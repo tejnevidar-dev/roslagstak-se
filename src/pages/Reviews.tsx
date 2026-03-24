@@ -35,12 +35,41 @@ const locations = [...new Set(allReviews.map(r => r.location))];
 const Reviews = () => {
   const avgRating = (allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length).toFixed(1);
 
+  const reviewSchemaJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    name: "RoslagsTak",
+    url: "https://roslagstak.se",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: avgRating,
+      reviewCount: allReviews.length,
+      bestRating: "5",
+    },
+    review: allReviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
+      reviewBody: r.text,
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
+      { "@type": "ListItem", position: 2, name: "Recensioner", item: "https://roslagstak.se/recensioner" },
+    ],
+  };
+
   return (
     <>
       <Header />
       <main className="pt-24 pb-20">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchemaJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
             <span>/</span>

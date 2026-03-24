@@ -145,10 +145,36 @@ const ServiceDetail = () => {
     );
   }
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
+      { "@type": "ListItem", position: 2, name: "Tjänster", item: "https://roslagstak.se/#tjanster" },
+      { "@type": "ListItem", position: 3, name: service.title, item: `https://roslagstak.se/tjanster/${slug}` },
+    ],
+  };
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: details.longDesc,
+    provider: {
+      "@type": "RoofingContractor",
+      name: "RoslagsTak",
+      url: "https://roslagstak.se",
+      telephone: "+46730849772",
+    },
+    areaServed: { "@type": "Place", name: "Roslagen" },
+  };
+
   return (
     <>
       <Header />
       <main className="pt-24 pb-20">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
         {/* Breadcrumb */}
         <div className="container mx-auto px-4 mb-8">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
