@@ -45,7 +45,7 @@ const QuoteConfigurator = () => {
             <h2 className="font-display text-3xl text-foreground">Tack för din förfrågan!</h2>
             {mode === "configure" ? (
               <p className="text-muted-foreground">
-                Du kommer att få ett ungefärligt kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. 
+                Du kommer att få ett kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. 
                 Kolla gärna din skräppost om du inte ser det direkt.
               </p>
             ) : (
