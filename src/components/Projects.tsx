@@ -1,3 +1,4 @@
+import { Star, ExternalLink } from "lucide-react";
 import projectCottage from "@/assets/project-coastal-cottage.jpg";
 import projectVilla from "@/assets/project-villa-copper.jpg";
 import projectIsland from "@/assets/project-island-cabin.jpg";
