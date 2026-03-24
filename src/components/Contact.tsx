@@ -14,7 +14,7 @@ const Contact = () => {
               Fyll i formuläret eller ring oss direkt. Vi återkommer inom 24 timmar med en offert anpassad efter ditt projekt.
             </p>
 
-            <div className="space-y-5">
+            <div className="space-y-5 mb-8">
               {[
                 { icon: Phone, label: "073-084 97 72", href: "tel:+46730849772" },
                 { icon: Mail, label: "info@roslagstak.se", href: "mailto:info@roslagstak.se" },
@@ -34,6 +34,20 @@ const Contact = () => {
                   )}
                 </div>
               ))}
+            </div>
+
+            {/* Google Maps */}
+            <div className="rounded-lg overflow-hidden border border-border aspect-[16/9]">
+              <iframe
+                title="RoslagsTak verksamhetsområde — Norrtälje, Roslagen"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d200000!2d18.7!3d59.76!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9e6a4eb3b5a5%3A0x5dc35c3b3b3b3b3b!2sNorrt%C3%A4lje!5e0!3m2!1ssv!2sse!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
