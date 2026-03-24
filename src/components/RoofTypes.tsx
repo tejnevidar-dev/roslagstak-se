@@ -43,7 +43,7 @@ const roofTypes = [
     pros: ["Helt vattentätt", "Extremt lång livslängd", "Exklusivt utseende", "Inga synliga skruvar", "Fungerar vid låg taklutning"],
     cons: ["Högre kostnad", "Kräver specialiserad hantverkare", "Längre monteringstid"],
     lifespan: "60–100+ år",
-    priceRange: "Från 900 kr/m²",
+    priceRange: "Från 2 000 kr/m²",
     bestFor: "Exklusiva kustvillor, herrgårdar, kulturbyggnader",
   },
   {
