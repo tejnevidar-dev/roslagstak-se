@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, MessageCircle } from "lucide-react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
     { href: "#tjanster", label: "Tjänster" },
+    { href: "#taktyper", label: "Taktyper" },
+    { href: "#offert", label: "Få offert" },
     { href: "#om-oss", label: "Om oss" },
     { href: "#projekt", label: "Projekt" },
     { href: "#kontakt", label: "Kontakt" },
@@ -15,7 +17,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent/80">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <a href="/" className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight">
-          Roslags<span className="text-primary">tak</span>
+          Roslags<span className="text-primary">Tak</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Huvudnavigation">
@@ -31,6 +33,13 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
+          <a
+            href="#radgivning"
+            className="flex items-center gap-2 border border-primary text-primary px-4 py-2.5 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Fri rådgivning
+          </a>
           <a
             href="tel:+46701234567"
             className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
@@ -61,6 +70,14 @@ const Header = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="#radgivning"
+            onClick={() => setMenuOpen(false)}
+            className="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-md text-sm font-semibold w-fit"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Fri rådgivning
+          </a>
           <a
             href="tel:+46701234567"
             className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold w-fit"

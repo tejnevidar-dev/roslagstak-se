@@ -5,10 +5,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <p className="font-display text-2xl mb-3">
-              Roslags<span className="text-primary">tak</span>
+              Roslags<span className="text-primary">Tak</span>
             </p>
             <p className="text-accent-foreground/60 text-sm leading-relaxed">
-              Professionell takläggning i Roslagen, Norrtälje, Täby, Vallentuna och Stockholms skärgård.
+              Professionell takläggning längs hela Roslagens kustlinje. Från Vaxholm till Arholma — vi når alla öar och kuststäder.
             </p>
           </div>
           <div>
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-accent-foreground/10 pt-6 text-center text-xs text-accent-foreground/40">
-          © {new Date().getFullYear()} Roslagstak. Alla rättigheter förbehållna.
+          © {new Date().getFullYear()} RoslagsTak. Alla rättigheter förbehållna.
         </div>
       </div>
     </footer>
