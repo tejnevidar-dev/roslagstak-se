@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
