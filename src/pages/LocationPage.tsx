@@ -9,6 +9,7 @@ import NotFound from "./NotFound";
 
 const LocationPage = () => {
   const { slug } = useParams<{ slug: string }>();
+  console.log("LocationPage slug:", slug, "found:", !!getLocationBySlug(slug || ""));
   const location = slug ? getLocationBySlug(slug) : undefined;
 
   useEffect(() => {
