@@ -6,7 +6,7 @@ import { services } from "@/components/Services";
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[] }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. I skärgårdsmiljöer är det extra viktigt att välja rätt material — saltstänk, kraftiga vindar och fukt ställer höga krav. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs av certifierade takläggare med 10 års garanti.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års garanti.",
     benefits: [
       "Komplett borttagning av gammalt takmaterial",
       "Inspektion och byte av skadat underlag",
