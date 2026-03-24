@@ -21,6 +21,7 @@ const Footer = () => {
               <li><Link to="/tjanster/takavvattning" className="hover:text-primary transition-colors">Takavvattning</Link></li>
               <li><Link to="/tjanster/platarbeten" className="hover:text-primary transition-colors">Plåtarbeten</Link></li>
               <li><Link to="/tjanster/takinspektion" className="hover:text-primary transition-colors">Takinspektion</Link></li>
+              <li><Link to="/priser" className="hover:text-primary transition-colors">Prislista</Link></li>
               <li><Link to="/recensioner" className="hover:text-primary transition-colors">Recensioner</Link></li>
               <li><Link to="/blogg" className="hover:text-primary transition-colors">Blogg & tips</Link></li>
             </ul>

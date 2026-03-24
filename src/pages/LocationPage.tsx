@@ -107,6 +107,33 @@ const LocationPage = () => {
                   ))}
                 </ul>
 
+                {/* Deep internal links */}
+                <div className="bg-card border border-border rounded-lg p-5 mb-6">
+                  <h3 className="font-display text-lg text-card-foreground mb-3">
+                    Populära tjänster {location.isIsland ? "på" : "i"} {location.name}
+                  </h3>
+                  <div className="grid sm:grid-cols-2 gap-2">
+                    <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Takbyte {location.isIsland ? "på" : "i"} {location.name}
+                    </Link>
+                    <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Takrenovering {location.isIsland ? "på" : "i"} {location.name}
+                    </Link>
+                    <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Se prislista
+                    </Link>
+                    <Link to="/blogg/valja-ratt-tak-roslagen" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Guide: Välj rätt tak
+                    </Link>
+                    <Link to="/blogg/rot-avdrag-takbyte" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> ROT-avdrag vid takbyte
+                    </Link>
+                    <Link to="/blogg/tecken-byta-tak" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> 7 tecken att byta tak
+                    </Link>
+                  </div>
+                </div>
+
                 <h3 className="font-display text-xl text-foreground mb-3">
                   Varför välja RoslagsTak {location.isIsland ? "på" : "i"} {location.name}?
                 </h3>
