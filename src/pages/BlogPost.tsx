@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";

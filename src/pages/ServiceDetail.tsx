@@ -172,6 +172,11 @@ const ServiceDetail = () => {
 
   return (
     <>
+      <SEOHead
+        title={`${service.title} i Roslagen — Takläggare RoslagsTak`}
+        description={`${service.title} i Roslagen. ${service.description} Kostnadsfri offert och 10 års garanti.`}
+        canonical={`https://roslagstak.se/tjanster/${slug}`}
+      />
       <Header />
       <main className="pt-24 pb-20">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />

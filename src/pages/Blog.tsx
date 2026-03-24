@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blog-posts";
@@ -7,6 +8,11 @@ import { blogPosts } from "@/data/blog-posts";
 const Blog = () => {
   return (
     <>
+      <SEOHead
+        title="Blogg — Tips om takbyte & takrenovering i Roslagen"
+        description="Artiklar och guider om takbyte, takrenovering, ROT-avdrag och takval i Roslagens skärgård. Från takläggare RoslagsTak."
+        canonical="https://roslagstak.se/blogg"
+      />
       <Header />
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4">

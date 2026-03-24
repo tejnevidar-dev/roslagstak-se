@@ -41,6 +41,11 @@ const LocationPage = () => {
 
   return (
     <>
+      <SEOHead
+        title={`Takläggare ${location.isIsland ? "på" : "i"} ${location.name} — Takbyte & Takrenovering`}
+        description={location.description}
+        canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
+      />
       <Header />
       <main className="pt-24 pb-20">
         <script
