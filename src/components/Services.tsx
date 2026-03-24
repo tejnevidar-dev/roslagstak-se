@@ -7,7 +7,7 @@ export const services = [
     icon: Home,
     slug: "takomlaggning",
     title: "Takomläggning",
-    description: "Komplett byte av takmaterial med moderna lösningar anpassade för kustklimat och havsnära miljöer.",
+    description: "Komplett byte av takmaterial med moderna lösningar. Allt arbete utförs enligt AMA-standard.",
   },
   {
     icon: Wrench,
