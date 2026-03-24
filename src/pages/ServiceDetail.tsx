@@ -6,11 +6,11 @@ import { services } from "@/components/Services";
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[] }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. I skärgårdsmiljöer är det extra viktigt att välja rätt material — saltstänk, kraftiga vindar och fukt ställer höga krav. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs av certifierade takläggare med 10 års garanti.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års garanti.",
     benefits: [
       "Komplett borttagning av gammalt takmaterial",
       "Inspektion och byte av skadat underlag",
-      "Nytt takmaterial anpassat för kustklimat",
+      "Nytt takmaterial anpassat för din byggnad",
       "Installation av underlagspapp och ventilation",
       "Ny taksäkerhet (gångbrygga, takstege, snörasskydd)",
       "10 års garanti på arbete och material",
@@ -26,7 +26,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   takrenovering: {
-    longDesc: "En takrenovering innebär att vi åtgärdar problem och förlänger livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten. I skärgården är det vanligt att tak drabbas av storm- och fuktskador — vi har erfarenhet av att renovera tak på öar med begränsad tillgänglighet.",
+    longDesc: "En takrenovering innebär att vi åtgärdar problem och förlänger livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten. Vi har erfarenhet av att renovera tak på öar med begränsad tillgänglighet och löser logistiken oavsett plats.",
     benefits: [
       "Lägre kostnad än komplett takomläggning",
       "Snabbare genomförande",
@@ -45,13 +45,13 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   takavvattning: {
-    longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag. I havsnära miljöer rekommenderar vi material som tål salt — som aluminium eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
+    longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i aluminium, koppar eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
     benefits: [
       "Skyddar fasad och grund mot vattenskador",
       "Hängrännor i aluminium, koppar eller lackerad plåt",
       "Stuprör med korrekt dimensionering",
       "Lövinsamlare och galler vid behov",
-      "Material som tål saltstänkt havsmiljö",
+      "Material i aluminium, koppar eller lackerad plåt",
       "Prydligt och hållbart resultat",
     ],
     process: [
@@ -64,7 +64,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   takkupor: {
-    longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. I skärgårdshusen är det vanligt att vindsplanet är oinrett — med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum med havsutsikt.",
+    longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. Med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum och öka boendeytan avsevärt.",
     benefits: [
       "Mer dagsljus på vindsvåningen",
       "Ökat boendeyta och husvärde",
@@ -102,13 +102,13 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   platarbeten: {
-    longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar. Våra plåtslagare är certifierade och har lång erfarenhet av att arbeta med både stål, aluminium, koppar och zink. I havsmiljöer rekommenderar vi aluminium framför galvad stålplåt för bättre korrosionsbeständighet.",
+    longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar. Våra plåtslagare är certifierade och har lång erfarenhet av att arbeta med både stål, aluminium, koppar och zink.",
     benefits: [
       "Certifierade plåtslagare",
       "Taktäckning med alla typer av plåt",
       "Beslag runt skorstenar och genomföringar",
       "Ränndalar och vindskivor i plåt",
-      "Material anpassat för kustklimat",
+      "Material i stål, aluminium, koppar och zink",
       "Koppar, zink, aluminium och stål",
     ],
     process: [

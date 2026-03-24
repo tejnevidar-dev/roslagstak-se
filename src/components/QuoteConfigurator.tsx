@@ -45,7 +45,7 @@ const QuoteConfigurator = () => {
             <h2 className="font-display text-3xl text-foreground">Tack för din förfrågan!</h2>
             {mode === "configure" ? (
               <p className="text-muted-foreground">
-                Du kommer att få ett ungefärligt kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. 
+                Du kommer att få ett kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. 
                 Kolla gärna din skräppost om du inte ser det direkt.
               </p>
             ) : (
@@ -89,7 +89,7 @@ const QuoteConfigurator = () => {
               <div className="text-left">
                 <div>Konfigurera själv</div>
                 <div className={`text-xs font-normal ${mode === "configure" ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                  Ungefärligt kostnadsförslag på mail inom 2 min
+                  Kostnadsförslag på mail inom 2 min
                 </div>
               </div>
             </button>
@@ -120,9 +120,9 @@ const QuoteConfigurator = () => {
             <div className="flex items-start gap-3 bg-primary/5 border border-primary/20 rounded-md p-4">
               <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Ungefärligt kostnadsförslag direkt på mail</p>
+                <p className="text-sm font-semibold text-foreground">Kostnadsförslag direkt på mail</p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Fyll i dina takval nedan och ange din e-post. Du får ett ungefärligt kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. Helt kostnadsfritt och utan förbindelser.
+                  Fyll i dina takval nedan och ange din e-post. Du får ett kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. Helt kostnadsfritt och utan förbindelser.
                 </p>
               </div>
             </div>
@@ -351,7 +351,7 @@ const QuoteConfigurator = () => {
 
           <p className="text-xs text-muted-foreground text-center">
             {mode === "configure"
-              ? "Helt kostnadsfritt. Du får ett ungefärligt kostnadsförslag på e-post inom 2 minuter."
+              ? "Helt kostnadsfritt. Du får ett kostnadsförslag på e-post inom 2 minuter."
               : "Helt kostnadsfritt. Vi återkopplar alltid inom 24 timmar från att formuläret skickas in."}
           </p>
         </form>

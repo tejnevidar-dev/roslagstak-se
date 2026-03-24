@@ -48,14 +48,14 @@ const About = () => {
               <p>
                 RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi har lagt tak på hundratals hem 
                 längs kustlinjen — från Vaxholm och Ljusterö till Singö, Grisslehamn och Arholma. Med en samlad 
-                erfarenhet på över 70 år i organisationen förstår vi de unika utmaningarna som havsnära miljöer 
-                ställer på ett tak: saltstänk, kraftiga vindar, fukt och temperaturväxlingar.
+                erfarenhet på över 70 år i organisationen har vi den kompetens som krävs för att leverera 
+                takprojekt av högsta kvalitet, alltid enligt branschens AMA-standard.
               </p>
               <p>
                 Vi vet hur det är att bo och verka i skärgården. Många av oss har själva vuxit upp med båtar, 
                 bryggor och röda stugor. Den kunskapen genomsyrar allt vi gör — från materialval till logistik. 
-                Vi når öar dit andra takfirmor inte tar sig, och vi vet att ett tak på en stuga i ytterskärgården 
-                behöver tåla mer än ett tak i stan.
+                Vi når öar dit andra takfirmor inte tar sig, och vi löser de praktiska utmaningarna med 
+                materialtransport och tillgänglighet som skärgården innebär.
               </p>
               <p>
                 Vare sig du är året-runt-boende i Norrtälje, har en sommarstuga på Blidö, eller äger en skärgårdsfastighet 
