@@ -16,11 +16,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-sm mb-3">Tjänster</h3>
             <ul className="space-y-2 text-sm text-accent-foreground/60">
-              <li>Takomläggning</li>
-              <li>Takrenovering</li>
-              <li>Takavvattning</li>
-              <li>Plåtarbeten</li>
-              <li>Takinspektion</li>
+              <li><Link to="/tjanster/takomlaggning" className="hover:text-primary transition-colors">Takomläggning</Link></li>
+              <li><Link to="/tjanster/takrenovering" className="hover:text-primary transition-colors">Takrenovering</Link></li>
+              <li><Link to="/tjanster/takavvattning" className="hover:text-primary transition-colors">Takavvattning</Link></li>
+              <li><Link to="/tjanster/platarbeten" className="hover:text-primary transition-colors">Plåtarbeten</Link></li>
+              <li><Link to="/tjanster/takinspektion" className="hover:text-primary transition-colors">Takinspektion</Link></li>
             </ul>
           </div>
           <div>
