@@ -19,7 +19,7 @@ const roofTypes = [
     shortDesc: "Profilerad plåt som efterliknar tegelpannors utseende.",
     fullDesc: "Tegelplåttak (även kallat takpanneplåt) är profilerade stålplåtskivor formade för att visuellt efterlikna traditionella tegelpannor. Varje skiva täcker flera 'pannor' vilket gör monteringen snabbare än verkliga tegelpannor. Plåten är förzinkad och ytbehandlad med plastisol eller polyester för lång hållbarhet. Det ger husägare möjligheten att få det klassiska tegelutseendet med plåtens fördelar: låg vikt, snabb montering och minimalt underhåll.",
     pros: ["Klassiskt tegelpanneliknande utseende", "Mycket lättare än riktigt tegel (ca 4–5 kg/m²)", "Snabbare montering än tegelpannor", "Underhållsfritt", "Tål kraftig vind väl"],
-    cons: ["Inte lika autentiskt utseende som riktigt tegel", "Kan låta vid kraftigt regn", "Kräver minst 14° taklutning", "Stålplåt kan korrodera i direkt saltstänkt miljö"],
+    cons: ["Inte lika autentiskt utseende som riktigt tegel", "Kan låta vid kraftigt regn", "Kräver minst 14° taklutning"],
     lifespan: "40–60 år",
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, sommarstugor, radhus",
