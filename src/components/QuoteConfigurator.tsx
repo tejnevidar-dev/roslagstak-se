@@ -351,7 +351,7 @@ const QuoteConfigurator = () => {
 
           <p className="text-xs text-muted-foreground text-center">
             {mode === "configure"
-              ? "Helt kostnadsfritt. Du får ett ungefärligt kostnadsförslag på e-post inom 2 minuter."
+              ? "Helt kostnadsfritt. Du får ett kostnadsförslag på e-post inom 2 minuter."
               : "Helt kostnadsfritt. Vi återkopplar alltid inom 24 timmar från att formuläret skickas in."}
           </p>
         </form>

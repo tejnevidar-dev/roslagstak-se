@@ -19,7 +19,7 @@ export const services = [
     icon: Droplets,
     slug: "takavvattning",
     title: "Takavvattning",
-    description: "Installation och byte av hängrännor, stuprör och takavvattningssystem som tål saltstänk.",
+    description: "Installation och byte av hängrännor, stuprör och kompletta takavvattningssystem.",
   },
   {
     icon: Sun,

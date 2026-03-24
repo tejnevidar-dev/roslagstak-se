@@ -108,7 +108,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Taktäckning med alla typer av plåt",
       "Beslag runt skorstenar och genomföringar",
       "Ränndalar och vindskivor i plåt",
-      "Material anpassat för kustklimat",
+      "Material i stål, aluminium, koppar och zink",
       "Koppar, zink, aluminium och stål",
     ],
     process: [

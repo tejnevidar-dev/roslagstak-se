@@ -30,7 +30,7 @@ const roofTypes = [
     shortDesc: "Svensk klassiker från tidigt 1900-tal med karaktäristisk vågprofil.",
     fullDesc: "Pannplåt är en genuint svensk takplåtstyp som först masstillverkades av Domnarvet i Borlänge i början av 1900-talet. Den har en karaktäristisk vågformad profil med rillor var 270:e mm som ger ett helt unikt utseende — pannplåten ska inte förväxlas med tegelplåt som imiterar tegelpannor. Pannplåten ger istället ett tidlöst, industriellt och genuint skandinaviskt uttryck. Den tillverkas i förzinkad stålplåt och finns i färger som svart, mörkröd, grafitgrå, tegelröd och ärggrön. Pannplåten passar lika bra på kulturminnesmärkta byggnader, kyrkor och funkishus som på moderna villor och lantbruksbyggnader. Minsta taklutning är 8°.",
     pros: ["Unikt och karaktäristiskt utseende", "Svensk klassiker med lång tradition", "Passar kulturhistoriska byggnader", "Fungerar vid låga taklutningar (från 8°)", "Förzinkad för god rostbeständighet", "Lätt material"],
-    cons: ["Mer begränsat färgutbud än modern profilerad plåt", "Kräver korrekt underlag (råspont + underlagspapp)", "Stålplåt kan korrodera i extrem havsmiljö"],
+    cons: ["Mer begränsat färgutbud än modern profilerad plåt", "Kräver korrekt underlag (råspont + underlagspapp)"],
     lifespan: "40–60 år",
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Kulturbyggnader, äldre villor, funkishus, lantbruksbyggnader, kyrkor",
