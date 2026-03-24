@@ -51,7 +51,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Hängrännor i aluminium, koppar eller lackerad plåt",
       "Stuprör med korrekt dimensionering",
       "Lövinsamlare och galler vid behov",
-      "Material som tål saltstänkt havsmiljö",
+      "Material i aluminium, koppar eller lackerad plåt",
       "Prydligt och hållbart resultat",
     ],
     process: [
