@@ -65,7 +65,7 @@ const roofTypes = [
     pros: ["Prisvärt", "Brett färgutbud", "God ljudisolering", "Brandsäkert", "Tillverkas i Sverige"],
     cons: ["Tungt material", "Kan få mossväxt", "Färgen kan blekna med tiden"],
     lifespan: "50–70 år",
-    priceRange: "Från 400 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, radhus, ekonomibyggnader",
   },
   {
