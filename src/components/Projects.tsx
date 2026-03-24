@@ -71,7 +71,7 @@ const Projects = () => {
               <div>
                 <p className="font-display text-lg text-card-foreground">Läs våra Google-recensioner</p>
                 <p className="text-muted-foreground text-sm mt-0.5">
-                  Se vad våra kunder tycker om oss på Google — äkta omdömen från riktiga takprojekt.
+                  Se vad våra kunder skriver om oss på Google.
                 </p>
               </div>
             </div>
