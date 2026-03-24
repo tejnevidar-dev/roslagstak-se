@@ -13,6 +13,7 @@ import Prices from "./pages/Prices.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import { locations } from "./data/locations";
 
 const queryClient = new QueryClient();
 
@@ -28,9 +29,15 @@ const App = () => (
             <Route path="/tjanster/:slug" element={<ServiceDetail />} />
             <Route path="/recensioner" element={<Reviews />} />
             <Route path="/priser" element={<Prices />} />
-            <Route path="/taklaggare-:slug" element={<LocationPage />} />
-            <Route path="/takbyte-:location" element={<ServiceLocationPage />} />
-            <Route path="/takrenovering-:location" element={<ServiceLocationPage />} />
+            {locations.map((loc) => (
+              <Route key={loc.slug} path={`/taklaggare-${loc.slug}`} element={<LocationPage />} />
+            ))}
+            {locations.map((loc) => (
+              <Route key={`takbyte-${loc.slug}`} path={`/takbyte-${loc.slug}`} element={<ServiceLocationPage />} />
+            ))}
+            {locations.map((loc) => (
+              <Route key={`takrenovering-${loc.slug}`} path={`/takrenovering-${loc.slug}`} element={<ServiceLocationPage />} />
+            ))}
             <Route path="/blogg" element={<Blog />} />
             <Route path="/blogg/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
