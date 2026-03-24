@@ -127,6 +127,10 @@ const ServiceDetail = () => {
   const service = services.find((s) => s.slug === slug);
   const details = slug ? serviceDetails[slug] : null;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
   if (!service || !details) {
     return (
       <>
