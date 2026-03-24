@@ -16,7 +16,7 @@ const ServiceLocationPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [service, locSlug]);
+  }, [serviceSlug, locSlug]);
 
   if (!combo) return <NotFound />;
 
