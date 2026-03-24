@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -9,12 +9,15 @@ import NotFound from "./NotFound";
 
 const LocationPage = () => {
   const { slug } = useParams<{ slug: string }>();
-  console.log("LocationPage slug:", slug, "found:", !!getLocationBySlug(slug || ""));
-  const location = slug ? getLocationBySlug(slug) : undefined;
+  const pathname = useLocation().pathname;
+  
+  // Extract slug from pathname as fallback
+  const resolvedSlug = slug || (pathname.startsWith("/taklaggare-") ? pathname.replace("/taklaggare-", "") : undefined);
+  const location = resolvedSlug ? getLocationBySlug(resolvedSlug) : undefined;
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+  }, [resolvedSlug]);
 
   if (!location) return <NotFound />;
 
