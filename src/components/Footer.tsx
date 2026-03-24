@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-accent text-accent-foreground py-12 border-t border-accent-foreground/10" role="contentinfo">
