@@ -54,7 +54,7 @@ const roofTypes = [
     pros: ["Tidlöst vackert", "Naturligt material", "Bra ljudisolering", "Åldras med värdighet", "Brandsäkert"],
     cons: ["Tungt — kräver förstärkt takstol", "Kan spricka vid frost", "Kräver regelbunden inspektion"],
     lifespan: "80–100+ år",
-    priceRange: "Från 650 kr/m²",
+    priceRange: "Från 1 500 kr/m²",
     bestFor: "Äldre villor, kulturhistoriska byggnader, herrgårdar",
   },
   {
