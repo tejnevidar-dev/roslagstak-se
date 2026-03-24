@@ -8,7 +8,7 @@ const roofTypes = [
     shortDesc: "Trapetsprofilerad stålplåt — Sveriges mest använda takplåt.",
     fullDesc: "TP20 (även kallat TRP20) är en trapetsprofilerad takplåt i förzinkad stålplåt. Siffran 20 anger profilens våghöjd i millimeter. Plåten levereras i långa skivor som sträcker sig från nock till takfot, vilket minimerar horisontella skarvar och minskar risken för läckage. TP20 är ett av de lättaste takmaterialen på marknaden med en vikt på ca 3–5 kg/m², vilket gör det lämpligt även för äldre byggnader med svagare takstolskonstruktion. Plåten finns i ett stort antal kulörer med plastisol- eller polyesterbeläggning.",
     pros: ["Mycket kostnadseffektivt", "Snabb montering — stora skivor", "Låg vikt (ca 3–5 kg/m²)", "Minimalt underhåll", "Brett färgutbud", "Minsta taklutning ca 14°"],
-    cons: ["Kan ge resonansljud vid kraftigt regn utan ljuddämpning", "Enklare estetik jämfört med falsad plåt", "Kondens kan uppstå utan korrekt ventilation och underlagspapp", "Stålplåt kan korrodera i saltstänkt havsmiljö — aluminiumplåt rekommenderas nära havet"],
+    cons: ["Kan ge resonansljud vid kraftigt regn utan ljuddämpning", "Enklare estetik jämfört med falsad plåt", "Kondens kan uppstå utan korrekt ventilation och underlagspapp"],
     lifespan: "40–50 år",
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, fritidshus, ekonomibyggnader, garage",
