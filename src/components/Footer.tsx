@@ -24,7 +24,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-sm mb-3">Kontakt</h3>
             <ul className="space-y-2 text-sm text-accent-foreground/60">
-              <li>070-123 45 67</li>
+              <li>073-084 97 72</li>
               <li>info@roslagstak.se</li>
               <li>Norrtälje, Roslagen</li>
               <li>Org.nr: 556xxx-xxxx</li>

@@ -16,10 +16,10 @@ const Contact = () => {
 
             <div className="space-y-5">
               {[
-                { icon: Phone, label: "070-123 45 67", href: "tel:+46701234567" },
+                { icon: Phone, label: "073-084 97 72", href: "tel:+46730849772" },
                 { icon: Mail, label: "info@roslagstak.se", href: "mailto:info@roslagstak.se" },
                 { icon: MapPin, label: "Norrtälje, Roslagen" },
-                { icon: Clock, label: "Mån–Fre 07:00–17:00" },
+                { icon: Clock, label: "Mån–Lör 07:00–20:00 | Sön 09:00–20:00" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3 text-foreground">
                   <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
