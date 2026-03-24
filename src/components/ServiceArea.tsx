@@ -1,4 +1,32 @@
 import { MapPin, Anchor } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const locationSlugMap: Record<string, string> = {
+  "Arholma": "arholma",
+  "Svartlöga": "svartloga",
+  "Norröra": "norrora",
+  "Söderöra": "sodorora",
+  "Humlö": "humlo",
+  "Gräskö": "grasko",
+  "Singö": "singo",
+  "Grisslehamn": "grisslehamn",
+  "Blidö": "blido",
+  "Yxlan": "yxlan",
+  "Furusund": "furusund",
+  "Finnhamn": "finnhamn",
+  "Ingmarsö": "ingmarso",
+  "Husarö": "husaro",
+  "Högmarsö": "hogmarso",
+  "Norrtälje": "norrtalje",
+  "Vaxholm": "vaxholm",
+  "Ljusterö": "ljustero",
+  "Rådmansö": "radmanso",
+  "Vätö": "vato",
+  "Väddö": "vaddo",
+  "Spillersboda": "spillersboda",
+  "Bergshamra": "bergshamra",
+  "Svartnö": "svartno",
+};
 
 const areas = [
   {
@@ -46,15 +74,27 @@ const ServiceArea = () => {
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-5">{area.description}</p>
               <div className="flex flex-wrap gap-2">
-                {area.locations.map((loc) => (
-                  <span
-                    key={loc}
-                    className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full"
-                  >
-                    <MapPin className="w-3 h-3" />
-                    {loc}
-                  </span>
-                ))}
+                {area.locations.map((loc) => {
+                  const slug = locationSlugMap[loc];
+                  return slug ? (
+                    <Link
+                      key={loc}
+                      to={`/taklaggare-${slug}`}
+                      className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      <MapPin className="w-3 h-3" />
+                      {loc}
+                    </Link>
+                  ) : (
+                    <span
+                      key={loc}
+                      className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full"
+                    >
+                      <MapPin className="w-3 h-3" />
+                      {loc}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           ))}
