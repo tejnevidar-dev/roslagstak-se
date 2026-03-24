@@ -87,7 +87,7 @@ const roofTypes = [
     pros: ["Mycket prisvärt", "Lätt att lägga", "Flexibelt material", "Funkar på låg lutning"],
     cons: ["Kortare livslängd", "Kräver regelbundet underhåll", "Känsligt för UV-ljus", "Mindre estetiskt tilltalande"],
     lifespan: "15–30 år",
-    priceRange: "Från 200 kr/m²",
+    priceRange: "Från 900 kr/m²",
     bestFor: "Garage, uthus, friggebodar, ekonomibyggnader",
   },
 ];
