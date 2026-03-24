@@ -69,7 +69,7 @@ const Reviews = () => {
       <main className="pt-24 pb-20">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchemaJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-          {/* Breadcrumb */}
+        <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
             <span>/</span>
