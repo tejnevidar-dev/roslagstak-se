@@ -1,4 +1,5 @@
-import { Star } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const testimonials = [
   {
@@ -9,12 +10,12 @@ const testimonials = [
   {
     name: "Erik Johansson",
     location: "Vaxholm",
-    text: "Professionellt från start till slut. Hjälpte oss med ROT-avdraget och städade fint efter sig. Taket tål havsvinden!",
+    text: "Professionellt från start till slut. Hjälpte oss med ROT-avdraget och städade fint efter sig. Offerten stämde på kronan.",
   },
   {
     name: "Maria Karlsson",
     location: "Grisslehamn",
-    text: "Bästa takläggarna vi har anlitat. Förstår skärgårdens förutsättningar och levererade ett tak som verkligen håller mot kustvädret.",
+    text: "Bästa takläggarna vi har anlitat. De levererade ett dubbelfalsat koppartak som verkligen håller. Otroligt fint hantverk.",
   },
 ];
 
@@ -25,7 +26,7 @@ const Testimonials = () => {
         <div className="max-w-2xl mx-auto text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Omdömen</p>
           <h2 id="testimonials-heading" className="font-display text-3xl md:text-4xl text-accent-foreground mb-4">
-            Vad våra kunder längs kusten säger
+            Vad våra kunder säger
           </h2>
         </div>
 
@@ -44,6 +45,15 @@ const Testimonials = () => {
               </footer>
             </blockquote>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/recensioner"
+            className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all"
+          >
+            Läs alla 22 recensioner <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
