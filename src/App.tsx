@@ -8,6 +8,8 @@ import Index from "./pages/Index.tsx";
 import ServiceDetail from "./pages/ServiceDetail.tsx";
 import Reviews from "./pages/Reviews.tsx";
 import LocationPage from "./pages/LocationPage.tsx";
+import ServiceLocationPage from "./pages/ServiceLocationPage.tsx";
+import Prices from "./pages/Prices.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -25,7 +27,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/tjanster/:slug" element={<ServiceDetail />} />
             <Route path="/recensioner" element={<Reviews />} />
+            <Route path="/priser" element={<Prices />} />
             <Route path="/taklaggare-:slug" element={<LocationPage />} />
+            <Route path="/takbyte-:location" element={<ServiceLocationPage />} />
+            <Route path="/takrenovering-:location" element={<ServiceLocationPage />} />
             <Route path="/blogg" element={<Blog />} />
             <Route path="/blogg/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
