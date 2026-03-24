@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Phone, Menu, X, MessageCircle } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
     { href: "#tjanster", label: "Tjänster" },
@@ -13,10 +16,24 @@ const Header = () => {
     { href: "#kontakt", label: "Kontakt" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMenuOpen(false);
+
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent/80">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="/" className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight">
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight">
           Roslags<span className="text-primary">Tak</span>
         </a>
 
@@ -25,6 +42,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-primary-foreground/80 hover:text-primary transition-colors"
             >
               {link.label}
@@ -35,13 +53,14 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#radgivning"
+            onClick={(e) => handleNavClick(e, "#radgivning")}
             className="flex items-center gap-2 border border-primary text-primary px-4 py-2.5 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
             Fri rådgivning
           </a>
           <a
-            href="tel:+46701234567"
+            href="tel:0730849772"
             className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
           >
             <Phone className="w-4 h-4" />
@@ -64,7 +83,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="block text-primary-foreground/80 hover:text-primary font-medium"
             >
               {link.label}
@@ -72,14 +91,14 @@ const Header = () => {
           ))}
           <a
             href="#radgivning"
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, "#radgivning")}
             className="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-md text-sm font-semibold w-fit"
           >
             <MessageCircle className="w-4 h-4" />
             Fri rådgivning
           </a>
           <a
-            href="tel:+46701234567"
+            href="tel:0730849772"
             className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold w-fit"
           >
             <Phone className="w-4 h-4" />
