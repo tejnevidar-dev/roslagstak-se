@@ -32,6 +32,12 @@ const BlogPost = () => {
 
   return (
     <>
+      <SEOHead
+        title={post.title}
+        description={post.excerpt}
+        canonical={`https://roslagstak.se/blogg/${post.slug}`}
+        type="article"
+      />
       <Header />
       <main className="pt-24 pb-20">
         <script
