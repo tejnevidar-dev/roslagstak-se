@@ -55,6 +55,29 @@ const Projects = () => {
             </article>
           ))}
         </div>
+
+        {/* Google Reviews CTA */}
+        <div className="mt-16 max-w-2xl mx-auto">
+          <a
+            href="https://share.google/nqda9nznKyzOXONmi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between gap-4 bg-card border border-border rounded-lg p-6 hover:border-primary/40 hover:shadow-lg transition-all group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Star className="w-6 h-6 text-primary fill-primary" />
+              </div>
+              <div>
+                <p className="font-display text-lg text-card-foreground">Läs våra Google-recensioner</p>
+                <p className="text-muted-foreground text-sm mt-0.5">
+                  Se vad våra kunder tycker om oss på Google — äkta omdömen från riktiga takprojekt.
+                </p>
+              </div>
+            </div>
+            <ExternalLink className="w-5 h-5 text-primary flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
       </div>
     </section>
   );
