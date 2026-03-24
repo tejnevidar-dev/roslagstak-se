@@ -45,7 +45,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   takavvattning: {
-    longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag. I havsnära miljöer rekommenderar vi material som tål salt — som aluminium eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
+    longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i aluminium, koppar eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
     benefits: [
       "Skyddar fasad och grund mot vattenskador",
       "Hängrännor i aluminium, koppar eller lackerad plåt",
