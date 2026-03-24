@@ -10,7 +10,7 @@ const roofTypes = [
     pros: ["Kostnadseffektivt", "Snabb montering", "Lågt underhåll", "Lång livslängd (40–50 år)", "Lätt material"],
     cons: ["Kan ge ljud vid regn", "Enklare estetik", "Kondens kan uppstå utan rätt underlag"],
     lifespan: "40–50 år",
-    priceRange: "Från 450 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Ekonomibyggnader, villor, fritidshus längs kusten",
   },
   {
