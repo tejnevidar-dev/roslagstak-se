@@ -87,7 +87,7 @@ const About = () => {
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg hidden md:block">
               <Anchor className="w-6 h-6 mb-1 opacity-80" />
-              <p className="font-display text-3xl">11</p>
+              <p className="font-display text-3xl">20+</p>
               <p className="text-sm opacity-90">Öar & kuststäder</p>
             </div>
           </div>

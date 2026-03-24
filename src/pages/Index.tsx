@@ -9,6 +9,7 @@ import FreeConsultation from "@/components/FreeConsultation";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
+import ServiceArea from "@/components/ServiceArea";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -33,6 +34,7 @@ const Index = () => {
         <QuoteConfigurator />
         <FreeConsultation />
         <About />
+        <ServiceArea />
         <Projects />
         <Testimonials />
         <Contact />
