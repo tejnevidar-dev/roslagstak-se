@@ -76,7 +76,7 @@ const roofTypes = [
     pros: ["Exklusivt utseende", "Självrenande effekt", "Mossresistent", "Färgbeständigt", "Lång livslängd"],
     cons: ["Dyrare än vanligt tegel", "Tungt", "Glasyren kan skadas vid hård mekanisk påverkan"],
     lifespan: "80–100+ år",
-    priceRange: "Från 750 kr/m²",
+    priceRange: "Från 1 800 kr/m²",
     bestFor: "Exklusiva villor, representativa fastigheter, skärgårdshus",
   },
   {
