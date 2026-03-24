@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";
@@ -31,6 +32,12 @@ const BlogPost = () => {
 
   return (
     <>
+      <SEOHead
+        title={post.title}
+        description={post.excerpt}
+        canonical={`https://roslagstak.se/blogg/${post.slug}`}
+        type="article"
+      />
       <Header />
       <main className="pt-24 pb-20">
         <script

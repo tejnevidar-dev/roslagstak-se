@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getLocationBySlug, locations } from "@/data/locations";
@@ -40,6 +41,11 @@ const LocationPage = () => {
 
   return (
     <>
+      <SEOHead
+        title={`Takläggare ${location.isIsland ? "på" : "i"} ${location.name} — Takbyte & Takrenovering`}
+        description={location.description}
+        canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
+      />
       <Header />
       <main className="pt-24 pb-20">
         <script

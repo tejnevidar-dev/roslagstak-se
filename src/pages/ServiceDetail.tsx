@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { services } from "@/components/Services";
 
-const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[] }> = {
+const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
     longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års garanti.",
+    priceRange: "Från ca 800 kr/m² (TP20) till 1 500+ kr/m² (dubbelfalsat). Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
     benefits: [
       "Komplett borttagning av gammalt takmaterial",
       "Inspektion och byte av skadat underlag",
@@ -28,6 +30,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takrenovering: {
     longDesc: "En takrenovering innebär att vi åtgärdar problem och förlänger livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten. Vi har erfarenhet av att renovera tak på öar med begränsad tillgänglighet och löser logistiken oavsett plats.",
+    priceRange: "Från ca 300 kr/m² beroende på skadans omfattning. Alltid fast pris efter besiktning. ROT-avdrag tillkommer.",
     benefits: [
       "Lägre kostnad än komplett takomläggning",
       "Snabbare genomförande",
@@ -47,6 +50,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takavvattning: {
     longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i aluminium, koppar eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
+    priceRange: "Från ca 250 kr/löpmeter för hängrännor i aluminium. Komplett system med stuprör från ca 15 000 kr. ROT-avdrag tillkommer.",
     benefits: [
       "Skyddar fasad och grund mot vattenskador",
       "Hängrännor i aluminium, koppar eller lackerad plåt",
@@ -66,6 +70,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takkupor: {
     longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. Med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum och öka boendeytan avsevärt.",
+    priceRange: "Takkupa från ca 50 000 kr. Takfönster (Velux) från ca 15 000 kr inkl. montering. ROT-avdrag tillkommer.",
     benefits: [
       "Mer dagsljus på vindsvåningen",
       "Ökat boendeyta och husvärde",
@@ -85,6 +90,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takinspektion: {
     longDesc: "En regelbunden takinspektion förebygger dyra skador. Vi utför grundliga besiktningar där vi kontrollerar takmaterialets skick, underlagspapp, råspont, taksäkerhet, avvattningssystem och ventilation. Du får en skriftlig rapport med foton och tydliga åtgärdsförslag. Vår inspektion är helt kostnadsfri och utan förbindelser.",
+    priceRange: "Helt kostnadsfritt — inga dolda avgifter.",
     benefits: [
       "Helt kostnadsfri och utan förbindelser",
       "Skriftlig rapport med foton",
@@ -104,13 +110,14 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   platarbeten: {
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar. Våra plåtslagare är certifierade och har lång erfarenhet av att arbeta med både stål, aluminium, koppar och zink.",
+    priceRange: "Beslag och detaljer från ca 2 000 kr. Taktäckning med plåt från ca 800 kr/m². ROT-avdrag tillkommer.",
     benefits: [
       "Certifierade plåtslagare",
       "Taktäckning med alla typer av plåt",
       "Beslag runt skorstenar och genomföringar",
       "Ränndalar och vindskivor i plåt",
       "Material i stål, aluminium, koppar och zink",
-      "Koppar, zink, aluminium och stål",
+      "10 års garanti",
     ],
     process: [
       "Besiktning och uppmätning",
@@ -171,6 +178,11 @@ const ServiceDetail = () => {
 
   return (
     <>
+      <SEOHead
+        title={`${service.title} i Roslagen — Takläggare RoslagsTak`}
+        description={`${service.title} i Roslagen. ${service.description} Kostnadsfri offert och 10 års garanti.`}
+        canonical={`https://roslagstak.se/tjanster/${slug}`}
+      />
       <Header />
       <main className="pt-24 pb-20">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -205,6 +217,21 @@ const ServiceDetail = () => {
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-foreground leading-relaxed">{details.longDesc}</p>
             </div>
+
+            {/* Price indication */}
+            {details.priceRange && (
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-12">
+                <h2 className="font-display text-xl text-foreground mb-2 flex items-center gap-2">
+                  💰 Prisindikation
+                </h2>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {details.priceRange}
+                </p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  * Priserna är riktpriser. Kontakta oss för en exakt offert anpassad efter ditt projekt.
+                </p>
+              </div>
+            )}
 
             {/* Benefits & Process */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">

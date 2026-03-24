@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -27,6 +28,11 @@ const Index = () => {
   }, [location.hash]);
   return (
     <>
+      <SEOHead
+        title="Takläggare Roslagen — Takbyte & Takrenovering Blidö, Ljusterö, Norrtälje"
+        description="RoslagsTak – takläggare i Roslagen. Takbyte, takrenovering & takomläggning på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Vaxholm, Norrtälje m.fl. Kostnadsfri offert!"
+        canonical="https://roslagstak.se/"
+      />
       <Header />
       <main>
         <Hero />

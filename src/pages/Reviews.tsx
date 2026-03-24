@@ -1,5 +1,6 @@
 import { Star, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -65,6 +66,11 @@ const Reviews = () => {
 
   return (
     <>
+      <SEOHead
+        title="Recensioner — Takläggare Roslagen | RoslagsTak"
+        description={`${allReviews.length} kundrecensioner från takprojekt i Roslagen. Blidö, Ljusterö, Yxlan, Furusund, Norrtälje m.fl. Snittbetyg ${avgRating}/5.`}
+        canonical="https://roslagstak.se/recensioner"
+      />
       <Header />
       <main className="pt-24 pb-20">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchemaJsonLd) }} />
