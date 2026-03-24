@@ -102,7 +102,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   platarbeten: {
-    longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar. Våra plåtslagare är certifierade och har lång erfarenhet av att arbeta med både stål, aluminium, koppar och zink. I havsmiljöer rekommenderar vi aluminium framför galvad stålplåt för bättre korrosionsbeständighet.",
+    longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar. Våra plåtslagare är certifierade och har lång erfarenhet av att arbeta med både stål, aluminium, koppar och zink.",
     benefits: [
       "Certifierade plåtslagare",
       "Taktäckning med alla typer av plåt",
