@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
@@ -126,6 +127,10 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
   const details = slug ? serviceDetails[slug] : null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!service || !details) {
     return (
