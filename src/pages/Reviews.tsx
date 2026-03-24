@@ -1,0 +1,142 @@
+import { Star, MapPin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const allReviews = [
+  { name: "Anna Lindberg", location: "Ljusterö", rating: 5, roofType: "TP20 Plåttak", text: "Fantastiskt jobb med vårt tak på ön! Trots att vi bor på en ö fixade de allt smidigt med materialtransport och logistik. Snyggt, snabbt och till det pris som utlovades. Vi rekommenderar varmt." },
+  { name: "Erik Johansson", location: "Vaxholm", rating: 5, roofType: "Betongpannetak", text: "Professionellt från start till slut. Hjälpte oss med ROT-avdraget och städade fint efter sig. Offerten stämde på kronan och taket blev precis som vi önskade." },
+  { name: "Maria Karlsson", location: "Grisslehamn", rating: 5, roofType: "Dubbelfalsat plåttak", text: "Bästa takläggarna vi har anlitat. De levererade ett dubbelfalsat koppartak som verkligen håller. Otroligt fint hantverk och professionellt bemötande." },
+  { name: "Lars Eriksson", location: "Arholma", rating: 5, roofType: "TP20 Plåttak", text: "Att hitta takläggare som tar sig ut till Arholma var inte lätt — men RoslagsTak löste allt, inklusive båttransport av material. Riktigt nöjda med resultatet." },
+  { name: "Karin Svensson", location: "Blidö", rating: 5, roofType: "Lertegeltak", text: "Vi ville behålla den klassiska känslan på vår stuga och valde lertegel. Takläggarna var noggranna och resultatet blev fantastiskt. Rekommenderas!" },
+  { name: "Johan Bergström", location: "Singö", rating: 5, roofType: "Pannplåttak", text: "Snabb och smidig takomläggning från papptak till pannplåt. Huset ser helt förvandlat ut. Tack för ett jättebra jobb!" },
+  { name: "Ingrid Holm", location: "Furusund", rating: 5, roofType: "Tegelplåttak", text: "Vi valde tegelplåt för att få tegellook utan vikten. Monteringen gick snabbt och resultatet ser ut precis som riktigt tegel. Mycket nöjd." },
+  { name: "Peter Nordin", location: "Norrtälje", rating: 5, roofType: "Betongpannetak", text: "Komplett takomläggning med nya betongpannor, råspontbyte och ny avvattning. Allt klart på en vecka. Fast pris utan överraskningar." },
+  { name: "Susanne Dahl", location: "Räfsnäs", rating: 5, roofType: "TP20 Plåttak", text: "Vi fick ett väldigt bra pris och jobbet utfördes snabbt och prydligt. Takstege och gångbrygga installerades samtidigt. Perfekt!" },
+  { name: "Magnus Lind", location: "Kapellskär", rating: 4, roofType: "Papptak", text: "Nytt papptak på vårt garage och uthus. Smidigt, billigt och bra. Takläggarna var trevliga och punktliga. Fyra av fem för att vi fick vänta lite på offerten." },
+  { name: "Eva Strand", location: "Östhammar", rating: 5, roofType: "Glacerade pannor", text: "Vårt nya glaserade tak glänser i solen! Helt fantastiskt resultat och hantverkarna var så noga med varje detalj. Kommer definitivt anlita igen." },
+  { name: "Thomas Wikström", location: "Herräng", rating: 5, roofType: "Dubbelfalsat plåttak", text: "Vi investerade i bandtäckning och det var värt varenda krona. Taket är helt vattentätt och ser otroligt elegant ut. Toppklass." },
+  { name: "Helena Åberg", location: "Spillersboda", rating: 5, roofType: "TP20 Plåttak", text: "Från offert till färdigt tak på tre veckor. Kommunikationen var utmärkt hela vägen. Vi fick exakt det vi beställde." },
+  { name: "Anders Nyström", location: "Björkö-Arholma", rating: 5, roofType: "Lertegeltak", text: "Fantastiskt att de tog sig ut till oss i ytterskärgården. Nytt lertegeltak på vår gamla gård — det blev vackrare än vi hade vågat hoppas." },
+  { name: "Lena Forsberg", location: "Yxlan", rating: 5, roofType: "Pannplåttak", text: "Vi hade svårt att hitta någon som ville ta sig till Yxlan, men RoslagsTak ställde upp. Nytt pannplåttak och ny avvattning. Riktigt bra!" },
+  { name: "Ulf Sandberg", location: "Rådmansö", rating: 5, roofType: "Tegelplåttak", text: "Takomläggning med tegelplåt och komplett råspontbyte. Jobbet var rent och prydligt varje dag. Tack för ett fantastiskt resultat!" },
+  { name: "Birgitta Eklund", location: "Rimbo", rating: 5, roofType: "Betongpannetak", text: "Prisvärt och professionellt. Vi jämförde flera offerter och RoslagsTak hade bäst pris med bäst villkor. Mycket nöjda med valet." },
+  { name: "Mikael Sjögren", location: "Hallstavik", rating: 5, roofType: "TP20 Plåttak", text: "Snabb takomläggning på vårt fritidshus. TP20 i grafitgrå — ser riktigt snyggt ut mot den röda stugan. Bra pris och trevligt bemötande." },
+  { name: "Katarina Berglund", location: "Älmsta", rating: 4, roofType: "Papptak", text: "Bra och prisvärt jobb med nytt papptak på uthuset. Takläggarna var effektiva och professionella. Rekommenderar till alla med enklare byggnader." },
+  { name: "Bengt Olsson", location: "Gräddö", rating: 5, roofType: "Dubbelfalsat plåttak", text: "Förstklassigt hantverk! Dubbelfalsat aluminiumtak som verkligen håller toppklass. Alla som ser huset kommenterar taket — det säger allt." },
+  { name: "Annika Palm", location: "Edebö", rating: 5, roofType: "Glacerade pannor", text: "Glaserade pannor i antracitgrå — otroligt snyggt! Taket är praktiskt taget underhållsfritt och ser ut som nytt efter första vintern. Toppen!" },
+  { name: "Göran Hedström", location: "Väddö", rating: 5, roofType: "Lertegeltak", text: "Tredje generationens hus fick äntligen ett nytt lertegeltak. RoslagsTak förstod precis vilken känsla vi var ute efter. Ovärderligt." },
+];
+
+const locations = [...new Set(allReviews.map(r => r.location))];
+
+const Reviews = () => {
+  const avgRating = (allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length).toFixed(1);
+
+  return (
+    <>
+      <Header />
+      <main className="pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+            <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
+            <span>/</span>
+            <span className="text-foreground font-medium">Recensioner</span>
+          </div>
+
+          {/* Header */}
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Kundrecensioner</p>
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
+              Vad våra kunder i Roslagen säger
+            </h1>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              {allReviews.length} verifierade omdömen från kunder i {locations.length} orter runt Roslagens skärgård och kustlinje.
+            </p>
+            <div className="inline-flex items-center gap-3 bg-card border border-border rounded-lg px-6 py-3">
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <span className="font-display text-2xl text-foreground">{avgRating}</span>
+              <span className="text-muted-foreground text-sm">/ 5 i snitt</span>
+            </div>
+          </div>
+
+          {/* Locations overview */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {locations.map(loc => (
+              <span key={loc} className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full">
+                <MapPin className="w-3 h-3" />
+                {loc}
+              </span>
+            ))}
+          </div>
+
+          {/* Reviews grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {allReviews.map((review, index) => (
+              <blockquote
+                key={index}
+                className="bg-card border border-border rounded-lg p-6 flex flex-col"
+              >
+                <div className="flex gap-0.5 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < review.rating ? "fill-primary text-primary" : "fill-muted text-muted"}`}
+                    />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                  "{review.text}"
+                </p>
+                <footer className="border-t border-border pt-3 mt-auto">
+                  <cite className="not-italic font-semibold text-sm text-card-foreground">{review.name}</cite>
+                  <div className="flex items-center justify-between mt-1">
+                    <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                      <MapPin className="w-3 h-3" />
+                      {review.location}
+                    </span>
+                    <span className="text-xs text-primary font-medium">{review.roofType}</span>
+                  </div>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="max-w-2xl mx-auto text-center mt-16">
+            <div className="bg-accent rounded-lg p-8">
+              <h2 className="font-display text-2xl text-accent-foreground mb-2">
+                Redo att bli nästa nöjda kund?
+              </h2>
+              <p className="text-accent-foreground/70 text-sm mb-6">
+                Få en kostnadsfri offert eller boka rådgivning — vi återkopplar inom 24 timmar.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/#offert"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  Få offert <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/#radgivning"
+                  className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  Kostnadsfri rådgivning
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default Reviews;
