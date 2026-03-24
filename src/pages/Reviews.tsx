@@ -51,10 +51,10 @@ const Reviews = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Kundrecensioner</p>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              Vad våra kunder i Roslagen säger
+              Recensioner från takprojekt i Roslagen
             </h1>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              {allReviews.length} verifierade omdömen från kunder i {locations.length} orter runt Roslagens skärgård och kustlinje.
+              {allReviews.length} omdömen från kunder på {locations.length} platser i Roslagens skärgård — Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö och fler.
             </p>
             <div className="inline-flex items-center gap-3 bg-card border border-border rounded-lg px-6 py-3">
               <div className="flex gap-0.5">
