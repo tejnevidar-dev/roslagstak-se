@@ -10,7 +10,7 @@ const roofTypes = [
     pros: ["Kostnadseffektivt", "Snabb montering", "Lågt underhåll", "Lång livslängd (40–50 år)", "Lätt material"],
     cons: ["Kan ge ljud vid regn", "Enklare estetik", "Kondens kan uppstå utan rätt underlag"],
     lifespan: "40–50 år",
-    priceRange: "Från 450 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Ekonomibyggnader, villor, fritidshus längs kusten",
   },
   {
@@ -21,7 +21,7 @@ const roofTypes = [
     pros: ["Vackert tegelliknande utseende", "Tåligt mot salt och fukt", "Lätt att montera", "Underhållsfritt", "Lång livslängd"],
     cons: ["Dyrare än TP20", "Kan inte läggas på för låg taklutning"],
     lifespan: "40–60 år",
-    priceRange: "Från 550 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, sommarstuga vid kusten, skärgårdshus",
   },
   {
@@ -32,7 +32,7 @@ const roofTypes = [
     pros: ["Klassiskt utseende", "Väderbeständigt", "Minimal underhåll", "Bra vindtålighet"],
     cons: ["Kräver fackmässig montering", "Något högre kostnad"],
     lifespan: "40–50 år",
-    priceRange: "Från 500 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Skärgårdsvillor, representativa bostäder",
   },
   {
@@ -43,7 +43,7 @@ const roofTypes = [
     pros: ["Helt vattentätt", "Extremt lång livslängd", "Exklusivt utseende", "Inga synliga skruvar", "Fungerar vid låg taklutning"],
     cons: ["Högre kostnad", "Kräver specialiserad hantverkare", "Längre monteringstid"],
     lifespan: "60–100+ år",
-    priceRange: "Från 900 kr/m²",
+    priceRange: "Från 2 000 kr/m²",
     bestFor: "Exklusiva kustvillor, herrgårdar, kulturbyggnader",
   },
   {
@@ -54,7 +54,7 @@ const roofTypes = [
     pros: ["Tidlöst vackert", "Naturligt material", "Bra ljudisolering", "Åldras med värdighet", "Brandsäkert"],
     cons: ["Tungt — kräver förstärkt takstol", "Kan spricka vid frost", "Kräver regelbunden inspektion"],
     lifespan: "80–100+ år",
-    priceRange: "Från 650 kr/m²",
+    priceRange: "Från 1 500 kr/m²",
     bestFor: "Äldre villor, kulturhistoriska byggnader, herrgårdar",
   },
   {
@@ -65,7 +65,7 @@ const roofTypes = [
     pros: ["Prisvärt", "Brett färgutbud", "God ljudisolering", "Brandsäkert", "Tillverkas i Sverige"],
     cons: ["Tungt material", "Kan få mossväxt", "Färgen kan blekna med tiden"],
     lifespan: "50–70 år",
-    priceRange: "Från 400 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, radhus, ekonomibyggnader",
   },
   {
@@ -76,7 +76,7 @@ const roofTypes = [
     pros: ["Exklusivt utseende", "Självrenande effekt", "Mossresistent", "Färgbeständigt", "Lång livslängd"],
     cons: ["Dyrare än vanligt tegel", "Tungt", "Glasyren kan skadas vid hård mekanisk påverkan"],
     lifespan: "80–100+ år",
-    priceRange: "Från 750 kr/m²",
+    priceRange: "Från 1 800 kr/m²",
     bestFor: "Exklusiva villor, representativa fastigheter, skärgårdshus",
   },
   {
@@ -87,7 +87,7 @@ const roofTypes = [
     pros: ["Mycket prisvärt", "Lätt att lägga", "Flexibelt material", "Funkar på låg lutning"],
     cons: ["Kortare livslängd", "Kräver regelbundet underhåll", "Känsligt för UV-ljus", "Mindre estetiskt tilltalande"],
     lifespan: "15–30 år",
-    priceRange: "Från 200 kr/m²",
+    priceRange: "Från 900 kr/m²",
     bestFor: "Garage, uthus, friggebodar, ekonomibyggnader",
   },
 ];
