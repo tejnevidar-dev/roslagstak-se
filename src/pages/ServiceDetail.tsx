@@ -64,7 +64,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   takkupor: {
-    longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. I skärgårdshusen är det vanligt att vindsplanet är oinrett — med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum med havsutsikt.",
+    longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. Med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum och öka boendeytan avsevärt.",
     benefits: [
       "Mer dagsljus på vindsvåningen",
       "Ökat boendeyta och husvärde",
