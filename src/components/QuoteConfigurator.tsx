@@ -120,9 +120,9 @@ const QuoteConfigurator = () => {
             <div className="flex items-start gap-3 bg-primary/5 border border-primary/20 rounded-md p-4">
               <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Ungefärligt kostnadsförslag direkt på mail</p>
+                <p className="text-sm font-semibold text-foreground">Kostnadsförslag direkt på mail</p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Fyll i dina takval nedan och ange din e-post. Du får ett ungefärligt kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. Helt kostnadsfritt och utan förbindelser.
+                  Fyll i dina takval nedan och ange din e-post. Du får ett kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. Helt kostnadsfritt och utan förbindelser.
                 </p>
               </div>
             </div>
