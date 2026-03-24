@@ -1,20 +1,20 @@
-import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler } from "lucide-react";
+import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Anchor } from "lucide-react";
 
 const services = [
   {
     icon: Home,
     title: "Takomläggning",
-    description: "Komplett byte av takmaterial med moderna, hållbara lösningar anpassade för nordiskt klimat.",
+    description: "Komplett byte av takmaterial med moderna lösningar anpassade för kustklimat och havsnära miljöer.",
   },
   {
     icon: Wrench,
     title: "Takrenovering",
-    description: "Vi renoverar och förlänger livslängden på ditt befintliga tak med professionella metoder.",
+    description: "Vi renoverar och förlänger livslängden på ditt befintliga tak — även på svåråtkomliga öar.",
   },
   {
     icon: Droplets,
     title: "Takavvattning",
-    description: "Installation och byte av hängrännor, stuprör och takavvattningssystem.",
+    description: "Installation och byte av hängrännor, stuprör och takavvattningssystem som tål saltstänk.",
   },
   {
     icon: Sun,
@@ -40,10 +40,10 @@ const Services = () => {
         <div className="max-w-2xl mx-auto text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Våra tjänster</p>
           <h2 id="services-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Allt inom tak — från inspektion till färdigt resultat
+            Allt inom tak — från kust till skärgård
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Vi erbjuder helhetslösningar för alla typer av takprojekt i Roslagen och Stockholms skärgård.
+            Vi erbjuder helhetslösningar för alla typer av takprojekt längs Roslagens kustlinje och öar.
           </p>
         </div>
 

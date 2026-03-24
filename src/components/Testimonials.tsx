@@ -3,18 +3,18 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Anna Lindberg",
-    location: "Norrtälje",
-    text: "Fantastiskt jobb med vårt tak! Snyggt, snabbt och till det pris som utlovades. Rekommenderar varmt.",
+    location: "Ljusterö",
+    text: "Fantastiskt jobb med vårt tak på ön! Trots att vi bor på en ö fixade de allt smidigt. Snyggt, snabbt och till det pris som utlovades.",
   },
   {
     name: "Erik Johansson",
-    location: "Täby",
-    text: "Professionellt från start till slut. Hjälpte oss med ROT-avdraget och städade fint efter sig.",
+    location: "Vaxholm",
+    text: "Professionellt från start till slut. Hjälpte oss med ROT-avdraget och städade fint efter sig. Taket tål havsvinden!",
   },
   {
     name: "Maria Karlsson",
-    location: "Vallentuna",
-    text: "Bästa takläggarna vi har anlitat. Noggranna, trevliga och levererade ett tak som ser fantastiskt ut.",
+    location: "Grisslehamn",
+    text: "Bästa takläggarna vi har anlitat. Förstår skärgårdens förutsättningar och levererade ett tak som verkligen håller mot kustvädret.",
   },
 ];
 
@@ -25,7 +25,7 @@ const Testimonials = () => {
         <div className="max-w-2xl mx-auto text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Omdömen</p>
           <h2 id="testimonials-heading" className="font-display text-3xl md:text-4xl text-accent-foreground mb-4">
-            Vad våra kunder säger
+            Vad våra kunder längs kusten säger
           </h2>
         </div>
 

@@ -4,13 +4,13 @@ import heroImg from "@/assets/hero-roof.jpg";
 const projects = [
   {
     img: roofProject,
-    title: "Villarenovering i Norrtälje",
-    description: "Komplett takomläggning med betongpannor och ny takavvattning.",
+    title: "Kustvillal på Ljusterö",
+    description: "Komplett takomläggning med dubbelfalsat plåttak och ny takavvattning. Anpassat för havsklimat.",
   },
   {
     img: heroImg,
-    title: "Sommarstuga i Roslagen",
-    description: "Nytt plåttak och isolering för åretruntboende.",
+    title: "Skärgårdsstuga vid Singö",
+    description: "Nytt TP20 plåttak med råspontbyte och gångbrygga. Transport med egen båt till ön.",
   },
 ];
 
@@ -21,10 +21,10 @@ const Projects = () => {
         <div className="max-w-2xl mx-auto text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Våra projekt</p>
           <h2 id="projects-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Senaste takprojekten
+            Takprojekt längs Roslagens kust
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Här ser du ett urval av våra senaste takarbeten runt om i Roslagen.
+            Från öar i ytterskärgården till kuststäder — här ser du ett urval av våra senaste projekt.
           </p>
         </div>
 

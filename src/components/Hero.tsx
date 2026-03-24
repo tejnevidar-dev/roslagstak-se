@@ -1,4 +1,4 @@
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight, Shield, Anchor } from "lucide-react";
 import heroImg from "@/assets/hero-roof.jpg";
 
 const Hero = () => {
@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center" aria-label="Huvudsektion">
       <img
         src={heroImg}
-        alt="Svenskt hus med nylagt tak i Roslagen vid gyllene timmen"
+        alt="Svenskt hus med nylagt tak längs Roslagens kustlinje"
         width={1920}
         height={1080}
         className="absolute inset-0 w-full h-full object-cover"
@@ -17,32 +17,32 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-2xl space-y-6">
           <div className="flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-widest">
-            <Shield className="w-4 h-4" />
-            Certifierade takläggare i Roslagen
+            <Anchor className="w-4 h-4" />
+            Kustens takläggare — från Norrtälje till yttersta skärgården
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-tight text-balance">
-            Kvalitetstak som skyddar ditt hem i generationer
+            Trygga tak längs hela Roslagens kustlinje
           </h1>
 
           <p className="text-lg text-white/80 max-w-xl leading-relaxed">
-            Med över 20 års erfarenhet levererar vi takläggning, takrenovering och takbyte i hela Roslagen. 
-            Alltid med garanti och till fast pris.
+            Vi lägger tak på öar, halvöar och kuststäder i hela Roslagen. Från Vaxholm och Ljusterö 
+            till Norrtälje, Grisslehamn och Arholma — vi når dit andra inte gör.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <a
-              href="#kontakt"
+              href="#offert"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md text-base font-semibold hover:bg-primary/90 transition-colors"
             >
-              Begär offert
+              Konfigurera din offert
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#tjanster"
+              href="#radgivning"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-md text-base font-semibold hover:bg-white/10 transition-colors"
             >
-              Våra tjänster
+              Kostnadsfri rådgivning
             </a>
           </div>
 
@@ -51,7 +51,7 @@ const Hero = () => {
             <div className="w-px h-10 bg-white/20" />
             <div><span className="text-white font-bold text-2xl font-display">20+</span><br />Års erfarenhet</div>
             <div className="w-px h-10 bg-white/20" />
-            <div><span className="text-white font-bold text-2xl font-display">10</span><br />Års garanti</div>
+            <div><span className="text-white font-bold text-2xl font-display">100+</span><br />Öar & kuststäder</div>
           </div>
         </div>
       </div>
