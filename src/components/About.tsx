@@ -47,19 +47,20 @@ const About = () => {
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi har lagt tak på hundratals hem 
-                längs kustlinjen — från Vaxholm och Ljusterö till Singö, Grisslehamn och Arholma. Med en samlad 
+                i hela Roslagen — på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn och Ingmarsö, 
+                liksom i Vaxholm, Norrtälje, Väddö och Rådmansö. Med en samlad 
                 erfarenhet på över 70 år i organisationen har vi den kompetens som krävs för att leverera 
                 takprojekt av högsta kvalitet, alltid enligt branschens AMA-standard.
               </p>
               <p>
                 Vi vet hur det är att bo och verka i skärgården. Många av oss har själva vuxit upp med båtar, 
                 bryggor och röda stugor. Den kunskapen genomsyrar allt vi gör — från materialval till logistik. 
-                Vi når öar dit andra takfirmor inte tar sig, och vi löser de praktiska utmaningarna med 
-                materialtransport och tillgänglighet som skärgården innebär.
+                Vi tar oss ut till Högmarsö, Svartlöga, Söderöra, Norröra, Humlö och Gräskö — öar dit 
+                andra takfirmor inte når.
               </p>
               <p>
-                Vare sig du är året-runt-boende i Norrtälje, har en sommarstuga på Blidö, eller äger en skärgårdsfastighet 
-                på Arholma — vi ser till att ditt tak håller i årtionden, oavsett hur nära havet du bor. Vi erbjuder 
+                Vare sig du är året-runt-boende i Norrtälje, har en sommarstuga på Blidö, eller äger en fastighet 
+                på Arholma — vi ser till att ditt tak håller i årtionden. Vi erbjuder 
                 alltid kostnadsfri besiktning och offert, och vi hjälper dig med ROT-avdraget så att du får ut maximalt 
                 av din investering.
               </p>
@@ -86,7 +87,7 @@ const About = () => {
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg hidden md:block">
               <Anchor className="w-6 h-6 mb-1 opacity-80" />
-              <p className="font-display text-3xl">11</p>
+              <p className="font-display text-3xl">20+</p>
               <p className="text-sm opacity-90">Öar & kuststäder</p>
             </div>
           </div>

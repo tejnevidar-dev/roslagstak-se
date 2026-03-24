@@ -10,7 +10,7 @@ const Footer = () => {
               Roslags<span className="text-primary">Tak</span>
             </p>
             <p className="text-accent-foreground/60 text-sm leading-relaxed">
-              Professionell takläggning längs hela Roslagens kustlinje. 70 års samlad erfarenhet, 150+ nöjda kunder och verksamma på 11 öar och kuststäder.
+              Takläggare i Roslagen. Takbyte och takrenovering på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Vaxholm, Norrtälje och 20+ platser i skärgården.
             </p>
           </div>
           <div>
