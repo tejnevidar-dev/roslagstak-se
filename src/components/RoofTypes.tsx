@@ -21,7 +21,7 @@ const roofTypes = [
     pros: ["Vackert tegelliknande utseende", "Tåligt mot salt och fukt", "Lätt att montera", "Underhållsfritt", "Lång livslängd"],
     cons: ["Dyrare än TP20", "Kan inte läggas på för låg taklutning"],
     lifespan: "40–60 år",
-    priceRange: "Från 550 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, sommarstuga vid kusten, skärgårdshus",
   },
   {
