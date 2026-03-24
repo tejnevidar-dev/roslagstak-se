@@ -32,7 +32,7 @@ const roofTypes = [
     pros: ["Klassiskt utseende", "Väderbeständigt", "Minimal underhåll", "Bra vindtålighet"],
     cons: ["Kräver fackmässig montering", "Något högre kostnad"],
     lifespan: "40–50 år",
-    priceRange: "Från 500 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Skärgårdsvillor, representativa bostäder",
   },
   {
