@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Star } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -9,8 +9,10 @@ import { locations } from "@/data/locations";
 import NotFound from "./NotFound";
 
 const ServiceLocationPage = () => {
-  const { service, location: locSlug } = useParams<{ service: string; location: string }>();
-  const combo = service && locSlug ? getCombo(service, locSlug) : undefined;
+  const { location: locSlug } = useParams<{ location: string }>();
+  const pathname = useLocation().pathname;
+  const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : "";
+  const combo = serviceSlug && locSlug ? getCombo(serviceSlug, locSlug) : undefined;
 
   useEffect(() => {
     window.scrollTo(0, 0);
