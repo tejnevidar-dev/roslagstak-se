@@ -10,7 +10,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     benefits: [
       "Komplett borttagning av gammalt takmaterial",
       "Inspektion och byte av skadat underlag",
-      "Nytt takmaterial anpassat för kustklimat",
+      "Nytt takmaterial anpassat för din byggnad",
       "Installation av underlagspapp och ventilation",
       "Ny taksäkerhet (gångbrygga, takstege, snörasskydd)",
       "10 års garanti på arbete och material",
