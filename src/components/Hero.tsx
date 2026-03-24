@@ -22,12 +22,12 @@ const Hero = () => {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-tight text-balance">
-            Trygga tak längs hela Roslagens kustlinje
+            Takläggare i Roslagen — takbyte & takrenovering
           </h1>
 
           <p className="text-lg text-white/80 max-w-xl leading-relaxed">
-            Vi lägger tak på öar, halvöar och kuststäder i hela Roslagen. Från Vaxholm och Ljusterö 
-            till Norrtälje, Grisslehamn och Arholma — vi når dit andra inte gör.
+            Vi lägger tak på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Vaxholm, 
+            Norrtälje och fler platser i Roslagens skärgård. Kostnadsfri offert.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
