@@ -89,7 +89,7 @@ const QuoteConfigurator = () => {
               <div className="text-left">
                 <div>Konfigurera själv</div>
                 <div className={`text-xs font-normal ${mode === "configure" ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                  Ungefärligt kostnadsförslag på mail inom 2 min
+                  Kostnadsförslag på mail inom 2 min
                 </div>
               </div>
             </button>
