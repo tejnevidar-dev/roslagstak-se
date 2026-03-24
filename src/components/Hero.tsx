@@ -47,11 +47,11 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center gap-8 pt-6 text-white/70 text-sm">
-            <div><span className="text-white font-bold text-2xl font-display">500+</span><br />Nöjda kunder</div>
+            <div><span className="text-white font-bold text-2xl font-display">150+</span><br />Nöjda kunder</div>
             <div className="w-px h-10 bg-white/20" />
-            <div><span className="text-white font-bold text-2xl font-display">20+</span><br />Års erfarenhet</div>
+            <div><span className="text-white font-bold text-2xl font-display">70</span><br />Års samlad erfarenhet</div>
             <div className="w-px h-10 bg-white/20" />
-            <div><span className="text-white font-bold text-2xl font-display">100+</span><br />Öar & kuststäder</div>
+            <div><span className="text-white font-bold text-2xl font-display">11</span><br />Öar & kuststäder</div>
           </div>
         </div>
       </div>

@@ -1,16 +1,22 @@
-import roofProject from "@/assets/roof-project.jpg";
-import heroImg from "@/assets/hero-roof.jpg";
+import projectCottage from "@/assets/project-coastal-cottage.jpg";
+import projectVilla from "@/assets/project-villa-copper.jpg";
+import projectIsland from "@/assets/project-island-cabin.jpg";
 
 const projects = [
   {
-    img: roofProject,
-    title: "Kustvillal på Ljusterö",
-    description: "Komplett takomläggning med dubbelfalsat plåttak och ny takavvattning. Anpassat för havsklimat.",
+    img: projectCottage,
+    title: "Skärgårdsstuga, Blidö",
+    description: "Komplett takomläggning från gammalt papptak till nytt TP20 plåttak i grafitgrå. Inklusive råspontbyte och ny takavvattning.",
   },
   {
-    img: heroImg,
-    title: "Skärgårdsstuga vid Singö",
-    description: "Nytt TP20 plåttak med råspontbyte och gångbrygga. Transport med egen båt till ön.",
+    img: projectVilla,
+    title: "Kustvillal i Norrtälje",
+    description: "Dubbelfalsat kopparplåttak med ny takkupa och komplett avvattningssystem. Bandtäckning för maximal täthet och livslängd.",
+  },
+  {
+    img: projectIsland,
+    title: "Sjöbod på Arholma",
+    description: "Nytt plåttak på sjöbod i ytterskärgården. Transport av material med båt. Aluminiumplåt vald för bästa korrosionsbeständighet.",
   },
 ];
 
@@ -28,15 +34,15 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
             <article key={project.title} className="group overflow-hidden rounded-lg border border-border bg-card">
               <div className="overflow-hidden aspect-[16/10]">
                 <img
                   src={project.img}
                   alt={project.title}
-                  width={800}
-                  height={500}
+                  width={1024}
+                  height={640}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

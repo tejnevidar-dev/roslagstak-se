@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, CheckCircle, Home } from "lucide-react";
+import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle } from "lucide-react";
 
 const roofTypeOptions = [
   "TP20 Plåttak",
@@ -13,7 +13,10 @@ const roofTypeOptions = [
   "Vet ej / Behöver rådgivning",
 ];
 
+type TabMode = "configure" | "consultation";
+
 const QuoteConfigurator = () => {
+  const [mode, setMode] = useState<TabMode>("configure");
   const [currentRoof, setCurrentRoof] = useState("");
   const [newRoof, setNewRoof] = useState("");
   const [raspont, setRaspont] = useState("");
@@ -26,6 +29,7 @@ const QuoteConfigurator = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,7 +43,17 @@ const QuoteConfigurator = () => {
           <div className="max-w-2xl mx-auto text-center space-y-4">
             <CheckCircle className="w-16 h-16 text-primary mx-auto" />
             <h2 className="font-display text-3xl text-foreground">Tack för din förfrågan!</h2>
-            <p className="text-muted-foreground">Vi återkommer inom 24 timmar med en kostnadsfri offert baserad på dina val.</p>
+            {mode === "configure" ? (
+              <p className="text-muted-foreground">
+                Du kommer att få ett ungefärligt kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. 
+                Kolla gärna din skräppost om du inte ser det direkt.
+              </p>
+            ) : (
+              <p className="text-muted-foreground">
+                Vi återkopplar till dig <strong>inom 24 timmar</strong> från och med nu. 
+                En av våra takexperter kommer kontakta dig för kostnadsfri rådgivning.
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -50,152 +64,235 @@ const QuoteConfigurator = () => {
     <section id="offert" className="py-20 md:py-28 bg-background" aria-labelledby="quote-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Konfigurera offert</p>
+          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Offert & Rådgivning</p>
           <h2 id="quote-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Få en skräddarsydd offert på 2 minuter
+            Hur vill du ha hjälp?
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Filtrera in dina val nedan så kontaktar vi dig med ett prisförslag. Helt kostnadsfritt och utan förbindelser.
+            Välj mellan att konfigurera ditt tak själv och få ett prisförslag direkt, eller boka en kostnadsfri rådgivning med en av våra takexperter.
           </p>
         </div>
 
+        {/* Tab switcher */}
+        <div className="max-w-3xl mx-auto mb-8">
+          <div className="flex rounded-lg border border-border overflow-hidden">
+            <button
+              type="button"
+              onClick={() => setMode("configure")}
+              className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 text-sm font-semibold transition-colors ${
+                mode === "configure"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-card text-foreground hover:bg-muted"
+              }`}
+            >
+              <Mail className="w-4 h-4" />
+              <div className="text-left">
+                <div>Konfigurera själv</div>
+                <div className={`text-xs font-normal ${mode === "configure" ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
+                  Ungefärligt kostnadsförslag på mail inom 2 min
+                </div>
+              </div>
+            </button>
+            <button
+              type="button"
+              onClick={() => setMode("consultation")}
+              className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 text-sm font-semibold transition-colors ${
+                mode === "consultation"
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-card text-foreground hover:bg-muted"
+              }`}
+            >
+              <MessageCircle className="w-4 h-4" />
+              <div className="text-left">
+                <div>Kostnadsfri rådgivning</div>
+                <div className={`text-xs font-normal ${mode === "consultation" ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
+                  Vi återkopplar inom 24 timmar
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
         <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-card border border-border rounded-lg p-8 space-y-8">
-          {/* Current roof */}
-          <div>
-            <label className="block text-sm font-semibold text-foreground mb-3">
-              <Home className="w-4 h-4 inline mr-2 text-primary" />
-              Befintlig taktyp
-            </label>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {roofTypeOptions.map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setCurrentRoof(opt)}
-                  className={`px-3 py-2.5 rounded-md text-sm border transition-colors ${
-                    currentRoof === opt
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-background border-border text-foreground hover:border-primary/50"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
+          
+          {/* Info banner */}
+          {mode === "configure" ? (
+            <div className="flex items-start gap-3 bg-primary/5 border border-primary/20 rounded-md p-4">
+              <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-semibold text-foreground">Ungefärligt kostnadsförslag direkt på mail</p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Fyll i dina takval nedan och ange din e-post. Du får ett ungefärligt kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. Helt kostnadsfritt och utan förbindelser.
+                </p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="flex items-start gap-3 bg-primary/5 border border-primary/20 rounded-md p-4">
+              <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-semibold text-foreground">Vi återkopplar alltid inom 24 timmar</p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Beskriv ditt takprojekt eller ställ en fråga. En av våra takexperter kontaktar dig personligen inom 24 timmar från att formuläret skickas in. Helt kostnadsfritt.
+                </p>
+              </div>
+            </div>
+          )}
 
-          {/* New roof */}
-          <div>
-            <label className="block text-sm font-semibold text-foreground mb-3">Önskad ny taktyp</label>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {roofTypeOptions.map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setNewRoof(opt)}
-                  className={`px-3 py-2.5 rounded-md text-sm border transition-colors ${
-                    newRoof === opt
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-background border-border text-foreground hover:border-primary/50"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
+          {mode === "configure" && (
+            <>
+              {/* Current roof */}
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-3">
+                  <Home className="w-4 h-4 inline mr-2 text-primary" />
+                  Befintlig taktyp
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {roofTypeOptions.map((opt) => (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => setCurrentRoof(opt)}
+                      className={`px-3 py-2.5 rounded-md text-sm border transition-colors ${
+                        currentRoof === opt
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-background border-border text-foreground hover:border-primary/50"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          {/* Råspontbyte */}
-          <div>
-            <label className="block text-sm font-semibold text-foreground mb-3">Råspontbyte (underlagsbyte)</label>
-            <div className="flex gap-3">
-              {["Ja", "Nej", "Vet ej"].map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setRaspont(opt)}
-                  className={`px-6 py-2.5 rounded-md text-sm border transition-colors ${
-                    raspont === opt
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-background border-border text-foreground hover:border-primary/50"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
+              {/* New roof */}
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-3">Önskad ny taktyp</label>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {roofTypeOptions.map((opt) => (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => setNewRoof(opt)}
+                      className={`px-3 py-2.5 rounded-md text-sm border transition-colors ${
+                        newRoof === opt
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-background border-border text-foreground hover:border-primary/50"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          {/* Taksäkerhet */}
-          <div>
-            <label className="block text-sm font-semibold text-foreground mb-3">Taksäkerhet</label>
-            <div className="flex flex-wrap gap-3">
-              <button
-                type="button"
-                onClick={() => setGangbrygga(!gangbrygga)}
-                className={`px-5 py-2.5 rounded-md text-sm border transition-colors ${
-                  gangbrygga
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-background border-border text-foreground hover:border-primary/50"
-                }`}
-              >
-                Gångbrygga
-              </button>
-              <button
-                type="button"
-                onClick={() => setTakstege(!takstege)}
-                className={`px-5 py-2.5 rounded-md text-sm border transition-colors ${
-                  takstege
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-background border-border text-foreground hover:border-primary/50"
-                }`}
-              >
-                Takstege
-              </button>
-            </div>
-          </div>
+              {/* Råspontbyte */}
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-3">Råspontbyte (underlagsbyte)</label>
+                <div className="flex gap-3">
+                  {["Ja", "Nej", "Vet ej"].map((opt) => (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => setRaspont(opt)}
+                      className={`px-6 py-2.5 rounded-md text-sm border transition-colors ${
+                        raspont === opt
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-background border-border text-foreground hover:border-primary/50"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          {/* Avvattning */}
-          <div>
-            <label className="block text-sm font-semibold text-foreground mb-3">Byte av avvattning (hängrännor & stuprör)</label>
-            <div className="flex gap-3">
-              {["Ja", "Nej", "Vet ej"].map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setAvvattning(opt)}
-                  className={`px-6 py-2.5 rounded-md text-sm border transition-colors ${
-                    avvattning === opt
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-background border-border text-foreground hover:border-primary/50"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
+              {/* Taksäkerhet */}
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-3">Taksäkerhet</label>
+                <div className="flex flex-wrap gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setGangbrygga(!gangbrygga)}
+                    className={`px-5 py-2.5 rounded-md text-sm border transition-colors ${
+                      gangbrygga
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "bg-background border-border text-foreground hover:border-primary/50"
+                    }`}
+                  >
+                    Gångbrygga
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setTakstege(!takstege)}
+                    className={`px-5 py-2.5 rounded-md text-sm border transition-colors ${
+                      takstege
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "bg-background border-border text-foreground hover:border-primary/50"
+                    }`}
+                  >
+                    Takstege
+                  </button>
+                </div>
+              </div>
 
-          {/* Antal våningar */}
-          <div>
-            <label className="block text-sm font-semibold text-foreground mb-3">Antal våningar</label>
-            <div className="flex gap-3">
-              {["1", "1.5", "2", "2.5", "3+"].map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setFloors(opt)}
-                  className={`px-5 py-2.5 rounded-md text-sm border transition-colors ${
-                    floors === opt
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-background border-border text-foreground hover:border-primary/50"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
+              {/* Avvattning */}
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-3">Byte av avvattning (hängrännor & stuprör)</label>
+                <div className="flex gap-3">
+                  {["Ja", "Nej", "Vet ej"].map((opt) => (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => setAvvattning(opt)}
+                      className={`px-6 py-2.5 rounded-md text-sm border transition-colors ${
+                        avvattning === opt
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-background border-border text-foreground hover:border-primary/50"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Antal våningar */}
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-3">Antal våningar</label>
+                <div className="flex gap-3">
+                  {["1", "1.5", "2", "2.5", "3+"].map((opt) => (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => setFloors(opt)}
+                      className={`px-5 py-2.5 rounded-md text-sm border transition-colors ${
+                        floors === opt
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-background border-border text-foreground hover:border-primary/50"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
+
+          {mode === "consultation" && (
+            <div>
+              <label className="block text-sm font-semibold text-foreground mb-3">
+                Beskriv ditt takprojekt eller ställ en fråga
+              </label>
+              <textarea
+                placeholder="T.ex. Vi har en sommarstuga på Ljusterö med ett gammalt papptak som behöver bytas. Vad rekommenderar ni?"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows={4}
+                className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+              />
             </div>
-          </div>
+          )}
 
           {/* Kontaktuppgifter */}
           <div className="border-t border-border pt-6">
@@ -239,10 +336,24 @@ const QuoteConfigurator = () => {
             type="submit"
             className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-md font-semibold text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
           >
-            Skicka offertförfrågan
-            <ArrowRight className="w-4 h-4" />
+            {mode === "configure" ? (
+              <>
+                Få kostnadsförslag på mail
+                <ArrowRight className="w-4 h-4" />
+              </>
+            ) : (
+              <>
+                Skicka förfrågan
+                <ArrowRight className="w-4 h-4" />
+              </>
+            )}
           </button>
-          <p className="text-xs text-muted-foreground text-center">Helt kostnadsfritt. Vi återkommer inom 24 timmar.</p>
+
+          <p className="text-xs text-muted-foreground text-center">
+            {mode === "configure"
+              ? "Helt kostnadsfritt. Du får ett ungefärligt kostnadsförslag på e-post inom 2 minuter."
+              : "Helt kostnadsfritt. Vi återkopplar alltid inom 24 timmar från att formuläret skickas in."}
+          </p>
         </form>
       </div>
     </section>
