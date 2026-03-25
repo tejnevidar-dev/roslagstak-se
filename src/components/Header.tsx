@@ -15,7 +15,7 @@ const Header = () => {
     if (displayCount < FULL_TEXT.length) {
       const timeout = setTimeout(() => {
         setDisplayCount((c) => c + 1);
-      }, 100);
+      }, 180);
       return () => clearTimeout(timeout);
     }
   }, [displayCount]);
@@ -23,6 +23,7 @@ const Header = () => {
   const visibleText = FULL_TEXT.slice(0, displayCount);
   const prefix = visibleText.slice(0, SPLIT_INDEX);
   const suffix = visibleText.slice(SPLIT_INDEX);
+  const lastCharIndex = displayCount - 1;
 
   const navLinks = [
     { href: "#tjanster", label: "Tjänster" },
@@ -51,7 +52,17 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent/80">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight min-w-[140px]">
-          {prefix}<span className="text-primary">{suffix}</span>
+          {prefix.split("").map((ch, i) => (
+            <span key={i} className={i === lastCharIndex && lastCharIndex < SPLIT_INDEX ? "animate-pulse text-primary" : ""}>{ch}</span>
+          ))}
+          <span className="text-primary">
+            {suffix.split("").map((ch, i) => {
+              const globalIndex = SPLIT_INDEX + i;
+              return (
+                <span key={globalIndex} className={globalIndex === lastCharIndex ? "animate-pulse text-primary-foreground" : ""}>{ch}</span>
+              );
+            })}
+          </span>
           {displayCount < FULL_TEXT.length && <span className="animate-pulse text-primary">|</span>}
         </a>
 
