@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import SplashScreen, { shouldShowSplash } from "@/components/SplashScreen";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -17,6 +18,9 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const location = useLocation();
+  const [showSplash, setShowSplash] = useState(() => shouldShowSplash());
+
+  const handleSplashDone = useCallback(() => setShowSplash(false), []);
 
   useEffect(() => {
     if (location.hash) {
@@ -26,8 +30,10 @@ const Index = () => {
       }, 100);
     }
   }, [location.hash]);
+
   return (
     <>
+      {showSplash && <SplashScreen onDone={handleSplashDone} />}
       <SEOHead
         title="Takläggare Roslagen — Takbyte & Takrenovering Blidö, Ljusterö, Norrtälje"
         description="RoslagsTak – takläggare i Roslagen. Takbyte, takrenovering & takomläggning på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Vaxholm, Norrtälje m.fl. Kostnadsfri offert!"
