@@ -22,6 +22,10 @@ const SEOHead = ({ title, description, canonical, type = "website" }: SEOHeadPro
       <meta property="og:type" content={type} />
       <meta property="og:locale" content="sv_SE" />
       <meta property="og:site_name" content="RoslagsTak" />
+      <meta property="og:image" content="https://roslagstak.se/placeholder.svg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
     </Helmet>
   );
 };
