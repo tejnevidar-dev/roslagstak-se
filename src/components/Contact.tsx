@@ -39,8 +39,8 @@ const Contact = () => {
             {/* Google Maps */}
             <div className="rounded-lg overflow-hidden border border-border aspect-[16/9]">
               <iframe
-                title="RoslagsTak verksamhetsområde — Norrtälje, Roslagen"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d200000!2d18.7!3d59.76!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9e6a4eb3b5a5%3A0x5dc35c3b3b3b3b3b!2sNorrt%C3%A4lje!5e0!3m2!1ssv!2sse!4v1"
+                title="RoslagsTak — Blidö, Norrtälje"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d18.8347!3d59.5933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f8e1a2d3c4b5e%3A0x1234567890abcdef!2sBlid%C3%B6!5e0!3m2!1ssv!2sse!4v1"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
