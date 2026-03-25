@@ -15,7 +15,7 @@ const Header = () => {
     if (displayCount < FULL_TEXT.length) {
       const timeout = setTimeout(() => {
         setDisplayCount((c) => c + 1);
-      }, 100);
+      }, 180);
       return () => clearTimeout(timeout);
     }
   }, [displayCount]);
