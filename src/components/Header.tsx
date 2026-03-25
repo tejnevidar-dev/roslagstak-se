@@ -50,9 +50,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent/80">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight">
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight min-w-[140px]">
           {prefix}<span className="text-primary">{suffix}</span>
-          <span className="animate-pulse">|</span>
+          {displayCount < FULL_TEXT.length && <span className="animate-pulse text-primary">|</span>}
         </a>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Huvudnavigation">
