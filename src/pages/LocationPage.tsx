@@ -1,6 +1,6 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, ArrowRight, CheckCircle, Phone, Star, ChevronDown } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle, Phone, Star, ChevronDown, Home } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -92,7 +92,10 @@ const LocationPage = () => {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
-            <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
+            <Link to="/" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Home className="w-4 h-4" />
+              Startsidan
+            </Link>
             <span>/</span>
             <Link to="/#omraden" className="hover:text-primary transition-colors">Områden</Link>
             <span>/</span>
