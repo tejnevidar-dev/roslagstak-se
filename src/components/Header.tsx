@@ -1,11 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, Menu, X, MessageCircle } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
+const FULL_TEXT = "RoslagsTak";
+const SPLIT_INDEX = 7; // "Roslags" = 7 chars
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [displayCount, setDisplayCount] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    if (displayCount < FULL_TEXT.length) {
+      const timeout = setTimeout(() => {
+        setDisplayCount((c) => c + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [displayCount]);
+
+  const visibleText = FULL_TEXT.slice(0, displayCount);
+  const prefix = visibleText.slice(0, SPLIT_INDEX);
+  const suffix = visibleText.slice(SPLIT_INDEX);
 
   const navLinks = [
     { href: "#tjanster", label: "Tjänster" },
@@ -34,7 +51,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent/80">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight">
-          Roslags<span className="text-primary">Tak</span>
+          {prefix}<span className="text-primary">{suffix}</span>
+          <span className="animate-pulse">|</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Huvudnavigation">
