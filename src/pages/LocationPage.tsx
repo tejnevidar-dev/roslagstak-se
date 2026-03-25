@@ -91,16 +91,25 @@ const LocationPage = () => {
 
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
-            <Link to="/" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
+          <div className="flex items-center justify-between mb-8">
+            <nav className="flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
+              <Link to="/" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
+                <Home className="w-4 h-4" />
+                Startsidan
+              </Link>
+              <span>/</span>
+              <Link to="/#omraden" className="hover:text-primary transition-colors">Områden</Link>
+              <span>/</span>
+              <span className="text-foreground font-medium">{location.name}</span>
+            </nav>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
+            >
               <Home className="w-4 h-4" />
-              Startsidan
+              Till startsidan
             </Link>
-            <span>/</span>
-            <Link to="/#omraden" className="hover:text-primary transition-colors">Områden</Link>
-            <span>/</span>
-            <span className="text-foreground font-medium">{location.name}</span>
-          </nav>
+          </div>
 
           {/* Hero */}
           <div className="max-w-4xl mb-16">
