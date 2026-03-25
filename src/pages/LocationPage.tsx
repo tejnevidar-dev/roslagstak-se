@@ -1,17 +1,23 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, ArrowRight, CheckCircle, Phone } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle, Phone, Star, ChevronDown } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getLocationBySlug, locations } from "@/data/locations";
+import { generateLocationFAQs } from "@/data/location-faqs";
 import NotFound from "./NotFound";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const LocationPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const pathname = useLocation().pathname;
   
-  // Extract slug from pathname as fallback
   const resolvedSlug = slug || (pathname.startsWith("/taklaggare-") ? pathname.replace("/taklaggare-", "") : undefined);
   const location = resolvedSlug ? getLocationBySlug(resolvedSlug) : undefined;
 
@@ -22,6 +28,8 @@ const LocationPage = () => {
   if (!location) return <NotFound />;
 
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
+  const prep = location.isIsland ? "på" : "i";
+  const faqs = generateLocationFAQs(location.name, prep, location.isIsland);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -41,12 +49,32 @@ const LocationPage = () => {
       addressRegion: "Stockholms län",
       addressCountry: "SE",
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      ratingCount: "153",
+      reviewCount: "153",
+    },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
     <>
       <SEOHead
-        title={`Takläggare ${location.isIsland ? "på" : "i"} ${location.name} — Takbyte & Takrenovering`}
+        title={`Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`}
         description={location.description}
         canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
       />
@@ -55,6 +83,10 @@ const LocationPage = () => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
 
         <div className="container mx-auto px-4">
@@ -74,11 +106,22 @@ const LocationPage = () => {
               {location.region}
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              Takläggare {location.isIsland ? "på" : "i"} {location.name} — takbyte & takrenovering
+              Takläggare {prep} {location.name} — takbyte & takrenovering
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {location.description}
             </p>
+            {/* Star rating */}
+            <div className="flex items-center gap-2 mt-4">
+              <div className="flex">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground">
+                4.9 av 5 — baserat på 153 kundrecensioner
+              </span>
+            </div>
           </div>
 
           {/* Content */}
@@ -86,19 +129,19 @@ const LocationPage = () => {
             <div className="lg:col-span-2 space-y-8">
               <div className="prose prose-slate max-w-none">
                 <h2 className="font-display text-2xl text-foreground mb-4">
-                  Takbyte och takrenovering {location.isIsland ? "på" : "i"} {location.name}
+                  Takbyte och takrenovering {prep} {location.name}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {location.longDescription}
                 </p>
 
                 <h3 className="font-display text-xl text-foreground mb-3">
-                  Våra taktjänster {location.isIsland ? "på" : "i"} {location.name}
+                  Våra taktjänster {prep} {location.name}
                 </h3>
                 <ul className="space-y-2 mb-6">
                   {[
-                    `Takomläggning ${location.isIsland ? "på" : "i"} ${location.name}`,
-                    `Takrenovering ${location.isIsland ? "på" : "i"} ${location.name}`,
+                    `Takomläggning ${prep} ${location.name}`,
+                    `Takrenovering ${prep} ${location.name}`,
                     `Plåtarbeten och takavvattning`,
                     `TP20, dubbelfalsat, tegelplåt, pannplåt och lertegeltak`,
                     `Takinspektion med kostnadsfri rapport`,
@@ -114,14 +157,14 @@ const LocationPage = () => {
                 {/* Deep internal links */}
                 <div className="bg-card border border-border rounded-lg p-5 mb-6">
                   <h3 className="font-display text-lg text-card-foreground mb-3">
-                    Populära tjänster {location.isIsland ? "på" : "i"} {location.name}
+                    Populära tjänster {prep} {location.name}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-2">
                     <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Takbyte {location.isIsland ? "på" : "i"} {location.name}
+                      <ArrowRight className="w-3 h-3" /> Takbyte {prep} {location.name}
                     </Link>
                     <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Takrenovering {location.isIsland ? "på" : "i"} {location.name}
+                      <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}
                     </Link>
                     <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Se prislista
@@ -139,7 +182,7 @@ const LocationPage = () => {
                 </div>
 
                 <h3 className="font-display text-xl text-foreground mb-3">
-                  Varför välja RoslagsTak {location.isIsland ? "på" : "i"} {location.name}?
+                  Varför välja RoslagsTak {prep} {location.name}?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Vi har 70 års samlad erfarenhet och har genomfört 150+ takprojekt i Roslagen. 
@@ -149,6 +192,25 @@ const LocationPage = () => {
                   {" "}Alla arbeten utförs enligt AMA-standard med 10 års garanti.
                 </p>
               </div>
+
+              {/* FAQ Section */}
+              <div className="mt-8">
+                <h2 className="font-display text-2xl text-foreground mb-6">
+                  Vanliga frågor om takbyte {prep} {location.name}
+                </h2>
+                <Accordion type="single" collapsible className="space-y-2">
+                  {faqs.map((faq, i) => (
+                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-4">
+                      <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
             </div>
 
             {/* Sidebar */}
@@ -156,7 +218,7 @@ const LocationPage = () => {
               <div className="bg-primary text-primary-foreground rounded-lg p-6">
                 <h3 className="font-display text-lg mb-2">Kostnadsfri offert</h3>
                 <p className="text-sm opacity-90 mb-4">
-                  Få en offert för ditt takprojekt {location.isIsland ? "på" : "i"} {location.name}. Vi återkopplar inom 24 timmar.
+                  Få en offert för ditt takprojekt {prep} {location.name}. Vi återkopplar inom 24 timmar.
                 </p>
                 <Link
                   to="/#offert"
@@ -219,7 +281,7 @@ const LocationPage = () => {
                   key={loc.slug}
                   to={`/taklaggare-${loc.slug}`}
                   className={`inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full transition-colors ${
-                    loc.slug === slug
+                    loc.slug === resolvedSlug
                       ? "bg-primary text-primary-foreground"
                       : "bg-primary/10 text-primary hover:bg-primary/20"
                   }`}
