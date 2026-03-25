@@ -28,7 +28,6 @@ const Header = () => {
   const visibleText = FULL_TEXT.slice(0, displayCount);
   const prefix = visibleText.slice(0, SPLIT_INDEX);
   const suffix = visibleText.slice(SPLIT_INDEX);
-  const lastCharIndex = displayCount - 1;
 
   const navLinks = [
     { href: "#tjanster", label: "Tjänster" },
