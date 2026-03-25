@@ -11,10 +11,15 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [flashIndex, setFlashIndex] = useState(-1);
+
   useEffect(() => {
     if (displayCount < FULL_TEXT.length) {
       const timeout = setTimeout(() => {
+        setFlashIndex(displayCount);
         setDisplayCount((c) => c + 1);
+        // Clear flash after a short moment
+        setTimeout(() => setFlashIndex(-1), 150);
       }, 180);
       return () => clearTimeout(timeout);
     }
