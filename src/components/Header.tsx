@@ -58,13 +58,13 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight min-w-[140px]">
           {prefix.split("").map((ch, i) => (
-            <span key={i} className={i === lastCharIndex && lastCharIndex < SPLIT_INDEX ? "animate-pulse text-primary" : ""}>{ch}</span>
+            <span key={i} className={i === flashIndex && flashIndex < SPLIT_INDEX ? "text-primary transition-colors duration-150" : ""}>{ch}</span>
           ))}
           <span className="text-primary">
             {suffix.split("").map((ch, i) => {
               const globalIndex = SPLIT_INDEX + i;
               return (
-                <span key={globalIndex} className={globalIndex === lastCharIndex ? "animate-pulse text-primary-foreground" : ""}>{ch}</span>
+                <span key={globalIndex} className={globalIndex === flashIndex ? "text-primary-foreground transition-colors duration-150" : ""}>{ch}</span>
               );
             })}
           </span>
