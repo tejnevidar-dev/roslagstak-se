@@ -1,6 +1,6 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, ArrowRight, CheckCircle, Phone, Star, ChevronDown } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle, Phone, Star, ChevronDown, Home } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
