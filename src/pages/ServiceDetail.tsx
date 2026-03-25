@@ -218,20 +218,6 @@ const ServiceDetail = () => {
               <p className="text-foreground leading-relaxed">{details.longDesc}</p>
             </div>
 
-            {/* Price indication */}
-            {details.priceRange && (
-              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-12">
-                <h2 className="font-display text-xl text-foreground mb-2 flex items-center gap-2">
-                  💰 Prisindikation
-                </h2>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {details.priceRange}
-                </p>
-                <p className="text-xs text-muted-foreground mt-2">
-                  * Priserna är riktpriser. Kontakta oss för en exakt offert anpassad efter ditt projekt.
-                </p>
-              </div>
-            )}
 
             {/* Benefits & Process */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
