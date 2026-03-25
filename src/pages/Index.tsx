@@ -18,6 +18,9 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const location = useLocation();
+  const [showSplash, setShowSplash] = useState(() => shouldShowSplash());
+
+  const handleSplashDone = useCallback(() => setShowSplash(false), []);
 
   useEffect(() => {
     if (location.hash) {
@@ -27,8 +30,10 @@ const Index = () => {
       }, 100);
     }
   }, [location.hash]);
+
   return (
     <>
+      {showSplash && <SplashScreen onDone={handleSplashDone} />}
       <SEOHead
         title="Takläggare Roslagen — Takbyte & Takrenovering Blidö, Ljusterö, Norrtälje"
         description="RoslagsTak – takläggare i Roslagen. Takbyte, takrenovering & takomläggning på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Vaxholm, Norrtälje m.fl. Kostnadsfri offert!"
