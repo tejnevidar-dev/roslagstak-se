@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="max-w-2xl space-y-6">
           <div className="flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-widest">
             <Anchor className="w-4 h-4" />
-            Kustens takläggare — från Norrtälje till yttersta skärgården
+            Skärgårdens takläggare — från Norrtälje till yttersta skärgården
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-tight text-balance">
