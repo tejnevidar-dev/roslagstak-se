@@ -98,6 +98,10 @@ const LocationPage = () => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
 
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
