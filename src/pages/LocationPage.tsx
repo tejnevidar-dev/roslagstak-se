@@ -71,6 +71,16 @@ const LocationPage = () => {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
+      { "@type": "ListItem", position: 2, name: "Områden", item: "https://roslagstak.se/#omraden" },
+      { "@type": "ListItem", position: 3, name: `Takläggare ${prep} ${location.name}`, item: `https://roslagstak.se/taklaggare-${location.slug}` },
+    ],
+  };
+
   return (
     <>
       <SEOHead
