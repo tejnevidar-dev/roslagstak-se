@@ -48,7 +48,7 @@ const Index = () => {
         <FreeConsultation />
         <About />
         <ServiceArea />
-        <Projects />
+        
         <Testimonials />
         <FAQ />
         <Contact />
