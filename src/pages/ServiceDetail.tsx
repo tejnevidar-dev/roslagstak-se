@@ -171,7 +171,7 @@ const ServiceDetail = () => {
       "@type": "RoofingContractor",
       name: "RoslagsTak",
       url: "https://roslagstak.se",
-      telephone: "+46730849772",
+      telephone: "+46701543639",
     },
     areaServed: { "@type": "Place", name: "Roslagen" },
   };
