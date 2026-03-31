@@ -1,41 +1,23 @@
 import { Star, ExternalLink } from "lucide-react";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import projectCottage from "@/assets/project-coastal-cottage.jpg";
-import projectVilla from "@/assets/project-villa-copper.jpg";
-import projectIsland from "@/assets/project-island-cabin.jpg";
-import beforeRoof1 from "@/assets/before-roof-1.jpg";
-import afterRoof1 from "@/assets/after-roof-1.jpg";
-import beforeRoof2 from "@/assets/before-roof-2.jpg";
-import afterRoof2 from "@/assets/after-roof-2.jpg";
 
 const projects = [
   {
-    img: projectCottage,
     title: "Skärgårdsstuga, Blidö",
     description: "Komplett takomläggning från gammalt papptak till nytt TP20 plåttak i grafitgrå. Inklusive råspontbyte och ny takavvattning.",
   },
   {
-    img: projectVilla,
     title: "Kustvilla i Norrtälje",
     description: "Dubbelfalsat kopparplåttak med ny takkupa och komplett avvattningssystem. Bandtäckning för maximal täthet och livslängd.",
   },
   {
-    img: projectIsland,
     title: "Sjöbod på Arholma",
     description: "Nytt plåttak på sjöbod i ytterskärgården. Transport av material med båt. Aluminiumplåt vald för bästa korrosionsbeständighet.",
   },
-];
-
-const beforeAfterProjects = [
   {
-    before: beforeRoof1,
-    after: afterRoof1,
     title: "Takomläggning, Ljusterö",
     description: "Från slitet pannetak med mossa och saknade pannor till nytt TP20 plåttak i grafitgrå.",
   },
   {
-    before: beforeRoof2,
-    after: afterRoof2,
     title: "Takbyte, Norrtälje",
     description: "Gammalt skadat tak ersatt med nytt dubbelfalsat plåttak. Komplett råspontbyte och ny avvattning.",
   },
@@ -55,43 +37,11 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Before/After section */}
-        <div className="mb-16">
-          <h3 className="font-display text-2xl text-foreground text-center mb-8">Före & efter</h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {beforeAfterProjects.map((project) => (
-              <div key={project.title} className="space-y-3">
-                <BeforeAfterSlider
-                  beforeImage={project.before}
-                  afterImage={project.after}
-                  beforeLabel="Före"
-                  afterLabel="Efter"
-                />
-                <h4 className="font-display text-lg text-foreground">{project.title}</h4>
-                <p className="text-muted-foreground text-sm">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Regular projects */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {projects.map((project) => (
-            <article key={project.title} className="group overflow-hidden rounded-lg border border-border bg-card">
-              <div className="overflow-hidden aspect-[16/10]">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  width={1024}
-                  height={640}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-display text-xl text-card-foreground mb-2">{project.title}</h3>
-                <p className="text-muted-foreground text-sm">{project.description}</p>
-              </div>
+            <article key={project.title} className="rounded-lg border border-border bg-card p-6">
+              <h3 className="font-display text-xl text-card-foreground mb-2">{project.title}</h3>
+              <p className="text-muted-foreground text-sm">{project.description}</p>
             </article>
           ))}
         </div>
