@@ -9,7 +9,7 @@ import RoofTypes from "@/components/RoofTypes";
 import QuoteConfigurator from "@/components/QuoteConfigurator";
 import FreeConsultation from "@/components/FreeConsultation";
 import About from "@/components/About";
-import Projects from "@/components/Projects";
+
 import Testimonials from "@/components/Testimonials";
 import ServiceArea from "@/components/ServiceArea";
 import FAQ from "@/components/FAQ";
@@ -48,7 +48,7 @@ const Index = () => {
         <FreeConsultation />
         <About />
         <ServiceArea />
-        <Projects />
+        
         <Testimonials />
         <FAQ />
         <Contact />
