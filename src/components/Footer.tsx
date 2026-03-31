@@ -34,7 +34,7 @@ const Footer = () => {
               <li>073-084 97 72</li>
               <li>info@roslagstak.se</li>
               <li>Norrtälje, Roslagen</li>
-              <li>Org.nr: 559539-3595</li>
+              <li data-nosnippet="">Org.nr: {orgNr}</li>
             </ul>
           </div>
         </div>
