@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
       "Så går vår takinspektion till: Vi klättrar upp på taket och inspekterar ytskikt, underlagspapp (om synlig), plåtbeslag runt skorstenar och ventiler, hängrännor, stuprör, takstege och gångbrygga. Vi fotograferar och dokumenterar alla fynd.",
       "Efter inspektionen får du en skriftlig rapport med bilder, bedömning av takets skick och vår rekommendation — renovering, reparation eller takbyte. Vi är alltid ärliga och rekommenderar aldrig onödiga åtgärder.",
       "Vår takinspektion är helt kostnadsfri och förutsättningslös. Vi genomför inspektioner i hela Roslagen — från Arholma i norr till Vaxholm i söder, och på alla öar däremellan.",
-      "Boka din kostnadsfria takinspektion idag. Ring 073-084 97 72 eller fyll i vårt offertformulär. Vi återkopplar inom 24 timmar.",
+      "Boka din kostnadsfria takinspektion idag. Ring 070-154 36 39 eller fyll i vårt offertformulär. Vi återkopplar inom 24 timmar.",
     ],
   },
 ];

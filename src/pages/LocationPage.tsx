@@ -36,7 +36,7 @@ const LocationPage = () => {
     "@type": "RoofingContractor",
     name: "RoslagsTak",
     url: `https://roslagstak.se/taklaggare-${location.slug}`,
-    telephone: "+46730849772",
+    telephone: "+46701543639",
     email: "info@roslagstak.se",
     areaServed: {
       "@type": "Place",
@@ -253,10 +253,10 @@ const LocationPage = () => {
                   Konfigurera din offert <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="tel:+46730849772"
+                  href="tel:+46701543639"
                   className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors mt-3"
                 >
-                  <Phone className="w-4 h-4" /> Ring 073-084 97 72
+                  <Phone className="w-4 h-4" /> Ring 070-154 36 39
                 </a>
               </div>
 

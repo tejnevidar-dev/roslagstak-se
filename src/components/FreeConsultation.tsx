@@ -25,11 +25,11 @@ const FreeConsultation = () => {
               <h3 className="font-semibold text-accent-foreground text-sm mb-1">Ring direkt</h3>
               <p className="text-accent-foreground/60 text-xs mb-3">Prata med en takexpert</p>
               <a
-                href="tel:+46730849772"
+                href="tel:+46701543639"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                073-084 97 72
+                070-154 36 39
               </a>
             </div>
 
