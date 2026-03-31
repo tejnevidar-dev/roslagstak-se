@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 
 const Footer = () => {
+  const orgNr = useMemo(() => ["559", "539", "-", "3595"].join(""), []);
   return (
     <footer className="bg-accent text-accent-foreground py-12 border-t border-accent-foreground/10" role="contentinfo">
       <div className="container mx-auto px-4">
@@ -32,7 +34,7 @@ const Footer = () => {
               <li>073-084 97 72</li>
               <li>info@roslagstak.se</li>
               <li>Norrtälje, Roslagen</li>
-              <li>Org.nr: 559539-3595</li>
+              <li data-nosnippet="">Org.nr: {orgNr}</li>
             </ul>
           </div>
         </div>
