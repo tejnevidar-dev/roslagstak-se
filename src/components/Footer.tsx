@@ -32,7 +32,7 @@ const Footer = () => {
               <li>073-084 97 72</li>
               <li>info@roslagstak.se</li>
               <li>Norrtälje, Roslagen</li>
-              <li>Org.nr: 556xxx-xxxx</li>
+              <li>Org.nr: 559539-3595</li>
             </ul>
           </div>
         </div>
