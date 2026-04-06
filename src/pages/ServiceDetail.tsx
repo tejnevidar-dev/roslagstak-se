@@ -128,6 +128,26 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Slutbesiktning",
     ],
   },
+  takvard: {
+    longDesc: "Takvård handlar om att underhålla och skydda ditt tak för att förlänga dess livslängd och bevara husets utseende. Vi erbjuder professionell taktvätt där vi tar bort mossa, alger och smuts med skonsamma metoder som inte skadar takmaterialet. Vi utför även takmålning med specialfärger anpassade för tak — oavsett om det är betongpannor, tegelpannor eller plåttak. Ett välskött tak håller längre, ser bättre ut och skyddar bättre mot väder och vind.",
+    priceRange: "Taktvätt från ca 80 kr/m². Takmålning från ca 150 kr/m². ROT-avdrag tillkommer.",
+    benefits: [
+      "Professionell taktvätt med skonsam metod",
+      "Borttagning av mossa, alger och lavar",
+      "Takmålning med specialfärg för tak",
+      "Förlänger takets livslängd avsevärt",
+      "Fräschar upp husets utseende",
+      "Skyddar takmaterialet mot fukt och UV",
+    ],
+    process: [
+      "Kostnadsfri besiktning av takets skick",
+      "Offert med tydlig beskrivning av åtgärder",
+      "Skonsam högtryckstvätt eller manuell rengöring",
+      "Behandling mot mossa och alger",
+      "Grundning och takmålning vid behov",
+      "Slutkontroll och dokumentation",
+    ],
+  },
 };
 
 const ServiceDetail = () => {

@@ -1,4 +1,4 @@
-import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler } from "lucide-react";
+import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -38,6 +38,12 @@ export const services = [
     slug: "platarbeten",
     title: "Plåtarbeten",
     description: "Taktäckning, beslag och plåtdetaljer utförda av certifierade plåtslagare.",
+  },
+  {
+    icon: Sparkles,
+    slug: "takvard",
+    title: "Takvård",
+    description: "Professionell taktvätt och takmålning som förlänger livslängden och fräschar upp ditt tak.",
   },
 ];
 
