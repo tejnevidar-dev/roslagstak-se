@@ -279,6 +279,31 @@ const ServiceDetail = () => {
               </div>
             </div>
 
+            {/* Internal links */}
+            <div className="bg-card border border-border rounded-lg p-6 mt-8">
+              <h2 className="font-display text-lg text-card-foreground mb-3">Relaterat innehåll</h2>
+              <div className="grid sm:grid-cols-2 gap-2">
+                <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Se prislista
+                </Link>
+                <Link to="/blogg/kostnad-takbyte-2026" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Vad kostar takbyte 2026?
+                </Link>
+                <Link to="/blogg/rot-avdrag-takbyte" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> ROT-avdrag vid takbyte
+                </Link>
+                <Link to="/taklaggare-blido" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takläggare på Blidö
+                </Link>
+                <Link to="/taklaggare-ljustero" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takläggare på Ljusterö
+                </Link>
+                <Link to="/recensioner" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Kundrecensioner
+                </Link>
+              </div>
+            </div>
+
             {/* Back */}
             <div className="mt-8">
               <Link to="/#tjanster" className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all">
