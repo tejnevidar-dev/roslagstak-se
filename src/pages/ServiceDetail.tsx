@@ -167,11 +167,19 @@ const ServiceDetail = () => {
     "@type": "Service",
     name: service.title,
     description: details.longDesc,
+    ...(details.priceRange ? { offers: { "@type": "Offer", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "SEK", description: details.priceRange } } } : {}),
     provider: {
       "@type": "RoofingContractor",
       name: "RoslagsTak",
       url: "https://roslagstak.se",
       telephone: "+46701543639",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        ratingCount: "153",
+        reviewCount: "153",
+      },
     },
     areaServed: { "@type": "Place", name: "Roslagen" },
   };

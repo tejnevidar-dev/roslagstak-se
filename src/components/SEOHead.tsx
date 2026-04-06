@@ -30,6 +30,8 @@ const SEOHead = ({ title, description, canonical, type = "website" }: SEOHeadPro
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="https://roslagstak.se/og-image.jpg" />
+      <link rel="alternate" hreflang="sv" href={url} />
+      <link rel="alternate" hreflang="x-default" href={url} />
     </Helmet>
   );
 };

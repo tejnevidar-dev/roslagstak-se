@@ -11,6 +11,7 @@ const Hero = () => {
         height={1080}
         className="absolute inset-0 w-full h-full object-cover"
         fetchPriority="high"
+        decoding="async"
       />
       <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
 
