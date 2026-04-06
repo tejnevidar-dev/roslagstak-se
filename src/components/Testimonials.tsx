@@ -1,4 +1,4 @@
-import { Star, ArrowRight } from "lucide-react";
+import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const testimonials = [
@@ -47,13 +47,23 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <div className="text-center mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
           <Link
             to="/recensioner"
             className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all"
           >
             Läs alla {24} recensioner <ArrowRight className="w-4 h-4" />
           </Link>
+          <a
+            href="https://share.google/FsdpfTq9H3amLoTPe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
+          >
+            <Star className="w-4 h-4 fill-current" />
+            Se våra Google-recensioner
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
       </div>
     </section>
