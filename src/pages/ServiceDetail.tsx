@@ -167,11 +167,19 @@ const ServiceDetail = () => {
     "@type": "Service",
     name: service.title,
     description: details.longDesc,
+    ...(details.priceRange ? { offers: { "@type": "Offer", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "SEK", description: details.priceRange } } } : {}),
     provider: {
       "@type": "RoofingContractor",
       name: "RoslagsTak",
       url: "https://roslagstak.se",
       telephone: "+46701543639",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        ratingCount: "153",
+        reviewCount: "153",
+      },
     },
     areaServed: { "@type": "Place", name: "Roslagen" },
   };
@@ -267,6 +275,31 @@ const ServiceDetail = () => {
                   className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   Kostnadsfri rådgivning
+                </Link>
+              </div>
+            </div>
+
+            {/* Internal links */}
+            <div className="bg-card border border-border rounded-lg p-6 mt-8">
+              <h2 className="font-display text-lg text-card-foreground mb-3">Relaterat innehåll</h2>
+              <div className="grid sm:grid-cols-2 gap-2">
+                <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Se prislista
+                </Link>
+                <Link to="/blogg/kostnad-takbyte-2026" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Vad kostar takbyte 2026?
+                </Link>
+                <Link to="/blogg/rot-avdrag-takbyte" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> ROT-avdrag vid takbyte
+                </Link>
+                <Link to="/taklaggare-blido" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takläggare på Blidö
+                </Link>
+                <Link to="/taklaggare-ljustero" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takläggare på Ljusterö
+                </Link>
+                <Link to="/recensioner" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Kundrecensioner
                 </Link>
               </div>
             </div>

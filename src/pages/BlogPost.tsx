@@ -81,8 +81,33 @@ const BlogPost = () => {
               ))}
             </div>
 
+            {/* Internal links */}
+            <div className="bg-card border border-border rounded-lg p-6 mt-10">
+              <h2 className="font-display text-lg text-card-foreground mb-3">Läs mer om tak i Roslagen</h2>
+              <div className="grid sm:grid-cols-2 gap-2">
+                <Link to="/tjanster/takomlaggning" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takomläggning
+                </Link>
+                <Link to="/tjanster/takrenovering" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takrenovering
+                </Link>
+                <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Se prislista
+                </Link>
+                <Link to="/taklaggare-blido" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takläggare på Blidö
+                </Link>
+                <Link to="/taklaggare-ljustero" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takläggare på Ljusterö
+                </Link>
+                <Link to="/recensioner" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Kundrecensioner
+                </Link>
+              </div>
+            </div>
+
             {/* CTA */}
-            <div className="bg-primary/10 rounded-lg p-8 mt-12 text-center">
+            <div className="bg-primary/10 rounded-lg p-8 mt-8 text-center">
               <h2 className="font-display text-xl text-foreground mb-2">Behöver du hjälp med ditt tak?</h2>
               <p className="text-muted-foreground text-sm mb-4">Kostnadsfri offert — vi återkopplar inom 24 timmar.</p>
               <Link

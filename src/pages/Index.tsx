@@ -1,19 +1,19 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, lazy, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import SplashScreen, { shouldShowSplash } from "@/components/SplashScreen";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import RoofTypes from "@/components/RoofTypes";
-import QuoteConfigurator from "@/components/QuoteConfigurator";
-import FreeConsultation from "@/components/FreeConsultation";
-import About from "@/components/About";
 
-import Testimonials from "@/components/Testimonials";
-import ServiceArea from "@/components/ServiceArea";
-import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
+const RoofTypes = lazy(() => import("@/components/RoofTypes"));
+const QuoteConfigurator = lazy(() => import("@/components/QuoteConfigurator"));
+const FreeConsultation = lazy(() => import("@/components/FreeConsultation"));
+const About = lazy(() => import("@/components/About"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const ServiceArea = lazy(() => import("@/components/ServiceArea"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Contact = lazy(() => import("@/components/Contact"));
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -43,15 +43,16 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
-        <RoofTypes />
-        <QuoteConfigurator />
-        <FreeConsultation />
-        <About />
-        <ServiceArea />
-        
-        <Testimonials />
-        <FAQ />
-        <Contact />
+        <Suspense fallback={null}>
+          <RoofTypes />
+          <QuoteConfigurator />
+          <FreeConsultation />
+          <About />
+          <ServiceArea />
+          <Testimonials />
+          <FAQ />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </>
