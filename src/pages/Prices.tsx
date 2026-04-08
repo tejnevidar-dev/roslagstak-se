@@ -55,7 +55,7 @@ const priceFaqs = [
   },
   {
     question: "Ingår material i priset?",
-    answer: "Ja, alla våra priser inkluderar material, arbete, taksäkerhet och avfallshantering. Vi arbetar alltid med fasta priser utan dolda kostnader.",
+    answer: "Ja, alla våra priser inkluderar material, arbete, byggställning , logistik och avfallshantering. Vi arbetar alltid med fasta priser utan dolda kostnader.",
   },
   {
     question: "Kan jag använda ROT-avdrag?",
