@@ -6,6 +6,12 @@ export interface LocationData {
   description: string;
   longDescription: string;
   nearbyLocations: string[];
+  /** Extra unique paragraph for SEO depth — rendered below longDescription */
+  extraContent: string;
+  /** Location-specific unique FAQ (on top of generic ones) */
+  uniqueFAQ: { question: string; answer: string };
+  /** Primary keyword phrase for this page, used in H-tags */
+  primaryKeyword: string;
 }
 
 export const locations: LocationData[] = [
@@ -14,8 +20,14 @@ export const locations: LocationData[] = [
     name: "Blidö",
     region: "Mellersta skärgården",
     isIsland: true,
-    description: "Takläggare på Blidö — takbyte, takrenovering och takomläggning. Vi tar oss ut till Blidö med material och utrustning för alla typer av takprojekt.",
+    description: "Takläggare på Blidö — takbyte, takrenovering och takomläggning. Vi utgår från Blidö och tar oss ut med material och utrustning för alla typer av takprojekt i skärgården.",
     longDescription: "Blidö utsätts för kraftig vind och saltluft året runt — förhållanden som sliter hårt på tak. Många fastighetsägare på Blidö upptäcker för sent att underlagspappen gett vika eller att plåtbeslagen rostat. Vi på RoslagsTak har genomfört ett stort antal takprojekt på Blidö och vet exakt vilka material som håller i skärgårdsmiljön. Vår erfarenhet av logistik via Blidöleden gör att vi kan leverera material effektivt och hålla projekttiden kort. Oavsett om din fastighet ligger vid bryggan eller djupt inne på ön — vi når dig och levererar ett tak som står emot Roslagens väder i decennier.",
+    extraContent: "Blidö är vår hemmabas och den plats vi känner bäst i hela Roslagen. Vi har lagt tak på allt från klassiska skärgårdsstugor med rödfärgad panel till moderna permanentboenden med dubbelfalsat plåttak. Den korta resvägen innebär att vi kan erbjuda de mest konkurrenskraftiga priserna i hela skärgården för fastighetsägare på Blidö. Beställ en kostnadsfri takinspektion — vi kan ofta vara på plats redan samma dag.",
+    uniqueFAQ: {
+      question: "Hur når RoslagsTak Blidö med material för takbyte?",
+      answer: "Vi utgår från Blidö och har etablerade logistikrutiner via Blidöleden. Material levereras direkt till ön, och vi samordnar ofta flera projekt för att minimera transportkostnader. All logistik ingår i offerten — du behöver inte arrangera något själv.",
+    },
+    primaryKeyword: "takläggare Blidö",
     nearbyLocations: ["Yxlan", "Furusund", "Rådmansö"],
   },
   {
@@ -23,8 +35,14 @@ export const locations: LocationData[] = [
     name: "Ljusterö",
     region: "Mellersta skärgården",
     isIsland: true,
-    description: "Takläggare på Ljusterö — professionell takläggning med erfarenhet av öns unika logistik. Takbyte, takrenovering och plåtarbeten.",
+    description: "Takläggare på Ljusterö — professionell takläggning med erfarenhet av Ljusterös unika förhållanden. Takbyte, takrenovering, TP20 och plåtarbeten.",
     longDescription: "Ljusterö är Roslagens största ö, med allt från moderna permanentboenden till äldre sommarstugor med originaltak från 60-talet. Klimatet här är påfrestande — saltstänk, höststormar och fuktiga vintrar bryter ner takmaterial snabbare än på fastlandet. Vi har arbetat på Ljusterö i många år och förstår vilka lösningar som fungerar långsiktigt. Dubbelfalsat plåttak eller TP20 med rätt underlag ger dig ett tak som håller i 40+ år, även i det tuffa skärgårdsklimatet. Vi sköter hela projektet — från besiktning till färdigt tak — utan att du behöver koordinera materialtransporter.",
+    extraContent: "Med sin storlek och varierade bebyggelse har Ljusterö ett brett spektrum av taktyper — från betongpannor och lertegel till äldre plåttak med ståndsfalsar. Vi har renoverat och bytt tak på alla typer av fastigheter på Ljusterö, inklusive bostadsrättsföreningar och fritidshus. Vår erfarenhet av Ljusterös vägnät och förutsättningar gör att vi planerar effektivt och håller nere kostnaderna. Ring oss för en kostnadsfri takinspektion på Ljusterö — vi ger dig en ärlig bedömning och fast pris.",
+    uniqueFAQ: {
+      question: "Vilken typ av tak är vanligast på Ljusterö?",
+      answer: "På Ljusterö ser vi en stor variation — från äldre betongpannetak och lertegel till modernare TP20-plåttak. Många väljer att byta till dubbelfalsat plåt eller tegelplåt vid takomläggning. Vi rekommenderar material utifrån husets stil, takets lutning och din budget. Boka en kostnadsfri besiktning så ger vi en personlig rekommendation.",
+    },
+    primaryKeyword: "takläggare Ljusterö",
     nearbyLocations: ["Svartnö", "Vaxholm", "Högmarsö"],
   },
   {
@@ -32,8 +50,14 @@ export const locations: LocationData[] = [
     name: "Yxlan",
     region: "Mellersta skärgården",
     isIsland: true,
-    description: "Takläggare på Yxlan — vi utför takbyte och takrenovering med transport av material direkt till ön.",
+    description: "Takläggare på Yxlan — vi utför takbyte och takrenovering med transport av material direkt till Yxlan. TP20, pannplåt och dubbelfalsat.",
     longDescription: "Yxlan och Blidö hänger ihop via Blidöleden, men känslan av ytterskärgård är påtaglig. Här finns många charmiga äldre stugor med tak som börjat åldras — spruckna pannor, sliten underlagspapp och rostiga beslag. Vi har lagt pannplåttak, TP20-tak och renoverat lertegeltak på Yxlan med goda resultat. Vår styrka är att vi förstår skärgårdens förutsättningar: vi planerar materialtransport, anpassar tidsplanen efter väder och levererar ett resultat som håller mot vind och salt i årtionden.",
+    extraContent: "På Yxlan finns många fritidshus som ägs av familjer som besöker ön under sommarhalvåret. Många gånger utför vi takbyten under vår och höst, när det är enklare att planera logistik och arbetet inte stör semestern. Vi har stor erfarenhet av att samordna med fastighetsägare på distans — du behöver inte vara på plats under arbetet. Vi skickar dokumentation och bilder löpande.",
+    uniqueFAQ: {
+      question: "Kan ni byta tak på Yxlan om jag inte är på plats?",
+      answer: "Ja, vi utför ofta takbyten på Yxlan när fastighetsägaren inte är på plats. Vi dokumenterar arbetet med bilder och håller dig uppdaterad löpande. Besiktning och offert kan göras vid ett separat besök, och nycklar kan överlämnas på plats. Vi har gjort detta många gånger med gott resultat.",
+    },
+    primaryKeyword: "takläggare Yxlan",
     nearbyLocations: ["Blidö", "Furusund", "Rådmansö"],
   },
   {
@@ -41,8 +65,14 @@ export const locations: LocationData[] = [
     name: "Furusund",
     region: "Mellersta skärgården",
     isIsland: false,
-    description: "Takläggare i Furusund — takbyte, tegelplåttak och takrenovering. Vi verkar regelbundet i Furusundsområdet.",
+    description: "Takläggare i Furusund — takbyte, tegelplåttak och takrenovering. Vi verkar regelbundet i Furusundsområdet med konkurrenskraftiga priser.",
     longDescription: "Furusund har anor som skärgårdsort och bebyggelsen speglar det — sekelskifteshus, klassiska sommarstugor och nyare villor. Många tak i Furusund har nått sin livslängd och behöver bytas eller renoveras. Vi finns regelbundet i Furusundsområdet och kan ofta kombinera projekt i närområdet, vilket ger dig ett fördelaktigt pris. Med vår kunskap om lokala förhållanden — från de salta vindarna till den fuktiga hösten — väljer vi material som verkligen håller. RoslagsTak är det självklara valet för fastighetsägare i Furusund som vill ha ett tak utan kompromisser.",
+    extraContent: "Furusund fungerar som knutpunkt för öarna i mellersta skärgården, och vi passerar dagligen genom Furusund på väg ut till Blidö, Yxlan och öarna i ytterskärgården. Det innebär att vi ofta kan erbjuda fastighetsägare i Furusund ett förmånligt pris genom att samordna med pågående projekt i närheten. Kontakta oss för en kostnadsfri takbesiktning i Furusund.",
+    uniqueFAQ: {
+      question: "Hur snabbt kan ni påbörja ett takbyte i Furusund?",
+      answer: "Eftersom vi arbetar regelbundet i Furusundsområdet kan vi ofta påbörja arbetet inom 1–3 veckor efter beställning. Vi samordnar gärna med andra projekt i närheten, vilket kan ge ett förmånligt pris. Ring oss för att diskutera ditt projekt — vi ger alltid en realistisk tidsplan.",
+    },
+    primaryKeyword: "takläggare Furusund",
     nearbyLocations: ["Blidö", "Yxlan", "Rådmansö"],
   },
   {
@@ -50,8 +80,14 @@ export const locations: LocationData[] = [
     name: "Husarö",
     region: "Mellersta skärgården",
     isIsland: true,
-    description: "Takläggare på Husarö — vi tar oss ut till Husarö för takbyte och takrenovering med full utrustning.",
+    description: "Takläggare på Husarö — vi tar oss ut till Husarö med båt för takbyte och takrenovering med full utrustning. Specialister på öar utan bro.",
     longDescription: "Husarö nås med båt, och just därför drar sig många takfirmor för att ta sig hit. Inte vi. Vi har erfarenhet av att planera och genomföra kompletta takprojekt på Husarö — inklusive materialtransport sjövägen. Öns exponerade läge gör att taken utsätts för extremt väder, vilket ställer höga krav på både material och utförande. Vi använder enbart beprövade lösningar som tål skärgårdens hårda påfrestningar. Får du en offert av oss ingår allt — transport, material, arbete och en garanti på 10 år.",
+    extraContent: "Husarö är ett typexempel på vår specialisering — takbyten på öar som saknar vägförbindelse och bara nås med båt. Vi har utvecklat logistiklösningar för att transportera allt material sjövägen, från plåt och råspont till underlagspapp och beslag. Det innebär att du som fastighetsägare på Husarö slipper oroa dig för hur materialet ska komma fram. Vi löser allt — och priset du får i offerten är fast och komplett.",
+    uniqueFAQ: {
+      question: "Hur transporterar ni takmaterial till Husarö?",
+      answer: "Vi transporterar allt material till Husarö sjövägen med egna logistiklösningar. Plåt, råspont, underlagspapp och verktyg — allt levereras direkt till ön. Transportkostnaden ingår i vår offert. Vi planerar leveranser noggrant för att minimera antalet transporter och hålla nere kostnaderna.",
+    },
+    primaryKeyword: "takläggare Husarö",
     nearbyLocations: ["Ingmarsö", "Finnhamn", "Ljusterö"],
   },
   {
@@ -59,8 +95,14 @@ export const locations: LocationData[] = [
     name: "Finnhamn",
     region: "Mellersta skärgården",
     isIsland: true,
-    description: "Takläggare på Finnhamn — professionell takläggning även i ytterskärgården. TP20, plåttak och mer.",
+    description: "Takläggare på Finnhamn — professionell takläggning i ytterskärgården. Vi når Finnhamn med båt för takbyte, TP20 och plåtarbeten.",
     longDescription: "Finnhamn är en av Stockholms skärgårds mest älskade öar — och de fastigheter som finns här förtjänar tak i toppskick. Det exponerade läget innebär att taken slits hårdare av vind, regn och saltluft. Vi har genomfört takprojekt på Finnhamn och vet vad som krävs: noggrann planering, rätt materialval och hantverkare som är vana vid att arbeta i skärgårdsmiljö. Resultatet blir ett tak som inte bara skyddar — det håller i generationer.",
+    extraContent: "Finnhamn är populärt som naturhamn och utflyktsmål, men de bofasta och fritidshusägare som finns här behöver en takläggare som vågar ta sig ut. Vi når Finnhamn med båt och har gjort takbyten här med allt från TP20-plåt till pannplåt. Den speciella skärgårdsmiljön kräver extra omsorg i materialval — vi rekommenderar alltid korrosionsbeständig plåt och dimensionerade infästningar för att tåla de starka vindarna.",
+    uniqueFAQ: {
+      question: "Går det att byta tak på Finnhamn trots att ön saknar vägförbindelse?",
+      answer: "Absolut. Vi är specialiserade på takbyten på öar utan broförbindelse, och Finnhamn är en av de platser vi arbetat på. Allt material transporteras sjövägen och vi planerar arbetet för att minimera logistikkostnader. Resultatet blir ett tak av samma kvalitet som på fastlandet — med full garanti.",
+    },
+    primaryKeyword: "takläggare Finnhamn",
     nearbyLocations: ["Husarö", "Ingmarsö", "Högmarsö"],
   },
   {
@@ -68,8 +110,14 @@ export const locations: LocationData[] = [
     name: "Ingmarsö",
     region: "Mellersta skärgården",
     isIsland: true,
-    description: "Takläggare på Ingmarsö — takomläggning och takbyte med erfarenhet av öns förutsättningar.",
+    description: "Takläggare på Ingmarsö — takomläggning och takbyte med erfarenhet av öns logistik. Transport av material sjövägen ingår.",
     longDescription: "Ingmarsö har en aktiv skärgårdsgemenskap med både året-runt-boende och sommarfirare. Bebyggelsen varierar från äldre röda stugor till nyare fritidshus — och alla behöver tak som klarar skärgårdens klimat. Vi har en gedigen erfarenhet av att arbeta på Ingmarsö och förstår de praktiska utmaningarna med materialleveranser och logistik. Vårt löfte är enkelt: du kontaktar oss, vi sköter resten. Från besiktning till färdigt tak, med fast pris och utan överraskningar.",
+    extraContent: "Ingmarsö har ett levande samhälle med både permanentboende och säsongsboende. Vi ser ofta att äldre tak på Ingmarsö har betongpannor eller eternitplattor som behöver bytas ut. Vid takbyte på Ingmarsö rekommenderar vi ofta TP20 eller pannplåt — lätta material som ger lägre transportkostnad och lång livslängd. Vi hanterar även rivning och borttransport av gammalt takmaterial från ön.",
+    uniqueFAQ: {
+      question: "Hanterar ni bortforsling av gammalt takmaterial från Ingmarsö?",
+      answer: "Ja, vi tar hand om allt — inklusive rivning, bortforsling och miljöriktig avfallshantering av gammalt takmaterial. Detta gäller även på öar som Ingmarsö dit vi transporterar material sjövägen. Allt ingår i det fasta priset du får i offerten.",
+    },
+    primaryKeyword: "takläggare Ingmarsö",
     nearbyLocations: ["Husarö", "Finnhamn", "Ljusterö"],
   },
   {
@@ -77,8 +125,14 @@ export const locations: LocationData[] = [
     name: "Högmarsö",
     region: "Mellersta skärgården",
     isIsland: true,
-    description: "Takläggare på Högmarsö — vi når Högmarsö för takbyte, takrenovering och plåtarbeten.",
+    description: "Takläggare på Högmarsö — takbyte, takrenovering och plåtarbeten. Vi når Högmarsö och hanterar all logistik för ditt takprojekt.",
     longDescription: "Högmarsö är en lugnare ö i mellersta Roslagen, men klimatet är lika krävande som i resten av skärgården. Fukt, mossa och salt bryter långsamt ner takmaterial som inte är anpassat för miljön. Vi har genomfört takprojekt på Högmarsö och vet vilka material som presterar bäst. TP20-plåttak med rätt underlag är ofta det optimala valet här — hållbart, underhållsfritt och estetiskt tilltalande. Vi ordnar transport och logistik, du får ett tak som håller.",
+    extraContent: "Högmarsö ligger nära Ljusterö och vi kombinerar ofta projekt på de två öarna. Det innebär att fastighetsägare på Högmarsö kan dra nytta av samordning och få ett förmånligt pris. Vi har erfarenhet av alla taktyper som förekommer på Högmarsö — från äldre papptak till moderna plåtlösningar. Oavsett om du har en sommarstuga eller ett permanentboende rekommenderar vi en kostnadsfri takinspektion som utgångspunkt.",
+    uniqueFAQ: {
+      question: "Är det dyrare att byta tak på Högmarsö jämfört med fastlandet?",
+      answer: "Inte nödvändigtvis. Vi samordnar ofta projekt på Högmarsö med andra jobb i skärgården, vilket håller nere logistikkostnaden. Transporttillägget för material är relativt litet tack vare Högmarsös närhet till Ljusterö. Begär en offert så ser du exakt vad det kostar — inga dolda tillägg.",
+    },
+    primaryKeyword: "takläggare Högmarsö",
     nearbyLocations: ["Ljusterö", "Finnhamn", "Ingmarsö"],
   },
   {
@@ -86,8 +140,14 @@ export const locations: LocationData[] = [
     name: "Svartlöga",
     region: "Norra skärgården",
     isIsland: true,
-    description: "Takläggare på Svartlöga — vi tar oss ut till ytterskärgården för takbyte och takrenovering.",
+    description: "Takläggare på Svartlöga — vi tar oss ut till ytterskärgården med båt för takbyte och takrenovering. Specialist på öar utan broförbindelse.",
     longDescription: "Svartlöga ligger i ytterskärgården och nås med Waxholmsbåt — ett läge som avskräcker de flesta takfirmor. Men för oss på RoslagsTak är det vardag. Vi har genomfört takprojekt på Svartlöga under alla årstider och förstår vad det kräver: exakt planering av materialtransport, väderanpassade tidsplaner och hantverkare som trivs med att jobba i avlägsna miljöer. Ditt tak på Svartlöga förtjänar samma kvalitet som på fastlandet — och det är precis vad vi levererar.",
+    extraContent: "Svartlöga är en av de mer avlägsna öarna vi arbetar på, men avståndet avskräcker oss inte. Vi har utvecklat effektiva transportlösningar för att få ut plåt, råspont och verktyg till Svartlöga. Med vår erfarenhet av ö-logistik tar vi ett helhetsansvar — från besiktning och offert till färdigt tak och städat arbetsområde. Flera fastighetsägare på Svartlöga har valt oss just för att vi faktiskt tar oss dit.",
+    uniqueFAQ: {
+      question: "Finns det takläggare som verkligen tar sig ut till Svartlöga?",
+      answer: "Ja — vi på RoslagsTak är specialiserade på takbyten på öar utan vägförbindelse, och Svartlöga är en av de platser vi regelbundet arbetar på. Vi transporterar allt material sjövägen och planerar projektet så att arbetet kan genomföras effektivt, oavsett väder. Ring oss så berättar vi mer.",
+    },
+    primaryKeyword: "takläggare Svartlöga",
     nearbyLocations: ["Söderöra", "Norröra", "Humlö"],
   },
   {
@@ -95,8 +155,14 @@ export const locations: LocationData[] = [
     name: "Söderöra",
     region: "Norra skärgården",
     isIsland: true,
-    description: "Takläggare på Söderöra — takbyte och takrenovering i norra skärgården.",
+    description: "Takläggare på Söderöra — takbyte och takrenovering i norra skärgården. Vi når Söderöra med båt och hanterar all logistik.",
     longDescription: "Söderöra i norra skärgården är en ö med genuint skärgårdsliv och äldre bebyggelse som kräver takläggare med rätt erfarenhet. Den öppna havsmiljön gör att taken exponeras för starka vindar och salt stänk, vilket påskyndar slitage. Vi har utfört takbyten med både plåt och pannor på Söderöra och anpassar alltid materialvalet efter öns förhållanden. Med oss får du en takläggare som tar sig dit andra inte vågar — och som levererar ett tak byggt för att hålla.",
+    extraContent: "Söderöra tillhör de öar i norra Roslagen som saknar bro och bara nås med båt. Trots det har vi genomfört flera takprojekt här med utmärkt resultat. Vi planerar materialtransporter noggrant och kombinerar gärna med arbete på närliggande öar som Norröra och Svartlöga för att optimera logistiken. Kontakta oss om du har en fastighet på Söderöra som behöver nytt tak.",
+    uniqueFAQ: {
+      question: "Kan ni byta tak på Söderöra trots att det bara nås med båt?",
+      answer: "Ja, det är vår specialitet. Vi har utvecklat logistiklösningar för att transportera material sjövägen till öar som Söderöra. Vi samordnar ofta med projekt på närliggande öar för att hålla nere kostnaderna. Allt ingår i det fasta priset i offerten.",
+    },
+    primaryKeyword: "takläggare Söderöra",
     nearbyLocations: ["Svartlöga", "Norröra", "Gräskö"],
   },
   {
@@ -104,8 +170,14 @@ export const locations: LocationData[] = [
     name: "Humlö",
     region: "Norra skärgården",
     isIsland: true,
-    description: "Takläggare på Humlö — professionellt takbyte och takrenovering på ön.",
+    description: "Takläggare på Humlö — professionellt takbyte och takrenovering i norra Roslagens skärgård. Material transporteras sjövägen.",
     longDescription: "Humlö är en av de mindre öarna i norra Roslagen, men takproblemen är desamma som på de större: salt, fukt och vind sliter på material som inte är dimensionerat för skärgården. Vi har genomfört takprojekt på Humlö och har rutiner för materialtransport och logistik till ön. Resultatet är alltid detsamma — ett professionellt utfört tak med 10 års garanti, oavsett hur avlägsen adressen är.",
+    extraContent: "Humlö ligger relativt nära Svartlöga och Norröra, och vi kombinerar gärna takprojekt på dessa öar för effektivare logistik. På Humlö ser vi ofta äldre tak med sliten papp eller rostiga beslag — problem som snabbt kan leda till fuktskador i underliggande konstruktion. En tidig takinspektion kan spara stora pengar. Kontakta oss för en kostnadsfri bedömning av taket på din fastighet på Humlö.",
+    uniqueFAQ: {
+      question: "Är det möjligt att få takinspektion på Humlö utan kostnad?",
+      answer: "Ja, vi erbjuder kostnadsfri takinspektion även på öar som Humlö. Vi samordnar ofta besiktningar med andra arbeten i norra skärgården. Kontakta oss så bokar vi in ett besök — du får en skriftlig rapport med vår bedömning och rekommendation.",
+    },
+    primaryKeyword: "takläggare Humlö",
     nearbyLocations: ["Svartlöga", "Norröra", "Gräskö"],
   },
   {
@@ -113,8 +185,14 @@ export const locations: LocationData[] = [
     name: "Norröra",
     region: "Norra skärgården",
     isIsland: true,
-    description: "Takläggare på Norröra — Saltkråkans ö. Takbyte och takrenovering med respekt för miljön.",
+    description: "Takläggare på Norröra (Saltkråkan) — takbyte och takrenovering med respekt för öns karaktär. Vi når Norröra med båt.",
     longDescription: "Norröra — eller Saltkråkan som många känner ön — har en unik kulturhistorisk miljö som ställer särskilda krav på takläggning. Här handlar det inte bara om att lägga ett hållbart tak, utan att göra det med respekt för öns karaktär. Vi anpassar materialval och utförande efter varje byggnads stil — pannplåt som efterliknar tegel, lertegel för de äldre husen, eller TP20 för nyare byggnader. Vår erfarenhet från Norröra gör oss till det naturliga valet för dig som vill bevara öns charm med ett tak som håller i decennier.",
+    extraContent: "Norröra har en speciell plats i svenskarnas hjärtan tack vare Astrid Lindgrens Saltkråkan. Bebyggelsen på ön speglar en äldre skärgårdskultur som kräver takläggare med känsla för detaljer. Vi har lagt tak på Norröra med material som matchar den befintliga arkitekturen — röda pannor, pannplåt i traditionella färger och handfalsat beslag. Om du äger en fastighet på Norröra och behöver byta tak, välj en takläggare som förstår öns unika värde.",
+    uniqueFAQ: {
+      question: "Kan ni lägga tak som matchar Norröras traditionella bebyggelse?",
+      answer: "Ja, vi är vana vid att arbeta med material som matchar äldre skärgårdsarkitektur. På Norröra rekommenderar vi ofta pannplåt i traditionella kulörer eller lertegel för att bevara öns karaktär. Vi anpassar alltid utförandet efter varje byggnads stil och historia.",
+    },
+    primaryKeyword: "takläggare Norröra",
     nearbyLocations: ["Söderöra", "Svartlöga", "Humlö"],
   },
   {
@@ -122,8 +200,14 @@ export const locations: LocationData[] = [
     name: "Gräskö",
     region: "Norra skärgården",
     isIsland: true,
-    description: "Takläggare på Gräskö — vi utför takbyte och takrenovering i skärgården.",
+    description: "Takläggare på Gräskö — vi utför takbyte och takrenovering i norra Roslagens skärgård. Materialtransport sjövägen ingår.",
     longDescription: "Gräskö i norra Roslagens skärgård har ett klimat som testar alla byggnaders uthållighet — och taken tar stryk först. Fukt, frost och den ständiga havsvinden kräver taklösningar som är genomtänkta från grunden. Vi har arbetat på Gräskö och förstår förutsättningarna. Oavsett om du vill byta till plåttak, renovera befintligt tak eller bara få en professionell bedömning av takets skick — kontakta oss så ordnar vi resten.",
+    extraContent: "Gräskö är en av de norra skärgårdsöarna där vi regelbundet utför takarbeten. Öns exponerade läge mot öppet hav gör att takmaterialen måste klara extrema förhållanden — något vi har gedigen erfarenhet av. Vi rekommenderar korrosionsbeständig plåt och dimensionerade infästningar som tål hårda vindar. Boka en takinspektion på Gräskö — vi dokumenterar skicket och ger dig en rekommendation.",
+    uniqueFAQ: {
+      question: "Vilka takmaterial klarar sig bäst på Gräskö?",
+      answer: "Gräskö ligger exponerat mot havet, så vi rekommenderar TP20-plåttak eller dubbelfalsat plåttak med korrosionsbeständig behandling. Dessa material tål salt, vind och fukt bäst. Vi undviker betongpannor på exponerade lägen i ytterskärgården — plåt ger längre livslängd och kräver minimalt underhåll.",
+    },
+    primaryKeyword: "takläggare Gräskö",
     nearbyLocations: ["Söderöra", "Norröra", "Furusund"],
   },
   {
@@ -131,8 +215,14 @@ export const locations: LocationData[] = [
     name: "Spillersboda",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare i Spillersboda — takbyte, takrenovering och plåtarbeten längs kusten.",
+    description: "Takläggare i Spillersboda — takbyte, takrenovering och plåtarbeten längs Roslagens kust. Lokal takläggare med snabb service.",
     longDescription: "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem vi åtgärdar hos fastighetsägare i Spillersboda. Med vår lokala närvaro kan vi ofta vara på plats inom kort och erbjuda en kostnadsfri besiktning. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte. Ärlighet och kvalitet är våra ledord.",
+    extraContent: "Spillersboda är en av de platser längs Roslagskusten där vi ofta arbetar. Fastighetsägare i Spillersboda uppskattar vår ärlighet — vi rekommenderar aldrig ett takbyte om en renovering räcker. Med vår lokala närvaro erbjuder vi snabb service och korta ledtider. Vi har lagt allt från tegelplåt och pannplåt till TP20 i Spillersboda med nöjda kunder som referens.",
+    uniqueFAQ: {
+      question: "Behöver jag byta hela taket eller räcker en renovering i Spillersboda?",
+      answer: "Det beror på takets skick. Vi erbjuder kostnadsfri takinspektion i Spillersboda där vi bedömer om en renovering räcker eller om det behövs ett komplett byte. Ibland kan byte av underlagspapp och beslag förlänga takets livslängd med 15–20 år. Vi ger alltid en ärlig rekommendation.",
+    },
+    primaryKeyword: "takläggare Spillersboda",
     nearbyLocations: ["Norrtälje", "Bergshamra", "Rådmansö"],
   },
   {
@@ -140,8 +230,14 @@ export const locations: LocationData[] = [
     name: "Rådmansö",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare på Rådmansö — takbyte, tegelplåt och takrenovering nära Norrtälje.",
+    description: "Takläggare på Rådmansö — takbyte, tegelplåt och takrenovering nära Norrtälje. Snabb service och konkurrenskraftiga priser.",
     longDescription: "Rådmansö är porten till skärgården och ligger bara minuter från vår bas i Norrtälje. Det innebär att vi kan erbjuda snabb service och konkurrenskraftiga priser till fastighetsägare på Rådmansö. Vi har genomfört allt från kompletta takbyten med tegelplåt till mindre renoveringar av plåtbeslag och hängrännor. Närheten gör att vi ofta kan påbörja arbetet snabbare än på mer avlägsna platser — kontakta oss så bokar vi in en kostnadsfri besiktning.",
+    extraContent: "Rådmansö har en blandning av permanentboenden och fritidshus, och vi har arbetat med alla typer av fastigheter här. Tack vare närheten till vår bas erbjuder vi de kortaste ledtiderna i området. Många fastighetsägare på Rådmansö väljer oss för att vi kan vara på plats snabbt och erbjuda fast pris redan vid första besöket. Vi utför även mindre arbeten som byte av hängrännor, stuprör och vindskivor.",
+    uniqueFAQ: {
+      question: "Hur snabbt kan ni komma till Rådmansö för en takinspektion?",
+      answer: "Rådmansö ligger nära vår bas, så vi kan ofta boka in en kostnadsfri takinspektion inom några dagar. Ring oss på 070-154 36 39 så hittar vi en tid som passar. Vi ger alltid en skriftlig rapport med bedömning och prisförslag.",
+    },
+    primaryKeyword: "takläggare Rådmansö",
     nearbyLocations: ["Norrtälje", "Blidö", "Furusund"],
   },
   {
@@ -149,8 +245,14 @@ export const locations: LocationData[] = [
     name: "Bergshamra",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare i Bergshamra — professionell takläggning längs Roslagens kust.",
+    description: "Takläggare i Bergshamra — professionell takläggning längs Roslagens kust. Takbyte, takrenovering och dubbelfalsat plåttak.",
     longDescription: "Bergshamra vid Roslagens kust har en mix av villor och fritidshus, många med tak som nu nått sin livslängd. Det kustnära läget innebär att taken utsätts för mer fukt och vind än längre in på fastlandet. Vi har lagt tak i Bergshamra många gånger och vet vilka material som ger bäst livslängd i den miljön. Ett dubbelfalsat plåttak eller TP20 med kvalitetsunderlag ger dig trygghet i 40+ år. Kontakta oss för en ärlig bedömning av ditt tak — helt utan kostnad.",
+    extraContent: "I Bergshamra ser vi ofta tak med äldre betongpannor eller eternitskivor som behöver bytas. Vi hanterar rivning och avfallshantering av alla materialtyper, inklusive eternit (med certifierad sanering). Om du har en fastighet i Bergshamra och undrar över takets skick, erbjuder vi kostnadsfri inspektion med skriftlig rapport. Vi ger alltid en rak och ärlig bedömning.",
+    uniqueFAQ: {
+      question: "Kan ni hantera eternittak vid takbyte i Bergshamra?",
+      answer: "Ja, vi hanterar rivning och bortforsling av eternittak med certifierad sanering enligt gällande regler. Eternit förekommer på många äldre fastigheter i Bergshamra. Vi sköter hela processen — från rivning till färdigt nytt tak — så att du slipper koordinera flera aktörer.",
+    },
+    primaryKeyword: "takläggare Bergshamra",
     nearbyLocations: ["Spillersboda", "Norrtälje", "Svartnö"],
   },
   {
@@ -158,8 +260,14 @@ export const locations: LocationData[] = [
     name: "Svartnö",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare på Svartnö — takbyte och takrenovering i Roslagens kustmiljö.",
+    description: "Takläggare på Svartnö — takbyte och takrenovering i Roslagens kustmiljö. TP20, dubbelfalsat och pannplåt.",
     longDescription: "Svartnö i Roslagens kustlandskap kombinerar havsnära boende med de utmaningar det innebär för byggnader — framför allt taken. Fukt, mossa och salt i luften bryter ner material som inte är anpassat. Vi har utfört takprojekt på Svartnö och rekommenderar alltid material som håller i kustmiljö. Med 10 års garanti på alla våra arbeten kan du känna dig trygg. Boka en kostnadsfri takinspektion — vi ger dig en ärlig bedömning och fast pris.",
+    extraContent: "Svartnö är populärt bland fritidshusägare som vill bo nära havet, och många fastigheter här har tak som är 25–35 år gamla — en ålder då de flesta takmaterial börjar ge vika. Vi har erfarenhet av att byta tak på alla typer av fastigheter på Svartnö, från mindre stugor till större villor. Kontakta oss för en bedömning.",
+    uniqueFAQ: {
+      question: "När bör man byta tak på ett hus på Svartnö?",
+      answer: "De flesta tak i kustmiljö som Svartnö håller 25–40 år beroende på material. Tecken på att det är dags: mossa, fuktfläckar i underlaget, rostiga beslag eller spruckna pannor. Vi erbjuder kostnadsfri takinspektion och ger dig en ärlig bedömning — ibland räcker det med en renovering istället för ett komplett byte.",
+    },
+    primaryKeyword: "takläggare Svartnö",
     nearbyLocations: ["Ljusterö", "Bergshamra", "Vaxholm"],
   },
   {
@@ -167,8 +275,14 @@ export const locations: LocationData[] = [
     name: "Väddö",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare på Väddö — takbyte, lertegeltak och takrenovering nära Grisslehamn.",
+    description: "Takläggare på Väddö — takbyte, lertegeltak och takrenovering nära Grisslehamn. Lokal takläggare med erfarenhet av Väddö.",
     longDescription: "Väddö sträcker sig från Norrtälje norrut mot Grisslehamn och rymmer en varierad bebyggelse — från jordbruksfastigheter med stora takytor till sommarstugor nära vattnet. Vi arbetar regelbundet på Väddö och har lagt allt från lertegel på äldre gårdar till moderna TP20-plåttak på nybyggen. Det vi erbjuder är en takläggare som förstår Väddös förhållanden: de kalla vintrarna, den fuktiga havsluften och vikten av att välja material som klarar det. Ring oss — vi ger dig en offert inom 24 timmar.",
+    extraContent: "Väddö har många jordbruksfastigheter med stora takytor — ladugårdar, lador och ekonomibyggnader som behöver tak i gott skick. Vi har erfarenhet av att lägga tak på stora ytor med TP20-plåt, som är kostnadseffektivt och snabbt att montera. Vi hanterar även äldre gårdar med lertegel och tradition att bevara. Kontakta oss för ett hembesök och offert.",
+    uniqueFAQ: {
+      question: "Kan ni lägga tak på stora lantbruksbyggnader på Väddö?",
+      answer: "Ja, vi har erfarenhet av att lägga tak på ladugårdar, lador och andra lantbruksbyggnader på Väddö. TP20-plåttak är ofta det mest kostnadseffektiva valet för stora takytor. Vi erbjuder fast pris och kan påbörja arbetet med kort ledtid.",
+    },
+    primaryKeyword: "takläggare Väddö",
     nearbyLocations: ["Grisslehamn", "Singö", "Norrtälje"],
   },
   {
@@ -176,8 +290,14 @@ export const locations: LocationData[] = [
     name: "Vätö",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare på Vätö — takbyte och takrenovering mellan Norrtälje och skärgården.",
+    description: "Takläggare på Vätö — takbyte och takrenovering mellan Norrtälje och skärgården. Ofta förmånliga priser tack vare samordning.",
     longDescription: "Vätö ligger strategiskt mellan Norrtälje och skärgården — ett område vi passerar dagligen på väg till projekt ute på öarna. Det gör att vi ofta kan erbjuda förmånliga priser till fastighetsägare på Vätö. Här finns många villor och fritidshus med tak som behöver ses över. Oavsett om det handlar om ett komplett takbyte eller en mindre renovering, finns vi nära och kan agera snabbt. Vi ger alltid fast pris efter besiktning — inga överraskningar på fakturan.",
+    extraContent: "Vätö är en av de platser vi passerar allra mest — och det märks i priserna vi kan erbjuda. Genom att kombinera arbete på Vätö med pågående projekt i skärgården minskar vi restidskostnaderna. Fastighetsägare på Vätö får därför ofta ett förmånligt pris utan att kompromissa på kvaliteten. Vi har lagt tak på villor, radhus och fritidshus på Vätö med gott resultat.",
+    uniqueFAQ: {
+      question: "Varför är takbyte på Vätö ofta billigare än på öarna?",
+      answer: "Vätö ligger längs vår dagliga färdväg ut till skärgården. Det innebär att vi kan samordna projekt och minska restidskostnaderna, vilket ger ett förmånligare pris. Du får samma kvalitet och garanti som på alla andra platser vi arbetar.",
+    },
+    primaryKeyword: "takläggare Vätö",
     nearbyLocations: ["Rådmansö", "Blidö", "Norrtälje"],
   },
   {
@@ -185,8 +305,14 @@ export const locations: LocationData[] = [
     name: "Norrtälje",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare i Norrtälje — din lokala partner för takbyte, takrenovering och plåtarbeten.",
+    description: "Takläggare i Norrtälje — din lokala partner för takbyte, takrenovering och plåtarbeten. 150+ genomförda takprojekt i Norrtäljeområdet.",
     longDescription: "Norrtälje är vår hemmabas och den ort där vi genomfört flest takprojekt. Vi känner stadens bebyggelse väl — från de äldre trähusen i centrum till villaområdena runt om. Med 70 års samlad erfarenhet och hundratals genomförda projekt i Norrtälje kan vi med säkerhet säga att vi är stadens mest erfarna takläggare. Vår lokala närvaro innebär snabb service, konkurrenskraftiga priser och en takläggare som alltid finns nära till hands. Behöver du en kostnadsfri besiktning? Ring oss — vi är ofta på plats samma vecka.",
+    extraContent: "Som Norrtäljes mest erfarna takläggare har vi referensprojekt i hela staden — från Norrtälje centrum till Rimbo, Hallstavik och Grisslehamn. Vi erbjuder komplett takservice: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör, samt takinspektion. Alla arbeten utförs enligt AMA-standard med 10 års garanti. Begär en offert så återkommer vi inom 24 timmar.",
+    uniqueFAQ: {
+      question: "Hur många takprojekt har RoslagsTak genomfört i Norrtälje?",
+      answer: "Vi har genomfört 150+ takprojekt i Norrtäljeområdet och har 70 års samlad erfarenhet. Vi är den mest erfarna takläggaren i Norrtälje med referensprojekt i hela kommunen. Ring oss för att diskutera ditt projekt — vi erbjuder alltid kostnadsfri besiktning.",
+    },
+    primaryKeyword: "takläggare Norrtälje",
     nearbyLocations: ["Rådmansö", "Vätö", "Spillersboda"],
   },
   {
@@ -194,8 +320,14 @@ export const locations: LocationData[] = [
     name: "Vaxholm",
     region: "Kusten",
     isIsland: false,
-    description: "Takläggare i Vaxholm — professionell takläggning nära Stockholm. Takbyte och takrenovering.",
+    description: "Takläggare i Vaxholm — professionell takläggning nära Stockholm. Takbyte, pannplåt och takrenovering med lokal erfarenhet.",
     longDescription: "Vaxholm är porten till Stockholms skärgård och har en unik blandning av kulturhistoriska trähus och moderna villor. Taken i Vaxholm utsätts för havsfukt och vind, samtidigt som estetiken är viktig — särskilt i de äldre delarna av staden. Vi har erfarenhet av att lägga tak i Vaxholm som både håller och ser rätt ut. Pannplåt som matchar äldre arkitektur, dubbelfalsat plåt för moderna hus, eller lertegel för den som vill bevara originallook — vi har lösningen.",
+    extraContent: "Vaxholm ställer höga krav på estetik, särskilt i de kulturhistoriskt värdefulla områdena. Vi arbetar med material och metoder som respekterar Vaxholms arkitektur — från handfalsat plåtbeslag till pannplåt i rätt kulör. Om du bor i Vaxholm och funderar på att byta tak, erbjuder vi en kostnadsfri konsultation där vi diskuterar materialval som passar just ditt hus.",
+    uniqueFAQ: {
+      question: "Tar RoslagsTak hänsyn till Vaxholms kulturhistoriska bebyggelse vid takbyte?",
+      answer: "Absolut. Vi har erfarenhet av att arbeta med kulturhistoriskt värdefulla fastigheter i Vaxholm. Vi anpassar materialval och utförande efter husets ålder och stil — pannplåt i traditionella kulörer, lertegel eller handfalsat beslag. Vi kan även hjälpa till med kontakt med kommunen om bygglov krävs.",
+    },
+    primaryKeyword: "takläggare Vaxholm",
     nearbyLocations: ["Ljusterö", "Norrtälje", "Svartnö"],
   },
   {
@@ -203,8 +335,14 @@ export const locations: LocationData[] = [
     name: "Singö",
     region: "Norra skärgården",
     isIsland: false,
-    description: "Takläggare på Singö — takbyte och takrenovering i norra Roslagen.",
+    description: "Takläggare på Singö — takbyte och takrenovering i norra Roslagen. TP20, pannplåt och dubbelfalsat plåttak.",
     longDescription: "Singö i norra Roslagen är en plats där skärgårdskänslan möter lantlig charm. Bebyggelsen varierar — äldre torp, sommarvillor och nyare fritidshus — och alla behöver tak som tål det nordliga skärgårdsklimatet. Vi arbetar regelbundet i Singö-området och kan ofta kombinera med projekt i Grisslehamn och Väddö, vilket ger dig ett bra pris. Våra takläggare har erfarenhet av allt från pannplåttak till kompletta takomläggningar, alltid utfört enligt AMA-standard.",
+    extraContent: "Singö har en blandning av fast boende och sommarboende, och taken här speglar det — allt från klassiska tegelpannetak till enklare papptak på äldre stugor. Vi har bytt tak på alla typer av fastigheter på Singö och rekommenderar alltid den lösning som passar bäst för just din byggnad. Kontakta oss för en kostnadsfri bedömning — vi arbetar ofta i Singö-området.",
+    uniqueFAQ: {
+      question: "Kan ni samordna takbyte på Singö med projekt i Grisslehamn?",
+      answer: "Ja, vi samordnar ofta projekt på Singö med arbeten i Grisslehamn och på Väddö. Det minskar restidskostnaden och kan ge dig ett förmånligare pris. Ring oss så planerar vi tillsammans.",
+    },
+    primaryKeyword: "takläggare Singö",
     nearbyLocations: ["Grisslehamn", "Väddö", "Arholma"],
   },
   {
@@ -212,8 +350,14 @@ export const locations: LocationData[] = [
     name: "Grisslehamn",
     region: "Norra skärgården",
     isIsland: false,
-    description: "Takläggare i Grisslehamn — takbyte och takrenovering i norra Roslagen.",
+    description: "Takläggare i Grisslehamn — takbyte och takrenovering i norra Roslagen. Dubbelfalsat plåttak och TP20 för hårda kustförhållanden.",
     longDescription: "Grisslehamn längst norrut i Roslagen är en kustort med direktkontakt med öppet hav — och det märks på taken. Vind, regn och salt sliter hårdare här än på de flesta andra platser i regionen. Vi utför regelbundet takprojekt i Grisslehamn och har lärt oss vilka material och metoder som ger längst livslängd. Dubbelfalsat plåttak och TP20 med rätt underlag är ofta det vi rekommenderar i dessa förhållanden. Kontakta oss för en kostnadsfri bedömning — vi ger dig rak och ärlig rådgivning.",
+    extraContent: "Grisslehamn ligger exponerat mot Ålands hav och är en av de mest vindbelastade platserna i Roslagen. Taken här måste klara extrema vindlaster och salt stänk. Vi har installerat flera TP20-tak och dubbelfalsade plåttak i Grisslehamn med förstärkta infästningar anpassade för det hårda klimatet. Kontakta oss om du behöver en erfaren takläggare i Grisslehamn.",
+    uniqueFAQ: {
+      question: "Vilka speciella krav ställer Grisslehamns klimat på takmaterial?",
+      answer: "Grisslehamn ligger exponerat mot Ålands hav med starka vindar och salt luft. Vi rekommenderar korrosionsbeständig plåt med förstärkta infästningar. Dubbelfalsat plåt eller TP20 med rätt underlag ger längst livslängd i dessa förhållanden. Undvik betongpannor — de riskerar frostsprängning i det hårda klimatet.",
+    },
+    primaryKeyword: "takläggare Grisslehamn",
     nearbyLocations: ["Singö", "Väddö", "Arholma"],
   },
   {
@@ -221,8 +365,14 @@ export const locations: LocationData[] = [
     name: "Arholma",
     region: "Norra skärgården",
     isIsland: true,
-    description: "Takläggare på Arholma — vi tar oss ut till ytterskärgården för professionellt takbyte.",
+    description: "Takläggare på Arholma — vi tar oss ut till ytterskärgården med båt för professionellt takbyte och takrenovering. Specialist på ö-logistik.",
     longDescription: "Arholma är en av de nordligaste öarna i Stockholms skärgård — avlägset, vackert och med ett klimat som ställer extrema krav på byggnaders tak. Här tar vi på RoslagsTak oss gärna — för det är precis i dessa miljöer vår erfarenhet gör störst skillnad. Vi planerar materialtransport, anpassar tidsplanen efter väder och sjöförhållanden, och levererar ett tak byggt för att stå emot Arholmas tuffa förhållanden i årtionden. Ditt tak på Arholma förtjänar en takläggare som verkligen förstår skärgården.",
+    extraContent: "Arholma är en av de mest avlägsna öarna i vårt verksamhetsområde, men vi har genomfört flera takbyten här med utmärkt resultat. Vi planerar logistiken noggrant — material transporteras sjövägen och vi anpassar tidsplanen efter väderprognoser. Fastighetsägare på Arholma väljer oss för att vi faktiskt tar oss ut — och levererar samma kvalitet som på fastlandet.",
+    uniqueFAQ: {
+      question: "Hur långt i förväg behöver jag boka takbyte på Arholma?",
+      answer: "Vi rekommenderar att boka 4–8 veckor i förväg för takbyte på Arholma, så att vi kan planera materialtransport och samordna med väder. Under högsäsong (maj–september) kan det vara fördelaktigt att boka ännu tidigare. Ring oss så ger vi en realistisk tidsplan.",
+    },
+    primaryKeyword: "takläggare Arholma",
     nearbyLocations: ["Singö", "Grisslehamn", "Svartlöga"],
   },
 ];
