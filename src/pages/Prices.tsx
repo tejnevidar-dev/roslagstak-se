@@ -67,7 +67,7 @@ const priceFaqs = [
   },
   {
     question: "Hur lång tid tar ett takbyte?",
-    answer: "Ett typiskt takbyte på ett villahus tar 3–7 arbetsdagar beroende på storlek och komplexitet. Vi tar effektivitet med störta allvar för att minimera störningarna i eran vardag ",
+    answer: "Ett typiskt takbyte på ett villahus tar 3–7 arbetsdagar beroende på storlek och komplexitet. Vi tar effektivitet med störta allvar för att minimera störningarna i eran vardag.",
   },
 ];
 
