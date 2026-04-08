@@ -111,12 +111,13 @@ const ServiceArea = () => {
                 Behöver du en <strong>takläggare i Roslagen</strong>? RoslagsTak utför alla typer av takarbeten — från 
                 <strong> takbyte på Blidö</strong> och <strong>takrenovering på Ljusterö</strong> till 
                 <strong> takomläggning i Norrtälje</strong> och <strong>plåttak på Yxlan</strong>. Vi är den takläggare 
-                som tar sig ut till öar i hela norra skärgården.
+                som tar sig ut till öar i hela norra skärgården — <strong>även öar utan broförbindelse</strong>.
               </p>
               <p>
-                Vi lägger tak på Husarö, Finnhamn och Ingmarsö — öar där logistiken kräver erfarenhet och planering. 
-                På Högmarsö, Svartlöga, Söderöra och Norröra har vi genomfört takprojekt under alla årstider. 
-                Humlö och Gräskö tillhör också vårt verksamhetsområde, liksom Furusund, Rådmansö och Vätö.
+                Vi är specialiserade på <strong>takbyte på öar som bara nås med båt</strong>. 
+                På Husarö, Finnhamn och Ingmarsö, liksom Svartlöga, Söderöra, Norröra, Humlö och Gräskö 
+                har vi genomfört takprojekt där allt material transporterats sjövägen. 
+                Högmarsö och Arholma tillhör också vårt verksamhetsområde, liksom Furusund, Rådmansö och Vätö.
               </p>
               <p>
                 Längs kusten arbetar vi i Spillersboda, Bergshamra och Svartnö. På Väddö och upp mot 
@@ -124,7 +125,7 @@ const ServiceArea = () => {
                 lagt tak på hundratals fastigheter genom åren.
               </p>
               <p>
-                Oavsett om du söker <strong>takbyte i Roslagen</strong>, behöver en <strong>takläggare på Furusund</strong> eller 
+                Oavsett om du söker <strong>takbyte i Roslagen</strong>, behöver en <strong>takläggare på en ö utan bro</strong> eller 
                 vill ha en <strong>takrenovering på Väddö</strong> — kontakta oss för en kostnadsfri offert. Vi återkopplar inom 24 timmar.
               </p>
             </div>

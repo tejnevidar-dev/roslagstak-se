@@ -12,6 +12,7 @@ const FreeConsultation = lazy(() => import("@/components/FreeConsultation"));
 const About = lazy(() => import("@/components/About"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const ServiceArea = lazy(() => import("@/components/ServiceArea"));
+const IslandSpecialist = lazy(() => import("@/components/IslandSpecialist"));
 const FAQ = lazy(() => import("@/components/FAQ"));
 const Contact = lazy(() => import("@/components/Contact"));
 import Footer from "@/components/Footer";
@@ -48,6 +49,7 @@ const Index = () => {
           <QuoteConfigurator />
           <FreeConsultation />
           <About />
+          <IslandSpecialist />
           <ServiceArea />
           <Testimonials />
           <FAQ />
