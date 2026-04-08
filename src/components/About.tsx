@@ -83,7 +83,7 @@ const About = () => {
               width={800}
               height={600}
               loading="lazy"
-              className="rounded-lg shadow-xl w-full object-cover aspect-[16/9]"
+              className="rounded-lg shadow-xl w-full object-cover aspect-[3/4]"
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg hidden md:block">
               <Anchor className="w-6 h-6 mb-1 opacity-80" />
