@@ -14,36 +14,36 @@ const priceData = [
   {
     category: "Plåttak",
     items: [
-      { name: "TP20 plåttak", priceRange: "Från ca 800 kr/m²", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
-      { name: "Pannplåttak", priceRange: "Från ca 850 kr/m²", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
-      { name: "Tegelplåttak", priceRange: "Från ca 900 kr/m²", description: "Plåtprofil som imiterar tegel. Stilrent och underhållsfritt." },
-      { name: "Dubbelfalsat plåttak", priceRange: "Från ca 1 500 kr/m²", description: "Premiumprodukten. Helt vattentätt, extremt långlivat (50+ år)." },
+      { name: "TP20 plåttak", priceRange: "Från ca 1200 kr/m²", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
+      { name: "Pannplåttak", priceRange: "Från ca 1200 kr/m²", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
+      { name: "Plegelplåttak", priceRange: "Från ca 1200 kr/m²", description: "Plåtprofil som imiterar tegel. Stilrent och underhållsfritt." },
+      { name: "Dubbelfalsat plåttak", priceRange: "Från ca 2000 kr/m²", description: "Premiumprodukten. Helt vattentätt, extremt långlivat (50+ år)." },
     ],
   },
   {
     category: "Panntak",
     items: [
-      { name: "Betongpannetak", priceRange: "Från ca 700 kr/m²", description: "Beprövat och prisvärt. 30–50 års livslängd." },
-      { name: "Lertegeltak", priceRange: "Från ca 1 200 kr/m²", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
+      { name: "Betongpannetak", priceRange: "Från ca 1200 kr/m²", description: "Beprövat och prisvärt. 30–50 års livslängd." },
+      { name: "Lertegeltak", priceRange: "Från ca 1 300 kr/m²", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
     ],
   },
   {
     category: "Övriga tjänster",
     items: [
-      { name: "Takrenovering", priceRange: "Från ca 300 kr/m²", description: "Beroende på skadans omfattning. Alltid fast pris efter besiktning." },
-      { name: "Takavvattning (hängrännor)", priceRange: "Från ca 250 kr/löpmeter", description: "Komplett system med stuprör från ca 15 000 kr." },
-      { name: "Takkupa", priceRange: "Från ca 50 000 kr", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
-      { name: "Takfönster (Velux)", priceRange: "Från ca 15 000 kr", description: "Inklusive montering och vattenavledning." },
+      { name: "Takrenovering", priceRange: "​Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter besiktning." },
+      { name: "Takavvattning (hängrännor)", priceRange: "​Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör från ca 15 000 kr." },
+      { name: "Takkupa", priceRange: "​Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
+      { name: "Takfönster (Velux)", priceRange: "​​Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
       { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig besiktning med skriftlig rapport och åtgärdsförslag." },
     ],
   },
   {
     category: "Tillval",
     items: [
-      { name: "Råspontbyte", priceRange: "Från ca 200 kr/m²", description: "Byte av skadat underlag vid takbyte." },
-      { name: "Underlagspapp", priceRange: "Från ca 80 kr/m²", description: "Ny underlagspapp ingår ofta i takbyte, tillägg vid renovering." },
-      { name: "Takstege + gångbrygga", priceRange: "Från ca 8 000 kr", description: "Komplett taksäkerhet enligt BBR." },
-      { name: "Snörasskydd", priceRange: "Från ca 500 kr/löpmeter", description: "Monteras vid takfot mot entréer och gångvägar." },
+      { name: "Råspontbyte", priceRange: "Från ca 300 kr/m²", description: "Byte av skadat underlag vid takbyte." },
+      { name: "Skorstensinklädnad", priceRange: "Från ca 7000 kr ", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
+      { name: "Takstege + gångbrygga", priceRange: "Från ca 8000 kr", description: "Komplett taksäkerhet enligt BBR." },
+      { name: "Snörasskydd", priceRange: "Från ca 1000 kr/löpmeter", description: "Monteras vid takfot mot entréer och gångvägar." },
     ],
   },
 ];
