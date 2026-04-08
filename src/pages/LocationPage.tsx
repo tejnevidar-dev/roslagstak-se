@@ -1,6 +1,6 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, ArrowRight, CheckCircle, Phone, Star, ChevronDown, Home } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle, Phone, Star, Home, Shield, Clock, Award } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -29,7 +29,7 @@ const LocationPage = () => {
 
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
   const prep = location.isIsland ? "på" : "i";
-  const faqs = generateLocationFAQs(location.name, prep, location.isIsland);
+  const faqs = generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -55,6 +55,18 @@ const LocationPage = () => {
       bestRating: "5",
       ratingCount: "153",
       reviewCount: "153",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "59.7666",
+      longitude: "18.6946",
+    },
+    priceRange: "$$",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "17:00",
     },
   };
 
@@ -84,8 +96,8 @@ const LocationPage = () => {
   return (
     <>
       <SEOHead
-        title={`Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`}
-        description={location.description}
+        title={`Takläggare ${prep} ${location.name} — Takbyte & Takrenovering 2026`}
+        description={`${location.primaryKeyword} — ${location.description} Kostnadsfri offert ✓ 10 års garanti ✓ ROT-avdrag ✓`}
         canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
       />
       <Header />
@@ -132,7 +144,7 @@ const LocationPage = () => {
               {location.region}
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              Takläggare {prep} {location.name} — takbyte & takrenovering
+              {location.primaryKeyword} — takbyte & takrenovering
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {location.description}
@@ -148,6 +160,18 @@ const LocationPage = () => {
                 4.9 av 5 — baserat på 153 kundrecensioner
               </span>
             </div>
+            {/* Trust signals */}
+            <div className="flex flex-wrap gap-4 mt-6">
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Shield className="w-4 h-4 text-primary" /> 10 års garanti
+              </div>
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
+              </div>
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Award className="w-4 h-4 text-primary" /> 150+ takprojekt
+              </div>
+            </div>
           </div>
 
           {/* Content */}
@@ -161,17 +185,22 @@ const LocationPage = () => {
                   {location.longDescription}
                 </p>
 
+                {/* Extra unique content for SEO depth */}
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {location.extraContent}
+                </p>
+
                 <h3 className="font-display text-xl text-foreground mb-3">
                   Våra taktjänster {prep} {location.name}
                 </h3>
                 <ul className="space-y-2 mb-6">
                   {[
-                    `Takomläggning ${prep} ${location.name}`,
-                    `Takrenovering ${prep} ${location.name}`,
-                    `Plåtarbeten och takavvattning`,
+                    `Takomläggning och takbyte ${prep} ${location.name}`,
+                    `Takrenovering och underhåll ${prep} ${location.name}`,
+                    `Plåtarbeten, takavvattning och hängrännor`,
                     `TP20, dubbelfalsat, tegelplåt, pannplåt och lertegeltak`,
-                    `Takinspektion med kostnadsfri rapport`,
-                    `Hjälp med ROT-avdrag`,
+                    `Kostnadsfri takinspektion med skriftlig rapport`,
+                    `Hjälp med ROT-avdrag — 30% rabatt på arbetskostnaden`,
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -193,7 +222,7 @@ const LocationPage = () => {
                       <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}
                     </Link>
                     <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Se prislista
+                      <ArrowRight className="w-3 h-3" /> Se prislista för takbyte
                     </Link>
                     <Link to="/blogg/valja-ratt-tak-roslagen" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Guide: Välj rätt tak
@@ -208,14 +237,14 @@ const LocationPage = () => {
                 </div>
 
                 <h3 className="font-display text-xl text-foreground mb-3">
-                  Varför välja RoslagsTak {prep} {location.name}?
+                  Varför välja RoslagsTak som {location.primaryKeyword.toLowerCase()}?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Vi har 70 års samlad erfarenhet och har genomfört 150+ takprojekt i Roslagen. 
                   {location.isIsland
-                    ? ` Vi hanterar all materialtransport till ${location.name} och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
-                    : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och erbjuder konkurrenskraftiga priser.`}
-                  {" "}Alla arbeten utförs enligt AMA-standard med 10 års garanti.
+                    ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
+                    : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och erbjuder konkurrenskraftiga priser tack vare samordning med andra projekt i området.`}
+                  {" "}Alla arbeten utförs enligt AMA Hus med 10 års garanti på material och utförande.
                 </p>
               </div>
 
@@ -263,7 +292,7 @@ const LocationPage = () => {
               {/* Nearby locations */}
               {nearby.length > 0 && (
                 <div className="bg-card border border-border rounded-lg p-6">
-                  <h3 className="font-display text-lg text-card-foreground mb-4">Närliggande områden</h3>
+                  <h3 className="font-display text-lg text-card-foreground mb-4">Takläggare i närområdet</h3>
                   <div className="space-y-2">
                     {nearby.map((loc) => (
                       <Link
@@ -280,7 +309,7 @@ const LocationPage = () => {
               )}
 
               <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="font-display text-lg text-card-foreground mb-3">Våra tjänster</h3>
+                <h3 className="font-display text-lg text-card-foreground mb-3">Våra taktjänster</h3>
                 <div className="space-y-2">
                   {["Takomläggning", "Takrenovering", "Takavvattning", "Plåtarbeten", "Takinspektion"].map((s) => (
                     <Link
