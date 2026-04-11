@@ -58,7 +58,7 @@ const Testimonials = () => {
             href="https://share.google/FsdpfTq9H3amLoTPe"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity hover:animate-subtle-pulse"
           >
             <Star className="w-4 h-4 fill-current" />
             Se våra Google-recensioner

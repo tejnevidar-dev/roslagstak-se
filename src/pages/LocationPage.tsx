@@ -130,7 +130,7 @@ const LocationPage = () => {
             </nav>
             <Link
               to="/"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
             >
               <Home className="w-4 h-4" />
               Till startsidan
@@ -277,13 +277,13 @@ const LocationPage = () => {
                 </p>
                 <Link
                   to="/#offert"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
                 >
                   Konfigurera din offert <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
                   href="tel:+46701543639"
-                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors mt-3"
+                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors mt-3 hover:animate-subtle-pulse"
                 >
                   <Phone className="w-4 h-4" /> Ring 070-154 36 39
                 </a>
