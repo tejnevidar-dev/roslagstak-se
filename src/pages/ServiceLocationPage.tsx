@@ -18,7 +18,7 @@ import {
 const ServiceLocationPage = () => {
   const { location: locSlug } = useParams<{ location: string }>();
   const pathname = useLocation().pathname;
-  const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : "";
+  const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : pathname.startsWith("/takomlaggning-") ? "takomlaggning" : "";
   const combo = serviceSlug && locSlug ? getCombo(serviceSlug, locSlug) : undefined;
 
   useEffect(() => {
@@ -35,8 +35,11 @@ const ServiceLocationPage = () => {
     })
     .filter(Boolean) || [];
 
-  const otherService = combo.serviceSlug === "takbyte" ? "takrenovering" : "takbyte";
-  const otherServiceName = combo.serviceSlug === "takbyte" ? "Takrenovering" : "Takbyte";
+  const otherServices = [
+    { slug: "takbyte", name: "Takbyte" },
+    { slug: "takrenovering", name: "Takrenovering" },
+    { slug: "takomlaggning", name: "Takomläggning" },
+  ].filter((s) => s.slug !== combo.serviceSlug);
 
   const faqs = generateServiceLocationFAQs(
     combo.serviceName,
@@ -195,12 +198,15 @@ const ServiceLocationPage = () => {
                   >
                     <ArrowRight className="w-3 h-3" /> Takläggare {combo.prep} {combo.locationName}
                   </Link>
-                  <Link
-                    to={`/${otherService}-${combo.locationSlug}`}
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
-                  >
-                    <ArrowRight className="w-3 h-3" /> {otherServiceName} {combo.prep} {combo.locationName}
-                  </Link>
+                  {otherServices.map((os) => (
+                    <Link
+                      key={os.slug}
+                      to={`/${os.slug}-${combo.locationSlug}`}
+                      className="flex items-center gap-2 text-sm text-primary hover:underline"
+                    >
+                      <ArrowRight className="w-3 h-3" /> {os.name} {combo.prep} {combo.locationName}
+                    </Link>
+                  ))}
                   <Link to="/tjanster/takavvattning" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> Takavvattning
                   </Link>
