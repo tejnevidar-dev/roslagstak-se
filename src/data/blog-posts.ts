@@ -197,6 +197,24 @@ export const blogPosts: BlogPost[] = [
       "Redo att boka? Kontakta oss för en kostnadsfri offert. Vi hjälper dig genom hela processen — från besiktning till slutbesiktning. Ring 070-154 36 39 eller konfigurera din offert direkt här på sidan.",
     ],
   },
+  {
+    slug: "eternittak-asbest-sanering",
+    title: "Eternittak med asbest — allt du behöver veta om sanering och takbyte",
+    excerpt: "Har du eternittak? Så identifierar du asbest, vad lagen säger och hur saneringen går till. Komplett guide för husägare i Roslagen och skärgården.",
+    date: "2026-04-11",
+    readTime: "7 min",
+    keywords: ["eternittak", "asbest tak", "asbestsanering tak", "riva eternittak", "eternit asbest", "eternittak sanering roslagen", "byta eternittak"],
+    content: [
+      "Eternit är ett byggmaterial som användes flitigt i Sverige mellan 1930- och 1980-talet. Det består av cement förstärkt med fibrer — och i äldre eternitplattor är dessa fibrer ofta asbest. Asbest är ett cancerframkallande material som vid rivning kan frigöra farliga mikroskopiska fibrer i luften.",
+      "Hur vet jag om mitt tak innehåller asbest? Om ditt hus har eternitplattor som lades före 1982 är sannolikheten stor att de innehåller asbest. Plattorna är ofta gråaktiga, korrugerade eller plana skivor. Det enda sättet att vara helt säker är att ta ett materialprov och skicka det till ett ackrediterat laboratorium — något vi kan hjälpa dig med kostnadsfritt.",
+      "Vad säger lagen? Enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1) är det förbjudet att riva asbestmaterial utan rätt utbildning, utrustning och anmälan. En anmälan till Arbetsmiljöverket ska göras minst 7 arbetsdagar före rivningen påbörjas. Brott mot reglerna kan leda till böter och arbetsförbud.",
+      "Så går saneringen till: Först gör vi en kostnadsfri besiktning och tar materialprov vid behov. När asbestförekomst bekräftats upprättar vi en saneringsplan och gör anmälan till Arbetsmiljöverket. Rivningen sker med fullständig skyddsutrustning — andningsskydd, skyddsdräkter och dammsugare med HEPA-filter. Plattorna fuktas för att minimera fiberutsläpp, tas ner hela och emballeras i märkta big bags som transporteras till godkänd deponi.",
+      "Vad kostar det att sanera eternittak? Saneringen i sig kostar från ca 400 kr/m² beroende på takets storlek och tillgänglighet. Därtill kommer kostnaden för nytt tak — från ca 800 kr/m² för TP20-plåt. Med ROT-avdrag (30% på arbetskostnaden, max 50 000 kr per person/år) blir totalkostnaden betydligt lägre. Vi ger alltid fast pris efter besiktning.",
+      "Eternittak i skärgården kräver extra planering. På öar utan broförbindelse som Blidö, Svartlöga, Husarö och Ingmarsö behöver det sanerade materialet transporteras med båt till godkänd deponi. Vi har lång erfarenhet av att hantera logistiken kring asbestsanering i Roslagens skärgård och ordnar allt från materialtransport till avfallshantering.",
+      "Kan jag bo kvar under saneringen? Ja, i de allra flesta fall. Vi spärrar av arbetsområdet och använder skyddsplast för att förhindra spridning av fibrer. Rivningen av ett normalt villatak tar 1–2 dagar, och det nya taket kan ofta läggas samma vecka.",
+      "Vänta inte med att byta ditt eternittak. Gamla eternitplattor vittrar med åren och risken för fiberutsläpp ökar. Dessutom kan ett skadat eternittak leda till fuktskador i konstruktionen. Kontakta oss för en kostnadsfri besiktning — vi undersöker ditt tak och ger dig en tydlig offert utan förbindelser. Ring 070-154 36 39 eller konfigurera din offert direkt.",
+    ],
+  },
 ];
 
 export const getBlogPostBySlug = (slug: string) => blogPosts.find((p) => p.slug === slug);
