@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { services } from "@/components/Services";
+import EternitSEOContent from "@/components/EternitSEOContent";
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
