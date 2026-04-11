@@ -5,9 +5,11 @@ interface SEOHeadProps {
   description: string;
   canonical?: string;
   type?: string;
+  geoPosition?: string;
+  geoPlacename?: string;
 }
 
-const SEOHead = ({ title, description, canonical, type = "website" }: SEOHeadProps) => {
+const SEOHead = ({ title, description, canonical, type = "website", geoPosition, geoPlacename }: SEOHeadProps) => {
   const fullTitle = title.length > 55 ? title : `${title} | RoslagsTak`;
   const url = canonical || "https://roslagstak.se/";
 
@@ -32,6 +34,10 @@ const SEOHead = ({ title, description, canonical, type = "website" }: SEOHeadPro
       <meta name="twitter:image" content="https://roslagstak.se/og-image.jpg" />
       <link rel="alternate" hrefLang="sv" href={url} />
       <link rel="alternate" hrefLang="x-default" href={url} />
+      <meta name="geo.region" content="SE-AB" />
+      {geoPosition && <meta name="geo.position" content={geoPosition} />}
+      {geoPosition && <meta name="ICBM" content={geoPosition.replace(";", ",")} />}
+      {geoPlacename && <meta name="geo.placename" content={geoPlacename} />}
     </Helmet>
   );
 };
