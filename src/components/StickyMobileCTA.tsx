@@ -15,7 +15,7 @@ const StickyMobileCTA = () => {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 md:hidden bg-accent/95 backdrop-blur-sm border-t border-border px-4 py-3 flex gap-3 transition-transform duration-500 ease-out ${
+      className={`fixed bottom-0 left-0 right-0 z-50 md:hidden bg-accent/95 backdrop-blur-sm border-t border-border shadow-[0_-8px_24px_-4px_hsl(var(--foreground)/0.15)] px-4 py-3 flex gap-3 transition-transform duration-500 ease-out ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
