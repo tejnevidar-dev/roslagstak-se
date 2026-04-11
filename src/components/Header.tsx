@@ -75,6 +75,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
+              data-nav-link
               onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-primary-foreground/80 hover:text-primary transition-colors"
             >
@@ -116,6 +117,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
+              data-nav-link
               onClick={(e) => handleNavClick(e, link.href)}
               className="block text-primary-foreground/80 hover:text-primary font-medium"
             >
