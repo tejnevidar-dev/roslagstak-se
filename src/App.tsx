@@ -13,6 +13,7 @@ import Prices from "./pages/Prices.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import StickyMobileCTA from "./components/StickyMobileCTA";
 import { locations } from "./data/locations";
 
 const queryClient = new QueryClient();
