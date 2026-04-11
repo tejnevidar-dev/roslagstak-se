@@ -230,8 +230,12 @@ const ServiceDetail = () => {
   return (
     <>
       <SEOHead
-        title={`${service.title} i Roslagen — Takläggare RoslagsTak`}
-        description={`${service.title} i Roslagen. ${service.description} Kostnadsfri offert och 10 års garanti.`}
+        title={slug === "eternit-asbest"
+          ? "Eternitsanering & Asbestrivning Roslagen — Certifierad"
+          : `${service.title} i Roslagen — Takläggare RoslagsTak`}
+        description={slug === "eternit-asbest"
+          ? "Certifierad eternitsanering och asbestrivning i Roslagen & skärgården. Säker rivning enligt AFS 2006:1, transport till deponi och nytt tak. Kostnadsfri besiktning. ROT-avdrag."
+          : `${service.title} i Roslagen. ${service.description} Kostnadsfri offert och 10 års garanti.`}
         canonical={`https://roslagstak.se/tjanster/${slug}`}
       />
       <Header />
@@ -268,6 +272,9 @@ const ServiceDetail = () => {
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-foreground leading-relaxed">{details.longDesc}</p>
             </div>
+
+            {/* Eternit-specific SEO content */}
+            {slug === "eternit-asbest" && <EternitSEOContent />}
 
 
             {/* Benefits & Process */}
