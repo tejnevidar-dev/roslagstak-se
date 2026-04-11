@@ -67,7 +67,7 @@
 }
 
 @layer components {
-  a:not([class*="animate-subtle-pulse"]):hover,
+  a:not([class*="animate-subtle-pulse"]):not(header nav a):hover,
   button:not([class*="animate-subtle-pulse"]):hover {
     animation: subtle-pulse 2.5s ease-in-out infinite;
   }
