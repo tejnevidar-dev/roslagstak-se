@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { services } from "@/components/Services";
+import EternitSEOContent from "@/components/EternitSEOContent";
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
@@ -229,8 +230,12 @@ const ServiceDetail = () => {
   return (
     <>
       <SEOHead
-        title={`${service.title} i Roslagen — Takläggare RoslagsTak`}
-        description={`${service.title} i Roslagen. ${service.description} Kostnadsfri offert och 10 års garanti.`}
+        title={slug === "eternit-asbest"
+          ? "Eternitsanering & Asbestrivning Roslagen — Certifierad"
+          : `${service.title} i Roslagen — Takläggare RoslagsTak`}
+        description={slug === "eternit-asbest"
+          ? "Certifierad eternitsanering och asbestrivning i Roslagen & skärgården. Säker rivning enligt AFS 2006:1, transport till deponi och nytt tak. Kostnadsfri besiktning. ROT-avdrag."
+          : `${service.title} i Roslagen. ${service.description} Kostnadsfri offert och 10 års garanti.`}
         canonical={`https://roslagstak.se/tjanster/${slug}`}
       />
       <Header />
@@ -267,6 +272,9 @@ const ServiceDetail = () => {
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-foreground leading-relaxed">{details.longDesc}</p>
             </div>
+
+            {/* Eternit-specific SEO content */}
+            {slug === "eternit-asbest" && <EternitSEOContent />}
 
 
             {/* Benefits & Process */}
@@ -334,6 +342,11 @@ const ServiceDetail = () => {
                 <Link to="/blogg/rot-avdrag-takbyte" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> ROT-avdrag vid takbyte
                 </Link>
+                {slug === "eternit-asbest" && (
+                  <Link to="/blogg/eternittak-asbest-sanering" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                    <ArrowRight className="w-3 h-3" /> Allt om eternittak och asbest
+                  </Link>
+                )}
                 <Link to="/taklaggare-blido" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> Takläggare på Blidö
                 </Link>
