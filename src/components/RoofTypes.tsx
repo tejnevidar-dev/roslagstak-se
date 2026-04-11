@@ -184,7 +184,7 @@ const RoofTypes = () => {
 
                     <a
                       href="#offert"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
+                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
                     >
                       Få offert för {roof.name.toLowerCase()}
                     </a>
