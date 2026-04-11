@@ -46,7 +46,6 @@ const App = () => (
           </Routes>
           <StickyMobileCTA />
         </BrowserRouter>
-        </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
