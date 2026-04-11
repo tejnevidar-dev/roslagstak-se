@@ -31,6 +31,8 @@ export const locations: LocationData[] = [
       answer: "Vi utgår från Blidö och har etablerade logistikrutiner via Blidöleden. Material levereras direkt till ön, och vi samordnar ofta flera projekt för att minimera transportkostnader. All logistik ingår i offerten — du behöver inte arrangera något själv.",
     },
     primaryKeyword: "takläggare Blidö",
+    lat: 59.6167,
+    lng: 18.8333,
     nearbyLocations: ["Yxlan", "Furusund", "Rådmansö"],
   },
   {
@@ -46,6 +48,8 @@ export const locations: LocationData[] = [
       answer: "På Ljusterö ser vi en stor variation — från äldre betongpannetak och lertegel till modernare TP20-plåttak. Många väljer att byta till dubbelfalsat plåt eller tegelplåt vid takomläggning. Vi rekommenderar material utifrån husets stil, takets lutning och din budget. Boka en kostnadsfri besiktning så ger vi en personlig rekommendation.",
     },
     primaryKeyword: "takläggare Ljusterö",
+    lat: 59.4667,
+    lng: 18.5333,
     nearbyLocations: ["Svartnö", "Vaxholm", "Högmarsö"],
   },
   {
@@ -61,6 +65,8 @@ export const locations: LocationData[] = [
       answer: "Ja, vi utför ofta takbyten på Yxlan när fastighetsägaren inte är på plats. Vi dokumenterar arbetet med bilder och håller dig uppdaterad löpande. Besiktning och offert kan göras vid ett separat besök, och nycklar kan överlämnas på plats. Vi har gjort detta många gånger med gott resultat.",
     },
     primaryKeyword: "takläggare Yxlan",
+    lat: 59.6333,
+    lng: 18.8167,
     nearbyLocations: ["Blidö", "Furusund", "Rådmansö"],
   },
   {
@@ -76,6 +82,8 @@ export const locations: LocationData[] = [
       answer: "Eftersom vi arbetar regelbundet i Furusundsområdet kan vi ofta påbörja arbetet inom 1–3 veckor efter beställning. Vi samordnar gärna med andra projekt i närheten, vilket kan ge ett förmånligt pris. Ring oss för att diskutera ditt projekt — vi ger alltid en realistisk tidsplan.",
     },
     primaryKeyword: "takläggare Furusund",
+    lat: 59.65,
+    lng: 18.9167,
     nearbyLocations: ["Blidö", "Yxlan", "Rådmansö"],
   },
   {
@@ -91,6 +99,8 @@ export const locations: LocationData[] = [
       answer: "Vi transporterar allt material till Husarö sjövägen med egna logistiklösningar. Plåt, råspont, underlagspapp och verktyg — allt levereras direkt till ön. Transportkostnaden ingår i vår offert. Vi planerar leveranser noggrant för att minimera antalet transporter och hålla nere kostnaderna.",
     },
     primaryKeyword: "takläggare Husarö",
+    lat: 59.5333,
+    lng: 18.6833,
     nearbyLocations: ["Ingmarsö", "Finnhamn", "Ljusterö"],
   },
   {
@@ -106,6 +116,8 @@ export const locations: LocationData[] = [
       answer: "Absolut. Vi är specialiserade på takbyten på öar utan broförbindelse, och Finnhamn är en av de platser vi arbetat på. Allt material transporteras sjövägen och vi planerar arbetet för att minimera logistikkostnader. Resultatet blir ett tak av samma kvalitet som på fastlandet — med full garanti.",
     },
     primaryKeyword: "takläggare Finnhamn",
+    lat: 59.5167,
+    lng: 18.7167,
     nearbyLocations: ["Husarö", "Ingmarsö", "Högmarsö"],
   },
   {
@@ -121,6 +133,8 @@ export const locations: LocationData[] = [
       answer: "Ja, vi tar hand om allt — inklusive rivning, bortforsling och miljöriktig avfallshantering av gammalt takmaterial. Detta gäller även på öar som Ingmarsö dit vi transporterar material sjövägen. Allt ingår i det fasta priset du får i offerten.",
     },
     primaryKeyword: "takläggare Ingmarsö",
+    lat: 59.5,
+    lng: 18.65,
     nearbyLocations: ["Husarö", "Finnhamn", "Ljusterö"],
   },
   {
@@ -136,6 +150,8 @@ export const locations: LocationData[] = [
       answer: "Inte nödvändigtvis. Vi samordnar ofta projekt på Högmarsö med andra jobb i skärgården, vilket håller nere logistikkostnaden. Transporttillägget för material är relativt litet tack vare Högmarsös närhet till Ljusterö. Begär en offert så ser du exakt vad det kostar — inga dolda tillägg.",
     },
     primaryKeyword: "takläggare Högmarsö",
+    lat: 59.4833,
+    lng: 18.6,
     nearbyLocations: ["Ljusterö", "Finnhamn", "Ingmarsö"],
   },
   {
@@ -151,6 +167,8 @@ export const locations: LocationData[] = [
       answer: "Ja — vi på RoslagsTak är specialiserade på takbyten på öar utan vägförbindelse, och Svartlöga är en av de platser vi regelbundet arbetar på. Vi transporterar allt material sjövägen och planerar projektet så att arbetet kan genomföras effektivt, oavsett väder. Ring oss så berättar vi mer.",
     },
     primaryKeyword: "takläggare Svartlöga",
+    lat: 59.6,
+    lng: 19.05,
     nearbyLocations: ["Söderöra", "Norröra", "Humlö"],
   },
   {
@@ -166,6 +184,8 @@ export const locations: LocationData[] = [
       answer: "Ja, det är vår specialitet. Vi har utvecklat logistiklösningar för att transportera material sjövägen till öar som Söderöra. Vi samordnar ofta med projekt på närliggande öar för att hålla nere kostnaderna. Allt ingår i det fasta priset i offerten.",
     },
     primaryKeyword: "takläggare Söderöra",
+    lat: 59.5833,
+    lng: 19.0,
     nearbyLocations: ["Svartlöga", "Norröra", "Gräskö"],
   },
   {
@@ -181,6 +201,8 @@ export const locations: LocationData[] = [
       answer: "Ja, vi erbjuder kostnadsfri takinspektion även på öar som Humlö. Vi samordnar ofta besiktningar med andra arbeten i norra skärgården. Kontakta oss så bokar vi in ett besök — du får en skriftlig rapport med vår bedömning och rekommendation.",
     },
     primaryKeyword: "takläggare Humlö",
+    lat: 59.6167,
+    lng: 19.0333,
     nearbyLocations: ["Svartlöga", "Norröra", "Gräskö"],
   },
   {
@@ -196,6 +218,8 @@ export const locations: LocationData[] = [
       answer: "Ja, vi är vana vid att arbeta med material som matchar äldre skärgårdsarkitektur. På Norröra rekommenderar vi ofta pannplåt i traditionella kulörer eller lertegel för att bevara öns karaktär. Vi anpassar alltid utförandet efter varje byggnads stil och historia.",
     },
     primaryKeyword: "takläggare Norröra",
+    lat: 59.5667,
+    lng: 18.9833,
     nearbyLocations: ["Söderöra", "Svartlöga", "Humlö"],
   },
   {
@@ -211,6 +235,8 @@ export const locations: LocationData[] = [
       answer: "Gräskö ligger exponerat mot havet, så vi rekommenderar TP20-plåttak eller dubbelfalsat plåttak med korrosionsbeständig behandling. Dessa material tål salt, vind och fukt bäst. Vi undviker betongpannor på exponerade lägen i ytterskärgården — plåt ger längre livslängd och kräver minimalt underhåll.",
     },
     primaryKeyword: "takläggare Gräskö",
+    lat: 59.55,
+    lng: 18.95,
     nearbyLocations: ["Söderöra", "Norröra", "Furusund"],
   },
   {
@@ -226,6 +252,8 @@ export const locations: LocationData[] = [
       answer: "Det beror på takets skick. Vi erbjuder kostnadsfri takinspektion i Spillersboda där vi bedömer om en renovering räcker eller om det behövs ett komplett byte. Ibland kan byte av underlagspapp och beslag förlänga takets livslängd med 15–20 år. Vi ger alltid en ärlig rekommendation.",
     },
     primaryKeyword: "takläggare Spillersboda",
+    lat: 59.7,
+    lng: 18.5833,
     nearbyLocations: ["Norrtälje", "Bergshamra", "Rådmansö"],
   },
   {
@@ -241,6 +269,8 @@ export const locations: LocationData[] = [
       answer: "Rådmansö ligger nära vår bas, så vi kan ofta boka in en kostnadsfri takinspektion inom några dagar. Ring oss på 070-154 36 39 så hittar vi en tid som passar. Vi ger alltid en skriftlig rapport med bedömning och prisförslag.",
     },
     primaryKeyword: "takläggare Rådmansö",
+    lat: 59.6667,
+    lng: 18.85,
     nearbyLocations: ["Norrtälje", "Blidö", "Furusund"],
   },
   {
@@ -256,6 +286,8 @@ export const locations: LocationData[] = [
       answer: "Ja, vi hanterar rivning och bortforsling av eternittak med certifierad sanering enligt gällande regler. Eternit förekommer på många äldre fastigheter i Bergshamra. Vi sköter hela processen — från rivning till färdigt nytt tak — så att du slipper koordinera flera aktörer.",
     },
     primaryKeyword: "takläggare Bergshamra",
+    lat: 59.7167,
+    lng: 18.55,
     nearbyLocations: ["Spillersboda", "Norrtälje", "Svartnö"],
   },
   {
@@ -271,6 +303,8 @@ export const locations: LocationData[] = [
       answer: "De flesta tak i kustmiljö som Svartnö håller 25–40 år beroende på material. Tecken på att det är dags: mossa, fuktfläckar i underlaget, rostiga beslag eller spruckna pannor. Vi erbjuder kostnadsfri takinspektion och ger dig en ärlig bedömning — ibland räcker det med en renovering istället för ett komplett byte.",
     },
     primaryKeyword: "takläggare Svartnö",
+    lat: 59.45,
+    lng: 18.55,
     nearbyLocations: ["Ljusterö", "Bergshamra", "Vaxholm"],
   },
   {
@@ -286,6 +320,8 @@ export const locations: LocationData[] = [
       answer: "Ja, vi har erfarenhet av att lägga tak på ladugårdar, lador och andra lantbruksbyggnader på Väddö. TP20-plåttak är ofta det mest kostnadseffektiva valet för stora takytor. Vi erbjuder fast pris och kan påbörja arbetet med kort ledtid.",
     },
     primaryKeyword: "takläggare Väddö",
+    lat: 59.95,
+    lng: 18.95,
     nearbyLocations: ["Grisslehamn", "Singö", "Norrtälje"],
   },
   {
@@ -301,6 +337,8 @@ export const locations: LocationData[] = [
       answer: "Vätö ligger längs vår dagliga färdväg ut till skärgården. Det innebär att vi kan samordna projekt och minska restidskostnaderna, vilket ger ett förmånligare pris. Du får samma kvalitet och garanti som på alla andra platser vi arbetar.",
     },
     primaryKeyword: "takläggare Vätö",
+    lat: 59.7,
+    lng: 18.7833,
     nearbyLocations: ["Rådmansö", "Blidö", "Norrtälje"],
   },
   {
@@ -316,6 +354,8 @@ export const locations: LocationData[] = [
       answer: "Vi har genomfört 150+ takprojekt i Norrtäljeområdet och har 70 års samlad erfarenhet. Vi är den mest erfarna takläggaren i Norrtälje med referensprojekt i hela kommunen. Ring oss för att diskutera ditt projekt — vi erbjuder alltid kostnadsfri besiktning.",
     },
     primaryKeyword: "takläggare Norrtälje",
+    lat: 59.7667,
+    lng: 18.7,
     nearbyLocations: ["Rådmansö", "Vätö", "Spillersboda"],
   },
   {
@@ -331,6 +371,8 @@ export const locations: LocationData[] = [
       answer: "Absolut. Vi har erfarenhet av att arbeta med kulturhistoriskt värdefulla fastigheter i Vaxholm. Vi anpassar materialval och utförande efter husets ålder och stil — pannplåt i traditionella kulörer, lertegel eller handfalsat beslag. Vi kan även hjälpa till med kontakt med kommunen om bygglov krävs.",
     },
     primaryKeyword: "takläggare Vaxholm",
+    lat: 59.4,
+    lng: 18.35,
     nearbyLocations: ["Ljusterö", "Norrtälje", "Svartnö"],
   },
   {
@@ -346,6 +388,8 @@ export const locations: LocationData[] = [
       answer: "Ja, vi samordnar ofta projekt på Singö med arbeten i Grisslehamn och på Väddö. Det minskar restidskostnaden och kan ge dig ett förmånligare pris. Ring oss så planerar vi tillsammans.",
     },
     primaryKeyword: "takläggare Singö",
+    lat: 60.0,
+    lng: 18.8,
     nearbyLocations: ["Grisslehamn", "Väddö", "Arholma"],
   },
   {
@@ -361,6 +405,8 @@ export const locations: LocationData[] = [
       answer: "Grisslehamn ligger exponerat mot Ålands hav med starka vindar och salt luft. Vi rekommenderar korrosionsbeständig plåt med förstärkta infästningar. Dubbelfalsat plåt eller TP20 med rätt underlag ger längst livslängd i dessa förhållanden. Undvik betongpannor — de riskerar frostsprängning i det hårda klimatet.",
     },
     primaryKeyword: "takläggare Grisslehamn",
+    lat: 60.1,
+    lng: 18.8167,
     nearbyLocations: ["Singö", "Väddö", "Arholma"],
   },
   {
@@ -376,6 +422,8 @@ export const locations: LocationData[] = [
       answer: "Vi rekommenderar att boka 4–8 veckor i förväg för takbyte på Arholma, så att vi kan planera materialtransport och samordna med väder. Under högsäsong (maj–september) kan det vara fördelaktigt att boka ännu tidigare. Ring oss så ger vi en realistisk tidsplan.",
     },
     primaryKeyword: "takläggare Arholma",
+    lat: 59.85,
+    lng: 19.15,
     nearbyLocations: ["Singö", "Grisslehamn", "Svartlöga"],
   },
 ];
