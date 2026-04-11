@@ -198,12 +198,15 @@ const ServiceLocationPage = () => {
                   >
                     <ArrowRight className="w-3 h-3" /> Takläggare {combo.prep} {combo.locationName}
                   </Link>
-                  <Link
-                    to={`/${otherService}-${combo.locationSlug}`}
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
-                  >
-                    <ArrowRight className="w-3 h-3" /> {otherServiceName} {combo.prep} {combo.locationName}
-                  </Link>
+                  {otherServices.map((os) => (
+                    <Link
+                      key={os.slug}
+                      to={`/${os.slug}-${combo.locationSlug}`}
+                      className="flex items-center gap-2 text-sm text-primary hover:underline"
+                    >
+                      <ArrowRight className="w-3 h-3" /> {os.name} {combo.prep} {combo.locationName}
+                    </Link>
+                  ))}
                   <Link to="/tjanster/takavvattning" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> Takavvattning
                   </Link>
