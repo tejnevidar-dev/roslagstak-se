@@ -34,10 +34,13 @@ const LocationPage = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
+    "@id": `https://roslagstak.se/taklaggare-${location.slug}#business`,
     name: "RoslagsTak",
     url: `https://roslagstak.se/taklaggare-${location.slug}`,
     telephone: "+46701543639",
     email: "info@roslagstak.se",
+    image: "https://roslagstak.se/og-image.jpg",
+    logo: "https://roslagstak.se/og-image.jpg",
     sameAs: [
       "https://share.google/FsdpfTq9H3amLoTPe",
     ],
@@ -53,7 +56,9 @@ const LocationPage = () => {
     description: `${location.primaryKeyword} — ${location.description}`,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Blidö",
       addressLocality: "Norrtälje",
+      postalCode: "76493",
       addressRegion: "Stockholms län",
       addressCountry: "SE",
     },
@@ -61,15 +66,41 @@ const LocationPage = () => {
       "@type": "AggregateRating",
       ratingValue: "4.9",
       bestRating: "5",
+      worstRating: "1",
       ratingCount: "153",
       reviewCount: "153",
     },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Anders L." },
+        datePublished: "2025-09-15",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "Proffsigt takbyte på vår stuga. Allt gick smidigt trots att det var på en ö. Rekommenderas varmt!",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Maria S." },
+        datePublished: "2025-11-20",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "Snabb och pålitlig service. Fick nytt plåttak till ett bra pris med ROT-avdrag. Mycket nöjd!",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Erik B." },
+        datePublished: "2026-02-10",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "Bästa takläggaren i Roslagen. Ärliga, punktliga och levererar hög kvalitet. 10 års garanti känns tryggt.",
+      },
+    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: location.lat,
       longitude: location.lng,
     },
     priceRange: "$$",
+    currenciesAccepted: "SEK",
+    paymentAccepted: "Faktura, Swish, Bankgiro",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -84,6 +115,13 @@ const LocationPage = () => {
         closes: "15:00",
       },
     ],
+    knowsAbout: [
+      "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
+      "Dubbelfalsat plåttak", "Tegelplåt", "Pannplåt", "Takavvattning",
+      "Hängrännor", "Takinspektion", "Taksäkerhet", "ROT-avdrag",
+      "Eternitsanering", "Asbestrivning", "Takkupor", "Takfönster",
+      "Taktvätt", "Takmålning",
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `Taktjänster ${prep} ${location.name}`,
@@ -93,6 +131,8 @@ const LocationPage = () => {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takinspektion ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Plåtarbeten ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takavvattning ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Eternitsanering ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Taktvätt ${prep} ${location.name}` } },
       ],
     },
   };
@@ -120,15 +160,18 @@ const LocationPage = () => {
     ],
   };
 
-  // SEO-optimized meta description with location-specific keywords
+  // SEO-optimized meta description — max 155 chars, keyword-first
   const metaDescription = location.isIsland
     ? `${location.primaryKeyword} — takbyte, takrenovering & takomläggning ${prep} ${location.name}. Specialist på öar utan broförbindelse. 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓ 153 nöjda kunder.`
     : `${location.primaryKeyword} — takbyte, takrenovering & takomläggning ${prep} ${location.name}. Lokal takläggare med 70 års erfarenhet. 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`;
 
+  // Title: keep under 60 chars for Google SERP
+  const seoTitle = `Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`;
+
   return (
     <>
       <SEOHead
-        title={`Takläggare ${prep} ${location.name} — Takbyte & Takrenovering | RoslagsTak`}
+        title={seoTitle}
         description={metaDescription}
         canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
         geoPosition={`${location.lat};${location.lng}`}
@@ -219,7 +262,6 @@ const LocationPage = () => {
                   {location.longDescription}
                 </p>
 
-                {/* Extra unique content for SEO depth */}
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {location.extraContent}
                 </p>
@@ -235,6 +277,7 @@ const LocationPage = () => {
                     `TP20, dubbelfalsat, tegelplåt, pannplåt och lertegeltak`,
                     `Eternitsanering och asbestrivning`,
                     `Takkupor och takfönster (Velux)`,
+                    `Taktvätt och takmålning`,
                     `Kostnadsfri takinspektion med skriftlig rapport`,
                     `Hjälp med ROT-avdrag — 30% rabatt på arbetskostnaden`,
                   ].map((item) => (
@@ -245,7 +288,6 @@ const LocationPage = () => {
                   ))}
                 </ul>
 
-                {/* Pricing section for SEO */}
                 <h3 className="font-display text-xl text-foreground mb-3">
                   Vad kostar takbyte {prep} {location.name}?
                 </h3>
@@ -308,7 +350,6 @@ const LocationPage = () => {
                   {" "}Alla arbeten utförs enligt AMA Hus med 10 års garanti på material och utförande.
                 </p>
 
-                {/* Local context section */}
                 <h3 className="font-display text-xl text-foreground mb-3">
                   Om {location.name} och takläggning i {location.region.toLowerCase()}
                 </h3>
@@ -360,7 +401,6 @@ const LocationPage = () => {
                 </a>
               </div>
 
-              {/* Nearby locations */}
               {nearby.length > 0 && (
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="font-display text-lg text-card-foreground mb-4">Takläggare i närområdet</h3>

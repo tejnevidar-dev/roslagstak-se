@@ -42,7 +42,52 @@ export const generateLocationFAQs = (
       question: `Hur bokar jag en kostnadsfri takinspektion ${prep} ${name}?`,
       answer: `Ring oss på 070-154 36 39 eller fyll i formuläret på vår hemsida. Vi erbjuder kostnadsfri takinspektion ${prep} ${name} där vi bedömer takets skick och ger en skriftlig rapport med rekommendation. ${isIsland ? "Vi samordnar ofta inspektioner med pågående arbeten i skärgården." : "Vi kan ofta vara på plats inom en vecka."}`,
     },
+    {
+      question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,
+      answer: `Det beror på takets skick. Vid vår kostnadsfria takinspektion ${prep} ${name} bedömer vi om en renovering räcker eller om det behövs ett komplett takbyte. Ibland kan byte av underlagspapp och beslag förlänga takets livslängd med 15–20 år. Vi ger alltid en ärlig rekommendation — vi föreslår aldrig ett takbyte om en renovering räcker.`,
+    },
+    {
+      question: `Har ni erfarenhet av eternittak och asbest ${prep} ${name}?`,
+      answer: `Ja, vi utför certifierad eternitsanering och asbestrivning enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1). ${isIsland ? `Vi hanterar sanering och borttransport av eternit även på öar som ${name}.` : `Vi hanterar hela processen — från rivning och sanering till nytt tak.`} Kontakta oss för en kostnadsfri bedömning om du misstänker att ditt tak innehåller asbest.`,
+    },
   );
 
   return faqs;
+};
+
+// FAQs for service+location combo pages (takbyte-X, takrenovering-X)
+export const generateServiceLocationFAQs = (
+  serviceName: string,
+  locationName: string,
+  prep: string,
+  isIsland: boolean,
+): LocationFAQ[] => {
+  const isTakbyte = serviceName.toLowerCase() === "takbyte";
+
+  return [
+    {
+      question: `Vad kostar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
+      answer: isTakbyte
+        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag. Riktpriser: TP20 från ca 800 kr/m², dubbelfalsat plåttak från ca 1 500 kr/m². ${isIsland ? "Transport till ön ingår i priset." : "Vi erbjuder alltid fast pris."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
+        : `En takrenovering ${prep} ${locationName} kostar från ca 300 kr/m² beroende på åtgärd. ${isIsland ? "Transport till ön ingår." : "Fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
+    },
+    {
+      question: `Hur lång tid tar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
+      answer: isTakbyte
+        ? `Ett komplett takbyte ${prep} ${locationName} tar normalt 3–7 arbetsdagar. ${isIsland ? "Vi planerar materialtransport i förväg för att minimera projekttiden." : "Vi kan ofta starta inom 2–4 veckor."} Tidsplan ingår alltid i offerten.`
+        : `En takrenovering ${prep} ${locationName} tar vanligtvis 1–4 arbetsdagar beroende på omfattning. ${isIsland ? "Vi samordnar transport med andra projekt." : "Vi kan ofta påbörja arbetet snabbt."} Exakt tidsplan ges i offerten.`,
+    },
+    {
+      question: `Vilka material används vid ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
+      answer: `${prep.charAt(0).toUpperCase() + prep.slice(1)} ${locationName} rekommenderar vi material anpassat för ${isIsland ? "skärgårdsklimat — salt, vind och fukt" : "det kustnära klimatet"}. Populära val: TP20-plåttak, dubbelfalsat plåttak, tegelplåt och pannplåt. Vi hjälper dig välja utifrån hus, budget och takets lutning.`,
+    },
+    {
+      question: `Ingår ROT-avdrag vid ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
+      answer: `Ja, ROT-avdrag gäller för ${serviceName.toLowerCase()} ${prep} ${locationName}. Du får 30% skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter all administration — du betalar bara din del.`,
+    },
+    {
+      question: `Erbjuder ni garanti på ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
+      answer: `Ja, alla våra ${isTakbyte ? "takbyten" : "takrenoveringar"} ${prep} ${locationName} utförs med 10 års garanti på material och utförande. Alla arbeten följer AMA Hus — branschstandarden i Sverige.`,
+    },
+  ];
 };

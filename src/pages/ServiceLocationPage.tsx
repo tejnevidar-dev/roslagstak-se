@@ -1,12 +1,19 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, ArrowRight, CheckCircle, Phone, Star } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getCombo, generateCombos, allServiceSlugs } from "@/data/service-location-combos";
+import { getCombo } from "@/data/service-location-combos";
 import { locations } from "@/data/locations";
+import { generateServiceLocationFAQs } from "@/data/location-faqs";
 import NotFound from "./NotFound";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const ServiceLocationPage = () => {
   const { location: locSlug } = useParams<{ location: string }>();
@@ -31,25 +38,63 @@ const ServiceLocationPage = () => {
   const otherService = combo.serviceSlug === "takbyte" ? "takrenovering" : "takbyte";
   const otherServiceName = combo.serviceSlug === "takbyte" ? "Takrenovering" : "Takbyte";
 
+  const faqs = generateServiceLocationFAQs(
+    combo.serviceName,
+    combo.locationName,
+    combo.prep,
+    loc?.isIsland || false,
+  );
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: `${combo.serviceName} ${combo.prep} ${combo.locationName}`,
     description: combo.description,
+    url: `https://roslagstak.se${combo.url}`,
     provider: {
       "@type": "RoofingContractor",
       name: "RoslagsTak",
       url: "https://roslagstak.se",
       telephone: "+46701543639",
+      image: "https://roslagstak.se/og-image.jpg",
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "4.9",
         bestRating: "5",
+        worstRating: "1",
         ratingCount: "153",
         reviewCount: "153",
       },
     },
-    areaServed: { "@type": "Place", name: combo.locationName },
+    areaServed: {
+      "@type": "Place",
+      name: combo.locationName,
+      geo: loc ? {
+        "@type": "GeoCoordinates",
+        latitude: loc.lat,
+        longitude: loc.lng,
+      } : undefined,
+    },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "SEK",
+      description: combo.serviceSlug === "takbyte"
+        ? "Från ca 800 kr/m² (TP20) till 1 500+ kr/m² (dubbelfalsat). ROT-avdrag tillkommer."
+        : "Från ca 300 kr/m² beroende på åtgärd. ROT-avdrag tillkommer.",
+    },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   const breadcrumbJsonLd = {
@@ -57,21 +102,32 @@ const ServiceLocationPage = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
-      { "@type": "ListItem", position: 2, name: combo.serviceName, item: `https://roslagstak.se/tjanster/${combo.serviceSlug === "takbyte" ? "takomlaggning" : "takrenovering"}` },
-      { "@type": "ListItem", position: 3, name: `${combo.serviceName} ${combo.prep} ${combo.locationName}`, item: `https://roslagstak.se${combo.url}` },
+      { "@type": "ListItem", position: 2, name: `Takläggare ${combo.prep} ${combo.locationName}`, item: `https://roslagstak.se/taklaggare-${combo.locationSlug}` },
+      { "@type": "ListItem", position: 3, name: combo.serviceName, item: `https://roslagstak.se${combo.url}` },
     ],
   };
+
+  // Richer meta description
+  const metaDescription = loc?.isIsland
+    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — professionell takläggare specialiserad på öar. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning. Ring 070-154 36 39.`
+    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare med 70 års erfarenhet. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
+
+  // Title under 60 chars
+  const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — RoslagsTak`;
 
   return (
     <>
       <SEOHead
-        title={combo.title}
-        description={combo.description}
+        title={seoTitle}
+        description={metaDescription}
         canonical={`https://roslagstak.se${combo.url}`}
+        geoPosition={loc ? `${loc.lat};${loc.lng}` : undefined}
+        geoPlacename={combo.locationName}
       />
       <Header />
       <main className="pt-24 pb-20">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
         <div className="container mx-auto px-4">
@@ -79,7 +135,7 @@ const ServiceLocationPage = () => {
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8 flex-wrap" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
             <span>/</span>
-            <Link to={`/taklaggare-${combo.locationSlug}`} className="hover:text-primary transition-colors">{combo.locationName}</Link>
+            <Link to={`/taklaggare-${combo.locationSlug}`} className="hover:text-primary transition-colors">Takläggare {combo.prep} {combo.locationName}</Link>
             <span>/</span>
             <span className="text-foreground font-medium">{combo.serviceName}</span>
           </nav>
@@ -91,11 +147,33 @@ const ServiceLocationPage = () => {
               {loc?.region || "Roslagen"}
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              {combo.serviceName} {combo.prep} {combo.locationName}
+              {combo.serviceName} {combo.prep} {combo.locationName} — professionell takläggare
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {combo.description}
             </p>
+            {/* Star rating + trust */}
+            <div className="flex items-center gap-2 mt-4">
+              <div className="flex">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground">
+                4.9 av 5 — 153 kundrecensioner
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-4 mt-4">
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Shield className="w-4 h-4 text-primary" /> 10 års garanti
+              </div>
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
+              </div>
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Award className="w-4 h-4 text-primary" /> 150+ takprojekt
+              </div>
+            </div>
           </div>
 
           {/* Content */}
@@ -123,31 +201,44 @@ const ServiceLocationPage = () => {
                   >
                     <ArrowRight className="w-3 h-3" /> {otherServiceName} {combo.prep} {combo.locationName}
                   </Link>
-                  <Link
-                    to="/tjanster/takavvattning"
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
-                  >
+                  <Link to="/tjanster/takavvattning" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> Takavvattning
                   </Link>
-                  <Link
-                    to="/tjanster/takinspektion"
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
-                  >
+                  <Link to="/tjanster/takinspektion" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> Kostnadsfri takinspektion
                   </Link>
-                  <Link
-                    to="/blogg/rot-avdrag-takbyte"
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
-                  >
+                  <Link to="/tjanster/eternit-asbest" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                    <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
+                  </Link>
+                  <Link to="/blogg/rot-avdrag-takbyte" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> ROT-avdrag vid takbyte
                   </Link>
-                  <Link
-                    to="/priser"
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
-                  >
+                  <Link to="/blogg/kostnad-takbyte-2026" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                    <ArrowRight className="w-3 h-3" /> Vad kostar takbyte 2026?
+                  </Link>
+                  <Link to="/priser" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> Se vår prislista
                   </Link>
                 </div>
+              </div>
+
+              {/* FAQ Section */}
+              <div className="mt-8">
+                <h2 className="font-display text-2xl text-foreground mb-6">
+                  Vanliga frågor om {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}
+                </h2>
+                <Accordion type="single" collapsible className="space-y-2">
+                  {faqs.map((faq, i) => (
+                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-4">
+                      <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
             </div>
 
@@ -178,7 +269,7 @@ const ServiceLocationPage = () => {
                 <ul className="space-y-2">
                   {[
                     "70 års samlad erfarenhet",
-                    "150+ nöjda kunder",
+                    "153 nöjda kunder",
                     "10 års garanti",
                     "Fast pris utan dolda kostnader",
                     "Hjälp med ROT-avdrag",
