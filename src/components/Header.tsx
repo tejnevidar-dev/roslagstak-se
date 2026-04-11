@@ -94,7 +94,7 @@ const Header = () => {
           </a>
           <a
             href="tel:0701543639"
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
           >
             <Phone className="w-4 h-4" />
             Ring oss
