@@ -308,21 +308,31 @@ const ServiceDetail = () => {
             {/* CTA */}
             <div className="bg-accent rounded-lg p-8 text-center">
               <h2 className="font-display text-2xl text-accent-foreground mb-2">
-                Intresserad av {service.title.toLowerCase()}?
+                {slug === "eternit-asbest"
+                  ? "Har du eternittak med asbest?"
+                  : `Intresserad av ${service.title.toLowerCase()}?`}
               </h2>
               <p className="text-accent-foreground/70 text-sm mb-6">
-                Kontakta oss för en kostnadsfri besiktning och offert.
+                {slug === "eternit-asbest"
+                  ? "Kontakta oss för kostnadsfri rådgivning om ditt eternittak. Vi hjälper dig vidare."
+                  : "Kontakta oss för en kostnadsfri besiktning och offert."}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link
-                  to="/#offert"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
-                >
-                  Få offert <ArrowRight className="w-4 h-4" />
-                </Link>
+                {slug !== "eternit-asbest" && (
+                  <Link
+                    to="/#offert"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
+                  >
+                    Få offert <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
                 <Link
                   to="/#radgivning"
-                  className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors animate-subtle-pulse"
+                  className={`inline-flex items-center justify-center gap-2 px-8 py-3 rounded-md text-sm font-semibold transition-colors animate-subtle-pulse ${
+                    slug === "eternit-asbest"
+                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                      : "border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  }`}
                 >
                   Kostnadsfri rådgivning
                 </Link>
