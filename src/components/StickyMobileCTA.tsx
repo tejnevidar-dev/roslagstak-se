@@ -21,14 +21,14 @@ const StickyMobileCTA = () => {
     >
       <a
         href="tel:0701543639"
-        className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 rounded-md text-sm font-semibold animate-subtle-pulse"
+        className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 rounded-md text-sm font-semibold hover:animate-subtle-pulse"
       >
         <Phone className="w-4 h-4" />
         Ring oss
       </a>
       <a
         href="/#offert"
-        className="flex-1 flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-md text-sm font-semibold animate-subtle-pulse"
+        className="flex-1 flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-md text-sm font-semibold hover:animate-subtle-pulse"
       >
         Få offert
         <ArrowRight className="w-4 h-4" />
