@@ -342,6 +342,11 @@ const ServiceDetail = () => {
                 <Link to="/blogg/rot-avdrag-takbyte" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> ROT-avdrag vid takbyte
                 </Link>
+                {slug === "eternit-asbest" && (
+                  <Link to="/blogg/eternittak-asbest-sanering" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                    <ArrowRight className="w-3 h-3" /> Allt om eternittak och asbest
+                  </Link>
+                )}
                 <Link to="/taklaggare-blido" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> Takläggare på Blidö
                 </Link>
