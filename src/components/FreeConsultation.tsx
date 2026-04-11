@@ -26,7 +26,7 @@ const FreeConsultation = () => {
               <p className="text-accent-foreground/60 text-xs mb-3">Prata med en takexpert</p>
               <a
                 href="tel:+46701543639"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
               >
                 <Phone className="w-4 h-4" />
                 070-154 36 39
@@ -39,7 +39,7 @@ const FreeConsultation = () => {
               <p className="text-accent-foreground/60 text-xs mb-3">Vi svarar inom 24 timmar</p>
               <a
                 href="#kontakt"
-                className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors animate-subtle-pulse"
               >
                 Skicka meddelande
               </a>
@@ -51,7 +51,7 @@ const FreeConsultation = () => {
               <p className="text-accent-foreground/60 text-xs mb-3">Helt gratis, inga krav</p>
               <a
                 href="#offert"
-                className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors animate-subtle-pulse"
               >
                 Konfigurera offert
               </a>

@@ -87,7 +87,7 @@ const Header = () => {
           <a
             href="#radgivning"
             onClick={(e) => handleNavClick(e, "#radgivning")}
-            className="flex items-center gap-2 border border-primary text-primary px-4 py-2.5 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="flex items-center gap-2 border border-primary text-primary px-4 py-2.5 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors animate-subtle-pulse"
           >
             <MessageCircle className="w-4 h-4" />
             Fri rådgivning
