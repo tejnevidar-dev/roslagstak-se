@@ -38,11 +38,19 @@ const LocationPage = () => {
     url: `https://roslagstak.se/taklaggare-${location.slug}`,
     telephone: "+46701543639",
     email: "info@roslagstak.se",
+    sameAs: [
+      "https://share.google/FsdpfTq9H3amLoTPe",
+    ],
     areaServed: {
       "@type": "Place",
       name: location.name,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: location.lat,
+        longitude: location.lng,
+      },
     },
-    description: location.description,
+    description: `${location.primaryKeyword} — ${location.description}`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Norrtälje",
@@ -58,15 +66,34 @@ const LocationPage = () => {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "59.7666",
-      longitude: "18.6946",
+      latitude: location.lat,
+      longitude: location.lng,
     },
     priceRange: "$$",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:00",
-      closes: "17:00",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "08:00",
+        closes: "15:00",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Taktjänster ${prep} ${location.name}`,
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takbyte ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takrenovering ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takinspektion ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Plåtarbeten ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takavvattning ${prep} ${location.name}` } },
+      ],
     },
   };
 
@@ -93,12 +120,19 @@ const LocationPage = () => {
     ],
   };
 
+  // SEO-optimized meta description with location-specific keywords
+  const metaDescription = location.isIsland
+    ? `${location.primaryKeyword} — takbyte, takrenovering & takomläggning ${prep} ${location.name}. Specialist på öar utan broförbindelse. 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓ 153 nöjda kunder.`
+    : `${location.primaryKeyword} — takbyte, takrenovering & takomläggning ${prep} ${location.name}. Lokal takläggare med 70 års erfarenhet. 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`;
+
   return (
     <>
       <SEOHead
-        title={`Takläggare ${prep} ${location.name} — Takbyte & Takrenovering 2026`}
-        description={`${location.primaryKeyword} — ${location.description} Kostnadsfri offert ✓ 10 års garanti ✓ ROT-avdrag ✓`}
+        title={`Takläggare ${prep} ${location.name} — Takbyte & Takrenovering | RoslagsTak`}
+        description={metaDescription}
         canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
+        geoPosition={`${location.lat};${location.lng}`}
+        geoPlacename={location.name}
       />
       <Header />
       <main className="pt-24 pb-20">
@@ -144,7 +178,7 @@ const LocationPage = () => {
               {location.region}
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              {location.primaryKeyword} — takbyte & takrenovering
+              Takläggare {prep} {location.name} — takbyte, takrenovering & plåtarbeten
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {location.description}
@@ -199,6 +233,8 @@ const LocationPage = () => {
                     `Takrenovering och underhåll ${prep} ${location.name}`,
                     `Plåtarbeten, takavvattning och hängrännor`,
                     `TP20, dubbelfalsat, tegelplåt, pannplåt och lertegeltak`,
+                    `Eternitsanering och asbestrivning`,
+                    `Takkupor och takfönster (Velux)`,
                     `Kostnadsfri takinspektion med skriftlig rapport`,
                     `Hjälp med ROT-avdrag — 30% rabatt på arbetskostnaden`,
                   ].map((item) => (
@@ -208,6 +244,19 @@ const LocationPage = () => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Pricing section for SEO */}
+                <h3 className="font-display text-xl text-foreground mb-3">
+                  Vad kostar takbyte {prep} {location.name}?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Priset för ett takbyte {prep} {location.name} beror på takets storlek, lutning, materialval och underlagets skick. 
+                  Som riktpris ligger TP20-plåttak från ca 800 kr/m² och dubbelfalsat plåttak från ca 1 500 kr/m². 
+                  {location.isIsland
+                    ? ` Transportkostnad till ${location.name} ingår alltid i vår offert — inga dolda tillägg.`
+                    : ` Vi erbjuder alltid fast pris efter besiktning — inga dolda tillägg.`}
+                  {" "}Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr per person och år).
+                </p>
 
                 {/* Deep internal links */}
                 <div className="bg-card border border-border rounded-lg p-5 mb-6">
@@ -221,6 +270,12 @@ const LocationPage = () => {
                     <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}
                     </Link>
+                    <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
+                    </Link>
+                    <Link to="/tjanster/takvard" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Taktvätt & takmålning
+                    </Link>
                     <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Se prislista för takbyte
                     </Link>
@@ -232,6 +287,12 @@ const LocationPage = () => {
                     </Link>
                     <Link to="/blogg/tecken-byta-tak" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> 7 tecken att byta tak
+                    </Link>
+                    <Link to="/blogg/kostnad-takbyte-2026" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Vad kostar takbyte 2026?
+                    </Link>
+                    <Link to="/recensioner" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Läs kundrecensioner
                     </Link>
                   </div>
                 </div>
@@ -245,6 +306,16 @@ const LocationPage = () => {
                     ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
                     : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och erbjuder konkurrenskraftiga priser tack vare samordning med andra projekt i området.`}
                   {" "}Alla arbeten utförs enligt AMA Hus med 10 års garanti på material och utförande.
+                </p>
+
+                {/* Local context section */}
+                <h3 className="font-display text-xl text-foreground mb-3">
+                  Om {location.name} och takläggning i {location.region.toLowerCase()}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  {location.name} tillhör {location.region} i Roslagen — ett område där klimatet med {location.isIsland ? "havsvind, salt och fukt" : "kustnära fukt och vind"} ställer 
+                  höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för {location.isIsland ? "skärgårdens hårda" : "det kustnära"} klimatet. 
+                  Kontakta oss för en kostnadsfri takinspektion {prep} {location.name} — vi ger dig en ärlig bedömning och fast pris utan förbindelser.
                 </p>
               </div>
 
@@ -311,13 +382,22 @@ const LocationPage = () => {
               <div className="bg-card border border-border rounded-lg p-6">
                 <h3 className="font-display text-lg text-card-foreground mb-3">Våra taktjänster</h3>
                 <div className="space-y-2">
-                  {["Takomläggning", "Takrenovering", "Takavvattning", "Plåtarbeten", "Takinspektion"].map((s) => (
+                  {[
+                    { name: "Takomläggning", slug: "takomlaggning" },
+                    { name: "Takrenovering", slug: "takrenovering" },
+                    { name: "Takavvattning", slug: "takavvattning" },
+                    { name: "Plåtarbeten", slug: "platarbeten" },
+                    { name: "Takinspektion", slug: "takinspektion" },
+                    { name: "Takkupor & takfönster", slug: "takkupor" },
+                    { name: "Taktvätt & takmålning", slug: "takvard" },
+                    { name: "Eternitsanering", slug: "eternit-asbest" },
+                  ].map((s) => (
                     <Link
-                      key={s}
-                      to={`/tjanster/${s.toLowerCase().replace("ö", "o").replace("å", "a")}`}
+                      key={s.slug}
+                      to={`/tjanster/${s.slug}`}
                       className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors py-1"
                     >
-                      <ArrowRight className="w-3 h-3" /> {s}
+                      <ArrowRight className="w-3 h-3" /> {s.name}
                     </Link>
                   ))}
                 </div>
