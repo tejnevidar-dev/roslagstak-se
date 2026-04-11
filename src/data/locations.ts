@@ -12,6 +12,9 @@ export interface LocationData {
   uniqueFAQ: { question: string; answer: string };
   /** Primary keyword phrase for this page, used in H-tags */
   primaryKeyword: string;
+  /** Geo coordinates for local SEO */
+  lat: number;
+  lng: number;
 }
 
 export const locations: LocationData[] = [
