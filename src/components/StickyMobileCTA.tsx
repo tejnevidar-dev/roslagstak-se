@@ -28,7 +28,7 @@ const StickyMobileCTA = () => {
       </a>
       <a
         href="/#offert"
-        className="flex-1 flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-md text-sm font-semibold"
+        className="flex-1 flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-md text-sm font-semibold animate-subtle-pulse"
       >
         Få offert
         <ArrowRight className="w-4 h-4" />
