@@ -76,7 +76,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold text-sm hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
+              className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold text-sm hover:bg-primary/90 transition-colors animate-subtle-pulse"
             >
               Skicka förfrågan
             </button>

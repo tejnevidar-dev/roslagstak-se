@@ -334,7 +334,7 @@ const QuoteConfigurator = () => {
 
           <button
             type="submit"
-            className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-md font-semibold text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 hover:animate-subtle-pulse"
+            className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-md font-semibold text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 animate-subtle-pulse"
           >
             {mode === "configure" ? (
               <>
