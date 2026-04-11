@@ -65,3 +65,10 @@
     text-wrap: balance;
   }
 }
+
+@layer components {
+  a:not([class*="animate-subtle-pulse"]):hover,
+  button:not([class*="animate-subtle-pulse"]):hover {
+    animation: subtle-pulse 2.5s ease-in-out infinite;
+  }
+}
