@@ -41,7 +41,7 @@ const Hero = () => {
             </a>
             <a
               href="#radgivning"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-md text-base font-semibold hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-md text-base font-semibold hover:bg-white/10 transition-colors hover:animate-subtle-pulse"
             >
               Kostnadsfri rådgivning
             </a>

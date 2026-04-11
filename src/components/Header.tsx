@@ -125,14 +125,14 @@ const Header = () => {
           <a
             href="#radgivning"
             onClick={(e) => handleNavClick(e, "#radgivning")}
-            className="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-md text-sm font-semibold w-fit"
+            className="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-md text-sm font-semibold w-fit hover:animate-subtle-pulse"
           >
             <MessageCircle className="w-4 h-4" />
             Fri rådgivning
           </a>
           <a
             href="tel:0701543639"
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold w-fit"
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold w-fit hover:animate-subtle-pulse"
           >
             <Phone className="w-4 h-4" />
             Ring oss
