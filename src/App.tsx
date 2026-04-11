@@ -39,6 +39,9 @@ const App = () => (
             {locations.map((loc) => (
               <Route key={`takrenovering-${loc.slug}`} path={`/takrenovering-${loc.slug}`} element={<ServiceLocationPage />} />
             ))}
+            {locations.map((loc) => (
+              <Route key={`takomlaggning-${loc.slug}`} path={`/takomlaggning-${loc.slug}`} element={<ServiceLocationPage />} />
+            ))}
             <Route path="/blogg" element={<Blog />} />
             <Route path="/blogg/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

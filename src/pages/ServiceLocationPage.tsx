@@ -18,7 +18,7 @@ import {
 const ServiceLocationPage = () => {
   const { location: locSlug } = useParams<{ location: string }>();
   const pathname = useLocation().pathname;
-  const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : "";
+  const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : pathname.startsWith("/takomlaggning-") ? "takomlaggning" : "";
   const combo = serviceSlug && locSlug ? getCombo(serviceSlug, locSlug) : undefined;
 
   useEffect(() => {
@@ -35,8 +35,11 @@ const ServiceLocationPage = () => {
     })
     .filter(Boolean) || [];
 
-  const otherService = combo.serviceSlug === "takbyte" ? "takrenovering" : "takbyte";
-  const otherServiceName = combo.serviceSlug === "takbyte" ? "Takrenovering" : "Takbyte";
+  const otherServices = [
+    { slug: "takbyte", name: "Takbyte" },
+    { slug: "takrenovering", name: "Takrenovering" },
+    { slug: "takomlaggning", name: "Takomläggning" },
+  ].filter((s) => s.slug !== combo.serviceSlug);
 
   const faqs = generateServiceLocationFAQs(
     combo.serviceName,

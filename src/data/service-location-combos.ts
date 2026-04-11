@@ -43,6 +43,20 @@ const serviceTypes = [
       `Boka en kostnadsfri takinspektion ${prep} ${loc.name}. Vi bedömer takets skick och ger dig en ärlig rekommendation — renovering eller takbyte. Kontakta oss så återkopplar vi inom 24 timmar.`,
     ],
   },
+  {
+    slug: "takomlaggning",
+    name: "Takomläggning",
+    verb: "lägga om tak",
+    generateContent: (loc: LocationData, prep: string) => [
+      `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak utför professionell takomläggning i hela Roslagen — vi lägger om tak med TP20, dubbelfalsat plåttak, tegelplåt, pannplåt och betongpannor. Med över 70 års samlad erfarenhet är vi det självklara valet för fastighetsägare ${prep} ${loc.name}.`,
+      `Takomläggning ${prep} ${loc.name} innebär att befintligt takmaterial byts ut mot nytt. Vi inspekterar underlaget, byter råspont och underlagspapp vid behov, och monterar det nya takmaterialet. Vi ser alltid till att taksäkerhet, ventilation och takavvattning uppfyller gällande krav.`,
+      loc.isIsland
+        ? `Som specialister på takarbeten i skärgården hanterar vi all materialtransport till ${loc.name}. Vi samordnar logistik och planerar projektet noggrant — du behöver inte arrangera något själv.`
+        : `Vår bas i Norrtälje gör att vi når ${loc.name} snabbt. Vi samordnar ofta flera projekt i området, vilket ger dig ett konkurrenskraftigt pris på din takomläggning.`,
+      `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval. TP20-plåttak från ca 800 kr/m², dubbelfalsat från ca 1 500 kr/m². Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr/person/år).`,
+      `Vi erbjuder kostnadsfri besiktning och offert för takomläggning ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i vårt offertformulär — vi återkopplar inom 24 timmar.`,
+    ],
+  },
 ];
 
 export const generateCombos = (): ServiceLocationCombo[] => {
