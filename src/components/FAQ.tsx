@@ -38,6 +38,10 @@ const faqs = [
     question: "Vilka områden i Roslagen täcker ni?",
     answer: "Vi verkar i hela Roslagen — från Vaxholm i söder till Arholma i norr. Det inkluderar Norrtälje, Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Högmarsö, Svartlöga, Söderöra, Norröra, Humlö, Gräskö, Spillersboda, Rådmansö, Bergshamra, Svartnö, Väddö, Vätö, Singö och Grisslehamn.",
   },
+  {
+    question: "Kan ni riva eternittak med asbest?",
+    answer: "Ja, vi utför certifierad asbestsanering enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1). Vi hanterar allt från materialprovstagning och anmälan till säker rivning, emballering och transport till godkänd deponi — inklusive på öar i skärgården. Efter saneringen lägger vi ett nytt, modernt tak. Kontakta oss för kostnadsfri besiktning.",
+  },
 ];
 
 const FAQ = () => {
