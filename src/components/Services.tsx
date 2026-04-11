@@ -1,4 +1,4 @@
-import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles } from "lucide-react";
+import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -44,6 +44,12 @@ export const services = [
     slug: "takvard",
     title: "Takvård",
     description: "Professionell taktvätt och takmålning som förlänger livslängden och fräschar upp ditt tak.",
+  },
+  {
+    icon: AlertTriangle,
+    slug: "eternit-asbest",
+    title: "Eternit & asbestsanering",
+    description: "Säker rivning och sanering av eternit- och asbesttak enligt Arbetsmiljöverkets regler. Vi hanterar allt från sanering till nytt tak.",
   },
 ];
 

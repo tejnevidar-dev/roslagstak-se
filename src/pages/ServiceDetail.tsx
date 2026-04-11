@@ -148,6 +148,28 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Slutkontroll och dokumentation",
     ],
   },
+  "eternit-asbest": {
+    longDesc: "Många äldre hus i Roslagen och skärgården har tak av eternitplattor som innehåller asbest — ett hälsofarligt material som kräver specialhantering vid rivning. Vi utför professionell asbestsanering enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1). Vårt team har utbildning i asbesthantering och använder skyddsutrustning, slussystem och godkänd emballering. Efter rivning transporteras materialet till godkänd deponi. Vi erbjuder sedan komplett takomläggning med modernt material så att du får ett säkert, hållbart och vackert tak. Vi har lång erfarenhet av att sanera eternittak på öar utan broförbindelse i Roslagens skärgård.",
+    priceRange: "Sanering från ca 400 kr/m² + nytt tak från ca 800 kr/m². Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer.",
+    benefits: [
+      "Certifierad asbestsanering enligt AFS 2006:1",
+      "Säker rivning med fullständig skyddsutrustning",
+      "Godkänd emballering och transport till deponi",
+      "Anmälan till Arbetsmiljöverket hanteras av oss",
+      "Komplett takomläggning efter sanering",
+      "Erfarenhet av eternittak på skärgårdsöar",
+    ],
+    process: [
+      "Kostnadsfri besiktning och materialprovtagning",
+      "Anmälan till Arbetsmiljöverket (minst 7 dagar före)",
+      "Upprättande av saneringsplan",
+      "Säker rivning med skyddsåtgärder",
+      "Emballering och transport till godkänd deponi",
+      "Inspektion av underlag och eventuell reparation",
+      "Montering av nytt takmaterial",
+      "Slutbesiktning och dokumentation",
+    ],
+  },
 };
 
 const ServiceDetail = () => {
