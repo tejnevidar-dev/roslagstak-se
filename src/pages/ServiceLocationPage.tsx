@@ -1,4 +1,4 @@
-import { useParams, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
