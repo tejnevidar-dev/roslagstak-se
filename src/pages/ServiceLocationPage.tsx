@@ -1,4 +1,4 @@
-import { useParams, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -16,9 +16,10 @@ import {
 } from "@/components/ui/accordion";
 
 const ServiceLocationPage = () => {
-  const { location: locSlug } = useParams<{ location: string }>();
   const pathname = useLocation().pathname;
   const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : pathname.startsWith("/takomlaggning-") ? "takomlaggning" : "";
+  const prefix = serviceSlug ? `/${serviceSlug}-` : "";
+  const locSlug = prefix ? pathname.replace(prefix, "") : undefined;
   const combo = serviceSlug && locSlug ? getCombo(serviceSlug, locSlug) : undefined;
 
   useEffect(() => {
