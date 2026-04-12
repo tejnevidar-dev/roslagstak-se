@@ -16,9 +16,10 @@ import {
 } from "@/components/ui/accordion";
 
 const ServiceLocationPage = () => {
-  const { location: locSlug } = useParams<{ location: string }>();
   const pathname = useLocation().pathname;
   const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : pathname.startsWith("/takomlaggning-") ? "takomlaggning" : "";
+  const prefix = serviceSlug ? `/${serviceSlug}-` : "";
+  const locSlug = prefix ? pathname.replace(prefix, "") : undefined;
   const combo = serviceSlug && locSlug ? getCombo(serviceSlug, locSlug) : undefined;
 
   useEffect(() => {
