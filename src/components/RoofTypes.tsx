@@ -194,6 +194,98 @@ const RoofTypes = () => {
             );
           })}
         </div>
+
+        {/* Räkneexempel */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <h3 className="font-display text-2xl text-foreground mb-6 text-center">
+            Räkneexempel — vad kostar takbyte?
+          </h3>
+          <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+            Priserna nedan inkluderar material, arbete, byggställning, logistik och avfallshantering. 
+            ROT-avdrag (30% på arbetskostnaden) tillkommer och sänker den faktiska kostnaden ytterligare.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Normalstort bostadshus */}
+            <div className="bg-card border border-border rounded-lg p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Coins className="w-5 h-5 text-primary" />
+                </span>
+                <div>
+                  <h4 className="font-display text-lg text-card-foreground">Normalstort bostadshus</h4>
+                  <p className="text-xs text-muted-foreground">Takyta ca 150 m²</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm">
+                <li className="flex justify-between text-muted-foreground">
+                  <span>TP20 plåttak</span>
+                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Tegelplåt / Pannplåt</span>
+                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Betongpannor</span>
+                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Lertegel</span>
+                  <span className="font-semibold text-foreground">ca 225 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Glacerade pannor</span>
+                  <span className="font-semibold text-foreground">ca 270 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Dubbelfalsat plåttak</span>
+                  <span className="font-semibold text-foreground">ca 300 000 kr</span>
+                </li>
+              </ul>
+              <p className="text-xs text-muted-foreground mt-4 italic">* Exakt pris beror på takets komplexitet, underlag och tillval. Kostnadsfri offert.</p>
+            </div>
+
+            {/* Mindre kustvilla */}
+            <div className="bg-card border border-border rounded-lg p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Coins className="w-5 h-5 text-primary" />
+                </span>
+                <div>
+                  <h4 className="font-display text-lg text-card-foreground">Mindre kustvilla / fritidshus</h4>
+                  <p className="text-xs text-muted-foreground">Takyta ca 100 m²</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm">
+                <li className="flex justify-between text-muted-foreground">
+                  <span>TP20 plåttak</span>
+                  <span className="font-semibold text-foreground">ca 120 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Tegelplåt / Pannplåt</span>
+                  <span className="font-semibold text-foreground">ca 120 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Betongpannor</span>
+                  <span className="font-semibold text-foreground">ca 120 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Lertegel</span>
+                  <span className="font-semibold text-foreground">ca 150 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Glacerade pannor</span>
+                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
+                </li>
+                <li className="flex justify-between text-muted-foreground">
+                  <span>Dubbelfalsat plåttak</span>
+                  <span className="font-semibold text-foreground">ca 200 000 kr</span>
+                </li>
+              </ul>
+              <p className="text-xs text-muted-foreground mt-4 italic">* Exakt pris beror på takets komplexitet, underlag och tillval. Kostnadsfri offert.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
