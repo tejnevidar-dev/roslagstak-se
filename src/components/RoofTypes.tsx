@@ -10,7 +10,7 @@ const roofTypes = [
     pros: ["Mycket kostnadseffektivt", "Snabb montering — stora skivor", "Låg vikt (ca 3–5 kg/m²)", "Minimalt underhåll", "Brett färgutbud", "Minsta taklutning ca 14°"],
     cons: ["Kan ge resonansljud vid kraftigt regn utan ljuddämpning", "Enklare estetik jämfört med falsad plåt", "Kondens kan uppstå utan korrekt ventilation och underlagspapp"],
     lifespan: "40–50 år",
-    priceRange: "Från 1 300 kr/m²",
+    priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, fritidshus, ekonomibyggnader, garage",
   },
   {
@@ -21,7 +21,7 @@ const roofTypes = [
     pros: ["Klassiskt tegelpanneliknande utseende", "Mycket lättare än riktigt tegel (ca 4–5 kg/m²)", "Snabbare montering än tegelpannor", "Underhållsfritt", "Tål kraftig vind väl"],
     cons: ["Inte lika autentiskt utseende som riktigt tegel", "Kan låta vid kraftigt regn", "Kräver minst 14° taklutning"],
     lifespan: "40–60 år",
-    priceRange: "Från 1 300 kr/m²",
+    priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, sommarstugor, radhus",
   },
   {
@@ -32,7 +32,7 @@ const roofTypes = [
     pros: ["Unikt och karaktäristiskt utseende", "Svensk klassiker med lång tradition", "Passar kulturhistoriska byggnader", "Fungerar vid låga taklutningar (från 8°)", "Förzinkad för god rostbeständighet", "Lätt material"],
     cons: ["Mer begränsat färgutbud än modern profilerad plåt", "Kräver korrekt underlag (råspont + underlagspapp)"],
     lifespan: "40–60 år",
-    priceRange: "Från 1 300 kr/m²",
+    priceRange: "Från 1 200 kr/m²",
     bestFor: "Kulturbyggnader, äldre villor, funkishus, lantbruksbyggnader, kyrkor",
   },
   {
@@ -65,7 +65,7 @@ const roofTypes = [
     pros: ["Prisvärt jämfört med lertegel", "Brett utbud av profiler och färger", "God ljud- och värmeisolering", "Brandsäkert", "Svensk tillverkning (bl.a. Benders, Monier)"],
     cons: ["Tungt material (40–45 kg/m²)", "Ytan kan bli porös och absorbera fukt med åren", "Mossa och alger kan växa, kräver taktvätt", "Färgen kan blekna med tiden", "Kräver minst 22° taklutning"],
     lifespan: "50–70 år",
-    priceRange: "Från 1 300 kr/m²",
+    priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, radhus, parhus — det trygga och beprövade valet",
   },
   {
