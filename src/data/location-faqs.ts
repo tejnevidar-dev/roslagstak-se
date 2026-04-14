@@ -20,7 +20,7 @@ export const generateLocationFAQs = (
   faqs.push(
     {
       question: `Vad kostar ett takbyte ${prep} ${name}?`,
-      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval. Som riktpris ligger TP20-plåttak från ca 800 kr/m² och dubbelfalsat plåttak från ca 1 500 kr/m². ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Vi erbjuder alltid fast pris efter besiktning."} ROT-avdrag ger ytterligare 30% rabatt på arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
+      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval. Som riktpris ligger TP20-plåttak från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Vi erbjuder alltid fast pris efter besiktning."} ROT-avdrag ger ytterligare 30% rabatt på arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
     },
     {
       question: `Hur lång tid tar ett takbyte ${prep} ${name}?`,
@@ -68,7 +68,7 @@ export const generateServiceLocationFAQs = (
     {
       question: `Vad kostar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
       answer: isTakbyte
-        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag. Riktpriser: TP20 från ca 800 kr/m², dubbelfalsat plåttak från ca 1 500 kr/m². ${isIsland ? "Transport till ön ingår i priset." : "Vi erbjuder alltid fast pris."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
+        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag. Riktpriser: TP20 från ca 1 200 kr/m², dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transport till ön ingår i priset." : "Vi erbjuder alltid fast pris."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
         : `En takrenovering ${prep} ${locationName} kostar från ca 300 kr/m² beroende på åtgärd. ${isIsland ? "Transport till ön ingår." : "Fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
     },
     {

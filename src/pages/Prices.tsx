@@ -30,10 +30,10 @@ const priceData = [
   {
     category: "Övriga tjänster",
     items: [
-      { name: "Takrenovering", priceRange: "​Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter besiktning." },
-      { name: "Takavvattning (hängrännor)", priceRange: "​Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör från ca 15 000 kr." },
-      { name: "Takkupa", priceRange: "​Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
-      { name: "Takfönster (Velux)", priceRange: "​​Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
+      { name: "Takrenovering", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter besiktning." },
+      { name: "Takavvattning (hängrännor)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör från ca 15 000 kr." },
+      { name: "Takkupa", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
+      { name: "Takfönster (Velux)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
       { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig besiktning med skriftlig rapport och åtgärdsförslag." },
     ],
   },
@@ -55,7 +55,7 @@ const priceFaqs = [
   },
   {
     question: "Ingår material i priset?",
-    answer: "Ja, alla våra priser inkluderar material, arbete, byggställning , logistik och avfallshantering. Vi arbetar alltid med fasta priser utan dolda kostnader.",
+    answer: "Ja, alla våra priser inkluderar material, arbete, byggställning, logistik och avfallshantering. Vi arbetar alltid med fasta priser utan dolda kostnader.",
   },
   {
     question: "Kan jag använda ROT-avdrag?",
@@ -67,7 +67,7 @@ const priceFaqs = [
   },
   {
     question: "Hur lång tid tar ett takbyte?",
-    answer: "Ett typiskt takbyte på ett villahus tar 3–7 arbetsdagar beroende på storlek och komplexitet. Vi tar effektivitet med störta allvar för att minimera störningarna i eran vardag.",
+    answer: "Ett typiskt takbyte på ett villahus tar 3–7 arbetsdagar beroende på storlek och komplexitet. Vi tar effektivitet med största allvar för att minimera störningarna i er vardag.",
   },
 ];
 

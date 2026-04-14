@@ -54,7 +54,7 @@ const roofTypes = [
     pros: ["Tidlöst och autentiskt utseende", "Naturligt och miljövänligt material", "Utmärkt ljud- och värmeisolering", "Åldras med värdighet", "Brandsäkert (obrännbart)", "Lång livslängd vid rätt underhåll"],
     cons: ["Tungt — kräver dimensionerad takstol (40–50 kg/m²)", "Risk för frostsprängning vid dålig kvalitet", "Enstaka pannor kan behöva bytas med åren", "Mossa och lav kan växa på skuggiga sidor", "Kräver minst 22° taklutning"],
     lifespan: "80–100+ år",
-    priceRange: "Från 1 500 kr/m²",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Äldre villor, kulturhistoriska byggnader, herrgårdar, skärgårdshus med karaktär",
   },
   {
@@ -231,7 +231,7 @@ const RoofTypes = () => {
                 </li>
                 <li className="flex justify-between text-muted-foreground">
                   <span>Lertegel</span>
-                  <span className="font-semibold text-foreground">ca 225 000 kr</span>
+                  <span className="font-semibold text-foreground">ca 195 000 kr</span>
                 </li>
                 <li className="flex justify-between text-muted-foreground">
                   <span>Glacerade pannor</span>
@@ -271,7 +271,7 @@ const RoofTypes = () => {
                 </li>
                 <li className="flex justify-between text-muted-foreground">
                   <span>Lertegel</span>
-                  <span className="font-semibold text-foreground">ca 150 000 kr</span>
+                  <span className="font-semibold text-foreground">ca 130 000 kr</span>
                 </li>
                 <li className="flex justify-between text-muted-foreground">
                   <span>Glacerade pannor</span>

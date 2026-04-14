@@ -10,7 +10,7 @@ import EternitSEOContent from "@/components/EternitSEOContent";
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
     longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års garanti.",
-    priceRange: "Från ca 800 kr/m² (TP20) till 1 500+ kr/m² (dubbelfalsat). Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
+    priceRange: "Från ca 1 200 kr/m² (TP20) till 2 000+ kr/m² (dubbelfalsat). Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
     benefits: [
       "Rivning av befintligt yttertak",
       "Ny råspont och ventilation vid behov",
@@ -115,7 +115,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   platarbeten: {
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar. Våra plåtslagare är certifierade och har lång erfarenhet av att arbeta med både stål, aluminium, koppar och zink.",
-    priceRange: "Beslag och detaljer från ca 2 000 kr. Taktäckning med plåt från ca 800 kr/m². ROT-avdrag tillkommer.",
+    priceRange: "Beslag och detaljer från ca 2 000 kr. Taktäckning med plåt från ca 1 200 kr/m². ROT-avdrag tillkommer.",
     benefits: [
       "Certifierade plåtslagare",
       "Taktäckning med alla typer av plåt",
@@ -155,7 +155,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   "eternit-asbest": {
     longDesc: "Många äldre hus i Roslagen och skärgården har tak av eternitplattor som innehåller asbest — ett hälsofarligt material som kräver specialhantering vid rivning. Vi utför professionell asbestsanering enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1). Vårt team har utbildning i asbesthantering och använder skyddsutrustning, slussystem och godkänd emballering. Efter rivning transporteras materialet till godkänd deponi. Vi erbjuder sedan komplett takomläggning med modernt material så att du får ett säkert, hållbart och vackert tak. Vi har lång erfarenhet av att sanera eternittak på öar utan broförbindelse i Roslagens skärgård.",
-    priceRange: "Sanering från ca 400 kr/m² + nytt tak från ca 800 kr/m². Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer.",
+    priceRange: "Sanering från ca 400 kr/m² + nytt tak från ca 1 200 kr/m². Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer.",
     benefits: [
       "Certifierad asbestsanering enligt AFS 2006:1",
       "Säker rivning med fullständig skyddsutrustning",
