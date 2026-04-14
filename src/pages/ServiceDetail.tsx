@@ -115,7 +115,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   platarbeten: {
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar. Våra plåtslagare är certifierade och har lång erfarenhet av att arbeta med både stål, aluminium, koppar och zink.",
-    priceRange: "Beslag och detaljer från ca 2 000 kr. Taktäckning med plåt från ca 800 kr/m². ROT-avdrag tillkommer.",
+    priceRange: "Beslag och detaljer från ca 2 000 kr. Taktäckning med plåt från ca 1 200 kr/m². ROT-avdrag tillkommer.",
     benefits: [
       "Certifierade plåtslagare",
       "Taktäckning med alla typer av plåt",

@@ -25,7 +25,7 @@ const serviceTypes = [
       loc.isIsland
         ? `${loc.name} nås ${loc.region === "Norra skärgården" ? "med båt" : "via väg eller färja"}, och vi har lång erfarenhet av att hantera materialtransport och logistik till ön. Vi planerar varje takbyte noggrant för att minimera kostnader och störningar.`
         : `Med vår bas i Norrtälje når vi ${loc.name} snabbt och effektivt. Vi erbjuder konkurrenskraftiga priser och snabb leverans på alla takbyten i området.`,
-      `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick. Som riktpris ligger ett takbyte med TP20-plåt från ca 800 kr/m² och dubbelfalsat plåttak från ca 1 500 kr/m². ROT-avdrag ger dig 30% rabatt på arbetskostnaden.`,
+      `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick. Som riktpris ligger ett takbyte med TP20-plåt från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². ROT-avdrag ger dig 30% rabatt på arbetskostnaden.`,
       `Kontakta oss för en kostnadsfri besiktning och offert för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
     ],
   },
@@ -53,7 +53,7 @@ const serviceTypes = [
       loc.isIsland
         ? `Som specialister på takarbeten i skärgården hanterar vi all materialtransport till ${loc.name}. Vi samordnar logistik och planerar projektet noggrant — du behöver inte arrangera något själv.`
         : `Vår bas i Norrtälje gör att vi når ${loc.name} snabbt. Vi samordnar ofta flera projekt i området, vilket ger dig ett konkurrenskraftigt pris på din takomläggning.`,
-      `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval. TP20-plåttak från ca 800 kr/m², dubbelfalsat från ca 1 500 kr/m². Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr/person/år).`,
+      `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval. TP20-plåttak från ca 1 200 kr/m², dubbelfalsat från ca 2 000 kr/m². Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr/person/år).`,
       `Vi erbjuder kostnadsfri besiktning och offert för takomläggning ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i vårt offertformulär — vi återkopplar inom 24 timmar.`,
     ],
   },
