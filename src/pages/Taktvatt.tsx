@@ -1,103 +1,271 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Phone, Star, Shield, Award, Droplets, Sparkles, Leaf, MapPin } from "lucide-react";
+import {
+  Paintbrush,
+  CheckCircle,
+  ShieldCheck,
+  Sprout,
+  Droplets,
+  Sun,
+  Clock,
+  Wrench,
+  ArrowRight,
+  Star,
+  AlertTriangle,
+  MapPin,
+  Award,
+  Phone,
+  FileCheck,
+  Leaf,
+  Snowflake,
+  Home,
+  TrendingUp,
+  BookOpen,
+  Hammer,
+  Thermometer,
+  CloudRain,
+  Anchor,
+  ListChecks,
+  Scale,
+} from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { locations } from "@/data/locations";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import heroImage from "@/assets/hero-roof.jpg";
+import beforeAfterImage from "@/assets/before-roof-1.jpg";
 
-const faqs = [
+const benefits = [
   {
-    question: "Vad kostar taktvätt i Roslagen?",
-    answer:
-      "Taktvätt kostar normalt 80–150 kr/m² beroende på takets storlek, lutning, material och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inklusive behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan.",
+    icon: Clock,
+    title: "Förlänger takets livslängd med 10–15 år",
+    desc: "Mossa, lavar och alger bryter ner ytskiktet. Regelbunden taktvätt skyddar pannor och plåt och skjuter upp ett dyrt takbyte.",
   },
   {
-    question: "Hur ofta behöver man tvätta taket?",
-    answer:
-      "Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på takets exponering. Tak på norrsidor, under träd eller nära hav och sjöar drabbas hårdare av mossa och alger och behöver tvättas oftare. I Roslagens fuktiga skärgårdsklimat är 5–7 år en bra riktlinje för många hus.",
+    icon: Droplets,
+    title: "Förebygger fukt- och frostskador",
+    desc: "Mossa suger åt sig vatten som fryser och spräcker pannor. En ren takyta leder bort vatten som den ska.",
   },
   {
-    question: "Är högtryckstvätt skadligt för taket?",
-    answer:
-      "Ja, högtryckstvätt med för högt tryck kan skada ytskiktet på betong- och tegelpannor och förkorta takets livslängd. Vi använder därför skonsam lågtryckstvätt eller manuell borstning beroende på takmaterial. På plåttak används metoder som inte skadar ytbehandlingen.",
+    icon: Sun,
+    title: "Snyggare hus och högre värde",
+    desc: "Ett rent, fräscht tak höjer husets marknadsvärde och första intryck markant — perfekt inför försäljning.",
   },
   {
-    question: "Vilket biocidmedel använder ni?",
-    answer:
-      "Vi använder miljögodkända biocidmedel som dödar mossa, alger och lavar i rotsystemet. Behandlingen ger ca 5 års skydd mot återväxt. Medlet är godkänt av Kemikalieinspektionen och bryts ner naturligt.",
-  },
-  {
-    question: "Måste taket målas efter tvätt?",
-    answer:
-      "Nej, taktvätt och takmålning är två separata tjänster. Många nöjer sig med taktvätt och biocidbehandling, vilket räcker för att förlänga takets livslängd och fräscha upp utseendet. Om färgen är blekt eller taket har börjat åldras kan takmålning däremot vara ett bra komplement.",
-  },
-  {
-    question: "Kan taktvätt göras på vintern?",
-    answer:
-      "Nej, taktvätt kräver torr väderlek och plusgrader. Bäst tid är från april till oktober. Vi planerar arbetet efter väderprognos för bästa resultat.",
-  },
-  {
-    question: "Förlänger taktvätt verkligen takets livslängd?",
-    answer:
-      "Ja, regelbunden taktvätt kan förlänga takets livslängd med 10–15 år. Mossa och alger håller fukt mot takmaterialet, vilket leder till frostsprängning på betong- och tegelpannor samt rost och rötskador på underlaget. Genom att hålla taket rent slipper du dyra reparationer och takbyten i förtid.",
-  },
-  {
-    question: "Ingår ROT-avdrag vid taktvätt?",
-    answer:
-      "Ja, ROT-avdrag gäller för taktvätt. Du får 30% skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter all administration — du betalar bara din del direkt på fakturan.",
+    icon: ShieldCheck,
+    title: "Försäkringsvänligt underhåll",
+    desc: "Många försäkringsbolag kräver löpande takunderhåll. Vi dokumenterar arbetet med före- och efterbilder.",
   },
 ];
 
+const roofTypes = [
+  { name: "Betongpannor", desc: "Vanligaste taket att tvätta. Mossan trivs i porerna — vi rengör och behandlar effektivt." },
+  { name: "Tegelpannor", desc: "Skonsam tvätt med rätt tryck för att inte skada det glaserade ytskiktet." },
+  { name: "Plåttak (TP20, pannplåt)", desc: "Tvätt och vid behov ommålning med UV-beständig takfärg som håller i 10+ år." },
+  { name: "Eternittak", desc: "OBS! Eternittak får aldrig högtryckstvättas — vi hjälper dig med säker hantering istället." },
+];
+
+const process = [
+  { step: "1", title: "Kostnadsfri besiktning", desc: "Vi inspekterar takets skick, mängd mossa/lavar och bedömer om tvätt räcker eller om målning behövs." },
+  { step: "2", title: "Skriftlig offert", desc: "Tydligt fast pris med ROT-avdrag inräknat. Inga överraskningar." },
+  { step: "3", title: "Skyddsåtgärder", desc: "Vi täcker fasad, fönster och växtlighet runt huset innan arbetet påbörjas." },
+  { step: "4", title: "Borttagning av mossa", desc: "Manuell borstning och skrapning av tjocka mosskuddar — skonsamt mot pannorna." },
+  { step: "5", title: "Tvätt med rätt tryck", desc: "Lågtrycks- eller mellantryckstvätt anpassad efter takmaterial. Aldrig högtryck på pannor." },
+  { step: "6", title: "Biocidbehandling", desc: "Miljögodkänt medel som dödar sporer och hindrar mossa från att komma tillbaka snabbt." },
+  { step: "7", title: "Rengöring av hängrännor", desc: "Vi tömmer och spolar ur rännor och stuprör så takavvattningen fungerar." },
+  { step: "8", title: "Eventuell takmålning", desc: "Två strykningar med UV-beständig takfärg om du valt målning i offerten." },
+  { step: "9", title: "Slutbesiktning & dokumentation", desc: "Genomgång på plats samt före- och efterbilder för ditt arkiv och försäkring." },
+];
+
+const guarantees = [
+  { icon: ShieldCheck, title: "10 års garanti", desc: "På utfört arbete — branschens längsta garanti. Trygghet för dig som husägare i Roslagen." },
+  { icon: Award, title: "Fast pris efter besiktning", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
+  { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Vi har ansvarsförsäkring och hanterar all ROT-administration åt dig." },
+  { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutbesiktning — alltid samma person att ringa." },
+];
+
+const faqs = [
+  {
+    q: "Vad kostar taktvätt i Roslagen?",
+    a: "Priset för taktvätt ligger oftast mellan 80–150 kr/m² beroende på takmaterial, mängd mossa och tillgänglighet. Med ROT-avdrag blir nettokostnaden cirka 56–105 kr/m². Vi lämnar alltid kostnadsfri offert med fast pris.",
+  },
+  {
+    q: "Hur ofta bör man tvätta taket?",
+    a: "Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på läge. Hus i skuggiga lägen, nära skog, hav eller på öar i skärgården behöver tvättas oftare än soliga tak inåt land.",
+  },
+  {
+    q: "Är högtryckstvätt skadligt för taket?",
+    a: "Ja, fel använt högtryck kan slå sönder ytskiktet på betong- och tegelpannor och göra problemet värre. Vi använder anpassat tryck för varje takmaterial och kombinerar med manuell borstning och biocidbehandling.",
+  },
+  {
+    q: "Ingår ROT-avdrag på taktvätt?",
+    a: "Ja, taktvätt och takmålning är ROT-berättigat. Du får 30 % rabatt på arbetskostnaden direkt på fakturan — vi sköter all administration mot Skatteverket.",
+  },
+  {
+    q: "När på året är det bäst att tvätta taket?",
+    a: "Bästa säsongen för taktvätt är från april till oktober då det är torrt och varmt. Vi utför taktvätt i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje med flera orter.",
+  },
+  {
+    q: "Hur länge håller en taktvätt?",
+    a: "Efter taktvätt med biocidbehandling håller sig taket rent i 5–8 år. Lägger man dessutom på takfärg får man ytterligare skydd och 10–15 års hållbarhet.",
+  },
+  {
+    q: "Kan ni tvätta tak på öar utan broförbindelse?",
+    a: "Ja, vi är specialister på skärgårdsmiljö och utför taktvätt på fritidshus och permanentbostäder på öar i hela Roslagens skärgård — Husarö, Ingmarsö, Möja, Arholma, Fejan och fler. Vi tar med utrustningen med båt.",
+  },
+  {
+    q: "Hur lång tid tar en taktvätt?",
+    a: "En normalstor villa (120–150 m² takyta) tar 1–2 dagar inklusive biocidbehandling. Inkluderar offerten även takmålning tar arbetet 3–5 dagar med torktid mellan strykningarna.",
+  },
+  {
+    q: "Vilka kemikalier använder ni vid taktvätt?",
+    a: "Vi använder endast biocider som är godkända av Kemikalieinspektionen och anpassade för taktvätt. Medlen bryts ned naturligt och skadar inte växtlighet runt huset när de spolas av i kontrollerade mängder.",
+  },
+  {
+    q: "Kan ni måla taket samtidigt som ni tvättar det?",
+    a: "Ja, takmålning utförs alltid efter en grundlig taktvätt. Vi rekommenderar takmålning på äldre betongpannor där ytskiktet börjat vittra — det förlänger livslängden med ytterligare 10–15 år.",
+  },
+  {
+    q: "Behöver jag vara hemma när ni utför taktvätten?",
+    a: "Nej, du behöver inte vara hemma. Många av våra kunder med fritidshus på Blidö, Ljusterö och i skärgården anlitar oss på distans. Vi rapporterar med bilder och text via e-post eller sms.",
+  },
+];
+
+const seasonGuide = [
+  { season: "Vår (april–maj)", icon: Sprout, desc: "Bästa starten på säsongen. Tjälen har gått ur marken och taket är torrt — perfekt för biocidbehandling som hinner verka hela sommaren." },
+  { season: "Sommar (juni–augusti)", icon: Sun, desc: "Högsäsong för taktvätt. Torrt väder, långa dagar och optimal torktid för takmålning. Boka tidigt — kötiderna är längst nu." },
+  { season: "Höst (september–oktober)", icon: Leaf, desc: "Sista chansen innan vintern. Vi rensar hängrännor och tvättar bort sommarens algpåväxt så taket är rustat för vintern." },
+  { season: "Vinter (november–mars)", icon: Snowflake, desc: "Vi utför inte taktvätt vintertid, men tar emot bokningar för våren. Boka i god tid för bästa pris och datum." },
+];
+
+const comparison = [
+  { aspect: "Kostnad", clean: "80–150 kr/m²", replace: "1 200–2 000 kr/m²", winner: "clean" },
+  { aspect: "Tidsåtgång", clean: "1–2 dagar", replace: "1–3 veckor", winner: "clean" },
+  { aspect: "Förlängd livslängd", clean: "10–15 år", replace: "30–50 år", winner: "replace" },
+  { aspect: "ROT-avdrag", clean: "Ja, 30 %", replace: "Ja, 30 %", winner: "tie" },
+  { aspect: "Störning för boende", clean: "Minimal", replace: "Stor — riv & bygg", winner: "clean" },
+  { aspect: "Garanti", clean: "10 år", replace: "10–15 år", winner: "tie" },
+];
+
+const checklist = [
+  "Inspektera takets norrsida — där växer mossan först",
+  "Kolla efter gröna strimmor från algpåväxt",
+  "Lyssna efter ljud i hängrännorna när det regnar (löv & grus)",
+  "Notera om takpannor ser mörkare ut än tidigare",
+  "Kontrollera takfoten och vindskivor för fuktskador",
+  "Mät hur länge det är sedan senaste taktvätten — över 5 år är dags",
+  "Be om en kostnadsfri besiktning från oss om du är osäker",
+];
+
+const glossary = [
+  { term: "Biocid", def: "Miljögodkänt bekämpningsmedel som dödar mossa, lavar och alger samt förhindrar återväxt i 5–8 år." },
+  { term: "Lågtryckstvätt", def: "Tvättmetod med 30–80 bar tryck, anpassad för takpannor. Skadar inte ytskiktet som högtryck gör." },
+  { term: "Mosskuddar", def: "Tjocka ansamlingar av mossa mellan takpannor som suger åt sig vatten och spräcker pannorna vid frost." },
+  { term: "Lavar", def: "Långsamväxande symbios mellan svamp och alg. Vita eller grå fläckar främst på takets norrsida." },
+  { term: "Algpåväxt", def: "Svarta eller mörkgröna strimmor från cyanobakterier. Indikerar fuktigt mikroklimat på taket — vanligt nära havet." },
+  { term: "Takmålning", def: "Två strykningar med UV-beständig akrylfärg som skyddar pannor och ger taket nytt utseende i 10–15 år." },
+  { term: "ROT-avdrag", def: "Skattereduktion på 30 % av arbetskostnaden för reparation och underhåll i bostad. Gäller taktvätt och takmålning." },
+  { term: "Fallskydd", def: "Personlig skyddsutrustning (sele, lina, förankring) som krävs vid takarbete enligt Arbetsmiljöverket." },
+];
+
+const climateFactors = [
+  { icon: CloudRain, title: "Hög nederbörd & havsluft", desc: "Roslagens kustklimat med fukt från Östersjön accelererar nedbrytningen av takets ytskikt och ger snabbare algpåväxt." },
+  { icon: Snowflake, title: "Långa snöperioder", desc: "Snö som ligger flera månader skapar fukt under smältningen — perfekt grogrund för mossa och lavar på taket." },
+  { icon: Anchor, title: "Skärgårdsläge", desc: "Hus på öar och nära vattnet utsätts för konstant fukt och saltluft som sliter på pannor och plåt extra hårt." },
+  { icon: Thermometer, title: "Frost-tö-cykler", desc: "Stora temperaturskillnader mellan dag och natt orsakar frostsprängning i porösa pannor med mossa." },
+];
+
+const tabs = [
+  { id: "villatak", label: "Villatak", icon: Home },
+  { id: "skargardshus", label: "Skärgårdshus", icon: Anchor },
+  { id: "fritidshus", label: "Fritidshus", icon: Sun },
+  { id: "naringsfastighet", label: "Näringsfastighet", icon: TrendingUp },
+];
+
+const tabContent: Record<string, { title: string; desc: string; bullets: string[] }> = {
+  villatak: {
+    title: "Taktvätt på villatak",
+    desc: "Det vanligaste uppdraget vi får. En typisk villa i Roslagen har 120–180 m² takyta och behöver tvättas vart 5:e till 8:e år beroende på läge, takmaterial och omgivning.",
+    bullets: [
+      "Komplett tvätt och biocidbehandling på 1–2 dagar",
+      "Vi täcker fasad, fönster och rabatter innan vi börjar",
+      "Hängrännor och stuprör rensas och spolas",
+      "Före- och efterbilder för försäkringsbolag och eget arkiv",
+    ],
+  },
+  skargardshus: {
+    title: "Taktvätt på skärgårdshus & ö-bostäder",
+    desc: "Hus på Blidö, Ljusterö, Yxlan, Husarö, Möja och andra öar i Roslagens skärgård har ofta extra tjock mosspåväxt på grund av hög luftfuktighet och saltluft. Vi är specialister på ö-logistik och tar med utrustning på båt.",
+    bullets: [
+      "Båttransport till öar utan broförbindelse",
+      "Anpassad metodik för takpannor i kustklimat",
+      "Vi kan utföra arbetet medan du är hemma — perfekt för fritidshus",
+      "Säsongsservice — vi samordnar med dina besök på ön",
+    ],
+  },
+  fritidshus: {
+    title: "Taktvätt på fritidshus",
+    desc: "Äger du ett fritidshus i Roslagen och vill slippa tänka på underhåll? Vi tar fullt ansvar för taktvätten — inspekterar, tvättar och dokumenterar utan att du behöver vara på plats.",
+    bullets: [
+      "Nyckelfri service med digital återrapportering",
+      "Bilder och rapport skickas direkt till din e-post",
+      "Avtalsbaserad service för regelbundet underhåll",
+      "Samordning med andra hantverkare vid behov",
+    ],
+  },
+  naringsfastighet: {
+    title: "Taktvätt på näringsfastigheter",
+    desc: "Vi utför taktvätt på hotell, restauranger, vandrarhem och kommersiella fastigheter i hela Roslagen. Avdragsgillt som driftkostnad och kan utföras med minimal störning för verksamheten.",
+    bullets: [
+      "Arbete utanför öppettider eller säsong",
+      "F-skatt, fullt försäkrade och referenser från besöksnäringen",
+      "Skriftliga avtal med servicenivåer (SLA)",
+      "Volymrabatt vid flera fastigheter",
+    ],
+  },
+};
+
 const Taktvatt = () => {
+  const [activeTab, setActiveTab] = useState("villatak");
+  const pageUrl = "https://roslagstak.se/tjanster/takvard";
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Taktvätt och takvård",
+    provider: {
+      "@type": "RoofingContractor",
+      name: "RoslagsTak",
+      areaServed: "Roslagen, Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje",
+      telephone: "+46-70-154-36-39",
+    },
+    areaServed: { "@type": "Place", name: "Roslagen" },
+    description:
+      "Professionell taktvätt med borttagning av mossa, lavar och alger. Skonsam tvätt, biocidbehandling och takmålning på betongpannor, tegelpannor och plåttak i hela Roslagen.",
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "SEK",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "80-150",
+        priceCurrency: "SEK",
+        unitText: "per kvadratmeter",
+      },
+    },
+  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
-      name: f.question,
-      acceptedAnswer: { "@type": "Answer", text: f.answer },
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
-  };
-
-  const serviceJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Taktvätt Roslagen",
-    description:
-      "Professionell taktvätt i hela Roslagen och skärgården — borttagning av mossa, alger och lavar med skonsam metod. Fast pris, 10 års garanti och ROT-avdrag.",
-    url: "https://roslagstak.se/taktvatt",
-    provider: {
-      "@type": "RoofingContractor",
-      name: "RoslagsTak",
-      url: "https://roslagstak.se",
-      telephone: "+46701543639",
-      image: "https://roslagstak.se/og-image.jpg",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        worstRating: "1",
-        ratingCount: "153",
-        reviewCount: "153",
-      },
-    },
-    areaServed: { "@type": "Place", name: "Roslagen" },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "SEK",
-      description: "Taktvätt från 80 kr/m². Takmålning från 150 kr/m². ROT-avdrag tillkommer.",
-    },
   };
 
   const breadcrumbJsonLd = {
@@ -105,302 +273,663 @@ const Taktvatt = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
-      { "@type": "ListItem", position: 2, name: "Taktvätt", item: "https://roslagstak.se/taktvatt" },
+      { "@type": "ListItem", position: 2, name: "Tjänster", item: "https://roslagstak.se/#tjanster" },
+      { "@type": "ListItem", position: 3, name: "Taktvätt", item: pageUrl },
     ],
   };
 
   return (
     <>
       <SEOHead
-        title="Taktvätt Roslagen — Mossborttagning & Takmålning | RoslagsTak"
-        description="Professionell taktvätt i Roslagen och skärgården. Borttagning av mossa, alger och lavar. Skonsam metod, fast pris från 80 kr/m², ROT-avdrag och 10 års garanti."
-        canonical="https://roslagstak.se/taktvatt"
+        title="Taktvätt i Roslagen — Ta bort mossa, lavar & alger | RoslagsTak"
+        description="Professionell taktvätt och takvård i Roslagen och skärgården. Vi tar bort mossa, lavar och alger på betong-, tegel- och plåttak. Fast pris, ROT-avdrag och 10 års garanti. Kostnadsfri offert."
+        canonical={pageUrl}
       />
+      <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+      <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+
       <Header />
-      <main className="pt-24 pb-20">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-
-        <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8 flex-wrap" aria-label="Breadcrumb">
-            <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
-            <span>/</span>
-            <span className="text-foreground font-medium">Taktvätt</span>
-          </nav>
-
-          {/* Hero */}
-          <div className="max-w-4xl mb-12">
-            <div className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-4">
-              <Droplets className="w-3 h-3" /> Taktvätt & mossborttagning
-            </div>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              Taktvätt i Roslagen — professionell mossborttagning & takmålning
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              RoslagsTak utför professionell taktvätt i hela Roslagen och skärgården. Vi tar bort mossa, alger och lavar med skonsam metod som inte skadar takmaterialet — och förlänger takets livslängd med upp till 15 år. Fast pris från 80 kr/m², ROT-avdrag och 10 års garanti.
-            </p>
-            <div className="flex items-center gap-2 mt-4">
-              <div className="flex">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">4.9 av 5 — 153 kundrecensioner</span>
-            </div>
-            <div className="flex flex-wrap gap-4 mt-4">
-              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-primary" /> 10 års garanti
-              </div>
-              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Leaf className="w-4 h-4 text-primary" /> Miljögodkänt biocidmedel
-              </div>
-              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Award className="w-4 h-4 text-primary" /> 70 års samlad erfarenhet
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 mt-8">
-              <Link
-                to="/#offert"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
-              >
-                Få offert på taktvätt <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a
-                href="tel:+46701543639"
-                className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Phone className="w-4 h-4" /> Ring 070-154 36 39
-              </a>
-            </div>
-          </div>
-
-          {/* Main content + sidebar */}
-          <div className="grid lg:grid-cols-3 gap-12 mb-20">
-            <div className="lg:col-span-2 space-y-10">
-              {/* Why */}
-              <section>
-                <h2 className="font-display text-2xl text-foreground mb-4">Varför är taktvätt så viktigt i Roslagen?</h2>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    Roslagens närhet till Östersjön, Mälaren och tusentals sjöar och vikar skapar ett fuktigt klimat där mossa, alger och lavar trivs särskilt bra. Tak i kustnära områden som Norrtälje, Östhammar, Vaxholm och hela skärgården drabbas snabbare än tak längre inland — och utan regelbunden taktvätt riskerar du dyra konsekvenser.
-                  </p>
-                  <p>
-                    Mossa fungerar som en tvättsvamp som suger åt sig regnvatten och håller fukten kvar mot takmaterialet. På betong- och tegelpannor leder detta till frostsprängning när vattnet fryser i porerna. På plåttak förstör fukten ytbehandlingen och accelererar rostbildningen. Underliggande råspont börjar ruttna, underlagspappen åldras snabbare och hela takkonstruktionen försvagas.
-                  </p>
-                  <p>
-                    En professionell taktvätt avlägsnar mossa, alger och smuts — och en efterföljande biocidbehandling förhindrar återväxt i 5+ år. Investeringen tjänar du snabbt in: ett villatak som tvättas regelbundet håller 40–60 år, medan ett otvättat tak ofta behöver bytas efter 25–30 år.
-                  </p>
-                </div>
-              </section>
-
-              {/* Process */}
-              <section>
-                <h2 className="font-display text-2xl text-foreground mb-4">Så går taktvätten till — steg för steg</h2>
-                <ol className="space-y-4">
-                  {[
-                    {
-                      title: "Kostnadsfri besiktning",
-                      desc: "Vi besöker din fastighet, bedömer takets skick och nedsmutsningsgrad samt rekommenderar rätt metod. Du får skriftlig offert med fast pris.",
-                    },
-                    {
-                      title: "Förberedelser och säkerhet",
-                      desc: "Vi täcker fasad, fönster och rabatter. All personal arbetar med fallskydd och säkerhetslina enligt Arbetsmiljöverkets krav.",
-                    },
-                    {
-                      title: "Skonsam rengöring",
-                      desc: "Vi använder lågtryckstvätt eller manuell borstning beroende på takmaterial. Aldrig högtryck på betong- eller tegelpannor — det skadar ytskiktet.",
-                    },
-                    {
-                      title: "Borttagning av mossa och rester",
-                      desc: "All mossa, alger och växtrester samlas upp och fraktas bort. Hängrännor och stuprör rengörs i samma arbete.",
-                    },
-                    {
-                      title: "Biocidbehandling",
-                      desc: "Vi sprayar taket med ett miljögodkänt biocidmedel som dödar kvarvarande mossa, alger och lavar i rotsystemet. Skydd i ca 5 år.",
-                    },
-                    {
-                      title: "Slutkontroll och dokumentation",
-                      desc: "Vi går igenom resultatet med dig på plats och dokumenterar arbetet med foton. ROT-avdraget hanteras av oss på fakturan.",
-                    },
-                  ].map((step, i) => (
-                    <li key={step.title} className="flex gap-4 bg-card border border-border rounded-lg p-5">
-                      <span className="w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center flex-shrink-0">
-                        {i + 1}
-                      </span>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-1">{step.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-              </section>
-
-              {/* Materials */}
-              <section>
-                <h2 className="font-display text-2xl text-foreground mb-4">Taktvätt på alla typer av tak</h2>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {[
-                    { name: "Betongpannor", desc: "Skonsam lågtryckstvätt + biocid. Vanligast i Roslagen — drabbas hårt av mossa." },
-                    { name: "Tegelpannor (lertegel)", desc: "Manuell rengöring och biocidbehandling. Tål inte högtryck." },
-                    { name: "Plåttak (TP20, pannplåt)", desc: "Skonsam tvätt med rengöringsmedel som inte skadar ytbehandlingen." },
-                    { name: "Dubbelfalsat plåttak", desc: "Specialmetod som bevarar falsar och ytskikt — vanligt på äldre hus." },
-                    { name: "Eternittak", desc: "Försiktig rengöring utan tryckspolning. OBS: aldrig på asbesthaltiga tak — de ska saneras." },
-                    { name: "Papptak / låglutande tak", desc: "Manuell borstning och milda kemikalier. Vi inspekterar samtidigt papptätningen." },
-                  ].map((mat) => (
-                    <div key={mat.name} className="bg-card border border-border rounded-lg p-5">
-                      <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2">
-                        <Sparkles className="w-4 h-4 text-primary" /> {mat.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{mat.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Pricing */}
-              <section>
-                <h2 className="font-display text-2xl text-foreground mb-4">Vad kostar taktvätt i Roslagen?</h2>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="text-foreground">Taktvätt (rengöring + uppsamling)</span>
-                    <span className="font-semibold text-foreground">från 80 kr/m²</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="text-foreground">Biocidbehandling mot mossa & alger</span>
-                    <span className="font-semibold text-foreground">från 30 kr/m²</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="text-foreground">Komplett paket (tvätt + biocid)</span>
-                    <span className="font-semibold text-foreground">från 110 kr/m²</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-border">
-                    <span className="text-foreground">Takmålning (grundning + 2 strykningar)</span>
-                    <span className="font-semibold text-foreground">från 150 kr/m²</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-foreground">Rengöring av hängrännor & stuprör</span>
-                    <span className="font-semibold text-foreground">från 25 kr/löpmeter</span>
-                  </div>
-                </div>
-                <div className="mt-4 grid sm:grid-cols-2 gap-4">
-                  <div className="bg-primary/5 border border-primary/20 rounded-lg p-5">
-                    <h3 className="font-semibold text-foreground mb-2">Räkneexempel: villa 150 m²</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Komplett taktvätt + biocid: <strong className="text-foreground">ca 16 500 kr</strong>. Efter ROT-avdrag (30% av arbetskostnaden): <strong className="text-foreground">ca 11 550 kr</strong>.
-                    </p>
-                  </div>
-                  <div className="bg-primary/5 border border-primary/20 rounded-lg p-5">
-                    <h3 className="font-semibold text-foreground mb-2">Räkneexempel: kustvilla 100 m²</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Komplett taktvätt + biocid: <strong className="text-foreground">ca 11 000 kr</strong>. Efter ROT-avdrag: <strong className="text-foreground">ca 7 700 kr</strong>.
-                    </p>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground mt-3">
-                  * Riktpriser. Slutpris beror på takets lutning, åtkomlighet, höjd och nedsmutsningsgrad. Vi lämnar alltid fast pris efter kostnadsfri besiktning.
-                </p>
-              </section>
-
-              {/* Local */}
-              <section>
-                <h2 className="font-display text-2xl text-foreground mb-4">Taktvätt i hela Roslagen — välj din ort</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Vi utför taktvätt över hela Roslagen — från Norrtälje och Östhammar till skärgårdsöarna Blidö, Ljusterö, Möja och Singö. Klicka på din ort för lokal information om taktvätt och mossborttagning:
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {locations.map((l) => (
-                    <Link
-                      key={l.slug}
-                      to={`/taktvatt-${l.slug}`}
-                      className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-                    >
-                      <MapPin className="w-3 h-3" /> Taktvätt {l.isIsland ? "på" : "i"} {l.name}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-
-              {/* FAQ */}
-              <section>
-                <h2 className="font-display text-2xl text-foreground mb-4">Vanliga frågor om taktvätt</h2>
-                <Accordion type="single" collapsible className="space-y-2">
-                  {faqs.map((f, i) => (
-                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-4">
-                      <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline">
-                        {f.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
-                        {f.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </section>
-            </div>
-
-            {/* Sidebar */}
-            <aside className="space-y-6">
-              <div className="bg-primary text-primary-foreground rounded-lg p-6 lg:sticky lg:top-28">
-                <h3 className="font-display text-lg mb-2">Kostnadsfri offert</h3>
-                <p className="text-sm opacity-90 mb-4">
-                  Få fast pris på taktvätt inom 24 timmar. Helt utan förbindelser.
-                </p>
-                <Link
-                  to="/#offert"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 transition-colors"
-                >
-                  Få offert <ArrowRight className="w-4 h-4" />
-                </Link>
-                <a
-                  href="tel:+46701543639"
-                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors mt-3"
-                >
-                  <Phone className="w-4 h-4" /> 070-154 36 39
+      <main>
+        {/* HERO — full bildbakgrund */}
+        <section className="relative min-h-screen flex items-end overflow-hidden pt-16">
+          <img
+            src={heroImage}
+            alt="Nytvättat tak i Roslagen efter professionell taktvätt"
+            width={1920}
+            height={1280}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+          <div className="relative z-10 container mx-auto px-4 pb-16 pt-24">
+            <div className="max-w-3xl">
+              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4 flex items-center gap-2">
+                <Paintbrush className="h-4 w-4" />
+                Taktvätt & takvård i hela Roslagen
+              </p>
+              <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">
+                Taktvätt i Roslagen — bort med mossa, lavar och alger
+              </h1>
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed max-w-2xl">
+                Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år.
+                Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med ROT-avdrag, fast pris och 10 års garanti.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <a href="/#offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
+                  Få kostnadsfri offert <ArrowRight className="h-4 w-4" />
+                </a>
+                <a href="tel:0701543639" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md border border-foreground/30 text-foreground font-medium hover:bg-foreground/5 transition-colors">
+                  <Phone className="h-4 w-4" /> Ring oss direkt
                 </a>
               </div>
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+                {[
+                  { num: "500+", label: "Tvättade tak" },
+                  { num: "10 år", label: "Garanti på arbetet" },
+                  { num: "30 %", label: "ROT-avdrag" },
+                  { num: "24+", label: "Orter & öar" },
+                ].map((s, i) => (
+                  <div key={s.label} className={`pr-8 ${i > 0 ? "pl-8 border-l border-foreground/20" : ""}`}>
+                    <div className="text-2xl md:text-3xl font-bold text-foreground">{s.num}</div>
+                    <div className="text-sm text-muted-foreground">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="font-display text-lg text-card-foreground mb-4">Ingår i taktvätt</h3>
-                <ul className="space-y-2">
+        {/* Sticky snabbnavigation */}
+        <nav aria-label="Sektioner på sidan" className="sticky top-16 z-40 bg-background/95 backdrop-blur border-b border-border">
+          <div className="container mx-auto px-4">
+            <ul className="flex gap-6 overflow-x-auto py-4 text-sm whitespace-nowrap">
+              <li><a href="#fordelar" className="text-muted-foreground hover:text-primary transition-colors">Fördelar</a></li>
+              <li><a href="#fastighetstyper" className="text-muted-foreground hover:text-primary transition-colors">För din fastighet</a></li>
+              <li><a href="#fore-efter" className="text-muted-foreground hover:text-primary transition-colors">Före & efter</a></li>
+              <li><a href="#klimat" className="text-muted-foreground hover:text-primary transition-colors">Skärgårdsklimat</a></li>
+              <li><a href="#process" className="text-muted-foreground hover:text-primary transition-colors">Vår process</a></li>
+              <li><a href="#taktyper" className="text-muted-foreground hover:text-primary transition-colors">Taktyper</a></li>
+              <li><a href="#jamforelse" className="text-muted-foreground hover:text-primary transition-colors">Tvätt vs takbyte</a></li>
+              <li><a href="#sasong" className="text-muted-foreground hover:text-primary transition-colors">Säsongsguide</a></li>
+              <li><a href="#checklista" className="text-muted-foreground hover:text-primary transition-colors">Checklista</a></li>
+              <li><a href="#pris" className="text-muted-foreground hover:text-primary transition-colors">Pris & ROT</a></li>
+              <li><a href="#omraden" className="text-muted-foreground hover:text-primary transition-colors">Områden</a></li>
+              <li><a href="#garantier" className="text-muted-foreground hover:text-primary transition-colors">Garantier</a></li>
+              <li><a href="#ordlista" className="text-muted-foreground hover:text-primary transition-colors">Ordlista</a></li>
+              <li><a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">Vanliga frågor</a></li>
+              <li><a href="/#offert" className="text-primary font-semibold hover:underline">Få offert →</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        {/* Breadcrumb */}
+        <div className="container mx-auto px-4 py-4">
+          <nav aria-label="Brödsmulor" className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link to="/" className="hover:text-foreground transition-colors">Startsidan</Link>
+            <span>/</span>
+            <a href="/#tjanster" className="hover:text-foreground transition-colors">Tjänster</a>
+            <span>/</span>
+            <span className="text-foreground">Taktvätt</span>
+          </nav>
+        </div>
+
+        {/* Intro-text */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Vad är taktvätt?</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Taktvätt — det viktigaste underhållet för ditt tak
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Taktvätt innebär att vi rengör ditt tak från mossa, lavar, alger och smuts som med åren bryter ner takets ytskikt.
+              I Roslagens fuktiga skärgårdsklimat — med havsluft, regn och långa vintrar — växer mossan snabbt på betong- och tegelpannor.
+              En obehandlad mosspåväxt kan halvera takets livslängd och leda till läckage, frostsprängning och fuktskador.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Vi på <strong className="text-foreground">RoslagsTak</strong> är specialister på taktvätt och takvård i hela Roslagen och skärgården.
+              Med rätt teknik, miljögodkända medel och 10 års garanti får ditt tak ett nytt liv — till en bråkdel av priset för ett takbyte.
+            </p>
+          </div>
+        </section>
+
+        {/* Varför taktvätt */}
+        <section id="fordelar" className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Därför ska du tvätta taket</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+              Varför taktvätt är en av de bästa investeringarna för ditt hus
+            </h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+              Mossa och lavar är inte bara fult — de bryter aktivt ner ditt tak. Här är fyra konkreta skäl att boka taktvätt i tid.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((b) => (
+                <div key={b.title} className="bg-card border border-border rounded-xl p-6">
+                  <b.icon className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{b.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Fastighetstyper — Tabs/flikar */}
+        <section id="fastighetstyper" className="container mx-auto px-4 py-20">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">För alla typer av fastigheter</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+            Taktvätt anpassad efter din fastighet
+          </h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
+            Klicka på fliken som passar dig — vi anpassar taktvätten efter villatak, skärgårdshus, fritidshus eller näringsfastighet.
+          </p>
+          <div className="max-w-4xl mx-auto">
+            <div role="tablist" className="flex flex-wrap gap-2 mb-8 border-b border-border">
+              {tabs.map((t) => (
+                <button
+                  key={t.id}
+                  role="tab"
+                  aria-selected={activeTab === t.id}
+                  onClick={() => setActiveTab(t.id)}
+                  className={`inline-flex items-center gap-2 px-5 py-3 text-sm font-medium transition-colors border-b-2 -mb-px ${
+                    activeTab === t.id
+                      ? "border-primary text-primary"
+                      : "border-transparent text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <t.icon className="h-4 w-4" />
+                  {t.label}
+                </button>
+              ))}
+            </div>
+            <div role="tabpanel" className="bg-card border border-border rounded-xl p-8">
+              <h3 className="font-display text-2xl font-bold text-foreground mb-4">{tabContent[activeTab].title}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">{tabContent[activeTab].desc}</p>
+              <ul className="space-y-3">
+                {tabContent[activeTab].bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                    <span className="text-muted-foreground">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Före & efter */}
+        <section id="fore-efter" className="container mx-auto px-4 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Före & efter taktvätt</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Skillnaden är som natt och dag
+              </h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Bilden visar ett typiskt resultat efter en taktvätt utförd av oss. Innan vi börjar är taket täckt av tjocka mosskuddar,
+                vita lavar och svarta algstrimmor. Efter vår taktvätt med biocidbehandling är taket helt rent och skyddat i 5–8 år framåt.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Mossan borstas bort manuellt — inte högtrycksspolad",
+                  "Biocidbehandling dödar sporer och förhindrar återväxt",
+                  "Hängrännor rengörs så takavvattningen fungerar",
+                  "Allt arbete dokumenteras med före- och efterbilder",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-border">
+              <img
+                src={beforeAfterImage}
+                alt="Före och efter taktvätt — tak med mossa och lavar jämfört med nytvättat rent tak"
+                loading="lazy"
+                width={1600}
+                height={1024}
+                className="w-full h-auto"
+              />
+              <div className="absolute top-4 left-4 bg-destructive/90 text-destructive-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                Före
+              </div>
+              <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                Efter
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Skärgårdsklimat */}
+        <section id="klimat" className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Skärgårdsklimat & taket</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+              Varför Roslagens klimat ställer extra höga krav
+            </h2>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+              Roslagens skärgårdsklimat — med fukt från havet, höga nederbördsmängder och stora temperaturskillnader — gör att tak åldras snabbare här än på de flesta andra platser i Sverige. Därför är regelbunden taktvätt ett måste.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {climateFactors.map((c) => (
+                <div key={c.title} className="bg-card border border-border rounded-xl p-6">
+                  <c.icon className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{c.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Tecken på att taket behöver tvättas */}
+        <section className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div>
+                <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">När är det dags?</p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  7 tecken på att ditt tak behöver tvättas
+                </h2>
+                <p className="text-muted-foreground mb-6">
+                  Många väntar för länge med taktvätt — och då blir skadorna både större och dyrare att åtgärda.
+                  Titta upp på taket och kolla efter dessa varningstecken:
+                </p>
+                <ul className="space-y-3">
                   {[
-                    "Skonsam lågtryckstvätt",
-                    "Borttagning av mossa & lavar",
-                    "Biocidbehandling 5 års skydd",
-                    "Rengöring av hängrännor",
-                    "Skydd av fasad & rabatter",
-                    "Bortforsling av växtrester",
-                    "Fotodokumentation",
-                    "ROT-avdrag på fakturan",
-                  ].map((u) => (
-                    <li key={u} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> {u}
+                    "Tjocka gröna eller svarta mosskuddar mellan pannorna",
+                    "Vita eller grå lavar på takets norrsida",
+                    "Mörka strimmor från algpåväxt",
+                    "Hängrännor fulla med grus från nedbrutet ytskikt",
+                    "Pannor som ser porösa eller flagnande ut",
+                    "Synliga sprickor i pannor som vatten kan tränga in i",
+                    "Det är 5+ år sedan taket senast tvättades",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Sprout className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="font-display text-lg text-card-foreground mb-4">Relaterade tjänster</h3>
-                <div className="space-y-2">
-                  <Link to="/tjanster/takvard" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                    <ArrowRight className="w-3 h-3" /> Takvård & takmålning
-                  </Link>
-                  <Link to="/tjanster/takinspektion" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                    <ArrowRight className="w-3 h-3" /> Kostnadsfri takinspektion
-                  </Link>
-                  <Link to="/tjanster/takrenovering" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                    <ArrowRight className="w-3 h-3" /> Takrenovering
-                  </Link>
-                  <Link to="/priser" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                    <ArrowRight className="w-3 h-3" /> Se prislista
-                  </Link>
+              <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <AlertTriangle className="h-8 w-8 text-destructive shrink-0" />
+                  <h3 className="font-display text-xl font-bold text-foreground">
+                    Varning: gör inte taktvätten själv
+                  </h3>
                 </div>
+                <p className="text-muted-foreground mb-4">
+                  Att tvätta taket själv är både farligt och kan göra mer skada än nytta. Vanliga misstag vi ser:
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2"><span className="text-destructive">✗</span> För högt tryck som spräcker pannor och blåser bort ytskiktet</li>
+                  <li className="flex items-start gap-2"><span className="text-destructive">✗</span> Kemikalier som rinner ner i hängrännor och dödar växtlighet</li>
+                  <li className="flex items-start gap-2"><span className="text-destructive">✗</span> Felaktig fallskyddsutrustning — fall från tak är en av de vanligaste arbetsplatsolyckorna</li>
+                  <li className="flex items-start gap-2"><span className="text-destructive">✗</span> Tvätt nedifrån och upp — pressar in vatten under pannorna</li>
+                </ul>
               </div>
-            </aside>
+            </div>
           </div>
+        </section>
+
+        {/* Process */}
+        <section id="process" className="container mx-auto px-4 py-20">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Så går det till</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+            Vår taktvättsprocess steg för steg
+          </h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            Vi följer en beprövad process för att ge dig ett rent, skyddat tak — utan att skada taket eller huset.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {process.map((p) => (
+              <div key={p.step} className="bg-card border border-border rounded-xl p-6">
+                <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold mb-4">
+                  {p.step}
+                </div>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{p.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Taktyper */}
+        <section id="taktyper" className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Alla takmaterial</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+              Vi tvättar alla typer av tak
+            </h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+              Olika takmaterial kräver olika metoder. Vi har erfarenhet av alla vanliga taktyper i Roslagen.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {roofTypes.map((r) => (
+                <div key={r.name} className="bg-card border border-border rounded-xl p-6">
+                  <Wrench className="h-7 w-7 text-primary mb-4" />
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{r.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pris & ROT */}
+        <section id="pris" className="container mx-auto px-4 py-20">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Pris & ROT-avdrag</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-6">
+              Vad kostar taktvätt?
+            </h2>
+            <p className="text-muted-foreground text-center mb-10">
+              Priset för taktvätt varierar beroende på takets storlek, lutning, mängd mossa och tillgänglighet.
+              Här är våra ungefärliga priser inklusive ROT-avdrag.
+            </p>
+            <div className="bg-card border border-border rounded-xl overflow-hidden">
+              <table className="w-full">
+                <thead className="bg-secondary">
+                  <tr>
+                    <th className="text-left p-4 font-semibold text-foreground">Tjänst</th>
+                    <th className="text-left p-4 font-semibold text-foreground">Pris/m²</th>
+                    <th className="text-left p-4 font-semibold text-foreground">Med ROT</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  <tr>
+                    <td className="p-4 text-muted-foreground">Taktvätt + biocidbehandling</td>
+                    <td className="p-4 text-muted-foreground">80–150 kr</td>
+                    <td className="p-4 text-foreground font-medium">56–105 kr</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 text-muted-foreground">Taktvätt + takmålning</td>
+                    <td className="p-4 text-muted-foreground">200–320 kr</td>
+                    <td className="p-4 text-foreground font-medium">140–224 kr</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 text-muted-foreground">Endast mossborttagning</td>
+                    <td className="p-4 text-muted-foreground">50–90 kr</td>
+                    <td className="p-4 text-foreground font-medium">35–63 kr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-4">
+              Priserna är ungefärliga. Vi lämnar alltid skriftlig offert med fast pris efter besiktning.
+            </p>
+          </div>
+        </section>
+
+        {/* Jämförelse: tvätt vs takbyte */}
+        <section id="jamforelse" className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Tvätt eller byte?</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+              Taktvätt jämfört med takbyte
+            </h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+              Är taket helt? Då räcker oftast en taktvätt — det är 10–20 gånger billigare än ett takbyte och kan förlänga takets livslängd med uppåt 15 år.
+            </p>
+            <div className="max-w-4xl mx-auto bg-card border border-border rounded-xl overflow-hidden">
+              <table className="w-full">
+                <thead className="bg-secondary">
+                  <tr>
+                    <th className="text-left p-4 font-semibold text-foreground"><Scale className="inline h-4 w-4 mr-2" />Aspekt</th>
+                    <th className="text-left p-4 font-semibold text-foreground">Taktvätt</th>
+                    <th className="text-left p-4 font-semibold text-foreground">Takbyte</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {comparison.map((c) => (
+                    <tr key={c.aspect}>
+                      <td className="p-4 text-foreground font-medium">{c.aspect}</td>
+                      <td className={`p-4 ${c.winner === "clean" ? "text-primary font-semibold" : "text-muted-foreground"}`}>{c.clean}</td>
+                      <td className={`p-4 ${c.winner === "replace" ? "text-primary font-semibold" : "text-muted-foreground"}`}>{c.replace}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-center text-muted-foreground mt-6 max-w-2xl mx-auto text-sm">
+              <strong className="text-foreground">Vår rekommendation:</strong> Boka alltid kostnadsfri besiktning först — vi säger ärligt om det räcker med taktvätt eller om ett takbyte är bättre investering.
+            </p>
+          </div>
+        </section>
+
+        {/* Säsongsguide */}
+        <section id="sasong" className="container mx-auto px-4 py-20">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">När på året?</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+            Säsongsguide för taktvätt i Roslagen
+          </h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            Tidpunkten på året påverkar både resultat och pris. Här är vår säsongsguide för taktvätt i skärgårdsmiljö.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {seasonGuide.map((s) => (
+              <div key={s.season} className="bg-card border border-border rounded-xl p-6">
+                <s.icon className="h-8 w-8 text-primary mb-4" />
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{s.season}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Områden */}
+        <section id="omraden" className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Områden vi servar</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+              Taktvätt i hela Roslagen
+            </h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+              Vi utför taktvätt på villor, fritidshus och skärgårdshus i alla orter i Roslagen — även på öar utan broförbindelse.
+              Klicka på din ort för att läsa mer om våra taktjänster där.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
+              {locations.map((loc) => (
+                <Link
+                  key={loc.slug}
+                  to={`/taktvatt-${loc.slug}`}
+                  className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-3 text-foreground hover:border-primary hover:bg-primary/5 transition-colors"
+                >
+                  <MapPin className="h-4 w-4 text-primary shrink-0" />
+                  <span className="text-sm font-medium">Taktvätt {loc.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Garantier */}
+        <section id="garantier" className="container mx-auto px-4 py-20">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Trygghet hela vägen</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+            Våra garantier till dig
+          </h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            När du anlitar oss för taktvätt får du fyra konkreta löften — inget krångel, inga överraskningar.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {guarantees.map((g) => (
+              <div key={g.title} className="bg-card border border-border rounded-xl p-6">
+                <g.icon className="h-8 w-8 text-primary mb-4" />
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{g.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{g.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Vad våra kunder säger</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+              Nöjda taktvätt-kunder i hela Roslagen
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { name: "Anna L., Blidö", text: "Helt otroligt vilken skillnad! Taket ser ut som nytt och vi sparade ett dyrt takbyte. Proffsigt från början till slut." },
+                { name: "Per J., Norrtälje", text: "De tog hand om allt — täckte växterna, dokumenterade med bilder och allt blev pinsamt rent. ROT-avdraget skötte de också." },
+                { name: "Maria K., Ljusterö", text: "Vårt skärgårdshus hade tjock mossa efter 15 år. Nu är det som nytt. Rekommenderas varmt till alla med hus i skärgården." },
+              ].map((t) => (
+                <div key={t.name} className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground italic mb-4">"{t.text}"</p>
+                  <p className="text-sm font-semibold text-foreground">{t.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Checklista */}
+        <section id="checklista" className="container mx-auto px-4 py-20">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Gör-själv-inspektion</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+              Checklista: behöver ditt tak tvättas?
+            </h2>
+            <p className="text-muted-foreground text-center mb-10">
+              Gå igenom listan från marken med en kikare — du behöver inte klättra upp på taket. Bockar du av 2 eller fler punkter är det dags att boka taktvätt.
+            </p>
+            <div className="bg-card border border-border rounded-xl p-8">
+              <ul className="space-y-4">
+                {checklist.map((item, i) => (
+                  <li key={item} className="flex items-start gap-4">
+                    <span className="inline-flex items-center justify-center h-7 w-7 rounded-full bg-primary/10 text-primary text-sm font-bold shrink-0">{i + 1}</span>
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 pt-6 border-t border-border text-center">
+                <ListChecks className="h-8 w-8 text-primary mx-auto mb-3" />
+                <p className="text-muted-foreground mb-4">Osäker? Vi gör en kostnadsfri besiktning på plats.</p>
+                <a href="/#offert" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
+                  Boka kostnadsfri besiktning <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Ordlista */}
+        <section id="ordlista" className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Lär dig branschord</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+                <BookOpen className="inline h-7 w-7 mr-2 mb-1 text-primary" />
+                Ordlista — taktvätt från A till Ö
+              </h2>
+              <p className="text-muted-foreground text-center mb-12">
+                Här förklarar vi de vanligaste begreppen kring taktvätt, takvård och takmålning så du kan jämföra offerter på lika villkor.
+              </p>
+              <dl className="grid md:grid-cols-2 gap-6">
+                {glossary.map((g) => (
+                  <div key={g.term} className="bg-card border border-border rounded-xl p-6">
+                    <dt className="font-display text-lg font-semibold text-foreground mb-2">{g.term}</dt>
+                    <dd className="text-sm text-muted-foreground leading-relaxed">{g.def}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        {/* Relaterade tjänster */}
+        <section className="container mx-auto px-4 py-20">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Andra tjänster</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+            Relaterade taktjänster
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { to: "/tjanster/takomlaggning", icon: Hammer, title: "Takomläggning", desc: "När taktvätt inte räcker — vi byter ut pannor och underlagspapp." },
+              { to: "/tjanster/takbyte", icon: FileCheck, title: "Takbyte", desc: "Komplett takbyte med 10 års garanti i hela Roslagen och skärgården." },
+              { to: "/tjanster/takrenovering", icon: Wrench, title: "Takrenovering", desc: "Reparation och uppfräschning av äldre tak utan komplett byte." },
+            ].map((s) => (
+              <Link
+                key={s.title}
+                to={s.to}
+                className="group bg-card border border-border rounded-xl p-6 hover:border-primary transition-colors"
+              >
+                <s.icon className="h-8 w-8 text-primary mb-4" />
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
+                <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
+                  Läs mer <ArrowRight className="h-3 w-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="container mx-auto px-4 py-20">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Vanliga frågor</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+              Frågor och svar om taktvätt
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((f) => (
+                <details key={f.q} className="bg-card border border-border rounded-xl p-6 group">
+                  <summary className="font-display text-lg font-semibold text-foreground cursor-pointer list-none flex justify-between items-center">
+                    {f.q}
+                    <span className="text-primary group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+                  </summary>
+                  <p className="text-muted-foreground mt-4 leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA / Offert */}
+        <section id="offert" className="bg-secondary py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-card border border-border rounded-2xl p-10 md:p-16 text-center max-w-4xl mx-auto">
+              <Paintbrush className="h-12 w-12 text-primary mx-auto mb-6" />
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Boka taktvätt i Roslagen idag
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
+                Vi erbjuder kostnadsfri besiktning och offert med fast pris. ROT-avdrag och 10 års garanti ingår alltid.
+                Verksamma i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje och skärgården.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="/#offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
+                  Få kostnadsfri offert <ArrowRight className="h-4 w-4" />
+                </a>
+                <a href="tel:0701543639" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md border border-foreground/30 text-foreground font-medium hover:bg-foreground/5 transition-colors">
+                  <Phone className="h-4 w-4" /> Ring oss direkt
+                </a>
+              </div>
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Svar inom 24h</span>
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris</span>
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> ROT-avdrag 30 %</span>
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> 10 års garanti</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="container mx-auto px-4 py-12">
+          <a href="/#tjanster" className="text-sm text-primary font-medium hover:underline">
+            ← Tillbaka till alla tjänster
+          </a>
         </div>
       </main>
       <Footer />
