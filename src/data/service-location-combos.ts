@@ -59,6 +59,24 @@ const serviceTypes = [
   },
 ];
 
+const taktvattService = {
+  slug: "taktvatt",
+  name: "Taktvätt",
+  verb: "tvätta tak",
+  generateContent: (loc: LocationData, prep: string) => [
+    `Behöver du taktvätt ${prep} ${loc.name}? RoslagsTak utför professionell taktvätt i hela Roslagen och skärgården. Vi tar bort mossa, alger, lavar och smuts från ditt tak med skonsamma metoder som inte skadar takmaterialet — oavsett om du har betongpannor, tegelpannor, eternit eller plåttak. En regelbunden taktvätt ${prep} ${loc.name} förlänger takets livslängd med upp till 10–15 år och sparar dig tiotusentals kronor i framtida takbyten.`,
+    `Mossa och alger trivs särskilt bra ${prep} ${loc.name} på grund av närheten till hav, sjöar och skog som ger fuktig luft. När mossan växer på taket håller den kvar fukten mot takmaterialet, vilket leder till frostsprängning på betong- och tegelpannor samt rost på plåttak. Vår taktvätt ${prep} ${loc.name} börjar med en grundlig rengöring där vi använder lågtryckstvätt eller manuell borstning beroende på takmaterial. Därefter behandlar vi taket med ett miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.`,
+    loc.isIsland
+      ? `Vi har stor erfarenhet av taktvätt på öar i Roslagens skärgård. Vi samordnar transport av utrustning, vatten och kemikalier till ${loc.name} och planerar arbetet noggrant så att det går smidigt — även om ön saknar broförbindelse. Många hus ${prep} ${loc.name} har problem med kraftig mossbildning på grund av det fuktiga skärgårdsklimatet, och regelbunden taktvätt är ofta avgörande för att undvika dyra takbyten.`
+      : `Med vår bas i Norrtälje når vi ${loc.name} snabbt och kan ofta utföra taktvätt inom 1–2 veckor. Vi har lång erfarenhet av de specifika problem som drabbar tak ${prep} ${loc.name} — främst mossa på norrsidor och alger nära träd och vegetation.`,
+    `Priset för taktvätt ${prep} ${loc.name} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning, material och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocid. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri besiktning — inga dolda kostnader.`,
+    `Förutom taktvätt erbjuder vi även takmålning ${prep} ${loc.name}. När taket är rent och torrt målar vi med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning kostar från ca 150 kr/m² inklusive grundning och två strykningar. Vi erbjuder takmålning i alla standardfärger — tegelröd, svart, mörkgrå, brun eller efter eget val.`,
+    `Bäst tid för taktvätt ${prep} ${loc.name} är från april till oktober när det är torrt och plusgrader. Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på takets exponering. Boka en kostnadsfri besiktning så bedömer vi takets skick och ger dig en ärlig rekommendation. Ring 070-154 36 39 eller fyll i offertformuläret — vi återkopplar inom 24 timmar.`,
+  ],
+};
+
+serviceTypes.push(taktvattService);
+
 export const generateCombos = (): ServiceLocationCombo[] => {
   const combos: ServiceLocationCombo[] = [];
   for (const service of serviceTypes) {
