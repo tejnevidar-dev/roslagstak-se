@@ -12,6 +12,7 @@ import ServiceLocationPage from "./pages/ServiceLocationPage.tsx";
 import Prices from "./pages/Prices.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import Taktvatt from "./pages/Taktvatt.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import { locations } from "./data/locations";
@@ -41,6 +42,10 @@ const App = () => (
             ))}
             {locations.map((loc) => (
               <Route key={`takomlaggning-${loc.slug}`} path={`/takomlaggning-${loc.slug}`} element={<ServiceLocationPage />} />
+            ))}
+            <Route path="/taktvatt" element={<Taktvatt />} />
+            {locations.map((loc) => (
+              <Route key={`taktvatt-${loc.slug}`} path={`/taktvatt-${loc.slug}`} element={<ServiceLocationPage />} />
             ))}
             <Route path="/blogg" element={<Blog />} />
             <Route path="/blogg/:slug" element={<BlogPost />} />
