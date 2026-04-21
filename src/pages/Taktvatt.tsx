@@ -32,8 +32,6 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { locations } from "@/data/locations";
-import heroImage from "@/assets/hero-roof.jpg";
-import beforeAfterImage from "@/assets/before-roof-1.jpg";
 
 const benefits = [
   {
@@ -293,14 +291,14 @@ const Taktvatt = () => {
       <main>
         {/* HERO — full bildbakgrund */}
         <section className="relative min-h-screen flex items-end overflow-hidden pt-16">
-          <img
-            src={heroImage}
-            alt="Nytvättat tak i Roslagen efter professionell taktvätt"
-            width={1920}
-            height={1280}
-            className="absolute inset-0 w-full h-full object-cover"
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary) / 0.9) 100%)",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/20" />
           <div className="relative z-10 container mx-auto px-4 pb-16 pt-24">
             <div className="max-w-3xl">
               <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -466,8 +464,9 @@ const Taktvatt = () => {
                 Skillnaden är som natt och dag
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Bilden visar ett typiskt resultat efter en taktvätt utförd av oss. Innan vi börjar är taket täckt av tjocka mosskuddar,
-                vita lavar och svarta algstrimmor. Efter vår taktvätt med biocidbehandling är taket helt rent och skyddat i 5–8 år framåt.
+                Innan vi börjar är taket täckt av tjocka mosskuddar, vita lavar och svarta algstrimmor.
+                Efter vår taktvätt med biocidbehandling är taket helt rent och skyddat i 5–8 år framåt.
+                Vi dokumenterar alltid arbetet med riktiga före- och efterbilder från ditt eget tak.
               </p>
               <ul className="space-y-3">
                 {[
@@ -483,20 +482,18 @@ const Taktvatt = () => {
                 ))}
               </ul>
             </div>
-            <div className="relative rounded-2xl overflow-hidden border border-border">
-              <img
-                src={beforeAfterImage}
-                alt="Före och efter taktvätt — tak med mossa och lavar jämfört med nytvättat rent tak"
-                loading="lazy"
-                width={1600}
-                height={1024}
-                className="w-full h-auto"
-              />
-              <div className="absolute top-4 left-4 bg-destructive/90 text-destructive-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                Före
+            <div className="relative rounded-2xl overflow-hidden border border-border aspect-[16/10] grid grid-cols-2">
+              <div className="bg-muted/40 flex items-center justify-center p-6 text-center">
+                <div>
+                  <div className="bg-destructive/90 text-destructive-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-3">Före</div>
+                  <p className="text-sm text-muted-foreground">Mossa, lavar och alger på taket</p>
+                </div>
               </div>
-              <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                Efter
+              <div className="bg-primary/10 flex items-center justify-center p-6 text-center border-l border-border">
+                <div>
+                  <div className="bg-primary/90 text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-3">Efter</div>
+                  <p className="text-sm text-foreground font-medium">Rent, skyddat tak i 5–8 år</p>
+                </div>
               </div>
             </div>
           </div>
