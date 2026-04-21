@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import splashBg from "@/assets/splash-bg.jpg";
 
 const FULL_TEXT = "RoslagsTak";
 const SPLIT_INDEX = 7;
@@ -54,13 +53,14 @@ const SplashScreen = ({ onDone }: { onDone: () => void }) => {
         transition: `opacity ${FADE_DURATION}ms ease-in-out`,
       }}
     >
-      <img
-        src={splashBg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-        fetchPriority="high"
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)",
+        }}
       />
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/30" />
 
       <h1 className="relative z-10 font-display text-6xl sm:text-8xl lg:text-9xl tracking-tight select-none">
         {prefix.split("").map((ch, i) => (
