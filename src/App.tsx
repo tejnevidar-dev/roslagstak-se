@@ -13,9 +13,6 @@ import Prices from "./pages/Prices.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import Taktvatt from "./pages/Taktvatt.tsx";
-import Takbyte from "./pages/Takbyte.tsx";
-import Takrenovering from "./pages/Takrenovering.tsx";
-import Taksakerhet from "./pages/Taksakerhet.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import { locations } from "./data/locations";
@@ -33,11 +30,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/tjanster/takvard" element={<Taktvatt />} />
             <Route path="/tjanster/taktvatt" element={<Taktvatt />} />
-            <Route path="/takbyte" element={<Takbyte />} />
-            <Route path="/tjanster/takomlaggning" element={<Takbyte />} />
-            <Route path="/takrenovering" element={<Takrenovering />} />
-            <Route path="/tjanster/takrenovering" element={<Takrenovering />} />
-            <Route path="/taksakerhet" element={<Taksakerhet />} />
             <Route path="/tjanster/:slug" element={<ServiceDetail />} />
             <Route path="/recensioner" element={<Reviews />} />
             <Route path="/priser" element={<Prices />} />

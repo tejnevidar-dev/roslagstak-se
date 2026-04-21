@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Phone, Menu, X, MessageCircle, Hammer, Wrench, Droplets, Shield } from "lucide-react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Phone, Menu, X, MessageCircle } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const FULL_TEXT = "RoslagsTak";
 const SPLIT_INDEX = 7; // "Roslags" = 7 chars
@@ -37,25 +37,6 @@ const Header = () => {
     { href: "#projekt", label: "Projekt" },
     { href: "#kontakt", label: "Kontakt" },
   ];
-
-  const categories = [
-    { to: "/takbyte", label: "Takbyte", icon: Hammer },
-    { to: "/takrenovering", label: "Takrenovering", icon: Wrench },
-    { to: "/taktvatt", label: "Taktvätt & Takvård", icon: Droplets },
-    { to: "/taksakerhet", label: "Taksäkerhet", icon: Shield },
-  ];
-
-  const isCategoryActive = (to: string) => {
-    if (to === "/taktvatt")
-      return location.pathname.startsWith("/taktvatt") || location.pathname === "/tjanster/takvard";
-    if (to === "/takbyte")
-      return location.pathname.startsWith("/takbyte") || location.pathname === "/tjanster/takomlaggning";
-    if (to === "/takrenovering")
-      return location.pathname.startsWith("/takrenovering") || location.pathname === "/tjanster/takrenovering";
-    if (to === "/taksakerhet")
-      return location.pathname.startsWith("/taksakerhet");
-    return false;
-  };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -143,19 +124,6 @@ const Header = () => {
               {link.label}
             </a>
           ))}
-          <div className="pt-3 border-t border-primary-foreground/10 space-y-2">
-            <p className="text-xs uppercase tracking-wider text-primary-foreground/50 font-semibold mb-2">Våra tjänster</p>
-            {categories.map((cat) => (
-              <Link
-                key={cat.to}
-                to={cat.to}
-                onClick={() => setMenuOpen(false)}
-                className={`flex items-center gap-2 font-medium ${isCategoryActive(cat.to) ? "text-primary" : "text-primary-foreground/80 hover:text-primary"}`}
-              >
-                <cat.icon className="w-4 h-4" /> {cat.label}
-              </Link>
-            ))}
-          </div>
           <a
             href="#radgivning"
             onClick={(e) => handleNavClick(e, "#radgivning")}
@@ -173,30 +141,6 @@ const Header = () => {
           </a>
         </div>
       )}
-
-      {/* Category bar — always visible */}
-      <div className="hidden md:block border-t border-primary-foreground/10 bg-accent/95 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center justify-center gap-1 overflow-x-auto" aria-label="Tjänstekategorier">
-            {categories.map((cat) => {
-              const active = isCategoryActive(cat.to);
-              return (
-                <Link
-                  key={cat.to}
-                  to={cat.to}
-                  className={`inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
-                    active
-                      ? "text-primary border-primary"
-                      : "text-primary-foreground/70 border-transparent hover:text-primary hover:border-primary/40"
-                  }`}
-                >
-                  <cat.icon className="w-4 h-4" /> {cat.label}
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-      </div>
     </header>
   );
 };
