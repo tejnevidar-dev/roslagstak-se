@@ -63,6 +63,36 @@ export const generateServiceLocationFAQs = (
   isIsland: boolean,
 ): LocationFAQ[] => {
   const isTakbyte = serviceName.toLowerCase() === "takbyte";
+  const isTaktvatt = serviceName.toLowerCase() === "taktvätt";
+
+  if (isTaktvatt) {
+    return [
+      {
+        question: `Vad kostar taktvätt ${prep} ${locationName}?`,
+        answer: `Priset för taktvätt ${prep} ${locationName} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri besiktning."}`,
+      },
+      {
+        question: `Hur ofta behöver jag tvätta taket ${prep} ${locationName}?`,
+        answer: `Vi rekommenderar taktvätt vart 5:e till 10:e år ${prep} ${locationName}, beroende på takets exponering. Tak på norrsidor, under träd eller nära vatten drabbas hårdare av mossa och alger och behöver tvättas oftare. ${isIsland ? `Det fuktiga skärgårdsklimatet ${prep} ${locationName} gör att mossan växer snabbt — många hus behöver taktvätt vart 5:e år.` : ""} Boka kostnadsfri besiktning så bedömer vi takets skick.`,
+      },
+      {
+        question: `Vilken metod använder ni för taktvätt ${prep} ${locationName}?`,
+        answer: `Vi använder skonsam lågtryckstvätt eller manuell borstning beroende på takmaterial. Högtryckstvätt rekommenderas inte på betong- och tegelpannor eftersom det kan skada ytskiktet och förkorta takets livslängd. Efter rengöring behandlar vi taket med ett miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet. Behandlingen ger ca 5 års skydd.`,
+      },
+      {
+        question: `Kan ni utföra både taktvätt och takmålning ${prep} ${locationName}?`,
+        answer: `Ja, vi erbjuder komplett takvård ${prep} ${locationName} — både taktvätt och takmålning. När taket är rent och torrt kan vi måla med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning kostar från ca 150 kr/m² inklusive grundning och två strykningar.`,
+      },
+      {
+        question: `Ingår ROT-avdrag vid taktvätt ${prep} ${locationName}?`,
+        answer: `Ja, ROT-avdrag gäller för taktvätt ${prep} ${locationName}. Du får 30% skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter all administration — du betalar bara din del direkt på fakturan.`,
+      },
+      {
+        question: `När är bästa tiden för taktvätt ${prep} ${locationName}?`,
+        answer: `Bästa tid för taktvätt ${prep} ${locationName} är från april till oktober när det är torrt och plusgrader. Vi planerar arbetet efter väderprognos för bästa resultat. ${isIsland ? "På öar planerar vi extra noga eftersom transport av utrustning kräver bra väder." : "Vi kan oftast utföra taktvätt inom 1–2 veckor från beställning."}`,
+      },
+    ];
+  }
 
   return [
     {

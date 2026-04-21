@@ -17,7 +17,15 @@ import {
 
 const ServiceLocationPage = () => {
   const pathname = useLocation().pathname;
-  const serviceSlug = pathname.startsWith("/takbyte-") ? "takbyte" : pathname.startsWith("/takrenovering-") ? "takrenovering" : pathname.startsWith("/takomlaggning-") ? "takomlaggning" : "";
+  const serviceSlug = pathname.startsWith("/takbyte-")
+    ? "takbyte"
+    : pathname.startsWith("/takrenovering-")
+    ? "takrenovering"
+    : pathname.startsWith("/takomlaggning-")
+    ? "takomlaggning"
+    : pathname.startsWith("/taktvatt-")
+    ? "taktvatt"
+    : "";
   const prefix = serviceSlug ? `/${serviceSlug}-` : "";
   const locSlug = prefix ? pathname.replace(prefix, "") : undefined;
   const combo = serviceSlug && locSlug ? getCombo(serviceSlug, locSlug) : undefined;
