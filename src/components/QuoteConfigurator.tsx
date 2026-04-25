@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const roofTypeOptions = [
   "TP20 Plåttak",
@@ -25,15 +27,49 @@ const QuoteConfigurator = () => {
   const [avvattning, setAvvattning] = useState("");
   const [floors, setFloors] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+
+    const payload = {
+      mode,
+      name: name.trim(),
+      phone: phone.trim(),
+      email: email.trim(),
+      address: address.trim() || null,
+      current_roof: mode === "configure" ? currentRoof || null : null,
+      new_roof: mode === "configure" ? newRoof || null : null,
+      raspont: mode === "configure" ? raspont || null : null,
+      gangbrygga: mode === "configure" ? gangbrygga : false,
+      takstege: mode === "configure" ? takstege : false,
+      avvattning: mode === "configure" ? avvattning || null : null,
+      floors: mode === "configure" ? floors || null : null,
+      message: mode === "consultation" ? message.trim() || null : null,
+    };
+
+    const { error } = await supabase.from("quote_requests").insert(payload);
+
+    if (error) {
+      console.error("Quote request error:", error);
+      toast({
+        title: "Något gick fel",
+        description: "Vänligen försök igen eller ring oss direkt på 070-154 36 39.",
+        variant: "destructive",
+      });
+      setSubmitting(false);
+      return;
+    }
+
     setSubmitted(true);
+    setSubmitting(false);
   };
 
   if (submitted) {
@@ -334,9 +370,12 @@ const QuoteConfigurator = () => {
 
           <button
             type="submit"
+            disabled={submitting}
             className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-md font-semibold text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 animate-subtle-pulse"
           >
-            {mode === "configure" ? (
+            {submitting ? (
+              <>Skickar...</>
+            ) : mode === "configure" ? (
               <>
                 Få kostnadsförslag på mail
                 <ArrowRight className="w-4 h-4" />
