@@ -429,7 +429,12 @@ const Taktvatt = () => {
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Vi på <strong className="text-foreground">RoslagsTak</strong> är specialister på taktvätt och takvård i hela Roslagen och skärgården.
-              Med rätt teknik, miljögodkända medel och 10 års garanti får ditt tak ett nytt liv — till en bråkdel av priset för ett takbyte.
+              Med rätt teknik, miljögodkända medel och 10 års garanti får ditt tak ett nytt liv — till en bråkdel av priset för ett{" "}
+              <Link to="/tjanster/takomlaggning" className="text-primary hover:underline font-medium">takbyte</Link>.
+              Se vår fullständiga <Link to="/priser" className="text-primary hover:underline font-medium">prislista för taktjänster</Link> eller läs mer om hur vi jobbar på{" "}
+              <Link to="/taktvatt-blido" className="text-primary hover:underline font-medium">Blidö</Link>,{" "}
+              <Link to="/taktvatt-ljustero" className="text-primary hover:underline font-medium">Ljusterö</Link> och{" "}
+              <Link to="/taktvatt-norrtalje" className="text-primary hover:underline font-medium">Norrtälje</Link>.
             </p>
           </div>
         </section>
