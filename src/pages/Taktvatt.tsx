@@ -32,6 +32,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { locations } from "@/data/locations";
+import { Helmet } from "react-helmet-async";
 
 const benefits = [
   {
@@ -225,7 +226,7 @@ const tabContent: Record<string, { title: string; desc: string; bullets: string[
 
 const Taktvatt = () => {
   const [activeTab, setActiveTab] = useState("villatak");
-  const pageUrl = "https://roslagstak.se/tjanster/takvard";
+  const pageUrl = "https://roslagstak.se/tjanster/taktvatt";
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -234,19 +235,54 @@ const Taktvatt = () => {
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${pageUrl}#service`,
+    name: "Taktvätt och takvård i Roslagen",
+    url: pageUrl,
     serviceType: "Taktvätt och takvård",
     provider: {
       "@type": "RoofingContractor",
+      "@id": "https://roslagstak.se/#organization",
       name: "RoslagsTak",
-      areaServed: "Roslagen, Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje",
+      url: "https://roslagstak.se/",
+      areaServed: "Roslagen, Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje, Skärgården",
       telephone: "+46-70-154-36-39",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Blidö",
+        addressRegion: "Stockholms län",
+        addressCountry: "SE",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "150",
+      },
     },
-    areaServed: { "@type": "Place", name: "Roslagen" },
+    areaServed: [
+      { "@type": "Place", name: "Roslagen" },
+      { "@type": "Place", name: "Norrtälje" },
+      { "@type": "Place", name: "Blidö" },
+      { "@type": "Place", name: "Ljusterö" },
+      { "@type": "Place", name: "Vaxholm" },
+      { "@type": "Place", name: "Stockholms skärgård" },
+    ],
     description:
       "Professionell taktvätt med borttagning av mossa, lavar och alger. Skonsam tvätt, biocidbehandling och takmålning på betongpannor, tegelpannor och plåttak i hela Roslagen.",
+    category: "Roof cleaning",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Taktvätt-tjänster",
+      itemListElement: [
+        { "@type": "Offer", name: "Taktvätt + biocidbehandling", priceSpecification: { "@type": "UnitPriceSpecification", price: "80-150", priceCurrency: "SEK", unitText: "per kvadratmeter" } },
+        { "@type": "Offer", name: "Taktvätt + takmålning", priceSpecification: { "@type": "UnitPriceSpecification", price: "200-320", priceCurrency: "SEK", unitText: "per kvadratmeter" } },
+        { "@type": "Offer", name: "Endast mossborttagning", priceSpecification: { "@type": "UnitPriceSpecification", price: "50-90", priceCurrency: "SEK", unitText: "per kvadratmeter" } },
+      ],
+    },
     offers: {
       "@type": "Offer",
       priceCurrency: "SEK",
+      availability: "https://schema.org/InStock",
+      url: pageUrl,
       priceSpecification: {
         "@type": "UnitPriceSpecification",
         price: "80-150",
@@ -279,13 +315,21 @@ const Taktvatt = () => {
   return (
     <>
       <SEOHead
-        title="Taktvätt i Roslagen — Ta bort mossa, lavar & alger | RoslagsTak"
-        description="Professionell taktvätt och takvård i Roslagen och skärgården. Vi tar bort mossa, lavar och alger på betong-, tegel- och plåttak. Fast pris, ROT-avdrag och 10 års garanti. Kostnadsfri offert."
+        title="Taktvätt Roslagen — Bort med mossa, lavar & alger"
+        description="Taktvätt i Roslagen från 80 kr/m². Vi tar bort mossa, lavar och alger på betong-, tegel- och plåttak. Fast pris, ROT-avdrag 30 % och 10 års garanti. Kostnadsfri offert."
         canonical={pageUrl}
+        type="article"
+        geoPosition="59.6237;18.8842"
+        geoPlacename="Blidö, Norrtälje, Roslagen"
       />
-      <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
-      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+      <Helmet>
+        <meta name="keywords" content="taktvätt Roslagen, taktvätt Norrtälje, taktvätt Blidö, mossa på taket, takvård, takmålning, biocidbehandling, ta bort mossa tak, taktvätt skärgården" />
+        <meta name="author" content="RoslagsTak" />
+        <meta property="article:section" content="Takvård" />
+        <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+      </Helmet>
 
       <Header />
       <main>
