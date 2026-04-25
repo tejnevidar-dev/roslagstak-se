@@ -1,4 +1,5 @@
 import { CheckCircle, Anchor, Heart, ShieldCheck, Award, Zap } from "lucide-react";
+import rooferImg from "@/assets/roofer-work.jpg";
 
 const coreValues = [
   {
@@ -76,16 +77,14 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div
-              className="rounded-lg shadow-xl w-full aspect-[4/3] flex items-center justify-center"
-              style={{
-                background:
-                  "linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)",
-              }}
-              aria-hidden="true"
-            >
-              <Anchor className="w-24 h-24 text-white/40" />
-            </div>
+            <img
+              src={rooferImg}
+              alt="Professionell takläggare arbetar på tak vid Roslagens kust"
+              width={800}
+              height={600}
+              loading="lazy"
+              className="rounded-lg shadow-xl w-full object-cover aspect-[4/3]"
+            />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg hidden md:block">
               <Anchor className="w-6 h-6 mb-1 opacity-80" />
               <p className="font-display text-3xl">20+</p>
