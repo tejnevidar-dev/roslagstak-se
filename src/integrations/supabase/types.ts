@@ -14,16 +14,112 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      quote_requests: {
+        Row: {
+          address: string | null
+          admin_notes: string | null
+          avvattning: string | null
+          created_at: string
+          current_roof: string | null
+          email: string
+          floors: string | null
+          gangbrygga: boolean | null
+          id: string
+          message: string | null
+          mode: Database["public"]["Enums"]["quote_mode"]
+          name: string
+          new_roof: string | null
+          phone: string
+          raspont: string | null
+          status: Database["public"]["Enums"]["quote_status"]
+          takstege: boolean | null
+          updated_at: string
+        }
+        Insert: {
+          address?: string | null
+          admin_notes?: string | null
+          avvattning?: string | null
+          created_at?: string
+          current_roof?: string | null
+          email: string
+          floors?: string | null
+          gangbrygga?: boolean | null
+          id?: string
+          message?: string | null
+          mode: Database["public"]["Enums"]["quote_mode"]
+          name: string
+          new_roof?: string | null
+          phone: string
+          raspont?: string | null
+          status?: Database["public"]["Enums"]["quote_status"]
+          takstege?: boolean | null
+          updated_at?: string
+        }
+        Update: {
+          address?: string | null
+          admin_notes?: string | null
+          avvattning?: string | null
+          created_at?: string
+          current_roof?: string | null
+          email?: string
+          floors?: string | null
+          gangbrygga?: boolean | null
+          id?: string
+          message?: string | null
+          mode?: Database["public"]["Enums"]["quote_mode"]
+          name?: string
+          new_roof?: string | null
+          phone?: string
+          raspont?: string | null
+          status?: Database["public"]["Enums"]["quote_status"]
+          takstege?: boolean | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin"
+      quote_mode: "configure" | "consultation"
+      quote_status:
+        | "ny"
+        | "kontaktad"
+        | "offert_skickad"
+        | "avslutad"
+        | "forlorad"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +246,16 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin"],
+      quote_mode: ["configure", "consultation"],
+      quote_status: [
+        "ny",
+        "kontaktad",
+        "offert_skickad",
+        "avslutad",
+        "forlorad",
+      ],
+    },
   },
 } as const
