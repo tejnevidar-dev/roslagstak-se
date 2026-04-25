@@ -86,47 +86,71 @@ const guarantees = [
 const faqs = [
   {
     q: "Vad kostar taktvätt i Roslagen?",
-    a: "Priset för taktvätt ligger oftast mellan 80–150 kr/m² beroende på takmaterial, mängd mossa och tillgänglighet. Med ROT-avdrag blir nettokostnaden cirka 56–105 kr/m². Vi lämnar alltid kostnadsfri offert med fast pris.",
+    a: "Taktvätt i Roslagen kostar 80–150 kr/m² inklusive biocidbehandling — med ROT-avdrag blir nettopriset 56–105 kr/m². För en normalvilla på 130 m² takyta landar totalpriset oftast på 10 400–19 500 kr brutto, eller 7 280–13 650 kr efter ROT. Vill du även ha takmålning kostar det 200–320 kr/m² (140–224 kr/m² efter ROT). Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri besiktning.",
   },
   {
     q: "Hur ofta bör man tvätta taket?",
-    a: "Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på läge. Hus i skuggiga lägen, nära skog, hav eller på öar i skärgården behöver tvättas oftare än soliga tak inåt land.",
+    a: "Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på läge. Hus i skuggiga lägen, nära skog, hav eller på öar i Roslagens skärgård behöver tvättas vart 5:e–7:e år, medan soliga tak inåt land klarar sig 8–10 år mellan tvättarna. Efter en taktvätt med biocidbehandling håller taket sig rent i 5–8 år, och med kompletterande takmålning förlängs intervallet till 10–15 år.",
   },
   {
     q: "Är högtryckstvätt skadligt för taket?",
-    a: "Ja, fel använt högtryck kan slå sönder ytskiktet på betong- och tegelpannor och göra problemet värre. Vi använder anpassat tryck för varje takmaterial och kombinerar med manuell borstning och biocidbehandling.",
+    a: "Ja, fel använt högtryck (över 100 bar) kan slå sönder ytskiktet på betong- och tegelpannor, blåsa bort ytbehandlingen och pressa in vatten under pannorna. Vi använder lågtryckstvätt med 30–80 bar anpassad för varje takmaterial, kombinerat med manuell borstning av tjocka mosskuddar och avslutande biocidbehandling. På eternittak används aldrig tryck — endast manuella metoder enligt AFS 2006:1.",
   },
   {
     q: "Ingår ROT-avdrag på taktvätt?",
-    a: "Ja, taktvätt och takmålning är ROT-berättigat. Du får 30 % rabatt på arbetskostnaden direkt på fakturan — vi sköter all administration mot Skatteverket.",
+    a: "Ja, både taktvätt, mossborttagning och takmålning är ROT-berättigade tjänster. Du får 30 % rabatt på arbetskostnaden direkt på fakturan upp till 50 000 kr per person och år. Vi sköter all administration mot Skatteverket — du behöver bara uppge personnummer och fastighetsbeteckning. Materialkostnader (biocid, färg) omfattas inte av ROT.",
   },
   {
     q: "När på året är det bäst att tvätta taket?",
-    a: "Bästa säsongen för taktvätt är från april till oktober då det är torrt och varmt. Vi utför taktvätt i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje med flera orter.",
+    a: "Bästa säsongen för taktvätt i Roslagen är april–oktober när det är torrt och temperaturen är över +5 °C. Våren (april–maj) är optimal för biocidbehandling som hinner verka hela sommaren, medan sommaren (juni–augusti) ger bäst torktid för efterföljande takmålning. Höstmånaderna september–oktober används för rensning av hängrännor och sista tvätten innan vintern. Vi tar emot bokningar året runt men utför inte taktvätt vid frost.",
   },
   {
     q: "Hur länge håller en taktvätt?",
-    a: "Efter taktvätt med biocidbehandling håller sig taket rent i 5–8 år. Lägger man dessutom på takfärg får man ytterligare skydd och 10–15 års hållbarhet.",
+    a: "Efter en taktvätt med biocidbehandling håller sig taket rent i 5–8 år innan ny mosspåväxt börjar synas. Lägger man dessutom på två strykningar UV-beständig takfärg får man ytterligare skydd och 10–15 års hållbarhet. I skärgårdsmiljö med saltluft och hög luftfuktighet kan intervallet vara något kortare — vi rekommenderar då en lättare uppfräschning vart 5:e år.",
   },
   {
     q: "Kan ni tvätta tak på öar utan broförbindelse?",
-    a: "Ja, vi är specialister på skärgårdsmiljö och utför taktvätt på fritidshus och permanentbostäder på öar i hela Roslagens skärgård — Husarö, Ingmarsö, Möja, Arholma, Fejan och fler. Vi tar med utrustningen med båt.",
+    a: "Ja, vi är specialister på skärgårdsmiljö och utför taktvätt på fritidshus och permanentbostäder på öar i hela Roslagens skärgård — Husarö, Ingmarsö, Möja, Arholma, Fejan, Svartlöga, Söderöra, Norröra, Gräskö och fler. Vi tar med all utrustning, biocid och fallskydd med egen båt från Blidö och behöver bara att du anger en brygga eller landningsplats. Båttransport ingår i offerten utan extra kostnad upp till 30 minuters körtid från Blidö.",
   },
   {
     q: "Hur lång tid tar en taktvätt?",
-    a: "En normalstor villa (120–150 m² takyta) tar 1–2 dagar inklusive biocidbehandling. Inkluderar offerten även takmålning tar arbetet 3–5 dagar med torktid mellan strykningarna.",
+    a: "En normalstor villa (120–150 m² takyta) tar 1–2 dagar inklusive biocidbehandling och rensning av hängrännor. Större fastigheter eller tak med tjock mosspåväxt kan ta upp till 3 dagar. Inkluderar offerten även takmålning tar arbetet 3–5 dagar totalt med 24 timmars torktid mellan grundstrykning och toppstrykning. Vi planerar arbetet efter väderprognosen för att undvika regn under torktiden.",
   },
   {
     q: "Vilka kemikalier använder ni vid taktvätt?",
-    a: "Vi använder endast biocider som är godkända av Kemikalieinspektionen och anpassade för taktvätt. Medlen bryts ned naturligt och skadar inte växtlighet runt huset när de spolas av i kontrollerade mängder.",
+    a: "Vi använder endast biocider som är godkända av Kemikalieinspektionen (KemI) och registrerade för taktvätt — främst medel baserade på kvartära ammoniumföreningar som bryts ned naturligt inom några veckor. Innan arbetet täcker vi rabatter, uteplatser och växtlighet runt huset. Vi använder aldrig klor, ättika eller starka syror som kan skada pannor, fasad eller grundvatten.",
   },
   {
     q: "Kan ni måla taket samtidigt som ni tvättar det?",
-    a: "Ja, takmålning utförs alltid efter en grundlig taktvätt. Vi rekommenderar takmålning på äldre betongpannor där ytskiktet börjat vittra — det förlänger livslängden med ytterligare 10–15 år.",
+    a: "Ja, takmålning utförs alltid efter en grundlig taktvätt — färgen fäster inte på smutsiga eller mossiga pannor. Vi rekommenderar takmålning på äldre betongpannor där ytskiktet börjat vittra eller färgen flagnar — det förlänger takets livslängd med ytterligare 10–15 år. Vi målar med två strykningar UV-beständig akrylfärg i valfri kulör (oftast tegelröd, svart eller grafitgrå). Plåttak målas med särskild plåtfärg, och tegelpannor målas oftast inte alls eftersom det glaserade ytskiktet är beständigt.",
   },
   {
     q: "Behöver jag vara hemma när ni utför taktvätten?",
-    a: "Nej, du behöver inte vara hemma. Många av våra kunder med fritidshus på Blidö, Ljusterö och i skärgården anlitar oss på distans. Vi rapporterar med bilder och text via e-post eller sms.",
+    a: "Nej, du behöver inte vara hemma. Många av våra kunder med fritidshus på Blidö, Ljusterö, Yxlan och i skärgården anlitar oss helt på distans. Vi behöver bara tillgång till vatten (utomhuskran eller motsvarande) och en parkeringsplats för servicebilen. Vi dokumenterar arbetet med före- och efterbilder och skickar en utförlig rapport via e-post eller sms när jobbet är klart.",
+  },
+  {
+    q: "Hur tar man bort mossa på taket?",
+    a: "Mossa på taket tas bort i tre steg: först manuell borstning av tjocka mosskuddar med mjuka borstar — aldrig metallskrapor som skadar ytskiktet. Därefter lågtryckstvätt (30–80 bar) uppifrån och ned så vatten inte pressas in under pannorna. Slutligen biocidbehandling med KemI-godkänt medel som dödar kvarvarande sporer och förhindrar återväxt i 5–8 år. Försök inte själv — fall från tak är en av Sveriges vanligaste arbetsplatsolyckor.",
+  },
+  {
+    q: "Vad är skillnaden på taktvätt och takvård?",
+    a: "Taktvätt är själva rengöringen av taket — borttagning av mossa, lavar och alger med tvätt och biocidbehandling. Takvård är ett bredare begrepp som även inkluderar förebyggande underhåll: rensning av hängrännor och stuprör, kontroll av plåtbeslag, takfot och vindskivor, samt eventuell takmålning. Vi erbjuder båda — många kunder bokar ett kombinerat takvårdspaket vart 5:e år för att hålla taket i toppskick.",
+  },
+  {
+    q: "Är taktvätt verkligen lönsamt jämfört med takbyte?",
+    a: "Ja, om taket är helt och underliggande konstruktion är frisk är taktvätt 10–20 gånger billigare än ett takbyte. En taktvätt på en normalvilla kostar 10 400–19 500 kr (brutto) och förlänger livslängden med 10–15 år. Ett komplett takbyte kostar 156 000–260 000 kr för samma yta. Vi gör alltid en ärlig bedömning vid besiktningen — om pannorna är vittrade eller underlagspappen är dålig rekommenderar vi takomläggning istället.",
+  },
+  {
+    q: "Tvättar ni även hängrännor och stuprör?",
+    a: "Ja, rensning och spolning av hängrännor och stuprör ingår alltid i vår taktvätt utan extra kostnad. Tilltäppta hängrännor är en av de vanligaste orsakerna till fukt- och fasadskador i Roslagen — särskilt på hus med löv- eller björkbestånd nära taket. Vi tar bort löv, grus och mossa, kontrollerar att stuprören är fria och justerar fall vid behov.",
+  },
+  {
+    q: "Kan svart algpåväxt försvinna helt efter taktvätt?",
+    a: "Ja, svarta strimmor från cyanobakterier (Gloeocapsa magma) försvinner helt efter taktvätt med biocidbehandling. Algerna lossnar dock inte direkt — det tar 2–6 veckor efter biocidbehandlingen innan regn och vind har spolat bort de döda kolonierna och taket ser helt rent ut. Vi förklarar detta vid slutbesiktningen så du vet vad du ska förvänta dig.",
+  },
+  {
+    q: "Erbjuder ni serviceavtal för regelbunden takvård?",
+    a: "Ja, vi erbjuder skräddarsydda serviceavtal för villaägare, bostadsrättsföreningar och näringsfastigheter i Roslagen. Avtalet inkluderar årlig okulärbesiktning, rensning av hängrännor en gång per år och taktvätt vart 5:e–7:e år till rabatterat pris. Perfekt för fritidshusägare som vill slippa tänka på underhåll — vi rapporterar löpande med bilder och text.",
   },
 ];
 
