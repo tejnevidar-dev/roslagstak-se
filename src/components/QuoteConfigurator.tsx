@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -33,6 +33,13 @@ const QuoteConfigurator = () => {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (submitted && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [submitted]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,11 +77,18 @@ const QuoteConfigurator = () => {
 
     setSubmitted(true);
     setSubmitting(false);
+    toast({
+      title: "Tack för din förfrågan!",
+      description:
+        mode === "configure"
+          ? "Du får ett kostnadsförslag på e-post inom 2 minuter."
+          : "Vi återkopplar till dig inom 24 timmar.",
+    });
   };
 
   if (submitted) {
     return (
-      <section id="offert" className="py-20 md:py-28 bg-background" aria-labelledby="quote-heading">
+      <section ref={sectionRef} id="offert" className="py-20 md:py-28 bg-background" aria-labelledby="quote-heading">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-4">
             <CheckCircle className="w-16 h-16 text-primary mx-auto" />
@@ -97,7 +111,7 @@ const QuoteConfigurator = () => {
   }
 
   return (
-    <section id="offert" className="py-20 md:py-28 bg-background" aria-labelledby="quote-heading">
+    <section ref={sectionRef} id="offert" className="py-20 md:py-28 bg-background" aria-labelledby="quote-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Offert & Rådgivning</p>
