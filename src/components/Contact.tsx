@@ -1,6 +1,53 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
+import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (submitting) return;
+
+    setSubmitting(true);
+
+    const { error } = await supabase.from("quote_requests").insert({
+      mode: "consultation",
+      name: name.trim(),
+      phone: phone.trim(),
+      email: email.trim(),
+      message: message.trim(),
+    });
+
+    if (error) {
+      console.error("Contact request error:", error);
+      toast({
+        title: "Något gick fel",
+        description: "Vänligen försök igen eller ring oss direkt på 070-154 36 39.",
+        variant: "destructive",
+      });
+      setSubmitting(false);
+      return;
+    }
+
+    setSubmitted(true);
+    setSubmitting(false);
+    setName("");
+    setPhone("");
+    setEmail("");
+    setMessage("");
+    toast({
+      title: "Tack för din förfrågan!",
+      description: "Vi har tagit emot ditt meddelande och återkopplar inom 24 timmar.",
+    });
+  };
+
   return (
     <section id="kontakt" className="py-20 md:py-28 bg-background" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
