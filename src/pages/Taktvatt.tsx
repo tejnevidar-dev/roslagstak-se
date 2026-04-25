@@ -897,7 +897,7 @@ const Taktvatt = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               { to: "/tjanster/takomlaggning", icon: Hammer, title: "Takomläggning", desc: "När taktvätt inte räcker — vi byter ut pannor och underlagspapp." },
-              { to: "/tjanster/takbyte", icon: FileCheck, title: "Takbyte", desc: "Komplett takbyte med 10 års garanti i hela Roslagen och skärgården." },
+              { to: "/tjanster/platarbeten", icon: FileCheck, title: "Plåtarbeten", desc: "Plåttak, hängrännor och beslag i hela Roslagen — med 10 års garanti." },
               { to: "/tjanster/takrenovering", icon: Wrench, title: "Takrenovering", desc: "Reparation och uppfräschning av äldre tak utan komplett byte." },
             ].map((s) => (
               <Link
