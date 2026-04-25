@@ -1,16 +1,19 @@
 import { ArrowRight, Shield, Anchor } from "lucide-react";
+import heroImg from "@/assets/hero-roof.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center" aria-label="Huvudsektion">
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary) / 0.85) 100%)",
-        }}
+      <img
+        src={heroImg}
+        alt="Svenskt hus med nylagt tak längs Roslagens kustlinje"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 w-full h-full object-cover"
+        fetchPriority="high"
+        decoding="async"
       />
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
 
       <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-2xl space-y-6">
