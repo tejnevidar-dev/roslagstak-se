@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
@@ -385,10 +385,14 @@ const QuoteConfigurator = () => {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-md font-semibold text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 animate-subtle-pulse"
+            aria-busy={submitting}
+            className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-md font-semibold text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 animate-subtle-pulse disabled:opacity-70 disabled:cursor-not-allowed disabled:animate-none"
           >
             {submitting ? (
-              <>Skickar...</>
+              <>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                Skickar din förfrågan...
+              </>
             ) : mode === "configure" ? (
               <>
                 Få kostnadsförslag på mail
@@ -401,6 +405,17 @@ const QuoteConfigurator = () => {
               </>
             )}
           </button>
+
+          {submitting && (
+            <div
+              role="status"
+              aria-live="polite"
+              className="flex items-center justify-center gap-2 rounded-md border border-primary/30 bg-primary/10 px-4 py-3 text-sm font-medium text-foreground"
+            >
+              <Loader2 className="w-4 h-4 animate-spin text-primary" />
+              <span>Vi tar emot din förfrågan – ett ögonblick...</span>
+            </div>
+          )}
 
           <p className="text-xs text-muted-foreground text-center">
             {mode === "configure"
