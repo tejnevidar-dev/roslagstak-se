@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.notify_saljtak_on_new_quote() FROM PUBLIC, anon, authenticated;
