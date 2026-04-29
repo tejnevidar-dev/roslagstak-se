@@ -60,16 +60,17 @@ const ContactLanding = () => {
       <main className="min-h-screen bg-background">
         {/* Minimal header */}
         <header className="border-b border-border bg-card">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-3">
             <Link to="/" className="font-display text-xl text-foreground hover:text-primary transition-colors">
               RoslagsTak
             </Link>
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Gå till hemsidan"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 md:px-5 md:py-3 rounded-md text-sm md:text-base font-semibold hover:bg-primary/90 transition-colors shadow-sm"
             >
-              <Home className="w-4 h-4" />
-              <span className="hidden sm:inline">Till startsidan</span>
+              <Home className="w-5 h-5" />
+              <span>Till hemsidan</span>
             </Link>
           </div>
         </header>
@@ -206,6 +207,23 @@ const ContactLanding = () => {
                 </p>
               </form>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom return-home CTA */}
+        <section className="py-10 md:py-14 bg-accent border-t border-border">
+          <div className="container mx-auto px-4 text-center space-y-4">
+            <p className="text-accent-foreground/80 text-base md:text-lg">
+              Vill du läsa mer om våra tjänster först?
+            </p>
+            <Link
+              to="/"
+              aria-label="Gå tillbaka till hemsidan"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-md text-base md:text-lg font-semibold hover:bg-primary/90 transition-colors shadow-md"
+            >
+              <Home className="w-6 h-6" />
+              Tillbaka till hemsidan
+            </Link>
           </div>
         </section>
       </main>
