@@ -16,6 +16,7 @@ import Taktvatt from "./pages/Taktvatt.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import AdminLogin from "./pages/AdminLogin.tsx";
 import AdminDashboard from "./pages/AdminDashboard.tsx";
+import ContactLanding from "./pages/ContactLanding.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import { locations } from "./data/locations";
 
@@ -55,6 +56,10 @@ const App = () => (
             <Route path="/blogg/:slug" element={<BlogPost />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/kontakt" element={<ContactLanding />} />
+            <Route path="/radgivning" element={<ContactLanding />} />
+            <Route path="/konsultation" element={<ContactLanding />} />
+            <Route path="/boka" element={<ContactLanding />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
