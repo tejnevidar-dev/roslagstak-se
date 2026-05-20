@@ -10,7 +10,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ title, description, canonical, type = "website", geoPosition, geoPlacename }: SEOHeadProps) => {
-  const fullTitle = title.length > 55 ? title : `${title} | RoslagsTak`;
+  const fullTitle = title.length > 47 ? title : `${title} | RoslagsTak`;
   const url = canonical || "https://roslagstak.se/";
 
   return (
