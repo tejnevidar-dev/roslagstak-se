@@ -37,7 +37,7 @@ const Index = () => {
       {showSplash && <SplashScreen onDone={handleSplashDone} />}
       <SEOHead
         title="Takläggare Roslagen — Takbyte & Takrenovering"
-        description="RoslagsTak – din takläggare i Roslagen. Takbyte, takrenovering & takomläggning på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Vaxholm, Norrtälje m.fl. 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓"
+        description="RoslagsTak – takläggare i Roslagen. Takbyte, takrenovering & takomläggning på Blidö, Ljusterö, Vaxholm & Norrtälje. 10 års garanti ✓ ROT-avdrag ✓"
         canonical="https://roslagstak.se/"
       />
       <Header />

@@ -160,10 +160,10 @@ const LocationPage = () => {
     ],
   };
 
-  // SEO-optimized meta description — max 155 chars, keyword-first
+  // SEO-optimized meta description — under 160 chars, keyword-first
   const metaDescription = location.isIsland
-    ? `${location.primaryKeyword} — takbyte, takrenovering & takomläggning ${prep} ${location.name}. Specialist på öar utan broförbindelse. 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓ 153 nöjda kunder.`
-    : `${location.primaryKeyword} — takbyte, takrenovering & takomläggning ${prep} ${location.name}. Lokal takläggare med 70 års erfarenhet. 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`;
+    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`
+    : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`;
 
   // Title: keep under 60 chars for Google SERP
   const seoTitle = `Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`;
