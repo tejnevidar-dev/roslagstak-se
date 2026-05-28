@@ -62,7 +62,25 @@ const BlogPost = () => {
     ],
   };
 
-  const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
+  // Topical relevance: rank other posts by shared keywords for better internal linking signals
+  const otherPosts = (() => {
+    const postKw = new Set(post.keywords.map((k) => k.toLowerCase()));
+    return blogPosts
+      .filter((p) => p.slug !== slug)
+      .map((p) => ({
+        post: p,
+        score: p.keywords.reduce((s, k) => s + (postKw.has(k.toLowerCase()) ? 2 : 0), 0) +
+          p.keywords.reduce(
+            (s, k) =>
+              s +
+              (Array.from(postKw).some((pk) => pk.includes(k.toLowerCase()) || k.toLowerCase().includes(pk)) ? 1 : 0),
+            0,
+          ),
+      }))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 4)
+      .map((x) => x.post);
+  })();
 
   return (
     <>
@@ -160,7 +178,7 @@ const BlogPost = () => {
           {/* Related posts */}
           {otherPosts.length > 0 && (
             <div className="max-w-3xl mx-auto mt-16 pt-12 border-t border-border">
-              <h2 className="font-display text-xl text-foreground mb-6">Fler artiklar</h2>
+              <h2 className="font-display text-xl text-foreground mb-6">Relaterade artiklar om tak</h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {otherPosts.map((p) => (
                   <Link
