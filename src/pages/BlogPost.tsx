@@ -17,15 +17,49 @@ const BlogPost = () => {
 
   if (!post) return <NotFound />;
 
+  const url = `https://roslagstak.se/blogg/${post.slug}`;
+  const articleBody = post.content.join("\n\n");
+  const wordCount = articleBody.split(/\s+/).filter(Boolean).length;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "RoslagsTak" },
-    publisher: { "@type": "Organization", name: "RoslagsTak" },
+    dateModified: post.date,
+    inLanguage: "sv-SE",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+    image: "https://roslagstak.se/og-image.jpg",
+    wordCount,
+    articleBody,
     keywords: post.keywords.join(", "),
+    author: {
+      "@type": "Organization",
+      name: "RoslagsTak",
+      url: "https://roslagstak.se/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "RoslagsTak",
+      url: "https://roslagstak.se/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://roslagstak.se/og-image.jpg",
+      },
+    },
+    about: { "@type": "Place", name: "Roslagen, Stockholm, Sverige" },
+  };
+
+  const breadcrumbsLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
+      { "@type": "ListItem", position: 2, name: "Blogg", item: "https://roslagstak.se/blogg" },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
   };
 
   const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
@@ -43,6 +77,10 @@ const BlogPost = () => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsLd) }}
         />
         <div className="container mx-auto px-4">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
