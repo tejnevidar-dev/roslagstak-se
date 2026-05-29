@@ -122,7 +122,7 @@ const ServiceLocationPage = () => {
   // Richer meta description
   const metaDescription = loc?.isIsland
     ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i Roslagen. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning. Ring 070-154 36 39.`
-    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — 70 års erfarenhet. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
+    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
 
   // Title under 60 chars
   const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris | RoslagsTak`;
@@ -183,7 +183,7 @@ const ServiceLocationPage = () => {
                 <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
               </div>
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Award className="w-4 h-4 text-primary" /> 150+ takprojekt
+                <Award className="w-4 h-4 text-primary" /> AMA-standard
               </div>
             </div>
           </div>

@@ -46,10 +46,9 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi har lagt tak på hundratals hem 
-                i hela Roslagen — på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn och Ingmarsö, 
-                liksom i Vaxholm, Norrtälje, Väddö och Rådmansö. Med en samlad 
-                erfarenhet på över 70 år i organisationen har vi den kompetens som krävs för att leverera 
+                RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi lägger tak
+                i hela Roslagen — på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn och Ingmarsö,
+                liksom i Vaxholm, Norrtälje, Väddö och Rådmansö. Vi levererar
                 takprojekt av högsta kvalitet, alltid enligt branschens AMA-standard.
               </p>
               <p>
@@ -85,11 +84,6 @@ const About = () => {
               loading="lazy"
               className="rounded-lg shadow-xl w-full object-cover aspect-[4/3]"
             />
-            <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg hidden md:block">
-              <Anchor className="w-6 h-6 mb-1 opacity-80" />
-              <p className="font-display text-3xl">20+</p>
-              <p className="text-sm opacity-90">Öar & kuststäder</p>
-            </div>
           </div>
         </div>
 
