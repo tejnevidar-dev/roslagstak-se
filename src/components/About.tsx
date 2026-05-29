@@ -1,4 +1,4 @@
-import { CheckCircle, Anchor, Heart, ShieldCheck, Award, Zap } from "lucide-react";
+import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
 import rooferImg from "@/assets/roofer-work.jpg";
 
 const coreValues = [
