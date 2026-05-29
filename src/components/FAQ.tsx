@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "Lägger ni tak på öar i skärgården?",
-    answer: "Ja! Vi utför takprojekt på 20+ öar och kuststäder i Roslagen — från Blidö, Ljusterö och Yxlan till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma. Vi ordnar all materialtransport och logistik.",
+    answer: "Ja! Vi utför takprojekt på öar och kuststäder i Roslagen — från Blidö, Ljusterö och Yxlan till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma. Vi ordnar all materialtransport och logistik.",
   },
   {
     question: "Vilka taktyper erbjuder ni?",

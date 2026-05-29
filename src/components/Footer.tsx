@@ -12,7 +12,7 @@ const Footer = () => {
               Roslags<span className="text-primary">Tak</span>
             </p>
             <p className="text-accent-foreground/60 text-sm leading-relaxed">
-              Takläggare i Roslagen. Takbyte och takrenovering på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Vaxholm, Norrtälje och 20+ platser i skärgården.
+              Takläggare i Roslagen. Takbyte och takrenovering på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Vaxholm, Norrtälje och fler platser i skärgården.
             </p>
           </div>
           <div>

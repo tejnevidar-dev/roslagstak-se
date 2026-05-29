@@ -245,9 +245,6 @@ const LocationPage = () => {
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
               </div>
-              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Award className="w-4 h-4 text-primary" /> 150+ takprojekt
-              </div>
             </div>
           </div>
 
@@ -343,7 +340,7 @@ const LocationPage = () => {
                   Varför välja RoslagsTak som {location.primaryKeyword.toLowerCase()}?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Vi har 70 års samlad erfarenhet och har genomfört 150+ takprojekt i Roslagen. 
+                  Vi är en lokal takläggare med stark förankring i Roslagen.
                   {location.isIsland
                     ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
                     : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och erbjuder konkurrenskraftiga priser tack vare samordning med andra projekt i området.`}
