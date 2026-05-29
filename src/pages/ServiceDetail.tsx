@@ -231,6 +231,34 @@ const ServiceDetail = () => {
     areaServed: { "@type": "Place", name: "Roslagen" },
   };
 
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `Så här går ${service.title.toLowerCase()} till — steg för steg`,
+    description: details.longDesc,
+    totalTime: "P14D",
+    ...(details.priceRange ? {
+      estimatedCost: {
+        "@type": "MonetaryAmount",
+        currency: "SEK",
+        value: details.priceRange,
+      },
+    } : {}),
+    supply: details.benefits.slice(0, 5).map((b) => ({ "@type": "HowToSupply", name: b })),
+    tool: [
+      { "@type": "HowToTool", name: "Byggställning" },
+      { "@type": "HowToTool", name: "Säkerhetsutrustning enligt AFS" },
+      { "@type": "HowToTool", name: "Plåtsax och falsverktyg" },
+    ],
+    step: details.process.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step,
+      text: step,
+      url: `https://roslagstak.se/tjanster/${slug}#steg-${i + 1}`,
+    })),
+  };
+
   return (
     <>
       <SEOHead
@@ -246,6 +274,7 @@ const ServiceDetail = () => {
       <main className="pt-24 pb-20">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
         {/* Breadcrumb */}
         <div className="container mx-auto px-4 mb-8">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
