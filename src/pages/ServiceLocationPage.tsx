@@ -283,8 +283,6 @@ const ServiceLocationPage = () => {
                 <h3 className="font-display text-lg text-card-foreground mb-4">Varför RoslagsTak?</h3>
                 <ul className="space-y-2">
                   {[
-                    "70 års samlad erfarenhet",
-                    "153 nöjda kunder",
                     "10 års garanti",
                     "Fast pris utan dolda kostnader",
                     "Hjälp med ROT-avdrag",
