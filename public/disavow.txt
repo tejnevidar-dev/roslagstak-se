@@ -1,0 +1,14 @@
+# Disavow file for roslagstak.se
+# Generated 2026-08-10 based on spammy backlink profile.
+# Upload this file to Google Search Console > Links > Disavow links.
+
+domain:trendyhealthtimes.com
+domain:backlinks-checker.com
+domain:8coint.com
+domain:anchorurl.cloud
+domain:atomizelink.icu
+domain:byteshort.xyz
+domain:creativeposts.top
+domain:fiverr-affordable-seo-services.site
+domain:fiverr-cost-effective-seo.site
+domain:fiverr-quality-seo-at-affordable-rates.site
