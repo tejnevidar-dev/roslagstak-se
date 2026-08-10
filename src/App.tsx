@@ -20,6 +20,7 @@ import AdminSeo from "./pages/AdminSeo.tsx";
 import ContactLanding from "./pages/ContactLanding.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import { locations } from "./data/locations";
+import { allServiceSlugs } from "./data/service-location-combos";
 
 const queryClient = new QueryClient();
 
@@ -40,19 +41,16 @@ const App = () => (
             {locations.map((loc) => (
               <Route key={loc.slug} path={`/taklaggare-${loc.slug}`} element={<LocationPage />} />
             ))}
-            {locations.map((loc) => (
-              <Route key={`takbyte-${loc.slug}`} path={`/takbyte-${loc.slug}`} element={<ServiceLocationPage />} />
-            ))}
-            {locations.map((loc) => (
-              <Route key={`takrenovering-${loc.slug}`} path={`/takrenovering-${loc.slug}`} element={<ServiceLocationPage />} />
-            ))}
-            {locations.map((loc) => (
-              <Route key={`takomlaggning-${loc.slug}`} path={`/takomlaggning-${loc.slug}`} element={<ServiceLocationPage />} />
-            ))}
             <Route path="/taktvatt" element={<Taktvatt />} />
-            {locations.map((loc) => (
-              <Route key={`taktvatt-${loc.slug}`} path={`/taktvatt-${loc.slug}`} element={<ServiceLocationPage />} />
-            ))}
+            {allServiceSlugs.flatMap((service) =>
+              locations.map((loc) => (
+                <Route
+                  key={`${service}-${loc.slug}`}
+                  path={`/${service}-${loc.slug}`}
+                  element={<ServiceLocationPage />}
+                />
+              )),
+            )}
             <Route path="/blogg" element={<Blog />} />
             <Route path="/blogg/:slug" element={<BlogPost />} />
             <Route path="/admin/login" element={<AdminLogin />} />

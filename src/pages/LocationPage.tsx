@@ -309,6 +309,27 @@ const LocationPage = () => {
                     <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}
                     </Link>
+                    <Link to={`/takomlaggning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Takomläggning {prep} {location.name}
+                    </Link>
+                    <Link to={`/platttak-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Plåttak {prep} {location.name}
+                    </Link>
+                    <Link to={`/bandtackning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Bandtäckning {prep} {location.name}
+                    </Link>
+                    <Link to={`/betongpannor-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Betongpannor {prep} {location.name}
+                    </Link>
+                    <Link to={`/tegeltak-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Tegeltak {prep} {location.name}
+                    </Link>
+                    <Link to={`/takmalning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Takmålning {prep} {location.name}
+                    </Link>
+                    <Link to={`/taktvatt-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Taktvätt {prep} {location.name}
+                    </Link>
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
                     </Link>

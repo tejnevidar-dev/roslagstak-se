@@ -4,7 +4,7 @@ import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } fr
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getCombo } from "@/data/service-location-combos";
+import { getCombo, allServiceSlugs } from "@/data/service-location-combos";
 import { locations } from "@/data/locations";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
 import NotFound from "./NotFound";
@@ -17,15 +17,8 @@ import {
 
 const ServiceLocationPage = () => {
   const pathname = useLocation().pathname;
-  const serviceSlug = pathname.startsWith("/takbyte-")
-    ? "takbyte"
-    : pathname.startsWith("/takrenovering-")
-    ? "takrenovering"
-    : pathname.startsWith("/takomlaggning-")
-    ? "takomlaggning"
-    : pathname.startsWith("/taktvatt-")
-    ? "taktvatt"
-    : "";
+  const serviceSlug =
+    allServiceSlugs.find((s) => pathname.startsWith(`/${s}-`)) ?? "";
   const prefix = serviceSlug ? `/${serviceSlug}-` : "";
   const locSlug = prefix ? pathname.replace(prefix, "") : undefined;
   const combo = serviceSlug && locSlug ? getCombo(serviceSlug, locSlug) : undefined;
@@ -48,6 +41,12 @@ const ServiceLocationPage = () => {
     { slug: "takbyte", name: "Takbyte" },
     { slug: "takrenovering", name: "Takrenovering" },
     { slug: "takomlaggning", name: "Takomläggning" },
+    { slug: "platttak", name: "Plåttak" },
+    { slug: "bandtackning", name: "Bandtäckning" },
+    { slug: "betongpannor", name: "Betongpannor" },
+    { slug: "tegeltak", name: "Tegeltak" },
+    { slug: "takmalning", name: "Takmålning" },
+    { slug: "taktvatt", name: "Taktvätt" },
   ].filter((s) => s.slug !== combo.serviceSlug);
 
   const faqs = generateServiceLocationFAQs(
@@ -125,7 +124,7 @@ const ServiceLocationPage = () => {
     : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
 
   // Title under 60 chars
-  const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris | RoslagsTak`;
+  const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;
 
   return (
     <>
