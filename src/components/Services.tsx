@@ -72,10 +72,11 @@ const Services = () => {
             <Link
               to={`/tjanster/${service.slug}`}
               key={service.title}
-              className="group bg-card border border-border rounded-lg p-8 hover:shadow-lg hover:border-primary/30 transition-all duration-300 block"
+              className="group card-lift relative overflow-hidden bg-card border border-border rounded-lg p-8 hover:border-primary/40 block"
             >
-              <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+              <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-primary opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
+              <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-gradient-primary transition-all duration-300">
+                <service.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="font-display text-xl text-card-foreground mb-2">{service.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.description}</p>

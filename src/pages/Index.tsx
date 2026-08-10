@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import SplashScreen, { shouldShowSplash } from "@/components/SplashScreen";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import Services from "@/components/Services";
 
 const RoofTypes = lazy(() => import("@/components/RoofTypes"));
@@ -14,6 +15,7 @@ const Testimonials = lazy(() => import("@/components/Testimonials"));
 const ServiceArea = lazy(() => import("@/components/ServiceArea"));
 const IslandSpecialist = lazy(() => import("@/components/IslandSpecialist"));
 const FAQ = lazy(() => import("@/components/FAQ"));
+const GuidesTeaser = lazy(() => import("@/components/GuidesTeaser"));
 const Contact = lazy(() => import("@/components/Contact"));
 import Footer from "@/components/Footer";
 
@@ -43,6 +45,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TrustBar />
         <Services />
         <Suspense fallback={null}>
           <RoofTypes />
@@ -52,6 +55,7 @@ const Index = () => {
           <IslandSpecialist />
           <ServiceArea />
           <Testimonials />
+          <GuidesTeaser />
           <FAQ />
           <Contact />
         </Suspense>
