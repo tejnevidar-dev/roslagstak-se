@@ -124,7 +124,7 @@ const ServiceLocationPage = () => {
     : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
 
   // Title under 60 chars
-  const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris | RoslagsTak`;
+  const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;
 
   return (
     <>
