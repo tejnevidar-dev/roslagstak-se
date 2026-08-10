@@ -41,6 +41,12 @@ const ServiceLocationPage = () => {
     { slug: "takbyte", name: "Takbyte" },
     { slug: "takrenovering", name: "Takrenovering" },
     { slug: "takomlaggning", name: "Takomläggning" },
+    { slug: "platttak", name: "Plåttak" },
+    { slug: "bandtackning", name: "Bandtäckning" },
+    { slug: "betongpannor", name: "Betongpannor" },
+    { slug: "tegeltak", name: "Tegeltak" },
+    { slug: "takmalning", name: "Takmålning" },
+    { slug: "taktvatt", name: "Taktvätt" },
   ].filter((s) => s.slug !== combo.serviceSlug);
 
   const faqs = generateServiceLocationFAQs(
