@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { LogOut, Mail, Phone, MapPin, MessageSquare, Trash2, RefreshCw } from "lucide-react";
+import { LogOut, Mail, Phone, MapPin, MessageSquare, Trash2, RefreshCw, BarChart3 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
 import { toast } from "@/hooks/use-toast";
@@ -167,6 +167,12 @@ const AdminDashboard = () => {
               <p className="text-xs text-muted-foreground">Inloggad som {user?.email}</p>
             </div>
             <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/admin/seo">
+                  <BarChart3 className="w-4 h-4" />
+                  SEO-dashboard
+                </Link>
+              </Button>
               <Button variant="outline" size="sm" onClick={loadRequests} disabled={fetching}>
                 <RefreshCw className={`w-4 h-4 ${fetching ? "animate-spin" : ""}`} />
                 Uppdatera
