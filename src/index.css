@@ -42,6 +42,11 @@
     --hero-overlay: linear-gradient(135deg, hsla(212, 45%, 12%, 0.88), hsla(210, 40%, 22%, 0.72));
     --section-warm: 210 20% 95%;
     --trust-glow: 210 80% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 75% 42%), hsl(210 80% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(212 45% 14%), hsl(210 45% 24%));
+    --shadow-card: 0 1px 2px hsl(212 45% 18% / 0.06), 0 8px 24px -12px hsl(212 45% 18% / 0.14);
+    --shadow-elevated: 0 2px 4px hsl(212 45% 18% / 0.08), 0 24px 48px -20px hsl(212 45% 18% / 0.28);
   }
 }
 
@@ -63,6 +68,24 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .card-lift {
+    box-shadow: var(--shadow-card);
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
   }
 }
 
