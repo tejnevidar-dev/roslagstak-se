@@ -1,5 +1,5 @@
 /**
- * Post-build prerender of head tags.
+ * Post-build prerender of head tags AND the important page text.
  *
  * The app is a client-rendered SPA, so <link rel="canonical"> and
  * <meta name="robots"> from SEOHead (react-helmet-async) only exist after JS
@@ -7,11 +7,19 @@
  * with those tags already present in the initial HTML, so crawlers that do not
  * execute JS still get the correct canonical, robots and og:url.
  *
+ * It also injects the route's H1, intro, body paragraphs and key internal links
+ * into <div id="root"> (see scripts/prerender-content.ts). React clears #root
+ * when it mounts, so the app then renders the same content — the prerendered
+ * text is identical to what visitors see.
+ *
  * Route list comes from public/sitemap.xml (single source of truth) plus the
  * noindex routes that are deliberately kept out of the sitemap.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from "fs";
 import { resolve, dirname } from "path";
+import { tmpdir } from "os";
+import { build as esbuild } from "esbuild";
+import { pathToFileURL } from "url";
 
 const SITE_URL = "https://roslagstak.se";
 const dist = resolve("dist");
@@ -24,6 +32,20 @@ if (!existsSync(templatePath)) {
 
 const template = readFileSync(templatePath, "utf8");
 const sitemap = readFileSync(resolve("public/sitemap.xml"), "utf8");
+
+/* Compile the TS content model to JS so this plain .mjs script can import it.
+   esbuild ships with Vite, so no extra dependency is needed. */
+const bundlePath = resolve(tmpdir(), `prerender-content-${process.pid}.mjs`);
+await esbuild({
+  entryPoints: [resolve("scripts/prerender-content.ts")],
+  outfile: bundlePath,
+  bundle: true,
+  format: "esm",
+  platform: "node",
+  target: "node18",
+  logLevel: "silent",
+});
+const { prerenderContent } = await import(pathToFileURL(bundlePath).href);
 
 const INDEX_ROBOTS =
   "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
@@ -47,6 +69,34 @@ const headFor = (path, robots) => {
   ].join("\n    ");
 };
 
+const esc = (s) =>
+  String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+
+/** Static markup for the route's important text, injected inside #root. */
+const bodyFor = (path) => {
+  const page = prerenderContent(path);
+  if (!page) return "";
+  const seen = new Set();
+  const links = page.links.filter((l) => {
+    if (seen.has(l.href)) return false;
+    seen.add(l.href);
+    return true;
+  });
+  return `<div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
+      <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
+      <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">${esc(page.h1)}</h1>
+      <p style="font-size:1.05rem">${esc(page.intro)}</p>
+      ${page.paragraphs.map((p) => `<p>${esc(p)}</p>`).join("\n      ")}
+      <nav aria-label="Sidlänkar"><ul>${links
+        .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)}</a></li>`)
+        .join("")}</ul></nav>
+    </div>`;
+};
+
 // Strip the sitewide hreflang/canonical placeholders so no route ships two.
 const stripped = template.replace(
   /\s*<link rel="alternate" hreflang="(?:sv|x-default)" href="[^"]*" \/>/g,
@@ -54,19 +104,28 @@ const stripped = template.replace(
 );
 
 let written = 0;
+let prerendered = 0;
 for (const { path, robots } of routes) {
   const url = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
-  const html = stripped.replace(
+  let html = stripped.replace(
     "</head>",
     `  ${headFor(path, robots)}
     <link rel="alternate" hreflang="sv" href="${url}" />
     <link rel="alternate" hreflang="x-default" href="${url}" />
   </head>`,
   );
+  const body = robots === NOINDEX_ROBOTS ? "" : bodyFor(path);
+  if (body) {
+    html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+    prerendered++;
+  }
   const out = path === "/" ? templatePath : resolve(dist, `.${path}/index.html`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, html);
   written++;
 }
 
-console.log(`[static-heads] wrote ${written} prerendered head files`);
+rmSync(bundlePath, { force: true });
+console.log(
+  `[static-heads] wrote ${written} prerendered files (${prerendered} with page text)`,
+);
