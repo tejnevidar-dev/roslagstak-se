@@ -89,9 +89,8 @@ const ServiceLocationPage = () => {
     offers: {
       "@type": "Offer",
       priceCurrency: "SEK",
-      description: combo.serviceSlug === "takbyte"
-        ? "Från ca 1 200 kr/m² (TP20) till 2 000+ kr/m² (dubbelfalsat). ROT-avdrag tillkommer."
-        : "Från ca 300 kr/m² beroende på åtgärd. ROT-avdrag tillkommer.",
+      description: servicePriceDescriptions[combo.serviceSlug] ??
+        "Fast pris efter kostnadsfri besiktning. ROT-avdrag tillkommer.",
     },
   };
 

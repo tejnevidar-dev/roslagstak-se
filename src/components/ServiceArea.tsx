@@ -1,52 +1,48 @@
 import { MapPin, Anchor } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const locationSlugMap: Record<string, string> = {
-  "Arholma": "arholma",
-  "Svartlöga": "svartloga",
-  "Norröra": "norrora",
-  "Söderöra": "sodorora",
-  "Humlö": "humlo",
-  "Gräskö": "grasko",
-  "Singö": "singo",
-  "Grisslehamn": "grisslehamn",
-  "Blidö": "blido",
-  "Yxlan": "yxlan",
-  "Furusund": "furusund",
-  "Finnhamn": "finnhamn",
-  "Ingmarsö": "ingmarso",
-  "Husarö": "husaro",
-  "Högmarsö": "hogmarso",
-  "Norrtälje": "norrtalje",
-  "Vaxholm": "vaxholm",
-  "Ljusterö": "ljustero",
-  "Rådmansö": "radmanso",
-  "Vätö": "vato",
-  "Väddö": "vaddo",
-  "Spillersboda": "spillersboda",
-  "Bergshamra": "bergshamra",
-  "Svartnö": "svartno",
+import { locations } from "@/data/locations";
+
+const regionDescriptions: Record<string, string> = {
+  "Norra skärgården":
+    "Takbyte och takrenovering i ytterskärgården. Vi tar oss ut till öar dit andra inte når — med material, verktyg och erfarenhet.",
+  "Mellersta skärgården":
+    "Takläggare med lång erfarenhet av takprojekt på öar i mellersta Roslagen. Från sommarstugor till permanentboenden.",
+  Kusten:
+    "Takomläggning, takrenovering och plåtarbeten längs hela Roslagens kustlinje och på fastlandet runt Norrtälje.",
+  "Norra Roslagen":
+    "Takbyte, plåttak och takrenovering i Hallstavik, Älmsta, Herräng och norra Roslagen — material valt för hårt kustklimat.",
+  Rådmansöhalvön:
+    "Bandtäckning, plåttak och takbyte i Gräddö och Kapellskär, där vind och saltluft ställer högsta krav på infästningar.",
+  "Roslagens inland":
+    "Takomläggning och takbyte i Rimbo, Edsbro, Riala, Vallentuna och Täby — snölast, ventilation och taksäkerhet enligt gällande krav.",
+  Österåker:
+    "Takbyte, takomläggning och bandtäckning i Åkersberga och Österskär — från 70-talsvillor till komplexa tak med kupor och torn.",
 };
 
-const areas = [
-  {
-    region: "Norra skärgården",
-    locations: ["Arholma", "Svartlöga", "Norröra", "Söderöra", "Humlö", "Gräskö", "Singö", "Grisslehamn"],
-    description: "Takbyte och takrenovering i ytterskärgården. Vi tar oss ut till öar dit andra inte når — med material, verktyg och erfarenhet.",
-  },
-  {
-    region: "Mellersta skärgården",
-    locations: ["Blidö", "Yxlan", "Furusund", "Finnhamn", "Ingmarsö", "Husarö", "Högmarsö"],
-    description: "Takläggare med lång erfarenhet av takprojekt på öar i mellersta Roslagen. Från sommarstugor till permanentboenden.",
-  },
-  {
-    region: "Kusten & fastlandet",
-    locations: ["Norrtälje", "Vaxholm", "Ljusterö", "Rådmansö", "Vätö", "Väddö", "Spillersboda", "Bergshamra", "Svartnö"],
-    description: "Takomläggning, takrenovering och plåtarbeten längs hela Roslagens kustlinje och på fastlandet runt Norrtälje.",
-  },
+const regionOrder = [
+  "Norra skärgården",
+  "Mellersta skärgården",
+  "Kusten",
+  "Rådmansöhalvön",
+  "Norra Roslagen",
+  "Roslagens inland",
+  "Österåker",
 ];
 
-const allLocations = areas.flatMap(a => a.locations);
+const areas = regionOrder
+  .filter((region) => locations.some((l) => l.region === region))
+  .map((region) => ({
+    region,
+    locations: locations.filter((l) => l.region === region).map((l) => l.name),
+    description: regionDescriptions[region] ?? "",
+  }));
+
+const locationSlugMap: Record<string, string> = Object.fromEntries(
+  locations.map((l) => [l.name, l.slug]),
+);
+
+const allLocations = areas.flatMap((a) => a.locations);
 
 const ServiceArea = () => {
   return (
