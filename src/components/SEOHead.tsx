@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import { canonicalUrl, isNoindexPath } from "@/lib/canonical";
 
 interface SEOHeadProps {
   title: string;
@@ -7,17 +9,31 @@ interface SEOHeadProps {
   type?: string;
   geoPosition?: string;
   geoPlacename?: string;
+  /** Force noindex (e.g. 404 or admin pages). Admin paths are detected automatically. */
+  noindex?: boolean;
 }
 
-const SEOHead = ({ title, description, canonical, type = "website", geoPosition, geoPlacename }: SEOHeadProps) => {
+const SEOHead = ({ title, description, canonical, type = "website", geoPosition, geoPlacename, noindex }: SEOHeadProps) => {
   const fullTitle = title.length > 47 ? title : `${title} | RoslagsTak`;
-  const url = canonical || "https://roslagstak.se/";
+  const { pathname } = useLocation();
+  // Always run through the canonical resolver: alias routes (/boka, /taktvatt …)
+  // collapse onto one URL, and trailing slashes/casing/query strings are stripped.
+  const url = canonicalUrl(canonical ?? pathname);
+  const shouldNoindex = noindex || isNoindexPath(pathname);
 
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      <meta
+        name="robots"
+        content={
+          shouldNoindex
+            ? "noindex, nofollow"
+            : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        }
+      />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
