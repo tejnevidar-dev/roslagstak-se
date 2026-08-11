@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:sitemap": "bun scripts/check-sitemap.ts",
+    "check:sitemap:live": "bun scripts/check-sitemap.ts --live"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
