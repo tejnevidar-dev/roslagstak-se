@@ -148,6 +148,38 @@ const AdminDashboard = () => {
     toast({ title: "Anteckning sparad" });
   };
 
+  const saveDetails = async (
+    id: string,
+    values: { property_designation: string; personal_number: string },
+  ) => {
+    const payload = {
+      property_designation: values.property_designation.trim() || null,
+      personal_number: values.personal_number.trim() || null,
+    };
+    const { error } = await supabase.from("quote_requests").update(payload).eq("id", id);
+    if (error) {
+      toast({ title: "Fel", description: error.message, variant: "destructive" });
+      return false;
+    }
+    setRequests((prev) => prev.map((r) => (r.id === id ? { ...r, ...payload } : r)));
+    toast({ title: "Uppgifter sparade" });
+    return true;
+  };
+
+  const saveNotesLegacy = async (id: string) => {
+    const notes = notesDraft[id] ?? "";
+    const { error } = await supabase
+      .from("quote_requests")
+      .update({ admin_notes: notes })
+      .eq("id", id);
+    if (error) {
+      toast({ title: "Fel", description: error.message, variant: "destructive" });
+      return;
+    }
+    setRequests((prev) => prev.map((r) => (r.id === id ? { ...r, admin_notes: notes } : r)));
+    toast({ title: "Anteckning sparad" });
+  };
+
   const deleteRequest = async (id: string) => {
     const { error } = await supabase.from("quote_requests").delete().eq("id", id);
     if (error) {
