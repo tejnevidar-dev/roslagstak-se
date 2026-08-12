@@ -1,13 +1,24 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { LogOut, Mail, Phone, MapPin, MessageSquare, Trash2, RefreshCw, BarChart3 } from "lucide-react";
+import { LogOut, Mail, Phone, MapPin, MessageSquare, Trash2, RefreshCw, BarChart3, Pencil, Home, IdCard } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import {
   Select,
   SelectContent,
@@ -48,6 +59,8 @@ interface QuoteRequest {
   floors: string | null;
   message: string | null;
   admin_notes: string | null;
+  property_designation: string | null;
+  personal_number: string | null;
 }
 
 const statusLabels: Record<QuoteStatus, string> = {
