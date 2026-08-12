@@ -166,20 +166,6 @@ const AdminDashboard = () => {
     return true;
   };
 
-  const saveNotesLegacy = async (id: string) => {
-    const notes = notesDraft[id] ?? "";
-    const { error } = await supabase
-      .from("quote_requests")
-      .update({ admin_notes: notes })
-      .eq("id", id);
-    if (error) {
-      toast({ title: "Fel", description: error.message, variant: "destructive" });
-      return;
-    }
-    setRequests((prev) => prev.map((r) => (r.id === id ? { ...r, admin_notes: notes } : r)));
-    toast({ title: "Anteckning sparad" });
-  };
-
   const deleteRequest = async (id: string) => {
     const { error } = await supabase.from("quote_requests").delete().eq("id", id);
     if (error) {
