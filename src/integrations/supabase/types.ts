@@ -29,7 +29,9 @@ export type Database = {
           mode: Database["public"]["Enums"]["quote_mode"]
           name: string
           new_roof: string | null
+          personal_number: string | null
           phone: string
+          property_designation: string | null
           raspont: string | null
           status: Database["public"]["Enums"]["quote_status"]
           takstege: boolean | null
@@ -49,7 +51,9 @@ export type Database = {
           mode: Database["public"]["Enums"]["quote_mode"]
           name: string
           new_roof?: string | null
+          personal_number?: string | null
           phone: string
+          property_designation?: string | null
           raspont?: string | null
           status?: Database["public"]["Enums"]["quote_status"]
           takstege?: boolean | null
@@ -69,7 +73,9 @@ export type Database = {
           mode?: Database["public"]["Enums"]["quote_mode"]
           name?: string
           new_roof?: string | null
+          personal_number?: string | null
           phone?: string
+          property_designation?: string | null
           raspont?: string | null
           status?: Database["public"]["Enums"]["quote_status"]
           takstege?: boolean | null
