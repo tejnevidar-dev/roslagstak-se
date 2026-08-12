@@ -276,7 +276,26 @@ const AdminDashboard = () => {
                         })}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2">
+                     <div className="flex flex-wrap items-center gap-2">
+                       <DetailsDialog
+                         request={r}
+                         onSaveDetails={saveDetails}
+                         onSaveNotes={async (id, notes) => {
+                           const { error } = await supabase
+                             .from("quote_requests")
+                             .update({ admin_notes: notes })
+                             .eq("id", id);
+                           if (error) {
+                             toast({ title: "Fel", description: error.message, variant: "destructive" });
+                             return;
+                           }
+                           setRequests((prev) =>
+                             prev.map((x) => (x.id === id ? { ...x, admin_notes: notes } : x)),
+                           );
+                           toast({ title: "Anteckning sparad" });
+                         }}
+                         onStatusChange={updateStatus}
+                       />
                       <Select
                         value={r.status}
                         onValueChange={(v) => updateStatus(r.id, v as QuoteStatus)}
@@ -336,6 +355,12 @@ const AdminDashboard = () => {
                       <div className="flex items-center gap-2 text-foreground sm:col-span-2">
                         <MapPin className="w-4 h-4 text-primary" />
                         {r.address}
+                      </div>
+                    )}
+                    {(r.property_designation || r.personal_number) && (
+                      <div className="flex items-center gap-2 text-foreground sm:col-span-2">
+                        <IdCard className="w-4 h-4 text-primary" />
+                        {[r.property_designation, r.personal_number].filter(Boolean).join(" · ")}
                       </div>
                     )}
                   </div>
@@ -410,5 +435,210 @@ const Field = ({ label, value }: { label: string; value: string | null | undefin
     <p className="text-foreground">{value || "—"}</p>
   </div>
 );
+
+const BigField = ({ label, value }: { label: string; value: string | null | undefined }) => (
+  <div className="rounded-md border border-border bg-muted/30 p-3">
+    <p className="text-xs uppercase font-semibold text-muted-foreground mb-1">{label}</p>
+    <p className="text-base sm:text-lg text-foreground break-words">{value || "—"}</p>
+  </div>
+);
+
+const DetailsDialog = ({
+  request: r,
+  onSaveDetails,
+  onSaveNotes,
+  onStatusChange,
+}: {
+  request: QuoteRequest;
+  onSaveDetails: (
+    id: string,
+    values: { property_designation: string; personal_number: string },
+  ) => Promise<boolean>;
+  onSaveNotes: (id: string, notes: string) => Promise<void>;
+  onStatusChange: (id: string, status: QuoteStatus) => void;
+}) => {
+  const [open, setOpen] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [prop, setProp] = useState(r.property_designation ?? "");
+  const [pnr, setPnr] = useState(r.personal_number ?? "");
+  const [notes, setNotes] = useState(r.admin_notes ?? "");
+
+  useEffect(() => {
+    if (open) {
+      setProp(r.property_designation ?? "");
+      setPnr(r.personal_number ?? "");
+      setNotes(r.admin_notes ?? "");
+      setEditing(false);
+    }
+  }, [open, r]);
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
+        <Button variant="default" size="sm">
+          <Home className="w-4 h-4" />
+          Visa allt
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="max-w-[100vw] w-screen h-[100dvh] sm:max-w-4xl sm:w-full sm:h-[90vh] overflow-y-auto p-4 sm:p-6">
+        <DialogHeader className="text-left">
+          <DialogTitle className="font-display text-2xl">{r.name}</DialogTitle>
+          <DialogDescription>
+            {r.mode === "configure" ? "Konfigurator" : "Rådgivning"} ·{" "}
+            {new Date(r.created_at).toLocaleString("sv-SE", {
+              dateStyle: "short",
+              timeStyle: "short",
+            })}
+          </DialogDescription>
+        </DialogHeader>
+
+        <div className="space-y-5">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge className={statusVariants[r.status]}>{statusLabels[r.status]}</Badge>
+            <Select value={r.status} onValueChange={(v) => onStatusChange(r.id, v as QuoteStatus)}>
+              <SelectTrigger className="w-[200px]">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {(Object.keys(statusLabels) as QuoteStatus[]).map((s) => (
+                  <SelectItem key={s} value={s}>
+                    {statusLabels[s]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            <a href={`tel:${r.phone}`} className="rounded-md border border-border bg-muted/30 p-3 hover:border-primary">
+              <p className="text-xs uppercase font-semibold text-muted-foreground mb-1 flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-primary" /> Telefon
+              </p>
+              <p className="text-base sm:text-lg text-foreground">{r.phone}</p>
+            </a>
+            <a href={`mailto:${r.email}`} className="rounded-md border border-border bg-muted/30 p-3 hover:border-primary">
+              <p className="text-xs uppercase font-semibold text-muted-foreground mb-1 flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-primary" /> E-post
+              </p>
+              <p className="text-base sm:text-lg text-foreground break-words">{r.email}</p>
+            </a>
+            <div className="sm:col-span-2">
+              <BigField label="Adress" value={r.address} />
+            </div>
+          </div>
+
+          {/* Fastighet & personnummer */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-sm font-semibold text-foreground flex items-center gap-2">
+                <IdCard className="w-4 h-4 text-primary" /> Fastighet & personnummer
+              </p>
+              {!editing && (
+                <Button size="sm" variant="outline" onClick={() => setEditing(true)}>
+                  <Pencil className="w-4 h-4" />
+                  Redigera
+                </Button>
+              )}
+            </div>
+            {editing ? (
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="space-y-1.5">
+                  <Label htmlFor={`prop-${r.id}`}>Fastighetsbeteckning</Label>
+                  <Input
+                    id={`prop-${r.id}`}
+                    value={prop}
+                    onChange={(e) => setProp(e.target.value)}
+                    placeholder="t.ex. Blidö 1:23"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor={`pnr-${r.id}`}>Personnummer</Label>
+                  <Input
+                    id={`pnr-${r.id}`}
+                    value={pnr}
+                    onChange={(e) => setPnr(e.target.value)}
+                    placeholder="ÅÅÅÅMMDD-XXXX"
+                  />
+                </div>
+                <div className="sm:col-span-2 flex gap-2">
+                  <Button
+                    size="sm"
+                    disabled={saving}
+                    onClick={async () => {
+                      setSaving(true);
+                      const ok = await onSaveDetails(r.id, {
+                        property_designation: prop,
+                        personal_number: pnr,
+                      });
+                      setSaving(false);
+                      if (ok) setEditing(false);
+                    }}
+                  >
+                    Spara uppgifter
+                  </Button>
+                  <Button size="sm" variant="ghost" onClick={() => setEditing(false)}>
+                    Avbryt
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <div className="grid gap-3 sm:grid-cols-2">
+                <BigField label="Fastighetsbeteckning" value={r.property_designation} />
+                <BigField label="Personnummer" value={r.personal_number} />
+              </div>
+            )}
+          </div>
+
+          {r.mode === "configure" && (
+            <div className="grid gap-3 sm:grid-cols-2">
+              <BigField label="Befintligt tak" value={r.current_roof} />
+              <BigField label="Önskat tak" value={r.new_roof} />
+              <BigField label="Råspontbyte" value={r.raspont} />
+              <BigField label="Avvattning" value={r.avvattning} />
+              <BigField label="Antal våningar" value={r.floors} />
+              <BigField
+                label="Taksäkerhet"
+                value={
+                  [r.gangbrygga && "Gångbrygga", r.takstege && "Takstege"]
+                    .filter(Boolean)
+                    .join(", ") || "Nej"
+                }
+              />
+            </div>
+          )}
+
+          {r.message && (
+            <div className="rounded-md border border-border bg-muted/30 p-3">
+              <p className="text-xs uppercase font-semibold text-muted-foreground mb-1 flex items-center gap-2">
+                <MessageSquare className="w-3.5 h-3.5 text-primary" /> Meddelande
+              </p>
+              <p className="text-base text-foreground whitespace-pre-wrap">{r.message}</p>
+            </div>
+          )}
+
+          <div className="space-y-2">
+            <p className="text-sm font-semibold text-foreground">Interna anteckningar</p>
+            <Textarea value={notes} rows={4} onChange={(e) => setNotes(e.target.value)} />
+            <Button
+              size="sm"
+              variant="outline"
+              disabled={notes === (r.admin_notes ?? "")}
+              onClick={() => onSaveNotes(r.id, notes)}
+            >
+              Spara anteckning
+            </Button>
+          </div>
+        </div>
+
+        <DialogFooter className="mt-4">
+          <Button variant="outline" onClick={() => setOpen(false)}>
+            Stäng
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 export default AdminDashboard;
