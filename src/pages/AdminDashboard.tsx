@@ -276,7 +276,26 @@ const AdminDashboard = () => {
                         })}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2">
+                     <div className="flex flex-wrap items-center gap-2">
+                       <DetailsDialog
+                         request={r}
+                         onSaveDetails={saveDetails}
+                         onSaveNotes={async (id, notes) => {
+                           const { error } = await supabase
+                             .from("quote_requests")
+                             .update({ admin_notes: notes })
+                             .eq("id", id);
+                           if (error) {
+                             toast({ title: "Fel", description: error.message, variant: "destructive" });
+                             return;
+                           }
+                           setRequests((prev) =>
+                             prev.map((x) => (x.id === id ? { ...x, admin_notes: notes } : x)),
+                           );
+                           toast({ title: "Anteckning sparad" });
+                         }}
+                         onStatusChange={updateStatus}
+                       />
                       <Select
                         value={r.status}
                         onValueChange={(v) => updateStatus(r.id, v as QuoteStatus)}
@@ -336,6 +355,12 @@ const AdminDashboard = () => {
                       <div className="flex items-center gap-2 text-foreground sm:col-span-2">
                         <MapPin className="w-4 h-4 text-primary" />
                         {r.address}
+                      </div>
+                    )}
+                    {(r.property_designation || r.personal_number) && (
+                      <div className="flex items-center gap-2 text-foreground sm:col-span-2">
+                        <IdCard className="w-4 h-4 text-primary" />
+                        {[r.property_designation, r.personal_number].filter(Boolean).join(" · ")}
                       </div>
                     )}
                   </div>
