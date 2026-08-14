@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import splashBg from "@/assets/splash-bg.jpg";
+import logoWhite from "@/assets/roslagstak-logo-white.png.asset.json";
 
-const FULL_TEXT = "RoslagsTak";
-const SPLIT_INDEX = 7;
-const CHAR_DELAY = 200;
-const HOLD_AFTER_TYPED = 1200;
+const HOLD_BEFORE_FADE = 1800;
 const FADE_DURATION = 1000;
 const COOLDOWN_MS = 10 * 60 * 1000; // 10 minutes
 
@@ -19,32 +17,21 @@ function markSplashShown() {
 }
 
 const SplashScreen = ({ onDone }: { onDone: () => void }) => {
-  const [displayCount, setDisplayCount] = useState(0);
-  const [flashIndex, setFlashIndex] = useState(-1);
   const [fadingOut, setFadingOut] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (displayCount < FULL_TEXT.length) {
-      const timeout = setTimeout(() => {
-        setFlashIndex(displayCount);
-        setDisplayCount((c) => c + 1);
-        setTimeout(() => setFlashIndex(-1), 150);
-      }, CHAR_DELAY);
-      return () => clearTimeout(timeout);
-    } else {
-      // Text fully typed — hold, then fade out
-      const holdTimeout = setTimeout(() => {
-        setFadingOut(true);
-        markSplashShown();
-        setTimeout(onDone, FADE_DURATION);
-      }, HOLD_AFTER_TYPED);
-      return () => clearTimeout(holdTimeout);
-    }
-  }, [displayCount, onDone]);
-
-  const visibleText = FULL_TEXT.slice(0, displayCount);
-  const prefix = visibleText.slice(0, SPLIT_INDEX);
-  const suffix = visibleText.slice(SPLIT_INDEX);
+    const reveal = setTimeout(() => setRevealed(true), 60);
+    const holdTimeout = setTimeout(() => {
+      setFadingOut(true);
+      markSplashShown();
+      setTimeout(onDone, FADE_DURATION);
+    }, HOLD_BEFORE_FADE);
+    return () => {
+      clearTimeout(reveal);
+      clearTimeout(holdTimeout);
+    };
+  }, [onDone]);
 
   return (
     <div
@@ -62,40 +49,18 @@ const SplashScreen = ({ onDone }: { onDone: () => void }) => {
       />
       <div className="absolute inset-0 bg-black/40" />
 
-      <h1 className="relative z-10 font-display text-6xl sm:text-8xl lg:text-9xl tracking-tight select-none">
-        {prefix.split("").map((ch, i) => (
-          <span
-            key={i}
-            className={
-              i === flashIndex && flashIndex < SPLIT_INDEX
-                ? "text-primary transition-colors duration-150"
-                : "text-white"
-            }
-          >
-            {ch}
-          </span>
-        ))}
-        <span className="text-primary">
-          {suffix.split("").map((ch, i) => {
-            const globalIndex = SPLIT_INDEX + i;
-            return (
-              <span
-                key={globalIndex}
-                className={
-                  globalIndex === flashIndex
-                    ? "text-white transition-colors duration-150"
-                    : ""
-                }
-              >
-                {ch}
-              </span>
-            );
-          })}
-        </span>
-        {displayCount < FULL_TEXT.length && (
-          <span className="animate-pulse text-primary">|</span>
-        )}
-      </h1>
+      <img
+        src={logoWhite.url}
+        alt="RoslagsTak logotyp"
+        width={1437}
+        height={535}
+        fetchPriority="high"
+        className="relative z-10 w-[78%] max-w-2xl select-none transition-all duration-700 ease-out"
+        style={{
+          opacity: revealed ? 1 : 0,
+          transform: revealed ? "scale(1)" : "scale(0.94)",
+        }}
+      />
     </div>
   );
 };
