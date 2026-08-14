@@ -1,33 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Phone, Menu, X, MessageCircle } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-
-const FULL_TEXT = "RoslagsTak";
-const SPLIT_INDEX = 7; // "Roslags" = 7 chars
+import logoWhite from "@/assets/roslagstak-logo-white.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [displayCount, setDisplayCount] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
-
-  const [flashIndex, setFlashIndex] = useState(-1);
-
-  useEffect(() => {
-    if (displayCount < FULL_TEXT.length) {
-      const timeout = setTimeout(() => {
-        setFlashIndex(displayCount);
-        setDisplayCount((c) => c + 1);
-        // Clear flash after a short moment
-        setTimeout(() => setFlashIndex(-1), 150);
-      }, 180);
-      return () => clearTimeout(timeout);
-    }
-  }, [displayCount]);
-
-  const visibleText = FULL_TEXT.slice(0, displayCount);
-  const prefix = visibleText.slice(0, SPLIT_INDEX);
-  const suffix = visibleText.slice(SPLIT_INDEX);
 
   const navLinks = [
     { href: "#tjanster", label: "Tjänster" },
@@ -55,19 +34,19 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent/80">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="font-display text-2xl md:text-3xl text-primary-foreground tracking-tight min-w-[140px]">
-          {prefix.split("").map((ch, i) => (
-            <span key={i} className={i === flashIndex && flashIndex < SPLIT_INDEX ? "text-primary transition-colors duration-150" : ""}>{ch}</span>
-          ))}
-          <span className="text-primary">
-            {suffix.split("").map((ch, i) => {
-              const globalIndex = SPLIT_INDEX + i;
-              return (
-                <span key={globalIndex} className={globalIndex === flashIndex ? "text-primary-foreground transition-colors duration-150" : ""}>{ch}</span>
-              );
-            })}
-          </span>
-          {displayCount < FULL_TEXT.length && <span className="animate-pulse text-primary">|</span>}
+        <a
+          href="/"
+          onClick={(e) => { e.preventDefault(); navigate("/"); }}
+          className="flex items-center shrink-0"
+          aria-label="RoslagsTak — till startsidan"
+        >
+          <img
+            src={logoWhite}
+            alt="RoslagsTak logotyp"
+            width={1437}
+            height={535}
+            className="h-9 md:h-11 w-auto"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Huvudnavigation">
