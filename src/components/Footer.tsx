@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
+import logoWhite from "@/assets/roslagstak-logo-white.png.asset.json";
 
 const Footer = () => {
   const orgNr = useMemo(() => ["559", "539", "-", "3595"].join(""), []);
@@ -8,9 +9,14 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <p className="font-display text-2xl mb-3">
-              Roslags<span className="text-primary">Tak</span>
-            </p>
+            <img
+              src={logoWhite.url}
+              alt="RoslagsTak logotyp"
+              width={1437}
+              height={535}
+              loading="lazy"
+              className="h-10 w-auto mb-4"
+            />
             <p className="text-accent-foreground/60 text-sm leading-relaxed">
               Takläggare i Roslagen. Takbyte och takrenovering på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Vaxholm, Norrtälje och fler platser i skärgården.
             </p>
