@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Phone, Menu, X, MessageCircle } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-import logoWhite from "@/assets/roslagstak-logo-white.png.asset.json";
+import logoWhite from "@/assets/roslagstak-logo-white.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,7 +41,7 @@ const Header = () => {
           aria-label="RoslagsTak — till startsidan"
         >
           <img
-            src={logoWhite.url}
+            src={logoWhite}
             alt="RoslagsTak logotyp"
             width={1437}
             height={535}

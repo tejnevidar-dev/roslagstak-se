@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import splashBg from "@/assets/splash-bg.jpg";
-import logoWhite from "@/assets/roslagstak-logo-white.png.asset.json";
+import logoWhite from "@/assets/roslagstak-logo-white.png";
 
 const HOLD_BEFORE_FADE = 1800;
 const FADE_DURATION = 1000;
@@ -50,7 +50,7 @@ const SplashScreen = ({ onDone }: { onDone: () => void }) => {
       <div className="absolute inset-0 bg-black/40" />
 
       <img
-        src={logoWhite.url}
+        src={logoWhite}
         alt="RoslagsTak logotyp"
         width={1437}
         height={535}

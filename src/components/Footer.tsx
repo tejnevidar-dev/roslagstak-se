@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
-import logoWhite from "@/assets/roslagstak-logo-white.png.asset.json";
+import logoWhite from "@/assets/roslagstak-logo-white.png";
 
 const Footer = () => {
   const orgNr = useMemo(() => ["559", "539", "-", "3595"].join(""), []);
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <img
-              src={logoWhite.url}
+              src={logoWhite}
               alt="RoslagsTak logotyp"
               width={1437}
               height={535}
