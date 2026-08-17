@@ -281,7 +281,7 @@ const RoofBuildAnimation = () => {
                           y1={r.y}
                           x2={r.x2}
                           y2={r.y}
-                          stroke="#8A5A２8".replace("２", "2")
+                          stroke="#8A5A28"
                           strokeOpacity="0.35"
                           strokeWidth="2.5"
                         />
