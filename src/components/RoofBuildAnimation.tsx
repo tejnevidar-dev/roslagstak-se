@@ -321,14 +321,6 @@ const RoofBuildAnimation = () => {
                   <rect x="772" y="335" width="16" height="168" rx="6" fill="url(#metal)" />
                 </Layer>
 
-                {/* 4 — vindskivor */}
-                <Layer active={active(3)} from={{ y: -140 }} reduce={reduce}>
-                  <line x1={APEX_X} y1={APEX_Y - 12} x2={LEFT_X - 12} y2={EAVE_Y - 6} stroke="#F7F9FC" strokeWidth="13" strokeLinecap="round" />
-                  <line x1={APEX_X} y1={APEX_Y - 12} x2={RIGHT_X + 12} y2={EAVE_Y - 6} stroke="#F7F9FC" strokeWidth="13" strokeLinecap="round" />
-                  <line x1={APEX_X} y1={APEX_Y - 12} x2={LEFT_X - 12} y2={EAVE_Y - 6} stroke="#0B1030" strokeOpacity="0.12" strokeWidth="2" />
-                  <line x1={APEX_X} y1={APEX_Y - 12} x2={RIGHT_X + 12} y2={EAVE_Y - 6} stroke="#0B1030" strokeOpacity="0.12" strokeWidth="2" />
-                </Layer>
-
                 {/* 5 — läkt */}
                 <Layer active={active(4)} from={{ x: 150, y: -60 }} reduce={reduce}>
                   <g clipPath="url(#battenClip)">
@@ -352,41 +344,51 @@ const RoofBuildAnimation = () => {
                 {/* 6 — takpannor */}
                 <Layer active={active(5)} from={{ y: -170 }} reduce={reduce}>
                   <g clipPath="url(#tileClip)">
+                    <polygon points={roofPoly(16)} fill="url(#tile)" />
                     {tileRows.map((t, ri) => {
                       const r = rowAt(t, 16);
-                      const width = r.x2 - r.x1;
+                      const width = r.x2 - r.x1 + 40;
                       const count = Math.max(4, Math.round(width / 46));
                       const w = width / count;
+                      const x0 = r.x1 - 20;
                       return (
                         <g key={`tilerow-${t}`}>
-                          <rect x={r.x1} y={r.y - 24} width={width} height="28" fill="url(#tile)" />
+                          <rect x={x0} y={r.y - 24} width={width} height="28" fill="url(#tile)" />
                           {Array.from({ length: count }).map((_, i) => (
                             <line
                               key={i}
-                              x1={r.x1 + i * w + (ri % 2 ? w / 2 : 0)}
+                              x1={x0 + i * w + (ri % 2 ? w / 2 : 0)}
                               y1={r.y - 24}
-                              x2={r.x1 + i * w + (ri % 2 ? w / 2 : 0)}
+                              x2={x0 + i * w + (ri % 2 ? w / 2 : 0)}
                               y2={r.y + 4}
                               stroke="#0B1030"
                               strokeOpacity="0.45"
                               strokeWidth="2"
                             />
                           ))}
-                          <line x1={r.x1} y1={r.y + 3} x2={r.x2} y2={r.y + 3} stroke="#0B1030" strokeOpacity="0.4" strokeWidth="3" />
+                          <line x1={x0} y1={r.y + 3} x2={x0 + width} y2={r.y + 3} stroke="#0B1030" strokeOpacity="0.4" strokeWidth="3" />
                         </g>
                       );
                     })}
                   </g>
                 </Layer>
 
+                {/* 4 — vindskivor (ritas ovanpå pannorna, syns som takets kanter) */}
+                <Layer active={active(3)} from={{ y: -140 }} reduce={reduce}>
+                  <line x1={APEX_X} y1={APEX_Y - 26} x2={LEFT_X - 22} y2={EAVE_Y - 14} stroke="#F7F9FC" strokeWidth="14" strokeLinecap="round" />
+                  <line x1={APEX_X} y1={APEX_Y - 26} x2={RIGHT_X + 22} y2={EAVE_Y - 14} stroke="#F7F9FC" strokeWidth="14" strokeLinecap="round" />
+                  <line x1={APEX_X} y1={APEX_Y - 26} x2={LEFT_X - 22} y2={EAVE_Y - 14} stroke="#0B1030" strokeOpacity="0.1" strokeWidth="2" />
+                  <line x1={APEX_X} y1={APEX_Y - 26} x2={RIGHT_X + 22} y2={EAVE_Y - 14} stroke="#0B1030" strokeOpacity="0.1" strokeWidth="2" />
+                </Layer>
+
                 {/* 7 — nock & plåtbeslag + skorsten */}
                 <Layer active={active(6)} from={{ y: -200 }} reduce={reduce}>
-                  <rect x="330" y={APEX_Y - 30} width="240" height="17" rx="8" fill="url(#metal)" />
-                  <rect x="330" y={APEX_Y - 15} width="240" height="5" rx="2" fill="#8E9AAC" opacity="0.7" />
+                  <rect x="352" y={APEX_Y - 24} width="196" height="16" rx="8" fill="url(#metal)" />
+                  <rect x="352" y={APEX_Y - 11} width="196" height="4" rx="2" fill="#8E9AAC" opacity="0.7" />
                   <g>
-                    <rect x="560" y="150" width="58" height="96" rx="4" fill="#E9EDF4" />
-                    <rect x="552" y="142" width="74" height="14" rx="5" fill="url(#metal)" />
-                    <polygon points="548,246 630,246 620,258 558,258" fill="url(#metal)" />
+                    <rect x="566" y="126" width="52" height="82" rx="4" fill="#E9EDF4" />
+                    <rect x="558" y="118" width="68" height="13" rx="5" fill="url(#metal)" />
+                    <polygon points="556,196 630,196 638,212 550,212" fill="url(#metal)" />
                   </g>
                 </Layer>
               </svg>
