@@ -1,6 +1,7 @@
 import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 export const services = [
   {
@@ -57,7 +58,7 @@ const Services = () => {
   return (
     <section id="tjanster" className="py-20 md:py-28 bg-background" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center mb-16">
+        <Reveal className="max-w-2xl mx-auto text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Våra tjänster</p>
           <h2 id="services-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
             Allt inom tak — från kust till skärgård
@@ -65,17 +66,17 @@ const Services = () => {
           <p className="text-muted-foreground leading-relaxed">
             Vi erbjuder helhetslösningar för alla typer av takprojekt längs Roslagens kustlinje och öar.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
+          {services.map((service, i) => (
+            <Reveal key={service.title} delay={Math.min(i, 5) * 0.06}>
             <Link
               to={`/tjanster/${service.slug}`}
-              key={service.title}
-              className="group card-lift relative overflow-hidden bg-card border border-border rounded-lg p-8 hover:border-primary/40 block"
+              className="group card-lift relative overflow-hidden bg-card border border-border rounded-2xl p-8 hover:border-primary/40 hover:-translate-y-1 block h-full"
             >
               <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-primary opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
-              <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-gradient-primary transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-gradient-primary group-hover:scale-110 transition-all duration-300">
                 <service.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="font-display text-xl text-card-foreground mb-2">{service.title}</h3>
@@ -84,6 +85,7 @@ const Services = () => {
                 Läs mer <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
+            </Reveal>
           ))}
         </div>
       </div>

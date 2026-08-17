@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import Services from "@/components/Services";
 
+const RoofBuildAnimation = lazy(() => import("@/components/RoofBuildAnimation"));
 const RoofTypes = lazy(() => import("@/components/RoofTypes"));
 const QuoteConfigurator = lazy(() => import("@/components/QuoteConfigurator"));
 const FreeConsultation = lazy(() => import("@/components/FreeConsultation"));
@@ -48,6 +49,7 @@ const Index = () => {
         <TrustBar />
         <Services />
         <Suspense fallback={null}>
+          <RoofBuildAnimation />
           <RoofTypes />
           <QuoteConfigurator />
           <FreeConsultation />
