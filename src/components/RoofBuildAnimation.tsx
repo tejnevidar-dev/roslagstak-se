@@ -158,7 +158,6 @@ const RoofBuildAnimation = () => {
   }, [inView, reduce]);
 
   useEffect(() => {
-    console.log('RB:', {playing, step, inView, reduce});
     if (!playing) return;
     const id = window.setTimeout(() => {
       setStep((s) => {
