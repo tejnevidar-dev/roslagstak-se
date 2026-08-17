@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion, AnimatePresence } from "framer-motion";
 import { Play, Pause, RotateCcw, ArrowRight, Phone } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
 
 /* ---------------------------------------------------------------- geometry */
 
