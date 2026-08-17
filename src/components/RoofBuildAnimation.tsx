@@ -454,7 +454,7 @@ const RoofBuildAnimation = () => {
                     type="button"
                     onClick={() => goto(current - 1)}
                     disabled={current === 0}
-                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-ink-foreground/20 text-sm font-medium transition-colors hover:bg-ink-foreground hover:text-accent disabled:opacity-30 disabled:pointer-events-none"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-ink-foreground/20 text-sm font-medium transition-colors hover:bg-ink-foreground hover:text-ink disabled:opacity-30 disabled:pointer-events-none"
                   >
                     <ArrowLeft className="w-4 h-4" aria-hidden="true" />
                     Föregående
