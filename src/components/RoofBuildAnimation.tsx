@@ -411,7 +411,7 @@ const RoofBuildAnimation = () => {
                 <button
                   type="button"
                   onClick={() => (step >= STEPS.length - 1 ? restart() : setPlaying((p) => !p))}
-                  className="w-12 h-12 shrink-0 rounded-xl bg-primary text-primary-foreground flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+                  className="w-12 h-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
                   aria-label={playing ? "Pausa animationen" : "Spela animationen"}
                 >
                   {step >= STEPS.length - 1 ? (
@@ -500,14 +500,14 @@ const RoofBuildAnimation = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href="#offert"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-primary-foreground font-bold rounded-xl transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
               >
                 Räkna på ditt takbyte
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="tel:0701543639"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-primary-foreground/20 font-bold rounded-xl hover:bg-primary-foreground/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary-foreground/20 font-semibold rounded-full hover:bg-primary-foreground/10 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 070-154 36 39
