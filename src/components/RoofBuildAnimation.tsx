@@ -438,23 +438,23 @@ const RoofBuildAnimation = () => {
               </div>
 
               {/* tydliga, stora kontroller — enkla att använda */}
-              <div className="border-t border-primary-foreground/10 px-5 sm:px-7 py-6 text-primary-foreground">
-                <div className="h-1 bg-primary-foreground/15 overflow-hidden rounded-full">
+              <div className="border-t border-accent-foreground/12 px-5 sm:px-8 py-7">
+                <div className="h-px bg-accent-foreground/15 overflow-hidden">
                   <motion.div
-                    className="h-full bg-primary"
+                    className="h-full bg-accent-foreground"
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                   />
                 </div>
-                <p className="mt-4 text-base font-medium text-primary-foreground/85">
-                  Steg {current + 1} av {STEPS.length}: {STEPS[current].label}
+                <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.4em] text-accent-foreground/50">
+                  Steg {String(current + 1).padStart(2, "0")} — {STEPS[current].label}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-3">
+                <div className="mt-5 flex flex-wrap gap-3">
                   <button
                     type="button"
                     onClick={() => goto(current - 1)}
                     disabled={current === 0}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-primary-foreground/25 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors disabled:opacity-35 disabled:pointer-events-none"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-accent-foreground/20 text-sm font-medium transition-colors hover:bg-accent-foreground hover:text-accent disabled:opacity-30 disabled:pointer-events-none"
                   >
                     <ArrowLeft className="w-4 h-4" aria-hidden="true" />
                     Föregående
@@ -463,7 +463,7 @@ const RoofBuildAnimation = () => {
                     type="button"
                     onClick={() => goto(current + 1)}
                     disabled={current >= STEPS.length - 1}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors disabled:opacity-35 disabled:pointer-events-none"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-accent-foreground text-accent text-sm font-medium transition-opacity hover:opacity-85 disabled:opacity-30 disabled:pointer-events-none"
                   >
                     Nästa steg
                     <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -471,7 +471,7 @@ const RoofBuildAnimation = () => {
                   <button
                     type="button"
                     onClick={() => (step >= STEPS.length - 1 ? restart() : setPlaying((p) => !p))}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-primary-foreground/25 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-accent-foreground/20 text-sm font-medium transition-colors hover:bg-accent-foreground hover:text-accent"
                   >
                     {step >= STEPS.length - 1 ? (
                       <>
@@ -497,11 +497,16 @@ const RoofBuildAnimation = () => {
 
           {/* ------------------------------------------------------- stepper */}
           <div className="lg:col-span-5">
-            <ol className="border-t border-border">
+            <ol className="border-t border-accent-foreground/15">
               {STEPS.map((s, i) => {
                 const isCurrent = i === current;
                 return (
-                  <li key={s.id} className={`border-b border-border ${isCurrent ? "bg-secondary/50" : ""}`}>
+                  <li
+                    key={s.id}
+                    className={`border-b border-accent-foreground/15 transition-colors ${
+                      isCurrent ? "bg-accent-foreground/[0.06]" : "hover:bg-accent-foreground/[0.03]"
+                    }`}
+                  >
                     <button
                       type="button"
                       onClick={() => {
@@ -509,26 +514,28 @@ const RoofBuildAnimation = () => {
                         setStep(i);
                       }}
                       aria-current={isCurrent ? "step" : undefined}
-                      className="relative w-full text-left px-1 py-5 transition-colors group"
+                      className="relative w-full text-left px-1 py-6 transition-colors group"
                     >
                       {isCurrent && (
                         <motion.span
                           layoutId="stepIndicator"
-                          className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary"
+                          className="absolute left-0 top-0 bottom-0 w-[2px] bg-accent-foreground"
                           aria-hidden="true"
                         />
                       )}
-                      <div className="flex items-baseline gap-4 pl-4">
+                      <div className="flex items-baseline gap-5 pl-5">
                         <span
-                          className={`text-xs font-semibold tabular-nums tracking-[0.2em] transition-colors ${
-                            step >= i ? "text-primary" : "text-muted-foreground/60"
+                          className={`text-[10px] font-bold tabular-nums tracking-[0.3em] transition-colors ${
+                            step >= i ? "text-accent-foreground/70" : "text-accent-foreground/30"
                           }`}
                         >
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span
-                          className={`font-display text-lg sm:text-xl tracking-[-0.02em] transition-colors ${
-                            isCurrent ? "text-accent" : "text-foreground/70 group-hover:text-accent"
+                          className={`font-display text-xl sm:text-2xl font-medium tracking-[-0.03em] transition-colors ${
+                            isCurrent
+                              ? "text-accent-foreground"
+                              : "text-accent-foreground/55 group-hover:text-accent-foreground"
                           }`}
                         >
                           {s.title.replace(/^\d+\.\s*/, "")}
@@ -543,8 +550,12 @@ const RoofBuildAnimation = () => {
                             transition={{ duration: 0.35, ease: "easeOut" }}
                             className="overflow-hidden"
                           >
-                            <p className="pt-3 pl-12 pr-4 text-base text-foreground/80 leading-relaxed">{s.body}</p>
-                            <p className="pt-2 pl-12 pr-4 text-sm text-muted-foreground leading-relaxed">{s.detail}</p>
+                            <p className="pt-4 pl-14 pr-4 text-base sm:text-lg font-light leading-relaxed text-accent-foreground/70">
+                              {s.body}
+                            </p>
+                            <p className="pt-3 pl-14 pr-4 text-sm leading-relaxed text-accent-foreground/45">
+                              {s.detail}
+                            </p>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -554,17 +565,17 @@ const RoofBuildAnimation = () => {
               })}
             </ol>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <a
                 href="#offert"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-md transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
+                className="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-primary text-primary-foreground font-medium transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
               >
                 Räkna på ditt takbyte
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="tel:0701543639"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-accent/25 text-accent font-semibold rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full border border-accent-foreground/20 text-accent-foreground font-medium transition-colors hover:bg-accent-foreground hover:text-accent"
               >
                 <Phone className="w-4 h-4" />
                 070-154 36 39
