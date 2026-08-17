@@ -166,7 +166,7 @@ const RoofBuildAnimation = () => {
     <section
       id="hur-det-gar-till"
       aria-label="Så går ett takbyte till"
-      className="relative overflow-hidden bg-accent text-primary-foreground py-20 lg:py-28"
+      className="relative overflow-hidden bg-[#05060F] text-primary-foreground py-24 lg:py-36"
     >
       {/* geometric watermark */}
       <div
@@ -185,18 +185,25 @@ const RoofBuildAnimation = () => {
       />
 
       <div ref={sectionRef} className="relative max-w-7xl mx-auto px-6">
-        <div className="max-w-2xl mb-12 lg:mb-16">
-          <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary-foreground/60 mb-5">
-            <span className="w-8 h-px bg-primary" aria-hidden="true" />
-            Hur går det till
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.05] text-balance mb-5">
-            Sju lager mellan dig och skärgårdens väder
-          </h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed">
-            Följ ett komplett takbyte lager för lager — från bar råspont till färdiga plåtbeslag.
-            Samma ordning använder vi på varje projekt.
-          </p>
+        <div className="grid lg:grid-cols-12 gap-10 items-end mb-14 lg:mb-20">
+          <div className="lg:col-span-8">
+            <SectionHeading
+              meta="Metodik"
+              index="02 / 04"
+              tone="dark"
+              title={<>Sju lager mellan dig och <em className="font-normal italic text-primary">skärgårdens väder</em></>}
+              intro="Följ ett komplett takbyte lager för lager — från bar råspont till färdiga plåtbeslag. Samma ordning på varje projekt, varje gång."
+            />
+          </div>
+          <div className="lg:col-span-4 lg:text-right">
+            <div className="font-display text-[clamp(3.5rem,9vw,7rem)] leading-[0.8] tracking-[-0.05em] tabular-nums text-primary-foreground/90">
+              {String(current + 1).padStart(2, "0")}
+              <span className="text-primary-foreground/25">/{String(STEPS.length).padStart(2, "0")}</span>
+            </div>
+            <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-primary-foreground/50">
+              {STEPS[current].label}
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
