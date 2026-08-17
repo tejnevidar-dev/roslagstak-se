@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { motion, useInView, useReducedMotion, AnimatePresence } from "framer-motion";
-import { Play, Pause, RotateCcw, ArrowRight, Phone } from "lucide-react";
+import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
+import { Play, Pause, RotateCcw, ArrowRight, ArrowLeft, Phone } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
 /* ---------------------------------------------------------------- geometry */
@@ -126,10 +126,27 @@ const Layer = ({ active, from, children, reduce }: LayerProps) => (
 const RoofBuildAnimation = () => {
   const reduce = !!useReducedMotion();
   const sectionRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(sectionRef, { amount: 0.35 });
+  const [inView, setInView] = useState(false);
   const [step, setStep] = useState(-1);
   const [playing, setPlaying] = useState(false);
   const started = useRef(false);
+
+  // Starta när sektionen kommer i vy (robust IntersectionObserver).
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setInView(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.05 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   // Autostart once the section is on screen.
   useEffect(() => {
@@ -162,46 +179,45 @@ const RoofBuildAnimation = () => {
   const current = step < 0 ? 0 : step;
   const active = (i: number) => step >= i;
   const progress = ((current + 1) / STEPS.length) * 100;
+  const goto = (i: number) => {
+    setPlaying(false);
+    setStep(Math.max(0, Math.min(STEPS.length - 1, i)));
+  };
 
   return (
     <section
       id="hur-det-gar-till"
       aria-label="Så går ett takbyte till"
-      className="relative overflow-hidden bg-[#05060F] text-primary-foreground py-24 lg:py-36"
+      className="relative overflow-hidden bg-background text-foreground border-y border-border py-24 lg:py-36"
     >
-      {/* geometric watermark */}
+      {/* technical drawing grid — subtle, contractor-like */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-[0.07]"
+        className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
-            "linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)",
-          backgroundSize: "72px 72px",
+            "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
         }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -top-40 -right-32 w-[38rem] h-[38rem] rounded-full blur-3xl opacity-25"
-        style={{ background: "radial-gradient(circle, hsl(var(--primary)), transparent 65%)" }}
       />
 
       <div ref={sectionRef} className="relative max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-10 items-end mb-14 lg:mb-20">
+        <div className="grid lg:grid-cols-12 gap-10 items-end mb-14 lg:mb-20 pb-10 border-b border-border">
           <div className="lg:col-span-8">
             <SectionHeading
               meta="Metodik"
               index="02 / 04"
-              tone="dark"
+              tone="light"
               title={<>Sju lager mellan dig och <em className="font-normal italic text-primary">skärgårdens väder</em></>}
               intro="Följ ett komplett takbyte lager för lager — från bar råspont till färdiga plåtbeslag. Samma ordning på varje projekt, varje gång."
             />
           </div>
           <div className="lg:col-span-4 lg:text-right">
-            <div className="font-display text-[clamp(3.5rem,9vw,7rem)] leading-[0.8] tracking-[-0.05em] tabular-nums text-primary-foreground/90">
+            <div className="font-display text-[clamp(3.5rem,9vw,7rem)] leading-[0.8] tracking-[-0.05em] tabular-nums text-accent">
               {String(current + 1).padStart(2, "0")}
-              <span className="text-primary-foreground/25">/{String(STEPS.length).padStart(2, "0")}</span>
+              <span className="text-accent/25">/{String(STEPS.length).padStart(2, "0")}</span>
             </div>
-            <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-primary-foreground/50">
+            <p className="mt-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
               {STEPS[current].label}
             </p>
           </div>
@@ -210,12 +226,17 @@ const RoofBuildAnimation = () => {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* ---------------------------------------------------- animation */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-[1.75rem] border border-primary-foreground/10 bg-gradient-to-b from-primary-foreground/[0.07] to-transparent backdrop-blur-sm p-4 sm:p-7">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 rounded-[1.75rem]"
-                style={{ boxShadow: "inset 0 0 140px 40px rgba(0,0,0,0.55)" }}
-              />
+            <figure className="relative m-0 rounded-lg overflow-hidden border border-accent/15 bg-accent shadow-[var(--shadow-card)]">
+              {/* ritningshuvud — entreprenadkänsla */}
+              <figcaption className="flex items-center justify-between gap-4 px-5 sm:px-7 py-4 border-b border-primary-foreground/10 text-primary-foreground">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary-foreground/55">
+                  Takuppbyggnad — sektion A–A
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.3em] tabular-nums text-primary-foreground/40">
+                  RT-01
+                </span>
+              </figcaption>
+              <div className="m-4 sm:m-6 rounded-md bg-[#EEF1F7] p-3 sm:p-5 text-accent">
               <svg
                 viewBox="0 0 900 540"
                 className="w-full h-auto"
@@ -405,46 +426,73 @@ const RoofBuildAnimation = () => {
                   </g>
                 </Layer>
               </svg>
+              </div>
 
-              {/* progress + controls */}
-              <div className="mt-5 flex items-center gap-4">
-                <button
-                  type="button"
-                  onClick={() => (step >= STEPS.length - 1 ? restart() : setPlaying((p) => !p))}
-                  className="w-12 h-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
-                  aria-label={playing ? "Pausa animationen" : "Spela animationen"}
-                >
-                  {step >= STEPS.length - 1 ? (
-                    <RotateCcw className="w-5 h-5" />
-                  ) : playing ? (
-                    <Pause className="w-5 h-5" />
-                  ) : (
-                    <Play className="w-5 h-5" />
-                  )}
-                </button>
-                <div className="flex-1">
-                  <div className="h-1.5 rounded-full bg-primary-foreground/15 overflow-hidden">
-                    <motion.div
-                      className="h-full bg-primary rounded-full"
-                      animate={{ width: `${progress}%` }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                    />
-                  </div>
-                  <p className="mt-2 text-[11px] font-bold uppercase tracking-widest text-primary-foreground/50">
-                    Steg {current + 1} av {STEPS.length} — {STEPS[current].label}
-                  </p>
+              {/* tydliga, stora kontroller — enkla att använda */}
+              <div className="border-t border-primary-foreground/10 px-5 sm:px-7 py-6 text-primary-foreground">
+                <div className="h-1 bg-primary-foreground/15 overflow-hidden rounded-full">
+                  <motion.div
+                    className="h-full bg-primary"
+                    animate={{ width: `${progress}%` }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  />
+                </div>
+                <p className="mt-4 text-base font-medium text-primary-foreground/85">
+                  Steg {current + 1} av {STEPS.length}: {STEPS[current].label}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <button
+                    type="button"
+                    onClick={() => goto(current - 1)}
+                    disabled={current === 0}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-primary-foreground/25 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors disabled:opacity-35 disabled:pointer-events-none"
+                  >
+                    <ArrowLeft className="w-4 h-4" aria-hidden="true" />
+                    Föregående
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => goto(current + 1)}
+                    disabled={current >= STEPS.length - 1}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors disabled:opacity-35 disabled:pointer-events-none"
+                  >
+                    Nästa steg
+                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => (step >= STEPS.length - 1 ? restart() : setPlaying((p) => !p))}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-primary-foreground/25 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors"
+                  >
+                    {step >= STEPS.length - 1 ? (
+                      <>
+                        <RotateCcw className="w-4 h-4" aria-hidden="true" />
+                        Spela om
+                      </>
+                    ) : playing ? (
+                      <>
+                        <Pause className="w-4 h-4" aria-hidden="true" />
+                        Pausa
+                      </>
+                    ) : (
+                      <>
+                        <Play className="w-4 h-4" aria-hidden="true" />
+                        Spela
+                      </>
+                    )}
+                  </button>
                 </div>
               </div>
-            </div>
+            </figure>
           </div>
 
           {/* ------------------------------------------------------- stepper */}
           <div className="lg:col-span-5">
-            <ol className="border-t border-primary-foreground/10">
+            <ol className="border-t border-border">
               {STEPS.map((s, i) => {
                 const isCurrent = i === current;
                 return (
-                  <li key={s.id} className="border-b border-primary-foreground/10">
+                  <li key={s.id} className={`border-b border-border ${isCurrent ? "bg-secondary/50" : ""}`}>
                     <button
                       type="button"
                       onClick={() => {
@@ -457,21 +505,21 @@ const RoofBuildAnimation = () => {
                       {isCurrent && (
                         <motion.span
                           layoutId="stepIndicator"
-                          className="absolute left-0 top-0 bottom-0 w-px bg-primary"
+                          className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary"
                           aria-hidden="true"
                         />
                       )}
                       <div className="flex items-baseline gap-4 pl-4">
                         <span
-                          className={`text-[10px] font-semibold tabular-nums tracking-[0.2em] transition-colors ${
-                            step >= i ? "text-primary" : "text-primary-foreground/35"
+                          className={`text-xs font-semibold tabular-nums tracking-[0.2em] transition-colors ${
+                            step >= i ? "text-primary" : "text-muted-foreground/60"
                           }`}
                         >
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span
                           className={`font-display text-lg sm:text-xl tracking-[-0.02em] transition-colors ${
-                            isCurrent ? "text-primary-foreground" : "text-primary-foreground/55 group-hover:text-primary-foreground/85"
+                            isCurrent ? "text-accent" : "text-foreground/70 group-hover:text-accent"
                           }`}
                         >
                           {s.title.replace(/^\d+\.\s*/, "")}
@@ -486,8 +534,8 @@ const RoofBuildAnimation = () => {
                             transition={{ duration: 0.35, ease: "easeOut" }}
                             className="overflow-hidden"
                           >
-                            <p className="pt-3 pl-12 pr-4 text-sm text-primary-foreground/75 leading-relaxed">{s.body}</p>
-                            <p className="pt-2 pl-12 pr-4 text-xs text-primary-foreground/45 leading-relaxed">{s.detail}</p>
+                            <p className="pt-3 pl-12 pr-4 text-base text-foreground/80 leading-relaxed">{s.body}</p>
+                            <p className="pt-2 pl-12 pr-4 text-sm text-muted-foreground leading-relaxed">{s.detail}</p>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -500,14 +548,14 @@ const RoofBuildAnimation = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href="#offert"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-md transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
               >
                 Räkna på ditt takbyte
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="tel:0701543639"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary-foreground/20 font-semibold rounded-full hover:bg-primary-foreground/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-accent/25 text-accent font-semibold rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 070-154 36 39
