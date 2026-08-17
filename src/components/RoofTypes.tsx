@@ -102,7 +102,7 @@ const RoofTypes = () => {
         <SectionHeading
           meta="Materialbibliotek"
           id="rooftypes-heading"
-          title={<>Nio taktyper — <em className="font-normal italic text-primary">material, livslängd och pris</em></>}
+          title={<>Taktyper — <em className="font-normal italic text-primary">material, livslängd och pris</em></>}
           intro={
             <>
               Öppna en taktyp för att läsa om material, livslängd, fördelar och nackdelar. Osäker?{" "}
