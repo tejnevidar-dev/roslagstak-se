@@ -10,6 +10,7 @@ import roofLakt from "@/assets/roof-build-05-lakt.jpg";
 import roofPannor from "@/assets/roof-build-06-pannor.jpg";
 import roofBeslag from "@/assets/roof-build-07-beslag.jpg";
 import roofSnorasskydd from "@/assets/roof-build-08-snorasskydd.jpg";
+import roofPoster from "@/assets/roof-build-poster.jpg";
 
 interface Step {
   id: string;
