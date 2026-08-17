@@ -56,7 +56,8 @@ const LayerIntro = () => {
                 className="absolute inset-0 w-full h-[112%] object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                 style={reduce ? undefined : { y }}
               />
-              <div className="absolute inset-0 bg-accent/25" />
+              <div className="absolute inset-0 bg-accent/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-accent/80 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between gap-4">
                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent-foreground/70">
                   7 skikt av totalt skydd
