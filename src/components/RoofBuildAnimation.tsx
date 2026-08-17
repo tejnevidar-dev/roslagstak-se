@@ -9,6 +9,7 @@ import roofVindskivor from "@/assets/roof-build-04-vindskivor.jpg";
 import roofLakt from "@/assets/roof-build-05-lakt.jpg";
 import roofPannor from "@/assets/roof-build-06-pannor.jpg";
 import roofBeslag from "@/assets/roof-build-07-beslag.jpg";
+import roofSnorasskydd from "@/assets/roof-build-08-snorasskydd.jpg";
 
 interface Step {
   id: string;
@@ -33,11 +34,11 @@ const STEPS: Step[] = [
   {
     id: "papp",
     label: "Underlagspapp",
-    title: "Underlagspapp",
-    body: "Papp eller underlagsduk spikas i förband över hela ytan — det är taket som håller vattnet ute.",
-    detail: "Överlapp enligt tillverkarens anvisning, extra tätning vid genomföringar.",
+    title: "Underlagspapp — Mataki Haloten PRO",
+    body: "Vi lägger Mataki Haloten PRO i förband över hela ytan — det är underlagstaket som håller vattnet ute.",
+    detail: "Överlapp enligt Matakis anvisning, extra tätning vid genomföringar och skorsten.",
     image: roofPapp,
-    alt: "Fotorealistisk 3D-visualisering av ett tak täckt med underlagspapp",
+    alt: "Fotorealistisk 3D-visualisering av ett tak täckt med Mataki Haloten PRO underlagspapp",
   },
   {
     id: "rannor",
@@ -70,7 +71,7 @@ const STEPS: Step[] = [
     id: "pannor",
     label: "Takpannor",
     title: "Takpannor eller plåt",
-    body: "Betongpannor, tegel eller falsad plåt läggs, klipps och stormsäkras rad för rad.",
+    body: "Betongpannor, tegel eller falsad plåt läggs rad för rad — första raden hänger ut till mitten av hängrännan.",
     detail: "Stormklammer i utsatta lägen — standard på öar och kustnära tak.",
     image: roofPannor,
     alt: "Fotorealistisk 3D-visualisering av nylagda mörka takpannor",
@@ -79,10 +80,19 @@ const STEPS: Step[] = [
     id: "beslag",
     label: "Plåtbeslag",
     title: "Nockpannor & plåtbeslag",
-    body: "Nock, valmar, skorstensbeslag och genomföringar tätas — sedan städning och slutbesiktning.",
-    detail: "Du får dokumentation, garantibevis och en genomgång på plats.",
+    body: "Nock, valmar, skorstensbeslag och genomföringar tätas. Gavelbeslagen läggs över pannorna.",
+    detail: "Täta anslutningar hela vägen runt takets kanter och genomföringar.",
     image: roofBeslag,
-    alt: "Fotorealistisk 3D-visualisering av ett helt färdigställt skärgårdstak",
+    alt: "Fotorealistisk 3D-visualisering av nockpannor och plåtbeslag på ett skärgårdstak",
+  },
+  {
+    id: "snorasskydd",
+    label: "Snörasskydd",
+    title: "Snörasskydd & slutbesiktning",
+    body: "Sist monteras snörasskydden ovanför takfoten — sedan städning, dokumentation och slutbesiktning.",
+    detail: "Du får garantibevis och en genomgång av hela taket på plats.",
+    image: roofSnorasskydd,
+    alt: "Fotorealistisk 3D-visualisering av monterat snörasskydd på ett färdigt skärgårdstak",
   },
 ];
 
