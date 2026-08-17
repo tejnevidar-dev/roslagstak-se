@@ -283,7 +283,7 @@ const RoofBuildAnimation = () => {
                 </defs>
 
                 {/* ground shadow */}
-                <ellipse cx="450" cy="512" rx="330" ry="16" fill="#000" opacity="0.25" />
+                <ellipse cx="450" cy="512" rx="330" ry="16" fill="#000" opacity="0.45" />
 
                 {/* house body */}
                 <g>
@@ -293,7 +293,7 @@ const RoofBuildAnimation = () => {
                   <rect x="600" y="366" width="86" height="98" rx="4" fill="#1800AD" opacity="0.16" />
                   <rect x="410" y="392" width="80" height="110" rx="4" fill="#1800AD" opacity="0.3" />
                   {/* rafters visible before boarding */}
-                  <polygon points={roofPoly(0)} fill="#0B1030" opacity="0.35" />
+                  <polygon points={roofPoly(0)} fill="#FFFFFF" opacity="0.06" />
                   {plankRows.map((t) => {
                     const r = rowAt(t, 0);
                     return (
@@ -303,8 +303,8 @@ const RoofBuildAnimation = () => {
                         y1={r.y}
                         x2={r.x2}
                         y2={r.y}
-                        stroke="#0B1030"
-                        strokeOpacity="0.35"
+                        stroke="#FFFFFF"
+                        strokeOpacity="0.22"
                         strokeWidth="2"
                       />
                     );
