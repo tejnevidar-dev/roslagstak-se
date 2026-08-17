@@ -70,15 +70,15 @@ const Services = () => {
             />
           </div>
           <div className="lg:col-span-4 lg:text-right">
-            <Link
-              to="/tjanster"
+            <a
+              href="#offert"
               className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group"
             >
-              Alla tjänster
+              Räkna på ditt projekt
               <span className="w-9 h-9 rounded-full border border-foreground/20 flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-primary-foreground group-hover:border-accent">
                 <ArrowRight className="w-4 h-4" />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
 
