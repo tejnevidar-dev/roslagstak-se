@@ -2,6 +2,7 @@ import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles, AlertTriangl
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
 
 export const services = [
   {
@@ -56,37 +57,74 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="py-20 md:py-28 bg-background" aria-labelledby="services-heading">
-      <div className="container mx-auto px-4">
-        <Reveal className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Våra tjänster</p>
-          <h2 id="services-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Allt inom tak — från kust till skärgård
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Vi erbjuder helhetslösningar för alla typer av takprojekt längs Roslagens kustlinje och öar.
-          </p>
-        </Reveal>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, i) => (
-            <Reveal key={service.title} delay={Math.min(i, 5) * 0.06}>
-            <Link
-              to={`/tjanster/${service.slug}`}
-              className="group card-lift relative overflow-hidden bg-card border border-border rounded-2xl p-8 hover:border-primary/40 hover:-translate-y-1 block h-full"
+    <section id="tjanster" className="py-24 md:py-36 bg-background" aria-labelledby="services-heading">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-14 lg:mb-20">
+          <div className="lg:col-span-8">
+            <SectionHeading
+              meta="Tjänster"
+              index="01 / 04"
+              id="services-heading"
+              title={<>Allt inom tak — <em className="font-normal italic text-primary">från kust till skärgård</em></>}
+              intro="Helhetslösningar för varje takprojekt längs Roslagens kustlinje och öar. Samma metodik, oavsett om huset står vid vägen eller bakom en båttur."
+            />
+          </div>
+          <div className="lg:col-span-4 lg:text-right">
+            <a
+              href="#offert"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group"
             >
-              <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-primary opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-gradient-primary group-hover:scale-110 transition-all duration-300">
-                <service.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
-              </div>
-              <h3 className="font-display text-xl text-card-foreground mb-2">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.description}</p>
-              <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all">
-                Läs mer <ArrowRight className="w-4 h-4" />
+              Räkna på ditt projekt
+              <span className="w-9 h-9 rounded-full border border-foreground/20 flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-primary-foreground group-hover:border-accent">
+                <ArrowRight className="w-4 h-4" />
               </span>
-            </Link>
+            </a>
+          </div>
+        </div>
+
+        <div className="border-t border-foreground/10">
+          {services.map((service, i) => (
+            <Reveal key={service.title} delay={Math.min(i, 6) * 0.05}>
+              <Link
+                to={`/tjanster/${service.slug}`}
+                className="group relative grid md:grid-cols-12 gap-4 md:gap-8 items-baseline py-7 md:py-9 border-b border-foreground/10 transition-colors"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 inset-y-0 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10"
+                />
+                <div className="md:col-span-1 flex items-center gap-3">
+                  <span className="text-[11px] font-semibold tabular-nums tracking-[0.2em] text-muted-foreground group-hover:text-primary-foreground/60 transition-colors">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="md:col-span-4 flex items-center gap-4 md:pl-2">
+                  <span className="w-10 h-10 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center transition-colors group-hover:bg-primary-foreground/15">
+                    <service.icon className="w-5 h-5 text-primary transition-colors group-hover:text-primary-foreground" />
+                  </span>
+                  <h3 className="font-display text-2xl md:text-[1.75rem] tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary-foreground">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="md:col-span-6 text-sm leading-relaxed text-muted-foreground transition-colors group-hover:text-primary-foreground/75 md:pr-6">
+                  {service.description}
+                </p>
+                <span className="md:col-span-1 md:justify-self-end inline-flex items-center text-primary transition-all group-hover:text-primary-foreground group-hover:translate-x-1">
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </Link>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          <span>AMA-standard</span>
+          <span className="w-8 h-px bg-foreground/15" aria-hidden="true" />
+          <span>10 års garanti</span>
+          <span className="w-8 h-px bg-foreground/15" aria-hidden="true" />
+          <span>ROT-avdrag</span>
+          <span className="w-8 h-px bg-foreground/15" aria-hidden="true" />
+          <span>Fast pris</span>
         </div>
       </div>
     </section>

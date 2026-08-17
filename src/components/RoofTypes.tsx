@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Shield, Droplets, Sun, Clock, Coins } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
 
 const roofTypes = [
   {
@@ -96,45 +97,59 @@ const RoofTypes = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
-    <section id="taktyper" className="py-20 md:py-28 bg-warm" aria-labelledby="rooftypes-heading">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Taktyper</p>
-          <h2 id="rooftypes-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Allt du behöver veta om olika taktyper
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Klicka på en taktyp för att läsa mer om material, livslängd, fördelar och nackdelar. 
-            Osäker? <a href="#radgivning" className="text-primary underline hover:no-underline">Boka kostnadsfri rådgivning</a> så hjälper vi dig välja.
-          </p>
-        </div>
+    <section id="taktyper" className="py-24 md:py-36 bg-warm" aria-labelledby="rooftypes-heading">
+      <div className="max-w-7xl mx-auto px-6">
+        <SectionHeading
+          meta="Materialbibliotek"
+          id="rooftypes-heading"
+          title={<>Taktyper — <em className="font-normal italic text-primary">material, livslängd och pris</em></>}
+          intro={
+            <>
+              Öppna en taktyp för att läsa om material, livslängd, fördelar och nackdelar. Osäker?{" "}
+              <a href="#radgivning" className="text-primary underline decoration-primary/40 hover:no-underline">
+                Boka kostnadsfri rådgivning
+              </a>{" "}
+              så hjälper vi dig välja.
+            </>
+          }
+          className="mb-14 lg:mb-20"
+        />
 
-        <div className="grid gap-4 max-w-4xl mx-auto">
-          {roofTypes.map((roof) => {
+        <div className="border-t border-foreground/10">
+          {roofTypes.map((roof, i) => {
             const isExpanded = expandedId === roof.id;
             return (
               <article
                 key={roof.id}
-                className="bg-card border border-border rounded-lg overflow-hidden transition-shadow hover:shadow-md"
+                className="border-b border-foreground/10"
               >
                 <button
                   onClick={() => setExpandedId(isExpanded ? null : roof.id)}
-                  className="w-full flex items-center justify-between p-6 text-left"
+                  className="group w-full flex items-center justify-between gap-6 py-7 text-left"
                   aria-expanded={isExpanded}
                 >
-                  <div>
-                    <h3 className="font-display text-xl text-card-foreground">{roof.name}</h3>
-                    <p className="text-muted-foreground text-sm mt-1">{roof.shortDesc}</p>
+                  <div className="flex items-baseline gap-5">
+                    <span className="text-[10px] font-semibold tabular-nums tracking-[0.2em] text-muted-foreground pt-1">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-2xl md:text-[1.75rem] tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary">
+                        {roof.name}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mt-1.5 max-w-xl">{roof.shortDesc}</p>
+                    </div>
                   </div>
-                  {isExpanded ? (
-                    <ChevronUp className="w-5 h-5 text-primary flex-shrink-0 ml-4" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-4" />
-                  )}
+                  <span
+                    className={`w-10 h-10 shrink-0 rounded-full border flex items-center justify-center transition-colors ${
+                      isExpanded ? "bg-accent text-primary-foreground border-accent" : "border-foreground/20 text-foreground group-hover:border-foreground/40"
+                    }`}
+                  >
+                    {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                  </span>
                 </button>
 
                 {isExpanded && (
-                  <div className="px-6 pb-6 border-t border-border pt-6 space-y-6">
+                  <div className="pb-9 pt-2 md:pl-12 space-y-7 animate-fade-in">
                     <p className="text-foreground leading-relaxed">{roof.fullDesc}</p>
 
                     <div className="grid sm:grid-cols-3 gap-4">

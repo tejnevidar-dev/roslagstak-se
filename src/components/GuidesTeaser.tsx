@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { blogPosts } from "@/data/blog-posts";
+import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
 
 const GuidesTeaser = () => {
   const featured = blogPosts.slice(0, 6);
@@ -18,43 +20,47 @@ const GuidesTeaser = () => {
   };
 
   return (
-    <section id="guider" className="py-20 md:py-28 bg-warm" aria-labelledby="guides-heading">
+    <section id="guider" className="py-24 md:py-36 bg-warm" aria-labelledby="guides-heading">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center mb-14">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Guider & råd</p>
-          <h2 id="guides-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Kunskap om tak — skrivet av takläggare i Roslagen
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Läs våra guider om material, kostnader, ROT-avdrag och underhåll innan du bestämmer dig för ditt takprojekt.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-6">
+        <SectionHeading
+          meta="Guider & råd"
+          id="guides-heading"
+          title={<>Kunskap om tak — <em className="font-normal italic text-primary">skrivet av takläggare</em></>}
+          intro="Läs våra guider om material, kostnader, ROT-avdrag och underhåll innan du bestämmer dig för ditt takprojekt."
+          className="mb-14 lg:mb-20"
+        />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featured.map((post) => (
-            <Link
-              key={post.slug}
-              to={`/blogg/${post.slug}`}
-              className="group card-lift bg-card border border-border rounded-lg p-7 hover:border-primary/40 flex flex-col"
-            >
-              <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground mb-4">
-                <BookOpen className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
-                {post.readTime} läsning
-              </div>
-              <h3 className="font-display text-xl text-card-foreground mb-3 leading-snug">{post.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-1">{post.excerpt}</p>
-              <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all">
-                Läs guiden <ArrowRight className="w-4 h-4" />
-              </span>
-            </Link>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 border-t border-foreground/10">
+          {featured.map((post, i) => (
+            <Reveal key={post.slug} delay={Math.min(i, 5) * 0.06}>
+              <Link
+                to={`/blogg/${post.slug}`}
+                className={`group h-full flex flex-col py-9 md:px-8 border-b border-foreground/10 transition-colors hover:bg-foreground/[0.03] ${
+                  i % 3 !== 0 ? "lg:border-l lg:border-foreground/10" : "md:pl-0 lg:pl-0"
+                }`}
+              >
+                <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">
+                  <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                  <BookOpen className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
+                  {post.readTime} läsning
+                </div>
+                <h3 className="font-display text-xl tracking-[-0.02em] text-foreground mb-3 leading-snug transition-colors group-hover:text-primary">
+                  {post.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{post.excerpt}</p>
+                <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold transition-transform group-hover:translate-x-1">
+                  Läs guiden <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+            </Reveal>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="mt-12">
           <Link
             to="/blogg"
-            className="inline-flex items-center gap-2 border-2 border-primary text-primary px-7 py-3.5 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="inline-flex items-center gap-2 border border-foreground/20 text-foreground px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-accent hover:text-primary-foreground hover:border-accent transition-colors"
           >
             Se alla guider <ArrowRight className="w-4 h-4" />
           </Link>

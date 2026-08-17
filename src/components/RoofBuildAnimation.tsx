@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion, AnimatePresence } from "framer-motion";
 import { Play, Pause, RotateCcw, ArrowRight, Phone } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
 
 /* ---------------------------------------------------------------- geometry */
 
@@ -166,7 +167,7 @@ const RoofBuildAnimation = () => {
     <section
       id="hur-det-gar-till"
       aria-label="Så går ett takbyte till"
-      className="relative overflow-hidden bg-accent text-primary-foreground py-20 lg:py-28"
+      className="relative overflow-hidden bg-[#05060F] text-primary-foreground py-24 lg:py-36"
     >
       {/* geometric watermark */}
       <div
@@ -185,24 +186,36 @@ const RoofBuildAnimation = () => {
       />
 
       <div ref={sectionRef} className="relative max-w-7xl mx-auto px-6">
-        <div className="max-w-2xl mb-12 lg:mb-16">
-          <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary-foreground/60 mb-5">
-            <span className="w-8 h-px bg-primary" aria-hidden="true" />
-            Hur går det till
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.05] text-balance mb-5">
-            Sju lager mellan dig och skärgårdens väder
-          </h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed">
-            Följ ett komplett takbyte lager för lager — från bar råspont till färdiga plåtbeslag.
-            Samma ordning använder vi på varje projekt.
-          </p>
+        <div className="grid lg:grid-cols-12 gap-10 items-end mb-14 lg:mb-20">
+          <div className="lg:col-span-8">
+            <SectionHeading
+              meta="Metodik"
+              index="02 / 04"
+              tone="dark"
+              title={<>Sju lager mellan dig och <em className="font-normal italic text-primary">skärgårdens väder</em></>}
+              intro="Följ ett komplett takbyte lager för lager — från bar råspont till färdiga plåtbeslag. Samma ordning på varje projekt, varje gång."
+            />
+          </div>
+          <div className="lg:col-span-4 lg:text-right">
+            <div className="font-display text-[clamp(3.5rem,9vw,7rem)] leading-[0.8] tracking-[-0.05em] tabular-nums text-primary-foreground/90">
+              {String(current + 1).padStart(2, "0")}
+              <span className="text-primary-foreground/25">/{String(STEPS.length).padStart(2, "0")}</span>
+            </div>
+            <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-primary-foreground/50">
+              {STEPS[current].label}
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* ---------------------------------------------------- animation */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-3xl border border-primary-foreground/10 bg-primary-foreground/[0.04] backdrop-blur-sm p-4 sm:p-6 shadow-elevated">
+            <div className="relative rounded-[1.75rem] border border-primary-foreground/10 bg-gradient-to-b from-primary-foreground/[0.07] to-transparent backdrop-blur-sm p-4 sm:p-7">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-[1.75rem]"
+                style={{ boxShadow: "inset 0 0 140px 40px rgba(0,0,0,0.55)" }}
+              />
               <svg
                 viewBox="0 0 900 540"
                 className="w-full h-auto"
@@ -398,7 +411,7 @@ const RoofBuildAnimation = () => {
                 <button
                   type="button"
                   onClick={() => (step >= STEPS.length - 1 ? restart() : setPlaying((p) => !p))}
-                  className="w-12 h-12 shrink-0 rounded-xl bg-primary text-primary-foreground flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+                  className="w-12 h-12 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
                   aria-label={playing ? "Pausa animationen" : "Spela animationen"}
                 >
                   {step >= STEPS.length - 1 ? (
@@ -427,11 +440,11 @@ const RoofBuildAnimation = () => {
 
           {/* ------------------------------------------------------- stepper */}
           <div className="lg:col-span-5">
-            <ol className="space-y-2">
+            <ol className="border-t border-primary-foreground/10">
               {STEPS.map((s, i) => {
                 const isCurrent = i === current;
                 return (
-                  <li key={s.id}>
+                  <li key={s.id} className="border-b border-primary-foreground/10">
                     <button
                       type="button"
                       onClick={() => {
@@ -439,21 +452,28 @@ const RoofBuildAnimation = () => {
                         setStep(i);
                       }}
                       aria-current={isCurrent ? "step" : undefined}
-                      className={`w-full text-left rounded-2xl border px-5 py-4 transition-all duration-300 ${
-                        isCurrent
-                          ? "border-primary bg-primary-foreground/[0.08] shadow-elevated"
-                          : "border-primary-foreground/10 hover:border-primary-foreground/25 hover:bg-primary-foreground/[0.04]"
-                      }`}
+                      className="relative w-full text-left px-1 py-5 transition-colors group"
                     >
-                      <div className="flex items-center gap-3">
+                      {isCurrent && (
+                        <motion.span
+                          layoutId="stepIndicator"
+                          className="absolute left-0 top-0 bottom-0 w-px bg-primary"
+                          aria-hidden="true"
+                        />
+                      )}
+                      <div className="flex items-baseline gap-4 pl-4">
                         <span
-                          className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center text-xs font-bold transition-colors ${
-                            step >= i ? "bg-primary text-primary-foreground" : "bg-primary-foreground/10 text-primary-foreground/60"
+                          className={`text-[10px] font-semibold tabular-nums tracking-[0.2em] transition-colors ${
+                            step >= i ? "text-primary" : "text-primary-foreground/35"
                           }`}
                         >
-                          {i + 1}
+                          {String(i + 1).padStart(2, "0")}
                         </span>
-                        <span className={`font-display font-semibold ${isCurrent ? "" : "text-primary-foreground/75"}`}>
+                        <span
+                          className={`font-display text-lg sm:text-xl tracking-[-0.02em] transition-colors ${
+                            isCurrent ? "text-primary-foreground" : "text-primary-foreground/55 group-hover:text-primary-foreground/85"
+                          }`}
+                        >
                           {s.title.replace(/^\d+\.\s*/, "")}
                         </span>
                       </div>
@@ -466,8 +486,8 @@ const RoofBuildAnimation = () => {
                             transition={{ duration: 0.35, ease: "easeOut" }}
                             className="overflow-hidden"
                           >
-                            <p className="pt-3 pl-11 text-sm text-primary-foreground/75 leading-relaxed">{s.body}</p>
-                            <p className="pt-2 pl-11 text-xs text-primary-foreground/50 leading-relaxed">{s.detail}</p>
+                            <p className="pt-3 pl-12 pr-4 text-sm text-primary-foreground/75 leading-relaxed">{s.body}</p>
+                            <p className="pt-2 pl-12 pr-4 text-xs text-primary-foreground/45 leading-relaxed">{s.detail}</p>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -480,14 +500,14 @@ const RoofBuildAnimation = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href="#offert"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-primary-foreground font-bold rounded-xl transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
               >
                 Räkna på ditt takbyte
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="tel:0701543639"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-primary-foreground/20 font-bold rounded-xl hover:bg-primary-foreground/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary-foreground/20 font-semibold rounded-full hover:bg-primary-foreground/10 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 070-154 36 39

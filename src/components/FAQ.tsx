@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SectionHeading from "@/components/SectionHeading";
 
 const faqs = [
   {
@@ -59,39 +60,40 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-background" aria-labelledby="faq-heading">
+    <section id="faq" className="py-24 md:py-36 bg-background" aria-labelledby="faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Vanliga frågor</p>
-          <h2 id="faq-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Frågor om takbyte och takläggare i Roslagen
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Här hittar du svar på de vanligaste frågorna om takbyte, takrenovering och takläggning i Roslagens skärgård.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="lg:col-span-5 lg:sticky lg:top-28">
+            <SectionHeading
+              meta="Vanliga frågor"
+              id="faq-heading"
+              title={<>Frågor om takbyte i <em className="font-normal italic text-primary">Roslagen</em></>}
+              intro="Svar på de vanligaste frågorna om takbyte, takrenovering och takläggning i skärgården."
+            />
+          </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-3">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`faq-${index}`}
-                className="bg-card border border-border rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-left font-semibold text-sm text-card-foreground hover:text-primary">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="lg:col-span-7">
+            <Accordion type="single" collapsible className="border-t border-foreground/10">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`faq-${index}`}
+                  className="border-b border-foreground/10"
+                >
+                  <AccordionTrigger className="text-left font-display text-lg tracking-[-0.02em] text-foreground hover:text-primary py-6">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-7">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>
