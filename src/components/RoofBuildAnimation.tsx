@@ -188,55 +188,64 @@ const RoofBuildAnimation = () => {
     <section
       id="hur-det-gar-till"
       aria-label="Så går ett takbyte till"
-      className="relative overflow-hidden bg-background text-foreground border-y border-border py-24 lg:py-36"
+      className="relative overflow-hidden bg-ink text-ink-foreground py-28 lg:py-44"
     >
-      {/* technical drawing grid — subtle, contractor-like */}
+      {/* hairline drafting grid — technical, entreprenad */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-[0.05]"
+        className="absolute inset-0 opacity-[0.035]"
         style={{
           backgroundImage:
-            "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
+            "linear-gradient(hsl(var(--ink-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--ink-foreground)) 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
         }}
       />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/15 to-transparent"
+      />
 
-      <div ref={sectionRef} className="relative max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-10 items-end mb-14 lg:mb-20 pb-10 border-b border-border">
+      <div ref={sectionRef} className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div className="grid lg:grid-cols-12 gap-10 items-end mb-16 lg:mb-24 pb-10 border-b border-ink-foreground/15">
           <div className="lg:col-span-8">
             <SectionHeading
               meta="Metodik"
               index="02 / 04"
-              tone="light"
-              title={<>Sju lager mellan dig och <em className="font-normal italic text-primary">skärgårdens väder</em></>}
+              tone="dark"
+              title={
+                <>
+                  Sju lager mellan dig och{" "}
+                  <em className="font-normal italic text-ink-foreground/55">skärgårdens väder</em>
+                </>
+              }
               intro="Följ ett komplett takbyte lager för lager — från bar råspont till färdiga plåtbeslag. Samma ordning på varje projekt, varje gång."
             />
           </div>
           <div className="lg:col-span-4 lg:text-right">
-            <div className="font-display text-[clamp(3.5rem,9vw,7rem)] leading-[0.8] tracking-[-0.05em] tabular-nums text-accent">
+            <div className="font-display text-[clamp(4rem,11vw,9rem)] font-medium leading-[0.78] tracking-[-0.06em] tabular-nums text-ink-foreground">
               {String(current + 1).padStart(2, "0")}
-              <span className="text-accent/25">/{String(STEPS.length).padStart(2, "0")}</span>
+              <span className="text-ink-foreground/25">/{String(STEPS.length).padStart(2, "0")}</span>
             </div>
-            <p className="mt-3 text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+            <p className="mt-4 text-[10px] font-bold uppercase tracking-[0.4em] text-ink-foreground/50">
               {STEPS[current].label}
             </p>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* ---------------------------------------------------- animation */}
           <div className="lg:col-span-7">
-            <figure className="relative m-0 rounded-lg overflow-hidden border border-accent/15 bg-accent shadow-[var(--shadow-card)]">
+            <figure className="relative m-0 overflow-hidden rounded-2xl border border-ink-foreground/12 bg-ink-foreground/[0.04]">
               {/* ritningshuvud — entreprenadkänsla */}
-              <figcaption className="flex items-center justify-between gap-4 px-5 sm:px-7 py-4 border-b border-primary-foreground/10 text-primary-foreground">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary-foreground/55">
+              <figcaption className="flex items-center justify-between gap-4 px-5 sm:px-8 py-5 border-b border-ink-foreground/12">
+                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-ink-foreground/50">
                   Takuppbyggnad — sektion A–A
                 </span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.3em] tabular-nums text-primary-foreground/40">
+                <span className="text-[10px] font-bold uppercase tracking-[0.4em] tabular-nums text-ink-foreground/35">
                   RT-01
                 </span>
               </figcaption>
-              <div className="m-4 sm:m-6 rounded-md bg-[#EEF1F7] p-3 sm:p-5 text-accent">
+              <div className="px-3 py-6 sm:px-8 sm:py-10">
               <svg
                 viewBox="0 0 900 540"
                 className="w-full h-auto"
@@ -274,17 +283,17 @@ const RoofBuildAnimation = () => {
                 </defs>
 
                 {/* ground shadow */}
-                <ellipse cx="450" cy="512" rx="330" ry="16" fill="#000" opacity="0.25" />
+                <ellipse cx="450" cy="512" rx="330" ry="16" fill="#000" opacity="0.45" />
 
                 {/* house body */}
                 <g>
-                  <rect x="128" y="320" width="644" height="182" rx="6" fill="#F4F6FA" opacity="0.96" />
-                  <rect x="128" y="320" width="644" height="182" rx="6" fill="none" stroke="#0B1030" strokeOpacity="0.12" />
-                  <rect x="214" y="366" width="86" height="98" rx="4" fill="#1800AD" opacity="0.16" />
-                  <rect x="600" y="366" width="86" height="98" rx="4" fill="#1800AD" opacity="0.16" />
-                  <rect x="410" y="392" width="80" height="110" rx="4" fill="#1800AD" opacity="0.3" />
+                  <rect x="128" y="320" width="644" height="182" rx="6" fill="#FFFFFF" opacity="0.07" />
+                  <rect x="128" y="320" width="644" height="182" rx="6" fill="none" stroke="#FFFFFF" strokeOpacity="0.2" />
+                  <rect x="214" y="366" width="86" height="98" rx="4" fill="#FFFFFF" opacity="0.14" />
+                  <rect x="600" y="366" width="86" height="98" rx="4" fill="#FFFFFF" opacity="0.14" />
+                  <rect x="410" y="392" width="80" height="110" rx="4" fill="#FFFFFF" opacity="0.22" />
                   {/* rafters visible before boarding */}
-                  <polygon points={roofPoly(0)} fill="#0B1030" opacity="0.35" />
+                  <polygon points={roofPoly(0)} fill="#FFFFFF" opacity="0.06" />
                   {plankRows.map((t) => {
                     const r = rowAt(t, 0);
                     return (
@@ -294,8 +303,8 @@ const RoofBuildAnimation = () => {
                         y1={r.y}
                         x2={r.x2}
                         y2={r.y}
-                        stroke="#0B1030"
-                        strokeOpacity="0.35"
+                        stroke="#FFFFFF"
+                        strokeOpacity="0.22"
                         strokeWidth="2"
                       />
                     );
@@ -429,23 +438,23 @@ const RoofBuildAnimation = () => {
               </div>
 
               {/* tydliga, stora kontroller — enkla att använda */}
-              <div className="border-t border-primary-foreground/10 px-5 sm:px-7 py-6 text-primary-foreground">
-                <div className="h-1 bg-primary-foreground/15 overflow-hidden rounded-full">
+              <div className="border-t border-ink-foreground/12 px-5 sm:px-8 py-7">
+                <div className="h-px bg-ink-foreground/15 overflow-hidden">
                   <motion.div
-                    className="h-full bg-primary"
+                    className="h-full bg-ink-foreground"
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                   />
                 </div>
-                <p className="mt-4 text-base font-medium text-primary-foreground/85">
-                  Steg {current + 1} av {STEPS.length}: {STEPS[current].label}
+                <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.4em] text-ink-foreground/50">
+                  Steg {String(current + 1).padStart(2, "0")} — {STEPS[current].label}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-3">
+                <div className="mt-5 flex flex-wrap gap-3">
                   <button
                     type="button"
                     onClick={() => goto(current - 1)}
                     disabled={current === 0}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-primary-foreground/25 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors disabled:opacity-35 disabled:pointer-events-none"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-ink-foreground/20 text-sm font-medium transition-colors hover:bg-ink-foreground hover:text-ink disabled:opacity-30 disabled:pointer-events-none"
                   >
                     <ArrowLeft className="w-4 h-4" aria-hidden="true" />
                     Föregående
@@ -454,7 +463,7 @@ const RoofBuildAnimation = () => {
                     type="button"
                     onClick={() => goto(current + 1)}
                     disabled={current >= STEPS.length - 1}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors disabled:opacity-35 disabled:pointer-events-none"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-ink-foreground text-ink text-sm font-medium transition-opacity hover:opacity-85 disabled:opacity-30 disabled:pointer-events-none"
                   >
                     Nästa steg
                     <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -462,7 +471,7 @@ const RoofBuildAnimation = () => {
                   <button
                     type="button"
                     onClick={() => (step >= STEPS.length - 1 ? restart() : setPlaying((p) => !p))}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-primary-foreground/25 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors"
+                    className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-ink-foreground/20 text-sm font-medium transition-colors hover:bg-ink-foreground hover:text-ink"
                   >
                     {step >= STEPS.length - 1 ? (
                       <>
@@ -488,11 +497,16 @@ const RoofBuildAnimation = () => {
 
           {/* ------------------------------------------------------- stepper */}
           <div className="lg:col-span-5">
-            <ol className="border-t border-border">
+            <ol className="border-t border-ink-foreground/15">
               {STEPS.map((s, i) => {
                 const isCurrent = i === current;
                 return (
-                  <li key={s.id} className={`border-b border-border ${isCurrent ? "bg-secondary/50" : ""}`}>
+                  <li
+                    key={s.id}
+                    className={`border-b border-ink-foreground/15 transition-colors ${
+                      isCurrent ? "bg-ink-foreground/[0.06]" : "hover:bg-ink-foreground/[0.03]"
+                    }`}
+                  >
                     <button
                       type="button"
                       onClick={() => {
@@ -500,26 +514,28 @@ const RoofBuildAnimation = () => {
                         setStep(i);
                       }}
                       aria-current={isCurrent ? "step" : undefined}
-                      className="relative w-full text-left px-1 py-5 transition-colors group"
+                      className="relative w-full text-left px-1 py-6 transition-colors group"
                     >
                       {isCurrent && (
                         <motion.span
                           layoutId="stepIndicator"
-                          className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary"
+                          className="absolute left-0 top-0 bottom-0 w-[2px] bg-ink-foreground"
                           aria-hidden="true"
                         />
                       )}
-                      <div className="flex items-baseline gap-4 pl-4">
+                      <div className="flex items-baseline gap-5 pl-5">
                         <span
-                          className={`text-xs font-semibold tabular-nums tracking-[0.2em] transition-colors ${
-                            step >= i ? "text-primary" : "text-muted-foreground/60"
+                          className={`text-[10px] font-bold tabular-nums tracking-[0.3em] transition-colors ${
+                            step >= i ? "text-ink-foreground/70" : "text-ink-foreground/30"
                           }`}
                         >
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span
-                          className={`font-display text-lg sm:text-xl tracking-[-0.02em] transition-colors ${
-                            isCurrent ? "text-accent" : "text-foreground/70 group-hover:text-accent"
+                          className={`font-display text-xl sm:text-2xl font-medium tracking-[-0.03em] transition-colors ${
+                            isCurrent
+                              ? "text-ink-foreground"
+                              : "text-ink-foreground/55 group-hover:text-ink-foreground"
                           }`}
                         >
                           {s.title.replace(/^\d+\.\s*/, "")}
@@ -534,8 +550,12 @@ const RoofBuildAnimation = () => {
                             transition={{ duration: 0.35, ease: "easeOut" }}
                             className="overflow-hidden"
                           >
-                            <p className="pt-3 pl-12 pr-4 text-base text-foreground/80 leading-relaxed">{s.body}</p>
-                            <p className="pt-2 pl-12 pr-4 text-sm text-muted-foreground leading-relaxed">{s.detail}</p>
+                            <p className="pt-4 pl-14 pr-4 text-base sm:text-lg font-light leading-relaxed text-ink-foreground/70">
+                              {s.body}
+                            </p>
+                            <p className="pt-3 pl-14 pr-4 text-sm leading-relaxed text-ink-foreground/45">
+                              {s.detail}
+                            </p>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -545,17 +565,17 @@ const RoofBuildAnimation = () => {
               })}
             </ol>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <a
                 href="#offert"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-md transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
+                className="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-primary text-primary-foreground font-medium transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse"
               >
                 Räkna på ditt takbyte
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="tel:0701543639"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-accent/25 text-accent font-semibold rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full border border-ink-foreground/20 text-ink-foreground font-medium transition-colors hover:bg-ink-foreground hover:text-ink"
               >
                 <Phone className="w-4 h-4" />
                 070-154 36 39
