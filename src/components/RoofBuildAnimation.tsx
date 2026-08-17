@@ -210,7 +210,12 @@ const RoofBuildAnimation = () => {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* ---------------------------------------------------- animation */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-3xl border border-primary-foreground/10 bg-primary-foreground/[0.04] backdrop-blur-sm p-4 sm:p-6 shadow-elevated">
+            <div className="relative rounded-[1.75rem] border border-primary-foreground/10 bg-gradient-to-b from-primary-foreground/[0.07] to-transparent backdrop-blur-sm p-4 sm:p-7">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-[1.75rem]"
+                style={{ boxShadow: "inset 0 0 140px 40px rgba(0,0,0,0.55)" }}
+              />
               <svg
                 viewBox="0 0 900 540"
                 className="w-full h-auto"
