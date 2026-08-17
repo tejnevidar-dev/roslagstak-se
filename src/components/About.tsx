@@ -99,12 +99,12 @@ const About = () => {
                 className="w-full h-[112%] object-cover"
                 style={reduce ? undefined : { y: imgY }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-accent/50 via-transparent to-transparent" aria-hidden="true" />
-              <div className="absolute left-5 bottom-5 right-5 flex items-end justify-between gap-4">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-primary-foreground/80">
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent" aria-hidden="true" />
+              <div className="absolute left-6 bottom-6 right-6">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/70">
                   Blidö · Roslagens skärgård
                 </p>
-                <p className="font-display text-primary-foreground text-lg tracking-[-0.02em]">Hantverk på plats</p>
+                <p className="font-display text-white text-xl tracking-[-0.02em] mt-1.5">Hantverk på plats</p>
               </div>
             </div>
           </div>
