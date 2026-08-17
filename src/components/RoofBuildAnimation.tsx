@@ -287,11 +287,11 @@ const RoofBuildAnimation = () => {
 
                 {/* house body */}
                 <g>
-                  <rect x="128" y="320" width="644" height="182" rx="6" fill="#F4F6FA" opacity="0.96" />
-                  <rect x="128" y="320" width="644" height="182" rx="6" fill="none" stroke="#0B1030" strokeOpacity="0.12" />
-                  <rect x="214" y="366" width="86" height="98" rx="4" fill="#1800AD" opacity="0.16" />
-                  <rect x="600" y="366" width="86" height="98" rx="4" fill="#1800AD" opacity="0.16" />
-                  <rect x="410" y="392" width="80" height="110" rx="4" fill="#1800AD" opacity="0.3" />
+                  <rect x="128" y="320" width="644" height="182" rx="6" fill="#FFFFFF" opacity="0.07" />
+                  <rect x="128" y="320" width="644" height="182" rx="6" fill="none" stroke="#FFFFFF" strokeOpacity="0.2" />
+                  <rect x="214" y="366" width="86" height="98" rx="4" fill="#FFFFFF" opacity="0.14" />
+                  <rect x="600" y="366" width="86" height="98" rx="4" fill="#FFFFFF" opacity="0.14" />
+                  <rect x="410" y="392" width="80" height="110" rx="4" fill="#FFFFFF" opacity="0.22" />
                   {/* rafters visible before boarding */}
                   <polygon points={roofPoly(0)} fill="#FFFFFF" opacity="0.06" />
                   {plankRows.map((t) => {
