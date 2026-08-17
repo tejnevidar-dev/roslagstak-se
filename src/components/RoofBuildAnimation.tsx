@@ -86,6 +86,8 @@ const STEPS: Step[] = [
   },
 ];
 
+const AUTOPLAY_MS = 2400;
+
 const RoofBuildAnimation = () => {
   const reduce = Boolean(useReducedMotion());
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -120,7 +122,7 @@ const RoofBuildAnimation = () => {
         }
         return current + 1;
       });
-    }, 3200);
+    }, AUTOPLAY_MS);
     return () => window.clearTimeout(timeout);
   }, [playing, step]);
 
@@ -168,23 +170,25 @@ const RoofBuildAnimation = () => {
               </figcaption>
 
               <div className="relative aspect-[3/2] overflow-hidden bg-ink">
-                <AnimatePresence mode="wait" initial={false}>
+                {STEPS.map((item, index) => (
                   <motion.img
-                    key={current.id}
-                    src={current.image}
-                    alt={current.alt}
+                    key={item.id}
+                    src={item.image}
+                    alt={item.alt}
                     width={1536}
                     height={1024}
-                    loading="lazy"
-                    initial={reduce ? { opacity: 1 } : { opacity: 0, scale: 1.06, filter: "blur(10px)" }}
-                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                    exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.985, filter: "blur(5px)" }}
-                    transition={{ duration: reduce ? 0.15 : 0.9, ease: [0.16, 1, 0.3, 1] }}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    aria-hidden={index === step ? undefined : true}
+                    initial={false}
+                    animate={{ opacity: index <= step ? 1 : 0 }}
+                    transition={{ duration: reduce ? 0.12 : 1.1, ease: [0.16, 1, 0.3, 1] }}
                     className="absolute inset-0 h-full w-full object-cover"
+                    style={{ zIndex: index }}
                   />
-                </AnimatePresence>
+                ))}
+                <div aria-hidden="true" className="absolute inset-0 z-10" />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-ink/15" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 p-6 sm:p-9">
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 p-6 sm:p-9">
                   <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-ink-foreground/55">Steg {String(step + 1).padStart(2, "0")}</p>
                   <AnimatePresence mode="wait" initial={false}>
                     <motion.h3
