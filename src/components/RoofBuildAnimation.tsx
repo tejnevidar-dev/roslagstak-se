@@ -181,6 +181,14 @@ const RoofBuildAnimation = () => {
               </figcaption>
 
               <div className="relative aspect-[3/2] overflow-hidden bg-ink">
+                <img
+                  src={roofPoster}
+                  alt="Förhandsvisning: så går ett takbyte till, steg för steg"
+                  width={1920}
+                  height={1280}
+                  fetchPriority="high"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
                 {STEPS.map((item, index) => (
                   <motion.img
                     key={item.id}
@@ -194,7 +202,7 @@ const RoofBuildAnimation = () => {
                     animate={{ opacity: index <= step ? 1 : 0 }}
                     transition={{ duration: reduce ? 0.12 : 1.1, ease: [0.16, 1, 0.3, 1] }}
                     className="absolute inset-0 h-full w-full object-cover"
-                    style={{ zIndex: index }}
+                    style={{ zIndex: index + 1 }}
                   />
                 ))}
                 <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-ink/85 via-transparent to-ink/15" />
@@ -267,7 +275,7 @@ const RoofBuildAnimation = () => {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: "Så går ett takbyte till – steg för steg", description: "RoslagsTaks arbetsgång vid takbyte: råspont, underlagspapp, hängrännor, vindskivor, läkt, takpannor och plåtbeslag.", step: STEPS.map((item, index) => ({ "@type": "HowToStep", position: index + 1, name: item.title, text: `${item.body} ${item.detail}` })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: "Så går ett takbyte till – steg för steg", description: "RoslagsTaks arbetsgång vid takbyte: råspont, underlagspapp, hängrännor, vindskivor, läkt, takpannor och plåtbeslag.", image: "https://roslagstak.se/takbyte-animation-thumbnail.jpg", thumbnailUrl: "https://roslagstak.se/takbyte-animation-preview.jpg", step: STEPS.map((item, index) => ({ "@type": "HowToStep", position: index + 1, name: item.title, text: `${item.body} ${item.detail}` })) }) }} />
     </section>
   );
 };
