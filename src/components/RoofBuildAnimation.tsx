@@ -186,8 +186,7 @@ const RoofBuildAnimation = () => {
                     style={{ zIndex: index }}
                   />
                 ))}
-                <div aria-hidden="true" className="absolute inset-0 z-10" />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-ink/15" />
+                <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-ink/85 via-transparent to-ink/15" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 p-6 sm:p-9">
                   <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-ink-foreground/55">Steg {String(step + 1).padStart(2, "0")}</p>
                   <AnimatePresence mode="wait" initial={false}>
