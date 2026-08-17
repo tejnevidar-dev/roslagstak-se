@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
-import splashBg from "@/assets/splash-bg.jpg";
+import { useState, useEffect, useRef } from "react";
 import logoWhite from "@/assets/roslagstak-logo-white.png";
 
-const HOLD_BEFORE_FADE = 1800;
-const FADE_DURATION = 1000;
+const COUNT_DURATION = 1600;
+const FADE_DURATION = 900;
 const COOLDOWN_MS = 10 * 60 * 1000; // 10 minutes
 
 function shouldShowSplash(): boolean {
@@ -16,51 +15,61 @@ function markSplashShown() {
   localStorage.setItem("roslagstak_splash_ts", String(Date.now()));
 }
 
+/** Cinematic black preloader with a counting percentage and a thin progress rule. */
 const SplashScreen = ({ onDone }: { onDone: () => void }) => {
+  const [pct, setPct] = useState(0);
   const [fadingOut, setFadingOut] = useState(false);
-  const [revealed, setRevealed] = useState(false);
+  const doneRef = useRef(false);
 
   useEffect(() => {
-    const reveal = setTimeout(() => setRevealed(true), 60);
-    const holdTimeout = setTimeout(() => {
-      setFadingOut(true);
-      markSplashShown();
-      setTimeout(onDone, FADE_DURATION);
-    }, HOLD_BEFORE_FADE);
-    return () => {
-      clearTimeout(reveal);
-      clearTimeout(holdTimeout);
+    const start = performance.now();
+    let frame = 0;
+
+    const tick = (now: number) => {
+      const t = Math.min((now - start) / COUNT_DURATION, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setPct(Math.round(eased * 100));
+      if (t < 1) {
+        frame = requestAnimationFrame(tick);
+      } else if (!doneRef.current) {
+        doneRef.current = true;
+        setFadingOut(true);
+        markSplashShown();
+        setTimeout(onDone, FADE_DURATION);
+      }
     };
+
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
   }, [onDone]);
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center"
-      style={{
-        opacity: fadingOut ? 0 : 1,
-        transition: `opacity ${FADE_DURATION}ms ease-in-out`,
-      }}
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black px-8"
+      style={{ opacity: fadingOut ? 0 : 1, transition: `opacity ${FADE_DURATION}ms ease-in-out` }}
+      aria-hidden="true"
     >
       <img
-        src={splashBg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-        fetchPriority="high"
-      />
-      <div className="absolute inset-0 bg-black/40" />
-
-      <img
         src={logoWhite}
-        alt="RoslagsTak logotyp"
+        alt=""
         width={1437}
         height={535}
         fetchPriority="high"
-        className="relative z-10 w-[78%] max-w-2xl select-none transition-all duration-700 ease-out"
-        style={{
-          opacity: revealed ? 1 : 0,
-          transform: revealed ? "scale(1)" : "scale(0.94)",
-        }}
+        className="w-[62%] max-w-md select-none mb-16 transition-opacity duration-700"
+        style={{ opacity: 0.95 }}
       />
+
+      <div className="font-display text-6xl md:text-8xl font-light tracking-tighter text-primary-foreground tabular-nums">
+        {pct}
+        <span className="text-2xl md:text-4xl align-top">%</span>
+      </div>
+
+      <div className="mt-6 w-56 md:w-72 h-px bg-primary-foreground/20 overflow-hidden">
+        <div
+          className="h-full bg-primary-foreground transition-[width] duration-100 ease-linear"
+          style={{ width: `${pct}%` }}
+        />
+      </div>
     </div>
   );
 };
