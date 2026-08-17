@@ -440,11 +440,11 @@ const RoofBuildAnimation = () => {
 
           {/* ------------------------------------------------------- stepper */}
           <div className="lg:col-span-5">
-            <ol className="space-y-2">
+            <ol className="border-t border-primary-foreground/10">
               {STEPS.map((s, i) => {
                 const isCurrent = i === current;
                 return (
-                  <li key={s.id}>
+                  <li key={s.id} className="border-b border-primary-foreground/10">
                     <button
                       type="button"
                       onClick={() => {
@@ -452,21 +452,28 @@ const RoofBuildAnimation = () => {
                         setStep(i);
                       }}
                       aria-current={isCurrent ? "step" : undefined}
-                      className={`w-full text-left rounded-2xl border px-5 py-4 transition-all duration-300 ${
-                        isCurrent
-                          ? "border-primary bg-primary-foreground/[0.08] shadow-elevated"
-                          : "border-primary-foreground/10 hover:border-primary-foreground/25 hover:bg-primary-foreground/[0.04]"
-                      }`}
+                      className="relative w-full text-left px-1 py-5 transition-colors group"
                     >
-                      <div className="flex items-center gap-3">
+                      {isCurrent && (
+                        <motion.span
+                          layoutId="stepIndicator"
+                          className="absolute left-0 top-0 bottom-0 w-px bg-primary"
+                          aria-hidden="true"
+                        />
+                      )}
+                      <div className="flex items-baseline gap-4 pl-4">
                         <span
-                          className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center text-xs font-bold transition-colors ${
-                            step >= i ? "bg-primary text-primary-foreground" : "bg-primary-foreground/10 text-primary-foreground/60"
+                          className={`text-[10px] font-semibold tabular-nums tracking-[0.2em] transition-colors ${
+                            step >= i ? "text-primary" : "text-primary-foreground/35"
                           }`}
                         >
-                          {i + 1}
+                          {String(i + 1).padStart(2, "0")}
                         </span>
-                        <span className={`font-display font-semibold ${isCurrent ? "" : "text-primary-foreground/75"}`}>
+                        <span
+                          className={`font-display text-lg sm:text-xl tracking-[-0.02em] transition-colors ${
+                            isCurrent ? "text-primary-foreground" : "text-primary-foreground/55 group-hover:text-primary-foreground/85"
+                          }`}
+                        >
                           {s.title.replace(/^\d+\.\s*/, "")}
                         </span>
                       </div>
@@ -479,8 +486,8 @@ const RoofBuildAnimation = () => {
                             transition={{ duration: 0.35, ease: "easeOut" }}
                             className="overflow-hidden"
                           >
-                            <p className="pt-3 pl-11 text-sm text-primary-foreground/75 leading-relaxed">{s.body}</p>
-                            <p className="pt-2 pl-11 text-xs text-primary-foreground/50 leading-relaxed">{s.detail}</p>
+                            <p className="pt-3 pl-12 pr-4 text-sm text-primary-foreground/75 leading-relaxed">{s.body}</p>
+                            <p className="pt-2 pl-12 pr-4 text-xs text-primary-foreground/45 leading-relaxed">{s.detail}</p>
                           </motion.div>
                         )}
                       </AnimatePresence>
