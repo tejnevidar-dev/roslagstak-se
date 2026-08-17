@@ -40,8 +40,9 @@ const Hero = () => {
           decoding="async"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/70 via-accent/20 to-accent/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-accent/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-accent/15 mix-blend-multiply" />
       </motion.div>
 
       <motion.div
