@@ -6,50 +6,53 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 248 100% 24%;
+    --background: 220 20% 99%;
+    --foreground: 212 69% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 248 100% 24%;
+    --card-foreground: 212 69% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 248 45% 12%;
+    --popover-foreground: 212 69% 15%;
 
-    --primary: 229 100% 56%;
+    --primary: 212 69% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 30% 95%;
-    --secondary-foreground: 248 100% 24%;
+    --secondary: 205 28% 95%;
+    --secondary-foreground: 212 69% 15%;
 
-    --muted: 220 30% 95%;
-    --muted-foreground: 248 22% 38%;
+    --muted: 205 28% 95%;
+    --muted-foreground: 211 22% 40%;
 
-    --accent: 248 100% 34%;
+    --accent: 203 61% 27%;
     --accent-foreground: 0 0% 100%;
 
-    --ink: 240 45% 5%;
+    --seafoam: 190 55% 40%;
+    --seafoam-light: 177 40% 55%;
+
+    --ink: 212 69% 11%;
     --ink-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 22% 87%;
-    --input: 220 22% 87%;
-    --ring: 229 100% 56%;
+    --border: 208 24% 87%;
+    --input: 208 24% 87%;
+    --ring: 190 55% 40%;
 
     --radius: 0.25rem;
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'Archivo Black', sans-serif;
+    --font-body: 'Hind', sans-serif;
 
-    --hero-overlay: linear-gradient(135deg, hsla(248, 100%, 12%, 0.9), hsla(229, 90%, 26%, 0.72));
-    --section-warm: 220 30% 96%;
-    --trust-glow: 202 100% 80%;
+    --hero-overlay: linear-gradient(135deg, hsla(212, 69%, 12%, 0.9), hsla(203, 61%, 24%, 0.72));
+    --section-warm: 205 28% 96%;
+    --trust-glow: 177 40% 55%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(248 100% 34%), hsl(229 100% 56%));
-    --gradient-accent: linear-gradient(135deg, hsl(248 100% 26%), hsl(248 100% 36%));
-    --shadow-card: 0 1px 2px hsl(248 100% 34% / 0.04), 0 8px 24px -16px hsl(248 100% 34% / 0.10);
-    --shadow-elevated: 0 1px 2px hsl(248 100% 34% / 0.06), 0 24px 60px -28px hsl(248 100% 34% / 0.16);
+    --gradient-primary: linear-gradient(135deg, hsl(212 69% 15%), hsl(203 61% 27%));
+    --gradient-accent: linear-gradient(135deg, hsl(212 69% 13%), hsl(190 55% 30%));
+    --shadow-card: 0 1px 2px hsl(212 69% 15% / 0.05), 0 8px 24px -16px hsl(212 69% 15% / 0.12);
+    --shadow-elevated: 0 1px 2px hsl(212 69% 15% / 0.07), 0 24px 60px -28px hsl(212 69% 15% / 0.2);
   }
 }
 
@@ -67,8 +70,8 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
   ::selection {
@@ -109,7 +112,15 @@
   }
 
   .rule-label {
-    @apply text-[11px] font-bold uppercase tracking-[0.28em] text-primary;
+    @apply inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam;
+  }
+
+  .rule-label::before {
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 1px;
+    background: hsl(var(--seafoam-light));
   }
 }
 
