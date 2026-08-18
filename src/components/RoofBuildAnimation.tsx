@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Pause, Phone, Play, RotateCcw } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import RoofBuildVideo from "@/components/RoofBuildVideo";
 import roofRaspont from "@/assets/roof-build-01-raspont.jpg";
 import roofPapp from "@/assets/roof-build-02-papp.jpg";
 import roofRannor from "@/assets/roof-build-03-rannor.jpg";
@@ -186,7 +187,8 @@ const RoofBuildAnimation = () => {
                   alt="Förhandsvisning: så går ett takbyte till, steg för steg"
                   width={1920}
                   height={1280}
-                  fetchPriority="high"
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 {STEPS.map((item, index) => (
@@ -239,6 +241,7 @@ const RoofBuildAnimation = () => {
                 </div>
               </div>
             </figure>
+            <RoofBuildVideo />
           </div>
 
           <div className="lg:col-span-4">
