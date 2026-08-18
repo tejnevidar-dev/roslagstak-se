@@ -35,7 +35,7 @@ const SectionHeading = ({
       >
         <span
           className={`text-[10px] font-semibold uppercase tracking-[0.28em] ${
-            dark ? "text-primary-foreground/55" : "text-muted-foreground"
+            dark ? "text-primary-foreground/55" : "text-primary"
           }`}
         >
           {meta}

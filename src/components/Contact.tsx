@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="py-20 md:py-28 bg-background" aria-labelledby="contact-heading">
+    <section id="kontakt" className="bg-background py-20 md:py-28" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12">
           <div>

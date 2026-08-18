@@ -57,7 +57,7 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="border-b border-border bg-warm py-20 md:py-28" aria-labelledby="services-heading">
+    <section id="tjanster" className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-12">
           <div className="lg:col-span-8">

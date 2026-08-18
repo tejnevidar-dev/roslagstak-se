@@ -20,7 +20,7 @@ const GuidesTeaser = () => {
   };
 
   return (
-    <section id="guider" className="py-24 md:py-36 bg-warm" aria-labelledby="guides-heading">
+    <section id="guider" className="border-b border-border bg-warm py-20 md:py-28" aria-labelledby="guides-heading">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
