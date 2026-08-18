@@ -61,7 +61,7 @@ const SectionHeading = ({
 
       <motion.h2
         id={id}
-        className={`font-display font-semibold tracking-[-0.03em] leading-[0.98] text-balance text-[clamp(2rem,5vw,3.75rem)] ${
+        className={`font-display font-semibold tracking-[-0.03em] leading-[1.06] text-balance text-[clamp(2rem,3.6vw,3rem)] ${
           dark ? "text-primary-foreground" : "text-foreground"
         }`}
         initial={reduce ? undefined : { opacity: 0, y: 24 }}
