@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Pause, Phone, Play, RotateCcw } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import RoofBuildVideo from "@/components/RoofBuildVideo";
 import roofRaspont from "@/assets/roof-build-01-raspont.jpg";
 import roofPapp from "@/assets/roof-build-02-papp.jpg";
 import roofRannor from "@/assets/roof-build-03-rannor.jpg";
