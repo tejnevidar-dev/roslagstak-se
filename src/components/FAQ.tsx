@@ -60,7 +60,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-24 md:py-36 bg-background" aria-labelledby="faq-heading">
+    <section id="faq" className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -71,23 +71,23 @@ const FAQ = () => {
             <SectionHeading
               meta="Vanliga frågor"
               id="faq-heading"
-              title={<>Frågor om takbyte i <em className="font-normal italic text-primary">Roslagen</em></>}
+              title="Frågor om takbyte i Roslagen"
               intro="Svar på de vanligaste frågorna om takbyte, takrenovering och takläggning i skärgården."
             />
           </div>
 
           <div className="lg:col-span-7">
-            <Accordion type="single" collapsible className="border-t border-foreground/10">
+            <Accordion type="single" collapsible className="border-t border-border">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`faq-${index}`}
-                  className="border-b border-foreground/10"
+                  className="border-b border-border"
                 >
-                  <AccordionTrigger className="text-left font-display text-lg tracking-[-0.02em] text-foreground hover:text-primary py-6">
+                  <AccordionTrigger className="py-6 text-left font-display text-lg font-semibold tracking-[-0.02em] text-foreground hover:text-primary">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-7">
+                  <AccordionContent className="pb-7 text-[15px] leading-relaxed text-muted-foreground">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

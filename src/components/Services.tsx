@@ -57,15 +57,15 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="py-24 md:py-36 bg-background" aria-labelledby="services-heading">
+    <section id="tjanster" className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-14 lg:mb-20">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-12">
           <div className="lg:col-span-8">
             <SectionHeading
               meta="Tjänster"
               index="01 / 04"
               id="services-heading"
-              title={<>Allt inom tak — <em className="font-normal italic text-primary">från kust till skärgård</em></>}
+              title="Allt inom tak — från kust till skärgård"
               intro="Helhetslösningar för varje takprojekt längs Roslagens kustlinje och öar. Samma metodik, oavsett om huset står vid vägen eller bakom en båttur."
             />
           </div>
@@ -75,19 +75,19 @@ const Services = () => {
               className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group"
             >
               Räkna på ditt projekt
-              <span className="w-9 h-9 rounded-full border border-foreground/20 flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-primary-foreground group-hover:border-accent">
+              <span className="w-9 h-9 border border-border flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-primary-foreground group-hover:border-accent">
                 <ArrowRight className="w-4 h-4" />
               </span>
             </a>
           </div>
         </div>
 
-        <div className="border-t border-foreground/10">
+        <div className="border-t border-border">
           {services.map((service, i) => (
             <Reveal key={service.title} delay={Math.min(i, 6) * 0.05}>
               <Link
                 to={`/tjanster/${service.slug}`}
-                className="group relative grid md:grid-cols-12 gap-4 md:gap-8 items-baseline py-7 md:py-9 border-b border-foreground/10 transition-colors"
+                className="group relative grid md:grid-cols-12 gap-4 md:gap-8 items-baseline py-7 md:py-8 border-b border-border transition-colors"
               >
                 <span
                   aria-hidden="true"
@@ -99,14 +99,14 @@ const Services = () => {
                   </span>
                 </div>
                 <div className="md:col-span-4 flex items-center gap-4 md:pl-2">
-                  <span className="w-10 h-10 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center transition-colors group-hover:bg-primary-foreground/15">
+                  <span className="w-10 h-10 shrink-0 border border-border bg-background flex items-center justify-center transition-colors group-hover:border-primary-foreground/25 group-hover:bg-primary-foreground/10">
                     <service.icon className="w-5 h-5 text-primary transition-colors group-hover:text-primary-foreground" />
                   </span>
-                  <h3 className="font-display text-2xl md:text-[1.75rem] tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary-foreground">
+                  <h3 className="font-display text-xl md:text-2xl font-semibold tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary-foreground">
                     {service.title}
                   </h3>
                 </div>
-                <p className="md:col-span-6 text-sm leading-relaxed text-muted-foreground transition-colors group-hover:text-primary-foreground/75 md:pr-6">
+                <p className="md:col-span-6 text-[15px] leading-relaxed text-muted-foreground transition-colors group-hover:text-primary-foreground/75 md:pr-6">
                   {service.description}
                 </p>
                 <span className="md:col-span-1 md:justify-self-end inline-flex items-center text-primary transition-all group-hover:text-primary-foreground group-hover:translate-x-1">
@@ -117,13 +117,13 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] font-bold uppercase tracking-[0.24em] text-muted-foreground">
           <span>AMA-standard</span>
-          <span className="w-8 h-px bg-foreground/15" aria-hidden="true" />
+          <span className="w-8 h-px bg-border" aria-hidden="true" />
           <span>10 års garanti</span>
-          <span className="w-8 h-px bg-foreground/15" aria-hidden="true" />
+          <span className="w-8 h-px bg-border" aria-hidden="true" />
           <span>ROT-avdrag</span>
-          <span className="w-8 h-px bg-foreground/15" aria-hidden="true" />
+          <span className="w-8 h-px bg-border" aria-hidden="true" />
           <span>Fast pris</span>
         </div>
       </div>

@@ -46,29 +46,27 @@ const allLocations = areas.flatMap((a) => a.locations);
 
 const ServiceArea = () => {
   return (
-    <section id="omraden" className="py-20 md:py-28 bg-warm" aria-labelledby="area-heading">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
-            Vårt verksamhetsområde
-          </p>
-          <h2 id="area-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
+    <section id="omraden" className="border-b border-border bg-warm py-20 md:py-28" aria-labelledby="area-heading">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-12 max-w-3xl">
+          <p className="rule-label mb-4">Verksamhetsområde</p>
+          <h2 id="area-heading" className="mb-5 font-display text-[clamp(2rem,3.4vw,2.75rem)] font-semibold leading-[1.06] tracking-[-0.03em] text-foreground text-balance">
             Takläggare i hela Roslagen — från kust till ytterskärgård
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-lg leading-relaxed text-muted-foreground">
             Vi utför takbyte, takrenovering och takomläggning på {allLocations.length}+ platser i Roslagens skärgård och längs kusten. 
             Oavsett om du bor på en ö utan bro eller i en kuststad — vi tar oss dit och levererar tak av högsta kvalitet.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="mb-14 grid border-t border-border md:grid-cols-2 lg:grid-cols-3">
           {areas.map((area) => (
-            <div key={area.region} className="bg-card border border-border rounded-lg p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Anchor className="w-5 h-5 text-primary" />
-                <h3 className="font-display text-lg text-card-foreground">{area.region}</h3>
+            <div key={area.region} className="border-b border-r border-border bg-card p-7">
+              <div className="mb-4 flex items-center gap-2">
+                <Anchor className="h-4 w-4 text-primary" aria-hidden="true" />
+                <h3 className="font-display text-lg font-semibold text-card-foreground">{area.region}</h3>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-5">{area.description}</p>
+              <p className="mb-5 text-[15px] leading-relaxed text-muted-foreground">{area.description}</p>
               <div className="flex flex-wrap gap-2">
                 {area.locations.map((loc) => {
                   const slug = locationSlugMap[loc];
@@ -76,17 +74,17 @@ const ServiceArea = () => {
                     <Link
                       key={loc}
                       to={`/taklaggare-${slug}`}
-                      className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full hover:bg-primary/20 transition-colors"
+                      className="inline-flex items-center gap-1 border border-border bg-background px-2.5 py-1.5 text-[13px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
                     >
-                      <MapPin className="w-3 h-3" />
+                      <MapPin className="h-3 w-3 text-primary" aria-hidden="true" />
                       {loc}
                     </Link>
                   ) : (
                     <span
                       key={loc}
-                      className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full"
+                      className="inline-flex items-center gap-1 border border-border bg-background px-2.5 py-1.5 text-[13px] font-medium text-muted-foreground"
                     >
-                      <MapPin className="w-3 h-3" />
+                      <MapPin className="h-3 w-3" aria-hidden="true" />
                       {loc}
                     </span>
                   );
@@ -97,12 +95,12 @@ const ServiceArea = () => {
         </div>
 
         {/* SEO-rich text block with natural keyword integration */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-card border border-border rounded-lg p-8 md:p-10">
-            <h3 className="font-display text-xl text-card-foreground mb-4">
+        <div className="max-w-4xl">
+          <div className="border-l-2 border-primary bg-card py-2 pl-8">
+            <h3 className="mb-4 font-display text-xl font-semibold text-card-foreground">
               Din lokala takläggare i Roslagen
             </h3>
-            <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+            <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
               <p>
                 Behöver du en <strong>takläggare i Roslagen</strong>? RoslagsTak utför alla typer av takarbeten — från 
                 <strong> takbyte på Blidö</strong> och <strong>takrenovering på Ljusterö</strong> till 
