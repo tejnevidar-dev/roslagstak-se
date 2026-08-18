@@ -34,8 +34,8 @@ const SectionHeading = ({
         className={`flex items-center gap-4 mb-6 ${align === "center" ? "justify-center" : ""}`}
       >
         <span
-          className={`text-[11px] font-bold uppercase tracking-[0.28em] ${
-            dark ? "text-seafoam-light" : "text-seafoam"
+          className={`text-[10px] font-semibold uppercase tracking-[0.28em] ${
+            dark ? "text-primary-foreground/55" : "text-primary"
           }`}
         >
           {meta}
@@ -61,7 +61,7 @@ const SectionHeading = ({
 
       <motion.h2
         id={id}
-        className={`font-display uppercase tracking-tight leading-[0.98] text-balance text-[clamp(2rem,3.8vw,3.25rem)] ${
+        className={`font-display font-semibold tracking-[-0.03em] leading-[1.06] text-balance text-[clamp(2rem,3.6vw,3rem)] ${
           dark ? "text-primary-foreground" : "text-foreground"
         }`}
         initial={reduce ? undefined : { opacity: 0, y: 24 }}
