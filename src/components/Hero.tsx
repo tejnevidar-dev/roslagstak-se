@@ -27,13 +27,13 @@ const Hero = () => {
     <section className="relative border-b border-border bg-background" aria-label="Huvudsektion">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-grid-fine opacity-60" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-12 lg:gap-16 lg:py-24">
-        <div className="lg:col-span-6 xl:col-span-5">
+        <div className="lg:col-span-6">
           <motion.p className="rule-label" {...fade(0)}>
             Takläggare i Roslagen sedan generationer
           </motion.p>
 
           <motion.h1
-            className="mt-6 font-display text-[clamp(2.5rem,5.2vw,4.25rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-foreground text-balance"
+            className="mt-6 font-display text-[clamp(2.25rem,4vw,3.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-foreground text-balance"
             {...fade(0.06)}
           >
             Takbyte och takrenovering — utfört rätt från första lagret.
@@ -56,14 +56,14 @@ const Hero = () => {
           <motion.div className="mt-10 flex flex-col gap-3 sm:flex-row" {...fade(0.24)}>
             <a
               href="#offert"
-              className="group inline-flex items-center justify-center gap-3 bg-primary px-8 py-5 text-base font-semibold text-primary-foreground transition-colors hover:bg-accent animate-subtle-pulse"
+              className="group inline-flex items-center justify-center gap-3 whitespace-nowrap bg-primary px-7 py-5 text-base font-semibold text-primary-foreground transition-colors hover:bg-accent animate-subtle-pulse"
             >
               Begär kostnadsfri offert
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
             <a
               href="tel:0701543639"
-              className="inline-flex items-center justify-center gap-3 border border-border px-8 py-5 text-base font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex items-center justify-center gap-3 whitespace-nowrap border border-border px-7 py-5 text-base font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               070-154 36 39
@@ -83,7 +83,7 @@ const Hero = () => {
         </div>
 
         <motion.div
-          className="lg:col-span-6 xl:col-span-7"
+          className="lg:col-span-6"
           initial={reduce ? undefined : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
