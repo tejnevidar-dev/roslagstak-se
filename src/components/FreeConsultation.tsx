@@ -3,7 +3,7 @@ import { ArrowRight, Phone } from "lucide-react";
 const FreeConsultation = () => {
   return (
     <section id="radgivning" className="bg-accent py-20 md:py-28" aria-labelledby="consultation-heading">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent-foreground/55">
