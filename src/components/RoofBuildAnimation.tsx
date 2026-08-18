@@ -187,7 +187,8 @@ const RoofBuildAnimation = () => {
                   alt="Förhandsvisning: så går ett takbyte till, steg för steg"
                   width={1920}
                   height={1280}
-                  fetchPriority="high"
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 {STEPS.map((item, index) => (
