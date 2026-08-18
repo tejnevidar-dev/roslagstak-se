@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Space Grotesk', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        display: ['Archivo Black', 'sans-serif'],
+        body: ['Hind', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -46,6 +46,10 @@ export default {
         ink: {
           DEFAULT: "hsl(var(--ink))",
           foreground: "hsl(var(--ink-foreground))",
+        },
+        seafoam: {
+          DEFAULT: "hsl(var(--seafoam))",
+          light: "hsl(var(--seafoam-light))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
