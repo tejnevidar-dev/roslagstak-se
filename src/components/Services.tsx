@@ -57,73 +57,89 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="services-heading">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-12">
-          <div className="lg:col-span-8">
+    <section
+      id="tjanster"
+      className="border-b border-border bg-secondary/40 py-20 md:py-28"
+      aria-labelledby="services-heading"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        {/* Asymmetrisk 60/40-inledning */}
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:gap-20">
+          <div className="lg:w-[60%]">
             <SectionHeading
               meta="Tjänster"
               index="01 / 04"
               id="services-heading"
-              title="Allt inom tak — från kust till skärgård"
-              intro="Helhetslösningar för varje takprojekt längs Roslagens kustlinje och öar. Samma metodik, oavsett om huset står vid vägen eller bakom en båttur."
+              title={
+                <>
+                  Allt inom tak — från
+                  <br />
+                  <span className="text-accent">kust till skärgård</span>
+                </>
+              }
             />
           </div>
-          <div className="lg:col-span-4 lg:text-right">
+          <div className="lg:w-[40%]">
+            <p className="border-l-2 border-seafoam pl-6 text-lg leading-relaxed text-muted-foreground">
+              Helhetslösningar för varje takprojekt längs Roslagens kustlinje och öar. Samma
+              metodik, oavsett om huset står vid vägen eller bakom en båttur.
+            </p>
             <a
               href="#offert"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group"
+              className="group mt-7 inline-flex items-center gap-3 pl-6 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground"
             >
               Räkna på ditt projekt
-              <span className="w-9 h-9 border border-border flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-primary-foreground group-hover:border-accent">
-                <ArrowRight className="w-4 h-4" />
+              <span className="flex h-9 w-9 items-center justify-center border border-primary/20 transition-colors group-hover:border-accent group-hover:bg-accent group-hover:text-primary-foreground">
+                <ArrowRight className="h-4 w-4" />
               </span>
             </a>
           </div>
         </div>
 
-        <div className="border-t border-border">
+        {/* Tjänstematris */}
+        <div className="mt-14 grid border-l border-t border-primary/12 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
-            <Reveal key={service.title} delay={Math.min(i, 6) * 0.05}>
+            <Reveal key={service.title} delay={Math.min(i, 7) * 0.04}>
               <Link
                 to={`/tjanster/${service.slug}`}
-                className="group relative grid md:grid-cols-12 gap-4 md:gap-8 items-baseline py-7 md:py-8 border-b border-border transition-colors"
+                className="group relative flex h-full flex-col border-b border-r border-primary/12 bg-background p-8 transition-colors duration-300 hover:bg-primary"
               >
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-x-0 inset-y-0 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10"
-                />
-                <div className="md:col-span-1 flex items-center gap-3">
-                  <span className="text-[11px] font-semibold tabular-nums tracking-[0.2em] text-muted-foreground group-hover:text-primary-foreground/60 transition-colors">
+                <div className="flex items-start justify-between">
+                  <span className="w-10 shrink-0 font-display text-[11px] tabular-nums tracking-[0.24em] text-seafoam">
                     {String(i + 1).padStart(2, "0")}
                   </span>
+                  <service.icon
+                    className="h-6 w-6 text-primary transition-colors duration-300 group-hover:text-seafoam-light"
+                    aria-hidden="true"
+                  />
                 </div>
-                <div className="md:col-span-4 flex items-center gap-4 md:pl-2">
-                  <span className="w-10 h-10 shrink-0 border border-border bg-background flex items-center justify-center transition-colors group-hover:border-primary-foreground/25 group-hover:bg-primary-foreground/10">
-                    <service.icon className="w-5 h-5 text-primary transition-colors group-hover:text-primary-foreground" />
-                  </span>
-                  <h3 className="font-display text-xl md:text-2xl font-semibold tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary-foreground">
-                    {service.title}
-                  </h3>
-                </div>
-                <p className="md:col-span-6 text-[15px] leading-relaxed text-muted-foreground transition-colors group-hover:text-primary-foreground/75 md:pr-6">
+
+                <h3 className="mt-10 font-display text-lg uppercase leading-tight tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary-foreground">
+                  {service.title}
+                </h3>
+                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-primary-foreground/70">
                   {service.description}
                 </p>
-                <span className="md:col-span-1 md:justify-self-end inline-flex items-center text-primary transition-all group-hover:text-primary-foreground group-hover:translate-x-1">
-                  <ArrowRight className="w-5 h-5" />
+
+                <span className="mt-8 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-primary transition-colors duration-300 group-hover:text-seafoam-light">
+                  Läs mer
+                  <ArrowRight
+                    className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
                 </span>
               </Link>
             </Reveal>
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] font-bold uppercase tracking-[0.24em] text-muted-foreground">
+        <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] font-bold uppercase tracking-[0.28em] text-muted-foreground">
           <span>AMA-standard</span>
-          <span className="w-8 h-px bg-border" aria-hidden="true" />
+          <span aria-hidden="true" className="h-px w-8 bg-seafoam-light" />
           <span>10 års garanti</span>
-          <span className="w-8 h-px bg-border" aria-hidden="true" />
+          <span aria-hidden="true" className="h-px w-8 bg-seafoam-light" />
           <span>ROT-avdrag</span>
-          <span className="w-8 h-px bg-border" aria-hidden="true" />
+          <span aria-hidden="true" className="h-px w-8 bg-seafoam-light" />
           <span>Fast pris</span>
         </div>
       </div>
