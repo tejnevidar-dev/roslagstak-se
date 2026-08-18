@@ -1,60 +1,60 @@
-import { Phone, MessageCircle, Clock, Shield } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 const FreeConsultation = () => {
   return (
     <section id="radgivning" className="bg-accent py-20 md:py-28" aria-labelledby="consultation-heading">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-            <MessageCircle className="w-4 h-4" />
-            Kostnadsfri rådgivning
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent-foreground/55">
+              Kostnadsfri rådgivning
+            </p>
+            <h2
+              id="consultation-heading"
+              className="font-display text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-[1.04] tracking-[-0.03em] text-accent-foreground"
+            >
+              Osäker på taktyp? Vi hjälper dig att välja rätt.
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-accent-foreground/70">
+              Du behöver inte vara expert på tak. Ring oss eller skicka en förfrågan — vi går igenom
+              vilken taktyp som passar just ditt hus, oavsett om det ligger på en ö eller längs kusten.
+            </p>
+            <a
+              href="tel:+46701543639"
+              className="mt-8 inline-flex items-center gap-3 bg-primary px-7 py-4 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 animate-subtle-pulse"
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" /> 070-154 36 39
+            </a>
           </div>
 
-          <h2 id="consultation-heading" className="font-display text-3xl md:text-4xl lg:text-5xl text-accent-foreground">
-            Osäker på taktyp? Vi hjälper dig!
-          </h2>
-
-          <p className="text-accent-foreground/70 text-lg leading-relaxed max-w-2xl mx-auto">
-            Du behöver inte vara expert på tak. Ring oss eller fyll i formuläret så ger vi dig kostnadsfri rådgivning 
-            om vilken taktyp som passar bäst för just ditt hus — oavsett om du bor på en ö i skärgården eller längs kusten.
-          </p>
-
-          <div className="grid sm:grid-cols-3 gap-6 pt-4">
-            <div className="bg-accent-foreground/5 border border-accent-foreground/10 rounded-lg p-6 text-center">
-              <Phone className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-accent-foreground text-sm mb-1">Ring direkt</h3>
-              <p className="text-accent-foreground/60 text-xs mb-3">Prata med en takexpert</p>
-              <a
-                href="tel:+46701543639"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
-              >
-                <Phone className="w-4 h-4" />
-                070-154 36 39
-              </a>
-            </div>
-
-            <div className="bg-accent-foreground/5 border border-accent-foreground/10 rounded-lg p-6 text-center">
-              <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-accent-foreground text-sm mb-1">Snabbt svar</h3>
-              <p className="text-accent-foreground/60 text-xs mb-3">Vi svarar inom 24 timmar</p>
-              <a
-                href="#kontakt"
-                className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors animate-subtle-pulse"
-              >
-                Skicka meddelande
-              </a>
-            </div>
-
-            <div className="bg-accent-foreground/5 border border-accent-foreground/10 rounded-lg p-6 text-center">
-              <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-accent-foreground text-sm mb-1">Ingen förbindelse</h3>
-              <p className="text-accent-foreground/60 text-xs mb-3">Helt gratis, inga krav</p>
-              <a
-                href="#offert"
-                className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors animate-subtle-pulse"
-              >
-                Konfigurera offert
-              </a>
+          <div className="lg:col-span-7">
+            <div className="border-t border-accent-foreground/20">
+              {[
+                { no: "01", title: "Ring direkt", text: "Prata med en takläggare, inte en säljare.", href: "tel:+46701543639", cta: "Ring nu" },
+                { no: "02", title: "Svar inom 24 timmar", text: "Skicka ett meddelande och få besked snabbt.", href: "#kontakt", cta: "Skicka meddelande" },
+                { no: "03", title: "Ingen förbindelse", text: "Kostnadsfri besiktning och offert — inga krav.", href: "#offert", cta: "Räkna på ditt tak" },
+              ].map((item) => (
+                <div
+                  key={item.no}
+                  className="flex flex-col gap-4 border-b border-accent-foreground/20 py-7 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div className="flex items-start gap-6">
+                    <span className="pt-1 text-[10px] font-semibold tabular-nums tracking-[0.2em] text-accent-foreground/45">
+                      {item.no}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-xl font-semibold text-accent-foreground">{item.title}</h3>
+                      <p className="mt-1 text-accent-foreground/65">{item.text}</p>
+                    </div>
+                  </div>
+                  <a
+                    href={item.href}
+                    className="inline-flex shrink-0 items-center gap-2 border border-accent-foreground/30 px-5 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent-foreground hover:text-accent"
+                  >
+                    {item.cta} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </div>
