@@ -4,7 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import SplashScreen, { shouldShowSplash } from "@/components/SplashScreen";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
 import Services from "@/components/Services";
 
 const RoofBuildAnimation = lazy(() => import("@/components/RoofBuildAnimation"));
@@ -47,7 +46,6 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <TrustBar />
         <Services />
         <Suspense fallback={null}>
           <LayerIntro />
