@@ -99,7 +99,7 @@ const Services = () => {
         {/* Tjänstematris */}
         <div className="mt-14 grid border-l border-t border-primary/12 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
-            <Reveal key={service.title} delay={Math.min(i, 7) * 0.04}>
+            <Reveal key={service.title} delay={Math.min(i, 7) * 0.04} className="h-full">
               <Link
                 to={`/tjanster/${service.slug}`}
                 className="group relative flex h-full flex-col border-b border-r border-primary/12 bg-background p-8 transition-colors duration-300 hover:bg-primary"
