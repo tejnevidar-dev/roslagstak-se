@@ -240,6 +240,7 @@ const RoofBuildAnimation = () => {
                 </div>
               </div>
             </figure>
+            <RoofBuildVideo />
           </div>
 
           <div className="lg:col-span-4">
