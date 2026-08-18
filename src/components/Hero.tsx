@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, PlayCircle, Check } from "lucide-react";
+import { ArrowRight, Phone, PlayCircle } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import heroImg from "@/assets/hero-cinematic.jpg";
 
