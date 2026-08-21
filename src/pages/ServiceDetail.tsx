@@ -201,6 +201,7 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
   const details = slug ? serviceDetails[slug] : null;
+  const serviceImage = (slug && serviceImages[slug]) || imgRoofProject;
 
   useEffect(() => {
     window.scrollTo(0, 0);
