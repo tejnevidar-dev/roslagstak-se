@@ -326,7 +326,7 @@ const ServiceDetail = () => {
         {/* Split-screen hero */}
         <section className="relative bg-primary text-primary-foreground">
           <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="relative flex flex-col justify-center px-6 pb-16 pt-16 sm:px-10 lg:pb-24 lg:pt-24 xl:px-20">
+            <div className="relative flex flex-col justify-center px-6 pb-16 pt-28 sm:px-10 lg:pb-24 lg:pt-32 xl:px-20">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine"

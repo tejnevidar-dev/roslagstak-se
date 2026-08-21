@@ -80,8 +80,13 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
   const onHome = location.pathname === "/";
   const activeRoute = routeActiveLabel(location.pathname);
-  /* Transparent, ljus header ovanpå den mörka heron — solid när man scrollat */
-  const overlay = onHome && !scrolled;
+  /* Sidor med mörk hero-topp → ljus text i overlay-läget */
+  const darkHero =
+    onHome || location.pathname.startsWith("/tjanster") || location.pathname === "/taktvatt";
+  /* Transparent header ovanpå sidans topp — solid när man scrollat (gäller alla sidor) */
+  const overlay = !scrolled;
+  /* Ljus text/logga bara när headern ligger över en mörk hero */
+  const light = overlay && darkHero;
 
   useEffect(() => {
     const onScroll = () => {
@@ -148,17 +153,17 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
   return (
     <header
-      className={`${onHome ? "fixed" : "sticky"} top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
         overlay
-          ? "bg-transparent text-primary-foreground"
+          ? `bg-transparent ${darkHero ? "text-primary-foreground" : "text-foreground"}`
           : "bg-background/90 text-foreground shadow-[0_1px_0_0_hsl(var(--border)),0_10px_30px_-24px_hsl(var(--primary)/0.5)] backdrop-blur-xl"
       }`}
     >
-      {/* Nästan osynlig fade så headern smälter in i heron (himlen till höger, navy till vänster) */}
+      {/* Nästan osynlig fade så headern smälter in i den mörka heron */}
       <div
         aria-hidden="true"
         className={`pointer-events-none absolute inset-x-0 top-0 h-[190%] bg-gradient-to-b from-primary/35 via-primary/10 to-transparent transition-opacity duration-700 ${
-          overlay ? "opacity-100" : "opacity-0"
+          overlay && darkHero ? "opacity-100" : "opacity-0"
         }`}
       />
 
@@ -177,7 +182,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           aria-label="RoslagsTak — till startsidan"
         >
           <img
-            src={overlay ? logoWhite : logo}
+            src={light ? logoWhite : logo}
             alt="RoslagsTak logotyp"
             width={1437}
             height={535}
@@ -205,10 +210,10 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                   onClick={(e) => handleNavClick(e, link.href)}
                   onFocus={hasMenu ? () => openDropdown(link.label) : undefined}
                   className={`group relative flex items-center gap-1.5 px-3 py-2 text-[14.5px] font-semibold tracking-tight transition-colors ${
-                    overlay
+                    light
                       ? "text-primary-foreground/70 hover:text-primary-foreground"
                       : "text-foreground/65 hover:text-foreground"
-                  } ${isActive ? (overlay ? "text-primary-foreground" : "text-primary") : ""}`}
+                  } ${isActive ? (light ? "text-primary-foreground" : "text-primary") : ""}`}
                 >
                   {isActive && (
                     <motion.span
@@ -216,7 +221,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                       aria-hidden="true"
                       transition={{ type: "spring", stiffness: 420, damping: 34 }}
                       className={`absolute inset-0 -z-10 ${
-                        overlay ? "bg-primary-foreground/10" : "bg-primary/[0.07]"
+                        light ? "bg-primary-foreground/10" : "bg-primary/[0.07]"
                       }`}
                     />
                   )}
@@ -310,7 +315,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           <a
             href="tel:0701543639"
             className={`hidden items-center gap-2 text-sm font-semibold transition-colors lg:flex ${
-              overlay
+              light
                 ? "text-primary-foreground/85 hover:text-seafoam-light"
                 : "text-foreground/80 hover:text-primary"
             }`}
@@ -320,13 +325,13 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           </a>
           <span
             aria-hidden="true"
-            className={`hidden h-6 w-px lg:block ${overlay ? "bg-primary-foreground/25" : "bg-border"}`}
+            className={`hidden h-6 w-px lg:block ${light ? "bg-primary-foreground/25" : "bg-border"}`}
           />
           <a
             href="#offert"
             onClick={(e) => handleNavClick(e, "#offert")}
             className={`group flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-colors animate-subtle-pulse ${
-              overlay
+              light
                 ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light"
                 : "bg-primary text-primary-foreground hover:bg-accent"
             }`}
@@ -340,7 +345,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           <a
             href="tel:0701543639"
             className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold ${
-              overlay ? "bg-seafoam text-primary-foreground" : "bg-primary text-primary-foreground"
+              light ? "bg-seafoam text-primary-foreground" : "bg-primary text-primary-foreground"
             }`}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
@@ -349,7 +354,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className={`border p-2.5 transition-colors ${
-              overlay ? "border-primary-foreground/30 text-primary-foreground" : "border-border text-foreground"
+              light ? "border-primary-foreground/30 text-primary-foreground" : "border-border text-foreground"
             }`}
             aria-label={menuOpen ? "Stäng meny" : "Öppna meny"}
             aria-expanded={menuOpen}
