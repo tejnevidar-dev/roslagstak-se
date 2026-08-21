@@ -406,16 +406,21 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
             className="relative max-h-[80vh] overflow-y-auto border-t border-primary-foreground/10 bg-primary px-6 py-6 text-primary-foreground lg:hidden"
           >
-            {navLinks.map((link, i) => (
+            {navLinks.map((link, i) => {
+              const isActive = onHome ? active === link.href : activeRoute === link.label;
+              return (
               <div key={link.href}>
                 <motion.a
                   href={link.href}
                   data-nav-link
+                  aria-current={isActive ? "true" : undefined}
                   initial={reduce ? undefined : { opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.04 * i, duration: 0.3 }}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="flex items-center justify-between border-b border-primary-foreground/10 py-4 text-lg font-bold tracking-tight"
+                  className={`flex items-center justify-between border-b border-primary-foreground/10 py-4 text-lg font-bold tracking-tight ${
+                    isActive ? "text-seafoam-light" : ""
+                  }`}
                 >
                   <span>
                     <span className="mr-3 text-[11px] font-bold text-seafoam-light">
@@ -427,13 +432,19 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                 </motion.a>
                 {link.items && (
                   <ul className="mb-2 mt-2 grid gap-1 pl-9">
-                    {link.items.map((item) => (
+                    {link.items.map((item) => {
+                      const itemActive = Boolean(item.to && item.to === location.pathname);
+                      const cls = `block py-1.5 text-[14px] ${
+                        itemActive ? "font-semibold text-seafoam-light" : "text-primary-foreground/70"
+                      }`;
+                      return (
                       <li key={item.label}>
                         {item.to ? (
                           <Link
                             to={item.to}
+                            aria-current={itemActive ? "page" : undefined}
                             onClick={() => setMenuOpen(false)}
-                            className="block py-1.5 text-[14px] text-primary-foreground/70"
+                            className={cls}
                           >
                             {item.label}
                           </Link>
@@ -442,15 +453,20 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                             href={item.href}
                             data-nav-link
                             onClick={(e) => handleNavClick(e, item.href!)}
-                            className="block py-1.5 text-[14px] text-primary-foreground/70"
+                            className={cls}
                           >
                             {item.label}
                           </a>
                         )}
                       </li>
-                    ))}
+                      );
+                    })}
                   </ul>
                 )}
+              </div>
+              );
+            })}
+
               </div>
             ))}
             <div className="mt-6 flex flex-col gap-3">
