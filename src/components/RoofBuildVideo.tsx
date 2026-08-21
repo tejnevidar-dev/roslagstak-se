@@ -49,13 +49,16 @@ const RoofBuildVideo = () => {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
+            onError={() => setFailed(true)}
             aria-label="Film: så går ett takbyte till, från råspont till snörasskydd"
           >
-            <source src="/takbyte-animation.webm" type="video/webm" />
+            <source src="/takbyte-animation-h264.mp4" type="video/mp4; codecs=avc1.4d4028" />
             <source src="/takbyte-animation-1080p.mp4" type="video/mp4" />
+            <source src="/takbyte-animation.webm" type="video/webm" />
             Din webbläsare kan inte spela upp video. Bilderna ovan visar samma arbetsgång steg för steg.
           </video>
+
         ) : (
           <button
             type="button"
