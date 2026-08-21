@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle, Phone } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 import { services } from "@/components/Services";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import imgRoofProject from "@/assets/roof-project.jpg";
