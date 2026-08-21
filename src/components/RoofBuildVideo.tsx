@@ -21,9 +21,17 @@ const RoofBuildVideo = () => {
       const el = videoRef.current;
       if (!el) return;
       el.load();
-      void el.play().catch(() => undefined);
+      // Playback starts from a user click, so sound is allowed. If a browser
+      // still blocks it, fall back to a muted autoplay instead of no video.
+      el.muted = false;
+      el.volume = 0.55;
+      void el.play().catch(() => {
+        el.muted = true;
+        void el.play().catch(() => undefined);
+      });
     });
   };
+
 
 
   return (
