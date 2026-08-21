@@ -43,7 +43,7 @@ const About = () => {
   const { scrollYProgress } = useScroll({ target: imgWrap, offset: ["start end", "end start"] });
   const imgY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
   return (
-    <section id="om-oss" className="border-b border-border bg-background py-24 md:py-36" aria-labelledby="about-heading">
+    <section id="om-oss" className="bg-background py-24 md:py-32" aria-labelledby="about-heading">
       <div className="max-w-7xl mx-auto px-6">
         {/* Intro */}
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 md:mb-24">
@@ -54,7 +54,7 @@ const About = () => {
               id="about-heading"
               title="Ditt tak i trygga händer — från kust till ö"
             />
-            <div className="space-y-5 text-[17px] text-muted-foreground leading-relaxed mt-8">
+            <div className="space-y-5 text-[19px] text-muted-foreground leading-relaxed mt-8">
               <p>
                 RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi lägger tak
                 i hela Roslagen — på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn och Ingmarsö,
@@ -75,13 +75,13 @@ const About = () => {
               </p>
             </div>
 
-            <ul className="grid sm:grid-cols-2 gap-x-8 mt-10 border-t border-border">
+            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 mt-10">
               {benefits.map((benefit) => (
                 <li
                   key={benefit}
-                  className="flex items-start gap-3 text-[15px] text-foreground py-3.5 border-b border-border"
+                  className="flex items-start gap-3 text-[17px] text-foreground py-3"
                 >
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   {benefit}
                 </li>
               ))}
@@ -89,7 +89,7 @@ const About = () => {
           </div>
 
           <div ref={imgWrap} className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="relative overflow-hidden border border-border aspect-[4/5]">
+            <div className="relative overflow-hidden rounded-3xl border border-border aspect-[4/5] shadow-[var(--shadow-elevated)]">
               <motion.img
                 src={rooferImg}
                 alt="Professionell takläggare arbetar på tak vid Roslagens kust"
@@ -118,22 +118,20 @@ const About = () => {
           className="mb-14"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-border">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {coreValues.map((value, i) => (
             <Reveal key={value.title} delay={i * 0.07}>
               <div
-                className={`group h-full py-9 sm:px-7 border-b border-border ${
-                  i > 0 ? "lg:border-l lg:border-border" : ""
-                } ${i === 0 ? "sm:pl-0" : ""}`}
+                className="group h-full rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-soft)]"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-[11px] font-bold tabular-nums tracking-[0.24em] text-primary">
+                  <span className="text-[13px] font-bold tabular-nums tracking-[0.16em] text-primary">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <value.icon className="w-4 h-4 text-muted-foreground transition-transform duration-500 group-hover:-translate-y-0.5" />
+                  <value.icon className="w-5 h-5 text-accent transition-transform duration-500 group-hover:-translate-y-0.5" />
                 </div>
-                <h4 className="font-display text-lg font-semibold tracking-[-0.02em] text-foreground mb-3">{value.title}</h4>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">{value.description}</p>
+                <h4 className="font-display text-xl font-bold tracking-[-0.02em] text-foreground mb-3">{value.title}</h4>
+                <p className="text-muted-foreground text-[17px] leading-relaxed">{value.description}</p>
               </div>
             </Reveal>
           ))}

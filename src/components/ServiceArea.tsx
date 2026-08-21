@@ -46,10 +46,10 @@ const allLocations = areas.flatMap((a) => a.locations);
 
 const ServiceArea = () => {
   return (
-    <section id="omraden" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="area-heading">
+    <section id="omraden" className="bg-secondary/50 py-24 md:py-32" aria-labelledby="area-heading">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 max-w-3xl">
-          <p className="rule-label mb-4">Verksamhetsområde</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">Verksamhetsområde</p>
           <h2 id="area-heading" className="mb-5 font-display text-[clamp(2rem,3.4vw,2.75rem)] font-semibold leading-[1.06] tracking-[-0.03em] text-foreground text-balance">
             Takläggare i hela Roslagen — från kust till ytterskärgård
           </h2>
@@ -59,14 +59,14 @@ const ServiceArea = () => {
           </p>
         </div>
 
-        <div className="mb-14 grid border-t border-border md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {areas.map((area) => (
-            <div key={area.region} className="border-b border-r border-border bg-card p-7">
+            <div key={area.region} className="rounded-3xl border border-border bg-card p-8">
               <div className="mb-4 flex items-center gap-2">
                 <Anchor className="h-4 w-4 text-primary" aria-hidden="true" />
-                <h3 className="font-display text-lg font-semibold text-card-foreground">{area.region}</h3>
+                <h3 className="font-display text-xl font-bold text-card-foreground">{area.region}</h3>
               </div>
-              <p className="mb-5 text-[15px] leading-relaxed text-muted-foreground">{area.description}</p>
+              <p className="mb-5 text-[17px] leading-relaxed text-muted-foreground">{area.description}</p>
               <div className="flex flex-wrap gap-2">
                 {area.locations.map((loc) => {
                   const slug = locationSlugMap[loc];
@@ -74,7 +74,7 @@ const ServiceArea = () => {
                     <Link
                       key={loc}
                       to={`/taklaggare-${slug}`}
-                      className="inline-flex items-center gap-1 border border-border bg-background px-2.5 py-1.5 text-[13px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+                      className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/60 px-3.5 py-2 text-[14px] font-semibold text-foreground transition-colors hover:border-accent hover:bg-primary hover:text-primary-foreground"
                     >
                       <MapPin className="h-3 w-3 text-primary" aria-hidden="true" />
                       {loc}
@@ -82,7 +82,7 @@ const ServiceArea = () => {
                   ) : (
                     <span
                       key={loc}
-                      className="inline-flex items-center gap-1 border border-border bg-background px-2.5 py-1.5 text-[13px] font-medium text-muted-foreground"
+                      className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3.5 py-2 text-[14px] font-medium text-muted-foreground"
                     >
                       <MapPin className="h-3 w-3" aria-hidden="true" />
                       {loc}
@@ -96,11 +96,11 @@ const ServiceArea = () => {
 
         {/* SEO-rich text block with natural keyword integration */}
         <div className="max-w-4xl">
-          <div className="border-l-2 border-primary bg-card py-2 pl-8">
+          <div className="rounded-3xl border border-border bg-card p-8">
             <h3 className="mb-4 font-display text-xl font-semibold text-card-foreground">
               Din lokala takläggare i Roslagen
             </h3>
-            <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
+            <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
               <p>
                 Behöver du en <strong>takläggare i Roslagen</strong>? RoslagsTak utför alla typer av takarbeten — från 
                 <strong> takbyte på Blidö</strong> och <strong>takrenovering på Ljusterö</strong> till 

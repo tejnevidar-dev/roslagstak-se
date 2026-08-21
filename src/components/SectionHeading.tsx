@@ -34,15 +34,15 @@ const SectionHeading = ({
         className={`flex items-center gap-4 mb-6 ${align === "center" ? "justify-center" : ""}`}
       >
         <span
-          className={`text-[10px] font-bold uppercase tracking-[0.28em] ${
-            dark ? "text-primary-foreground/55" : "text-seafoam"
+          className={`text-[13px] font-bold uppercase tracking-[0.16em] ${
+            dark ? "text-primary-foreground/70" : "text-primary"
           }`}
         >
           {meta}
         </span>
         <motion.span
           aria-hidden="true"
-          className={`h-px flex-1 max-w-[6rem] origin-left ${dark ? "bg-primary-foreground/25" : "bg-foreground/15"}`}
+          className={`h-1.5 rounded-full flex-1 max-w-[2.5rem] origin-left ${dark ? "bg-primary-foreground/30" : "bg-accent"}`}
           initial={reduce ? undefined : { scaleX: 0 }}
           whileInView={reduce ? undefined : { scaleX: 1 }}
           viewport={{ once: true, margin: "-60px" }}
@@ -74,7 +74,7 @@ const SectionHeading = ({
 
       {intro && (
         <motion.p
-          className={`mt-6 text-lg leading-relaxed ${
+          className={`mt-6 text-[19px] leading-relaxed ${
             dark ? "text-primary-foreground/70" : "text-muted-foreground"
           } ${align === "center" ? "mx-auto" : ""} max-w-2xl`}
           initial={reduce ? undefined : { opacity: 0, y: 18 }}
