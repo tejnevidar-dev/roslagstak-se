@@ -119,7 +119,7 @@ const IslandSpecialist = () => {
                 ))}
                 . Dessa öar saknar bilväg — allt material fraktas sjövägen.
                 Trots det levererar vi samma höga kvalitet och{" "}
-                <strong>10 års garanti</strong> som på fastlandet.
+                <strong>10 års utförandegaranti och 30 års materialgaranti</strong> som på fastlandet.
               </p>
               <p>
                 Behöver du en{" "}
