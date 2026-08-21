@@ -83,13 +83,14 @@ const Header = () => {
           : "bg-background/90 text-foreground shadow-[0_1px_0_0_hsl(var(--border)),0_10px_30px_-24px_hsl(var(--primary)/0.5)] backdrop-blur-xl"
       }`}
     >
-      {/* Mjuk filmisk övergång från heron */}
+      {/* Nästan osynlig fade så headern smälter in i heron (himlen till höger, navy till vänster) */}
       <div
         aria-hidden="true"
-        className={`pointer-events-none absolute inset-x-0 top-0 h-[160%] bg-gradient-to-b from-primary/90 via-primary/45 to-transparent transition-opacity duration-700 ${
+        className={`pointer-events-none absolute inset-x-0 top-0 h-[190%] bg-gradient-to-b from-primary/25 via-primary/8 to-transparent transition-opacity duration-700 ${
           overlay ? "opacity-100" : "opacity-0"
         }`}
       />
+
 
       <div
         className={`relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 transition-all duration-500 ${
