@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import QuickAccess from "@/components/QuickAccess";
+import TrustBar from "@/components/TrustBar";
 
 const About = lazy(() => import("@/components/About"));
 const ServiceArea = lazy(() => import("@/components/ServiceArea"));
@@ -54,6 +55,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TrustBar />
         <QuickAccess />
         <Services />
 
