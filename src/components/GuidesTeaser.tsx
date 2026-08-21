@@ -37,6 +37,8 @@ const GuidesTeaser = () => {
               <Link
                 to={`/blogg/${post.slug}`}
                 className="group h-full flex flex-col rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elevated)]"
+              >
+
 
                 <div className="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.14em] text-muted-foreground mb-6">
                   <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
