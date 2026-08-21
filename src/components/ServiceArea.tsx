@@ -46,7 +46,7 @@ const allLocations = areas.flatMap((a) => a.locations);
 
 const ServiceArea = () => {
   return (
-    <section id="omraden" className="border-b border-border bg-warm py-20 md:py-28" aria-labelledby="area-heading">
+    <section id="omraden" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="area-heading">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 max-w-3xl">
           <p className="rule-label mb-4">Verksamhetsområde</p>

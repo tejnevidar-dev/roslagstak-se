@@ -39,7 +39,7 @@ const items: Item[] = [
 
 const QuickAccess = () => (
   <section aria-labelledby="snabbval" className="border-b border-border bg-warm">
-    <div className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
+    <div className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
       <h2
         id="snabbval"
         className="font-display text-2xl font-extrabold tracking-[-0.02em] text-foreground sm:text-3xl"

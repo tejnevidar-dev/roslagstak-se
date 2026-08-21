@@ -2,7 +2,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 const FreeConsultation = () => {
   return (
-    <section id="radgivning" className="bg-accent py-20 md:py-28" aria-labelledby="consultation-heading">
+    <section id="radgivning" className="bg-accent py-24 md:py-36" aria-labelledby="consultation-heading">
       <div className="container mx-auto px-6">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">

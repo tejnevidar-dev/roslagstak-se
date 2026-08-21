@@ -64,8 +64,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    font-size: 1.0625rem;
-    line-height: 1.65;
+    font-size: 1.1875rem;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4 {
@@ -73,6 +75,31 @@
     font-weight: 800;
     letter-spacing: -0.03em;
   }
+
+  h2, h3 {
+    line-height: 1.15;
+  }
+
+  /* Läsbar radlängd — max ~68 tecken per rad (utan att störa layoutstyrd text) */
+  p:not([class*="max-w"]):not([class*="text-center"]):not([class*="text-["]) {
+    max-width: 68ch;
+  }
+
+  /* Stora, trygga tryckytor även för äldre besökare */
+  a[href^="tel:"],
+  a[class*="bg-primary"],
+  a[class*="bg-seafoam"],
+  a[class*="bg-accent"],
+  button[class*="bg-primary"],
+  button[class*="bg-seafoam"] {
+    min-height: 3.5rem;
+  }
+
+  /* Headern har egen kompakt höjd */
+  header a, header button {
+    min-height: 0;
+  }
+
 
   ::selection {
     background: hsl(var(--primary));

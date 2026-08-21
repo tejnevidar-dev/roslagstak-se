@@ -25,7 +25,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projekt" className="py-20 md:py-28 bg-background" aria-labelledby="projects-heading">
+    <section id="projekt" className="py-24 md:py-36 bg-background" aria-labelledby="projects-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Våra projekt</p>

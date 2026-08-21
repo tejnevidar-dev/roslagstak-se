@@ -38,7 +38,7 @@ const IslandSpecialist = () => {
   return (
     <section
       id="o-specialist"
-      className="border-b border-border bg-background py-20 md:py-28"
+      className="border-b border-border bg-background py-24 md:py-36"
       aria-labelledby="island-heading"
     >
       <div className="container mx-auto px-4">

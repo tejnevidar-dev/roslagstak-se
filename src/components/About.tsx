@@ -43,7 +43,7 @@ const About = () => {
   const { scrollYProgress } = useScroll({ target: imgWrap, offset: ["start end", "end start"] });
   const imgY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
   return (
-    <section id="om-oss" className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="about-heading">
+    <section id="om-oss" className="border-b border-border bg-background py-24 md:py-36" aria-labelledby="about-heading">
       <div className="max-w-7xl mx-auto px-6">
         {/* Intro */}
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 md:mb-24">
