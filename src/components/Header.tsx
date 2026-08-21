@@ -359,32 +359,8 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
         </div>
       </div>
 
-      {/* Brödsmulor — visas i headern på undersidor, smälter in i headerns yta */}
-      {breadcrumb && breadcrumb.length > 0 && (
-        <nav
-          aria-label="Brödsmulor"
-          className={`relative overflow-hidden border-t border-border/50 bg-transparent transition-all duration-500 ${
-            scrolled ? "max-h-0 border-t-0 opacity-0" : "max-h-12 opacity-100"
-          }`}
-        >
-          <ol className="mx-auto flex max-w-7xl flex-wrap items-center gap-2.5 px-6 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground/70">
-            {breadcrumb.map((crumb, i) => (
-              <li key={`${crumb.label}-${i}`} className="flex items-center gap-2.5">
-                {i > 0 && (
-                  <ChevronRight aria-hidden="true" className="h-3 w-3 shrink-0 text-muted-foreground/40" />
-                )}
-                {crumb.to ? (
-                  <Link to={crumb.to} className="transition-colors hover:text-primary">
-                    {crumb.label}
-                  </Link>
-                ) : (
-                  <span className="text-primary">{crumb.label}</span>
-                )}
-              </li>
-            ))}
-          </ol>
-        </nav>
-      )}
+
+
 
 
       {/* Läsprogress */}
