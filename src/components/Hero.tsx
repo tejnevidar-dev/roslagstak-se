@@ -114,12 +114,6 @@ const Hero = () => {
             aria-hidden="true"
             className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/10 to-transparent"
           />
-          <div className="absolute left-0 top-10 bg-primary px-7 py-5">
-            <p className="font-display text-3xl font-extrabold leading-none">10+30 ÅR</p>
-            <p className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-seafoam-light">
-              Utförande + Material
-            </p>
-          </div>
           <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-primary/85 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">
             <span>Falsat plåttak — Roslagens kust</span>
             <span className="text-primary-foreground/55">RT</span>
