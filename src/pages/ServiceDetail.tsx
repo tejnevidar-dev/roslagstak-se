@@ -412,94 +412,226 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        {/* Beskrivning */}
+        {/* Faktaband — hårda siffror direkt under heron */}
+        <section aria-label="Snabbfakta" className="border-b border-border bg-warm">
+          <dl className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-6 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-y-0">
+            {[
+              { k: "Prisbild", v: details.priceRange?.split(".")[0] ?? "Fast pris efter besiktning", note: "ROT-avdrag på arbetskostnaden" },
+              { k: "Garanti", v: "10 + 30 år", note: "Utförande respektive material" },
+              { k: "Besiktning", v: "Kostnadsfri", note: "Skriftlig bedömning med foton" },
+              { k: "Utförande", v: "AMA-standard", note: "Certifierade takläggare, F-skatt" },
+            ].map((f, i) => (
+              <div key={f.k} className="py-8 sm:px-8 lg:first:pl-0">
+                <Reveal delay={i * 0.05}>
+                  <dt className="text-[10px] font-bold uppercase tracking-[0.28em] text-seafoam">{f.k}</dt>
+                  <dd className="mt-3 font-display text-[1.35rem] font-extrabold leading-tight tracking-[-0.03em] text-foreground">
+                    {f.v}
+                  </dd>
+                  <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{f.note}</p>
+                </Reveal>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        {/* Översikt — text + närbild */}
         <section className="bg-background py-20 lg:py-28">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-[68ch]">
-              <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-                <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
-                Översikt
-              </p>
-              <h2 className="mt-6 font-display text-[clamp(1.7rem,2.6vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
-                Om {service.title.toLowerCase()}
-              </h2>
-              <p className="mt-8 text-[clamp(1.05rem,1.35vw,1.2rem)] leading-[1.8] text-muted-foreground">
-                {details.longDesc}
+            <div className="grid items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+              <Reveal>
+                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                  Översikt
+                </p>
+                <h2 className="mt-6 font-display text-[clamp(1.7rem,2.6vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
+                  Om {service.title.toLowerCase()}
+                </h2>
+                <p className="mt-8 max-w-[60ch] text-[clamp(1.02rem,1.25vw,1.14rem)] leading-[1.8] text-muted-foreground">
+                  {details.longDesc}
+                </p>
+                <div className="mt-10 border-l-2 border-seafoam pl-6">
+                  <p className="font-display text-[1.05rem] font-semibold leading-relaxed tracking-[-0.02em] text-foreground">
+                    "Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när sista biten går med båt."
+                  </p>
+                  <p className="mt-2 text-[12px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                    RoslagsTak, Blidö
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <figure className="m-0">
+                  <div className="overflow-hidden bg-secondary">
+                    <img
+                      src={detailImage}
+                      alt={`Detaljbild från ${service.title.toLowerCase()} i Roslagen`}
+                      width={1200}
+                      height={900}
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.03]"
+                    />
+                  </div>
+                  <figcaption className="mt-4 flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
+                    <span className="mt-px text-[10px] font-bold uppercase tracking-[0.22em] text-seafoam">Foto</span>
+                    Eget arbete utfört av vårt team i Roslagen — inga lagerbilder på färdiga projekt.
+                  </figcaption>
+                </figure>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Bildblock i full bredd */}
+        <section aria-hidden="true" className="relative h-[38vh] min-h-[260px] overflow-hidden lg:h-[46vh]">
+          <img
+            src={bandImage}
+            alt=""
+            width={2000}
+            height={1000}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/45" />
+          <div className="absolute inset-0 flex items-end">
+            <div className="container mx-auto px-4 pb-8 lg:pb-12">
+              <p className="max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-primary-foreground">
+                Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.
               </p>
             </div>
           </div>
         </section>
 
+        {/* Vad ingår — faktarutor */}
+        <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-xl">
+                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                  Omfattning
+                </p>
+                <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
+                  Det här ingår i arbetet
+                </h2>
+              </div>
+              <p className="max-w-md text-[15px] leading-relaxed text-muted-foreground">
+                Allt specificeras i offerten — inga tillägg i efterhand utan att du godkänt dem.
+              </p>
+            </div>
 
+            <ul className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+              {details.benefits.map((b, i) => (
+                <li key={b} className="bg-background">
+                  <Reveal delay={(i % 3) * 0.05}>
+                    <div className="flex h-full flex-col gap-3 p-7">
+                      <span className="font-display text-[11px] font-bold tabular-nums tracking-[0.24em] text-seafoam">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-[15px] leading-[1.6] text-foreground">{b}</span>
+                    </div>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Arbetsgång — mörkt band */}
+        <section className="relative bg-primary py-20 text-primary-foreground lg:py-28">
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
+          <div className="container relative mx-auto px-4">
+            <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+              <div className="lg:sticky lg:top-28 lg:self-start">
+                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
+                  <span aria-hidden="true" className="h-px w-8 bg-seafoam-light/50" />
+                  Arbetsgång
+                </p>
+                <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
+                  Så här går det till
+                </h2>
+                <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-primary-foreground/70">
+                  {details.process.length} steg från första besiktning till avetablering. Du har samma kontaktperson hela vägen.
+                </p>
+                <a
+                  href="tel:0701543639"
+                  className="mt-8 inline-flex items-center gap-2.5 border border-primary-foreground/25 px-6 py-3.5 text-sm font-semibold transition-colors hover:border-seafoam-light hover:text-seafoam-light"
+                >
+                  <Phone className="h-4 w-4" aria-hidden="true" />
+                  070-154 36 39
+                </a>
+              </div>
+
+              <ol className="grid gap-px bg-primary-foreground/15 sm:grid-cols-2">
+                {details.process.map((step, i) => (
+                  <li key={step} id={`steg-${i + 1}`} className="bg-primary">
+                    <Reveal delay={(i % 2) * 0.05}>
+                      <div className="flex h-full items-start gap-4 p-6">
+                        <span className="font-display text-[13px] font-bold tabular-nums text-seafoam-light">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-[15px] leading-[1.6] text-primary-foreground/85">{step}</span>
+                      </div>
+                    </Reveal>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* Bra att veta — faktarutor */}
+        <section className="bg-background py-20 lg:py-24">
+          <div className="container mx-auto px-4">
+            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+              <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+              Bra att veta
+            </p>
+            <div className="mt-10 grid gap-8 md:grid-cols-3">
+              {[
+                {
+                  t: "Pris och ROT",
+                  d: details.priceRange ?? "Fast pris efter kostnadsfri besiktning.",
+                },
+                {
+                  t: "Garanti och försäkring",
+                  d: "10 års utförandegaranti och 30 års materialgaranti från tillverkaren. Vi har F-skatt och fullständigt försäkringsskydd.",
+                },
+                {
+                  t: "Skärgård och logistik",
+                  d: "Vi arbetar även på öar utan broförbindelse och planerar båttransport av material och ställning i offerten.",
+                },
+              ].map((f, i) => (
+                <Reveal key={f.t} delay={i * 0.06}>
+                  <div className="h-full border-t-2 border-seafoam bg-secondary/40 p-7">
+                    <h3 className="font-display text-[1.05rem] font-bold tracking-[-0.02em] text-foreground">{f.t}</h3>
+                    <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">{f.d}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {slug === "eternit-asbest" && (
-          <section className="bg-secondary/40 py-20">
+          <section className="border-t border-border bg-secondary/40 py-20">
             <div className="container mx-auto px-4">
               <EternitSEOContent />
             </div>
           </section>
         )}
 
-        {/* Vad ingår + process */}
-        <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
-          <div className="container mx-auto px-4">
-            <div className="grid items-start gap-14 md:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-              <div className="md:sticky md:top-28">
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
-                  Omfattning
-                </p>
-                <h2 className="mt-5 font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
-                  Vad ingår
-                </h2>
-                <ul className="mt-8 space-y-px border-y border-border">
-                  {details.benefits.map((b) => (
-                    <li
-                      key={b}
-                      className="flex items-start gap-3.5 border-b border-border/60 py-3.5 text-[15px] leading-[1.6] text-muted-foreground last:border-b-0"
-                    >
-                      <CheckCircle className="mt-[3px] h-4 w-4 shrink-0 text-seafoam" aria-hidden="true" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="md:border-l md:border-border md:pl-14 lg:pl-20">
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
-                  Arbetsgång
-                </p>
-                <h2 className="mt-5 font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
-                  Så här går det till
-                </h2>
-                <ol className="mt-8 space-y-0">
-                  {details.process.map((step, i) => (
-                    <li
-                      key={step}
-                      id={`steg-${i + 1}`}
-                      className="relative flex items-start gap-5 pb-7 pl-0 text-[15px] leading-[1.6] text-muted-foreground last:pb-0"
-                    >
-                      {i < details.process.length - 1 && (
-                        <span
-                          aria-hidden="true"
-                          className="absolute left-[15px] top-8 h-[calc(100%-1.5rem)] w-px bg-border"
-                        />
-                      )}
-                      <span className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-background font-display text-[11px] font-bold text-seafoam ring-1 ring-seafoam/30">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="pt-1.5">{step}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
         {/* CTA-band */}
-        <section className="relative bg-primary py-16 text-primary-foreground lg:py-20">
+        <section className="relative overflow-hidden py-16 text-primary-foreground lg:py-20">
+          <img
+            src={serviceImage}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-primary/90" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
           <div className="container relative mx-auto px-4">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
@@ -578,7 +710,6 @@ const ServiceDetail = () => {
               ))}
             </ul>
 
-
             <div className="mt-14 border-t border-border pt-8">
               <Link
                 to="/#tjanster"
@@ -590,6 +721,7 @@ const ServiceDetail = () => {
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </>
