@@ -186,7 +186,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Huvudnavigation">
           {navLinks.map((link) => {
-            const isActive = onHome && active === link.href;
+            const isActive = onHome ? active === link.href : activeRoute === link.label;
             const hasMenu = Boolean(link.items);
             const isOpen = openMenu === link.label;
             return (
