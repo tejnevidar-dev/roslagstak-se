@@ -4,13 +4,15 @@ import Reveal from "@/components/Reveal";
 
 export const services = [
   {
+    icon: Home,
     slug: "takomlaggning",
     title: "Takomläggning",
     short: "Komplett takbyte",
     description:
-      "Kommplett byte av takmaterial med moderna lösningar. Allt arbete utförs enligt AMA-standard.",
+      "Komplett byte av takmaterial med moderna lösningar. Allt arbete utförs enligt AMA-standard.",
   },
   {
+    icon: Wrench,
     slug: "takrenovering",
     title: "Takrenovering",
     short: "Laga & förlänga",
@@ -18,6 +20,7 @@ export const services = [
       "Vi renoverar och förlänger livslängden på ditt befintliga tak — även på svåråtkomliga öar.",
   },
   {
+    icon: Droplets,
     slug: "takavvattning",
     title: "Takavvattning",
     short: "Rännor & stuprör",
@@ -25,6 +28,7 @@ export const services = [
       "Installation och byte av hängrännor, stuprör och kompletta takavvattningssystem.",
   },
   {
+    icon: Sun,
     slug: "takkupor",
     title: "Takkupor & fönster",
     short: "Ljus på vinden",
@@ -32,6 +36,7 @@ export const services = [
       "Montering av takkupor och takfönster för mer ljus och bättre utnyttjande av vinden.",
   },
   {
+    icon: ShieldCheck,
     slug: "takinspektion",
     title: "Takinspektion",
     short: "Besiktning & rapport",
@@ -39,6 +44,7 @@ export const services = [
       "Grundlig besiktning av ditt tak med kostnadsfri rapport och åtgärdsförslag.",
   },
   {
+    icon: Ruler,
     slug: "platarbeten",
     title: "Plåtarbeten",
     short: "Plåtslagare",
@@ -46,6 +52,7 @@ export const services = [
       "Taktäckning, beslag och plåtdetaljer utförda av certifierade plåtslagare.",
   },
   {
+    icon: Sparkles,
     slug: "takvard",
     title: "Takvård",
     short: "Tvätt & målning",
@@ -53,6 +60,7 @@ export const services = [
       "Professionell taktvätt och takmålning som förlänger livslängden och fräschar upp ditt tak.",
   },
   {
+    icon: AlertTriangle,
     slug: "eternit-asbest",
     title: "Eternit & asbestsanering",
     short: "Säker rivning",
