@@ -20,7 +20,7 @@ const GuidesTeaser = () => {
   };
 
   return (
-    <section id="guider" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="guides-heading">
+    <section id="guider" className="bg-background py-24 md:py-32" aria-labelledby="guides-heading">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
@@ -31,25 +31,25 @@ const GuidesTeaser = () => {
           className="mb-14 lg:mb-20"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 border-t border-foreground/10">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((post, i) => (
             <Reveal key={post.slug} delay={Math.min(i, 5) * 0.06}>
               <Link
                 to={`/blogg/${post.slug}`}
-                className={`group h-full flex flex-col py-9 md:px-8 border-b border-foreground/10 transition-colors hover:bg-foreground/[0.03] ${
-                  i % 3 !== 0 ? "lg:border-l lg:border-foreground/10" : "md:pl-0 lg:pl-0"
-                }`}
+                className="group h-full flex flex-col rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elevated)]"
               >
-                <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">
+
+
+                <div className="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.14em] text-muted-foreground mb-6">
                   <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
-                  <BookOpen className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
+                  <BookOpen className="w-4 h-4 text-accent" aria-hidden="true" />
                   {post.readTime} läsning
                 </div>
-                <h3 className="font-display text-xl tracking-[-0.02em] text-foreground mb-3 leading-snug transition-colors group-hover:text-primary">
+                <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-foreground mb-3 leading-snug transition-colors group-hover:text-primary">
                   {post.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{post.excerpt}</p>
-                <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold transition-transform group-hover:translate-x-1">
+                <p className="text-muted-foreground text-[17px] leading-relaxed mb-6 flex-1">{post.excerpt}</p>
+                <span className="inline-flex items-center gap-2 text-primary text-[17px] font-bold transition-transform group-hover:translate-x-1">
                   Läs guiden <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
@@ -60,7 +60,7 @@ const GuidesTeaser = () => {
         <div className="mt-12">
           <Link
             to="/blogg"
-            className="inline-flex items-center gap-2 border border-foreground/20 text-foreground px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-accent hover:text-primary-foreground hover:border-accent transition-colors"
+            className="inline-flex items-center gap-2 rounded-xl border-2 border-primary text-primary px-8 py-4 text-[18px] font-bold hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             Se alla guider <ArrowRight className="w-4 h-4" />
           </Link>
