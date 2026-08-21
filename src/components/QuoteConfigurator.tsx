@@ -88,7 +88,7 @@ const QuoteConfigurator = () => {
 
   if (submitted) {
     return (
-      <section ref={sectionRef} id="offert" className="border-b border-border bg-warm py-20 md:py-28" aria-labelledby="quote-heading">
+      <section ref={sectionRef} id="offert" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="quote-heading">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-4">
             <CheckCircle className="w-16 h-16 text-primary mx-auto" />
@@ -111,7 +111,7 @@ const QuoteConfigurator = () => {
   }
 
   return (
-    <section ref={sectionRef} id="offert" className="border-b border-border bg-warm py-20 md:py-28" aria-labelledby="quote-heading">
+    <section ref={sectionRef} id="offert" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="quote-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Offert & Rådgivning</p>

@@ -60,7 +60,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="faq-heading">
+    <section id="faq" className="border-b border-border bg-background py-24 md:py-36" aria-labelledby="faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

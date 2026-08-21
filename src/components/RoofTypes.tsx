@@ -97,7 +97,7 @@ const RoofTypes = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
-    <section id="taktyper" className="border-b border-border bg-warm py-20 md:py-28" aria-labelledby="rooftypes-heading">
+    <section id="taktyper" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="rooftypes-heading">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           meta="Materialbibliotek"
