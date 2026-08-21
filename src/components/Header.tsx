@@ -51,10 +51,21 @@ const navLinks: { href: string; label: string; items?: MenuItem[]; wide?: boolea
   { href: "#kontakt", label: "Kontakt" },
 ];
 
+/* Aktiv flik utifrån aktuell URL på undersidor */
+const routeActiveLabel = (pathname: string): string | null => {
+  if (pathname.startsWith("/tjanster") || pathname === "/taktvatt") return "Tjänster";
+  if (pathname.startsWith("/taktyp")) return "Taktyper";
+  if (pathname === "/priser") return "Få offert";
+  if (/^\/(kontakt|radgivning|konsultation|boka)/.test(pathname)) return "Kontakt";
+  if (pathname === "/om-oss") return "Om oss";
+  return null;
+};
+
 export interface Crumb {
   label: string;
   to?: string;
 }
+
 
 const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
   const [menuOpen, setMenuOpen] = useState(false);
