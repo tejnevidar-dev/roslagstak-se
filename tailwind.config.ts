@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Archivo Black', 'sans-serif'],
-        body: ['Hind', 'sans-serif'],
+        display: ['Urbanist', 'sans-serif'],
+        body: ['Epilogue', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
