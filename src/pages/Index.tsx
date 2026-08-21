@@ -5,6 +5,7 @@ import SplashScreen, { shouldShowSplash } from "@/components/SplashScreen";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import QuickAccess from "@/components/QuickAccess";
 
 const RoofBuildAnimation = lazy(() => import("@/components/RoofBuildAnimation"));
 const LayerIntro = lazy(() => import("@/components/LayerIntro"));
