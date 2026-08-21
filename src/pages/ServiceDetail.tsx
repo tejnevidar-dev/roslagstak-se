@@ -16,6 +16,10 @@ import imgLayers from "@/assets/roof-layers-macro.jpg";
 import imgAfter from "@/assets/after-roof-1.jpg";
 import imgCottage from "@/assets/project-coastal-cottage.jpg";
 import imgCabin from "@/assets/project-island-cabin.jpg";
+import imgVilla from "@/assets/project-villa-copper.jpg";
+import imgLakt from "@/assets/roof-build-05-lakt.jpg";
+import imgPannor from "@/assets/roof-build-06-pannor.jpg";
+import imgCinematic from "@/assets/hero-cinematic.jpg";
 
 const serviceImages: Record<string, string> = {
   takomlaggning: imgRoofProject,
@@ -27,6 +31,19 @@ const serviceImages: Record<string, string> = {
   takvard: imgAfter,
   "eternit-asbest": imgCabin,
 };
+
+/** Närbild i översiktssektionen — alltid en annan bild än heron. */
+const detailImages: Record<string, string> = {
+  takomlaggning: imgLakt,
+  takrenovering: imgLayers,
+  takavvattning: imgBeslag,
+  takkupor: imgVilla,
+  takinspektion: imgRooferWork,
+  platarbeten: imgLayers,
+  takvard: imgPannor,
+  "eternit-asbest": imgRooferWork,
+};
+
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
