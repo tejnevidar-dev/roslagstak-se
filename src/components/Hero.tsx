@@ -10,7 +10,7 @@ const facts = [
 ];
 
 const points = [
-  "Kostnadsfri besiktning",
+  "Kostnadsfri besiktning & konsultation",
   "Certifierade takläggare, F-skatt",
   "Vana vid öar utan broförbindelse",
 ];
