@@ -406,7 +406,7 @@ const LocationPage = () => {
                   Få en offert för ditt takprojekt {prep} {location.name}. Vi återkopplar inom 24 timmar.
                 </p>
                 <Link
-                  to="/#offert"
+                  to="/offert"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
                 >
                   Konfigurera din offert <ArrowRight className="w-4 h-4" />

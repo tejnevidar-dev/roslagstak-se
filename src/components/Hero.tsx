@@ -68,7 +68,7 @@ const Hero = () => {
 
             <motion.div className="mt-11 flex flex-wrap items-center gap-5" {...fade(0.24)}>
               <a
-                href="#offert"
+                href="/offert"
                 className="group inline-flex items-center gap-3 bg-seafoam px-9 py-5 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
               >
                 Begär kostnadsfri offert
@@ -84,7 +84,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.a
-              href="#hur-det-gar-till"
+              href="/hur-det-gar-till"
               className="mt-8 inline-flex items-center gap-2 border-b border-seafoam/60 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-seafoam-light"
               {...fade(0.3)}
             >

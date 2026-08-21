@@ -106,7 +106,7 @@ const RoofTypes = () => {
           intro={
             <>
               Öppna en taktyp för att läsa om material, livslängd, fördelar och nackdelar. Osäker?{" "}
-              <a href="#radgivning" className="text-primary underline decoration-primary/40 hover:no-underline">
+              <a href="/offert#radgivning" className="text-primary underline decoration-primary/40 hover:no-underline">
                 Boka kostnadsfri rådgivning
               </a>{" "}
               så hjälper vi dig välja.
@@ -198,7 +198,7 @@ const RoofTypes = () => {
                     </div>
 
                     <a
-                      href="#offert"
+                      href="/offert"
                       className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
                     >
                       Få offert för {roof.name.toLowerCase()}

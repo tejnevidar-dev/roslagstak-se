@@ -381,7 +381,7 @@ const Taktvatt = () => {
                 Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med ROT-avdrag, fast pris och 10 års utförandegaranti.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <a href="/#offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
+                <a href="/offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
                   Få kostnadsfri offert <ArrowRight className="h-4 w-4" />
                 </a>
                 <a href="tel:0701543639" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md border border-foreground/30 text-foreground font-medium hover:bg-foreground/5 transition-colors">
@@ -414,7 +414,7 @@ const Taktvatt = () => {
               <li><a href="#fore-efter" className="text-muted-foreground hover:text-primary transition-colors">Före & efter</a></li>
               <li><a href="#klimat" className="text-muted-foreground hover:text-primary transition-colors">Skärgårdsklimat</a></li>
               <li><a href="#process" className="text-muted-foreground hover:text-primary transition-colors">Vår process</a></li>
-              <li><a href="#taktyper" className="text-muted-foreground hover:text-primary transition-colors">Taktyper</a></li>
+              <li><a href="/taktyper" className="text-muted-foreground hover:text-primary transition-colors">Taktyper</a></li>
               <li><a href="#jamforelse" className="text-muted-foreground hover:text-primary transition-colors">Tvätt vs takbyte</a></li>
               <li><a href="#sasong" className="text-muted-foreground hover:text-primary transition-colors">Säsongsguide</a></li>
               <li><a href="#checklista" className="text-muted-foreground hover:text-primary transition-colors">Checklista</a></li>
@@ -423,7 +423,7 @@ const Taktvatt = () => {
               <li><a href="#garantier" className="text-muted-foreground hover:text-primary transition-colors">Garantier</a></li>
               <li><a href="#ordlista" className="text-muted-foreground hover:text-primary transition-colors">Ordlista</a></li>
               <li><a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">Vanliga frågor</a></li>
-              <li><a href="/#offert" className="text-primary font-semibold hover:underline">Få offert →</a></li>
+              <li><a href="/offert" className="text-primary font-semibold hover:underline">Få offert →</a></li>
             </ul>
           </div>
         </nav>
@@ -885,7 +885,7 @@ const Taktvatt = () => {
               <div className="mt-8 pt-6 border-t border-border text-center">
                 <ListChecks className="h-8 w-8 text-primary mx-auto mb-3" />
                 <p className="text-muted-foreground mb-4">Osäker? Vi gör en kostnadsfri besiktning på plats.</p>
-                <a href="/#offert" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
+                <a href="/offert" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
                   Boka kostnadsfri besiktning <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
@@ -979,7 +979,7 @@ const Taktvatt = () => {
                 Verksamma i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje och skärgården.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a href="/#offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
+                <a href="/offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
                   Få kostnadsfri offert <ArrowRight className="h-4 w-4" />
                 </a>
                 <a href="tel:0701543639" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md border border-foreground/30 text-foreground font-medium hover:bg-foreground/5 transition-colors">

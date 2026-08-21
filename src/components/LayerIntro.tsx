@@ -82,7 +82,7 @@ const LayerIntro = () => {
         </ol>
 
         <motion.a
-          href="#hur-det-gar-till"
+          href="/hur-det-gar-till"
           initial={reduce ? undefined : { opacity: 0, y: 16 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
