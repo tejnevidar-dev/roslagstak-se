@@ -325,49 +325,75 @@ const ServiceDetail = () => {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center border-t border-primary-foreground/10 bg-accent px-8 py-16 lg:border-l lg:border-t-0">
-              <div className="w-full max-w-sm">
-                <div className="flex h-16 w-16 items-center justify-center border border-seafoam-light/40 bg-primary/40">
-                  <service.icon className="h-8 w-8 text-seafoam-light" aria-hidden="true" />
-                </div>
-                <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
-                  Prisbild
-                </p>
-                <p className="mt-3 text-[15px] leading-relaxed text-primary-foreground/80">
-                  {details.priceRange ?? "Fast pris efter kostnadsfri besiktning."}
-                </p>
-                <dl className="mt-8 space-y-4 border-t border-primary-foreground/15 pt-8">
-                  {[
-                    { label: "Utförande", value: "10 års garanti" },
-                    { label: "Material", value: "30 års garanti" },
-                    { label: "Standard", value: "AMA-utförande" },
-                  ].map((fact) => (
-                    <div key={fact.label} className="flex items-baseline justify-between gap-4">
-                      <dt className="text-[10px] font-bold uppercase tracking-[0.26em] text-primary-foreground/50">
-                        {fact.label}
-                      </dt>
-                      <dd className="font-display text-base font-bold tracking-[-0.02em]">{fact.value}</dd>
+            {/* Höger panel — bild med spec-kort */}
+            <figure className="relative m-0 min-h-[340px] overflow-hidden bg-accent lg:min-h-full">
+              <img
+                src={serviceImage}
+                alt={`${service.title} i Roslagen utförd av RoslagsTak`}
+                width={1600}
+                height={1200}
+                fetchPriority="high"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-primary via-primary/45 to-primary/10"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                <div className="border-t border-seafoam-light/40 bg-primary/85 p-6 backdrop-blur-sm">
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-seafoam-light/40">
+                      <service.icon className="h-5 w-5 text-seafoam-light" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
+                        Prisbild
+                      </p>
+                      <p className="mt-2 text-[14px] leading-relaxed text-primary-foreground/80">
+                        {details.priceRange ?? "Fast pris efter kostnadsfri besiktning."}
+                      </p>
                     </div>
-                  ))}
-                </dl>
+                  </div>
+                  <dl className="mt-6 grid grid-cols-3 gap-4 border-t border-primary-foreground/15 pt-5">
+                    {[
+                      { label: "Utförande", value: "10 år" },
+                      { label: "Material", value: "30 år" },
+                      { label: "Standard", value: "AMA" },
+                    ].map((fact) => (
+                      <div key={fact.label}>
+                        <dt className="text-[9px] font-bold uppercase tracking-[0.22em] text-primary-foreground/50">
+                          {fact.label}
+                        </dt>
+                        <dd className="mt-1 font-display text-base font-bold tracking-[-0.02em]">
+                          {fact.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        {/* Beskrivning */}
+        <section className="bg-background py-16 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr] lg:gap-14">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam">Översikt</p>
+                <h2 className="mt-4 font-display text-[clamp(1.5rem,2.2vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-foreground">
+                  Om {service.title.toLowerCase()}
+                </h2>
+              </div>
+              <div className="border-l-2 border-seafoam/40 pl-6 lg:pl-10">
+                <p className="text-[17px] leading-[1.75] text-muted-foreground">{details.longDesc}</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Beskrivning */}
-        <section className="bg-background py-20 lg:py-28">
-          <div className="container mx-auto px-4">
-            <div className="grid gap-12 lg:grid-cols-[0.4fr_0.6fr]">
-              <h2 className="font-display text-[clamp(1.6rem,2.4vw,2.3rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
-                Om {service.title.toLowerCase()}
-              </h2>
-              <div>
-                <p className="text-lg leading-relaxed text-muted-foreground">{details.longDesc}</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {slug === "eternit-asbest" && (
           <section className="bg-secondary/40 py-20">
