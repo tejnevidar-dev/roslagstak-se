@@ -111,7 +111,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
   /* Markera aktuell sektion i navigationen */
   useEffect(() => {
     if (!onHome) return;
-    const ids = navLinks.map((l) => l.href.slice(1));
+    const ids = navLinks.filter((l) => l.href).map((l) => l.href!.slice(1));
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
