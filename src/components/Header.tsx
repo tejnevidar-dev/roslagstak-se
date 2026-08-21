@@ -80,8 +80,11 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
   const onHome = location.pathname === "/";
   const activeRoute = routeActiveLabel(location.pathname);
-  /* Transparent, ljus header ovanpå den mörka heron — solid när man scrollat */
-  const overlay = onHome && !scrolled;
+  /* Sidor med mörk hero-topp → ljus text i overlay-läget */
+  const darkHero =
+    onHome || location.pathname.startsWith("/tjanster") || location.pathname === "/taktvatt";
+  /* Transparent header ovanpå sidans topp — solid när man scrollat (gäller alla sidor) */
+  const overlay = !scrolled;
 
   useEffect(() => {
     const onScroll = () => {
