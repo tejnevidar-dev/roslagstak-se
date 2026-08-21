@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Phone, Menu, X, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Menu, X, MapPin, ArrowRight } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import logo from "@/assets/roslagstak-logo.png";
@@ -83,28 +83,6 @@ const Header = () => {
           : "bg-background/95 text-foreground shadow-[0_1px_0_0_hsl(var(--border))] backdrop-blur-md"
       }`}
     >
-      {/* Utility bar — direktkontakt */}
-      <div
-        className={`hidden overflow-hidden transition-all duration-500 md:block ${
-          overlay ? "max-h-12 bg-accent" : "max-h-0 md:max-h-0"
-        }`}
-      >
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-2 text-[12.5px] text-primary-foreground/80">
-          <p className="flex items-center gap-2">
-            <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-            Takläggare i Roslagen — Norrtälje, Blidö, Ljusterö, Vaxholm
-          </p>
-          <div className="flex items-center gap-6">
-            <a href="mailto:info@roslagstak.se" className="flex items-center gap-2 hover:text-primary-foreground">
-              <Mail className="h-3.5 w-3.5" aria-hidden="true" /> info@roslagstak.se
-            </a>
-            <a href="tel:0701543639" className="flex items-center gap-2 font-semibold text-primary-foreground">
-              <Phone className="h-3.5 w-3.5" aria-hidden="true" /> 070-154 36 39
-            </a>
-          </div>
-        </div>
-      </div>
-
       <div
         className={`mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 transition-all duration-500 ${
           scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
