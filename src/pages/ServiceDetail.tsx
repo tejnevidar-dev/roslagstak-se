@@ -499,27 +499,27 @@ const ServiceDetail = () => {
 
 
         {/* CTA-band */}
-        <section className="relative bg-primary py-20 text-primary-foreground lg:py-24">
+        <section className="relative bg-primary py-16 text-primary-foreground lg:py-20">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
           <div className="container relative mx-auto px-4">
-            <div className="grid items-center gap-10 lg:grid-cols-[0.6fr_0.4fr]">
-              <div>
-                <h2 className="font-display text-[clamp(1.7rem,3vw,2.6rem)] font-extrabold leading-[1.06] tracking-[-0.03em]">
+            <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
+              <div className="max-w-2xl">
+                <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.3rem)] font-extrabold leading-[1.08] tracking-[-0.03em]">
                   {slug === "eternit-asbest"
                     ? "Har du eternittak med asbest?"
                     : `Intresserad av ${service.title.toLowerCase()}?`}
                 </h2>
-                <p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/75">
+                <p className="mt-4 text-[17px] leading-[1.7] text-primary-foreground/75">
                   {slug === "eternit-asbest"
                     ? "Kontakta oss för kostnadsfri rådgivning om ditt eternittak. Vi hjälper dig vidare."
                     : "Kontakta oss för en kostnadsfri besiktning och offert."}
                 </p>
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
                 {slug !== "eternit-asbest" && (
                   <Link
                     to="/#offert"
-                    className="group inline-flex items-center justify-between gap-3 bg-seafoam px-8 py-5 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
+                    className="group inline-flex items-center justify-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
                   >
                     Få offert
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -527,7 +527,7 @@ const ServiceDetail = () => {
                 )}
                 <Link
                   to="/#radgivning"
-                  className={`inline-flex items-center justify-between gap-3 px-8 py-5 text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
+                  className={`inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
                     slug === "eternit-asbest"
                       ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
                       : "border border-primary-foreground/25 text-primary-foreground hover:border-seafoam-light hover:text-seafoam-light"
@@ -542,39 +542,42 @@ const ServiceDetail = () => {
         </section>
 
         {/* Relaterat innehåll */}
-        <section className="bg-background py-20">
+        <section className="bg-background py-20 lg:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr]">
-              <h2 className="font-display text-[clamp(1.5rem,2.2vw,2.1rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
-                Relaterat innehåll
-              </h2>
-              <ul className="grid gap-px bg-border sm:grid-cols-2">
-                {[
-                  { to: "/priser", label: "Se prislista" },
-                  { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
-                  { to: "/blogg/rot-avdrag-takbyte", label: "ROT-avdrag vid takbyte" },
-                  ...(slug === "eternit-asbest"
-                    ? [{ to: "/blogg/eternittak-asbest-sanering", label: "Allt om eternittak och asbest" }]
-                    : []),
-                  { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
-                  { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
-                  { to: "/recensioner", label: "Kundrecensioner" },
-                ].map((link) => (
-                  <li key={link.to} className="bg-background">
-                    <Link
-                      to={link.to}
-                      className="group flex items-center justify-between gap-3 px-5 py-5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary/60"
-                    >
-                      {link.label}
-                      <ArrowRight
-                        className="h-4 w-4 shrink-0 text-seafoam transition-transform group-hover:translate-x-1"
-                        aria-hidden="true"
-                      />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+              <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+              Läs vidare
+            </p>
+            <h2 className="mt-5 max-w-xl font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
+              Relaterat innehåll
+            </h2>
+            <ul className="mt-10 grid border-t border-border sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { to: "/priser", label: "Se prislista" },
+                { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
+                { to: "/blogg/rot-avdrag-takbyte", label: "ROT-avdrag vid takbyte" },
+                ...(slug === "eternit-asbest"
+                  ? [{ to: "/blogg/eternittak-asbest-sanering", label: "Allt om eternittak och asbest" }]
+                  : []),
+                { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
+                { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
+                { to: "/recensioner", label: "Kundrecensioner" },
+              ].map((link) => (
+                <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
+                  <Link
+                    to={link.to}
+                    className="group flex h-full items-center justify-between gap-4 px-1 py-5 text-[15px] font-semibold text-foreground transition-colors hover:text-seafoam sm:px-6"
+                  >
+                    {link.label}
+                    <ArrowRight
+                      className="h-4 w-4 shrink-0 text-seafoam transition-transform group-hover:translate-x-1"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
 
             <div className="mt-14 border-t border-border pt-8">
               <Link
