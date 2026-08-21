@@ -411,17 +411,30 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             className="relative max-h-[80vh] overflow-y-auto border-t border-primary-foreground/10 bg-primary px-6 py-6 text-primary-foreground lg:hidden"
           >
             {navLinks.map((link, i) => {
-              const isActive = onHome ? active === link.href : activeRoute === link.label;
+              const isActive = link.to
+                ? activeRoute === link.label
+                : onHome
+                  ? active === link.href
+                  : activeRoute === link.label;
               return (
-              <div key={link.href}>
+              <div key={link.label}>
                 <motion.a
-                  href={link.href}
+                  href={link.to ?? link.href}
                   data-nav-link
                   aria-current={isActive ? "true" : undefined}
                   initial={reduce ? undefined : { opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.04 * i, duration: 0.3 }}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={(e) => {
+                    if (link.to) {
+                      e.preventDefault();
+                      setMenuOpen(false);
+                      navigate(link.to);
+                    } else {
+                      handleNavClick(e, link.href!);
+                    }
+                  }}
+
                   className={`flex items-center justify-between border-b border-primary-foreground/10 py-4 text-lg font-bold tracking-tight ${
                     isActive ? "text-seafoam-light" : ""
                   }`}
