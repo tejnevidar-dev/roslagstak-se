@@ -167,6 +167,43 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
         }`}
       />
 
+      {/* Hjälprad högst upp — alltid samma plats, stor text, ingen jakt efter telefonnummer */}
+      <div
+        className={`relative hidden overflow-hidden transition-all duration-500 lg:block ${
+          scrolled ? "h-0 opacity-0" : "h-10 opacity-100"
+        } ${light ? "border-b border-primary-foreground/15" : "border-b border-border"}`}
+      >
+        <div className="mx-auto flex h-10 max-w-7xl items-center justify-between gap-6 px-6">
+          <p
+            className={`flex items-center gap-2 text-[13.5px] font-semibold ${
+              light ? "text-primary-foreground/80" : "text-foreground/70"
+            }`}
+          >
+            <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+            Norrtälje · Blidö · Ljusterö · Vaxholm — även öar utan bro
+          </p>
+          <div className="flex items-center gap-5">
+            <Link
+              to="/recensioner"
+              className={`text-[13.5px] font-semibold underline-offset-4 hover:underline ${
+                light ? "text-primary-foreground/80" : "text-foreground/70"
+              }`}
+            >
+              Läs omdömen från kunder
+            </Link>
+            <a
+              href="tel:0701543639"
+              className={`flex items-center gap-2 text-[14.5px] font-bold ${
+                light ? "text-seafoam-light" : "text-primary"
+              }`}
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              Ring oss: 070-154 36 39
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div
         className={`relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 transition-all duration-500 ${
           scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
