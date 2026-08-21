@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Phone, Menu, X, MapPin, ArrowRight, ChevronDown } from "lucide-react";
+import { Phone, Menu, X, MapPin, ArrowRight, ChevronDown, ChevronRight } from "lucide-react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import logo from "@/assets/roslagstak-logo.png";
