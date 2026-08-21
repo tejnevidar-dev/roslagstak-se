@@ -81,6 +81,17 @@ const RoofBuildVideo = () => {
             </span>
           </button>
         )}
+
+        {failed && (
+          <p className="absolute inset-x-0 bottom-0 bg-ink/85 px-5 py-3 text-center text-sm text-ink-foreground">
+            Filmen kunde inte spelas upp här.{" "}
+            <a href="/takbyte-animation-h264.mp4" className="underline" target="_blank" rel="noopener">
+              Öppna filmen i ett nytt fönster
+            </a>
+            .
+          </p>
+        )}
+
       </div>
 
       <script
