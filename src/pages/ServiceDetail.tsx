@@ -6,6 +6,26 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { services } from "@/components/Services";
 import EternitSEOContent from "@/components/EternitSEOContent";
+import imgRoofProject from "@/assets/roof-project.jpg";
+import imgRooferWork from "@/assets/roofer-work.jpg";
+import imgRannor from "@/assets/roof-build-03-rannor.jpg";
+import imgVindskivor from "@/assets/roof-build-04-vindskivor.jpg";
+import imgBeslag from "@/assets/roof-build-07-beslag.jpg";
+import imgLayers from "@/assets/roof-layers-macro.jpg";
+import imgAfter from "@/assets/after-roof-1.jpg";
+import imgCottage from "@/assets/project-coastal-cottage.jpg";
+import imgCabin from "@/assets/project-island-cabin.jpg";
+
+const serviceImages: Record<string, string> = {
+  takomlaggning: imgRoofProject,
+  takrenovering: imgRooferWork,
+  takavvattning: imgRannor,
+  takkupor: imgCottage,
+  takinspektion: imgLayers,
+  platarbeten: imgBeslag,
+  takvard: imgAfter,
+  "eternit-asbest": imgCabin,
+};
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
