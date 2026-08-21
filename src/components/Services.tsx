@@ -95,39 +95,27 @@ const Services = () => {
       </div>
 
 
-      {/* Editorial numbered index — premium, not generic icon-boxes */}
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <ol className="divide-y divide-border border-y border-border">
+      {/* Tjänstekort — ljusa, luftiga ytor med tydliga tryckytor */}
+      <div className="mx-auto max-w-7xl px-6 py-20 lg:py-24">
+        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <li key={service.slug}>
               <Reveal delay={Math.min(i, 5) * 0.04}>
                 <Link
                   to={`/tjanster/${service.slug}`}
-                  className="group grid grid-cols-[auto_1fr] items-start gap-5 py-7 transition-colors duration-300 sm:grid-cols-[auto_1.4fr_1fr_auto] sm:gap-8 sm:py-8"
+                  className="group flex h-full flex-col rounded-3xl border border-border bg-card p-9 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elevated)]"
                 >
-                  {/* Nummer */}
-                  <span className="font-display text-sm font-bold tabular-nums tracking-[0.1em] text-primary/70 transition-colors group-hover:text-primary sm:pt-1.5">
-                    {String(i + 1).padStart(2, "0")}
+                  <span className="mb-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <service.icon className="h-7 w-7" aria-hidden="true" />
                   </span>
-
-                  {/* Titel */}
-                  <div className="min-w-0">
-                    <h3 className="font-display text-xl font-bold tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary sm:text-2xl">
-                      {service.title}
-                    </h3>
-                    <p className="mt-1 text-sm font-semibold uppercase tracking-[0.12em] text-muted-foreground/80">
-                      {service.short}
-                    </p>
-                  </div>
-
-                  {/* Beskrivning (desktop) */}
-                  <p className="hidden max-w-md text-base leading-relaxed text-muted-foreground sm:block">
+                  <h3 className="font-display text-2xl font-bold tracking-[-0.02em] text-foreground">
+                    {service.title}
+                  </h3>
+                  <p className="mt-4 text-[18px] leading-relaxed text-muted-foreground">
                     {service.description}
                   </p>
-
-                  {/* Arrow CTA */}
-                  <span className="flex shrink-0 items-center gap-2 self-center text-sm font-bold uppercase tracking-[0.12em] text-primary sm:pt-1">
-                    <span className="hidden sm:inline">Läs mer</span>
+                  <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-primary">
+                    Läs mer
                     <ArrowRight
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5"
                       aria-hidden="true"
@@ -137,29 +125,29 @@ const Services = () => {
               </Reveal>
             </li>
           ))}
-        </ol>
+        </ul>
 
         {/* Avslutande CTA-band */}
-        <div className="mt-10 grid gap-6 border border-border bg-warm px-7 py-7 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-8">
+        <div className="mt-14 grid gap-6 rounded-3xl bg-primary px-9 py-10 text-primary-foreground sm:grid-cols-[1fr_auto] sm:items-center sm:gap-10">
           <div>
-            <p className="font-display text-xl font-bold tracking-[-0.02em] text-foreground">
+            <p className="font-display text-2xl font-bold tracking-[-0.02em]">
               Vet du inte vad ditt tak behöver?
             </p>
-            <p className="mt-1.5 text-base leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-[18px] leading-relaxed text-primary-foreground/80">
               Fast pris, 10 års utförandegaranti och 30 års materialgaranti — ROT-avdrag dras direkt.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
               href="/offert"
-              className="inline-flex items-center justify-center gap-3 bg-primary px-8 py-4 text-base font-bold text-primary-foreground transition-colors hover:bg-accent animate-subtle-pulse"
+              className="inline-flex items-center justify-center gap-3 rounded-xl bg-card px-8 py-5 text-[18px] font-bold text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
             >
               Räkna på ditt tak
               <ArrowRight className="h-5 w-5" aria-hidden="true" />
             </a>
             <a
               href="tel:0701543639"
-              className="inline-flex items-center justify-center gap-2.5 border border-primary px-7 py-4 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              className="inline-flex items-center justify-center gap-2.5 rounded-xl border-2 border-primary-foreground/40 px-7 py-5 text-[18px] font-bold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               Ring oss
@@ -167,6 +155,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };
