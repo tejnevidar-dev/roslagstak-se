@@ -443,37 +443,52 @@ const ServiceDetail = () => {
         {/* Vad ingår + process */}
         <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
           <div className="container mx-auto px-4">
-            <div className="grid gap-px bg-border md:grid-cols-2">
-              <div className="bg-background p-8 lg:p-12">
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam">01</p>
-                <h2 className="mt-4 font-display text-2xl font-extrabold tracking-[-0.02em] text-foreground">
+            <div className="grid items-start gap-14 md:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+              <div className="md:sticky md:top-28">
+                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                  Omfattning
+                </p>
+                <h2 className="mt-5 font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
                   Vad ingår
                 </h2>
-                <ul className="mt-8 space-y-4">
+                <ul className="mt-8 space-y-px border-y border-border">
                   {details.benefits.map((b) => (
-                    <li key={b} className="flex items-start gap-3 text-[15px] leading-relaxed text-muted-foreground">
-                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-seafoam" aria-hidden="true" />
+                    <li
+                      key={b}
+                      className="flex items-start gap-3.5 border-b border-border/60 py-3.5 text-[15px] leading-[1.6] text-muted-foreground last:border-b-0"
+                    >
+                      <CheckCircle className="mt-[3px] h-4 w-4 shrink-0 text-seafoam" aria-hidden="true" />
                       {b}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-background p-8 lg:p-12">
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam">02</p>
-                <h2 className="mt-4 font-display text-2xl font-extrabold tracking-[-0.02em] text-foreground">
+              <div className="md:border-l md:border-border md:pl-14 lg:pl-20">
+                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                  Arbetsgång
+                </p>
+                <h2 className="mt-5 font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
                   Så här går det till
                 </h2>
-                <ol className="mt-8 space-y-5">
+                <ol className="mt-8 space-y-0">
                   {details.process.map((step, i) => (
                     <li
                       key={step}
                       id={`steg-${i + 1}`}
-                      className="flex items-start gap-4 text-[15px] leading-relaxed text-muted-foreground"
+                      className="relative flex items-start gap-5 pb-7 pl-0 text-[15px] leading-[1.6] text-muted-foreground last:pb-0"
                     >
-                      <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center border border-seafoam/40 font-display text-xs font-bold text-seafoam">
+                      {i < details.process.length - 1 && (
+                        <span
+                          aria-hidden="true"
+                          className="absolute left-[15px] top-8 h-[calc(100%-1.5rem)] w-px bg-border"
+                        />
+                      )}
+                      <span className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-background font-display text-[11px] font-bold text-seafoam ring-1 ring-seafoam/30">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      {step}
+                      <span className="pt-1.5">{step}</span>
                     </li>
                   ))}
                 </ol>
@@ -481,6 +496,7 @@ const ServiceDetail = () => {
             </div>
           </div>
         </section>
+
 
         {/* CTA-band */}
         <section className="relative bg-primary py-20 text-primary-foreground lg:py-24">
