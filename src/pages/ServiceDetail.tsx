@@ -413,21 +413,23 @@ const ServiceDetail = () => {
         </section>
 
         {/* Beskrivning */}
-        <section className="bg-background py-16 lg:py-20">
+        <section className="bg-background py-20 lg:py-28">
           <div className="container mx-auto px-4">
-            <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr] lg:gap-14">
-              <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam">Översikt</p>
-                <h2 className="mt-4 font-display text-[clamp(1.5rem,2.2vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-foreground">
-                  Om {service.title.toLowerCase()}
-                </h2>
-              </div>
-              <div className="border-l-2 border-seafoam/40 pl-6 lg:pl-10">
-                <p className="text-[17px] leading-[1.75] text-muted-foreground">{details.longDesc}</p>
-              </div>
+            <div className="mx-auto max-w-[68ch]">
+              <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+                <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                Översikt
+              </p>
+              <h2 className="mt-6 font-display text-[clamp(1.7rem,2.6vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
+                Om {service.title.toLowerCase()}
+              </h2>
+              <p className="mt-8 text-[clamp(1.05rem,1.35vw,1.2rem)] leading-[1.8] text-muted-foreground">
+                {details.longDesc}
+              </p>
             </div>
           </div>
         </section>
+
 
 
         {slug === "eternit-asbest" && (
