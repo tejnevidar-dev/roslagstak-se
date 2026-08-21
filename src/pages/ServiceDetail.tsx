@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, CheckCircle, Phone } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Phone, PlayCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -364,6 +364,15 @@ const ServiceDetail = () => {
                   </a>
                 </div>
 
+                <Link
+                  to="/#hur-det-gar-till"
+                  className="mt-8 inline-flex items-center gap-2 border-b border-seafoam/60 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-seafoam-light"
+                >
+                  <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                  Se hur ett takbyte går till
+                </Link>
+
+
                 <ul className="mt-12 grid gap-3 border-t border-primary-foreground/15 pt-8 sm:grid-cols-2">
                   {[
                     "Kostnadsfri besiktning och fast pris",
@@ -427,32 +436,41 @@ const ServiceDetail = () => {
                     ))}
                   </dl>
                 </div>
+                <div className="mt-4 flex items-center justify-between gap-4 border-t border-primary-foreground/15 bg-primary/85 px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">
+                  <span>{service.title} — Roslagens kust</span>
+                  <span className="text-primary-foreground/55">RT</span>
+                </div>
               </figcaption>
+
             </figure>
           </div>
         </section>
 
-        {/* Faktaband — hårda siffror direkt under heron */}
-        <section aria-label="Snabbfakta" className="border-b border-border bg-warm">
-          <dl className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-6 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-y-0">
+        {/* Faktarad — samma band som på startsidans hero */}
+        <section aria-label="Snabbfakta" className="bg-accent text-primary-foreground">
+          <dl className="grid grid-cols-2 border-t border-primary-foreground/15 md:grid-cols-4">
             {[
               { k: "Prisbild", v: details.priceRange?.split(".")[0] ?? "Fast pris efter besiktning", note: "ROT-avdrag på arbetskostnaden" },
               { k: "Garanti", v: "10 + 30 år", note: "Utförande respektive material" },
               { k: "Besiktning", v: "Kostnadsfri", note: "Skriftlig bedömning med foton" },
               { k: "Utförande", v: "AMA-standard", note: "Certifierade takläggare, F-skatt" },
             ].map((f, i) => (
-              <div key={f.k} className="py-8 sm:px-8 lg:first:pl-0">
-                <Reveal delay={i * 0.05}>
-                  <dt className="text-[10px] font-bold uppercase tracking-[0.28em] text-seafoam">{f.k}</dt>
-                  <dd className="mt-3 font-display text-[1.35rem] font-extrabold leading-tight tracking-[-0.03em] text-foreground">
-                    {f.v}
-                  </dd>
-                  <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{f.note}</p>
-                </Reveal>
+              <div
+                key={f.k}
+                className={`group px-7 py-8 transition-colors duration-300 hover:bg-primary ${
+                  i < 2 ? "border-b border-primary-foreground/15 md:border-b-0" : ""
+                } ${i !== 3 ? "border-r border-primary-foreground/15" : ""}`}
+              >
+                <dt className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
+                  {f.k}
+                </dt>
+                <dd className="font-display text-lg font-bold leading-tight tracking-[-0.02em]">{f.v}</dd>
+                <p className="mt-2 text-[13px] leading-relaxed text-primary-foreground/60">{f.note}</p>
               </div>
             ))}
           </dl>
         </section>
+
 
         {/* Översikt — text + närbild */}
         <section className="bg-background py-20 lg:py-28">
@@ -503,7 +521,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* Bildblock i full bredd */}
-        <section aria-hidden="true" className="relative h-[38vh] min-h-[260px] overflow-hidden lg:h-[46vh]">
+        <section aria-label="Hantverket" className="relative h-[42vh] min-h-[300px] overflow-hidden lg:h-[50vh]">
           <img
             src={bandImage}
             alt=""
@@ -513,15 +531,27 @@ const ServiceDetail = () => {
             decoding="async"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/45" />
-          <div className="absolute inset-0 flex items-end">
-            <div className="container mx-auto px-4 pb-8 lg:pb-12">
-              <p className="max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-primary-foreground">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/45 to-primary/10"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-4">
+              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
+                <span aria-hidden="true" className="h-px w-10 bg-seafoam-light/60" />
+                Hantverket
+              </p>
+              <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
                 Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.
               </p>
             </div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-primary/85 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-primary-foreground backdrop-blur-sm">
+            <span>{service.title} — utfört i Roslagen</span>
+            <span className="text-primary-foreground/55">RT</span>
+          </div>
         </section>
+
 
         {/* Vad ingår — faktarutor */}
         <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
