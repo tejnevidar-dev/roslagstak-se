@@ -1,29 +1,57 @@
+import { ShieldCheck, Package, Receipt, Search } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const items = [
-  { no: "01", title: "10+30 års garanti", text: "10 års garanti på utförande och 30 års materialgaranti från tillverkaren." },
-  { no: "02", title: "ROT-avdrag", text: "Vi hanterar administrationen direkt på fakturan." },
-  { no: "03", title: "F-skatt & försäkrad", text: "Erfarna takläggare med fullständigt försäkringsskydd." },
-  { no: "04", title: "Fri besiktning", text: "Vi bedömer ditt taks skick helt utan kostnad." },
+  {
+    icon: ShieldCheck,
+    title: "10 år",
+    text: "Utförandegaranti",
+  },
+  {
+    icon: Package,
+    title: "30 år",
+    text: "Materialgaranti",
+  },
+  {
+    icon: Receipt,
+    title: "ROT-avdrag",
+    text: "Dras direkt på fakturan",
+  },
+  {
+    icon: Search,
+    title: "Fri besiktning",
+    text: "Vi bedömer takets skick",
+  },
 ];
 
-/** Sober trust band — light surface, hairline dividers, numbered items. */
+/** Ljus trust-rad som lyfter upp över hero-kanten. */
 const TrustBar = () => {
   return (
-    <section className="border-b border-border bg-warm" aria-label="Våra löften">
-      <ul className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-6 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-y-0">
-        {items.map((item, i) => (
-          <li key={item.title}>
-            <Reveal delay={i * 0.06}>
-              <div className="flex flex-col gap-2 px-0 py-9 sm:px-8 lg:first:pl-0">
-                <span className="text-[11px] font-bold tabular-nums tracking-[0.28em] text-primary">{item.no}</span>
-                <span className="font-display text-lg font-semibold tracking-tight text-foreground">{item.title}</span>
-                <span className="text-sm leading-relaxed text-muted-foreground">{item.text}</span>
-              </div>
-            </Reveal>
-          </li>
-        ))}
-      </ul>
+    <section className="relative z-20 -mt-14 bg-background pb-4" aria-label="Våra löften">
+      <div className="mx-auto max-w-7xl px-6">
+        <ul className="grid grid-cols-1 overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elevated)] sm:grid-cols-2 lg:grid-cols-4">
+          {items.map((item, i) => (
+            <li
+              key={item.title}
+              className="border-b border-border last:border-b-0 sm:[&:nth-child(odd)]:border-r lg:border-b-0 lg:border-r lg:last:border-r-0"
+            >
+              <Reveal delay={i * 0.06}>
+                <div className="flex items-center gap-5 p-7">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
+                    <item.icon className="h-7 w-7" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="font-display text-2xl font-bold tracking-[-0.02em] text-foreground">
+                      {item.title}
+                    </p>
+                    <p className="mt-0.5 text-[16px] text-muted-foreground">{item.text}</p>
+                  </div>
+                </div>
+              </Reveal>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
