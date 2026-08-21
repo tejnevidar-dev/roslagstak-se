@@ -12,12 +12,19 @@ const DURATION_SECONDS = 20.2;
  */
 const RoofBuildVideo = () => {
   const [active, setActive] = useState(false);
+  const [failed, setFailed] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const start = () => {
     setActive(true);
-    requestAnimationFrame(() => void videoRef.current?.play().catch(() => undefined));
+    requestAnimationFrame(() => {
+      const el = videoRef.current;
+      if (!el) return;
+      el.load();
+      void el.play().catch(() => undefined);
+    });
   };
+
 
   return (
     <figure className="relative m-0 mt-10 overflow-hidden rounded-2xl border border-ink-foreground/15 bg-ink-foreground/[0.04]">
