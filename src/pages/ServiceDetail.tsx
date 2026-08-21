@@ -364,6 +364,15 @@ const ServiceDetail = () => {
                   </a>
                 </div>
 
+                <Link
+                  to="/#hur-det-gar-till"
+                  className="mt-8 inline-flex items-center gap-2 border-b border-seafoam/60 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-seafoam-light"
+                >
+                  <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                  Se hur ett takbyte går till
+                </Link>
+
+
                 <ul className="mt-12 grid gap-3 border-t border-primary-foreground/15 pt-8 sm:grid-cols-2">
                   {[
                     "Kostnadsfri besiktning och fast pris",
