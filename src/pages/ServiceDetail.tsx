@@ -220,6 +220,8 @@ const ServiceDetail = () => {
   const service = services.find((s) => s.slug === slug);
   const details = slug ? serviceDetails[slug] : null;
   const serviceImage = (slug && serviceImages[slug]) || imgRoofProject;
+  const detailImage = (slug && detailImages[slug]) || imgLayers;
+  const bandImage = slug === "takvard" ? imgAfter : imgCinematic;
 
   useEffect(() => {
     window.scrollTo(0, 0);
