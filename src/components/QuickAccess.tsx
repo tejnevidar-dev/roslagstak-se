@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone, Hammer, Wrench, Droplets, Calculator } from "lucide-react";
+import { ArrowUpRight, Phone, Hammer, Wrench, Droplets, Calculator } from "lucide-react";
 
 type Item = {
   label: string;
@@ -9,7 +9,7 @@ type Item = {
   href?: string;
 };
 
-/* Snabbval direkt under heron — stora ytor, tydligt språk, ett klick till målet */
+/* Snabbval direkt under heron — en bred hairline-remsa, inte kortrutnät */
 const items: Item[] = [
   {
     label: "Byta tak",
@@ -38,45 +38,60 @@ const items: Item[] = [
 ];
 
 const QuickAccess = () => (
-  <section aria-labelledby="snabbval" className="bg-background">
-    <div className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
-      <h2
-        id="snabbval"
-        className="font-display text-2xl font-extrabold tracking-[-0.02em] text-foreground sm:text-3xl"
-      >
-        Vad behöver du hjälp med?
-      </h2>
-      <p className="mt-3 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-        Välj det som passar dig bäst — eller ring oss, vi svarar gärna på frågor innan du bestämmer
-        något.
-      </p>
+  <section aria-labelledby="snabbval" className="border-y border-border bg-background">
+    <div className="mx-auto max-w-7xl px-6">
+      <div className="flex flex-col gap-6 py-10 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">Snabbval</p>
+          <h2
+            id="snabbval"
+            className="mt-3 font-display text-[clamp(1.75rem,2.6vw,2.5rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-foreground"
+          >
+            Vad behöver du hjälp med?
+          </h2>
+        </div>
+        <a
+          href="tel:0701543639"
+          className="inline-flex shrink-0 items-center gap-3 text-[17px] font-bold text-foreground underline decoration-accent decoration-2 underline-offset-[6px] hover:text-primary"
+        >
+          <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+          Hellre prata? 070-154 36 39
+        </a>
+      </div>
 
-      <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((item) => {
+      <ul className="grid border-t border-border lg:grid-cols-4">
+        {items.map((item, i) => {
           const inner = (
             <>
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <item.icon className="h-7 w-7" aria-hidden="true" />
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-0 h-0 bg-secondary/70 transition-[height] duration-500 ease-out group-hover:h-full"
+              />
+              <span className="relative flex items-center justify-between">
+                <span className="text-[12px] font-bold tabular-nums tracking-[0.2em] text-muted-foreground/70">
+                  0{i + 1}
+                </span>
+                <item.icon className="h-6 w-6 text-primary transition-transform duration-500 group-hover:-translate-y-1" aria-hidden="true" />
               </span>
-              <span className="mt-5 block font-display text-xl font-bold tracking-[-0.02em] text-foreground">
+              <span className="relative mt-14 block font-display text-[clamp(1.35rem,1.7vw,1.6rem)] font-bold leading-tight tracking-[-0.025em] text-foreground">
                 {item.label}
               </span>
-              <span className="mt-1.5 block text-base leading-snug text-muted-foreground">
+              <span className="relative mt-2 block text-[16px] leading-snug text-muted-foreground">
                 {item.help}
               </span>
-              <span className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-primary">
-                Läs mer
-                <ArrowRight
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              <span className="relative mt-6 inline-flex items-center gap-2 text-[15px] font-bold uppercase tracking-[0.14em] text-primary">
+                Vidare
+                <ArrowUpRight
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                   aria-hidden="true"
                 />
               </span>
             </>
           );
           const cls =
-            "group flex h-full min-h-[13.5rem] flex-col rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elevated)]";
+            "group relative flex h-full flex-col overflow-hidden border-b border-border px-0 py-9 lg:border-b-0 lg:border-l lg:px-8 lg:first:border-l-0 lg:first:pl-0";
           return (
-            <li key={item.label}>
+            <li key={item.label} className="lg:contents">
               {item.to ? (
                 <Link to={item.to} className={cls}>
                   {inner}
@@ -90,20 +105,6 @@ const QuickAccess = () => (
           );
         })}
       </ul>
-
-      {/* Hjälp-rad — extra tydlig väg för den som helst pratar med en människa */}
-      <div className="mt-6 flex flex-col items-start gap-4 border border-primary bg-primary px-6 py-6 text-primary-foreground sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-lg font-semibold leading-snug">
-          Osäker på vad ditt tak behöver? Vi tittar på det kostnadsfritt.
-        </p>
-        <a
-          href="tel:0701543639"
-          className="inline-flex shrink-0 items-center gap-3 bg-seafoam px-7 py-4 text-lg font-bold text-primary-foreground transition-colors hover:bg-seafoam-light animate-subtle-pulse"
-        >
-          <Phone className="h-5 w-5" aria-hidden="true" />
-          Ring 070-154 36 39
-        </a>
-      </div>
     </div>
   </section>
 );
