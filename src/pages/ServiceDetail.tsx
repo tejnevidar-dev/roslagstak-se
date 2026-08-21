@@ -531,15 +531,27 @@ const ServiceDetail = () => {
             decoding="async"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/45" />
-          <div className="absolute inset-0 flex items-end">
-            <div className="container mx-auto px-4 pb-8 lg:pb-12">
-              <p className="max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-primary-foreground">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/45 to-primary/10"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-4">
+              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
+                <span aria-hidden="true" className="h-px w-10 bg-seafoam-light/60" />
+                Hantverket
+              </p>
+              <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
                 Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.
               </p>
             </div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-primary/85 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-primary-foreground backdrop-blur-sm">
+            <span>{service.title} — utfört i Roslagen</span>
+            <span className="text-primary-foreground/55">RT</span>
+          </div>
         </section>
+
 
         {/* Vad ingår — faktarutor */}
         <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
