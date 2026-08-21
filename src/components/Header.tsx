@@ -19,47 +19,55 @@ const serviceItems: MenuItem[] = [
 ];
 
 const roofTypeItems: MenuItem[] = [
-  { label: "TP20 Plåttak", href: "#taktyper" },
-  { label: "Tegelplåttak", href: "#taktyper" },
-  { label: "Pannplåttak", href: "#taktyper" },
-  { label: "Dubbelfalsat (bandtäckning)", href: "#taktyper" },
-  { label: "Lertegeltak", href: "#taktyper" },
-  { label: "Betongpannetak", href: "#taktyper" },
-  { label: "Glaserade pannor", href: "#taktyper" },
-  { label: "Papptak (ytpapp)", href: "#taktyper" },
+  { label: "TP20 Plåttak", to: "/taktyper" },
+  { label: "Tegelplåttak", to: "/taktyper" },
+  { label: "Pannplåttak", to: "/taktyper" },
+  { label: "Dubbelfalsat (bandtäckning)", to: "/taktyper" },
+  { label: "Lertegeltak", to: "/taktyper" },
+  { label: "Betongpannetak", to: "/taktyper" },
+  { label: "Glaserade pannor", to: "/taktyper" },
+  { label: "Papptak (ytpapp)", to: "/taktyper" },
 ];
 
 const quoteItems: MenuItem[] = [
   {
     label: "Kostnadsfri konsultation",
-    href: "#radgivning",
+    to: "/offert#radgivning",
     note: "Vi ringer upp och bokar besiktning",
   },
   {
     label: "Konfigurera själv",
-    href: "#offert",
+    to: "/offert",
     note: "Räkna fram din offert direkt",
   },
 ];
 
-const navLinks: { href: string; label: string; items?: MenuItem[]; wide?: boolean }[] = [
+const navLinks: {
+  href?: string;
+  to?: string;
+  label: string;
+  items?: MenuItem[];
+  wide?: boolean;
+}[] = [
   { href: "#tjanster", label: "Tjänster", items: serviceItems, wide: true },
-  { href: "#taktyper", label: "Taktyper", items: roofTypeItems, wide: true },
-  { href: "#hur-det-gar-till", label: "Så går det till" },
-  { href: "#offert", label: "Få offert", items: quoteItems },
+  { to: "/taktyper", label: "Taktyper", items: roofTypeItems, wide: true },
+  { to: "/hur-det-gar-till", label: "Så går det till" },
+  { to: "/offert", label: "Få offert", items: quoteItems },
   { href: "#om-oss", label: "Om oss" },
-  { href: "#kontakt", label: "Kontakt" },
+  { to: "/kontakt", label: "Kontakt" },
 ];
 
 /* Aktiv flik utifrån aktuell URL på undersidor */
 const routeActiveLabel = (pathname: string): string | null => {
   if (pathname.startsWith("/tjanster") || pathname === "/taktvatt") return "Tjänster";
   if (pathname.startsWith("/taktyp")) return "Taktyper";
-  if (pathname === "/priser") return "Få offert";
+  if (pathname === "/hur-det-gar-till") return "Så går det till";
+  if (pathname === "/priser" || pathname === "/offert") return "Få offert";
   if (/^\/(kontakt|radgivning|konsultation|boka)/.test(pathname)) return "Kontakt";
   if (pathname === "/om-oss") return "Om oss";
   return null;
 };
+
 
 export interface Crumb {
   label: string;
