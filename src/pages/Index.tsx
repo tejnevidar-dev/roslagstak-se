@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback, lazy, Suspense } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import SplashScreen, { shouldShowSplash } from "@/components/SplashScreen";
 import Header from "@/components/Header";
@@ -7,34 +7,41 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import QuickAccess from "@/components/QuickAccess";
 
-const RoofBuildAnimation = lazy(() => import("@/components/RoofBuildAnimation"));
-const LayerIntro = lazy(() => import("@/components/LayerIntro"));
-const RoofTypes = lazy(() => import("@/components/RoofTypes"));
-const QuoteConfigurator = lazy(() => import("@/components/QuoteConfigurator"));
-const FreeConsultation = lazy(() => import("@/components/FreeConsultation"));
 const About = lazy(() => import("@/components/About"));
-const Testimonials = lazy(() => import("@/components/Testimonials"));
 const ServiceArea = lazy(() => import("@/components/ServiceArea"));
-const IslandSpecialist = lazy(() => import("@/components/IslandSpecialist"));
-const FAQ = lazy(() => import("@/components/FAQ"));
 const GuidesTeaser = lazy(() => import("@/components/GuidesTeaser"));
-const Contact = lazy(() => import("@/components/Contact"));
 import Footer from "@/components/Footer";
+
+/* Sektioner som flyttat till egna sidor — gamla hash-länkar skickas vidare dit */
+const hashRoutes: Record<string, string> = {
+  "#offert": "/offert",
+  "#radgivning": "/offert#radgivning",
+  "#taktyper": "/taktyper",
+  "#o-specialist": "/taktyper#o-specialist",
+  "#hur-det-gar-till": "/hur-det-gar-till",
+  "#faq": "/offert#faq",
+  "#kontakt": "/kontakt",
+};
 
 const Index = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [showSplash, setShowSplash] = useState(() => shouldShowSplash());
 
   const handleSplashDone = useCallback(() => setShowSplash(false), []);
 
   useEffect(() => {
-    if (location.hash) {
-      setTimeout(() => {
-        const el = document.querySelector(location.hash);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+    if (!location.hash) return;
+    const target = hashRoutes[location.hash];
+    if (target) {
+      navigate(target, { replace: true });
+      return;
     }
-  }, [location.hash]);
+    const t = window.setTimeout(() => {
+      document.querySelector(location.hash)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+    return () => window.clearTimeout(t);
+  }, [location.hash, navigate]);
 
   return (
     <>
@@ -51,18 +58,9 @@ const Index = () => {
         <Services />
 
         <Suspense fallback={null}>
-          <LayerIntro />
-          <RoofBuildAnimation />
-          <RoofTypes />
-          <QuoteConfigurator />
-          <FreeConsultation />
           <About />
-          <IslandSpecialist />
           <ServiceArea />
-          <Testimonials />
           <GuidesTeaser />
-          <FAQ />
-          <Contact />
         </Suspense>
       </main>
       <Footer />
