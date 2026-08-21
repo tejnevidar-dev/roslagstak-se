@@ -436,7 +436,12 @@ const ServiceDetail = () => {
                     ))}
                   </dl>
                 </div>
+                <div className="mt-4 flex items-center justify-between gap-4 border-t border-primary-foreground/15 bg-primary/85 px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">
+                  <span>{service.title} — Roslagens kust</span>
+                  <span className="text-primary-foreground/55">RT</span>
+                </div>
               </figcaption>
+
             </figure>
           </div>
         </section>
