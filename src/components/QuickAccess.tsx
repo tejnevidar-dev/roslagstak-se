@@ -38,7 +38,7 @@ const items: Item[] = [
 ];
 
 const QuickAccess = () => (
-  <section aria-labelledby="snabbval" className="border-b border-border bg-warm">
+  <section aria-labelledby="snabbval" className="bg-background">
     <div className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
       <h2
         id="snabbval"
@@ -55,8 +55,8 @@ const QuickAccess = () => (
         {items.map((item) => {
           const inner = (
             <>
-              <span className="flex h-12 w-12 items-center justify-center bg-primary text-primary-foreground transition-colors group-hover:bg-seafoam">
-                <item.icon className="h-6 w-6" aria-hidden="true" />
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <item.icon className="h-7 w-7" aria-hidden="true" />
               </span>
               <span className="mt-5 block font-display text-xl font-bold tracking-[-0.02em] text-foreground">
                 {item.label}
@@ -74,7 +74,7 @@ const QuickAccess = () => (
             </>
           );
           const cls =
-            "group flex h-full min-h-[13rem] flex-col border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_24px_48px_-32px_hsl(var(--primary)/0.55)]";
+            "group flex h-full min-h-[13.5rem] flex-col rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elevated)]";
           return (
             <li key={item.label}>
               {item.to ? (
