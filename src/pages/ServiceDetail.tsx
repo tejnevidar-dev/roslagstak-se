@@ -9,7 +9,7 @@ import EternitSEOContent from "@/components/EternitSEOContent";
 import imgRoofProject from "@/assets/roof-project.jpg";
 import imgRooferWork from "@/assets/roofer-work.jpg";
 import imgRannor from "@/assets/roof-build-03-rannor.jpg";
-import imgVindskivor from "@/assets/roof-build-04-vindskivor.jpg";
+
 import imgBeslag from "@/assets/roof-build-07-beslag.jpg";
 import imgLayers from "@/assets/roof-layers-macro.jpg";
 import imgAfter from "@/assets/after-roof-1.jpg";
