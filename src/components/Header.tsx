@@ -209,7 +209,7 @@ const Header = () => {
       {/* Läsprogress */}
       <div
         aria-hidden="true"
-        className={`h-[2px] w-full origin-left bg-seafoam transition-opacity duration-300 ${
+        className={`relative h-[2px] w-full origin-left bg-seafoam transition-opacity duration-300 ${
           scrolled ? "opacity-100" : "opacity-0"
         }`}
         style={{ transform: `scaleX(${progress})` }}
@@ -223,7 +223,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={reduce ? undefined : { opacity: 0, y: -12 }}
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="border-t border-primary-foreground/10 bg-primary px-6 py-6 text-primary-foreground lg:hidden"
+            className="relative border-t border-primary-foreground/10 bg-primary px-6 py-6 text-primary-foreground lg:hidden"
           >
             {navLinks.map((link, i) => (
               <motion.a
