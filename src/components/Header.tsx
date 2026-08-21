@@ -151,17 +151,17 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
   return (
     <header
-      className={`${onHome ? "fixed" : "sticky"} top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
         overlay
-          ? "bg-transparent text-primary-foreground"
+          ? `bg-transparent ${darkHero ? "text-primary-foreground" : "text-foreground"}`
           : "bg-background/90 text-foreground shadow-[0_1px_0_0_hsl(var(--border)),0_10px_30px_-24px_hsl(var(--primary)/0.5)] backdrop-blur-xl"
       }`}
     >
-      {/* Nästan osynlig fade så headern smälter in i heron (himlen till höger, navy till vänster) */}
+      {/* Nästan osynlig fade så headern smälter in i den mörka heron */}
       <div
         aria-hidden="true"
         className={`pointer-events-none absolute inset-x-0 top-0 h-[190%] bg-gradient-to-b from-primary/35 via-primary/10 to-transparent transition-opacity duration-700 ${
-          overlay ? "opacity-100" : "opacity-0"
+          overlay && darkHero ? "opacity-100" : "opacity-0"
         }`}
       />
 
