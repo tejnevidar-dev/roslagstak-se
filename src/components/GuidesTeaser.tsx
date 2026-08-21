@@ -36,10 +36,8 @@ const GuidesTeaser = () => {
             <Reveal key={post.slug} delay={Math.min(i, 5) * 0.06}>
               <Link
                 to={`/blogg/${post.slug}`}
-                className={`group h-full flex flex-col py-9 md:px-8 border-b border-foreground/10 transition-colors hover:bg-foreground/[0.03] ${
-                  i % 3 !== 0 ? "lg:border-l lg:border-foreground/10" : "md:pl-0 lg:pl-0"
-                }`}
-              >
+                className="group h-full flex flex-col rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elevated)]"
+
                 <div className="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.14em] text-muted-foreground mb-6">
                   <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                   <BookOpen className="w-4 h-4 text-accent" aria-hidden="true" />
