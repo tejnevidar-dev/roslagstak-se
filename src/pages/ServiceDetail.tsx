@@ -343,6 +343,20 @@ const ServiceDetail = () => {
                     070-154 36 39
                   </a>
                 </div>
+
+                <ul className="mt-12 grid gap-3 border-t border-primary-foreground/15 pt-8 sm:grid-cols-2">
+                  {[
+                    "Kostnadsfri besiktning och fast pris",
+                    "Certifierade takläggare, F-skatt",
+                    "ROT-avdrag på arbetskostnaden",
+                    "Vana vid öar utan broförbindelse",
+                  ].map((point) => (
+                    <li key={point} className="flex items-start gap-3 text-[14px] text-primary-foreground/80">
+                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-seafoam-light" aria-hidden="true" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
