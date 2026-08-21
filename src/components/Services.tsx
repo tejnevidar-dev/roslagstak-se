@@ -72,27 +72,28 @@ export const services = [
 const Services = () => {
   return (
     <section id="tjanster" className="border-b border-border bg-background" aria-labelledby="services-heading">
-      {/* Navy header band — matches Hero accent rhythm */}
-      <div className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
+      {/* Ljus sektionsintro */}
+      <div className="bg-secondary/60">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
-              <span aria-hidden="true" className="h-px w-10 bg-seafoam-light/60" />
+            <p className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">
+              <span aria-hidden="true" className="h-1.5 w-10 rounded-full bg-accent" />
               Allt inom tak — från kust till skärgård
             </p>
             <h2
               id="services-heading"
-              className="mt-5 font-display text-4xl font-extrabold leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-6xl"
+              className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.035em] text-foreground sm:text-5xl"
             >
               Våra tjänster
             </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/75">
+            <p className="mt-6 max-w-2xl text-[19px] leading-relaxed text-muted-foreground">
               Vi hjälper dig hela vägen, oavsett om huset står vid vägen eller bakom en båttur. Välj
               en tjänst nedan — eller ring så guidar vi dig.
             </p>
           </div>
         </div>
       </div>
+
 
       {/* Editorial numbered index — premium, not generic icon-boxes */}
       <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
