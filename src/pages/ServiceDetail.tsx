@@ -432,27 +432,31 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        {/* Faktaband — hårda siffror direkt under heron */}
-        <section aria-label="Snabbfakta" className="border-b border-border bg-warm">
-          <dl className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-6 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-y-0">
+        {/* Faktarad — samma band som på startsidans hero */}
+        <section aria-label="Snabbfakta" className="bg-accent text-primary-foreground">
+          <dl className="grid grid-cols-2 border-t border-primary-foreground/15 md:grid-cols-4">
             {[
               { k: "Prisbild", v: details.priceRange?.split(".")[0] ?? "Fast pris efter besiktning", note: "ROT-avdrag på arbetskostnaden" },
               { k: "Garanti", v: "10 + 30 år", note: "Utförande respektive material" },
               { k: "Besiktning", v: "Kostnadsfri", note: "Skriftlig bedömning med foton" },
               { k: "Utförande", v: "AMA-standard", note: "Certifierade takläggare, F-skatt" },
             ].map((f, i) => (
-              <div key={f.k} className="py-8 sm:px-8 lg:first:pl-0">
-                <Reveal delay={i * 0.05}>
-                  <dt className="text-[10px] font-bold uppercase tracking-[0.28em] text-seafoam">{f.k}</dt>
-                  <dd className="mt-3 font-display text-[1.35rem] font-extrabold leading-tight tracking-[-0.03em] text-foreground">
-                    {f.v}
-                  </dd>
-                  <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{f.note}</p>
-                </Reveal>
+              <div
+                key={f.k}
+                className={`group px-7 py-8 transition-colors duration-300 hover:bg-primary ${
+                  i < 2 ? "border-b border-primary-foreground/15 md:border-b-0" : ""
+                } ${i !== 3 ? "border-r border-primary-foreground/15" : ""}`}
+              >
+                <dt className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
+                  {f.k}
+                </dt>
+                <dd className="font-display text-lg font-bold leading-tight tracking-[-0.02em]">{f.v}</dd>
+                <p className="mt-2 text-[13px] leading-relaxed text-primary-foreground/60">{f.note}</p>
               </div>
             ))}
           </dl>
         </section>
+
 
         {/* Översikt — text + närbild */}
         <section className="bg-background py-20 lg:py-28">
