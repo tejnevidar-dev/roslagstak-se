@@ -131,8 +131,8 @@ const ServiceLocationPage = () => {
 
   // Richer meta description
   const metaDescription = loc?.isIsland
-    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i Roslagen. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning. Ring 070-154 36 39.`
-    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris ✓ 10 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
+    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i Roslagen. Fast pris ✓ 10+30 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning. Ring 070-154 36 39.`
+    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris ✓ 10+30 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
 
   // Title under 60 chars
   const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;
@@ -169,7 +169,7 @@ const ServiceLocationPage = () => {
               {loc?.region || "Roslagen"}
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              {combo.serviceName} {combo.prep} {combo.locationName} — fast pris & 10 års garanti
+              {combo.serviceName} {combo.prep} {combo.locationName} — fast pris & 10+30 års garanti
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {combo.description}
@@ -187,7 +187,7 @@ const ServiceLocationPage = () => {
             </div>
             <div className="flex flex-wrap gap-4 mt-4">
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-primary" /> 10 års garanti
+                <Shield className="w-4 h-4 text-primary" /> 10+30 års garanti
               </div>
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
@@ -293,7 +293,7 @@ const ServiceLocationPage = () => {
                 <h3 className="font-display text-lg text-card-foreground mb-4">Varför RoslagsTak?</h3>
                 <ul className="space-y-2">
                   {[
-                    "10 års garanti",
+                    "10 års utförandegaranti, 30 års materialgaranti",
                     "Fast pris utan dolda kostnader",
                     "Hjälp med ROT-avdrag",
                     "Kostnadsfri besiktning",

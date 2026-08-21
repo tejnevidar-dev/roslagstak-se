@@ -90,7 +90,7 @@ const LocationPage = () => {
         author: { "@type": "Person", name: "Erik B." },
         datePublished: "2026-02-10",
         reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Bästa takläggaren i Roslagen. Ärliga, punktliga och levererar hög kvalitet. 10 års garanti känns tryggt.",
+        reviewBody: "Bästa takläggaren i Roslagen. Ärliga, punktliga och levererar hög kvalitet. 10 års utförandegaranti och 30 års materialgaranti känns tryggt.",
       },
     ],
     geo: {
@@ -162,8 +162,8 @@ const LocationPage = () => {
 
   // SEO-optimized meta description — under 160 chars, keyword-first
   const metaDescription = location.isIsland
-    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`
-    : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, 10 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`;
+    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, 10+30 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`
+    : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, 10+30 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`;
 
   // Title: keep under 60 chars for Google SERP
   const seoTitle = `Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`;
@@ -240,7 +240,7 @@ const LocationPage = () => {
             {/* Trust signals */}
             <div className="flex flex-wrap gap-4 mt-6">
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-primary" /> 10 års garanti
+                <Shield className="w-4 h-4 text-primary" /> 10+30 års garanti
               </div>
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
@@ -365,7 +365,7 @@ const LocationPage = () => {
                   {location.isIsland
                     ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
                     : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och erbjuder konkurrenskraftiga priser tack vare samordning med andra projekt i området.`}
-                  {" "}Alla arbeten utförs enligt AMA Hus med 10 års garanti på material och utförande.
+                  {" "}Alla arbeten utförs enligt AMA Hus med 10 års utförandegaranti och 30 års materialgaranti.
                 </p>
 
                 <h3 className="font-display text-xl text-foreground mb-3">

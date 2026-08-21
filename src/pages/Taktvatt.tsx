@@ -77,7 +77,7 @@ const process = [
 ];
 
 const guarantees = [
-  { icon: ShieldCheck, title: "10 års garanti", desc: "På utfört arbete — branschens längsta garanti. Trygghet för dig som husägare i Roslagen." },
+  { icon: ShieldCheck, title: "10 års garanti", desc: "På utfört arbete — branschens längsta garanti. Trygghet för dig som husägare i Roslagen. 30 års materialgaranti vid takvård med utbyte." },
   { icon: Award, title: "Fast pris efter besiktning", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
   { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Vi har ansvarsförsäkring och hanterar all ROT-administration åt dig." },
   { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutbesiktning — alltid samma person att ringa." },
@@ -340,7 +340,7 @@ const Taktvatt = () => {
     <>
       <SEOHead
         title="Taktvätt Roslagen — Bort med mossa, lavar & alger"
-        description="Taktvätt i Roslagen från 80 kr/m². Vi tar bort mossa, lavar och alger på betong-, tegel- och plåttak. Fast pris, ROT-avdrag 30 % och 10 års garanti. Kostnadsfri offert."
+        description="Taktvätt i Roslagen från 80 kr/m². Vi tar bort mossa, lavar och alger på betong-, tegel- och plåttak. Fast pris, ROT-avdrag 30 % och 10 års utförandegaranti. Kostnadsfri offert."
         canonical={pageUrl}
         type="article"
         geoPosition="59.6237;18.8842"
@@ -378,7 +378,7 @@ const Taktvatt = () => {
               </h1>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed max-w-2xl">
                 Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år.
-                Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med ROT-avdrag, fast pris och 10 års garanti.
+                Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med ROT-avdrag, fast pris och 10 års utförandegaranti.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <a href="/#offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
@@ -453,7 +453,7 @@ const Taktvatt = () => {
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Vi på <strong className="text-foreground">RoslagsTak</strong> är specialister på taktvätt och takvård i hela Roslagen och skärgården.
-              Med rätt teknik, miljögodkända medel och 10 års garanti får ditt tak ett nytt liv — till en bråkdel av priset för ett{" "}
+              Med rätt teknik, miljögodkända medel och 10 års utförandegaranti får ditt tak ett nytt liv — till en bråkdel av priset för ett{" "}
               <Link to="/tjanster/takomlaggning" className="text-primary hover:underline font-medium">takbyte</Link>.
               Se vår fullständiga <Link to="/priser" className="text-primary hover:underline font-medium">prislista för taktjänster</Link> eller läs mer om hur vi jobbar på{" "}
               <Link to="/taktvatt-blido" className="text-primary hover:underline font-medium">Blidö</Link>,{" "}
@@ -926,7 +926,7 @@ const Taktvatt = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               { to: "/tjanster/takomlaggning", icon: Hammer, title: "Takomläggning", desc: "När taktvätt inte räcker — vi byter ut pannor och underlagspapp." },
-              { to: "/tjanster/platarbeten", icon: FileCheck, title: "Plåtarbeten", desc: "Plåttak, hängrännor och beslag i hela Roslagen — med 10 års garanti." },
+              { to: "/tjanster/platarbeten", icon: FileCheck, title: "Plåtarbeten", desc: "Plåttak, hängrännor och beslag i hela Roslagen — med 10 års utförandegaranti." },
               { to: "/tjanster/takrenovering", icon: Wrench, title: "Takrenovering", desc: "Reparation och uppfräschning av äldre tak utan komplett byte." },
             ].map((s) => (
               <Link
@@ -975,7 +975,7 @@ const Taktvatt = () => {
                 Boka taktvätt i Roslagen idag
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
-                Vi erbjuder kostnadsfri besiktning och offert med fast pris. ROT-avdrag och 10 års garanti ingår alltid.
+                Vi erbjuder kostnadsfri besiktning och offert med fast pris. ROT-avdrag och 10 års utförandegaranti ingår alltid.
                 Verksamma i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje och skärgården.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -990,7 +990,7 @@ const Taktvatt = () => {
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Svar inom 24h</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> ROT-avdrag 30 %</span>
-                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> 10 års garanti</span>
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> 10 års utförandegaranti</span>
               </div>
             </div>
           </div>

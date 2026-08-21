@@ -1,7 +1,7 @@
 import Reveal from "@/components/Reveal";
 
 const items = [
-  { no: "01", title: "10 års garanti", text: "Fullt ansvar för material och arbete i ett decennium." },
+  { no: "01", title: "10+30 års garanti", text: "10 års garanti på utförande och 30 års materialgaranti från tillverkaren." },
   { no: "02", title: "ROT-avdrag", text: "Vi hanterar administrationen direkt på fakturan." },
   { no: "03", title: "F-skatt & försäkrad", text: "Erfarna takläggare med fullständigt försäkringsskydd." },
   { no: "04", title: "Fri besiktning", text: "Vi bedömer ditt taks skick helt utan kostnad." },

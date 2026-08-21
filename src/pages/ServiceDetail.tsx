@@ -9,7 +9,7 @@ import EternitSEOContent from "@/components/EternitSEOContent";
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års garanti.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års utförandegaranti och 30 års materialgaranti.",
     priceRange: "Från ca 1 200 kr/m² (TP20) till 2 000+ kr/m² (dubbelfalsat). Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
     benefits: [
       "Rivning av befintligt yttertak",
@@ -122,7 +122,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Beslag runt skorstenar och genomföringar",
       "Ränndalar och vindskivor i plåt",
       "Material i stål, aluminium, koppar och zink",
-      "10 års garanti",
+      "10 års utförandegaranti, 30 års materialgaranti",
     ],
     process: [
       "Besiktning och uppmätning",
@@ -267,7 +267,7 @@ const ServiceDetail = () => {
           : `${service.title} i Roslagen — Takläggare RoslagsTak`}
         description={slug === "eternit-asbest"
           ? "Certifierad eternitsanering och asbestrivning i Roslagen & skärgården. Säker rivning enligt AFS 2006:1, transport till deponi och nytt tak. Kostnadsfri besiktning. ROT-avdrag."
-          : `${service.title} i Roslagen. ${service.description} Kostnadsfri offert och 10 års garanti.`}
+          : `${service.title} i Roslagen. ${service.description} Kostnadsfri offert, 10 års utförandegaranti och 30 års materialgaranti.`}
         canonical={`https://roslagstak.se/tjanster/${slug}`}
       />
       <Header />

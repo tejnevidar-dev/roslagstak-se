@@ -14,7 +14,7 @@ const coreValues = [
   {
     icon: ShieldCheck,
     title: "Ansvar",
-    description: "Vi står bakom varje takpanna, varje plåtskiva och varje skarv vi lägger. Med 10 års garanti och tydliga avtal tar vi fullt ansvar för resultatet.",
+    description: "Vi står bakom varje takpanna, varje plåtskiva och varje skarv vi lägger. Med 10 års utförandegaranti, 30 års materialgaranti och tydliga avtal tar vi fullt ansvar för resultatet.",
   },
   {
     icon: Award,
@@ -31,7 +31,7 @@ const coreValues = [
 const benefits = [
   "Certifierade och försäkrade takläggare",
   "Fast pris utan dolda kostnader",
-  "10 års garanti på allt arbete",
+  "10 års utförandegaranti, 30 års materialgaranti",
   "Verksamma i hela Roslagens skärgård",
   "Kostnadsfri besiktning och offert",
   "Hjälp med ROT-avdrag",

@@ -84,7 +84,7 @@ const Services = () => {
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-bold uppercase tracking-[0.24em] text-muted-foreground">
             <span>AMA-standard</span>
             <span className="h-px w-6 bg-border" aria-hidden="true" />
-            <span>10 års garanti</span>
+            <span>10+30 års garanti</span>
             <span className="h-px w-6 bg-border" aria-hidden="true" />
             <span>ROT-avdrag</span>
             <span className="h-px w-6 bg-border" aria-hidden="true" />
