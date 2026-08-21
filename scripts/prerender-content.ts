@@ -67,6 +67,36 @@ const home: PrerenderPage = {
 
 const staticPages: Record<string, PrerenderPage> = {
   "/": home,
+  "/offert": {
+    h1: "Få offert på takbyte i Roslagen",
+    intro:
+      "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och besiktning på plats.",
+    paragraphs: [
+      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri besiktning — med 10 års utförandegaranti och 30 års materialgaranti.",
+      `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi återkopplar inom 24 timmar.`,
+    ],
+    links: [...primaryLinks, ...serviceLinks],
+  },
+  "/taktyper": {
+    h1: "Taktyper — plåttak, tegel och betongpannor",
+    intro:
+      "Jämför taktyper inför ditt takbyte: TP20, pannplåt, tegelplåt, dubbelfalsat plåttak (bandtäckning), lertegel, betongpannor, glaserade pannor och papptak.",
+    paragraphs: [
+      "Plåttak är lätt, snabbt att montera och passar de flesta hus i kustnära klimat. Dubbelfalsad bandtäckning har längst livslängd (50+ år). Betongpannor och lertegel ger klassisk karaktär men kräver bärande konstruktion för högre vikt.",
+      "Vi hjälper dig välja material utifrån husets konstruktion, taklutning, väderutsatthet och budget — och sköter transport till öar utan broförbindelse.",
+    ],
+    links: [...primaryLinks, ...serviceLinks],
+  },
+  "/hur-det-gar-till": {
+    h1: "Så går ett takbyte till — steg för steg",
+    intro:
+      "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager.",
+    paragraphs: [
+      "Ordningen är råspont, underlagspapp, hängrännor och stuprör, vindskivor, ströläkt och bärläkt, takpannor eller plåt, samt avslutande plåtbeslag kring skorsten och genomföringar.",
+      "Varje moment dokumenteras och kontrolleras. Du får löpande återkoppling under projektet och slutbesiktning innan vi lämnar arbetsplatsen.",
+    ],
+    links: [...primaryLinks, ...serviceLinks],
+  },
   "/priser": {
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro:
