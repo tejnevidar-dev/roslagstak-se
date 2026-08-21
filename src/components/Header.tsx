@@ -351,8 +351,8 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             className={`hidden h-6 w-px lg:block ${light ? "bg-primary-foreground/25" : "bg-border"}`}
           />
           <a
-            href="#offert"
-            onClick={(e) => handleNavClick(e, "#offert")}
+            href="/offert"
+            onClick={(e) => { e.preventDefault(); setOpenMenu(null); navigate("/offert"); }}
             className={`group flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-colors animate-subtle-pulse ${
               light
                 ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light"
@@ -485,8 +485,8 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             })}
             <div className="mt-6 flex flex-col gap-3">
               <a
-                href="#offert"
-                onClick={(e) => handleNavClick(e, "#offert")}
+                href="/offert"
+                onClick={(e) => { e.preventDefault(); setMenuOpen(false); navigate("/offert"); }}
                 className="flex items-center justify-center gap-2 bg-seafoam px-5 py-4 text-base font-semibold text-primary-foreground animate-subtle-pulse"
               >
                 Begär kostnadsfri offert
