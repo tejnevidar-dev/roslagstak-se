@@ -12,12 +12,19 @@ const DURATION_SECONDS = 20.2;
  */
 const RoofBuildVideo = () => {
   const [active, setActive] = useState(false);
+  const [failed, setFailed] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const start = () => {
     setActive(true);
-    requestAnimationFrame(() => void videoRef.current?.play().catch(() => undefined));
+    requestAnimationFrame(() => {
+      const el = videoRef.current;
+      if (!el) return;
+      el.load();
+      void el.play().catch(() => undefined);
+    });
   };
+
 
   return (
     <figure className="relative m-0 mt-10 overflow-hidden rounded-2xl border border-ink-foreground/15 bg-ink-foreground/[0.04]">
@@ -42,13 +49,16 @@ const RoofBuildVideo = () => {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
+            onError={() => setFailed(true)}
             aria-label="Film: så går ett takbyte till, från råspont till snörasskydd"
           >
-            <source src="/takbyte-animation.webm" type="video/webm" />
+            <source src="/takbyte-animation-h264.mp4" type="video/mp4; codecs=avc1.4d4028" />
             <source src="/takbyte-animation-1080p.mp4" type="video/mp4" />
+            <source src="/takbyte-animation.webm" type="video/webm" />
             Din webbläsare kan inte spela upp video. Bilderna ovan visar samma arbetsgång steg för steg.
           </video>
+
         ) : (
           <button
             type="button"
@@ -71,6 +81,17 @@ const RoofBuildVideo = () => {
             </span>
           </button>
         )}
+
+        {failed && (
+          <p className="absolute inset-x-0 bottom-0 bg-ink/85 px-5 py-3 text-center text-sm text-ink-foreground">
+            Filmen kunde inte spelas upp här.{" "}
+            <a href="/takbyte-animation-h264.mp4" className="underline" target="_blank" rel="noopener">
+              Öppna filmen i ett nytt fönster
+            </a>
+            .
+          </p>
+        )}
+
       </div>
 
       <script
