@@ -51,10 +51,21 @@ const navLinks: { href: string; label: string; items?: MenuItem[]; wide?: boolea
   { href: "#kontakt", label: "Kontakt" },
 ];
 
+/* Aktiv flik utifrån aktuell URL på undersidor */
+const routeActiveLabel = (pathname: string): string | null => {
+  if (pathname.startsWith("/tjanster") || pathname === "/taktvatt") return "Tjänster";
+  if (pathname.startsWith("/taktyp")) return "Taktyper";
+  if (pathname === "/priser") return "Få offert";
+  if (/^\/(kontakt|radgivning|konsultation|boka)/.test(pathname)) return "Kontakt";
+  if (pathname === "/om-oss") return "Om oss";
+  return null;
+};
+
 export interface Crumb {
   label: string;
   to?: string;
 }
+
 
 const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -68,6 +79,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
   const reduce = useReducedMotion();
 
   const onHome = location.pathname === "/";
+  const activeRoute = routeActiveLabel(location.pathname);
   /* Transparent, ljus header ovanpå den mörka heron — solid när man scrollat */
   const overlay = onHome && !scrolled;
 
@@ -175,7 +187,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Huvudnavigation">
           {navLinks.map((link) => {
-            const isActive = onHome && active === link.href;
+            const isActive = onHome ? active === link.href : activeRoute === link.label;
             const hasMenu = Boolean(link.items);
             const isOpen = openMenu === link.label;
             return (
@@ -235,6 +247,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                       <div className="border-t-2 border-seafoam bg-primary p-2 text-primary-foreground shadow-[0_28px_60px_-28px_hsl(var(--primary)/0.6)]">
                         <ul className={link.wide ? "grid grid-cols-1" : ""}>
                           {link.items!.map((item) => {
+                            const itemActive = Boolean(item.to && item.to === location.pathname);
                             const inner = (
                               <>
                                 <span className="flex-1">
@@ -253,12 +266,20 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                                 />
                               </>
                             );
-                            const cls =
-                              "group/item flex items-start gap-3 px-4 py-3 transition-colors hover:bg-primary-foreground/[0.08]";
+                            const cls = `group/item flex items-start gap-3 border-l-2 px-4 py-3 transition-colors hover:bg-primary-foreground/[0.08] ${
+                              itemActive
+                                ? "border-seafoam bg-primary-foreground/[0.08]"
+                                : "border-transparent"
+                            }`;
                             return (
                               <li key={item.label}>
                                 {item.to ? (
-                                  <Link to={item.to} onClick={() => setOpenMenu(null)} className={cls}>
+                                  <Link
+                                    to={item.to}
+                                    aria-current={itemActive ? "page" : undefined}
+                                    onClick={() => setOpenMenu(null)}
+                                    className={cls}
+                                  >
                                     {inner}
                                   </Link>
                                 ) : (
@@ -274,6 +295,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                               </li>
                             );
                           })}
+
                         </ul>
                       </div>
                     </motion.div>
@@ -384,16 +406,21 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
             className="relative max-h-[80vh] overflow-y-auto border-t border-primary-foreground/10 bg-primary px-6 py-6 text-primary-foreground lg:hidden"
           >
-            {navLinks.map((link, i) => (
+            {navLinks.map((link, i) => {
+              const isActive = onHome ? active === link.href : activeRoute === link.label;
+              return (
               <div key={link.href}>
                 <motion.a
                   href={link.href}
                   data-nav-link
+                  aria-current={isActive ? "true" : undefined}
                   initial={reduce ? undefined : { opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.04 * i, duration: 0.3 }}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="flex items-center justify-between border-b border-primary-foreground/10 py-4 text-lg font-bold tracking-tight"
+                  className={`flex items-center justify-between border-b border-primary-foreground/10 py-4 text-lg font-bold tracking-tight ${
+                    isActive ? "text-seafoam-light" : ""
+                  }`}
                 >
                   <span>
                     <span className="mr-3 text-[11px] font-bold text-seafoam-light">
@@ -405,13 +432,19 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                 </motion.a>
                 {link.items && (
                   <ul className="mb-2 mt-2 grid gap-1 pl-9">
-                    {link.items.map((item) => (
+                    {link.items.map((item) => {
+                      const itemActive = Boolean(item.to && item.to === location.pathname);
+                      const cls = `block py-1.5 text-[14px] ${
+                        itemActive ? "font-semibold text-seafoam-light" : "text-primary-foreground/70"
+                      }`;
+                      return (
                       <li key={item.label}>
                         {item.to ? (
                           <Link
                             to={item.to}
+                            aria-current={itemActive ? "page" : undefined}
                             onClick={() => setMenuOpen(false)}
-                            className="block py-1.5 text-[14px] text-primary-foreground/70"
+                            className={cls}
                           >
                             {item.label}
                           </Link>
@@ -420,17 +453,19 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                             href={item.href}
                             data-nav-link
                             onClick={(e) => handleNavClick(e, item.href!)}
-                            className="block py-1.5 text-[14px] text-primary-foreground/70"
+                            className={cls}
                           >
                             {item.label}
                           </a>
                         )}
                       </li>
-                    ))}
+                      );
+                    })}
                   </ul>
                 )}
               </div>
-            ))}
+              );
+            })}
             <div className="mt-6 flex flex-col gap-3">
               <a
                 href="#offert"
