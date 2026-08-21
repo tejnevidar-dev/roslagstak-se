@@ -247,6 +247,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                       <div className="border-t-2 border-seafoam bg-primary p-2 text-primary-foreground shadow-[0_28px_60px_-28px_hsl(var(--primary)/0.6)]">
                         <ul className={link.wide ? "grid grid-cols-1" : ""}>
                           {link.items!.map((item) => {
+                            const itemActive = Boolean(item.to && item.to === location.pathname);
                             const inner = (
                               <>
                                 <span className="flex-1">
@@ -265,12 +266,20 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                                 />
                               </>
                             );
-                            const cls =
-                              "group/item flex items-start gap-3 px-4 py-3 transition-colors hover:bg-primary-foreground/[0.08]";
+                            const cls = `group/item flex items-start gap-3 border-l-2 px-4 py-3 transition-colors hover:bg-primary-foreground/[0.08] ${
+                              itemActive
+                                ? "border-seafoam bg-primary-foreground/[0.08]"
+                                : "border-transparent"
+                            }`;
                             return (
                               <li key={item.label}>
                                 {item.to ? (
-                                  <Link to={item.to} onClick={() => setOpenMenu(null)} className={cls}>
+                                  <Link
+                                    to={item.to}
+                                    aria-current={itemActive ? "page" : undefined}
+                                    onClick={() => setOpenMenu(null)}
+                                    className={cls}
+                                  >
                                     {inner}
                                   </Link>
                                 ) : (
@@ -286,6 +295,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                               </li>
                             );
                           })}
+
                         </ul>
                       </div>
                     </motion.div>
