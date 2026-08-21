@@ -47,7 +47,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <QuickAccess />
         <Services />
+
         <Suspense fallback={null}>
           <LayerIntro />
           <RoofBuildAnimation />
