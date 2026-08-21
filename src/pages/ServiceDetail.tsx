@@ -311,7 +311,13 @@ const ServiceDetail = () => {
           : `${service.title} i Roslagen. ${service.description} Kostnadsfri offert, 10 års utförandegaranti och 30 års materialgaranti.`}
         canonical={`https://roslagstak.se/tjanster/${slug}`}
       />
-      <Header />
+      <Header
+        breadcrumb={[
+          { label: "Startsidan", to: "/" },
+          { label: "Tjänster", to: "/#tjanster" },
+          { label: service.title },
+        ]}
+      />
       <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
@@ -320,28 +326,16 @@ const ServiceDetail = () => {
         {/* Split-screen hero */}
         <section className="relative bg-primary text-primary-foreground">
           <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="relative flex flex-col justify-center px-6 pb-16 pt-32 sm:px-10 lg:pb-24 lg:pt-36 xl:px-20">
+            <div className="relative flex flex-col justify-center px-6 pb-16 pt-16 sm:px-10 lg:pb-24 lg:pt-24 xl:px-20">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine"
               />
               <div className="relative mx-auto w-full max-w-2xl lg:mx-0">
-                <nav aria-label="Brödsmulor" className="mb-8 flex flex-wrap items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary-foreground/55">
-                  <Link to="/" className="transition-colors hover:text-seafoam-light">Startsidan</Link>
-                  <span aria-hidden="true">/</span>
-                  <Link to="/#tjanster" className="transition-colors hover:text-seafoam-light">Tjänster</Link>
-                  <span aria-hidden="true">/</span>
-                  <span className="text-seafoam-light">{service.title}</span>
-                </nav>
-
-                <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
-                  <span aria-hidden="true" className="h-px w-10 bg-seafoam-light/60" />
-                  Tjänst i Roslagen och skärgården
-                </p>
-
-                <h1 className="mt-7 font-display text-[clamp(2.2rem,4.4vw,3.9rem)] font-extrabold leading-[1.02] tracking-[-0.035em]">
+                <h1 className="font-display text-[clamp(2.2rem,4.4vw,3.9rem)] font-extrabold leading-[1.02] tracking-[-0.035em]">
                   {service.title}
                 </h1>
+
 
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75">
                   {service.description}
