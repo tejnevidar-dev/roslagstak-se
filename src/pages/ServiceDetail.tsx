@@ -521,7 +521,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* Bildblock i full bredd */}
-        <section aria-hidden="true" className="relative h-[38vh] min-h-[260px] overflow-hidden lg:h-[46vh]">
+        <section aria-label="Hantverket" className="relative h-[42vh] min-h-[300px] overflow-hidden lg:h-[50vh]">
           <img
             src={bandImage}
             alt=""
