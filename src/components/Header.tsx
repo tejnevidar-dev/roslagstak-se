@@ -19,47 +19,55 @@ const serviceItems: MenuItem[] = [
 ];
 
 const roofTypeItems: MenuItem[] = [
-  { label: "TP20 Plåttak", href: "#taktyper" },
-  { label: "Tegelplåttak", href: "#taktyper" },
-  { label: "Pannplåttak", href: "#taktyper" },
-  { label: "Dubbelfalsat (bandtäckning)", href: "#taktyper" },
-  { label: "Lertegeltak", href: "#taktyper" },
-  { label: "Betongpannetak", href: "#taktyper" },
-  { label: "Glaserade pannor", href: "#taktyper" },
-  { label: "Papptak (ytpapp)", href: "#taktyper" },
+  { label: "TP20 Plåttak", to: "/taktyper" },
+  { label: "Tegelplåttak", to: "/taktyper" },
+  { label: "Pannplåttak", to: "/taktyper" },
+  { label: "Dubbelfalsat (bandtäckning)", to: "/taktyper" },
+  { label: "Lertegeltak", to: "/taktyper" },
+  { label: "Betongpannetak", to: "/taktyper" },
+  { label: "Glaserade pannor", to: "/taktyper" },
+  { label: "Papptak (ytpapp)", to: "/taktyper" },
 ];
 
 const quoteItems: MenuItem[] = [
   {
     label: "Kostnadsfri konsultation",
-    href: "#radgivning",
+    to: "/offert#radgivning",
     note: "Vi ringer upp och bokar besiktning",
   },
   {
     label: "Konfigurera själv",
-    href: "#offert",
+    to: "/offert",
     note: "Räkna fram din offert direkt",
   },
 ];
 
-const navLinks: { href: string; label: string; items?: MenuItem[]; wide?: boolean }[] = [
+const navLinks: {
+  href?: string;
+  to?: string;
+  label: string;
+  items?: MenuItem[];
+  wide?: boolean;
+}[] = [
   { href: "#tjanster", label: "Tjänster", items: serviceItems, wide: true },
-  { href: "#taktyper", label: "Taktyper", items: roofTypeItems, wide: true },
-  { href: "#hur-det-gar-till", label: "Så går det till" },
-  { href: "#offert", label: "Få offert", items: quoteItems },
+  { to: "/taktyper", label: "Taktyper", items: roofTypeItems, wide: true },
+  { to: "/hur-det-gar-till", label: "Så går det till" },
+  { to: "/offert", label: "Få offert", items: quoteItems },
   { href: "#om-oss", label: "Om oss" },
-  { href: "#kontakt", label: "Kontakt" },
+  { to: "/kontakt", label: "Kontakt" },
 ];
 
 /* Aktiv flik utifrån aktuell URL på undersidor */
 const routeActiveLabel = (pathname: string): string | null => {
   if (pathname.startsWith("/tjanster") || pathname === "/taktvatt") return "Tjänster";
   if (pathname.startsWith("/taktyp")) return "Taktyper";
-  if (pathname === "/priser") return "Få offert";
+  if (pathname === "/hur-det-gar-till") return "Så går det till";
+  if (pathname === "/priser" || pathname === "/offert") return "Få offert";
   if (/^\/(kontakt|radgivning|konsultation|boka)/.test(pathname)) return "Kontakt";
   if (pathname === "/om-oss") return "Om oss";
   return null;
 };
+
 
 export interface Crumb {
   label: string;
@@ -103,7 +111,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
   /* Markera aktuell sektion i navigationen */
   useEffect(() => {
     if (!onHome) return;
-    const ids = navLinks.map((l) => l.href.slice(1));
+    const ids = navLinks.filter((l) => l.href).map((l) => l.href!.slice(1));
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
@@ -193,23 +201,37 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Huvudnavigation">
           {navLinks.map((link) => {
-            const isActive = onHome ? active === link.href : activeRoute === link.label;
+            const isActive = link.to
+              ? activeRoute === link.label
+              : onHome
+                ? active === link.href
+                : activeRoute === link.label;
             const hasMenu = Boolean(link.items);
             const isOpen = openMenu === link.label;
             return (
               <div
-                key={link.href}
+                key={link.label}
                 className="relative"
                 onMouseEnter={hasMenu ? () => openDropdown(link.label) : undefined}
                 onMouseLeave={hasMenu ? scheduleClose : undefined}
               >
                 <a
-                  href={link.href}
+                  href={link.to ?? link.href}
                   data-nav-link
                   aria-current={isActive ? "true" : undefined}
                   aria-expanded={hasMenu ? isOpen : undefined}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={(e) => {
+                    if (link.to) {
+                      e.preventDefault();
+                      setOpenMenu(null);
+                      setMenuOpen(false);
+                      navigate(link.to);
+                    } else {
+                      handleNavClick(e, link.href!);
+                    }
+                  }}
                   onFocus={hasMenu ? () => openDropdown(link.label) : undefined}
+
                   className={`group relative flex items-center gap-1.5 px-3 py-2 text-[14.5px] font-semibold tracking-tight transition-colors ${
                     light
                       ? "text-primary-foreground/70 hover:text-primary-foreground"
@@ -329,8 +351,8 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             className={`hidden h-6 w-px lg:block ${light ? "bg-primary-foreground/25" : "bg-border"}`}
           />
           <a
-            href="#offert"
-            onClick={(e) => handleNavClick(e, "#offert")}
+            href="/offert"
+            onClick={(e) => { e.preventDefault(); setOpenMenu(null); navigate("/offert"); }}
             className={`group flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-colors animate-subtle-pulse ${
               light
                 ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light"
@@ -389,17 +411,30 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             className="relative max-h-[80vh] overflow-y-auto border-t border-primary-foreground/10 bg-primary px-6 py-6 text-primary-foreground lg:hidden"
           >
             {navLinks.map((link, i) => {
-              const isActive = onHome ? active === link.href : activeRoute === link.label;
+              const isActive = link.to
+                ? activeRoute === link.label
+                : onHome
+                  ? active === link.href
+                  : activeRoute === link.label;
               return (
-              <div key={link.href}>
+              <div key={link.label}>
                 <motion.a
-                  href={link.href}
+                  href={link.to ?? link.href}
                   data-nav-link
                   aria-current={isActive ? "true" : undefined}
                   initial={reduce ? undefined : { opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.04 * i, duration: 0.3 }}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={(e) => {
+                    if (link.to) {
+                      e.preventDefault();
+                      setMenuOpen(false);
+                      navigate(link.to);
+                    } else {
+                      handleNavClick(e, link.href!);
+                    }
+                  }}
+
                   className={`flex items-center justify-between border-b border-primary-foreground/10 py-4 text-lg font-bold tracking-tight ${
                     isActive ? "text-seafoam-light" : ""
                   }`}
@@ -450,8 +485,8 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             })}
             <div className="mt-6 flex flex-col gap-3">
               <a
-                href="#offert"
-                onClick={(e) => handleNavClick(e, "#offert")}
+                href="/offert"
+                onClick={(e) => { e.preventDefault(); setMenuOpen(false); navigate("/offert"); }}
                 className="flex items-center justify-center gap-2 bg-seafoam px-5 py-4 text-base font-semibold text-primary-foreground animate-subtle-pulse"
               >
                 Begär kostnadsfri offert

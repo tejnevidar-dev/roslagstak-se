@@ -343,7 +343,7 @@ const ServiceDetail = () => {
 
                 <div className="mt-10 flex flex-wrap items-center gap-5">
                   <Link
-                    to="/#offert"
+                    to="/offert"
                     className="group inline-flex items-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
                   >
                     Begär kostnadsfri offert
@@ -359,7 +359,7 @@ const ServiceDetail = () => {
                 </div>
 
                 <Link
-                  to="/#hur-det-gar-till"
+                  to="/hur-det-gar-till"
                   className="mt-8 inline-flex items-center gap-2 border-b border-seafoam/60 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-seafoam-light"
                 >
                   <PlayCircle className="h-4 w-4" aria-hidden="true" />
@@ -694,7 +694,7 @@ const ServiceDetail = () => {
               <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
                 {slug !== "eternit-asbest" && (
                   <Link
-                    to="/#offert"
+                    to="/offert"
                     className="group inline-flex items-center justify-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
                   >
                     Få offert
@@ -702,7 +702,7 @@ const ServiceDetail = () => {
                   </Link>
                 )}
                 <Link
-                  to="/#radgivning"
+                  to="/offert#radgivning"
                   className={`inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
                     slug === "eternit-asbest"
                       ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"

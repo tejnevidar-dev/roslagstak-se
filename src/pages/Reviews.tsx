@@ -155,13 +155,13 @@ const Reviews = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/#offert"
+                  to="/offert"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
                 >
                   Få offert <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/#radgivning"
+                  to="/offert#radgivning"
                   className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors hover:animate-subtle-pulse"
                 >
                   Kostnadsfri rådgivning

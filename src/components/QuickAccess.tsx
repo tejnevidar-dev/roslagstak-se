@@ -33,7 +33,7 @@ const items: Item[] = [
     label: "Se vad taket kostar",
     help: "Räkna fram ditt pris direkt",
     icon: Calculator,
-    href: "/#offert",
+    href: "/offert",
   },
 ];
 

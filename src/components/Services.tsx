@@ -150,7 +150,7 @@ const Services = () => {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
-              href="#offert"
+              href="/offert"
               className="inline-flex items-center justify-center gap-3 bg-primary px-8 py-4 text-base font-bold text-primary-foreground transition-colors hover:bg-accent animate-subtle-pulse"
             >
               Räkna på ditt tak

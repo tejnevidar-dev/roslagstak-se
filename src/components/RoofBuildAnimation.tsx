@@ -271,7 +271,7 @@ const RoofBuildAnimation = () => {
             </ol>
 
             <div className="mt-10 flex flex-col gap-3">
-              <a href="#offert" className="inline-flex items-center justify-center gap-3 rounded-full bg-primary px-9 py-4 font-medium text-primary-foreground transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse">Räkna på ditt takbyte <ArrowRight className="h-4 w-4" /></a>
+              <a href="/offert" className="inline-flex items-center justify-center gap-3 rounded-full bg-primary px-9 py-4 font-medium text-primary-foreground transition-transform hover:scale-[1.02] active:scale-95 animate-subtle-pulse">Räkna på ditt takbyte <ArrowRight className="h-4 w-4" /></a>
               <a href="tel:0701543639" className="inline-flex items-center justify-center gap-3 rounded-full border border-ink-foreground/20 px-9 py-4 font-medium text-ink-foreground transition-colors hover:bg-ink-foreground hover:text-ink"><Phone className="h-4 w-4" />070-154 36 39</a>
             </div>
           </div>
