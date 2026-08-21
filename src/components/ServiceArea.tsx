@@ -46,61 +46,94 @@ const allLocations = areas.flatMap((a) => a.locations);
 
 const ServiceArea = () => {
   return (
-    <section id="omraden" className="bg-secondary/50 py-24 md:py-32" aria-labelledby="area-heading">
+    <section id="omraden" className="border-y border-border bg-secondary/40 py-20 lg:py-28" aria-labelledby="area-heading">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-12 max-w-3xl">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">Verksamhetsområde</p>
-          <h2 id="area-heading" className="mb-5 font-display text-[clamp(2rem,3.4vw,2.75rem)] font-semibold leading-[1.06] tracking-[-0.03em] text-foreground text-balance">
-            Takläggare i hela Roslagen — från kust till ytterskärgård
-          </h2>
-          <p className="text-lg leading-relaxed text-muted-foreground">
-            Vi utför takbyte, takrenovering och takomläggning på {allLocations.length}+ platser i Roslagens skärgård och längs kusten. 
-            Oavsett om du bor på en ö utan bro eller i en kuststad — vi tar oss dit och levererar tak av högsta kvalitet.
-          </p>
-        </div>
-
-        <div className="mb-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {areas.map((area) => (
-            <div key={area.region} className="rounded-3xl border border-border bg-card p-8">
-              <div className="mb-4 flex items-center gap-2">
-                <Anchor className="h-4 w-4 text-primary" aria-hidden="true" />
-                <h3 className="font-display text-xl font-bold text-card-foreground">{area.region}</h3>
-              </div>
-              <p className="mb-5 text-[17px] leading-relaxed text-muted-foreground">{area.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {area.locations.map((loc) => {
-                  const slug = locationSlugMap[loc];
-                  return slug ? (
-                    <Link
-                      key={loc}
-                      to={`/taklaggare-${slug}`}
-                      className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/60 px-3.5 py-2 text-[14px] font-semibold text-foreground transition-colors hover:border-accent hover:bg-primary hover:text-primary-foreground"
-                    >
-                      <MapPin className="h-3 w-3 text-primary" aria-hidden="true" />
-                      {loc}
-                    </Link>
-                  ) : (
-                    <span
-                      key={loc}
-                      className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3.5 py-2 text-[14px] font-medium text-muted-foreground"
-                    >
-                      <MapPin className="h-3 w-3" aria-hidden="true" />
-                      {loc}
-                    </span>
-                  );
-                })}
-              </div>
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+          {/* Sticky intro */}
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">
+                03 — Verksamhetsområde
+              </p>
+              <h2
+                id="area-heading"
+                className="mt-4 font-display text-[clamp(2rem,3.4vw,3rem)] font-extrabold leading-[1.03] tracking-[-0.038em] text-foreground text-balance"
+              >
+                Från kust till ytterskärgård
+              </h2>
+              <p className="mt-6 text-[18px] leading-relaxed text-muted-foreground">
+                Vi utför takbyte, takrenovering och takomläggning på {allLocations.length}+ platser i
+                Roslagens skärgård och längs kusten. Bor du på en ö utan bro tar vi oss dit sjövägen.
+              </p>
+              <dl className="mt-9 grid grid-cols-2 gap-y-7 border-t border-border pt-8">
+                <div>
+                  <dt className="text-[12px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Orter</dt>
+                  <dd className="mt-1 font-display text-3xl font-extrabold tabular-nums tracking-[-0.03em] text-foreground">
+                    {allLocations.length}+
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-[12px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Områden</dt>
+                  <dd className="mt-1 font-display text-3xl font-extrabold tabular-nums tracking-[-0.03em] text-foreground">
+                    {areas.length}
+                  </dd>
+                </div>
+              </dl>
             </div>
-          ))}
+          </div>
+
+          {/* Regioner som hairline-rader */}
+          <div className="lg:col-span-8">
+            {areas.map((area, i) => (
+              <div key={area.region} className="border-t border-border py-9 last:border-b">
+                <div className="flex items-baseline gap-5">
+                  <span className="text-[12px] font-bold tabular-nums tracking-[0.2em] text-muted-foreground/70">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="flex-1">
+                    <h3 className="flex items-center gap-3 font-display text-[clamp(1.4rem,2vw,1.85rem)] font-bold leading-tight tracking-[-0.028em] text-foreground">
+                      <Anchor className="h-5 w-5 text-accent" aria-hidden="true" />
+                      {area.region}
+                    </h3>
+                    <p className="mt-3 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">
+                      {area.description}
+                    </p>
+                    <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
+                      {area.locations.map((loc) => {
+                        const slug = locationSlugMap[loc];
+                        return slug ? (
+                          <Link
+                            key={loc}
+                            to={`/taklaggare-${slug}`}
+                            className="group inline-flex items-center gap-1.5 text-[16px] font-semibold text-foreground"
+                          >
+                            <MapPin className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                            <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-primary group-hover:text-primary">
+                              {loc}
+                            </span>
+                          </Link>
+                        ) : (
+                          <span key={loc} className="inline-flex items-center gap-1.5 text-[16px] text-muted-foreground">
+                            <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+                            {loc}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* SEO-rich text block with natural keyword integration */}
-        <div className="max-w-4xl">
-          <div className="rounded-3xl border border-border bg-card p-8">
-            <h3 className="mb-4 font-display text-xl font-semibold text-card-foreground">
+        <div className="mt-16 border-t border-border pt-12">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <h3 className="font-display text-2xl font-bold tracking-[-0.028em] text-foreground lg:col-span-4">
               Din lokala takläggare i Roslagen
             </h3>
-            <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground lg:col-span-8 lg:columns-2 lg:gap-10 lg:space-y-0 [&>p]:mb-5">
               <p>
                 Behöver du en <strong>takläggare i Roslagen</strong>? RoslagsTak utför alla typer av takarbeten — från 
                 <strong> takbyte på Blidö</strong> och <strong>takrenovering på Ljusterö</strong> till 
