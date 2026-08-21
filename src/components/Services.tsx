@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone, Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles, AlertTriangle } from "lucide-react";
+import { ArrowUpRight, Phone, Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles, AlertTriangle } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import roofProject from "@/assets/roof-project.jpg";
 
 export const services = [
   {
@@ -71,91 +72,93 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="border-b border-border bg-background" aria-labelledby="services-heading">
-      {/* Ljus sektionsintro */}
-      <div className="bg-secondary/60">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-          <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">
-              <span aria-hidden="true" className="h-1.5 w-10 rounded-full bg-accent" />
-              Allt inom tak — från kust till skärgård
+    <section id="tjanster" className="bg-background py-20 lg:py-28" aria-labelledby="services-heading">
+      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-12 lg:gap-16">
+        {/* Sticky vänsterkolumn — rubrik, bild och CTA följer med i scrollen */}
+        <div className="lg:col-span-4">
+          <div className="lg:sticky lg:top-28">
+            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">
+              02 — Tjänster
             </p>
             <h2
               id="services-heading"
-              className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.035em] text-foreground sm:text-5xl"
+              className="mt-4 font-display text-[clamp(2rem,3.4vw,3rem)] font-extrabold leading-[1.03] tracking-[-0.038em] text-foreground text-balance"
             >
-              Våra tjänster
+              Allt inom tak — från kust till ytterskärgård
             </h2>
-            <p className="mt-6 max-w-2xl text-[19px] leading-relaxed text-muted-foreground">
-              Vi hjälper dig hela vägen, oavsett om huset står vid vägen eller bakom en båttur. Välj
-              en tjänst nedan — eller ring så guidar vi dig.
+            <p className="mt-6 text-[18px] leading-relaxed text-muted-foreground">
+              Vi hjälper dig hela vägen, oavsett om huset står vid vägen eller bakom en båttur.
             </p>
+
+            <div className="mt-9 overflow-hidden rounded-3xl border border-border">
+              <img
+                src={roofProject}
+                alt="Nylagt tak på hus i Roslagens skärgård"
+                width={800}
+                height={600}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+              <a
+                href="/offert"
+                className="inline-flex items-center justify-center gap-3 rounded-xl bg-primary px-7 py-4 text-[17px] font-bold text-primary-foreground transition-colors hover:bg-accent animate-subtle-pulse"
+              >
+                Räkna på ditt tak
+                <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a
+                href="tel:0701543639"
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl border-2 border-border px-6 py-4 text-[17px] font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+                070-154 36 39
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-
-      {/* Tjänstekort — ljusa, luftiga ytor med tydliga tryckytor */}
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:py-24">
-        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Tjänstelista — hairline-rader i stället för kortrutnät */}
+        <ul className="lg:col-span-8">
           {services.map((service, i) => (
-            <li key={service.slug}>
+            <li key={service.slug} className="border-t border-border last:border-b">
               <Reveal delay={Math.min(i, 5) * 0.04}>
                 <Link
                   to={`/tjanster/${service.slug}`}
-                  className="group flex h-full flex-col rounded-3xl border border-border bg-card p-9 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elevated)]"
+                  className="group relative flex flex-col gap-4 overflow-hidden py-8 md:flex-row md:items-baseline md:gap-8 md:py-9"
                 >
-                  <span className="mb-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <service.icon className="h-7 w-7" aria-hidden="true" />
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-y-0 left-0 w-0 bg-secondary/60 transition-[width] duration-500 ease-out group-hover:w-full"
+                  />
+                  <span className="relative w-16 shrink-0 text-[12px] font-bold tabular-nums tracking-[0.2em] text-muted-foreground/70 md:pt-2">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-display text-2xl font-bold tracking-[-0.02em] text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="mt-4 text-[18px] leading-relaxed text-muted-foreground">
+                  <span className="relative md:w-[15rem] md:shrink-0">
+                    <span className="flex items-center gap-3">
+                      <service.icon className="h-5 w-5 text-primary md:hidden" aria-hidden="true" />
+                      <span className="block font-display text-[clamp(1.4rem,2vw,1.85rem)] font-bold leading-tight tracking-[-0.028em] text-foreground transition-colors group-hover:text-primary">
+                        {service.title}
+                      </span>
+                    </span>
+                    <span className="mt-1.5 block text-[13px] font-semibold uppercase tracking-[0.16em] text-accent">
+                      {service.short}
+                    </span>
+                  </span>
+                  <span className="relative flex-1 text-[17px] leading-relaxed text-muted-foreground">
                     {service.description}
-                  </p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-primary">
-                    Läs mer
-                    <ArrowRight
-                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5"
-                      aria-hidden="true"
-                    />
+                  </span>
+                  <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
+                    <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
                   </span>
                 </Link>
               </Reveal>
             </li>
           ))}
         </ul>
-
-        {/* Avslutande CTA-band */}
-        <div className="mt-14 grid gap-6 rounded-3xl bg-primary px-9 py-10 text-primary-foreground sm:grid-cols-[1fr_auto] sm:items-center sm:gap-10">
-          <div>
-            <p className="font-display text-2xl font-bold tracking-[-0.02em]">
-              Vet du inte vad ditt tak behöver?
-            </p>
-            <p className="mt-2 text-[18px] leading-relaxed text-primary-foreground/80">
-              Fast pris, 10 års utförandegaranti och 30 års materialgaranti — ROT-avdrag dras direkt.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              href="/offert"
-              className="inline-flex items-center justify-center gap-3 rounded-xl bg-card px-8 py-5 text-[18px] font-bold text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
-            >
-              Räkna på ditt tak
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </a>
-            <a
-              href="tel:0701543639"
-              className="inline-flex items-center justify-center gap-2.5 rounded-xl border-2 border-primary-foreground/40 px-7 py-5 text-[18px] font-bold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
-            >
-              <Phone className="h-5 w-5" aria-hidden="true" />
-              Ring oss
-            </a>
-          </div>
-        </div>
       </div>
-
     </section>
   );
 };

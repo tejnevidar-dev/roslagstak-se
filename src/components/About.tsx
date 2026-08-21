@@ -2,7 +2,6 @@ import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Reveal from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
 import rooferImg from "@/assets/roofer-work.jpg";
 
 const coreValues = [
@@ -48,12 +47,15 @@ const About = () => {
         {/* Intro */}
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 md:mb-24">
           <div className="lg:col-span-7">
-            <SectionHeading
-              meta="Om RoslagsTak"
-              index="04 / 04"
+            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">
+              04 — Om RoslagsTak
+            </p>
+            <h2
               id="about-heading"
-              title="Ditt tak i trygga händer — från kust till ö"
-            />
+              className="mt-4 font-display text-[clamp(2rem,3.4vw,3rem)] font-extrabold leading-[1.03] tracking-[-0.038em] text-foreground text-balance"
+            >
+              Ditt tak i trygga händer — från kust till ö
+            </h2>
             <div className="space-y-5 text-[19px] text-muted-foreground leading-relaxed mt-8">
               <p>
                 RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi lägger tak
@@ -110,32 +112,44 @@ const About = () => {
           </div>
         </div>
 
-        {/* Core values */}
-        <SectionHeading
-          meta="Våra ledord"
-          title="Fyra ledord som genomsyrar allt vi gör"
-          intro="Alla i vår organisation arbetar under samma fyra ledord. De styr hur vi bemöter kunder, planerar projekt och utför varje takläggning."
-          className="mb-14"
-        />
+        {/* Core values — ledger med hairlines i stället för fyra likadana kort */}
+        <div className="border-t border-border pt-12">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">Våra ledord</p>
+              <h3 className="mt-4 font-display text-[clamp(1.7rem,2.6vw,2.25rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-foreground text-balance">
+                Fyra ledord som genomsyrar allt vi gör
+              </h3>
+              <p className="mt-5 text-[18px] leading-relaxed text-muted-foreground">
+                De styr hur vi bemöter kunder, planerar projekt och utför varje takläggning.
+              </p>
+            </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {coreValues.map((value, i) => (
-            <Reveal key={value.title} delay={i * 0.07}>
-              <div
-                className="group h-full rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-soft)]"
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="text-[13px] font-bold tabular-nums tracking-[0.16em] text-primary">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <value.icon className="w-5 h-5 text-accent transition-transform duration-500 group-hover:-translate-y-0.5" />
-                </div>
-                <h4 className="font-display text-xl font-bold tracking-[-0.02em] text-foreground mb-3">{value.title}</h4>
-                <p className="text-muted-foreground text-[17px] leading-relaxed">{value.description}</p>
-              </div>
-            </Reveal>
-          ))}
+            <ul className="lg:col-span-8">
+              {coreValues.map((value, i) => (
+                <li key={value.title} className="border-t border-border first:border-t-0 lg:first:border-t">
+                  <Reveal delay={i * 0.06}>
+                    <div className="group flex flex-col gap-3 py-8 md:flex-row md:gap-8">
+                      <span className="flex w-full shrink-0 items-center gap-3 md:w-[13rem]">
+                        <span className="text-[12px] font-bold tabular-nums tracking-[0.2em] text-muted-foreground/70">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <value.icon className="h-5 w-5 text-accent transition-transform duration-500 group-hover:-translate-y-0.5" aria-hidden="true" />
+                        <span className="font-display text-xl font-bold tracking-[-0.025em] text-foreground">
+                          {value.title}
+                        </span>
+                      </span>
+                      <p className="flex-1 text-[17px] leading-relaxed text-muted-foreground">
+                        {value.description}
+                      </p>
+                    </div>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+
       </div>
     </section>
   );
