@@ -201,23 +201,37 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Huvudnavigation">
           {navLinks.map((link) => {
-            const isActive = onHome ? active === link.href : activeRoute === link.label;
+            const isActive = link.to
+              ? activeRoute === link.label
+              : onHome
+                ? active === link.href
+                : activeRoute === link.label;
             const hasMenu = Boolean(link.items);
             const isOpen = openMenu === link.label;
             return (
               <div
-                key={link.href}
+                key={link.label}
                 className="relative"
                 onMouseEnter={hasMenu ? () => openDropdown(link.label) : undefined}
                 onMouseLeave={hasMenu ? scheduleClose : undefined}
               >
                 <a
-                  href={link.href}
+                  href={link.to ?? link.href}
                   data-nav-link
                   aria-current={isActive ? "true" : undefined}
                   aria-expanded={hasMenu ? isOpen : undefined}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={(e) => {
+                    if (link.to) {
+                      e.preventDefault();
+                      setOpenMenu(null);
+                      setMenuOpen(false);
+                      navigate(link.to);
+                    } else {
+                      handleNavClick(e, link.href!);
+                    }
+                  }}
                   onFocus={hasMenu ? () => openDropdown(link.label) : undefined}
+
                   className={`group relative flex items-center gap-1.5 px-3 py-2 text-[14.5px] font-semibold tracking-tight transition-colors ${
                     light
                       ? "text-primary-foreground/70 hover:text-primary-foreground"
