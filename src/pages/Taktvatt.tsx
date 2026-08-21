@@ -926,7 +926,7 @@ const Taktvatt = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               { to: "/tjanster/takomlaggning", icon: Hammer, title: "Takomläggning", desc: "När taktvätt inte räcker — vi byter ut pannor och underlagspapp." },
-              { to: "/tjanster/platarbeten", icon: FileCheck, title: "Plåtarbeten", desc: "Plåttak, hängrännor och beslag i hela Roslagen — med 10 års garanti." },
+              { to: "/tjanster/platarbeten", icon: FileCheck, title: "Plåtarbeten", desc: "Plåttak, hängrännor och beslag i hela Roslagen — med 10 års utförandegaranti." },
               { to: "/tjanster/takrenovering", icon: Wrench, title: "Takrenovering", desc: "Reparation och uppfräschning av äldre tak utan komplett byte." },
             ].map((s) => (
               <Link
@@ -975,7 +975,7 @@ const Taktvatt = () => {
                 Boka taktvätt i Roslagen idag
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
-                Vi erbjuder kostnadsfri besiktning och offert med fast pris. ROT-avdrag och 10 års garanti ingår alltid.
+                Vi erbjuder kostnadsfri besiktning och offert med fast pris. ROT-avdrag och 10 års utförandegaranti ingår alltid.
                 Verksamma i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje och skärgården.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -990,7 +990,7 @@ const Taktvatt = () => {
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Svar inom 24h</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> ROT-avdrag 30 %</span>
-                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> 10 års garanti</span>
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> 10 års utförandegaranti</span>
               </div>
             </div>
           </div>
