@@ -77,14 +77,22 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-50 transition-colors duration-500 ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
         overlay
-          ? "bg-primary text-primary-foreground"
-          : "bg-background/95 text-foreground shadow-[0_1px_0_0_hsl(var(--border))] backdrop-blur-md"
+          ? "bg-transparent text-primary-foreground"
+          : "bg-background/90 text-foreground shadow-[0_1px_0_0_hsl(var(--border)),0_10px_30px_-24px_hsl(var(--primary)/0.5)] backdrop-blur-xl"
       }`}
     >
+      {/* Mjuk filmisk övergång från heron */}
       <div
-        className={`mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 transition-all duration-500 ${
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-x-0 top-0 h-[160%] bg-gradient-to-b from-primary/90 via-primary/45 to-transparent transition-opacity duration-700 ${
+          overlay ? "opacity-100" : "opacity-0"
+        }`}
+      />
+
+      <div
+        className={`relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 transition-all duration-500 ${
           scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
         }`}
       >
@@ -118,14 +126,24 @@ const Header = () => {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`group relative px-3 py-2 text-[14.5px] font-semibold tracking-tight transition-colors ${
                   overlay
-                    ? "text-primary-foreground/75 hover:text-primary-foreground"
-                    : "text-foreground/70 hover:text-foreground"
-                } ${isActive ? (overlay ? "text-primary-foreground" : "text-foreground") : ""}`}
+                    ? "text-primary-foreground/70 hover:text-primary-foreground"
+                    : "text-foreground/65 hover:text-foreground"
+                } ${isActive ? (overlay ? "text-primary-foreground" : "text-primary") : ""}`}
               >
-                {link.label}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active"
+                    aria-hidden="true"
+                    transition={{ type: "spring", stiffness: 420, damping: 34 }}
+                    className={`absolute inset-0 -z-10 ${
+                      overlay ? "bg-primary-foreground/10" : "bg-primary/[0.07]"
+                    }`}
+                  />
+                )}
+                <span className="relative">{link.label}</span>
                 <span
                   aria-hidden="true"
-                  className={`absolute inset-x-3 -bottom-0.5 h-[2px] origin-left bg-seafoam transition-transform duration-300 ${
+                  className={`absolute inset-x-3 bottom-0 h-[2px] origin-left bg-seafoam transition-transform duration-300 ${
                     isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 />
@@ -133,6 +151,7 @@ const Header = () => {
             );
           })}
         </nav>
+
 
         <div className="hidden items-center gap-3 md:flex">
           <a
