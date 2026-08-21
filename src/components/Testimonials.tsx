@@ -26,7 +26,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="testimonials-heading">
+    <section className="border-b border-border bg-secondary py-20 md:py-28" aria-labelledby="testimonials-heading">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           meta="Omdömen"

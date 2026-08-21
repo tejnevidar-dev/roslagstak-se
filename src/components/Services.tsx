@@ -2,7 +2,6 @@ import { Home, Wrench, Droplets, Sun, ShieldCheck, Ruler, Sparkles, AlertTriangl
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
 
 export const services = [
   {
@@ -57,74 +56,71 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="border-b border-border bg-background py-20 md:py-28" aria-labelledby="services-heading">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-12">
-          <div className="lg:col-span-8">
-            <SectionHeading
-              meta="Tjänster"
-              index="01 / 04"
-              id="services-heading"
-              title="Allt inom tak — från kust till skärgård"
-              intro="Helhetslösningar för varje takprojekt längs Roslagens kustlinje och öar. Samma metodik, oavsett om huset står vid vägen eller bakom en båttur."
-            />
-          </div>
-          <div className="lg:col-span-4 lg:text-right">
-            <a
-              href="#offert"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group"
-            >
-              Räkna på ditt projekt
-              <span className="w-9 h-9 border border-border flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-primary-foreground group-hover:border-accent">
-                <ArrowRight className="w-4 h-4" />
-              </span>
-            </a>
+    <section id="tjanster" className="border-b border-border bg-background" aria-labelledby="services-heading">
+      <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[minmax(0,34%)_minmax(0,66%)]">
+        {/* Vänster: fast rubrikpanel */}
+        <div className="bg-secondary px-6 py-16 sm:px-10 lg:sticky lg:top-20 lg:h-fit lg:py-24 xl:px-16">
+          <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
+            <span aria-hidden="true" className="h-px w-10 bg-seafoam/50" />
+            Tjänster
+          </p>
+          <h2
+            id="services-heading"
+            className="mt-6 font-display text-[clamp(2rem,3.4vw,3rem)] font-extrabold leading-[1.02] tracking-[-0.035em] text-foreground"
+          >
+            Allt inom tak — från kust till skärgård
+          </h2>
+          <p className="mt-6 max-w-md text-[17px] leading-relaxed text-muted-foreground">
+            Helhetslösningar för varje takprojekt längs Roslagens kustlinje och öar. Samma metodik,
+            oavsett om huset står vid vägen eller bakom en båttur.
+          </p>
+          <a
+            href="#offert"
+            className="group mt-9 inline-flex items-center gap-3 bg-primary px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-accent"
+          >
+            Räkna på ditt projekt
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          </a>
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-bold uppercase tracking-[0.24em] text-muted-foreground">
+            <span>AMA-standard</span>
+            <span className="h-px w-6 bg-border" aria-hidden="true" />
+            <span>10 års garanti</span>
+            <span className="h-px w-6 bg-border" aria-hidden="true" />
+            <span>ROT-avdrag</span>
+            <span className="h-px w-6 bg-border" aria-hidden="true" />
+            <span>Fast pris</span>
           </div>
         </div>
 
-        <div className="border-t border-border">
+        {/* Höger: tjänsteruta i rutnät */}
+        <div className="grid border-t border-border sm:grid-cols-2 lg:border-t-0">
           {services.map((service, i) => (
             <Reveal key={service.title} delay={Math.min(i, 6) * 0.05}>
               <Link
                 to={`/tjanster/${service.slug}`}
-                className="group relative grid md:grid-cols-12 gap-4 md:gap-8 items-baseline py-7 md:py-8 border-b border-border transition-colors"
+                className="group relative flex h-full flex-col border-b border-r border-border bg-background px-7 py-10 transition-colors hover:bg-primary xl:px-10"
               >
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-x-0 inset-y-0 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] -z-10"
-                />
-                <div className="md:col-span-1 flex items-center gap-3">
-                  <span className="text-[11px] font-semibold tabular-nums tracking-[0.2em] text-muted-foreground group-hover:text-primary-foreground/60 transition-colors">
+                <div className="flex items-center justify-between">
+                  <span className="flex h-11 w-11 items-center justify-center border border-border transition-colors group-hover:border-primary-foreground/25 group-hover:bg-primary-foreground/10">
+                    <service.icon className="h-5 w-5 text-seafoam transition-colors group-hover:text-seafoam-light" aria-hidden="true" />
+                  </span>
+                  <span className="text-[11px] font-bold tabular-nums tracking-[0.2em] text-muted-foreground transition-colors group-hover:text-primary-foreground/50">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <div className="md:col-span-4 flex items-center gap-4 md:pl-2">
-                  <span className="w-10 h-10 shrink-0 border border-border bg-background flex items-center justify-center transition-colors group-hover:border-primary-foreground/25 group-hover:bg-primary-foreground/10">
-                    <service.icon className="w-5 h-5 text-primary transition-colors group-hover:text-primary-foreground" />
-                  </span>
-                  <h3 className="font-display text-xl md:text-2xl font-semibold tracking-[-0.02em] text-foreground transition-colors group-hover:text-primary-foreground">
-                    {service.title}
-                  </h3>
-                </div>
-                <p className="md:col-span-6 text-[15px] leading-relaxed text-muted-foreground transition-colors group-hover:text-primary-foreground/75 md:pr-6">
+                <h3 className="mt-7 font-display text-xl font-bold tracking-[-0.025em] text-foreground transition-colors group-hover:text-primary-foreground">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground transition-colors group-hover:text-primary-foreground/70">
                   {service.description}
                 </p>
-                <span className="md:col-span-1 md:justify-self-end inline-flex items-center text-primary transition-all group-hover:text-primary-foreground group-hover:translate-x-1">
-                  <ArrowRight className="w-5 h-5" />
+                <span className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-seafoam transition-all group-hover:text-seafoam-light">
+                  Läs mer
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </span>
               </Link>
             </Reveal>
           ))}
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11px] font-bold uppercase tracking-[0.24em] text-muted-foreground">
-          <span>AMA-standard</span>
-          <span className="w-8 h-px bg-border" aria-hidden="true" />
-          <span>10 års garanti</span>
-          <span className="w-8 h-px bg-border" aria-hidden="true" />
-          <span>ROT-avdrag</span>
-          <span className="w-8 h-px bg-border" aria-hidden="true" />
-          <span>Fast pris</span>
         </div>
       </div>
     </section>
