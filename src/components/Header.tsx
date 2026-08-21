@@ -79,14 +79,14 @@ const Header = () => {
     <header
       className={`sticky top-0 left-0 right-0 z-50 transition-colors duration-500 ${
         overlay
-          ? "bg-transparent text-primary-foreground"
+          ? "bg-primary text-primary-foreground"
           : "bg-background/95 text-foreground shadow-[0_1px_0_0_hsl(var(--border))] backdrop-blur-md"
       }`}
     >
       {/* Utility bar — direktkontakt */}
       <div
         className={`hidden overflow-hidden transition-all duration-500 md:block ${
-          overlay ? "max-h-12 bg-primary/40 backdrop-blur-sm" : "max-h-0 md:max-h-0"
+          overlay ? "max-h-12 bg-accent" : "max-h-0 md:max-h-0"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-2 text-[12.5px] text-primary-foreground/80">
