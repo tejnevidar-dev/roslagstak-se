@@ -79,6 +79,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
   const reduce = useReducedMotion();
 
   const onHome = location.pathname === "/";
+  const activeRoute = routeActiveLabel(location.pathname);
   /* Transparent, ljus header ovanpå den mörka heron — solid när man scrollat */
   const overlay = onHome && !scrolled;
 
