@@ -184,7 +184,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           </p>
           <div className="flex items-center gap-5">
             <Link
-              to="/omdomen"
+              to="/recensioner"
               className={`text-[13.5px] font-semibold underline-offset-4 hover:underline ${
                 light ? "text-primary-foreground/80" : "text-foreground/70"
               }`}
