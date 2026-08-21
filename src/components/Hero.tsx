@@ -3,8 +3,8 @@ import { motion, useReducedMotion } from "framer-motion";
 import heroImg from "@/assets/hero-cinematic.jpg";
 
 const facts = [
-  { label: "Trygghet", value: "10 års garanti" },
-  { label: "Ekonomi", value: "ROT-avdrag" },
+  { label: "Utförande", value: "10 års garanti" },
+  { label: "Material", value: "30 års garanti" },
   { label: "Prissättning", value: "Fast pris" },
   { label: "Täckning", value: "Hela Roslagen" },
 ];
@@ -54,7 +54,7 @@ const Hero = () => {
               {...fade(0.12)}
             >
               Vi byter, renoverar och plåtar tak längs Roslagens kust och på öarna — med
-              premiummaterial, fast pris och 10 års garanti på allt arbete.
+              premiummaterial, fast pris, 10 års utförandegaranti och 30 års materialgaranti.
             </motion.p>
 
             <motion.ul className="mt-9 space-y-3" {...fade(0.18)}>
@@ -115,9 +115,9 @@ const Hero = () => {
             className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/10 to-transparent"
           />
           <div className="absolute left-0 top-10 bg-primary px-7 py-5">
-            <p className="font-display text-3xl font-extrabold leading-none">10 ÅR</p>
+            <p className="font-display text-3xl font-extrabold leading-none">10+30 ÅR</p>
             <p className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-seafoam-light">
-              Totalgaranti
+              Utförande + Material
             </p>
           </div>
           <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-primary/85 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">
