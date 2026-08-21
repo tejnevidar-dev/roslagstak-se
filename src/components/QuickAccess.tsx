@@ -88,10 +88,14 @@ const QuickAccess = () => (
               </span>
             </>
           );
-          const cls =
-            "group relative flex h-full flex-col overflow-hidden border-b border-border px-0 py-9 lg:border-b-0 lg:border-l lg:px-8 lg:first:border-l-0 lg:first:pl-0";
+          const cls = `group relative flex h-full flex-col overflow-hidden py-9 ${
+            i === 0 ? "lg:pr-8" : "lg:px-8"
+          }`;
           return (
-            <li key={item.label} className="lg:contents">
+            <li
+              key={item.label}
+              className={`border-b border-border lg:border-b-0 ${i === 0 ? "" : "lg:border-l lg:border-border"}`}
+            >
               {item.to ? (
                 <Link to={item.to} className={cls}>
                   {inner}
