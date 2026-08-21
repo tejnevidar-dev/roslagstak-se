@@ -78,15 +78,15 @@ const Services = () => {
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
               <span aria-hidden="true" className="h-px w-10 bg-seafoam-light/60" />
-              Våra tjänster
+              Allt inom tak — från kust till skärgård
             </p>
             <h2
               id="services-heading"
-              className="mt-5 font-display text-3xl font-extrabold leading-[1.02] tracking-[-0.035em] sm:text-4xl lg:text-[2.75rem]"
+              className="mt-5 font-display text-4xl font-extrabold leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-6xl"
             >
-              Allt inom tak — från kust till skärgård
+              Våra tjänster
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/75">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/75">
               Vi hjälper dig hela vägen, oavsett om huset står vid vägen eller bakom en båttur. Välj
               en tjänst nedan — eller ring så guidar vi dig.
             </p>
