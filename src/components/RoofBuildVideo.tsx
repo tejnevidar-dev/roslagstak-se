@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 import roofPoster from "@/assets/roof-build-poster.jpg";
 
@@ -14,6 +14,7 @@ const RoofBuildVideo = () => {
   const [active, setActive] = useState(false);
   const [failed, setFailed] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   const start = () => {
     setActive(true);
@@ -32,7 +33,22 @@ const RoofBuildVideo = () => {
     });
   };
 
-
+  // Pause (and thereby mute) the film as soon as it scrolls out of view, so the
+  // music never keeps playing while the visitor reads further down the page.
+  useEffect(() => {
+    if (!active) return;
+    const el = videoRef.current;
+    const wrap = wrapRef.current;
+    if (!el || !wrap) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting && !el.paused) el.pause();
+      },
+      { threshold: 0.35 },
+    );
+    observer.observe(wrap);
+    return () => observer.disconnect();
+  }, [active]);
 
   return (
     <figure className="relative m-0 mt-10 overflow-hidden rounded-2xl border border-ink-foreground/15 bg-ink-foreground/[0.04]">
@@ -45,7 +61,7 @@ const RoofBuildVideo = () => {
         </span>
       </figcaption>
 
-      <div className="relative aspect-[3/2] bg-ink">
+      <div ref={wrapRef} className="relative aspect-[3/2] bg-ink">
         {active ? (
           <video
             ref={videoRef}
