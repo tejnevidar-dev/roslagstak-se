@@ -2,7 +2,6 @@ import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Reveal from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
 import rooferImg from "@/assets/roofer-work.jpg";
 
 const coreValues = [
@@ -48,12 +47,15 @@ const About = () => {
         {/* Intro */}
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 md:mb-24">
           <div className="lg:col-span-7">
-            <SectionHeading
-              meta="Om RoslagsTak"
-              index="04 / 04"
+            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">
+              04 — Om RoslagsTak
+            </p>
+            <h2
               id="about-heading"
-              title="Ditt tak i trygga händer — från kust till ö"
-            />
+              className="mt-4 font-display text-[clamp(2rem,3.4vw,3rem)] font-extrabold leading-[1.03] tracking-[-0.038em] text-foreground text-balance"
+            >
+              Ditt tak i trygga händer — från kust till ö
+            </h2>
             <div className="space-y-5 text-[19px] text-muted-foreground leading-relaxed mt-8">
               <p>
                 RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi lägger tak
