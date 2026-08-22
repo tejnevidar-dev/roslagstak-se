@@ -323,156 +323,114 @@ const ServiceDetail = () => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
 
-        {/* Split-screen hero */}
-        <section className="relative bg-primary text-primary-foreground">
-          <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="relative flex flex-col justify-center px-6 pb-16 pt-28 sm:px-10 lg:pb-24 lg:pt-32 xl:px-20">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine"
-              />
-              <div className="relative mx-auto w-full max-w-2xl lg:mx-0">
-                <h1 className="font-display text-[clamp(2.2rem,4.4vw,3.9rem)] font-extrabold leading-[1.02] tracking-[-0.035em]">
-                  {service.title}
-                </h1>
+        {/* Split-screen hero — samma arkitektoniska språk som startsidan */}
+        <section className="relative grid border-b border-border bg-card lg:grid-cols-[1.02fr_0.98fr]">
+          <div className="flex flex-col justify-center px-6 pb-16 pt-32 sm:px-10 lg:px-16 lg:py-24 xl:px-20">
+            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+              <span aria-hidden="true" className="h-px w-12 bg-primary" />
+              Tjänst — Roslagen &amp; skärgården
+            </p>
 
+            <h1 className="mt-8 max-w-[34rem] font-display text-[clamp(2.4rem,4.8vw,4.2rem)] font-extrabold leading-[0.99] tracking-[-0.04em] text-foreground">
+              {service.title}
+            </h1>
 
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75">
-                  {service.description}
-                </p>
+            <p className="mt-8 max-w-lg text-[19px] font-light leading-relaxed text-muted-foreground">
+              {service.description}
+            </p>
 
-                <div className="mt-10 flex flex-wrap items-center gap-5">
-                  <Link
-                    to="/offert"
-                    className="group inline-flex items-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
-                  >
-                    Begär kostnadsfri offert
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </Link>
-                  <a
-                    href="tel:0701543639"
-                    className="inline-flex items-center gap-2.5 border border-primary-foreground/25 px-7 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-seafoam-light hover:text-seafoam-light"
-                  >
-                    <Phone className="h-4 w-4" aria-hidden="true" />
-                    070-154 36 39
-                  </a>
-                </div>
-
-                <Link
-                  to="/hur-det-gar-till"
-                  className="mt-8 inline-flex items-center gap-2 border-b border-seafoam/60 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-seafoam-light"
+            <ul className="mt-10 grid gap-px border-y border-border bg-border sm:grid-cols-2 sm:gap-px">
+              {[
+                "Kostnadsfri besiktning och fast pris",
+                "Certifierade takläggare, F-skatt",
+                "ROT-avdrag på arbetskostnaden",
+                "Vana vid öar utan broförbindelse",
+              ].map((point) => (
+                <li
+                  key={point}
+                  className="flex items-center gap-3 bg-card py-4 text-[16px] text-foreground"
                 >
-                  <PlayCircle className="h-4 w-4" aria-hidden="true" />
-                  Se hur ett takbyte går till
-                </Link>
+                  <CheckCircle className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                  {point}
+                </li>
+              ))}
+            </ul>
 
-
-                <ul className="mt-12 grid gap-3 border-t border-primary-foreground/15 pt-8 sm:grid-cols-2">
-                  {[
-                    "Kostnadsfri besiktning och fast pris",
-                    "Certifierade takläggare, F-skatt",
-                    "ROT-avdrag på arbetskostnaden",
-                    "Vana vid öar utan broförbindelse",
-                  ].map((point) => (
-                    <li key={point} className="flex items-start gap-3 text-[14px] text-primary-foreground/80">
-                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-seafoam-light" aria-hidden="true" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link
+                to="/offert"
+                className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-sm bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
+              >
+                Begär kostnadsfri offert
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+              <a
+                href="tel:0701543639"
+                className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
+              >
+                <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+                070-154 36 39
+              </a>
             </div>
 
-            {/* Höger panel — bild med spec-kort */}
-            <figure className="relative m-0 min-h-[340px] overflow-hidden bg-accent lg:min-h-full">
-              <img
-                src={serviceImage}
-                alt={`${service.title} i Roslagen utförd av RoslagsTak`}
-                width={1600}
-                height={1200}
-                fetchPriority="high"
-                decoding="async"
-                className="h-full w-full object-cover"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-primary via-primary/45 to-primary/10"
-              />
-              <figcaption className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                <div className="border-t border-seafoam-light/40 bg-primary/85 p-6 backdrop-blur-sm">
-                  <div className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-seafoam-light/40">
-                      <service.icon className="h-5 w-5 text-seafoam-light" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
-                        Prisbild
-                      </p>
-                      <p className="mt-2 text-[14px] leading-relaxed text-primary-foreground/80">
-                        {details.priceRange ?? "Fast pris efter kostnadsfri besiktning."}
-                      </p>
-                    </div>
-                  </div>
-                  <dl className="mt-6 grid grid-cols-3 gap-4 border-t border-primary-foreground/15 pt-5">
-                    {[
-                      { label: "Utförande", value: "10 år" },
-                      { label: "Material", value: "30 år" },
-                      { label: "Standard", value: "AMA" },
-                    ].map((fact) => (
-                      <div key={fact.label}>
-                        <dt className="text-[9px] font-bold uppercase tracking-[0.22em] text-primary-foreground/50">
-                          {fact.label}
-                        </dt>
-                        <dd className="mt-1 font-display text-base font-bold tracking-[-0.02em]">
-                          {fact.value}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-                <div className="mt-4 flex items-center justify-between gap-4 border-t border-primary-foreground/15 bg-primary/85 px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">
-                  <span>{service.title} — Roslagens kust</span>
-                  <span className="text-primary-foreground/55">RT</span>
-                </div>
-              </figcaption>
-
-            </figure>
+            <Link
+              to="/hur-det-gar-till"
+              className="group mt-10 inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary"
+            >
+              <PlayCircle className="h-4 w-4" aria-hidden="true" />
+              Se hur ett takbyte går till
+              <span aria-hidden="true" className="h-px w-8 bg-primary transition-all group-hover:w-14" />
+            </Link>
           </div>
+
+          {/* Höger panel — helformatsbild med saklig bildtext */}
+          <figure className="relative m-0 min-h-[22rem] overflow-hidden bg-secondary lg:min-h-full">
+            <img
+              src={serviceImage}
+              alt={`${service.title} i Roslagen utförd av RoslagsTak`}
+              width={1600}
+              height={1200}
+              fetchPriority="high"
+              decoding="async"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-card px-6 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
+              <span>{service.title} — Roslagens kust</span>
+              <span className="text-muted-foreground">RT</span>
+            </figcaption>
+          </figure>
         </section>
 
-        {/* Faktarad — samma band som på startsidans hero */}
-        <section aria-label="Snabbfakta" className="bg-accent text-primary-foreground">
-          <dl className="grid grid-cols-2 border-t border-primary-foreground/15 md:grid-cols-4">
+
+        {/* Faktarad — djupt band med hairlines */}
+        <section aria-label="Snabbfakta" className="bg-primary text-primary-foreground">
+          <dl className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-primary-foreground/15 px-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { k: "Prisbild", v: details.priceRange?.split(".")[0] ?? "Fast pris efter besiktning", note: "ROT-avdrag på arbetskostnaden" },
               { k: "Garanti", v: "10 + 30 år", note: "Utförande respektive material" },
               { k: "Besiktning", v: "Kostnadsfri", note: "Skriftlig bedömning med foton" },
               { k: "Utförande", v: "AMA-standard", note: "Certifierade takläggare, F-skatt" },
-            ].map((f, i) => (
-              <div
-                key={f.k}
-                className={`group px-7 py-8 transition-colors duration-300 hover:bg-primary ${
-                  i < 2 ? "border-b border-primary-foreground/15 md:border-b-0" : ""
-                } ${i !== 3 ? "border-r border-primary-foreground/15" : ""}`}
-              >
-                <dt className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
+            ].map((f) => (
+              <div key={f.k} className="bg-primary px-2 py-9 sm:px-6">
+                <dt className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground/60">
                   {f.k}
                 </dt>
-                <dd className="font-display text-lg font-bold leading-tight tracking-[-0.02em]">{f.v}</dd>
-                <p className="mt-2 text-[13px] leading-relaxed text-primary-foreground/60">{f.note}</p>
+                <dd className="font-display text-[1.15rem] font-bold leading-tight tracking-[-0.025em]">{f.v}</dd>
+                <p className="mt-2.5 text-[14px] font-light leading-relaxed text-primary-foreground/70">{f.note}</p>
               </div>
             ))}
           </dl>
         </section>
 
 
+
         {/* Översikt — text + närbild */}
         <section className="bg-background py-20 lg:py-28">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6">
             <div className="grid items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
               <Reveal>
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+                  <span aria-hidden="true" className="h-px w-12 bg-primary" />
                   Översikt
                 </p>
                 <h2 className="mt-6 font-display text-[clamp(1.7rem,2.6vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
@@ -481,7 +439,7 @@ const ServiceDetail = () => {
                 <p className="mt-8 max-w-[60ch] text-[clamp(1.02rem,1.25vw,1.14rem)] leading-[1.8] text-muted-foreground">
                   {details.longDesc}
                 </p>
-                <div className="mt-10 border-l-2 border-seafoam pl-6">
+                <div className="mt-10 border-l-2 border-primary pl-6">
                   <p className="font-display text-[1.05rem] font-semibold leading-relaxed tracking-[-0.02em] text-foreground">
                     "Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när sista biten går med båt."
                   </p>
@@ -505,7 +463,7 @@ const ServiceDetail = () => {
                     />
                   </div>
                   <figcaption className="mt-4 flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
-                    <span className="mt-px text-[10px] font-bold uppercase tracking-[0.22em] text-seafoam">Foto</span>
+                    <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">Foto</span>
                     Eget arbete utfört av vårt team i Roslagen — inga lagerbilder på färdiga projekt.
                   </figcaption>
                 </figure>
@@ -530,9 +488,9 @@ const ServiceDetail = () => {
             className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/45 to-primary/10"
           />
           <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-4">
-              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
-                <span aria-hidden="true" className="h-px w-10 bg-seafoam-light/60" />
+            <div className="mx-auto max-w-7xl px-6">
+              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
+                <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
                 Hantverket
               </p>
               <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
@@ -549,11 +507,11 @@ const ServiceDetail = () => {
 
         {/* Vad ingår — faktarutor */}
         <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="max-w-xl">
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+                  <span aria-hidden="true" className="h-px w-12 bg-primary" />
                   Omfattning
                 </p>
                 <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
@@ -570,7 +528,7 @@ const ServiceDetail = () => {
                 <li key={b} className="bg-background">
                   <Reveal delay={(i % 3) * 0.05}>
                     <div className="flex h-full flex-col gap-3 p-7">
-                      <span className="font-display text-[11px] font-bold tabular-nums tracking-[0.24em] text-seafoam">
+                      <span className="font-display text-[11px] font-bold tabular-nums tracking-[0.24em] text-primary">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className="text-[15px] leading-[1.6] text-foreground">{b}</span>
@@ -585,11 +543,11 @@ const ServiceDetail = () => {
         {/* Arbetsgång — mörkt band */}
         <section className="relative bg-primary py-20 text-primary-foreground lg:py-28">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-6">
             <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
               <div className="lg:sticky lg:top-28 lg:self-start">
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam-light/50" />
+                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
+                  <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
                   Arbetsgång
                 </p>
                 <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
@@ -600,7 +558,7 @@ const ServiceDetail = () => {
                 </p>
                 <a
                   href="tel:0701543639"
-                  className="mt-8 inline-flex items-center gap-2.5 border border-primary-foreground/25 px-6 py-3.5 text-sm font-semibold transition-colors hover:border-seafoam-light hover:text-seafoam-light"
+                  className="mt-8 inline-flex items-center gap-2.5 rounded-sm border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
                 >
                   <Phone className="h-4 w-4" aria-hidden="true" />
                   070-154 36 39
@@ -612,7 +570,7 @@ const ServiceDetail = () => {
                   <li key={step} id={`steg-${i + 1}`} className="bg-primary">
                     <Reveal delay={(i % 2) * 0.05}>
                       <div className="flex h-full items-start gap-4 p-6">
-                        <span className="font-display text-[13px] font-bold tabular-nums text-seafoam-light">
+                        <span className="font-display text-[13px] font-bold tabular-nums text-primary-foreground/70">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="text-[15px] leading-[1.6] text-primary-foreground/85">{step}</span>
@@ -627,12 +585,12 @@ const ServiceDetail = () => {
 
         {/* Bra att veta — faktarutor */}
         <section className="bg-background py-20 lg:py-24">
-          <div className="container mx-auto px-4">
-            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-              <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+              <span aria-hidden="true" className="h-px w-12 bg-primary" />
               Bra att veta
             </p>
-            <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <div className="mt-12 grid gap-px border-y border-border bg-border md:grid-cols-3">
               {[
                 {
                   t: "Pris och ROT",
@@ -648,7 +606,7 @@ const ServiceDetail = () => {
                 },
               ].map((f, i) => (
                 <Reveal key={f.t} delay={i * 0.06}>
-                  <div className="h-full border-t-2 border-seafoam bg-secondary/40 p-7">
+                  <div className="h-full bg-card p-8">
                     <h3 className="font-display text-[1.05rem] font-bold tracking-[-0.02em] text-foreground">{f.t}</h3>
                     <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">{f.d}</p>
                   </div>
@@ -660,7 +618,7 @@ const ServiceDetail = () => {
 
         {slug === "eternit-asbest" && (
           <section className="border-t border-border bg-secondary/40 py-20">
-            <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-7xl px-6">
               <EternitSEOContent />
             </div>
           </section>
@@ -677,7 +635,7 @@ const ServiceDetail = () => {
           />
           <div aria-hidden="true" className="absolute inset-0 bg-primary/90" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-6">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
               <div className="max-w-2xl">
                 <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.3rem)] font-extrabold leading-[1.08] tracking-[-0.03em]">
@@ -695,7 +653,7 @@ const ServiceDetail = () => {
                 {slug !== "eternit-asbest" && (
                   <Link
                     to="/offert"
-                    className="group inline-flex items-center justify-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
+                    className="group inline-flex items-center justify-center gap-3 rounded-sm bg-card px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
                   >
                     Få offert
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -705,8 +663,8 @@ const ServiceDetail = () => {
                   to="/offert#radgivning"
                   className={`inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
                     slug === "eternit-asbest"
-                      ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
-                      : "border border-primary-foreground/25 text-primary-foreground hover:border-seafoam-light hover:text-seafoam-light"
+                      ? "rounded-sm bg-card text-primary hover:bg-secondary animate-subtle-pulse"
+                      : "rounded-sm border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                   }`}
                 >
                   Kostnadsfri rådgivning
@@ -719,9 +677,9 @@ const ServiceDetail = () => {
 
         {/* Relaterat innehåll */}
         <section className="bg-background py-20 lg:py-24">
-          <div className="container mx-auto px-4">
-            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-              <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+              <span aria-hidden="true" className="h-px w-12 bg-primary" />
               Läs vidare
             </p>
             <h2 className="mt-5 max-w-xl font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
@@ -742,11 +700,11 @@ const ServiceDetail = () => {
                 <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
                   <Link
                     to={link.to}
-                    className="group flex h-full items-center justify-between gap-4 px-1 py-5 text-[15px] font-semibold text-foreground transition-colors hover:text-seafoam sm:px-6"
+                    className="group flex h-full items-center justify-between gap-4 px-1 py-5 text-[15px] font-semibold text-foreground transition-colors hover:text-primary sm:px-6"
                   >
                     {link.label}
                     <ArrowRight
-                      className="h-4 w-4 shrink-0 text-seafoam transition-transform group-hover:translate-x-1"
+                      className="h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-1"
                       aria-hidden="true"
                     />
                   </Link>
@@ -757,7 +715,7 @@ const ServiceDetail = () => {
             <div className="mt-14 border-t border-border pt-8">
               <Link
                 to="/#tjanster"
-                className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground transition-colors hover:text-seafoam"
+                className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground transition-colors hover:text-primary"
               >
                 <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
                 Tillbaka till alla tjänster
