@@ -63,7 +63,7 @@ const Hero = () => {
         <motion.div className="mt-10 flex flex-col gap-4 sm:flex-row" {...fade(0.24)}>
           <a
             href="/offert"
-            className="group inline-flex items-center justify-center gap-3 rounded-sm bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
+            className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-sm bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
           >
             Få kostnadsfri offert
             <ArrowRight
@@ -73,7 +73,7 @@ const Hero = () => {
           </a>
           <a
             href="tel:0701543639"
-            className="inline-flex items-center justify-center gap-2.5 rounded-sm border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
           >
             <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
             070-154 36 39
@@ -107,7 +107,7 @@ const Hero = () => {
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-card/92 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-primary backdrop-blur-sm">
+        <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-card px-6 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-primary ">
           <span>Falsat plåttak — Roslagens kust</span>
           <span className="text-muted-foreground">RT</span>
         </figcaption>
