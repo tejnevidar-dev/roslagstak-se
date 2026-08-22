@@ -426,11 +426,11 @@ const ServiceDetail = () => {
 
         {/* Översikt — text + närbild */}
         <section className="bg-background py-20 lg:py-28">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6">
             <div className="grid items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
               <Reveal>
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+                  <span aria-hidden="true" className="h-px w-12 bg-primary" />
                   Översikt
                 </p>
                 <h2 className="mt-6 font-display text-[clamp(1.7rem,2.6vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
@@ -439,7 +439,7 @@ const ServiceDetail = () => {
                 <p className="mt-8 max-w-[60ch] text-[clamp(1.02rem,1.25vw,1.14rem)] leading-[1.8] text-muted-foreground">
                   {details.longDesc}
                 </p>
-                <div className="mt-10 border-l-2 border-seafoam pl-6">
+                <div className="mt-10 border-l-2 border-primary pl-6">
                   <p className="font-display text-[1.05rem] font-semibold leading-relaxed tracking-[-0.02em] text-foreground">
                     "Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när sista biten går med båt."
                   </p>
@@ -463,7 +463,7 @@ const ServiceDetail = () => {
                     />
                   </div>
                   <figcaption className="mt-4 flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
-                    <span className="mt-px text-[10px] font-bold uppercase tracking-[0.22em] text-seafoam">Foto</span>
+                    <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">Foto</span>
                     Eget arbete utfört av vårt team i Roslagen — inga lagerbilder på färdiga projekt.
                   </figcaption>
                 </figure>
@@ -488,9 +488,9 @@ const ServiceDetail = () => {
             className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/45 to-primary/10"
           />
           <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-4">
-              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
-                <span aria-hidden="true" className="h-px w-10 bg-seafoam-light/60" />
+            <div className="mx-auto max-w-7xl px-6">
+              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
+                <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
                 Hantverket
               </p>
               <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
@@ -507,11 +507,11 @@ const ServiceDetail = () => {
 
         {/* Vad ingår — faktarutor */}
         <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="max-w-xl">
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+                <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+                  <span aria-hidden="true" className="h-px w-12 bg-primary" />
                   Omfattning
                 </p>
                 <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
@@ -528,7 +528,7 @@ const ServiceDetail = () => {
                 <li key={b} className="bg-background">
                   <Reveal delay={(i % 3) * 0.05}>
                     <div className="flex h-full flex-col gap-3 p-7">
-                      <span className="font-display text-[11px] font-bold tabular-nums tracking-[0.24em] text-seafoam">
+                      <span className="font-display text-[11px] font-bold tabular-nums tracking-[0.24em] text-primary">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className="text-[15px] leading-[1.6] text-foreground">{b}</span>
@@ -543,11 +543,11 @@ const ServiceDetail = () => {
         {/* Arbetsgång — mörkt band */}
         <section className="relative bg-primary py-20 text-primary-foreground lg:py-28">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-6">
             <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
               <div className="lg:sticky lg:top-28 lg:self-start">
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam-light">
-                  <span aria-hidden="true" className="h-px w-8 bg-seafoam-light/50" />
+                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
+                  <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
                   Arbetsgång
                 </p>
                 <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
@@ -558,7 +558,7 @@ const ServiceDetail = () => {
                 </p>
                 <a
                   href="tel:0701543639"
-                  className="mt-8 inline-flex items-center gap-2.5 border border-primary-foreground/25 px-6 py-3.5 text-sm font-semibold transition-colors hover:border-seafoam-light hover:text-seafoam-light"
+                  className="mt-8 inline-flex items-center gap-2.5 rounded-sm border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
                 >
                   <Phone className="h-4 w-4" aria-hidden="true" />
                   070-154 36 39
@@ -570,7 +570,7 @@ const ServiceDetail = () => {
                   <li key={step} id={`steg-${i + 1}`} className="bg-primary">
                     <Reveal delay={(i % 2) * 0.05}>
                       <div className="flex h-full items-start gap-4 p-6">
-                        <span className="font-display text-[13px] font-bold tabular-nums text-seafoam-light">
+                        <span className="font-display text-[13px] font-bold tabular-nums text-primary-foreground/70">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="text-[15px] leading-[1.6] text-primary-foreground/85">{step}</span>
@@ -585,12 +585,12 @@ const ServiceDetail = () => {
 
         {/* Bra att veta — faktarutor */}
         <section className="bg-background py-20 lg:py-24">
-          <div className="container mx-auto px-4">
-            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-              <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+              <span aria-hidden="true" className="h-px w-12 bg-primary" />
               Bra att veta
             </p>
-            <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <div className="mt-12 grid gap-px border-y border-border bg-border md:grid-cols-3">
               {[
                 {
                   t: "Pris och ROT",
@@ -606,7 +606,7 @@ const ServiceDetail = () => {
                 },
               ].map((f, i) => (
                 <Reveal key={f.t} delay={i * 0.06}>
-                  <div className="h-full border-t-2 border-seafoam bg-secondary/40 p-7">
+                  <div className="h-full bg-card p-8">
                     <h3 className="font-display text-[1.05rem] font-bold tracking-[-0.02em] text-foreground">{f.t}</h3>
                     <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">{f.d}</p>
                   </div>
@@ -618,7 +618,7 @@ const ServiceDetail = () => {
 
         {slug === "eternit-asbest" && (
           <section className="border-t border-border bg-secondary/40 py-20">
-            <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-7xl px-6">
               <EternitSEOContent />
             </div>
           </section>
@@ -635,7 +635,7 @@ const ServiceDetail = () => {
           />
           <div aria-hidden="true" className="absolute inset-0 bg-primary/90" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-6">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
               <div className="max-w-2xl">
                 <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.3rem)] font-extrabold leading-[1.08] tracking-[-0.03em]">
@@ -653,7 +653,7 @@ const ServiceDetail = () => {
                 {slug !== "eternit-asbest" && (
                   <Link
                     to="/offert"
-                    className="group inline-flex items-center justify-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
+                    className="group inline-flex items-center justify-center gap-3 rounded-sm bg-card px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
                   >
                     Få offert
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -663,8 +663,8 @@ const ServiceDetail = () => {
                   to="/offert#radgivning"
                   className={`inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
                     slug === "eternit-asbest"
-                      ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
-                      : "border border-primary-foreground/25 text-primary-foreground hover:border-seafoam-light hover:text-seafoam-light"
+                      ? "rounded-sm bg-card text-primary hover:bg-secondary animate-subtle-pulse"
+                      : "rounded-sm border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                   }`}
                 >
                   Kostnadsfri rådgivning
@@ -677,9 +677,9 @@ const ServiceDetail = () => {
 
         {/* Relaterat innehåll */}
         <section className="bg-background py-20 lg:py-24">
-          <div className="container mx-auto px-4">
-            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-              <span aria-hidden="true" className="h-px w-8 bg-seafoam/50" />
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+              <span aria-hidden="true" className="h-px w-12 bg-primary" />
               Läs vidare
             </p>
             <h2 className="mt-5 max-w-xl font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
@@ -700,11 +700,11 @@ const ServiceDetail = () => {
                 <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
                   <Link
                     to={link.to}
-                    className="group flex h-full items-center justify-between gap-4 px-1 py-5 text-[15px] font-semibold text-foreground transition-colors hover:text-seafoam sm:px-6"
+                    className="group flex h-full items-center justify-between gap-4 px-1 py-5 text-[15px] font-semibold text-foreground transition-colors hover:text-primary sm:px-6"
                   >
                     {link.label}
                     <ArrowRight
-                      className="h-4 w-4 shrink-0 text-seafoam transition-transform group-hover:translate-x-1"
+                      className="h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-1"
                       aria-hidden="true"
                     />
                   </Link>
@@ -715,7 +715,7 @@ const ServiceDetail = () => {
             <div className="mt-14 border-t border-border pt-8">
               <Link
                 to="/#tjanster"
-                className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground transition-colors hover:text-seafoam"
+                className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground transition-colors hover:text-primary"
               >
                 <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
                 Tillbaka till alla tjänster
