@@ -323,122 +323,84 @@ const ServiceDetail = () => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
 
-        {/* Split-screen hero */}
-        <section className="relative bg-primary text-primary-foreground">
-          <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="relative flex flex-col justify-center px-6 pb-16 pt-28 sm:px-10 lg:pb-24 lg:pt-32 xl:px-20">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine"
-              />
-              <div className="relative mx-auto w-full max-w-2xl lg:mx-0">
-                <h1 className="font-display text-[clamp(2.2rem,4.4vw,3.9rem)] font-extrabold leading-[1.02] tracking-[-0.035em]">
-                  {service.title}
-                </h1>
+        {/* Split-screen hero — samma arkitektoniska språk som startsidan */}
+        <section className="relative grid border-b border-border bg-card lg:grid-cols-[1.02fr_0.98fr]">
+          <div className="flex flex-col justify-center px-6 pb-16 pt-32 sm:px-10 lg:px-16 lg:py-24 xl:px-20">
+            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+              <span aria-hidden="true" className="h-px w-12 bg-primary" />
+              Tjänst — Roslagen &amp; skärgården
+            </p>
 
+            <h1 className="mt-8 max-w-[34rem] font-display text-[clamp(2.4rem,4.8vw,4.2rem)] font-extrabold leading-[0.99] tracking-[-0.04em] text-foreground">
+              {service.title}
+            </h1>
 
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75">
-                  {service.description}
-                </p>
+            <p className="mt-8 max-w-lg text-[19px] font-light leading-relaxed text-muted-foreground">
+              {service.description}
+            </p>
 
-                <div className="mt-10 flex flex-wrap items-center gap-5">
-                  <Link
-                    to="/offert"
-                    className="group inline-flex items-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-seafoam-light hover:text-primary animate-subtle-pulse"
-                  >
-                    Begär kostnadsfri offert
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </Link>
-                  <a
-                    href="tel:0701543639"
-                    className="inline-flex items-center gap-2.5 border border-primary-foreground/25 px-7 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-seafoam-light hover:text-seafoam-light"
-                  >
-                    <Phone className="h-4 w-4" aria-hidden="true" />
-                    070-154 36 39
-                  </a>
-                </div>
-
-                <Link
-                  to="/hur-det-gar-till"
-                  className="mt-8 inline-flex items-center gap-2 border-b border-seafoam/60 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-seafoam-light"
+            <ul className="mt-10 grid gap-px border-y border-border bg-border sm:grid-cols-2 sm:gap-px">
+              {[
+                "Kostnadsfri besiktning och fast pris",
+                "Certifierade takläggare, F-skatt",
+                "ROT-avdrag på arbetskostnaden",
+                "Vana vid öar utan broförbindelse",
+              ].map((point) => (
+                <li
+                  key={point}
+                  className="flex items-center gap-3 bg-card py-4 text-[16px] text-foreground"
                 >
-                  <PlayCircle className="h-4 w-4" aria-hidden="true" />
-                  Se hur ett takbyte går till
-                </Link>
+                  <CheckCircle className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                  {point}
+                </li>
+              ))}
+            </ul>
 
-
-                <ul className="mt-12 grid gap-3 border-t border-primary-foreground/15 pt-8 sm:grid-cols-2">
-                  {[
-                    "Kostnadsfri besiktning och fast pris",
-                    "Certifierade takläggare, F-skatt",
-                    "ROT-avdrag på arbetskostnaden",
-                    "Vana vid öar utan broförbindelse",
-                  ].map((point) => (
-                    <li key={point} className="flex items-start gap-3 text-[14px] text-primary-foreground/80">
-                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-seafoam-light" aria-hidden="true" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link
+                to="/offert"
+                className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-sm bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
+              >
+                Begär kostnadsfri offert
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+              <a
+                href="tel:0701543639"
+                className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
+              >
+                <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+                070-154 36 39
+              </a>
             </div>
 
-            {/* Höger panel — bild med spec-kort */}
-            <figure className="relative m-0 min-h-[340px] overflow-hidden bg-accent lg:min-h-full">
-              <img
-                src={serviceImage}
-                alt={`${service.title} i Roslagen utförd av RoslagsTak`}
-                width={1600}
-                height={1200}
-                fetchPriority="high"
-                decoding="async"
-                className="h-full w-full object-cover"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-primary via-primary/45 to-primary/10"
-              />
-              <figcaption className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                <div className="border-t border-seafoam-light/40 bg-primary/85 p-6 backdrop-blur-sm">
-                  <div className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-seafoam-light/40">
-                      <service.icon className="h-5 w-5 text-seafoam-light" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
-                        Prisbild
-                      </p>
-                      <p className="mt-2 text-[14px] leading-relaxed text-primary-foreground/80">
-                        {details.priceRange ?? "Fast pris efter kostnadsfri besiktning."}
-                      </p>
-                    </div>
-                  </div>
-                  <dl className="mt-6 grid grid-cols-3 gap-4 border-t border-primary-foreground/15 pt-5">
-                    {[
-                      { label: "Utförande", value: "10 år" },
-                      { label: "Material", value: "30 år" },
-                      { label: "Standard", value: "AMA" },
-                    ].map((fact) => (
-                      <div key={fact.label}>
-                        <dt className="text-[9px] font-bold uppercase tracking-[0.22em] text-primary-foreground/50">
-                          {fact.label}
-                        </dt>
-                        <dd className="mt-1 font-display text-base font-bold tracking-[-0.02em]">
-                          {fact.value}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-                <div className="mt-4 flex items-center justify-between gap-4 border-t border-primary-foreground/15 bg-primary/85 px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] backdrop-blur-sm">
-                  <span>{service.title} — Roslagens kust</span>
-                  <span className="text-primary-foreground/55">RT</span>
-                </div>
-              </figcaption>
-
-            </figure>
+            <Link
+              to="/hur-det-gar-till"
+              className="group mt-10 inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary"
+            >
+              <PlayCircle className="h-4 w-4" aria-hidden="true" />
+              Se hur ett takbyte går till
+              <span aria-hidden="true" className="h-px w-8 bg-primary transition-all group-hover:w-14" />
+            </Link>
           </div>
+
+          {/* Höger panel — helformatsbild med saklig bildtext */}
+          <figure className="relative m-0 min-h-[22rem] overflow-hidden bg-secondary lg:min-h-full">
+            <img
+              src={serviceImage}
+              alt={`${service.title} i Roslagen utförd av RoslagsTak`}
+              width={1600}
+              height={1200}
+              fetchPriority="high"
+              decoding="async"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-card px-6 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
+              <span>{service.title} — Roslagens kust</span>
+              <span className="text-muted-foreground">RT</span>
+            </figcaption>
+          </figure>
         </section>
+
 
         {/* Faktarad — samma band som på startsidans hero */}
         <section aria-label="Snabbfakta" className="bg-accent text-primary-foreground">
