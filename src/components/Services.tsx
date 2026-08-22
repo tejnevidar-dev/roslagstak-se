@@ -123,16 +123,16 @@ const Services = () => {
         </div>
 
         {/* Tjänsteregister — hairline-rutnät i tre spalter */}
-        <ul className="mt-20 grid border-t border-border md:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-20 grid gap-px border-t border-border bg-border md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <li
               key={service.slug}
-              className="border-b border-border md:[&:nth-child(odd)]:border-r lg:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(odd)]:border-r"
+              className="bg-card"
             >
               <Reveal delay={Math.min(i, 5) * 0.04}>
                 <Link
                   to={`/tjanster/${service.slug}`}
-                  className="group flex h-full flex-col px-0 py-12 transition-colors md:px-10 md:first:pl-0 lg:[&:nth-child(3n+1)]:pl-0"
+                  className="group flex h-full flex-col px-0 py-12 transition-colors md:px-9"
                 >
                   <span className="flex items-center justify-between">
                     <span className="text-[10px] font-bold tabular-nums tracking-[0.3em] text-muted-foreground/60">
