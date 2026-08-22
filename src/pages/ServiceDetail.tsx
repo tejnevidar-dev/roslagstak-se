@@ -402,30 +402,26 @@ const ServiceDetail = () => {
         </section>
 
 
-        {/* Faktarad — samma band som på startsidans hero */}
-        <section aria-label="Snabbfakta" className="bg-accent text-primary-foreground">
-          <dl className="grid grid-cols-2 border-t border-primary-foreground/15 md:grid-cols-4">
+        {/* Faktarad — djupt band med hairlines */}
+        <section aria-label="Snabbfakta" className="bg-primary text-primary-foreground">
+          <dl className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-primary-foreground/15 px-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { k: "Prisbild", v: details.priceRange?.split(".")[0] ?? "Fast pris efter besiktning", note: "ROT-avdrag på arbetskostnaden" },
               { k: "Garanti", v: "10 + 30 år", note: "Utförande respektive material" },
               { k: "Besiktning", v: "Kostnadsfri", note: "Skriftlig bedömning med foton" },
               { k: "Utförande", v: "AMA-standard", note: "Certifierade takläggare, F-skatt" },
-            ].map((f, i) => (
-              <div
-                key={f.k}
-                className={`group px-7 py-8 transition-colors duration-300 hover:bg-primary ${
-                  i < 2 ? "border-b border-primary-foreground/15 md:border-b-0" : ""
-                } ${i !== 3 ? "border-r border-primary-foreground/15" : ""}`}
-              >
-                <dt className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.3em] text-seafoam-light">
+            ].map((f) => (
+              <div key={f.k} className="bg-primary px-2 py-9 sm:px-6">
+                <dt className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground/60">
                   {f.k}
                 </dt>
-                <dd className="font-display text-lg font-bold leading-tight tracking-[-0.02em]">{f.v}</dd>
-                <p className="mt-2 text-[13px] leading-relaxed text-primary-foreground/60">{f.note}</p>
+                <dd className="font-display text-[1.15rem] font-bold leading-tight tracking-[-0.025em]">{f.v}</dd>
+                <p className="mt-2.5 text-[14px] font-light leading-relaxed text-primary-foreground/70">{f.note}</p>
               </div>
             ))}
           </dl>
         </section>
+
 
 
         {/* Översikt — text + närbild */}
