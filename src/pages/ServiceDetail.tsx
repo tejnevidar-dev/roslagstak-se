@@ -323,104 +323,143 @@ const ServiceDetail = () => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
 
-        {/* Split-screen hero — samma arkitektoniska språk som startsidan */}
-        <section className="relative grid border-b border-border bg-card lg:grid-cols-[1.02fr_0.98fr]">
-          <div className="flex flex-col justify-center px-6 pb-16 pt-32 sm:px-10 lg:px-16 lg:py-24 xl:px-20">
-            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-              <span aria-hidden="true" className="h-px w-12 bg-primary" />
-              Tjänst — Roslagen &amp; skärgården
-            </p>
+        {/* Hero — asymmetriskt dokumentärt rutnät */}
+        <section className="bg-background pb-16 pt-32 lg:pb-20 lg:pt-36">
+          <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
+            <div className="flex flex-col gap-8">
+              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
+                <span aria-hidden="true" className="h-px w-10 bg-primary" />
+                Tjänstebeskrivning / Roslagen
+              </p>
 
-            <h1 className="mt-8 max-w-[34rem] font-display text-[clamp(2.4rem,4.8vw,4.2rem)] font-extrabold leading-[0.99] tracking-[-0.04em] text-foreground">
-              {service.title}
-            </h1>
+              <h1 className="font-display text-[clamp(2.6rem,6.4vw,5.6rem)] font-extrabold leading-[0.88] tracking-[-0.045em] text-foreground">
+                {service.title}
+                <br />
+                <span className="text-accent">{meta.accentLine}</span>
+              </h1>
 
-            <p className="mt-8 max-w-lg text-[19px] font-light leading-relaxed text-muted-foreground">
-              {service.description}
-            </p>
+              <p className="max-w-xl text-[19px] font-light leading-relaxed text-muted-foreground">
+                {service.description}
+              </p>
 
-            <ul className="mt-10 grid gap-px border-y border-border bg-border sm:grid-cols-2 sm:gap-px">
-              {[
-                "Kostnadsfri besiktning och fast pris",
-                "Certifierade takläggare, F-skatt",
-                "ROT-avdrag på arbetskostnaden",
-                "Vana vid öar utan broförbindelse",
-              ].map((point) => (
-                <li
-                  key={point}
-                  className="flex items-center gap-3 bg-card py-4 text-[16px] text-foreground"
+              <div className="flex flex-wrap gap-x-8 gap-y-5">
+                {meta.specs.map((s) => (
+                  <div key={s.k} className="flex flex-col border-l-2 border-accent py-1 pl-4">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">{s.k}</span>
+                    <span className="text-[15px] font-medium text-foreground">{s.v}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-2 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  to="/offert"
+                  className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-sm bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
                 >
-                  <CheckCircle className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                  {point}
-                </li>
-              ))}
-            </ul>
+                  Begär kostnadsfri offert
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </Link>
+                <a
+                  href="tel:0701543639"
+                  className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
+                >
+                  <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+                  070-154 36 39
+                </a>
+              </div>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
-                to="/offert"
-                className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-sm bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
+                to="/hur-det-gar-till"
+                className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.26em] text-primary"
               >
-                Begär kostnadsfri offert
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                Se hur ett takbyte går till
+                <span aria-hidden="true" className="h-px w-8 bg-primary transition-all group-hover:w-14" />
               </Link>
-              <a
-                href="tel:0701543639"
-                className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
-              >
-                <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
-                070-154 36 39
-              </a>
             </div>
 
-            <Link
-              to="/hur-det-gar-till"
-              className="group mt-10 inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary"
-            >
-              <PlayCircle className="h-4 w-4" aria-hidden="true" />
-              Se hur ett takbyte går till
-              <span aria-hidden="true" className="h-px w-8 bg-primary transition-all group-hover:w-14" />
-            </Link>
+            {/* Dokumentärt foto med teknisk metadata */}
+            <figure className="relative m-0">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary shadow-[var(--shadow-elevated)]">
+                <img
+                  src={serviceImage}
+                  alt={`${service.title} i Roslagen utförd av RoslagsTak`}
+                  width={1200}
+                  height={1500}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 border-t border-primary-foreground/15 bg-primary/90 p-5 text-primary-foreground backdrop-blur-md">
+                  <div className="flex items-end justify-between gap-4">
+                    <div>
+                      <span className="mb-1 block text-[10px] uppercase tracking-[0.2em] text-primary-foreground/60">
+                        Ur vårt arbete
+                      </span>
+                      <p className="font-mono text-[11px] font-medium">{meta.techLine}</p>
+                    </div>
+                    <span className="font-mono text-[10px] text-primary-foreground/45">59.75° N, 18.70° E</span>
+                  </div>
+                </figcaption>
+              </div>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-3 -top-3 -z-10 h-20 w-20 border-r-2 border-t-2 border-accent"
+              />
+            </figure>
           </div>
-
-          {/* Höger panel — helformatsbild med saklig bildtext */}
-          <figure className="relative m-0 min-h-[22rem] overflow-hidden bg-secondary lg:min-h-full">
-            <img
-              src={serviceImage}
-              alt={`${service.title} i Roslagen utförd av RoslagsTak`}
-              width={1600}
-              height={1200}
-              fetchPriority="high"
-              decoding="async"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-card px-6 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
-              <span>{service.title} — Roslagens kust</span>
-              <span className="text-muted-foreground">RT</span>
-            </figcaption>
-          </figure>
         </section>
 
-
-        {/* Faktarad — djupt band med hairlines */}
-        <section aria-label="Snabbfakta" className="bg-primary text-primary-foreground">
-          <dl className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-primary-foreground/15 px-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { k: "Prisbild", v: details.priceRange?.split(".")[0] ?? "Fast pris efter besiktning", note: "ROT-avdrag på arbetskostnaden" },
-              { k: "Garanti", v: "10 + 30 år", note: "Utförande respektive material" },
-              { k: "Besiktning", v: "Kostnadsfri", note: "Skriftlig bedömning med foton" },
-              { k: "Utförande", v: "AMA-standard", note: "Certifierade takläggare, F-skatt" },
-            ].map((f) => (
-              <div key={f.k} className="bg-primary px-2 py-9 sm:px-6">
-                <dt className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground/60">
-                  {f.k}
-                </dt>
-                <dd className="font-display text-[1.15rem] font-bold leading-tight tracking-[-0.025em]">{f.v}</dd>
-                <p className="mt-2.5 text-[14px] font-light leading-relaxed text-primary-foreground/70">{f.note}</p>
-              </div>
-            ))}
+        {/* Faktaband — högkontrastblock */}
+        <section aria-label="Snabbfakta" className="bg-background pb-20 lg:pb-24">
+          <dl className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm bg-primary p-8 text-primary-foreground">
+              <dt className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">Kostnad</dt>
+              <dd>
+                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em]">
+                  Fast pris
+                </span>
+                <p className="text-[13px] leading-relaxed text-primary-foreground/70">
+                  {details.priceRange?.split(".")[0] ?? "Efter kostnadsfri besiktning"}
+                </p>
+              </dd>
+            </div>
+            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm border-2 border-primary bg-card p-8">
+              <dt className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Hållbarhet</dt>
+              <dd>
+                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em] text-foreground">
+                  10 + 30 år
+                </span>
+                <p className="text-[13px] leading-relaxed text-muted-foreground">
+                  Utförandegaranti respektive materialgaranti från tillverkaren.
+                </p>
+              </dd>
+            </div>
+            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm bg-accent p-8 text-accent-foreground">
+              <dt className="text-[10px] font-bold uppercase tracking-[0.2em]">Besiktning</dt>
+              <dd>
+                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em]">
+                  Kostnadsfri
+                </span>
+                <p className="text-[13px] leading-relaxed opacity-90">
+                  Skriftlig bedömning med foton och tydliga åtgärdsförslag.
+                </p>
+              </dd>
+            </div>
+            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm border border-border bg-card p-8">
+              <dt className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Logistik</dt>
+              <dd>
+                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em] text-foreground">
+                  Lokalt
+                </span>
+                <p className="text-[13px] leading-relaxed text-muted-foreground">
+                  Eget team i Roslagen — vi löser även båttransport till öar utan bro.
+                </p>
+              </dd>
+            </div>
           </dl>
         </section>
+
 
 
 
