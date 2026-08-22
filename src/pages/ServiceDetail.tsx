@@ -563,48 +563,38 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        {/* Arbetsgång — mörkt band */}
-        <section className="relative bg-primary py-20 text-primary-foreground lg:py-28">
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.07] bg-grid-fine" />
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-              <div className="lg:sticky lg:top-28 lg:self-start">
-                <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
-                  <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
-                  Arbetsgång
-                </p>
-                <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
-                  Så här går det till
-                </h2>
-                <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-primary-foreground/70">
-                  {details.process.length} steg från första besiktning till avetablering. Du har samma kontaktperson hela vägen.
-                </p>
-                <a
-                  href="tel:0701543639"
-                  className="mt-8 inline-flex items-center gap-2.5 rounded-sm border border-primary-foreground/30 px-6 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
-                >
-                  <Phone className="h-4 w-4" aria-hidden="true" />
-                  070-154 36 39
-                </a>
-              </div>
-
-              <ol className="grid gap-px bg-primary-foreground/15 sm:grid-cols-2">
-                {details.process.map((step, i) => (
-                  <li key={step} id={`steg-${i + 1}`} className="bg-primary">
-                    <Reveal delay={(i % 2) * 0.05}>
-                      <div className="flex h-full items-start gap-4 p-6">
-                        <span className="font-display text-[13px] font-bold tabular-nums text-primary-foreground/70">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-[15px] leading-[1.6] text-primary-foreground/85">{step}</span>
-                      </div>
-                    </Reveal>
-                  </li>
-                ))}
-              </ol>
+        {/* Fullbreddsfoto — dokumentärt band */}
+        <section aria-label="Hantverket" className="relative h-[38vh] min-h-[280px] overflow-hidden lg:h-[46vh]">
+          <img
+            src={bandImage}
+            alt=""
+            width={2000}
+            height={1000}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/45 to-primary/10"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <div className="mx-auto w-full max-w-7xl px-6">
+              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
+                <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
+                Hantverket
+              </p>
+              <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
+                {meta.craftLine}
+              </p>
             </div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-primary/85 px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-primary-foreground backdrop-blur-sm">
+            <span>{service.title} — utfört i Roslagen</span>
+            <span className="text-primary-foreground/55">{meta.objCode}</span>
+          </div>
         </section>
+
 
         {/* Bra att veta — faktarutor */}
         <section className="bg-background py-20 lg:py-24">
