@@ -424,85 +424,108 @@ const ServiceDetail = () => {
 
 
 
-        {/* Översikt — text + närbild */}
+        {/* Teknisk specifikation — redaktionell text, arbetsgång och offertkolumn */}
         <section className="bg-background py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+          <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[1.9fr_1fr] lg:gap-20">
+            <div className="space-y-16">
               <Reveal>
                 <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
                   <span aria-hidden="true" className="h-px w-12 bg-primary" />
-                  Översikt
+                  Teknisk specifikation
                 </p>
-                <h2 className="mt-6 font-display text-[clamp(1.7rem,2.6vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-foreground">
-                  Om {service.title.toLowerCase()}
+                <h2 className="mt-6 max-w-[24ch] font-display text-[clamp(1.8rem,2.8vw,2.6rem)] font-extrabold leading-[1.06] tracking-[-0.035em] text-foreground">
+                  {meta.specHeading}
                 </h2>
-                <p className="mt-8 max-w-[60ch] text-[clamp(1.02rem,1.25vw,1.14rem)] leading-[1.8] text-muted-foreground">
-                  {details.longDesc}
+                <p className="mt-8 max-w-[46ch] font-display text-[1.15rem] font-semibold leading-[1.5] tracking-[-0.02em] text-foreground">
+                  {meta.lead}
                 </p>
-                <div className="mt-10 border-l-2 border-primary pl-6">
-                  <p className="font-display text-[1.05rem] font-semibold leading-relaxed tracking-[-0.02em] text-foreground">
-                    "Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när sista biten går med båt."
-                  </p>
-                  <p className="mt-2 text-[12px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                    RoslagsTak, Blidö
+                <div className="mt-8 gap-12 text-[15px] leading-[1.85] text-muted-foreground md:columns-2 [&>p]:mb-6">
+                  <p>{details.longDesc}</p>
+                  <p>
+                    Våra projektledare dokumenterar varje steg fotografiskt, så du får en fullständig
+                    historik över de dolda lager som utgör takets verkliga skydd. Vi arbetar med
+                    material som tål saltstänk, hård vind och tunga snölaster i Roslagen och skärgården.
                   </p>
                 </div>
               </Reveal>
 
-              <Reveal delay={0.1}>
-                <figure className="m-0">
-                  <div className="overflow-hidden bg-secondary">
-                    <img
-                      src={detailImage}
-                      alt={`Detaljbild från ${service.title.toLowerCase()} i Roslagen`}
-                      width={1200}
-                      height={900}
-                      loading="lazy"
-                      decoding="async"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] hover:scale-[1.03]"
-                    />
-                  </div>
-                  <figcaption className="mt-4 flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
-                    <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">Foto</span>
-                    Eget arbete utfört av vårt team i Roslagen — inga lagerbilder på färdiga projekt.
-                  </figcaption>
-                </figure>
+              <Reveal>
+                <div className="border-y border-border py-12">
+                  <h3 className="font-display text-[1.35rem] font-extrabold uppercase tracking-[0.16em] text-foreground">
+                    Arbetsgång i {details.process.length} steg
+                  </h3>
+                  <ol className="mt-8 grid gap-x-12 md:grid-cols-2">
+                    {details.process.map((step, i) => (
+                      <li
+                        key={step}
+                        id={`steg-${i + 1}`}
+                        className="group flex items-start gap-4 border-b border-border/70 py-3.5"
+                      >
+                        <span className="mt-px font-mono text-[13px] tabular-nums text-primary transition-all group-hover:pl-1.5">
+                          {String(i + 1).padStart(2, "0")}.
+                        </span>
+                        <span className="text-[15px] font-medium leading-[1.6] text-foreground">{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
               </Reveal>
             </div>
+
+            {/* Offertkolumn */}
+            <aside className="flex flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
+              <div className="flex flex-col gap-6 rounded-sm bg-primary p-9 text-primary-foreground">
+                <h3 className="font-display text-[1.55rem] font-extrabold tracking-[-0.03em]">Begär offert</h3>
+                <p className="text-[15px] font-light leading-relaxed text-primary-foreground/75">
+                  Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri besiktning.
+                </p>
+                <Link
+                  to="/offert"
+                  className="inline-flex w-full items-center justify-center gap-2.5 rounded-sm bg-accent px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-accent-foreground transition-colors hover:bg-primary-foreground hover:text-primary animate-subtle-pulse"
+                >
+                  Starta förfrågan
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+                <a
+                  href="tel:0701543639"
+                  className="inline-flex items-center gap-2.5 text-[15px] font-semibold text-primary-foreground/90 transition-colors hover:text-primary-foreground"
+                >
+                  <Phone className="h-4 w-4" aria-hidden="true" />
+                  070-154 36 39
+                </a>
+              </div>
+
+              <figure className="m-0 space-y-5">
+                <div className="overflow-hidden rounded-sm bg-secondary">
+                  <img
+                    src={detailImage}
+                    alt={`Detalj från ${service.title.toLowerCase()} i Roslagen`}
+                    width={1200}
+                    height={900}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[4/3] w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                  />
+                </div>
+                <figcaption className="flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
+                  <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">Foto</span>
+                  {meta.photoNote}
+                </figcaption>
+              </figure>
+
+              <blockquote className="border-l-2 border-accent pl-6">
+                <p className="font-display text-[1.05rem] font-semibold italic leading-relaxed tracking-[-0.02em] text-foreground">
+                  "Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när
+                  sista biten går med båt."
+                </p>
+                <footer className="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
+                  RoslagsTak, Blidö
+                </footer>
+              </blockquote>
+            </aside>
           </div>
         </section>
 
-        {/* Bildblock i full bredd */}
-        <section aria-label="Hantverket" className="relative h-[42vh] min-h-[300px] overflow-hidden lg:h-[50vh]">
-          <img
-            src={bandImage}
-            alt=""
-            width={2000}
-            height={1000}
-            loading="lazy"
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/45 to-primary/10"
-          />
-          <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto max-w-7xl px-6">
-              <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
-                <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
-                Hantverket
-              </p>
-              <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
-                Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.
-              </p>
-            </div>
-          </div>
-          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-primary/85 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-primary-foreground backdrop-blur-sm">
-            <span>{service.title} — utfört i Roslagen</span>
-            <span className="text-primary-foreground/55">RT</span>
-          </div>
-        </section>
 
 
         {/* Vad ingår — faktarutor */}
