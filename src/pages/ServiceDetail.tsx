@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, CheckCircle, Phone, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Phone, PlayCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
