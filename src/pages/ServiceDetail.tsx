@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, CheckCircle, Phone, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Phone, PlayCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,40 +9,169 @@ import { services } from "@/components/Services";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import imgRoofProject from "@/assets/roof-project.jpg";
 import imgRooferWork from "@/assets/roofer-work.jpg";
+import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
+import imgPapp from "@/assets/roof-build-02-papp.jpg";
 import imgRannor from "@/assets/roof-build-03-rannor.jpg";
-
+import imgVindskivor from "@/assets/roof-build-04-vindskivor.jpg";
 import imgBeslag from "@/assets/roof-build-07-beslag.jpg";
+import imgSnoras from "@/assets/roof-build-08-snorasskydd.jpg";
 import imgLayers from "@/assets/roof-layers-macro.jpg";
 import imgAfter from "@/assets/after-roof-1.jpg";
-import imgCottage from "@/assets/project-coastal-cottage.jpg";
-import imgCabin from "@/assets/project-island-cabin.jpg";
 import imgVilla from "@/assets/project-villa-copper.jpg";
 import imgLakt from "@/assets/roof-build-05-lakt.jpg";
 import imgPannor from "@/assets/roof-build-06-pannor.jpg";
 import imgCinematic from "@/assets/hero-cinematic.jpg";
 
+/** Hero-foto per tjänst — dokumentära bilder från eget arbete. */
 const serviceImages: Record<string, string> = {
-  takomlaggning: imgRoofProject,
-  takrenovering: imgRooferWork,
+  takomlaggning: imgPannor,
+  takrenovering: imgPapp,
   takavvattning: imgRannor,
-  takkupor: imgCottage,
-  takinspektion: imgLayers,
+  takkupor: imgVindskivor,
+  takinspektion: imgRaspont,
   platarbeten: imgBeslag,
   takvard: imgAfter,
-  "eternit-asbest": imgCabin,
+  "eternit-asbest": imgRooferWork,
 };
 
-/** Närbild i översiktssektionen — alltid en annan bild än heron. */
+/** Närbild i specifikationskolumnen — alltid en annan bild än heron. */
 const detailImages: Record<string, string> = {
   takomlaggning: imgLakt,
   takrenovering: imgLayers,
   takavvattning: imgBeslag,
   takkupor: imgVilla,
-  takinspektion: imgRooferWork,
-  platarbeten: imgLayers,
+  takinspektion: imgLayers,
+  platarbeten: imgSnoras,
   takvard: imgPannor,
-  "eternit-asbest": imgRooferWork,
+  "eternit-asbest": imgRaspont,
 };
+
+type ServiceMeta = {
+  accentLine: string;
+  specs: { k: string; v: string }[];
+  techLine: string;
+  objCode: string;
+  specHeading: string;
+  lead: string;
+  craftLine: string;
+  photoNote: string;
+};
+
+const serviceMeta: Record<string, ServiceMeta> = {
+  takomlaggning: {
+    accentLine: "i skärgårdsmiljö.",
+    specs: [
+      { k: "Material", v: "30 års garanti" },
+      { k: "Utförande", v: "AMA-standard" },
+      { k: "Läkt", v: "25 × 38 mm" },
+    ],
+    techLine: "OBJ: NORRTÄLJE-32 // TEGELPANNA PÅ LÄKT",
+    objCode: "RT-01",
+    specHeading: "Teknisk specifikation och utförande",
+    lead: "Varje omläggning inleds med en fullständig analys av råspont, ventilation och avvattning.",
+    craftLine: "Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.",
+    photoNote: "Ny läkt monterad på diffusionsöppen underlagsduk — eget arbete i Roslagen.",
+  },
+  takrenovering: {
+    accentLine: "utan helt takbyte.",
+    specs: [
+      { k: "Åtgärd", v: "Punktinsats" },
+      { k: "Underlag", v: "Papp och råspont" },
+      { k: "Pris", v: "Fast efter besiktning" },
+    ],
+    techLine: "OBJ: VÄDDÖ-14 // BYTE AV UNDERLAGSPAPP",
+    objCode: "RT-02",
+    specHeading: "Vad vi åtgärdar — och vad vi låter vara",
+    lead: "Renovering handlar om att byta rätt delar: skadad papp, rötat virke och trasiga pannor.",
+    craftLine: "Ett tak dör sällan överallt samtidigt — vi byter det som behöver bytas.",
+    photoNote: "Detalj av takets uppbyggnad i lager — från råspont till ytskikt.",
+  },
+  takavvattning: {
+    accentLine: "rännor och stuprör.",
+    specs: [
+      { k: "Material", v: "Aluminium, koppar, plåt" },
+      { k: "Dimension", v: "Beräknad per takyta" },
+      { k: "Ränndalar", v: "Falsade i plåt" },
+    ],
+    techLine: "OBJ: BLIDÖ-07 // HÄNGRÄNNA 125 MM",
+    objCode: "RT-03",
+    specHeading: "Dimensionering och montage av avvattning",
+    lead: "Vattnet ska bort från fasad och grund — dimension och fall avgör om systemet fungerar.",
+    craftLine: "Fel fall på rännan syns inte första året. Det syns på fasaden fem år senare.",
+    photoNote: "Nymonterade hängrännor med fotplåt och korrekt fall.",
+  },
+  takkupor: {
+    accentLine: "mer ljus på vinden.",
+    specs: [
+      { k: "Bygglov", v: "Vi hanterar ansökan" },
+      { k: "Fönster", v: "Velux eller motsvarande" },
+      { k: "Tätning", v: "Plåtbeslag runt kupa" },
+    ],
+    techLine: "OBJ: LJUSTERÖ-21 // KUPA MED PLÅTINKLÄDNAD",
+    objCode: "RT-04",
+    specHeading: "Konstruktion, tätning och invändig finish",
+    lead: "En kupa är lika mycket plåtarbete som snickeri — tätningen avgör resultatet.",
+    craftLine: "Runt kupor och genomföringar avgörs om taket håller tätt i 30 år.",
+    photoNote: "Vindskivor och gavelbeslag monterade före taktäckning.",
+  },
+  takinspektion: {
+    accentLine: "innan skadan kostar.",
+    specs: [
+      { k: "Pris", v: "Kostnadsfri" },
+      { k: "Leverans", v: "Skriftlig rapport" },
+      { k: "Omfattning", v: "Tak, underlag, ventilation" },
+    ],
+    techLine: "OBJ: RIMBO-05 // BEDÖMNING AV RÅSPONT",
+    objCode: "RT-05",
+    specHeading: "Vad vi kontrollerar vid en besiktning",
+    lead: "Vi bedömer takets återstående livslängd — inte bara hur det ser ut från marken.",
+    craftLine: "Det som avgör takets skick ligger under pannorna.",
+    photoNote: "Råspont friläggs och bedöms innan nytt tätskikt läggs.",
+  },
+  platarbeten: {
+    accentLine: "beslag och bandtäckning.",
+    specs: [
+      { k: "Material", v: "Stål, alu, koppar, zink" },
+      { k: "Teknik", v: "Falsning på plats" },
+      { k: "Detaljer", v: "Skorsten och genomföring" },
+    ],
+    techLine: "OBJ: GRISSLEHAMN-11 // SKORSTENSBESLAG",
+    objCode: "RT-06",
+    specHeading: "Plåtdetaljer som håller mot kustklimat",
+    lead: "Plåtarbetet är takets tätning — beslagen tillverkas och falsas efter ditt hus.",
+    craftLine: "Plåtslageri är millimeterarbete. Salt och vind förlåter ingenting.",
+    photoNote: "Snörasskydd och plåtdetaljer monterade efter taktäckning.",
+  },
+  takvard: {
+    accentLine: "tvätt och målning.",
+    specs: [
+      { k: "Metod", v: "Skonsam rengöring" },
+      { k: "Färg", v: "Specialfärg för tak" },
+      { k: "Effekt", v: "Förlängd livslängd" },
+    ],
+    techLine: "OBJ: HALLSTAVIK-09 // TAKTVÄTT OCH BEHANDLING",
+    objCode: "RT-07",
+    specHeading: "Rengöring, behandling och målning",
+    lead: "Mossa håller fukt mot ytskiktet — rätt metod tar bort den utan att skada materialet.",
+    craftLine: "Ett välskött tak håller år längre än ett tak som lämnas åt mossan.",
+    photoNote: "Rengjorda och behandlade betongpannor efter avslutat arbete.",
+  },
+  "eternit-asbest": {
+    accentLine: "säkert och enligt regelverk.",
+    specs: [
+      { k: "Regelverk", v: "AFS 2006:1" },
+      { k: "Anmälan", v: "Vi hanterar den" },
+      { k: "Deponi", v: "Godkänd transport" },
+    ],
+    techLine: "OBJ: SKÄRGÅRD-03 // SANERING AV ETERNITTAK",
+    objCode: "RT-08",
+    specHeading: "Sanering enligt AFS 2006:1 — steg för steg",
+    lead: "Asbest kräver skyddsutrustning, emballering och dokumenterad transport till deponi.",
+    craftLine: "Eternit ska inte kapas, brytas eller högtryckstvättas. Den ska saneras.",
+    photoNote: "Arbete på plats med full skyddsutrustning enligt regelverket.",
+  },
+};
+
 
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
@@ -222,6 +351,8 @@ const ServiceDetail = () => {
   const serviceImage = (slug && serviceImages[slug]) || imgRoofProject;
   const detailImage = (slug && detailImages[slug]) || imgLayers;
   const bandImage = slug === "takvard" ? imgAfter : imgCinematic;
+  const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
