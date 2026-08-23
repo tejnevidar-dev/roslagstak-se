@@ -351,6 +351,8 @@ const ServiceDetail = () => {
   const serviceImage = (slug && serviceImages[slug]) || imgRoofProject;
   const detailImage = (slug && detailImages[slug]) || imgLayers;
   const bandImage = slug === "takvard" ? imgAfter : imgCinematic;
+  const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
