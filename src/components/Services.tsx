@@ -72,46 +72,77 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="border-b border-border bg-card py-24 lg:py-32" aria-labelledby="services-heading">
+    <section id="tjanster" className="bg-card py-24 lg:py-32" aria-labelledby="services-heading">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-          <div>
-            <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-              <span aria-hidden="true" className="h-px w-12 bg-primary" />
-              Vår expertis
-            </p>
+        {/* Förskjuten rubrikkomposition */}
+        <div className="mb-16 grid grid-cols-12 items-end gap-8 lg:mb-20">
+          <div className="col-span-12 lg:col-span-6">
             <h2
               id="services-heading"
-              className="mt-7 max-w-3xl font-display text-[clamp(2.1rem,4vw,3.5rem)] font-extrabold leading-[1.02] tracking-[-0.04em] text-foreground text-balance"
+              className="font-display text-[clamp(2rem,3.8vw,3.1rem)] font-bold leading-[1.12] text-foreground"
             >
-              Hantverk som sträcker sig över hela taket
+              Vi bygger för kustklimatets{" "}
+              <span className="text-accent">tuffaste utmaningar.</span>
             </h2>
           </div>
-          <div className="lg:pb-3">
+          <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <p className="text-[18px] font-light leading-relaxed text-muted-foreground">
-              Vi hjälper dig hela vägen, oavsett om huset står vid vägen eller bakom en båttur.
+              Från minsta sjöstuga till större fastigheter — traditionellt hantverk kombinerat
+              med material valt för väderutsatta lägen i Roslagen.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/offert"
-                className="inline-flex items-center justify-center gap-3 rounded-sm bg-primary px-7 py-4 text-[17px] font-bold text-primary-foreground transition-colors hover:bg-accent animate-subtle-pulse"
+                className="inline-flex items-center justify-center gap-3 border-b-4 border-accent bg-primary px-7 py-4 text-[17px] font-semibold text-primary-foreground transition-colors hover:bg-marine animate-subtle-pulse"
               >
                 Räkna på ditt tak
                 <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
               </a>
               <a
                 href="tel:0701543639"
-                className="inline-flex items-center justify-center gap-2.5 rounded-sm border border-border px-6 py-4 text-[17px] font-bold text-foreground transition-colors hover:bg-secondary"
+                className="inline-flex items-center justify-center gap-2.5 border-2 border-primary/15 px-6 py-4 text-[17px] font-semibold text-foreground transition-colors hover:bg-secondary"
               >
-                <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
+                <Phone className="h-5 w-5 text-accent" aria-hidden="true" />
                 070-154 36 39
               </a>
             </div>
           </div>
         </div>
 
+        {/* Förskjutna tjänsteblock — varannan spalt nedskjuten */}
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {services.map((service, i) => (
+            <li key={service.slug} className={i % 2 === 1 ? "lg:mt-14" : undefined}>
+              <Reveal delay={Math.min(i, 5) * 0.04}>
+                <Link
+                  to={`/tjanster/${service.slug}`}
+                  className="group flex h-full flex-col bg-background p-10 transition-colors duration-300 hover:bg-marine hover:text-marine-foreground"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mb-8 block h-1 w-10 bg-seafoam transition-all duration-500 group-hover:w-full"
+                  />
+                  <service.icon
+                    className="mb-6 h-6 w-6 text-accent transition-colors group-hover:text-seafoam"
+                    aria-hidden="true"
+                  />
+                  <span className="font-display text-[1.35rem] font-bold leading-snug">
+                    {service.title}
+                  </span>
+                  <span className="mt-4 block flex-1 text-[15px] font-light leading-relaxed opacity-70">
+                    {service.description}
+                  </span>
+                  <span className="mt-8 inline-flex items-center gap-2 font-display text-[15px] italic text-accent transition-colors group-hover:text-seafoam">
+                    Läs mer <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                </Link>
+              </Reveal>
+            </li>
+          ))}
+        </ul>
+
         {/* Full-bredds referensbild som sektionsavskiljare */}
-        <div className="mt-16 overflow-hidden rounded-sm border border-border">
+        <figure className="relative m-0 mt-20 overflow-hidden">
           <img
             src={roofProject}
             alt="Nylagt tak på hus i Roslagens skärgård"
@@ -120,44 +151,10 @@ const Services = () => {
             loading="lazy"
             className="aspect-[16/6] w-full object-cover"
           />
-        </div>
-
-        {/* Tjänsteregister — hairline-rutnät i tre spalter */}
-        <ul className="mt-20 grid gap-px border-t border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => (
-            <li
-              key={service.slug}
-              className="bg-card"
-            >
-              <Reveal delay={Math.min(i, 5) * 0.04}>
-                <Link
-                  to={`/tjanster/${service.slug}`}
-                  className="group flex h-full flex-col px-0 py-12 transition-colors md:px-9"
-                >
-                  <span className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold tabular-nums tracking-[0.3em] text-muted-foreground/60">
-                      {String(i + 1).padStart(2, "0")}/
-                    </span>
-                    <service.icon className="h-5 w-5 text-primary transition-transform duration-500 group-hover:-translate-y-1" aria-hidden="true" />
-                  </span>
-                  <span className="mt-10 block font-display text-[clamp(1.35rem,1.8vw,1.7rem)] font-bold leading-tight tracking-[-0.028em] text-foreground transition-colors group-hover:text-primary">
-                    {service.title}
-                  </span>
-                  <span className="mt-3 block text-[11px] font-bold uppercase tracking-[0.24em] text-primary/70">
-                    {service.short}
-                  </span>
-                  <span className="mt-5 block flex-1 text-[17px] font-light leading-relaxed text-muted-foreground">
-                    {service.description}
-                  </span>
-                  <span className="mt-8 inline-flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
-                    Läs mer
-                    <span aria-hidden="true" className="h-[2px] w-8 bg-primary transition-all group-hover:w-14" />
-                  </span>
-                </Link>
-              </Reveal>
-            </li>
-          ))}
-        </ul>
+          <figcaption className="absolute bottom-0 left-0 bg-primary px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-seafoam">
+            Referens — falsat plåttak, Roslagens kust
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

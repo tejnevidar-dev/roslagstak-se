@@ -1,23 +1,25 @@
-import { ShieldCheck, Package, Receipt, Search } from "lucide-react";
-
 const items = [
-  { icon: ShieldCheck, title: "10 års utförandegaranti" },
-  { icon: Package, title: "30 års materialgaranti" },
-  { icon: Receipt, title: "ROT-avdrag på fakturan" },
-  { icon: Search, title: "Kostnadsfri besiktning" },
+  { value: "30 år", label: "Materialgaranti" },
+  { value: "ROT", label: "Avdrag direkt på fakturan" },
+  { value: "0 kr", label: "Besiktning på plats", accent: true },
+  { value: "Logistik", label: "Pråm & transport till öar" },
 ];
 
-/* Hairline-remsa med runda ikonhållare — lugn, saklig, ingen kortkänsla */
+/* Mörk marin faktamatris — vertikala accentlinjer istället för kort */
 const TrustBar = () => (
-  <section className="border-b border-border bg-card" aria-label="Våra löften">
-    <ul className="mx-auto grid max-w-7xl grid-cols-1 gap-px bg-border px-6 sm:grid-cols-2 lg:grid-cols-4">
+  <section className="relative z-20 bg-primary py-14 lg:py-16" aria-label="Våra löften">
+    <ul className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 px-6 text-primary-foreground md:grid-cols-4 md:gap-12">
       {items.map((item) => (
-        <li key={item.title} className="group flex items-center gap-4 bg-card px-2 py-8 lg:justify-center">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-            <item.icon className="h-5 w-5" aria-hidden="true" />
+        <li key={item.label} className="flex flex-col border-l-2 border-seafoam py-1 pl-5">
+          <span
+            className={`font-display text-2xl font-bold lg:text-3xl ${
+              item.accent ? "text-seafoam" : ""
+            }`}
+          >
+            {item.value}
           </span>
-          <span className="text-[13px] font-bold uppercase tracking-[0.16em] text-foreground">
-            {item.title}
+          <span className="mt-1 text-[12px] font-medium uppercase tracking-[0.16em] text-seafoam/90">
+            {item.label}
           </span>
         </li>
       ))}

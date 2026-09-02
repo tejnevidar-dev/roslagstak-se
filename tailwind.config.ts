@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Urbanist', 'sans-serif'],
-        body: ['Epilogue', 'sans-serif'],
+        display: ['Libre Baskerville', 'Georgia', 'serif'],
+        body: ['IBM Plex Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,6 +50,10 @@ export default {
         seafoam: {
           DEFAULT: "hsl(var(--seafoam))",
           light: "hsl(var(--seafoam-light))",
+        },
+        marine: {
+          DEFAULT: "hsl(var(--marine))",
+          foreground: "hsl(var(--marine-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
