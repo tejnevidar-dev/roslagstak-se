@@ -51,6 +51,10 @@ export default {
           DEFAULT: "hsl(var(--seafoam))",
           light: "hsl(var(--seafoam-light))",
         },
+        marine: {
+          DEFAULT: "hsl(var(--marine))",
+          foreground: "hsl(var(--marine-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
