@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Urbanist', 'sans-serif'],
-        body: ['Epilogue', 'sans-serif'],
+        display: ['Libre Baskerville', 'Georgia', 'serif'],
+        body: ['IBM Plex Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
