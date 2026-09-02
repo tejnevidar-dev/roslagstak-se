@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import { services } from "@/components/Services";
 import EternitSEOContent from "@/components/EternitSEOContent";
+import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
+import { serviceBlocks } from "@/data/service-blocks";
 import imgRoofProject from "@/assets/roof-project.jpg";
 import imgRooferWork from "@/assets/roofer-work.jpg";
 import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
@@ -352,6 +354,9 @@ const ServiceDetail = () => {
   const detailImage = (slug && detailImages[slug]) || imgLayers;
   const bandImage = slug === "takvard" ? imgAfter : imgCinematic;
   const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
+  const blocks = (slug && serviceBlocks[slug]) || serviceBlocks.takomlaggning;
+  const specificBlock = <ServiceSpecificBlock block={blocks.block} />;
+
 
 
   useEffect(() => {
@@ -434,12 +439,8 @@ const ServiceDetail = () => {
   return (
     <>
       <SEOHead
-        title={slug === "eternit-asbest"
-          ? "Eternitsanering & Asbestrivning Roslagen — Certifierad"
-          : `${service.title} i Roslagen — Takläggare RoslagsTak`}
-        description={slug === "eternit-asbest"
-          ? "Certifierad eternitsanering och asbestrivning i Roslagen & skärgården. Säker rivning enligt AFS 2006:1, transport till deponi och nytt tak. Kostnadsfri besiktning. ROT-avdrag."
-          : `${service.title} i Roslagen. ${service.description} Kostnadsfri offert, 10 års utförandegaranti och 30 års materialgaranti.`}
+        title={blocks.seoTitle}
+        description={blocks.seoDescription}
         canonical={`https://roslagstak.se/tjanster/${slug}`}
       />
       <Header
@@ -541,55 +542,50 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        {/* Faktaband — högkontrastblock */}
+        {/* Faktaband — tjänstspecifika nyckeltal */}
         <section aria-label="Snabbfakta" className="bg-background pb-20 lg:pb-24">
           <dl className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm bg-primary p-8 text-primary-foreground">
-              <dt className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">Kostnad</dt>
-              <dd>
-                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em]">
-                  Fast pris
-                </span>
-                <p className="text-[13px] leading-relaxed text-primary-foreground/70">
-                  {details.priceRange?.split(".")[0] ?? "Efter kostnadsfri besiktning"}
-                </p>
-              </dd>
-            </div>
-            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm border-2 border-primary bg-card p-8">
-              <dt className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Hållbarhet</dt>
-              <dd>
-                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em] text-foreground">
-                  10 + 30 år
-                </span>
-                <p className="text-[13px] leading-relaxed text-muted-foreground">
-                  Utförandegaranti respektive materialgaranti från tillverkaren.
-                </p>
-              </dd>
-            </div>
-            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm bg-accent p-8 text-accent-foreground">
-              <dt className="text-[10px] font-bold uppercase tracking-[0.2em]">Besiktning</dt>
-              <dd>
-                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em]">
-                  Kostnadsfri
-                </span>
-                <p className="text-[13px] leading-relaxed opacity-90">
-                  Skriftlig bedömning med foton och tydliga åtgärdsförslag.
-                </p>
-              </dd>
-            </div>
-            <div className="flex min-h-[11.5rem] flex-col justify-between rounded-sm border border-border bg-card p-8">
-              <dt className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Logistik</dt>
-              <dd>
-                <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em] text-foreground">
-                  Lokalt
-                </span>
-                <p className="text-[13px] leading-relaxed text-muted-foreground">
-                  Eget team i Roslagen — vi löser även båttransport till öar utan bro.
-                </p>
-              </dd>
-            </div>
+            {blocks.factCards.map((f) => {
+              const tone =
+                f.tone === "primary"
+                  ? "bg-primary text-primary-foreground"
+                  : f.tone === "accent"
+                    ? "bg-accent text-accent-foreground"
+                    : f.tone === "outline"
+                      ? "border-2 border-primary bg-card"
+                      : "border border-border bg-card";
+              const label =
+                f.tone === "primary"
+                  ? "text-accent"
+                  : f.tone === "accent"
+                    ? "text-accent-foreground/80"
+                    : f.tone === "outline"
+                      ? "text-primary"
+                      : "text-muted-foreground";
+              const body =
+                f.tone === "primary"
+                  ? "text-primary-foreground/70"
+                  : f.tone === "accent"
+                    ? "opacity-90"
+                    : "text-muted-foreground";
+              return (
+                <div key={f.label} className={`flex min-h-[11.5rem] flex-col justify-between rounded-sm p-8 ${tone}`}>
+                  <dt className={`text-[10px] font-bold uppercase tracking-[0.2em] ${label}`}>{f.label}</dt>
+                  <dd>
+                    <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em]">
+                      {f.value}
+                    </span>
+                    <p className={`text-[13px] leading-relaxed ${body}`}>{f.text}</p>
+                  </dd>
+                </div>
+              );
+            })}
           </dl>
         </section>
+
+        {blocks.blockPlacement === "before-spec" && specificBlock}
+
+
 
 
 
@@ -696,6 +692,7 @@ const ServiceDetail = () => {
           </div>
         </section>
 
+        {blocks.blockPlacement === "after-spec" && specificBlock}
 
 
         {/* Vad ingår — faktarutor */}
@@ -732,6 +729,10 @@ const ServiceDetail = () => {
             </ul>
           </div>
         </section>
+
+        {blocks.blockPlacement === "after-scope" && specificBlock}
+
+
 
         {/* Fullbreddsfoto — dokumentärt band */}
         <section aria-label="Hantverket" className="relative h-[38vh] min-h-[280px] overflow-hidden lg:h-[46vh]">
@@ -873,9 +874,7 @@ const ServiceDetail = () => {
                 { to: "/priser", label: "Se prislista" },
                 { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
                 { to: "/blogg/rot-avdrag-takbyte", label: "ROT-avdrag vid takbyte" },
-                ...(slug === "eternit-asbest"
-                  ? [{ to: "/blogg/eternittak-asbest-sanering", label: "Allt om eternittak och asbest" }]
-                  : []),
+                ...(blocks.relatedLinks ?? []),
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
                 { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
                 { to: "/recensioner", label: "Kundrecensioner" },
