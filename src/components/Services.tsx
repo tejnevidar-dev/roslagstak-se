@@ -127,7 +127,7 @@ const Services = () => {
               key={service.slug}
               className="border-b border-r border-border"
             >
-              <Reveal delay={Math.min(i, 5) * 0.05}>
+              <Reveal className="h-full" delay={Math.min(i, 5) * 0.05}>
                 <Link
                   to={`/tjanster/${service.slug}`}
                   className="group relative flex h-full min-h-[19rem] flex-col p-8 transition-colors duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-secondary/70 lg:p-9"
@@ -176,7 +176,7 @@ const Services = () => {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent"
         />
         <figcaption className="absolute bottom-0 left-0 right-0 mx-auto flex max-w-7xl flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-7 text-primary-foreground">
           <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-seafoam">
