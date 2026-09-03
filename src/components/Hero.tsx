@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/offert"
-                className="group inline-flex items-center gap-3 border-b-4 border-accent bg-primary px-8 py-4 text-[17px] font-semibold text-primary-foreground transition-colors duration-500 hover:bg-marine hover:animate-subtle-pulse"
+                className="group inline-flex items-center gap-3 border-b-4 border-accent bg-primary px-8 py-4 text-[17px] font-semibold text-primary-foreground transition-colors duration-500 hover:bg-marine animate-subtle-pulse"
               >
                 Få kostnadsfri offert
                 <ArrowRight
