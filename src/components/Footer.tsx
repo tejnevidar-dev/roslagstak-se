@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           <nav className="md:col-span-3" aria-label="Tjänster">
-            <h3 className="mb-5 text-[12px] font-bold uppercase tracking-[0.16em] text-primary-foreground/60">Tjänster</h3>
+            <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-seafoam">Tjänster</h3>
             <ul className="space-y-3 text-[17px] text-primary-foreground/75">
               {tjanster.map((item) => (
                 <li key={item.to}>
@@ -55,7 +55,7 @@ const Footer = () => {
           </nav>
 
           <nav className="md:col-span-2" aria-label="Genvägar">
-            <h3 className="mb-5 text-[12px] font-bold uppercase tracking-[0.16em] text-primary-foreground/60">Genvägar</h3>
+            <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-seafoam">Genvägar</h3>
             <ul className="space-y-3 text-[17px] text-primary-foreground/75">
               {genvagar.map((item) => (
                 <li key={item.to}>
@@ -66,7 +66,7 @@ const Footer = () => {
           </nav>
 
           <div className="md:col-span-2">
-            <h3 className="mb-5 text-[12px] font-bold uppercase tracking-[0.16em] text-primary-foreground/60">Kontakt</h3>
+            <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-seafoam">Kontakt</h3>
             <ul className="space-y-3 text-[17px] text-primary-foreground/75">
               <li>
                 <a href="tel:0701543639" className="flex items-center gap-2 font-semibold text-primary-foreground">
