@@ -87,7 +87,7 @@ const Services = () => {
         {/* Förskjuten rubrikkomposition */}
         <div className="mb-14 grid grid-cols-12 items-end gap-x-8 gap-y-10 lg:mb-18">
           <div className="col-span-12 lg:col-span-6">
-            <p className="rule-label mb-6 text-accent">Våra tjänster</p>
+            <p className="mb-6 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent"><span aria-hidden="true" className="h-px w-12 bg-accent/50" />Våra tjänster</p>
             <h2
               id="services-heading"
               className="max-w-[24ch] font-display text-[clamp(1.95rem,3.4vw,2.9rem)] font-bold leading-[1.14] tracking-[-0.02em] text-foreground"

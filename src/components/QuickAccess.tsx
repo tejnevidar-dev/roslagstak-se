@@ -7,7 +7,7 @@ const QuickAccess = () => (
     <div className="mx-auto max-w-7xl px-6">
       <div className="grid grid-cols-12 items-end gap-8">
         <div className="col-span-12 lg:col-span-7">
-          <p className="rule-label text-accent">Snabbval</p>
+          <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent"><span aria-hidden="true" className="h-px w-12 bg-accent/50" />Snabbval</p>
           <h2
             id="snabbval"
             className="mt-6 max-w-[26ch] font-display text-[clamp(1.85rem,3vw,2.6rem)] font-bold leading-[1.14] tracking-[-0.02em] text-foreground"
