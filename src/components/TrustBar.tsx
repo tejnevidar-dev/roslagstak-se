@@ -7,18 +7,21 @@ const items = [
 
 /* Mörk marin faktamatris — vertikala accentlinjer istället för kort */
 const TrustBar = () => (
-  <section className="relative z-20 bg-primary py-14 lg:py-16" aria-label="Våra löften">
+  <section className="relative z-20 bg-primary py-12 lg:py-14" aria-label="Våra löften">
     <ul className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 px-6 text-primary-foreground md:grid-cols-4 md:gap-12">
       {items.map((item) => (
-        <li key={item.label} className="flex flex-col border-l-2 border-seafoam py-1 pl-5">
+        <li
+          key={item.label}
+          className="group flex flex-col border-l-2 border-seafoam/60 py-1 pl-5 transition-[border-color,padding] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-seafoam hover:pl-6"
+        >
           <span
-            className={`font-display text-2xl font-bold lg:text-3xl ${
+            className={`font-display text-2xl font-bold tracking-[-0.015em] lg:text-[1.75rem] ${
               item.accent ? "text-seafoam" : ""
             }`}
           >
             {item.value}
           </span>
-          <span className="mt-1 text-[12px] font-medium uppercase tracking-[0.16em] text-seafoam/90">
+          <span className="mt-1.5 text-[11.5px] font-medium uppercase leading-[1.5] tracking-[0.18em] text-seafoam/85">
             {item.label}
           </span>
         </li>
@@ -26,5 +29,6 @@ const TrustBar = () => (
     </ul>
   </section>
 );
+
 
 export default TrustBar;
