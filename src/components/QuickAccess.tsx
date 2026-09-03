@@ -3,7 +3,7 @@ import { Phone, ArrowRight } from "lucide-react";
 
 /* Snabbval i nautisk asymmetri: bred ljus panel + smal accentpanel som skjuter upp */
 const QuickAccess = () => (
-  <section aria-labelledby="snabbval" className="bg-secondary/60 py-20 lg:py-24">
+  <section aria-labelledby="snabbval" className="bg-secondary/60 py-16 lg:py-20">
     <div className="mx-auto max-w-7xl px-6">
       <div className="grid grid-cols-12 items-end gap-8">
         <div className="col-span-12 lg:col-span-7">

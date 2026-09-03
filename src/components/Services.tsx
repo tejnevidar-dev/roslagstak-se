@@ -82,7 +82,7 @@ export const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="bg-card pt-24 lg:pt-32" aria-labelledby="services-heading">
+    <section id="tjanster" className="bg-card pt-20 lg:pt-24" aria-labelledby="services-heading">
       <div className="mx-auto max-w-7xl px-6">
         {/* Förskjuten rubrikkomposition */}
         <div className="mb-14 grid grid-cols-12 items-end gap-x-8 gap-y-10 lg:mb-18">
@@ -121,11 +121,11 @@ const Services = () => {
         </div>
 
         {/* Fast rutnät med hårstreck — gemensam baslinje för alla kort */}
-        <ul className="grid grid-cols-1 border-t border-border sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid grid-cols-1 border-l border-t border-border sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
             <li
               key={service.slug}
-              className="border-b border-border sm:[&:nth-child(odd)]:border-r lg:[&:nth-child(odd)]:border-r-0 lg:[&:not(:nth-child(4n))]:border-r"
+              className="border-b border-r border-border"
             >
               <Reveal delay={Math.min(i, 5) * 0.05}>
                 <Link
