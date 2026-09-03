@@ -36,110 +36,123 @@ const benefits = [
   "Hjälp med ROT-avdrag",
 ];
 
+/* Nautisk asymmetri: roterat foto som bryter ut i vänsterkant, texten i en
+   förskjuten spalt, ledorden som mörk marinlista. */
 const About = () => {
   const reduce = useReducedMotion();
   const imgWrap = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: imgWrap, offset: ["start end", "end start"] });
   const imgY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
+
   return (
-    <section id="om-oss" className="bg-background py-24 md:py-32" aria-labelledby="about-heading">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Intro */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 md:mb-24">
-          <div className="lg:col-span-7">
-            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">
-              04 — Om RoslagsTak
+    <section id="om-oss" className="bg-background py-24 lg:py-32" aria-labelledby="about-heading">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-12 items-start gap-10 lg:gap-16">
+          {/* Roterat foto med garantiplakett — samma språk som hero */}
+          <div ref={imgWrap} className="col-span-12 lg:col-span-5">
+            <div className="relative">
+              <figure className="relative m-0 aspect-[4/5] -rotate-2 overflow-hidden border-[12px] border-card bg-secondary shadow-[0_50px_100px_-50px_rgba(12,35,64,0.75)]">
+                <motion.img
+                  src={rooferImg}
+                  alt="Professionell takläggare arbetar på tak vid Roslagens kust"
+                  width={800}
+                  height={1000}
+                  loading="lazy"
+                  className="h-[112%] w-full object-cover"
+                  style={reduce ? undefined : { y: imgY }}
+                />
+              </figure>
+              <figcaption className="absolute -bottom-5 left-6 z-10 rotate-2 bg-primary px-6 py-4 text-primary-foreground shadow-xl">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-seafoam">
+                  Blidö · Roslagens skärgård
+                </span>
+                <span className="mt-1 block font-display text-xl">Hantverk på plats</span>
+              </figcaption>
+              <span aria-hidden="true" className="absolute -right-4 -top-4 h-12 w-12 bg-seafoam" />
+            </div>
+          </div>
+
+          {/* Text i förskjuten spalt */}
+          <div className="col-span-12 lg:col-span-6 lg:col-start-7 lg:pt-6">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+              Om RoslagsTak
             </p>
             <h2
               id="about-heading"
-              className="mt-4 font-display text-[clamp(2rem,3.4vw,3rem)] font-extrabold leading-[1.03] tracking-[-0.038em] text-foreground text-balance"
+              className="mt-6 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.14] text-foreground"
             >
-              Ditt tak i trygga händer — från kust till ö
+              Ditt tak i trygga händer —{" "}
+              <span className="italic text-accent">från kust till ö.</span>
             </h2>
-            <div className="space-y-5 text-[19px] text-muted-foreground leading-relaxed mt-8">
+            <div className="mt-8 space-y-6 text-[18px] font-light leading-relaxed text-marine">
               <p>
-                RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi lägger tak
-                i hela Roslagen — på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn och Ingmarsö,
-                liksom i Vaxholm, Norrtälje, Väddö och Rådmansö. Vi levererar
-                takprojekt av högsta kvalitet, alltid enligt branschens AMA-standard.
+                RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi lägger tak i hela
+                Roslagen — på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn och Ingmarsö, liksom
+                i Vaxholm, Norrtälje, Väddö och Rådmansö. Vi levererar takprojekt av högsta kvalitet,
+                alltid enligt branschens AMA-standard.
               </p>
               <p>
-                Vi vet hur det är att bo och verka i skärgården. Många av oss har själva vuxit upp med båtar, 
-                bryggor och röda stugor. Den kunskapen genomsyrar allt vi gör — från materialval till logistik. 
-                Vi tar oss ut till Högmarsö, Svartlöga, Söderöra, Norröra, Humlö och Gräskö — öar dit 
-                andra takfirmor inte når.
+                Vi vet hur det är att bo och verka i skärgården. Många av oss har själva vuxit upp med
+                båtar, bryggor och röda stugor. Den kunskapen genomsyrar allt vi gör — från materialval
+                till logistik. Vi tar oss ut till Högmarsö, Svartlöga, Söderöra, Norröra, Humlö och
+                Gräskö — öar dit andra takfirmor inte når.
               </p>
               <p>
-                Vare sig du är året-runt-boende i Norrtälje, har en sommarstuga på Blidö, eller äger en fastighet 
-                på Arholma — vi ser till att ditt tak håller i årtionden. Vi erbjuder 
-                alltid kostnadsfri besiktning och offert, och vi hjälper dig med ROT-avdraget så att du får ut maximalt 
-                av din investering.
+                Vare sig du är året-runt-boende i Norrtälje, har en sommarstuga på Blidö, eller äger en
+                fastighet på Arholma — vi ser till att ditt tak håller i årtionden. Vi erbjuder alltid
+                kostnadsfri besiktning och offert, och vi hjälper dig med ROT-avdraget så att du får ut
+                maximalt av din investering.
               </p>
             </div>
 
-            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 mt-10">
+            <ul className="mt-10 grid gap-x-8 sm:grid-cols-2">
               {benefits.map((benefit) => (
                 <li
                   key={benefit}
-                  className="flex items-start gap-3 text-[17px] text-foreground py-3"
+                  className="flex items-start gap-3 border-t border-border py-4 text-[16px] text-foreground"
                 >
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
                   {benefit}
                 </li>
               ))}
             </ul>
           </div>
-
-          <div ref={imgWrap} className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="relative overflow-hidden rounded-3xl border border-border aspect-[4/5] shadow-[var(--shadow-elevated)]">
-              <motion.img
-                src={rooferImg}
-                alt="Professionell takläggare arbetar på tak vid Roslagens kust"
-                width={800}
-                height={1000}
-                loading="lazy"
-                className="w-full h-[112%] object-cover"
-                style={reduce ? undefined : { y: imgY }}
-              />
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent" aria-hidden="true" />
-              <div className="absolute left-6 bottom-6 right-6">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/70">
-                  Blidö · Roslagens skärgård
-                </p>
-                <p className="font-display text-white text-xl tracking-[-0.02em] mt-1.5">Hantverk på plats</p>
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Core values — ledger med hairlines i stället för fyra likadana kort */}
-        <div className="border-t border-border pt-12">
-          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-4">
-              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-primary">Våra ledord</p>
-              <h3 className="mt-4 font-display text-[clamp(1.7rem,2.6vw,2.25rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-foreground text-balance">
+        {/* Ledord som mörk marinlista */}
+        <div className="mt-24 bg-primary px-6 py-16 text-primary-foreground sm:px-12 lg:mt-28 lg:px-16 lg:py-20">
+          <div className="grid grid-cols-12 gap-10 lg:gap-16">
+            <div className="col-span-12 lg:col-span-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-seafoam">
+                Våra ledord
+              </p>
+              <h3 className="mt-6 font-display text-[clamp(1.6rem,2.5vw,2.2rem)] font-bold leading-[1.16]">
                 Fyra ledord som genomsyrar allt vi gör
               </h3>
-              <p className="mt-5 text-[18px] leading-relaxed text-muted-foreground">
+              <p className="mt-5 text-[17px] font-light leading-relaxed text-primary-foreground/75">
                 De styr hur vi bemöter kunder, planerar projekt och utför varje takläggning.
               </p>
             </div>
 
-            <ul className="lg:col-span-8">
+            <ul className="col-span-12 lg:col-span-7 lg:col-start-6">
               {coreValues.map((value, i) => (
-                <li key={value.title} className="border-t border-border first:border-t-0 lg:first:border-t">
+                <li
+                  key={value.title}
+                  className="border-t border-primary-foreground/20 first:border-t-0"
+                >
                   <Reveal delay={i * 0.06}>
-                    <div className="group flex flex-col gap-3 py-8 md:flex-row md:gap-8">
-                      <span className="flex w-full shrink-0 items-center gap-3 md:w-[13rem]">
-                        <span className="text-[12px] font-bold tabular-nums tracking-[0.2em] text-muted-foreground/70">
+                    <div className="group flex flex-col gap-4 py-8 md:flex-row md:gap-10">
+                      <span className="flex w-full shrink-0 items-center gap-3 md:w-[12rem]">
+                        <span className="font-display text-[12px] tabular-nums tracking-[0.24em] text-seafoam">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <value.icon className="h-5 w-5 text-accent transition-transform duration-500 group-hover:-translate-y-0.5" aria-hidden="true" />
-                        <span className="font-display text-xl font-bold tracking-[-0.025em] text-foreground">
-                          {value.title}
-                        </span>
+                        <value.icon
+                          className="h-5 w-5 text-seafoam transition-transform duration-500 group-hover:-translate-y-0.5"
+                          aria-hidden="true"
+                        />
+                        <span className="font-display text-xl font-bold">{value.title}</span>
                       </span>
-                      <p className="flex-1 text-[17px] leading-relaxed text-muted-foreground">
+                      <p className="flex-1 text-[16px] font-light leading-relaxed text-primary-foreground/75">
                         {value.description}
                       </p>
                     </div>
@@ -149,7 +162,6 @@ const About = () => {
             </ul>
           </div>
         </div>
-
       </div>
     </section>
   );
