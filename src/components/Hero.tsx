@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative flex min-h-[74vh] items-center overflow-hidden bg-primary lg:min-h-[82vh]"
+      className="relative flex min-h-[560px] items-center overflow-hidden bg-primary lg:min-h-[76vh] lg:max-h-[880px]"
       aria-label="Huvudsektion"
     >
       <div className="absolute inset-0 z-0">
