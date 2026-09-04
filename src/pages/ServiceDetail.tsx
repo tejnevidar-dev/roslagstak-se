@@ -399,13 +399,6 @@ const ServiceDetail = () => {
       name: "RoslagsTak",
       url: "https://roslagstak.se",
       telephone: "+46701543639",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        ratingCount: "153",
-        reviewCount: "153",
-      },
     },
     areaServed: { "@type": "Place", name: "Roslagen" },
   };
@@ -891,7 +884,7 @@ const ServiceDetail = () => {
 
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
                 { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
-                { to: "/recensioner", label: "Kundrecensioner" },
+                { to: "/recensioner", label: "Omdömen på Google" },
               ].map((link) => (
                 <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
                   <Link

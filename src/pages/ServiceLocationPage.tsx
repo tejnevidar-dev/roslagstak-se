@@ -80,14 +80,6 @@ const ServiceLocationPage = () => {
       url: "https://roslagstak.se",
       telephone: "+46701543639",
       image: "https://roslagstak.se/og-image.jpg",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        worstRating: "1",
-        ratingCount: "153",
-        reviewCount: "153",
-      },
     },
     areaServed: {
       "@type": "Place",
@@ -174,16 +166,16 @@ const ServiceLocationPage = () => {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {combo.description}
             </p>
-            {/* Star rating + trust */}
-            <div className="flex items-center gap-2 mt-4">
-              <div className="flex">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">
-                4.9 av 5 — 153 kundrecensioner
-              </span>
+            <div className="mt-4">
+              <a
+                href="https://share.google/FsdpfTq9H3amLoTPe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary"
+              >
+                <Star className="w-4 h-4 fill-primary text-primary" />
+                Läs våra omdömen på Google
+              </a>
             </div>
             <div className="flex flex-wrap gap-4 mt-4">
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
