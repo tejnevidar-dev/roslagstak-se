@@ -98,7 +98,7 @@ export const generateServiceLocationFAQs = (
     {
       question: `Vad kostar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
       answer: isTakbyte
-        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag. Riktpriser: TP20 från ca 1 200 kr/m², dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transport till ön ingår i priset." : "Vi erbjuder alltid fast pris."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
+        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag. Riktpriser: TP20 från ca 1 200 kr/m², dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transport till ön ingår i priset." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
         : `En takrenovering ${prep} ${locationName} kostar från ca 300 kr/m² beroende på åtgärd. ${isIsland ? "Transport till ön ingår." : "Fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
     },
     {

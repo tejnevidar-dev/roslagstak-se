@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
       "Tegelplåttak och pannplåttak är plåtprofiler som imiterar utseendet av tegel respektive pannor. De ger ett traditionellt utseende till en lägre vikt och kostnad än riktigt tegel. Populärt val för hus på Rådmansö, Furusund och längs kusten.",
       "Betongpannor är ett beprövat och prisvärt alternativ som passar de flesta hustyper. De finns i många färger och profiler och har en livslängd på 30–50 år. Vi lägger betongpannetak i hela Roslagen — från Vaxholm till Väddö.",
       "Lertegeltak är det mest traditionella valet och passar utmärkt till äldre hus och kulturhistoriska byggnader. Lertegel har lagts på svenska hus i hundratals år och ger en varm, klassisk känsla. Vi har lagt lertegeltak på stugor på Blidö, Norröra och Gräskö.",
-      "Kontakta oss för rådgivning om vilken taktyp som passar ditt hus bäst. Vi erbjuder alltid kostnadsfri besiktning och offert, oavsett var i Roslagen du bor.",
+      "Kontakta oss för rådgivning om vilken taktyp som passar ditt hus bäst. Besiktning och offert är alltid kostnadsfria, oavsett var i Roslagen du bor.",
     ],
   },
   {
@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
       "Betongpannor: 30–50 år. Robusta och prisvärda. Kan bli mossiga i fuktiga lägen, men det påverkar sällan funktionen.",
       "Lertegeltak: 50–100+ år. Det mest långlivade takmaterialet. Enskilda pannor kan gå sönder och behöva bytas, men grunden håller i generationer.",
       "Underlagspapp: 20–30 år. Oavsett ytmaterial behöver underlagspappen ses över. Det är ofta underlagspappen — inte ytskiktet — som ger vika först.",
-      "Vill du veta hur ditt tak mår? Vi erbjuder kostnadsfri takinspektion i hela Roslagen. Vi bedömer takets skick och ger dig en ärlig prognos för återstående livslängd.",
+      "Vill du veta hur ditt tak mår? Vi gör kostnadsfri takinspektion i hela Roslagen. Vi bedömer takets skick och ger dig en ärlig prognos för återstående livslängd.",
     ],
   },
   {
@@ -187,7 +187,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ["förbered takbyte", "checklista takbyte", "tips takbyte", "innan takbyte"],
     content: [
       "Att byta tak är ett av de största underhållsprojekten du gör som husägare. Med rätt förberedelse blir processen smidig och resultatet bättre. Här är vår checklista baserad på 150+ takprojekt i Roslagen.",
-      "1. Boka takinspektion tidigt. En professionell besiktning avslöjar skador som inte syns utifrån — röta i råspont, fukt i isolering, trasig underlagspapp. Vi erbjuder kostnadsfri takinspektion i hela Roslagen.",
+      "1. Boka takinspektion tidigt. En professionell besiktning avslöjar skador som inte syns utifrån — röta i råspont, fukt i isolering, trasig underlagspapp. Vi gör kostnadsfri takinspektion i hela Roslagen.",
       "2. Välj material i god tid. TP20, dubbelfalsat, tegelplåt eller betongpannor? Varje material har olika leveranstider. Populära färger och profiler kan ha väntetid, särskilt under högsäsong.",
       "3. Kolla ROT-avdrag. Se till att du har tillräckligt skatteutrymme för att utnyttja ROT-avdraget. Du kan spara upp till 50 000 kr per person och år.",
       "4. Informera grannar. Takarbete innebär buller, lastbilar och ibland stängda uppfarter. Ett snabbt meddelande till grannarna skapar goodwill. På öar utan bilväg — planera med båttransport i förväg.",
@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min",
     keywords: ["takläggare norrtälje", "takbyte norrtälje", "tak norrtälje", "takrenovering norrtälje", "takfirma norrtälje"],
     content: [
-      "Norrtälje är hjärtat i Roslagen och vår bas. Här har vi genomfört hundratals takprojekt — från villor i centrala Norrtälje till lantbruksfastigheter utanför staden. Med lokal närvaro och korta resvägar erbjuder vi Norrtäljes mest konkurrenskraftiga priser på takbyte och takrenovering.",
+      "Norrtälje är hjärtat i Roslagen och vår bas. Här har vi genomfört hundratals takprojekt — från villor i centrala Norrtälje till lantbruksfastigheter utanför staden. Lokal närvaro och korta resvägar håller nere etableringskostnaden vid takbyte och takrenovering.",
       "Norrtäljes bebyggelse är varierad: sekelskifteshus med lertegel, 70-talsvillor med betongpannor, radhusområden med papptak och moderna nybyggen med plåt. Vi har erfarenhet av alla taktyper och anpassar alltid materialvalet efter husets stil och dina önskemål.",
       "Vad kostar takbyte i Norrtälje? Priserna varierar beroende på material och takets storlek. TP20-plåttak: från ca 1 200 kr/m². Tegelplåt: från ca 1 200 kr/m². Dubbelfalsat: från ca 2 000 kr/m². Betongpannor: från ca 1 200 kr/m². Med ROT-avdrag (30% på arbete) sparar du rejält.",
       "Takrenovering i Norrtälje — ett billigare alternativ. Inte alla tak behöver bytas helt. Ibland räcker det med att byta enstaka pannor, laga plåtbeslag, rensa hängrännor eller byta underlagspapp. Takrenovering kostar från ca 300 kr/m² och kan förlänga takets livslängd med 10–20 år.",
@@ -346,7 +346,7 @@ export const blogPosts: BlogPost[] = [
       "Pris klicktak: 1 400–1 800 kr/m² inklusive material och arbete. Snabbare montering ger lägre arbetskostnad. Med ROT-avdrag ca 1 100–1 500 kr/m². Klicktak är ofta 20–30% billigare än bandtäckt plåt på en likvärdig yta.",
       "Hållbarhet: Bandtäckt plåt har en förväntad livslängd på 50–80 år utan stora underhållsinsatser. Klicktak håller 40–60 år. Båda är bättre val än betongpannor eller tegelpannor som typiskt håller 30–50 år.",
       "Vind och skärgårdsmiljö: I exponerade lägen på Blidö, Yxlan, Husarö och längs kusten rekommenderar vi alltid bandtäckt plåt. De helsvetsade falsen står emot sug och kantvindar bättre än klicktakets klickfog. På innanförliggande hus där vinden är mildare fungerar klicktak utmärkt.",
-      "Underhåll: Båda taktyperna kräver minimalt underhåll. Spola av med vatten 1–2 ggr/år, kontrollera infästningar och taksäkerhet vart 5:e år. Vi erbjuder taktvätt och inspektion som tilläggstjänst i hela Roslagen.",
+      "Underhåll: Båda taktyperna kräver minimalt underhåll. Spola av med vatten 1–2 ggr/år, kontrollera infästningar och taksäkerhet vart 5:e år. Vi utför taktvätt och inspektion som tilläggstjänst i hela Roslagen.",
       "Vårt råd: Välj bandtäckt plåt om du planerar att bo kvar länge, har ett komplicerat tak eller hus i utsatt läge. Välj klicktak om budgeten är snävare och taket är en enklare sadelkonstruktion. Vi hjälper dig gärna att räkna på båda alternativen — kontakta oss för en kostnadsfri offert.",
     ],
   },
@@ -383,7 +383,7 @@ export const blogPosts: BlogPost[] = [
       "4. Vattenpölar (stillastående vatten). Hittar du pölar mer än 48 timmar efter regn har taket otillräcklig lutning eller en svacka. Det är inte alltid akut, men pölar accelererar nedbrytningen av tätskiktet. Vi åtgärdar med påsvetsad extra papp, omläggning av fall eller — i värsta fall — ny takkonstruktion.",
       "5. Inifrån huset. Vi inspekterar undertaket från insidan för att se var fukten faktiskt slår igenom. Det här är ofta avgörande, eftersom vattnet kan vandra långt under tätskiktet innan det droppar ner.",
       "Akuta åtgärder: Vid ett pågående läckage gör vi temporära tätningar med flytande tätskikt eller en lapp av påsvetsad papp för att stoppa skadan. Sedan planerar vi en permanent lösning — antingen punktreparation eller omläggning av hela taket.",
-      "Pris för omläggning av platta tak i Roslagen: 1 200–1 800 kr/m² beroende på underlag och taktyp. Vi erbjuder både SBS-papp (klassisk papp), TPO-duk och dubbelfalsat plåttak som permanenta lösningar. Med ROT-avdrag sparar du 30% på arbetskostnaden.",
+      "Pris för omläggning av platta tak i Roslagen: 1 200–1 800 kr/m² beroende på underlag och taktyp. Vi arbetar med SBS-papp (klassisk papp), TPO-duk och dubbelfalsat plåttak som permanenta lösningar. Med ROT-avdrag sparar du 30% på arbetskostnaden.",
       "Har du ett läckande platt tak? Ring 070-154 36 39 så är vi ofta på plats inom några dagar för en kostnadsfri felsökning.",
     ],
   },

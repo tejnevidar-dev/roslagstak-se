@@ -9,7 +9,7 @@ import SectionHeading from "@/components/SectionHeading";
 const faqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: "Priset beror på taktyp, storlek och materialval. Ett takbyte med TP20-plåt kostar vanligtvis från ca 1200-1300 kr/m², medan dubbelfalsat plåttak ligger högre. Vi erbjuder alltid kostnadsfri offert — konfigurera din offert direkt på sidan eller kontakta oss för rådgivning.",
+    answer: "Priset beror på taktyp, storlek och materialval. Ett takbyte med TP20-plåt kostar vanligtvis från ca 1200-1300 kr/m², medan dubbelfalsat plåttak ligger högre. Offerten är alltid kostnadsfri — konfigurera din offert direkt på sidan eller kontakta oss för rådgivning.",
   },
   {
     question: "Lägger ni tak på öar i skärgården?",
