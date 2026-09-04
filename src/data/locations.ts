@@ -1541,7 +1541,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Hammarby Sjöstad?",
       answer:
-        "Priset för ett takbyte i Hammarby Sjöstad ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Hammarby Sjöstad ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Hammarby Sjöstad",
     lat: 59.3033,
@@ -1562,7 +1562,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Liljeholmen?",
       answer:
-        "Priset för ett takbyte i Liljeholmen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Liljeholmen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Liljeholmen",
     lat: 59.3103,
@@ -1583,7 +1583,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Årsta?",
       answer:
-        "Priset för ett takbyte i Årsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Årsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Årsta",
     lat: 59.2986,
@@ -1604,7 +1604,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Hägersten?",
       answer:
-        "Priset för ett takbyte i Hägersten ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Hägersten ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Hägersten",
     lat: 59.3006,
@@ -1625,7 +1625,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Gröndal?",
       answer:
-        "Priset för ett takbyte i Gröndal ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Gröndal ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Gröndal",
     lat: 59.3131,
@@ -1646,7 +1646,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Aspudden?",
       answer:
-        "Priset för ett takbyte i Aspudden ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Aspudden ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Aspudden",
     lat: 59.3081,
@@ -1667,7 +1667,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Häggvik?",
       answer:
-        "Priset för ett takbyte i Häggvik ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Häggvik ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Häggvik",
     lat: 59.3856,
@@ -1688,7 +1688,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Helenelund?",
       answer:
-        "Priset för ett takbyte i Helenelund ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Helenelund ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Helenelund",
     lat: 59.4053,
@@ -1709,7 +1709,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Edsberg?",
       answer:
-        "Priset för ett takbyte i Edsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Edsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Edsberg",
     lat: 59.4408,
@@ -1730,7 +1730,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Rotebro?",
       answer:
-        "Priset för ett takbyte i Rotebro ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Rotebro ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Rotebro",
     lat: 59.4772,
@@ -1751,7 +1751,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Norrviken?",
       answer:
-        "Priset för ett takbyte i Norrviken ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Norrviken ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Norrviken",
     lat: 59.4586,
@@ -1772,7 +1772,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Stocksund?",
       answer:
-        "Priset för ett takbyte i Stocksund ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Stocksund ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Stocksund",
     lat: 59.3931,
@@ -1793,7 +1793,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Enebyberg?",
       answer:
-        "Priset för ett takbyte i Enebyberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Enebyberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Enebyberg",
     lat: 59.4225,
@@ -1814,7 +1814,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Jakobsberg?",
       answer:
-        "Priset för ett takbyte i Jakobsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Jakobsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Jakobsberg",
     lat: 59.4231,
@@ -1835,7 +1835,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Barkarby?",
       answer:
-        "Priset för ett takbyte i Barkarby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Barkarby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Barkarby",
     lat: 59.4103,
@@ -1856,7 +1856,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Kallhäll?",
       answer:
-        "Priset för ett takbyte i Kallhäll ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Kallhäll ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Kallhäll",
     lat: 59.4553,
@@ -1877,7 +1877,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Viksjö?",
       answer:
-        "Priset för ett takbyte i Viksjö ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Viksjö ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Viksjö",
     lat: 59.4192,
@@ -1898,7 +1898,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Bro?",
       answer:
-        "Priset för ett takbyte i Bro ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Bro ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Bro",
     lat: 59.5147,
@@ -1919,7 +1919,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Kungsängen?",
       answer:
-        "Priset för ett takbyte i Kungsängen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Kungsängen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Kungsängen",
     lat: 59.4783,
@@ -1940,7 +1940,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Märsta?",
       answer:
-        "Priset för ett takbyte i Märsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Märsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Märsta",
     lat: 59.6206,
@@ -1961,7 +1961,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Blackeberg?",
       answer:
-        "Priset för ett takbyte i Blackeberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Blackeberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Blackeberg",
     lat: 59.3378,
@@ -1982,7 +1982,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Nockeby?",
       answer:
-        "Priset för ett takbyte i Nockeby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Nockeby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Nockeby",
     lat: 59.3283,
@@ -2003,7 +2003,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Abrahamsberg?",
       answer:
-        "Priset för ett takbyte i Abrahamsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Abrahamsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Abrahamsberg",
     lat: 59.3372,
@@ -2024,7 +2024,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Ängby?",
       answer:
-        "Priset för ett takbyte i Ängby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Ängby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Ängby",
     lat: 59.3372,
@@ -2045,7 +2045,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Kista?",
       answer:
-        "Priset för ett takbyte i Kista ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Kista ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Kista",
     lat: 59.4033,
@@ -2066,7 +2066,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Akalla?",
       answer:
-        "Priset för ett takbyte i Akalla ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Akalla ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Akalla",
     lat: 59.4147,
@@ -2087,7 +2087,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Tensta?",
       answer:
-        "Priset för ett takbyte i Tensta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Tensta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Tensta",
     lat: 59.3944,
@@ -2108,7 +2108,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Saltsjöbaden?",
       answer:
-        "Priset för ett takbyte i Saltsjöbaden ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Saltsjöbaden ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Saltsjöbaden",
     lat: 59.2828,
@@ -2129,7 +2129,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Fisksätra?",
       answer:
-        "Priset för ett takbyte i Fisksätra ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Fisksätra ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Fisksätra",
     lat: 59.2925,
@@ -2150,7 +2150,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Saltsjö-Boo?",
       answer:
-        "Priset för ett takbyte i Saltsjö-Boo ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Saltsjö-Boo ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Saltsjö-Boo",
     lat: 59.3319,
@@ -2171,7 +2171,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Älta?",
       answer:
-        "Priset för ett takbyte i Älta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Älta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Älta",
     lat: 59.2681,
@@ -2192,7 +2192,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Gustavsberg?",
       answer:
-        "Priset för ett takbyte i Gustavsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Gustavsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Gustavsberg",
     lat: 59.3269,
@@ -2213,7 +2213,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak på Ingarö?",
       answer:
-        "Priset för ett takbyte på Ingarö ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte på Ingarö ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Ingarö",
     lat: 59.2839,
@@ -2234,7 +2234,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Hemmesta?",
       answer:
-        "Priset för ett takbyte i Hemmesta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Hemmesta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Hemmesta",
     lat: 59.3175,
@@ -2255,7 +2255,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Trollbäcken?",
       answer:
-        "Priset för ett takbyte i Trollbäcken ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Trollbäcken ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Trollbäcken",
     lat: 59.2542,
@@ -2276,7 +2276,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Brandbergen?",
       answer:
-        "Priset för ett takbyte i Brandbergen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Brandbergen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Brandbergen",
     lat: 59.1614,
@@ -2297,7 +2297,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Handen?",
       answer:
-        "Priset för ett takbyte i Handen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Handen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Handen",
     lat: 59.1686,
@@ -2318,7 +2318,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Jordbro?",
       answer:
-        "Priset för ett takbyte i Jordbro ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Jordbro ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Jordbro",
     lat: 59.1381,
@@ -2339,7 +2339,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Västerhaninge?",
       answer:
-        "Priset för ett takbyte i Västerhaninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Västerhaninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Västerhaninge",
     lat: 59.12,
@@ -2360,7 +2360,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Tungelsta?",
       answer:
-        "Priset för ett takbyte i Tungelsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Tungelsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Tungelsta",
     lat: 59.1,
@@ -2381,7 +2381,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Dalarö?",
       answer:
-        "Priset för ett takbyte i Dalarö ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Dalarö ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Dalarö",
     lat: 59.1339,
@@ -2402,7 +2402,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Stuvsta?",
       answer:
-        "Priset för ett takbyte i Stuvsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Stuvsta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Stuvsta",
     lat: 59.2444,
@@ -2423,7 +2423,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Trångsund?",
       answer:
-        "Priset för ett takbyte i Trångsund ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Trångsund ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Trångsund",
     lat: 59.2258,
@@ -2444,7 +2444,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Skogås?",
       answer:
-        "Priset för ett takbyte i Skogås ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Skogås ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Skogås",
     lat: 59.2286,
@@ -2465,7 +2465,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Segeltorp?",
       answer:
-        "Priset för ett takbyte i Segeltorp ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Segeltorp ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Segeltorp",
     lat: 59.2794,
@@ -2486,7 +2486,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Bandhagen?",
       answer:
-        "Priset för ett takbyte i Bandhagen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Bandhagen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Bandhagen",
     lat: 59.2703,
@@ -2507,7 +2507,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Högdalen?",
       answer:
-        "Priset för ett takbyte i Högdalen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Högdalen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Högdalen",
     lat: 59.265,
@@ -2528,7 +2528,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Hökarängen?",
       answer:
-        "Priset för ett takbyte i Hökarängen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Hökarängen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Hökarängen",
     lat: 59.2569,
@@ -2549,7 +2549,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Tumba?",
       answer:
-        "Priset för ett takbyte i Tumba ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Tumba ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Tumba",
     lat: 59.1994,
@@ -2570,7 +2570,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Tullinge?",
       answer:
-        "Priset för ett takbyte i Tullinge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Tullinge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Tullinge",
     lat: 59.2028,
@@ -2591,7 +2591,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Norsborg?",
       answer:
-        "Priset för ett takbyte i Norsborg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Norsborg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Norsborg",
     lat: 59.2439,
@@ -2612,7 +2612,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Alby?",
       answer:
-        "Priset för ett takbyte i Alby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Alby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi besiktigar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
     },
     primaryKeyword: "takläggare Alby",
     lat: 59.24,
@@ -2633,7 +2633,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Fittja?",
       answer:
-        "Priset för ett takbyte i Fittja ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Fittja ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter besiktning på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
     },
     primaryKeyword: "takläggare Fittja",
     lat: 59.2453,
@@ -2654,7 +2654,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Rönninge?",
       answer:
-        "Priset för ett takbyte i Rönninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Rönninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Rönninge",
     lat: 59.2011,
@@ -2675,7 +2675,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Järna?",
       answer:
-        "Priset för ett takbyte i Järna ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Järna ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter besiktningen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
     },
     primaryKeyword: "takläggare Järna",
     lat: 59.0928,
@@ -2696,7 +2696,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Edsviken?",
       answer:
-        "Priset för ett takbyte i Edsviken ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+        "Priset för ett takbyte i Edsviken ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden.",
     },
     primaryKeyword: "takläggare Edsviken",
     lat: 59.4014,
