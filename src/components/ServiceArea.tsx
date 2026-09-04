@@ -18,6 +18,14 @@ const regionDescriptions: Record<string, string> = {
     "Takomläggning och takbyte i Rimbo, Edsbro, Riala, Vallentuna och Täby — snölast, ventilation och taksäkerhet enligt gällande krav.",
   Österåker:
     "Takbyte, takomläggning och bandtäckning i Åkersberga och Österskär — från 70-talsvillor till komplexa tak med kupor och torn.",
+  "Stockholms stad":
+    "Takläggare i hela Stockholms kommun — från innerstadens kulturhistoriska tak till villataken i Bromma och Farsta. Logistik för tätbebyggda kvarter.",
+  "Norrort Stockholm":
+    "Takbyte, takrenovering och bandtäckning i Solna, Sundbyberg, Danderyd, Sollentuna och på Lidingö — exklusiva villatak och bostadsrättsfastigheter.",
+  "Söderort Stockholm":
+    "Takläggare i Nacka, Värmdö, Tyresö och Haninge — från villor till skärgårdstak där vi transporterar material sjövägen.",
+  "Västerort Stockholm":
+    "Takbyte och takomläggning i Ekerö, Järfälla, Huddinge, Sigtuna, Upplands Väsby och Nynäshamn — från kulturhistoriska tegeltak till kustnära plåttak.",
 };
 
 const regionOrder = [
@@ -27,7 +35,11 @@ const regionOrder = [
   "Rådmansöhalvön",
   "Norra Roslagen",
   "Roslagens inland",
-  "Österåker",
+  Österåker,
+  "Stockholms stad",
+  "Norrort Stockholm",
+  "Söderort Stockholm",
+  "Västerort Stockholm",
 ];
 
 const areas = regionOrder
@@ -152,7 +164,7 @@ const ServiceArea = () => {
             </div>
             <div className="col-span-12 space-y-5 text-[16px] font-light leading-relaxed text-marine lg:col-span-8 lg:columns-2 lg:gap-10 lg:space-y-0 [&>p]:mb-5">
               <p>
-                Behöver du en <strong className="font-semibold">takläggare i Roslagen</strong>? RoslagsTak utför alla typer av takarbeten — från
+                Behöver du en <strong className="font-semibold">takläggare i Roslagen</strong> eller <strong className="font-semibold">takläggare i Stockholm</strong>? RoslagsTak utför alla typer av takarbeten — från
                 <strong className="font-semibold"> takbyte på Blidö</strong> och <strong className="font-semibold">takrenovering på Ljusterö</strong> till
                 <strong className="font-semibold"> takomläggning i Norrtälje</strong> och <strong className="font-semibold">plåttak på Yxlan</strong>. Vi är den takläggare
                 som tar sig ut till öar i hela norra skärgården — <strong className="font-semibold">även öar utan broförbindelse</strong>.
@@ -169,7 +181,12 @@ const ServiceArea = () => {
                 lagt tak på hundratals fastigheter genom åren.
               </p>
               <p>
-                Oavsett om du söker <strong className="font-semibold">takbyte i Roslagen</strong>, behöver en <strong className="font-semibold">takläggare på en ö utan bro</strong> eller
+                I <strong className="font-semibold">hela Storstockholm</strong> — från <strong className="font-semibold">takbyte i Solna</strong> och <strong className="font-semibold">bandtäckning i Danderyd</strong> till
+                <strong className="font-semibold"> takrenovering i Nacka</strong> och <strong className="font-semibold">plåttak i Bromma</strong> — är vi din takläggare. Vi arbetar i Stockholm stad, Solna, Sundbyberg,
+                Danderyd, Sollentuna, Lidingö, Nacka, Värmdö, Tyresö, Haninge, Ekerö, Järfälla, Huddinge, Sigtuna, Upplands Väsby och Nynäshamn.
+              </p>
+              <p>
+                Oavsett om du söker <strong className="font-semibold">takbyte i Stockholm</strong>, <strong className="font-semibold">takbyte i Roslagen</strong>, behöver en <strong className="font-semibold">takläggare på en ö utan bro</strong> eller
                 vill ha en <strong className="font-semibold">takrenovering på Väddö</strong> — kontakta oss för en kostnadsfri offert. Vi återkopplar inom 24 timmar.
               </p>
             </div>
