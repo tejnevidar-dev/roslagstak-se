@@ -31,6 +31,7 @@ const ContactLanding = lazy(() => import("./pages/ContactLanding.tsx"));
 const QuotePage = lazy(() => import("./pages/QuotePage.tsx"));
 const RoofTypesPage = lazy(() => import("./pages/RoofTypesPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
+const AreasPage = lazy(() => import("./pages/AreasPage.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
               <Route path="/offert" element={<QuotePage />} />
               <Route path="/taktyper" element={<RoofTypesPage />} />
               <Route path="/hur-det-gar-till" element={<ProcessPage />} />
+              <Route path="/omraden" element={<AreasPage />} />
               <Route path="/tjanster/:slug" element={<ServiceDetail />} />
 
               <Route path="/recensioner" element={<Reviews />} />

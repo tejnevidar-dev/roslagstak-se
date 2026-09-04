@@ -1,4 +1,5 @@
-import { Anchor } from "lucide-react";
+import { Anchor, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { locationIndex as locations } from "@/data/location-index";
 
@@ -57,7 +58,7 @@ const areas = regionOrder
   .filter((region) => locations.some((l) => l.region === region))
   .map((region) => ({
     region,
-    locations: locations.filter((l) => l.region === region).map((l) => l.name),
+    locations: locations.filter((l) => l.region === region),
     description: regionDescriptions[region] ?? "",
   }));
 
@@ -129,10 +130,29 @@ const ServiceArea = () => {
                     <p className="mt-3 max-w-2xl text-[16px] font-light leading-relaxed text-marine-foreground/80">
                       {area.description}
                     </p>
+                    <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-marine-foreground/70">
+                      {area.locations.map((place) => (
+                        <li key={place.slug}>
+                          <Link
+                            to={`/taklaggare-${place.slug}`}
+                            className="underline decoration-marine-foreground/25 underline-offset-4 transition-colors hover:text-seafoam hover:decoration-seafoam"
+                          >
+                            {place.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
             ))}
+            <Link
+              to="/omraden"
+              className="mt-9 inline-flex items-center gap-2 text-[15px] font-semibold text-seafoam transition-colors hover:text-marine-foreground"
+            >
+              Se alla orter vi arbetar i
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
 

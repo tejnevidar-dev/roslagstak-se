@@ -157,7 +157,7 @@ const LocationPage = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
-      { "@type": "ListItem", position: 2, name: "Områden", item: "https://roslagstak.se/#omraden" },
+      { "@type": "ListItem", position: 2, name: "Områden", item: "https://roslagstak.se/omraden" },
       { "@type": "ListItem", position: 3, name: `Takläggare ${prep} ${location.name}`, item: `https://roslagstak.se/taklaggare-${location.slug}` },
     ],
   };
@@ -203,7 +203,7 @@ const LocationPage = () => {
                 Startsidan
               </Link>
               <span>/</span>
-              <Link to="/#omraden" className="hover:text-primary transition-colors">Områden</Link>
+              <Link to="/omraden" className="hover:text-primary transition-colors">Områden</Link>
               <span>/</span>
               <span className="text-foreground font-medium">{location.name}</span>
             </nav>

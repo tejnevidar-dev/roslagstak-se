@@ -15,6 +15,9 @@ const tjanster = [
 ];
 
 const genvagar = [
+  { to: "/omraden", label: "Områden & orter" },
+  { to: "/taktyper", label: "Taktyper" },
+  { to: "/hur-det-gar-till", label: "Så går det till" },
   { to: "/priser", label: "Prislista" },
   { to: "/recensioner", label: "Recensioner" },
   { to: "/blogg", label: "Blogg & tips" },
