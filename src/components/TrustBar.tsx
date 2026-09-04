@@ -1,9 +1,10 @@
 const items = [
-  { value: "30 år", label: "Materialgaranti" },
-  { value: "ROT", label: "Avdrag direkt på fakturan" },
-  { value: "0 kr", label: "Besiktning på plats", accent: true },
-  { value: "Logistik", label: "Pråm & transport till öar" },
+  { value: "10 + 30 år", label: "Utförande- & materialgaranti" },
+  { value: "Fast pris", label: "Inga dolda kostnader" },
+  { value: "0 kr", label: "Hembesök & offert utan förpliktelser", accent: true },
+  { value: "ROT", label: "Avdraget direkt på fakturan" },
 ];
+
 
 /* Mörk marin faktamatris — vertikala accentlinjer istället för kort */
 const TrustBar = () => (
