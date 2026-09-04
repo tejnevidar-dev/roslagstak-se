@@ -102,7 +102,7 @@ const ServiceLocationPage = () => {
       "@type": "Offer",
       priceCurrency: "SEK",
       description: servicePriceDescriptions[combo.serviceSlug] ??
-        "Fast pris efter kostnadsfri besiktning. ROT-avdrag tillkommer.",
+        "Fast pris efter kostnadsfri besiktning — ställning och avfall specificeras i offerten.",
     },
   };
 
@@ -131,8 +131,8 @@ const ServiceLocationPage = () => {
 
   // Richer meta description
   const metaDescription = loc?.isIsland
-    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i Roslagen. Fast pris ✓ 10+30 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning. Ring 070-154 36 39.`
-    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris ✓ 10+30 års garanti ✓ ROT-avdrag ✓ Kostnadsfri besiktning och offert.`;
+    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i Roslagen. Fast pris efter besiktning, 10+30 års garanti och kostnadsfri besiktning. Ring 070-154 36 39.`
+    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`;
 
   // Title under 60 chars
   const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;
@@ -295,7 +295,7 @@ const ServiceLocationPage = () => {
                   {[
                     "10 års utförandegaranti, 30 års materialgaranti",
                     "Fast pris utan dolda kostnader",
-                    "Hjälp med ROT-avdrag",
+                    "Samma kontaktperson genom hela projektet",
                     "Kostnadsfri besiktning",
                   ].map((usp) => (
                     <li key={usp} className="flex items-start gap-2 text-sm text-muted-foreground">

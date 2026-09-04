@@ -24,7 +24,7 @@ const serviceTypes = [
       `Ett takbyte ${prep} ${loc.name} innebär att vi river det gamla takmaterialet, inspekterar och vid behov byter råspont och underlagspapp, och sedan monterar nytt takmaterial. Vi installerar alltid ny taksäkerhet (takstege, gångbrygga, snörasskydd) och ser till att takavvattningen fungerar optimalt.`,
       loc.isIsland
         ? `${loc.name} nås ${loc.region === "Norra skärgården" ? "med båt" : "via väg eller färja"}, och vi har lång erfarenhet av att hantera materialtransport och logistik till ön. Vi planerar varje takbyte noggrant för att minimera kostnader och störningar.`
-        : `Med vår bas i Norrtälje når vi ${loc.name} snabbt och effektivt. Vi erbjuder konkurrenskraftiga priser och snabb leverans på alla takbyten i området.`,
+        : `Med vår bas i Norrtälje når vi ${loc.name} snabbt och effektivt. Korta resvägar gör att vi kan hålla nere etableringskostnaden vid takbyten i området.`,
       `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick. Som riktpris ligger ett takbyte med TP20-plåt från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². ROT-avdrag ger dig 30% rabatt på arbetskostnaden.`,
       `Kontakta oss för en kostnadsfri besiktning och offert för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
     ],
@@ -54,7 +54,7 @@ const serviceTypes = [
         ? `Som specialister på takarbeten i skärgården hanterar vi all materialtransport till ${loc.name}. Vi samordnar logistik och planerar projektet noggrant — du behöver inte arrangera något själv.`
         : `Vår bas i Norrtälje gör att vi når ${loc.name} snabbt. Vi samordnar ofta flera projekt i området, vilket ger dig ett konkurrenskraftigt pris på din takomläggning.`,
       `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval. TP20-plåttak från ca 1 200 kr/m², dubbelfalsat från ca 2 000 kr/m². Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr/person/år).`,
-      `Vi erbjuder kostnadsfri besiktning och offert för takomläggning ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i vårt offertformulär — vi återkopplar inom 24 timmar.`,
+      `Besiktning och offert för takomläggning är kostnadsfria ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i vårt offertformulär — vi återkopplar inom 24 timmar.`,
     ],
   },
 ];
@@ -70,7 +70,7 @@ const taktvattService = {
       ? `Vi har stor erfarenhet av taktvätt på öar i Roslagens skärgård. Vi samordnar transport av utrustning, vatten och kemikalier till ${loc.name} och planerar arbetet noggrant så att det går smidigt — även om ön saknar broförbindelse. Många hus ${prep} ${loc.name} har problem med kraftig mossbildning på grund av det fuktiga skärgårdsklimatet, och regelbunden taktvätt är ofta avgörande för att undvika dyra takbyten.`
       : `Med vår bas i Norrtälje når vi ${loc.name} snabbt och kan ofta utföra taktvätt inom 1–2 veckor. Vi har lång erfarenhet av de specifika problem som drabbar tak ${prep} ${loc.name} — främst mossa på norrsidor och alger nära träd och vegetation.`,
     `Priset för taktvätt ${prep} ${loc.name} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning, material och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocid. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri besiktning — inga dolda kostnader.`,
-    `Förutom taktvätt erbjuder vi även takmålning ${prep} ${loc.name}. När taket är rent och torrt målar vi med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning kostar från ca 150 kr/m² inklusive grundning och två strykningar. Vi erbjuder takmålning i alla standardfärger — tegelröd, svart, mörkgrå, brun eller efter eget val.`,
+    `Förutom taktvätt utför vi även takmålning ${prep} ${loc.name}. När taket är rent och torrt målar vi med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning kostar från ca 150 kr/m² inklusive grundning och två strykningar. Vi målar i alla standardfärger — tegelröd, svart, mörkgrå, brun eller efter eget val.`,
     `Bäst tid för taktvätt ${prep} ${loc.name} är från april till oktober när det är torrt och plusgrader. Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på takets exponering. Boka en kostnadsfri besiktning så bedömer vi takets skick och ger dig en ärlig rekommendation. Ring 070-154 36 39 eller fyll i offertformuläret — vi återkopplar inom 24 timmar.`,
   ],
 };
@@ -167,7 +167,7 @@ export const generateCombos = (): ServiceLocationCombo[] => {
         prep,
         url: `/${service.slug}-${loc.slug}`,
         title: `${service.name} ${prep} ${loc.name} — Takläggare RoslagsTak`,
-        description: `${service.name} ${prep} ${loc.name}. Professionell takläggare i Roslagen. Fast pris, 10 års garanti och kostnadsfri offert. ROT-avdrag.`,
+        description: `${service.name} ${prep} ${loc.name}. Professionell takläggare i Roslagen. Fast pris efter besiktning, 10 års garanti och kostnadsfri offert.`,
         content: service.generateContent(loc, prep),
       });
     }

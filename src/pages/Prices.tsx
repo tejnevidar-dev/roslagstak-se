@@ -59,7 +59,7 @@ const priceFaqs = [
   },
   {
     question: "Kan jag använda ROT-avdrag?",
-    answer: "Ja! Du får 30% skattereduktion på arbetskostnaden, max 50 000 kr per person och år. Vi drar av ROT-avdraget direkt på fakturan.",
+    answer: "Ja, takbyte och takrenovering är ROT-berättigade. Du får 30% skattereduktion på arbetskostnaden, max 50 000 kr per person och år. Avdraget syns direkt på fakturan och vi sköter ansökan mot Skatteverket.",
   },
   {
     question: "Kostar det extra på öar i skärgården?",
@@ -86,7 +86,7 @@ const Prices = () => {
     <>
       <SEOHead
         title="Priser takbyte & takrenovering Roslagen — Prislista 2026"
-        description="Vad kostar takbyte i Roslagen? Prislista för TP20, dubbelfalsat, tegelplåt, betongpannor och takrenovering. Fast pris och ROT-avdrag. Kostnadsfri offert."
+        description="Vad kostar takbyte i Roslagen? Prislista för TP20, dubbelfalsat, tegelplåt, betongpannor och takrenovering. Fast pris efter besiktning och kostnadsfri offert."
         canonical="https://roslagstak.se/priser"
       />
       <Header />
@@ -136,7 +136,7 @@ const Prices = () => {
           {/* ROT info */}
           <div className="max-w-4xl mx-auto bg-primary/5 border border-primary/20 rounded-lg p-8 mb-16">
             <h2 className="font-display text-xl text-foreground mb-4 flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-primary" /> ROT-avdrag — spara upp till 50 000 kr per person
+              <CheckCircle className="w-5 h-5 text-primary" /> Så fungerar ROT-avdraget vid takarbeten
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Takbyte och takrenovering berättigar till ROT-avdrag. Du får 30% skattereduktion på arbetskostnaden, 
