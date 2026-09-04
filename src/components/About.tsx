@@ -38,7 +38,7 @@ const benefits = [
   "10 års utförandegaranti, 30 års materialgaranti",
   "Roslagen och hela Storstockholm",
   "Kostnadsfritt hembesök och offert",
-  "Vi sköter ROT-avdraget åt dig",
+  "Samma kontaktperson genom hela projektet",
 ];
 
 
@@ -108,7 +108,7 @@ const About = () => {
                 Vi är dessutom vana vid lägen där andra tvekar — öar utan broförbindelse, smala
                 infarter och tak nära vatten och saltluft. Oavsett om du har en villa i Stockholm,
                 ett radhus i Täby eller en sommarstuga på Blidö får du kostnadsfritt hembesök,
-                fast pris och hjälp med ROT-avdraget innan du bestämmer dig.
+                fast pris och en tydlig tidplan innan du bestämmer dig.
               </p>
             </div>
 

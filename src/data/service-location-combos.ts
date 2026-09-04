@@ -167,7 +167,7 @@ export const generateCombos = (): ServiceLocationCombo[] => {
         prep,
         url: `/${service.slug}-${loc.slug}`,
         title: `${service.name} ${prep} ${loc.name} — Takläggare RoslagsTak`,
-        description: `${service.name} ${prep} ${loc.name}. Professionell takläggare i Roslagen. Fast pris, 10 års garanti och kostnadsfri offert. ROT-avdrag.`,
+        description: `${service.name} ${prep} ${loc.name}. Professionell takläggare i Roslagen. Fast pris efter besiktning, 10 års garanti och kostnadsfri offert.`,
         content: service.generateContent(loc, prep),
       });
     }

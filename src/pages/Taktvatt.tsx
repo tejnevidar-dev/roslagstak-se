@@ -66,7 +66,7 @@ const roofTypes = [
 
 const process = [
   { step: "1", title: "Kostnadsfri besiktning", desc: "Vi inspekterar takets skick, mängd mossa/lavar och bedömer om tvätt räcker eller om målning behövs." },
-  { step: "2", title: "Skriftlig offert", desc: "Tydligt fast pris med ROT-avdrag inräknat. Inga överraskningar." },
+  { step: "2", title: "Skriftlig offert", desc: "Tydligt fast pris på hela arbetet. Inga överraskningar i efterhand." },
   { step: "3", title: "Skyddsåtgärder", desc: "Vi täcker fasad, fönster och växtlighet runt huset innan arbetet påbörjas." },
   { step: "4", title: "Borttagning av mossa", desc: "Manuell borstning och skrapning av tjocka mosskuddar — skonsamt mot pannorna." },
   { step: "5", title: "Tvätt med rätt tryck", desc: "Lågtrycks- eller mellantryckstvätt anpassad efter takmaterial. Aldrig högtryck på pannor." },
@@ -77,9 +77,9 @@ const process = [
 ];
 
 const guarantees = [
-  { icon: ShieldCheck, title: "10 års garanti", desc: "På utfört arbete — branschens längsta garanti. Trygghet för dig som husägare i Roslagen. 30 års materialgaranti vid takvård med utbyte." },
+  { icon: ShieldCheck, title: "10 års garanti", desc: "På utfört arbete, med 30 års materialgaranti vid takvård med utbyte. Du får garantin skriftligt." },
   { icon: Award, title: "Fast pris efter besiktning", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
-  { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Vi har ansvarsförsäkring och hanterar all ROT-administration åt dig." },
+  { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Godkänd för F-skatt med ansvarsförsäkring för hela arbetet." },
   { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutbesiktning — alltid samma person att ringa." },
 ];
 
@@ -134,7 +134,7 @@ const faqs = [
   },
   {
     q: "Vad är skillnaden på taktvätt och takvård?",
-    a: "Taktvätt är själva rengöringen av taket — borttagning av mossa, lavar och alger med tvätt och biocidbehandling. Takvård är ett bredare begrepp som även inkluderar förebyggande underhåll: rensning av hängrännor och stuprör, kontroll av plåtbeslag, takfot och vindskivor, samt eventuell takmålning. Vi erbjuder båda — många kunder bokar ett kombinerat takvårdspaket vart 5:e år för att hålla taket i toppskick.",
+    a: "Taktvätt är själva rengöringen av taket — borttagning av mossa, lavar och alger med tvätt och biocidbehandling. Takvård är ett bredare begrepp som även inkluderar förebyggande underhåll: rensning av hängrännor och stuprör, kontroll av plåtbeslag, takfot och vindskivor, samt eventuell takmålning. Vi utför båda — många kunder bokar ett kombinerat takvårdspaket vart 5:e år för att hålla taket i toppskick.",
   },
   {
     q: "Är taktvätt verkligen lönsamt jämfört med takbyte?",
@@ -150,7 +150,7 @@ const faqs = [
   },
   {
     q: "Erbjuder ni serviceavtal för regelbunden takvård?",
-    a: "Ja, vi erbjuder skräddarsydda serviceavtal för villaägare, bostadsrättsföreningar och näringsfastigheter i Roslagen. Avtalet inkluderar årlig okulärbesiktning, rensning av hängrännor en gång per år och taktvätt vart 5:e–7:e år till rabatterat pris. Perfekt för fritidshusägare som vill slippa tänka på underhåll — vi rapporterar löpande med bilder och text.",
+    a: "Ja, vi tecknar serviceavtal för villaägare, bostadsrättsföreningar och näringsfastigheter i Roslagen. Avtalet inkluderar årlig okulärbesiktning, rensning av hängrännor en gång per år och taktvätt vart 5:e–7:e år till rabatterat pris. Perfekt för fritidshusägare som vill slippa tänka på underhåll — vi rapporterar löpande med bilder och text.",
   },
 ];
 
@@ -378,7 +378,7 @@ const Taktvatt = () => {
               </h1>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed max-w-2xl">
                 Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år.
-                Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med ROT-avdrag, fast pris och 10 års utförandegaranti.
+                Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med fast pris efter besiktning och 10 års utförandegaranti.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <a href="/offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
@@ -392,7 +392,7 @@ const Taktvatt = () => {
                 {[
                   { num: "500+", label: "Tvättade tak" },
                   { num: "10 år", label: "Garanti på arbetet" },
-                  { num: "30 %", label: "ROT-avdrag" },
+                  { num: "5–8 år", label: "Effekt av behandling" },
                   { num: "24+", label: "Orter & öar" },
                 ].map((s, i) => (
                   <div key={s.label} className={`pr-8 ${i > 0 ? "pl-8 border-l border-foreground/20" : ""}`}>
@@ -698,7 +698,7 @@ const Taktvatt = () => {
             </h2>
             <p className="text-muted-foreground text-center mb-10">
               Priset för taktvätt varierar beroende på takets storlek, lutning, mängd mossa och tillgänglighet.
-              Här är våra ungefärliga priser inklusive ROT-avdrag.
+              Här är våra ungefärliga priser, både före och efter ROT-avdrag.
             </p>
             <div className="bg-card border border-border rounded-xl overflow-hidden">
               <table className="w-full">
@@ -975,7 +975,7 @@ const Taktvatt = () => {
                 Boka taktvätt i Roslagen idag
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
-                Vi erbjuder kostnadsfri besiktning och offert med fast pris. ROT-avdrag och 10 års utförandegaranti ingår alltid.
+                Du får kostnadsfri besiktning och en skriftlig offert med fast pris, samt 10 års utförandegaranti på arbetet.
                 Verksamma i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje och skärgården.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -989,7 +989,7 @@ const Taktvatt = () => {
               <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Svar inom 24h</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris</span>
-                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> ROT-avdrag 30 %</span>
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris efter besiktning</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> 10 års utförandegaranti</span>
               </div>
             </div>

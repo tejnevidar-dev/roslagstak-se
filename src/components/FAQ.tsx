@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Kan jag använda ROT-avdrag för takbyte?",
-    answer: "Ja, takbyte och takrenovering berättigar till ROT-avdrag. Du kan få 30% skattereduktion på arbetskostnaden (max 50 000 kr per person och år). Vi hjälper dig med allt pappersarbete.",
+    answer: "Ja, takbyte och takrenovering berättigar till ROT-avdrag. Du kan få 30% skattereduktion på arbetskostnaden (max 50 000 kr per person och år). Vi hanterar ansökan mot Skatteverket och drar av avdraget på fakturan.",
   },
   {
     question: "Hur snabbt kan ni påbörja mitt takprojekt?",

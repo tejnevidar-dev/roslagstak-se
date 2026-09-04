@@ -118,7 +118,7 @@ const LocationPage = () => {
     knowsAbout: [
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
       "Dubbelfalsat plåttak", "Tegelplåt", "Pannplåt", "Takavvattning",
-      "Hängrännor", "Takinspektion", "Taksäkerhet", "ROT-avdrag",
+      "Hängrännor", "Takinspektion", "Taksäkerhet",
       "Eternitsanering", "Asbestrivning", "Takkupor", "Takfönster",
       "Taktvätt", "Takmålning",
     ],
@@ -162,8 +162,8 @@ const LocationPage = () => {
 
   // SEO-optimized meta description — under 160 chars, keyword-first
   const metaDescription = location.isIsland
-    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, 10+30 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`
-    : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, 10+30 års garanti ✓ Kostnadsfri offert ✓ ROT-avdrag ✓`;
+    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
+    : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`;
 
   // Title: keep under 60 chars for Google SERP
   const seoTitle = `Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`;
@@ -276,7 +276,6 @@ const LocationPage = () => {
                     `Takkupor och takfönster (Velux)`,
                     `Taktvätt och takmålning`,
                     `Kostnadsfri takinspektion med skriftlig rapport`,
-                    `Hjälp med ROT-avdrag — 30% rabatt på arbetskostnaden`,
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -293,7 +292,7 @@ const LocationPage = () => {
                   Som riktpris ligger TP20-plåttak från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². 
                   {location.isIsland
                     ? ` Transportkostnad till ${location.name} ingår alltid i vår offert — inga dolda tillägg.`
-                    : ` Vi erbjuder alltid fast pris efter besiktning — inga dolda tillägg.`}
+                    : ` Du får alltid fast pris efter besiktning — inga dolda tillägg.`}
                   {" "}Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr per person och år).
                 </p>
 
@@ -364,7 +363,7 @@ const LocationPage = () => {
                   Vi är en lokal takläggare med stark förankring i Roslagen.
                   {location.isIsland
                     ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
-                    : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och erbjuder konkurrenskraftiga priser tack vare samordning med andra projekt i området.`}
+                    : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och kan ofta hålla nere kostnaden genom att samordna med andra projekt i området.`}
                   {" "}Alla arbeten utförs enligt AMA Hus med 10 års utförandegaranti och 30 års materialgaranti.
                 </p>
 

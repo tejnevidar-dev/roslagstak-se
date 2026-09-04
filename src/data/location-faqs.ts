@@ -20,7 +20,7 @@ export const generateLocationFAQs = (
   faqs.push(
     {
       question: `Vad kostar ett takbyte ${prep} ${name}?`,
-      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval. Som riktpris ligger TP20-plåttak från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Vi erbjuder alltid fast pris efter besiktning."} ROT-avdrag ger ytterligare 30% rabatt på arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
+      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval. Som riktpris ligger TP20-plåttak från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger ytterligare 30% rabatt på arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
     },
     {
       question: `Hur lång tid tar ett takbyte ${prep} ${name}?`,
@@ -32,7 +32,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Erbjuder ni garanti på takarbeten ${prep} ${name}?`,
-      answer: `Ja, vi erbjuder 10 års garanti på alla våra takarbeten ${prep} ${name}. Garantin täcker både material och utförande. Alla arbeten utförs enligt AMA Hus — branschstandarden för kvalitetssäkring av byggarbeten i Sverige.`,
+      answer: `Ja, vi lämnar 10 års garanti på alla våra takarbeten ${prep} ${name}. Garantin täcker både material och utförande. Alla arbeten utförs enligt AMA Hus — branschstandarden för kvalitetssäkring av byggarbeten i Sverige.`,
     },
     {
       question: `Kan jag använda ROT-avdrag för takbyte ${prep} ${name}?`,
@@ -40,7 +40,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Hur bokar jag en kostnadsfri takinspektion ${prep} ${name}?`,
-      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret på vår hemsida. Vi erbjuder kostnadsfri takinspektion ${prep} ${name} där vi bedömer takets skick och ger en skriftlig rapport med rekommendation. ${isIsland ? "Vi samordnar ofta inspektioner med pågående arbeten i skärgården." : "Vi kan ofta vara på plats inom en vecka."}`,
+      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret på vår hemsida. Vi gör en kostnadsfri takinspektion ${prep} ${name} där vi bedömer takets skick och ger en skriftlig rapport med rekommendation. ${isIsland ? "Vi samordnar ofta inspektioner med pågående arbeten i skärgården." : "Vi kan ofta vara på plats inom en vecka."}`,
     },
     {
       question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,

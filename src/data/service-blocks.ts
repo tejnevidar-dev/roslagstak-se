@@ -109,7 +109,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takrenovering: {
     seoTitle: "Takrenovering Roslagen — Laga läckor & byta papp",
     seoDescription:
-      "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter besiktning från ca 300 kr/m². ROT-avdrag.",
+      "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter besiktning från ca 300 kr/m².",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "outline", label: "Prisbild", value: "Från 300 kr/m²", text: "Punktinsats kostar en bråkdel av en komplett omläggning." },
@@ -136,7 +136,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takavvattning: {
     seoTitle: "Hängrännor & Stuprör Roslagen — Takavvattning",
     seoDescription:
-      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta. Fast pris och ROT-avdrag.",
+      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta och fast pris efter besiktning.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "accent", label: "Dimension", value: "125 / 150 mm", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet." },
@@ -164,7 +164,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takkupor: {
     seoTitle: "Takkupor & Takfönster Roslagen — Bygglov & montage",
     seoDescription:
-      "Takkupor och takfönster i Roslagen: konstruktion, plåtinklädnad, tätning och invändig finish. Vi hanterar bygglovsansökan. Takkupa från ca 50 000 kr, ROT-avdrag.",
+      "Takkupor och takfönster i Roslagen: konstruktion, plåtinklädnad, tätning och invändig finish. Vi hanterar bygglovsansökan. Takkupa från ca 50 000 kr.",
     blockPlacement: "after-scope",
     factCards: [
       { tone: "primary", label: "Bygglov", value: "Krävs oftast", text: "Vi tar fram ritningar och hanterar ansökan mot kommunen." },
@@ -258,7 +258,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takvard: {
     seoTitle: "Taktvätt & Takmålning Roslagen — Skonsam takvård",
     seoDescription:
-      "Takvård i Roslagen: skonsam taktvätt, borttagning av mossa och alger samt takmålning med specialfärg. Taktvätt från ca 80 kr/m², målning från ca 150 kr/m². ROT-avdrag.",
+      "Takvård i Roslagen: skonsam taktvätt, borttagning av mossa och alger samt takmålning med specialfärg. Taktvätt från ca 80 kr/m², målning från ca 150 kr/m².",
     blockPlacement: "after-scope",
     factCards: [
       { tone: "outline", label: "Taktvätt", value: "Från 80 kr/m²", text: "Skonsam metod anpassad efter panna, plåt eller papp." },
