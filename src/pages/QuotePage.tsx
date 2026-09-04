@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import PageHero from "@/components/PageHero";
 
@@ -30,6 +31,7 @@ const QuotePage = () => {
       />
       <Header />
       <main>
+        <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }]} withSchema={true} />
         <PageHero
           eyebrow="Offert & rådgivning"
           title="Få pris på ditt takprojekt"

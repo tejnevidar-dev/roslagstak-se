@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import PageHero from "@/components/PageHero";
 import FaqSection from "@/components/FaqSection";
@@ -73,6 +74,7 @@ const RoofTypesPage = () => {
       />
       <Header />
       <main>
+        <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }]} withSchema={false} />
         <PageHero
           eyebrow="Taktyper"
           title="Vilket tak passar ditt hus?"

@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import PageHero from "@/components/PageHero";
 import FaqSection from "@/components/FaqSection";
@@ -73,6 +74,7 @@ const ProcessPage = () => {
       />
       <Header />
       <main>
+        <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }]} withSchema={false} />
         <PageHero
           eyebrow="Så går det till"
           title="Ett takbyte, steg för steg"

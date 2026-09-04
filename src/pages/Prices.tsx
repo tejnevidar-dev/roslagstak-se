@@ -3,6 +3,8 @@ import { ArrowRight, CheckCircle, HelpCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 import RelatedLinks from "@/components/RelatedLinks";
 import {
   Accordion,
@@ -92,6 +94,12 @@ const Prices = () => {
       />
       <Header />
       <main className="pt-24 pb-20">
+        <JsonLd
+          data={buildBreadcrumbSchema([
+            { name: "Hem", path: "/" },
+            { name: "Priser", path: "/priser" },
+          ])}
+        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
         <div className="container mx-auto px-4">
