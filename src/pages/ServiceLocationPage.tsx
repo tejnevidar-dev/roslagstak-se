@@ -4,6 +4,7 @@ import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } fr
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import { getCombo, allServiceSlugs } from "@/data/service-location-combos";
 import { locations } from "@/data/locations";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
@@ -344,6 +345,7 @@ const ServiceLocationPage = () => {
             </div>
           </div>
         </div>
+        <GoogleReviews variant="band" />
       </main>
       <Footer />
     </>
