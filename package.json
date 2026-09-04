@@ -14,9 +14,11 @@
     "test:watch": "vitest",
     "check:sitemap": "bun scripts/check-sitemap.ts",
     "check:sitemap:live": "bun scripts/check-sitemap.ts --live",
+    "location-index": "tsx scripts/generate-location-index.ts",
     "sitemap": "tsx scripts/generate-sitemap.ts",
-    "predev": "tsx scripts/generate-sitemap.ts",
-    "prebuild": "tsx scripts/generate-sitemap.ts"
+    "validate:schema": "node scripts/validate-structured-data.mjs",
+    "predev": "tsx scripts/generate-location-index.ts && tsx scripts/generate-sitemap.ts",
+    "prebuild": "tsx scripts/generate-location-index.ts && tsx scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

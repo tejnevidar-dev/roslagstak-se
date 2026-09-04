@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getLocationBySlug, locations } from "@/data/locations";
 import { generateLocationFAQs } from "@/data/location-faqs";
+import { buildLocalSections } from "@/data/local-sections";
 import NotFound from "./NotFound";
 import {
   Accordion,
@@ -29,6 +30,7 @@ const LocationPage = () => {
 
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
   const prep = location.isIsland ? "på" : "i";
+  const localSections = buildLocalSections(location);
   const faqs = generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ);
 
   const jsonLd = {
