@@ -42,7 +42,6 @@ const QuickAccess = () => (
               Komplett takbyte från råspont till färdig plåt — eller en riktad åtgärd där taket
               läcker. Vi bedömer skicket på plats och lämnar ett fast pris innan vi börjar.
             </p>
-
           </div>
           <span className="mt-10 inline-flex items-center gap-3 font-display text-[16px] italic text-accent">
             Se tjänster för villa &amp; fritidshus
@@ -68,7 +67,6 @@ const QuickAccess = () => (
               Taktvätt, behandling och takmålning som förlänger takets livslängd — eller räkna
               fram ett prisspann för just ditt tak på under en minut.
             </p>
-
           </div>
           <span className="mt-10 inline-flex items-center gap-3 font-display text-[16px] italic">
             Räkna på ditt tak
