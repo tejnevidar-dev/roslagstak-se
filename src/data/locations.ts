@@ -2167,6 +2167,23 @@ export const locations: LocationData[] = [
     lng: 17.5658,
     nearbyLocations: ["Södertälje", "Rönninge", "Salem"],
   },
+  {
+    slug: "edsviken",
+    name: "Edsviken",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description: "Takläggare i Edsviken — takbyte, takrenovering och plåtarbeten i Edsviken. Fast pris, 10+30 års garanti och ROT-avdrag på arbetskostnaden.",
+    longDescription: "Edsviken är villaområdet kring viken med samma namn, på gränsen mellan Sollentuna, Danderyd och Solna. Här finns allt från sekelskiftesvillor och funkishus till nyare enfamiljshus, ofta med sadeltak i tegel, betongpannor eller falsad plåt. Det sjönära läget innebär mer vind och fukt än längre in i landet, vilket sliter extra på plåtdetaljer, hängrännor och underlagspapp. Vi utför takbyte, takrenovering och takomläggning i Edsviken med material anpassat efter husets ålder och stil, kostnadsfri takbesiktning, fast pris och en tidsplan som håller. Ställning, materialleverans, avfallshantering och slutstädning ingår alltid.",
+    extraContent: "Vi känner till förutsättningarna i Edsviken — smala villagator, stora tomter med träd och hus nära vattnet där väderpåfrestningen är större. Det påverkar både val av material och hur vi planerar ställning och kranbil, och gör att vi kan lämna en realistisk offert direkt efter besiktningen istället för luddiga prisintervall. Har grannen redan bytt tak samordnar vi gärna projekten, vilket sänker kostnaden för ställning och etablering för båda. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takbesiktning i Edsviken.",
+    uniqueFAQ: {
+      question: "Vad kostar det att byta tak i Edsviken?",
+      answer: "Priset för ett takbyte i Edsviken ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri besiktning får du ett fast pris där rivning, material, ställning, arbete och avfallshantering ingår. ROT-avdraget drar av 30 % av arbetskostnaden.",
+    },
+    primaryKeyword: "takläggare Edsviken",
+    lat: 59.4014,
+    lng: 18.0122,
+    nearbyLocations: ["Edsberg", "Danderyd", "Sollentuna"],
+  },
 ];
 
 export const getLocationBySlug = (slug: string) => locations.find((l) => l.slug === slug);
