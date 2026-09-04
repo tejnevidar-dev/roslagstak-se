@@ -71,8 +71,7 @@ const Hero = () => {
                 070-154 36 39
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-border pt-6">
-              <GoogleReviews variant="inline" className="text-primary" />
+            <div className="mt-8 border-t border-border pt-6">
               <a
                 href="/hur-det-gar-till"
                 className="group inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-accent"
