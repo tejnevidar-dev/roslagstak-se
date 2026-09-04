@@ -150,7 +150,7 @@ export const buildLocalBusinessSchema = () => ({
     })),
   },
   sameAs: [
-    "https://share.google/FsdpfTq9H3amLoTPe",
+    "https://www.google.com/maps/search/?api=1&query=RoslagsTak%20Blid%C3%B6",
     "https://www.hitta.se/s%C3%B6k?vad=roslagstak&var=norrt%C3%A4lje",
     "https://www.eniro.se/q/roslagstak",
   ],

@@ -169,7 +169,7 @@ const ServiceLocationPage = () => {
             </p>
             <div className="mt-4">
               <a
-                href="https://share.google/FsdpfTq9H3amLoTPe"
+                href="https://www.google.com/maps/search/?api=1&query=RoslagsTak%20Blid%C3%B6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary"
