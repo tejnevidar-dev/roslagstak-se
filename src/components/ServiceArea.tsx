@@ -1,6 +1,6 @@
 import { Anchor } from "lucide-react";
 
-import { locations } from "@/data/locations";
+import { locationIndex as locations } from "@/data/location-index";
 
 const regionDescriptions: Record<string, string> = {
   "Norra skärgården":

@@ -1,4 +1,4 @@
-import { locations } from "@/data/locations";
+import { locationIndex as locations } from "@/data/location-index";
 
 /**
  * Central JSON-LD-byggare. Alla noder delar samma @id:n så att Google slår ihop

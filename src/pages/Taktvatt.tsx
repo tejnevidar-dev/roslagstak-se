@@ -32,7 +32,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedLinks from "@/components/RelatedLinks";
-import { locations } from "@/data/locations";
+import { locationIndex as locations } from "@/data/location-index";
 import { Helmet } from "react-helmet-async";
 
 const benefits = [
