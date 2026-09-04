@@ -102,14 +102,11 @@ const AreasPage = () => {
           </div>
 
           <RelatedLinks
+            currentPath="/omraden"
             title="Nästa steg"
-            links={[
-              { to: "/priser", label: "Prislista per kvadratmeter", description: "Riktpriser för plåt, tegel och betongpannor." },
-              { to: "/taktyper", label: "Jämför taktyper", description: "Livslängd, lutning och pris för varje material." },
-              { to: "/hur-det-gar-till", label: "Så går ett takbyte till", description: "Från besiktning till slutkontroll, steg för steg." },
-              { to: "/offert", label: "Kostnadsfri offert", description: "Fast pris efter besiktning på plats." },
-            ]}
+            intro="Priser, taktyper och hur ett takprojekt går till — oavsett vilken ort du bor i."
           />
+
         </div>
       </main>
       <Footer />
