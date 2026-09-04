@@ -88,7 +88,7 @@ const ServiceArea = () => {
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
                 Vi utför takbyte, takrenovering och takomläggning på {allLocations.length}+ platser i
-                Roslagens skärgård och längs kusten. Bor du på en ö utan bro tar vi oss dit sjövägen.
+                Roslagens skärgård och hela Storstockholm. Bor du på en ö utan bro tar vi oss dit sjövägen.
               </p>
 
               <dl className="mt-10 grid grid-cols-2 bg-card text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
