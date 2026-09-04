@@ -4,6 +4,8 @@ import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2, Shield, M
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 
 const ContactLanding = () => {
   const [name, setName] = useState("");
@@ -55,6 +57,13 @@ const ContactLanding = () => {
         title="Kontakt & Kostnadsfri Rådgivning — RoslagsTak"
         description="Boka kostnadsfri rådgivning med RoslagsTak. Ring 070-154 36 39 eller fyll i formuläret — vi återkopplar inom 24 timmar. Takläggare i Roslagen, Blidö, Norrtälje & skärgården."
         canonical="https://roslagstak.se/kontakt"
+      />
+
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Hem", path: "/" },
+          { name: "Kontakt", path: "/kontakt" },
+        ])}
       />
 
       <main className="min-h-screen bg-background">
