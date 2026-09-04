@@ -22,6 +22,8 @@ import QuotePage from "./pages/QuotePage.tsx";
 import RoofTypesPage from "./pages/RoofTypesPage.tsx";
 import ProcessPage from "./pages/ProcessPage.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
+import JsonLd from "./components/JsonLd";
+import { buildLocalBusinessSchema } from "./lib/schema";
 import { locations } from "./data/locations";
 import { allServiceSlugs } from "./data/service-location-combos";
 
@@ -33,6 +35,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <JsonLd data={buildLocalBusinessSchema()} />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
