@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
-import { buildBreadcrumbSchema } from "@/lib/schema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const ContactLanding = () => {
   const [name, setName] = useState("");
@@ -59,13 +59,6 @@ const ContactLanding = () => {
         canonical="https://roslagstak.se/kontakt"
       />
 
-      <JsonLd
-        data={buildBreadcrumbSchema([
-          { name: "Hem", path: "/" },
-          { name: "Kontakt", path: "/kontakt" },
-        ])}
-      />
-
       <main className="min-h-screen bg-background">
         {/* Minimal header */}
         <header className="border-b border-border bg-card">
@@ -83,6 +76,8 @@ const ContactLanding = () => {
             </Link>
           </div>
         </header>
+
+        <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Kontakt", path: "/kontakt" }]} />
 
         {/* Hero */}
         <section className="bg-accent py-12 md:py-16">
