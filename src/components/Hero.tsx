@@ -2,7 +2,7 @@ import { ArrowRight, Phone, PlayCircle } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import heroImg from "@/assets/hero-cinematic.jpg";
 import craftImg from "@/assets/roofer-work.jpg";
-import GoogleReviews from "@/components/GoogleReviews";
+
 
 /* Nautisk asymmetri: helformatsbild med marinblå slöja, vit textpanel som bryter
    rutnätet och ett roterat hantverksfoto med garantiplakett. */
@@ -71,8 +71,7 @@ const Hero = () => {
                 070-154 36 39
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-border pt-6">
-              <GoogleReviews variant="inline" className="text-primary" />
+            <div className="mt-8 border-t border-border pt-6">
               <a
                 href="/hur-det-gar-till"
                 className="group inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-accent"
