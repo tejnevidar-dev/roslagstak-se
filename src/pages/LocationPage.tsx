@@ -64,37 +64,6 @@ const LocationPage = () => {
       addressRegion: "Stockholms län",
       addressCountry: "SE",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: "153",
-      reviewCount: "153",
-    },
-    review: [
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Anders L." },
-        datePublished: "2025-09-15",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Proffsigt takbyte på vår stuga. Allt gick smidigt trots att det var på en ö. Rekommenderas varmt!",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Maria S." },
-        datePublished: "2025-11-20",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Snabb och pålitlig service. Fick nytt plåttak till ett bra pris med ROT-avdrag. Mycket nöjd!",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Erik B." },
-        datePublished: "2026-02-10",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Bästa takläggaren i Roslagen. Ärliga, punktliga och levererar hög kvalitet. 10 års utförandegaranti och 30 års materialgaranti känns tryggt.",
-      },
-    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: location.lat,
@@ -228,16 +197,16 @@ const LocationPage = () => {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {location.description}
             </p>
-            {/* Star rating */}
-            <div className="flex items-center gap-2 mt-4">
-              <div className="flex">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">
-                4.9 av 5 — baserat på 153 kundrecensioner
-              </span>
+            <div className="mt-5">
+              <a
+                href="https://share.google/FsdpfTq9H3amLoTPe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary"
+              >
+                <Star className="w-4 h-4 fill-primary text-primary" />
+                Läs våra omdömen på Google
+              </a>
             </div>
             {/* Trust signals */}
             <div className="flex flex-wrap gap-4 mt-6">

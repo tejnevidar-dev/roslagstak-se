@@ -277,11 +277,6 @@ const Taktvatt = () => {
         addressRegion: "Stockholms län",
         addressCountry: "SE",
       },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "150",
-      },
     },
     areaServed: [
       { "@type": "Place", name: "Roslagen" },

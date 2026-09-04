@@ -399,13 +399,6 @@ const ServiceDetail = () => {
       name: "RoslagsTak",
       url: "https://roslagstak.se",
       telephone: "+46701543639",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        ratingCount: "153",
-        reviewCount: "153",
-      },
     },
     areaServed: { "@type": "Place", name: "Roslagen" },
   };
