@@ -23,6 +23,19 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger(), staticHeads()].filter(Boolean),
+  build: {
+    // Dela ut tunga bibliotek i egna chunkar så att sidkoden kan cachas separat.
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "react-router-dom", "react-helmet-async"],
+          motion: ["framer-motion"],
+          charts: ["recharts"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 700,
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

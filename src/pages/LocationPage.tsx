@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getLocationBySlug, locations } from "@/data/locations";
 import { generateLocationFAQs } from "@/data/location-faqs";
+import { buildLocalSections } from "@/data/local-sections";
 import NotFound from "./NotFound";
 import {
   Accordion,
@@ -29,6 +30,7 @@ const LocationPage = () => {
 
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
   const prep = location.isIsland ? "på" : "i";
+  const localSections = buildLocalSections(location);
   const faqs = generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ);
 
   const jsonLd = {
@@ -262,6 +264,30 @@ const LocationPage = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {location.extraContent}
                 </p>
+
+                {/* Unikt lokalt innehåll per ort — klimat, bebyggelse och logistik */}
+                {localSections.blocks.map((block) => (
+                  <div key={block.heading}>
+                    <h3 className="font-display text-xl text-foreground mb-3">{block.heading}</h3>
+                    {block.paragraphs.map((para) => (
+                      <p key={para} className="text-muted-foreground leading-relaxed mb-4">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                ))}
+
+                <dl className="mb-6 grid gap-x-6 gap-y-3 rounded-lg border border-border bg-card p-5 sm:grid-cols-2">
+                  {localSections.facts.map((fact) => (
+                    <div key={fact.label}>
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
+                        {fact.label}
+                      </dt>
+                      <dd className="text-sm text-muted-foreground">{fact.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+
 
                 <h3 className="font-display text-xl text-foreground mb-3">
                   Våra taktjänster {prep} {location.name}

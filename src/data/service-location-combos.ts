@@ -1,4 +1,5 @@
 import { locations, type LocationData } from "./locations";
+import { allServiceSlugs } from "./service-slugs";
 
 export interface ServiceLocationCombo {
   serviceSlug: string;
@@ -178,4 +179,7 @@ export const generateCombos = (): ServiceLocationCombo[] => {
 export const getCombo = (serviceSlug: string, locationSlug: string) =>
   generateCombos().find((c) => c.serviceSlug === serviceSlug && c.locationSlug === locationSlug);
 
-export const allServiceSlugs = serviceTypes.map((s) => s.slug);
+export { allServiceSlugs };
+
+/** Skyddsnät: den statiska sluglistan måste matcha serviceTypes. */
+export const serviceSlugsFromTypes = serviceTypes.map((s) => s.slug);

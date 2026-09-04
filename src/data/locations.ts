@@ -308,9 +308,9 @@ export const locations: LocationData[] = [
       "Spillersboda är en av de platser längs Roslagskusten där vi ofta arbetar. Fastighetsägare i Spillersboda uppskattar vår ärlighet — vi rekommenderar aldrig ett takbyte om en renovering räcker. Den lokala närvaron ger korta restider och snabb återkoppling. Vi har lagt allt från tegelplåt och pannplåt till TP20 i Spillersboda med nöjda kunder som referens.",
     uniqueFAQ: {
       question:
-        "Behöver jag byta hela taket eller räcker en renovering i Spillersboda?",
+        "Hur påverkar havsluften i Spillersboda takets livslängd?",
       answer:
-        "Det beror på takets skick. Vi gör kostnadsfri takinspektion i Spillersboda där vi bedömer om en renovering räcker eller om det behövs ett komplett byte. Ibland kan byte av underlagspapp och beslag förlänga takets livslängd med 15–20 år. Vi ger alltid en ärlig rekommendation.",
+        "Den fuktiga luften från kusten gör att mossa och alger får fäste snabbare, och att plåtbeslag och spik rostar tidigare än längre in i landet. Vid besiktningen i Spillersboda kontrollerar vi därför beslag, infästningar och råspont extra noga, och föreslår material som klarar kustklimatet.",
     },
     primaryKeyword: "takläggare Spillersboda",
     lat: 59.7,
@@ -751,9 +751,9 @@ export const locations: LocationData[] = [
     extraContent:
       "Vallentuna ligger i inlandet med kalla vintrar och betydande snölast. Vi dimensionerar därför alltid snörasskydd över entréer och uteplatser, och kontrollerar att takstolar och infästningar klarar lasten innan nytt material monteras.",
     uniqueFAQ: {
-      question: "Hur lång tid tar ett takbyte i Vallentuna?",
+      question: "Hur snabbt kan ni börja ett takbyte i Vallentuna?",
       answer:
-        "Ett normalt villatakbyte i Vallentuna tar 1–2 veckor från att ställningen är på plats, beroende på takets storlek, material och väder. Vi meddelar tidsplan i offerten och håller dig uppdaterad löpande under projektet.",
+        "Vi har normalt 2–4 veckors framförhållning för takbyten i Vallentuna, och kan ofta boka besiktningen inom en vecka. Startdatum och tidsplan skriver vi in i offerten så att du vet vad som gäller innan du beställer.",
     },
     primaryKeyword: "takläggare Vallentuna",
     lat: 59.5342,
