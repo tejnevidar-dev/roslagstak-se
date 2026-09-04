@@ -19,15 +19,21 @@ const regionDescriptions: Record<string, string> = {
   Österåker:
     "Takbyte, takomläggning och bandtäckning i Åkersberga och Österskär — från 70-talsvillor till komplexa tak med kupor och torn.",
   "Stockholms stad":
-    "Takläggare i hela Stockholms kommun — från innerstadens kulturhistoriska tak till villataken i Bromma och Farsta. Logistik för tätbebyggda kvarter.",
-  "Norrort Stockholm":
-    "Takbyte, takrenovering och bandtäckning i Solna, Sundbyberg, Danderyd, Sollentuna, Järfälla, Upplands Väsby, Sigtuna och på Lidingö.",
-  Södertörn:
-    "Takläggare i Nacka, Tyresö, Haninge, Huddinge och Nynäshamn — villatak, radhus och bostadsrättsfastigheter söder om stan.",
-  "Värmdö & östra skärgården":
-    "Takprojekt i Värmdö och Stockholms östra skärgård — där vi ofta transporterar material sjövägen.",
-  "Mälaröarna & västerort":
-    "Takbyte och takomläggning på Ekerö och Mälaröarna — kulturhistoriska tegeltak och sjönära plåttak.",
+    "Takläggare i Stockholms innerstad — från Gamla stan och Södermalm till Östermalm, Kungsholmen och Vasastan. Takarbeten på kulturhistoriska tak och bostadsrättsfastigheter i tätbebyggda kvarter.",
+  "Norra Stockholm":
+    "Takbyte, takrenovering och plåtarbeten i Solna, Sundbyberg, Danderyd, Sollentuna och Upplands Väsby — norra Stockholms villabälte och bostadsrättsområden.",
+  "Nordvästra Stockholm":
+    "Takläggare i Järfälla, Upplands-Bro och Sigtuna — från miljonprogramstak till villatak och kulturhistorisk bebyggelse i Sigtuna.",
+  Västerort:
+    "Takbyte och takrenovering i Bromma, Hässelby, Vällingby och Spånga — västra Stockholms trädgårdsstäder och villaområden.",
+  "Östra Stockholm":
+    "Takläggare på Lidingö, i Nacka och Värmdö — östra Stockholms ö- och skärgårdskommuner med fukt- och vindkrav på takmaterial.",
+  "Sydöstra Stockholm":
+    "Takbyte och takrenovering i Tyresö, Haninge, Vendelsö, Vega och Nynäshamn — sydöstra Stockholms kust- och skärgårdsområden.",
+  "Södra Stockholm":
+    "Takläggare i Huddinge, Älvsjö, Enskede, Farsta, Skarpnäck och Skärholmen — södra Stockholms villor, radhus och bostadsrättsfastigheter.",
+  "Sydvästra Stockholm":
+    "Takbyte, takrenovering och plåtarbeten på Ekerö och i Botkyrka, Salem och Södertälje — sydvästra Stockholms sjönära och kommunala takprojekt.",
 };
 
 const regionOrder = [
@@ -39,10 +45,13 @@ const regionOrder = [
   "Roslagens inland",
   "Österåker",
   "Stockholms stad",
-  "Norrort Stockholm",
-  "Södertörn",
-  "Värmdö & östra skärgården",
-  "Mälaröarna & västerort",
+  "Norra Stockholm",
+  "Nordvästra Stockholm",
+  "Västerort",
+  "Östra Stockholm",
+  "Sydöstra Stockholm",
+  "Södra Stockholm",
+  "Sydvästra Stockholm",
 ];
 
 const areas = regionOrder
