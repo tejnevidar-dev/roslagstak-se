@@ -73,9 +73,9 @@ const links: FoundLink[] = [];
 
 for (const file of files) {
   const src = read(file);
-  // <Link to="..."> och <Link to={`...`}> med ev. ankartext efteråt
+  // Alla to="/..." / to={`/...`} samt objekt-poster { to, label }
   const patterns = [
-    /<Link\b[^>]*?\sto=(?:"([^"]+)"|\{`([^`]+)`\})[^>]*>([\s\S]{0,180}?)<\/Link>/g,
+    /\sto=(?:"([^"]+)"|\{`([^`]+)`\})([\s\S]{0,400}?)<\/Link>/g,
     /\bto:\s*(?:"([^"]+)"|`([^`]+)`)\s*,\s*label:\s*(?:"([^"]+)"|`([^`]+)`)/g,
   ];
   for (const [i, re] of patterns.entries()) {
@@ -86,6 +86,7 @@ for (const file of files) {
       const anchor = anchorRaw
         .replace(/<[^>]*>/g, " ")
         .replace(/\{[^}]*\}/g, " ")
+        .replace(/className=("[^"]*"|\{[^}]*\})/g, " ")
         .replace(/\s+/g, " ")
         .trim();
       links.push({ file: file.replace(resolve(".") + "/", ""), raw, anchor });
