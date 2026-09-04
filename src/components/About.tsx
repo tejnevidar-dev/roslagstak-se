@@ -70,9 +70,10 @@ const About = () => {
               </figure>
               <figcaption className="absolute -bottom-5 left-6 z-10 rotate-2 bg-primary px-6 py-4 text-primary-foreground shadow-xl">
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-seafoam">
-                  Blidö · Roslagens skärgård
+                  Roslagen &amp; Storstockholm
                 </span>
-                <span className="mt-1 block font-display text-xl">Hantverk på plats</span>
+                <span className="mt-1 block font-display text-xl">Egna takläggare på plats</span>
+
               </figcaption>
               <span aria-hidden="true" className="absolute -right-4 -top-4 h-12 w-12 bg-seafoam" />
             </div>
@@ -134,11 +135,13 @@ const About = () => {
                 Våra ledord
               </p>
               <h3 className="mt-6 font-display text-[clamp(1.6rem,2.5vw,2.2rem)] font-bold leading-[1.16]">
-                Fyra ledord som genomsyrar allt vi gör
+                Så jobbar vi — varje projekt, varje tak
               </h3>
               <p className="mt-5 text-[17px] font-light leading-relaxed text-primary-foreground/75">
-                De styr hur vi bemöter kunder, planerar projekt och utför varje takläggning.
+                Fyra löften som styr hur vi bemöter dig, planerar projektet och utför själva
+                takläggningen.
               </p>
+
             </div>
 
             <ul className="col-span-12 lg:col-span-7 lg:col-start-6">
