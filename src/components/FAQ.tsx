@@ -5,6 +5,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SectionHeading from "@/components/SectionHeading";
+import JsonLd from "@/components/JsonLd";
+import { buildFaqSchema } from "@/lib/schema";
 
 const faqs = [
   {
@@ -46,25 +48,10 @@ const faqs = [
 ];
 
 const FAQ = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
 
   return (
     <section id="faq" className="border-b border-border bg-background py-24 md:py-36" aria-labelledby="faq-heading">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={buildFaqSchema(faqs)} />
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-5 lg:sticky lg:top-28">

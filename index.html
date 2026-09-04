@@ -38,6 +38,7 @@
     {
       "@context": "https://schema.org",
       "@type": "RoofingContractor",
+      "@id": "https://roslagstak.se/#localbusiness",
       "name": "RoslagsTak",
       "url": "https://roslagstak.se",
       "telephone": "+46701543639",
@@ -53,10 +54,24 @@
         "latitude": 59.765,
         "longitude": 18.705
       },
-      "areaServed": ["Roslagen", "Norrtälje", "Vaxholm", "Ljusterö", "Blidö", "Yxlan", "Furusund", "Väddö", "Vätö", "Rådmansö", "Husarö", "Finnhamn", "Ingmarsö", "Högmarsö", "Svartlöga", "Söderöra", "Humlö", "Norröra", "Gräskö", "Spillersboda", "Bergshamra", "Svartnö", "Singö", "Grisslehamn", "Arholma", "Stockholms norra skärgård"],
-      "description": "Takläggare i Roslagen. Takbyte, takrenovering och takomläggning på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Vaxholm, Norrtälje, Väddö, Rådmansö och fler öar i skärgården.",
+      "areaServed": ["Roslagen", "Storstockholm", "Norrtälje", "Vaxholm", "Ljusterö", "Blidö", "Yxlan", "Furusund", "Väddö", "Vätö", "Rådmansö", "Husarö", "Finnhamn", "Ingmarsö", "Högmarsö", "Svartlöga", "Söderöra", "Humlö", "Norröra", "Gräskö", "Spillersboda", "Bergshamra", "Svartnö", "Singö", "Grisslehamn", "Arholma", "Stockholms norra skärgård", "Stockholms stad", "Norra Stockholm", "Nordvästra Stockholm", "Västerort", "Östra Stockholm", "Sydöstra Stockholm", "Södra Stockholm", "Sydvästra Stockholm", "Täby", "Danderyd", "Sollentuna", "Nacka", "Värmdö", "Huddinge", "Södertälje"],
+      "description": "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och eternitsanering — från Stockholms innerstad till öarna i skärgården.",
       "priceRange": "$$",
       "openingHours": ["Mo-Sa 07:00-20:00", "Su 09:00-20:00"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Takarbeten i Roslagen och Storstockholm",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Takomläggning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Takrenovering" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Takavvattning, hängrännor och stuprör" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Takkupor och takfönster" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Takinspektion" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plåtarbeten och bandtäckning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Takvård, taktvätt och takmålning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eternitsanering och asbestrivning" } }
+        ]
+      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
