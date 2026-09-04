@@ -28,7 +28,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Blidö utsätts för kraftig vind och saltluft året runt — förhållanden som sliter hårt på tak. Många fastighetsägare på Blidö upptäcker för sent att underlagspappen gett vika eller att plåtbeslagen rostat. Vi på RoslagsTak har genomfört ett stort antal takprojekt på Blidö och vet exakt vilka material som håller i skärgårdsmiljön. Vår erfarenhet av logistik via Blidöleden gör att vi kan leverera material effektivt och hålla projekttiden kort. Oavsett om din fastighet ligger vid bryggan eller djupt inne på ön — vi når dig och levererar ett tak som står emot Roslagens väder i decennier.",
     extraContent:
-      "Blidö är vår hemmabas och den plats vi känner bäst i hela Roslagen. Vi har lagt tak på allt från klassiska skärgårdsstugor med rödfärgad panel till moderna permanentboenden med dubbelfalsat plåttak. Den korta resvägen innebär att vi kan erbjuda de mest konkurrenskraftiga priserna i hela skärgården för fastighetsägare på Blidö. Beställ en kostnadsfri takinspektion — vi kan ofta vara på plats redan samma dag.",
+      "Blidö är vår hemmabas och den plats vi känner bäst i hela Roslagen. Vi har lagt tak på allt från klassiska skärgårdsstugor med rödfärgad panel till moderna permanentboenden med dubbelfalsat plåttak. Den korta resvägen håller ner etableringskostnaden för dig som har hus på Blidö. Beställ en kostnadsfri takinspektion — vi kan ofta vara på plats redan samma dag.",
     uniqueFAQ: {
       question: "Hur når RoslagsTak Blidö med material för takbyte?",
       answer:
@@ -305,12 +305,12 @@ export const locations: LocationData[] = [
     longDescription:
       "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem vi åtgärdar hos fastighetsägare i Spillersboda. Med vår lokala närvaro kan vi ofta vara på plats inom kort och erbjuda en kostnadsfri besiktning. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte. Ärlighet och kvalitet är våra ledord.",
     extraContent:
-      "Spillersboda är en av de platser längs Roslagskusten där vi ofta arbetar. Fastighetsägare i Spillersboda uppskattar vår ärlighet — vi rekommenderar aldrig ett takbyte om en renovering räcker. Med vår lokala närvaro erbjuder vi snabb service och korta ledtider. Vi har lagt allt från tegelplåt och pannplåt till TP20 i Spillersboda med nöjda kunder som referens.",
+      "Spillersboda är en av de platser längs Roslagskusten där vi ofta arbetar. Fastighetsägare i Spillersboda uppskattar vår ärlighet — vi rekommenderar aldrig ett takbyte om en renovering räcker. Den lokala närvaron ger korta restider och snabb återkoppling. Vi har lagt allt från tegelplåt och pannplåt till TP20 i Spillersboda med nöjda kunder som referens.",
     uniqueFAQ: {
       question:
         "Behöver jag byta hela taket eller räcker en renovering i Spillersboda?",
       answer:
-        "Det beror på takets skick. Vi erbjuder kostnadsfri takinspektion i Spillersboda där vi bedömer om en renovering räcker eller om det behövs ett komplett byte. Ibland kan byte av underlagspapp och beslag förlänga takets livslängd med 15–20 år. Vi ger alltid en ärlig rekommendation.",
+        "Det beror på takets skick. Vi gör kostnadsfri takinspektion i Spillersboda där vi bedömer om en renovering räcker eller om det behövs ett komplett byte. Ibland kan byte av underlagspapp och beslag förlänga takets livslängd med 15–20 år. Vi ger alltid en ärlig rekommendation.",
     },
     primaryKeyword: "takläggare Spillersboda",
     lat: 59.7,
@@ -327,7 +327,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Rådmansö är porten till skärgården och ligger bara minuter från vår bas i Norrtälje. Det innebär att vi kan erbjuda snabb service och konkurrenskraftiga priser till fastighetsägare på Rådmansö. Vi har genomfört allt från kompletta takbyten med tegelplåt till mindre renoveringar av plåtbeslag och hängrännor. Närheten gör att vi ofta kan påbörja arbetet snabbare än på mer avlägsna platser — kontakta oss så bokar vi in en kostnadsfri besiktning.",
     extraContent:
-      "Rådmansö har en blandning av permanentboenden och fritidshus, och vi har arbetat med alla typer av fastigheter här. Tack vare närheten till vår bas erbjuder vi de kortaste ledtiderna i området. Många fastighetsägare på Rådmansö väljer oss för att vi kan vara på plats snabbt och erbjuda fast pris redan vid första besöket. Vi utför även mindre arbeten som byte av hängrännor, stuprör och vindskivor.",
+      "Rådmansö har en blandning av permanentboenden och fritidshus, och vi har arbetat med alla typer av fastigheter här. Tack vare närheten till vår bas har vi ofta korta ledtider i området. Många fastighetsägare på Rådmansö väljer oss för att vi kan vara på plats snabbt och erbjuda fast pris redan vid första besöket. Vi utför även mindre arbeten som byte av hängrännor, stuprör och vindskivor.",
     uniqueFAQ: {
       question: "Hur snabbt kan ni komma till Rådmansö för en takinspektion?",
       answer:
@@ -348,7 +348,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Bergshamra vid Roslagens kust har en mix av villor och fritidshus, många med tak som nu nått sin livslängd. Det kustnära läget innebär att taken utsätts för mer fukt och vind än längre in på fastlandet. Vi har lagt tak i Bergshamra många gånger och vet vilka material som ger bäst livslängd i den miljön. Ett dubbelfalsat plåttak eller TP20 med kvalitetsunderlag ger dig trygghet i 40+ år. Kontakta oss för en ärlig bedömning av ditt tak — helt utan kostnad.",
     extraContent:
-      "I Bergshamra ser vi ofta tak med äldre betongpannor eller eternitskivor som behöver bytas. Vi hanterar rivning och avfallshantering av alla materialtyper, inklusive eternit (med certifierad sanering). Om du har en fastighet i Bergshamra och undrar över takets skick, erbjuder vi kostnadsfri inspektion med skriftlig rapport. Vi ger alltid en rak och ärlig bedömning.",
+      "I Bergshamra ser vi ofta tak med äldre betongpannor eller eternitskivor som behöver bytas. Vi hanterar rivning och avfallshantering av alla materialtyper, inklusive eternit (med certifierad sanering). Om du har en fastighet i Bergshamra och undrar över takets skick, gör vi en kostnadsfri inspektion med skriftlig rapport. Vi ger alltid en rak och ärlig bedömning.",
     uniqueFAQ: {
       question: "Kan ni hantera eternittak vid takbyte i Bergshamra?",
       answer:
@@ -373,7 +373,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "När bör man byta tak på ett hus på Svartnö?",
       answer:
-        "De flesta tak i kustmiljö som Svartnö håller 25–40 år beroende på material. Tecken på att det är dags: mossa, fuktfläckar i underlaget, rostiga beslag eller spruckna pannor. Vi erbjuder kostnadsfri takinspektion och ger dig en ärlig bedömning — ibland räcker det med en renovering istället för ett komplett byte.",
+        "De flesta tak i kustmiljö som Svartnö håller 25–40 år beroende på material. Tecken på att det är dags: mossa, fuktfläckar i underlaget, rostiga beslag eller spruckna pannor. Vi gör kostnadsfri takinspektion och ger dig en ärlig bedömning — ibland räcker det med en renovering istället för ett komplett byte.",
     },
     primaryKeyword: "takläggare Svartnö",
     lat: 59.45,
@@ -388,13 +388,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Väddö — takbyte, lertegeltak och takrenovering nära Grisslehamn. Lokal takläggare med erfarenhet av Väddö.",
     longDescription:
-      "Väddö sträcker sig från Norrtälje norrut mot Grisslehamn och rymmer en varierad bebyggelse — från jordbruksfastigheter med stora takytor till sommarstugor nära vattnet. Vi arbetar regelbundet på Väddö och har lagt allt från lertegel på äldre gårdar till moderna TP20-plåttak på nybyggen. Det vi erbjuder är en takläggare som förstår Väddös förhållanden: de kalla vintrarna, den fuktiga havsluften och vikten av att välja material som klarar det. Ring oss — vi ger dig en offert inom 24 timmar.",
+      "Väddö sträcker sig från Norrtälje norrut mot Grisslehamn och rymmer en varierad bebyggelse — från jordbruksfastigheter med stora takytor till sommarstugor nära vattnet. Vi arbetar regelbundet på Väddö och har lagt allt från lertegel på äldre gårdar till moderna TP20-plåttak på nybyggen. Du får en takläggare som förstår Väddös förhållanden: de kalla vintrarna, den fuktiga havsluften och vikten av att välja material som klarar det. Ring oss — vi ger dig en offert inom 24 timmar.",
     extraContent:
       "Väddö har många jordbruksfastigheter med stora takytor — ladugårdar, lador och ekonomibyggnader som behöver tak i gott skick. Vi har erfarenhet av att lägga tak på stora ytor med TP20-plåt, som är kostnadseffektivt och snabbt att montera. Vi hanterar även äldre gårdar med lertegel och tradition att bevara. Kontakta oss för ett hembesök och offert.",
     uniqueFAQ: {
       question: "Kan ni lägga tak på stora lantbruksbyggnader på Väddö?",
       answer:
-        "Ja, vi har erfarenhet av att lägga tak på ladugårdar, lador och andra lantbruksbyggnader på Väddö. TP20-plåttak är ofta det mest kostnadseffektiva valet för stora takytor. Vi erbjuder fast pris och kan påbörja arbetet med kort ledtid.",
+        "Ja, vi har erfarenhet av att lägga tak på ladugårdar, lador och andra lantbruksbyggnader på Väddö. TP20-plåttak är ofta det mest kostnadseffektiva valet för stora takytor. Vi lämnar fast pris och kan påbörja arbetet med kort ledtid.",
     },
     primaryKeyword: "takläggare Väddö",
     lat: 59.95,
@@ -432,11 +432,11 @@ export const locations: LocationData[] = [
     longDescription:
       "Norrtälje är vår hemmabas. Vi känner stadens bebyggelse väl — från de äldre trähusen i centrum till villaområdena runt om. Vår lokala närvaro innebär snabb service, konkurrenskraftiga priser och en takläggare som alltid finns nära till hands. Behöver du en kostnadsfri besiktning? Ring oss — vi är ofta på plats samma vecka.",
     extraContent:
-      "Som Norrtäljes mest erfarna takläggare har vi referensprojekt i hela staden — från Norrtälje centrum till Rimbo, Hallstavik och Grisslehamn. Vi erbjuder komplett takservice: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör, samt takinspektion. Alla arbeten utförs enligt AMA-standard med 10 års garanti. Begär en offert så återkommer vi inom 24 timmar.",
+      "Som lokal takläggare i Norrtälje har vi referensprojekt i hela staden — från Norrtälje centrum till Rimbo, Hallstavik och Grisslehamn. Vi utför komplett takservice: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör, samt takinspektion. Alla arbeten utförs enligt AMA-standard med 10 års garanti. Begär en offert så återkommer vi inom 24 timmar.",
     uniqueFAQ: {
       question: "Är RoslagsTak en lokal takläggare i Norrtälje?",
       answer:
-        "Ja, Norrtälje är vår hemmabas. Vi har referensprojekt i hela kommunen och kan ofta vara på plats samma vecka. Ring oss för att diskutera ditt projekt — vi erbjuder alltid kostnadsfri besiktning.",
+        "Ja, Norrtälje är vår hemmabas. Vi har referensprojekt i hela kommunen och kan ofta vara på plats samma vecka. Ring oss för att diskutera ditt projekt — besiktningen är alltid kostnadsfri.",
     },
     primaryKeyword: "takläggare Norrtälje",
     lat: 59.7667,
@@ -453,7 +453,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Vaxholm är porten till Stockholms skärgård och har en unik blandning av kulturhistoriska trähus och moderna villor. Taken i Vaxholm utsätts för havsfukt och vind, samtidigt som estetiken är viktig — särskilt i de äldre delarna av staden. Vi har erfarenhet av att lägga tak i Vaxholm som både håller och ser rätt ut. Pannplåt som matchar äldre arkitektur, dubbelfalsat plåt för moderna hus, eller lertegel för den som vill bevara originallook — vi har lösningen.",
     extraContent:
-      "Vaxholm ställer höga krav på estetik, särskilt i de kulturhistoriskt värdefulla områdena. Vi arbetar med material och metoder som respekterar Vaxholms arkitektur — från handfalsat plåtbeslag till pannplåt i rätt kulör. Om du bor i Vaxholm och funderar på att byta tak, erbjuder vi en kostnadsfri konsultation där vi diskuterar materialval som passar just ditt hus.",
+      "Vaxholm ställer höga krav på estetik, särskilt i de kulturhistoriskt värdefulla områdena. Vi arbetar med material och metoder som respekterar Vaxholms arkitektur — från handfalsat plåtbeslag till pannplåt i rätt kulör. Om du bor i Vaxholm och funderar på att byta tak, bokar vi in en kostnadsfri genomgång där vi diskuterar materialval som passar just ditt hus.",
     uniqueFAQ: {
       question:
         "Tar RoslagsTak hänsyn till Vaxholms kulturhistoriska bebyggelse vid takbyte?",
@@ -984,7 +984,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Sundbyberg är en tät kommun med en blandning av tidiga villaområden, bostadsrättsfastigheter och nyare bostadsbebyggelse kring stationerna. Många äldre villatak har betongpannor eller tegel från 50- och 60-talet som behöver omläggning. Vi utför takbyten och takrenoveringar i Sundbyberg med material som passar både äldre villor och moderna bostadshus. Vi planerar logistiken i den täta bebyggelsen så att grannar och trafik påverkas minimalt.",
     extraContent:
-      "I Sundbybergs bostadsrättsområden arbetar vi ofta med styrelser och fastighetsägare för att planera takbyten över flera fastigheter. Genom att samordna projekt kan vi erbjuda förmånliga priser och kortare ledtider. Vi lämnar offert och tidsplan anpassad för en bostadsrättsförenings beslutsprocess.",
+      "I Sundbybergs bostadsrättsområden arbetar vi ofta med styrelser och fastighetsägare för att planera takbyten över flera fastigheter. Genom att samordna projekt kan vi hålla nere kostnaden och korta ledtiderna. Vi lämnar offert och tidsplan anpassad för en bostadsrättsförenings beslutsprocess.",
     uniqueFAQ: {
       question: "Kan ni samordna takbyte för flera fastigheter i Sundbyberg?",
       answer:

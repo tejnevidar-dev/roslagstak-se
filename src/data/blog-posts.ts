@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
       "Det betyder att om arbetskostnaden för ditt takbyte är 100 000 kr, kan du få tillbaka 30 000 kr genom ROT-avdraget. För ett par som delar på avdraget blir det upp till 60 000 kr i skattereduktion.",
       "ROT-avdraget gäller för arbete på din permanentbostad eller fritidshus. Det inkluderar takomläggning, takrenovering, byte av underlagspapp och råspont, installation av taksäkerhet och takavvattning. Materialkostnader ingår inte i underlaget.",
       "Vi på RoslagsTak hanterar all administration kring ROT-avdraget. Du betalar bara din del direkt — vi drar av ROT-avdraget på fakturan och söker resten från Skatteverket. Smidigt och enkelt.",
-      "Kontakta oss för en offert som tydligt visar hur mycket du sparar med ROT-avdrag. Vi erbjuder kostnadsfri rådgivning för alla kunder i Roslagen — från Vaxholm till Arholma.",
+      "Kontakta oss för en offert som tydligt visar hur mycket du sparar med ROT-avdrag. Rådgivningen är kostnadsfri för dig som bor i Roslagen — från Vaxholm till Arholma.",
     ],
   },
   {
