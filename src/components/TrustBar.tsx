@@ -2,14 +2,13 @@ const items = [
   { value: "10 + 30 år", label: "Utförande- & materialgaranti" },
   { value: "Fast pris", label: "Inga dolda kostnader" },
   { value: "0 kr", label: "Hembesök & offert utan förpliktelser", accent: true },
-  { value: "10 års", label: "Erfarenhet från Roslagen & Stockholm" },
 ];
 
 
 /* Mörk marin faktamatris — vertikala accentlinjer istället för kort */
 const TrustBar = () => (
   <section className="relative z-20 bg-primary py-12 lg:py-14" aria-label="Våra löften">
-    <ul className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 px-6 text-primary-foreground md:grid-cols-4 md:gap-12">
+    <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-x-8 gap-y-10 px-6 text-primary-foreground md:grid-cols-3 md:gap-12">
       {items.map((item) => (
         <li
           key={item.label}
