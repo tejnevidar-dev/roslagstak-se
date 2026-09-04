@@ -20,7 +20,7 @@ export const services = [
     title: "Takomläggning",
     short: "Komplett takbyte",
     description:
-      "Komplett byte av takmaterial med moderna lösningar. Allt arbete utförs enligt AMA-standard.",
+      "Komplett takbyte där vi byter takmaterial, ser över råspont och underlagstäckning och utför allt enligt AMA.",
   },
   {
     icon: IconRoofRepair,
@@ -28,7 +28,7 @@ export const services = [
     title: "Takrenovering",
     short: "Laga & förlänga",
     description:
-      "Vi renoverar och förlänger livslängden på ditt befintliga tak — även på svåråtkomliga öar.",
+      "Vi lagar skador och förlänger livslängden på ditt befintliga tak — en klok investering när taket inte behöver bytas helt.",
   },
   {
     icon: IconGutter,
@@ -36,7 +36,7 @@ export const services = [
     title: "Takavvattning",
     short: "Rännor & stuprör",
     description:
-      "Installation och byte av hängrännor, stuprör och kompletta takavvattningssystem.",
+      "Nya hängrännor, stuprör och kompletta avvattningssystem som leder bort vattnet från grund och fasad.",
   },
   {
     icon: IconDormer,
@@ -44,7 +44,7 @@ export const services = [
     title: "Takkupor & fönster",
     short: "Ljus på vinden",
     description:
-      "Montering av takkupor och takfönster för mer ljus och bättre utnyttjande av vinden.",
+      "Takkupor och takfönster som ger mer dagsljus och gör vindsvåningen användbar — tätt inklätt i plåt.",
   },
   {
     icon: IconInspection,
@@ -52,7 +52,7 @@ export const services = [
     title: "Takinspektion",
     short: "Besiktning & rapport",
     description:
-      "Grundlig besiktning av ditt tak med kostnadsfri rapport och åtgärdsförslag.",
+      "Vi går igenom taket punkt för punkt och du får en tydlig rapport med skicket, åtgärdsförslag och kostnad.",
   },
   {
     icon: IconSheetMetal,
@@ -60,7 +60,7 @@ export const services = [
     title: "Plåtarbeten",
     short: "Plåtslagare",
     description:
-      "Taktäckning, beslag och plåtdetaljer utförda av certifierade plåtslagare.",
+      "Bandtäckning, skorstensinklädnad, fotplåt och beslag utförda av erfarna plåtslagare — där tak oftast läcker.",
   },
   {
     icon: IconRoofCare,
@@ -68,7 +68,7 @@ export const services = [
     title: "Takvård",
     short: "Tvätt & målning",
     description:
-      "Professionell taktvätt och takmålning som förlänger livslängden och fräschar upp ditt tak.",
+      "Taktvätt, behandling mot mossa och takmålning som fräschar upp taket och skjuter fram ett takbyte flera år.",
   },
   {
     icon: IconAsbestos,
@@ -76,9 +76,10 @@ export const services = [
     title: "Eternit & asbestsanering",
     short: "Säker rivning",
     description:
-      "Säker rivning och sanering av eternit- och asbesttak enligt Arbetsmiljöverkets regler. Vi hanterar allt från sanering till nytt tak.",
+      "Säker rivning och deponering av eternit- och asbesttak enligt Arbetsmiljöverkets krav — inklusive nytt tak efteråt.",
   },
 ];
+
 
 const Services = () => {
   return (
@@ -92,15 +93,16 @@ const Services = () => {
               id="services-heading"
               className="max-w-[24ch] font-display text-[clamp(1.95rem,3.4vw,2.9rem)] font-bold leading-[1.14] tracking-[-0.02em] text-foreground"
             >
-              Vi bygger för kustklimatets{" "}
-              <span className="text-accent">tuffaste utmaningar.</span>
+              Allt inom tak och plåt —{" "}
+              <span className="text-accent">under ett och samma tak.</span>
             </h2>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <p className="max-w-[46ch] text-[17px] font-light leading-[1.68] text-muted-foreground">
-              Från minsta sjöstuga till större fastigheter — traditionellt hantverk kombinerat
-              med material valt för väderutsatta lägen i Roslagen.
+              Villa, radhus, fritidshus eller bostadsrättsförening — vi utför hela arbetet med
+              egna takläggare och plåtslagare, och med material valt för svenskt klimat.
             </p>
+
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/offert"

@@ -39,16 +39,18 @@ const Hero = () => {
               className="absolute -left-4 -top-4 h-12 w-12 bg-seafoam"
             />
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-              Takläggare i Roslagen och skärgården
+              Takläggare i Roslagen &amp; Stockholm
             </p>
             <h1 className="mt-5 max-w-[22ch] font-display text-[clamp(2.1rem,4.2vw,3.5rem)] font-bold leading-[1.06] tracking-[-0.022em] text-foreground">
-              Vi lägger tak som tål{" "}
-              <span className="italic text-accent">skärgårdens alla årstider.</span>
+              Ett takjobb du kan{" "}
+              <span className="italic text-accent">lita på — år efter år.</span>
             </h1>
             <p className="mt-6 max-w-[48ch] text-[18px] font-light leading-[1.68] text-marine">
-              Takbyte, takrenovering och plåtarbeten längs Roslagens kust och på öar utan
-              broförbindelse. Fast pris, 10 års utförandegaranti och 30 års materialgaranti.
+              Vi tar hand om hela processen — från första besiktningen till sista plåtdetaljen.
+              Takbyte, takrenovering och plåtarbeten i Roslagen och hela Storstockholm, med fast
+              pris, 10 års utförandegaranti och 30 års materialgaranti.
             </p>
+
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/offert"

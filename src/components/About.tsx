@@ -7,34 +7,40 @@ import rooferImg from "@/assets/roofer-work.jpg";
 const coreValues = [
   {
     icon: Heart,
-    title: "Servicemind",
-    description: "Vi sätter alltid kunden i centrum. Oavsett om det gäller en snabb fråga om ditt tak eller ett omfattande projekt, möter vi dig med lyhördhet och engagemang.",
+    title: "Tillgänglighet",
+    description:
+      "Du ska aldrig behöva jaga din takläggare. Vi svarar i telefon, återkommer inom 24 timmar och håller dig uppdaterad genom hela projektet — oavsett om det gäller en snabb fråga eller ett komplett takbyte.",
   },
   {
     icon: ShieldCheck,
     title: "Ansvar",
-    description: "Vi står bakom varje takpanna, varje plåtskiva och varje skarv vi lägger. Med 10 års utförandegaranti, 30 års materialgaranti och tydliga avtal tar vi fullt ansvar för resultatet.",
+    description:
+      "Vi står bakom varje takpanna, plåtskiva och skarv vi lägger. Med skriftligt avtal, 10 års utförandegaranti och 30 års materialgaranti vet du exakt vad som gäller — även flera år efter att vi lämnat tomten.",
   },
   {
     icon: Award,
-    title: "Professionalism",
-    description: "Våra takläggare är certifierade och löpande utbildade. Vi arbetar efter branschens bästa praxis med rätt verktyg, rätt material och rätt metod — varje gång.",
+    title: "Hantverk",
+    description:
+      "Våra takläggare och plåtslagare är utbildade, försäkrade och arbetar enligt AMA och branschens säkerhetskrav. Rätt underlagspapp, rätt infästning och rätt plåtdetaljer — det är där ett tak avgörs.",
   },
   {
     icon: Zap,
-    title: "Effektivitet",
-    description: "Vi vet att ett takprojekt påverkar din vardag. Därför planerar vi noggrant, håller tidsplanen och minimerar störningarna i ditt hem.",
+    title: "Ordning på arbetsplatsen",
+    description:
+      "Ett takprojekt påverkar din vardag. Därför planerar vi noga, håller tidplanen, täcker in vad som behöver skyddas och lämnar tomten städad och fri från spik och avfall.",
   },
 ];
 
+
 const benefits = [
   "Certifierade och försäkrade takläggare",
-  "Fast pris utan dolda kostnader",
+  "Fast pris — inga dolda kostnader",
   "10 års utförandegaranti, 30 års materialgaranti",
-  "Verksamma i hela Roslagens skärgård",
-  "Kostnadsfri besiktning och offert",
-  "Hjälp med ROT-avdrag",
+  "Roslagen och hela Storstockholm",
+  "Kostnadsfritt hembesök och offert",
+  "Vi sköter ROT-avdraget åt dig",
 ];
+
 
 /* Nautisk asymmetri: roterat foto som bryter ut i vänsterkant, texten i en
    förskjuten spalt, ledorden som mörk marinlista. */
@@ -64,9 +70,10 @@ const About = () => {
               </figure>
               <figcaption className="absolute -bottom-5 left-6 z-10 rotate-2 bg-primary px-6 py-4 text-primary-foreground shadow-xl">
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-seafoam">
-                  Blidö · Roslagens skärgård
+                  Roslagen &amp; Storstockholm
                 </span>
-                <span className="mt-1 block font-display text-xl">Hantverk på plats</span>
+                <span className="mt-1 block font-display text-xl">Egna takläggare på plats</span>
+
               </figcaption>
               <span aria-hidden="true" className="absolute -right-4 -top-4 h-12 w-12 bg-seafoam" />
             </div>
@@ -81,29 +88,30 @@ const About = () => {
               id="about-heading"
               className="mt-6 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.14] text-foreground"
             >
-              Ditt tak i trygga händer —{" "}
-              <span className="italic text-accent">från kust till ö.</span>
+              Ett tak som håller —{" "}
+              <span className="italic text-accent">och en firma som svarar.</span>
             </h2>
             <div className="mt-8 space-y-6 text-[18px] font-light leading-relaxed text-marine">
               <p>
-                RoslagsTak har sina rötter i Norrtälje och Roslagens skärgård. Vi lägger tak i hela
-                Roslagen — på Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn och Ingmarsö, liksom
-                i Vaxholm, Norrtälje, Väddö och Rådmansö. Vi levererar takprojekt av högsta kvalitet,
-                alltid enligt branschens AMA-standard.
+                RoslagsTak är en takfirma med rötterna i Norrtälje och Roslagens skärgård. Idag
+                utför vi takbyte, takrenovering, takvård och plåtarbeten i hela Roslagen och i
+                hela Storstockholm — allt arbete enligt branschstandard AMA och av erfarna,
+                försäkrade takläggare.
               </p>
               <p>
-                Vi vet hur det är att bo och verka i skärgården. Många av oss har själva vuxit upp med
-                båtar, bryggor och röda stugor. Den kunskapen genomsyrar allt vi gör — från materialval
-                till logistik. Vi tar oss ut till Högmarsö, Svartlöga, Söderöra, Norröra, Humlö och
-                Gräskö — öar dit andra takfirmor inte når.
+                Vi tar hand om hela projektet: besiktning, materialval, bygglov när det behövs,
+                ställning, rivning, nytt tak och bortforsling av allt avfall. Du har samma
+                kontaktperson från första besöket till slutbesiktningen, och du får veta vad som
+                händer varje dag arbetet pågår.
               </p>
               <p>
-                Vare sig du är året-runt-boende i Norrtälje, har en sommarstuga på Blidö, eller äger en
-                fastighet på Arholma — vi ser till att ditt tak håller i årtionden. Vi erbjuder alltid
-                kostnadsfri besiktning och offert, och vi hjälper dig med ROT-avdraget så att du får ut
-                maximalt av din investering.
+                Vi är dessutom vana vid lägen där andra tvekar — öar utan broförbindelse, smala
+                infarter och tak nära vatten och saltluft. Oavsett om du har en villa i Stockholm,
+                ett radhus i Täby eller en sommarstuga på Blidö får du kostnadsfritt hembesök,
+                fast pris och hjälp med ROT-avdraget innan du bestämmer dig.
               </p>
             </div>
+
 
             <ul className="mt-10 grid gap-x-8 sm:grid-cols-2">
               {benefits.map((benefit) => (
@@ -127,11 +135,13 @@ const About = () => {
                 Våra ledord
               </p>
               <h3 className="mt-6 font-display text-[clamp(1.6rem,2.5vw,2.2rem)] font-bold leading-[1.16]">
-                Fyra ledord som genomsyrar allt vi gör
+                Så jobbar vi — varje projekt, varje tak
               </h3>
               <p className="mt-5 text-[17px] font-light leading-relaxed text-primary-foreground/75">
-                De styr hur vi bemöter kunder, planerar projekt och utför varje takläggning.
+                Fyra löften som styr hur vi bemöter dig, planerar projektet och utför själva
+                takläggningen.
               </p>
+
             </div>
 
             <ul className="col-span-12 lg:col-span-7 lg:col-start-6">
