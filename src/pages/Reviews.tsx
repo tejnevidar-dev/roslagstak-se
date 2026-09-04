@@ -77,11 +77,11 @@ const Reviews = () => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchemaJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+          <nav aria-label="Brödsmulor" className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
-            <span>/</span>
-            <span className="text-foreground font-medium">Recensioner</span>
-          </div>
+            <span aria-hidden="true">/</span>
+            <span className="text-foreground font-medium" aria-current="page">Recensioner</span>
+          </nav>
 
           {/* Header */}
           <div className="max-w-3xl mx-auto text-center mb-16">

@@ -11,7 +11,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
-import { CANONICAL_ALIASES, canonicalPath, isNoindexPath, normalizePath } from "../src/lib/canonical";
+import { canonicalPath, isNoindexPath, normalizePath } from "../src/lib/canonical";
 
 const SITE_URL = "https://roslagstak.se";
 
