@@ -874,7 +874,15 @@ const ServiceDetail = () => {
                 { to: "/priser", label: "Se prislista" },
                 { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
                 { to: "/blogg/rot-avdrag-takbyte", label: "ROT-avdrag vid takbyte" },
+                { to: "/taktyper", label: "Taktyper & material" },
+                { to: "/hur-det-gar-till", label: "Så går ett takbyte till" },
+                { to: "/offert#faq", label: "Vanliga frågor om takarbete" },
+                ...services
+                  .filter((s) => s.slug !== slug)
+                  .slice(0, 4)
+                  .map((s) => ({ to: `/tjanster/${s.slug}`, label: s.title })),
                 ...(blocks.relatedLinks ?? []),
+
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
                 { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
                 { to: "/recensioner", label: "Kundrecensioner" },

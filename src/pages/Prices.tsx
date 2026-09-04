@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, HelpCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedLinks from "@/components/RelatedLinks";
 import {
   Accordion,
   AccordionContent,
@@ -195,6 +196,7 @@ const Prices = () => {
             </div>
           </div>
         </div>
+        <RelatedLinks currentPath="/priser" title="Relaterat till pris" />
       </main>
       <Footer />
     </>

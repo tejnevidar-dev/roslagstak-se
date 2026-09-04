@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedLinks from "@/components/RelatedLinks";
 import PageHero from "@/components/PageHero";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
@@ -41,7 +42,6 @@ const roofTypeFaqs = [
   },
 ];
 
-
 const RoofTypes = lazy(() => import("@/components/RoofTypes"));
 const IslandSpecialist = lazy(() => import("@/components/IslandSpecialist"));
 
@@ -51,7 +51,9 @@ const RoofTypesPage = () => {
   useEffect(() => {
     if (!location.hash) return;
     const t = window.setTimeout(() => {
-      document.querySelector(location.hash)?.scrollIntoView({ behavior: "smooth" });
+      document
+        .querySelector(location.hash)
+        ?.scrollIntoView({ behavior: "smooth" });
     }, 150);
     return () => window.clearTimeout(t);
   }, [location.hash]);
@@ -86,6 +88,7 @@ const RoofTypesPage = () => {
           faqs={roofTypeFaqs}
           path="/taktyper"
         />
+        <RelatedLinks currentPath="/taktyper" title="Mer om tak och pris" />
       </main>
       <Footer />
     </>
