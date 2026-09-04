@@ -86,10 +86,45 @@ const ServiceArea = () => {
 
               <div className="mt-10 bg-card p-7 text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                  Områden
+                  Verksamhetsområde
                 </p>
-                <p className="mt-2 font-display text-3xl font-bold tabular-nums text-accent">
-                  {areas.length}
+                <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-5">
+                  <div>
+                    <p className="font-display text-3xl font-bold tabular-nums text-accent">
+                      {areas.length}
+                    </p>
+                    <p className="mt-1 text-[12px] leading-snug text-muted-foreground">
+                      områden
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-display text-3xl font-bold tabular-nums text-accent">
+                      {locations.length}
+                    </p>
+                    <p className="mt-1 text-[12px] leading-snug text-muted-foreground">
+                      orter & stadsdelar
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-display text-3xl font-bold tabular-nums text-accent">
+                      24h
+                    </p>
+                    <p className="mt-1 text-[12px] leading-snug text-muted-foreground">
+                      återkoppling
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-display text-3xl font-bold tabular-nums text-accent">
+                      100%
+                    </p>
+                    <p className="mt-1 text-[12px] leading-snug text-muted-foreground">
+                      ROT-avdrag hanterat
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-6 border-t border-border pt-5 text-[14px] leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-foreground">Öar utan bro?</span> Inget problem
+                  — vi transporterar material och verktyg sjövägen till öar i hela norra skärgården.
                 </p>
               </div>
             </div>
