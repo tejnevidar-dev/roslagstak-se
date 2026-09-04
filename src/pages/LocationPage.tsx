@@ -47,7 +47,7 @@ const LocationPage = () => {
     image: "https://roslagstak.se/og-image.jpg",
     logo: "https://roslagstak.se/og-image.jpg",
     sameAs: [
-      "https://www.google.com/maps/search/?api=1&query=RoslagsTak%20Blid%C3%B6",
+      "https://www.google.com/search?q=RoslagsTak+recensioner",
     ],
     areaServed: {
       "@type": "Place",
@@ -208,7 +208,7 @@ const LocationPage = () => {
             </p>
             <div className="mt-5">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=RoslagsTak%20Blid%C3%B6"
+                href="https://www.google.com/search?q=RoslagsTak+recensioner"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary"
