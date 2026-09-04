@@ -18,7 +18,8 @@
     "sitemap": "tsx scripts/generate-sitemap.ts",
     "validate:schema": "node scripts/validate-structured-data.mjs",
     "predev": "tsx scripts/generate-location-index.ts && tsx scripts/generate-sitemap.ts",
-    "prebuild": "tsx scripts/generate-location-index.ts && tsx scripts/generate-sitemap.ts"
+    "prebuild": "tsx scripts/generate-location-index.ts && tsx scripts/generate-sitemap.ts",
+    "postbuild": "node scripts/validate-structured-data.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
