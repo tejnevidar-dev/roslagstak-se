@@ -8,6 +8,7 @@ import GoogleReviews from "@/components/GoogleReviews";
 import { getLocationBySlug, locations } from "@/data/locations";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
+import { regionSlugs } from "@/data/regions";
 import NotFound from "./NotFound";
 import {
   Accordion,
@@ -32,6 +33,7 @@ const LocationPage = () => {
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
   const prep = location.isIsland ? "på" : "i";
   const localSections = buildLocalSections(location);
+  const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
   const faqs = generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ);
 
   const jsonLd = {
@@ -128,7 +130,8 @@ const LocationPage = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
       { "@type": "ListItem", position: 2, name: "Områden", item: "https://roslagstak.se/omraden" },
-      { "@type": "ListItem", position: 3, name: `Takläggare ${prep} ${location.name}`, item: `https://roslagstak.se/taklaggare-${location.slug}` },
+      { "@type": "ListItem", position: 3, name: location.region, item: `https://roslagstak.se${regionHref}` },
+      { "@type": "ListItem", position: 4, name: `Takläggare ${prep} ${location.name}`, item: `https://roslagstak.se/taklaggare-${location.slug}` },
     ],
   };
 
@@ -175,6 +178,8 @@ const LocationPage = () => {
               <span>/</span>
               <Link to="/omraden" className="hover:text-primary transition-colors">Områden</Link>
               <span>/</span>
+              <Link to={regionHref} className="hover:text-primary transition-colors">{location.region}</Link>
+              <span>/</span>
               <span className="text-foreground font-medium">{location.name}</span>
             </nav>
             <Link
@@ -188,10 +193,13 @@ const LocationPage = () => {
 
           {/* Hero */}
           <div className="max-w-4xl mb-16">
-            <div className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-4">
+            <Link
+              to={regionHref}
+              className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-4 transition-colors hover:bg-primary/20"
+            >
               <MapPin className="w-3 h-3" />
-              {location.region}
-            </div>
+              Takläggare i {location.region}
+            </Link>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
               Takläggare {prep} {location.name} — takbyte, takrenovering & plåtarbeten
             </h1>
@@ -290,6 +298,47 @@ const LocationPage = () => {
                     ? ` Transportkostnad till ${location.name} ingår alltid i vår offert — inga dolda tillägg.`
                     : ` Du får alltid fast pris efter besiktning — inga dolda tillägg.`}
                   {" "}Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr per person och år).
+                </p>
+
+                {/* Prisexempel — riktpriser per vanlig takstorlek */}
+                <div className="mb-6 overflow-hidden rounded-lg border border-border">
+                  <table className="w-full text-left text-sm">
+                    <caption className="sr-only">
+                      Riktpriser för takbyte {prep} {location.name}
+                    </caption>
+                    <thead className="bg-muted/50 text-foreground">
+                      <tr>
+                        <th scope="col" className="px-4 py-3 font-medium">Takyta</th>
+                        <th scope="col" className="px-4 py-3 font-medium">TP20-plåt</th>
+                        <th scope="col" className="px-4 py-3 font-medium">Dubbelfalsat</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      {[100, 130, 160, 200].map((m2) => (
+                        <tr key={m2} className="border-t border-border">
+                          <th scope="row" className="px-4 py-3 font-normal text-foreground">
+                            {m2} m²
+                          </th>
+                          <td className="px-4 py-3">
+                            från {(m2 * 1200).toLocaleString("sv-SE")} kr
+                          </td>
+                          <td className="px-4 py-3">
+                            från {(m2 * 2000).toLocaleString("sv-SE")} kr
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-sm text-muted-foreground mb-6">
+                  Riktpriser inkl. material och arbete, före ROT-avdrag.
+                  {location.isIsland
+                    ? ` Transport till ${location.name} ingår i offerten.`
+                    : " Slutligt fast pris sätts efter kostnadsfri besiktning."}{" "}
+                  <Link to="/priser" className="text-primary hover:underline">
+                    Se hela prislistan
+                  </Link>
+                  .
                 </p>
 
                 {/* Deep internal links */}
