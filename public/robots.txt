@@ -1,15 +1,30 @@
+# robots.txt — RoslagsTak (roslagstak.se)
+# Indexerbart: startsida, tjänstesidor, prissidor, FAQ/offert, guider och
+# hubbsidor per ort (/taklaggare-<ort> samt /<tjanst>-<ort>).
+# Dubbletter styrs med rel=canonical i sidhuvudet, inte med Disallow, så att
+# Google kan läsa canonical-taggen och slå ihop signalerna till primärversionen.
+
 User-agent: *
 Allow: /
+Allow: /tjanster/
+Allow: /priser
+Allow: /offert
+Allow: /taklaggare-
 Disallow: /admin
 Disallow: /admin/
+Disallow: /*?*
 
 User-agent: Googlebot
 Allow: /
+Allow: /tjanster/
+Allow: /taklaggare-
 Disallow: /admin
 Disallow: /admin/
 
 User-agent: Bingbot
 Allow: /
+Allow: /tjanster/
+Allow: /taklaggare-
 Disallow: /admin
 Disallow: /admin/
 
