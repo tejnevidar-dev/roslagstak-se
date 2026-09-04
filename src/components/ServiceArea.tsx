@@ -194,8 +194,9 @@ const ServiceArea = () => {
               </p>
               <p>
                 I <strong className="font-semibold">hela Storstockholm</strong> — från <strong className="font-semibold">takbyte i Solna</strong> och <strong className="font-semibold">bandtäckning i Danderyd</strong> till
-                <strong className="font-semibold"> takrenovering i Nacka</strong> och <strong className="font-semibold">plåttak i Bromma</strong> — är vi din takläggare. Vi arbetar i Stockholm stad, Solna, Sundbyberg,
-                Danderyd, Sollentuna, Lidingö, Nacka, Värmdö, Tyresö, Haninge, Ekerö, Järfälla, Huddinge, Sigtuna, Upplands Väsby och Nynäshamn.
+                <strong className="font-semibold"> takrenovering i Nacka</strong> och <strong className="font-semibold">plåttak i Bromma</strong> — är vi din takläggare. Vi arbetar i Stockholm stad och Södermalm, Östermalm,
+                Kungsholmen och Vasastan; norrort i Solna, Sundbyberg, Danderyd, Sollentuna och Upplands Väsby; nordväst i Järfälla, Upplands-Bro och Sigtuna; västerort i Bromma, Hässelby, Vällingby och Spånga;
+                österut på Lidingö, i Nacka och Värmdö; sydöst i Tyresö, Haninge, Vendelsö, Vega och Nynäshamn; söderut i Huddinge, Älvsjö, Enskede, Farsta, Skarpnäck och Skärholmen; samt sydväst på Ekerö och i Botkyrka, Salem och Södertälje.
               </p>
               <p>
                 Oavsett om du söker <strong className="font-semibold">takbyte i Stockholm</strong>, <strong className="font-semibold">takbyte i Roslagen</strong>, behöver en <strong className="font-semibold">takläggare på en ö utan bro</strong> eller
