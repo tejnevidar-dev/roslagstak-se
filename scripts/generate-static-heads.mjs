@@ -125,7 +125,42 @@ for (const { path, robots } of routes) {
   written++;
 }
 
+/* Alias-/dubblett-URL:er: hostingen kan inte skicka riktig 301 för SPA-filer,
+   så varje alias får en egen sida med rel=canonical mot primärversionen,
+   noindex + meta-refresh och en JS-redirect. Sökmotorer slår ihop signalerna
+   och besökare hamnar direkt på den kanoniska sidan. */
+const aliasEntries = [
+  ["/tjanster/takvard", "/tjanster/taktvatt"],
+  ["/taktvatt", "/tjanster/taktvatt"],
+  ["/radgivning", "/kontakt"],
+  ["/konsultation", "/kontakt"],
+  ["/boka", "/kontakt"],
+];
+let aliases = 0;
+for (const [alias, target] of aliasEntries) {
+  const targetUrl = `${SITE_URL}${target}`;
+  const html = `<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flyttad — RoslagsTak</title>
+    <link rel="canonical" href="${targetUrl}" />
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content="0; url=${target}" />
+    <script>window.location.replace("${target}" + window.location.search + window.location.hash);</script>
+  </head>
+  <body>
+    <p>Sidan har flyttat till <a href="${target}">${targetUrl}</a>.</p>
+  </body>
+</html>
+`;
+  const out = resolve(dist, `.${alias}/index.html`);
+  mkdirSync(dirname(out), { recursive: true });
+  writeFileSync(out, html);
+  aliases++;
+}
+
 rmSync(bundlePath, { force: true });
 console.log(
-  `[static-heads] wrote ${written} prerendered files (${prerendered} with page text)`,
+  `[static-heads] wrote ${written} prerendered files (${prerendered} with page text, ${aliases} alias-redirects)`,
 );
