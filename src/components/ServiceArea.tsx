@@ -19,15 +19,21 @@ const regionDescriptions: Record<string, string> = {
   Österåker:
     "Takbyte, takomläggning och bandtäckning i Åkersberga och Österskär — från 70-talsvillor till komplexa tak med kupor och torn.",
   "Stockholms stad":
-    "Takläggare i hela Stockholms kommun — från innerstadens kulturhistoriska tak till villataken i Bromma och Farsta. Logistik för tätbebyggda kvarter.",
-  "Norrort Stockholm":
-    "Takbyte, takrenovering och bandtäckning i Solna, Sundbyberg, Danderyd, Sollentuna, Järfälla, Upplands Väsby, Sigtuna och på Lidingö.",
-  Södertörn:
-    "Takläggare i Nacka, Tyresö, Haninge, Huddinge och Nynäshamn — villatak, radhus och bostadsrättsfastigheter söder om stan.",
-  "Värmdö & östra skärgården":
-    "Takprojekt i Värmdö och Stockholms östra skärgård — där vi ofta transporterar material sjövägen.",
-  "Mälaröarna & västerort":
-    "Takbyte och takomläggning på Ekerö och Mälaröarna — kulturhistoriska tegeltak och sjönära plåttak.",
+    "Takläggare i Stockholms innerstad — från Gamla stan och Södermalm till Östermalm, Kungsholmen och Vasastan. Takarbeten på kulturhistoriska tak och bostadsrättsfastigheter i tätbebyggda kvarter.",
+  "Norra Stockholm":
+    "Takbyte, takrenovering och plåtarbeten i Solna, Sundbyberg, Danderyd, Sollentuna och Upplands Väsby — norra Stockholms villabälte och bostadsrättsområden.",
+  "Nordvästra Stockholm":
+    "Takläggare i Järfälla, Upplands-Bro och Sigtuna — från miljonprogramstak till villatak och kulturhistorisk bebyggelse i Sigtuna.",
+  Västerort:
+    "Takbyte och takrenovering i Bromma, Hässelby, Vällingby och Spånga — västra Stockholms trädgårdsstäder och villaområden.",
+  "Östra Stockholm":
+    "Takläggare på Lidingö, i Nacka och Värmdö — östra Stockholms ö- och skärgårdskommuner med fukt- och vindkrav på takmaterial.",
+  "Sydöstra Stockholm":
+    "Takbyte och takrenovering i Tyresö, Haninge, Vendelsö, Vega och Nynäshamn — sydöstra Stockholms kust- och skärgårdsområden.",
+  "Södra Stockholm":
+    "Takläggare i Huddinge, Älvsjö, Enskede, Farsta, Skarpnäck och Skärholmen — södra Stockholms villor, radhus och bostadsrättsfastigheter.",
+  "Sydvästra Stockholm":
+    "Takbyte, takrenovering och plåtarbeten på Ekerö och i Botkyrka, Salem och Södertälje — sydvästra Stockholms sjönära och kommunala takprojekt.",
 };
 
 const regionOrder = [
@@ -39,10 +45,13 @@ const regionOrder = [
   "Roslagens inland",
   "Österåker",
   "Stockholms stad",
-  "Norrort Stockholm",
-  "Södertörn",
-  "Värmdö & östra skärgården",
-  "Mälaröarna & västerort",
+  "Norra Stockholm",
+  "Nordvästra Stockholm",
+  "Västerort",
+  "Östra Stockholm",
+  "Sydöstra Stockholm",
+  "Södra Stockholm",
+  "Sydvästra Stockholm",
 ];
 
 const areas = regionOrder
@@ -79,7 +88,7 @@ const ServiceArea = () => {
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
                 Vi utför takbyte, takrenovering och takomläggning på {allLocations.length}+ platser i
-                Roslagens skärgård och längs kusten. Bor du på en ö utan bro tar vi oss dit sjövägen.
+                Roslagens skärgård och hela Storstockholm. Bor du på en ö utan bro tar vi oss dit sjövägen.
               </p>
 
               <dl className="mt-10 grid grid-cols-2 bg-card text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
@@ -185,8 +194,9 @@ const ServiceArea = () => {
               </p>
               <p>
                 I <strong className="font-semibold">hela Storstockholm</strong> — från <strong className="font-semibold">takbyte i Solna</strong> och <strong className="font-semibold">bandtäckning i Danderyd</strong> till
-                <strong className="font-semibold"> takrenovering i Nacka</strong> och <strong className="font-semibold">plåttak i Bromma</strong> — är vi din takläggare. Vi arbetar i Stockholm stad, Solna, Sundbyberg,
-                Danderyd, Sollentuna, Lidingö, Nacka, Värmdö, Tyresö, Haninge, Ekerö, Järfälla, Huddinge, Sigtuna, Upplands Väsby och Nynäshamn.
+                <strong className="font-semibold"> takrenovering i Nacka</strong> och <strong className="font-semibold">plåttak i Bromma</strong> — är vi din takläggare. Vi arbetar i Stockholm stad och Södermalm, Östermalm,
+                Kungsholmen och Vasastan; norrort i Solna, Sundbyberg, Danderyd, Sollentuna och Upplands Väsby; nordväst i Järfälla, Upplands-Bro och Sigtuna; västerort i Bromma, Hässelby, Vällingby och Spånga;
+                österut på Lidingö, i Nacka och Värmdö; sydöst i Tyresö, Haninge, Vendelsö, Vega och Nynäshamn; söderut i Huddinge, Älvsjö, Enskede, Farsta, Skarpnäck och Skärholmen; samt sydväst på Ekerö och i Botkyrka, Salem och Södertälje.
               </p>
               <p>
                 Oavsett om du söker <strong className="font-semibold">takbyte i Stockholm</strong>, <strong className="font-semibold">takbyte i Roslagen</strong>, behöver en <strong className="font-semibold">takläggare på en ö utan bro</strong> eller
