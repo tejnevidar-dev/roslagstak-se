@@ -12,6 +12,7 @@ export const allServiceSlugs = [
   "betongpannor",
   "tegeltak",
   "takmalning",
+  "taktvatt",
 ] as const satisfies readonly string[];
 
 export type ServiceSlug = (typeof allServiceSlugs)[number];
