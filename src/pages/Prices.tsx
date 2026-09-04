@@ -103,7 +103,7 @@ const Prices = () => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
         <div className="container mx-auto px-4">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Brödsmulor">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
             <span>/</span>
             <span className="text-foreground font-medium">Priser</span>
