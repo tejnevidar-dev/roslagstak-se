@@ -29,6 +29,9 @@ const TrustBar = () => (
         </li>
       ))}
     </ul>
+    <div className="mx-auto mt-10 flex max-w-5xl justify-center px-6 lg:mt-12">
+      <GoogleReviews variant="inline" className="text-seafoam" />
+    </div>
   </section>
 );
 
