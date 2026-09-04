@@ -21,11 +21,13 @@ const regionDescriptions: Record<string, string> = {
   "Stockholms stad":
     "Takläggare i hela Stockholms kommun — från innerstadens kulturhistoriska tak till villataken i Bromma och Farsta. Logistik för tätbebyggda kvarter.",
   "Norrort Stockholm":
-    "Takbyte, takrenovering och bandtäckning i Solna, Sundbyberg, Danderyd, Sollentuna och på Lidingö — exklusiva villatak och bostadsrättsfastigheter.",
-  "Söderort Stockholm":
-    "Takläggare i Nacka, Värmdö, Tyresö och Haninge — från villor till skärgårdstak där vi transporterar material sjövägen.",
-  "Västerort Stockholm":
-    "Takbyte och takomläggning i Ekerö, Järfälla, Huddinge, Sigtuna, Upplands Väsby och Nynäshamn — från kulturhistoriska tegeltak till kustnära plåttak.",
+    "Takbyte, takrenovering och bandtäckning i Solna, Sundbyberg, Danderyd, Sollentuna, Järfälla, Upplands Väsby, Sigtuna och på Lidingö.",
+  Södertörn:
+    "Takläggare i Nacka, Tyresö, Haninge, Huddinge och Nynäshamn — villatak, radhus och bostadsrättsfastigheter söder om stan.",
+  "Värmdö & östra skärgården":
+    "Takprojekt i Värmdö och Stockholms östra skärgård — där vi ofta transporterar material sjövägen.",
+  "Mälaröarna & västerort":
+    "Takbyte och takomläggning på Ekerö och Mälaröarna — kulturhistoriska tegeltak och sjönära plåttak.",
 };
 
 const regionOrder = [
@@ -38,8 +40,9 @@ const regionOrder = [
   "Österåker",
   "Stockholms stad",
   "Norrort Stockholm",
-  "Söderort Stockholm",
-  "Västerort Stockholm",
+  "Södertörn",
+  "Värmdö & östra skärgården",
+  "Mälaröarna & västerort",
 ];
 
 const areas = regionOrder

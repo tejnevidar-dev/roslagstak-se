@@ -855,7 +855,7 @@ export const locations: LocationData[] = [
   {
     slug: "nacka",
     name: "Nacka",
-    region: "Söderort Stockholm",
+    region: "Södertörn",
     isIsland: false,
     description: "Takläggare i Nacka — takbyte, takrenovering och plåtarbeten i östra Stockholm. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Nacka kommun sträcker sig från tät bebyggelse vid Järla och Sicklaö till skogsnära villor i Saltsjöbaden och Älta. Taken varierar från industribyggnaders plåttak till exklusiva villatak i Saltsjöbaden. Vi utför takbyten, takomläggningar och plåtarbeten i hela Nacka kommun med material anpassat för varje stadsdel. Många tak i Älta och Nackanäs är nu 30–40 år och mogna för omläggning.",
@@ -872,7 +872,7 @@ export const locations: LocationData[] = [
   {
     slug: "varmdo",
     name: "Värmdö",
-    region: "Söderort Stockholm",
+    region: "Värmdö & östra skärgården",
     isIsland: false,
     description: "Takläggare i Värmdö — takbyte, takrenovering och plåtarbeten i Stockholms södra skärgård. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Värmdö är en stor kommun som sträcker sig från tätorten Gustavsberg ut genom södra skärgården till öar som Sandhamn och Möja. Bebyggelsen varierar från villaområden till fritidshus och skärgårdsgårdar. Taken utsätts för samma salt och vind som i norra skärgården — och vi har erfarenhet av att arbeta i hela Värmdö, inklusive öar som nås med båt. Vi utför takbyten, takomläggningar och plåtarbeten med material valt för skärgårdsklimatet.",
@@ -889,7 +889,7 @@ export const locations: LocationData[] = [
   {
     slug: "tyreso",
     name: "Tyresö",
-    region: "Söderort Stockholm",
+    region: "Södertörn",
     isIsland: false,
     description: "Takläggare i Tyresö — takbyte, takrenovering och plåtarbeten i södra Stockholm. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Tyresö sträcker sig från villabebyggelse i Bollmora till skog- och sjönära hus vid Tyresö slott och ut mot Älvudden. Bebyggelsen är en blandning av äldre villor, 70-talsradhus och nyare bostadsområden. Många tak är nu mogna för omläggning. Vi utför takbyten och takrenoveringar i Tyresö med både plåt och pannor, och lämnar fast pris efter kostnadsfri besiktning.",
@@ -906,7 +906,7 @@ export const locations: LocationData[] = [
   {
     slug: "haninge",
     name: "Haninge",
-    region: "Söderort Stockholm",
+    region: "Södertörn",
     isIsland: false,
     description: "Takläggare i Haninge — takbyte, takrenovering och plåtarbeten söder om Stockholm. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Haninge kommun omfattar Handen, Vendelsö, Dalarö och skärgårdsöarna ut mot Ornö och Utö. Bebyggelsen är varierad — villaområden, fritidshus och skärgårdsgårdar. Vi utför takbyten, takomläggningar och plåtarbeten i hela Haninge, inklusive öarna i södra skärgården där vi transporterar material sjövägen. Vi anpassar material efter det fuktiga, salta klimatet nära havet.",
@@ -923,7 +923,7 @@ export const locations: LocationData[] = [
   {
     slug: "ekero",
     name: "Ekerö",
-    region: "Västerort Stockholm",
+    region: "Mälaröarna & västerort",
     isIsland: true,
     description: "Takläggare på Ekerö — takbyte, takrenovering och plåtarbeten på en ö i Mälaren. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Ekerö är en ö i Mälaren med en varierad bebyggelse — från kungsgårdshistoria i Drottningholm till villor i Mälarstrand och fritidshus ut mot ön. Taken utsätts för fukt och vind från Mälaren. Vi utför takbyten, takomläggningar och plåtarbeten på Ekerö med material valt för det sjönära klimatet. Många hus har tegeltak eller plåttak från 1950-talet som nu behöver omläggning.",
@@ -940,7 +940,7 @@ export const locations: LocationData[] = [
   {
     slug: "jarfalla",
     name: "Järfälla",
-    region: "Västerort Stockholm",
+    region: "Norrort Stockholm",
     isIsland: false,
     description: "Takläggare i Järfälla — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri besiktning, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Järfälla har en stor andel miljonprogrambebyggelse och villaområden från 70-talet, med bostadsrättsfastigheter i Jakobsberg och villor i Kallhäll och Stäket. Många tak är nu 40–50 år gamla och mogna för byte. Vi utför takbyten och takomläggningar i Järfälla med både plåttak och betongpannor, och hanterar stora takytor effektivt. Vi lämnar fast pris efter kostnadsfri besiktning.",
@@ -957,7 +957,7 @@ export const locations: LocationData[] = [
   {
     slug: "huddinge",
     name: "Huddinge",
-    region: "Västerort Stockholm",
+    region: "Södertörn",
     isIsland: false,
     description: "Takläggare i Huddinge — takbyte, takrenovering och plåtarbeten söder om Stockholm. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Huddinge har en stor villabebyggelse och bostadsrättsområden i Flemingsberg, Fullregatorp och Stuvsta. Många tak från 60- och 70-talet är nu mogna för omläggning eller byte. Vi utför takbyten, takomläggningar och plåtarbeten i Huddinge med både plåttak och betongpannor. Vi lämnar fast pris efter kostnadsfri besiktning och kan ofta starta inom några veckor.",
@@ -974,7 +974,7 @@ export const locations: LocationData[] = [
   {
     slug: "sigtuna",
     name: "Sigtuna",
-    region: "Västerort Stockholm",
+    region: "Norrort Stockholm",
     isIsland: false,
     description: "Takläggare i Sigtuna — takbyte, takrenovering och plåtarbeten i en av Sveriges äldsta städer. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Sigtuna är en av Sveriges äldsta städer med medeltida gaturum, tegelhus och en kulturmiljö som ställer höga krav på takläggning. Taken i centrala Sigtuna är ofta tegeltak och plåttak från tidigt 1900-tal. Vi utför takbyten, takrenoveringar och plåtarbeten i Sigtuna med respekt för den kulturhistoriska bebyggelsen — tegelpannor, dubbelfalsad plåt och handfalsade beslag. I nyare områden som Märsta arbetar vi med moderna plåttak.",
@@ -991,7 +991,7 @@ export const locations: LocationData[] = [
   {
     slug: "upplands-vasby",
     name: "Upplands Väsby",
-    region: "Västerort Stockholm",
+    region: "Norrort Stockholm",
     isIsland: false,
     description: "Takläggare i Upplands Väsby — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri besiktning, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Upplands Väsby har en stor villabebyggelse och bostadsrättsområden från 70- och 80-talet. Många tak är nu 30–40 år gamla med betongpannor som frostspränger och underlagspapp som torkat sönder. Vi utför takbyten, takomläggningar och plåtarbeten i Upplands Väsby med både plåttak och betongpannor, alltid med ny taksäkerhet och fungerande ventilation. Vi lämnar fast pris efter kostnadsfri besiktning.",
@@ -1008,7 +1008,7 @@ export const locations: LocationData[] = [
   {
     slug: "nynashamn",
     name: "Nynäshamn",
-    region: "Västerort Stockholm",
+    region: "Södertörn",
     isIsland: false,
     description: "Takläggare i Nynäshamn — takbyte, takrenovering och plåtarbeten i kustläge söder om Stockholm. Fast pris, 10+30 års garanti och ROT-avdrag.",
     longDescription: "Nynäshamn ligger längst söderut i Stockholms län med direktkontakt med öppet hav — ett kustläge som sliter hårt på takmaterial med salt, vind och fukt. Bebyggelsen varierar från villor i tätorten till fritidshus ut mot kusten. Vi utför takbyten, takrenoveringar och plåtarbeten i Nynäshamn med material valt för det hårda kustklimatet — korrosionsbeständig plåt och förstärkta infästningar.",
