@@ -13,7 +13,7 @@ import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
-import { regionBySlug, regionIntros, regionLongText } from "../src/data/regions";
+import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
 
 export interface PrerenderPage {
   h1: string;
@@ -185,6 +185,25 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
           .filter((p) => p.slug !== post.slug)
           .slice(0, 8)
           .map((p) => ({ href: `/blogg/${p.slug}`, label: p.title })),
+      ],
+    };
+  }
+
+  if (clean === "/omraden") {
+    return {
+      h1: "Takläggare i Roslagen och hela Storstockholm",
+      intro: `RoslagsTak utför takbyte, takomläggning, takrenovering, plåtarbeten och takvård i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad.`,
+      paragraphs: [
+        "Välj ditt område nedan för lokala priser, vanliga taktyper och hur ett takprojekt går till just där.",
+        `Ring ${PHONE} för kostnadsfri besiktning och fast pris.`,
+      ],
+      links: [
+        ...primaryLinks,
+        ...Object.entries(regionSlugs).map(([region, slug]) => ({
+          href: `/omraden/${slug}`,
+          label: `Takläggare i ${region}`,
+        })),
+        ...locationLinks,
       ],
     };
   }
