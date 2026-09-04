@@ -1,6 +1,6 @@
 import { Star, ExternalLink, ShieldCheck, MapPin } from "lucide-react";
 
-const GOOGLE_REVIEWS_URL = "https://share.google/FsdpfTq9H3amLoTPe";
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/search/?api=1&query=RoslagsTak%20Blid%C3%B6";
 
 interface GoogleReviewsProps {
   /** Rubrik ovanför knappen. */
