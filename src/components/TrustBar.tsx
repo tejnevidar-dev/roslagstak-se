@@ -2,7 +2,7 @@ const items = [
   { value: "10 + 30 år", label: "Utförande- & materialgaranti" },
   { value: "Fast pris", label: "Inga dolda kostnader" },
   { value: "0 kr", label: "Hembesök & offert utan förpliktelser", accent: true },
-  { value: "ROT", label: "Vi sköter ansökan & papper" },
+  { value: "10 års", label: "Erfarenhet från Roslagen & Stockholm" },
 ];
 
 
