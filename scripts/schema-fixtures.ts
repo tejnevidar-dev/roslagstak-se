@@ -7,7 +7,7 @@ import { buildBreadcrumbSchema, buildFaqSchema, buildLocalBusinessSchema, servic
 import { locations } from "../src/data/locations";
 import { generateLocationFAQs, generateServiceLocationFAQs } from "../src/data/location-faqs";
 import { allServiceSlugs } from "../src/data/service-slugs";
-import { serviceSlugsFromTypes } from "../src/data/service-location-combos";
+import { getCombo, serviceSlugsFromTypes } from "../src/data/service-location-combos";
 
 export interface SchemaSample {
   /** Sidan schemat hör till (för felmeddelanden). */
@@ -66,11 +66,13 @@ export const collectSchemas = (): SchemaSample[] => {
 
     for (const service of allServiceSlugs) {
       const url = `/${service}-${loc.slug}`;
+      const combo = getCombo(service, loc.slug);
+      if (!combo) continue;
       samples.push({
         page: url,
         kind: "FAQPage",
         schema: buildFaqSchema(
-          generateServiceLocationFAQs(service, loc.name, prep, loc.isIsland),
+          generateServiceLocationFAQs(combo.serviceName, combo.locationName, combo.prep, loc.isIsland),
           `${SITE_URL}${url}`,
         ) as Record<string, unknown>,
       });
