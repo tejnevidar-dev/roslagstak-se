@@ -299,7 +299,7 @@ const LocationPage = () => {
                 {/* Deep internal links */}
                 <div className="bg-card border border-border rounded-lg p-5 mb-6">
                   <h3 className="font-display text-lg text-card-foreground mb-3">
-                    Populära tjänster {prep} {location.name}
+                    Tjänster, priser och guider {prep} {location.name}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-2">
                     <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
@@ -332,11 +332,23 @@ const LocationPage = () => {
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
                     </Link>
-                    <Link to="/tjanster/takvard" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                    <Link to="/tjanster/taktvatt" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Taktvätt & takmålning
                     </Link>
                     <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Se prislista för takbyte
+                    </Link>
+                    <Link to="/taktyper" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Taktyper & material
+                    </Link>
+                    <Link to="/hur-det-gar-till" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Så går ett takbyte till
+                    </Link>
+                    <Link to="/offert#faq" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Vanliga frågor om takarbete
+                    </Link>
+                    <Link to="/offert" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> Räkna ut pris på ditt tak
                     </Link>
                     <Link to="/blogg/valja-ratt-tak-roslagen" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Guide: Välj rätt tak

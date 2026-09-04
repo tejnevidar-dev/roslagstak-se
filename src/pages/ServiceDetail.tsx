@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import { services } from "@/components/Services";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { canonicalPath } from "@/lib/canonical";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
 import { serviceBlocks } from "@/data/service-blocks";
@@ -443,20 +445,24 @@ const ServiceDetail = () => {
         description={blocks.seoDescription}
         canonical={`https://roslagstak.se/tjanster/${slug}`}
       />
-      <Header
-        breadcrumb={[
-          { label: "Startsidan", to: "/" },
-          { label: "Tjänster", to: "/#tjanster" },
-          { label: service.title },
-        ]}
-      />
+      <Header />
       <main>
+        <div className="pt-24">
+          <Breadcrumbs
+            items={[
+              { name: "Hem", path: "/" },
+              { name: "Tjänster", path: "/#tjanster" },
+              { name: service.title, path: `/tjanster/${slug}` },
+            ]}
+            withSchema={false}
+          />
+        </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
 
         {/* Hero — asymmetriskt dokumentärt rutnät */}
-        <section className="bg-background pb-16 pt-32 lg:pb-20 lg:pt-36">
+        <section className="bg-background pb-16 pt-12 lg:pb-20 lg:pt-16">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
             <div className="flex flex-col gap-8">
               <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
@@ -880,7 +886,7 @@ const ServiceDetail = () => {
                 ...services
                   .filter((s) => s.slug !== slug)
                   .slice(0, 4)
-                  .map((s) => ({ to: `/tjanster/${s.slug}`, label: s.title })),
+                  .map((s) => ({ to: canonicalPath(`/tjanster/${s.slug}`), label: s.title })),
                 ...(blocks.relatedLinks ?? []),
 
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },

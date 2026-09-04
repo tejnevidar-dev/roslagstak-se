@@ -1,4 +1,5 @@
 import { services } from "@/components/Services";
+import { canonicalPath } from "@/lib/canonical";
 
 export interface InternalLink {
   to: string;
@@ -42,7 +43,7 @@ export const hubLinks: InternalLink[] = [
 
 /** Alla tjänstesidor som länkbara kort. */
 export const serviceLinks: InternalLink[] = services.map((service) => ({
-  to: `/tjanster/${service.slug}`,
+  to: canonicalPath(`/tjanster/${service.slug}`),
   label: service.title,
   description: service.short,
 }));
