@@ -35,7 +35,7 @@ const regionOrder = [
   "Rådmansöhalvön",
   "Norra Roslagen",
   "Roslagens inland",
-  Österåker,
+  "Österåker",
   "Stockholms stad",
   "Norrort Stockholm",
   "Söderort Stockholm",
