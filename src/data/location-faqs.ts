@@ -98,10 +98,10 @@ export const generateServiceLocationFAQs = (
         question: `När är bästa tiden för taktvätt ${prep} ${locationName}?`,
         answer: `Bästa tid för taktvätt ${prep} ${locationName} är från april till oktober när det är torrt och plusgrader. Vi planerar arbetet efter väderprognos för bästa resultat. ${isIsland ? "På öar planerar vi extra noga eftersom transport av utrustning kräver bra väder." : "Vi kan oftast utföra taktvätt inom 1–2 veckor från beställning."}`,
       },
-    ];
+    ]);
   }
 
-  return [
+  return tidy([
     {
       question: `Vad kostar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
       answer: isTakbyte
@@ -126,5 +126,5 @@ export const generateServiceLocationFAQs = (
       question: `Erbjuder ni garanti på ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
       answer: `Ja, alla våra ${isTakbyte ? "takbyten" : "takrenoveringar"} ${prep} ${locationName} utförs med 10 års garanti på material och utförande. Alla arbeten följer AMA Hus — branschstandarden i Sverige.`,
     },
-  ];
+  ]);
 };
