@@ -308,9 +308,9 @@ export const locations: LocationData[] = [
       "Spillersboda är en av de platser längs Roslagskusten där vi ofta arbetar. Fastighetsägare i Spillersboda uppskattar vår ärlighet — vi rekommenderar aldrig ett takbyte om en renovering räcker. Den lokala närvaron ger korta restider och snabb återkoppling. Vi har lagt allt från tegelplåt och pannplåt till TP20 i Spillersboda med nöjda kunder som referens.",
     uniqueFAQ: {
       question:
-        "Behöver jag byta hela taket eller räcker en renovering i Spillersboda?",
+        "Hur påverkar havsluften i Spillersboda takets livslängd?",
       answer:
-        "Det beror på takets skick. Vi gör kostnadsfri takinspektion i Spillersboda där vi bedömer om en renovering räcker eller om det behövs ett komplett byte. Ibland kan byte av underlagspapp och beslag förlänga takets livslängd med 15–20 år. Vi ger alltid en ärlig rekommendation.",
+        "Den fuktiga luften från kusten gör att mossa och alger får fäste snabbare, och att plåtbeslag och spik rostar tidigare än längre in i landet. Vid besiktningen i Spillersboda kontrollerar vi därför beslag, infästningar och råspont extra noga, och föreslår material som klarar kustklimatet.",
     },
     primaryKeyword: "takläggare Spillersboda",
     lat: 59.7,
