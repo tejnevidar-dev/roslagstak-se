@@ -2,7 +2,7 @@ const items = [
   { value: "10 + 30 år", label: "Utförande- & materialgaranti" },
   { value: "Fast pris", label: "Inga dolda kostnader" },
   { value: "0 kr", label: "Hembesök & offert utan förpliktelser", accent: true },
-  { value: "ROT", label: "Avdraget direkt på fakturan" },
+  { value: "ROT", label: "Vi sköter ansökan & papper" },
 ];
 
 
