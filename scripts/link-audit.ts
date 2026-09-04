@@ -87,6 +87,7 @@ for (const file of files) {
         .replace(/<[^>]*>/g, " ")
         .replace(/\{[^}]*\}/g, " ")
         .replace(/className=("[^"]*"|\{[^}]*\})/g, " ")
+        .replace(/[<>{}]/g, " ")
         .replace(/\s+/g, " ")
         .trim();
       links.push({ file: file.replace(resolve(".") + "/", ""), raw, anchor });
