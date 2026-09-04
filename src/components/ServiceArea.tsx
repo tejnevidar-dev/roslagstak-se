@@ -1,5 +1,4 @@
-import { MapPin, Anchor } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Anchor } from "lucide-react";
 
 import { locations } from "@/data/locations";
 
@@ -62,12 +61,6 @@ const areas = regionOrder
     description: regionDescriptions[region] ?? "",
   }));
 
-const locationSlugMap: Record<string, string> = Object.fromEntries(
-  locations.map((l) => [l.name, l.slug]),
-);
-
-const allLocations = areas.flatMap((a) => a.locations);
-
 /* Marin geografisektion: teal fält, vit sifferpanel och regioner som sjökortsrader */
 const ServiceArea = () => {
   return (
@@ -87,25 +80,25 @@ const ServiceArea = () => {
                 <span className="italic text-seafoam">ytterskärgård.</span>
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
-                Vi utför takbyte, takrenovering och takomläggning på {allLocations.length}+ platser i
+                Vi utför takbyte, takrenovering och takomläggning i {areas.length} områden i
                 Roslagens skärgård och hela Storstockholm. Bor du på en ö utan bro tar vi oss dit sjövägen.
               </p>
 
               <dl className="mt-10 grid grid-cols-2 bg-card text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
                 <div className="border-r border-border p-7">
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                    Orter
-                  </dt>
-                  <dd className="mt-2 font-display text-3xl font-bold tabular-nums text-accent">
-                    {allLocations.length}+
-                  </dd>
-                </div>
-                <div className="p-7">
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                     Områden
                   </dt>
                   <dd className="mt-2 font-display text-3xl font-bold tabular-nums text-accent">
                     {areas.length}
+                  </dd>
+                </div>
+                <div className="p-7">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                    Utgår från
+                  </dt>
+                  <dd className="mt-2 font-display text-3xl font-bold text-accent">
+                    Blidö
                   </dd>
                 </div>
               </dl>
@@ -130,31 +123,6 @@ const ServiceArea = () => {
                     <p className="mt-3 max-w-2xl text-[16px] font-light leading-relaxed text-marine-foreground/80">
                       {area.description}
                     </p>
-                    <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
-                      {area.locations.map((loc) => {
-                        const slug = locationSlugMap[loc];
-                        return slug ? (
-                          <Link
-                            key={loc}
-                            to={`/taklaggare-${slug}`}
-                            className="group inline-flex items-center gap-1.5 text-[16px] font-semibold"
-                          >
-                            <MapPin className="h-3.5 w-3.5 text-seafoam" aria-hidden="true" />
-                            <span className="border-b border-transparent pb-0.5 transition-colors group-hover:border-seafoam group-hover:text-seafoam">
-                              {loc}
-                            </span>
-                          </Link>
-                        ) : (
-                          <span
-                            key={loc}
-                            className="inline-flex items-center gap-1.5 text-[16px] text-marine-foreground/70"
-                          >
-                            <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-                            {loc}
-                          </span>
-                        );
-                      })}
-                    </div>
                   </div>
                 </div>
               </div>
