@@ -397,6 +397,641 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/taktvatt-blido</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-ljustero</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-yxlan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-furusund</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-husaro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-finnhamn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-ingmarso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hogmarso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-svartloga</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-sodorora</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-humlo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-norrora</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-grasko</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-spillersboda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-radmanso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-bergshamra</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-svartno</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vaddo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vato</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-norrtalje</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vaxholm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-singo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-grisslehamn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-arholma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-rimbo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hallstavik</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-almsta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-herrang</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-edsbro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-riala</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-graddo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-kapellskar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-akersberga</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-osterskar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vallentuna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-taby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-stockholm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-sodermalm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-ostermalm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-bromma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-kungsholmen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vasastan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-skarholmen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-farsta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-solna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-sundbyberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-danderyd</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-sollentuna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-lidingo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-nacka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-varmdo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-tyreso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-haninge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-ekero</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-jarfalla</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-huddinge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-sigtuna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-upplands-vasby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-nynashamn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hasselby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vallingby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-spanga</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vendelso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vega</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-alvsjo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-enskede</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-skarpnack</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-botkyrka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-salem</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-sodertalje</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-upplands-bro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hammarby-sjostad</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-liljeholmen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-arsta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hagersten</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-grondal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-aspudden</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-haggvik</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-helenelund</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-edsberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-rotebro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-norrviken</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-stocksund</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-enebyberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-jakobsberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-barkarby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-kallhall</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-viksjo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-bro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-kungsangen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-marsta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-blackeberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-nockeby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-abrahamsberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-angby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-kista</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-akalla</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-tensta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-saltsjobaden</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-fisksatra</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-saltsjo-boo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-alta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-gustavsberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-ingaro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hemmesta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-trollbacken</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-brandbergen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-handen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-jordbro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-vasterhaninge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-tungelsta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-dalaro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-stuvsta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-trangsund</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-skogas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-segeltorp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-bandhagen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hogdalen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-hokarangen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-tumba</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-tullinge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-norsborg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-alby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-fittja</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-ronninge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-jarna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taktvatt-edsviken</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/taklaggare-blido</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1047,11 +1682,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-blido</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-blido</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1088,11 +1718,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-ljustero</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-ljustero</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1137,11 +1762,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-yxlan</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-yxlan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1178,11 +1798,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-furusund</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-furusund</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1227,11 +1842,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-husaro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-husaro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1268,11 +1878,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-finnhamn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-finnhamn</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1317,11 +1922,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-ingmarso</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-ingmarso</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1358,11 +1958,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-hogmarso</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-hogmarso</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1407,11 +2002,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-svartloga</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-svartloga</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1448,11 +2038,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-sodorora</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-sodorora</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1497,11 +2082,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-humlo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-humlo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1538,11 +2118,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-norrora</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-norrora</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1587,11 +2162,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-grasko</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-grasko</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1628,11 +2198,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-spillersboda</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-spillersboda</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1677,11 +2242,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-radmanso</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-radmanso</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1718,11 +2278,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-bergshamra</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-bergshamra</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1767,11 +2322,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-svartno</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-svartno</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1808,11 +2358,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-vaddo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-vaddo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1857,11 +2402,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-vato</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-vato</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1898,11 +2438,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-norrtalje</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-norrtalje</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1947,11 +2482,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-vaxholm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-vaxholm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1988,11 +2518,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-singo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-singo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2037,11 +2562,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-grisslehamn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-grisslehamn</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2078,11 +2598,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-arholma</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-arholma</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2127,11 +2642,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-rimbo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-rimbo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2168,11 +2678,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-hallstavik</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-hallstavik</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2217,11 +2722,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-almsta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-almsta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2258,11 +2758,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-herrang</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-herrang</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2307,11 +2802,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-edsbro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-edsbro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2348,11 +2838,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-riala</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-riala</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2397,11 +2882,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-graddo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-graddo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2438,11 +2918,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-kapellskar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-kapellskar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2487,11 +2962,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-akersberga</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-akersberga</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2528,11 +2998,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-osterskar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-osterskar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2577,11 +3042,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-vallentuna</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-vallentuna</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2618,11 +3078,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-taby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-taby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2667,11 +3122,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-stockholm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-stockholm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2708,11 +3158,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-sodermalm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-sodermalm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2757,11 +3202,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-ostermalm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-ostermalm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2798,11 +3238,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-bromma</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-bromma</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2847,11 +3282,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-kungsholmen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-kungsholmen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2888,11 +3318,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-vasastan</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-vasastan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2937,11 +3362,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-skarholmen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-skarholmen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2978,11 +3398,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-farsta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-farsta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3027,11 +3442,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-solna</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-solna</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3068,11 +3478,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-sundbyberg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-sundbyberg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3117,11 +3522,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-danderyd</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-danderyd</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3158,11 +3558,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-sollentuna</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-sollentuna</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3207,11 +3602,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-lidingo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-lidingo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3248,11 +3638,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-nacka</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-nacka</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3297,11 +3682,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-varmdo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-varmdo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3338,11 +3718,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-tyreso</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-tyreso</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3387,11 +3762,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-haninge</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-haninge</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3428,11 +3798,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-ekero</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-ekero</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3477,11 +3842,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-jarfalla</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-jarfalla</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3518,11 +3878,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-huddinge</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-huddinge</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3567,11 +3922,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-sigtuna</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-sigtuna</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3608,11 +3958,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-upplands-vasby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-upplands-vasby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3657,11 +4002,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-nynashamn</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-nynashamn</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3698,11 +4038,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-hasselby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-hasselby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3747,11 +4082,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-vallingby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-vallingby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3788,11 +4118,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-spanga</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-spanga</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3837,11 +4162,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-vendelso</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-vendelso</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3878,11 +4198,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-vega</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-vega</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3927,11 +4242,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-alvsjo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-alvsjo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3968,11 +4278,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-enskede</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-enskede</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4017,11 +4322,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-skarpnack</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-skarpnack</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4058,11 +4358,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-botkyrka</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-botkyrka</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4107,11 +4402,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-salem</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-salem</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4148,11 +4438,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-sodertalje</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-sodertalje</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4197,11 +4482,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-upplands-bro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-upplands-bro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4238,11 +4518,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-hammarby-sjostad</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-hammarby-sjostad</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4287,11 +4562,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-liljeholmen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-liljeholmen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4328,11 +4598,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-arsta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-arsta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4377,11 +4642,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-hagersten</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-hagersten</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4418,11 +4678,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-grondal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-grondal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4467,11 +4722,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-aspudden</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-aspudden</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4508,11 +4758,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-haggvik</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-haggvik</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4557,11 +4802,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-helenelund</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-helenelund</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4598,11 +4838,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-edsberg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-edsberg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4647,11 +4882,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-rotebro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-rotebro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4688,11 +4918,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-norrviken</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-norrviken</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4737,11 +4962,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-stocksund</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-stocksund</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4778,11 +4998,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-enebyberg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-enebyberg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4827,11 +5042,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-jakobsberg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-jakobsberg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4868,11 +5078,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-barkarby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-barkarby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -4917,11 +5122,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-kallhall</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-kallhall</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -4958,11 +5158,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-viksjo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-viksjo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5007,11 +5202,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-bro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-bro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5048,11 +5238,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-kungsangen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-kungsangen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5097,11 +5282,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-marsta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-marsta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5138,11 +5318,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-blackeberg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-blackeberg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5187,11 +5362,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-nockeby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-nockeby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5228,11 +5398,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-abrahamsberg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-abrahamsberg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5277,11 +5442,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-angby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-angby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5318,11 +5478,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-kista</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-kista</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5367,11 +5522,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-akalla</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-akalla</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5408,11 +5558,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-tensta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-tensta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5457,11 +5602,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-saltsjobaden</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-saltsjobaden</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5498,11 +5638,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-fisksatra</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-fisksatra</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5547,11 +5682,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-saltsjo-boo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-saltsjo-boo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5588,11 +5718,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-alta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-alta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5637,11 +5762,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-gustavsberg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-gustavsberg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5678,11 +5798,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-ingaro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-ingaro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5727,11 +5842,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-hemmesta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-hemmesta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5768,11 +5878,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-trollbacken</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-trollbacken</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5817,11 +5922,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-brandbergen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-brandbergen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5858,11 +5958,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-handen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-handen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5907,11 +6002,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-jordbro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-jordbro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -5948,11 +6038,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-vasterhaninge</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-vasterhaninge</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5997,11 +6082,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-tungelsta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-tungelsta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6038,11 +6118,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-dalaro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-dalaro</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6087,11 +6162,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-stuvsta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-stuvsta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6128,11 +6198,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-trangsund</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-trangsund</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6177,11 +6242,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-skogas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-skogas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6218,11 +6278,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-segeltorp</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-segeltorp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6267,11 +6322,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-bandhagen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-bandhagen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6308,11 +6358,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-hogdalen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-hogdalen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6357,11 +6402,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-hokarangen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-hokarangen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6398,11 +6438,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-tumba</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-tumba</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6447,11 +6482,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-tullinge</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-tullinge</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6488,11 +6518,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-norsborg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-norsborg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6537,11 +6562,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-alby</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-alby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6578,11 +6598,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-fittja</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-fittja</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -6627,11 +6642,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-ronninge</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-ronninge</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6672,11 +6682,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://roslagstak.se/taktvatt-jarna</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://roslagstak.se/bandtackning-jarna</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -6713,11 +6718,6 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takomlaggning-edsviken</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roslagstak.se/taktvatt-edsviken</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
