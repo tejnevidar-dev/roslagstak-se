@@ -76,13 +76,15 @@ const ServiceArea = () => {
                 id="area-heading"
                 className="mt-6 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.14]"
               >
-                Från kust till{" "}
-                <span className="italic text-seafoam">ytterskärgård.</span>
+                Från Stockholms innerstad till{" "}
+                <span className="italic text-seafoam">ytterskärgårdens öar.</span>
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
-                Vi utför takbyte, takrenovering och takomläggning i {areas.length} områden i
-                Roslagens skärgård och hela Storstockholm. Bor du på en ö utan bro tar vi oss dit sjövägen.
+                Vi utför takbyte, takrenovering, takvård och plåtarbeten i {areas.length} områden i
+                Roslagen och hela Storstockholm. Bor du på en ö utan broförbindelse tar vi oss dit
+                sjövägen — med material, verktyg och ställning.
               </p>
+
 
               <div className="mt-10 bg-card p-8 text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
@@ -97,13 +99,14 @@ const ServiceArea = () => {
                   </span>
                 </div>
                 <p className="mt-5 text-[15px] font-light leading-relaxed text-muted-foreground">
-                  Från ytterskärgårdens öar till Storstockholms stadsdelar — takbyte, takrenovering
-                  och takomläggning där du bor.
+                  Samma hantverk, garantier och fasta priser oavsett om taket sitter på en villa i
+                  Stockholm eller en stuga i skärgården.
                 </p>
                 <p className="mt-6 border-t border-border pt-5 text-[14px] leading-relaxed text-muted-foreground">
-                  <span className="font-semibold text-foreground">Öar utan bro?</span> Inget problem
-                  — vi transporterar material och verktyg sjövägen till öar i hela norra skärgården.
+                  <span className="font-semibold text-foreground">Ö utan broförbindelse?</span> Inget
+                  hinder — vi har lång erfarenhet av att frakta material och utrustning sjövägen.
                 </p>
+
               </div>
             </div>
           </div>
