@@ -99,26 +99,10 @@ const ServiceArea = () => {
                   </div>
                   <div>
                     <p className="font-display text-3xl font-bold tabular-nums text-accent">
-                      {locations.length}
-                    </p>
-                    <p className="mt-1 text-[12px] leading-snug text-muted-foreground">
-                      orter & stadsdelar
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-display text-3xl font-bold tabular-nums text-accent">
                       24h
                     </p>
                     <p className="mt-1 text-[12px] leading-snug text-muted-foreground">
                       återkoppling
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-display text-3xl font-bold tabular-nums text-accent">
-                      100%
-                    </p>
-                    <p className="mt-1 text-[12px] leading-snug text-muted-foreground">
-                      ROT-avdrag hanterat
                     </p>
                   </div>
                 </div>
