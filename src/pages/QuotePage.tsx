@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
+import GoogleReviews from "@/components/GoogleReviews";
 import PageHero from "@/components/PageHero";
 
 const QuoteConfigurator = lazy(() => import("@/components/QuoteConfigurator"));
@@ -42,6 +43,7 @@ const QuotePage = () => {
           <FreeConsultation />
           <FAQ />
         </Suspense>
+        <GoogleReviews variant="band" title="Vad kunderna säger om jobbet" />
         <RelatedLinks currentPath="/offert" title="Läs vidare innan du bestämmer dig" />
       </main>
       <Footer />

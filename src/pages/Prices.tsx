@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 import RelatedLinks from "@/components/RelatedLinks";
+import GoogleReviews from "@/components/GoogleReviews";
 import {
   Accordion,
   AccordionContent,
@@ -204,6 +205,7 @@ const Prices = () => {
             </div>
           </div>
         </div>
+        <GoogleReviews variant="band" />
         <RelatedLinks currentPath="/priser" title="Relaterat till pris" />
       </main>
       <Footer />

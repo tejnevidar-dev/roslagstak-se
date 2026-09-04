@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Phone, PlayCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import Reveal from "@/components/Reveal";
 import { services } from "@/components/Services";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -913,6 +914,7 @@ const ServiceDetail = () => {
           </div>
         </section>
 
+        <GoogleReviews variant="band" />
       </main>
       <Footer />
     </>

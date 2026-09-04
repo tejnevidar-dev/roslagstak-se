@@ -1,3 +1,5 @@
+import GoogleReviews from "@/components/GoogleReviews";
+
 const items = [
   { value: "10 + 30 år", label: "Utförande- & materialgaranti" },
   { value: "Fast pris", label: "Inga dolda kostnader" },
@@ -27,6 +29,9 @@ const TrustBar = () => (
         </li>
       ))}
     </ul>
+    <div className="mx-auto mt-10 flex max-w-5xl justify-center px-6 lg:mt-12">
+      <GoogleReviews variant="inline" className="text-seafoam" />
+    </div>
   </section>
 );
 

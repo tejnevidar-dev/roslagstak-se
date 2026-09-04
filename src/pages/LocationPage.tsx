@@ -4,6 +4,7 @@ import { MapPin, ArrowRight, CheckCircle, Phone, Star, Home, Shield, Clock, Awar
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import { getLocationBySlug, locations } from "@/data/locations";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
@@ -492,6 +493,7 @@ const LocationPage = () => {
             </div>
           </div>
         </div>
+        <GoogleReviews variant="band" place={`i ${location.name}`} />
       </main>
       <Footer />
     </>
