@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import { services } from "@/components/Services";
+import { canonicalPath } from "@/lib/canonical";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
 import { serviceBlocks } from "@/data/service-blocks";
@@ -880,7 +881,7 @@ const ServiceDetail = () => {
                 ...services
                   .filter((s) => s.slug !== slug)
                   .slice(0, 4)
-                  .map((s) => ({ to: `/tjanster/${s.slug}`, label: s.title })),
+                  .map((s) => ({ to: canonicalPath(`/tjanster/${s.slug}`), label: s.title })),
                 ...(blocks.relatedLinks ?? []),
 
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },

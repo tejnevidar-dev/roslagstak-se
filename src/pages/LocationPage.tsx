@@ -332,7 +332,7 @@ const LocationPage = () => {
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
                     </Link>
-                    <Link to="/tjanster/takvard" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                    <Link to="/tjanster/taktvatt" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Taktvätt & takmålning
                     </Link>
                     <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">

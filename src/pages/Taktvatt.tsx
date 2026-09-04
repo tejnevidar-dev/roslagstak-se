@@ -1002,7 +1002,7 @@ const Taktvatt = () => {
             ← Tillbaka till alla tjänster
           </a>
         </div>
-        <RelatedLinks currentPath="/tjanster/takvard" title="Andra tjänster och priser" />
+        <RelatedLinks currentPath="/tjanster/taktvatt" title="Andra tjänster och priser" />
       </main>
       <Footer />
     </>
