@@ -1,4 +1,5 @@
-import { Anchor } from "lucide-react";
+import { Anchor, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { locationIndex as locations } from "@/data/location-index";
 
