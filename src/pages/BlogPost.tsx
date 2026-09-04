@@ -101,7 +101,7 @@ const BlogPost = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsLd) }}
         />
         <div className="container mx-auto px-4">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Brödsmulor">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
             <span>/</span>
             <Link to="/blogg" className="hover:text-primary transition-colors">Blogg</Link>

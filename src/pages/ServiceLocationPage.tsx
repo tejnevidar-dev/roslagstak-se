@@ -154,7 +154,7 @@ const ServiceLocationPage = () => {
 
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8 flex-wrap" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8 flex-wrap" aria-label="Brödsmulor">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
             <span>/</span>
             <Link to={`/taklaggare-${combo.locationSlug}`} className="hover:text-primary transition-colors">Takläggare {combo.prep} {combo.locationName}</Link>

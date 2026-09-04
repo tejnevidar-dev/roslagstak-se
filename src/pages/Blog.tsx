@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blog-posts";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 
 const Blog = () => {
   return (
@@ -13,10 +15,16 @@ const Blog = () => {
         description="Artiklar och guider om takbyte, takrenovering, ROT-avdrag och takval i Roslagens skärgård. Från takläggare RoslagsTak."
         canonical="https://roslagstak.se/blogg"
       />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: "Hem", path: "/" },
+          { name: "Blogg", path: "/blogg" },
+        ])}
+      />
       <Header />
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Brödsmulor">
             <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
             <span>/</span>
             <span className="text-foreground font-medium">Blogg</span>

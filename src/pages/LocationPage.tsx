@@ -195,7 +195,7 @@ const LocationPage = () => {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center justify-between mb-8">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
+            <nav className="flex items-center gap-2 text-sm text-muted-foreground" aria-label="Brödsmulor">
               <Link to="/" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
                 <Home className="w-4 h-4" />
                 Startsidan
