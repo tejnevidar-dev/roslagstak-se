@@ -3,6 +3,13 @@ export interface LocationFAQ {
   answer: string;
 }
 
+/** Städar bort dubbla blanksteg som uppstår när villkorade meningar utgår. */
+const tidy = (faqs: LocationFAQ[]): LocationFAQ[] =>
+  faqs.map((f) => ({
+    question: f.question.replace(/\s{2,}/g, " ").trim(),
+    answer: f.answer.replace(/\s{2,}/g, " ").trim(),
+  }));
+
 // Generic FAQs used as base, with location name injected
 export const generateLocationFAQs = (
   name: string,
@@ -52,7 +59,7 @@ export const generateLocationFAQs = (
     },
   );
 
-  return faqs;
+  return tidy(faqs);
 };
 
 // FAQs for service+location combo pages (takbyte-X, takrenovering-X)
@@ -66,7 +73,7 @@ export const generateServiceLocationFAQs = (
   const isTaktvatt = serviceName.toLowerCase() === "taktvätt";
 
   if (isTaktvatt) {
-    return [
+    return tidy([
       {
         question: `Vad kostar taktvätt ${prep} ${locationName}?`,
         answer: `Priset för taktvätt ${prep} ${locationName} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri besiktning."}`,
