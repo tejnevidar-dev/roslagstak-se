@@ -4,7 +4,6 @@ import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2, Shield, M
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import SEOHead from "@/components/SEOHead";
-import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 const ContactLanding = () => {
