@@ -12,6 +12,7 @@ import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { canonicalPath, isNoindexPath, normalizePath } from "../src/lib/canonical";
+import { regionSlugs } from "../src/data/regions";
 
 const SITE_URL = "https://roslagstak.se";
 
@@ -32,6 +33,7 @@ for (const m of current.matchAll(
   const path = url.startsWith(SITE_URL) ? url.slice(SITE_URL.length) || "/" : url;
   // Skip location and combo pages — we regenerate them below.
   if (/^\/taklaggare-/.test(path)) continue;
+  if (/^\/omraden\//.test(path)) continue;
   if (allServiceSlugs.some((s) => path.startsWith(`/${s}-`))) continue;
   existingEntries.push({
     path,
@@ -48,6 +50,13 @@ const locationEntries: Entry[] = locations.map((l) => ({
   priority: "0.8",
 }));
 
+// ---------- 2b. Build region hub pages ----------
+const regionEntries: Entry[] = Object.values(regionSlugs).map((slug) => ({
+  path: `/omraden/${slug}`,
+  changefreq: "monthly",
+  priority: "0.8",
+}));
+
 // ---------- 3. Build service-location combo pages ----------
 const comboEntries: Entry[] = locations.flatMap((l) =>
   allServiceSlugs.map((s) => ({
@@ -58,7 +67,7 @@ const comboEntries: Entry[] = locations.flatMap((l) =>
 );
 
 // ---------- 4. Assemble + filtrera till indexerbara canonical-URL:er ----------
-const rawEntries: Entry[] = [...existingEntries, ...locationEntries, ...comboEntries];
+const rawEntries: Entry[] = [...existingEntries, ...regionEntries, ...locationEntries, ...comboEntries];
 
 const skipped: string[] = [];
 const seen = new Set<string>();
