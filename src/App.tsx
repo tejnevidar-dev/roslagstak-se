@@ -32,6 +32,7 @@ const QuotePage = lazy(() => import("./pages/QuotePage.tsx"));
 const RoofTypesPage = lazy(() => import("./pages/RoofTypesPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const AreasPage = lazy(() => import("./pages/AreasPage.tsx"));
+const RegionPage = lazy(() => import("./pages/RegionPage.tsx"));
 
 const queryClient = new QueryClient();
 
