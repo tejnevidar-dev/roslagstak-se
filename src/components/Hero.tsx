@@ -2,6 +2,7 @@ import { ArrowRight, Phone, PlayCircle } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import heroImg from "@/assets/hero-cinematic.jpg";
 import craftImg from "@/assets/roofer-work.jpg";
+import GoogleReviews from "@/components/GoogleReviews";
 
 /* Nautisk asymmetri: helformatsbild med marinblå slöja, vit textpanel som bryter
    rutnätet och ett roterat hantverksfoto med garantiplakett. */
@@ -70,17 +71,21 @@ const Hero = () => {
                 070-154 36 39
               </a>
             </div>
-            <a
-              href="/hur-det-gar-till"
-              className="group mt-7 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-accent"
-            >
-              <PlayCircle className="h-4 w-4" aria-hidden="true" />
-              Se hur ett takbyte går till
-              <span
-                aria-hidden="true"
-                className="h-px w-8 bg-accent transition-all duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:w-14"
-              />
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-border pt-6">
+              <GoogleReviews variant="inline" className="text-primary" />
+              <a
+                href="/hur-det-gar-till"
+                className="group inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-accent"
+              >
+                <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                Se hur ett takbyte går till
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8 bg-accent transition-all duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:w-14"
+                />
+              </a>
+            </div>
+
           </div>
         </motion.div>
 
