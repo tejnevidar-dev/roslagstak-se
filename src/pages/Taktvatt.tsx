@@ -31,6 +31,7 @@ import {
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import RelatedLinks from "@/components/RelatedLinks";
 import { locationIndex as locations } from "@/data/location-index";
 import { Helmet } from "react-helmet-async";
@@ -832,29 +833,14 @@ const Taktvatt = () => {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Omdömen */}
         <section className="bg-secondary py-20">
           <div className="container mx-auto px-4">
-            <p className="text-sm font-semibold text-primary uppercase tracking-wider text-center mb-2">Vad våra kunder säger</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
-              Nöjda taktvätt-kunder i hela Roslagen
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { name: "Anna L., Blidö", text: "Helt otroligt vilken skillnad! Taket ser ut som nytt och vi sparade ett dyrt takbyte. Proffsigt från början till slut." },
-                { name: "Per J., Norrtälje", text: "De tog hand om allt — täckte växterna, dokumenterade med bilder och allt blev pinsamt rent. ROT-avdraget skötte de också." },
-                { name: "Maria K., Ljusterö", text: "Vårt skärgårdshus hade tjock mossa efter 15 år. Nu är det som nytt. Rekommenderas varmt till alla med hus i skärgården." },
-              ].map((t) => (
-                <div key={t.name} className="bg-card border border-border rounded-xl p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground italic mb-4">"{t.text}"</p>
-                  <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                </div>
-              ))}
+            <div className="max-w-3xl mx-auto">
+              <GoogleReviews
+                title="Omdömen från taktvätt-kunder"
+                intro="Vi publicerar inga egenskrivna kundcitat. Omdömen om vårt arbete finns på vår Google-företagsprofil, med namn och datum."
+              />
             </div>
           </div>
         </section>
