@@ -8,7 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
-import { regionOrder, regionIntros } from "@/data/regions";
+import { regionOrder, regionIntros, regionSlugs } from "@/data/regions";
 
 const AreasPage = () => {
   useEffect(() => {
@@ -72,7 +72,9 @@ const AreasPage = () => {
                   className="flex items-center gap-3 font-display text-2xl font-bold text-foreground"
                 >
                   <Anchor className="h-5 w-5 text-accent" aria-hidden="true" />
-                  {group.region}
+                  <Link to={`/omraden/${regionSlugs[group.region]}`} className="hover:text-accent">
+                    {group.region}
+                  </Link>
                 </h2>
                 {group.intro && (
                   <p className="mt-3 max-w-3xl text-[16px] font-light leading-relaxed text-muted-foreground">
@@ -97,6 +99,15 @@ const AreasPage = () => {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-4 text-sm">
+                  <Link
+                    to={`/omraden/${regionSlugs[group.region]}`}
+                    className="inline-flex items-center gap-1 text-primary hover:underline"
+                  >
+                    Mer om takarbeten i {group.region}
+                    <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                  </Link>
+                </p>
               </section>
             ))}
           </div>
