@@ -75,14 +75,14 @@ for (const file of files) {
   const src = read(file);
   // Alla to="/..." / to={`/...`} samt objekt-poster { to, label }
   const patterns = [
-    /\sto=(?:"([^"]+)"|\{`([^`]+)`\})([\s\S]{0,400}?)<\/Link>/g,
+    /\sto=(?:"([^"]+)"|\{`([^`]+)`\})([\s\S]{0,400})/g,
     /\bto:\s*(?:"([^"]+)"|`([^`]+)`)\s*,\s*label:\s*(?:"([^"]+)"|`([^`]+)`)/g,
   ];
   for (const [i, re] of patterns.entries()) {
     for (const m of src.matchAll(re)) {
       const raw = (m[1] ?? m[2] ?? "").trim();
       if (!raw.startsWith("/")) continue;
-      const anchorRaw = i === 0 ? (m[3] ?? "") : (m[3] ?? m[4] ?? "");
+      const anchorRaw = i === 0 ? (m[3] ?? "").split("</Link>")[0] : (m[3] ?? m[4] ?? "");
       const anchor = anchorRaw
         .replace(/<[^>]*>/g, " ")
         .replace(/\{[^}]*\}/g, " ")
