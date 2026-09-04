@@ -58,7 +58,7 @@ const areas = regionOrder
   .filter((region) => locations.some((l) => l.region === region))
   .map((region) => ({
     region,
-    locations: locations.filter((l) => l.region === region).map((l) => l.name),
+    locations: locations.filter((l) => l.region === region),
     description: regionDescriptions[region] ?? "",
   }));
 
