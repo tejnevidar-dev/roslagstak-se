@@ -36,12 +36,13 @@ const QuickAccess = () => (
               01 — Nytt tak
             </span>
             <h3 className="mt-7 font-display text-[clamp(1.5rem,2.2vw,2rem)] font-bold leading-[1.2] tracking-[-0.018em] text-foreground">
-              Byta eller renovera tak
+              Byta eller renovera taket
             </h3>
             <p className="mt-5 max-w-[46ch] text-[17px] font-light leading-[1.68] text-muted-foreground">
-              Nytt tak från råspont till plåt, eller punktinsatser där taket läcker. Vi bedömer
-              skicket på plats och lämnar fast pris.
+              Komplett takbyte från råspont till färdig plåt — eller en riktad åtgärd där taket
+              läcker. Vi bedömer skicket på plats och lämnar ett fast pris innan vi börjar.
             </p>
+
           </div>
           <span className="mt-10 inline-flex items-center gap-3 font-display text-[16px] italic text-accent">
             Se tjänster för villa &amp; fritidshus
@@ -64,9 +65,10 @@ const QuickAccess = () => (
               Takvård &amp; vad det kostar
             </h3>
             <p className="mt-5 max-w-[44ch] text-[17px] font-light leading-[1.68] opacity-90">
-              Taktvätt och målning som förlänger takets liv — eller räkna fram ett prisspann för
-              ditt tak direkt i konfiguratorn.
+              Taktvätt, behandling och takmålning som förlänger takets livslängd — eller räkna
+              fram ett prisspann för just ditt tak på under en minut.
             </p>
+
           </div>
           <span className="mt-10 inline-flex items-center gap-3 font-display text-[16px] italic">
             Räkna på ditt tak
