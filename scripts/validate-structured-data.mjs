@@ -141,7 +141,9 @@ if (existsSync(dist)) {
   };
   const checkHtml = (file) => {
     const rel = file.replace(dist, "") || "/index.html";
-    const html = readFileSync(file, "utf8");
+    const raw = readFileSync(file, "utf8");
+    // Kommentarer bort först — annars matchar exempeltaggar i kommentarer.
+    const html = raw.replace(/<!--[\s\S]*?-->/g, "");
     htmlChecked++;
     const canon = html.match(/<link rel="canonical"[^>]*>/g) ?? [];
     if (canon.length !== 1) err(rel, `${canon.length} canonical-taggar (ska vara 1)`);

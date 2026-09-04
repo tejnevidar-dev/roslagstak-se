@@ -751,9 +751,9 @@ export const locations: LocationData[] = [
     extraContent:
       "Vallentuna ligger i inlandet med kalla vintrar och betydande snölast. Vi dimensionerar därför alltid snörasskydd över entréer och uteplatser, och kontrollerar att takstolar och infästningar klarar lasten innan nytt material monteras.",
     uniqueFAQ: {
-      question: "Hur lång tid tar ett takbyte i Vallentuna?",
+      question: "Hur snabbt kan ni börja ett takbyte i Vallentuna?",
       answer:
-        "Ett normalt villatakbyte i Vallentuna tar 1–2 veckor från att ställningen är på plats, beroende på takets storlek, material och väder. Vi meddelar tidsplan i offerten och håller dig uppdaterad löpande under projektet.",
+        "Vi har normalt 2–4 veckors framförhållning för takbyten i Vallentuna, och kan ofta boka besiktningen inom en vecka. Startdatum och tidsplan skriver vi in i offerten så att du vet vad som gäller innan du beställer.",
     },
     primaryKeyword: "takläggare Vallentuna",
     lat: 59.5342,
