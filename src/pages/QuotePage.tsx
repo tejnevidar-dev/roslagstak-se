@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedLinks from "@/components/RelatedLinks";
 import PageHero from "@/components/PageHero";
 
 const QuoteConfigurator = lazy(() => import("@/components/QuoteConfigurator"));
@@ -39,6 +40,7 @@ const QuotePage = () => {
           <FreeConsultation />
           <FAQ />
         </Suspense>
+        <RelatedLinks currentPath="/offert" title="Läs vidare innan du bestämmer dig" />
       </main>
       <Footer />
     </>

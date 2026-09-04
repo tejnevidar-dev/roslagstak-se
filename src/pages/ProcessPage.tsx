@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedLinks from "@/components/RelatedLinks";
 import PageHero from "@/components/PageHero";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
@@ -88,6 +89,7 @@ const ProcessPage = () => {
           faqs={processFaqs}
           path="/hur-det-gar-till"
         />
+        <RelatedLinks currentPath="/hur-det-gar-till" title="Nästa steg" />
       </main>
       <Footer />
     </>

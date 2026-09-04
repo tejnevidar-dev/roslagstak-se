@@ -31,6 +31,7 @@ import {
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedLinks from "@/components/RelatedLinks";
 import { locations } from "@/data/locations";
 import { Helmet } from "react-helmet-async";
 
@@ -1001,6 +1002,7 @@ const Taktvatt = () => {
             ← Tillbaka till alla tjänster
           </a>
         </div>
+        <RelatedLinks currentPath="/tjanster/takvard" title="Andra tjänster och priser" />
       </main>
       <Footer />
     </>

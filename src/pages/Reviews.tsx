@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedLinks from "@/components/RelatedLinks";
 
 const allReviews = [
   { name: "Anna Lindberg", location: "Ljusterö", rating: 5, roofType: "TP20 Plåttak", text: "Fantastiskt jobb med vårt tak på ön! Trots att vi bor på en ö fixade de allt smidigt med materialtransport och logistik. Snyggt, snabbt och till det pris som utlovades. Vi rekommenderar varmt." },
@@ -170,6 +171,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
+        <RelatedLinks currentPath="/recensioner" title="Läs vidare" />
       </main>
       <Footer />
     </>
