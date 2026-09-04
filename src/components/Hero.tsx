@@ -2,6 +2,7 @@ import { ArrowRight, Phone, PlayCircle } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import heroImg from "@/assets/hero-cinematic.jpg";
 import craftImg from "@/assets/roofer-work.jpg";
+import GoogleReviews from "@/components/GoogleReviews";
 
 /* Nautisk asymmetri: helformatsbild med marinblå slöja, vit textpanel som bryter
    rutnätet och ett roterat hantverksfoto med garantiplakett. */
