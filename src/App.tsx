@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
@@ -26,6 +26,7 @@ import JsonLd from "./components/JsonLd";
 import { buildLocalBusinessSchema } from "./lib/schema";
 import { locations } from "./data/locations";
 import { allServiceSlugs } from "./data/service-location-combos";
+import { CANONICAL_ALIASES } from "./lib/canonical";
 
 const queryClient = new QueryClient();
 
@@ -39,7 +40,6 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/tjanster/takvard" element={<Taktvatt />} />
             <Route path="/tjanster/taktvatt" element={<Taktvatt />} />
             <Route path="/offert" element={<QuotePage />} />
             <Route path="/taktyper" element={<RoofTypesPage />} />
@@ -51,7 +51,6 @@ const App = () => (
             {locations.map((loc) => (
               <Route key={loc.slug} path={`/taklaggare-${loc.slug}`} element={<LocationPage />} />
             ))}
-            <Route path="/taktvatt" element={<Taktvatt />} />
             {allServiceSlugs.flatMap((service) =>
               locations.map((loc) => (
                 <Route
@@ -67,9 +66,10 @@ const App = () => (
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/seo" element={<AdminSeo />} />
             <Route path="/kontakt" element={<ContactLanding />} />
-            <Route path="/radgivning" element={<ContactLanding />} />
-            <Route path="/konsultation" element={<ContactLanding />} />
-            <Route path="/boka" element={<ContactLanding />} />
+            {/* Dubblett-/gamla URL:er pekas om till kanonisk version (replace = ingen historik-loop). */}
+            {Object.entries(CANONICAL_ALIASES).map(([alias, target]) => (
+              <Route key={alias} path={alias} element={<Navigate to={target} replace />} />
+            ))}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
