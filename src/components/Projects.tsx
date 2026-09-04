@@ -49,7 +49,7 @@ const Projects = () => {
         {/* Google Reviews CTA */}
         <div className="mt-16 max-w-2xl mx-auto">
           <a
-            href="https://www.google.com/maps/search/?api=1&query=RoslagsTak%20Blid%C3%B6"
+            href="https://www.google.com/search?q=RoslagsTak+recensioner"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between gap-4 bg-card border border-border rounded-lg p-6 hover:border-primary/40 hover:shadow-lg transition-all group"
