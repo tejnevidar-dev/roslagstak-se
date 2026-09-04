@@ -2097,7 +2097,7 @@ export const locations: LocationData[] = [
     primaryKeyword: "takläggare Norsborg",
     lat: 59.2439,
     lng: 17.8092,
-    nearbyLocations: ["Alby", "Hallunda", "Botkyrka"],
+    nearbyLocations: ["Alby", "Fittja", "Botkyrka"],
   },
   {
     slug: "alby",
