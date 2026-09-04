@@ -884,7 +884,7 @@ const ServiceDetail = () => {
 
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
                 { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
-                { to: "/recensioner", label: "Kundrecensioner" },
+                { to: "/recensioner", label: "Omdömen på Google" },
               ].map((link) => (
                 <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
                   <Link

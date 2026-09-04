@@ -8,7 +8,7 @@ RoslagsTak utgår från Blidö och utför takprojekt längs Roslagens kust, på 
 
 - [Startsidan](/): Översikt över tjänster, områden och kontakt.
 - [Priser](/priser): Prislista för takbyte, takrenovering och takvård.
-- [Recensioner](/recensioner): Omdömen från kunder i Roslagen.
+- [Omdömen](/recensioner): Länk till våra verifierade omdömen på Google.
 - [Kontakt & offert](/kontakt): Begär kostnadsfri offert eller boka platsbesök.
 - [Blogg](/blogg): Guider om tak, material och takprojekt i skärgården.
 

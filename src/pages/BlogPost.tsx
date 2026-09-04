@@ -157,7 +157,7 @@ const BlogPost = () => {
                   <ArrowRight className="w-3 h-3" /> Takläggare på Ljusterö
                 </Link>
                 <Link to="/recensioner" className="flex items-center gap-1 text-sm text-primary hover:underline">
-                  <ArrowRight className="w-3 h-3" /> Kundrecensioner
+                  <ArrowRight className="w-3 h-3" /> Omdömen på Google
                 </Link>
               </div>
             </div>

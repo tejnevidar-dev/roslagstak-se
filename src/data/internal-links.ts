@@ -36,8 +36,8 @@ export const hubLinks: InternalLink[] = [
   },
   {
     to: "/recensioner",
-    label: "Kundrecensioner",
-    description: "Omdömen från takprojekt i Roslagen och Storstockholm.",
+    label: "Omdömen på Google",
+    description: "Verifierade omdömen från kunder — läs dem i original på Google."
   },
 ];
 
