@@ -84,24 +84,14 @@ const ServiceArea = () => {
                 Roslagens skärgård och hela Storstockholm. Bor du på en ö utan bro tar vi oss dit sjövägen.
               </p>
 
-              <dl className="mt-10 grid grid-cols-2 bg-card text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
-                <div className="border-r border-border p-7">
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                    Områden
-                  </dt>
-                  <dd className="mt-2 font-display text-3xl font-bold tabular-nums text-accent">
-                    {areas.length}
-                  </dd>
-                </div>
-                <div className="p-7">
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                    Utgår från
-                  </dt>
-                  <dd className="mt-2 font-display text-3xl font-bold text-accent">
-                    Blidö
-                  </dd>
-                </div>
-              </dl>
+              <div className="mt-10 bg-card p-7 text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                  Områden
+                </p>
+                <p className="mt-2 font-display text-3xl font-bold tabular-nums text-accent">
+                  {areas.length}
+                </p>
+              </div>
             </div>
           </div>
 
