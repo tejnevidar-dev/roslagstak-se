@@ -73,6 +73,9 @@ const home: PrerenderPage = {
 const staticPages: Record<string, PrerenderPage> = {
   "/": home,
   "/offert": {
+    title: "Offert på takbyte — fast pris efter besiktning",
+    description:
+      "Räkna fram ett prisförslag på takbyte direkt, eller boka kostnadsfri besiktning. Fast pris, 10 års utförandegaranti och återkoppling inom 24 timmar.",
     h1: "Få offert på takbyte i Roslagen",
     intro:
       "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och besiktning på plats.",
@@ -83,6 +86,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/taktyper": {
+    title: "Taktyper — plåttak, tegel och betongpannor",
+    description:
+      "Jämför TP20, pannplåt, tegelplåt, dubbelfalsat plåttak, lertegel, betongpannor och papptak — livslängd, kostnad och vad som passar ditt hus.",
     h1: "Taktyper — plåttak, tegel och betongpannor",
     intro:
       "Jämför taktyper inför ditt takbyte: TP20, pannplåt, tegelplåt, dubbelfalsat plåttak (bandtäckning), lertegel, betongpannor, glaserade pannor och papptak.",
@@ -93,6 +99,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/hur-det-gar-till": {
+    title: "Så går ett takbyte till — steg för steg",
+    description:
+      "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager, med dokumentation och slutbesiktning.",
     h1: "Så går ett takbyte till — steg för steg",
     intro:
       "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager.",
@@ -103,6 +112,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/priser": {
+    title: "Priser för takbyte och takrenovering",
+    description:
+      "Riktpriser för takarbeten: plåttak från 1 200 kr/m², bandtäckning från 2 000 kr/m², taktvätt 80–150 kr/m². Fast pris efter kostnadsfri besiktning.",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro:
       "Riktpriser för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
@@ -113,6 +125,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/recensioner": {
+    title: "Recensioner — läs kundernas omdömen på Google",
+    description:
+      "Läs vad kunder i Roslagen och Stockholms skärgård säger om RoslagsTak — alla omdömen finns att läsa direkt på Google.",
     h1: "Recensioner från takprojekt i Roslagen",
     intro:
       "Omdömen från kunder i Roslagens skärgård — Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö och fler orter.",
@@ -122,6 +137,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...locationLinks.slice(0, 24)],
   },
   "/blogg": {
+    title: "Guider om tak — takbyte, priser och underhåll",
+    description:
+      "Fördjupande guider om taktyper, kostnader, ROT-avdrag, taksäkerhet, asbestsanering och underhåll av tak i kustnära klimat.",
     h1: "Allt om tak i Roslagen",
     intro:
       "Tips, guider och nyheter om takbyte, takrenovering och takläggning i Roslagens skärgård.",
@@ -134,6 +152,9 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
   },
   "/kontakt": {
+    title: "Kontakt och kostnadsfri takrådgivning",
+    description:
+      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takinspektion och offert i hela Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
     h1: "Boka rådgivning med en takexpert",
     intro: `Ring ${PHONE} eller fyll i formuläret. Vi återkopplar inom 24 timmar — helt kostnadsfritt och utan förbindelser.`,
     paragraphs: [
@@ -142,6 +163,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: primaryLinks,
   },
   "/tjanster/taktvatt": {
+    title: "Taktvätt och takmålning — bort med mossa och lav",
+    description:
+      "Professionell taktvätt och takmålning som förlänger takets livslängd. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
     h1: "Taktvätt i Roslagen — bort med mossa, lavar och alger",
     intro:
       "Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
