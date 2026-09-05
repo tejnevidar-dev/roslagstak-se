@@ -31,7 +31,7 @@ export interface PrerenderPage {
 const servicesSource = readFileSync(resolve("src/components/Services.tsx"), "utf8");
 const services = [
   ...servicesSource.matchAll(
-    /slug:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)",\s*\n\s*description:\s*"([^"]+)"/g,
+    /slug:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)",[\s\S]*?description:\s*\n?\s*"([^"]+)"/g,
   ),
 ].map((m) => ({ slug: m[1], title: m[2], description: m[3] }));
 
@@ -306,7 +306,7 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
   const combo = comboByUrl.get(clean);
   if (combo) {
     return {
-      title: combo.title,
+      title: `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`,
       description: combo.description,
       h1: `${combo.serviceName} ${combo.prep} ${combo.locationName} — fast pris & 10 års garanti`,
       intro: combo.description,
