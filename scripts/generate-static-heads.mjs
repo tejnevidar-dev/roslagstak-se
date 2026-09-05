@@ -122,7 +122,9 @@ for (const { path, robots } of routes) {
   const page = robots === NOINDEX_ROBOTS ? null : prerenderContent(path);
   if (page?.title) {
     const fullTitle =
-      page.title.length > 47 ? page.title : `${page.title} | RoslagsTak`;
+      page.title.length > 47 || page.title.includes("RoslagsTak")
+        ? page.title
+        : `${page.title} | RoslagsTak`;
     html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(fullTitle)}</title>`);
     html = html.replace(
       /<meta property="og:title" content="[^"]*" \/>/,
