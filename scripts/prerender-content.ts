@@ -20,6 +20,10 @@ export interface PrerenderPage {
   intro: string;
   paragraphs: string[];
   links: { href: string; label: string }[];
+  /** Unique <title> for the static HTML (before JS runs). Mirrors SEOHead. */
+  title?: string;
+  /** Unique meta description for the static HTML. */
+  description?: string;
 }
 
 /* Services live in a React component; read the data with a regex so the
