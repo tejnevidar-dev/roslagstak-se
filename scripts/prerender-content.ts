@@ -20,6 +20,10 @@ export interface PrerenderPage {
   intro: string;
   paragraphs: string[];
   links: { href: string; label: string }[];
+  /** Unique <title> for the static HTML (before JS runs). Mirrors SEOHead. */
+  title?: string;
+  /** Unique meta description for the static HTML. */
+  description?: string;
 }
 
 /* Services live in a React component; read the data with a regex so the
@@ -27,7 +31,7 @@ export interface PrerenderPage {
 const servicesSource = readFileSync(resolve("src/components/Services.tsx"), "utf8");
 const services = [
   ...servicesSource.matchAll(
-    /slug:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)",\s*\n\s*description:\s*"([^"]+)"/g,
+    /slug:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)",[\s\S]*?description:\s*\n?\s*"([^"]+)"/g,
   ),
 ].map((m) => ({ slug: m[1], title: m[2], description: m[3] }));
 
@@ -69,6 +73,9 @@ const home: PrerenderPage = {
 const staticPages: Record<string, PrerenderPage> = {
   "/": home,
   "/offert": {
+    title: "Offert på takbyte — fast pris efter besiktning",
+    description:
+      "Räkna fram ett prisförslag på takbyte direkt, eller boka kostnadsfri besiktning. Fast pris, 10 års utförandegaranti och återkoppling inom 24 timmar.",
     h1: "Få offert på takbyte i Roslagen",
     intro:
       "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och besiktning på plats.",
@@ -79,6 +86,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/taktyper": {
+    title: "Taktyper — plåttak, tegel och betongpannor",
+    description:
+      "Jämför TP20, pannplåt, tegelplåt, dubbelfalsat plåttak, lertegel, betongpannor och papptak — livslängd, kostnad och vad som passar ditt hus.",
     h1: "Taktyper — plåttak, tegel och betongpannor",
     intro:
       "Jämför taktyper inför ditt takbyte: TP20, pannplåt, tegelplåt, dubbelfalsat plåttak (bandtäckning), lertegel, betongpannor, glaserade pannor och papptak.",
@@ -89,6 +99,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/hur-det-gar-till": {
+    title: "Så går ett takbyte till — steg för steg",
+    description:
+      "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager, med dokumentation och slutbesiktning.",
     h1: "Så går ett takbyte till — steg för steg",
     intro:
       "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager.",
@@ -99,6 +112,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/priser": {
+    title: "Priser för takbyte och takrenovering",
+    description:
+      "Riktpriser för takarbeten: plåttak från 1 200 kr/m², bandtäckning från 2 000 kr/m², taktvätt 80–150 kr/m². Fast pris efter kostnadsfri besiktning.",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro:
       "Riktpriser för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
@@ -109,6 +125,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/recensioner": {
+    title: "Recensioner — läs kundernas omdömen på Google",
+    description:
+      "Läs vad kunder i Roslagen och Stockholms skärgård säger om RoslagsTak — alla omdömen finns att läsa direkt på Google.",
     h1: "Recensioner från takprojekt i Roslagen",
     intro:
       "Omdömen från kunder i Roslagens skärgård — Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö och fler orter.",
@@ -118,6 +137,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...locationLinks.slice(0, 24)],
   },
   "/blogg": {
+    title: "Guider om tak — takbyte, priser och underhåll",
+    description:
+      "Fördjupande guider om taktyper, kostnader, ROT-avdrag, taksäkerhet, asbestsanering och underhåll av tak i kustnära klimat.",
     h1: "Allt om tak i Roslagen",
     intro:
       "Tips, guider och nyheter om takbyte, takrenovering och takläggning i Roslagens skärgård.",
@@ -130,6 +152,9 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
   },
   "/kontakt": {
+    title: "Kontakt och kostnadsfri takrådgivning",
+    description:
+      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takinspektion och offert i hela Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
     h1: "Boka rådgivning med en takexpert",
     intro: `Ring ${PHONE} eller fyll i formuläret. Vi återkopplar inom 24 timmar — helt kostnadsfritt och utan förbindelser.`,
     paragraphs: [
@@ -138,6 +163,9 @@ const staticPages: Record<string, PrerenderPage> = {
     links: primaryLinks,
   },
   "/tjanster/taktvatt": {
+    title: "Taktvätt och takmålning — bort med mossa och lav",
+    description:
+      "Professionell taktvätt och takmålning som förlänger takets livslängd. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
     h1: "Taktvätt i Roslagen — bort med mossa, lavar och alger",
     intro:
       "Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
@@ -150,6 +178,12 @@ const staticPages: Record<string, PrerenderPage> = {
 };
 
 const serviceIntro = (title: string, description: string): PrerenderPage => ({
+  title: `${title} i Roslagen & Storstockholm`,
+  description:
+    `${description} Fast pris efter kostnadsfri besiktning, 10 års garanti. Ring ${PHONE}.`.slice(
+      0,
+      158,
+    ),
   h1: `${title} i Roslagen`,
   intro: description,
   paragraphs: [
@@ -176,6 +210,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     const post = blogPosts.find((p) => p.slug === clean.slice("/blogg/".length));
     if (!post) return null;
     return {
+      title: post.title,
+      description: post.excerpt,
       h1: post.title,
       intro: post.excerpt,
       paragraphs: post.content,
@@ -191,6 +227,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
 
   if (clean === "/omraden") {
     return {
+      title: "Våra områden — Roslagen och hela Storstockholm",
+      description: `RoslagsTak utför takbyte, takrenovering och plåtarbeten i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad. Hitta din ort här.`,
       h1: "Takläggare i Roslagen och hela Storstockholm",
       intro: `RoslagsTak utför takbyte, takomläggning, takrenovering, plåtarbeten och takvård i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad.`,
       paragraphs: [
@@ -213,6 +251,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     if (!region) return null;
     const places = locations.filter((l) => l.region === region);
     return {
+      title: `Takläggare i ${region}`,
+      description: `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri besiktning, 10 års garanti. Ring ${PHONE}.`,
       h1: `Takläggare i ${region}`,
       intro: regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
@@ -235,6 +275,10 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     if (!loc) return null;
     const prep = loc.isIsland ? "på" : "i";
     return {
+      title: `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
+      description: loc.isIsland
+        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
+        : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`,
       h1: `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
       intro: loc.description,
       paragraphs: [
@@ -262,6 +306,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
   const combo = comboByUrl.get(clean);
   if (combo) {
     return {
+      title: `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`,
+      description: combo.description,
       h1: `${combo.serviceName} ${combo.prep} ${combo.locationName} — fast pris & 10 års garanti`,
       intro: combo.description,
       paragraphs: combo.content,
