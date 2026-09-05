@@ -62,11 +62,14 @@ const home: PrerenderPage = {
   h1: "Takläggare i Roslagen — takbyte & takrenovering",
   intro:
     "RoslagsTak är takläggare i Roslagen med bas på Blidö. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års garanti och ROT-avdrag.",
-  paragraphs: [
-    "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), tegelplåt, pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA-standard av certifierade och försäkrade takläggare.",
-    "Som skärgårdsspecialister hanterar vi all materialtransport och logistik till öar utan broförbindelse — från Blidö, Yxlan och Ljusterö till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma.",
-    `Begär kostnadsfri besiktning och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
-  ],
+    paragraphs: [
+      "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), tegelplåt, pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA-standard av certifierade och försäkrade takläggare.",
+      "Som skärgårdsspecialister hanterar vi all materialtransport och logistik till öar utan broförbindelse — från Blidö, Yxlan och Ljusterö till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma.",
+      "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
+      "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet samt städning och bortforsling. Du får en kontaktperson som följer projektet från besiktning till slutgenomgång.",
+      "Varje moment dokumenteras med foton som du får ta del av. Efter slutförd besiktning får du garantihandlingar: 10 års utförandegaranti och 30 års materialgaranti på plåttak.",
+      `Begär kostnadsfri besiktning och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
+    ],
   links: [...primaryLinks, ...serviceLinks, ...locationLinks],
 };
 
@@ -81,6 +84,9 @@ const staticPages: Record<string, PrerenderPage> = {
       "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och besiktning på plats.",
     paragraphs: [
       "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri besiktning — med 10 års utförandegaranti och 30 års materialgaranti.",
+      "I offerten ingår allt som behövs för ett komplett takbyte: rivning och bortforsling av gamla taket, kontroll och byte av råspont och underlagspapp, ny strö- och bärläkt, valt tätskikt, kompletta plåtbeslag kring skorsten, ventiler och genomföringar, samt taksäkerhet i form av takstege, gångbrygga och nockfästen.",
+      "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri besiktning. På plats mäter vi taket, kontrollerar underlaget och pratar igenom materialval. Därefter får du en skriftlig offert med fast pris — det priset gäller, utan tillägg.",
+      "När du accepterat offerten planerar vi startdatum, beställer material och håller dig uppdaterad genom hela projektet. Efter slutbesiktning får du garantihandlingar och foton från varje moment.",
       `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi återkopplar inom 24 timmar.`,
     ],
     links: [...primaryLinks, ...serviceLinks],
@@ -121,6 +127,10 @@ const staticPages: Record<string, PrerenderPage> = {
     paragraphs: [
       "TP20 plåttak från ca 1 200 kr/m². Tegelprofilerad plåt och betongpannor från ca 1 300–1 400 kr/m². Dubbelfalsat plåttak (bandtäckning) från ca 2 000 kr/m². Taktvätt 80–150 kr/m² och takmålning från ca 150 kr/m².",
       "Priset styrs av takets storlek, lutning, antal genomföringar samt underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri besiktning — inga dolda kostnader.",
+      "Exempel: ett TP20-tak på 100 m² kostar från cirka 120 000 kr, 130 m² från cirka 156 000 kr och 160 m² från cirka 192 000 kr. Ett dubbelfalsat tak på 130 m² kostar från cirka 260 000 kr. Priserna är riktpriser — exakt pris får du efter besiktning.",
+      "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter hela ansökan och drar av beloppet direkt på fakturan, så du behöver aldrig ligga ute med pengarna.",
+      "Faktorer som påverkar priset: takets lutning och komplexitet, antal genomföringar som skorstenar och takkupor, underlagets skick, samt logistik — på öar utan bro tillkommer båttransport. Allt specificeras i offerten innan arbetet börjar.",
+      "Vill du jämföra taktyper? På sidan Taktyper ser du livslängd, underhållsbehov och vad som passar just ditt hus. I bloggen hittar du fördjupande prisguider för 2026.",
     ],
     links: [...primaryLinks, ...serviceLinks],
   },
@@ -132,7 +142,10 @@ const staticPages: Record<string, PrerenderPage> = {
     intro:
       "Omdömen från kunder i Roslagens skärgård — Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö och fler orter.",
     paragraphs: [
-      "Kunderna lyfter framför allt fram tydlig kommunikation, fast pris, noggrant utfört plåtarbete och vår vana att lösa materialtransport till öar utan broförbindelse.",
+      "Vi samlar våra omdömen på Google istället för att publicera egenskrivna recensioner här på sajten. Det gör att du kan läsa omdömena i original, skrivna av verifierade kunder, direkt i vår Google-företagsprofil.",
+      "Följ länken till Google för att se aktuella omdömen, stjärnbetyg och bilder från utförda takprojekt. Har du själv anlitat oss får du gärna lämna ett omdöme — det hjälper andra husägare i Roslagen att välja takläggare.",
+      "Det vi hör oftast från kunderna: att kommunikationen är tydlig från första kontakten, att priset som avtalats är det som faktureras, och att plåtarbetet utförs med noggrannhet. Många lyfter också att vi löser materialtransport till öar utan broförbindelse som en självklar del av projektet.",
+      "Vi utför takbyte, takrenovering, plåtarbeten och takvård i hela Roslagen och Storstockholm. Besiktning och offert är alltid kostnadsfria, och du får 10 års utförandegaranti på allt arbete.",
     ],
     links: [...primaryLinks, ...locationLinks.slice(0, 24)],
   },
@@ -158,7 +171,11 @@ const staticPages: Record<string, PrerenderPage> = {
     h1: "Boka rådgivning med en takexpert",
     intro: `Ring ${PHONE} eller fyll i formuläret. Vi återkopplar inom 24 timmar — helt kostnadsfritt och utan förbindelser.`,
     paragraphs: [
-      "Vi erbjuder kostnadsfri takinspektion och offert i hela Roslagen och Stockholms norra skärgård, inklusive öar utan broförbindelse.",
+      "Vi erbjuder kostnadsfri takinspektion och offert i hela Roslagen och Storstockholm, inklusive öar utan broförbindelse. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
+      "När du hör av dig får du svar inom 24 timmar. Vi bokar en tid för besiktning som passar dig, tittar på taket tillsammans med dig om du vill, och lämnar därefter en skriftlig offert med fast pris.",
+      "Vi tar uppdrag i hela Roslagen — Norrtälje, Österåker, Vaxholm, Östhammar och alla öar — samt i hela Storstockholm från Täby och Sollentuna till Nacka och Södertälje.",
+      "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser), hur lång tid tar det (normalt 1–3 veckor beroende på storlek och väder) och kan man bo kvar under arbetet (ja, i de flesta fall).",
+      `Telefon: ${PHONE}. Du kan också mejla via formuläret på sidan — ange adress så återkommer vi med förslag på besiktningstid.`,
     ],
     links: primaryLinks,
   },
