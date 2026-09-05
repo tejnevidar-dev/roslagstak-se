@@ -114,6 +114,40 @@ for (const { path, robots } of routes) {
     <link rel="alternate" hreflang="x-default" href="${url}" />
   </head>`,
   );
+
+  /* Unique <title> and meta description per route, already in the static HTML.
+     The SPA template ships the homepage title on every route — crawlers that
+     do not execute JS would otherwise see 1 300+ identical titles. Mirrors
+     SEOHead's rule of appending " | RoslagsTak" to short titles. */
+  const page = robots === NOINDEX_ROBOTS ? null : prerenderContent(path);
+  if (page?.title) {
+    const fullTitle =
+      page.title.length > 47 ? page.title : `${page.title} | RoslagsTak`;
+    html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(fullTitle)}</title>`);
+    html = html.replace(
+      /<meta property="og:title" content="[^"]*" \/>/,
+      `<meta property="og:title" content="${esc(fullTitle)}" />`,
+    );
+    html = html.replace(
+      /<meta name="twitter:title" content="[^"]*" \/>/,
+      `<meta name="twitter:title" content="${esc(fullTitle)}" />`,
+    );
+  }
+  if (page?.description) {
+    html = html.replace(
+      /<meta name="description" content="[^"]*" \/>/,
+      `<meta name="description" content="${esc(page.description)}" />`,
+    );
+    html = html.replace(
+      /<meta property="og:description" content="[^"]*" \/>/,
+      `<meta property="og:description" content="${esc(page.description)}" />`,
+    );
+    html = html.replace(
+      /<meta name="twitter:description" content="[^"]*" \/>/,
+      `<meta name="twitter:description" content="${esc(page.description)}" />`,
+    );
+  }
+
   const body = robots === NOINDEX_ROBOTS ? "" : bodyFor(path);
   if (body) {
     html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
