@@ -178,6 +178,12 @@ const staticPages: Record<string, PrerenderPage> = {
 };
 
 const serviceIntro = (title: string, description: string): PrerenderPage => ({
+  title: `${title} i Roslagen & Storstockholm`,
+  description:
+    `${description} Fast pris efter kostnadsfri besiktning, 10 års garanti. Ring ${PHONE}.`.slice(
+      0,
+      158,
+    ),
   h1: `${title} i Roslagen`,
   intro: description,
   paragraphs: [
@@ -204,6 +210,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     const post = blogPosts.find((p) => p.slug === clean.slice("/blogg/".length));
     if (!post) return null;
     return {
+      title: post.title,
+      description: post.excerpt,
       h1: post.title,
       intro: post.excerpt,
       paragraphs: post.content,
@@ -219,6 +227,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
 
   if (clean === "/omraden") {
     return {
+      title: "Våra områden — Roslagen och hela Storstockholm",
+      description: `RoslagsTak utför takbyte, takrenovering och plåtarbeten i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad. Hitta din ort här.`,
       h1: "Takläggare i Roslagen och hela Storstockholm",
       intro: `RoslagsTak utför takbyte, takomläggning, takrenovering, plåtarbeten och takvård i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad.`,
       paragraphs: [
@@ -241,6 +251,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     if (!region) return null;
     const places = locations.filter((l) => l.region === region);
     return {
+      title: `Takläggare i ${region}`,
+      description: `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri besiktning, 10 års garanti. Ring ${PHONE}.`,
       h1: `Takläggare i ${region}`,
       intro: regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
@@ -263,6 +275,10 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     if (!loc) return null;
     const prep = loc.isIsland ? "på" : "i";
     return {
+      title: `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
+      description: loc.isIsland
+        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
+        : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`,
       h1: `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
       intro: loc.description,
       paragraphs: [
@@ -290,6 +306,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
   const combo = comboByUrl.get(clean);
   if (combo) {
     return {
+      title: combo.title,
+      description: combo.description,
       h1: `${combo.serviceName} ${combo.prep} ${combo.locationName} — fast pris & 10 års garanti`,
       intro: combo.description,
       paragraphs: combo.content,
