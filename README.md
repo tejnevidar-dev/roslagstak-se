@@ -1,26 +1,26 @@
-# Roslagstak SEO Boost
+# RoslagsTak – roslagstak.se
 
-hej kan du göra en hemsida till mitt tak företag och maximalt SEO optimera den. med domänen roslagstak.se
+Marknadsföringswebbplats för RoslagsTak, SEO-optimerad, med ett enkelt admin-läge för
+inkomna offertförfrågningar. Byggd med Vite + React + TypeScript + Tailwind, Supabase
+som backend (auth + databas).
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://roslagstak-se.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f165ebb4-0415-4c55-94de-95b6d42584ce).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Se [docs/lovable-exit-plan.md](./docs/lovable-exit-plan.md) för status på migreringen
+bort från Lovable (samma resa som CRM-systemet, `admin.vt6`, redan gjort).
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
 npm i
 npm run dev
+```
+
+## Scripts
+
+```sh
+npm run build          # produktionsbygge
+npm run build:dev      # dev-läge-bygge
+npm run lint            # eslint
+npm run test             # vitest
+npm run check:sitemap    # validera sitemap mot rutter
+npm run validate:schema  # validera structured data efter bygge
 ```

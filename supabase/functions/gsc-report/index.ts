@@ -1,6 +1,15 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 
+// PAUSED as of the Lovable exit (see docs/lovable-exit-plan.md): this previously went
+// through Lovable's connector gateway, which handled the Google OAuth2 flow (token
+// refresh etc.) behind the scenes. A direct integration needs a real Google Cloud
+// project with OAuth client id/secret and a stored refresh token — not just an API key
+// — so this throws below until that's set up. Real endpoints for when this gets
+// rebuilt: Google's own `https://www.googleapis.com/webmasters/v3/...` and
+// `https://searchconsole.googleapis.com/v1/urlInspection/index:inspect` — Lovable's
+// gateway paths matched these exactly, so the URL-building code below doesn't need to
+// change, only the auth.
 const GATEWAY = "https://connector-gateway.lovable.dev/google_search_console";
 const TARGET = "https://roslagstak.se/";
 
@@ -52,15 +61,10 @@ Deno.serve(async (req) => {
     });
     if (!isAdmin) return json({ error: "Forbidden" }, 403);
 
-    const lovableApiKey = Deno.env.get("LOVABLE_API_KEY");
-    const connectionApiKey = Deno.env.get("GOOGLE_SEARCH_CONSOLE_API_KEY");
-    if (!lovableApiKey || !connectionApiKey) {
-      return json({ error: "Search Console är inte kopplad" }, 500);
-    }
-    const headers = {
-      Authorization: `Bearer ${lovableApiKey}`,
-      "X-Connection-Api-Key": connectionApiKey,
-    };
+    // PAUSED: see the note at the top of this file. Throws before any gateway call is made.
+    const headers: Record<string, string> = (() => {
+      throw new Error("Search Console är pausad i väntan på en riktig Google OAuth2-uppsättning (se docs/lovable-exit-plan.md).");
+    })();
 
     let selectedSiteUrl: string | undefined;
     if (req.method === "POST") {

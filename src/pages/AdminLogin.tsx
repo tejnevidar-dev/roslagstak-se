@@ -92,7 +92,7 @@ const AdminLogin = () => {
           </form>
 
           <p className="text-xs text-muted-foreground text-center">
-            Behöver du ett konto? Skapa det via Lovable Cloud → Users.
+            Behöver du ett konto? Skapa det via Supabase Dashboard → Authentication → Users.
           </p>
         </div>
       </main>
