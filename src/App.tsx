@@ -31,6 +31,7 @@ const ContactLanding = lazy(() => import("./pages/ContactLanding.tsx"));
 const QuotePage = lazy(() => import("./pages/QuotePage.tsx"));
 const RoofTypesPage = lazy(() => import("./pages/RoofTypesPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
+const BrfPage = lazy(() => import("./pages/BrfPage.tsx"));
 const AreasPage = lazy(() => import("./pages/AreasPage.tsx"));
 const RegionPage = lazy(() => import("./pages/RegionPage.tsx"));
 
@@ -53,6 +54,7 @@ const App = () => (
               <Route path="/tjanster/taktvatt" element={<Taktvatt />} />
               <Route path="/offert" element={<QuotePage />} />
               <Route path="/taktyper" element={<RoofTypesPage />} />
+              <Route path="/brf" element={<BrfPage />} />
               <Route path="/hur-det-gar-till" element={<ProcessPage />} />
               <Route path="/omraden" element={<AreasPage />} />
               <Route path="/omraden/:region" element={<RegionPage />} />

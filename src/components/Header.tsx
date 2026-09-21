@@ -51,6 +51,7 @@ const navLinks: {
 }[] = [
   { href: "#tjanster", label: "Tjänster", items: serviceItems, wide: true },
   { to: "/taktyper", label: "Taktyper", items: roofTypeItems, wide: true },
+  { to: "/brf", label: "BRF & fastigheter" },
   { to: "/hur-det-gar-till", label: "Så går det till" },
   { to: "/offert", label: "Få offert", items: quoteItems },
   { href: "#om-oss", label: "Om oss" },
@@ -61,6 +62,7 @@ const navLinks: {
 const routeActiveLabel = (pathname: string): string | null => {
   if (pathname.startsWith("/tjanster") || pathname === "/taktvatt") return "Tjänster";
   if (pathname.startsWith("/taktyp")) return "Taktyper";
+  if (pathname === "/brf") return "BRF & fastigheter";
   if (pathname === "/hur-det-gar-till") return "Så går det till";
   if (pathname === "/priser" || pathname === "/offert") return "Få offert";
   if (/^\/(kontakt|radgivning|konsultation|boka)/.test(pathname)) return "Kontakt";
@@ -232,7 +234,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                   }}
                   onFocus={hasMenu ? () => openDropdown(link.label) : undefined}
 
-                  className={`group relative flex items-center gap-1.5 px-3 py-2 text-[14.5px] font-semibold tracking-tight transition-colors ${
+                  className={`group relative flex items-center gap-1.5 whitespace-nowrap px-2.5 py-2 text-[14.5px] font-semibold tracking-tight transition-colors xl:px-3 ${
                     light
                       ? "text-primary-foreground/70 hover:text-primary-foreground"
                       : "text-foreground/65 hover:text-foreground"
@@ -257,7 +259,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                   )}
                   <span
                     aria-hidden="true"
-                    className={`absolute inset-x-3 bottom-0 h-[2px] origin-left bg-seafoam transition-transform duration-300 ${
+                    className={`absolute inset-x-3 bottom-0 h-[2px] origin-left bg-accent transition-transform duration-300 ${
                       isActive || isOpen ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                     }`}
                   />
@@ -272,7 +274,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                       transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                       className={`absolute left-0 top-full z-50 pt-3 ${link.wide ? "w-[22rem]" : "w-[19rem]"}`}
                     >
-                      <div className="border-t-2 border-seafoam bg-primary p-2 text-primary-foreground shadow-[0_28px_60px_-28px_hsl(var(--primary)/0.6)]">
+                      <div className="border-t-2 border-accent bg-primary p-2 text-primary-foreground shadow-[0_28px_60px_-28px_hsl(var(--primary)/0.6)]">
                         <ul className={link.wide ? "grid grid-cols-1" : ""}>
                           {link.items!.map((item) => {
                             const itemActive = Boolean(item.to && item.to === location.pathname);
@@ -289,14 +291,14 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                                   )}
                                 </span>
                                 <ArrowRight
-                                  className="mt-0.5 h-3.5 w-3.5 shrink-0 text-seafoam-light transition-transform group-hover/item:translate-x-1"
+                                  className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent transition-transform group-hover/item:translate-x-1"
                                   aria-hidden="true"
                                 />
                               </>
                             );
                             const cls = `group/item flex items-start gap-3 border-l-2 px-4 py-3 transition-colors hover:bg-primary-foreground/[0.08] ${
                               itemActive
-                                ? "border-seafoam bg-primary-foreground/[0.08]"
+                                ? "border-accent bg-primary-foreground/[0.08]"
                                 : "border-transparent"
                             }`;
                             return (
@@ -337,9 +339,9 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
         <div className="hidden items-center gap-3 md:flex">
           <a
             href="tel:0701543639"
-            className={`hidden items-center gap-2 text-sm font-semibold transition-colors lg:flex ${
+            className={`hidden items-center gap-2 text-sm font-semibold transition-colors xl:flex ${
               light
-                ? "text-primary-foreground/85 hover:text-seafoam-light"
+                ? "text-primary-foreground/85 hover:text-accent"
                 : "text-foreground/80 hover:text-primary"
             }`}
           >
@@ -348,14 +350,14 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           </a>
           <span
             aria-hidden="true"
-            className={`hidden h-6 w-px lg:block ${light ? "bg-primary-foreground/25" : "bg-border"}`}
+            className={`hidden h-6 w-px xl:block ${light ? "bg-primary-foreground/25" : "bg-border"}`}
           />
           <a
             href="/offert"
             onClick={(e) => { e.preventDefault(); setOpenMenu(null); navigate("/offert"); }}
             className={`group flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-colors animate-subtle-pulse ${
               light
-                ? "bg-seafoam text-primary-foreground hover:bg-seafoam-light"
+                ? "bg-accent text-primary-foreground hover:bg-accent/85"
                 : "bg-primary text-primary-foreground hover:bg-accent"
             }`}
           >
@@ -368,7 +370,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           <a
             href="tel:0701543639"
             className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold ${
-              light ? "bg-seafoam text-primary-foreground" : "bg-primary text-primary-foreground"
+              light ? "bg-accent text-primary-foreground" : "bg-primary text-primary-foreground"
             }`}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
@@ -394,7 +396,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
       {/* Läsprogress */}
       <div
         aria-hidden="true"
-        className={`relative h-[2px] w-full origin-left bg-seafoam transition-opacity duration-300 ${
+        className={`relative h-[2px] w-full origin-left bg-accent transition-opacity duration-300 ${
           scrolled ? "opacity-100" : "opacity-0"
         }`}
         style={{ transform: `scaleX(${progress})` }}
@@ -436,23 +438,23 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                   }}
 
                   className={`flex items-center justify-between border-b border-primary-foreground/10 py-4 text-lg font-bold tracking-tight ${
-                    isActive ? "text-seafoam-light" : ""
+                    isActive ? "text-accent" : ""
                   }`}
                 >
                   <span>
-                    <span className="mr-3 text-[11px] font-bold text-seafoam-light">
+                    <span className="mr-3 text-[11px] font-bold text-accent">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     {link.label}
                   </span>
-                  <ArrowRight className="h-4 w-4 text-seafoam-light" aria-hidden="true" />
+                  <ArrowRight className="h-4 w-4 text-accent" aria-hidden="true" />
                 </motion.a>
                 {link.items && (
                   <ul className="mb-2 mt-2 grid gap-1 pl-9">
                     {link.items.map((item) => {
                       const itemActive = Boolean(item.to && item.to === location.pathname);
                       const cls = `block py-1.5 text-[14px] ${
-                        itemActive ? "font-semibold text-seafoam-light" : "text-primary-foreground/70"
+                        itemActive ? "font-semibold text-accent" : "text-primary-foreground/70"
                       }`;
                       return (
                       <li key={item.label}>
@@ -487,7 +489,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
               <a
                 href="/offert"
                 onClick={(e) => { e.preventDefault(); setMenuOpen(false); navigate("/offert"); }}
-                className="flex items-center justify-center gap-2 bg-seafoam px-5 py-4 text-base font-semibold text-primary-foreground animate-subtle-pulse"
+                className="flex items-center justify-center gap-2 bg-accent px-5 py-4 text-base font-semibold text-primary-foreground animate-subtle-pulse"
               >
                 Begär kostnadsfri offert
               </a>

@@ -65,6 +65,7 @@ const staticRoutes = [
   "/priser",
   "/offert",
   "/taktyper",
+  "/brf",
   "/hur-det-gar-till",
   "/blogg",
   "/kontakt",

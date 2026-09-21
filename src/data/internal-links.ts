@@ -25,6 +25,11 @@ export const hubLinks: InternalLink[] = [
     description: "Jämför livslängd, taklutning och kostnad för de vanligaste taken.",
   },
   {
+    to: "/brf",
+    label: "Takbyte för BRF",
+    description: "Besiktning, fast offert och serviceavtal för bostadsrättsföreningar.",
+  },
+  {
     to: "/hur-det-gar-till",
     label: "Så går ett takbyte till",
     description: "Steg för steg från besiktning till slutbesiktning och plåtdetaljer.",

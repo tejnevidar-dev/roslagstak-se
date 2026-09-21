@@ -116,6 +116,23 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
     links: [...primaryLinks, ...serviceLinks],
   },
+  "/brf": {
+    title: "Takbyte för BRF — bostadsrättsföreningar",
+    description:
+      "Takbyte, takbesiktning och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.",
+    h1: "Takbyte för bostadsrättsföreningar, med underlag styrelsen kan besluta på",
+    intro:
+      "Från kostnadsfri takbesiktning och fast offert till slutbesiktning och garantibevis. Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
+    paragraphs: [
+      "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk. Vi bygger arbetet på tre underlag som går att spara och jämföra: besiktningsrapport med foton, fast offert och garantihandlingar efter slutbesiktning.",
+      "Så går ett takbyte till i en förening: takbesiktning, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande med fotodokumentation samt slutbesiktning och garantibevis.",
+      "Vi erbjuder takbyte och takrenovering samt serviceavtal med regelbunden takkontroll, rengöring och snöskottning. Upplägg och pris för serviceavtal anpassas efter föreningens byggnader.",
+      "Vi lämnar 10 års utförandegaranti och 30 års materialgaranti på plåttak. RoslagsTak har F-skatt och ansvarsförsäkring.",
+      "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
+      `Boka en kostnadsfri takbesiktning på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
+    ],
+    links: [...primaryLinks, ...serviceLinks],
+  },
   "/hur-det-gar-till": {
     title: "Så går ett takbyte till — steg för steg",
     description:
