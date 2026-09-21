@@ -138,7 +138,7 @@ const BlogPost = () => {
             </div>
 
             {/* Internal links */}
-            <div className="bg-card border border-border rounded-lg p-6 mt-10">
+            <div className="bg-card border border-border rounded-2xl p-6 mt-10">
               <h2 className="font-display text-lg text-card-foreground mb-3">Läs mer om tak i Roslagen</h2>
               <div className="grid sm:grid-cols-2 gap-2">
                 <Link to="/tjanster/takomlaggning" className="flex items-center gap-1 text-sm text-primary hover:underline">
@@ -163,12 +163,12 @@ const BlogPost = () => {
             </div>
 
             {/* CTA */}
-            <div className="bg-primary/10 rounded-lg p-8 mt-8 text-center">
+            <div className="bg-primary/10 rounded-2xl p-8 mt-8 text-center">
               <h2 className="font-display text-xl text-foreground mb-2">Behöver du hjälp med ditt tak?</h2>
               <p className="text-muted-foreground text-sm mb-4">Kostnadsfri offert — vi återkopplar inom 24 timmar.</p>
               <Link
                 to="/offert"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
               >
                 Konfigurera din offert <ArrowRight className="w-4 h-4" />
               </Link>
@@ -184,7 +184,7 @@ const BlogPost = () => {
                   <Link
                     key={p.slug}
                     to={`/blogg/${p.slug}`}
-                    className="group bg-card border border-border rounded-lg p-5 hover:shadow-md transition-shadow"
+                    className="group bg-card border border-border rounded-2xl p-5 hover:shadow-md transition-shadow"
                   >
                     <h3 className="font-display text-sm text-card-foreground group-hover:text-primary transition-colors mb-2">
                       {p.title}

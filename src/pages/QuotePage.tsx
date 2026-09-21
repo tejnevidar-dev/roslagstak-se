@@ -32,7 +32,9 @@ const QuotePage = () => {
       />
       <Header />
       <main>
-        <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }]} withSchema={true} />
+        <div className="pt-24">
+          <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }]} withSchema={true} />
+        </div>
         <PageHero
           eyebrow="Offert & rådgivning"
           title="Få pris på ditt takprojekt"

@@ -68,7 +68,7 @@ const ContactLanding = () => {
             <Link
               to="/"
               aria-label="Gå till hemsidan"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 md:px-5 md:py-3 rounded-md text-sm md:text-base font-semibold hover:bg-primary/90 transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 md:px-5 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-primary/90 transition-colors shadow-sm"
             >
               <Home className="w-5 h-5" />
               <span>Till hemsidan</span>
@@ -93,7 +93,7 @@ const ContactLanding = () => {
             </p>
             <a
               href="tel:+46701543639"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md text-base font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-base font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
             >
               <Phone className="w-5 h-5" />
               Ring 070-154 36 39
@@ -116,7 +116,7 @@ const ContactLanding = () => {
                     { icon: Shield, title: "3. Kostnadsfritt offertbesök", text: "Vi kommer ut, mäter och ger dig en offert utan förbindelser." },
                   ].map((step) => (
                     <li key={step.title} className="flex gap-3">
-                      <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <step.icon className="w-5 h-5 text-primary" />
                       </div>
                       <div>
@@ -135,7 +135,7 @@ const ContactLanding = () => {
                     { icon: Clock, label: "Mån–Lör 07:00–20:00 | Sön 09:00–20:00" },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-3 text-foreground">
-                      <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                         <item.icon className="w-5 h-5 text-primary" />
                       </div>
                       {item.href ? (
@@ -151,14 +151,14 @@ const ContactLanding = () => {
               </div>
 
               <form
-                className="bg-card border border-border rounded-lg p-6 md:p-8 space-y-5 h-fit"
+                className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-5 h-fit"
                 onSubmit={handleSubmit}
                 aria-label="Boka kostnadsfri rådgivning"
               >
                 <h2 className="font-display text-2xl text-foreground">Boka rådgivning</h2>
 
                 {submitted && (
-                  <div className="flex items-start gap-3 rounded-md border border-primary/30 bg-primary/10 p-4">
+                  <div className="flex items-start gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-4">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold text-foreground">Tack för din förfrågan!</p>
@@ -170,28 +170,28 @@ const ContactLanding = () => {
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Namn</label>
-                    <input id="name" type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Ditt namn" />
+                    <input id="name" type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Ditt namn" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Telefon</label>
-                    <input id="phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="070-000 00 00" />
+                    <input id="phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="070-000 00 00" />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">E-post</label>
-                  <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="din@epost.se" />
+                  <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="din@epost.se" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">
                     Meddelande <span className="text-muted-foreground font-normal">(valfritt)</span>
                   </label>
-                  <textarea id="message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Beskriv kort ditt takprojekt eller vad du vill ha rådgivning om..." />
+                  <textarea id="message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Beskriv kort ditt takprojekt eller vad du vill ha rådgivning om..." />
                 </div>
                 <button
                   type="submit"
                   disabled={submitting}
                   aria-busy={submitting}
-                  className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold text-sm hover:bg-primary/90 transition-colors animate-subtle-pulse flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:animate-none"
+                  className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold text-sm hover:bg-primary/90 transition-colors animate-subtle-pulse flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:animate-none"
                 >
                   {submitting ? (
                     <>
@@ -222,7 +222,7 @@ const ContactLanding = () => {
             <Link
               to="/"
               aria-label="Gå tillbaka till hemsidan"
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-md text-base md:text-lg font-semibold hover:bg-primary/90 transition-colors shadow-md"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-base md:text-lg font-semibold hover:bg-primary/90 transition-colors shadow-md"
             >
               <Home className="w-6 h-6" />
               Tillbaka till hemsidan

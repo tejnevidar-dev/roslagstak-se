@@ -74,7 +74,9 @@ const ProcessPage = () => {
       />
       <Header />
       <main>
-        <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }]} withSchema={false} />
+        <div className="pt-24">
+          <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }]} withSchema={false} />
+        </div>
         <PageHero
           eyebrow="Så går det till"
           title="Ett takbyte, steg för steg"

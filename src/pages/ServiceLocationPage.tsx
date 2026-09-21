@@ -4,6 +4,7 @@ import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } fr
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
 import { getCombo, allServiceSlugs } from "@/data/service-location-combos";
 import { locations } from "@/data/locations";
@@ -140,21 +141,23 @@ const ServiceLocationPage = () => {
         geoPlacename={combo.locationName}
       />
       <Header />
-      <main className="pt-24 pb-20">
+      <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-        <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8 flex-wrap" aria-label="Brödsmulor">
-            <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
-            <span>/</span>
-            <Link to={`/taklaggare-${combo.locationSlug}`} className="hover:text-primary transition-colors">Takläggare {combo.prep} {combo.locationName}</Link>
-            <span>/</span>
-            <span className="text-foreground font-medium">{combo.serviceName}</span>
-          </nav>
+        <div className="pt-24">
+          <Breadcrumbs
+            items={[
+              { name: "Hem", path: "/" },
+              { name: `Takläggare ${combo.prep} ${combo.locationName}`, path: `/taklaggare-${combo.locationSlug}` },
+              { name: combo.serviceName },
+            ]}
+            withSchema={false}
+          />
+        </div>
 
+        <div className="container mx-auto px-4 pt-10 pb-20">
           {/* Hero */}
           <div className="max-w-4xl mb-12">
             <div className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-4">
@@ -199,7 +202,7 @@ const ServiceLocationPage = () => {
               ))}
 
               {/* Internal links to related services */}
-              <div className="bg-card border border-border rounded-lg p-6 mt-8">
+              <div className="bg-card border border-border rounded-2xl p-6 mt-8">
                 <h2 className="font-display text-lg text-card-foreground mb-4">
                   Relaterade tjänster {combo.prep} {combo.locationName}
                 </h2>
@@ -247,7 +250,7 @@ const ServiceLocationPage = () => {
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2">
                   {faqs.map((faq, i) => (
-                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-4">
+                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-2xl px-4">
                       <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline">
                         {faq.question}
                       </AccordionTrigger>
@@ -262,27 +265,27 @@ const ServiceLocationPage = () => {
 
             {/* Sidebar */}
             <aside className="space-y-6">
-              <div className="bg-primary text-primary-foreground rounded-lg p-6">
+              <div className="bg-primary text-primary-foreground rounded-2xl p-6">
                 <h3 className="font-display text-lg mb-2">Kostnadsfri offert</h3>
                 <p className="text-sm opacity-90 mb-4">
                   Få en offert för {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}. Vi återkopplar inom 24 timmar.
                 </p>
                 <Link
                   to="/offert"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
                 >
                   Konfigurera din offert <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
                   href="tel:+46701543639"
-                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors mt-3 hover:animate-subtle-pulse"
+                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors mt-3 hover:animate-subtle-pulse"
                 >
                   <Phone className="w-4 h-4" /> Ring 070-154 36 39
                 </a>
               </div>
 
               {/* USPs */}
-              <div className="bg-card border border-border rounded-lg p-6">
+              <div className="bg-card border border-border rounded-2xl p-6">
                 <h3 className="font-display text-lg text-card-foreground mb-4">Varför RoslagsTak?</h3>
                 <ul className="space-y-2">
                   {[
@@ -301,7 +304,7 @@ const ServiceLocationPage = () => {
 
               {/* Nearby combos */}
               {nearbyInService.length > 0 && (
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-card border border-border rounded-2xl p-6">
                   <h3 className="font-display text-lg text-card-foreground mb-4">
                     {combo.serviceName} i närheten
                   </h3>

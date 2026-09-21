@@ -74,7 +74,9 @@ const RoofTypesPage = () => {
       />
       <Header />
       <main>
-        <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }]} withSchema={false} />
+        <div className="pt-24">
+          <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }]} withSchema={false} />
+        </div>
         <PageHero
           eyebrow="Taktyper"
           title="Vilket tak passar ditt hus?"

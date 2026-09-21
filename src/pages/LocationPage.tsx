@@ -1,9 +1,10 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, ArrowRight, CheckCircle, Phone, Star, Home, Shield, Clock, Award } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
 import { getLocationBySlug, locations } from "@/data/locations";
 import { generateLocationFAQs } from "@/data/location-faqs";
@@ -153,7 +154,7 @@ const LocationPage = () => {
         geoPlacename={location.name}
       />
       <Header />
-      <main className="pt-24 pb-20">
+      <main>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -167,30 +168,19 @@ const LocationPage = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
 
-        <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="flex items-center justify-between mb-8">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground" aria-label="Brödsmulor">
-              <Link to="/" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
-                <Home className="w-4 h-4" />
-                Startsidan
-              </Link>
-              <span>/</span>
-              <Link to="/omraden" className="hover:text-primary transition-colors">Områden</Link>
-              <span>/</span>
-              <Link to={regionHref} className="hover:text-primary transition-colors">{location.region}</Link>
-              <span>/</span>
-              <span className="text-foreground font-medium">{location.name}</span>
-            </nav>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
-            >
-              <Home className="w-4 h-4" />
-              Till startsidan
-            </Link>
-          </div>
+        <div className="pt-24">
+          <Breadcrumbs
+            items={[
+              { name: "Hem", path: "/" },
+              { name: "Områden", path: "/omraden" },
+              { name: location.region, path: regionHref },
+              { name: location.name },
+            ]}
+            withSchema={false}
+          />
+        </div>
 
+        <div className="container mx-auto px-4 pt-10 pb-20">
           {/* Hero */}
           <div className="max-w-4xl mb-16">
             <Link
@@ -255,7 +245,7 @@ const LocationPage = () => {
                   </div>
                 ))}
 
-                <dl className="mb-6 grid gap-x-6 gap-y-3 rounded-lg border border-border bg-card p-5 sm:grid-cols-2">
+                <dl className="mb-6 grid gap-x-6 gap-y-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2">
                   {localSections.facts.map((fact) => (
                     <div key={fact.label}>
                       <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
@@ -301,7 +291,7 @@ const LocationPage = () => {
                 </p>
 
                 {/* Prisexempel — riktpriser per vanlig takstorlek */}
-                <div className="mb-6 overflow-hidden rounded-lg border border-border">
+                <div className="mb-6 overflow-hidden rounded-2xl border border-border">
                   <table className="w-full text-left text-sm">
                     <caption className="sr-only">
                       Riktpriser för takbyte {prep} {location.name}
@@ -342,7 +332,7 @@ const LocationPage = () => {
                 </p>
 
                 {/* Deep internal links */}
-                <div className="bg-card border border-border rounded-lg p-5 mb-6">
+                <div className="bg-card border border-border rounded-2xl p-5 mb-6">
                   <h3 className="font-display text-lg text-card-foreground mb-3">
                     Tjänster, priser och guider {prep} {location.name}
                   </h3>
@@ -441,7 +431,7 @@ const LocationPage = () => {
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2">
                   {faqs.map((faq, i) => (
-                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-4">
+                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-2xl px-4">
                       <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline">
                         {faq.question}
                       </AccordionTrigger>
@@ -456,27 +446,27 @@ const LocationPage = () => {
 
             {/* Sidebar */}
             <aside className="space-y-6">
-              <div className="bg-primary text-primary-foreground rounded-lg p-6">
+              <div className="bg-primary text-primary-foreground rounded-2xl p-6">
                 <h3 className="font-display text-lg mb-2">Kostnadsfri offert</h3>
                 <p className="text-sm opacity-90 mb-4">
                   Få en offert för ditt takprojekt {prep} {location.name}. Vi återkopplar inom 24 timmar.
                 </p>
                 <Link
                   to="/offert"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
                 >
                   Konfigurera din offert <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
                   href="tel:+46701543639"
-                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors mt-3 hover:animate-subtle-pulse"
+                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white w-full px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors mt-3 hover:animate-subtle-pulse"
                 >
                   <Phone className="w-4 h-4" /> Ring 070-154 36 39
                 </a>
               </div>
 
               {nearby.length > 0 && (
-                <div className="bg-card border border-border rounded-lg p-6">
+                <div className="bg-card border border-border rounded-2xl p-6">
                   <h3 className="font-display text-lg text-card-foreground mb-4">Takläggare i närområdet</h3>
                   <div className="space-y-2">
                     {nearby.map((loc) => (
@@ -493,7 +483,7 @@ const LocationPage = () => {
                 </div>
               )}
 
-              <div className="bg-card border border-border rounded-lg p-6">
+              <div className="bg-card border border-border rounded-2xl p-6">
                 <h3 className="font-display text-lg text-card-foreground mb-3">Våra taktjänster</h3>
                 <div className="space-y-2">
                   {[

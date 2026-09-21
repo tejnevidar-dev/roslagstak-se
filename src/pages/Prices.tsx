@@ -3,8 +3,8 @@ import { ArrowRight, CheckCircle, HelpCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import JsonLd from "@/components/JsonLd";
-import { buildBreadcrumbSchema } from "@/lib/schema";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
 import GoogleReviews from "@/components/GoogleReviews";
 import {
@@ -93,38 +93,23 @@ const Prices = () => {
         description="Vad kostar takbyte i Roslagen? Prislista för TP20, dubbelfalsat, tegelplåt, betongpannor och takrenovering. Fast pris efter besiktning och kostnadsfri offert."
         canonical="https://roslagstak.se/priser"
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
-      <main className="pt-24 pb-20">
-        <JsonLd
-          data={buildBreadcrumbSchema([
-            { name: "Hem", path: "/" },
-            { name: "Priser", path: "/priser" },
-          ])}
+      <main>
+        <div className="pt-24">
+          <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Priser" }]} />
+        </div>
+        <PageHero
+          eyebrow="Prislista 2026"
+          title="Vad kostar takbyte och takrenovering i Roslagen?"
+          text="Riktpriser för alla typer av takarbeten. Alla priser inkluderar material och arbete. ROT-avdrag (30% på arbetskostnaden) tillkommer. Kostnadsfri offert med exakt pris."
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Brödsmulor">
-            <Link to="/" className="hover:text-primary transition-colors">Startsidan</Link>
-            <span>/</span>
-            <span className="text-foreground font-medium">Priser</span>
-          </nav>
-
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Prislista 2026</p>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              Vad kostar takbyte och takrenovering i Roslagen?
-            </h1>
-            <p className="text-muted-foreground leading-relaxed">
-              Riktpriser för alla typer av takarbeten. Alla priser inkluderar material och arbete. 
-              ROT-avdrag (30% på arbetskostnaden) tillkommer. Kostnadsfri offert med exakt pris.
-            </p>
-          </div>
-
+        <div className="container mx-auto px-4 pt-16 pb-20">
           {/* Price tables */}
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {priceData.map((category) => (
-              <div key={category.category} className="bg-card border border-border rounded-lg overflow-hidden">
+              <div key={category.category} className="bg-card border border-border rounded-2xl overflow-hidden">
                 <div className="bg-primary/5 px-6 py-4 border-b border-border">
                   <h2 className="font-display text-lg text-foreground">{category.category}</h2>
                 </div>
@@ -144,7 +129,7 @@ const Prices = () => {
           </div>
 
           {/* ROT info */}
-          <div className="max-w-4xl mx-auto bg-primary/5 border border-primary/20 rounded-lg p-8 mb-16">
+          <div className="max-w-4xl mx-auto bg-primary/5 border border-primary/20 rounded-2xl p-8 mb-16">
             <h2 className="font-display text-xl text-foreground mb-4 flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-primary" /> Så fungerar ROT-avdraget vid takarbeten
             </h2>
@@ -167,7 +152,7 @@ const Prices = () => {
             </h2>
             <Accordion type="single" collapsible className="space-y-3">
               {priceFaqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-6">
+                <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-2xl px-6">
                   <AccordionTrigger className="text-left font-semibold text-sm text-card-foreground hover:text-primary">
                     {faq.question}
                   </AccordionTrigger>
@@ -181,7 +166,7 @@ const Prices = () => {
 
           {/* CTA */}
           <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-accent rounded-lg p-8">
+            <div className="bg-accent rounded-2xl p-8">
               <h2 className="font-display text-2xl text-accent-foreground mb-2">
                 Vill du veta exakt vad ditt tak kostar?
               </h2>
@@ -191,13 +176,13 @@ const Prices = () => {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   to="/offert"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
                 >
                   Konfigurera din offert <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
                   href="tel:+46701543639"
-                  className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-md text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors hover:animate-subtle-pulse"
+                  className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors hover:animate-subtle-pulse"
                 >
                   Ring 070-154 36 39
                 </a>

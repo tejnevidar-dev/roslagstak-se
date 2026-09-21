@@ -12,7 +12,6 @@ import { canonicalPath } from "@/lib/canonical";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
 import { serviceBlocks } from "@/data/service-blocks";
-import imgRoofProject from "@/assets/roof-project.jpg";
 import imgRooferWork from "@/assets/roofer-work.jpg";
 import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
 import imgPapp from "@/assets/roof-build-02-papp.jpg";
@@ -20,12 +19,14 @@ import imgRannor from "@/assets/roof-build-03-rannor.jpg";
 import imgVindskivor from "@/assets/roof-build-04-vindskivor.jpg";
 import imgBeslag from "@/assets/roof-build-07-beslag.jpg";
 import imgSnoras from "@/assets/roof-build-08-snorasskydd.jpg";
-import imgLayers from "@/assets/roof-layers-macro.jpg";
 import imgAfter from "@/assets/after-roof-1.jpg";
-import imgVilla from "@/assets/project-villa-copper.jpg";
 import imgLakt from "@/assets/roof-build-05-lakt.jpg";
 import imgPannor from "@/assets/roof-build-06-pannor.jpg";
-import imgCinematic from "@/assets/hero-cinematic.jpg";
+import imgBefore1 from "@/assets/before-roof-1.jpg";
+import imgBefore2 from "@/assets/before-roof-2.jpg";
+import imgAfter2 from "@/assets/after-roof-2.jpg";
+import imgDronePoster from "@/assets/hero-drone-poster.jpg";
+import imgBlidoLakeview from "@/assets/project-blido-lakeview.jpg";
 
 /** Hero-foto per tjänst — dokumentära bilder från eget arbete. */
 const serviceImages: Record<string, string> = {
@@ -42,10 +43,10 @@ const serviceImages: Record<string, string> = {
 /** Närbild i specifikationskolumnen — alltid en annan bild än heron. */
 const detailImages: Record<string, string> = {
   takomlaggning: imgLakt,
-  takrenovering: imgLayers,
+  takrenovering: imgBefore2,
   takavvattning: imgBeslag,
-  takkupor: imgVilla,
-  takinspektion: imgLayers,
+  takkupor: imgAfter2,
+  takinspektion: imgBefore1,
   platarbeten: imgSnoras,
   takvard: imgPannor,
   "eternit-asbest": imgRaspont,
@@ -54,8 +55,6 @@ const detailImages: Record<string, string> = {
 type ServiceMeta = {
   accentLine: string;
   specs: { k: string; v: string }[];
-  techLine: string;
-  objCode: string;
   specHeading: string;
   lead: string;
   craftLine: string;
@@ -70,8 +69,6 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Utförande", v: "AMA-standard" },
       { k: "Läkt", v: "25 × 38 mm" },
     ],
-    techLine: "OBJ: NORRTÄLJE-32 // TEGELPANNA PÅ LÄKT",
-    objCode: "RT-01",
     specHeading: "Teknisk specifikation och utförande",
     lead: "Varje omläggning inleds med en fullständig analys av råspont, ventilation och avvattning.",
     craftLine: "Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.",
@@ -84,12 +81,10 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Underlag", v: "Papp och råspont" },
       { k: "Pris", v: "Fast efter besiktning" },
     ],
-    techLine: "OBJ: VÄDDÖ-14 // BYTE AV UNDERLAGSPAPP",
-    objCode: "RT-02",
     specHeading: "Vad vi åtgärdar — och vad vi låter vara",
     lead: "Renovering handlar om att byta rätt delar: skadad papp, rötat virke och trasiga pannor.",
     craftLine: "Ett tak dör sällan överallt samtidigt — vi byter det som behöver bytas.",
-    photoNote: "Detalj av takets uppbyggnad i lager — från råspont till ytskikt.",
+    photoNote: "Skadat, mossbevuxet tegeltak — exakt den typ av skador vi bedömer och åtgärdar.",
   },
   takavvattning: {
     accentLine: "rännor och stuprör.",
@@ -98,8 +93,6 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Dimension", v: "Beräknad per takyta" },
       { k: "Ränndalar", v: "Falsade i plåt" },
     ],
-    techLine: "OBJ: BLIDÖ-07 // HÄNGRÄNNA 125 MM",
-    objCode: "RT-03",
     specHeading: "Dimensionering och montage av avvattning",
     lead: "Vattnet ska bort från fasad och grund — dimension och fall avgör om systemet fungerar.",
     craftLine: "Fel fall på rännan syns inte första året. Det syns på fasaden fem år senare.",
@@ -112,12 +105,10 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Fönster", v: "Velux eller motsvarande" },
       { k: "Tätning", v: "Plåtbeslag runt kupa" },
     ],
-    techLine: "OBJ: LJUSTERÖ-21 // KUPA MED PLÅTINKLÄDNAD",
-    objCode: "RT-04",
     specHeading: "Konstruktion, tätning och invändig finish",
     lead: "En kupa är lika mycket plåtarbete som snickeri — tätningen avgör resultatet.",
     craftLine: "Runt kupor och genomföringar avgörs om taket håller tätt i 30 år.",
-    photoNote: "Vindskivor och gavelbeslag monterade före taktäckning.",
+    photoNote: "Färdigt tak med två takkupor — tätt inklätt i plåt runt varje kupa.",
   },
   takinspektion: {
     accentLine: "innan skadan kostar.",
@@ -126,12 +117,10 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Leverans", v: "Skriftlig rapport" },
       { k: "Omfattning", v: "Tak, underlag, ventilation" },
     ],
-    techLine: "OBJ: RIMBO-05 // BEDÖMNING AV RÅSPONT",
-    objCode: "RT-05",
     specHeading: "Vad vi kontrollerar vid en besiktning",
     lead: "Vi bedömer takets återstående livslängd — inte bara hur det ser ut från marken.",
     craftLine: "Det som avgör takets skick ligger under pannorna.",
-    photoNote: "Råspont friläggs och bedöms innan nytt tätskikt läggs.",
+    photoNote: "Sprucken plåt och lossnande pannor — exempel på skador vi upptäcker vid besiktning.",
   },
   platarbeten: {
     accentLine: "beslag och bandtäckning.",
@@ -140,8 +129,6 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Teknik", v: "Falsning på plats" },
       { k: "Detaljer", v: "Skorsten och genomföring" },
     ],
-    techLine: "OBJ: GRISSLEHAMN-11 // SKORSTENSBESLAG",
-    objCode: "RT-06",
     specHeading: "Plåtdetaljer som håller mot kustklimat",
     lead: "Plåtarbetet är takets tätning — beslagen tillverkas och falsas efter ditt hus.",
     craftLine: "Plåtslageri är millimeterarbete. Salt och vind förlåter ingenting.",
@@ -154,8 +141,6 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Färg", v: "Specialfärg för tak" },
       { k: "Effekt", v: "Förlängd livslängd" },
     ],
-    techLine: "OBJ: HALLSTAVIK-09 // TAKTVÄTT OCH BEHANDLING",
-    objCode: "RT-07",
     specHeading: "Rengöring, behandling och målning",
     lead: "Mossa håller fukt mot ytskiktet — rätt metod tar bort den utan att skada materialet.",
     craftLine: "Ett välskött tak håller år längre än ett tak som lämnas åt mossan.",
@@ -168,8 +153,6 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Anmälan", v: "Vi hanterar den" },
       { k: "Deponi", v: "Godkänd transport" },
     ],
-    techLine: "OBJ: SKÄRGÅRD-03 // SANERING AV ETERNITTAK",
-    objCode: "RT-08",
     specHeading: "Sanering enligt AFS 2006:1 — steg för steg",
     lead: "Asbest kräver skyddsutrustning, emballering och dokumenterad transport till deponi.",
     craftLine: "Eternit ska inte kapas, brytas eller högtryckstvättas. Den ska saneras.",
@@ -353,9 +336,9 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
   const details = slug ? serviceDetails[slug] : null;
-  const serviceImage = (slug && serviceImages[slug]) || imgRoofProject;
-  const detailImage = (slug && detailImages[slug]) || imgLayers;
-  const bandImage = slug === "takvard" ? imgAfter : imgCinematic;
+  const serviceImage = (slug && serviceImages[slug]) || imgDronePoster;
+  const detailImage = (slug && detailImages[slug]) || imgLakt;
+  const bandImage = slug === "takvard" ? imgAfter : imgBlidoLakeview;
   const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
   const blocks = (slug && serviceBlocks[slug]) || serviceBlocks.takomlaggning;
   const specificBlock = <ServiceSpecificBlock block={blocks.block} />;
@@ -486,14 +469,14 @@ const ServiceDetail = () => {
               <div className="mt-2 flex flex-col gap-4 sm:flex-row">
                 <Link
                   to="/offert"
-                  className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-sm bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
+                  className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-full bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
                 >
                   Begär kostnadsfri offert
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
                 <a
                   href="tel:0701543639"
-                  className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-sm border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
+                  className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-full border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
                 >
                   <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
                   070-154 36 39
@@ -510,9 +493,9 @@ const ServiceDetail = () => {
               </Link>
             </div>
 
-            {/* Dokumentärt foto med teknisk metadata */}
+            {/* Dokumentärt foto */}
             <figure className="relative m-0">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary shadow-[var(--shadow-elevated)]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[var(--shadow-elevated)]">
                 <img
                   src={serviceImage}
                   alt={`${service.title} i Roslagen utförd av RoslagsTak`}
@@ -522,22 +505,7 @@ const ServiceDetail = () => {
                   decoding="async"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
-                <figcaption className="absolute inset-x-0 bottom-0 border-t border-primary-foreground/15 bg-primary/90 p-5 text-primary-foreground backdrop-blur-md">
-                  <div className="flex items-end justify-between gap-4">
-                    <div>
-                      <span className="mb-1 block text-[10px] uppercase tracking-[0.2em] text-primary-foreground/60">
-                        Ur vårt arbete
-                      </span>
-                      <p className="font-mono text-[11px] font-medium">{meta.techLine}</p>
-                    </div>
-                    <span className="font-mono text-[10px] text-primary-foreground/45">59.75° N, 18.70° E</span>
-                  </div>
-                </figcaption>
               </div>
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-3 -top-3 -z-10 h-20 w-20 border-r-2 border-t-2 border-accent"
-              />
             </figure>
           </div>
         </section>
@@ -569,7 +537,7 @@ const ServiceDetail = () => {
                     ? "opacity-90"
                     : "text-muted-foreground";
               return (
-                <div key={f.label} className={`flex min-h-[11.5rem] flex-col justify-between rounded-sm p-8 ${tone}`}>
+                <div key={f.label} className={`flex min-h-[11.5rem] flex-col justify-between rounded-2xl p-8 ${tone}`}>
                   <dt className={`text-[10px] font-bold uppercase tracking-[0.2em] ${label}`}>{f.label}</dt>
                   <dd>
                     <span className="mb-1.5 block font-display text-[1.6rem] font-extrabold leading-none tracking-[-0.03em]">
@@ -640,14 +608,14 @@ const ServiceDetail = () => {
 
             {/* Offertkolumn */}
             <aside className="flex flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
-              <div className="flex flex-col gap-6 rounded-sm bg-primary p-9 text-primary-foreground">
+              <div className="flex flex-col gap-6 rounded-2xl bg-primary p-9 text-primary-foreground">
                 <h3 className="font-display text-[1.55rem] font-extrabold tracking-[-0.03em]">Begär offert</h3>
                 <p className="text-[15px] font-light leading-relaxed text-primary-foreground/75">
                   Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri besiktning.
                 </p>
                 <Link
                   to="/offert"
-                  className="inline-flex w-full items-center justify-center gap-2.5 rounded-sm bg-accent px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-accent-foreground transition-colors hover:bg-primary-foreground hover:text-primary animate-subtle-pulse"
+                  className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-accent px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-accent-foreground transition-colors hover:bg-primary-foreground hover:text-primary animate-subtle-pulse"
                 >
                   Starta förfrågan
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -662,7 +630,7 @@ const ServiceDetail = () => {
               </div>
 
               <figure className="m-0 space-y-5">
-                <div className="overflow-hidden rounded-sm bg-secondary">
+                <div className="overflow-hidden rounded-2xl bg-secondary">
                   <img
                     src={detailImage}
                     alt={`Detalj från ${service.title.toLowerCase()} i Roslagen`}
@@ -679,15 +647,10 @@ const ServiceDetail = () => {
                 </figcaption>
               </figure>
 
-              <blockquote className="border-l-2 border-accent pl-6">
-                <p className="font-display text-[1.05rem] font-semibold italic leading-relaxed tracking-[-0.02em] text-foreground">
-                  "Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när
-                  sista biten går med båt."
-                </p>
-                <footer className="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
-                  RoslagsTak, Blidö
-                </footer>
-              </blockquote>
+              <p className="border-l-2 border-accent pl-6 text-[15px] leading-relaxed text-muted-foreground">
+                Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när
+                sista biten går med båt.
+              </p>
             </aside>
           </div>
         </section>
@@ -760,9 +723,8 @@ const ServiceDetail = () => {
               </p>
             </div>
           </div>
-          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 bg-primary/85 px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-primary-foreground backdrop-blur-sm">
+          <div className="absolute inset-x-0 bottom-0 bg-primary/85 px-6 py-4 text-[11px] uppercase tracking-[0.2em] text-primary-foreground backdrop-blur-sm">
             <span>{service.title} — utfört i Roslagen</span>
-            <span className="text-primary-foreground/55">{meta.objCode}</span>
           </div>
         </section>
 
@@ -837,7 +799,7 @@ const ServiceDetail = () => {
                 {slug !== "eternit-asbest" && (
                   <Link
                     to="/offert"
-                    className="group inline-flex items-center justify-center gap-3 rounded-sm bg-card px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
+                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-card px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
                   >
                     Få offert
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -847,8 +809,8 @@ const ServiceDetail = () => {
                   to="/offert#radgivning"
                   className={`inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
                     slug === "eternit-asbest"
-                      ? "rounded-sm bg-card text-primary hover:bg-secondary animate-subtle-pulse"
-                      : "rounded-sm border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                      ? "rounded-full bg-card text-primary hover:bg-secondary animate-subtle-pulse"
+                      : "rounded-full border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                   }`}
                 >
                   Kostnadsfri rådgivning
