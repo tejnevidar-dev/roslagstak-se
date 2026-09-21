@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Libre Baskerville', 'Georgia', 'serif'],
-        body: ['IBM Plex Sans', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        body: ['Karla', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

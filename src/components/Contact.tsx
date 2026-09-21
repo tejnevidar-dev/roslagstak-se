@@ -69,7 +69,7 @@ const Contact = () => {
                 { icon: Clock, label: "Mån–Lör 07:00–20:00 | Sön 09:00–20:00" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3 text-foreground">
-                  <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   {item.href ? (
@@ -84,7 +84,7 @@ const Contact = () => {
             </div>
 
             {/* Google Maps */}
-            <div className="rounded-lg overflow-hidden border border-border aspect-[16/9]">
+            <div className="rounded-2xl overflow-hidden border border-border aspect-[16/9]">
               <iframe
                 title="RoslagsTak — Blidö, Norrtälje"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000!2d18.8347!3d59.5933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f8e1a2d3c4b5e%3A0x1234567890abcdef!2sBlid%C3%B6!5e0!3m2!1ssv!2sse!4v1"
@@ -99,12 +99,12 @@ const Contact = () => {
           </div>
 
           <form
-            className="bg-card border border-border rounded-lg p-8 space-y-5"
+            className="bg-card border border-border rounded-2xl p-8 space-y-5"
             onSubmit={handleSubmit}
             aria-label="Kontaktformulär"
           >
             {submitted && (
-              <div className="flex items-start gap-3 rounded-md border border-primary/30 bg-primary/10 p-4">
+              <div className="flex items-start gap-3 rounded-xl border border-primary/30 bg-primary/10 p-4">
                 <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-semibold text-foreground">Tack för din förfrågan!</p>
@@ -115,26 +115,26 @@ const Contact = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Namn</label>
-                <input id="name" type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Ditt namn" />
+                <input id="name" type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Ditt namn" />
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Telefon</label>
-                <input id="phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="070-000 00 00" />
+                <input id="phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="070-000 00 00" />
               </div>
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">E-post</label>
-              <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="din@epost.se" />
+              <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="din@epost.se" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Meddelande</label>
-              <textarea id="message" rows={4} required value={message} onChange={(e) => setMessage(e.target.value)} className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Beskriv ditt takprojekt..." />
+              <textarea id="message" rows={4} required value={message} onChange={(e) => setMessage(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Beskriv ditt takprojekt..." />
             </div>
             <button
               type="submit"
               disabled={submitting}
               aria-busy={submitting}
-              className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold text-sm hover:bg-primary/90 transition-colors animate-subtle-pulse flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:animate-none"
+              className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold text-sm hover:bg-primary/90 transition-colors animate-subtle-pulse flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:animate-none"
             >
               {submitting ? (
                 <>
@@ -149,7 +149,7 @@ const Contact = () => {
               )}
             </button>
             {submitting && (
-              <div role="status" aria-live="polite" className="flex items-center justify-center gap-2 rounded-md border border-primary/30 bg-primary/10 px-4 py-3 text-sm font-medium text-foreground">
+              <div role="status" aria-live="polite" className="flex items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-sm font-medium text-foreground">
                 <Loader2 className="w-4 h-4 animate-spin text-primary" />
                 <span>Vi tar emot din förfrågan – ett ögonblick...</span>
               </div>

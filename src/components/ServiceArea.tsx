@@ -70,7 +70,7 @@ const ServiceArea = () => {
         <div className="grid grid-cols-12 gap-10 lg:gap-16">
           <div className="col-span-12 lg:col-span-4">
             <div className="lg:sticky lg:top-28">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-seafoam">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
                 Vart finns vi
               </p>
               <h2
@@ -78,7 +78,7 @@ const ServiceArea = () => {
                 className="mt-6 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.14]"
               >
                 Från Stockholms innerstad till{" "}
-                <span className="italic text-seafoam">ytterskärgårdens öar.</span>
+                <span className="italic text-accent">ytterskärgårdens öar.</span>
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
                 Vi utför takbyte, takrenovering, takvård och plåtarbeten i {areas.length} områden i
@@ -119,12 +119,12 @@ const ServiceArea = () => {
                 className="border-t border-marine-foreground/20 py-9 last:border-b"
               >
                 <div className="flex items-baseline gap-5">
-                  <span className="font-display text-[12px] tabular-nums tracking-[0.24em] text-seafoam">
+                  <span className="font-display text-[12px] tabular-nums tracking-[0.24em] text-accent">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="flex-1">
                     <h3 className="flex items-center gap-3 font-display text-[clamp(1.35rem,2vw,1.8rem)] font-bold leading-tight">
-                      <Anchor className="h-5 w-5 text-seafoam" aria-hidden="true" />
+                      <Anchor className="h-5 w-5 text-accent" aria-hidden="true" />
                       {area.region}
                     </h3>
                     <p className="mt-3 max-w-2xl text-[16px] font-light leading-relaxed text-marine-foreground/80">
@@ -135,7 +135,7 @@ const ServiceArea = () => {
                         <li key={place.slug}>
                           <Link
                             to={`/taklaggare-${place.slug}`}
-                            className="underline decoration-marine-foreground/25 underline-offset-4 transition-colors hover:text-seafoam hover:decoration-seafoam"
+                            className="underline decoration-marine-foreground/25 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
                           >
                             {place.name}
                           </Link>
@@ -148,7 +148,7 @@ const ServiceArea = () => {
             ))}
             <Link
               to="/omraden"
-              className="mt-9 inline-flex items-center gap-2 text-[15px] font-semibold text-seafoam transition-colors hover:text-marine-foreground"
+              className="mt-9 inline-flex items-center gap-2 text-[15px] font-semibold text-accent transition-colors hover:text-marine-foreground"
             >
               Se alla orter vi arbetar i
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -162,7 +162,7 @@ const ServiceArea = () => {
             <div className="col-span-12 lg:col-span-4">
               <span
                 aria-hidden="true"
-                className="mb-6 block h-1 w-12 bg-seafoam"
+                className="mb-6 block h-1 w-12 bg-accent"
               />
               <h3 className="font-display text-[clamp(1.4rem,2vw,1.9rem)] font-bold leading-snug text-foreground">
                 Din lokala takläggare i Roslagen

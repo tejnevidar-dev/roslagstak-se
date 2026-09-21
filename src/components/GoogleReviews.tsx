@@ -64,8 +64,8 @@ const GoogleReviews = ({
       >
         <div className="mx-auto grid max-w-6xl grid-cols-12 items-center gap-10 px-6">
           <div className="col-span-12 lg:col-span-7">
-            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-seafoam">
-              <span aria-hidden="true" className="h-px w-10 bg-seafoam/50" />
+            <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
+              <span aria-hidden="true" className="h-px w-10 bg-accent/50" />
               Omdömen
             </p>
             <h2 className="mt-5 max-w-[28ch] font-display text-[clamp(1.6rem,2.6vw,2.25rem)] font-bold leading-[1.16] tracking-[-0.02em]">
@@ -76,7 +76,7 @@ const GoogleReviews = ({
             </p>
             <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
               {badges.map((b) => (
-                <li key={b.text} className="flex items-center gap-2 text-[13px] text-seafoam/90">
+                <li key={b.text} className="flex items-center gap-2 text-[13px] text-accent/90">
                   <b.icon className="h-4 w-4" aria-hidden="true" />
                   {b.text}
                 </li>
@@ -88,7 +88,7 @@ const GoogleReviews = ({
               href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-seafoam px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-transform duration-500 hover:-translate-y-0.5 hover:animate-subtle-pulse"
+              className="inline-flex items-center gap-3 bg-accent px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-transform duration-500 hover:-translate-y-0.5 hover:animate-subtle-pulse"
             >
               <Star className="h-4 w-4 fill-current" aria-hidden="true" />
               Läs omdömena på Google

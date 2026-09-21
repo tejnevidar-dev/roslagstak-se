@@ -50,7 +50,7 @@ const BeforeAfterSlider = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[16/10] rounded-lg overflow-hidden cursor-col-resize select-none"
+      className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden cursor-col-resize select-none"
       onMouseDown={(e) => {
         setIsDragging(true);
         updatePosition(e.clientX);

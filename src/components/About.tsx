@@ -57,7 +57,7 @@ const About = () => {
           {/* Roterat foto med garantiplakett — samma språk som hero */}
           <div ref={imgWrap} className="col-span-12 lg:col-span-5">
             <div className="relative">
-              <figure className="relative m-0 aspect-[4/5] -rotate-2 overflow-hidden border-[12px] border-card bg-secondary shadow-[0_50px_100px_-50px_rgba(12,35,64,0.75)]">
+              <figure className="relative m-0 aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[0_50px_100px_-50px_rgba(12,35,64,0.75)]">
                 <motion.img
                   src={rooferImg}
                   alt="Professionell takläggare arbetar på tak vid Roslagens kust"
@@ -68,14 +68,13 @@ const About = () => {
                   style={reduce ? undefined : { y: imgY }}
                 />
               </figure>
-              <figcaption className="absolute -bottom-5 left-6 z-10 rotate-2 bg-primary px-6 py-4 text-primary-foreground shadow-xl">
-                <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-seafoam">
+              <figcaption className="absolute -bottom-5 left-6 z-10 rounded-2xl bg-primary px-6 py-4 text-primary-foreground shadow-xl">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-accent">
                   Roslagen &amp; Storstockholm
                 </span>
                 <span className="mt-1 block font-display text-xl">Egna takläggare på plats</span>
 
               </figcaption>
-              <span aria-hidden="true" className="absolute -right-4 -top-4 h-12 w-12 bg-seafoam" />
             </div>
           </div>
 
@@ -131,7 +130,7 @@ const About = () => {
         <div className="mt-24 bg-primary px-6 py-16 text-primary-foreground sm:px-12 lg:mt-28 lg:px-16 lg:py-20">
           <div className="grid grid-cols-12 gap-10 lg:gap-16">
             <div className="col-span-12 lg:col-span-4">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-seafoam">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
                 Våra ledord
               </p>
               <h3 className="mt-6 font-display text-[clamp(1.6rem,2.5vw,2.2rem)] font-bold leading-[1.16]">
@@ -153,11 +152,11 @@ const About = () => {
                   <Reveal delay={i * 0.06}>
                     <div className="group flex flex-col gap-4 py-8 md:flex-row md:gap-10">
                       <span className="flex w-full shrink-0 items-center gap-3 md:w-[12rem]">
-                        <span className="font-display text-[12px] tabular-nums tracking-[0.24em] text-seafoam">
+                        <span className="font-display text-[12px] tabular-nums tracking-[0.24em] text-accent">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <value.icon
-                          className="h-5 w-5 text-seafoam transition-transform duration-500 group-hover:-translate-y-0.5"
+                          className="h-5 w-5 text-accent transition-transform duration-500 group-hover:-translate-y-0.5"
                           aria-hidden="true"
                         />
                         <span className="font-display text-xl font-bold">{value.title}</span>

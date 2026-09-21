@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -26,8 +26,8 @@
     --muted: 205 45% 95%;
     --muted-foreground: 210 20% 42%;
 
-    /* #2d8a9e */
-    --accent: 190 56% 40%;
+    /* #b96a3a — koppar (bytte ut den gamla tealen #2d8a9e i D-riktningen) */
+    --accent: 24 58% 47%;
     --accent-foreground: 0 0% 100%;
 
     /* #5cbdb9 */
@@ -46,12 +46,12 @@
 
     --border: 208 30% 89%;
     --input: 208 30% 89%;
-    --ring: 190 56% 40%;
+    --ring: 24 58% 47%;
 
     --radius: 0.125rem;
 
-    --font-display: 'Libre Baskerville', Georgia, serif;
-    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Karla', sans-serif;
 
     --hero-overlay: linear-gradient(120deg, hsla(212, 68%, 15%, 0.78), hsla(205, 61%, 27%, 0.42));
     --section-warm: 205 45% 96%;

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Phone } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import roofProject from "@/assets/roof-project.jpg";
+import roofProject from "@/assets/hero-drone-poster.jpg";
 import {
   IconRoofNew,
   IconRoofRepair,
@@ -169,7 +169,7 @@ const Services = () => {
       <figure className="relative m-0 mt-24 overflow-hidden">
         <img
           src={roofProject}
-          alt="Nylagt falsat plåttak på hus i Roslagens skärgård"
+          alt="Drönarfoto av nylagt tak på Blidö, Roslagens skärgård"
           width={1920}
           height={720}
           loading="lazy"
@@ -181,11 +181,11 @@ const Services = () => {
           className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent"
         />
         <figcaption className="absolute bottom-0 left-0 right-0 mx-auto flex max-w-7xl flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-7 text-primary-foreground">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-seafoam">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">
             Referens
           </span>
           <span className="font-display text-[15px] italic">
-            Falsat plåttak, Roslagens kust
+            Nylagt tak, Blidö
           </span>
         </figcaption>
       </figure>

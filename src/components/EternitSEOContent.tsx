@@ -103,7 +103,7 @@ const EternitSEOContent = () => {
             <AccordionItem
               key={index}
               value={`eternit-faq-${index}`}
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border rounded-2xl px-6"
             >
               <AccordionTrigger className="text-left font-semibold text-sm text-card-foreground hover:text-primary">
                 {faq.question}
@@ -117,7 +117,7 @@ const EternitSEOContent = () => {
       </div>
 
       {/* Extra internal links specific to eternit */}
-      <div className="bg-card border border-border rounded-lg p-6 mb-8">
+      <div className="bg-card border border-border rounded-2xl p-6 mb-8">
         <h2 className="font-display text-lg text-card-foreground mb-3">
           Eternitsanering i din kommun
         </h2>

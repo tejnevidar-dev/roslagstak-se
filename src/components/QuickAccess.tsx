@@ -18,7 +18,7 @@ const QuickAccess = () => (
         <div className="col-span-12 lg:col-span-5 lg:text-right">
           <a
             href="tel:0701543639"
-            className="inline-flex items-center gap-3 text-[17px] font-semibold text-foreground underline decoration-seafoam decoration-2 underline-offset-[6px] hover:text-accent"
+            className="inline-flex items-center gap-3 text-[17px] font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[6px] hover:text-accent"
           >
             <Phone className="h-5 w-5 text-accent" aria-hidden="true" />
             Hellre prata? 070-154 36 39

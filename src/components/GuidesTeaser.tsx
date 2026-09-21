@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { blogPosts } from "@/data/blog-posts";
 import Reveal from "@/components/Reveal";
-import roofMacro from "@/assets/roof-layers-macro.jpg";
+import roofMacro from "@/assets/roof-build-01-raspont.jpg";
 
 /* Guider i nautisk asymmetri: roterat uppslag till vänster, hairline-lista till höger */
 const GuidesTeaser = () => {
@@ -41,7 +41,7 @@ const GuidesTeaser = () => {
           <div className="col-span-12 lg:col-span-5 lg:text-right">
             <Link
               to="/blogg"
-              className="inline-flex items-center gap-3 text-[17px] font-semibold text-foreground underline decoration-seafoam decoration-2 underline-offset-[6px] hover:text-accent"
+              className="inline-flex items-center gap-3 text-[17px] font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[6px] hover:text-accent"
             >
               Se alla guider <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -52,16 +52,16 @@ const GuidesTeaser = () => {
           {lead && (
             <Reveal className="col-span-12 lg:col-span-5">
               <Link to={`/blogg/${lead.slug}`} className="group block">
-                <figure className="relative m-0 rotate-1 overflow-hidden border-[10px] border-background bg-secondary shadow-[0_40px_90px_-55px_rgba(12,35,64,0.75)]">
+                <figure className="relative m-0 overflow-hidden rounded-2xl bg-secondary shadow-[0_40px_90px_-55px_rgba(12,35,64,0.75)]">
                   <img
                     src={roofMacro}
-                    alt="Närbild på takkonstruktion med läkt och pannor"
+                    alt="Nylagd råspont på tak i Roslagens skärgård, eget arbete"
                     width={900}
                     height={675}
                     loading="lazy"
                     className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   />
-                  <figcaption className="absolute bottom-0 left-0 bg-primary px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-seafoam">
+                  <figcaption className="absolute bottom-0 left-0 bg-primary px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-accent">
                     Mest läst · {lead.readTime} läsning
                   </figcaption>
                 </figure>

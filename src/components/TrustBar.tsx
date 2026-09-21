@@ -14,23 +14,23 @@ const TrustBar = () => (
       {items.map((item) => (
         <li
           key={item.label}
-          className="group flex flex-col border-l-2 border-seafoam/60 py-1 pl-5 transition-[border-color,padding] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-seafoam hover:pl-6"
+          className="group flex flex-col border-l-2 border-accent/60 py-1 pl-5 transition-[border-color,padding] duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-accent hover:pl-6"
         >
           <span
             className={`font-display text-2xl font-bold tracking-[-0.015em] lg:text-[1.75rem] ${
-              item.accent ? "text-seafoam" : ""
+              item.accent ? "text-accent" : ""
             }`}
           >
             {item.value}
           </span>
-          <span className="mt-1.5 text-[11.5px] font-medium uppercase leading-[1.5] tracking-[0.18em] text-seafoam/85">
+          <span className="mt-1.5 text-[11.5px] font-medium uppercase leading-[1.5] tracking-[0.18em] text-accent/85">
             {item.label}
           </span>
         </li>
       ))}
     </ul>
     <div className="mx-auto mt-10 flex max-w-5xl justify-center px-6 lg:mt-12">
-      <GoogleReviews variant="inline" className="text-seafoam" />
+      <GoogleReviews variant="inline" className="text-accent" />
     </div>
   </section>
 );

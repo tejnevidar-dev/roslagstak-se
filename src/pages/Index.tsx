@@ -11,16 +11,18 @@ import TrustBar from "@/components/TrustBar";
 const About = lazy(() => import("@/components/About"));
 const ServiceArea = lazy(() => import("@/components/ServiceArea"));
 const GuidesTeaser = lazy(() => import("@/components/GuidesTeaser"));
+const FAQ = lazy(() => import("@/components/FAQ"));
 import Footer from "@/components/Footer";
 
-/* Sektioner som flyttat till egna sidor — gamla hash-länkar skickas vidare dit */
+/* Sektioner som flyttat till egna sidor — gamla hash-länkar skickas vidare dit.
+   #faq finns numera även direkt på startsidan (se <FAQ /> nedan), så den routas
+   inte längre bort. */
 const hashRoutes: Record<string, string> = {
   "#offert": "/offert",
   "#radgivning": "/offert#radgivning",
   "#taktyper": "/taktyper",
   "#o-specialist": "/taktyper#o-specialist",
   "#hur-det-gar-till": "/hur-det-gar-till",
-  "#faq": "/offert#faq",
   "#kontakt": "/kontakt",
 };
 
@@ -63,6 +65,7 @@ const Index = () => {
           <About />
           <ServiceArea />
           <GuidesTeaser />
+          <FAQ />
         </Suspense>
       </main>
       <Footer />

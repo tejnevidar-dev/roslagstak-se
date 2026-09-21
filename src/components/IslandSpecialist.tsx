@@ -66,7 +66,7 @@ const IslandSpecialist = () => {
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="bg-card border border-border rounded-lg p-8 text-center hover:shadow-md transition-shadow"
+              className="bg-card border border-border rounded-2xl p-8 text-center hover:shadow-md transition-shadow"
             >
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
                 <item.icon className="w-7 h-7 text-primary" />
@@ -83,7 +83,7 @@ const IslandSpecialist = () => {
 
         {/* SEO-rich detail block */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-card border border-border rounded-lg p-8 md:p-10">
+          <div className="bg-card border border-border rounded-2xl p-8 md:p-10">
             <h3 className="font-display text-xl text-card-foreground mb-4">
               Takbyte på ö utan bro — så gör vi
             </h3>
@@ -145,7 +145,7 @@ const IslandSpecialist = () => {
             <div className="mt-8">
               <a
                 href="/offert"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
               >
                 Begär offert för ditt ö-projekt
                 <ArrowRight className="w-4 h-4" />
