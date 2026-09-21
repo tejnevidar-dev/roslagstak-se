@@ -13,6 +13,7 @@ import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
+import { brfLocationSlugs } from "../src/data/brf-locations";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
 
 export interface PrerenderPage {
@@ -332,6 +333,31 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
           href: `/taklaggare-${l.slug}`,
           label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
         })),
+      ],
+    };
+  }
+
+  if (clean.startsWith("/brf/")) {
+    const slug = clean.slice("/brf/".length);
+    const loc = (brfLocationSlugs as readonly string[]).includes(slug)
+      ? locations.find((l) => l.slug === slug)
+      : undefined;
+    if (!loc) return null;
+    const prep = loc.isIsland ? "på" : "i";
+    return {
+      title: `Takbyte BRF ${prep} ${loc.name} — bostadsrättsföreningar`,
+      description: `Takbyte, takbesiktning och serviceavtal för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri besiktning, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.`,
+      h1: `Takbyte för bostadsrättsföreningar ${prep} ${loc.name}, med underlag styrelsen kan besluta på`,
+      intro: `Från kostnadsfri takbesiktning och fast offert till slutbesiktning och garantibevis. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
+      paragraphs: [
+        `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri besiktning, följd av en skriftlig offert med fast pris som styrelsen och stämman kan besluta på.`,
+        "Vi erbjuder takbyte, takrenovering och serviceavtal med regelbunden takkontroll, rengöring och snöskottning. Efter slutbesiktning lämnar vi garantibevis och fotodokumentation.",
+        `Ring ${PHONE} eller boka besiktning på /brf/${loc.slug}. Vi återkommer inom 24 timmar.`,
+      ],
+      links: [
+        ...primaryLinks,
+        { href: "/brf", label: "BRF & fastigheter" },
+        { href: `/taklaggare-${loc.slug}`, label: `Takläggare ${prep} ${loc.name}` },
       ],
     };
   }

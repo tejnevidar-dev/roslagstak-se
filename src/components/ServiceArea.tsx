@@ -34,6 +34,8 @@ const regionDescriptions: Record<string, string> = {
     "Takläggare i Huddinge, Älvsjö, Enskede, Farsta, Skarpnäck och Skärholmen — södra Stockholms villor, radhus och bostadsrättsfastigheter.",
   "Sydvästra Stockholm":
     "Takbyte, takrenovering och plåtarbeten på Ekerö och i Botkyrka, Salem och Södertälje — sydvästra Stockholms sjönära och kommunala takprojekt.",
+  Mälardalen:
+    "Takbyte och takrenovering för villor och bostadsrättsföreningar i Uppsala, Västerås, Eskilstuna, Strängnäs och övriga Mälardalen.",
 };
 
 const regionOrder = [
@@ -52,6 +54,7 @@ const regionOrder = [
   "Sydöstra Stockholm",
   "Södra Stockholm",
   "Sydvästra Stockholm",
+  "Mälardalen",
 ];
 
 const areas = regionOrder

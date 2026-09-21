@@ -136,6 +136,18 @@ export const locationIndex: LocationSummary[] = [
   { slug: "ronninge", name: "Rönninge", region: "Sydvästra Stockholm", isIsland: false },
   { slug: "jarna", name: "Järna", region: "Sydvästra Stockholm", isIsland: false },
   { slug: "edsviken", name: "Edsviken", region: "Norra Stockholm", isIsland: false },
+  { slug: "uppsala", name: "Uppsala", region: "Mälardalen", isIsland: false },
+  { slug: "knivsta", name: "Knivsta", region: "Mälardalen", isIsland: false },
+  { slug: "balsta", name: "Bålsta", region: "Mälardalen", isIsland: false },
+  { slug: "enkoping", name: "Enköping", region: "Mälardalen", isIsland: false },
+  { slug: "vasteras", name: "Västerås", region: "Mälardalen", isIsland: false },
+  { slug: "eskilstuna", name: "Eskilstuna", region: "Mälardalen", isIsland: false },
+  { slug: "strangnas", name: "Strängnäs", region: "Mälardalen", isIsland: false },
+  { slug: "mariefred", name: "Mariefred", region: "Mälardalen", isIsland: false },
+  { slug: "nykvarn", name: "Nykvarn", region: "Mälardalen", isIsland: false },
+  { slug: "gnesta", name: "Gnesta", region: "Mälardalen", isIsland: false },
+  { slug: "nykoping", name: "Nyköping", region: "Mälardalen", isIsland: false },
+  { slug: "trosa", name: "Trosa", region: "Mälardalen", isIsland: false },
 ];
 
 export const locationRegions = Array.from(new Set(locationIndex.map((l) => l.region)));

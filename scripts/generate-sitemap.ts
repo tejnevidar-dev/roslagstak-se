@@ -11,6 +11,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
+import { hasServiceCombos } from "../src/data/service-slugs";
+import { brfLocationSlugs } from "../src/data/brf-locations";
 import { canonicalPath, isNoindexPath, normalizePath } from "../src/lib/canonical";
 import { regionSlugs } from "../src/data/regions";
 
@@ -34,6 +36,7 @@ for (const m of current.matchAll(
   // Skip location and combo pages — we regenerate them below.
   if (/^\/taklaggare-/.test(path)) continue;
   if (/^\/omraden\//.test(path)) continue;
+  if (/^\/brf\//.test(path)) continue;
   if (allServiceSlugs.some((s) => path.startsWith(`/${s}-`))) continue;
   existingEntries.push({
     path,
@@ -57,8 +60,15 @@ const regionEntries: Entry[] = Object.values(regionSlugs).map((slug) => ({
   priority: "0.8",
 }));
 
+// ---------- 2c. Build BRF location pages ----------
+const brfEntries: Entry[] = brfLocationSlugs.map((slug) => ({
+  path: `/brf/${slug}`,
+  changefreq: "monthly",
+  priority: "0.7",
+}));
+
 // ---------- 3. Build service-location combo pages ----------
-const comboEntries: Entry[] = locations.flatMap((l) =>
+const comboEntries: Entry[] = locations.filter((l) => hasServiceCombos(l.region)).flatMap((l) =>
   allServiceSlugs.map((s) => ({
     path: `/${s}-${l.slug}`,
     changefreq: "monthly",
@@ -67,7 +77,7 @@ const comboEntries: Entry[] = locations.flatMap((l) =>
 );
 
 // ---------- 4. Assemble + filtrera till indexerbara canonical-URL:er ----------
-const rawEntries: Entry[] = [...existingEntries, ...regionEntries, ...locationEntries, ...comboEntries];
+const rawEntries: Entry[] = [...existingEntries, ...regionEntries, ...locationEntries, ...brfEntries, ...comboEntries];
 
 const skipped: string[] = [];
 const seen = new Set<string>();

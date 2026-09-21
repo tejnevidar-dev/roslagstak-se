@@ -1,4 +1,6 @@
 import { useParams, Link, useLocation } from "react-router-dom";
+import { hasServiceCombos } from "@/data/service-slugs";
+import { isBrfLocation } from "@/data/brf-locations";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -337,6 +339,8 @@ const LocationPage = () => {
                     Tjänster, priser och guider {prep} {location.name}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-2">
+                    {hasServiceCombos(location.region) && (
+                    <>
                     <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Takbyte {prep} {location.name}
                     </Link>
@@ -364,6 +368,13 @@ const LocationPage = () => {
                     <Link to={`/taktvatt-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Taktvätt {prep} {location.name}
                     </Link>
+                    </>
+                    )}
+                    {isBrfLocation(location.slug) && (
+                      <Link to={`/brf/${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> Takbyte för BRF {prep} {location.name}
+                      </Link>
+                    )}
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
                     </Link>
@@ -407,8 +418,12 @@ const LocationPage = () => {
                   Varför välja RoslagsTak som {location.primaryKeyword.toLowerCase()}?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Vi är en lokal takläggare med stark förankring i Roslagen.
-                  {location.isIsland
+                  {location.region === "Mälardalen"
+                    ? `Vi tar uppdrag i ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri besiktning och fast pris.`
+                    : "Vi är en lokal takläggare med stark förankring i Roslagen."}
+                  {location.region === "Mälardalen"
+                    ? ""
+                    : location.isIsland
                     ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
                     : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och kan ofta hålla nere kostnaden genom att samordna med andra projekt i området.`}
                   {" "}Alla arbeten utförs enligt AMA Hus med 10 års utförandegaranti och 30 års materialgaranti.
@@ -418,8 +433,10 @@ const LocationPage = () => {
                   Om {location.name} och takläggning i {location.region.toLowerCase()}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  {location.name} tillhör {location.region} i Roslagen — ett område där klimatet med {location.isIsland ? "havsvind, salt och fukt" : "kustnära fukt och vind"} ställer 
-                  höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för {location.isIsland ? "skärgårdens hårda" : "det kustnära"} klimatet. 
+                  {location.region === "Mälardalen"
+                    ? `${location.name} ligger i Mälardalen — ett område där öppna lägen med vind och snö, samt fukt nära vatten, ställer höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för läget.`
+                    : <>{location.name} tillhör {location.region} i Roslagen — ett område där klimatet med {location.isIsland ? "havsvind, salt och fukt" : "kustnära fukt och vind"} ställer 
+                  höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för {location.isIsland ? "skärgårdens hårda" : "det kustnära"} klimatet.</>} 
                   Kontakta oss för en kostnadsfri takinspektion {prep} {location.name} — vi ger dig en ärlig bedömning och fast pris utan förbindelser.
                 </p>
               </div>

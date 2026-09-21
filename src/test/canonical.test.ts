@@ -11,6 +11,7 @@ import {
 } from "@/lib/canonical";
 import { locations } from "@/data/locations";
 import { allServiceSlugs } from "@/data/service-location-combos";
+import { hasServiceCombos } from "@/data/service-slugs";
 
 const sitemap = readFileSync(resolve(__dirname, "../../public/sitemap.xml"), "utf8");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());
@@ -57,6 +58,7 @@ describe("duplicate control", () => {
     const missing: string[] = [];
     for (const loc of locations) {
       if (!sitemapPaths.includes(`/taklaggare-${loc.slug}`)) missing.push(`/taklaggare-${loc.slug}`);
+      if (!hasServiceCombos(loc.region)) continue;
       for (const service of allServiceSlugs) {
         const path = `/${service}-${loc.slug}`;
         if (!sitemapPaths.includes(canonicalPath(path))) missing.push(path);

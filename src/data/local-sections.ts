@@ -138,6 +138,13 @@ const REGION_PROFILES: Record<string, RegionProfile> = {
   },
 };
 
+REGION_PROFILES["Mälardalen"] = {
+  weather: "öppna slättlägen med vind och snölast, samt fukt nära Mälaren och kusten som gynnar mossa på skuggiga takytor",
+  buildings: "äldre stadskvarter, villaområden och flerbostadshus från efterkrigstiden",
+  materials: "tegel, betongpannor och plåt, samt papp på flacka tak",
+  access: "goda tillfarter i de flesta lägen, men trånga stadskärnor kräver planerad etablering",
+};
+
 const FALLBACK_PROFILE: RegionProfile = {
   weather: "kustnära fukt, vind och snölast som växlar mellan årstiderna",
   buildings: "villor och fritidshus av blandad ålder",
@@ -176,7 +183,10 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
     ? `${p.access.charAt(0).toUpperCase() + p.access.slice(1)}. Vi bokar transport och lossningsplats innan arbetet startar, så att rivningsavfall och nytt material inte behöver ligga och vänta på tomten ${prep} ${loc.name}.`
     : `${p.access.charAt(0).toUpperCase() + p.access.slice(1)}. Vi går igenom var container, lift och materialupplägg står innan första dagen ${prep} ${loc.name}, så att du vet exakt vad som händer på tomten.`;
 
-  const neighbourPara = `Vi har återkommande projekt ${prep} ${loc.name} och i närområdet — ${neighbourText}. När flera tak ligger nära varandra kan vi samordna transporter och etablering, vilket kortar tiden på plats.`;
+  const neighbourPara =
+    loc.region === "Mälardalen"
+      ? `Vi tar uppdrag ${prep} ${loc.name} och i närområdet — ${neighbourText}. När flera tak ligger nära varandra kan vi samordna transporter och etablering, vilket kortar tiden på plats.`
+      : `Vi har återkommande projekt ${prep} ${loc.name} och i närområdet — ${neighbourText}. När flera tak ligger nära varandra kan vi samordna transporter och etablering, vilket kortar tiden på plats.`;
 
   return {
     intro: `${climateIntro} ${inspectNote}`,

@@ -2703,6 +2703,259 @@ export const locations: LocationData[] = [
     lng: 18.0122,
     nearbyLocations: ["Edsberg", "Danderyd", "Sollentuna"],
   },
+  // ---- Mälardalen ----
+  {
+    slug: "uppsala",
+    name: "Uppsala",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Uppsala — takbyte, takrenovering och plåtarbeten för villor och bostadsrättsföreningar. Fast pris efter besiktning och 10+30 års garanti.",
+    longDescription:
+      "Uppsala är en av landets äldsta universitetsstäder, med bebyggelse som sträcker sig från äldre kvarter längs Fyrisån till villaområden i Luthagen och Kvarngärdet och flerbostadshus från 60- och 70-talen i Gottsunda och Sunnersta. Staden ligger på den öppna Uppsalaslätten, där vind och snö får fritt spelrum över taken. Vi tar uppdrag i Uppsala med takbyte, takrenovering och plåtarbeten, både för villaägare och för bostadsrättsföreningar. Alla uppdrag börjar med en kostnadsfri besiktning och slutar med ett fast pris.",
+    extraContent:
+      "För en bostadsrättsförening i Uppsala är ett takbyte ett beslut som ska hålla för både styrelse och stämma. Därför lämnar vi ett skriftligt underlag med foton och ett fast pris, och dokumentation och garantibevis efter slutbesiktning. Äldre kvarter kan ha tegel- eller plåttak med många genomföringar och trånga takytor, medan nyare områden oftast har enklare sadeltak. Boka en kostnadsfri takbesiktning så går vi igenom vad som passar just ert tak.",
+    uniqueFAQ: {
+      question: "Tar ni uppdrag från bostadsrättsföreningar i Uppsala?",
+      answer:
+        "Ja. Vi tar uppdrag från både bostadsrättsföreningar och villaägare i Uppsala. För föreningar börjar vi med en kostnadsfri takbesiktning och lämnar ett fast pris som styrelsen kan besluta på. Efter slutbesiktning får föreningen garantibevis och fotodokumentation.",
+    },
+    primaryKeyword: "takläggare Uppsala",
+    lat: 59.8586,
+    lng: 17.6389,
+    nearbyLocations: ["Knivsta", "Märsta", "Sigtuna"],
+  },
+  {
+    slug: "knivsta",
+    name: "Knivsta",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Knivsta — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri besiktning och 10+30 års garanti.",
+    longDescription:
+      "Knivsta ligger mellan Stockholm och Uppsala och har vuxit snabbt med nya villaområden och radhus intill den äldre bebyggelsen kring centrum. Nybyggda hus har oftast enkla sadeltak i betongpannor eller plåt, medan äldre villor kan behöva ny underlagspapp, läkt och beslag. Vi tar uppdrag i Knivsta med takbyte, takrenovering, takavvattning och plåtarbeten, med kostnadsfri besiktning och fast pris.",
+    extraContent:
+      "Öppna lägen på slätten gör att vindskivor, nockbeslag och takfot slits först. Vid besiktningen tittar vi särskilt på infästningar, genomföringar och rännor, och lämnar ett skriftligt prisunderlag utan dolda tillägg. Även bostadsrättsföreningar och radhusföreningar i Knivsta är välkomna att höra av sig.",
+    uniqueFAQ: {
+      question: "Kommer ni ut till Knivsta för besiktning?",
+      answer:
+        "Ja, vi tar uppdrag i Knivsta. Besiktning och offert är kostnadsfria och förpliktar inte till något. Vi går igenom takets skick, ger en ärlig rekommendation mellan renovering och byte och lämnar ett fast pris.",
+    },
+    primaryKeyword: "takläggare Knivsta",
+    lat: 59.7246,
+    lng: 17.7867,
+    nearbyLocations: ["Uppsala", "Märsta", "Sigtuna"],
+  },
+  {
+    slug: "balsta",
+    name: "Bålsta",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Bålsta — takbyte, takrenovering och plåtarbeten i Håbo. Fast pris efter besiktning och 10+30 års garanti.",
+    longDescription:
+      "Bålsta är centralort i Håbo kommun vid Mälaren, med villaområden, radhus och flerbostadshus från olika decennier. Närheten till vatten och skog innebär fukt, mossa på nordsidor och löv som samlas i rännor och bakom skorstenar. Vi tar uppdrag i Bålsta med takbyte, takrenovering, takavvattning och taktvätt, för både villaägare och bostadsrättsföreningar.",
+    extraContent:
+      "Vid besiktningen börjar vi i takfot, rännor och genomföringar, eftersom det är där fukt och läckage oftast visar sig först. Är taket i gott skick räcker det ibland med renovering eller taktvätt, och det säger vi som det är. Behövs ett takbyte lämnar vi ett fast pris med specificerade moment.",
+    uniqueFAQ: {
+      question: "Vilka takproblem är vanligast i Bålsta?",
+      answer:
+        "I Bålsta med omnejd är mossa och alger på skuggiga takytor, löv i rännor och slitna beslag runt skorstenar vanligast. Vi bedömer vid en kostnadsfri besiktning om det räcker med renovering eller taktvätt eller om taket behöver bytas.",
+    },
+    primaryKeyword: "takläggare Bålsta",
+    lat: 59.5689,
+    lng: 17.5275,
+    nearbyLocations: ["Upplands-Bro", "Kungsängen", "Enköping"],
+  },
+  {
+    slug: "enkoping",
+    name: "Enköping",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Enköping — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri besiktning och 10+30 års garanti.",
+    longDescription:
+      "Enköping är en mälarstad med en välbevarad stadskärna och villaområden som ligger utspridda över slättlandskapet runt staden. Äldre trähus och tegelbyggnader i centrum har ofta tak med många detaljer, medan nyare områden har enklare tak i betongpannor eller plåt. Vi tar uppdrag i Enköping med takbyte, takrenovering, bandtäckning och plåtarbeten.",
+    extraContent:
+      "Äldre tak i tegel eller falsad plåt kräver ofta en försiktig hantering och rätt beslagsdetaljer, medan nyare tak främst behöver kontroll av underlag och avvattning. Vi bedömer vad som gäller vid en kostnadsfri besiktning och lämnar ett fast pris. Bostadsrättsföreningar i Enköping får ett skriftligt underlag som styrelsen kan ta med till beslut.",
+    uniqueFAQ: {
+      question: "Hur går en takbesiktning till i Enköping?",
+      answer:
+        "Vi besöker fastigheten, går igenom taket, fotograferar och bedömer skicket på takmaterial, underlag, beslag och avvattning. Efter besiktningen får du en rekommendation och ett fast pris. Besiktningen är kostnadsfri och förpliktar inte till något.",
+    },
+    primaryKeyword: "takläggare Enköping",
+    lat: 59.6361,
+    lng: 17.0777,
+    nearbyLocations: ["Bålsta", "Västerås", "Uppsala"],
+  },
+  {
+    slug: "vasteras",
+    name: "Västerås",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Västerås — takbyte, takrenovering och plåtarbeten för villor och bostadsrättsföreningar. Fast pris och 10+30 års garanti.",
+    longDescription:
+      "Västerås är Mälardalens största stad, belägen vid Mälaren och Svartån, med en blandning av äldre stadsbebyggelse, villaområden och stora bostadsrättsföreningar och flerbostadshus. Storleken ger en stor variation av taktyper, från tegeltak på äldre hus till plåt och papp på flacka tak. Vi tar uppdrag i Västerås med takbyte, takrenovering och plåtarbeten, både för villaägare och för föreningar.",
+    extraContent:
+      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: besiktning, fast offert, tidplan och en fast kontaktperson under hela projektet. Vi dokumenterar arbetet med foton och lämnar garantibevis efter slutbesiktning. Kontakta oss för en kostnadsfri takbesiktning i Västerås.",
+    uniqueFAQ: {
+      question: "Kan ni ta uppdrag åt större bostadsrättsföreningar i Västerås?",
+      answer:
+        "Ja, vi tar uppdrag från bostadsrättsföreningar i Västerås. Vi börjar med en kostnadsfri takbesiktning och lämnar ett fast pris och en tidplan som styrelsen kan besluta på. Hör av dig så går vi igenom fastigheten och vilken omfattning som passar.",
+    },
+    primaryKeyword: "takläggare Västerås",
+    lat: 59.6099,
+    lng: 16.5448,
+    nearbyLocations: ["Enköping", "Eskilstuna", "Strängnäs"],
+  },
+  {
+    slug: "eskilstuna",
+    name: "Eskilstuna",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Eskilstuna — takbyte, takrenovering och plåtarbeten. Fast pris efter besiktning och 10+30 års garanti.",
+    longDescription:
+      "Eskilstuna ligger vid Eskilstunaån med en gammal industri- och verkstadsstad i botten. Bebyggelsen spänner från äldre kvarter nära ån till villaområden och flerbostadshus från efterkrigstiden. Taken varierar därefter, med tegel och plåt på äldre byggnader och betongpannor och papp på senare bebyggelse. Vi tar uppdrag i Eskilstuna med takbyte, takrenovering, plåtarbeten och takavvattning.",
+    extraContent:
+      "Många flerbostadshus från 1950–70-talet har tak som närmar sig slutet av sin livslängd. För bostadsrättsföreningar lämnar vi ett skriftligt underlag efter en kostnadsfri besiktning, med fast pris och tydlig specifikation, så att styrelsen kan planera och besluta. Även villaägare är välkomna att boka besiktning.",
+    uniqueFAQ: {
+      question: "När bör en förening i Eskilstuna se över taket?",
+      answer:
+        "Som riktvärde bör äldre tak besiktas var femte till tionde år, och senast när ni ser läckage, uppdykande mossa eller trasiga pannor. En besiktning ger styrelsen ett underlag för underhållsplan och budget innan problemen blir akuta.",
+    },
+    primaryKeyword: "takläggare Eskilstuna",
+    lat: 59.3666,
+    lng: 16.5077,
+    nearbyLocations: ["Strängnäs", "Västerås", "Mariefred"],
+  },
+  {
+    slug: "strangnas",
+    name: "Strängnäs",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Strängnäs — takbyte, takrenovering och plåtarbeten vid Mälaren. Fast pris efter besiktning och 10+30 års garanti.",
+    longDescription:
+      "Strängnäs är en gammal domkyrkostad på en halvö i Mälaren, med välbevarade kvarter, sjönära villor och nyare områden längre från centrum. Läget vid vattnet ger fuktig luft och vind som slits på beslag, vindskivor och underlagspapp. Vi tar uppdrag i Strängnäs med takbyte, takrenovering, bandtäckning och plåtarbeten.",
+    extraContent:
+      "På äldre byggnader i stadskärnan är rätt beslag och detaljer avgörande, medan nyare hus främst behöver kontroll av läkt, papp och avvattning. Vi går igenom takets skick vid en kostnadsfri besiktning och lämnar ett fast pris. Bostadsrättsföreningar och privatpersoner är lika välkomna.",
+    uniqueFAQ: {
+      question: "Passar plåttak vid Mälaren i Strängnäs?",
+      answer:
+        "Ja, plåttak är ett vanligt och hållbart val nära vatten. Välj färgbelagd plåt med hög korrosionsklass och korrekt monterade beslag. Vi går igenom material, profil och kulör vid besiktningen och lämnar ett fast pris.",
+    },
+    primaryKeyword: "takläggare Strängnäs",
+    lat: 59.3777,
+    lng: 17.0313,
+    nearbyLocations: ["Mariefred", "Eskilstuna", "Nykvarn"],
+  },
+  {
+    slug: "mariefred",
+    name: "Mariefred",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Mariefred — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri besiktning och 10+30 års garanti.",
+    longDescription:
+      "Mariefred är en liten stad vid Mälaren med välbevarad trähusbebyggelse och tegeltak, och med villor och fritidshus i sjönära lägen runt omkring. Äldre hus kräver ofta varsamhet vid takarbete, medan sjönära villor mest slits av fukt och vind. Vi tar uppdrag i Mariefred med takbyte, takrenovering, plåtarbeten och takavvattning.",
+    extraContent:
+      "Vid besiktningen bedömer vi om taket kan renoveras eller om ett byte är mer ekonomiskt över tid, och vi går igenom material som passar husets stil och läge. Vi lämnar ett fast pris med specificerade moment. Kontakta oss för en kostnadsfri takbesiktning i Mariefred.",
+    uniqueFAQ: {
+      question: "Kan ni lägga tegel eller falsad plåt på äldre hus i Mariefred?",
+      answer:
+        "Ja, vi arbetar med både tegel, tegelprofilerad plåt och dubbelfalsad bandtäckning. Vi rekommenderar material utifrån husets ålder, stil och taklutning, och går igenom alternativen vid en kostnadsfri besiktning.",
+    },
+    primaryKeyword: "takläggare Mariefred",
+    lat: 59.2578,
+    lng: 17.2158,
+    nearbyLocations: ["Strängnäs", "Nykvarn", "Södertälje"],
+  },
+  {
+    slug: "nykvarn",
+    name: "Nykvarn",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Nykvarn — takbyte, takrenovering och plåtarbeten. Fast pris efter besiktning och 10+30 års garanti.",
+    longDescription:
+      "Nykvarn är en mindre kommun nära Södertälje med villaområden, radhus och lantbruksfastigheter. Bebyggelsen är blandad, från äldre gårdar till villor byggda i olika omgångar, och taken ser därefter ut. Vi tar uppdrag i Nykvarn med takbyte, takrenovering, takavvattning och plåtarbeten.",
+    extraContent:
+      "Lantbruks- och ekonomibyggnader har ofta stora takytor i plåt eller papp, medan bostadshusen vanligen har betongpannor eller tegel. Vi lämnar ett fast pris efter kostnadsfri besiktning, oavsett om det gäller bostadshus, uthus eller större byggnader.",
+    uniqueFAQ: {
+      question: "Tar ni uppdrag på uthus och ekonomibyggnader i Nykvarn?",
+      answer:
+        "Ja. Vi tar uppdrag på både bostadshus och uthus, garage och ekonomibyggnader i Nykvarn. Vi går igenom takets skick vid en kostnadsfri besiktning och lämnar ett fast pris.",
+    },
+    primaryKeyword: "takläggare Nykvarn",
+    lat: 59.1775,
+    lng: 17.4353,
+    nearbyLocations: ["Södertälje", "Mariefred", "Gnesta"],
+  },
+  {
+    slug: "gnesta",
+    name: "Gnesta",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Gnesta — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri besiktning och 10+30 års garanti.",
+    longDescription:
+      "Gnesta är en mindre ort i Södermanland med villor, radhus och äldre gårdar, omgiven av skog och öppna landskap. Snölast, lövfall och fukt i skogsnära lägen påverkar taken, särskilt rännor, takfot och nordsidor. Vi tar uppdrag i Gnesta med takbyte, takrenovering, takavvattning och plåtarbeten.",
+    extraContent:
+      "Vid besiktningen kontrollerar vi underlag, läkt, beslag och avvattning och ger en ärlig rekommendation mellan renovering och byte. Vi lämnar ett fast pris med tydligt vad som ingår, och kan även erbjuda taktvätt när taket i övrigt är i gott skick.",
+    uniqueFAQ: {
+      question: "Vilket takmaterial passar skogsnära hus i Gnesta?",
+      answer:
+        "I skogsnära lägen samlas löv och barr i rännor och på takytan, och mossa trivs på skuggiga sidor. Plåt med släta ytor och god avvattning är ofta lättskött, medan betongpannor och tegel kräver regelbunden rengöring. Vi går igenom alternativen vid en kostnadsfri besiktning och lämnar ett fast pris.",
+    },
+    primaryKeyword: "takläggare Gnesta",
+    lat: 59.0486,
+    lng: 17.3133,
+    nearbyLocations: ["Nykvarn", "Trosa", "Södertälje"],
+  },
+  {
+    slug: "nykoping",
+    name: "Nyköping",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Nyköping — takbyte, takrenovering och plåtarbeten. Fast pris efter besiktning och 10+30 års garanti.",
+    longDescription:
+      "Nyköping ligger vid Nyköpingsån nära Östersjön, med äldre stadskvarter, villaområden och flerbostadshus. Kustnära läge ger fukt, vind och saltpåverkan som slitar på beslag och plåtdetaljer, och mossa etablerar sig lätt på skuggiga takytor. Vi tar uppdrag i Nyköping med takbyte, takrenovering, plåtarbeten och takavvattning.",
+    extraContent:
+      "Nära kusten rekommenderar vi ofta plåt med hög korrosionsklass och rostfria infästningar. Vi går igenom material och detaljer vid en kostnadsfri besiktning och lämnar ett fast pris. Bostadsrättsföreningar får ett underlag som styrelsen kan besluta på.",
+    uniqueFAQ: {
+      question: "Vilket takmaterial passar nära kusten i Nyköping?",
+      answer:
+        "Plåt med hög korrosionsklass, dubbelfalsad bandtäckning eller lertegel klarar kustklimat väl. Viktigast är rätt infästningar och beslag. Vi rekommenderar material vid en kostnadsfri besiktning.",
+    },
+    primaryKeyword: "takläggare Nyköping",
+    lat: 58.7531,
+    lng: 17.0079,
+    nearbyLocations: ["Trosa", "Gnesta", "Strängnäs"],
+  },
+  {
+    slug: "trosa",
+    name: "Trosa",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takläggare i Trosa — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri besiktning och 10+30 års garanti.",
+    longDescription:
+      "Trosa är en kuststad vid Trosaån med välbevarad småstadsmiljö, sommarhus och villor i kustnära lägen. Salt luft, fukt och vind från Östersjön slits på beslag, vindskivor och underlagspapp, och äldre träbebyggelse kräver rätt detaljer. Vi tar uppdrag i Trosa med takbyte, takrenovering, bandtäckning och plåtarbeten.",
+    extraContent:
+      "Fritidshus och permanentbostäder nära vattnet har samma krav: material och infästningar som tål kustklimat. Vi går igenom takets skick vid en kostnadsfri besiktning och lämnar ett fast pris. Kontakta oss så bokar vi en tid.",
+    uniqueFAQ: {
+      question: "Tar ni uppdrag på fritidshus i Trosa?",
+      answer:
+        "Ja, vi tar uppdrag på både permanentbostäder och fritidshus i Trosa. Vi bedömer takets skick vid en kostnadsfri besiktning och lämnar ett fast pris, med material som klarar kustklimat.",
+    },
+    primaryKeyword: "takläggare Trosa",
+    lat: 58.8973,
+    lng: 17.5525,
+    nearbyLocations: ["Nyköping", "Gnesta", "Nynäshamn"],
+  },
 ];
 
 export const getLocationBySlug = (slug: string) =>

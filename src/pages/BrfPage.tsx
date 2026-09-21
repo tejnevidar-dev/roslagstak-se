@@ -11,6 +11,8 @@ import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 import { supabase } from "@/integrations/supabase/client";
+import { locationIndex } from "@/data/location-index";
+import { brfLocationSlugs } from "@/data/brf-locations";
 import { toast } from "@/hooks/use-toast";
 import heroImg from "@/assets/roof-brf-hero.jpg";
 
@@ -110,6 +112,15 @@ const brfFaqs = [
   },
 ];
 
+export interface BrfPlace {
+  slug: string;
+  name: string;
+  prep: string;
+  region: string;
+  paragraphs: string[];
+  nearby: { slug: string; name: string }[];
+}
+
 const inputClass =
   "w-full rounded-xl border border-input bg-background px-4 py-3 text-[15px] text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-ring";
 const labelClass = "mb-1.5 block text-sm font-medium text-foreground";
@@ -126,7 +137,7 @@ const initialForm = {
   message: "",
 };
 
-const BrfForm = () => {
+const BrfForm = ({ place }: { place?: BrfPlace }) => {
   const [form, setForm] = useState(initialForm);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -143,6 +154,7 @@ const BrfForm = () => {
     const message = [
       "BRF-förfrågan",
       `Förening: ${form.forening.trim()}`,
+      place ? `Ort (sida /brf/${place.slug}): ${place.name}` : null,
       `Gäller: ${form.topic}`,
       form.buildings ? `Antal byggnader: ${form.buildings}` : null,
       form.area.trim() ? `Ungefärlig takyta: ${form.area.trim()}` : null,
@@ -279,8 +291,22 @@ const BrfForm = () => {
   );
 };
 
-const BrfPage = () => {
+const BrfPage = ({ place }: { place?: BrfPlace }) => {
   const location = useLocation();
+  const inPlace = place ? ` ${place.prep} ${place.name}` : "";
+  const pagePath = place ? `/brf/${place.slug}` : "/brf";
+  const faqs = place
+    ? [
+        {
+          question: `Tar ni uppdrag från bostadsrättsföreningar${inPlace}?`,
+          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takbesiktning och lämnar ett skriftligt underlag med fast pris som styrelsen kan besluta på. Efter slutbesiktning får föreningen garantibevis och fotodokumentation.`,
+        },
+        ...brfFaqs,
+      ]
+    : brfFaqs;
+  const brfPlaces = brfLocationSlugs
+    .map((slug) => locationIndex.find((l) => l.slug === slug))
+    .filter((l): l is (typeof locationIndex)[number] => Boolean(l));
 
   useEffect(() => {
     if (!location.hash) return;
@@ -293,21 +319,30 @@ const BrfPage = () => {
   return (
     <>
       <SEOHead
-        title="Takbyte för BRF — bostadsrättsföreningar"
-        description="Takbyte, takbesiktning och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti, F-skatt och ansvarsförsäkring."
-        canonical="https://roslagstak.se/brf"
+        title={place ? `Takbyte BRF${inPlace} — bostadsrättsföreningar` : "Takbyte för BRF — bostadsrättsföreningar"}
+        description={
+          place
+            ? `Takbyte, takbesiktning och serviceavtal för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri besiktning, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.`
+            : "Takbyte, takbesiktning och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti, F-skatt och ansvarsförsäkring."
+        }
+        canonical={`https://roslagstak.se${pagePath}`}
       />
       <JsonLd
         data={buildBreadcrumbSchema([
           { name: "Hem", path: "/" },
           { name: "BRF & fastigheter", path: "/brf" },
+          ...(place ? [{ name: `BRF${inPlace}`, path: pagePath }] : []),
         ])}
       />
       <Header />
       <main>
         <div className="pt-24">
           <Breadcrumbs
-            items={[{ name: "Hem", path: "/" }, { name: "BRF & fastigheter", path: "/brf" }]}
+            items={[
+              { name: "Hem", path: "/" },
+              place ? { name: "BRF & fastigheter", path: "/brf" } : { name: "BRF & fastigheter", path: "/brf" },
+              ...(place ? [{ name: `BRF${inPlace}` }] : []),
+            ]}
             withSchema={false}
           />
         </div>
@@ -317,18 +352,18 @@ const BrfPage = () => {
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
               <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">
-                BRF &amp; fastigheter
+                {place ? `BRF${inPlace}` : "BRF & fastigheter"}
               </p>
               <h1
                 id="brf-heading"
                 className="max-w-[21ch] font-display text-[clamp(2.2rem,4.4vw,3.5rem)] font-semibold leading-[1.06] tracking-[-0.025em] text-balance text-foreground"
               >
-                Takbyte för bostadsrättsföreningar,{" "}
+                Takbyte för bostadsrättsföreningar{inPlace},{" "}
                 <span className="italic text-accent">med underlag styrelsen kan besluta på.</span>
               </h1>
               <p className="mt-7 max-w-[52ch] text-[18px] leading-relaxed text-muted-foreground md:text-[19px]">
                 Från kostnadsfri takbesiktning och fast offert till slutbesiktning och garantibevis. Vi arbetar i
-                Storstockholm, Roslagen och Mälardalen.
+                {place ? `${place.name} och närområdet` : "Storstockholm, Roslagen och Mälardalen"}.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -408,6 +443,42 @@ const BrfPage = () => {
             </Reveal>
           </div>
         </section>
+
+        {place && (
+          <section className="border-t border-border bg-background pb-24 md:pb-28" aria-labelledby="brf-place-heading">
+            <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-12 lg:gap-16">
+              <h2
+                id="brf-place-heading"
+                className="font-display text-[clamp(1.6rem,2.8vw,2.2rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-balance text-foreground lg:col-span-5"
+              >
+                Takbyte för bostadsrättsföreningar{inPlace}
+              </h2>
+              <div className="space-y-5 text-[18px] leading-relaxed text-muted-foreground lg:col-span-7">
+                {place.paragraphs.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+                <p className="text-[16px]">
+                  <Link to={`/taklaggare-${place.slug}`} className="font-semibold text-primary underline decoration-accent decoration-2 underline-offset-4">
+                    Takläggare{inPlace}
+                  </Link>
+                  {place.nearby.length > 0 && (
+                    <>
+                      {" "}· Närliggande:{" "}
+                      {place.nearby.map((n, i) => (
+                        <span key={n.slug}>
+                          {i > 0 && ", "}
+                          <Link to={`/brf/${n.slug}`} className="text-primary underline underline-offset-4 hover:no-underline">
+                            {n.name}
+                          </Link>
+                        </span>
+                      ))}
+                    </>
+                  )}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Process */}
         <section className="border-y border-border bg-secondary py-24 md:py-32" aria-labelledby="brf-process-heading">
@@ -594,18 +665,37 @@ const BrfPage = () => {
               </p>
             </div>
             <div className="lg:col-span-7">
-              <BrfForm />
+              <BrfForm place={place} />
             </div>
           </div>
         </section>
 
+        {!place && (
+          <section className="border-t border-border bg-secondary py-16 md:py-20" aria-labelledby="brf-places-heading">
+            <div className="mx-auto max-w-7xl px-6">
+              <h2 id="brf-places-heading" className="font-display text-2xl text-foreground md:text-3xl">
+                Bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen
+              </h2>
+              <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-4">
+                {brfPlaces.map((l) => (
+                  <li key={l.slug}>
+                    <Link to={`/brf/${l.slug}`} className="text-[16px] text-foreground underline decoration-accent/50 decoration-2 underline-offset-4 hover:text-primary hover:decoration-accent">
+                      BRF {l.isIsland ? "på" : "i"} {l.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
         <FaqSection
           title="Frågor från styrelser om takbyte"
           intro="Process, pris, garanti och vad som händer under arbetet."
-          faqs={brfFaqs}
-          path="/brf"
+          faqs={faqs}
+          path={pagePath}
         />
-        <RelatedLinks currentPath="/brf" title="Läs vidare" />
+        <RelatedLinks currentPath={pagePath} title="Läs vidare" />
       </main>
       <Footer />
     </>

@@ -10,7 +10,8 @@ import StickyMobileCTA from "./components/StickyMobileCTA";
 import JsonLd from "./components/JsonLd";
 import { buildLocalBusinessSchema } from "./lib/schema";
 import { locationIndex } from "./data/location-index";
-import { allServiceSlugs } from "./data/service-slugs";
+import { brfLocationSlugs } from "./data/brf-locations";
+import { allServiceSlugs, hasServiceCombos } from "./data/service-slugs";
 import { CANONICAL_ALIASES } from "./lib/canonical";
 
 /* Alla sidor utom startsidan laddas som egna chunkar — startsidans JS blir mindre
@@ -32,6 +33,7 @@ const QuotePage = lazy(() => import("./pages/QuotePage.tsx"));
 const RoofTypesPage = lazy(() => import("./pages/RoofTypesPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const BrfPage = lazy(() => import("./pages/BrfPage.tsx"));
+const BrfLocationPage = lazy(() => import("./pages/BrfLocationPage.tsx"));
 const AreasPage = lazy(() => import("./pages/AreasPage.tsx"));
 const RegionPage = lazy(() => import("./pages/RegionPage.tsx"));
 
@@ -55,6 +57,9 @@ const App = () => (
               <Route path="/offert" element={<QuotePage />} />
               <Route path="/taktyper" element={<RoofTypesPage />} />
               <Route path="/brf" element={<BrfPage />} />
+              {brfLocationSlugs.map((slug) => (
+                <Route key={slug} path={`/brf/${slug}`} element={<BrfLocationPage />} />
+              ))}
               <Route path="/hur-det-gar-till" element={<ProcessPage />} />
               <Route path="/omraden" element={<AreasPage />} />
               <Route path="/omraden/:region" element={<RegionPage />} />
@@ -66,7 +71,7 @@ const App = () => (
                 <Route key={loc.slug} path={`/taklaggare-${loc.slug}`} element={<LocationPage />} />
               ))}
               {allServiceSlugs.flatMap((service) =>
-                locationIndex.map((loc) => (
+                locationIndex.filter((loc) => hasServiceCombos(loc.region)).map((loc) => (
                   <Route
                     key={`${service}-${loc.slug}`}
                     path={`/${service}-${loc.slug}`}

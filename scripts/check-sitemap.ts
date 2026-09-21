@@ -23,6 +23,8 @@ import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
+import { hasServiceCombos } from "../src/data/service-slugs";
+import { brfLocationSlugs } from "../src/data/brf-locations";
 import {
   CANONICAL_ALIASES,
   SITE_URL,
@@ -85,7 +87,8 @@ const knownRoutes = new Set<string>([
   ...serviceSlugs.map((s) => `/tjanster/${s}`),
   ...blogSlugs.map((s) => `/blogg/${s}`),
   ...locations.map((l) => `/taklaggare-${l.slug}`),
-  ...locations.flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`)),
+  ...brfLocationSlugs.map((s) => `/brf/${s}`),
+  ...locations.filter((l) => hasServiceCombos(l.region)).flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`)),
 ]);
 
 /* ---------- 3. static validation of every sitemap URL ---------- */

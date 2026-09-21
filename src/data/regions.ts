@@ -16,6 +16,7 @@ export const regionOrder = [
   "Sydöstra Stockholm",
   "Södra Stockholm",
   "Sydvästra Stockholm",
+  "Mälardalen",
 ] as const;
 
 export const regionIntros: Record<string, string> = {
@@ -49,6 +50,8 @@ export const regionIntros: Record<string, string> = {
     "Villor, radhus och bostadsrättsfastigheter i södra Stockholm — plåt, tegel och betongpannor.",
   "Sydvästra Stockholm":
     "Sjönära villatak och kommunala takprojekt sydväst om Stockholm.",
+  Mälardalen:
+    "Takbyte, takrenovering och serviceavtal för villor och bostadsrättsföreningar i Uppsala, Västerås, Eskilstuna och övriga Mälardalen.",
 };
 
 /** URL-slug per region — används av områdeshubbarna (/omraden/<slug>). */
@@ -68,6 +71,7 @@ export const regionSlugs: Record<string, string> = {
   "Sydöstra Stockholm": "sydostra-stockholm",
   "Södra Stockholm": "sodra-stockholm",
   "Sydvästra Stockholm": "sydvastra-stockholm",
+  Mälardalen: "malardalen",
 };
 
 export const regionBySlug = (slug: string): string | undefined =>
@@ -140,5 +144,9 @@ export const regionLongText: Record<string, string[]> = {
   "Sydvästra Stockholm": [
     "Sydväst om staden ligger sjönära villor, radhus och nyare grupphus med enkla sadeltak. Blåsiga lägen mot Mälaren sliter på vindskivor och nockplåt.",
     "Tillfarterna är goda men tomterna trånga mellan husen. Vi håller etableringen kompakt och städar löpande under arbetet.",
+  ],
+  Mälardalen: [
+    "Vi tar uppdrag i Mälardalen, där förutsättningarna för taken är välkända: slättlandskap med öppna, blåsiga lägen, snölast under vintern och fukt nära Mälaren och Östersjökusten. Bebyggelsen spänner från äldre stadskärnor med tegel och plåt till villaområden och flerbostadshus från efterkrigstiden.",
+    "Här tar vi uppdrag från både villaägare och bostadsrättsföreningar. För föreningar lämnar vi ett skriftligt underlag efter en kostnadsfri besiktning, med fast pris, tidplan och garantihandlingar efter slutbesiktning, så att styrelsen kan besluta.",
   ],
 };

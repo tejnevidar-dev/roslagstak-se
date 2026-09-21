@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { hasServiceCombos } from "@/data/service-slugs";
 import { Link } from "react-router-dom";
 import {
   Paintbrush,
@@ -799,7 +800,7 @@ const Taktvatt = () => {
               Klicka på din ort för att läsa mer om våra taktjänster där.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
-              {locations.map((loc) => (
+              {locations.filter((loc) => hasServiceCombos(loc.region)).map((loc) => (
                 <Link
                   key={loc.slug}
                   to={`/taktvatt-${loc.slug}`}

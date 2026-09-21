@@ -16,3 +16,8 @@ export const allServiceSlugs = [
 ] as const satisfies readonly string[];
 
 export type ServiceSlug = (typeof allServiceSlugs)[number];
+
+/** Regioner där vi bara har en ortssida och ingen tjänst+ort-kombination (nytt verksamhetsområde utan egen lokal historik). */
+export const NO_COMBO_REGIONS: readonly string[] = ["Mälardalen"];
+
+export const hasServiceCombos = (region: string) => !NO_COMBO_REGIONS.includes(region);

@@ -11,6 +11,7 @@ import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
+import { hasServiceCombos } from "../src/data/service-slugs";
 
 const args = process.argv.slice(2);
 const mdPath = args.find((a) => a.startsWith("--md="))?.split("=")[1];
@@ -52,7 +53,7 @@ const staticRoutes = [
 const serviceRoutes = serviceSlugs.map((s) => `/tjanster/${s}`);
 const blogRoutes = blogSlugs.map((s) => `/blogg/${s}`);
 const locationRoutes = locations.map((l) => `/taklaggare-${l.slug}`);
-const comboRoutes = locations.flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`));
+const comboRoutes = locations.filter((l) => hasServiceCombos(l.region)).flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`));
 
 const routes = [
   ...staticRoutes,
