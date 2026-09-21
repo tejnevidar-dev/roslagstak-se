@@ -124,17 +124,58 @@ tidigare (fritt val av hosting).
 7. ✅ **`bun install` kört** (2026-09-12) — `lovable-tagger` borttagen, 500 paket,
    lockfile uppdaterad. `bun run build:dev` verifierat grönt (exit 0, 1355
    prerendrade sidor genererade, inga fel).
-8. ❌ **Cloudflare Pages** kopplat till repot (git-baserad auto-deploy vid push till
-   `main`), miljövariabler (`VITE_SUPABASE_*`) satta mot det nya Supabase-projektet.
-9. ❌ **DNS-cutover**: `roslagstak.se` pekas om från Lovables hosting till Cloudflare
-   Pages. **Kräver koordinering** — kort driftavbrott om det görs fel ordning; gör
-   detta sist, efter att Cloudflare Pages-versionen är verifierad fungera fullt ut på
-   sin `*.pages.dev`-adress.
+8. ✅ **Cloudflare Pages kopplat och live** (2026-09-12): projekt `roslagstak-se`,
+   Cloudflare GitHub App installerad scoped till bara detta repo (least privilege),
+   build command `bun run build`, output `dist`, `VITE_SUPABASE_*` satta mot nya
+   projektet. Live på `https://roslagstak-se.pages.dev` — verifierat: startsidan och
+   `/admin/login` renderar korrekt, inga konsolfel.
+   **Riktig bugg hittad och fixad under uppsättningen:** `prebuild`/`predev`-scripten
+   körde `tsx ...`, men `tsx` var aldrig ett riktigt beroende i `package.json` — bara
+   ett verktyg som råkade finnas globalt i Lovables/utvecklingsmiljön. Detta hade
+   **aldrig testats lokalt heller**: `bun run build:dev` (som verifierades tidigare)
+   triggar inte `prebuild`-hooken, bara `bun run build` gör det (npm/bun-konventionen
+   är att `preX`/`postX` bara kopplas till scriptet som exakt heter `X`). Fixat genom
+   att byta `tsx scripts/....ts` → `bun scripts/....ts` överallt (Bun kör TypeScript
+   nativt, inget separat tsx-paket behövs), inte genom att lägga till `tsx` som
+   beroende (det gav ett annat fel, en trasig Bun/tsx-shim-interaktion — `bun` direkt
+   är den enklare, mer robusta lösningen).
+   Committat och pushat till `main` (`9d5a5ba`) efter godkännande — samma commit
+   innehåller env-cutover, tsx-fixen och all tidigare kodstädning.
+9. 🔶 **DNS-cutover pågår** (2026-09-13): hela zonen `roslagstak.se` flyttad till
+   Cloudflares DNS (krävdes för att kunna lägga root-domänen som Custom Domain på
+   Pages — Cloudflare kräver att zonen ligger hos dem för apex-domäner). Process:
+   - Cloudflares automatiska skanning missade 6 poster som Simplys zon faktiskt hade
+     (jämfört mot en fullständig manuell genomgång av Simplys DNS-lista): CNAME
+     `simplycom1._domainkey`/`simplycom2._domainkey` (Simplys egen DKIM),
+     `bounce-zem` (ZeptoMail/Zoho bounce-hantering), samt SRV `_autodiscover._tcp`,
+     `_caldavs._tcp`, `_carddavs._tcp` (Zoho-mejlklienters auto-konfiguration/CalDAV/
+     CardDAV). Alla 6 tillagda manuellt i Cloudflare och verifierade, DNS-only
+     (oproxade) eftersom de är mejl-relaterade, inte webbtrafik.
+   - **Medvetet uteslutet:** TXT `10143357._domainkey` (ytterligare en Simply-DKIM-
+     nyckel) — värdet är för långt/tvetydigt att transkribera för hand utan risk för
+     fel; en felaktig DKIM-nyckel ger bara att den signeringskedjan misslyckas, inte
+     att domänen eller huvud-e-posten slutar fungera. Kan läggas till senare genom
+     att kopiera värdet direkt Simply → Cloudflare (urklipp, inte avläsning).
+     TXT `_lovable.www` (Lovables domänverifiering) — uteslöts avsiktligt, blir
+     irrelevant när Lovable kopplas bort.
+   - **DNSSEC stängdes av hos Simply** innan namnserverbytet (obligatoriskt —
+     annars kan hela domänen sluta svara helt, inte bara e-posten, eftersom det nya
+     DNSSEC-nyckelparet på Cloudflare inte matchar de gamla DS-posterna hos
+     registraren).
+   - **Namnservrar bytta hos Simply**: `ns1/ns2/ns3.simply.com` → Cloudflares
+     `lewis.ns.cloudflare.com` + `mariah.ns.cloudflare.com`. Simply bekräftar bytet
+     mottaget; Cloudflare visar "Waiting for your registrar to propagate your new
+     nameservers" (typiskt 1–2 timmar, kan ta upp till 24 timmar).
+   - ✅ **Namnservrar spridda** (2026-09-14, klart inom ett par timmar — snabbare än
+     de utlovade 1–2h/24h). `roslagstak.se` som Custom Domain tillagt på Pages-
+     projektet, aktiverat och verifierat: sajten svarar på `https://roslagstak.se`
+     med giltigt SSL, korrekt titel/innehåll, inga konsolfel på start- eller
+     offertsidan. **DNS-cutovern är HELT KLAR.**
+   - Kvarstår: ev. `www.roslagstak.se` som alias (inte gjort, inte begärt).
 10. ❌ **Koppla bort Lovables GitHub-app**, städa bort `previewAuthStorage.ts` om du
     vill (lågrisk, inte blockerande). `gsc-report`-pausningen måste också redeployas
     (`supabase functions deploy gsc-report`) för att gälla i produktion — funktionen
     är aldrig deployad mot det nya projektet över huvud taget än.
 
-**Nästa konkreta steg:** #8, Cloudflare Pages-koppling. Kräver användarens eget
-Cloudflare-konto (finns redan, från CRM:et) och ett beslut om hur repot pushas dit
-(GitHub-koppling i Cloudflare-dashboarden, git-baserad auto-deploy).
+**Nästa konkreta steg:** #9, DNS-cutover av `roslagstak.se` — när användaren är redo
+(kort driftavbrott möjligt, så bör göras medvetet, inte i förbigående).
