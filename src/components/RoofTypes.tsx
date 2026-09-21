@@ -1,8 +1,29 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Shield, Droplets, Sun, Clock, Coins } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import imgTp20 from "@/assets/roof-type-tp20.jpg";
+import imgDubbelfalsat from "@/assets/roof-type-dubbelfalsat.jpg";
+import imgLertegel from "@/assets/roof-type-lertegel.jpg";
+import imgBetongpanne from "@/assets/roof-type-betongpanne.jpg";
+import imgTegelplat from "@/assets/roof-type-tegelplat.jpg";
+import imgPannplat from "@/assets/roof-type-pannplat.jpg";
+import imgGlacerade from "@/assets/roof-type-glacerade.jpg";
 
-const roofTypes = [
+type RoofType = {
+  id: string;
+  name: string;
+  shortDesc: string;
+  fullDesc: string;
+  pros: string[];
+  cons: string[];
+  lifespan: string;
+  priceRange: string;
+  bestFor: string;
+  image?: string;
+  imageAlt?: string;
+};
+
+const roofTypes: RoofType[] = [
   {
     id: "tp20",
     name: "TP20 Plåttak",
@@ -13,6 +34,8 @@ const roofTypes = [
     lifespan: "40–50 år",
     priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, fritidshus, ekonomibyggnader, garage",
+    image: imgTp20,
+    imageAlt: "Närbild på trapetsprofilerad TP20-plåt",
   },
   {
     id: "tegelplat",
@@ -24,6 +47,8 @@ const roofTypes = [
     lifespan: "40–60 år",
     priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, sommarstugor, radhus",
+    image: imgTegelplat,
+    imageAlt: "Vått grått tak i tegelplåt med snörasskydd",
   },
   {
     id: "pannplat",
@@ -35,6 +60,8 @@ const roofTypes = [
     lifespan: "40–60 år",
     priceRange: "Från 1 200 kr/m²",
     bestFor: "Kulturbyggnader, äldre villor, funkishus, lantbruksbyggnader, kyrkor",
+    image: imgPannplat,
+    imageAlt: "Svart pannplåt med karaktäristisk vågprofil",
   },
   {
     id: "dubbelfalsat",
@@ -46,6 +73,8 @@ const roofTypes = [
     lifespan: "60–100+ år",
     priceRange: "Från 2 000 kr/m²",
     bestFor: "Exklusiva kustvillor, herrgårdar, kyrkor, kulturbyggnader",
+    image: imgDubbelfalsat,
+    imageAlt: "Dubbelfalsat plåttak i svart bandtäckning på modern timmerbyggnad",
   },
   {
     id: "lertegel",
@@ -57,6 +86,8 @@ const roofTypes = [
     lifespan: "80–100+ år",
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Äldre villor, kulturhistoriska byggnader, herrgårdar, skärgårdshus med karaktär",
+    image: imgLertegel,
+    imageAlt: "Närbild på tvåkupiga lertegelpannor i terrakotta",
   },
   {
     id: "betongpanne",
@@ -68,6 +99,8 @@ const roofTypes = [
     lifespan: "50–70 år",
     priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, radhus, parhus — det trygga och beprövade valet",
+    image: imgBetongpanne,
+    imageAlt: "Närbild på svart betongpannetak med vågprofil",
   },
   {
     id: "glacerade",
@@ -79,6 +112,8 @@ const roofTypes = [
     lifespan: "80–100+ år",
     priceRange: "Från 1 800 kr/m²",
     bestFor: "Exklusiva villor, representativa fastigheter, skärgårdshus",
+    image: imgGlacerade,
+    imageAlt: "Närbild på glacerade takpannor i svart glansig glasyr",
   },
   {
     id: "papptak",
@@ -150,7 +185,19 @@ const RoofTypes = () => {
 
                 {isExpanded && (
                   <div className="pb-9 pt-2 md:pl-12 space-y-7 animate-fade-in">
-                    <p className="text-foreground leading-relaxed">{roof.fullDesc}</p>
+                    <div className={roof.image ? "grid gap-7 sm:grid-cols-[minmax(0,15rem)_1fr] sm:items-start" : ""}>
+                      {roof.image && (
+                        <img
+                          src={roof.image}
+                          alt={roof.imageAlt}
+                          width={480}
+                          height={360}
+                          loading="lazy"
+                          className="aspect-[4/3] w-full rounded-2xl object-cover sm:max-w-[15rem]"
+                        />
+                      )}
+                      <p className="text-foreground leading-relaxed">{roof.fullDesc}</p>
+                    </div>
 
                     <div className="grid sm:grid-cols-3 gap-4">
                       <div className="flex items-center gap-2 text-sm">
@@ -199,7 +246,7 @@ const RoofTypes = () => {
 
                     <a
                       href="/offert"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
+                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
                     >
                       Få offert för {roof.name.toLowerCase()}
                     </a>
@@ -221,7 +268,7 @@ const RoofTypes = () => {
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Normalstort bostadshus */}
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                   <Coins className="w-5 h-5 text-primary" />
@@ -261,7 +308,7 @@ const RoofTypes = () => {
             </div>
 
             {/* Mindre kustvilla */}
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                   <Coins className="w-5 h-5 text-primary" />
