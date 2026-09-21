@@ -10,6 +10,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "byta-tak-brf-guide-styrelse",
+    title: "Så byter ni tak i en BRF — guide för styrelsen",
+    excerpt: "Guide för BRF-styrelser: besiktning, underhållsplan, finansiering, stämmobeslut, upphandling och garanti. Så förbereder ni ett takbyte steg för steg.",
+    date: "2026-09-21",
+    readTime: "5 min",
+    keywords: ["takbyte brf","bostadsrättsförening tak","brf takrenovering","styrelse takbyte","underhållsplan tak","upphandla takbyte"],
+    content: [
+      "Ett takbyte är ofta en av de största enskilda utgifterna i en bostadsrättsförening, och ett beslut som ska hålla inför både medlemmar och nästa styrelse. Den här guiden går igenom stegen från första besiktning till slutbesiktning, med de frågor som en styrelse behöver ha svar på på vägen. Reglerna för beslut och upphandling beror på föreningens stadgar, så vid osäkerhet är det bra att stämma av med föreningens förvaltare eller en jurist.",
+      "Steg 1 — Se över taket innan det blir akut: Det bästa läget för ett beslut är när taket är slitet men inte har börjat läcka. Tecken att titta efter är fuktfläckar i vindsutrymmen och trapphus, trasiga eller förskjutna pannor, rost och fläckar på plåt, skadade beslag runt skorstenar och genomföringar samt kraftig mossa eller algpåväxt som håller kvar fukt. En takbesiktning ger styrelsen ett dokumenterat underlag: takets skick, en bedömning av kvarvarande livslängd och ett förslag på åtgärd, gärna med foton.",
+      "Steg 2 — Lägg in taket i underhållsplanen: En underhållsplan visar när större åtgärder behövs och vad de väntas kosta, och kopplar till föreningens avsättning till underhållsfond. Livslängden varierar mycket med material och skick. Som riktvärden håller papptak ofta 15–30 år, plåttak 40–60 år, betongpannor 50–70 år och dubbelfalsad bandtäckning 60 år eller mer. Ett tak som planeras in i god tid blir en kalkylerad kostnad i stället för en akut.",
+      "Steg 3 — Bestäm åtgärd och omfattning: Ibland räcker en renovering med lagning, ny underlagspapp eller taktvätt, ibland behövs ett fullständigt takbyte. Besiktningen bör svara på vilket. Tänk också på det som hör till taket: takavvattning, plåtdetaljer, ventilation, skorstensinklädnad och taksäkerhet som takstege, gångbrygga och snörasskydd. Står ställningen redan uppe är det ofta klokt att samordna arbeten på hängrännor, fasad eller skorstenar i samma projekt.",
+      "Steg 4 — Klargör finansieringen: Takbyten finansieras ofta via föreningens underhållsfond, banklån, en justering av årsavgiften eller en kombination. Prata tidigt med ekonomisk förvaltare och bank. De behöver ett konkret prisunderlag, och därför är det värt att ha en offert med fast pris innan beslutet tas.",
+      "Steg 5 — Beslut i föreningen: Vem som beslutar styrs av stadgarna och bostadsrättslagen. Underhåll ligger normalt på styrelsen, men frågor som lån, avgiftshöjning eller större ombyggnader tas ofta upp på föreningsstämman. Ta med besiktningsrapporten, en jämförelse av offerter, finansieringsplanen, en tidplan och en beskrivning av vad arbetet innebär för de boende. Ju tydligare underlag, desto färre frågor och missförstånd på stämman.",
+      "Steg 6 — Upphandla på jämförbara villkor: Begär offert från flera entreprenörer, gärna två eller tre, och ge dem samma underlag så att omfattningen går att jämföra. Titta på mer än totalsumman. Frågor att ställa: Har entreprenören F-skatt och ansvarsförsäkring? Vilka referenser finns från liknande uppdrag? Hur lång är garantin och vad omfattar den? Ingår rivning, avfallshantering, ställning och taksäkerhet? Är priset fast, och hur hanteras tilläggsarbeten om skadad råspont upptäcks när gamla taket är rivet? Vissa föreningar ställer även krav på kollektivavtal eller annan dokumentation, så ta reda på föreningens krav innan förfrågan skickas ut.",
+      "Steg 7 — Avtal: Många föreningar skriver avtal enligt branschens standardvillkor för entreprenader, till exempel AB 04 eller ABT 06, som bland annat reglerar garantitid, ändrings- och tilläggsarbeten och besiktning. Enligt AB 04 är garantitiden normalt fem år, men en entreprenör kan erbjuda längre. Kontrollera att avtalet beskriver omfattning, pris, tidplan, garanti och hur slutbesiktningen går till.",
+      "Steg 8 — Planera genomförandet med de boende i åtanke: Ett takbyte märks. Ställning, transporter, buller och avspärrningar påverkar boende, och därför bör information gå ut i god tid. Bestäm tillsammans med entreprenören tidplan, uppställningsplatser för container och lift, skydd av fasad, planteringar och uteplatser, samt hur taket täcks in vid regn. Ha en fast kontaktperson hos entreprenören som styrelsen kan ringa under hela projektet.",
+      "Steg 9 — Slutbesiktning och dokumentation: Gör en slutbesiktning innan sista betalningen, gärna med en oberoende besiktningsman. Kräv garantibevis, materialdokumentation och foton från arbetet och spara dem i föreningens arkiv, så att nästa styrelse vet vad som är gjort. Notera när garantitiden går ut och boka en garantibesiktning före det datumet, så att eventuella fel hinner åtgärdas inom garantin.",
+      "Vanliga misstag: Att välja enbart på lägsta pris utan att kontrollera att offerterna omfattar samma arbete. Att vänta tills det läcker. Att glömma takavvattning och taksäkerhet i kalkylen. Att inte dokumentera arbetet. Och att informera de boende för sent.",
+      "Så kan RoslagsTak hjälpa: Vi tar uppdrag från bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Vi börjar med en kostnadsfri takbesiktning och lämnar en skriftlig offert med fast pris som styrelsen kan ta med till beslut. Vi har F-skatt och ansvarsförsäkring, lämnar 10 års utförandegaranti och 30 års materialgaranti på plåttak och ger garantibevis och fotodokumentation efter slutbesiktning. Läs mer på roslagstak.se/brf eller ring 070-154 36 39.",
+    ],
+  },
+  {
     slug: "valja-ratt-tak-roslagen",
     title: "Så väljer du rätt tak i Roslagen — en komplett guide",
     excerpt: "Guide till de vanligaste taktyperna för hus i Roslagens skärgård. TP20, dubbelfalsat, tegelplåt, pannplåt och lertegeltak — fördelar, nackdelar och kostnader.",
@@ -323,7 +345,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "taklaggare-norrtalje-guide",
     title: "Takläggare i Norrtälje — komplett guide till takbyte 2026",
-    excerpt: "Söker du takläggare i Norrtälje? Guide med priser, material och tips. Lokal takfirma med 70 års erfarenhet. Kostnadsfri offert.",
+    excerpt: "Söker du takläggare i Norrtälje? Guide med priser, material och tips. Lokal takfirma med fast pris och 10 års garanti. Kostnadsfri offert.",
     date: "2026-04-05",
     readTime: "6 min",
     keywords: ["takläggare norrtälje", "takbyte norrtälje", "tak norrtälje", "takrenovering norrtälje", "takfirma norrtälje"],
@@ -751,7 +773,7 @@ export const blogPosts: BlogPost[] = [
       "Hagel: är den enda situation där plåttak verkligen låter mer än tegel. Vid kraftigt hagel är ljudnivån påtaglig, men det är också ovanligt i Roslagen — i genomsnitt 1–2 gånger per år. Plåten skadas dock inte av normalt hagel; godkända plåtprodukter klarar haglkorn upp till 25 mm.",
       "Självtest för dig som funderar: be att få besöka ett hus med plåttak i din närhet under ett regnoväder. Nästan alla som gör provet blir överraskade av hur tyst det är. Vi hjälper gärna till att ordna en referensträff om du vill höra skillnaden med egna öron.",
       "Kompletterande ljudåtgärder om du ändå är känslig: extra mineralull i takstolarna, ljudabsorberande papp under plåten och gipsskivor i innertaket gör stor skillnad. Dessa åtgärder är enkla att lägga till när taket ändå byts.",
-      "Vår erfarenhet efter 70 år: vi har lagt plåttak åt hundratals kunder i Roslagen och nästan ingen klagar på ljudet efter installationen. De flesta är överraskade över hur tyst det är. Vill du höra själv — ring 070-154 36 39 så visar vi ett referensobjekt i din närhet.",      "Vill du ytterligare dämpa ljudet i ett befintligt plåttak? Den mest effektiva efteråtgärden är kompletterande isolering i vindsbjälklaget. Den sänker inte bara regnljudet utan också uppvärmningskostnaden — en dubbel vinst som ofta är berättigad till ROT-avdrag.",
+      "Vår erfarenhet: de flesta kunder är överraskade över hur tyst ett plåttak är efter installationen. Vill du höra själv — ring 070-154 36 39 så visar vi ett referensobjekt i din närhet.",      "Vill du ytterligare dämpa ljudet i ett befintligt plåttak? Den mest effektiva efteråtgärden är kompletterande isolering i vindsbjälklaget. Den sänker inte bara regnljudet utan också uppvärmningskostnaden — en dubbel vinst som ofta är berättigad till ROT-avdrag.",
 
     ],
   },

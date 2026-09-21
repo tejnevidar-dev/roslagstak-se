@@ -130,11 +130,21 @@ const BlogPost = () => {
             </header>
 
             <div className="space-y-5">
-              {post.content.map((paragraph, i) => (
-                <p key={i} className="text-muted-foreground leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
+              {post.content.map((paragraph, i) => {
+                const lead = paragraph.match(/^(Steg \d+ — [^:]{2,70}|Vanliga misstag|Så kan RoslagsTak hjälpa): /);
+                return (
+                  <p key={i} className="text-muted-foreground leading-relaxed">
+                    {lead ? (
+                      <>
+                        <strong className="font-semibold text-foreground">{lead[1]}.</strong>{" "}
+                        {paragraph.slice(lead[0].length)}
+                      </>
+                    ) : (
+                      paragraph
+                    )}
+                  </p>
+                );
+              })}
             </div>
 
             {/* Internal links */}
@@ -146,6 +156,9 @@ const BlogPost = () => {
                 </Link>
                 <Link to="/tjanster/takrenovering" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> Takrenovering
+                </Link>
+                <Link to="/brf" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takbyte för BRF
                 </Link>
                 <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> Se prislista
