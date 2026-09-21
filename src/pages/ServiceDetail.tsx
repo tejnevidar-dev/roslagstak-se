@@ -19,12 +19,8 @@ import imgRannor from "@/assets/roof-build-03-rannor.jpg";
 import imgVindskivor from "@/assets/roof-build-04-vindskivor.jpg";
 import imgBeslag from "@/assets/roof-build-07-beslag.jpg";
 import imgSnoras from "@/assets/roof-build-08-snorasskydd.jpg";
-import imgAfter from "@/assets/after-roof-1.jpg";
 import imgLakt from "@/assets/roof-build-05-lakt.jpg";
 import imgPannor from "@/assets/roof-build-06-pannor.jpg";
-import imgBefore1 from "@/assets/before-roof-1.jpg";
-import imgBefore2 from "@/assets/before-roof-2.jpg";
-import imgAfter2 from "@/assets/after-roof-2.jpg";
 import imgDronePoster from "@/assets/hero-drone-poster.jpg";
 import imgBlidoLakeview from "@/assets/project-blido-lakeview.jpg";
 
@@ -36,17 +32,14 @@ const serviceImages: Record<string, string> = {
   takkupor: imgVindskivor,
   takinspektion: imgRaspont,
   platarbeten: imgBeslag,
-  takvard: imgAfter,
+  takvard: imgDronePoster,
   "eternit-asbest": imgRooferWork,
 };
 
-/** Närbild i specifikationskolumnen — alltid en annan bild än heron. */
-const detailImages: Record<string, string> = {
+/** Närbild i specifikationskolumnen — alltid en annan bild än heron. Tjänster utan riktig bild visar ingen närbild. */
+const detailImages: Partial<Record<string, string>> = {
   takomlaggning: imgLakt,
-  takrenovering: imgBefore2,
   takavvattning: imgBeslag,
-  takkupor: imgAfter2,
-  takinspektion: imgBefore1,
   platarbeten: imgSnoras,
   takvard: imgPannor,
   "eternit-asbest": imgRaspont,
@@ -337,8 +330,8 @@ const ServiceDetail = () => {
   const service = services.find((s) => s.slug === slug);
   const details = slug ? serviceDetails[slug] : null;
   const serviceImage = (slug && serviceImages[slug]) || imgDronePoster;
-  const detailImage = (slug && detailImages[slug]) || imgLakt;
-  const bandImage = slug === "takvard" ? imgAfter : imgBlidoLakeview;
+  const detailImage = slug ? detailImages[slug] : undefined;
+  const bandImage = imgBlidoLakeview;
   const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
   const blocks = (slug && serviceBlocks[slug]) || serviceBlocks.takomlaggning;
   const specificBlock = <ServiceSpecificBlock block={blocks.block} />;
@@ -629,6 +622,7 @@ const ServiceDetail = () => {
                 </a>
               </div>
 
+              {detailImage && (
               <figure className="m-0 space-y-5">
                 <div className="overflow-hidden rounded-2xl bg-secondary">
                   <img
@@ -646,6 +640,7 @@ const ServiceDetail = () => {
                   {meta.photoNote}
                 </figcaption>
               </figure>
+              )}
 
               <p className="border-l-2 border-accent pl-6 text-[15px] leading-relaxed text-muted-foreground">
                 Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när
