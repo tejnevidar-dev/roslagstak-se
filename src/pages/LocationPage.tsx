@@ -1,6 +1,7 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
 import { isBrfLocation } from "@/data/brf-locations";
+import { isNearBase } from "@/data/service-reach";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -138,10 +139,15 @@ const LocationPage = () => {
     ],
   };
 
+  /* Orter långt från basen i Norrtälje beskrivs utan påståenden om lokal närvaro. */
+  const far = !location.isIsland && !isNearBase(location);
+
   // SEO-optimized meta description — under 160 chars, keyword-first
   const metaDescription = location.isIsland
     ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
-    : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`;
+    : far
+      ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
+      : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`;
 
   // Title: keep under 60 chars for Google SERP
   const seoTitle = `Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`;
@@ -418,10 +424,10 @@ const LocationPage = () => {
                   Varför välja RoslagsTak som {location.primaryKeyword.toLowerCase()}?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  {location.region === "Mälardalen"
-                    ? `Vi tar uppdrag i ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri besiktning och fast pris.`
+                  {far
+                    ? `Vi tar uppdrag ${prep} ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri besiktning och fast pris.`
                     : "Vi är en lokal takläggare med stark förankring i Roslagen."}
-                  {location.region === "Mälardalen"
+                  {far
                     ? ""
                     : location.isIsland
                     ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`

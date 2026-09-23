@@ -14,6 +14,7 @@ import { locations } from "../src/data/locations";
 import { generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { brfLocationSlugs } from "../src/data/brf-locations";
+import { isNearBase } from "../src/data/service-reach";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
 
 export interface PrerenderPage {
@@ -370,7 +371,9 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
       title: `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
       description: loc.isIsland
         ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
-        : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`,
+        : isNearBase(loc)
+          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
+          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`,
       h1: `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
       intro: loc.description,
       paragraphs: [

@@ -183,10 +183,7 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
     ? `${p.access.charAt(0).toUpperCase() + p.access.slice(1)}. Vi bokar transport och lossningsplats innan arbetet startar, så att rivningsavfall och nytt material inte behöver ligga och vänta på tomten ${prep} ${loc.name}.`
     : `${p.access.charAt(0).toUpperCase() + p.access.slice(1)}. Vi går igenom var container, lift och materialupplägg står innan första dagen ${prep} ${loc.name}, så att du vet exakt vad som händer på tomten.`;
 
-  const neighbourPara =
-    loc.region === "Mälardalen"
-      ? `Vi tar uppdrag ${prep} ${loc.name} och i närområdet — ${neighbourText}. När flera tak ligger nära varandra kan vi samordna transporter och etablering, vilket kortar tiden på plats.`
-      : `Vi har återkommande projekt ${prep} ${loc.name} och i närområdet — ${neighbourText}. När flera tak ligger nära varandra kan vi samordna transporter och etablering, vilket kortar tiden på plats.`;
+  const neighbourPara = `Vi tar uppdrag ${prep} ${loc.name} och i närområdet — ${neighbourText}. När flera tak ligger nära varandra kan vi samordna transporter och etablering, vilket kortar tiden på plats.`;
 
   return {
     intro: `${climateIntro} ${inspectNote}`,
