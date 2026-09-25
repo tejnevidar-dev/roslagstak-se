@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { trackEvent } from "@/lib/analytics";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -36,6 +37,7 @@ const Contact = () => {
       return;
     }
 
+    trackEvent("generate_lead", { form: "kontakt_startsida" });
     setSubmitted(true);
     setSubmitting(false);
     setName("");

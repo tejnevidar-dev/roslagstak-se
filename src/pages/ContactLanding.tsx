@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2, Shield, MessageCircle, Home } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { trackEvent } from "@/lib/analytics";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -38,6 +39,7 @@ const ContactLanding = () => {
       return;
     }
 
+    trackEvent("generate_lead", { form: "kontakt_sida" });
     setSubmitted(true);
     setSubmitting(false);
     setName("");

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { trackEvent } from "@/lib/analytics";
 
 const roofTypeOptions = [
   "TP20 Plåttak",
@@ -41,6 +42,17 @@ const QuoteConfigurator = () => {
     }
   }, [submitted]);
 
+  const startedRef = useRef(false);
+  useEffect(() => {
+    if (startedRef.current) return;
+    const touched =
+      currentRoof || newRoof || raspont || gangbrygga || takstege || avvattning || floors || name || phone || email || address || message;
+    if (touched) {
+      startedRef.current = true;
+      trackEvent("begin_quote", { mode });
+    }
+  }, [mode, currentRoof, newRoof, raspont, gangbrygga, takstege, avvattning, floors, name, phone, email, address, message]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (submitting) return;
@@ -75,6 +87,7 @@ const QuoteConfigurator = () => {
       return;
     }
 
+    trackEvent("generate_lead", { form: mode === "configure" ? "offert_konfigurator" : "offert_radgivning" });
     setSubmitted(true);
     setSubmitting(false);
     toast({

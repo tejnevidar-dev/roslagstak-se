@@ -14,6 +14,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { locationIndex } from "@/data/location-index";
 import { brfLocationSlugs } from "@/data/brf-locations";
 import { toast } from "@/hooks/use-toast";
+import { trackEvent } from "@/lib/analytics";
 import heroImg from "@/assets/roof-brf-hero.jpg";
 
 const facts = [
@@ -184,6 +185,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
       return;
     }
 
+    trackEvent("generate_lead", { form: "brf", ort: place?.slug });
     setSubmitted(true);
     setForm(initialForm);
   };
