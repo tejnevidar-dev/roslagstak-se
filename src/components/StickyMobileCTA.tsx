@@ -1,8 +1,10 @@
 import { Phone, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const StickyMobileCTA = () => {
   const [visible, setVisible] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +14,9 @@ const StickyMobileCTA = () => {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  /* Annonssidorna har egen fast knapprad. */
+  if (pathname.startsWith("/offert/")) return null;
 
   return (
     <div
