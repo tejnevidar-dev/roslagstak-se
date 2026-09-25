@@ -69,6 +69,8 @@ const staticRoutes = [
   "/taktyper",
   "/brf",
   "/cookies",
+  "/takkontroll",
+  "/takreparation",
   "/hur-det-gar-till",
   "/blogg",
   "/kontakt",

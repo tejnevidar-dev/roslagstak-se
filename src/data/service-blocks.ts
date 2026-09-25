@@ -323,10 +323,14 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
   takrenovering: [
     { to: "/tjanster/takinspektion", label: "Boka kostnadsfri takbesiktning" },
     { to: "/tjanster/takomlaggning", label: "När räcker inte renovering?" },
+    { to: "/takreparation", label: "Takreparation vid läckage och skador" },
   ],
   takavvattning: [{ to: "/tjanster/platarbeten", label: "Plåtarbeten och beslag" }],
   takkupor: [{ to: "/tjanster/platarbeten", label: "Plåtinklädnad runt kupor" }],
-  takinspektion: [{ to: "/tjanster/takrenovering", label: "Vanliga åtgärder efter besiktning" }],
+  takinspektion: [
+    { to: "/tjanster/takrenovering", label: "Vanliga åtgärder efter besiktning" },
+    { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
+  ],
   platarbeten: [{ to: "/taktyper", label: "Falsat plåttak och bandtäckning" }],
   takvard: [{ to: "/tjanster/takinspektion", label: "Kontroll före takvård" }],
 };

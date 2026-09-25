@@ -38,6 +38,7 @@ const BrfPage = lazy(() => import("./pages/BrfPage.tsx"));
 const BrfLocationPage = lazy(() => import("./pages/BrfLocationPage.tsx"));
 const AdLandingPage = lazy(() => import("./pages/AdLandingPage.tsx"));
 const CookiesPage = lazy(() => import("./pages/CookiesPage.tsx"));
+const ServiceLandingPage = lazy(() => import("./pages/ServiceLandingPage.tsx"));
 const AreasPage = lazy(() => import("./pages/AreasPage.tsx"));
 const RegionPage = lazy(() => import("./pages/RegionPage.tsx"));
 
@@ -61,6 +62,8 @@ const App = () => (
               <Route path="/offert" element={<QuotePage />} />
               <Route path="/taktyper" element={<RoofTypesPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
+              <Route path="/takreparation" element={<ServiceLandingPage slug="takreparation" />} />
+              <Route path="/takkontroll" element={<ServiceLandingPage slug="takkontroll" />} />
               <Route path="/brf" element={<BrfPage />} />
               {adLandingSlugs.map((slug) => (
                 <Route key={slug} path={`/offert/${slug}`} element={<AdLandingPage />} />

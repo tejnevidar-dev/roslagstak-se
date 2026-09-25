@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { ArrowRight, CheckCircle, Loader2, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Phone, ShieldCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import NotFound from "@/pages/NotFound";
 import {
@@ -9,9 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { trackEvent } from "@/lib/analytics";
+import LeadForm from "@/components/LeadForm";
 import { getAdLanding, type AdLanding } from "@/data/ad-landings";
 import logo from "@/assets/roslagstak-logo.png";
 
@@ -68,135 +65,6 @@ const faqs = [
     a: "Byter du till likvärdigt material och behåller takets utseende krävs normalt inget bygglov. Byter du kulör eller material, eller bygger takkupor, kan bygglov eller anmälan behövas. Vi kontrollerar vad som gäller i din kommun.",
   },
 ];
-
-const initialForm = { name: "", phone: "", email: "", address: "", topic: "Takbyte", message: "" };
-
-const inputClass =
-  "w-full rounded-xl border border-input bg-background px-4 py-3 text-[16px] text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-ring";
-const labelClass = "mb-1.5 block text-sm font-medium text-foreground";
-
-const LeadForm = ({ landing }: { landing: AdLanding }) => {
-  const [form, setForm] = useState(initialForm);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const set = (key: keyof typeof initialForm) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
-  ) => setForm((prev) => ({ ...prev, [key]: e.target.value }));
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (submitting) return;
-    setSubmitting(true);
-
-    const message = [
-      `Annonssida /offert/${landing.slug} (${landing.name})`,
-      `Gäller: ${form.topic}`,
-      form.message.trim() ? `\n${form.message.trim()}` : null,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    const { error } = await supabase.from("quote_requests").insert({
-      mode: "consultation",
-      name: form.name.trim(),
-      phone: form.phone.trim(),
-      email: form.email.trim(),
-      address: form.address.trim() || null,
-      message,
-    });
-
-    setSubmitting(false);
-
-    if (error) {
-      console.error("Ad landing request error:", error);
-      toast({
-        title: "Något gick fel",
-        description: `Försök igen eller ring oss direkt på ${PHONE_DISPLAY}.`,
-        variant: "destructive",
-      });
-      return;
-    }
-
-    trackEvent("generate_lead", { form: "annons", ort: landing.slug });
-    setSubmitted(true);
-    setForm(initialForm);
-  };
-
-  if (submitted) {
-    return (
-      <div className="flex flex-col items-start gap-4 rounded-2xl border border-border bg-card p-8" role="status">
-        <CheckCircle className="h-9 w-9 text-accent" aria-hidden="true" />
-        <h2 className="font-display text-2xl text-foreground">Tack, vi har tagit emot din förfrågan.</h2>
-        <p className="leading-relaxed text-muted-foreground">
-          Vi återkommer inom 24 timmar för att boka en tid för kostnadsfri besiktning. Vill du prata direkt kan du
-          ringa {PHONE_DISPLAY}.
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <form
-      onSubmit={handleSubmit}
-      aria-label="Begär kostnadsfri offert"
-      className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-[0_30px_70px_-45px_rgba(12,35,64,0.55)] md:p-8"
-    >
-      <div>
-        <h2 className="font-display text-2xl text-foreground">Begär kostnadsfri offert</h2>
-        <p className="mt-1 text-sm text-muted-foreground">Svar inom 24 timmar. Ingen förbindelse.</p>
-      </div>
-      <div>
-        <label htmlFor="ad-name" className={labelClass}>Namn</label>
-        <input id="ad-name" required autoComplete="name" value={form.name} onChange={set("name")} className={inputClass} />
-      </div>
-      <div>
-        <label htmlFor="ad-phone" className={labelClass}>Telefon</label>
-        <input id="ad-phone" type="tel" inputMode="tel" required autoComplete="tel" value={form.phone} onChange={set("phone")} className={inputClass} />
-      </div>
-      <div>
-        <label htmlFor="ad-email" className={labelClass}>E-post</label>
-        <input id="ad-email" type="email" required autoComplete="email" value={form.email} onChange={set("email")} className={inputClass} />
-      </div>
-      <div>
-        <label htmlFor="ad-address" className={labelClass}>Adress</label>
-        <input id="ad-address" required autoComplete="street-address" value={form.address} onChange={set("address")} className={inputClass} placeholder={`Gatuadress, ${landing.name}`} />
-      </div>
-      <div>
-        <label htmlFor="ad-topic" className={labelClass}>Vad gäller det?</label>
-        <select id="ad-topic" value={form.topic} onChange={set("topic")} className={inputClass}>
-          <option>Takbyte</option>
-          <option>Takrenovering eller reparation</option>
-          <option>Takmålning eller taktvätt</option>
-          <option>Takbesiktning</option>
-          <option>Vet inte än</option>
-        </select>
-      </div>
-      <div>
-        <label htmlFor="ad-message" className={labelClass}>
-          Meddelande <span className="font-normal text-muted-foreground">(valfritt)</span>
-        </label>
-        <textarea id="ad-message" rows={3} value={form.message} onChange={set("message")} className={`${inputClass} resize-none`} />
-      </div>
-      <button
-        type="submit"
-        disabled={submitting}
-        aria-busy={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-7 py-4 text-[17px] font-semibold text-accent-foreground transition-colors hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70"
-      >
-        {submitting ? (
-          <>
-            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Skickar
-          </>
-        ) : (
-          <>
-            Skicka förfrågan <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </>
-        )}
-      </button>
-    </form>
-  );
-};
 
 const AdLandingPage = () => {
   const { pathname } = useLocation();
@@ -259,7 +127,12 @@ const AdLandingPage = () => {
               </ul>
             </div>
             <div id="forfragan" className="scroll-mt-24 lg:col-span-5">
-              <LeadForm landing={landing} />
+              <LeadForm
+                source={`Annonssida /offert/${landing.slug} (${landing.name})`}
+                formName="annons"
+                ort={landing.slug}
+                addressPlaceholder={`Gatuadress, ${landing.name}`}
+              />
             </div>
           </div>
         </section>

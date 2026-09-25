@@ -15,6 +15,7 @@ import { generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { isNearBase } from "../src/data/service-reach";
+import { landingServices } from "../src/data/landing-services";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
 
 export interface PrerenderPage {
@@ -75,7 +76,29 @@ const home: PrerenderPage = {
   links: [...primaryLinks, ...serviceLinks, ...locationLinks],
 };
 
+const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
+  landingServices.map((s) => [
+    s.path,
+    {
+      title: s.seoTitle,
+      description: s.seoDescription,
+      h1: `${s.h1} ${s.h1Accent}`,
+      intro: s.intro,
+      paragraphs: [
+        ...s.list.map((i) => `${i.title}: ${i.text}`),
+        ...s.steps.map((st, n) => `Steg ${n + 1}, ${st.title}: ${st.text}`),
+        ...s.extraParagraphs,
+        s.priceNote,
+        ...s.faqs.map((f) => `${f.question} ${f.answer}`),
+        `Ring ${PHONE} eller skicka en förfrågan på ${s.path}. Vi återkommer inom 24 timmar.`,
+      ],
+      links: [...primaryLinks, ...s.related.map((r) => ({ href: r.to, label: r.label }))],
+    } satisfies PrerenderPage,
+  ]),
+);
+
 const staticPages: Record<string, PrerenderPage> = {
+  ...landingPages,
   "/": home,
   "/offert": {
     title: "Offert på takbyte — fast pris efter besiktning",

@@ -25,6 +25,16 @@ export const hubLinks: InternalLink[] = [
     description: "Jämför livslängd, taklutning och kostnad för de vanligaste taken.",
   },
   {
+    to: "/takkontroll",
+    label: "Kostnadsfri takkontroll",
+    description: "Skriftlig rapport med foton om takets skick, utan kostnad och utan förbindelser.",
+  },
+  {
+    to: "/takreparation",
+    label: "Takreparation",
+    description: "Läckage, trasiga pannor och skadad plåt. Fast pris efter besiktning.",
+  },
+  {
     to: "/brf",
     label: "Takbyte för BRF",
     description: "Besiktning, fast offert och serviceavtal för bostadsrättsföreningar.",
