@@ -69,7 +69,7 @@ const home: PrerenderPage = {
       "Som skärgårdsspecialister hanterar vi all materialtransport och logistik till öar utan broförbindelse — från Blidö, Yxlan och Ljusterö till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma.",
       "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
       "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet samt städning och bortforsling. Du får en kontaktperson som följer projektet från besiktning till slutgenomgång.",
-      "Varje moment dokumenteras med foton som du får ta del av. Efter slutförd besiktning får du garantihandlingar: 10 års utförandegaranti och 30 års materialgaranti på plåttak.",
+      "Varje moment dokumenteras med foton som du får ta del av. Efter slutförd besiktning får du garantihandlingar: 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
       `Begär kostnadsfri besiktning och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
     ],
   links: [...primaryLinks, ...serviceLinks, ...locationLinks],
@@ -85,7 +85,7 @@ const staticPages: Record<string, PrerenderPage> = {
     intro:
       "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och besiktning på plats.",
     paragraphs: [
-      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri besiktning — med 10 års utförandegaranti och 30 års materialgaranti.",
+      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri besiktning — med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
       "I offerten ingår allt som behövs för ett komplett takbyte: rivning och bortforsling av gamla taket, kontroll och byte av råspont och underlagspapp, ny strö- och bärläkt, valt tätskikt, kompletta plåtbeslag kring skorsten, ventiler och genomföringar, samt taksäkerhet i form av takstege, gångbrygga och nockfästen.",
       "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri besiktning. På plats mäter vi taket, kontrollerar underlaget och pratar igenom materialval. Därefter får du en skriftlig offert med fast pris — det priset gäller, utan tillägg.",
       "När du accepterat offerten planerar vi startdatum, beställer material och håller dig uppdaterad genom hela projektet. Efter slutbesiktning får du garantihandlingar och foton från varje moment.",
@@ -129,7 +129,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk. Vi bygger arbetet på tre underlag som går att spara och jämföra: besiktningsrapport med foton, fast offert och garantihandlingar efter slutbesiktning.",
       "Så går ett takbyte till i en förening: takbesiktning, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande med fotodokumentation samt slutbesiktning och garantibevis.",
       "Vi erbjuder takbyte och takrenovering samt serviceavtal med regelbunden takkontroll, rengöring och snöskottning. Upplägg och pris för serviceavtal anpassas efter föreningens byggnader.",
-      "Vi lämnar 10 års utförandegaranti och 30 års materialgaranti på plåttak. RoslagsTak har F-skatt och ansvarsförsäkring.",
+      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. RoslagsTak har F-skatt och ansvarsförsäkring.",
       "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
       `Boka en kostnadsfri takbesiktning på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
     ],
@@ -370,10 +370,10 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     return {
       title: `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
       description: loc.isIsland
-        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
+        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
         : isNearBase(loc)
-          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`
-          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter besiktning, 10+30 års garanti och kostnadsfri offert.`,
+          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
+          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`,
       h1: `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
       intro: loc.description,
       paragraphs: [

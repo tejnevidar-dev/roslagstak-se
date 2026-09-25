@@ -17,7 +17,7 @@ const highlights = [
     icon: Anchor,
     title: "Skärgårdserfarenhet",
     description:
-      "Med över 70 års samlad erfarenhet har vi lagt tak på öar som Svartlöga, Norröra, Söderöra, Humlö, Gräskö, Finnhamn och Ingmarsö — platser dit andra takfirmor inte tar sig.",
+      "Vi har lagt tak på öar som Svartlöga, Norröra, Söderöra, Humlö, Gräskö, Finnhamn och Ingmarsö — platser dit andra takfirmor inte tar sig.",
   },
 ];
 
@@ -119,7 +119,7 @@ const IslandSpecialist = () => {
                 ))}
                 . Dessa öar saknar bilväg — allt material fraktas sjövägen.
                 Trots det levererar vi samma höga kvalitet och{" "}
-                <strong>10 års utförandegaranti och 30 års materialgaranti</strong> som på fastlandet.
+                <strong>10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI</strong> som på fastlandet.
               </p>
               <p>
                 Behöver du en{" "}

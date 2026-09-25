@@ -80,7 +80,7 @@ const process = [
 ];
 
 const guarantees = [
-  { icon: ShieldCheck, title: "10 års garanti", desc: "På utfört arbete, med 30 års materialgaranti vid takvård med utbyte. Du får garantin skriftligt." },
+  { icon: ShieldCheck, title: "10 års garanti", desc: "På utfört arbete. Du får garantin skriftligt." },
   { icon: Award, title: "Fast pris efter besiktning", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
   { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Godkänd för F-skatt med ansvarsförsäkring för hela arbetet." },
   { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutbesiktning — alltid samma person att ringa." },

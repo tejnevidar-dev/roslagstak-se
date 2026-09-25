@@ -58,7 +58,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
   takomlaggning: {
     accentLine: "i skärgårdsmiljö.",
     specs: [
-      { k: "Material", v: "30 års garanti" },
+      { k: "Tätskikt", v: "30 års garanti (MATAKI)" },
       { k: "Utförande", v: "AMA-standard" },
       { k: "Läkt", v: "25 × 38 mm" },
     ],
@@ -157,7 +157,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års utförandegaranti och 30 års materialgaranti.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
     priceRange: "Från ca 1 200 kr/m² (TP20) till 2 000+ kr/m² (dubbelfalsat). Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
     benefits: [
       "Rivning av befintligt yttertak",
@@ -270,7 +270,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Beslag runt skorstenar och genomföringar",
       "Ränndalar och vindskivor i plåt",
       "Material i stål, aluminium, koppar och zink",
-      "10 års utförandegaranti, 30 års materialgaranti",
+      "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
     ],
     process: [
       "Besiktning och uppmätning",
@@ -739,7 +739,7 @@ const ServiceDetail = () => {
                 },
                 {
                   t: "Garanti och försäkring",
-                  d: "10 års utförandegaranti och 30 års materialgaranti från tillverkaren. Vi har F-skatt och fullständigt försäkringsskydd.",
+                  d: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Vi har F-skatt och fullständigt försäkringsskydd.",
                 },
                 {
                   t: "Skärgård och logistik",

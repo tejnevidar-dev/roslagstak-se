@@ -1,7 +1,7 @@
 import GoogleReviews from "@/components/GoogleReviews";
 
 const items = [
-  { value: "10 + 30 år", label: "Utförande- & materialgaranti" },
+  { value: "10 + 30 år", label: "Utförande- & tätskiktsgaranti" },
   { value: "Fast pris", label: "Inga dolda kostnader" },
   { value: "0 kr", label: "Hembesök & offert utan förpliktelser", accent: true },
 ];

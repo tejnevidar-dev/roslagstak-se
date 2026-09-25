@@ -15,7 +15,7 @@ const coreValues = [
     icon: ShieldCheck,
     title: "Ansvar",
     description:
-      "Vi står bakom varje takpanna, plåtskiva och skarv vi lägger. Med skriftligt avtal, 10 års utförandegaranti och 30 års materialgaranti vet du exakt vad som gäller — även flera år efter att vi lämnat tomten.",
+      "Vi står bakom varje takpanna, plåtskiva och skarv vi lägger. Med skriftligt avtal, 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI vet du exakt vad som gäller — även flera år efter att vi lämnat tomten.",
   },
   {
     icon: Award,
@@ -35,7 +35,7 @@ const coreValues = [
 const benefits = [
   "Certifierade och försäkrade takläggare",
   "Fast pris — inga dolda kostnader",
-  "10 års utförandegaranti, 30 års materialgaranti",
+  "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
   "Roslagen och hela Storstockholm",
   "Kostnadsfritt hembesök och offert",
   "Samma kontaktperson genom hela projektet",

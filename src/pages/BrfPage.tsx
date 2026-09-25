@@ -19,7 +19,7 @@ import heroImg from "@/assets/roof-brf-hero.jpg";
 
 const facts = [
   { label: "Utförande", value: "10 års garanti" },
-  { label: "Material", value: "30 års garanti på plåttak" },
+  { label: "Tätskikt", value: "30 års garanti genom MATAKI" },
   { label: "Företaget", value: "F-skatt och ansvarsförsäkring" },
   { label: "Standard", value: "Arbete enligt AMA Hus" },
 ];
@@ -89,7 +89,7 @@ const brfFaqs = [
   {
     question: "Vilken garanti får föreningen?",
     answer:
-      "Vi lämnar 10 års utförandegaranti och 30 års materialgaranti på plåttak. Garantihandlingar och fotodokumentation lämnas efter slutbesiktning, så att de går att spara i föreningens arkiv.",
+      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Garantihandlingar och fotodokumentation lämnas efter slutbesiktning, så att de går att spara i föreningens arkiv.",
   },
   {
     question: "Kan ni ta hand om takservice och snöskottning löpande?",

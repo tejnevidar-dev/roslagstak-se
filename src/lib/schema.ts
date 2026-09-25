@@ -89,7 +89,7 @@ export const buildLocalBusinessSchema = () => ({
   paymentAccepted: "Faktura",
   parentOrganization: { "@id": ORG_ID },
   description:
-    "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och eternitsanering med fast pris efter besiktning, 10 års utförandegaranti och 30 års materialgaranti.",
+    "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och eternitsanering med fast pris efter besiktning, 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
   address: {
     "@type": "PostalAddress",
     addressLocality: NAP.addressLocality,
