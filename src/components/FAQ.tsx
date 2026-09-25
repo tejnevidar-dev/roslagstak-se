@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     question: "Kan ni riva eternittak med asbest?",
-    answer: "Ja, vi utför certifierad asbestsanering enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1). Vi hanterar allt från materialprovstagning och anmälan till säker rivning, emballering och transport till godkänd deponi — inklusive på öar i skärgården. Efter saneringen lägger vi ett nytt, modernt tak. Kontakta oss för kostnadsfri besiktning.",
+    answer: "Ja, vi utför certifierad asbestsanering enligt Arbetsmiljöverkets föreskrifter. Vi hanterar allt från materialprovstagning och anmälan till säker rivning, emballering och transport till godkänd deponi — inklusive på öar i skärgården. Efter saneringen lägger vi ett nytt, modernt tak. Kontakta oss för kostnadsfri besiktning.",
   },
 ];
 

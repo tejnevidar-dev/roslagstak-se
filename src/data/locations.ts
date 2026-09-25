@@ -602,11 +602,11 @@ export const locations: LocationData[] = [
     longDescription:
       "Herräng ligger kustnära i norra Roslagen med en blandning av äldre gruvortsbebyggelse, villor och fritidshus. Saltmättad luft och vindexponering gör att billiga plåtkvaliteter och dåliga infästningar inte håller här. Vi väljer material med hög korrosionsklass och förstärkta infästningar vid takbyten i Herräng. Vi utför även takrenovering, plåtarbeten, taktvätt och takmålning — allt med fast pris och 10 års garanti.",
     extraContent:
-      "Många hus i Herräng har eternit- eller pannplåttak från mitten av 1900-talet. Har du eternittak hanterar vi asbestsanering enligt AFS 2006:1 via behörig partner innan nytt tak monteras. Vi guidar dig genom hela processen och tar hand om dokumentation och avfallshantering.",
+      "Många hus i Herräng har eternit- eller pannplåttak från mitten av 1900-talet. Har du eternittak hanterar vi asbestsanering enligt Arbetsmiljöverkets föreskrifter via behörig partner innan nytt tak monteras. Vi guidar dig genom hela processen och tar hand om dokumentation och avfallshantering.",
     uniqueFAQ: {
       question: "Har ni erfarenhet av eternittak i Herräng?",
       answer:
-        "Ja. Många hus i Herräng har eternittak som innehåller asbest. Sanering måste utföras av behörig entreprenör enligt AFS 2006:1 — vi samordnar detta via partner och monterar därefter nytt tak. All dokumentation och avfallshantering ingår i offerten.",
+        "Ja. Många hus i Herräng har eternittak som innehåller asbest. Sanering måste utföras av behörig entreprenör enligt Arbetsmiljöverkets föreskrifter — vi samordnar detta via partner och monterar därefter nytt tak. All dokumentation och avfallshantering ingår i offerten.",
     },
     primaryKeyword: "takläggare Herräng",
     lat: 60.1167,

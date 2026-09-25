@@ -55,7 +55,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Har ni erfarenhet av eternittak och asbest ${prep} ${name}?`,
-      answer: `Ja, vi utför certifierad eternitsanering och asbestrivning enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1). ${isIsland ? `Vi hanterar sanering och borttransport av eternit även på öar som ${name}.` : `Vi hanterar hela processen — från rivning och sanering till nytt tak.`} Kontakta oss för en kostnadsfri bedömning om du misstänker att ditt tak innehåller asbest.`,
+      answer: `Ja, vi utför certifierad eternitsanering och asbestrivning enligt Arbetsmiljöverkets föreskrifter. ${isIsland ? `Vi hanterar sanering och borttransport av eternit även på öar som ${name}.` : `Vi hanterar hela processen — från rivning och sanering till nytt tak.`} Kontakta oss för en kostnadsfri bedömning om du misstänker att ditt tak innehåller asbest.`,
     },
   );
 

@@ -14,7 +14,7 @@ const eternitFaqs = [
   },
   {
     question: "Får man riva eternittak själv?",
-    answer: "Nej. Eternitplattor som innehåller asbest klassas som farligt avfall. Enligt Arbetsmiljöverkets föreskrifter (AFS 2006:1) krävs utbildning, skyddsutrustning och en godkänd saneringsplan. Rivning ska anmälas till Arbetsmiljöverket minst 7 dagar i förväg. Anlita alltid ett certifierat företag.",
+    answer: "Nej. Eternitplattor som innehåller asbest klassas som farligt avfall. Enligt Arbetsmiljöverkets föreskrifter krävs utbildning, skyddsutrustning och en godkänd saneringsplan. Rivning ska anmälas till Arbetsmiljöverket minst 7 dagar i förväg. Anlita alltid ett certifierat företag.",
   },
   {
     question: "Hur vet jag om mitt eternittak innehåller asbest?",
@@ -85,7 +85,7 @@ const EternitSEOContent = () => {
           Samarbete med behöriga partners för säker asbesthantering
         </h3>
         <p className="text-foreground leading-relaxed mb-4">
-          Vid rivning av eternittak och asbest samarbetar vi med behöriga samarbetspartners och underentreprenörer som har rätt utbildning, certifieringar och tillstånd för asbestsanering. Alla våra partners följer Arbetsmiljöverkets föreskrifter (AFS 2006:1) och har dokumenterad erfarenhet av säker hantering av asbesthaltigt material. Genom att arbeta med kvalificerade underentreprenörer säkerställer vi att varje steg — från rivning och emballering till transport och deponering — utförs korrekt och tryggt. Du som kund får en enda kontaktperson och ett helhetsåtagande, medan vi koordinerar alla inblandade parter.
+          Vid rivning av eternittak och asbest samarbetar vi med behöriga samarbetspartners och underentreprenörer som har rätt utbildning, certifieringar och tillstånd för asbestsanering. Alla våra partners följer Arbetsmiljöverkets föreskrifter och har dokumenterad erfarenhet av säker hantering av asbesthaltigt material. Genom att arbeta med kvalificerade underentreprenörer säkerställer vi att varje steg — från rivning och emballering till transport och deponering — utförs korrekt och tryggt. Du som kund får en enda kontaktperson och ett helhetsåtagande, medan vi koordinerar alla inblandade parter.
         </p>
       </div>
 

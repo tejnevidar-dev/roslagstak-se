@@ -284,10 +284,10 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   "eternit-asbest": {
     seoTitle: "Eternitsanering & Asbestrivning Roslagen — Certifierad",
     seoDescription:
-      "Certifierad eternitsanering och asbestrivning i Roslagen och skärgården. Säker rivning enligt AFS 2006:1, emballering, transport till godkänd deponi och nytt tak. Kostnadsfri besiktning.",
+      "Certifierad eternitsanering och asbestrivning i Roslagen och skärgården. Säker rivning enligt Arbetsmiljöverkets föreskrifter, emballering, transport till godkänd deponi och nytt tak. Kostnadsfri besiktning.",
     blockPlacement: "before-spec",
     factCards: [
-      { tone: "primary", label: "Regelverk", value: "AFS 2006:1", text: "Arbetsmiljöverkets föreskrifter styr hela hanteringen." },
+      { tone: "primary", label: "Regelverk", value: "Arbetsmiljöverket", text: "Arbetsmiljöverkets föreskrifter styr hela hanteringen." },
       { tone: "outline", label: "Anmälan", value: "7 dagar före", text: "Anmälan till Arbetsmiljöverket görs av oss innan start." },
       { tone: "accent", label: "Sanering", value: "Från 400 kr/m²", text: "Plus nytt tak från ca 1 200 kr/m². ROT-avdrag tillkommer." },
       { tone: "plain", label: "Avfall", value: "Godkänd deponi", text: "Emballerat, märkt och transporterat med dokumenterad kvittens." },
@@ -297,7 +297,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       eyebrow: "Regelverk",
       heading: "Så hanteras asbest lagligt — och vad du aldrig ska göra själv",
       intro:
-        "Eternit får inte kapas, borras, brytas eller högtryckstvättas. Fibrerna frigörs i luften och är hälsofarliga. All hantering sker enligt AFS 2006:1.",
+        "Eternit får inte kapas, borras, brytas eller högtryckstvättas. Fibrerna frigörs i luften och är hälsofarliga. All hantering sker enligt Arbetsmiljöverkets föreskrifter.",
       steps: [
         { code: "01", title: "Materialbedömning", text: "Vi identifierar eternit och bedömer skick, åtkomst och rivningsmetod på plats." },
         { code: "02", title: "Anmälan", text: "Anmälan till Arbetsmiljöverket lämnas minst sju dagar före arbetets start." },

@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     q: "Är högtryckstvätt skadligt för taket?",
-    a: "Ja, fel använt högtryck (över 100 bar) kan slå sönder ytskiktet på betong- och tegelpannor, blåsa bort ytbehandlingen och pressa in vatten under pannorna. Vi använder lågtryckstvätt med 30–80 bar anpassad för varje takmaterial, kombinerat med manuell borstning av tjocka mosskuddar och avslutande biocidbehandling. På eternittak används aldrig tryck — endast manuella metoder enligt AFS 2006:1.",
+    a: "Ja, fel använt högtryck (över 100 bar) kan slå sönder ytskiktet på betong- och tegelpannor, blåsa bort ytbehandlingen och pressa in vatten under pannorna. Vi använder lågtryckstvätt med 30–80 bar anpassad för varje takmaterial, kombinerat med manuell borstning av tjocka mosskuddar och avslutande biocidbehandling. På eternittak används aldrig tryck — endast manuella metoder enligt Arbetsmiljöverkets föreskrifter.",
   },
   {
     q: "Ingår ROT-avdrag på taktvätt?",

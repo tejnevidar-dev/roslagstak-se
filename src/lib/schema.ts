@@ -63,7 +63,7 @@ export const services: { slug: string; name: string; description: string }[] = [
   {
     slug: "eternit-asbest",
     name: "Eternitsanering och asbestrivning",
-    description: "Rivning och omhändertagande av eternittak enligt AFS 2006:1, inklusive transport till godkänd deponi.",
+    description: "Rivning och omhändertagande av eternittak enligt Arbetsmiljöverkets föreskrifter, inklusive transport till godkänd deponi.",
   },
 ];
 
