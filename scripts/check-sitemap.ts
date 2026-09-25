@@ -68,6 +68,7 @@ const staticRoutes = [
   "/offert",
   "/taktyper",
   "/brf",
+  "/cookies",
   "/hur-det-gar-till",
   "/blogg",
   "/kontakt",

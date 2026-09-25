@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
+import CookieBanner from "./components/CookieBanner";
 import JsonLd from "./components/JsonLd";
 import { buildLocalBusinessSchema } from "./lib/schema";
 import { locationIndex } from "./data/location-index";
@@ -36,6 +37,7 @@ const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const BrfPage = lazy(() => import("./pages/BrfPage.tsx"));
 const BrfLocationPage = lazy(() => import("./pages/BrfLocationPage.tsx"));
 const AdLandingPage = lazy(() => import("./pages/AdLandingPage.tsx"));
+const CookiesPage = lazy(() => import("./pages/CookiesPage.tsx"));
 const AreasPage = lazy(() => import("./pages/AreasPage.tsx"));
 const RegionPage = lazy(() => import("./pages/RegionPage.tsx"));
 
@@ -58,6 +60,7 @@ const App = () => (
               <Route path="/tjanster/taktvatt" element={<Taktvatt />} />
               <Route path="/offert" element={<QuotePage />} />
               <Route path="/taktyper" element={<RoofTypesPage />} />
+              <Route path="/cookies" element={<CookiesPage />} />
               <Route path="/brf" element={<BrfPage />} />
               {adLandingSlugs.map((slug) => (
                 <Route key={slug} path={`/offert/${slug}`} element={<AdLandingPage />} />
@@ -99,6 +102,7 @@ const App = () => (
             </Routes>
           </Suspense>
           <StickyMobileCTA />
+          <CookieBanner />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

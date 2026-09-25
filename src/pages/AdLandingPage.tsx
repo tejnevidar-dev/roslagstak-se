@@ -364,6 +364,10 @@ const AdLandingPage = () => {
         RoslagsTak · F-skatt · Fullständigt försäkrade ·{" "}
         <a href="/" className="underline underline-offset-4 hover:text-foreground">
           roslagstak.se
+        </a>{" "}
+        ·{" "}
+        <a href="/cookies" className="underline underline-offset-4 hover:text-foreground">
+          Cookies
         </a>
       </footer>
 

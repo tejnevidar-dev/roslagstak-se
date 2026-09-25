@@ -24,6 +24,7 @@ const genvagar = [
   { to: "/blogg", label: "Blogg & tips" },
   { to: "/boka", label: "Boka rådgivning" },
   { to: "/kontakt", label: "Kontakt" },
+  { to: "/cookies", label: "Cookies & integritet" },
 ];
 
 const Footer = () => {

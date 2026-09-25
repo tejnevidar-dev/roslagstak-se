@@ -1,3 +1,5 @@
+import { hasAnalyticsConsent } from "@/lib/consent";
+
 type EventParams = Record<string, string | number | boolean | undefined>;
 
 declare global {
@@ -8,6 +10,7 @@ declare global {
 
 /** Skickar en GA4-händelse. Gör ingenting om taggen inte är laddad (t.ex. blockerad eller i test). */
 export const trackEvent = (name: string, params: EventParams = {}) => {
+  if (!hasAnalyticsConsent()) return;
   try {
     window.gtag?.("event", name, { page_path: window.location.pathname, ...params });
   } catch {
