@@ -159,7 +159,7 @@ for (const { path, robots } of routes) {
     html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
     prerendered++;
   }
-  const out = path === "/" ? templatePath : resolve(dist, `.${path}/index.html`);
+  const out = path === "/" ? templatePath : resolve(dist, `.${path}.html`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, html);
   written++;
@@ -194,7 +194,7 @@ for (const [alias, target] of aliasEntries) {
   </body>
 </html>
 `;
-  const out = resolve(dist, `.${alias}/index.html`);
+  const out = resolve(dist, `.${alias}.html`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, html);
   aliases++;
