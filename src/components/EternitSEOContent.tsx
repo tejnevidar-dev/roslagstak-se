@@ -22,7 +22,7 @@ const eternitFaqs = [
   },
   {
     question: "Kan ni sanera eternittak på öar i skärgården?",
-    answer: "Ja, vi har lång erfarenhet av att sanera eternittak på öar utan broförbindelse i Roslagens skärgård — t.ex. Blidö, Ljusterö, Svartlöga, Ingmarsö och Finnhamn. Vi ordnar all sjötransport av material och farligt avfall.",
+    answer: "Blidö, Ljusterö, Svartlöga, Ingmarsö och Finnhamn. Vi ordnar all sjötransport av material och farligt avfall.",
   },
   {
     question: "Vad händer med det rivna eternitmaterialet?",
@@ -79,7 +79,7 @@ const EternitSEOContent = () => {
           Eternitsanering i skärgården — specialkompetens krävs
         </h3>
         <p className="text-foreground leading-relaxed mb-4">
-          Att sanera eternittak på en ö utan broförbindelse kräver extra planering. Farligt avfall måste emballeras säkert och transporteras med båt till godkänd deponi på fastlandet. Vi har genomfört eternitsaneringar på öar som Blidö, Ljusterö, Svartlöga, Ingmarsö, Finnhamn och Husarö. Vår erfarenhet av sjöburen logistik gör att vi kan genomföra projektet effektivt även på de mest avlägsna platserna.
+          Att sanera eternittak på en ö utan broförbindelse kräver extra planering. Farligt avfall måste emballeras säkert och transporteras med båt till godkänd deponi på fastlandet. Vi samordnar transporten även till avlägsna öar.
         </p>
         <h3 className="font-display text-xl text-foreground mb-3 mt-8">
           Samarbete med behöriga partners för säker asbesthantering

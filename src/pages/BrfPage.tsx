@@ -564,7 +564,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                   ))}
                 </ul>
                 <p className="mt-6 text-[15px] leading-relaxed text-primary-foreground/60">
-                  Vi har utfört pannbyten och takbesiktningar på flerbostadshus.
+                  Vi tar uppdrag för pannbyten och takbesiktningar på flerbostadshus.
                 </p>
                 <a
                   href="#forfragan"

@@ -179,9 +179,9 @@ const ServiceArea = () => {
                 som tar sig ut till öar i hela norra skärgården — <strong className="font-semibold">även öar utan broförbindelse</strong>.
               </p>
               <p>
-                Vi är specialiserade på <strong className="font-semibold">takbyte på öar som bara nås med båt</strong>.
+                Vi tar uppdrag för <strong className="font-semibold">takbyte på öar som bara nås med båt</strong>.
                 På Husarö, Finnhamn och Ingmarsö, liksom Svartlöga, Söderöra, Norröra, Humlö och Gräskö
-                har vi genomfört takprojekt där allt material transporterats sjövägen.
+                tar vi uppdrag där allt material transporteras sjövägen.
                 Högmarsö och Arholma tillhör också vårt verksamhetsområde, liksom Furusund, Rådmansö och Vätö.
               </p>
               <p>

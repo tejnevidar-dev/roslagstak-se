@@ -5,7 +5,7 @@ const highlights = [
     icon: Ship,
     title: "Materialtransport sjövägen",
     description:
-      "Vi transporterar allt material — takpannor, plåt, virke och verktyg — med båt till öar utan broförbindelse. Vi har den erfarenhet och utrustning som krävs.",
+      "Vi transporterar allt material — takpannor, plåt, virke och verktyg — med båt till öar utan broförbindelse.",
   },
   {
     icon: Wrench,
@@ -15,9 +15,9 @@ const highlights = [
   },
   {
     icon: Anchor,
-    title: "Skärgårdserfarenhet",
+    title: "Skärgårdslogistik",
     description:
-      "Vi har lagt tak på öar som Svartlöga, Norröra, Söderöra, Humlö, Gräskö, Finnhamn och Ingmarsö — platser dit andra takfirmor inte tar sig.",
+      "Vi tar uppdrag på öar som Svartlöga, Norröra, Söderöra, Humlö, Gräskö, Finnhamn och Ingmarsö, även där man bara kommer fram med båt.",
   },
 ];
 
@@ -105,7 +105,7 @@ const IslandSpecialist = () => {
                 arbetet börjar.
               </p>
               <p>
-                Vi har utfört <strong>takbyten</strong> och{" "}
+                Vi tar uppdrag för <strong>takbyten</strong> och{" "}
                 <strong>takrenoveringar</strong> på öar som{" "}
                 {islandList.map((island, i) => (
                   <span key={island}>

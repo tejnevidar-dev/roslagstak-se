@@ -430,7 +430,7 @@ const LocationPage = () => {
                   {far
                     ? ""
                     : location.isIsland
-                    ? ` Vi är specialiserade på takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
+                    ? ` Vi tar uppdrag för takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
                     : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och kan ofta hålla nere kostnaden genom att samordna med andra projekt i området.`}
                   {" "}Alla arbeten utförs enligt AMA Hus med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.
                 </p>
