@@ -7,6 +7,21 @@ import Footer from "@/components/Footer";
 import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";
 import NotFound from "./NotFound";
 
+/** Tjänstesida som passar artikelns ämne bäst (första träff vinner), för internlänkning från blogg till tjänst. */
+const serviceForSlug = (slug: string): { to: string; label: string } | null => {
+  const rules: [RegExp, { to: string; label: string }][] = [
+    [/kupa/, { to: "/tjanster/takkupor", label: "Takkupor" }],
+    [/eternit|asbest/, { to: "/tjanster/eternit-asbest", label: "Eternit och asbest" }],
+    [/mossa|takmalning|tvatt/, { to: "/tjanster/taktvatt", label: "Takvård och taktvätt" }],
+    [/hangrannor|stupror|avrinning/, { to: "/tjanster/takavvattning", label: "Takavvattning" }],
+    [/inspektion|hur-lange|tecken/, { to: "/tjanster/takinspektion", label: "Takinspektion" }],
+    [/plat|bandtack|epdm|snorasskydd|vindskivor|takstege|falsad/, { to: "/tjanster/platarbeten", label: "Plåtarbeten" }],
+    [/renovering|papp|ventilation/, { to: "/tjanster/takrenovering", label: "Takrenovering" }],
+    [/byta|takbyte|tak-pa|lagga-om|forbered|kostnad|material/, { to: "/tjanster/takomlaggning", label: "Takomläggning" }],
+  ];
+  return rules.find(([re]) => re.test(slug))?.[1] ?? null;
+};
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
@@ -168,6 +183,11 @@ const BlogPost = () => {
             <div className="bg-card border border-border rounded-2xl p-6 mt-10">
               <h2 className="font-display text-lg text-card-foreground mb-3">Läs mer om tak i Roslagen</h2>
               <div className="grid sm:grid-cols-2 gap-2">
+                {serviceForSlug(post.slug) && (
+                  <Link to={serviceForSlug(post.slug)!.to} className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline sm:col-span-2">
+                    <ArrowRight className="w-3 h-3" /> Om vår tjänst: {serviceForSlug(post.slug)!.label}
+                  </Link>
+                )}
                 <Link to="/tjanster/takomlaggning" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> Takomläggning
                 </Link>
