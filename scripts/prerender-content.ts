@@ -16,6 +16,7 @@ import { blogPosts } from "../src/data/blog-posts";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { isNearBase } from "../src/data/service-reach";
 import { landingServices } from "../src/data/landing-services";
+import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
 
 export interface PrerenderPage {
@@ -286,7 +287,7 @@ const serviceIntro = (title: string, description: string): PrerenderPage => ({
 });
 
 /** Important on-page text for a route, or null when the route has no prerender. */
-export const prerenderContent = (path: string): PrerenderPage | null => {
+const prerenderContentRaw = (path: string): PrerenderPage | null => {
   const clean = path === "/" ? "/" : path.replace(/\/+$/, "").toLowerCase();
 
   if (staticPages[clean]) return staticPages[clean];
@@ -445,4 +446,13 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
   }
 
   return null;
+};
+export const prerenderContent = (path: string): PrerenderPage | null => {
+  const page = prerenderContentRaw(path);
+  if (!page) return page;
+  return {
+    ...page,
+    title: page.title ? fitTitle(page.title) : page.title,
+    description: page.description ? fitDescription(page.description) : page.description,
+  };
 };

@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min",
     keywords: ["takbyte vinter", "byta tak sommar", "takbyte årstid", "när byta tak"],
     content: [
-      "En av de vanligaste frågorna vi får är: 'Kan man byta tak på vintern?' Svaret är ja — men det beror på vilken typ av tak och hur vädret ser ut. Här delar vi vår erfarenhet från 150+ takprojekt i Roslagen.",
+      "En av de vanligaste frågorna vi får är: 'Kan man byta tak på vintern?' Svaret är ja — men det beror på vilken typ av tak och hur vädret ser ut. Här går vi igenom vad som gäller för takbyte på vintern.",
       "Sommar och tidig höst (maj–september) är högsäsong för takbyten. Fördelarna är uppenbara: längre dagar, torrare väder och enklare arbetsförhållanden. Nackdelen? Längre väntetider — alla vill byta tak samtidigt. Boka tidigt om du vill ha sommarslot.",
       "Vår och sen höst (mars–april, oktober–november) är utmärkta perioder. Vädret är ofta stabilt nog för takarbete, och vi kan ofta erbjuda kortare ledtider och ibland förmånligare priser eftersom efterfrågan är lägre.",
       "Vinter (december–februari) fungerar för plåttak men inte för alla taktyper. Plåt kan monteras i minusgrader, men underlagspapp behöver viss värme för att häfta ordentligt. Vi planerar vinterarbeten noggrant och pausar vid extrem kyla eller snöfall.",
@@ -264,7 +264,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min",
     keywords: ["förbered takbyte", "checklista takbyte", "tips takbyte", "innan takbyte"],
     content: [
-      "Att byta tak är ett av de största underhållsprojekten du gör som husägare. Med rätt förberedelse blir processen smidig och resultatet bättre. Här är vår checklista baserad på 150+ takprojekt i Roslagen.",
+      "Att byta tak är ett av de största underhållsprojekten du gör som husägare. Med rätt förberedelse blir processen smidig och resultatet bättre. Här är en checklista att gå igenom innan du byter tak.",
       "1. Boka takinspektion tidigt. En professionell besiktning avslöjar skador som inte syns utifrån — röta i råspont, fukt i isolering, trasig underlagspapp. Vi gör kostnadsfri takinspektion i hela Roslagen.",
       "2. Välj material i god tid. TP20, dubbelfalsat, tegelplåt eller betongpannor? Varje material har olika leveranstider. Populära färger och profiler kan ha väntetid, särskilt under högsäsong.",
       "3. Kolla ROT-avdrag. Se till att du har tillräckligt skatteutrymme för att utnyttja ROT-avdraget. Du kan spara upp till 50 000 kr per person och år.",
@@ -350,7 +350,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min",
     keywords: ["takläggare norrtälje", "takbyte norrtälje", "tak norrtälje", "takrenovering norrtälje", "takfirma norrtälje"],
     content: [
-      "Norrtälje är hjärtat i Roslagen och vår bas. Här har vi genomfört hundratals takprojekt — från villor i centrala Norrtälje till lantbruksfastigheter utanför staden. Lokal närvaro och korta resvägar håller nere etableringskostnaden vid takbyte och takrenovering.",
+      "Norrtälje är hjärtat i Roslagen och vår bas. Vi tar uppdrag på allt från villor i centrala Norrtälje till lantbruksfastigheter utanför staden. Lokal närvaro och korta resvägar håller nere etableringskostnaden vid takbyte och takrenovering.",
       "Norrtäljes bebyggelse är varierad: sekelskifteshus med lertegel, 70-talsvillor med betongpannor, radhusområden med papptak och moderna nybyggen med plåt. Vi har erfarenhet av alla taktyper och anpassar alltid materialvalet efter husets stil och dina önskemål.",
       "Vad kostar takbyte i Norrtälje? Priserna varierar beroende på material och takets storlek. TP20-plåttak: från ca 1 200 kr/m². Tegelplåt: från ca 1 200 kr/m². Dubbelfalsat: från ca 2 000 kr/m². Betongpannor: från ca 1 200 kr/m². Med ROT-avdrag (30% på arbete) sparar du rejält.",
       "Takrenovering i Norrtälje — ett billigare alternativ. Inte alla tak behöver bytas helt. Ibland räcker det med att byta enstaka pannor, laga plåtbeslag, rensa hängrännor eller byta underlagspapp. Takrenovering kostar från ca 300 kr/m² och kan förlänga takets livslängd med 10–20 år.",

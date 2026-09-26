@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { canonicalUrl, isNoindexPath } from "@/lib/canonical";
+import { fitDescription, fitTitle, withSuffix } from "@/lib/seo-fit";
 
 interface SEOHeadProps {
   title: string;
@@ -13,8 +14,10 @@ interface SEOHeadProps {
   noindex?: boolean;
 }
 
-const SEOHead = ({ title, description, canonical, type = "website", geoPosition, geoPlacename, noindex }: SEOHeadProps) => {
-  const fullTitle = title.length > 47 ? title : `${title} | RoslagsTak`;
+const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type = "website", geoPosition, geoPlacename, noindex }: SEOHeadProps) => {
+  const title = fitTitle(rawTitle);
+  const description = fitDescription(rawDescription);
+  const fullTitle = withSuffix(title);
   const { pathname } = useLocation();
   // Always run through the canonical resolver: alias routes (/boka, /taktvatt …)
   // collapse onto one URL, and trailing slashes/casing/query strings are stripped.

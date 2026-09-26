@@ -25,6 +25,7 @@ import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { brfLocationSlugs } from "../src/data/brf-locations";
+import { regionSlugs } from "../src/data/regions";
 import {
   CANONICAL_ALIASES,
   SITE_URL,
@@ -68,6 +69,7 @@ const staticRoutes = [
   "/offert",
   "/taktyper",
   "/brf",
+  "/omraden",
   "/cookies",
   "/takkontroll",
   "/takreparation",
@@ -91,6 +93,7 @@ const knownRoutes = new Set<string>([
   ...blogSlugs.map((s) => `/blogg/${s}`),
   ...locations.map((l) => `/taklaggare-${l.slug}`),
   ...brfLocationSlugs.map((s) => `/brf/${s}`),
+  ...Object.values(regionSlugs).map((s) => `/omraden/${s}`),
   ...locations.filter((l) => hasServiceCombos(l.region)).flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`)),
 ]);
 
