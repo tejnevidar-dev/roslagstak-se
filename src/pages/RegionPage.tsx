@@ -45,7 +45,7 @@ const RegionPage = () => {
     <>
       <SEOHead
         title={`Takläggare i ${region} — takbyte & takrenovering`}
-        description={`Takläggare i ${region}: takbyte, takomläggning, plåtarbeten och takvård i ${places.length} orter. Kostnadsfri besiktning, fast pris och 10 års garanti.`}
+        description={`Takläggare i ${region}: takbyte, takomläggning, plåtarbeten och takvård i ${places.length} orter. Kostnadsfri takkontroll, fast pris och 10 års garanti.`}
         canonical={`https://roslagstak.se${path}`}
       />
       <JsonLd data={itemListSchema} />

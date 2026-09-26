@@ -97,7 +97,7 @@ const ServiceLocationPage = () => {
       "@type": "Offer",
       priceCurrency: "SEK",
       description: servicePriceDescriptions[combo.serviceSlug] ??
-        "Fast pris efter kostnadsfri besiktning — ställning och avfall specificeras i offerten.",
+        "Fast pris efter kostnadsfri takkontroll — ställning och avfall specificeras i offerten.",
     },
   };
 
@@ -126,7 +126,7 @@ const ServiceLocationPage = () => {
 
   // Richer meta description
   const metaDescription = loc?.isIsland
-    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i skärgården. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri besiktning. Ring 070-154 36 39.`
+    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i skärgården. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri takkontroll. Ring 070-154 36 39.`
     : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`;
 
   // Title under 60 chars
@@ -294,7 +294,7 @@ const ServiceLocationPage = () => {
                     "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
                     "Fast pris utan dolda kostnader",
                     "Samma kontaktperson genom hela projektet",
-                    "Kostnadsfri besiktning",
+                    "Kostnadsfri takkontroll",
                   ].map((usp) => (
                     <li key={usp} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />

@@ -169,7 +169,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Avfallshantering",
     ],
     process: [
-      "Kostnadsfri besiktning och offert",
+      "Kostnadsfri takkontroll och offert",
       "Offert godkänns av kund",
       "Logistikplanering påbörjas",
       "Byggställning monteras",
@@ -253,7 +253,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Tydliga åtgärdsförslag med prisuppskattning",
     ],
     process: [
-      "Boka besiktning (telefon eller formulär)",
+      "Boka takkontroll (telefon eller formulär)",
       "Vi besöker din fastighet",
       "Grundlig inspektion av tak, underlag och avvattning",
       "Fotografering och dokumentation",
@@ -293,7 +293,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Skyddar takmaterialet mot fukt och UV",
     ],
     process: [
-      "Kostnadsfri besiktning av takets skick",
+      "Kostnadsfri takkontroll av takets skick",
       "Offert med tydlig beskrivning av åtgärder",
       "Skonsam högtryckstvätt eller manuell rengöring",
       "Behandling mot mossa och alger",
@@ -313,7 +313,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Erfarenhet av eternittak på skärgårdsöar",
     ],
     process: [
-      "Kostnadsfri besiktning och materialprovtagning",
+      "Kostnadsfri takkontroll och materialprovtagning",
       "Anmälan till Arbetsmiljöverket (minst 7 dagar före)",
       "Upprättande av saneringsplan",
       "Säker rivning med skyddsåtgärder",
@@ -604,7 +604,7 @@ const ServiceDetail = () => {
               <div className="flex flex-col gap-6 rounded-2xl bg-primary p-9 text-primary-foreground">
                 <h3 className="font-display text-[1.55rem] font-extrabold tracking-[-0.03em]">Begär offert</h3>
                 <p className="text-[15px] font-light leading-relaxed text-primary-foreground/75">
-                  Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri besiktning.
+                  Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.
                 </p>
                 <Link
                   to="/offert"
@@ -735,7 +735,7 @@ const ServiceDetail = () => {
               {[
                 {
                   t: "Pris och ROT",
-                  d: details.priceRange ?? "Fast pris efter kostnadsfri besiktning.",
+                  d: details.priceRange ?? "Fast pris efter kostnadsfri takkontroll.",
                 },
                 {
                   t: "Garanti och försäkring",
@@ -787,7 +787,7 @@ const ServiceDetail = () => {
                 <p className="mt-4 text-[17px] leading-[1.7] text-primary-foreground/75">
                   {slug === "eternit-asbest"
                     ? "Kontakta oss för kostnadsfri rådgivning om ditt eternittak. Vi hjälper dig vidare."
-                    : "Kontakta oss för en kostnadsfri besiktning och offert."}
+                    : "Kontakta oss för en kostnadsfri takkontroll och offert."}
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">

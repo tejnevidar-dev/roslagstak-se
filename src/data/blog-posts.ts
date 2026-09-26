@@ -283,8 +283,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "eternittak-asbest-sanering",
-    title: "Eternittak med asbest — allt du behöver veta om sanering och takbyte",
-    excerpt: "Har du eternittak? Så identifierar du asbest, vad lagen säger och hur saneringen går till. Komplett guide för husägare i Roslagen och skärgården.",
+    title: "Eternittak och asbest: lagkrav, sanering och takbyte",
+    excerpt: "Har du eternittak? Så identifierar du asbest, vad lagen säger och hur saneringen går till. Guide för husägare i Roslagen och skärgården.",
     date: "2026-04-11",
     readTime: "7 min",
     keywords: ["eternittak", "asbest tak", "asbestsanering tak", "riva eternittak", "eternit asbest", "eternittak sanering roslagen", "byta eternittak"],
@@ -292,11 +292,11 @@ export const blogPosts: BlogPost[] = [
       "Eternit är ett byggmaterial som användes flitigt i Sverige mellan 1930- och 1980-talet. Det består av cement förstärkt med fibrer — och i äldre eternitplattor är dessa fibrer ofta asbest. Asbest är ett cancerframkallande material som vid rivning kan frigöra farliga mikroskopiska fibrer i luften.",
       "Hur vet jag om mitt tak innehåller asbest? Om ditt hus har eternitplattor som lades före 1982 är sannolikheten stor att de innehåller asbest. Plattorna är ofta gråaktiga, korrugerade eller plana skivor. Det enda sättet att vara helt säker är att ta ett materialprov och skicka det till ett ackrediterat laboratorium — något vi kan hjälpa dig med kostnadsfritt.",
       "Vad säger lagen? Enligt Arbetsmiljöverkets föreskrifter är det förbjudet att riva asbestmaterial utan rätt utbildning, utrustning och anmälan. En anmälan till Arbetsmiljöverket ska göras minst 7 arbetsdagar före rivningen påbörjas. Brott mot reglerna kan leda till böter och arbetsförbud.",
-      "Så går saneringen till: Först gör vi en kostnadsfri besiktning och tar materialprov vid behov. När asbestförekomst bekräftats upprättar vi en saneringsplan och gör anmälan till Arbetsmiljöverket. Rivningen sker med fullständig skyddsutrustning — andningsskydd, skyddsdräkter och dammsugare med HEPA-filter. Plattorna fuktas för att minimera fiberutsläpp, tas ner hela och emballeras i märkta big bags som transporteras till godkänd deponi.",
+      "Så går saneringen till: Först gör vi en kostnadsfri takkontroll och tar materialprov vid behov. När asbestförekomst bekräftats upprättar vi en saneringsplan och gör anmälan till Arbetsmiljöverket. Rivningen sker med fullständig skyddsutrustning — andningsskydd, skyddsdräkter och dammsugare med HEPA-filter. Plattorna fuktas för att minimera fiberutsläpp, tas ner hela och emballeras i märkta big bags som transporteras till godkänd deponi.",
       "Vad kostar det att sanera eternittak? Saneringen i sig kostar från ca 400 kr/m² beroende på takets storlek och tillgänglighet. Därtill kommer kostnaden för nytt tak — från ca 1 200 kr/m² för TP20-plåt. Med ROT-avdrag (30% på arbetskostnaden, max 50 000 kr per person/år) blir totalkostnaden betydligt lägre. Vi ger alltid fast pris efter besiktning.",
       "Eternittak i skärgården kräver extra planering. På öar utan broförbindelse som Blidö, Svartlöga, Husarö och Ingmarsö behöver det sanerade materialet transporteras med båt till godkänd deponi.",
       "Kan jag bo kvar under saneringen? Ja, i de allra flesta fall. Vi spärrar av arbetsområdet och använder skyddsplast för att förhindra spridning av fibrer. Rivningen av ett normalt villatak tar 1–2 dagar, och det nya taket kan ofta läggas samma vecka.",
-      "Vänta inte med att byta ditt eternittak. Gamla eternitplattor vittrar med åren och risken för fiberutsläpp ökar. Dessutom kan ett skadat eternittak leda till fuktskador i konstruktionen. Kontakta oss för en kostnadsfri besiktning — vi undersöker ditt tak och ger dig en tydlig offert utan förbindelser. Ring 070-154 36 39 eller konfigurera din offert direkt.",      "Efter saneringen får du dokumentation: anmälningshandlingar, deponikvitton och fotodokumentation av det färdiga arbetet. Spara allt — vid framtida försäljning är beviset på att asbesten hanterats korrekt av certifierad personal värt mycket för köparens trygghet och husets värde.",
+      "Vänta inte med att byta ditt eternittak. Gamla eternitplattor vittrar med åren och risken för fiberutsläpp ökar. Dessutom kan ett skadat eternittak leda till fuktskador i konstruktionen. Kontakta oss för en kostnadsfri takkontroll — vi undersöker ditt tak och ger dig en tydlig offert utan förbindelser. Ring 070-154 36 39 eller konfigurera din offert direkt.",      "Efter saneringen får du dokumentation: anmälningshandlingar, deponikvitton och fotodokumentation av det färdiga arbetet. Spara allt — vid framtida försäljning är beviset på att asbesten hanterats korrekt av certifierad personal värt mycket för köparens trygghet och husets värde.",
 
     ],
   },
@@ -424,7 +424,7 @@ export const blogPosts: BlogPost[] = [
       "Tips: Planera takrenoveringen på hösten eller våren. Under sommaren vill du använda stugan, och under vintern kan vädret vara svårhanterligt. Vi kan ofta göra besiktning och offert vid ett besök, och sedan utföra arbetet vid ett senare tillfälle när det passar dig.",
       "Tänk på att många sommarstugor saknar vindsisolering. När taket ändå öppnas är det ett utmärkt tillfälle att komplettera isoleringen — det både sänker uppvärmningskostnaderna och skyddar takkonstruktionen mot kondens. Vi rådgör gärna om vad som är värt att göra samtidigt.",
       "Kostnadsexempel för en typisk sommarstuga: takbyte med TP20-plåt på 80 m² kostar cirka 100 000–130 000 kr, varav ROT-avdraget drar ner din faktiska kostnad med upp till 20 000 kr per person. En enklare renovering med nytt tätskikt på friskt underlag kan landa betydligt lägre.",
-      "Kontakta oss för en kostnadsfri besiktning av din sommarstugas tak. Vi verkar i hela Roslagen — från Arholma i norr till Vaxholm i söder. Ring 070-154 36 39 eller fyll i vårt offertformulär.",      "Har stugan legat oanvänd länge? Då är en genomgång av hela yttertaket extra viktig — inte bara tätskiktet utan även hängrännor, stuprör, skorstensbeslag och vindskivor. Vi gör en komplett statusbedömning vid besiktningen så att du vet exakt vad som behövs, i vilken ordning och vad varje del kostar.",
+      "Kontakta oss för en kostnadsfri takkontroll av din sommarstugas tak. Vi verkar i hela Roslagen — från Arholma i norr till Vaxholm i söder. Ring 070-154 36 39 eller fyll i vårt offertformulär.",      "Har stugan legat oanvänd länge? Då är en genomgång av hela yttertaket extra viktig — inte bara tätskiktet utan även hängrännor, stuprör, skorstensbeslag och vindskivor. Vi gör en komplett statusbedömning vid besiktningen så att du vet exakt vad som behövs, i vilken ordning och vad varje del kostar.",
 
     ],
   },
@@ -486,7 +486,7 @@ export const blogPosts: BlogPost[] = [
       "Ska man välja ventilerad nock eller inte? På nybyggda hus och vid takbyte är ventilerad nock det självklara valet — den ger jämn ventilation, syns knappt och kräver inget underhåll. Det enda undantaget är extremt platta tak (under 14° lutning) där alternativa lösningar med takhuvar kan fungera bättre.",
       "Tecken på dålig takventilation: fuktfläckar på undertaket, ispiggar längs takfoten på vintern, mögellukt på vinden, frostbildning på vindens insida, eller en sval och fuktig vind även sommartid. Upptäcker du något av detta — boka en takinspektion direkt.",
       "Vid takbyte kontrollerar vi alltid takets ventilation och åtgärdar brister i samma arbete. Det är betydligt billigare att förbättra luftspalten när taket ändå är öppet än att gå tillbaka senare. Vi installerar nockventil, takfotsventiler och vindventiler i hela Roslagen — från Vaxholm till Singö.",
-      "Vill du veta om ditt tak ventileras rätt? Ring 070-154 36 39 eller boka en kostnadsfri besiktning, så går vi igenom konstruktionen tillsammans.",      "Isoleringens roll: ventilation och isolering arbetar tillsammans. För tunn isolering släpper upp mer varm fuktig luft mot yttertaket, och för dålig ventilation klarar inte luftspalten att föra bort den. Vid takbyte kontrollerar vi båda delarna och föreslår åtgärder där det behövs.",
+      "Vill du veta om ditt tak ventileras rätt? Ring 070-154 36 39 eller boka en kostnadsfri takkontroll, så går vi igenom konstruktionen tillsammans.",      "Isoleringens roll: ventilation och isolering arbetar tillsammans. För tunn isolering släpper upp mer varm fuktig luft mot yttertaket, och för dålig ventilation klarar inte luftspalten att föra bort den. Vid takbyte kontrollerar vi båda delarna och föreslår åtgärder där det behövs.",
       "Kostnad för åtgärder: en ventilerad nock i samband med takbyte tillkommer med en förhållandevis liten kostnad, medan eftermontering av takfotsventiler på ett slutet tak kan kräva att vindskivor öppnas. Därför är takbytestillfället det ekonomiskt smarta läget att fixa ventilationen.",
       "Ett sista tecken att hålla koll på: jämn smältning. Om snön smälter ojämnt på taket — fläckvis eller fortast vid nocken — kan det tyda på att värme läcker upp genom isoleringen och att ventilationen inte kompenserar. Det är ett tidigt, gratis varningstecken som alla husägare kan läsa av från marken.",
 
@@ -529,14 +529,14 @@ export const blogPosts: BlogPost[] = [
       "Kostnad för takbyte på radhus 2026: Räkna med 80 000–180 000 kr per hushåll beroende på taktyp, takyta och om man byter underlagspapp. När hela längan beställs samtidigt kan rabatten landa på 10–15% per hushåll tack vare bättre logistik och materialinköp. Med ROT-avdrag sparar varje hushåll ytterligare upp till 50 000 kr per person.",
       "Vanliga takmaterial på radhus: TP20-plåt (smidigast och billigast), tegelplåt (klassisk look till lägre vikt) och betongpannor (om den ursprungliga konstruktionen är dimensionerad för det). Bandtäckt plåt används sällan eftersom det är dyrare och radhustak ofta är enkla sadeltak utan komplicerade detaljer.",
       "Tidplan: Ett radhustak om 4–6 bostäder genomför vi normalt på 3–5 veckor från första rivning till färdigt arbete, beroende på väder. Varje hushåll har normal användning av sin bostad under arbetet — vi täcker över med presenningar varje kväll och vid risk för regn.",
-      "Vill du samordna ett takbyte i din radhuslänga? Ring 070-154 36 39 eller skicka in en offertförfrågan, så bokar vi ett gemensamt informationsmöte med er och en kostnadsfri besiktning.",      "Ekonomi och fördelning: i våra radhusprojekt specificerar vi varje hushålls kostnad separat, inklusive ROT-avdrag per delägare. Det gör det enkelt för varje familj att se sin exakta kostnad och sin besparing — utan att någon behöver stå som samlande betalare för hela längan.",
+      "Vill du samordna ett takbyte i din radhuslänga? Ring 070-154 36 39 eller skicka in en offertförfrågan, så bokar vi ett gemensamt informationsmöte med er och en kostnadsfri takkontroll.",      "Ekonomi och fördelning: i våra radhusprojekt specificerar vi varje hushålls kostnad separat, inklusive ROT-avdrag per delägare. Det gör det enkelt för varje familj att se sin exakta kostnad och sin besparing — utan att någon behöver stå som samlande betalare för hela längan.",
 
     ],
   },
   {
     slug: "takkupa-vindskupa-guide",
-    title: "Bygga takkupa eller vindskupa — guide till lov, pris och planering",
-    excerpt: "Allt om takkupor och vindskupor: bygglov eller attefall, kostnad 2026, takvinkel, isolering och hur du får mer ljus och boyta på vinden.",
+    title: "Takkupa: bygglov, pris 2026 och planering — guide",
+    excerpt: "Vad kostar en takkupa? En enkel kupa 80 000–150 000 kr. Bygglov eller attefall, takvinkel, isolering och hur du får mer ljus på vinden.",
     date: "2026-04-12",
     readTime: "6 min",
     keywords: ["takkupa", "vindskupa", "bygga takkupa", "takkupa pris", "takkupa bygglov", "vindskupa pris", "vindskupa attefall"],
@@ -550,7 +550,7 @@ export const blogPosts: BlogPost[] = [
       "Isolering är avgörande: En takkupa exponeras för väder från tre sidor och bör isoleras minst lika väl som husets bjälklag — minst 240 mm mineralull, gärna mer på taket. Otillräcklig isolering ger kalla väggar och kondensproblem på lång sikt.",
       "Färdiga takkupor eller platsbyggt? Prefabricerade kupor lyfts på plats med kran och ger kortare byggtid och ofta lägre pris på enkla tak. Platsbyggda kupor ger full frihet i form och mått och passar bättre på oregelbundna eller branta tak. Vi hjälper dig att välja utifrån takets konstruktion och budget.",
       "Tidsplan: från första besiktning till färdig kupa tar det normalt 6–12 veckor, varav bygglovsansökan (om den behövs) tar 4–8 veckor hos kommunen. Självbygget på plats tar 1–3 veckor beroende på storlek och komplexitet.",
-      "Vill du bygga en takkupa på Blidö, Ljusterö, Norrtälje eller någon annanstans i Roslagen? Vi gör allt från ritning och bygglovshandlingar till färdigt rum. Boka en kostnadsfri besiktning så går vi igenom förutsättningarna på plats.",
+      "Vill du bygga en takkupa på Blidö, Ljusterö, Norrtälje eller någon annanstans i Roslagen? Vi gör allt från ritning och bygglovshandlingar till färdigt rum. Boka en kostnadsfri takkontroll så går vi igenom förutsättningarna på plats.",
     ],
   },
   {
@@ -568,7 +568,7 @@ export const blogPosts: BlogPost[] = [
       "Avvattning: Hängrännor och stuprör är extra viktigt på carporter eftersom de står nära körytan. Felaktigt placerad avvattning kan ge ishala fläckar på vintern. Vi planerar alltid avrinningen så att vattnet leds bort från infart och uppställningsplats.",
       "Pris för carporttak 2026: SBS-papp på en standardcarport (5×6 m, 30 m²): 30 000–45 000 kr. Bandtäckt plåt på samma yta: 55 000–75 000 kr. Renovering av befintligt tak (ny papp på befintlig råspont): 15 000–25 000 kr. Med ROT-avdrag sparar du 30% på arbetskostnaden — gäller för carporter på din permanentbostad eller fritidshus.",
       "Bonus: Solceller på carporttaket. Ett välbyggt carporttak är en utmärkt yta för solceller. Vi planerar gärna takkonstruktionen så att solpanelfästena kan monteras utan att skada tätskiktet. Säg till tidigt i offertarbetet om du planerar solceller — det påverkar valet av takmaterial.",
-      "Behöver du nytt tak på din carport i Norrtälje, Blidö, Vaxholm eller någon annanstans i Roslagen? Ring 070-154 36 39 eller boka en kostnadsfri besiktning så ger vi ett fast pris på plats.",      "Bygglov för carport: carportar upp till 50 kvadratmeter kan ofta byggas som friggebodsliknande attefallsåtgärd utan bygglov, men reglerna skiljer mellan kommuner och tomtens läge. Kontrollera alltid med din kommun innan du bygger.",
+      "Behöver du nytt tak på din carport i Norrtälje, Blidö, Vaxholm eller någon annanstans i Roslagen? Ring 070-154 36 39 eller boka en kostnadsfri takkontroll så ger vi ett fast pris på plats.",      "Bygglov för carport: carportar upp till 50 kvadratmeter kan ofta byggas som friggebodsliknande attefallsåtgärd utan bygglov, men reglerna skiljer mellan kommuner och tomtens läge. Kontrollera alltid med din kommun innan du bygger.",
       "Samordna med husets tak: ska både huset och carporten få nytt tak är det smart att göra samtidigt — samma material, samma kulör och bara en etableringskostnad. Vi ger gärna paketpris när vi ändå är på plats.",
       "Avslutningsvis — glöm inte dräneringen runt carporten. Ett nytt tätt tak leder vattnet till rännorna, men om markdräneringen inte tar hand om det därifrån kan du få fuktproblem vid grunden istället. Vi ser alltid över hela vattenvägen från tak till mark vid våra besiktningar.",
 
@@ -629,7 +629,7 @@ export const blogPosts: BlogPost[] = [
       "Färgval: Tegelröd, mörkbrun, svart, antracit och tegelbrun är vanligast. Mörka färger gör taket varmare på sommaren (kan ge bättre torkning men sämre energiprestanda om vinden är inredd). Vi rekommenderar matta färger framför blanka — blanka avslöjar ojämnheter och blir 'plastiga'.",
       "Pris för takmålning av betongpannor i Roslagen 2026: 250–400 kr/m² inklusive rengöring, primer och två strykningar färg. Standardtak om 150 m² landar på 37 500–60 000 kr. Med ROT-avdrag sparar du 30% på arbetskostnaden. Det här är vanligtvis 25–40% av kostnaden för ett komplett takbyte med nya pannor.",
       "Hållbarhet: En korrekt utförd takmålning håller 10–15 år innan den behöver göras om. Vissa premiumfärger (silikonbaserade) kan hålla upp till 20 år. Vi lämnar 10 års garanti på vårt målningsarbete.",
-      "Vårt råd: Boka alltid en kostnadsfri besiktning innan du beställer takmålning. Vi går ärligt igenom om taket faktiskt klarar målning eller om du sparar pengar på att byta direkt. Ring 070-154 36 39 eller fyll i offertformuläret.",      "Underarbetet avgör allt: den vanligaste orsaken till misslyckad takmålning är otillräcklig rengöring. Mossrötter, lös cement och smuts under färgen gör att den släpper inom ett par år. Vi lägger därför mer tid på rengöring och grundning än på själva strykningen.",
+      "Vårt råd: Boka alltid en kostnadsfri takkontroll innan du beställer takmålning. Vi går ärligt igenom om taket faktiskt klarar målning eller om du sparar pengar på att byta direkt. Ring 070-154 36 39 eller fyll i offertformuläret.",      "Underarbetet avgör allt: den vanligaste orsaken till misslyckad takmålning är otillräcklig rengöring. Mossrötter, lös cement och smuts under färgen gör att den släpper inom ett par år. Vi lägger därför mer tid på rengöring och grundning än på själva strykningen.",
       "Väderfönstret: takmålning kräver torrt väder och minst plusgrader under hela arbetet plus torktiden. I Roslagen är juni–september den säkra säsongen. Vi bokar målningsuppdrag med vädermarginal och återkommer hellre än målar i tveksamt väder.",
       "Väderstrecket spelar roll för resultatet: norrsidor behåller fukten längre och ställer högre krav på både rengöring och färgens biostabilitet. Vi använder därför färgsystem med alg- och mosskydd på norrsidor, och berättar i offerten exakt vilket system som föreslås för respektive takfall.",
 
@@ -674,7 +674,7 @@ export const blogPosts: BlogPost[] = [
       "När SBS-papp kan vara bättre: budget är avgörande och du accepterar omläggning om 25–30 år, taket är extremt litet eller har många smala vinklar (kapsvinn på EPDM-duken blir då stor), eller du föredrar svetsad lösning för specifika tekniska skäl.",
       "Vanliga frågor om EPDM: Kan man lägga EPDM ovanpå gammal takpapp? I vissa fall ja, men vi rekommenderar nästan alltid att riva ner till bärigt underlag för att kunna kontrollera skicket under. Tål EPDM att gå på? Ja, vid behov — men använd mjuka skor och undvik vassa föremål. Kan man reparera en skada? Ja, skador lagas enkelt med EPDM-lagningssatser och specialtejp.",
       "Miljöaspekten: EPDM har lång livslängd vilket ger låg materialförbrukning över tid, och duken kan återvinnas som brännbart material vid demontering. För dig som planerar gröna tak eller solceller är EPDM en stabil bas som inte behöver bytas förrän solcellerna gjort sitt.",
-      "Vi lägger EPDM på tak i hela Roslagen — Norrtälje, Vaxholm, Blidö, Ljusterö och skärgården. Ring 070-154 36 39 eller boka kostnadsfri besiktning så går vi igenom vilket tätskikt som passar ditt tak bäst.",
+      "Vi lägger EPDM på tak i hela Roslagen — Norrtälje, Vaxholm, Blidö, Ljusterö och skärgården. Ring 070-154 36 39 eller boka kostnadsfri takkontroll så går vi igenom vilket tätskikt som passar ditt tak bäst.",
     ],
   },
   {
@@ -713,7 +713,7 @@ export const blogPosts: BlogPost[] = [
       "4. Referenser och recensioner: be om referenser från projekt liknande ditt eget — om du har ett villatak i skärgården, be om referenser från andra skärgårdsprojekt. Läs Google-recensioner och leta efter återkommande mönster (både positiva och negativa). En firma utan recensioner är inte automatiskt dålig — men inte heller en självklar trygghet.",
       "5. Offerten ska vara tydlig: en bra offert specificerar material (märke, modell, tjocklek), arbetstid, eventuella tillkommande arbeten (taksäkerhet, hängrännor, nockventil), garantitid och betalningsplan. Otydliga 'kompletta priser' utan specifikation döljer ofta tillägg som dyker upp efteråt.",
       "Prisbild för plåtarbete i Norrtälje 2026: TP20 plåttak: 1 200–1 500 kr/m². Tegelplåt: 1 300–1 700 kr/m². Bandtäckt plåt: 1 800–2 400 kr/m². Hängrännor och stuprör: 600–900 kr/m. Snörasskydd: 350–550 kr/m. Med ROT-avdrag sparar du 30% på arbetskostnaden — det innebär ofta 30 000–60 000 kr i besparing på ett villatak.",
-      "Vi på RoslagsTak är lokal plåtslagarfirma med bas i Blidö/Norrtälje, full F-skatt och 10 års utförandegaranti. Boka en kostnadsfri besiktning på 070-154 36 39.",      "Ställ rätt frågor vid offertmötet: Vem utför arbetet — egna montörer eller underentreprenörer? Vem är min kontaktperson? Hur hanteras tillkommande skador? Hur ser betalningsplanen ut? En seriös firma svarar rakt och skriftligt på allt.",
+      "Vi på RoslagsTak är lokal plåtslagarfirma med bas i Blidö/Norrtälje, full F-skatt och 10 års utförandegaranti. Boka en kostnadsfri takkontroll på 070-154 36 39.",      "Ställ rätt frågor vid offertmötet: Vem utför arbetet — egna montörer eller underentreprenörer? Vem är min kontaktperson? Hur hanteras tillkommande skador? Hur ser betalningsplanen ut? En seriös firma svarar rakt och skriftligt på allt.",
       "Röda flaggor att akta dig för: priser per telefon utan besiktning, krav på stor förskottsbetalning, otydliga garantier och bolag utan lokal adress. Lägg hellre några procent mer på en firma du kan nå även efter betalning.",
       "Vårt löfte som lokal aktör: vi står kvar i Norrtälje med omnejd också efter att sista fakturan är betald. Garantiärenden, inspektioner och små åtgärder hanteras av samma team som lade taket. Det är den största skillnaden mellan en lokal firma och en firma som bara passerar förbi.",
 
@@ -734,7 +734,7 @@ export const blogPosts: BlogPost[] = [
       "Profilval: TP20 — klassisk plåt med tydlig profil, billigast, passar ekonomibyggnader och enklare villor. Tegelplåt — imiterar tegel, traditionellt uttryck till lägre kostnad och vikt än riktig tegel. Pannplåt — som tegelplåt men med snyggare djupprofil. Bandtäckt — det rena, moderna premiumuttrycket med släta banor utan synliga skarvar.",
       "Färgval och trend 2026: matt antracit, svart och mörkbrun är just nu mest populära kulörer. De ger ett dovt, sofistikerat uttryck som passar både modernt och klassiskt arkitektur. Tegelrött och brun är fortsatt populära för hus där man vill bevara den traditionella looken. Vi avråder från glansiga, ljusa kulörer — de blir 'plastiga' och åldras visuellt sämre.",
       "Pris i Roslagen 2026: byte från pannor till TP20 — totalentreprenad ca 1 400–1 700 kr/m² inklusive rivning, underlagspapp och plåt. Byte till bandtäckt: 2 000–2 600 kr/m². Standardvilla 150 m²: 210 000–390 000 kr. Med ROT-avdrag sparar du 30% på arbetskostnaden, ofta 50 000–100 000 kr.",
-      "Vill du se vad det här skulle göra med ditt hus? Vi gör gärna före/efter-skisser och visar exempel från liknande projekt i Roslagen. Boka kostnadsfri besiktning på 070-154 36 39.",      "Värdet för huset: ett nytt plåttak syns direkt på fasadprospektet och är ett av de första köparna frågar om vid visning. Mäklare vittnar om att ett dokumenterat, garantibackat takbyte kan höja både intresse och slutpris — särskilt i Roslagen där köpare vet vad skärgårdsklimatet gör med gamla tak.",
+      "Vill du se vad det här skulle göra med ditt hus? Vi gör gärna före/efter-skisser och visar exempel från liknande projekt i Roslagen. Boka kostnadsfri takkontroll på 070-154 36 39.",      "Värdet för huset: ett nytt plåttak syns direkt på fasadprospektet och är ett av de första köparna frågar om vid visning. Mäklare vittnar om att ett dokumenterat, garantibackat takbyte kan höja både intresse och slutpris — särskilt i Roslagen där köpare vet vad skärgårdsklimatet gör med gamla tak.",
 
     ],
   },
@@ -833,7 +833,7 @@ export const blogPosts: BlogPost[] = [
       "Kostnad i Roslagen 2026: snörasräcke i målad stål — 600–900 kr/löpmeter monterat. Aluminium eller rostfritt — 900–1 400 kr/löpmeter. Tegelkrokar — 80–150 kr/st (cirka 4 st per kvadratmeter takyta). Standardvilla med 12 meter takfot mot gata: 7 000–12 000 kr. ROT-avdrag tillkommer.",
       "Montering vid takbyte är smartast. När taket ändå är öppet förankras fästena direkt i bärläkten och underlaget — starkast möjliga montage utan att öppna det färdiga taket i efterhand. I efterhand monterat rasskydd kräver att plåt eller pannor öppnas vid varje fäste.",
       "Undvik de vanligaste felen: rasskydd som monterats för nära takfoten, för få infästningar per meter, eller skruvar som bara sitter i ytskiktet istället för bärande konstruktion. Vi ser ofta rasskydd som lossnat efter bara några vintrar för att de monterats fel från början.",
-      "Vi monterar snörasskydd både som separat åtgärd och i samband med takbyte. Sitter du i ett hus som vetter mot gata utan skydd? Ring 070-154 36 39 så bokar vi en kostnadsfri besiktning.",      "Glöm inte tillbehören runt rasskyddet: på tak där takstege eller gångbrygga korsar rasskyddslinjen krävs genomgångsdetaljer så att passage fortfarande är möjlig. Vi ritar in hela taksäkerhetslösningen som en helhet så att inget hamnar i konflikt med något annat.",
+      "Vi monterar snörasskydd både som separat åtgärd och i samband med takbyte. Sitter du i ett hus som vetter mot gata utan skydd? Ring 070-154 36 39 så bokar vi en kostnadsfri takkontroll.",      "Glöm inte tillbehören runt rasskyddet: på tak där takstege eller gångbrygga korsar rasskyddslinjen krävs genomgångsdetaljer så att passage fortfarande är möjlig. Vi ritar in hela taksäkerhetslösningen som en helhet så att inget hamnar i konflikt med något annat.",
 
     ],
   },
@@ -945,8 +945,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "mala-plattak-guide-pris",
-    title: "Måla plåttak — guide, färgval och pris 2026",
-    excerpt: "Ska du måla plåttaket? Vi går igenom när det lönar sig, vilken färg du ska välja och vad det kostar att måla plåttak i Roslagen.",
+    title: "Måla plåttak 2026: pris per m², färg och när det lönar sig",
+    excerpt: "Vad kostar det att måla plåttak? Ca 100–200 kr/m², vilken färg du ska välja och när målning är bättre än nytt tak. Guide för Roslagen.",
     date: "2026-08-10",
     readTime: "5 min",
     keywords: ["måla plåttak", "måla plåttak pris", "färg plåttak", "måla tak plåt", "plåttak målning roslagen"],
@@ -980,7 +980,7 @@ export const blogPosts: BlogPost[] = [
       "Vilken nivå passar ditt tak? Avgörande är underlagets skick. Är råspont, papp och läkt friska räcker en omläggning. Visar pappen ålderstecken eller har taket läckt rekommenderar vi alltid komplett byte — att lägga nytt ytskikt på ett dåligt underlag är pengar i sjön.",
       "Tänk på tillbehören när du räknar: hängrännor, stuprör, snörasskydd och vindskivor är smarta att byta i samma arbete som taket. Marginalkostnaden blir låg när ställningen ändå står uppe, och du slipper ställningskostnad en gång till om några år.",
       "Hur lång tid tar det? En enkel omläggning tar några dagar, ett komplett takbyte på en normalvilla 1–3 veckor. Väder och materialleveranser påverkar — vi håller dig uppdaterad om tidplanen förändras.",
-      "Vill du veta exakt vad det kostar att lägga om ditt tak? Boka en kostnadsfri besiktning med RoslagsTak. Vi inspekterar taket och ger dig ett fast pris — utan överraskningar. Ring 070-154 36 39 eller fyll i offertformuläret.",      "Så får du ett rättvist pris: begär alltid skriftliga offerter från minst två firmor och jämför vad som ingår rad för rad — underlag, beslag, taksäkerhet, städning och garantier. Det billigaste priset utan specifikation blir ofta dyrast i slutänden.",
+      "Vill du veta exakt vad det kostar att lägga om ditt tak? Boka en kostnadsfri takkontroll med RoslagsTak. Vi inspekterar taket och ger dig ett fast pris — utan överraskningar. Ring 070-154 36 39 eller fyll i offertformuläret.",      "Så får du ett rättvist pris: begär alltid skriftliga offerter från minst två firmor och jämför vad som ingår rad för rad — underlag, beslag, taksäkerhet, städning och garantier. Det billigaste priset utan specifikation blir ofta dyrast i slutänden.",
       "Finansiering och ROT: arbetskostnaden specificeras alltid separat i våra offerter så att ROT-avdraget är tydligt. Vi sköter ansökan åt dig och drar beloppet direkt på fakturan — du behöver inte ligga ute med pengarna.",
       "Ett sista råd om begreppen: när du pratar med takfirmor, be dem specificera exakt vad som ingår i deras definition. Vissa räknar omläggning som byte av ytskikt plus papp, andra bara ytskiktet. Skillnaden kan vara tiotusentals kronor — och avgörande för garantiernas giltighet.",
 
@@ -1026,7 +1026,7 @@ export const blogPosts: BlogPost[] = [
       "Vårt upplägg i Storstockholm: samma fasta priser, samma garantier och samma kontaktperson genom hela projektet som i Roslagen. Vi tar hellre färre uppdrag och gör dem ordentligt än tvärtom.",
       "RoslagsTak utför takrenovering i Stockholm, Norrtälje, Vaxholm och Roslagens skärgård. Vi hjälper dig med materialval, bygglovsfrågor och en offert med fast pris. Ring 070-154 36 39 eller boka rådgivning online.",      "Rot-avdraget i praktiken: för ett takbyte i Stockholm på 200 000 kr, varav hälften är arbete, sänker ROT kostnaden med cirka 30 000 kr per person. Vi drar avdraget direkt på fakturan och hanterar all kontakt med Skatteverket.",
       "Vanliga husägarfrågor: Måste jag vara hemma under arbetet? Nej, men vi behöver tillgång till el och gärna en genomgång vid start och slut. Hur störande är arbetet? Rivningsdagen är bullrig, resten av arbetet är vardagsljud. Vi håller tomten städad varje dag.",
-      "Oavsett var i Stockholm du bor — Täby, Danderyd, Sollentuna, Nacka, Huddinge eller Södertälje — får du samma upplägg: kostnadsfri besiktning, skriftlig offert med fast pris, fast kontaktperson och tio års utförandegaranti. Vi återkopplar alltid inom 24 timmar.",
+      "Oavsett var i Stockholm du bor — Täby, Danderyd, Sollentuna, Nacka, Huddinge eller Södertälje — får du samma upplägg: kostnadsfri takkontroll, skriftlig offert med fast pris, fast kontaktperson och tio års utförandegaranti. Vi återkopplar alltid inom 24 timmar.",
 
     ],
   },

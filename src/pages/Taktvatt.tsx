@@ -68,7 +68,7 @@ const roofTypes = [
 ];
 
 const process = [
-  { step: "1", title: "Kostnadsfri besiktning", desc: "Vi inspekterar takets skick, mängd mossa/lavar och bedömer om tvätt räcker eller om målning behövs." },
+  { step: "1", title: "Kostnadsfri takkontroll", desc: "Vi inspekterar takets skick, mängd mossa/lavar och bedömer om tvätt räcker eller om målning behövs." },
   { step: "2", title: "Skriftlig offert", desc: "Tydligt fast pris på hela arbetet. Inga överraskningar i efterhand." },
   { step: "3", title: "Skyddsåtgärder", desc: "Vi täcker fasad, fönster och växtlighet runt huset innan arbetet påbörjas." },
   { step: "4", title: "Borttagning av mossa", desc: "Manuell borstning och skrapning av tjocka mosskuddar — skonsamt mot pannorna." },
@@ -89,7 +89,7 @@ const guarantees = [
 const faqs = [
   {
     q: "Vad kostar taktvätt i Roslagen?",
-    a: "Taktvätt i Roslagen kostar 80–150 kr/m² inklusive biocidbehandling — med ROT-avdrag blir nettopriset 56–105 kr/m². För en normalvilla på 130 m² takyta landar totalpriset oftast på 10 400–19 500 kr brutto, eller 7 280–13 650 kr efter ROT. Vill du även ha takmålning kostar det 200–320 kr/m² (140–224 kr/m² efter ROT). Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri besiktning.",
+    a: "Taktvätt i Roslagen kostar 80–150 kr/m² inklusive biocidbehandling — med ROT-avdrag blir nettopriset 56–105 kr/m². För en normalvilla på 130 m² takyta landar totalpriset oftast på 10 400–19 500 kr brutto, eller 7 280–13 650 kr efter ROT. Vill du även ha takmålning kostar det 200–320 kr/m² (140–224 kr/m² efter ROT). Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri takkontroll.",
   },
   {
     q: "Hur ofta bör man tvätta taket?",
@@ -180,7 +180,7 @@ const checklist = [
   "Notera om takpannor ser mörkare ut än tidigare",
   "Kontrollera takfoten och vindskivor för fuktskador",
   "Mät hur länge det är sedan senaste taktvätten — över 5 år är dags",
-  "Be om en kostnadsfri besiktning från oss om du är osäker",
+  "Be om en kostnadsfri takkontroll från oss om du är osäker",
 ];
 
 const glossary = [
@@ -763,7 +763,7 @@ const Taktvatt = () => {
               </table>
             </div>
             <p className="text-center text-muted-foreground mt-6 max-w-2xl mx-auto text-sm">
-              <strong className="text-foreground">Vår rekommendation:</strong> Boka alltid kostnadsfri besiktning först — vi säger ärligt om det räcker med taktvätt eller om ett takbyte är bättre investering.
+              <strong className="text-foreground">Vår rekommendation:</strong> Boka alltid kostnadsfri takkontroll först — vi säger ärligt om det räcker med taktvätt eller om ett takbyte är bättre investering.
             </p>
           </div>
         </section>
@@ -867,9 +867,9 @@ const Taktvatt = () => {
               </ul>
               <div className="mt-8 pt-6 border-t border-border text-center">
                 <ListChecks className="h-8 w-8 text-primary mx-auto mb-3" />
-                <p className="text-muted-foreground mb-4">Osäker? Vi gör en kostnadsfri besiktning på plats.</p>
+                <p className="text-muted-foreground mb-4">Osäker? Vi gör en kostnadsfri takkontroll på plats.</p>
                 <a href="/offert" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
-                  Boka kostnadsfri besiktning <ArrowRight className="h-4 w-4" />
+                  Boka kostnadsfri takkontroll <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -958,7 +958,7 @@ const Taktvatt = () => {
                 Boka taktvätt i Roslagen idag
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
-                Du får kostnadsfri besiktning och en skriftlig offert med fast pris, samt 10 års utförandegaranti på arbetet.
+                Du får kostnadsfri takkontroll och en skriftlig offert med fast pris, samt 10 års utförandegaranti på arbetet.
                 Verksamma i hela Roslagen — Blidö, Ljusterö, Yxlan, Furusund, Vaxholm, Norrtälje och skärgården.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

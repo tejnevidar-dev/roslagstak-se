@@ -33,7 +33,7 @@ const quoteItems: MenuItem[] = [
   {
     label: "Kostnadsfri konsultation",
     to: "/offert#radgivning",
-    note: "Vi ringer upp och bokar besiktning",
+    note: "Vi ringer upp och bokar takkontroll",
   },
   {
     label: "Konfigurera själv",

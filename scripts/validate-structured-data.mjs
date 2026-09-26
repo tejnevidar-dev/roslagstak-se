@@ -136,7 +136,7 @@ if (existsSync(dist)) {
     for (const entry of readdirSync(dir)) {
       const full = join(dir, entry);
       if (statSync(full).isDirectory()) walk(full);
-      else if (entry === "index.html") checkHtml(full);
+      else if (entry.endsWith(".html")) checkHtml(full);
     }
   };
   const checkHtml = (file) => {

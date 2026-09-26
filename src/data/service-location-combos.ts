@@ -32,7 +32,7 @@ const serviceTypes = [
             `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att etableringskostnaden hålls nere och offerten blir tydlig.`,
           ),
       `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick. Som riktpris ligger ett takbyte med TP20-plåt från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². ROT-avdrag ger dig 30% rabatt på arbetskostnaden.`,
-      `Kontakta oss för en kostnadsfri besiktning och offert för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
+      `Kontakta oss för en kostnadsfri takkontroll och offert för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
     ],
   },
   {
@@ -87,9 +87,9 @@ const taktvattService = {
           `Med vår bas i Norrtälje når vi ${loc.name} snabbt. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
           `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
         ),
-    `Priset för taktvätt ${prep} ${loc.name} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning, material och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocid. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri besiktning — inga dolda kostnader.`,
+    `Priset för taktvätt ${prep} ${loc.name} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning, material och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocid. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.`,
     `Förutom taktvätt utför vi även takmålning ${prep} ${loc.name}. När taket är rent och torrt målar vi med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning kostar från ca 150 kr/m² inklusive grundning och två strykningar. Vi målar i alla standardfärger — tegelröd, svart, mörkgrå, brun eller efter eget val.`,
-    `Bäst tid för taktvätt ${prep} ${loc.name} är från april till oktober när det är torrt och plusgrader. Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på takets exponering. Boka en kostnadsfri besiktning så bedömer vi takets skick och ger dig en ärlig rekommendation. Ring 070-154 36 39 eller fyll i offertformuläret — vi återkopplar inom 24 timmar.`,
+    `Bäst tid för taktvätt ${prep} ${loc.name} är från april till oktober när det är torrt och plusgrader. Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på takets exponering. Boka en kostnadsfri takkontroll så bedömer vi takets skick och ger dig en ärlig rekommendation. Ring 070-154 36 39 eller fyll i offertformuläret — vi återkopplar inom 24 timmar.`,
   ],
 };
 
@@ -146,7 +146,7 @@ const specialistServices = [
             `Vi når ${loc.name} snabbt från Norrtälje och har alltid tillgång till både nya pannor och matchande begagnade pannor för lagning.`,
             `Vi tar med både nya pannor och matchande begagnade pannor för lagning till ${loc.name}.`,
           ),
-      `Ett tak med betongpannor ${prep} ${loc.name} kostar från ca 1 300 kr/m² vid nyläggning. Omläggning av befintliga pannor med ny papp och läkt ligger normalt lägre. Vi lämnar fast pris efter kostnadsfri besiktning. ROT-avdrag ger 30% på arbetskostnaden.`,
+      `Ett tak med betongpannor ${prep} ${loc.name} kostar från ca 1 300 kr/m² vid nyläggning. Omläggning av befintliga pannor med ny papp och läkt ligger normalt lägre. Vi lämnar fast pris efter kostnadsfri takkontroll. ROT-avdrag ger 30% på arbetskostnaden.`,
       `Osäker på om ditt betongpannetak ${prep} ${loc.name} ska renoveras eller bytas? Boka en kostnadsfri takinspektion — vi ger en ärlig rekommendation. Ring 070-154 36 39.`,
     ],
   },
@@ -175,7 +175,7 @@ const specialistServices = [
         ? `Vi tar med tvättutrustning, färg och skyddsutrustning till ${loc.name} och planerar arbetet efter väderfönstret — takfärg behöver torrt väder och plusgrader.`
         : `Vi målar tak ${prep} ${loc.name} från april till oktober och kan oftast boka in dig inom några veckor.`,
       `Takmålning ${prep} ${loc.name} kostar från ca 150 kr/m² inklusive tvätt, grundning och två strykningar. Ett målat tak håller normalt 10–15 år innan det behöver göras om. ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
-      `Undrar du om ditt tak ${prep} ${loc.name} går att måla eller om det är dags för byte? Boka kostnadsfri besiktning — vi säger som det är. Ring 070-154 36 39.`,
+      `Undrar du om ditt tak ${prep} ${loc.name} går att måla eller om det är dags för byte? Boka kostnadsfri takkontroll — vi säger som det är. Ring 070-154 36 39.`,
     ],
   },
 ];

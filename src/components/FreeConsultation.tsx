@@ -32,7 +32,7 @@ const FreeConsultation = () => {
               {[
                 { no: "01", title: "Ring direkt", text: "Prata med en takläggare, inte en säljare.", href: "tel:+46701543639", cta: "Ring nu" },
                 { no: "02", title: "Svar inom 24 timmar", text: "Skicka ett meddelande och få besked snabbt.", href: "#kontakt", cta: "Skicka meddelande" },
-                { no: "03", title: "Ingen förbindelse", text: "Kostnadsfri besiktning och offert — inga krav.", href: "#offert", cta: "Räkna på ditt tak" },
+                { no: "03", title: "Ingen förbindelse", text: "Kostnadsfri takkontroll och offert — inga krav.", href: "#offert", cta: "Räkna på ditt tak" },
               ].map((item) => (
                 <div
                   key={item.no}

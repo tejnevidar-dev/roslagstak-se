@@ -40,7 +40,7 @@ const AreasPage = () => {
     <>
       <SEOHead
         title="Områden — takläggare i Roslagen & Storstockholm"
-        description={`Takläggare i ${locationIndex.length} orter i Roslagen och Storstockholm. Välj din ort för priser, taktyper och kostnadsfri besiktning med fast pris.`}
+        description={`Takläggare i ${locationIndex.length} orter i Roslagen och Storstockholm. Välj din ort för priser, taktyper och kostnadsfri takkontroll med fast pris.`}
         canonical="https://roslagstak.se/omraden"
       />
       <JsonLd data={itemListSchema} />

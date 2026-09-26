@@ -48,7 +48,7 @@ export const services: { slug: string; name: string; description: string }[] = [
   {
     slug: "takinspektion",
     name: "Takinspektion",
-    description: "Kostnadsfri besiktning av tak, underlagspapp, råspont, avvattning och taksäkerhet med skriftlig rapport.",
+    description: "Kostnadsfri takkontroll av tak, underlagspapp, råspont, avvattning och taksäkerhet med skriftlig rapport.",
   },
   {
     slug: "platarbeten",

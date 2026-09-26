@@ -76,11 +76,11 @@ export const generateServiceLocationFAQs = (
     return tidy([
       {
         question: `Vad kostar taktvätt ${prep} ${locationName}?`,
-        answer: `Priset för taktvätt ${prep} ${locationName} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri besiktning."}`,
+        answer: `Priset för taktvätt ${prep} ${locationName} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri takkontroll."}`,
       },
       {
         question: `Hur ofta behöver jag tvätta taket ${prep} ${locationName}?`,
-        answer: `Vi rekommenderar taktvätt vart 5:e till 10:e år ${prep} ${locationName}, beroende på takets exponering. Tak på norrsidor, under träd eller nära vatten drabbas hårdare av mossa och alger och behöver tvättas oftare. ${isIsland ? `Det fuktiga skärgårdsklimatet ${prep} ${locationName} gör att mossan växer snabbt — många hus behöver taktvätt vart 5:e år.` : ""} Boka kostnadsfri besiktning så bedömer vi takets skick.`,
+        answer: `Vi rekommenderar taktvätt vart 5:e till 10:e år ${prep} ${locationName}, beroende på takets exponering. Tak på norrsidor, under träd eller nära vatten drabbas hårdare av mossa och alger och behöver tvättas oftare. ${isIsland ? `Det fuktiga skärgårdsklimatet ${prep} ${locationName} gör att mossan växer snabbt — många hus behöver taktvätt vart 5:e år.` : ""} Boka kostnadsfri takkontroll så bedömer vi takets skick.`,
       },
       {
         question: `Vilken metod använder ni för taktvätt ${prep} ${locationName}?`,

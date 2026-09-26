@@ -96,7 +96,7 @@ const IslandSpecialist = () => {
                 har gjort detta i årtionden.
               </p>
               <p>
-                Processen börjar med en <strong>kostnadsfri besiktning</strong>{" "}
+                Processen börjar med en <strong>kostnadsfri takkontroll</strong>{" "}
                 där vi åker ut till din ö, inspekterar taket och planerar hela
                 projektet. Vi beräknar materialbehov, koordinerar
                 båttransporter och säkerställer att allt — från{" "}

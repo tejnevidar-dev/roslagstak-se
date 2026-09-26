@@ -34,7 +34,7 @@ export const landingServices: LandingService[] = [
     breadcrumb: "Takreparation",
     eyebrow: "Takreparation",
     h1: "Takreparation vid läckage och skador.",
-    h1Accent: "Fast pris efter kostnadsfri besiktning.",
+    h1Accent: "Fast pris efter kostnadsfri takkontroll.",
     intro:
       "Läcker taket, är pannor trasiga eller sitter plåten löst? Vi besiktigar taket, lämnar ett skriftligt fast pris och utför reparationen. Är taket i så dåligt skick att en reparation inte räcker säger vi det.",
     listHeading: "Skador vi lagar",
@@ -72,7 +72,7 @@ export const landingServices: LandingService[] = [
         text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar. Vid akut läckage: ring 070-154 36 39.",
       },
       {
-        title: "Kostnadsfri besiktning",
+        title: "Kostnadsfri takkontroll",
         text: "Vi tittar på taket och orsaken till skadan, fotograferar och bedömer om en reparation räcker.",
       },
       {
@@ -96,7 +96,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Vad kostar en takreparation?",
         answer:
-          "Det beror på skadans omfattning, takmaterial och åtkomst. Efter en kostnadsfri besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+          "Det beror på skadans omfattning, takmaterial och åtkomst. Efter en kostnadsfri takkontroll får du ett fast pris. Vi arbetar endast till fast pris.",
       },
       {
         question: "Vad ska jag göra vid akut läckage?",
@@ -123,7 +123,7 @@ export const landingServices: LandingService[] = [
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
-    formTitle: "Begär besiktning och fast pris",
+    formTitle: "Begär takkontroll och fast pris",
     related: [
       { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
       { to: "/tjanster/takrenovering", label: "Takrenovering" },
@@ -278,7 +278,7 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       {
-        title: "Kostnadsfri besiktning",
+        title: "Kostnadsfri takkontroll",
         text: "Vi tittar på taket och bedömer vad som behöver göras.",
       },
       {
@@ -329,7 +329,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Vad kostar ett takbyte?",
         answer:
-          "Det beror på taket. Efter en kostnadsfri besiktning får du ett fast pris, och vi arbetar endast till fast pris.",
+          "Det beror på taket. Efter en kostnadsfri takkontroll får du ett fast pris, och vi arbetar endast till fast pris.",
       },
     ],
     defaultTopic: "Takbyte",
@@ -360,7 +360,7 @@ export const landingServices: LandingService[] = [
       { title: "Fånga vattnet", text: "Ställ ett kärl under droppet så att golvet inte tar skada." },
       { title: "Fotografera skadan", text: "Bilder på fuktfläckar och droppande vatten kan vara bra om du gör en försäkringsanmälan." },
       { title: "Gå inte upp på taket", text: "Ett vått tak är halt. Lämna arbetet på taket till oss." },
-      { title: "Kontakta oss", text: "Ring 070-154 36 39. Vi går igenom vad som hänt och bokar besiktning." },
+      { title: "Kontakta oss", text: "Ring 070-154 36 39. Vi går igenom vad som hänt och bokar takkontroll." },
       { title: "Anmäl till försäkringsbolaget", text: "Kontakta ditt försäkringsbolag om skadan kan täckas av hemförsäkringen." },
     ],
     stepsHeading: "Så går det till",
@@ -391,7 +391,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Vad kostar det att laga ett läckage?",
         answer:
-          "Det beror på orsaken, takmaterial och åtkomst. Efter en kostnadsfri besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+          "Det beror på orsaken, takmaterial och åtkomst. Efter en kostnadsfri takkontroll får du ett fast pris. Vi arbetar endast till fast pris.",
       },
       {
         question: "Får jag garanti på reparationen?",
@@ -403,7 +403,7 @@ export const landingServices: LandingService[] = [
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
-    formTitle: "Begär besiktning och fast pris",
+    formTitle: "Begär takkontroll och fast pris",
     related: [
       { to: "/takreparation", label: "Takreparation" },
       { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -436,7 +436,7 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
-      { title: "Kostnadsfri besiktning", text: "Vi tittar på befintliga rännor, takyta och fasad." },
+      { title: "Kostnadsfri takkontroll", text: "Vi tittar på befintliga rännor, takyta och fasad." },
       { title: "Fast pris", text: "Du får en skriftlig offert med material, dimension och fast pris." },
       { title: "Montering", text: "Vi monterar systemet och kontrollerar att vattnet leds bort som det ska." },
     ],
@@ -452,7 +452,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Vad kostar nya hängrännor?",
         answer:
-          "Det beror på material, takyta och antal stuprör. Efter en kostnadsfri besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+          "Det beror på material, takyta och antal stuprör. Efter en kostnadsfri takkontroll får du ett fast pris. Vi arbetar endast till fast pris.",
       },
       {
         question: "Vilka material finns?",
@@ -472,7 +472,7 @@ export const landingServices: LandingService[] = [
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
-    formTitle: "Begär besiktning och fast pris",
+    formTitle: "Begär takkontroll och fast pris",
     related: [
       { to: "/tjanster/takavvattning", label: "Om takavvattning" },
       { to: "/tjanster/platarbeten", label: "Plåtarbeten och beslag" },
@@ -505,7 +505,7 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
-      { title: "Kostnadsfri besiktning", text: "Vi tittar på taket och de plåtdetaljer som ska åtgärdas." },
+      { title: "Kostnadsfri takkontroll", text: "Vi tittar på taket och de plåtdetaljer som ska åtgärdas." },
       { title: "Fast pris", text: "Du får en skriftlig offert med tydlig åtgärdslista och fast pris." },
       { title: "Utförande", text: "Vi utför arbetet enligt AMA och lämnar 10 års utförandegaranti." },
     ],
@@ -521,7 +521,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Vad kostar plåtarbeten på tak?",
         answer:
-          "Det beror på omfattning, material och åtkomst. Efter en kostnadsfri besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+          "Det beror på omfattning, material och åtkomst. Efter en kostnadsfri takkontroll får du ett fast pris. Vi arbetar endast till fast pris.",
       },
       {
         question: "Vilka metaller arbetar ni i?",
@@ -541,7 +541,7 @@ export const landingServices: LandingService[] = [
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
-    formTitle: "Begär besiktning och fast pris",
+    formTitle: "Begär takkontroll och fast pris",
     related: [
       { to: "/tjanster/platarbeten", label: "Om plåtarbeten" },
       { to: "/hangrannor", label: "Hängrännor och stuprör" },

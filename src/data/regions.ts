@@ -139,7 +139,7 @@ export const regionLongText: Record<string, string[]> = {
   ],
   "Södra Stockholm": [
     "Villaområden från 1940–70-talet med många tillbyggnader dominerar södra Stockholm. Växlande vinterväder som fryser och tinar ger isproppar i rännorna och skador i takfoten.",
-    "Kuperad terräng betyder att lift och materialplacering ofta måste bestämmas på plats. Det gör vi vid den kostnadsfria besiktningen.",
+    "Kuperad terräng betyder att lift och materialplacering ofta måste bestämmas på plats. Det gör vi vid den kostnadsfria takkontrollen.",
   ],
   "Sydvästra Stockholm": [
     "Sydväst om staden ligger sjönära villor, radhus och nyare grupphus med enkla sadeltak. Blåsiga lägen mot Mälaren sliter på vindskivor och nockplåt.",

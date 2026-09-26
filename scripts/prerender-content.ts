@@ -10,6 +10,7 @@
  */
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
@@ -74,7 +75,7 @@ const home: PrerenderPage = {
       "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
       "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet samt städning och bortforsling. Du får en kontaktperson som följer projektet från besiktning till slutgenomgång.",
       "Varje moment dokumenteras med foton som du får ta del av. Efter slutförd besiktning får du garantihandlingar: 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
-      `Begär kostnadsfri besiktning och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
+      `Begär kostnadsfri takkontroll och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
     ],
   links: [...primaryLinks, ...serviceLinks, ...locationLinks],
 };
@@ -106,14 +107,14 @@ const staticPages: Record<string, PrerenderPage> = {
   "/offert": {
     title: "Offert på takbyte — fast pris efter besiktning",
     description:
-      "Räkna fram ett prisförslag på takbyte direkt, eller boka kostnadsfri besiktning. Fast pris, 10 års utförandegaranti och återkoppling inom 24 timmar.",
+      "Räkna fram ett prisförslag på takbyte direkt, eller boka kostnadsfri takkontroll. Fast pris, 10 års utförandegaranti och återkoppling inom 24 timmar.",
     h1: "Få offert på takbyte i Roslagen",
     intro:
-      "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och besiktning på plats.",
+      "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och takkontroll på plats.",
     paragraphs: [
-      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri besiktning — med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
       "I offerten ingår allt som behövs för ett komplett takbyte: rivning och bortforsling av gamla taket, kontroll och byte av råspont och underlagspapp, ny strö- och bärläkt, valt tätskikt, kompletta plåtbeslag kring skorsten, ventiler och genomföringar, samt taksäkerhet i form av takstege, gångbrygga och nockfästen.",
-      "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri besiktning. På plats mäter vi taket, kontrollerar underlaget och pratar igenom materialval. Därefter får du en skriftlig offert med fast pris — det priset gäller, utan tillägg.",
+      "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri takkontroll. På plats mäter vi taket, kontrollerar underlaget och pratar igenom materialval. Därefter får du en skriftlig offert med fast pris — det priset gäller, utan tillägg.",
       "När du accepterat offerten planerar vi startdatum, beställer material och håller dig uppdaterad genom hela projektet. Efter slutbesiktning får du garantihandlingar och foton från varje moment.",
       "Vanliga frågor om offerten: Är besiktningen verkligen gratis? Ja, besiktning och offert är alltid kostnadsfria och du förbinder dig inte till något. Hur länge gäller offerten? Normalt 30 dagar. Kan jag ändra materialval efter offerten? Ja, fram tills materialet är beställt justerar vi kostnadsfritt.",
       "Vi tar uppdrag i hela Roslagen och Storstockholm — från Norrtälje, Vaxholm och Österåker till Täby, Sollentuna, Nacka och öarna i skärgården. Även öar utan broförbindelse ingår, vi löser båttransporten som en del av projektet.",
@@ -140,7 +141,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Betongpannor: beprövat och prisvärt med 30–50 års livslängd. Passar de flesta hustyper på fastlandet. Kräver minst 22 graders taklutning och en konstruktion som tål 40–50 kg/m².",
       "Lertegel: det klassiska valet för äldre hus och kulturbyggnader. Kan hålla över 100 år och ger husets karaktär ett oersättligt uttryck.",
       "Papptak: för platta och låglutande tak på garage, tillbyggnader och funkishus. Modern SBS-papp håller 25–35 år när den läggs rätt.",
-      "Osäker på vad som passar ditt hus? Boka en kostnadsfri besiktning — vi tittar på konstruktion, lutning och läge och ger dig en ärlig rekommendation med fast pris.",
+      "Osäker på vad som passar ditt hus? Boka en kostnadsfri takkontroll — vi tittar på konstruktion, lutning och läge och ger dig en ärlig rekommendation med fast pris.",
     ],
     links: [...primaryLinks, ...serviceLinks],
   },
@@ -182,21 +183,21 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/priser": {
-    title: "Priser för takbyte och takrenovering",
+    title: "Vad kostar takbyte? Priser per m² 2026 — Roslagen",
     description:
-      "Riktpriser för takarbeten: plåttak från 1 200 kr/m², bandtäckning från 2 000 kr/m², taktvätt 80–150 kr/m². Fast pris efter kostnadsfri besiktning.",
+      "Prislista för takbyte: TP20 från ca 1 200 kr/m², betongpannor och tegelplåt från ca 1 300 kr/m², dubbelfalsat från ca 2 000 kr/m². Fast pris efter takkontroll.",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro:
       "Riktpriser för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
     paragraphs: [
       "TP20 plåttak från ca 1 200 kr/m². Tegelprofilerad plåt och betongpannor från ca 1 300–1 400 kr/m². Dubbelfalsat plåttak (bandtäckning) från ca 2 000 kr/m². Taktvätt 80–150 kr/m² och takmålning från ca 150 kr/m².",
-      "Priset styrs av takets storlek, lutning, antal genomföringar samt underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri besiktning — inga dolda kostnader.",
+      "Priset styrs av takets storlek, lutning, antal genomföringar samt underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.",
       "Exempel: ett TP20-tak på 100 m² kostar från cirka 120 000 kr, 130 m² från cirka 156 000 kr och 160 m² från cirka 192 000 kr. Ett dubbelfalsat tak på 130 m² kostar från cirka 260 000 kr. Priserna är riktpriser — exakt pris får du efter besiktning.",
       "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter hela ansökan och drar av beloppet direkt på fakturan, så du behöver aldrig ligga ute med pengarna.",
       "Faktorer som påverkar priset: takets lutning och komplexitet, antal genomföringar som skorstenar och takkupor, underlagets skick, samt logistik — på öar utan bro tillkommer båttransport. Allt specificeras i offerten innan arbetet börjar.",
       "Vill du jämföra taktyper? På sidan Taktyper ser du livslängd, underhållsbehov och vad som passar just ditt hus. I bloggen hittar du fördjupande prisguider för 2026.",
       "Så budgeterar du smart: boka besiktningen tidigt så hinner du jämföra materialalternativ i lugn takt. Överväg att samordna takbytet med byte av vindskivor, hängrännor eller taksäkerhet — marginalkostnaden blir lägre när ställningen ändå står uppe. Och glöm inte att ROT-avdraget gäller per person, två delägare kan alltså få upp till 100 000 kr tillsammans.",
-      "Alla priser på sidan är riktpriser baserade på våra utförda projekt i Roslagen och Storstockholm. Exakt pris för ditt tak får du alltid skriftligt efter den kostnadsfria besiktningen.",
+      "Alla priser på sidan är riktpriser baserade på våra utförda projekt i Roslagen och Storstockholm. Exakt pris för ditt tak får du alltid skriftligt efter den kostnadsfria takkontrollen.",
       "Vad ingår i kvadratmeterpriset? Rivning och bortforsling av gamla taket, underlagspapp, strö- och bärläkt, tätskikt i valt material, plåtbeslag kring skorsten och genomföringar, taksäkerhet och städning. Det enda som kan tillkomma är skador på råspont eller takstolar som inte går att se förrän gamla taket är rivet — då stannar vi upp och prisar tillägget separat innan vi fortsätter.",
       "Jämför du offerter från flera firmor? Titta på vad som faktiskt ingår, inte bara totalsumman. Fråga efter garantitider, om beslag och taksäkerhet ingår, och om priset är fast eller ett ungefärligt upplägg.",
     ],
@@ -274,7 +275,7 @@ const staticPages: Record<string, PrerenderPage> = {
 const serviceIntro = (title: string, description: string): PrerenderPage => ({
   title: `${title} i Roslagen & Storstockholm`,
   description:
-    `${description} Fast pris efter kostnadsfri besiktning, 10 års garanti. Ring ${PHONE}.`.slice(
+    `${description} Fast pris efter kostnadsfri takkontroll, 10 års garanti. Ring ${PHONE}.`.slice(
       0,
       158,
     ),
@@ -282,7 +283,7 @@ const serviceIntro = (title: string, description: string): PrerenderPage => ({
   intro: description,
   paragraphs: [
     `RoslagsTak utför ${title.toLowerCase()} i hela Roslagen och Stockholms norra skärgård. Allt arbete utförs enligt AMA-standard av certifierade takläggare, med 10 års garanti.`,
-    "Vi lämnar fast pris efter kostnadsfri besiktning och hanterar all logistik — även till öar utan broförbindelse. ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
+    "Vi lämnar fast pris efter kostnadsfri takkontroll och hanterar all logistik — även till öar utan broförbindelse. ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
     `Ring ${PHONE} eller begär kostnadsfri offert — vi återkopplar inom 24 timmar.`,
   ],
   links: [...primaryLinks, ...serviceLinks, ...locationLinks.slice(0, 24)],
@@ -327,7 +328,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: `RoslagsTak utför takbyte, takomläggning, takrenovering, plåtarbeten och takvård i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad.`,
       paragraphs: [
         "Välj ditt område nedan för lokala priser, vanliga taktyper och hur ett takprojekt går till just där.",
-        `Ring ${PHONE} för kostnadsfri besiktning och fast pris.`,
+        `Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
       ],
       links: [
         ...primaryLinks,
@@ -346,12 +347,12 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const places = locations.filter((l) => l.region === region);
     return {
       title: `Takläggare i ${region}`,
-      description: `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri besiktning, 10 års garanti. Ring ${PHONE}.`,
+      description: `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri takkontroll, 10 års garanti. Ring ${PHONE}.`,
       h1: `Takläggare i ${region}`,
       intro: regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
         ...(regionLongText[region] ?? []),
-        `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri besiktning och fast pris.`,
+        `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
       ],
       links: [
         ...primaryLinks,
@@ -394,19 +395,19 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     if (!loc) return null;
     const prep = loc.isIsland ? "på" : "i";
     return {
-      title: `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
-      description: loc.isIsland
+      title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
+      description: ortSeoOverrides[loc.slug]?.description ?? (loc.isIsland
         ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
         : isNearBase(loc)
           ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
-          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`,
+          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`),
       h1: `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
       intro: loc.description,
       paragraphs: [
         loc.longDescription,
         loc.extraContent,
         `${loc.uniqueFAQ.question} ${loc.uniqueFAQ.answer}`,
-        `Ring ${PHONE} för kostnadsfri besiktning och offert ${prep} ${loc.name}.`,
+        `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,
       ],
       links: [
         ...primaryLinks,

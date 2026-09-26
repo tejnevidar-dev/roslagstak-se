@@ -89,8 +89,8 @@ const Prices = () => {
   return (
     <>
       <SEOHead
-        title="Priser takbyte & takrenovering Roslagen — Prislista 2026"
-        description="Vad kostar takbyte i Roslagen? Prislista för TP20, dubbelfalsat, tegelplåt, betongpannor och takrenovering. Fast pris efter besiktning och kostnadsfri offert."
+        title="Vad kostar takbyte? Priser per m² 2026 — Roslagen"
+        description="Prislista för takbyte: TP20 från ca 1 200 kr/m², betongpannor och tegelplåt från ca 1 300 kr/m², dubbelfalsat från ca 2 000 kr/m². Fast pris efter takkontroll."
         canonical="https://roslagstak.se/priser"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -171,7 +171,7 @@ const Prices = () => {
                 Vill du veta exakt vad ditt tak kostar?
               </h2>
               <p className="text-accent-foreground/70 text-sm mb-6">
-                Konfigurera din offert eller kontakta oss för kostnadsfri besiktning.
+                Konfigurera din offert eller kontakta oss för kostnadsfri takkontroll.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link

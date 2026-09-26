@@ -1,3 +1,4 @@
+import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
 import { isBrfLocation } from "@/data/brf-locations";
@@ -150,13 +151,14 @@ const LocationPage = () => {
       : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`;
 
   // Title: keep under 60 chars for Google SERP
-  const seoTitle = `Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`;
+  const override = ortSeoOverrides[location.slug];
+  const seoTitle = override?.title ?? `Takläggare ${prep} ${location.name} — Takbyte & Takrenovering`;
 
   return (
     <>
       <SEOHead
         title={seoTitle}
-        description={metaDescription}
+        description={override?.description ?? metaDescription}
         canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
         geoPosition={`${location.lat};${location.lng}`}
         geoPlacename={location.name}
@@ -332,7 +334,7 @@ const LocationPage = () => {
                   Riktpriser inkl. material och arbete, före ROT-avdrag.
                   {location.isIsland
                     ? ` Transport till ${location.name} ingår i offerten.`
-                    : " Slutligt fast pris sätts efter kostnadsfri besiktning."}{" "}
+                    : " Slutligt fast pris sätts efter kostnadsfri takkontroll."}{" "}
                   <Link to="/priser" className="text-primary hover:underline">
                     Se hela prislistan
                   </Link>

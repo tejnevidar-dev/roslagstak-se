@@ -81,7 +81,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takomlaggning: {
     seoTitle: "Takomläggning Roslagen — Fast pris & 10 års garanti",
     seoDescription:
-      "Komplett takomläggning i Roslagen och skärgården: rivning, ny råspont, papp, läkt och nytt ytskikt. Fast pris efter kostnadsfri besiktning, 10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI.",
+      "Komplett takomläggning i Roslagen och skärgården: rivning, ny råspont, papp, läkt och nytt ytskikt. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Prisbild", value: "1 200–2 000 kr/m²", text: "TP20-plåt i nedre spannet, dubbelfalsat i övre. Fast pris i offerten." },
@@ -284,7 +284,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   "eternit-asbest": {
     seoTitle: "Eternitsanering & Asbestrivning Roslagen — Certifierad",
     seoDescription:
-      "Certifierad eternitsanering och asbestrivning i Roslagen och skärgården. Säker rivning enligt Arbetsmiljöverkets föreskrifter, emballering, transport till godkänd deponi och nytt tak. Kostnadsfri besiktning.",
+      "Certifierad eternitsanering och asbestrivning i Roslagen och skärgården. Säker rivning enligt Arbetsmiljöverkets föreskrifter, emballering, transport till godkänd deponi och nytt tak. Kostnadsfri takkontroll.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "primary", label: "Regelverk", value: "Arbetsmiljöverket", text: "Arbetsmiljöverkets föreskrifter styr hela hanteringen." },
