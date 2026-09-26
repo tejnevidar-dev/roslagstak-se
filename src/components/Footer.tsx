@@ -11,6 +11,7 @@ const tjanster = [
   { to: "/tjanster/takinspektion", label: "Takinspektion" },
   { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   { to: "/takreparation", label: "Takreparation" },
+  { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
   { to: "/tjanster/taktvatt", label: "Takvård & taktvätt" },
   { to: "/taktvatt", label: "Taktvätt & mossborttagning" },
   { to: "/tjanster/eternit-asbest", label: "Eternit & asbest" },

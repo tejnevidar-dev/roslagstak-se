@@ -73,6 +73,7 @@ const staticRoutes = [
   "/omraden",
   "/cookies",
   "/takkontroll",
+  "/rot-avdrag",
   "/takreparation",
   "/hur-det-gar-till",
   "/blogg",

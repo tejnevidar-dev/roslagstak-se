@@ -35,6 +35,11 @@ export const hubLinks: InternalLink[] = [
     description: "Läckage, trasiga pannor och skadad plåt. Fast pris efter besiktning.",
   },
   {
+    to: "/rot-avdrag",
+    label: "ROT-avdrag på tak",
+    description: "30 % av arbetskostnaden, högst 50 000 kr per person och år, direkt på fakturan.",
+  },
+  {
     to: "/brf",
     label: "Takbyte för BRF",
     description: "Besiktning, fast offert och serviceavtal för bostadsrättsföreningar.",

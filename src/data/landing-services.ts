@@ -1,6 +1,6 @@
 /** Innehåll för /takreparation och /takkontroll. Endast uppgifter som redan står på sajten eller som ägaren bekräftat. */
 export interface LandingService {
-  slug: "takreparation" | "takkontroll";
+  slug: "takreparation" | "takkontroll" | "rot-avdrag";
   path: string;
   seoTitle: string;
   seoDescription: string;
@@ -19,7 +19,7 @@ export interface LandingService {
   priceNote: string;
   faqTitle: string;
   faqs: { question: string; answer: string }[];
-  defaultTopic: "Takrenovering eller reparation" | "Takbesiktning";
+  defaultTopic: "Takrenovering eller reparation" | "Takbesiktning" | "Takbyte";
   formTitle: string;
   related: { to: string; label: string }[];
 }
@@ -233,6 +233,112 @@ export const landingServices: LandingService[] = [
       { to: "/takreparation", label: "Takreparation" },
       { to: "/tjanster/takrenovering", label: "Takrenovering" },
       { to: "/blogg/tecken-byta-tak", label: "Tecken på att det är dags att byta tak" },
+    ],
+  },
+  {
+    slug: "rot-avdrag",
+    path: "/rot-avdrag",
+    seoTitle: "ROT-avdrag på tak — 30 % av arbetskostnaden",
+    seoDescription:
+      "ROT-avdrag på takbyte och takarbeten: 30 % av arbetskostnaden, högst 50 000 kr per person och år. Vi drar av det direkt på fakturan. Fast pris.",
+    breadcrumb: "ROT-avdrag",
+    eyebrow: "ROT-avdrag",
+    h1: "ROT-avdrag på takarbeten.",
+    h1Accent: "30 % av arbetskostnaden.",
+    intro:
+      "Som privatperson kan du få ROT-avdrag på arbetskostnaden när vi byter eller renoverar taket på din bostad. Avdraget ger 30 % skattereduktion, upp till 50 000 kr per person och år. Vi drar av det direkt på fakturan.",
+    listHeading: "Så fungerar ROT-avdraget på tak",
+    listIntro: "Det här är det som gäller för dig som privatperson.",
+    list: [
+      {
+        title: "30 % av arbetskostnaden",
+        text: "Avdraget beräknas på arbetskostnaden, inte på hela priset.",
+      },
+      {
+        title: "Högst 50 000 kr per person och år",
+        text: "Är ni två ägare kan var och en använda sitt avdrag, om ni båda uppfyller villkoren.",
+      },
+      {
+        title: "Bara arbetet ger avdrag",
+        text: "Material, som pannor, plåt och papp, ger inget ROT-avdrag. Därför specificerar vi arbetskostnaden separat i offerten.",
+      },
+      {
+        title: "Avdraget görs på fakturan",
+        text: "Du betalar det som återstår efter avdraget. Vi hanterar ansökan till Skatteverket.",
+      },
+      {
+        title: "För dig som äger bostaden",
+        text: "ROT-avdraget gäller privatpersoner som äger bostaden, till exempel villa eller fritidshus. För bostadsrättsföreningar gäller andra regler.",
+      },
+      {
+        title: "Skatt att göra avdrag mot",
+        text: "ROT-avdraget är en skattereduktion. Du behöver ha betalat tillräckligt med skatt under året för att kunna använda hela avdraget.",
+      },
+    ],
+    stepsHeading: "Så går det till",
+    steps: [
+      {
+        title: "Kostnadsfri besiktning",
+        text: "Vi tittar på taket och bedömer vad som behöver göras.",
+      },
+      {
+        title: "Offert med fast pris",
+        text: "Du får en skriftlig offert där arbetskostnad och materialkostnad redovisas var för sig.",
+      },
+      {
+        title: "Arbetet utförs",
+        text: "Vi utför takarbetet enligt AMA och lämnar 10 års utförandegaranti.",
+      },
+      {
+        title: "Faktura med ROT-avdrag",
+        text: "Avdraget dras av direkt på fakturan, så du slipper vänta på pengar tillbaka.",
+      },
+    ],
+    extraHeading: "Vilka takarbeten ger ROT-avdrag?",
+    extraParagraphs: [
+      "Takbyte, takomläggning, takrenovering och takreparation på din bostad ger ROT-avdrag på arbetskostnaden. Detsamma gäller plåtarbeten och takavvattning som ingår i arbetet.",
+      "Vilka regler som gäller just din situation avgörs av Skatteverket. Vi går gärna igenom hur det ser ut för ditt tak när vi lämnar offert.",
+    ],
+    priceNote:
+      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget räknas av från arbetskostnaden i offerten.",
+    faqTitle: "Frågor om ROT-avdrag på tak",
+    faqs: [
+      {
+        question: "Hur mycket är ROT-avdraget?",
+        answer: "30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+      },
+      {
+        question: "Gäller ROT-avdraget materialet?",
+        answer:
+          "Nej. Avdraget gäller bara arbetskostnaden. Därför redovisar vi arbete och material separat i offerten.",
+      },
+      {
+        question: "Hur får jag ROT-avdraget?",
+        answer:
+          "Vi drar av det direkt på fakturan och ansöker om utbetalningen hos Skatteverket, så du betalar bara det som återstår.",
+      },
+      {
+        question: "Kan bostadsrättsföreningar få ROT-avdrag?",
+        answer:
+          "ROT-avdraget gäller privatpersoner. För bostadsrättsföreningar gäller andra regler, och vi går igenom det i offerten.",
+      },
+      {
+        question: "Kan jag få ROT-avdrag på en takreparation?",
+        answer: "Ja, på arbetskostnaden vid reparation, renovering och takbyte på din bostad.",
+      },
+      {
+        question: "Vad kostar ett takbyte?",
+        answer:
+          "Det beror på taket. Efter en kostnadsfri besiktning får du ett fast pris, och vi arbetar endast till fast pris.",
+      },
+    ],
+    defaultTopic: "Takbyte",
+    formTitle: "Begär offert med ROT-avdrag",
+    related: [
+      { to: "/blogg/rot-avdrag-takbyte", label: "Guide: ROT-avdrag vid takbyte" },
+      { to: "/priser", label: "Priser för takbyte" },
+      { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
+      { to: "/offert", label: "Räkna ut din offert" },
     ],
   },
 ];
