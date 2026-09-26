@@ -38,7 +38,7 @@ for (const m of current.matchAll(
   if (/^\/taklaggare-/.test(path)) continue;
   if (/^\/omraden\//.test(path)) continue;
   if (/^\/brf\//.test(path)) continue;
-  if (allServiceSlugs.some((s) => path.startsWith(`/${s}-`))) continue;
+  if (allServiceSlugs.some((s) => locations.some((l) => path === `/${s}-${l.slug}`))) continue;
   existingEntries.push({
     path,
     lastmod: m[2]?.trim() || undefined,

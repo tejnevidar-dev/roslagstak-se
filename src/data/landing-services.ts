@@ -1,6 +1,6 @@
 /** Innehåll för /takreparation och /takkontroll. Endast uppgifter som redan står på sajten eller som ägaren bekräftat. */
 export interface LandingService {
-  slug: "takreparation" | "takkontroll" | "rot-avdrag" | "akut-lackage" | "hangrannor" | "platslagare";
+  slug: "takreparation" | "takkontroll" | "rot-avdrag" | "akut-lackage" | "hangrannor" | "platslagare" | "takbyte-var-2027";
   path: string;
   seoTitle: string;
   seoDescription: string;
@@ -547,6 +547,79 @@ export const landingServices: LandingService[] = [
       { to: "/hangrannor", label: "Hängrännor och stuprör" },
       { to: "/takreparation", label: "Takreparation" },
       { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
+    ],
+  },
+  {
+    slug: "takbyte-var-2027",
+    path: "/takbyte-var-2027",
+    seoTitle: "Planera ditt takbyte till våren 2027",
+    seoDescription:
+      "Planera takbytet i god tid: kostnadsfri takkontroll nu, skriftlig offert med fast pris och en tidplan tillsammans med dig. 10 års utförandegaranti.",
+    breadcrumb: "Takbyte våren 2027",
+    eyebrow: "Takbyte våren 2027",
+    h1: "Planera ditt takbyte till våren 2027.",
+    h1Accent: "Börja med en kostnadsfri takkontroll.",
+    intro:
+      "Ett takbyte går smidigast när det planeras i god tid. Boka en kostnadsfri takkontroll nu, så får du en skriftlig bedömning av taket och en offert med fast pris. Därefter bestämmer vi tidpunkt tillsammans.",
+    listHeading: "Fördelen med att planera i god tid",
+    listIntro: "Ett takbyte är ett stort beslut. Ju tidigare du har underlaget, desto lugnare kan du välja.",
+    list: [
+      { title: "Du vet takets skick", text: "Takkontrollen ger dig en skriftlig rapport med foton och en bedömning av återstående livslängd." },
+      { title: "Du får ett fast pris", text: "Offerten är skriftlig och specificerad. Vi arbetar endast till fast pris." },
+      { title: "Tid att jämföra", text: "Du kan jämföra offerter och material i lugn och ro innan du bestämmer dig." },
+      { title: "Tid att planera ekonomin", text: "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Kom ihåg att avdraget gäller per år." },
+      { title: "Du väljer tidpunkt", text: "Vi bestämmer tidpunkt för arbetet tillsammans med dig efter offerten." },
+      { title: "Ingen förbindelse", text: "Takkontrollen är kostnadsfri och förpliktar inte till något." },
+    ],
+    stepsHeading: "Så går det till",
+    steps: [
+      { title: "Boka takkontroll", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Takkontroll", text: "Vi går igenom tak, underlag och avvattning och fotograferar. Du får en skriftlig rapport." },
+      { title: "Offert med fast pris", text: "Du får en skriftlig offert där arbete och material redovisas var för sig." },
+      { title: "Tidplan", text: "Om du vill gå vidare bestämmer vi tidpunkt för takbytet tillsammans." },
+    ],
+    extraHeading: "Är det dags att byta tak?",
+    extraParagraphs: [
+      "Tecken på att taket närmar sig slutet är fuktfläckar i tak eller på vinden, trasiga eller förskjutna pannor, rost på plåt samt mossa och alger som håller kvar fukt. Är du osäker ger takkontrollen svar.",
+      "Ibland räcker en reparation. Vi ger en ärlig bedömning och föreslår aldrig ett takbyte om en renovering räcker.",
+    ],
+    priceNote:
+      "Priset beror på takets storlek, lutning, material och skick. Vi arbetar endast till fast pris och lämnar det efter besiktning.",
+    faqTitle: "Frågor om att planera takbyte",
+    faqs: [
+      {
+        question: "Kostar takkontrollen något?",
+        answer: "Nej, den är helt kostnadsfri och förpliktar inte till något.",
+      },
+      {
+        question: "Måste jag bestämma mig direkt?",
+        answer: "Nej. Du får en skriftlig offert och bestämmer själv om och när du vill gå vidare.",
+      },
+      {
+        question: "Vad kostar ett takbyte?",
+        answer:
+          "Det beror på takets storlek, lutning, material och skick. Efter besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+      },
+      {
+        question: "Vilken garanti får jag?",
+        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete och 30 års tätskiktsgaranti genom MATAKI.",
+      },
+      {
+        question: "Kan jag få ROT-avdrag?",
+        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+      },
+      {
+        question: "Vilka områden arbetar ni i?",
+        answer: "Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
+      },
+    ],
+    defaultTopic: "Takbyte",
+    formTitle: "Boka takkontroll inför takbyte",
+    related: [
+      { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
+      { to: "/priser", label: "Priser för takbyte" },
+      { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
+      { to: "/hur-det-gar-till", label: "Så går ett takbyte till" },
     ],
   },
 ];

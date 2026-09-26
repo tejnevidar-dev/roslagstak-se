@@ -77,6 +77,7 @@ const staticRoutes = [
   "/akut-lackage",
   "/hangrannor",
   "/platslagare",
+  "/takbyte-var-2027",
   "/takreparation",
   "/hur-det-gar-till",
   "/blogg",
