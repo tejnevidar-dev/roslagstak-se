@@ -86,9 +86,23 @@ const Hero = () => {
               className="inline-flex items-center gap-3 border-2 border-primary-foreground/40 px-8 py-4 text-[17px] font-semibold text-primary-foreground transition-colors duration-500 hover:bg-primary-foreground/10"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
-              Ring vid akut läckage
+              Ring 070-154 36 39
             </a>
           </div>
+          <p className="mt-4 text-[14px] text-primary-foreground/80">
+            <Link to="/takkontroll" className="font-semibold text-accent underline-offset-4 hover:underline">
+              Boka kostnadsfri takkontroll
+            </Link>
+            <span aria-hidden="true"> · </span>
+            <Link to="/rot-avdrag" className="underline-offset-4 hover:underline">
+              ROT-avdrag på tak
+            </Link>
+          </p>
+          <ul className="mt-6 flex max-w-[46ch] flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-primary-foreground/75" aria-label="Fakta om RoslagsTak">
+            {["10 års utförandegaranti", "30 års tätskiktsgaranti via MATAKI", "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"].map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
         </motion.div>
       </div>
 
