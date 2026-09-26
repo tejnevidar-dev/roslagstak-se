@@ -12,7 +12,7 @@
  *  - URLs that are aliases of another canonical URL (duplicate content)
  *  - URLs that resolve to a noindex path (admin etc.)
  *  - routes that exist in the app but are missing from the sitemap (orphans)
- *  - prerendered dist/<path>/index.html: missing file, noindex robots tag or
+ *  - prerendered dist/<path>.html: missing file, noindex robots tag or
  *    canonical that does not match the sitemap URL
  *
  * Live checks (--live): real HTTP status per URL, redirect target, and the
@@ -147,7 +147,7 @@ const dist = resolve("dist");
 let checkedHeads = 0;
 if (existsSync(resolve(dist, "index.html"))) {
   for (const path of sitemapPaths) {
-    const file = path === "/" ? resolve(dist, "index.html") : resolve(dist, `.${path}/index.html`);
+    const file = path === "/" ? resolve(dist, "index.html") : resolve(dist, `.${path}.html`);
     const url = `${SITE_URL}${path === "/" ? "/" : path}`;
     if (!existsSync(file)) {
       fail(url, "no prerendered dist file → served as SPA fallback without static head tags");
