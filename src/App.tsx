@@ -65,6 +65,9 @@ const App = () => (
               <Route path="/takreparation" element={<ServiceLandingPage slug="takreparation" />} />
               <Route path="/takkontroll" element={<ServiceLandingPage slug="takkontroll" />} />
               <Route path="/rot-avdrag" element={<ServiceLandingPage slug="rot-avdrag" />} />
+              <Route path="/akut-lackage" element={<ServiceLandingPage slug="akut-lackage" />} />
+              <Route path="/hangrannor" element={<ServiceLandingPage slug="hangrannor" />} />
+              <Route path="/platslagare" element={<ServiceLandingPage slug="platslagare" />} />
               <Route path="/brf" element={<BrfPage />} />
               {adLandingSlugs.map((slug) => (
                 <Route key={slug} path={`/offert/${slug}`} element={<AdLandingPage />} />

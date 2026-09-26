@@ -1,6 +1,6 @@
 /** Innehåll för /takreparation och /takkontroll. Endast uppgifter som redan står på sajten eller som ägaren bekräftat. */
 export interface LandingService {
-  slug: "takreparation" | "takkontroll" | "rot-avdrag";
+  slug: "takreparation" | "takkontroll" | "rot-avdrag" | "akut-lackage" | "hangrannor" | "platslagare";
   path: string;
   seoTitle: string;
   seoDescription: string;
@@ -339,6 +339,214 @@ export const landingServices: LandingService[] = [
       { to: "/priser", label: "Priser för takbyte" },
       { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
       { to: "/offert", label: "Räkna ut din offert" },
+    ],
+  },
+  {
+    slug: "akut-lackage",
+    path: "/akut-lackage",
+    seoTitle: "Akut läckage i taket — ring 070-154 36 39",
+    seoDescription:
+      "Läcker taket? Ring oss på 070-154 36 39 eller skicka en förfrågan. Vi besiktigar kostnadsfritt, lämnar fast pris och lagar. 10 års utförandegaranti.",
+    breadcrumb: "Akut läckage",
+    eyebrow: "Akut läckage",
+    h1: "Läcker taket?",
+    h1Accent: "Ring oss, så tar vi det därifrån.",
+    intro:
+      "Ring 070-154 36 39 eller skicka formuläret. Vi besiktigar taket, hittar orsaken till läckaget och lämnar ett skriftligt fast pris för reparationen.",
+    listHeading: "Gör så här medan du väntar",
+    listIntro: "Några enkla åtgärder begränsar skadan tills vi har varit på plats.",
+    list: [
+      { title: "Skydda det som kan ta skada", text: "Flytta möbler och värdesaker undan från platsen där det droppar." },
+      { title: "Fånga vattnet", text: "Ställ ett kärl under droppet så att golvet inte tar skada." },
+      { title: "Fotografera skadan", text: "Bilder på fuktfläckar och droppande vatten kan vara bra om du gör en försäkringsanmälan." },
+      { title: "Gå inte upp på taket", text: "Ett vått tak är halt. Lämna arbetet på taket till oss." },
+      { title: "Kontakta oss", text: "Ring 070-154 36 39. Vi går igenom vad som hänt och bokar besiktning." },
+      { title: "Anmäl till försäkringsbolaget", text: "Kontakta ditt försäkringsbolag om skadan kan täckas av hemförsäkringen." },
+    ],
+    stepsHeading: "Så går det till",
+    steps: [
+      { title: "Du kontaktar oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Besiktning", text: "Vi tittar på taket, hittar var vattnet kommer in och fotograferar." },
+      { title: "Fast pris", text: "Du får en skriftlig offert med tydlig åtgärdslista och fast pris." },
+      { title: "Reparation", text: "Vi utför reparationen, kontrollerar resultatet och dokumenterar med foton." },
+    ],
+    extraHeading: "Var läcker tak oftast?",
+    extraParagraphs: [
+      "Läckage uppstår oftast kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken syns sällan där fuktfläcken kommer fram inomhus, så vi följer vattnet uppåt.",
+      "Ibland räcker en reparation, ibland är taket i så dåligt skick att ett takbyte blir bättre ekonomi. Vi ger en ärlig bedömning.",
+    ],
+    priceNote:
+      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+    faqTitle: "Frågor om akut läckage",
+    faqs: [
+      {
+        question: "Vad ska jag göra om taket läcker?",
+        answer:
+          "Ring oss på 070-154 36 39. Flytta undan det som kan ta skada, ställ ett kärl under droppet och fotografera skadan.",
+      },
+      {
+        question: "Hur snabbt får jag svar?",
+        answer: "Vi återkommer inom 24 timmar. Vid akut läckage: ring oss direkt.",
+      },
+      {
+        question: "Vad kostar det att laga ett läckage?",
+        answer:
+          "Det beror på orsaken, takmaterial och åtkomst. Efter en kostnadsfri besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+      },
+      {
+        question: "Får jag garanti på reparationen?",
+        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete.",
+      },
+      {
+        question: "Kan jag få ROT-avdrag?",
+        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+      },
+    ],
+    defaultTopic: "Takrenovering eller reparation",
+    formTitle: "Begär besiktning och fast pris",
+    related: [
+      { to: "/takreparation", label: "Takreparation" },
+      { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
+      { to: "/tjanster/platarbeten", label: "Plåtarbeten och beslag" },
+      { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
+    ],
+  },
+  {
+    slug: "hangrannor",
+    path: "/hangrannor",
+    seoTitle: "Hängrännor och stuprör — byte och nyinstallation",
+    seoDescription:
+      "Nya hängrännor och stuprör i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta, fast pris efter besiktning och 10 års utförandegaranti.",
+    breadcrumb: "Hängrännor och stuprör",
+    eyebrow: "Takavvattning",
+    h1: "Nya hängrännor och stuprör.",
+    h1Accent: "Dimensionerade efter ditt tak.",
+    intro:
+      "Läcker rännorna, hänger de snett eller svämmar de över? Vi byter eller installerar kompletta avvattningssystem med hängrännor, stuprör, ränndalar och fotplåt, och lämnar ett fast pris efter besiktning.",
+    listHeading: "Det här kan vi göra",
+    listIntro: "Takavvattningen leder bort vattnet från tak, fasad och grund.",
+    list: [
+      { title: "Nya hängrännor", text: "Rännor i aluminium, koppar eller lackerad plåt, valda efter hus och läge." },
+      { title: "Stuprör", text: "Nya stuprör med rätt antal och dimension för takytan." },
+      { title: "Ränndalar och fotplåt", text: "Falsas i plåt och anpassas till takets lutning och material." },
+      { title: "Dimensionering", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet, så att systemet inte svämmar över." },
+      { title: "Fall", text: "Rännorna läggs med rätt fall så att vattnet inte blir stående." },
+      { title: "Byte i samband med takbyte", text: "Byter du tak är det klokt att se över avvattningen samtidigt." },
+    ],
+    stepsHeading: "Så går det till",
+    steps: [
+      { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Kostnadsfri besiktning", text: "Vi tittar på befintliga rännor, takyta och fasad." },
+      { title: "Fast pris", text: "Du får en skriftlig offert med material, dimension och fast pris." },
+      { title: "Montering", text: "Vi monterar systemet och kontrollerar att vattnet leds bort som det ska." },
+    ],
+    extraHeading: "Aluminium, koppar eller lackerad plåt?",
+    extraParagraphs: [
+      "Materialet väljs efter hus, läge och budget. Vid besiktningen går vi igenom alternativen med dig.",
+      "Under tiden går det bra att läsa mer om hur takavvattning fungerar på sidan om takavvattning.",
+    ],
+    priceNote:
+      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+    faqTitle: "Frågor om hängrännor och stuprör",
+    faqs: [
+      {
+        question: "Vad kostar nya hängrännor?",
+        answer:
+          "Det beror på material, takyta och antal stuprör. Efter en kostnadsfri besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+      },
+      {
+        question: "Vilka material finns?",
+        answer: "Aluminium, koppar och lackerad plåt.",
+      },
+      {
+        question: "Kan jag få ROT-avdrag på hängrännor?",
+        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+      },
+      {
+        question: "Får jag garanti?",
+        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete.",
+      },
+      {
+        question: "Hur snabbt får jag svar?",
+        answer: "Vi återkommer inom 24 timmar.",
+      },
+    ],
+    defaultTopic: "Takrenovering eller reparation",
+    formTitle: "Begär besiktning och fast pris",
+    related: [
+      { to: "/tjanster/takavvattning", label: "Om takavvattning" },
+      { to: "/tjanster/platarbeten", label: "Plåtarbeten och beslag" },
+      { to: "/takreparation", label: "Takreparation" },
+      { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
+    ],
+  },
+  {
+    slug: "platslagare",
+    path: "/platslagare",
+    seoTitle: "Plåtslagare för tak — bandtäckning och beslag",
+    seoDescription:
+      "Plåtarbeten på tak: bandtäckning, falsat plåttak, skorstensbeslag, ränndalar och vindskiveplåt i stål, aluminium, koppar eller zink. Fast pris.",
+    breadcrumb: "Plåtslagare",
+    eyebrow: "Plåtarbeten",
+    h1: "Plåtslagare för ditt tak.",
+    h1Accent: "Fast pris efter besiktning.",
+    intro:
+      "Bandtäckning, falsat plåttak och beslag kring skorstenar och genomföringar. Vi utför plåtarbeten i stål, aluminium, koppar och zink och lämnar ett skriftligt fast pris efter besiktning.",
+    listHeading: "Plåtarbeten vi utför",
+    listIntro: "Det är ofta plåtdetaljerna som avgör om ett tak håller tätt.",
+    list: [
+      { title: "Bandtäckning", text: "Dubbelfalsad bandtäckning som klarar låg lutning där pannor inte fungerar." },
+      { title: "Falsat plåttak", text: "Falsat plåttak med rörliga klammer så att plåten kan arbeta vid temperaturväxlingar." },
+      { title: "Skorstensbeslag", text: "Beslag och inklädnad runt skorstenar, där tak oftast läcker." },
+      { title: "Ränndalar", text: "Ränndalar falsade och anpassade till takets lutning och material." },
+      { title: "Vindskiveplåt", text: "Plåt på vindskivor och takfot." },
+      { title: "Platstillverkade detaljer", text: "Beslag falsas och anpassas på plats efter husets mått." },
+    ],
+    stepsHeading: "Så går det till",
+    steps: [
+      { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Kostnadsfri besiktning", text: "Vi tittar på taket och de plåtdetaljer som ska åtgärdas." },
+      { title: "Fast pris", text: "Du får en skriftlig offert med tydlig åtgärdslista och fast pris." },
+      { title: "Utförande", text: "Vi utför arbetet enligt AMA och lämnar 10 års utförandegaranti." },
+    ],
+    extraHeading: "Vilken metall passar?",
+    extraParagraphs: [
+      "Stål, aluminium, koppar och zink har olika livslängd och underhållsbehov. Saltluft ställer högre krav än inlandsklimat, och vi väljer material efter läge, lutning och husets karaktär.",
+      "Läs mer om metallerna på sidan om plåtarbeten.",
+    ],
+    priceNote:
+      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+    faqTitle: "Frågor om plåtarbeten",
+    faqs: [
+      {
+        question: "Vad kostar plåtarbeten på tak?",
+        answer:
+          "Det beror på omfattning, material och åtkomst. Efter en kostnadsfri besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+      },
+      {
+        question: "Vilka metaller arbetar ni i?",
+        answer: "Stål, aluminium, koppar och zink.",
+      },
+      {
+        question: "Kan jag få ROT-avdrag på plåtarbeten?",
+        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+      },
+      {
+        question: "Får jag garanti?",
+        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete.",
+      },
+      {
+        question: "Hur snabbt får jag svar?",
+        answer: "Vi återkommer inom 24 timmar.",
+      },
+    ],
+    defaultTopic: "Takrenovering eller reparation",
+    formTitle: "Begär besiktning och fast pris",
+    related: [
+      { to: "/tjanster/platarbeten", label: "Om plåtarbeten" },
+      { to: "/hangrannor", label: "Hängrännor och stuprör" },
+      { to: "/takreparation", label: "Takreparation" },
+      { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
     ],
   },
 ];
