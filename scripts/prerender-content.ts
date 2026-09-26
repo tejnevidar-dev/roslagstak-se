@@ -11,10 +11,12 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
-import { generateCombos } from "../src/data/service-location-combos";
+import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { isNearBase } from "../src/data/service-reach";
+import { hasServiceCombos } from "../src/data/service-slugs";
+import { isThinComboLocation } from "../src/data/thin-combos";
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
@@ -456,3 +458,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
     description: page.description ? fitDescription(page.description) : page.description,
   };
 };
+
+/** Tjänst+ort-URL:er som ska noindexeras (se src/data/thin-combos.ts). */
+export const thinComboPaths: string[] = locations
+  .filter((l) => hasServiceCombos(l.region) && isThinComboLocation(l))
+  .flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`));

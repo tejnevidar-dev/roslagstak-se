@@ -1,3 +1,4 @@
+import { isThinComboLocation } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } from "lucide-react";
@@ -139,6 +140,7 @@ const ServiceLocationPage = () => {
         canonical={`https://roslagstak.se${combo.url}`}
         geoPosition={loc ? `${loc.lat};${loc.lng}` : undefined}
         geoPlacename={combo.locationName}
+        noindex={loc && isThinComboLocation(loc) ? "follow" : undefined}
       />
       <Header />
       <main>

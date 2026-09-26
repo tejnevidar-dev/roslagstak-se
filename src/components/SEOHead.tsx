@@ -11,7 +11,7 @@ interface SEOHeadProps {
   geoPosition?: string;
   geoPlacename?: string;
   /** Force noindex (e.g. 404 or admin pages). Admin paths are detected automatically. */
-  noindex?: boolean;
+  noindex?: boolean | "follow";
 }
 
 const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type = "website", geoPosition, geoPlacename, noindex }: SEOHeadProps) => {
@@ -33,7 +33,7 @@ const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type
         name="robots"
         content={
           shouldNoindex
-            ? "noindex, nofollow"
+            ? (noindex === "follow" ? "noindex, follow" : "noindex, nofollow")
             : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
         }
       />

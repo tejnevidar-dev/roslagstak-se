@@ -45,7 +45,7 @@ await esbuild({
   target: "node18",
   logLevel: "silent",
 });
-const { prerenderContent } = await import(pathToFileURL(bundlePath).href);
+const { prerenderContent, thinComboPaths } = await import(pathToFileURL(bundlePath).href);
 
 const INDEX_ROBOTS =
   "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
@@ -58,6 +58,7 @@ const routes = [
     .map((m) => m[1].replace(SITE_URL, "") || "/")
     .map((path) => ({ path, robots: INDEX_ROBOTS })),
   ...noindexRoutes.map((path) => ({ path, robots: NOINDEX_ROBOTS })),
+  ...thinComboPaths.map((path) => ({ path, robots: "noindex, follow" })),
 ];
 
 const headFor = (path, robots) => {
