@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { utmLine } from "@/lib/utm";
 /* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
 const loadSupabase = () => import("@/integrations/supabase/client").then((m) => m.supabase);
 import { toast } from "@/hooks/use-toast";
@@ -54,7 +55,7 @@ const LeadForm = ({
     if (submitting) return;
     setSubmitting(true);
 
-    const message = [source, `Gäller: ${form.topic}`, form.message.trim() ? `\n${form.message.trim()}` : null]
+    const message = [source, utmLine() || null, `Gäller: ${form.topic}`, form.message.trim() ? `\n${form.message.trim()}` : null]
       .filter(Boolean)
       .join("\n");
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { withUtm } from "@/lib/utm";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
@@ -23,7 +24,7 @@ const Contact = () => {
       name: name.trim(),
       phone: phone.trim(),
       email: email.trim(),
-      message: message.trim(),
+      message: withUtm(message) ?? "",
     });
 
     if (error) {

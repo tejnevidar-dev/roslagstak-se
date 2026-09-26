@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle, Loader2 } from "lucide-react";
+import { withUtm } from "@/lib/utm";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
@@ -71,7 +72,7 @@ const QuoteConfigurator = () => {
       takstege: mode === "configure" ? takstege : false,
       avvattning: mode === "configure" ? avvattning || null : null,
       floors: mode === "configure" ? floors || null : null,
-      message: mode === "consultation" ? message.trim() || null : null,
+      message: withUtm(mode === "consultation" ? message : null),
     };
 
     const { error } = await supabase.from("quote_requests").insert(payload);

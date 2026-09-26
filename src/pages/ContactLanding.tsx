@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2, Shield, MessageCircle, Home } from "lucide-react";
+import { withUtm } from "@/lib/utm";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
@@ -25,7 +26,7 @@ const ContactLanding = () => {
       name: name.trim(),
       phone: phone.trim(),
       email: email.trim(),
-      message: message.trim() || "Önskar kostnadsfri rådgivning (via kontaktsida)",
+      message: withUtm(message.trim() || "Önskar kostnadsfri rådgivning (via kontaktsida)"),
     });
 
     if (error) {
