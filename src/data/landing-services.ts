@@ -19,7 +19,7 @@ export interface LandingService {
   priceNote: string;
   faqTitle: string;
   faqs: { question: string; answer: string }[];
-  defaultTopic: "Takrenovering eller reparation" | "Takbesiktning" | "Takbyte";
+  defaultTopic: "Takrenovering eller reparation" | "Takkontroll" | "Takbyte";
   formTitle: string;
   related: { to: string; label: string }[];
 }
@@ -226,7 +226,7 @@ export const landingServices: LandingService[] = [
         answer: "Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
       },
     ],
-    defaultTopic: "Takbesiktning",
+    defaultTopic: "Takkontroll",
     formTitle: "Boka kostnadsfri takkontroll",
     related: [
       { to: "/tjanster/takinspektion", label: "Takinspektion" },

@@ -24,7 +24,7 @@ const trust = [
 
 const steps = [
   {
-    title: "Kostnadsfri besiktning",
+    title: "Kostnadsfri takkontroll",
     text: "Vi återkommer inom 24 timmar och bokar en tid. På plats går vi igenom taket, fotograferar och mäter.",
   },
   {
@@ -46,7 +46,7 @@ const prices = [
 const faqs = [
   {
     q: "Vad kostar ett takbyte?",
-    a: "Priset beror på takets storlek, lutning, material och skick. Riktpriserna ovan är utgångspunkter, och efter den kostnadsfria besiktningen får du ett fast pris. Det priset gäller.",
+    a: "Priset beror på takets storlek, lutning, material och skick. Riktpriserna ovan är utgångspunkter, och efter den kostnadsfria takkontrollen får du ett fast pris. Det priset gäller.",
   },
   {
     q: "Vad ingår i priset?",
@@ -76,8 +76,8 @@ const AdLandingPage = () => {
   return (
     <>
       <SEOHead
-        title={`Takbyte ${inPlace} — fast pris efter besiktning`}
-        description={`Nytt tak ${inPlace}? Kostnadsfri besiktning och fast pris. 10 års utförandegaranti. Svar inom 24 timmar.`}
+        title={`Takbyte ${inPlace} — fast pris efter takkontroll`}
+        description={`Nytt tak ${inPlace}? Kostnadsfri takkontroll och fast pris. 10 års utförandegaranti. Svar inom 24 timmar.`}
         canonical={`https://roslagstak.se/offert/${landing.slug}`}
         noindex
       />
@@ -105,10 +105,10 @@ const AdLandingPage = () => {
               </p>
               <h1 className="max-w-[20ch] font-display text-[clamp(2.1rem,6vw,3.4rem)] font-semibold leading-[1.07] tracking-[-0.025em] text-balance text-foreground">
                 Nytt tak {inPlace}?{" "}
-                <span className="italic text-accent">Fast pris efter kostnadsfri besiktning.</span>
+                <span className="italic text-accent">Fast pris efter kostnadsfri takkontroll.</span>
               </h1>
               <p className="mt-5 max-w-[50ch] text-[18px] leading-relaxed text-muted-foreground">
-                Vi besiktigar taket, lämnar ett skriftligt fast pris och sköter hela jobbet. Vi tar uppdrag i{" "}
+                Vi kontrollerar taket, lämnar ett skriftligt fast pris och sköter hela jobbet. Vi tar uppdrag i{" "}
                 {landing.areas}.
               </p>
               <a
@@ -169,7 +169,7 @@ const AdLandingPage = () => {
                 Vad kostar ett takbyte?
               </h2>
               <p className="mt-4 max-w-[38ch] leading-relaxed text-muted-foreground">
-                Riktpriser inklusive material och arbete. Efter besiktningen får du ett fast pris.
+                Riktpriser inklusive material och arbete. Efter takkontrollen får du ett fast pris.
               </p>
             </div>
             <div className="lg:col-span-8">

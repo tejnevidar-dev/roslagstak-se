@@ -11,7 +11,7 @@ const topics = [
   "Takbyte",
   "Takrenovering eller reparation",
   "Takmålning eller taktvätt",
-  "Takbesiktning",
+  "Takkontroll",
   "Vet inte än",
 ] as const;
 
