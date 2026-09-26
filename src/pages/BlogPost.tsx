@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Fragment, useEffect } from "react";
+import { Calendar, Clock, ArrowRight, Phone } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -133,7 +133,23 @@ const BlogPost = () => {
               {post.content.map((paragraph, i) => {
                 const lead = paragraph.match(/^(Steg \d+ — [^:]{2,70}|Vanliga misstag|Så kan RoslagsTak hjälpa): /);
                 return (
-                  <p key={i} className="text-muted-foreground leading-relaxed">
+                  <Fragment key={i}>
+                  {i === 3 && post.content.length > 6 && (
+                    <aside className="rounded-2xl border border-border bg-card p-5" aria-label="Kostnadsfri takkontroll">
+                      <p className="text-sm text-card-foreground">
+                        <strong className="font-semibold">Osäker på hur ditt tak mår?</strong> Vi gör en kostnadsfri takkontroll med skriftlig rapport och foton, utan förbindelser.
+                      </p>
+                      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+                        <Link to="/takkontroll" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
+                          Boka takkontroll <ArrowRight className="w-3 h-3" />
+                        </Link>
+                        <a href="tel:0701543639" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
+                          <Phone className="w-3 h-3" /> 070-154 36 39
+                        </a>
+                      </div>
+                    </aside>
+                  )}
+                  <p className="text-muted-foreground leading-relaxed">
                     {lead ? (
                       <>
                         <strong className="font-semibold text-foreground">{lead[1]}.</strong>{" "}
@@ -143,6 +159,7 @@ const BlogPost = () => {
                       paragraph
                     )}
                   </p>
+                  </Fragment>
                 );
               })}
             </div>
@@ -162,6 +179,15 @@ const BlogPost = () => {
                 </Link>
                 <Link to="/priser" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> Se prislista
+                </Link>
+                <Link to="/takkontroll" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Kostnadsfri takkontroll
+                </Link>
+                <Link to="/takreparation" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> Takreparation
+                </Link>
+                <Link to="/rot-avdrag" className="flex items-center gap-1 text-sm text-primary hover:underline">
+                  <ArrowRight className="w-3 h-3" /> ROT-avdrag på tak
                 </Link>
                 <Link to="/taklaggare-blido" className="flex items-center gap-1 text-sm text-primary hover:underline">
                   <ArrowRight className="w-3 h-3" /> Takläggare på Blidö
@@ -185,6 +211,14 @@ const BlogPost = () => {
               >
                 Konfigurera din offert <ArrowRight className="w-4 h-4" />
               </Link>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+                <a href="tel:0701543639" className="inline-flex items-center gap-2 font-semibold text-foreground hover:text-primary">
+                  <Phone className="w-4 h-4" /> Ring 070-154 36 39
+                </a>
+                <Link to="/takkontroll" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
+                  Boka kostnadsfri takkontroll <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
           </article>
 
