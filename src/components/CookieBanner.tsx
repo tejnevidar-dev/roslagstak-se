@@ -34,7 +34,7 @@ const CookieBanner = () => {
         Vi använder nödvändig lagring för att sajten ska fungera. Om du godkänner använder vi också statistik från
         Google Analytics för att förstå hur sajten används. Du kan ändra ditt val när som helst.{" "}
         <Link to="/cookies" className="font-medium text-primary underline underline-offset-4">
-          Läs mer
+          Läs mer om cookies
         </Link>
       </p>
       <div className="mt-4 grid grid-cols-2 gap-3">

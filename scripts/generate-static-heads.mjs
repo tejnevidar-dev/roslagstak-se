@@ -15,7 +15,7 @@
  * Route list comes from public/sitemap.xml (single source of truth) plus the
  * noindex routes that are deliberately kept out of the sitemap.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, readdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { tmpdir } from "os";
 import { build as esbuild } from "esbuild";
@@ -64,9 +64,29 @@ const routes = [
   ...thinComboPaths.map((path) => ({ path, robots: "noindex, follow" })),
 ];
 
+/* Sidkomponenterna laddas lazy. Utan hint hämtas deras chunk först när huvudscriptet körts
+   (en extra tur och retur). modulepreload i den statiska HTML:en hämtar den parallellt. */
+const assetFiles = existsSync(resolve(dist, "assets")) ? readdirSync(resolve(dist, "assets")) : [];
+const LANDING_STATIC = ["/takreparation", "/takkontroll", "/rot-avdrag", "/akut-lackage", "/hangrannor", "/platslagare", "/takbyte-var-2027"];
+const COMBO_RE = /^\/(takbyte|takrenovering|takomlaggning|bandtackning|platttak|betongpannor|tegeltak|takmalning|taktvatt)-/;
+const chunkPrefixFor = (path) => {
+  if (path.startsWith("/offert/")) return "AdLandingPage-";
+  if (LANDING_STATIC.includes(path)) return "ServiceLandingPage-";
+  if (path.startsWith("/blogg/")) return "BlogPost-";
+  if (path.startsWith("/taklaggare-")) return "LocationPage-";
+  if (COMBO_RE.test(path)) return "ServiceLocationPage-";
+  return null;
+};
+const preloadFor = (path) => {
+  const prefix = chunkPrefixFor(path);
+  const file = prefix && assetFiles.find((f) => f.startsWith(prefix) && f.endsWith(".js"));
+  return file ? [`<link rel="modulepreload" crossorigin href="/assets/${file}" />`] : [];
+};
+
 const headFor = (path, robots) => {
   const url = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
   return [
+    ...preloadFor(path),
     `<link rel="canonical" href="${url}" />`,
     `<meta name="robots" content="${robots}" />`,
     `<meta property="og:url" content="${url}" />`,
