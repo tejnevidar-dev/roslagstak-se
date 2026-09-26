@@ -21,9 +21,9 @@ export const regionOrder = [
 
 export const regionIntros: Record<string, string> = {
   "Norra skärgården":
-    "Takbyte och takrenovering i ytterskärgården. Vi tar oss ut till öar dit andra inte når — med material, verktyg och erfarenhet.",
+    "Takbyte och takrenovering i ytterskärgården. Vi tar oss ut till öar dit andra inte når — med material och verktyg.",
   "Mellersta skärgården":
-    "Takläggare med lång erfarenhet av takprojekt på öar i mellersta Roslagen. Från sommarstugor till permanentboenden.",
+    "Takbyte och takrenovering på öar i mellersta Roslagen. Från sommarstugor till permanentboenden.",
   Kusten:
     "Takomläggning, takrenovering och plåtarbeten längs hela Roslagens kustlinje och på fastlandet runt Norrtälje.",
   "Norra Roslagen":

@@ -430,13 +430,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Norrtälje — din lokala partner för takbyte, takrenovering och plåtarbeten i Norrtäljeområdet.",
     longDescription:
-      "Norrtälje är vår hemmabas. Vi känner stadens bebyggelse väl — från de äldre trähusen i centrum till villaområdena runt om. Vår lokala närvaro innebär snabb service, konkurrenskraftiga priser och en takläggare som alltid finns nära till hands. Behöver du en kostnadsfri besiktning? Ring oss — vi är ofta på plats samma vecka.",
+      "Norrtälje är vår hemmabas, vilket ger korta resvägar till din fastighet. Vi tar uppdrag i staden och i kommunen: takbyte, takrenovering, takreparation och plåtarbeten på villor och andra byggnader. Du får en kostnadsfri besiktning och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för besiktning.",
     extraContent:
-      "Som lokal takläggare i Norrtälje har vi referensprojekt i hela staden — från Norrtälje centrum till Rimbo, Hallstavik och Grisslehamn. Vi utför komplett takservice: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör, samt takinspektion. Alla arbeten utförs enligt AMA-standard med 10 års garanti. Begär en offert så återkommer vi inom 24 timmar.",
+      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör samt takinspektion. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar.",
     uniqueFAQ: {
       question: "Är RoslagsTak en lokal takläggare i Norrtälje?",
       answer:
-        "Ja, Norrtälje är vår hemmabas. Vi har referensprojekt i hela kommunen och kan ofta vara på plats samma vecka. Ring oss för att diskutera ditt projekt — besiktningen är alltid kostnadsfri.",
+        "Ja, Norrtälje är vår hemmabas. Vi tar uppdrag i hela kommunen, och besiktningen är alltid kostnadsfri. Ring oss eller boka via formuläret, så återkommer vi inom 24 timmar.",
     },
     primaryKeyword: "takläggare Norrtälje",
     lat: 59.7667,
@@ -556,7 +556,7 @@ export const locations: LocationData[] = [
     region: "Norra Roslagen",
     isIsland: false,
     description:
-      "Takläggare i Hallstavik — takbyte, plåttak och takrenovering i norra Roslagen. Fast pris och 10 års garanti.",
+      "Takläggare i Hallstavik — takbyte, plåttak och takrenovering i norra Roslagen. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Hallstavik i norra Roslagen har en tät villabebyggelse med många hus från industriortens expansiva år. Taken här är ofta 40–50 år gamla och har nått slutet av sin livslängd. Vi utför takbyten, takomläggningar och takrenoveringar i Hallstavik och rekommenderar oftast TP20-plåt eller dubbelfalsat plåttak — lätt, tåligt och underhållsfritt. Vi hanterar allt från byggställning och rivning till ny taksäkerhet och avvattning, och lämnar fast pris efter kostnadsfri besiktning.",
     extraContent:
@@ -661,7 +661,7 @@ export const locations: LocationData[] = [
     region: "Rådmansöhalvön",
     isIsland: false,
     description:
-      "Takläggare i Gräddö — takbyte, plåttak och takrenovering i kustnära läge på Rådmansö. Fast pris och 10 års garanti.",
+      "Takläggare i Gräddö — takbyte, plåttak och takrenovering i kustnära läge på Rådmansö. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Gräddö på Rådmansöhalvön är utgångspunkt för många öar i Roslagens skärgård och har en tät bebyggelse av fritidshus och permanentboenden nära vattnet. Här slår salt luft och vind hårt mot tak och plåtdetaljer. Vi utför takbyten, bandtäckning, plåtarbeten och takrenovering i Gräddö med material valt för kustklimat.",
     extraContent:
@@ -724,7 +724,7 @@ export const locations: LocationData[] = [
     region: "Österåker",
     isIsland: false,
     description:
-      "Takläggare i Österskär — takbyte, bandtäckning och takrenovering i sjönära läge. Fast pris och 10 års garanti.",
+      "Takläggare i Österskär — takbyte, bandtäckning och takrenovering i sjönära läge. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Österskär är ett sjönära villaområde i Österåker med många äldre, arkitektoniskt påkostade hus — brutna tak, torn, kupor och valmade takfall. Sådana tak kräver skicklig plåtslagning snarare än snabb takläggning. Vi utför bandtäckning, plåtarbeten och kompletta takbyten i Österskär och plåtslår beslag kring skorstenar, kupor och takfönster för hand.",
     extraContent:
@@ -766,11 +766,11 @@ export const locations: LocationData[] = [
     region: "Roslagens inland",
     isIsland: false,
     description:
-      "Takläggare i Täby — takbyte, takomläggning, bandtäckning och takrenovering. Fast pris och 10 års garanti.",
+      "Takläggare i Täby — takbyte, takomläggning, bandtäckning och takrenovering. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Täby har allt från radhusområden och 60-talsvillor till stora fristående hus med komplexa takkonstruktioner. Vi utför takbyten, takomläggningar, bandtäckning och plåtarbeten i Täby med fast pris efter kostnadsfri besiktning. Vi arbetar enligt AMA-standard, lämnar 10 års garanti och sköter hela projektet — ställning, rivning, avfall, nytt tak, avvattning och taksäkerhet.",
     extraContent:
-      "I Täby är vi vana vid tätbebyggda områden där ställning, materialupplag och avfallshantering måste planeras med hänsyn till grannar och trånga tomter. Vi lägger upp en logistikplan innan start så att arbetet flyter utan onödiga störningar.",
+      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid besiktningen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI.",
     uniqueFAQ: {
       question: "Hjälper ni med bygglov och grannhänsyn vid takbyte i Täby?",
       answer:
