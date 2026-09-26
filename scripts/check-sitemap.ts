@@ -24,6 +24,7 @@ import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
+import { isThinComboLocation } from "../src/data/thin-combos";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { regionSlugs } from "../src/data/regions";
 import {
@@ -123,10 +124,15 @@ for (const url of locs) {
 }
 
 for (const [url, count] of seen) if (count > 1) fail(url, `duplicated ${count}× in sitemap`);
+const thinComboRoutes = new Set<string>(
+  locations.filter((l) => hasServiceCombos(l.region) && isThinComboLocation(l)).flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`)),
+);
+
 
 /* ---------- 4. orphan routes: indexable but not in the sitemap ---------- */
 for (const route of knownRoutes) {
   if (isNoindexPath(route)) continue;
+  if (thinComboRoutes.has(route)) continue; // noindex-kombosidor, avsiktligt utanför sitemap
   if (canonicalPath(route) !== route) continue; // alias, intentionally excluded
   if (!sitemapPaths.has(route)) warn(`${SITE_URL}${route}`, "indexable route missing from sitemap");
 }
