@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+/* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
+const loadSupabase = () => import("@/integrations/supabase/client").then((m) => m.supabase);
 import { toast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
 
@@ -57,6 +58,7 @@ const LeadForm = ({
       .filter(Boolean)
       .join("\n");
 
+    const supabase = await loadSupabase();
     const { error } = await supabase.from("quote_requests").insert({
       mode: "consultation",
       name: form.name.trim(),
@@ -97,6 +99,7 @@ const LeadForm = ({
   return (
     <form
       onSubmit={handleSubmit}
+      onFocusCapture={() => void loadSupabase()}
       aria-label={title}
       className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-[0_30px_70px_-45px_rgba(12,35,64,0.55)] md:p-8"
     >
