@@ -226,6 +226,20 @@ const LocationPage = () => {
                 <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
               </div>
             </div>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+              <a
+                href="tel:0701543639"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary"
+              >
+                <Phone className="w-4 h-4 text-primary" /> Ring 070-154 36 39
+              </a>
+              <Link
+                to="/takkontroll"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                Boka kostnadsfri takkontroll <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
 
           {/* Content */}
