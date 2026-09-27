@@ -134,8 +134,10 @@ let stripped = template.replace(
    eller ta bort själva Vite-taggarna längre ner. */
 const mainCss = stripped.match(/<link rel="stylesheet"[^>]*href="([^"]+)"/)?.[1];
 const mainJs = stripped.match(/<script type="module"[^>]*src="([^"]+)"/)?.[1];
+/* crossorigin måste matcha exakt det Vite-taggen längre ner har (annars räknar webbläsaren
+   preload och den riktiga hämtningen som två olika förfrågningar och laddar filen två gånger). */
 const earlyHints = [
-  mainCss ? `<link rel="preload" as="style" href="${mainCss}" />` : "",
+  mainCss ? `<link rel="preload" as="style" crossorigin href="${mainCss}" />` : "",
   mainJs ? `<link rel="preload" as="script" crossorigin href="${mainJs}" />` : "",
 ]
   .filter(Boolean)
