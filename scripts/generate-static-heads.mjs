@@ -122,10 +122,30 @@ const bodyFor = (path) => {
 };
 
 // Strip the sitewide hreflang/canonical placeholders so no route ships two.
-const stripped = template.replace(
+let stripped = template.replace(
   /\s*<link rel="alternate" hreflang="(?:sv|x-default)" href="[^"]*" \/>/g,
   "",
 );
+
+/* Prestanda: Vite lägger sin <script type="module"> och CSS-länk sist i <head>, efter flera KB
+   metadata och JSON-LD-scheman. Webbläsarens preload-scanner måste tolka allt det först innan den
+   hittar den renderingskritiska koden. Vi lägger därför tidiga preload-hintar för samma CSS- och
+   JS-fil högst upp i <head> (rätt efter charset), så att hämtningen börjar direkt, utan att flytta
+   eller ta bort själva Vite-taggarna längre ner. */
+const mainCss = stripped.match(/<link rel="stylesheet"[^>]*href="([^"]+)"/)?.[1];
+const mainJs = stripped.match(/<script type="module"[^>]*src="([^"]+)"/)?.[1];
+const earlyHints = [
+  mainCss ? `<link rel="preload" as="style" href="${mainCss}" />` : "",
+  mainJs ? `<link rel="preload" as="script" crossorigin href="${mainJs}" />` : "",
+]
+  .filter(Boolean)
+  .join("\n    ");
+if (earlyHints) {
+  stripped = stripped.replace(
+    '<meta charset="UTF-8" />',
+    `<meta charset="UTF-8" />\n    ${earlyHints}`,
+  );
+}
 
 let written = 0;
 let prerendered = 0;
