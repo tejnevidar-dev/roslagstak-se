@@ -1,11 +1,11 @@
 /**
- * Kampanjkälla (utm_source, utm_medium, utm_campaign) ur URL:en. Sparas i sessionStorage så att
- * uppgiften följer med om besökaren byter sida, och läggs som en rad i förfrågans message
- * (inget nytt databasfält). Första kända kampanj i sessionen behålls tills en ny utm-länk öppnas.
- * Inga personuppgifter. gclid hanteras inte här (väntar på samtyckesbeslut).
+ * Kampanjkälla (utm_source, utm_medium, utm_campaign, utm_content) ur URL:en. Sparas i
+ * sessionStorage så att uppgiften följer med om besökaren byter sida, och läggs som en rad i
+ * förfrågans message (inget nytt databasfält). Första kända kampanj i sessionen behålls tills en
+ * ny utm-länk öppnas. Inga personuppgifter. gclid hanteras inte här (väntar på samtyckesbeslut).
  */
 const KEY = "rt_utm_v1";
-const KEYS = ["utm_source", "utm_medium", "utm_campaign"] as const;
+const KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content"] as const;
 type UtmKey = (typeof KEYS)[number];
 type Utm = Partial<Record<UtmKey, string>>;
 

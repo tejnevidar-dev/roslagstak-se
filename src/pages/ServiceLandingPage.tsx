@@ -15,8 +15,10 @@ import NotFound from "@/pages/NotFound";
 const trust = [
   "F-skatt och ansvarsförsäkring",
   "10 års utförandegaranti",
-  "Fast pris efter besiktning",
+  "30 års tätskiktsgaranti (MATAKI)",
+  "Fast pris efter takkontroll",
   "Arbete enligt AMA",
+  "Svar inom 24 timmar",
 ];
 
 /** Indexerbar landningssida för en tjänst med formulär: /takreparation och /takkontroll. */

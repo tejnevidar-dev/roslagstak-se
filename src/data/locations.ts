@@ -432,11 +432,11 @@ export const locations: LocationData[] = [
     longDescription:
       "Norrtälje är vår hemmabas, vilket ger korta resvägar till din fastighet. Vi tar uppdrag i staden och i kommunen: takbyte, takrenovering, takreparation och plåtarbeten på villor och andra byggnader. Du får en kostnadsfri takkontroll och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för besiktning.",
     extraContent:
-      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör samt takinspektion. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar.",
+      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör samt takinspektion. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll och skriftlig rapport, fast pris i offerten utan löpande timpris, utförande enligt AMA, och slutbesiktning med garantibevis och fotodokumentation. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
     uniqueFAQ: {
       question: "Är RoslagsTak en lokal takläggare i Norrtälje?",
       answer:
-        "Ja, Norrtälje är vår hemmabas. Vi tar uppdrag i hela kommunen, och besiktningen är alltid kostnadsfri. Ring oss eller boka via formuläret, så återkommer vi inom 24 timmar.",
+        "Ja, Norrtälje är vår hemmabas. Vi tar uppdrag i hela kommunen, och takkontrollen är alltid kostnadsfri. Ring oss eller boka via formuläret, så återkommer vi inom 24 timmar.",
     },
     primaryKeyword: "takläggare Norrtälje",
     lat: 59.7667,
@@ -770,7 +770,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Täby har allt från radhusområden och 60-talsvillor till stora fristående hus med komplexa takkonstruktioner. Vi utför takbyten, takomläggningar, bandtäckning och plåtarbeten i Täby med fast pris efter kostnadsfri takkontroll. Vi arbetar enligt AMA-standard, lämnar 10 års garanti och sköter hela projektet — ställning, rivning, avfall, nytt tak, avvattning och taksäkerhet.",
     extraContent:
-      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid besiktningen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI.",
+      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid besiktningen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Processen är densamma för alla jobb i Täby: kostnadsfri takkontroll med skriftlig rapport, fast pris i offerten för hela jobbet — rivning, material, arbete, ställning och bortforsling — utan löpande timpris, utförande enligt AMA och slutbesiktning med garantibevis och foton. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år, och vi tar uppdrag i hela Täby med grannkommunerna Vallentuna, Åkersberga och Vaxholm.",
     uniqueFAQ: {
       question: "Hjälper ni med bygglov och grannhänsyn vid takbyte i Täby?",
       answer:

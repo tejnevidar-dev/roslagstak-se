@@ -22,6 +22,21 @@ const serviceForSlug = (slug: string): { to: string; label: string } | null => {
   return rules.find(([re]) => re.test(slug))?.[1] ?? null;
 };
 
+/** Länk till takbyte-ort-sidan när artikeln handlar om en specifik ort. */
+const locationForSlug = (slug: string): { to: string; label: string } | null => {
+  const rules: [RegExp, { to: string; label: string }][] = [
+    [/norrtalje/, { to: "/takbyte-norrtalje", label: "Takbyte i Norrtälje" }],
+    [/-taby-|-taby$/, { to: "/takbyte-taby", label: "Takbyte i Täby" }],
+    [/ljustero/, { to: "/takbyte-ljustero", label: "Takbyte på Ljusterö" }],
+    [/blido/, { to: "/takbyte-blido", label: "Takbyte på Blidö" }],
+    [/vaxholm/, { to: "/takbyte-vaxholm", label: "Takbyte i Vaxholm" }],
+    [/husaro|finnhamn/, { to: "/taklaggare-husaro", label: "Takläggare på Husarö" }],
+    [/radmanso|vato/, { to: "/taklaggare-radmanso", label: "Takläggare på Rådmansö" }],
+    [/-stockholm/, { to: "/taklaggare-stockholm", label: "Takläggare i Stockholm" }],
+  ];
+  return rules.find(([re]) => re.test(slug))?.[1] ?? null;
+};
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
@@ -186,6 +201,11 @@ const BlogPost = () => {
                 {serviceForSlug(post.slug) && (
                   <Link to={serviceForSlug(post.slug)!.to} className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline sm:col-span-2">
                     <ArrowRight className="w-3 h-3" /> Om vår tjänst: {serviceForSlug(post.slug)!.label}
+                  </Link>
+                )}
+                {locationForSlug(post.slug) && (
+                  <Link to={locationForSlug(post.slug)!.to} className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline sm:col-span-2">
+                    <ArrowRight className="w-3 h-3" /> {locationForSlug(post.slug)!.label}
                   </Link>
                 )}
                 <Link to="/tjanster/takomlaggning" className="flex items-center gap-1 text-sm text-primary hover:underline">
