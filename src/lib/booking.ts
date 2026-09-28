@@ -58,8 +58,8 @@ export const nextOpeningLabel = (now: Date = new Date()): string => {
 export const confirmationText = (kind: "ring_mig" | "boka", now: Date = new Date()): string => {
   if (isWithinOpeningHours(now)) {
     return kind === "ring_mig"
-      ? "Vi ringer dig inom 1 timme, på 070-154 36 39."
-      : "Vi hör av oss inom 2 timmar för att bekräfta tiden, på 070-154 36 39.";
+      ? "Vi ringer dig inom 1 timme, från 070-154 36 39."
+      : "Vi hör av oss inom 2 timmar för att bekräfta tiden, från 070-154 36 39.";
   }
-  return `Vi hör av oss ${nextOpeningLabel(now)}, på 070-154 36 39.`;
+  return `Vi hör av oss ${nextOpeningLabel(now)}, från 070-154 36 39.`;
 };

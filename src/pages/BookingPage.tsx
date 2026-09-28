@@ -8,7 +8,6 @@ import BookingWidget from "@/components/BookingWidget";
 import { BOOKING_ENABLED } from "@/lib/booking";
 
 const trust = [
-  "F-skatt och ansvarsförsäkring",
   "10 års utförandegaranti",
   "30 års tätskiktsgaranti (MATAKI)",
   "Fast pris, arbete enligt AMA",
