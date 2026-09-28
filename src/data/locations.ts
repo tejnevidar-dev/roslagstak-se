@@ -348,7 +348,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Bergshamra vid Roslagens kust har en mix av villor och fritidshus, många med tak som nu nått sin livslängd. Det kustnära läget innebär att taken utsätts för mer fukt och vind än längre in på fastlandet. Ett dubbelfalsat plåttak eller TP20 med kvalitetsunderlag ger dig trygghet i 40+ år. Kontakta oss för en ärlig bedömning av ditt tak — helt utan kostnad.",
     extraContent:
-      "I Bergshamra ser vi ofta tak med äldre betongpannor eller eternitskivor som behöver bytas. Vi hanterar rivning och avfallshantering av alla materialtyper, inklusive eternit (med certifierad sanering). Om du har en fastighet i Bergshamra och undrar över takets skick, gör vi en kostnadsfri inspektion med skriftlig rapport. Vi ger alltid en rak och ärlig bedömning.",
+      "I Bergshamra ser vi ofta tak med äldre betongpannor eller eternitskivor som behöver bytas. Vi hanterar rivning och avfallshantering. Innehåller eterniten asbest samordnar vi saneringen med en behörig saneringsfirma innan nytt tak läggs. Om du har en fastighet i Bergshamra och undrar över takets skick, gör vi en kostnadsfri inspektion. Vi ger alltid en rak och ärlig bedömning.",
     uniqueFAQ: {
       question: "Kan ni hantera eternittak vid takbyte i Bergshamra?",
       answer:
