@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";
+import QuickContactFacts from "@/components/QuickContactFacts";
 import NotFound from "./NotFound";
 
 /** Tjänstesida som passar artikelns ämne bäst (första träff vinner), för internlänkning från blogg till tjänst. */
@@ -157,6 +158,7 @@ const BlogPost = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {post.excerpt}
               </p>
+              <QuickContactFacts />
             </header>
 
             <div className="space-y-5">
