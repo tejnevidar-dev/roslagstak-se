@@ -53,6 +53,7 @@ const NOINDEX_ROBOTS = "noindex, nofollow";
 
 const noindexRoutes = [
   "/admin", "/admin/login", "/admin/seo",
+  "/boka-takkontroll",
   ...["taby", "norrtalje", "vallentuna", "akersberga", "danderyd", "sollentuna", "rimbo", "hallstavik"].map((s) => `/offert/${s}`),
 ];
 

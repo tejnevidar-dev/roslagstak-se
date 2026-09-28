@@ -1,0 +1,66 @@
+-- FÖRBERED, EJ KÖRD. Kräver Vidars/IT-stöds godkännande och körning i SQL-editorn.
+--
+-- Bakgrund: bokningsformuläret (BookingWidget.tsx, bakom flaggan BOOKING_ENABLED i
+-- src/lib/booking.ts) skriver idag in i quote_requests precis som alla andra formulär,
+-- och går via den BEFINTLIGA triggern trg_notify_saljtak_on_new_quote till CRM:s
+-- vanliga lead-webhook. Det fungerar utan ändringar här.
+--
+-- Den här migrationen lägger till en ANDRA, egen trigger som i stället postar till CRM:s
+-- dedikerade bokningsendpoint (kontrakt levererat av Agent - CRM, 2026-09-28):
+--   POST /api/public/booking-request
+--   Header: X-Webhook-Secret: <samma hemlighet som saljtak_secret>
+--   Body: { id, name, phone, email, municipality, slot, date, message, utm }
+-- Fördelen: CRM sätter booking_slot/callback_requested som egna fält och kan räkna ut
+-- sla_promised_at server-side i stället för att vi gissar det i frontend.
+--
+-- Så aktiveras den (körs manuellt av Vidar/IT-stöd, inte av en agent):
+-- 1. Kör GRANT/URL-uppsättningen nedan i SQL-editorn för webbsidans projekt.
+-- 2. UPDATE/INSERT en rad i webhook_config: key='booking_url',
+--    value='https://admin-vt6.tejnevidar.workers.dev/api/public/booking-request'.
+--    (Hemligheten är redan satt som saljtak_secret och återanvänds, inget nytt secret.)
+-- 3. Live-testa en bokning och bekräfta i CRM att lead_id + sla_promised_at kommer tillbaka.
+-- 4. Sätt BOOKING_ENABLED = true i webbsida/src/lib/booking.ts (egen commit, efter att
+--    designen visats för och godkänts av Vidar) och slå på länkar till /boka-takkontroll.
+
+-- Lägg till en booking_slot-kolumn på quote_requests så bokningsdata går att fråga separat
+-- (valfritt — även utan denna kolumn fungerar dagens lösning via message-fältet).
+-- ALTER TABLE public.quote_requests
+--   ADD COLUMN IF NOT EXISTS booking_slot TEXT,
+--   ADD COLUMN IF NOT EXISTS booking_date DATE;
+
+-- CREATE OR REPLACE FUNCTION public.notify_booking_webhook()
+-- RETURNS TRIGGER
+-- LANGUAGE plpgsql
+-- SECURITY DEFINER
+-- SET search_path = public, extensions, net
+-- AS $$
+-- DECLARE
+--   v_url TEXT;
+--   v_secret TEXT;
+-- BEGIN
+--   IF NEW.message NOT LIKE 'Bokning kostnadsfri takkontroll%' THEN
+--     RETURN NEW; -- bara riktiga bokningar, inte vanliga förfrågningar
+--   END IF;
+--   SELECT value INTO v_url FROM public.webhook_config WHERE key = 'booking_url';
+--   SELECT value INTO v_secret FROM public.webhook_config WHERE key = 'saljtak_secret';
+--   IF v_url IS NULL OR v_secret IS NULL THEN
+--     RAISE WARNING 'Bokningswebhook ej konfigurerad - hoppar över';
+--     RETURN NEW;
+--   END IF;
+--   PERFORM net.http_post(
+--     url := v_url,
+--     headers := jsonb_build_object('Content-Type', 'application/json', 'X-Webhook-Secret', v_secret),
+--     body := jsonb_build_object(
+--       'id', NEW.id::text, 'name', NEW.name, 'phone', NEW.phone, 'email', NEW.email,
+--       'municipality', NEW.address, 'message', NEW.message, 'created_at', NEW.created_at::text
+--     )
+--   );
+--   RETURN NEW;
+-- END;
+-- $$;
+--
+-- DROP TRIGGER IF EXISTS trg_notify_booking_webhook ON public.quote_requests;
+-- CREATE TRIGGER trg_notify_booking_webhook
+--   AFTER INSERT ON public.quote_requests
+--   FOR EACH ROW
+--   EXECUTE FUNCTION public.notify_booking_webhook();
