@@ -10,23 +10,23 @@ import {
 const eternitFaqs = [
   {
     question: "Vad kostar det att riva ett eternittak?",
-    answer: "Sanering av eternittak kostar från ca 400 kr/m². Totalkostnaden inkl. nytt tak ligger vanligtvis på 1 200–1 800 kr/m² beroende på takets storlek, materialval och åtkomlighet. För ett normalt villatak (ca 150 m²) hamnar totalkostnaden ofta på 180 000–270 000 kr före ROT-avdrag.",
+    answer: "Kostnaden beror på takets storlek, mängden asbesthaltigt material och åtkomligheten, och sätts av den saneringsfirma vi samordnar med. Vi tar fram en offert på hela projektet — sanering och nytt tak — efter en kostnadsfri takkontroll.",
   },
   {
     question: "Får man riva eternittak själv?",
-    answer: "Nej. Eternitplattor som innehåller asbest klassas som farligt avfall. Enligt Arbetsmiljöverkets föreskrifter krävs utbildning, skyddsutrustning och en godkänd saneringsplan. Rivning ska anmälas till Arbetsmiljöverket minst 7 dagar i förväg. Anlita alltid ett certifierat företag.",
+    answer: "Nej. Rivning av asbesthaltigt material, till exempel eternitplattor, kräver tillstånd från Arbetsmiljöverket och särskild utbildning. Asbesten är farligt avfall. Anlita alltid ett företag som har Arbetsmiljöverkets tillstånd för asbestrivning.",
   },
   {
     question: "Hur vet jag om mitt eternittak innehåller asbest?",
     answer: "Eternitplattor tillverkade före 1977 innehåller nästan alltid asbest. Plattor från 1977–1986 kan innehålla asbest. Är du osäker kan vi ta ett materialprov och skicka det till laboratorium för analys — helt kostnadsfritt vid besiktning.",
   },
   {
-    question: "Kan ni sanera eternittak på öar i skärgården?",
-    answer: "Blidö, Ljusterö, Svartlöga, Ingmarsö och Finnhamn. Vi ordnar all sjötransport av material och farligt avfall.",
+    question: "Kan ni hjälpa till med eternitsanering på öar i skärgården?",
+    answer: "Ja, på till exempel Blidö, Ljusterö, Svartlöga, Ingmarsö och Finnhamn. Vi samordnar hela projektet — takkontroll, sanering via ett företag med Arbetsmiljöverkets tillstånd och sjötransport av nytt material — och håller ihop det som en kontaktperson.",
   },
   {
     question: "Vad händer med det rivna eternitmaterialet?",
-    answer: "Allt asbestinnehållande material emballeras i godkända säckar och märks som farligt avfall. Vi transporterar materialet till en godkänd deponi. Du får dokumentation på att saneringen utförts enligt gällande regler.",
+    answer: "Allt asbestinnehållande material emballeras i godkända säckar och märks som farligt avfall. Saneringsfirman transporterar materialet till en godkänd deponi, och du får dokumentation på att saneringen utförts enligt gällande regler.",
   },
   {
     question: "Kan jag få ROT-avdrag för eternitsanering?",
@@ -82,10 +82,10 @@ const EternitSEOContent = () => {
           Att sanera eternittak på en ö utan broförbindelse kräver extra planering. Farligt avfall måste emballeras säkert och transporteras med båt till godkänd deponi på fastlandet. Vi samordnar transporten även till avlägsna öar.
         </p>
         <h3 className="font-display text-xl text-foreground mb-3 mt-8">
-          Samarbete med behöriga partners för säker asbesthantering
+          Sanering görs alltid av ett företag med tillstånd
         </h3>
         <p className="text-foreground leading-relaxed mb-4">
-          Vid rivning av eternittak och asbest samarbetar vi med behöriga samarbetspartners och underentreprenörer som har rätt utbildning, certifieringar och tillstånd för asbestsanering. Alla våra partners följer Arbetsmiljöverkets föreskrifter och har dokumenterad erfarenhet av säker hantering av asbesthaltigt material. Genom att arbeta med kvalificerade underentreprenörer säkerställer vi att varje steg — från rivning och emballering till transport och deponering — utförs korrekt och tryggt. Du som kund får en enda kontaktperson och ett helhetsåtagande, medan vi koordinerar alla inblandade parter.
+          Rivning av eternit som innehåller asbest får bara göras av ett företag med tillstånd från Arbetsmiljöverket. Vi utför inte asbestsanering själva. Vi hjälper dig att planera hela takbytet och samordnar saneringen med ett företag som har rätt tillstånd, så att rivning, emballering, transport och deponering sker enligt gällande regler. Du som kund får en enda kontaktperson hos oss genom hela processen.
         </p>
       </div>
 
@@ -119,29 +119,29 @@ const EternitSEOContent = () => {
       {/* Extra internal links specific to eternit */}
       <div className="bg-card border border-border rounded-2xl p-6 mb-8">
         <h2 className="font-display text-lg text-card-foreground mb-3">
-          Eternitsanering i din kommun
+          Eternittak i din kommun
         </h2>
         <p className="text-sm text-muted-foreground mb-4">
-          Vi utför eternitsanering i hela Roslagen — från Vaxholm till Arholma.
+          Vi hjälper dig med eternittak i hela Roslagen — från Vaxholm till Arholma — och samordnar saneringen.
         </p>
         <div className="grid sm:grid-cols-3 gap-2">
           <Link to="/taklaggare-blido" className="flex items-center gap-1 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3 h-3" /> Eternitsanering Blidö
+            <ArrowRight className="w-3 h-3" /> Eternittak Blidö
           </Link>
           <Link to="/taklaggare-ljustero" className="flex items-center gap-1 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3 h-3" /> Eternitsanering Ljusterö
+            <ArrowRight className="w-3 h-3" /> Eternittak Ljusterö
           </Link>
           <Link to="/taklaggare-norrtalje" className="flex items-center gap-1 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3 h-3" /> Eternitsanering Norrtälje
+            <ArrowRight className="w-3 h-3" /> Eternittak Norrtälje
           </Link>
           <Link to="/taklaggare-vaxholm" className="flex items-center gap-1 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3 h-3" /> Eternitsanering Vaxholm
+            <ArrowRight className="w-3 h-3" /> Eternittak Vaxholm
           </Link>
           <Link to="/taklaggare-furusund" className="flex items-center gap-1 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3 h-3" /> Eternitsanering Furusund
+            <ArrowRight className="w-3 h-3" /> Eternittak Furusund
           </Link>
           <Link to="/taklaggare-husaro" className="flex items-center gap-1 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3 h-3" /> Eternitsanering Husarö
+            <ArrowRight className="w-3 h-3" /> Eternittak Husarö
           </Link>
         </div>
       </div>

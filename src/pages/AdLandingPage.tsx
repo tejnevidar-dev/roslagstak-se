@@ -33,7 +33,7 @@ const steps = [
   },
   {
     title: "Vi utför jobbet",
-    text: "Vi sköter hela arbetet, städar och går igenom resultatet tillsammans med dig. Du får garantihandlingar och foton.",
+    text: "Vi sköter hela arbetet, städar och går igenom resultatet tillsammans med dig. Du får skriftlig garanti och foton.",
   },
 ];
 
@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: "Vilken garanti får jag?",
-    a: "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Efter slutbesiktningen får du garantihandlingar och foton från arbetet.",
+    a: "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Efter slutbesiktningen får du garantin skriftligt i avtalet och foton från arbetet.",
   },
   {
     q: "Behöver jag bygglov?",

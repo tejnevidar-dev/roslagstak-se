@@ -143,7 +143,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "säkert och enligt regelverk.",
     specs: [
       { k: "Regelverk", v: "Arbetsmiljöverkets föreskrifter" },
-      { k: "Anmälan", v: "Vi hanterar den" },
+      { k: "Tillstånd", v: "Krävs, ca 8 veckor" },
       { k: "Deponi", v: "Godkänd transport" },
     ],
     specHeading: "Sanering enligt Arbetsmiljöverkets föreskrifter — steg för steg",
@@ -177,7 +177,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Montering av nytt takmaterial",
       "Installation av ny taksäkerhet och avvattning",
       "Slutsamråd med kund och ansvarig säljare för att säkerställa att allt är korrekt utfört enligt offert",
-      "Slutbesiktning och garantibevis",
+      "Slutbesiktning och skriftlig garanti",
       "Rivning av byggställning och avetablering från fastigheten",
     ],
   },
@@ -303,18 +303,18 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   "eternit-asbest": {
     longDesc: "Många äldre hus i Roslagen och skärgården har tak av eternitplattor som innehåller asbest — ett hälsofarligt material som kräver specialhantering vid rivning. Vi samordnar saneringen med en behörig saneringsfirma, som utför rivningen enligt Arbetsmiljöverkets föreskrifter med skyddsutrustning, slussystem och godkänd emballering, och transporterar materialet till godkänd deponi. Vi utför inte asbestsanering själva. Därefter utför vi komplett takomläggning med modernt material så att du får ett säkert, hållbart och vackert tak.",
-    priceRange: "Sanering från ca 400 kr/m² (via saneringsfirman) + nytt tak från ca 1 200 kr/m². Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer på takarbetet.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll — sanering (via saneringsfirman) plus nytt tak från ca 1 200 kr/m². Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer på takarbetet.",
     benefits: [
       "Sanering av behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter",
       "Vi samordnar hela processen åt dig",
-      "Anmälan till Arbetsmiljöverket hanteras av saneringsfirman",
+      "Tillstånd hos Arbetsmiljöverket söks och hanteras av saneringsfirman",
       "Komplett takomläggning efter sanering",
       "Fast pris efter kostnadsfri takkontroll",
     ],
     process: [
       "Kostnadsfri takkontroll och materialprovtagning",
       "Vi samordnar sanering med behörig saneringsfirma",
-      "Saneringsfirman anmäler till Arbetsmiljöverket (minst 7 dagar före) och river med skyddsåtgärder",
+      "Saneringsfirman söker tillstånd hos Arbetsmiljöverket (ca 8 veckor före) och river med skyddsåtgärder",
       "Emballering och transport till godkänd deponi (saneringsfirman)",
       "Inspektion av underlag och eventuell reparation",
       "Montering av nytt takmaterial",
@@ -737,7 +737,7 @@ const ServiceDetail = () => {
                 },
                 {
                   t: "Garanti och försäkring",
-                  d: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Vi har F-skatt och fullständigt försäkringsskydd.",
+                  d: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Vi har F-skatt.",
                 },
                 {
                   t: "Skärgård och logistik",

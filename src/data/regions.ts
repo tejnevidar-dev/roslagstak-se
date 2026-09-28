@@ -147,6 +147,6 @@ export const regionLongText: Record<string, string[]> = {
   ],
   Mälardalen: [
     "Vi tar uppdrag i Mälardalen, där förutsättningarna för taken är välkända: slättlandskap med öppna, blåsiga lägen, snölast under vintern och fukt nära Mälaren och Östersjökusten. Bebyggelsen spänner från äldre stadskärnor med tegel och plåt till villaområden och flerbostadshus från efterkrigstiden.",
-    "Här tar vi uppdrag från både villaägare och bostadsrättsföreningar. För föreningar lämnar vi ett skriftligt underlag efter en kostnadsfri besiktning, med fast pris, tidplan och garantihandlingar efter slutbesiktning, så att styrelsen kan besluta.",
+    "Här tar vi uppdrag från både villaägare och bostadsrättsföreningar. För föreningar lämnar vi ett skriftligt underlag efter en kostnadsfri besiktning, med fast pris, tidplan och skriftlig garanti efter slutbesiktning, så att styrelsen kan besluta.",
   ],
 };

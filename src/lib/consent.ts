@@ -104,11 +104,15 @@ export const initConsent = () => {
   // Låter Google fortsätta koppla klick (gclid) till konverteringar utan cookies när samtycke saknas.
   // Sätter inga nya cookies själv och kräver därför inte samtycke.
   window.gtag?.("set", "url_passthrough", true);
+  // Redigerar annonsidentifierare ur klick när ad_storage är nekat (Googles rekommendation för consent mode).
+  window.gtag?.("set", "ads_data_redaction", true);
   window.gtag?.("consent", "default", {
     analytics_storage: "denied",
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
+    // Ger sidan tid att läsa sparat samtycke innan taggarna hinner skicka något.
+    wait_for_update: 500,
   });
   const saved = readConsent();
   if (saved) applyConsent(saved);

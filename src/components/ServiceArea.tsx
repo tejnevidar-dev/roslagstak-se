@@ -186,8 +186,8 @@ const ServiceArea = () => {
               </p>
               <p>
                 Längs kusten arbetar vi i Spillersboda, Bergshamra och Svartnö. På Väddö och upp mot
-                Singö, Grisslehamn och Arholma hittar du oss regelbundet. I Vaxholm och Norrtälje har vi
-                lagt tak på hundratals fastigheter genom åren.
+                Singö, Grisslehamn och Arholma hittar du oss regelbundet. I Vaxholm och Norrtälje tar
+                vi uppdrag på villor, fritidshus och radhus.
               </p>
               <p>
                 I <strong className="font-semibold">hela Storstockholm</strong> — från <strong className="font-semibold">takbyte i Solna</strong> och <strong className="font-semibold">bandtäckning i Danderyd</strong> till

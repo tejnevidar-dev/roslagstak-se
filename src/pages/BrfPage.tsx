@@ -46,8 +46,8 @@ const steps = [
     text: "Rivning, underlag, nytt tak och plåtdetaljer. Varje moment dokumenteras med foton och arbetsplatsen städas löpande.",
   },
   {
-    title: "Slutbesiktning och garantibevis",
-    text: "Vi går igenom arbetet tillsammans med er och lämnar garantihandlingar och fotodokumentation som styrelsen kan spara till nästa mandatperiod.",
+    title: "Slutbesiktning och skriftlig garanti",
+    text: "Vi går igenom arbetet tillsammans med er och lämnar skriftlig garanti och fotodokumentation som styrelsen kan spara till nästa mandatperiod.",
   },
 ];
 
@@ -74,7 +74,7 @@ const brfFaqs = [
   {
     question: "Hur går ett takbyte till för en bostadsrättsförening?",
     answer:
-      "Det börjar med en kostnadsfri takbesiktning, därefter får föreningen en skriftlig offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet dokumenteras med foton och avslutas med slutbesiktning och garantihandlingar.",
+      "Det börjar med en kostnadsfri takbesiktning, därefter får föreningen en skriftlig offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet dokumenteras med foton och avslutas med slutbesiktning och skriftlig garanti.",
   },
   {
     question: "Behöver föreningen en besiktning före ett takbyte?",
@@ -301,7 +301,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
     ? [
         {
           question: `Tar ni uppdrag från bostadsrättsföreningar${inPlace}?`,
-          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takbesiktning och lämnar ett skriftligt underlag med fast pris som styrelsen kan besluta på. Efter slutbesiktning får föreningen garantibevis och fotodokumentation.`,
+          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takbesiktning och lämnar ett skriftligt underlag med fast pris som styrelsen kan besluta på. Efter slutbesiktning får föreningen skriftlig garanti och fotodokumentation.`,
         },
         ...brfFaqs,
       ]
@@ -364,7 +364,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 <span className="italic text-accent">med underlag styrelsen kan besluta på.</span>
               </h1>
               <p className="mt-7 max-w-[52ch] text-[18px] leading-relaxed text-muted-foreground md:text-[19px]">
-                Från kostnadsfri takbesiktning och fast offert till slutbesiktning och garantibevis. Vi arbetar i
+                Från kostnadsfri takbesiktning och fast offert till slutbesiktning och skriftlig garanti. Vi arbetar i
                 {place ? `${place.name} och närområdet` : "Storstockholm, Roslagen och Mälardalen"}.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -434,7 +434,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 {[
                   ["Besiktningsrapport", "Takets skick dokumenterat med foton, som grund för underhållsplan och beslut."],
                   ["Fast offert", "Ett skriftligt pris som gäller, med tydligt vad som ingår."],
-                  ["Garantihandlingar", "Fotodokumentation och garantibevis efter slutbesiktning."],
+                  ["Garantivillkor", "Fotodokumentation och skriftlig garanti efter slutbesiktning."],
                 ].map(([title, text]) => (
                   <li key={title} className="grid gap-1 border-b border-border py-5 sm:grid-cols-[13rem_1fr] sm:gap-6">
                     <span className="font-display text-lg text-foreground">{title}</span>
@@ -494,7 +494,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 Så går ett takbyte till i en förening
               </h2>
               <p className="mt-6 max-w-[42ch] text-[17px] leading-relaxed text-muted-foreground">
-                Sex steg från första besiktningen till garantibevis. Beslutet ligger hos föreningen, och vi ser till
+                Sex steg från första besiktningen till skriftlig garanti. Beslutet ligger hos föreningen, och vi ser till
                 att underlaget finns när det behövs.
               </p>
             </div>

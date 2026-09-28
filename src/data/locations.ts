@@ -432,7 +432,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Norrtälje är vår hemmabas, vilket ger korta resvägar till din fastighet. Vi tar uppdrag i staden och i kommunen: takbyte, takrenovering, takreparation och plåtarbeten på villor och andra byggnader. Du får en kostnadsfri takkontroll och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för besiktning.",
     extraContent:
-      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör samt takinspektion. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll och skriftlig rapport, fast pris i offerten utan löpande timpris, utförande enligt AMA, och slutbesiktning med garantibevis och fotodokumentation. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
+      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör samt takinspektion. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll och skriftlig rapport, fast pris i offerten utan löpande timpris, utförande enligt AMA, och slutbesiktning med skriftlig garanti i avtalet och fotodokumentation. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
     uniqueFAQ: {
       question: "Är RoslagsTak en lokal takläggare i Norrtälje?",
       answer:
@@ -770,7 +770,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Täby har allt från radhusområden och 60-talsvillor till stora fristående hus med komplexa takkonstruktioner. Vi utför takbyten, takomläggningar, bandtäckning och plåtarbeten i Täby med fast pris efter kostnadsfri takkontroll. Vi arbetar enligt AMA-standard, lämnar 10 års garanti och sköter hela projektet — ställning, rivning, avfall, nytt tak, avvattning och taksäkerhet.",
     extraContent:
-      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid besiktningen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Processen är densamma för alla jobb i Täby: kostnadsfri takkontroll med skriftlig rapport, fast pris i offerten för hela jobbet — rivning, material, arbete, ställning och bortforsling — utan löpande timpris, utförande enligt AMA och slutbesiktning med garantibevis och foton. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år, och vi tar uppdrag i hela Täby med grannkommunerna Vallentuna, Åkersberga och Vaxholm.",
+      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid besiktningen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Processen är densamma för alla jobb i Täby: kostnadsfri takkontroll med skriftlig rapport, fast pris i offerten för hela jobbet — rivning, material, arbete, ställning och bortforsling — utan löpande timpris, utförande enligt AMA och slutbesiktning med skriftlig garanti i avtalet och foton. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år, och vi tar uppdrag i hela Täby med grannkommunerna Vallentuna, Åkersberga och Vaxholm.",
     uniqueFAQ: {
       question: "Hjälper ni med bygglov och grannhänsyn vid takbyte i Täby?",
       answer:
@@ -2714,11 +2714,11 @@ export const locations: LocationData[] = [
     longDescription:
       "Uppsala är en av landets äldsta universitetsstäder, med bebyggelse som sträcker sig från äldre kvarter längs Fyrisån till villaområden i Luthagen och Kvarngärdet och flerbostadshus från 60- och 70-talen i Gottsunda och Sunnersta. Staden ligger på den öppna Uppsalaslätten, där vind och snö får fritt spelrum över taken. Vi tar uppdrag i Uppsala med takbyte, takrenovering och plåtarbeten, både för villaägare och för bostadsrättsföreningar. Alla uppdrag börjar med en kostnadsfri takkontroll och slutar med ett fast pris.",
     extraContent:
-      "För en bostadsrättsförening i Uppsala är ett takbyte ett beslut som ska hålla för både styrelse och stämma. Därför lämnar vi ett skriftligt underlag med foton och ett fast pris, och dokumentation och garantibevis efter slutbesiktning. Äldre kvarter kan ha tegel- eller plåttak med många genomföringar och trånga takytor, medan nyare områden oftast har enklare sadeltak. Boka en kostnadsfri takbesiktning så går vi igenom vad som passar just ert tak.",
+      "För en bostadsrättsförening i Uppsala är ett takbyte ett beslut som ska hålla för både styrelse och stämma. Därför lämnar vi ett skriftligt underlag med foton och ett fast pris, och dokumentation och skriftlig garanti efter slutbesiktning. Äldre kvarter kan ha tegel- eller plåttak med många genomföringar och trånga takytor, medan nyare områden oftast har enklare sadeltak. Boka en kostnadsfri takbesiktning så går vi igenom vad som passar just ert tak.",
     uniqueFAQ: {
       question: "Tar ni uppdrag från bostadsrättsföreningar i Uppsala?",
       answer:
-        "Ja. Vi tar uppdrag från både bostadsrättsföreningar och villaägare i Uppsala. För föreningar börjar vi med en kostnadsfri takbesiktning och lämnar ett fast pris som styrelsen kan besluta på. Efter slutbesiktning får föreningen garantibevis och fotodokumentation.",
+        "Ja. Vi tar uppdrag från både bostadsrättsföreningar och villaägare i Uppsala. För föreningar börjar vi med en kostnadsfri takbesiktning och lämnar ett fast pris som styrelsen kan besluta på. Efter slutbesiktning får föreningen skriftlig garanti och fotodokumentation.",
     },
     primaryKeyword: "takläggare Uppsala",
     lat: 59.8586,
@@ -2798,7 +2798,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Västerås är Mälardalens största stad, belägen vid Mälaren och Svartån, med en blandning av äldre stadsbebyggelse, villaområden och stora bostadsrättsföreningar och flerbostadshus. Storleken ger en stor variation av taktyper, från tegeltak på äldre hus till plåt och papp på flacka tak. Vi tar uppdrag i Västerås med takbyte, takrenovering och plåtarbeten, både för villaägare och för föreningar.",
     extraContent:
-      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: besiktning, fast offert, tidplan och en fast kontaktperson under hela projektet. Vi dokumenterar arbetet med foton och lämnar garantibevis efter slutbesiktning. Kontakta oss för en kostnadsfri takbesiktning i Västerås.",
+      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: besiktning, fast offert, tidplan och en fast kontaktperson under hela projektet. Vi dokumenterar arbetet med foton och lämnar skriftlig garanti efter slutbesiktning. Kontakta oss för en kostnadsfri takbesiktning i Västerås.",
     uniqueFAQ: {
       question: "Kan ni ta uppdrag åt större bostadsrättsföreningar i Västerås?",
       answer:

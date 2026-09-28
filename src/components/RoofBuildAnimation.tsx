@@ -92,7 +92,7 @@ const STEPS: Step[] = [
     label: "Snörasskydd",
     title: "Snörasskydd & slutbesiktning",
     body: "Sist monteras snörasskydden ovanför takfoten — sedan städning, dokumentation och slutbesiktning.",
-    detail: "Du får garantibevis och en genomgång av hela taket på plats.",
+    detail: "Du får skriftlig garanti i avtalet och en genomgång av hela taket på plats.",
     image: roofSnorasskydd,
     alt: "Fotorealistisk 3D-visualisering av monterat snörasskydd på ett färdigt skärgårdstak",
   },

@@ -16,11 +16,7 @@ const sections = [
   },
   {
     title: "Marknadsföring (Google Ads och Meta)",
-    text: "Om du även godkänner marknadsföring kan Google Ads och Meta (Facebook/Instagram) se att du besökt sajten, så att vi kan visa relevant annonsering och mäta vilka annonser som ger förfrågningar. Google Ads sätter cookies som _gcl_au (lagras ca 90 dagar). Metas pixel sätter _fbp och, om du kommer via en annons, _fbc (lagras ca 90 dagar). Vi skickar aldrig namn, telefonnummer, e-post eller annat du skrivit i ett formulär till Google eller Meta – bara att ett besök eller en förfrågan skett. Utan ditt godkännande laddas ingen av dessa och inga marknadsföringscookies sätts.",
-  },
-  {
-    title: "Uppgifter du lämnar i formulär",
-    text: "När du skickar en förfrågan sparas namn, telefon, e-post, adress och ditt meddelande i vårt kundsystem, så att vi kan svara dig och lämna offert. Du kan när som helst be om att få se eller radera dina uppgifter genom att kontakta oss.",
+    text: "Om du även godkänner marknadsföring kan Google Ads och Meta (Facebook/Instagram) se att du besökt sajten, så att vi kan visa relevant annonsering och mäta vilka annonser som ger förfrågningar. Google Ads sätter cookies som _gcl_au (lagras ca 90 dagar). Metas pixel sätter _fbp och, om du kommer via en annons, _fbc (lagras ca 90 dagar). Vi skickar aldrig namn, telefonnummer, e-post eller annat du skrivit i ett formulär till Google eller Meta – ingen \"advanced matching\" eller \"enhanced conversions\", bara att ett besök eller en förfrågan skett. Google och Meta kan föra över uppgifter till länder utanför EU, till exempel USA, med stöd av EU:s beslut om tillräcklig skyddsnivå eller standardavtalsklausuler. Utan ditt godkännande laddas ingen av dessa och inga marknadsföringscookies sätts.",
   },
 ];
 
@@ -51,6 +47,75 @@ const CookiesPage = () => (
               </div>
             ))}
             <div>
+              <h2 className="font-display text-2xl text-foreground">Dina personuppgifter</h2>
+
+              <h3 className="mt-6 font-display text-lg text-foreground">Vem ansvarar för dina uppgifter?</h3>
+              <p className="mt-2 text-[17px] leading-relaxed text-muted-foreground">
+                Personuppgiftsansvarig är VT6 Invest AB (org.nr 559539-3595), som driver RoslagsTak, Stångholmsbacken
+                77, 127 40 Skärholmen, vidar@roslagstak.se, 070-154 36 39.
+              </p>
+
+              <h3 className="mt-6 font-display text-lg text-foreground">Vilka uppgifter och varför</h3>
+              <ul className="mt-2 space-y-2 text-[17px] leading-relaxed text-muted-foreground">
+                <li>
+                  <strong className="text-foreground">Förfrågan och takkontroll:</strong> namn, telefon, e-post,
+                  adress och det du berättar om taket. Vi använder dem för att svara dig, boka takkontroll och ta
+                  fram en offert. Du har själv bett om detta, så grunden är åtgärder innan ett avtal (artikel 6.1 b).
+                </li>
+                <li>
+                  <strong className="text-foreground">Avtal och utförande:</strong> samma uppgifter plus foton av
+                  taket. Grunden är att fullgöra avtalet (artikel 6.1 b).
+                </li>
+                <li>
+                  <strong className="text-foreground">ROT-avdrag:</strong> personnummer och fastighetsbeteckning, som
+                  vi lämnar till Skatteverket för att begära ROT. Grunden är avtalet och lagkrav (artikel 6.1 b och c).
+                </li>
+                <li>
+                  <strong className="text-foreground">Bokföring:</strong> fakturor och underlag. Grunden är lagkrav
+                  (artikel 6.1 c).
+                </li>
+                <li>
+                  <strong className="text-foreground">Marknadsföring via sms eller mejl:</strong> bara om du har sagt
+                  ja. Du kan när som helst ta tillbaka ditt samtycke.
+                </li>
+              </ul>
+
+              <h3 className="mt-6 font-display text-lg text-foreground">Vem vi delar uppgifterna med</h3>
+              <p className="mt-2 text-[17px] leading-relaxed text-muted-foreground">
+                Med våra säljare och de hantverkare (underentreprenörer) som utför arbetet, bara det som behövs för
+                jobbet, med Skatteverket (ROT) och med våra IT-leverantörer (kundsystem, e-post och webbplats), som
+                behandlar uppgifterna för vår räkning. Vi säljer aldrig dina uppgifter.
+              </p>
+
+              <h3 className="mt-6 font-display text-lg text-foreground">Hur länge vi sparar dem</h3>
+              <p className="mt-2 text-[17px] leading-relaxed text-muted-foreground">
+                Förfrågningar som inte leder till något avtal raderas senast 12 månader efter sista kontakten.
+                Uppgifter om utförda jobb sparas så länge garantin och reklamationsrätten gäller (upp till 10 år).
+                Fakturor och bokföringsunderlag sparas i 7 år enligt bokföringslagen.
+              </p>
+
+              <h3 className="mt-6 font-display text-lg text-foreground">Dina rättigheter</h3>
+              <p className="mt-2 text-[17px] leading-relaxed text-muted-foreground">
+                Du har rätt att få veta vilka uppgifter vi har om dig, att få fel rättade, att få uppgifter raderade
+                när vi inte längre behöver dem, att begära att behandlingen begränsas, att invända mot behandlingen
+                och att få ut dina uppgifter (dataportabilitet). Kontakta oss på{" "}
+                <a href="mailto:vidar@roslagstak.se" className="text-primary underline underline-offset-4">
+                  vidar@roslagstak.se
+                </a>
+                . Är du missnöjd med hur vi hanterar dina uppgifter kan du klaga hos Integritetsskyddsmyndigheten
+                (IMY),{" "}
+                <a
+                  href="https://www.imy.se"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-primary underline underline-offset-4"
+                >
+                  imy.se
+                </a>
+                .
+              </p>
+            </div>
+            <div>
               <h2 className="font-display text-2xl text-foreground">Ändra ditt val</h2>
               <p className="mt-3 text-[17px] leading-relaxed text-muted-foreground">
                 Du kan när som helst godkänna eller stänga av statistik och marknadsföring.
@@ -67,8 +132,8 @@ const CookiesPage = () => (
               <h2 className="font-display text-2xl text-foreground">Kontakt</h2>
               <p className="mt-3 text-[17px] leading-relaxed text-muted-foreground">
                 Frågor om hur vi hanterar dina uppgifter? Mejla{" "}
-                <a href="mailto:info@roslagstak.se" className="text-primary underline underline-offset-4">
-                  info@roslagstak.se
+                <a href="mailto:vidar@roslagstak.se" className="text-primary underline underline-offset-4">
+                  vidar@roslagstak.se
                 </a>{" "}
                 eller ring 070-154 36 39.
               </p>

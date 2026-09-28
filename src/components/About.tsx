@@ -21,7 +21,7 @@ const coreValues = [
     icon: Award,
     title: "Hantverk",
     description:
-      "Våra takläggare och plåtslagare är utbildade, försäkrade och arbetar enligt AMA och branschens säkerhetskrav. Rätt underlagspapp, rätt infästning och rätt plåtdetaljer — det är där ett tak avgörs.",
+      "Våra takläggare och plåtslagare är utbildade och arbetar enligt AMA och branschens säkerhetskrav. Rätt underlagspapp, rätt infästning och rätt plåtdetaljer — det är där ett tak avgörs.",
   },
   {
     icon: Zap,
@@ -33,7 +33,7 @@ const coreValues = [
 
 
 const benefits = [
-  "Certifierade och försäkrade takläggare",
+  "Certifierade takläggare",
   "Fast pris — inga dolda kostnader",
   "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
   "Roslagen och hela Storstockholm",
@@ -94,8 +94,8 @@ const About = () => {
               <p>
                 RoslagsTak är en takfirma med rötterna i Norrtälje och Roslagens skärgård. Idag
                 utför vi takbyte, takrenovering, takvård och plåtarbeten i hela Roslagen och i
-                hela Storstockholm — allt arbete enligt branschstandard AMA och av erfarna,
-                försäkrade takläggare.
+                hela Storstockholm — allt arbete enligt branschstandard AMA och av erfarna
+                takläggare.
               </p>
               <p>
                 Vi tar hand om hela projektet: besiktning, materialval, bygglov när det behövs,

@@ -13,7 +13,7 @@ export interface ComboOverride {
 }
 
 const PROCESS =
-  "Processen är densamma oavsett kommun: en kostnadsfri takkontroll där vi går igenom tak, underlag, plåtdetaljer och avvattning, en skriftlig offert med fast pris — aldrig löpande timpris — utförande enligt AMA, och en slutbesiktning med garantibevis och foton. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Du har en och samma kontaktperson från takkontroll till slutbesiktning, och du bestämmer alltid själv om och när du vill gå vidare efter takkontrollen — den är kostnadsfri och förpliktar inte till något.";
+  "Processen är densamma oavsett kommun: en kostnadsfri takkontroll där vi går igenom tak, underlag, plåtdetaljer och avvattning, en skriftlig offert med fast pris — aldrig löpande timpris — utförande enligt AMA, och en slutbesiktning med skriftlig garanti och foton. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Du har en och samma kontaktperson från takkontroll till slutbesiktning, och du bestämmer alltid själv om och när du vill gå vidare efter takkontrollen — den är kostnadsfri och förpliktar inte till något.";
 
 const ROT =
   "Som privatperson kan du använda ROT-avdrag på arbetskostnaden vid takbyte: 30 %, högst 50 000 kr per person och år. Äger ni bostaden tillsammans kan ni använda avdraget var för sig, så att ett par kan få upp till 100 000 kr sammanlagt om utrymmet finns kvar för året. Materialet ger inget avdrag, bara arbetskostnaden gör det, och vi drar av ROT direkt på fakturan så att du bara betalar din del.";

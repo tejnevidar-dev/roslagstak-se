@@ -14,7 +14,10 @@ declare global {
  * Ett lead speglas även till Meta-pixeln (bara händelsenamnet "Lead", aldrig formulärfälten i `params`).
  */
 export const trackEvent = (name: string, params: EventParams = {}) => {
-  if (name === "generate_lead" && hasMarketingConsent()) trackPixelLead();
+  if (name === "generate_lead" && hasMarketingConsent()) {
+    const form = params.form;
+    trackPixelLead(typeof form === "string" ? form : undefined);
+  }
   if (!hasAnalyticsConsent()) return;
   try {
     window.gtag?.("event", name, { page_path: window.location.pathname, ...params });

@@ -56,7 +56,7 @@ const priceData = [
 const priceFaqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: "Ett takbyte kostar vanligtvis mellan 1200–2000 kr/m² beroende på materialval. Med ROT-avdrag (30% på arbetskostnaden) blir det avsevärt billigare. Ett typiskt hus på 120 m² tak kostar ca 144 000 kr–240 000 kr före ROT-avdrag.",
+    answer: "Ett takbyte kostar vanligtvis mellan 1200–2000 kr/m² inkl. moms, beroende på materialval. Med ROT-avdrag (30% på arbetskostnaden) blir det avsevärt billigare. Ett typiskt hus på 120 m² tak kostar ca 144 000 kr–240 000 kr före ROT-avdrag.",
   },
   {
     question: "Ingår material i priset?",
@@ -103,7 +103,7 @@ const Prices = () => {
         <PageHero
           eyebrow="Prislista 2026"
           title="Vad kostar takbyte och takrenovering i Roslagen?"
-          text="Riktpriser för alla typer av takarbeten. Alla priser inkluderar material och arbete. ROT-avdrag (30% på arbetskostnaden) tillkommer. Kostnadsfri offert med exakt pris."
+          text="Riktpriser för alla typer av takarbeten, inkl. moms och före ROT-avdrag. Alla priser inkluderar material och arbete. ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan. Kostnadsfri offert med exakt pris."
         />
 
         <div className="container mx-auto px-4 pt-16 pb-20">

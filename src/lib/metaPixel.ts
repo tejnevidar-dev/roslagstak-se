@@ -49,10 +49,13 @@ export const trackPixelPageView = () => {
   window.fbq?.("track", "PageView");
 };
 
-/** Anropas när ett lead sparats, i samma ögonblick som GA4:s generate_lead. Skickar bara händelsenamnet. */
-export const trackPixelLead = () => {
+/**
+ * Anropas när ett lead sparats, i samma ögonblick som GA4:s generate_lead. `contentName` är bara
+ * formulärets typ (t.ex. "booking", "offert_konfigurator") – aldrig namn, telefon eller e-post.
+ */
+export const trackPixelLead = (contentName?: string) => {
   if (!pixelLoaded) return;
-  window.fbq?.("track", "Lead");
+  window.fbq?.("track", "Lead", contentName ? { content_name: contentName } : {});
 };
 
 /** Vid återkallat samtycke: pixeln laddas inte om förrän samtycke ges igen. */

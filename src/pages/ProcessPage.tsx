@@ -39,7 +39,7 @@ const processFaqs = [
   {
     question: "Vad ingår i slutbesiktningen?",
     answer:
-      "Vi går igenom taket tillsammans med dig: infästningar, plåtdetaljer, avvattning, taksäkerhet och städning av tomten. Du får garantibevis, materialdokumentation och bilder från arbetet.",
+      "Vi går igenom taket tillsammans med dig: infästningar, plåtdetaljer, avvattning, taksäkerhet och städning av tomten. Du får skriftlig garanti i avtalet, materialdokumentation och bilder från arbetet.",
   },
 ];
 

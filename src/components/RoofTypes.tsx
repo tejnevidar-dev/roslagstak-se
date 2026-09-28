@@ -144,7 +144,7 @@ const RoofTypes = () => {
               <a href="/offert#radgivning" className="text-primary underline decoration-primary/40 hover:no-underline">
                 Boka kostnadsfri rådgivning
               </a>{" "}
-              så hjälper vi dig välja.
+              så hjälper vi dig välja. Priserna nedan är riktpriser inkl. moms, före ROT-avdrag.
             </>
           }
           className="mb-14 lg:mb-20"
@@ -263,8 +263,8 @@ const RoofTypes = () => {
             Räkneexempel — vad kostar takbyte?
           </h3>
           <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
-            Priserna nedan inkluderar material, arbete, byggställning, logistik och avfallshantering. 
-            ROT-avdrag (30% på arbetskostnaden) tillkommer och sänker den faktiska kostnaden ytterligare.
+            Priserna nedan är inkl. moms, före ROT-avdrag, och inkluderar material, arbete, byggställning, logistik och avfallshantering.
+            ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan och sänker den faktiska kostnaden ytterligare.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Normalstort bostadshus */}

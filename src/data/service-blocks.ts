@@ -282,14 +282,14 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   "eternit-asbest": {
-    seoTitle: "Eternitsanering & Asbestrivning Roslagen — Certifierad",
+    seoTitle: "Eternitsanering & Asbestrivning Roslagen",
     seoDescription:
-      "Certifierad eternitsanering och asbestrivning i Roslagen och skärgården. Säker rivning enligt Arbetsmiljöverkets föreskrifter, emballering, transport till godkänd deponi och nytt tak. Kostnadsfri takkontroll.",
+      "Eternitsanering och asbestrivning i Roslagen och skärgården, samordnat med ett företag som har Arbetsmiljöverkets tillstånd. Emballering, transport till godkänd deponi och nytt tak. Kostnadsfri takkontroll.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "primary", label: "Regelverk", value: "Arbetsmiljöverket", text: "Arbetsmiljöverkets föreskrifter styr hela hanteringen." },
-      { tone: "outline", label: "Anmälan", value: "7 dagar före", text: "Anmälan till Arbetsmiljöverket görs av oss innan start." },
-      { tone: "accent", label: "Sanering", value: "Från 400 kr/m²", text: "Plus nytt tak från ca 1 200 kr/m². ROT-avdrag tillkommer." },
+      { tone: "outline", label: "Tillstånd", value: "Krävs, ca 8 veckor", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket innan rivning får starta." },
+      { tone: "accent", label: "Sanering", value: "Fast pris efter takkontroll", text: "Sanering (via saneringsfirman) plus nytt tak. ROT-avdrag tillkommer på takarbetet." },
       { tone: "plain", label: "Avfall", value: "Godkänd deponi", text: "Emballerat, märkt och transporterat med dokumenterad kvittens." },
     ],
     block: {
@@ -300,7 +300,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Eternit får inte kapas, borras, brytas eller högtryckstvättas. Fibrerna frigörs i luften och är hälsofarliga. All hantering sker enligt Arbetsmiljöverkets föreskrifter.",
       steps: [
         { code: "01", title: "Materialbedömning", text: "Vi identifierar eternit och bedömer skick, åtkomst och rivningsmetod på plats." },
-        { code: "02", title: "Anmälan", text: "Anmälan till Arbetsmiljöverket lämnas minst sju dagar före arbetets start." },
+        { code: "02", title: "Tillstånd", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket, vanligtvis cirka 8 veckor före rivning." },
         { code: "03", title: "Saneringsplan", text: "Skyddszon, personlig skyddsutrustning, dammbindning och avfallsflöde fastställs skriftligt." },
         { code: "04", title: "Kontrollerad rivning", text: "Plattorna lyfts hela, dammbinds och hanteras utan kapning eller brytning." },
         { code: "05", title: "Emballering och transport", text: "Materialet dubbelemballeras, märks och transporteras till godkänd deponi med kvittens." },

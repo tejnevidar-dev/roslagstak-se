@@ -11,7 +11,7 @@ import { buildFaqSchema } from "@/lib/schema";
 const faqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: "Priset beror på taktyp, storlek och materialval. Ett takbyte med TP20-plåt kostar vanligtvis från ca 1200-1300 kr/m², medan dubbelfalsat plåttak ligger högre. Offerten är alltid kostnadsfri — konfigurera din offert direkt på sidan eller kontakta oss för rådgivning.",
+    answer: "Priset beror på taktyp, storlek och materialval. Ett takbyte med TP20-plåt kostar vanligtvis från ca 1200-1300 kr/m² inkl. moms, före ROT-avdrag, medan dubbelfalsat plåttak ligger högre. Offerten är alltid kostnadsfri — konfigurera din offert direkt på sidan eller kontakta oss för rådgivning.",
   },
   {
     question: "Lägger ni tak på öar i skärgården?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "Hur lång garanti ger ni på takarbeten?",
-    answer: "Vi ger 10 års garanti på allt arbete vi utför (utförandegaranti) och 30 års tätskiktsgaranti genom MATAKI. Alla våra takläggare är certifierade och försäkrade, och vi arbetar alltid enligt AMA-standard.",
+    answer: "Vi ger 10 års garanti på allt arbete vi utför (utförandegaranti) och 30 års tätskiktsgaranti genom MATAKI. Alla våra takläggare är certifierade, och vi arbetar alltid enligt AMA-standard.",
   },
   {
     question: "Kan jag använda ROT-avdrag för takbyte?",
