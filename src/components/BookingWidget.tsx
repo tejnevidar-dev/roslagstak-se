@@ -85,7 +85,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       return;
     }
 
-    trackEvent("generate_lead", { form: "booking", slot: form.slot });
+    trackEvent("generate_lead", { form: form.slot === "ring_mig" ? "callback" : "booking", slot: form.slot });
     setSubmitted(confirmationText(form.slot === "ring_mig" ? "ring_mig" : "boka"));
   };
 

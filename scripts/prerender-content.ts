@@ -258,6 +258,18 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
     links: primaryLinks,
   },
+  "/cookies": {
+    title: "Cookies och integritet",
+    description:
+      "Så använder roslagstak.se cookies och vilka uppgifter vi sparar när du kontaktar oss. Du väljer själv om statistik och marknadsföring ska vara på.",
+    h1: "Cookies och integritet",
+    intro: "Här ser du vad vi sparar, varför, och hur du ändrar ditt val.",
+    paragraphs: [
+      "Nödvändig lagring krävs inget samtycke för. Statistik (Google Analytics) och marknadsföring (Google Ads och Meta) laddas bara efter att du godkänt dem, och du kan ändra ditt val när som helst.",
+      "Personuppgiftsansvarig är VT6 Invest AB, som driver RoslagsTak. Läs mer om vilka uppgifter vi sparar, varför, hur länge och vilka rättigheter du har längre ned på sidan.",
+    ],
+    links: primaryLinks,
+  },
   "/tjanster/taktvatt": {
     title: "Taktvätt och takmålning — bort med mossa och lav",
     description:

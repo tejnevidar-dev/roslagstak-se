@@ -108,8 +108,8 @@ const AdLandingPage = () => {
                 <span className="italic text-accent">Fast pris efter kostnadsfri takkontroll.</span>
               </h1>
               <p className="mt-5 max-w-[50ch] text-[18px] leading-relaxed text-muted-foreground">
-                Vi kontrollerar taket, lämnar ett skriftligt fast pris och sköter hela jobbet. Vi tar uppdrag i{" "}
-                {landing.areas}.
+                Kostnadsfri takkontroll utan förpliktelser, en kontaktperson hela vägen och ett skriftligt fast pris.
+                Vi lägger betongpannor, lertegel, TP20 och falsat plåttak. Vi tar uppdrag i {landing.areas}.
               </p>
               <a
                 href={PHONE_HREF}
@@ -234,7 +234,7 @@ const AdLandingPage = () => {
       </main>
 
       <footer className="border-t border-border bg-background px-5 py-6 text-center text-[13px] text-muted-foreground">
-        RoslagsTak · F-skatt · Fullständigt försäkrade ·{" "}
+        RoslagsTak · F-skatt · Ansvarsförsäkring ·{" "}
         <a href="/" className="underline underline-offset-4 hover:text-foreground">
           roslagstak.se
         </a>{" "}

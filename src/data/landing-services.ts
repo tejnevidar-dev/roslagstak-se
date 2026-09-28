@@ -30,13 +30,13 @@ export const landingServices: LandingService[] = [
     path: "/takreparation",
     seoTitle: "Takreparation — läckage och trasiga takpannor",
     seoDescription:
-      "Läcker taket eller är pannor trasiga? Vi besiktigar kostnadsfritt, lämnar fast pris och lagar. 10 års utförandegaranti. Svar inom 24 timmar.",
+      "Läcker taket eller är pannor trasiga? Vi gör en kostnadsfri takkontroll, lämnar fast pris och lagar. 10 års utförandegaranti. Svar inom 24 timmar.",
     breadcrumb: "Takreparation",
     eyebrow: "Takreparation",
     h1: "Takreparation vid läckage och skador.",
     h1Accent: "Fast pris efter kostnadsfri takkontroll.",
     intro:
-      "Läcker taket, är pannor trasiga eller sitter plåten löst? Vi besiktigar taket, lämnar ett skriftligt fast pris och utför reparationen. Är taket i så dåligt skick att en reparation inte räcker säger vi det.",
+      "Läcker taket, är pannor trasiga eller sitter plåten löst? Vi gör en kostnadsfri takkontroll, lämnar ett skriftligt fast pris och utför reparationen. Är taket i så dåligt skick att en reparation inte räcker säger vi det.",
     listHeading: "Skador vi lagar",
     listIntro: "De vanligaste orsakerna till att tak läcker eller tar skada, och vad vi gör åt dem.",
     list: [
@@ -134,15 +134,15 @@ export const landingServices: LandingService[] = [
   {
     slug: "takkontroll",
     path: "/takkontroll",
-    seoTitle: "Kostnadsfri takkontroll — besiktning av taket",
+    seoTitle: "Kostnadsfri takkontroll av ditt tak — fast pris",
     seoDescription:
-      "Kostnadsfri takkontroll: vi går igenom tak, underlag och avvattning och du får en skriftlig rapport med foton. Utan förbindelser. Svar inom 24 timmar.",
+      "Kostnadsfri takkontroll: vi går igenom tak, underlag och avvattning och du får en skriftlig rapport med foton. Utan förpliktelser. Svar inom 24 timmar.",
     breadcrumb: "Kostnadsfri takkontroll",
     eyebrow: "Takkontroll",
     h1: "Kostnadsfri takkontroll.",
     h1Accent: "Skriftlig rapport med foton.",
     intro:
-      "Vi går igenom taket på plats och bedömer skick, underlag och avvattning. Du får en skriftlig rapport med foton och tydliga åtgärdsförslag, utan kostnad och utan förbindelser.",
+      "Vi går igenom taket på plats och bedömer skick, underlag och avvattning. Du får en skriftlig rapport med foton och tydliga åtgärdsförslag, utan kostnad och utan förpliktelser.",
     listHeading: "Vad vi kontrollerar",
     listIntro: "Det som avgör ett taks skick ligger ofta under takmaterialet. Därför tittar vi på hela taket.",
     list: [
@@ -346,13 +346,13 @@ export const landingServices: LandingService[] = [
     path: "/akut-lackage",
     seoTitle: "Akut läckage i taket — ring 070-154 36 39",
     seoDescription:
-      "Läcker taket? Ring oss på 070-154 36 39 eller skicka en förfrågan. Vi besiktigar kostnadsfritt, lämnar fast pris och lagar. 10 års utförandegaranti.",
+      "Läcker taket? Ring oss på 070-154 36 39 eller skicka en förfrågan. Vi gör en kostnadsfri takkontroll, lämnar fast pris och lagar. 10 års utförandegaranti.",
     breadcrumb: "Akut läckage",
     eyebrow: "Akut läckage",
     h1: "Läcker taket?",
     h1Accent: "Ring oss, så tar vi det därifrån.",
     intro:
-      "Ring 070-154 36 39 eller skicka formuläret. Vi besiktigar taket, hittar orsaken till läckaget och lämnar ett skriftligt fast pris för reparationen.",
+      "Ring 070-154 36 39 eller skicka formuläret. Vi gör en kostnadsfri takkontroll, hittar orsaken till läckaget och lämnar ett skriftligt fast pris för reparationen.",
     listHeading: "Gör så här medan du väntar",
     listIntro: "Några enkla åtgärder begränsar skadan tills vi har varit på plats.",
     list: [
@@ -416,13 +416,13 @@ export const landingServices: LandingService[] = [
     path: "/hangrannor",
     seoTitle: "Hängrännor och stuprör — byte och nyinstallation",
     seoDescription:
-      "Nya hängrännor och stuprör i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta, fast pris efter besiktning och 10 års utförandegaranti.",
+      "Nya hängrännor och stuprör i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta, fast pris efter takkontroll och 10 års utförandegaranti.",
     breadcrumb: "Hängrännor och stuprör",
     eyebrow: "Takavvattning",
     h1: "Nya hängrännor och stuprör.",
     h1Accent: "Dimensionerade efter ditt tak.",
     intro:
-      "Läcker rännorna, hänger de snett eller svämmar de över? Vi byter eller installerar kompletta avvattningssystem med hängrännor, stuprör, ränndalar och fotplåt, och lämnar ett fast pris efter besiktning.",
+      "Läcker rännorna, hänger de snett eller svämmar de över? Vi byter eller installerar kompletta avvattningssystem med hängrännor, stuprör, ränndalar och fotplåt, och lämnar ett fast pris efter kostnadsfri takkontroll.",
     listHeading: "Det här kan vi göra",
     listIntro: "Takavvattningen leder bort vattnet från tak, fasad och grund.",
     list: [
@@ -489,9 +489,9 @@ export const landingServices: LandingService[] = [
     breadcrumb: "Plåtslagare",
     eyebrow: "Plåtarbeten",
     h1: "Plåtslagare för ditt tak.",
-    h1Accent: "Fast pris efter besiktning.",
+    h1Accent: "Fast pris efter kostnadsfri takkontroll.",
     intro:
-      "Bandtäckning, falsat plåttak och beslag kring skorstenar och genomföringar. Vi utför plåtarbeten i stål, aluminium, koppar och zink och lämnar ett skriftligt fast pris efter besiktning.",
+      "Bandtäckning, falsat plåttak och beslag kring skorstenar och genomföringar. Vi utför plåtarbeten i stål, aluminium, koppar och zink och lämnar ett skriftligt fast pris efter kostnadsfri takkontroll.",
     listHeading: "Plåtarbeten vi utför",
     listIntro: "Det är ofta plåtdetaljerna som avgör om ett tak håller tätt.",
     list: [
