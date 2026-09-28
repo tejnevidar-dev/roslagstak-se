@@ -15,6 +15,10 @@ const sections = [
     text: "Om du godkänner statistik laddar vi Google Analytics 4. Det sätter cookies med namn som _ga och _ga_ följt av ett id, och används för att räkna besök, se vilka sidor som används och mäta hur många som ringer eller skickar en förfrågan. Uppgifterna behandlas av Google. Utan ditt godkännande laddas Google Analytics inte alls och inga statistikcookies sätts.",
   },
   {
+    title: "Marknadsföring (Google Ads och Meta)",
+    text: "Om du även godkänner marknadsföring kan Google Ads och Meta (Facebook/Instagram) se att du besökt sajten, så att vi kan visa relevant annonsering och mäta vilka annonser som ger förfrågningar. Google Ads sätter cookies som _gcl_au (lagras ca 90 dagar). Metas pixel sätter _fbp och, om du kommer via en annons, _fbc (lagras ca 90 dagar). Vi skickar aldrig namn, telefonnummer, e-post eller annat du skrivit i ett formulär till Google eller Meta – bara att ett besök eller en förfrågan skett. Utan ditt godkännande laddas ingen av dessa och inga marknadsföringscookies sätts.",
+  },
+  {
     title: "Uppgifter du lämnar i formulär",
     text: "När du skickar en förfrågan sparas namn, telefon, e-post, adress och ditt meddelande i vårt kundsystem, så att vi kan svara dig och lämna offert. Du kan när som helst be om att få se eller radera dina uppgifter genom att kontakta oss.",
   },
@@ -24,7 +28,7 @@ const CookiesPage = () => (
   <>
     <SEOHead
       title="Cookies och integritet"
-      description="Så använder roslagstak.se cookies och vilka uppgifter vi sparar när du kontaktar oss. Du väljer själv om statistik ska vara på."
+      description="Så använder roslagstak.se cookies och vilka uppgifter vi sparar när du kontaktar oss. Du väljer själv om statistik och marknadsföring ska vara på."
       canonical="https://roslagstak.se/cookies"
     />
     <Header />
@@ -49,7 +53,7 @@ const CookiesPage = () => (
             <div>
               <h2 className="font-display text-2xl text-foreground">Ändra ditt val</h2>
               <p className="mt-3 text-[17px] leading-relaxed text-muted-foreground">
-                Du kan när som helst godkänna eller stänga av statistik.
+                Du kan när som helst godkänna eller stänga av statistik och marknadsföring.
               </p>
               <button
                 type="button"

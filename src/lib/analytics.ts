@@ -1,4 +1,5 @@
-import { hasAnalyticsConsent } from "@/lib/consent";
+import { hasAnalyticsConsent, hasMarketingConsent } from "@/lib/consent";
+import { trackPixelLead } from "@/lib/metaPixel";
 
 type EventParams = Record<string, string | number | boolean | undefined>;
 
@@ -8,8 +9,12 @@ declare global {
   }
 }
 
-/** Skickar en GA4-händelse. Gör ingenting om taggen inte är laddad (t.ex. blockerad eller i test). */
+/**
+ * Skickar en GA4-händelse. Gör ingenting om taggen inte är laddad (t.ex. blockerad eller i test).
+ * Ett lead speglas även till Meta-pixeln (bara händelsenamnet "Lead", aldrig formulärfälten i `params`).
+ */
 export const trackEvent = (name: string, params: EventParams = {}) => {
+  if (name === "generate_lead" && hasMarketingConsent()) trackPixelLead();
   if (!hasAnalyticsConsent()) return;
   try {
     window.gtag?.("event", name, { page_path: window.location.pathname, ...params });

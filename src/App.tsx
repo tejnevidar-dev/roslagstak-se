@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import CookieBanner from "./components/CookieBanner";
+import PixelPageViewTracker from "./components/PixelPageViewTracker";
 import JsonLd from "./components/JsonLd";
 import { buildLocalBusinessSchema } from "./lib/schema";
 import { locationIndex } from "./data/location-index";
@@ -113,6 +114,7 @@ const App = () => (
           </Suspense>
           <StickyMobileCTA />
           <CookieBanner />
+          <PixelPageViewTracker />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

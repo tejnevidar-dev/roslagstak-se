@@ -1,4 +1,9 @@
-/** Cookie-samtycke (Google Consent Mode v2). Google Analytics laddas först när besökaren godkänner statistik. */
+/**
+ * Cookie-samtycke (Google Consent Mode v2). Google Analytics laddas först när besökaren godkänner
+ * statistik. Google Ads-signaler och Meta-pixeln (se metaPixel.ts) laddas först efter marknadsföringssamtycke.
+ */
+import { loadMetaPixel, resetMetaPixel } from "./metaPixel";
+
 const STORAGE_KEY = "rt_consent_v1";
 const GA_ID = "G-2XTVMBMSWY";
 
@@ -28,6 +33,7 @@ export const readConsent = (): ConsentChoice | null => {
 };
 
 export const hasAnalyticsConsent = () => readConsent()?.analytics === true;
+export const hasMarketingConsent = () => readConsent()?.marketing === true;
 
 const ensureGtag = () => {
   window.dataLayer = window.dataLayer || [];
@@ -53,13 +59,13 @@ const loadGoogleAnalytics = () => {
   window.gtag?.("config", GA_ID);
 };
 
-const removeAnalyticsCookies = () => {
+const removeCookiesByName = (matches: (name: string) => boolean) => {
   const host = window.location.hostname;
   const domains = [host, `.${host}`, `.${host.split(".").slice(-2).join(".")}`];
   document.cookie
     .split(";")
     .map((c) => c.trim().split("=")[0])
-    .filter((name) => name === "_ga" || name.startsWith("_ga_") || name === "_gid")
+    .filter(matches)
     .forEach((name) => {
       domains.forEach((domain) => {
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;
@@ -67,6 +73,13 @@ const removeAnalyticsCookies = () => {
       document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
     });
 };
+
+const removeAnalyticsCookies = () =>
+  removeCookiesByName((name) => name === "_ga" || name.startsWith("_ga_") || name === "_gid");
+
+/** _fbp/_fbc sätts av Meta-pixeln, _gcl_* av Google Ads (url_passthrough/klick-id). */
+const removeMarketingCookies = () =>
+  removeCookiesByName((name) => name === "_fbp" || name === "_fbc" || name.startsWith("_gcl_"));
 
 const applyConsent = (choice: ConsentChoice) => {
   ensureGtag();
@@ -78,11 +91,19 @@ const applyConsent = (choice: ConsentChoice) => {
   });
   if (choice.analytics) loadGoogleAnalytics();
   else removeAnalyticsCookies();
+  if (choice.marketing) loadMetaPixel();
+  else {
+    resetMetaPixel();
+    removeMarketingCookies();
+  }
 };
 
 /** Körs en gång vid start: allt nekas som standard, sparat val återställs. */
 export const initConsent = () => {
   ensureGtag();
+  // Låter Google fortsätta koppla klick (gclid) till konverteringar utan cookies när samtycke saknas.
+  // Sätter inga nya cookies själv och kräver därför inte samtycke.
+  window.gtag?.("set", "url_passthrough", true);
   window.gtag?.("consent", "default", {
     analytics_storage: "denied",
     ad_storage: "denied",
@@ -91,7 +112,10 @@ export const initConsent = () => {
   });
   const saved = readConsent();
   if (saved) applyConsent(saved);
-  else removeAnalyticsCookies(); // cookies från tiden före samtycke
+  else {
+    removeAnalyticsCookies(); // cookies från tiden före samtycke
+    removeMarketingCookies();
+  }
 };
 
 export const saveConsent = (choice: ConsentChoice) => {

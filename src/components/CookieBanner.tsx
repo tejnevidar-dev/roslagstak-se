@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { OPEN_CONSENT_EVENT, readConsent, saveConsent } from "@/lib/consent";
+import { ConsentChoice, OPEN_CONSENT_EVENT, readConsent, saveConsent } from "@/lib/consent";
 
-/** Samtyckesruta: två lika stora val, statistik är avstängd tills besökaren godkänner. */
+/** Samtyckesruta: tre val. Statistik och marknadsföring är avstängt tills besökaren godkänner. */
 const CookieBanner = () => {
   const [open, setOpen] = useState(false);
 
@@ -15,8 +15,8 @@ const CookieBanner = () => {
 
   if (!open) return null;
 
-  const choose = (analytics: boolean) => {
-    saveConsent({ analytics, marketing: false });
+  const choose = (choice: ConsentChoice) => {
+    saveConsent(choice);
     setOpen(false);
   };
 
@@ -32,26 +32,36 @@ const CookieBanner = () => {
       </h2>
       <p id="cookie-text" className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
         Vi använder nödvändig lagring för att sajten ska fungera. Om du godkänner använder vi också statistik från
-        Google Analytics för att förstå hur sajten används. Du kan ändra ditt val när som helst.{" "}
+        Google Analytics, och om du även godkänner marknadsföring visar vi relevant annonsering via Google Ads och
+        Meta. Du kan ändra ditt val när som helst.{" "}
         <Link to="/cookies" className="font-medium text-primary underline underline-offset-4">
           Läs mer om cookies
         </Link>
       </p>
-      <div className="mt-4 grid grid-cols-2 gap-3">
+      <div className="mt-4 flex flex-col gap-3">
         <button
           type="button"
-          onClick={() => choose(false)}
-          className="rounded-full border-2 border-primary/25 px-4 py-3 text-[14px] font-semibold text-foreground transition-colors hover:bg-secondary"
+          onClick={() => choose({ analytics: true, marketing: true })}
+          className="w-full rounded-full bg-primary px-4 py-3 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
         >
-          Endast nödvändiga
+          Godkänn statistik och marknadsföring
         </button>
-        <button
-          type="button"
-          onClick={() => choose(true)}
-          className="rounded-full bg-primary px-4 py-3 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-        >
-          Godkänn statistik
-        </button>
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            type="button"
+            onClick={() => choose({ analytics: false, marketing: false })}
+            className="rounded-full border-2 border-primary/25 px-4 py-3 text-[14px] font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            Endast nödvändiga
+          </button>
+          <button
+            type="button"
+            onClick={() => choose({ analytics: true, marketing: false })}
+            className="rounded-full border-2 border-primary/25 px-4 py-3 text-[14px] font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            Endast statistik
+          </button>
+        </div>
       </div>
     </div>
   );
