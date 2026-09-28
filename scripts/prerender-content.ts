@@ -17,7 +17,8 @@ import { blogPosts } from "../src/data/blog-posts";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { isNearBase } from "../src/data/service-reach";
 import { hasServiceCombos } from "../src/data/service-slugs";
-import { isThinComboLocation } from "../src/data/thin-combos";
+import { isThinCombo } from "../src/data/thin-combos";
+import { comboOverrides } from "../src/data/combo-overrides";
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
@@ -427,12 +428,13 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
 
   const combo = comboByUrl.get(clean);
   if (combo) {
+    const override = combo.serviceSlug === "takbyte" ? comboOverrides[combo.locationSlug] : undefined;
     return {
-      title: `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`,
-      description: combo.description,
+      title: override?.title ?? `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`,
+      description: override?.description ?? combo.description,
       h1: `${combo.serviceName} ${combo.prep} ${combo.locationName} — fast pris & 10 års garanti`,
-      intro: combo.description,
-      paragraphs: combo.content,
+      intro: override?.description ?? combo.description,
+      paragraphs: override?.content ?? combo.content,
       links: [
         ...primaryLinks,
         {
@@ -462,5 +464,5 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
 
 /** Tjänst+ort-URL:er som ska noindexeras (se src/data/thin-combos.ts). */
 export const thinComboPaths: string[] = locations
-  .filter((l) => hasServiceCombos(l.region) && isThinComboLocation(l))
-  .flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`));
+  .filter((l) => hasServiceCombos(l.region))
+  .flatMap((l) => allServiceSlugs.filter((s) => isThinCombo(s, l)).map((s) => `/${s}-${l.slug}`));

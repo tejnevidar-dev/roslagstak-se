@@ -12,7 +12,7 @@ import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
-import { isThinComboLocation } from "../src/data/thin-combos";
+import { isThinCombo } from "../src/data/thin-combos";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { canonicalPath, isNoindexPath, normalizePath } from "../src/lib/canonical";
 import { regionSlugs } from "../src/data/regions";
@@ -69,8 +69,8 @@ const brfEntries: Entry[] = brfLocationSlugs.map((slug) => ({
 }));
 
 // ---------- 3. Build service-location combo pages ----------
-const comboEntries: Entry[] = locations.filter((l) => hasServiceCombos(l.region) && !isThinComboLocation(l)).flatMap((l) =>
-  allServiceSlugs.map((s) => ({
+const comboEntries: Entry[] = locations.filter((l) => hasServiceCombos(l.region)).flatMap((l) =>
+  allServiceSlugs.filter((s) => !isThinCombo(s, l)).map((s) => ({
     path: `/${s}-${l.slug}`,
     changefreq: "monthly",
     priority: "0.7",

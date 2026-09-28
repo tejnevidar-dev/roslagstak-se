@@ -3042,6 +3042,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/takbyte-stockholm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-solna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-lidingo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-nacka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/takbyte-varmdo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3083,6 +3103,21 @@
   </url>
   <url>
     <loc>https://roslagstak.se/taktvatt-varmdo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-jarfalla</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-huddinge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-upplands-vasby</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

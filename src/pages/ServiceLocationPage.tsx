@@ -1,4 +1,4 @@
-import { isThinComboLocation } from "@/data/thin-combos";
+import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } from "lucide-react";
@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
 import { getCombo, allServiceSlugs } from "@/data/service-location-combos";
+import { comboOverrides } from "@/data/combo-overrides";
 import { locations } from "@/data/locations";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
 import NotFound from "./NotFound";
@@ -44,6 +45,10 @@ const ServiceLocationPage = () => {
 
   if (!combo) return <NotFound />;
 
+  /* Storstockholms största kommuner (sprint-offensiv-2026-09-28 punkt 3): egen, längre och
+     unik text för /takbyte-<ort> i stället för den korta mallgenererade combo-texten. */
+  const override = combo.serviceSlug === "takbyte" ? comboOverrides[combo.locationSlug] : undefined;
+
   const loc = locations.find((l) => l.slug === combo.locationSlug);
   const nearbyInService = loc?.nearbyLocations
     .map((name) => {
@@ -75,7 +80,7 @@ const ServiceLocationPage = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     name: `${combo.serviceName} ${combo.prep} ${combo.locationName}`,
-    description: combo.description,
+    description: override?.description ?? combo.description,
     url: `https://roslagstak.se${combo.url}`,
     provider: {
       "@type": "RoofingContractor",
@@ -125,12 +130,14 @@ const ServiceLocationPage = () => {
   };
 
   // Richer meta description
-  const metaDescription = loc?.isIsland
-    ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i skärgården. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri takkontroll. Ring 070-154 36 39.`
-    : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`;
+  const metaDescription =
+    override?.description ??
+    (loc?.isIsland
+      ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i skärgården. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri takkontroll. Ring 070-154 36 39.`
+      : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`);
 
   // Title under 60 chars
-  const seoTitle = `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;
+  const seoTitle = override?.title ?? `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;
 
   return (
     <>
@@ -140,7 +147,7 @@ const ServiceLocationPage = () => {
         canonical={`https://roslagstak.se${combo.url}`}
         geoPosition={loc ? `${loc.lat};${loc.lng}` : undefined}
         geoPlacename={combo.locationName}
-        noindex={loc && isThinComboLocation(loc) ? "follow" : undefined}
+        noindex={loc && isThinCombo(combo.serviceSlug, loc) ? "follow" : undefined}
       />
       <Header />
       <main>
@@ -170,7 +177,7 @@ const ServiceLocationPage = () => {
               {combo.serviceName} {combo.prep} {combo.locationName} — fast pris & 10 års utförandegaranti
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              {combo.description}
+              {override?.description ?? combo.description}
             </p>
             <div className="mt-4">
               <a
@@ -213,7 +220,7 @@ const ServiceLocationPage = () => {
           {/* Content */}
           <div className="grid lg:grid-cols-3 gap-12 mb-20">
             <div className="lg:col-span-2 space-y-6">
-              {combo.content.map((paragraph, i) => (
+              {(override?.content ?? combo.content).map((paragraph, i) => (
                 <p key={i} className="text-muted-foreground leading-relaxed">{paragraph}</p>
               ))}
 
