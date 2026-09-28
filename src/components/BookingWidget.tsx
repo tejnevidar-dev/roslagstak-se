@@ -181,7 +181,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
         type="submit"
         disabled={submitting}
         aria-busy={submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-7 py-4 text-[17px] font-semibold text-accent-foreground transition-colors hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-cta px-7 py-4 text-[17px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {submitting ? (
           <>

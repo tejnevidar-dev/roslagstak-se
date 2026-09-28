@@ -30,6 +30,12 @@
     --accent: 24 58% 47%;
     --accent-foreground: 0 0% 100%;
 
+    /* #a95e2d — mörkare koppar, bara för knappbakgrunder med vit text (kontrast ca 4,8:1, backlog #0c 2026-09-28).
+       Samma kulör som --accent, men separat token så att rubriker, linjer och illustrationer (text-accent)
+       inte påverkas. */
+    --cta: 24 58% 42%;
+    --cta-foreground: 0 0% 100%;
+
     /* #5cbdb9 */
     --seafoam: 178 41% 55%;
     --seafoam-light: 178 45% 68%;
@@ -108,8 +114,10 @@
   a[class*="bg-primary"],
   a[class*="bg-seafoam"],
   a[class*="bg-accent"],
+  a[class*="bg-cta"],
   button[class*="bg-primary"],
-  button[class*="bg-seafoam"] {
+  button[class*="bg-seafoam"],
+  button[class*="bg-cta"] {
     min-height: 3.5rem;
   }
 

@@ -606,7 +606,7 @@ const ServiceDetail = () => {
                 </p>
                 <Link
                   to="/offert"
-                  className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-accent px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-accent-foreground transition-colors hover:bg-primary-foreground hover:text-primary animate-subtle-pulse"
+                  className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-cta px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-cta-foreground transition-colors hover:bg-primary-foreground hover:text-primary animate-subtle-pulse"
                 >
                   Starta förfrågan
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />

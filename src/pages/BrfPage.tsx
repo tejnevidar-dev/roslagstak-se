@@ -370,7 +370,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#forfragan"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-[16px] font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-8 py-4 text-[16px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
                 >
                   Boka kostnadsfri takbesiktning <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>

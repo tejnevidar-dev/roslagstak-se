@@ -140,7 +140,7 @@ export const landingServices: LandingService[] = [
     breadcrumb: "Kostnadsfri takkontroll",
     eyebrow: "Takkontroll",
     h1: "Kostnadsfri takkontroll.",
-    h1Accent: "Skriftlig rapport med foton.",
+    h1Accent: "Utan förpliktelser.",
     intro:
       "Vi går igenom taket på plats och bedömer skick, underlag och avvattning. Du får en skriftlig rapport med foton och tydliga åtgärdsförslag, utan kostnad och utan förpliktelser.",
     listHeading: "Vad vi kontrollerar",

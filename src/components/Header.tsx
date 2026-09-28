@@ -357,8 +357,8 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             onClick={(e) => { e.preventDefault(); setOpenMenu(null); navigate("/offert"); }}
             className={`group flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-colors animate-subtle-pulse ${
               light
-                ? "bg-accent text-primary-foreground hover:bg-accent/85"
-                : "bg-primary text-primary-foreground hover:bg-accent"
+                ? "bg-cta text-primary-foreground hover:bg-cta/85"
+                : "bg-primary text-primary-foreground hover:bg-cta"
             }`}
           >
             Begär offert
@@ -370,7 +370,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
           <a
             href="tel:0701543639"
             className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold ${
-              light ? "bg-accent text-primary-foreground" : "bg-primary text-primary-foreground"
+              light ? "bg-cta text-primary-foreground" : "bg-primary text-primary-foreground"
             }`}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
@@ -489,7 +489,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
               <a
                 href="/offert"
                 onClick={(e) => { e.preventDefault(); setMenuOpen(false); navigate("/offert"); }}
-                className="flex items-center justify-center gap-2 bg-accent px-5 py-4 text-base font-semibold text-primary-foreground animate-subtle-pulse"
+                className="flex items-center justify-center gap-2 bg-cta px-5 py-4 text-base font-semibold text-primary-foreground animate-subtle-pulse"
               >
                 Begär kostnadsfri offert
               </a>

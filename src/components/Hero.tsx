@@ -73,7 +73,7 @@ const Hero = () => {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="/offert"
-              className="hero-offer-pulse group inline-flex items-center gap-3 bg-accent px-8 py-4 text-[17px] font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              className="hero-offer-pulse group inline-flex items-center gap-3 bg-cta px-8 py-4 text-[17px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
             >
               Få kostnadsfri offert
               <ArrowRight

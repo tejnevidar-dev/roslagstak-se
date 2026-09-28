@@ -62,7 +62,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="tel:0701543639"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-[17px] font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-8 py-4 text-[17px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
                 >
                   <Phone className="h-5 w-5" aria-hidden="true" /> Ring 070-154 36 39
                 </a>
@@ -89,6 +89,11 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
                 defaultTopic={service.defaultTopic}
                 title={service.formTitle}
               />
+              {service.slug === "takkontroll" && (
+                <p className="mt-4 text-center text-[13px] font-medium text-muted-foreground">
+                  En kontaktperson · Fast pris · Utan förpliktelser
+                </p>
+              )}
             </div>
           </div>
         </section>
