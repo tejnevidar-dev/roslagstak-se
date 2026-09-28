@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
 import GoogleReviews from "@/components/GoogleReviews";
+import QuickContactFacts from "@/components/QuickContactFacts";
 
 const points = [
   {
@@ -56,7 +57,10 @@ const Reviews = () => {
         />
         <div className="container mx-auto px-4 pt-16 pb-20">
           <div className="max-w-4xl">
-            <GoogleReviews />
+            <QuickContactFacts />
+            <div className="mt-10">
+              <GoogleReviews />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mt-14">

@@ -25,7 +25,7 @@ const GuidesTeaser = () => {
     <section id="guider" className="bg-card py-20 lg:py-28" aria-labelledby="guides-heading">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-12 items-end gap-8">
+        <div className="grid grid-cols-12 items-end gap-y-8 lg:gap-8">
           <div className="col-span-12 lg:col-span-7">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
               Guider &amp; råd
@@ -48,7 +48,7 @@ const GuidesTeaser = () => {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-12 gap-10 lg:gap-16">
+        <div className="mt-14 grid grid-cols-12 gap-y-10 lg:gap-16">
           {lead && (
             <Reveal className="col-span-12 lg:col-span-5">
               <Link to={`/blogg/${lead.slug}`} className="group block">

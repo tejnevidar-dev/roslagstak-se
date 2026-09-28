@@ -5,7 +5,7 @@ import { Phone, ArrowRight } from "lucide-react";
 const QuickAccess = () => (
   <section aria-labelledby="snabbval" className="bg-secondary/60 py-16 lg:py-20">
     <div className="mx-auto max-w-7xl px-6">
-      <div className="grid grid-cols-12 items-end gap-8">
+      <div className="grid grid-cols-12 items-end gap-y-8 lg:gap-8">
         <div className="col-span-12 lg:col-span-7">
           <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent"><span aria-hidden="true" className="h-px w-12 bg-accent/50" />Snabbval</p>
           <h2
@@ -26,7 +26,7 @@ const QuickAccess = () => (
         </div>
       </div>
 
-      <div className="mt-12 grid grid-cols-12 gap-6">
+      <div className="mt-12 grid grid-cols-12 gap-y-6 lg:gap-6">
         <Link
           to="/tjanster/takomlaggning"
           className="group col-span-12 flex flex-col justify-between bg-card p-10 shadow-[0_30px_70px_-50px_rgba(12,35,64,0.6)] transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 lg:col-span-7 lg:p-14"

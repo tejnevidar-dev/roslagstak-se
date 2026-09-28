@@ -70,7 +70,7 @@ const ServiceArea = () => {
   return (
     <section id="omraden" className="bg-marine py-20 text-marine-foreground lg:py-28" aria-labelledby="area-heading">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-12 gap-10 lg:gap-16">
+        <div className="grid grid-cols-12 gap-y-10 lg:gap-16">
           <div className="col-span-12 lg:col-span-4">
             <div className="lg:sticky lg:top-28">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
@@ -161,7 +161,7 @@ const ServiceArea = () => {
 
         {/* SEO-text i ljus panel som bryter det marina fältet */}
         <div className="mt-16 bg-card px-6 py-12 text-foreground shadow-[0_40px_90px_-60px_rgba(12,35,64,0.8)] sm:px-12 lg:mt-20 lg:px-16 lg:py-16">
-          <div className="grid grid-cols-12 gap-8 lg:gap-16">
+          <div className="grid grid-cols-12 gap-y-8 lg:gap-16">
             <div className="col-span-12 lg:col-span-4">
               <span
                 aria-hidden="true"

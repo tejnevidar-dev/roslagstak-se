@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
 import GoogleReviews from "@/components/GoogleReviews";
+import QuickContactFacts from "@/components/QuickContactFacts";
 import {
   Accordion,
   AccordionContent,
@@ -106,6 +107,9 @@ const Prices = () => {
         />
 
         <div className="container mx-auto px-4 pt-16 pb-20">
+          <div className="max-w-4xl mx-auto mb-12">
+            <QuickContactFacts />
+          </div>
           {/* Price tables */}
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {priceData.map((category) => (

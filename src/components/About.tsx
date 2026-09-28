@@ -53,7 +53,7 @@ const About = () => {
   return (
     <section id="om-oss" className="bg-background py-24 lg:py-32" aria-labelledby="about-heading">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-12 items-start gap-10 lg:gap-16">
+        <div className="grid grid-cols-12 items-start gap-y-10 lg:gap-16">
           {/* Roterat foto med garantiplakett — samma språk som hero */}
           <div ref={imgWrap} className="col-span-12 lg:col-span-5">
             <div className="relative">
@@ -128,7 +128,7 @@ const About = () => {
 
         {/* Ledord som mörk marinlista */}
         <div className="mt-24 bg-primary px-6 py-16 text-primary-foreground sm:px-12 lg:mt-28 lg:px-16 lg:py-20">
-          <div className="grid grid-cols-12 gap-10 lg:gap-16">
+          <div className="grid grid-cols-12 gap-y-10 lg:gap-16">
             <div className="col-span-12 lg:col-span-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
                 Våra ledord
