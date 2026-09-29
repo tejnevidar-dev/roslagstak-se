@@ -32,6 +32,11 @@ export interface PrerenderPage {
   title?: string;
   /** Unique meta description for the static HTML. */
   description?: string;
+  /** Sidspecifik delningsbild för den statiska HTML:en (og:image/twitter:image), t.ex. ett
+   *  projektfoto eller en materialbild — en STABIL sökväg under public/ (aldrig en Vite-import,
+   *  det här scriptet körs via esbuild utan Vite:s tillgångsupplösning). Mirrors SEOHead. */
+  ogImage?: string;
+  ogImageAlt?: string;
 }
 
 /* Services live in a React component; read the data with a regex so the
@@ -64,6 +69,8 @@ const projectSummaries = [
       "Nytt ytmaterial blev betongpannor från Benders i svart, ett robust och prisvärt val som är vanligt på fritidshus i Roslagens skärgård.",
       "Jobbet är utfört av RoslagsTak med kundens samtycke till att bilderna publiceras i marknadsföring.",
     ],
+    ogImage: "/og/project-blido-hero.jpg",
+    ogImageAlt: "Nylagt svart betongpannetak på fritidshus på Blidö, sett från altansidan med skog runtomkring",
   },
   {
     slug: "takbyte-singo",
@@ -81,6 +88,8 @@ const projectSummaries = [
       "Taket har två material: röda betongpannor på huvudbyggnadens tak, och röd TP20-plåt (trapetsprofilerad plåt) på de lägre takdelarna — ett vanligt sätt att hålla nere vikten och kostnaden på tillbyggnader utan att tumma på utseendet.",
       "Jobbet är utfört av RoslagsTak med kundens samtycke till att bilderna publiceras i marknadsföring, inklusive startsidans hero-bild.",
     ],
+    ogImage: "/og/project-singo-hero.jpg",
+    ogImageAlt: "Rött tak på hus på Singö i Grisslehamn med utsikt över fjärden, drönarbild snett ovanifrån",
   },
 ];
 
@@ -249,6 +258,8 @@ const materialSummaries = [
       "Fördelar: klassiskt pannat utseende, finns i flera kulörer, tåligt material, enskilda pannor kan bytas. Nackdelar: tunga, så takstolarna måste klara vikten.",
       "Passar när du vill ha ett traditionellt pannat tak och huset tål vikten. Vanligt vid byte från äldre pannor.",
     ],
+    ogImage: "/og/material-betongpannor.jpg",
+    ogImageAlt: "Närbild på svart betongpannetak med vågprofil",
   },
   {
     slug: "tp20-plattak",
@@ -264,6 +275,8 @@ const materialSummaries = [
       "Fördelar: lätt jämfört med pannor, snabb att lägga, finns i flera kulörer, fungerar på lägre lutningar. Nackdelar: skruvar och skarvar måste sitta rätt och kontrolleras.",
       "Passar när du vill ha ett lätt tak, har låg lutning eller vill ha plåttakets uttryck, eller på lägre takdelar i kombination med pannor.",
     ],
+    ogImage: "/og/material-tp20-plattak.jpg",
+    ogImageAlt: "Närbild på trapetsprofilerad TP20-plåt",
   },
 ];
 
@@ -645,6 +658,8 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: material.intro,
       paragraphs: material.paragraphs,
       links: [...primaryLinks, { href: "/material", label: "Alla material" }, { href: "/priser", label: "Priser för takarbeten" }],
+      ogImage: material.ogImage,
+      ogImageAlt: material.ogImageAlt,
     };
   }
 
@@ -664,6 +679,8 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { href: `/tjanster/${project.serviceSlug}`, label: project.serviceName },
         { href: `/taklaggare-${project.locationSlug}`, label: `Takläggare i ${project.locationName}` },
       ],
+      ogImage: project.ogImage,
+      ogImageAlt: project.ogImageAlt,
     };
   }
 

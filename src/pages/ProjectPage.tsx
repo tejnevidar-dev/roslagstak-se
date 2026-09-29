@@ -9,6 +9,14 @@ import NotFound from "@/pages/NotFound";
 import { getProject } from "@/data/projects";
 import { materials } from "@/data/materials";
 
+/* Stabila sökvägar under public/og/ (kopior av samma foton som heroImage) för og:image/
+   twitter:image — Vite-hashade importsökvägar duger inte där, se prerender-content.ts som
+   sätter samma bild i den statiska HTML:en (SEO-audit P2, 2026-09-29). */
+const OG_IMAGES: Record<string, string> = {
+  "takrenovering-blido": "/og/project-blido-hero.jpg",
+  "takbyte-singo": "/og/project-singo-hero.jpg",
+};
+
 const ProjectPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProject(slug) : undefined;
@@ -32,6 +40,8 @@ const ProjectPage = () => {
         description={project.summary}
         canonical={`https://roslagstak.se/projekt/${project.slug}`}
         type="article"
+        image={OG_IMAGES[project.slug]}
+        imageAlt={project.heroAlt}
       />
       <Header />
       <main>

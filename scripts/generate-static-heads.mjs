@@ -196,6 +196,19 @@ for (const { path, robots } of routes) {
       `<meta name="twitter:description" content="${esc(page.description)}" />`,
     );
   }
+  if (page?.ogImage) {
+    /* Sidspecifik delningsbild (projektfoto/materialbild) i stället för den sitewide
+       og-image.jpg (SEO-audit P2, 2026-09-29). Bredd/höjd tas bort eftersom dessa foton inte är
+       1200×630 — samma regel som SEOHead.tsx tillämpar klientsidan. */
+    const imageUrl = `${SITE_URL}${page.ogImage}`;
+    const imageAlt = esc(page.ogImageAlt ?? page.title ?? "");
+    html = html
+      .replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${imageUrl}" />`)
+      .replace(/\s*<meta property="og:image:width" content="[^"]*" \/>/, "")
+      .replace(/\s*<meta property="og:image:height" content="[^"]*" \/>/, "")
+      .replace(/<meta property="og:image:alt" content="[^"]*" \/>/, `<meta property="og:image:alt" content="${imageAlt}" />`)
+      .replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${imageUrl}" />`);
+  }
 
   const body = robots === NOINDEX_ROBOTS ? "" : bodyFor(path);
   if (body) {

@@ -98,6 +98,7 @@ interface FoundLink {
   file: string;
   raw: string;
   anchor: string;
+  hasDynamicAnchor: boolean;
 }
 const links: FoundLink[] = [];
 
@@ -115,6 +116,10 @@ for (const file of files) {
       const raw = (m[1] ?? m[2] ?? "").trim();
       if (!raw.startsWith("/")) continue;
       const anchorRaw = i === 0 ? (m[3] ?? "").split("</Link>")[0] : (m[3] ?? m[4] ?? "");
+      // JSX-uttryck ({p.title} osv.) i länktexten går inte att läsa av statiskt — de renderas olika
+      // per instans (t.ex. "BRF i Nacka", "Priser för takbyte"). Sådana länkar hoppas över i
+      // svag-ankartext-kontrollen nedan i stället för att felaktigt flaggas som "för korta".
+      const hasDynamicAnchor = /\{[^}]+\}/.test(anchorRaw.replace(/<[^>]*>/g, " ").replace(/className=("[^"]*"|\{[^}]*\})/g, " "));
       const anchor = anchorRaw
         .replace(/<[^>]*>/g, " ")
         .replace(/\{[^}]*\}/g, " ")
@@ -122,7 +127,7 @@ for (const file of files) {
         .replace(/[<>{}]/g, " ")
         .replace(/\s+/g, " ")
         .trim();
-      links.push({ file: file.replace(resolve(".") + "/", ""), raw, anchor });
+      links.push({ file: file.replace(resolve(".") + "/", ""), raw, anchor, hasDynamicAnchor });
     }
   }
 }
@@ -184,6 +189,7 @@ const WEAK_ANCHORS = [
   "read more",
 ];
 const weak = links.filter((l) => {
+  if (l.hasDynamicAnchor) return false;
   const a = l.anchor.toLowerCase();
   return a.length > 0 && (WEAK_ANCHORS.includes(a) || a.length < 4);
 });

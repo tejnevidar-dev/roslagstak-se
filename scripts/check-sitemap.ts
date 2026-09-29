@@ -156,7 +156,15 @@ for (const route of knownRoutes) {
   if (isNoindexPath(route)) continue;
   if (thinComboRoutes.has(route)) continue; // noindex-kombosidor, avsiktligt utanför sitemap
   if (canonicalPath(route) !== route) continue; // alias, intentionally excluded
-  if (!sitemapPaths.has(route)) warn(`${SITE_URL}${route}`, "indexable route missing from sitemap");
+  if (!sitemapPaths.has(route)) {
+    /* /tjanster/* är BLOCKERANDE (fail, inte warn): generate-sitemap.ts bygger bara om lokations-
+       och kombo-poster automatiskt och bevarar redan befintliga statiska /tjanster/*-rader — en NY
+       tjänstesida kräver alltid en manuell rad i public/sitemap.xml (SEO-audit P2, 2026-09-29).
+       Det har glömts bort minst en gång tidigare (tegeltak) och blir därför en hård spärr här,
+       inte bara en varning som är lätt att missa. */
+    if (route.startsWith("/tjanster/")) fail(`${SITE_URL}${route}`, "ny tjänstesida saknas i sitemap.xml — lägg till manuellt (se kommentaren i generate-sitemap.ts)");
+    else warn(`${SITE_URL}${route}`, "indexable route missing from sitemap");
+  }
 }
 
 /* ---------- 5. prerendered head tags in dist (if a build exists) ---------- */

@@ -9,6 +9,15 @@ import NotFound from "@/pages/NotFound";
 import { getMaterial, type MaterialDetail } from "@/data/materials";
 import { getProjectsByMaterial } from "@/data/projects";
 
+/* Stabila sökvägar under public/og/ (kopior av samma foton som redan används på /taktyper,
+   RoofTypes.tsx) — inga nya bilder, bara återanvända för sidspecifik og:image i stället för den
+   sitewide og-image.jpg (SEO-audit P2, 2026-09-29). Samma sökvägar sätts i den statiska HTML:en av
+   prerender-content.ts, så crawler-spegling och den riktiga sidan visar samma delningsbild. */
+const OG_IMAGES: Record<string, { src: string; alt: string }> = {
+  betongpannor: { src: "/og/material-betongpannor.jpg", alt: "Närbild på svart betongpannetak med vågprofil" },
+  "tp20-plattak": { src: "/og/material-tp20-plattak.jpg", alt: "Närbild på trapetsprofilerad TP20-plåt" },
+};
+
 const sections: { key: keyof MaterialDetail; heading: string }[] = [
   { key: "funktion", heading: "Funktion" },
   { key: "anvandning", heading: "Användning" },
@@ -45,6 +54,8 @@ const MaterialPage = () => {
         title={detail.metaTitle}
         description={detail.metaDescription}
         canonical={`https://roslagstak.se${material.href}`}
+        image={OG_IMAGES[material.slug]?.src}
+        imageAlt={OG_IMAGES[material.slug]?.alt}
       />
       <Header />
       <main>

@@ -12,9 +12,17 @@ interface SEOHeadProps {
   geoPlacename?: string;
   /** Force noindex (e.g. 404 or admin pages). Admin paths are detected automatically. */
   noindex?: boolean | "follow";
+  /**
+   * Sidspecifik delningsbild (t.ex. ett projektfoto eller en materialbild) i stället för den
+   * sitewide og-image.jpg. Vite-importerade bilder ger en rot-relativ sökväg (/assets/xxx-HASH.jpg)
+   * — den görs absolut här. Bredd/höjd utelämnas för anpassade bilder eftersom de sällan är
+   * exakt 1200×630 (plattformarna hanterar det fint utan de taggarna).
+   */
+  image?: string;
+  imageAlt?: string;
 }
 
-const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type = "website", geoPosition, geoPlacename, noindex }: SEOHeadProps) => {
+const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type = "website", geoPosition, geoPlacename, noindex, image, imageAlt }: SEOHeadProps) => {
   const title = fitTitle(rawTitle);
   const description = fitDescription(rawDescription);
   const fullTitle = withSuffix(title);
@@ -23,6 +31,8 @@ const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type
   // collapse onto one URL, and trailing slashes/casing/query strings are stripped.
   const url = canonicalUrl(canonical ?? pathname);
   const shouldNoindex = noindex || isNoindexPath(pathname);
+  const ogImage = image ? (image.startsWith("http") ? image : `https://roslagstak.se${image}`) : "https://roslagstak.se/og-image.jpg";
+  const ogImageAlt = image ? (imageAlt ?? title) : title;
 
   return (
     <Helmet>
@@ -43,14 +53,14 @@ const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type
       <meta property="og:type" content={type} />
       <meta property="og:locale" content="sv_SE" />
       <meta property="og:site_name" content="RoslagsTak" />
-      <meta property="og:image" content="https://roslagstak.se/og-image.jpg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
+      <meta property="og:image" content={ogImage} />
+      {!image && <meta property="og:image:width" content="1200" />}
+      {!image && <meta property="og:image:height" content="630" />}
+      <meta property="og:image:alt" content={ogImageAlt} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://roslagstak.se/og-image.jpg" />
+      <meta name="twitter:image" content={ogImage} />
       <link rel="alternate" hrefLang="sv" href={url} />
       <link rel="alternate" hrefLang="x-default" href={url} />
       <meta name="geo.region" content="SE-AB" />
