@@ -1,6 +1,8 @@
 import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
+import { generateCombos } from "@/data/service-location-combos";
+import { isThinCombo } from "@/data/thin-combos";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
 import { useEffect } from "react";
@@ -39,11 +41,22 @@ const LocationPage = () => {
 
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
   /* Geografisk graf (SEO Phase 2.7): bara 2 av 139 orter har ett exakt projekt. Genom att visa ett
-     referensjobb från en grannort (samma region eller ≤30 km, se getNearbyProject) får många fler
-     ortssidor en riktig location↔project-länk — alltid med orten utskriven, aldrig bara "i
-     närområdet" utan angiven plats (Marknadschefen 2026-09-29, regel 5). */
+     referensjobb från en grannort (≤30 km, se getNearbyProject) får många fler ortssidor en riktig
+     location↔project-länk — alltid med orten utskriven, aldrig bara "i närområdet" utan angiven
+     plats (Marknadschefen 2026-09-29, regel 5). */
   const nearbyProject = getNearbyProject(location);
   const nearbyProjectKommun = nearbyProject?.locationName.split(",")[1]?.trim();
+  /* Vilka tjänst+ort-sidor som faktiskt är indexerade här (inte alla 9 — se thin-combos.ts).
+     Speglar samma beräkning som scripts/prerender-content.ts:geoFactsParagraph. */
+  const indexedServiceNames = hasServiceCombos(location.region)
+    ? [
+        ...new Set(
+          generateCombos()
+            .filter((c) => c.locationSlug === location.slug && !isThinCombo(c.serviceSlug, location))
+            .map((c) => c.serviceName),
+        ),
+      ]
+    : [];
   const prep = location.isIsland ? "på" : "i";
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
@@ -368,6 +381,11 @@ const LocationPage = () => {
                   <h3 className="font-display text-lg text-card-foreground mb-3">
                     Tjänster, priser och guider {prep} {location.name}
                   </h3>
+                  {indexedServiceNames.length > 0 && (
+                    <p className="mb-3 text-sm text-muted-foreground">
+                      Vi har egna sidor för {indexedServiceNames.join(", ").toLowerCase()} {prep} {location.name}.
+                    </p>
+                  )}
                   <div className="grid sm:grid-cols-2 gap-2">
                     {hasServiceCombos(location.region) && (
                     <>

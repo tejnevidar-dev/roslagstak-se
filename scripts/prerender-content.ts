@@ -15,7 +15,7 @@ import { locations } from "../src/data/locations";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { brfLocationSlugs } from "../src/data/brf-locations";
-import { isNearBase } from "../src/data/service-reach";
+import { isNearBase, distanceFromBaseKm, distanceFromTabyKm, distanceKm } from "../src/data/service-reach";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
@@ -569,6 +569,47 @@ const serviceIntro = (title: string, description: string): PrerenderPage => ({
   links: [...primaryLinks, ...serviceLinks, ...locationLinks.slice(0, 24)],
 });
 
+const NEARBY_PROJECT_MAX_KM = 30;
+
+/**
+ * Datadriven stycke för LOCATION-sidor (Marknadschefens beslut 2026-09-29, efter fyndet att 25
+ * ortspar hade Jaccard > 0,8 efter maskering av ortsnamnet): avstånd till Norrtälje/Täby, region
+ * och grannorter, ev. referensjobb, och vilka tjänst+ort-sidor som faktiskt är indexerade här.
+ * Byggt av riktig data (locations.ts, projectSummaries, thin-combos.ts) — aldrig malltext med bara
+ * ortnamnet bytt, vilket var precis vad som orsakade dubbletterna.
+ */
+const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
+  const prep = loc.isIsland ? "på" : "i";
+  const parts: string[] = [
+    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje och cirka ${Math.round(distanceFromTabyKm(loc))} km från Täby. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
+  ];
+
+  const exactProject = projectSummaries.find((p) => p.locationSlug === loc.slug);
+  if (exactProject) {
+    parts.push(`Vi har utfört ett dokumenterat referensjobb här: ${exactProject.title}.`);
+  } else {
+    const nearbyProject = projectSummaries.find((p) => {
+      const projectLoc = locations.find((l) => l.slug === p.locationSlug);
+      return projectLoc && distanceKm(loc, projectLoc) <= NEARBY_PROJECT_MAX_KM;
+    });
+    if (nearbyProject) {
+      const projectLoc = locations.find((l) => l.slug === nearbyProject.locationSlug)!;
+      parts.push(
+        `Vi påstår inte att det jobbet gjordes här, men ett referensjobb i närområdet — ${nearbyProject.title} (cirka ${Math.round(distanceKm(loc, projectLoc))} km bort) — visar hur ett komplett takbyte kan se ut.`,
+      );
+    }
+  }
+
+  const indexedServiceNames = hasServiceCombos(loc.region)
+    ? [...new Set(combos.filter((c) => c.locationSlug === loc.slug && !isThinCombo(c.serviceSlug, loc)).map((c) => c.serviceName))]
+    : [];
+  if (indexedServiceNames.length > 0) {
+    parts.push(`Vi har egna sidor för ${indexedServiceNames.join(", ")} ${prep} ${loc.name}.`);
+  }
+
+  return parts.join(" ");
+};
+
 /** Important on-page text for a route, or null when the route has no prerender. */
 const prerenderContentRaw = (path: string): PrerenderPage | null => {
   const clean = path === "/" ? "/" : path.replace(/\/+$/, "").toLowerCase();
@@ -731,6 +772,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       paragraphs: [
         loc.longDescription,
         loc.extraContent,
+        geoFactsParagraph(loc),
         `${loc.uniqueFAQ.question} ${loc.uniqueFAQ.answer}`,
         `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,
       ],

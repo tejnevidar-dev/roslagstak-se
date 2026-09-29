@@ -30,6 +30,7 @@ import imgSingoHero from "@/assets/project-singo-hero.jpg";
 import imgSingoDetail1 from "@/assets/project-singo-detail-1.jpg";
 import type { MaterialSlug } from "@/data/materials";
 import { locations, type LocationData } from "@/data/locations";
+import { distanceKm } from "@/data/service-reach";
 
 export interface Project {
   slug: string;
@@ -112,16 +113,6 @@ export const getProjectsByMaterial = (materialSlug: MaterialSlug) =>
   projects.filter((p) => p.materialSlugs.includes(materialSlug));
 
 const NEARBY_PROJECT_MAX_KM = 30;
-
-const distanceKm = (a: LocationData, b: LocationData) => {
-  const R = 6371;
-  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
-  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
-  const s =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos((a.lat * Math.PI) / 180) * Math.cos((b.lat * Math.PI) / 180) * Math.sin(dLng / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(s));
-};
 
 /**
  * Ett referensjobb att visa på en ortssida som saknar ett eget projekt — men bara om det verkligen
