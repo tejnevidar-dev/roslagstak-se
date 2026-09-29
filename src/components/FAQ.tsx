@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: "Utför ni takinspektion?",
-    answer: "Ja, vi erbjuder kostnadsfri takinspektion med en detaljerad rapport och åtgärdsförslag. Vi besiktigar taket, underlagspapp, råspont, avvattning och taksäkerhet.",
+    answer: "Ja, vi erbjuder en kostnadsfri takkontroll. Vi går igenom taket, underlagspapp, råspont, avvattning och taksäkerhet.",
   },
   {
     question: "Vilka områden i Roslagen täcker ni?",
