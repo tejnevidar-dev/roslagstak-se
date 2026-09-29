@@ -52,3 +52,18 @@ export const withUtm = (message: string | null | undefined): string | null => {
   if (!line) return base || null;
   return base ? `${line}\n${base}` : line;
 };
+
+/**
+ * Strukturerade utm-fält för quote_requests-kolumner (#1d, VAL B) — null-värden om ingen
+ * kampanj är känd. Använd i stället för withUtm()/utmLine() när attributionskolumnerna finns
+ * (se supabase/migrations/*_attribution_columns_prepared.sql).
+ */
+export const utmFields = () => {
+  const u = read();
+  return {
+    utm_source: u.utm_source ?? null,
+    utm_medium: u.utm_medium ?? null,
+    utm_campaign: u.utm_campaign ?? null,
+    utm_content: u.utm_content ?? null,
+  };
+};
