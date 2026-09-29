@@ -144,15 +144,11 @@ export const landingServices: LandingService[] = [
     intro:
       "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Kostnadsfritt och utan förpliktelser — du betalar inget och binder dig inte till något.",
     listHeading: "Vad vi tittar på",
-    listIntro: "Det som avgör ett taks skick ligger ofta under takmaterialet. Därför går vi igenom hela taket.",
+    listIntro: "Vi tittar bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt.",
     list: [
       {
         title: "Takmaterialet",
         text: "Vi tittar efter sprickor, förskjutningar, rost samt mossa och alger som håller kvar fukt.",
-      },
-      {
-        title: "Underlag och råspont",
-        text: "Vi bedömer skador och fukt under takmaterialet, där det går att se.",
       },
       {
         title: "Plåtdetaljer och genomföringar",
@@ -163,12 +159,8 @@ export const landingServices: LandingService[] = [
         text: "Vi kontrollerar hängrännor, stuprör och fall.",
       },
       {
-        title: "Taksäkerhet",
-        text: "Vi tittar på takstege och gångbrygga.",
-      },
-      {
-        title: "Ventilation",
-        text: "Vi bedömer om taket och vinden har den ventilation som behövs.",
+        title: "Vinden",
+        text: "När vinden går att komma åt tittar vi på underlag och råspont därifrån.",
       },
     ],
     stepsHeading: "Så går takkontrollen till",

@@ -29,7 +29,7 @@ const genvagar = [
   { to: "/priser", label: "Prislista" },
   { to: "/recensioner", label: "Omdömen" },
   { to: "/blogg", label: "Blogg & tips" },
-  { to: "/boka", label: "Boka rådgivning" },
+  { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
   { to: "/kontakt", label: "Kontakt" },
   { to: "/cookies", label: "Cookies & integritet" },
 ];
