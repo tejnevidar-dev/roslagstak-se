@@ -18,7 +18,7 @@ import { trackEvent } from "@/lib/analytics";
 import heroImg from "@/assets/roof-brf-hero.jpg";
 
 const facts = [
-  { label: "Utförande", value: "10 års garanti" },
+  { label: "Utförande", value: "10 års utförandegaranti" },
   { label: "Tätskikt", value: "30 års garanti genom MATAKI" },
   { label: "Företaget", value: "F-skatt och ansvarsförsäkring" },
   { label: "Standard", value: "Arbete enligt AMA Hus" },
@@ -288,6 +288,10 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
       </button>
       <p className="text-center text-[13px] text-muted-foreground">
         Vi svarar inom 24 timmar. Besiktning och offert är kostnadsfria och förpliktar inte till något.
+      </p>
+      <p className="text-center text-xs text-muted-foreground">
+        Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
+        <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
       </p>
     </form>
   );

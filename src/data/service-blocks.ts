@@ -79,7 +79,7 @@ export type ServiceBlocks = {
 
 export const serviceBlocks: Record<string, ServiceBlocks> = {
   takomlaggning: {
-    seoTitle: "Takomläggning Roslagen — Fast pris & 10 års garanti",
+    seoTitle: "Takomläggning Roslagen — Fast pris & 10 års utförandegaranti",
     seoDescription:
       "Komplett takomläggning i Roslagen och skärgården: rivning, ny råspont, papp, läkt och nytt ytskikt. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI.",
     blockPlacement: "after-spec",

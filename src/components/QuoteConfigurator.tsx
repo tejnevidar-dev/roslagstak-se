@@ -436,6 +436,10 @@ const QuoteConfigurator = () => {
               ? "Helt kostnadsfritt. Du får ett kostnadsförslag på e-post inom 2 minuter."
               : "Helt kostnadsfritt. Vi återkopplar alltid inom 24 timmar från att formuläret skickas in."}
           </p>
+          <p className="text-xs text-muted-foreground text-center">
+            Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
+            <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
+          </p>
         </form>
       </div>
     </section>

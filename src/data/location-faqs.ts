@@ -39,7 +39,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Erbjuder ni garanti på takarbeten ${prep} ${name}?`,
-      answer: `Ja, vi lämnar 10 års garanti på alla våra takarbeten ${prep} ${name}. Garantin täcker både material och utförande. Alla arbeten utförs enligt AMA Hus — branschstandarden för kvalitetssäkring av byggarbeten i Sverige.`,
+      answer: `Ja, vi lämnar 10 års utförandegaranti på alla våra takarbeten ${prep} ${name}. Alla arbeten utförs enligt AMA Hus — branschstandarden för kvalitetssäkring av byggarbeten i Sverige.`,
     },
     {
       question: `Kan jag använda ROT-avdrag för takbyte ${prep} ${name}?`,
@@ -124,7 +124,7 @@ export const generateServiceLocationFAQs = (
     },
     {
       question: `Erbjuder ni garanti på ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
-      answer: `Ja, alla våra ${isTakbyte ? "takbyten" : "takrenoveringar"} ${prep} ${locationName} utförs med 10 års garanti på material och utförande. Alla arbeten följer AMA Hus — branschstandarden i Sverige.`,
+      answer: `Ja, alla våra ${isTakbyte ? "takbyten" : "takrenoveringar"} ${prep} ${locationName} utförs med 10 års utförandegaranti. Alla arbeten följer AMA Hus — branschstandarden i Sverige.`,
     },
   ]);
 };
