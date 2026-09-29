@@ -46,8 +46,8 @@ const priceData = [
     category: "Tillval",
     items: [
       { name: "Råspontbyte", priceRange: "Fast pris efter takkontroll", description: "Byte av skadat underlag vid takbyte." },
-      { name: "Skorstensinklädnad", priceRange: "Från ca 7000 kr ", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
-      { name: "Takstege + gångbrygga", priceRange: "Från ca 8000 kr", description: "Komplett taksäkerhet enligt BBR." },
+      { name: "Skorstensinklädnad", priceRange: "Pris efter takkontroll", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
+      { name: "Takstege + gångbrygga", priceRange: "Pris efter takkontroll", description: "Komplett taksäkerhet enligt BBR." },
       { name: "Snörasskydd", priceRange: "Fast pris efter bedömning", description: "Monteras vid takfot mot entréer och gångvägar." },
     ],
   },
