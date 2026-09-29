@@ -237,6 +237,48 @@ const problemSummaries = [
       "Åtgärder som används: rensning eller byte av hängrännor, förbättrad ventilation och tätning mot vinden så att mindre värme når yttertaket.",
     ],
   },
+  {
+    slug: "stormskador-pa-taket",
+    title: "Stormskador på taket",
+    metaTitle: "Stormskador på taket – vad du gör efter blåsten",
+    metaDescription:
+      "Lösa eller avblåsta pannor och plåt efter en storm? Så bedömer du läget från marken, dokumenterar skadan och får taket kontrollerat.",
+    intro:
+      "Efter en storm är det lätt att se om ett träd har fallit, men skador på taket syns inte alltid lika tydligt — en panna som flyttat sig eller en plåt som lyft i kanten kan släppa in vatten redan vid nästa regn.",
+    paragraphs: [
+      "Symptom: pannor som saknas, ligger snett eller har glidit ner mot takfoten, bitar av pannor eller plåt på marken. Nockpannor som lossnat. Plåt som lyft, vikts upp eller släppt i kanten. Hängrännor eller stuprör som lossnat eller böjts.",
+      "Vanliga orsaker: kraftig vind skapar ett sug på taket, särskilt vid kanter, hörn och nock, som kan lyfta pannor och plåt som redan sitter löst. Nedfallande grenar och föremål kan också slå sönder pannor eller skada ytbehandlingen.",
+      "Åtgärder som används: byte eller omläggning av lösa och trasiga pannor, nya eller omfästa nockpannor, nya plåtdetaljer och omfästning eller byte av hängrännor. Är taket i övrigt uttjänt kan ett takbyte vara bättre än att laga det som blåste loss.",
+    ],
+  },
+  {
+    slug: "lackage-vid-takfonster-och-genomforingar",
+    title: "Läckage vid takfönster och genomföringar",
+    metaTitle: "Läckage vid takfönster, ventilation och avluftning",
+    metaDescription:
+      "Fukt runt takfönstret eller vid ventilationsröret? Så hittar du var vattnet kommer in, vad du gör själv och när anslutningen mot taket behöver ses över.",
+    intro:
+      "Överallt där något går igenom taket finns en skarv som ska vara tät: runt takfönster, ventilationshuvar, avluftning och antennfästen. De här anslutningarna är utsatta, eftersom vatten, snö och is samlas just där taket bryts.",
+    paragraphs: [
+      "Symptom: fuktfläckar eller missfärgning i innertaket runt ett takfönster eller under ett ventilationsdon. På vinden syns fukt, mörka ränder eller droppmärken på råsponten och isoleringen runt rör och kanaler som går upp genom taket.",
+      "Vanliga orsaker: plåten eller manschetten som sluter tätt mellan genomföringen och takytan har släppt, rostat eller spruckit. Runt takfönster kan anslutningsplåten vara fel monterad eller skadad. Ibland är det i stället kondens från en dåligt isolerad ventilationskanal, som ser ut som ett läckage men har en annan orsak.",
+      "Åtgärder som används: ny eller omlagd plåt och tätning runt genomföringen, omläggning av pannorna närmast och ny anslutningsplåt runt takfönstret där den är skadad. Är taket i övrigt uttjänt kan ett takbyte vara bättre än att laga en genomföring i taget.",
+    ],
+  },
+  {
+    slug: "svackor-i-taket",
+    title: "Svackor eller buktande tak",
+    metaTitle: "Svackor i taket – vad buktande takytor kan tyda på",
+    metaDescription:
+      "Syns en svacka eller en buktning i takytan? Så kan den uppstå, varför den ska kontrolleras och vad du kan titta efter från marken och från vinden.",
+    intro:
+      "Ett tak ska ha raka linjer: en rak nock, jämna takfall och raka takfötter. När takytan i stället sjunker in i en svacka eller buktar är det ett tecken på att något under ytmaterialet har förändrats, i underlaget eller i den bärande konstruktionen.",
+    paragraphs: [
+      "Symptom: en synlig svacka eller våg i takytan, ofta tydligast i motljus eller när snö ligger kvar ojämnt. En nock som sjunker på mitten. På vinden kan det synas böjda, spruckna eller fuktskadade takstolar och brädor, eller mjuk och mörk råspont.",
+      "Vanliga orsaker: råspont eller läkt som har blivit mjuk av fukt under lång tid, takstolar som skadats av fukt eller belastats hårdare än de är gjorda för, eller äldre ombyggnader där bärande delar har ändrats.",
+      "Åtgärder som används: beror helt på orsaken. Är det underlaget kan skadade delar av råsponten och läkten bytas, ofta i samband med ett takbyte. Är det takstolarna kan de behöva förstärkas eller bytas efter en konstruktörs bedömning.",
+    ],
+  },
 ];
 
 /**

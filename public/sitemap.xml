@@ -163,6 +163,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/takproblem/stormskador-pa-taket</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/lackage-vid-takfonster-och-genomforingar</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/svackor-i-taket</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/material</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>

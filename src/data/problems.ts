@@ -282,6 +282,91 @@ export const problems: Problem[] = [
       { to: "/takproblem/kondens-pa-vinden", label: "Kondens på vinden" },
     ],
   },
+  {
+    slug: "stormskador-pa-taket",
+    title: "Stormskador på taket",
+    metaTitle: "Stormskador på taket – vad du gör efter blåsten",
+    metaDescription:
+      "Lösa eller avblåsta pannor och plåt efter en storm? Så bedömer du läget från marken, dokumenterar skadan och får taket kontrollerat.",
+    intro:
+      "Efter en storm är det lätt att se om ett träd har fallit, men skador på taket syns inte alltid lika tydligt. En panna som har flyttat sig några centimeter eller en plåt som har lyft i kanten kan släppa in vatten redan vid nästa regn. Här går vi igenom vad du kan titta efter från marken, vad du gör själv och när taket behöver kontrolleras.",
+    symptom:
+      "Pannor som saknas, ligger snett eller har glidit ner mot takfoten, och bitar av pannor eller plåt på marken runt huset. Nockpannor som har lossnat. Plåt som har lyft, vikts upp eller släppt i kanten, till exempel vid vindskivor, fotplåt eller runt skorstenen. Hängrännor eller stuprör som har lossnat eller böjts. Grenar som ligger kvar på taket. Inomhus kan det synas som nya fuktfläckar i taket eller droppar på vinden efter nästa regn.",
+    orsaker:
+      "Kraftig vind skapar ett sug på taket, särskilt vid kanter, hörn och nock, som kan lyfta pannor och plåt som redan sitter löst. Pannor som är spruckna, dåligt fästa eller ligger på en åldrad läkt ger lättare vika. Lösa plåtdetaljer kan fånga vinden och vikas upp. Nedfallande grenar och föremål kan också slå sönder pannor eller skada plåtens ytbehandling.",
+    akut:
+      "När vatten kommer in, när pannor eller plåt hänger löst och kan falla ner mot gång, uteplats eller bil, eller när taket har fått hål. Då gäller det att begränsa skadan: håll dig och andra borta från området under takkanten, samla upp vatten inomhus, flytta undan det som kan ta skada och kontakta en takläggare. En skada som ser liten ut ska ändå kontrolleras innan nästa regn.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: vilka pannor och plåtdetaljer som har rört sig eller skadats, om nock, fotplåt och vindskivor sitter som de ska, och om vatten har kommit in till underlaget. Där vinden går att komma åt syns därifrån om råspont och isolering har blivit fuktiga. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+    atgarder:
+      "Byte eller omläggning av lösa och trasiga pannor, nya eller omfästa nockpannor, nya plåtdetaljer där plåten har skadats och omfästning eller byte av hängrännor. Har vatten kommit in kan skadade delar av underlaget behöva bytas. Är taket i övrigt uttjänt, med åldrad läkt och slitet underlag, kan ett takbyte vara en bättre lösning än att laga det som blåste loss.",
+    gorInteSjalv:
+      "Gå inte upp på taket, varken under eller direkt efter stormen. Taket kan vara halt, pannor kan sitta löst och vinden kan fortfarande vara byig. Du kan fotografera skadorna från marken och från vinden, gärna med datum, spara bitar som har blåst ner och anteckna när stormen var. Kontakta ditt försäkringsbolag om du vill anmäla skadan. Det är försäkringsbolaget som avgör om och hur mycket som ersätts, och det kan vi inte lova något om. Dina egna bilder kan du ha nytta av när du anmäler.",
+    related: [
+      { to: "/takproblem/trasiga-takpannor", label: "Trasiga eller förskjutna takpannor" },
+      { to: "/takproblem/rostig-plat", label: "Rostig plåt och rostiga beslag" },
+      { to: "/takproblem/igensatta-hangrannor", label: "Igensatta hängrännor" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/takomlaggning", label: "Takomläggning" },
+    ],
+  },
+  {
+    slug: "lackage-vid-takfonster-och-genomforingar",
+    title: "Läckage vid takfönster och genomföringar",
+    metaTitle: "Läckage vid takfönster, ventilation och avluftning",
+    metaDescription:
+      "Fukt runt takfönstret eller vid ventilationsröret? Så hittar du var vattnet kommer in, vad du gör själv och när anslutningen mot taket behöver ses över.",
+    intro:
+      "Överallt där något går igenom taket finns en skarv som ska vara tät: runt takfönster, ventilationshuvar, avluftning för avloppet, antennfästen och andra rör. De här anslutningarna är utsatta, eftersom vatten, snö och is samlas just där taket bryts. Här går vi igenom hur ett sådant läckage brukar visa sig, vad det kan bero på och vad du kan göra innan taket kontrolleras.",
+    symptom:
+      "Fuktfläckar eller missfärgning i innertaket runt ett takfönster eller under ett ventilationsdon. Droppar eller fuktränder på karmen eller fönsternischen när det regnar eller när snön smälter. På vinden syns fukt, mörka ränder eller droppmärken på råsponten och isoleringen runt rör och kanaler som går upp genom taket. Ibland märks läckaget bara vid kraftigt slagregn eller vind från ett visst håll.",
+    orsaker:
+      "Plåten eller manschetten som sluter tätt mellan genomföringen och takytan har släppt, rostat eller spruckit. Tätningar och fogar har åldrats. Pannorna närmast genomföringen ligger fel eller har flyttats, så att vatten leds in under dem i stället för förbi. Runt takfönster kan anslutningsplåten (inklädnaden) vara fel monterad eller skadad. Snö och is som ligger kvar ovanför fönstret eller huven kan tvinga smältvatten in under pannorna. På vinden kan det också vara kondens från en dåligt isolerad ventilationskanal, som ser ut som ett läckage men har en annan orsak.",
+    akut:
+      "När vatten droppar in, eller när fukten når isolering, elinstallationer eller ett innertak som börjar ge vika. Då ska det åtgärdas snarast: samla upp vattnet, flytta undan det som kan ta skada, fota och kontakta en takläggare. Enstaka fläckar som inte växer bör ändå kontrolleras, eftersom fukt som pågår länge kan skada råspont och isolering.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: plåtarna och tätningarna runt varje genomföring, anslutningen runt takfönstret och pannorna närmast. Där vinden går att komma åt följs fuktspåren därifrån för att se var vattnet kommer in, eftersom det kan rinna en bit längs råsponten innan det syns. Om fukten beror på kondens från en kanal snarare än på taket blir det tydligt här.",
+    atgarder:
+      "Ny eller omlagd plåt och tätning runt genomföringen, omläggning av pannorna närmast och ny anslutningsplåt runt takfönstret där den är skadad. Har vatten kommit in kan skadade delar av underlaget behöva bytas. Är taket i övrigt uttjänt, med slitet underlag och flera svaga punkter, kan ett takbyte vara bättre än att laga en genomföring i taget. Vid ett takbyte görs alla anslutningar om.",
+    gorInteSjalv:
+      "Arbete uppe på taket och ingrepp i takfönstret eller i tätningarna. Du kan fota fläckarna och vinden, lägga något under som samlar upp vattnet och notera när det läcker: vid regn, snösmältning, blåst eller kyla. Det hjälper till att skilja ett läckage från kondens.",
+    related: [
+      { to: "/takproblem/lackage-vid-skorsten", label: "Läckage vid skorstenen" },
+      { to: "/takproblem/kondens-pa-vinden", label: "Kondens på vinden" },
+      { to: "/takproblem/fukt-pa-vinden", label: "Fukt eller mögel på vinden" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/takomlaggning", label: "Takomläggning" },
+    ],
+  },
+  {
+    slug: "svackor-i-taket",
+    title: "Svackor eller buktande tak",
+    metaTitle: "Svackor i taket – vad buktande takytor kan tyda på",
+    metaDescription:
+      "Syns en svacka eller en buktning i takytan? Så kan den uppstå, varför den ska kontrolleras och vad du kan titta efter från marken och från vinden.",
+    intro:
+      "Ett tak ska ha raka linjer: en rak nock, jämna takfall och raka takfötter. När takytan i stället sjunker in i en svacka, buktar eller när nocken inte längre är rak, är det ett tecken på att något under ytmaterialet har förändrats. Det behöver inte vara akut, men det ska alltid kontrolleras, eftersom orsaken kan finnas i underlaget eller i själva bärande konstruktionen.",
+    symptom:
+      "En synlig svacka eller våg i takytan, ofta tydligast i motljus eller när snö ligger kvar ojämnt. En nock som sjunker på mitten eller en takfot som inte längre är rak. Pannor som har glidit isär eller ligger ojämnt i ett parti. På vinden kan det synas böjda, spruckna eller fuktskadade takstolar och brädor, mjuk eller mörk råspont, eller att takstolar eller läkt har rört sig. Inomhus kan sprickor i innertaket eller dörrar som börjar kärva på övervåningen ibland höra ihop med samma sak.",
+    orsaker:
+      "Råspont eller läkt som har blivit mjuk av fukt under lång tid, till exempel efter ett läckage som inte har upptäckts. Takstolar som har skadats av fukt eller som har belastats hårdare än de är gjorda för, till exempel av ett tyngre takmaterial eller av mycket snö. Äldre ombyggnader där bärande delar har tagits bort eller ändrats. Ibland handlar det bara om att underlaget har satt sig ojämnt, men det går inte att veta säkert utan att titta.",
+    akut:
+      "När svackan växer snabbt, när det knakar i konstruktionen, när taket sviktar eller när mycket snö ligger på ett tak som redan buktar. Håll dig då borta från taket och från utrymmet direkt under, och kontakta en takläggare. Är det tecken på att bärande delar har gett vika kan en konstruktör behöva bedöma huset.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: hur takytan, nocken och takfötterna ligger, och, där vinden går att komma åt, hur råspont, läkt och takstolar ser ut därifrån och om det finns fuktspår. Syftet är att skilja ett underlag som har tagit skada av fukt från problem i den bärande konstruktionen. Pekar något mot takstolarna kan en konstruktörs bedömning behövas innan taket åtgärdas.",
+    atgarder:
+      "Beror helt på orsaken. Är det underlaget som har tagit skada kan skadade delar av råsponten och läkten bytas, ofta i samband med ett takbyte när taket ändå är öppet. Fuktkällan ska alltid åtgärdas samtidigt. Är det takstolarna kan de behöva förstärkas eller bytas efter en konstruktörs bedömning. Vid byte till ett tyngre material, till exempel från plåt till pannor, måste konstruktionen klara den nya vikten.",
+    gorInteSjalv:
+      "Gå inte upp på ett tak som buktar eller sviktar, och gör inga ingrepp i takstolarna. Du kan fota svackan från marken, gärna från samma ställe vid olika tillfällen så att du ser om den växer, och fota eventuella fuktspår på vinden.",
+    related: [
+      { to: "/takproblem/rutten-raspont", label: "Rutten eller skadad råspont" },
+      { to: "/takproblem/fukt-pa-vinden", label: "Fukt eller mögel på vinden" },
+      { to: "/takproblem/dalig-underlagspapp", label: "Dålig underlagspapp" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/takomlaggning", label: "Takomläggning" },
+    ],
+    relatedProject: "takbyte-singo",
+  },
 ];
 
 export const getProblem = (slug: string) => problems.find((p) => p.slug === slug);
