@@ -1,6 +1,10 @@
 -- FÖRBERED, EJ KÖRD. Kräver Vidars/IT-stöds godkännande och körning i SQL-editorn.
 -- Uppdaterad 2026-09-28 efter granskning av Agent - CRM: två kritiska fel rättade
 -- (dubbelpostning till fel webhook, och saknat obligatoriskt fält 'slot').
+-- OBS 2026-09-29: 20260929140000_attribution_columns_prepared.sql lägger senare till
+-- landing_path/referrer_category/utm_* och ersätter notify_booking_webhook() igen med de
+-- fälten inkluderade. Ordningen är medveten — den här filens funktion skapas FÖRST utan dem
+-- (kolumnerna finns inte än när den här filen körs), sedan bygger nästa migration vidare.
 --
 -- Bakgrund: bokningsformuläret (BookingWidget.tsx, bakom flaggan BOOKING_ENABLED i
 -- src/lib/booking.ts) skriver idag in i quote_requests precis som alla andra formulär.

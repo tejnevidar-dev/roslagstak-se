@@ -1,0 +1,114 @@
+-- FÖRBERED, EJ KÖRD. Kräver Vidars/IT-stöds godkännande och körning i SQL-editorn
+-- (webbsidans Supabase-projekt). Går via Driftchefen för granskning FÖRE Vidar (CLAUDE.md regel 3).
+--
+-- Bakgrund (#1d, attribution-spec-2026-09-29.md): veckorapporten ska kunna räkna SEO-leads per
+-- landningssida och innehållskluster. Driftchefens beslut 2026-09-29: VAL B — egna kolumner i
+-- quote_requests, och egna JSON-fält i webhook-payloaden till CRM (INTE text i message-fältet).
+-- CRM bygger motsvarande på sin sida (nästa lediga migrationsnummer där: 20260929060000,
+-- bekräftas igen av CRM innan den skrivs — annan databas, samordnas inte i den här filen).
+--
+-- Så aktiveras det (körs manuellt av Vidar/IT-stöd, inte av en agent):
+-- 1. Kör hela filen (allt nedan, i ordning) i SQL-editorn för webbsidans projekt.
+-- 2. Uppdatera Contact.tsx, ContactLanding.tsx, QuoteConfigurator.tsx, BookingWidget.tsx (samt
+--    LeadForm.tsx via diff, filen är spärrad för Hemsida & SEO) så att insert-anropen fyller
+--    landing_path/referrer_category/utm_source/utm_medium/utm_campaign/utm_content från
+--    src/lib/attribution.ts + src/lib/utm.ts i stället för att bara skicka dem som textrader.
+--    (attribution.ts och main.tsx-kopplingen är redan byggda och committade — de kör bara
+--    sessionStorage-fångst och gör ingenting mot databasen förrän detta steg är klart.)
+-- 3. Live-testa ALLA publika formulär (regel 4): /offert, /takkontroll, /brf, /boka-takkontroll,
+--    kontaktformuläret på ortssidorna — bekräfta att en rad skapas med rätt landing_path/
+--    referrer_category/utm_* och att webhooken postar dem som egna JSON-fält till CRM.
+--
+-- 1) Strukturerade attributionskolumner (additiv, påverkar inga befintliga rader).
+-- ALTER TABLE public.quote_requests
+--   ADD COLUMN IF NOT EXISTS landing_path TEXT,
+--   ADD COLUMN IF NOT EXISTS referrer_category TEXT,
+--   ADD COLUMN IF NOT EXISTS utm_source TEXT,
+--   ADD COLUMN IF NOT EXISTS utm_medium TEXT,
+--   ADD COLUMN IF NOT EXISTS utm_campaign TEXT,
+--   ADD COLUMN IF NOT EXISTS utm_content TEXT;
+
+-- 2) Uppdatera den befintliga leadwebhooken så att fälten skickas som egna JSON-nycklar
+--    (CRM:s uttryckliga krav — inte inbäddat i message). Samma funktionskropp som idag
+--    (20260429084646), bara de sex nya nycklarna i body är nya.
+-- CREATE OR REPLACE FUNCTION public.notify_saljtak_on_new_quote()
+-- RETURNS TRIGGER
+-- LANGUAGE plpgsql
+-- SECURITY DEFINER
+-- SET search_path = public, extensions, net
+-- AS $$
+-- DECLARE
+--   v_url TEXT;
+--   v_secret TEXT;
+-- BEGIN
+--   IF NEW.message LIKE 'Bokning kostnadsfri takkontroll%' THEN
+--     RETURN NEW; -- bokningar går via trg_notify_booking_webhook, se 20260928120000
+--   END IF;
+--   SELECT value INTO v_url FROM public.webhook_config WHERE key = 'saljtak_url';
+--   SELECT value INTO v_secret FROM public.webhook_config WHERE key = 'saljtak_secret';
+--   IF v_url IS NULL OR v_secret IS NULL THEN
+--     RAISE WARNING 'Sälj tak webhook ej konfigurerad - hoppar över';
+--     RETURN NEW;
+--   END IF;
+--   PERFORM net.http_post(
+--     url := v_url,
+--     headers := jsonb_build_object('Content-Type', 'application/json', 'X-Webhook-Secret', v_secret),
+--     body := jsonb_build_object(
+--       'id', NEW.id::text, 'mode', NEW.mode::text, 'name', NEW.name, 'phone', NEW.phone,
+--       'email', NEW.email, 'address', NEW.address, 'current_roof', NEW.current_roof,
+--       'new_roof', NEW.new_roof, 'raspont', NEW.raspont, 'gangbrygga', NEW.gangbrygga,
+--       'takstege', NEW.takstege, 'avvattning', NEW.avvattning, 'floors', NEW.floors,
+--       'message', NEW.message, 'created_at', NEW.created_at::text,
+--       'landing_path', NEW.landing_path, 'referrer_category', NEW.referrer_category,
+--       'utm_source', NEW.utm_source, 'utm_medium', NEW.utm_medium,
+--       'utm_campaign', NEW.utm_campaign, 'utm_content', NEW.utm_content
+--     )
+--   );
+--   RETURN NEW;
+-- END;
+-- $$;
+
+-- 3) Samma sex fält i bokningswebhooken. Denna CREATE OR REPLACE körs EFTER 20260928120000
+--    (som skapar funktionen första gången, utan dessa fält eftersom kolumnerna inte finns än
+--    vid den tidpunkten) — så ordningen mellan filerna är avsiktlig, inte valfri.
+-- CREATE OR REPLACE FUNCTION public.notify_booking_webhook()
+-- RETURNS TRIGGER
+-- LANGUAGE plpgsql
+-- SECURITY DEFINER
+-- SET search_path = public, extensions, net
+-- AS $$
+-- DECLARE
+--   v_url TEXT;
+--   v_secret TEXT;
+-- BEGIN
+--   IF NEW.message NOT LIKE 'Bokning kostnadsfri takkontroll%' THEN
+--     RETURN NEW; -- bara riktiga bokningar
+--   END IF;
+--   IF NEW.booking_slot IS NULL THEN
+--     RAISE WARNING 'Bokning utan booking_slot - hoppar över webhook';
+--     RETURN NEW;
+--   END IF;
+--   SELECT value INTO v_url FROM public.webhook_config WHERE key = 'booking_url';
+--   SELECT value INTO v_secret FROM public.webhook_config WHERE key = 'saljtak_secret';
+--   IF v_url IS NULL OR v_secret IS NULL THEN
+--     RAISE WARNING 'Bokningswebhook ej konfigurerad - hoppar över';
+--     RETURN NEW;
+--   END IF;
+--   PERFORM net.http_post(
+--     url := v_url,
+--     headers := jsonb_build_object('Content-Type', 'application/json', 'X-Webhook-Secret', v_secret),
+--     body := jsonb_build_object(
+--       'id', NEW.id::text, 'name', NEW.name, 'phone', NEW.phone,
+--       'email', NULLIF(NEW.email, ''), 'municipality', NEW.address,
+--       'slot', NEW.booking_slot, 'date', NEW.booking_date::text,
+--       'message', NEW.message, 'created_at', NEW.created_at::text,
+--       'landing_path', NEW.landing_path, 'referrer_category', NEW.referrer_category,
+--       'utm_source', NEW.utm_source, 'utm_medium', NEW.utm_medium,
+--       'utm_campaign', NEW.utm_campaign, 'utm_content', NEW.utm_content
+--     )
+--   );
+--   RETURN NEW;
+-- END;
+-- $$;
+-- (Ingen ny DROP/CREATE TRIGGER behövs — triggern pekar redan på funktionsnamnet, och
+-- CREATE OR REPLACE FUNCTION byter kroppen utan att röra triggern.)
