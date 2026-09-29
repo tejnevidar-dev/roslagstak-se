@@ -115,6 +115,15 @@ const CookiesPage = () => (
                   för ROT-avdrag, sparas i 7 år enligt bokföringslagen.
                 </li>
                 <li>
+                  <strong className="text-foreground">Dörrknackning:</strong> när vi knackar dörr sparar vi adressen
+                  och om någon var hemma, för att inte knacka i onödan. Vi raderar det efter 6–12 månader. Vill du
+                  inte ha besök sparar vi adressen som spärr. Säg till eller mejla{" "}
+                  <a href="mailto:vidar@roslagstak.se" className="text-primary underline underline-offset-4">
+                    vidar@roslagstak.se
+                  </a>
+                  .
+                </li>
+                <li>
                   Du kan när som helst invända mot att vi sparar dina uppgifter eller be oss radera dem. Då gör vi
                   det, utom när lag kräver att vi sparar dem.
                 </li>
