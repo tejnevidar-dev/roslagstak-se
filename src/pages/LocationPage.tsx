@@ -14,6 +14,7 @@ import { getLocationBySlug, locations } from "@/data/locations";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { regionSlugs } from "@/data/regions";
+import { projects } from "@/data/projects";
 import NotFound from "./NotFound";
 import {
   Accordion,
@@ -28,6 +29,7 @@ const LocationPage = () => {
   
   const resolvedSlug = slug || (pathname.startsWith("/taklaggare-") ? pathname.replace("/taklaggare-", "") : undefined);
   const location = resolvedSlug ? getLocationBySlug(resolvedSlug) : undefined;
+  const locationProject = resolvedSlug ? projects.find((p) => p.locationSlug === resolvedSlug) : undefined;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -395,6 +397,11 @@ const LocationPage = () => {
                     {isBrfLocation(location.slug) && (
                       <Link to={`/brf/${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                         <ArrowRight className="w-3 h-3" /> Takbyte för BRF {prep} {location.name}
+                      </Link>
+                    )}
+                    {locationProject && (
+                      <Link to={`/projekt/${locationProject.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> Referensjobb: {locationProject.title}
                       </Link>
                     )}
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">

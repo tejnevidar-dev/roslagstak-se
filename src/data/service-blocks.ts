@@ -351,12 +351,14 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
   takomlaggning: [
     { to: "/taktyper", label: "Jämför taktyper och material" },
     { to: "/hur-det-gar-till", label: "Se hur ett takbyte går till" },
+    { to: "/projekt/takbyte-singo", label: "Referensjobb: takbyte på Singö" },
   ],
   takrenovering: [
     { to: "/tjanster/takinspektion", label: "Boka kostnadsfri takbesiktning" },
     { to: "/tjanster/takomlaggning", label: "När räcker inte renovering?" },
     { to: "/takreparation", label: "Takreparation vid läckage och skador" },
     { to: "/akut-lackage", label: "Akut läckage i taket" },
+    { to: "/projekt/takrenovering-blido", label: "Referensjobb: takrenovering på Blidö" },
   ],
   takavvattning: [
     { to: "/tjanster/platarbeten", label: "Plåtarbeten och beslag" },

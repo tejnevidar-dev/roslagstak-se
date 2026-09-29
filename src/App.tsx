@@ -43,6 +43,8 @@ const ServiceLandingPage = lazy(() => import("./pages/ServiceLandingPage.tsx"));
 const AreasPage = lazy(() => import("./pages/AreasPage.tsx"));
 const RegionPage = lazy(() => import("./pages/RegionPage.tsx"));
 const BookingPage = lazy(() => import("./pages/BookingPage.tsx"));
+const ProjectsPage = lazy(() => import("./pages/ProjectsPage.tsx"));
+const ProjectPage = lazy(() => import("./pages/ProjectPage.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -72,6 +74,8 @@ const App = () => (
               <Route path="/platslagare" element={<ServiceLandingPage slug="platslagare" />} />
               <Route path="/takbyte-var-2027" element={<ServiceLandingPage slug="takbyte-var-2027" />} />
               <Route path="/boka-takkontroll" element={<BookingPage />} />
+              <Route path="/projekt" element={<ProjectsPage />} />
+              <Route path="/projekt/:slug" element={<ProjectPage />} />
               <Route path="/brf" element={<BrfPage />} />
               {adLandingSlugs.map((slug) => (
                 <Route key={slug} path={`/offert/${slug}`} element={<AdLandingPage />} />

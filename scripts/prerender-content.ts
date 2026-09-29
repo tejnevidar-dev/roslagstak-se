@@ -43,6 +43,47 @@ const services = [
   ),
 ].map((m) => ({ slug: m[1], title: m[2], description: m[3] }));
 
+/**
+ * Textspegling av src/data/projects.ts, utan bildimporterna (esbuild/Node kan inte
+ * lösa Vite-bildimporter). Håll fälten i synk manuellt vid ändringar i projects.ts.
+ */
+const projectSummaries = [
+  {
+    slug: "takrenovering-blido",
+    title: "Takrenovering på Blidö",
+    locationName: "Blidö, Norrtälje",
+    locationSlug: "blido",
+    serviceName: "Takrenovering",
+    serviceSlug: "takrenovering",
+    material: "Betongpannor (Benders, svart)",
+    period: "sommaren 2026",
+    summary:
+      "Komplett takrenovering på ett fritidshus på Blidö, med nya betongpannor i svart. Befintlig råspont behölls.",
+    description: [
+      "Ett fritidshus på Blidö i Norrtälje kommun, omgärdat av skog med utsikt mot fjärden, fick sommaren 2026 en komplett takrenovering. Nytt underlag, ny läkt, nya plåtdetaljer kring skorstenar och genomföringar samt nya hängrännor lades hela vägen — den befintliga råsponten var i så pass gott skick att den kunde behållas.",
+      "Nytt ytmaterial blev betongpannor från Benders i svart, ett robust och prisvärt val som är vanligt på fritidshus i Roslagens skärgård.",
+      "Jobbet är utfört av RoslagsTak med kundens samtycke till att bilderna publiceras i marknadsföring.",
+    ],
+  },
+  {
+    slug: "takbyte-singo",
+    title: "Takbyte på Singö",
+    locationName: "Singö, Grisslehamn",
+    locationSlug: "singo",
+    serviceName: "Takomläggning",
+    serviceSlug: "takomlaggning",
+    material: "Betongpannor på huvudtaket, TP20-plåt på de lägre delarna (båda röda)",
+    period: "september 2026",
+    summary:
+      "Komplett takbyte på ett hus på Singö med utsikt över fjärden — röda betongpannor på huvudtaket och röd TP20-plåt på de lägre takdelarna.",
+    description: [
+      "På Singö i Grisslehamn, Norrtälje kommun, genomförde RoslagsTak i september 2026 ett komplett takbyte på ett hus med utsikt över fjärden. Delar av råsponten byttes ut där den var skadad, resten behölls.",
+      "Taket har två material: röda betongpannor på huvudbyggnadens tak, och röd TP20-plåt (trapetsprofilerad plåt) på de lägre takdelarna — ett vanligt sätt att hålla nere vikten och kostnaden på tillbyggnader utan att tumma på utseendet.",
+      "Jobbet är utfört av RoslagsTak med kundens samtycke till att bilderna publiceras i marknadsföring, inklusive startsidans hero-bild.",
+    ],
+  },
+];
+
 const PHONE = "070-154 36 39";
 
 const primaryLinks = [
@@ -270,6 +311,18 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
     links: primaryLinks,
   },
+  "/projekt": {
+    title: "Referensjobb — riktiga takprojekt i Roslagen",
+    description:
+      "Se riktiga takprojekt vi utfört i Roslagen och Storstockholm, med bilder och fakta om material, omfattning och plats.",
+    h1: "Riktiga takprojekt i Roslagen",
+    intro: "Här visar vi jobb vi faktiskt utfört, med kundens samtycke. Riktiga bilder, riktiga material — inga påhittade case.",
+    paragraphs: [
+      "Takrenovering på Blidö: nya betongpannor från Benders i svart, sommaren 2026.",
+      "Takbyte på Singö, Grisslehamn: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
+    ],
+    links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Takrenovering på Blidö" }, { href: "/projekt/takbyte-singo", label: "Takbyte på Singö" }],
+  },
   "/tjanster/taktvatt": {
     title: "Taktvätt och takmålning — bort med mossa och lav",
     description:
@@ -312,6 +365,25 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const slug = clean.slice("/tjanster/".length);
     const service = services.find((s) => s.slug === slug);
     return service ? serviceIntro(service.title, service.description) : null;
+  }
+
+  if (clean.startsWith("/projekt/")) {
+    const projectSlug = clean.slice("/projekt/".length);
+    const project = projectSummaries.find((p) => p.slug === projectSlug);
+    if (!project) return null;
+    return {
+      title: `${project.title} — referensjobb`,
+      description: project.summary,
+      h1: project.title,
+      intro: project.summary,
+      paragraphs: [...project.description, `Material: ${project.material}. Utfört: ${project.period}.`],
+      links: [
+        ...primaryLinks,
+        { href: "/projekt", label: "Alla referensjobb" },
+        { href: `/tjanster/${project.serviceSlug}`, label: project.serviceName },
+        { href: `/taklaggare-${project.locationSlug}`, label: `Takläggare i ${project.locationName}` },
+      ],
+    };
   }
 
   if (clean.startsWith("/blogg/")) {
