@@ -348,47 +348,6 @@ const LocationPage = () => {
                   {" "}Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr per person och år).
                 </p>
 
-                {/* Prisexempel — riktpriser per vanlig takstorlek */}
-                <div className="mb-6 overflow-hidden rounded-2xl border border-border">
-                  <table className="w-full text-left text-sm">
-                    <caption className="sr-only">
-                      Riktpriser för takbyte {prep} {location.name}
-                    </caption>
-                    <thead className="bg-muted/50 text-foreground">
-                      <tr>
-                        <th scope="col" className="px-4 py-3 font-medium">Takyta</th>
-                        <th scope="col" className="px-4 py-3 font-medium">TP20-plåt</th>
-                        <th scope="col" className="px-4 py-3 font-medium">Dubbelfalsat</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-muted-foreground">
-                      {[100, 130, 160, 200].map((m2) => (
-                        <tr key={m2} className="border-t border-border">
-                          <th scope="row" className="px-4 py-3 font-normal text-foreground">
-                            {m2} m²
-                          </th>
-                          <td className="px-4 py-3">
-                            från {(m2 * 1200).toLocaleString("sv-SE")} kr
-                          </td>
-                          <td className="px-4 py-3">
-                            från {(m2 * 2000).toLocaleString("sv-SE")} kr
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                <p className="text-sm text-muted-foreground mb-6">
-                  Riktpriser inkl. material och arbete, före ROT-avdrag.
-                  {location.isIsland
-                    ? ` Transport till ${location.name} ingår i offerten.`
-                    : " Slutligt fast pris sätts efter kostnadsfri takkontroll."}{" "}
-                  <Link to="/priser" className="text-primary hover:underline">
-                    Se hela prislistan
-                  </Link>
-                  .
-                </p>
-
                 {/* Deep internal links */}
                 <div className="bg-card border border-border rounded-2xl p-5 mb-6">
                   <h3 className="font-display text-lg text-card-foreground mb-3">
