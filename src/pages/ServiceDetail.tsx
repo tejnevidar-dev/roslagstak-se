@@ -161,9 +161,9 @@ const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Pris", v: "Fast pris efter takkontroll" },
     ],
     specHeading: "Lertegel jämfört med andra taktyper",
-    lead: "Lertegel är det klassiska valet för äldre hus och kulturbyggnader — och håller längst av alla takmaterial.",
+    lead: "Lertegel är det klassiska valet som passar både äldre och nyare hus — och håller mycket länge.",
     craftLine: "Lertegel kräver en konstruktion som tål vikten. Vi kontrollerar bärigheten innan vi offererar.",
-    photoNote: "Lertegeltak — det klassiska materialvalet för äldre hus och kulturbyggnader.",
+    photoNote: "Lertegeltak — det klassiska materialvalet som passar både äldre och nyare hus.",
   },
 };
 
@@ -336,7 +336,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   tegeltak: {
-    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet för äldre hus och kulturbyggnader, med ett uttryck som plåt eller betong inte kan ersätta. Lertegel kan hålla över 100 år, men kräver en konstruktion som tål vikten (ca 40–50 kg/m²) och minst 22 graders taklutning. Vi kontrollerar alltid bärigheten vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
+    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Lertegel kan hålla över 100 år, men kräver en konstruktion som tål vikten (ca 40–50 kg/m²) och minst 22 graders taklutning. Vi kontrollerar alltid bärigheten vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlagets skick.",
     benefits: [
       "Klassiskt uttryck som håller husets karaktär",

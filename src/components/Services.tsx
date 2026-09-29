@@ -84,7 +84,7 @@ export const services = [
     title: "Tegeltak i lertegel",
     short: "Klassiskt tegel",
     description:
-      "Vi lägger tegeltak i lertegel — det klassiska materialvalet för äldre hus och kulturbyggnader, med fast pris efter kostnadsfri takkontroll.",
+      "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med fast pris efter kostnadsfri takkontroll.",
   },
 ];
 
@@ -107,8 +107,8 @@ const Services = () => {
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <p className="max-w-[46ch] text-[17px] font-light leading-[1.68] text-muted-foreground">
-              Villa, radhus, fritidshus eller bostadsrättsförening — vi utför hela arbetet med
-              egna takläggare och plåtslagare, och med material valt för svenskt klimat.
+              Villa, radhus, fritidshus eller bostadsrättsförening — du har en kontaktperson genom
+              hela processen, från takkontroll till färdigt tak, med material valt för svenskt klimat.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">

@@ -334,8 +334,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min",
     keywords: ["takläggare norrtälje", "takbyte norrtälje", "tak norrtälje", "takrenovering norrtälje", "takfirma norrtälje"],
     content: [
-      "Norrtälje är hjärtat i Roslagen och vår bas. Vi tar uppdrag på allt från villor i centrala Norrtälje till lantbruksfastigheter utanför staden. Lokal närvaro och korta resvägar håller nere etableringskostnaden vid takbyte och takrenovering.",
-      "Norrtäljes bebyggelse är varierad: sekelskifteshus med lertegel, 70-talsvillor med betongpannor, radhusområden med papptak och moderna nybyggen med plåt.",
+      "Norrtälje är hjärtat i Roslagen. Vi tar uppdrag på allt från villor i centrala Norrtälje till lantbruksfastigheter utanför staden.",
+      "Norrtäljes bebyggelse är varierad: sekelskifteshus med lertegel, 70-talsvillor med betongpannor och moderna nybyggen med plåt.",
       "Vad kostar takbyte i Norrtälje? Priset varierar beroende på material och takets storlek — TP20-plåttak, tegelplåt, dubbelfalsat eller betongpannor. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag (30% på arbete) sparar du rejält.",
       "Takrenovering i Norrtälje — ett billigare alternativ. Inte alla tak behöver bytas helt. Ibland räcker det med att byta enstaka pannor, laga plåtbeslag, rensa hängrännor eller byta underlagspapp. Takrenovering kan förlänga takets livslängd med 10–20 år.",
       "Vi utför även takavvattning (hängrännor, stuprör, takbrunnar), takkupor, takfönster (Velux), taksäkerhet och eternitsanering i Norrtälje. Totalentreprenad är möjligt — vi projektleder hela arbetet inklusive ställning, snickeri och plåtslageri.",
@@ -421,7 +421,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ["takläggare rådmansö", "takbyte rådmansö", "takläggare vätö", "takbyte vätö", "tak rådmansö", "takrenovering vätö"],
     content: [
       "Rådmansö och Vätö ligger strategiskt mellan Norrtälje och skärgården, och vi passerar dagligen genom området på väg ut till öarna. Det innebär att fastighetsägare på Rådmansö och Vätö kan dra nytta av vår närvaro i området — kort resväg, ingen reseersättning och möjlighet att samordna med andra projekt.",
-      "Rådmansö har en blandning av permanentboenden, fritidshus och lantbruksfastigheter. Här ser vi allt från betongpannetak på 70-talsvillor till papptak på ekonomibyggnader och äldre plåttak som börjat rosta.",
+      "Rådmansö har en blandning av permanentboenden, fritidshus och lantbruksfastigheter, med taktyper som varierar därefter — från betongpannor och plåt på bostadshus till enklare taktäckning på ekonomibyggnader.",
       "Vätö har liknande bebyggelse med tillägget att flera fastigheter ligger nära vattnet och exponeras för kustnära fukt och vind. Här rekommenderar vi takmaterial som tål skärgårdsmiljön — TP20 eller dubbelfalsat plåttak med korrosionsbeständig ytbehandling.",
       "Priset för takbyte på Rådmansö och Vätö beror på materialval — TP20, tegelplåt eller dubbelfalsat. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag sparar du 30% på arbetskostnaden.",
       "Vi utför även takrenoveringar, takavvattning, takkupor, takfönster och eternitsanering på Rådmansö och Vätö. Behöver du hjälp med en komplett takomläggning eller bara en reparation? Kontakta oss för en kostnadsfri bedömning.",

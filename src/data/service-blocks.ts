@@ -319,8 +319,8 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Byta till eller lägga om tegeltak? Kostnadsfri takkontroll utan förpliktelser, fast pris och 10 års utförandegaranti. Svar inom 24 h.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet för äldre hus och kulturbyggnader — inte att förväxla med tegelplåt." },
-      { tone: "outline", label: "Livslängd", value: "100+ år", text: "Lertegel är det takmaterial som håller allra längst." },
+      { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus — inte att förväxla med tegelplåt." },
+      { tone: "outline", label: "Livslängd", value: "100+ år", text: "Lertegel håller mycket länge." },
       { tone: "accent", label: "Bärighet", value: "Kontrolleras alltid", text: "Lertegel väger mer än plåt — vi kontrollerar konstruktionen vid takkontrollen." },
       { tone: "plain", label: "Pris", value: "Fast pris efter takkontroll", text: "Inkl. moms, före ROT-avdrag. Fast pris i offerten." },
     ],
@@ -332,7 +332,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Tegel eller betong? Och vad är egentligen skillnaden mellan lertegel och tegelplåt? Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Livslängd", "Passar"],
       rows: [
-        ["Lertegel", "Fast pris", "100+ år", "Äldre hus och kulturbyggnader som ska behålla sin karaktär"],
+        ["Lertegel", "Fast pris", "100+ år", "Äldre och nyare hus som ska behålla sin karaktär"],
         ["Betongpannor", "Fast pris", "30–50 år", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
         ["Tegelplåt (profilerad plåt)", "Fast pris", "40–50 år", "Tegelutseende till lägre vikt och pris än lertegel"],
         ["Dubbelfalsat plåttak", "Fast pris", "50–70 år", "Vindutsatta lägen och kustnära hus"],

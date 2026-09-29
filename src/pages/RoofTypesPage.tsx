@@ -14,7 +14,7 @@ const roofTypeFaqs = [
   {
     question: "Vilken taktyp håller längst?",
     answer:
-      "Dubbelfalsad bandtäckning i plåt har längst teknisk livslängd — 60 år eller mer med rätt underhåll. Lertegel ligger på 50–80 år, betongpannor 40–50 år och TP20-plåt cirka 40 år. Underlagspappen är oftast det som avgör när taket behöver läggas om.",
+      "Dubbelfalsad bandtäckning i plåt har normalt längst teknisk livslängd med rätt underhåll, följt av lertegel. Betongpannor och TP20-plåt håller också länge, men vanligtvis kortare än tegel. Underlagspappen är oftast det som avgör när taket behöver läggas om.",
   },
   {
     question: "Vad kostar de olika taktyperna?",
@@ -24,7 +24,7 @@ const roofTypeFaqs = [
   {
     question: "Plåttak eller betongpannor — vad passar bäst nära havet?",
     answer:
-      "Nära kusten rekommenderar vi plåt med hög korrosionsklass eller lertegel. Saltluft och kraftig vind sliter på infästningar, och pannor kan lyfta i utsatta lägen. Vi går igenom takets vindlast och läge vid besiktningen.",
+      "Nära kusten rekommenderar vi plåt med hög korrosionsklass eller lertegel. Saltluft och kraftig vind sliter på infästningar, och pannor kan lyfta i utsatta lägen. Vi går igenom takets vindlast och läge vid takkontrollen.",
   },
   {
     question: "Kan jag lägga plåttak direkt på gamla betongpannor?",
