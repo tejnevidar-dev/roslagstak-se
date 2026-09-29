@@ -23,9 +23,13 @@ export interface LocationData {
   factBox?: { label: string; value: string }[];
   /**
    * För villaområden som är en del av en ort, inte en egen ort (t.ex. Ella gård i Täby).
-   * Styr H1, brödsmula och länken högst upp på sidan (SEO-programmet villaomraden våg 1+).
+   * Styr brödsmula och länken högst upp på sidan (SEO-programmet villaomraden våg 1+).
+   * name kan skilja sig från slugens ort (t.ex. "Österåker" som visningsnamn för
+   * /taklaggare-akersberga) när området hör till en kommun utan egen ortssida.
    */
   parentLocation?: { name: string; slug: string };
+  /** Manuell H1 för villaområden vars namnmönster inte passar standardmallen. */
+  h1Override?: string;
   /**
    * Källattribuering för en specifik uppgift på sidan (t.ex. en kommunal kulturmiljöriktlinje),
    * renderad som en synlig länk under faktarutan. Kontrollera källan live innan publicering.
@@ -830,6 +834,129 @@ export const locations: LocationData[] = [
     lat: 59.4447,
     lng: 18.0539,
     nearbyLocations: ["Täby", "Vallentuna", "Åkersberga"],
+  },
+  {
+    slug: "skarpang",
+    name: "Skarpäng",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Skarpäng i Täby, ett villaområde med typhus från 1970- och 80-talen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Skarpäng ligger i kuperad terräng i sydvästra Täby, på gränsen mot Sollentuna och Danderyd. Namnet kommer från ängen Skarpängen, som finns med på en karta över Ella från 1715. Där beskrivs den som en skarp och torr äng, alltså en mark med mager och torr jord. Längst i söder finns torpet Skarpäng, anlagt vid mitten av 1700-talet, som har gett kommundelen dess namn. Liksom flera andra villaområden i Täby började Skarpäng som en gles bebyggelse på stora tomter, främst sommarstugor. Förvandlingen till tätt villaområde tog fart med 1960-talets förnyelseplanering och 1970-talets nya stadsplaner. Enligt Täby kommuns beskrivning präglas området i dag helt av typhus från 1970- och 80-talen, med fasader i mexitegel och trä. I norr finns enligt kommunen flera grupphusområden med radhus och friliggande hus.",
+    extraContent:
+      "Ett kvarter sticker ut: i Knäpparen uppfördes husen 1978–1979 efter ritningar av arkitekten Gustaf Lettström, med fasader av rödbrunt eller sandfärgat tegel och mörkbruna vindskivor och fönstersnickerier. Täby kommuns råd och riktlinjer för Knäpparen är att behålla bruna fönstersnickerier, ursprungliga tegelfasader och svarta tak — det gäller bara det kvarteret, inte hela Skarpäng. Vid ett takbyte i kvarteret är det klokt att ta hänsyn till det redan när materialet väljs. De flesta husen i Skarpäng är i dag runt 40–50 år gamla. Taken kan redan ha lagts om, men där det inte har skett är det ofta dags att se över underlagspapp, läkt, plåtdetaljer och hängrännor. I grupphusområdena är husen ofta likadana och byggda samtidigt, och då kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun.",
+    factBox: [
+      { label: "Kommun", value: "Täby" },
+      { label: "Hustyper", value: "Villor, radhus, grupphus" },
+      { label: "Byggperiod", value: "Typhus 1970- och 80-tal, Knäpparen 1978–79" },
+      { label: "Kulturmiljö", value: "Knäpparen (ett kvarter): riktlinje \"Behåll … svarta tak\"" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 200" },
+    ],
+    sourceLink: {
+      label: "Täby kommun: Skarpäng (kulturmiljö, råd och riktlinjer)",
+      url: "https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/skarpang",
+    },
+    parentLocation: { name: "Täby", slug: "taby" },
+    h1Override: "Takläggare i Skarpäng, Täby",
+    uniqueFAQ: {
+      question: "Gäller kulturmiljöriktlinjerna hela Skarpäng?",
+      answer:
+        "Nej. Täby kommuns riktlinje om att behålla bruna fönstersnickerier, ursprungliga tegelfasader och svarta tak gäller specifikt kvarteret Knäpparen, inte hela Skarpäng. Vi tar med riktlinjerna i underlaget när vi tar fram offerten om ditt hus ligger i Knäpparen.",
+    },
+    primaryKeyword: "takläggare Skarpäng",
+    lat: 59.4440,
+    lng: 18.0194,
+    nearbyLocations: ["Täby", "Sollentuna", "Vallentuna"],
+  },
+  {
+    slug: "viby",
+    name: "Viby",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Viby i Sollentuna, med villor, radhus och kedjehus från 1960- till 1980-talet. Kostnadsfri takkontroll utan förpliktelser.",
+    longDescription:
+      "Viby i norra Sollentuna har en historia som sträcker sig långt före villaområdena. Här finns gravfält och boplatser från yngre järnåldern, och vid nuvarande Rävgärdsvägen finns en runristning i berghällen från mitten av 1000-talet, som räknas som det äldsta kända skriftliga meddelandet från trakten. Namnet kommer från Viby gård, ett tidigare säteri som är känt i skrift sedan 1409. På en karta från 1687 sträcker sig gårdens ägor från sjön Ravalen och dagens Uppsalavägen i öster till Översjön i väster, med flera torp under sig. Herrgården från 1820-talet står kvar och ägs i dag av Sollentuna hembygdsförening. Den moderna bebyggelsen växte fram när gårdens ekonomibyggnader revs på 1960-talet. Enligt beskrivningar av kommundelen består bebyggelsen i dag huvudsakligen av villor och radhus, fördelade på områdena Lilla Viby, Östra Viby, Viby gård och Södra Viby. Enligt hitta.se är husen främst byggda på 1960- och 1980-talen.",
+    extraContent:
+      "Kommundelen gränsar till Rotebro, Norrviken, Häggvik och Järvafältet, och med knappt 5 700 invånare är Viby den femte största kommundelen i Sollentuna sett till invånarantal. De flesta husen i Viby är i dag runt 40–60 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. I radhus- och kedjehusområdena är husen ofta likadana och byggda samtidigt. Där kan grannar ibland ha nytta av att planera takbyten i samma veva, även om varje hus alltid får en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun.",
+    factBox: [
+      { label: "Kommun", value: "Sollentuna" },
+      { label: "Delområden", value: "Lilla Viby, Östra Viby, Viby gård, Södra Viby" },
+      { label: "Hustyper", value: "Villor, kedjehus, radhus" },
+      { label: "Byggperiod", value: "1960- och 1980-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 300" },
+    ],
+    parentLocation: { name: "Sollentuna", slug: "sollentuna" },
+    h1Override: "Takläggare i Viby, Sollentuna",
+    uniqueFAQ: {
+      question: "Hur gammal är bebyggelsen i Viby?",
+      answer:
+        "Enligt hitta.se är husen i Viby främst byggda på 1960- och 1980-talen. Taken kan redan ha lagts om en eller flera gånger, så vi kan inte säga något generellt om skicket — vi tittar alltid på ditt tak på plats vid en kostnadsfri takkontroll.",
+    },
+    primaryKeyword: "takläggare Viby",
+    lat: 59.4578,
+    lng: 17.8952,
+    nearbyLocations: ["Sollentuna", "Täby", "Upplands Väsby"],
+  },
+  {
+    slug: "brevik",
+    name: "Brevik",
+    region: "Österåker",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Brevik, Lervik, Flaxenvik och Skärgårdsstad i Österåker. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Öster om Åkersberga, ut mot kusten, ligger ett område med flera mindre delar: Brevik, Lervik, Flaxenvik, Ekhammar, Gröndal, Tråsättra, Skärgårdsstad, Översättra och södra Margretelund. Tillsammans bildar de ett stort sammanhängande småhusområde. Bebyggelsen har vuxit fram under lång tid. Enligt hitta.se är villorna i Brevik och Gröndal främst byggda på 1950- och 1960-talen, och villorna i Lervik på 1930- och 1970-talen. I Tråsättra finns kedjehus och radhus från 1970- och 1980-talen. Skärgårdsstad har en egen historia: området ligger vid kusten, mellan Solbergasjön, Bosjön och Isättraviken, cirka sju kilometer från Åkersberga och till stor del omgivet av skog. Här fanns tidigare gruvhantering, och när den lades ned togs en detaljplan fram för bostäder. Skärgårdsstad bebyggdes främst under 1980- och 90-talen, och gatorna är uppkallade efter de bönder som ursprungligen ägde marken eller efter gruvdriften. Området har en egen samfällighetsförening. Närheten till Åkersberga har präglat hela området sedan järnvägen kom — Åkersberga station öppnade 1901 vid den dåvarande kustbanan, och orten är i dag centralort i Österåkers kommun.",
+    extraContent:
+      "I ett område med hus från 1930-talet till 1990-talet finns ingen typisk takålder. Villorna från 1950- och 60-talen är i dag runt 60–70 år gamla, kedjehusen och radhusen i Tråsättra runt 40–50 år, och husen i Skärgårdsstad runt 30–40 år. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. Det enda säkra sättet att veta vad taket behöver är att titta på det på plats. I Tråsättra och Skärgårdsstad, där husen ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Österåkers kommun.",
+    factBox: [
+      { label: "Kommun", value: "Österåker" },
+      { label: "Delområden", value: "Brevik, Lervik, Flaxenvik, Ekhammar, Gröndal, Tråsättra, Skärgårdsstad, Översättra, södra Margretelund" },
+      { label: "Hustyper", value: "Villor, kedjehus och radhus (Tråsättra)" },
+      { label: "Byggperiod", value: "Brevik/Gröndal 1950–60-tal, Lervik 1930- och 70-tal, Tråsättra 1970–80-tal, Skärgårdsstad 1980–90-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 800" },
+    ],
+    parentLocation: { name: "Österåker", slug: "akersberga" },
+    h1Override: "Takläggare i Brevik, Lervik och Flaxenvik, Österåker",
+    uniqueFAQ: {
+      question: "Är bebyggelsen i Brevik-området enhetlig?",
+      answer:
+        "Nej. Området spänner från 1930-talsvillor i Lervik till 1980–90-talsbebyggelse i Skärgårdsstad, så det går inte att säga något generellt om takens skick. Vi tittar alltid på ditt tak på plats vid en kostnadsfri takkontroll innan vi lämnar ett fast pris.",
+    },
+    primaryKeyword: "takläggare Brevik",
+    lat: 59.4593,
+    lng: 18.3624,
+    nearbyLocations: ["Åkersberga", "Vaxholm", "Ljusterö"],
+  },
+  {
+    slug: "ormsta",
+    name: "Ormsta",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Ormsta, Bällsta, Västra Bällsta och Molnby i Vallentuna. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Vallentuna tätort har vuxit fram längs Roslagsbanan, där mindre samhällen i södra delen av kommunen gradvis har vuxit ihop. I norr sträcker sig tätorten upp till Ormsta, och i de östra och norra delarna ligger bostadsområden som Ormsta, Bällsta, Västra Bällsta och, enligt hitta.se, Molnby. Enligt beskrivningar av ortens historia fanns det på 1930- och 40-talen bland annat två tegelbruk i centralorten, och befolkningen växte snabbt efter kriget: från omkring 2 300 invånare 1944 till nästan 5 900 år 1952. Ormsta, i tätortens nordligaste del, gränsar till Åby i söder, Lingsberg i öster och Ubby i norr. Området fick sin station på Roslagsbanan 1957. Enligt hitta.se är husen i Ormsta främst byggda på 1950- och 1970-talen, i Bällsta på 1960- och 2000-talen, i Västra Bällsta på 1970- och 1980-talen och i Molnby på 1980- och 2000-talen.",
+    extraContent:
+      "Det gör östra Vallentuna till ett område där hus från fem decennier ligger nära varandra, från de tidiga villorna i Ormsta till de nyare kvarteren i Bällsta och Molnby. De äldsta villorna från 1950- och 60-talen är i dag runt 60–70 år gamla, husen från 1970- och 80-talen runt 40–50 år, och de nyare husen från 2000-talet är i regel betydligt yngre. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. I kedjehusområdena, där husen byggdes samtidigt och ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Vallentuna kommun.",
+    factBox: [
+      { label: "Kommun", value: "Vallentuna" },
+      { label: "Delområden", value: "Ormsta, Bällsta, Västra Bällsta, Molnby" },
+      { label: "Hustyper", value: "Villor, kedjehus, radhus" },
+      { label: "Byggperiod", value: "Ormsta 1950–70-tal, Bällsta 1960- och 2000-tal, V. Bällsta 1970–80-tal, Molnby 1980- och 2000-tal" },
+    ],
+    parentLocation: { name: "Vallentuna", slug: "vallentuna" },
+    h1Override: "Takläggare i Vallentuna – Ormsta, Bällsta och Molnby",
+    uniqueFAQ: {
+      question: "Är husen i Ormsta, Bällsta och Molnby från samma tid?",
+      answer:
+        "Nej. Enligt hitta.se är husen i Ormsta främst byggda på 1950- och 1970-talen, i Bällsta på 1960- och 2000-talen och i Molnby på 1980- och 2000-talen. Vi tittar alltid på ditt tak på plats vid en kostnadsfri takkontroll, oavsett hur gammalt huset är.",
+    },
+    primaryKeyword: "takläggare Ormsta",
+    lat: 59.5413,
+    lng: 18.0881,
+    nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
   },
   // =================== STORSTOCKHOLM ===================
   {

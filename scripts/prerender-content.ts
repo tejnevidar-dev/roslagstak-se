@@ -849,9 +849,10 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         : isNearBase(loc)
           ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
           : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`),
-      h1: loc.parentLocation
-        ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
-        : `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
+      h1: loc.h1Override ??
+        (loc.parentLocation
+          ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
+          : `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`),
       intro: loc.description,
       paragraphs: [
         loc.longDescription,

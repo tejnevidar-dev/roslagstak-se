@@ -233,9 +233,10 @@ const LocationPage = () => {
               {location.parentLocation ? `Takläggare i ${location.parentLocation.name}` : `Takläggare i ${location.region}`}
             </Link>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              {location.parentLocation
-                ? `Takläggare i ${location.name}, ${location.parentLocation.name}`
-                : `Takläggare ${prep} ${location.name} — takbyte, takrenovering & plåtarbeten`}
+              {location.h1Override ??
+                (location.parentLocation
+                  ? `Takläggare i ${location.name}, ${location.parentLocation.name}`
+                  : `Takläggare ${prep} ${location.name} — takbyte, takrenovering & plåtarbeten`)}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {location.description}

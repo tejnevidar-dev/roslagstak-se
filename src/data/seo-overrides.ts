@@ -19,4 +19,24 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Ella gård i Täby. Kostnadsfri takkontroll utan förpliktelser, fast pris och hänsyn till kommunens riktlinjer för kulturmiljön.",
   },
+  skarpang: {
+    title: "Takbyte i Skarpäng, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i Skarpäng i Täby, ett villaområde med typhus från 1970- och 80-talen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  viby: {
+    title: "Takbyte i Viby, Sollentuna – fast pris",
+    description:
+      "Takbyte och takomläggning i Viby i Sollentuna, med villor, radhus och kedjehus från 1960- till 1980-talet. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  brevik: {
+    title: "Takbyte i Brevik och Lervik, Österåker – fast pris",
+    description:
+      "Takbyte och takomläggning i Brevik, Lervik, Flaxenvik och Skärgårdsstad i Österåker. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  ormsta: {
+    title: "Takbyte i Vallentuna – Ormsta och Bällsta, fast pris",
+    description:
+      "Takbyte och takomläggning i Ormsta, Bällsta, Västra Bällsta och Molnby i Vallentuna. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
 };
