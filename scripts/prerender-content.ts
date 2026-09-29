@@ -849,18 +849,22 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         : isNearBase(loc)
           ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
           : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`),
-      h1: `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
+      h1: loc.parentLocation
+        ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
+        : `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
       intro: loc.description,
       paragraphs: [
         loc.longDescription,
         loc.extraContent,
         ...(loc.factBox ? [loc.factBox.map((f) => `${f.label}: ${f.value}.`).join(" ")] : []),
+        ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
         geoFactsParagraph(loc),
         `${loc.uniqueFAQ.question} ${loc.uniqueFAQ.answer}`,
         `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,
       ],
       links: [
         ...primaryLinks,
+        ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
         ...combos
           .filter((c) => c.locationSlug === loc.slug)
           .map((c) => ({ href: c.url, label: `${c.serviceName} ${c.prep} ${c.locationName}` })),

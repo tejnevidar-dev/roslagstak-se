@@ -21,6 +21,16 @@ export interface LocationData {
    * ledning/marknad/villaomraden/texter/. Renderas i samma stil som LocalFact-rutan.
    */
   factBox?: { label: string; value: string }[];
+  /**
+   * För villaområden som är en del av en ort, inte en egen ort (t.ex. Ella gård i Täby).
+   * Styr H1, brödsmula och länken högst upp på sidan (SEO-programmet villaomraden våg 1+).
+   */
+  parentLocation?: { name: string; slug: string };
+  /**
+   * Källattribuering för en specifik uppgift på sidan (t.ex. en kommunal kulturmiljöriktlinje),
+   * renderad som en synlig länk under faktarutan. Kontrollera källan live innan publicering.
+   */
+  sourceLink?: { label: string; url: string };
 }
 
 export const locations: LocationData[] = [
@@ -804,8 +814,13 @@ export const locations: LocationData[] = [
       { label: "Byggperiod", value: "1955–ca 1970, två delområden tidigt 1970-tal" },
       { label: "Antal hus i ursprungsplanen", value: "Ca 500" },
       { label: "Kulturmiljö", value: "Täby kommuns riktlinje: \"Takpannor av lertegel bör användas\"" },
-      { label: "Ägda småhus i området", value: "Ca 1 500 (SCB, 2025)" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 500" },
     ],
+    sourceLink: {
+      label: "Täby kommun: Ella gård (kulturmiljö, råd och riktlinjer)",
+      url: "https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/ella-gard",
+    },
+    parentLocation: { name: "Täby", slug: "taby" },
     uniqueFAQ: {
       question: "Måste jag använda lertegel om jag byter tak i Ella gård?",
       answer:

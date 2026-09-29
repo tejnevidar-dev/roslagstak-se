@@ -157,7 +157,15 @@ const LocationPage = () => {
       { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
       { "@type": "ListItem", position: 2, name: "Områden", item: "https://roslagstak.se/omraden" },
       { "@type": "ListItem", position: 3, name: location.region, item: `https://roslagstak.se${regionHref}` },
-      { "@type": "ListItem", position: 4, name: `Takläggare ${prep} ${location.name}`, item: `https://roslagstak.se/taklaggare-${location.slug}` },
+      ...(location.parentLocation
+        ? [{ "@type": "ListItem", position: 4, name: `Takläggare i ${location.parentLocation.name}`, item: `https://roslagstak.se/taklaggare-${location.parentLocation.slug}` }]
+        : []),
+      {
+        "@type": "ListItem",
+        position: location.parentLocation ? 5 : 4,
+        name: `Takläggare ${prep} ${location.name}`,
+        item: `https://roslagstak.se/taklaggare-${location.slug}`,
+      },
     ],
   };
 
@@ -205,6 +213,9 @@ const LocationPage = () => {
               { name: "Hem", path: "/" },
               { name: "Områden", path: "/omraden" },
               { name: location.region, path: regionHref },
+              ...(location.parentLocation
+                ? [{ name: location.parentLocation.name, path: `/taklaggare-${location.parentLocation.slug}` }]
+                : []),
               { name: location.name },
             ]}
             withSchema={false}
@@ -215,14 +226,16 @@ const LocationPage = () => {
           {/* Hero */}
           <div className="max-w-4xl mb-16">
             <Link
-              to={regionHref}
+              to={location.parentLocation ? `/taklaggare-${location.parentLocation.slug}` : regionHref}
               className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-4 transition-colors hover:bg-primary/20"
             >
               <MapPin className="w-3 h-3" />
-              Takläggare i {location.region}
+              {location.parentLocation ? `Takläggare i ${location.parentLocation.name}` : `Takläggare i ${location.region}`}
             </Link>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              Takläggare {prep} {location.name} — takbyte, takrenovering & plåtarbeten
+              {location.parentLocation
+                ? `Takläggare i ${location.name}, ${location.parentLocation.name}`
+                : `Takläggare ${prep} ${location.name} — takbyte, takrenovering & plåtarbeten`}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {location.description}
@@ -290,6 +303,20 @@ const LocationPage = () => {
                       </div>
                     ))}
                   </dl>
+                )}
+
+                {location.sourceLink && (
+                  <p className="mb-6 text-xs text-muted-foreground">
+                    Källa:{" "}
+                    <a
+                      href={location.sourceLink.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline underline-offset-4 hover:no-underline"
+                    >
+                      {location.sourceLink.label}
+                    </a>
+                  </p>
                 )}
 
                 {/* Unikt lokalt innehåll per ort — klimat, bebyggelse och logistik */}

@@ -14,4 +14,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare i Norrtälje för dig som ska byta tak. Kostnadsfri takkontroll, skriftligt fast pris och 10 års utförandegaranti. Svar inom 24 timmar.",
   },
+  "ella-gard": {
+    title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
+    description:
+      "Takbyte och takomläggning i Ella gård i Täby. Kostnadsfri takkontroll utan förpliktelser, fast pris och hänsyn till kommunens riktlinjer för kulturmiljön.",
+  },
 };
