@@ -150,6 +150,24 @@ const Prices = () => {
             </Link>
           </div>
 
+          {/* Vad påverkar priset */}
+          <div className="max-w-4xl mx-auto bg-card border border-border rounded-2xl p-8 mb-16">
+            <h2 className="font-display text-xl text-foreground mb-4">
+              Vad avgör priset på just ditt tak?
+            </h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              Riktpriserna ovan är per kvadratmeter och material — men det slutgiltiga priset styrs också av
+              takets storlek och form, underlagets skick, taklutning och tillgänglighet, samt detaljer som
+              skorstenar, plåtbeslag och hängrännor. Därför lämnar vi aldrig ett pris utan att först ha sett taket.
+            </p>
+            <Link
+              to="/blogg/kostnad-takbyte-2026"
+              className="inline-flex items-center gap-1 text-primary text-sm font-semibold hover:gap-2 transition-all"
+            >
+              Läs hela guiden: Vad kostar ett takbyte? <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
           {/* FAQ */}
           <div className="max-w-3xl mx-auto mb-16">
             <h2 className="font-display text-2xl text-foreground mb-6 text-center flex items-center justify-center gap-2">

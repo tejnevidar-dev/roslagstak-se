@@ -439,7 +439,11 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vad ingår i kvadratmeterpriset? Rivning och bortforsling av gamla taket, underlagspapp, strö- och bärläkt, tätskikt i valt material, plåtbeslag kring skorsten och genomföringar, taksäkerhet och städning. Det enda som kan tillkomma är skador på råspont eller takstolar som inte går att se förrän gamla taket är rivet — då stannar vi upp och prisar tillägget separat innan vi fortsätter.",
       "Jämför du offerter från flera firmor? Titta på vad som faktiskt ingår, inte bara totalsumman. Fråga efter garantitider, om beslag och taksäkerhet ingår, och om priset är fast eller ett ungefärligt upplägg.",
     ],
-    links: [...primaryLinks, ...serviceLinks],
+    links: [
+      { href: "/blogg/kostnad-takbyte-2026", label: "Vad kostar ett takbyte? Hela guiden" },
+      ...primaryLinks,
+      ...serviceLinks,
+    ],
   },
   "/recensioner": {
     title: "Recensioner — läs kundernas omdömen på Google",
