@@ -20,15 +20,15 @@ import {
 } from "@/components/ui/accordion";
 
 const servicePriceDescriptions: Record<string, string> = {
-  takbyte: "Från ca 1 200 kr/m² (TP20) till 2 000+ kr/m² (dubbelfalsat plåt). ROT-avdrag tillkommer.",
-  takomlaggning: "Från ca 1 200 kr/m² (TP20) till 2 000+ kr/m² (dubbelfalsat plåt). ROT-avdrag tillkommer.",
-  takrenovering: "Från ca 300 kr/m² beroende på åtgärdens omfattning. ROT-avdrag tillkommer.",
-  taktvatt: "80–150 kr/m² inklusive biocidbehandling. ROT-avdrag tillkommer.",
-  takmalning: "Från ca 150 kr/m² inklusive tvätt, grundning och två strykningar. ROT-avdrag tillkommer.",
-  bandtackning: "Från ca 2 000 kr/m² i förzinkad eller färgbelagd plåt. ROT-avdrag tillkommer.",
-  platttak: "Från ca 1 200 kr/m² (TP20) och från ca 2 000 kr/m² (dubbelfalsat). ROT-avdrag tillkommer.",
-  betongpannor: "Från ca 1 300 kr/m² vid nyläggning. Omläggning av befintliga pannor ligger lägre. ROT-avdrag tillkommer.",
-  tegeltak: "Från ca 1 400 kr/m² i lertegel eller tegelprofilerad plåt. ROT-avdrag tillkommer.",
+  takbyte: "Fast pris efter kostnadsfri takkontroll, oavsett material. ROT-avdrag tillkommer.",
+  takomlaggning: "Fast pris efter kostnadsfri takkontroll, oavsett material. ROT-avdrag tillkommer.",
+  takrenovering: "Fast pris efter kostnadsfri takkontroll, beroende på åtgärdens omfattning. ROT-avdrag tillkommer.",
+  taktvatt: "Fast pris efter kostnadsfri takkontroll, inklusive biocidbehandling. ROT-avdrag tillkommer.",
+  takmalning: "Fast pris efter kostnadsfri takkontroll, inklusive tvätt, grundning och två strykningar. ROT-avdrag tillkommer.",
+  bandtackning: "Fast pris efter kostnadsfri takkontroll, i förzinkad eller färgbelagd plåt. ROT-avdrag tillkommer.",
+  platttak: "Fast pris efter kostnadsfri takkontroll, oavsett material. ROT-avdrag tillkommer.",
+  betongpannor: "Fast pris efter kostnadsfri takkontroll. Omläggning av befintliga pannor ligger normalt lägre än nyläggning. ROT-avdrag tillkommer.",
+  tegeltak: "Fast pris efter kostnadsfri takkontroll, i lertegel eller tegelprofilerad plåt. ROT-avdrag tillkommer.",
 };
 
 const ServiceLocationPage = () => {

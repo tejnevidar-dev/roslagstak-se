@@ -32,7 +32,7 @@ const roofTypes: RoofType[] = [
     pros: ["Mycket kostnadseffektivt", "Snabb montering — stora skivor", "Låg vikt (ca 3–5 kg/m²)", "Minimalt underhåll", "Brett färgutbud", "Minsta taklutning ca 14°"],
     cons: ["Kan ge resonansljud vid kraftigt regn utan ljuddämpning", "Enklare estetik jämfört med falsad plåt", "Kondens kan uppstå utan korrekt ventilation och underlagspapp"],
     lifespan: "40–50 år",
-    priceRange: "Från 1 200 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Villor, fritidshus, ekonomibyggnader, garage",
     image: imgTp20,
     imageAlt: "Närbild på trapetsprofilerad TP20-plåt",
@@ -45,7 +45,7 @@ const roofTypes: RoofType[] = [
     pros: ["Klassiskt tegelpanneliknande utseende", "Mycket lättare än riktigt tegel (ca 4–5 kg/m²)", "Snabbare montering än tegelpannor", "Underhållsfritt", "Tål kraftig vind väl"],
     cons: ["Inte lika autentiskt utseende som riktigt tegel", "Kan låta vid kraftigt regn", "Kräver minst 14° taklutning"],
     lifespan: "40–60 år",
-    priceRange: "Från 1 200 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Villor, sommarstugor, radhus",
     image: imgTegelplat,
     imageAlt: "Vått grått tak i tegelplåt med snörasskydd",
@@ -58,7 +58,7 @@ const roofTypes: RoofType[] = [
     pros: ["Unikt och karaktäristiskt utseende", "Svensk klassiker med lång tradition", "Passar kulturhistoriska byggnader", "Fungerar vid låga taklutningar (från 8°)", "Förzinkad för god rostbeständighet", "Lätt material"],
     cons: ["Mer begränsat färgutbud än modern profilerad plåt", "Kräver korrekt underlag (råspont + underlagspapp)"],
     lifespan: "40–60 år",
-    priceRange: "Från 1 200 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Kulturbyggnader, äldre villor, funkishus, lantbruksbyggnader, kyrkor",
     image: imgPannplat,
     imageAlt: "Svart pannplåt med karaktäristisk vågprofil",
@@ -71,7 +71,7 @@ const roofTypes: RoofType[] = [
     pros: ["Helt vattentätt — inga genomgående skruvar", "Extremt lång livslängd", "Fungerar vid låg taklutning (från 6°)", "Exklusivt och tidlöst utseende", "Materialval: koppar, zink, stål, aluminium", "Åldras vackert (koppar/zink)"],
     cons: ["Högsta materialkostnaden", "Kräver specialiserad plåtslagare", "Längre monteringstid", "Koppar och zink har högre kvadratmeterpris"],
     lifespan: "60–100+ år",
-    priceRange: "Från 2 000 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Exklusiva kustvillor, herrgårdar, kyrkor, kulturbyggnader",
     image: imgDubbelfalsat,
     imageAlt: "Dubbelfalsat plåttak i svart bandtäckning på modern timmerbyggnad",
@@ -84,7 +84,7 @@ const roofTypes: RoofType[] = [
     pros: ["Tidlöst och autentiskt utseende", "Naturligt och miljövänligt material", "Utmärkt ljud- och värmeisolering", "Åldras med värdighet", "Brandsäkert (obrännbart)", "Lång livslängd vid rätt underhåll"],
     cons: ["Tungt — kräver dimensionerad takstol (40–50 kg/m²)", "Risk för frostsprängning vid dålig kvalitet", "Enstaka pannor kan behöva bytas med åren", "Mossa och lav kan växa på skuggiga sidor", "Kräver minst 22° taklutning"],
     lifespan: "80–100+ år",
-    priceRange: "Från 1 300 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Äldre villor, kulturhistoriska byggnader, herrgårdar, skärgårdshus med karaktär",
     image: imgLertegel,
     imageAlt: "Närbild på tvåkupiga lertegelpannor i terrakotta",
@@ -97,7 +97,7 @@ const roofTypes: RoofType[] = [
     pros: ["Prisvärt jämfört med lertegel", "Brett utbud av profiler och färger", "God ljud- och värmeisolering", "Brandsäkert", "Svensk tillverkning (bl.a. Benders, Monier)"],
     cons: ["Tungt material (40–45 kg/m²)", "Ytan kan bli porös och absorbera fukt med åren", "Mossa och alger kan växa, kräver taktvätt", "Färgen kan blekna med tiden", "Kräver minst 22° taklutning"],
     lifespan: "50–70 år",
-    priceRange: "Från 1 200 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Villor, radhus, parhus — det trygga och beprövade valet",
     image: imgBetongpanne,
     imageAlt: "Närbild på svart betongpannetak med vågprofil",
@@ -110,7 +110,7 @@ const roofTypes: RoofType[] = [
     pros: ["Exklusivt glansigt utseende", "Självrengörande — mossa och smuts fastnar inte", "Ingen risk för frostsprängning (sluten yta)", "Färgbeständigt — bleknar inte", "Brett färgutbud", "Samma livslängd som lertegel"],
     cons: ["Dyrare än vanligt lertegel och betongpannor", "Tungt material (ca 40–50 kg/m²)", "Glasyren kan i sällsynta fall spricka vid hård mekanisk påverkan", "Kräver minst 22° taklutning"],
     lifespan: "80–100+ år",
-    priceRange: "Från 1 800 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Exklusiva villor, representativa fastigheter, skärgårdshus",
     image: imgGlacerade,
     imageAlt: "Närbild på glacerade takpannor i svart glansig glasyr",
@@ -123,7 +123,7 @@ const roofTypes: RoofType[] = [
     pros: ["Mycket prisvärt", "Lätt material", "Fungerar vid mycket låg taklutning (från 3°)", "Flexibelt — anpassar sig efter underlaget", "Enkel att lägga om"],
     cons: ["Kortare livslängd än övriga material", "Kräver regelbundet underhåll och omslagning", "Känsligt för UV-strålning — åldras av sol", "Mindre estetiskt tilltalande", "Kan bli spröd i extrem kyla"],
     lifespan: "15–30 år",
-    priceRange: "Från 900 kr/m²",
+    priceRange: "Fast pris efter takkontroll",
     bestFor: "Garage, uthus, friggebodar, ekonomibyggnader, låglutande tak",
   },
 ];
@@ -144,7 +144,7 @@ const RoofTypes = () => {
               <a href="/offert#radgivning" className="text-primary underline decoration-primary/40 hover:no-underline">
                 Boka kostnadsfri rådgivning
               </a>{" "}
-              så hjälper vi dig välja. Priserna nedan är riktpriser inkl. moms, före ROT-avdrag.
+              så hjälper vi dig välja. Vi lämnar alltid fast pris efter kostnadsfri takkontroll.
             </>
           }
           className="mb-14 lg:mb-20"
@@ -275,96 +275,16 @@ const RoofTypes = () => {
           })}
         </div>
 
-        {/* Räkneexempel */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <h3 className="font-display text-2xl text-foreground mb-6 text-center">
-            Räkneexempel — vad kostar takbyte?
+        {/* Vad kostar takbyte? */}
+        <div className="max-w-2xl mx-auto mt-16 text-center">
+          <h3 className="font-display text-2xl text-foreground mb-4">
+            Vad kostar takbyte?
           </h3>
-          <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
-            Priserna nedan är inkl. moms, före ROT-avdrag, och inkluderar material, arbete, byggställning, logistik och avfallshantering.
-            ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan och sänker den faktiska kostnaden ytterligare.
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan. Priset beror på
+            materialval, takets storlek och skick, och inkluderar material, arbete, logistik och
+            avfallshantering. ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan.
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Normalstort bostadshus */}
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Coins className="w-5 h-5 text-primary" />
-                </span>
-                <div>
-                  <h4 className="font-display text-lg text-card-foreground">Normalstort bostadshus</h4>
-                  <p className="text-xs text-muted-foreground">Takyta ca 150 m²</p>
-                </div>
-              </div>
-              <ul className="space-y-2 text-sm">
-                <li className="flex justify-between text-muted-foreground">
-                  <span>TP20 plåttak</span>
-                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Tegelplåt / Pannplåt</span>
-                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Betongpannor</span>
-                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Lertegel</span>
-                  <span className="font-semibold text-foreground">ca 195 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Glacerade pannor</span>
-                  <span className="font-semibold text-foreground">ca 270 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Dubbelfalsat plåttak</span>
-                  <span className="font-semibold text-foreground">ca 300 000 kr</span>
-                </li>
-              </ul>
-              <p className="text-xs text-muted-foreground mt-4 italic">* Exakt pris beror på takets komplexitet, underlag och tillval. Kostnadsfri offert.</p>
-            </div>
-
-            {/* Mindre kustvilla */}
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Coins className="w-5 h-5 text-primary" />
-                </span>
-                <div>
-                  <h4 className="font-display text-lg text-card-foreground">Mindre kustvilla / fritidshus</h4>
-                  <p className="text-xs text-muted-foreground">Takyta ca 100 m²</p>
-                </div>
-              </div>
-              <ul className="space-y-2 text-sm">
-                <li className="flex justify-between text-muted-foreground">
-                  <span>TP20 plåttak</span>
-                  <span className="font-semibold text-foreground">ca 120 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Tegelplåt / Pannplåt</span>
-                  <span className="font-semibold text-foreground">ca 120 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Betongpannor</span>
-                  <span className="font-semibold text-foreground">ca 120 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Lertegel</span>
-                  <span className="font-semibold text-foreground">ca 130 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Glacerade pannor</span>
-                  <span className="font-semibold text-foreground">ca 180 000 kr</span>
-                </li>
-                <li className="flex justify-between text-muted-foreground">
-                  <span>Dubbelfalsat plåttak</span>
-                  <span className="font-semibold text-foreground">ca 200 000 kr</span>
-                </li>
-              </ul>
-              <p className="text-xs text-muted-foreground mt-4 italic">* Exakt pris beror på takets komplexitet, underlag och tillval. Kostnadsfri offert.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

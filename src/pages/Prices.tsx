@@ -19,24 +19,24 @@ const priceData = [
   {
     category: "Plåttak",
     items: [
-      { name: "TP20 plåttak", priceRange: "Från ca 1200 kr/m²", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
-      { name: "Pannplåttak", priceRange: "Från ca 1200 kr/m²", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
-      { name: "Plegelplåttak", priceRange: "Från ca 1200 kr/m²", description: "Plåtprofil som imiterar tegel. Stilrent och underhållsfritt." },
-      { name: "Dubbelfalsat plåttak", priceRange: "Från ca 2000 kr/m²", description: "Premiumprodukten. Helt vattentätt, extremt långlivat (50+ år)." },
+      { name: "TP20 plåttak", priceRange: "Fast pris efter takkontroll", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
+      { name: "Pannplåttak", priceRange: "Fast pris efter takkontroll", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
+      { name: "Plegelplåttak", priceRange: "Fast pris efter takkontroll", description: "Plåtprofil som imiterar tegel. Stilrent och underhållsfritt." },
+      { name: "Dubbelfalsat plåttak", priceRange: "Fast pris efter takkontroll", description: "Premiumprodukten. Helt vattentätt, extremt långlivat (50+ år)." },
     ],
   },
   {
     category: "Panntak",
     items: [
-      { name: "Betongpannetak", priceRange: "Från ca 1200 kr/m²", description: "Beprövat och prisvärt. 30–50 års livslängd." },
-      { name: "Lertegeltak", priceRange: "Från ca 1 300 kr/m²", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
+      { name: "Betongpannetak", priceRange: "Fast pris efter takkontroll", description: "Beprövat och prisvärt. 30–50 års livslängd." },
+      { name: "Lertegeltak", priceRange: "Fast pris efter takkontroll", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
     ],
   },
   {
     category: "Övriga tjänster",
     items: [
       { name: "Takrenovering", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter besiktning." },
-      { name: "Takavvattning (hängrännor)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör från ca 15 000 kr." },
+      { name: "Takavvattning (hängrännor)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör, fast pris i offerten." },
       { name: "Takkupa", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
       { name: "Takfönster (Velux)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
       { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig besiktning med skriftlig rapport och åtgärdsförslag." },
@@ -45,10 +45,10 @@ const priceData = [
   {
     category: "Tillval",
     items: [
-      { name: "Råspontbyte", priceRange: "Från ca 300 kr/m²", description: "Byte av skadat underlag vid takbyte." },
+      { name: "Råspontbyte", priceRange: "Fast pris efter takkontroll", description: "Byte av skadat underlag vid takbyte." },
       { name: "Skorstensinklädnad", priceRange: "Från ca 7000 kr ", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
       { name: "Takstege + gångbrygga", priceRange: "Från ca 8000 kr", description: "Komplett taksäkerhet enligt BBR." },
-      { name: "Snörasskydd", priceRange: "Från ca 1000 kr/löpmeter", description: "Monteras vid takfot mot entréer och gångvägar." },
+      { name: "Snörasskydd", priceRange: "Fast pris efter bedömning", description: "Monteras vid takfot mot entréer och gångvägar." },
     ],
   },
 ];
@@ -56,7 +56,7 @@ const priceData = [
 const priceFaqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: "Ett takbyte kostar vanligtvis mellan 1200–2000 kr/m² inkl. moms, beroende på materialval. Med ROT-avdrag (30% på arbetskostnaden) blir det avsevärt billigare. Ett typiskt hus på 120 m² tak kostar ca 144 000 kr–240 000 kr före ROT-avdrag.",
+    answer: "Priset beror på takets storlek, lutning, material och skick. Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan. Med ROT-avdrag (30% på arbetskostnaden) blir det avsevärt billigare.",
   },
   {
     question: "Ingår material i priset?",
@@ -90,8 +90,8 @@ const Prices = () => {
   return (
     <>
       <SEOHead
-        title="Vad kostar takbyte? Priser per m² 2026 — Roslagen"
-        description="Prislista för takbyte: TP20 från ca 1 200 kr/m², betongpannor och tegelplåt från ca 1 300 kr/m², dubbelfalsat från ca 2 000 kr/m². Fast pris efter takkontroll."
+        title="Vad kostar takbyte? Fast pris 2026 — Roslagen"
+        description="Vad kostar ett takbyte i Roslagen? Fast pris efter kostnadsfri takkontroll, oavsett material — TP20, betongpannor, tegel eller dubbelfalsat plåttak."
         canonical="https://roslagstak.se/priser"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -102,9 +102,9 @@ const Prices = () => {
         </div>
         <PageHero
           compact
-          eyebrow="Prislista 2026"
+          eyebrow="Priser 2026"
           title="Vad kostar takbyte och takrenovering i Roslagen?"
-          text="Riktpriser för alla typer av takarbeten, inkl. moms och före ROT-avdrag. Alla priser inkluderar material och arbete. ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan. Kostnadsfri offert med exakt pris."
+          text="Fast pris efter kostnadsfri takkontroll, oavsett material. Alla priser inkluderar material och arbete, inkl. moms och före ROT-avdrag. ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan."
         />
 
         <div className="container mx-auto px-4 pt-2 pb-20">
@@ -156,9 +156,9 @@ const Prices = () => {
               Vad avgör priset på just ditt tak?
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Riktpriserna ovan är per kvadratmeter och material — men det slutgiltiga priset styrs också av
-              takets storlek och form, underlagets skick, taklutning och tillgänglighet, samt detaljer som
-              skorstenar, plåtbeslag och hängrännor. Därför lämnar vi aldrig ett pris utan att först ha sett taket.
+              Priset styrs av materialval, takets storlek och form, underlagets skick, taklutning och
+              tillgänglighet, samt detaljer som skorstenar, plåtbeslag och hängrännor. Därför lämnar vi
+              aldrig ett pris utan att först ha sett taket.
             </p>
             <Link
               to="/blogg/kostnad-takbyte-2026"

@@ -84,7 +84,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Komplett takomläggning i Roslagen och skärgården: rivning, ny råspont, papp, läkt och nytt ytskikt. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Prisbild", value: "1 200–2 000 kr/m²", text: "TP20-plåt i nedre spannet, dubbelfalsat i övre. Fast pris i offerten." },
+      { tone: "primary", label: "Prisbild", value: "Fast pris efter takkontroll", text: "TP20-plåt i nedre spannet, dubbelfalsat i övre. Fast pris i offerten." },
       { tone: "outline", label: "Tidsåtgång", value: "1–3 veckor", text: "Normalvilla med ställning, rivning, nytt underlag och ytskikt." },
       { tone: "accent", label: "Livslängd", value: "40–70 år", text: "Beror på val av ytskikt, lutning och exponering mot saltluft." },
       { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Allt dolt material byts — papp, läkt, beslag och avvattning." },
@@ -95,24 +95,24 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       heading: "Fyra ytskikt vi lägger — och vad som skiljer dem",
       intro:
         "Valet av ytskikt styr både pris, livslängd och hur taket tål Roslagens saltluft. Vi går igenom alternativen på plats innan offerten skrivs.",
-      columns: ["Material", "Pris/m²", "Livslängd", "Passar"],
+      columns: ["Material", "Pris", "Livslängd", "Passar"],
       rows: [
-        ["Profilerad plåt (TP20)", "1 200–1 400 kr", "40–50 år", "Fritidshus, uthus, enkla sadeltak"],
-        ["Betongpanna", "1 400–1 600 kr", "50–60 år", "Villor med bärkraftig konstruktion"],
-        ["Tegelpanna", "1 600–1 800 kr", "60–70 år", "Äldre hus med traditionellt uttryck"],
-        ["Dubbelfalsat plåttak", "1 800–2 000+ kr", "60–80 år", "Vindutsatta lägen, låg lutning, kustnära"],
+        ["Profilerad plåt (TP20)", "Fast pris", "40–50 år", "Fritidshus, uthus, enkla sadeltak"],
+        ["Betongpanna", "Fast pris", "50–60 år", "Villor med bärkraftig konstruktion"],
+        ["Tegelpanna", "Fast pris", "60–70 år", "Äldre hus med traditionellt uttryck"],
+        ["Dubbelfalsat plåttak", "Fast pris", "60–80 år", "Vindutsatta lägen, låg lutning, kustnära"],
       ],
-      footnote: "Priser är inklusive material och arbete, före ROT-avdrag. Ställning och avfall specificeras separat i offerten.",
+      footnote: "Priset sätts efter kostnadsfri takkontroll, inklusive material och arbete, före ROT-avdrag. Ställning och avfall specificeras separat i offerten.",
     },
   },
 
   takrenovering: {
     seoTitle: "Takrenovering Roslagen — Laga läckor & byta papp",
     seoDescription:
-      "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter besiktning från ca 300 kr/m².",
+      "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "before-spec",
     factCards: [
-      { tone: "outline", label: "Prisbild", value: "Från 300 kr/m²", text: "Punktinsats kostar en bråkdel av en komplett omläggning." },
+      { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Punktinsats kostar en bråkdel av en komplett omläggning." },
       { tone: "primary", label: "Vanligast", value: "Underlagspapp", text: "Läckan sitter oftast i pappen eller i beslag, inte i pannan." },
       { tone: "plain", label: "Tidsåtgång", value: "1–5 dagar", text: "Beroende på skadans omfattning och åtkomst till taket." },
       { tone: "accent", label: "Vinst", value: "+10–20 år", text: "Rätt insats i tid skjuter upp hela takbytet betydligt." },
@@ -141,7 +141,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     factCards: [
       { tone: "accent", label: "Dimension", value: "125 / 150 mm", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet." },
       { tone: "primary", label: "Fall", value: "3–5 mm/m", text: "För lite fall ger stående vatten, för mycket syns på fasaden." },
-      { tone: "outline", label: "Prisbild", value: "Från 250 kr/lpm", text: "Aluminium; koppar ligger högre. Komplett system från ca 15 000 kr." },
+      { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Aluminium; koppar ligger högre. Komplett system, fast pris i offerten." },
       { tone: "plain", label: "Livslängd", value: "25–50 år", text: "Lackerad plåt i nedre spannet, koppar i det övre." },
     ],
     block: {
@@ -164,11 +164,11 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takkupor: {
     seoTitle: "Takkupor & Takfönster Roslagen — Bygglov & montage",
     seoDescription:
-      "Takkupor och takfönster i Roslagen: konstruktion, plåtinklädnad, tätning och invändig finish. Vi hanterar bygglovsansökan. Takkupa från ca 50 000 kr.",
+      "Takkupor och takfönster i Roslagen: konstruktion, plåtinklädnad, tätning och invändig finish. Vi hanterar bygglovsansökan och lämnar fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-scope",
     factCards: [
       { tone: "primary", label: "Bygglov", value: "Krävs oftast", text: "Vi tar fram ritningar och hanterar ansökan mot kommunen." },
-      { tone: "outline", label: "Prisbild", value: "Från 50 000 kr", text: "Takkupa komplett. Takfönster från ca 15 000 kr monterat." },
+      { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Takkupa komplett, inklusive bygglovsansökan. Samma för takfönster, monterat." },
       { tone: "accent", label: "Handläggning", value: "4–10 veckor", text: "Kommunens tid för bygglov — planera projektet i god tid." },
       { tone: "plain", label: "Byggtid", value: "1–2 veckor", text: "Från öppning i takfall till färdig inklädnad och tätning." },
     ],
@@ -258,11 +258,11 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takvard: {
     seoTitle: "Taktvätt & Takmålning Roslagen — Skonsam takvård",
     seoDescription:
-      "Takvård i Roslagen: skonsam taktvätt, borttagning av mossa och alger samt takmålning med specialfärg. Taktvätt från ca 80 kr/m², målning från ca 150 kr/m².",
+      "Takvård i Roslagen: skonsam taktvätt, borttagning av mossa och alger samt takmålning med specialfärg. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-scope",
     factCards: [
-      { tone: "outline", label: "Taktvätt", value: "Från 80 kr/m²", text: "Skonsam metod anpassad efter panna, plåt eller papp." },
-      { tone: "primary", label: "Takmålning", value: "Från 150 kr/m²", text: "Grundning och två skikt specialfärg för tak." },
+      { tone: "outline", label: "Taktvätt", value: "Fast pris efter takkontroll", text: "Skonsam metod anpassad efter panna, plåt eller papp." },
+      { tone: "primary", label: "Takmålning", value: "Fast pris efter takkontroll", text: "Grundning och två skikt specialfärg för tak." },
       { tone: "accent", label: "Intervall", value: "Var 5–8 år", text: "Beroende på trädskugga, väderstreck och takmaterial." },
       { tone: "plain", label: "Effekt", value: "+10 år", text: "Rätt underhåll förlänger ytskiktets livslängd påtagligt." },
     ],
@@ -322,7 +322,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet för äldre hus och kulturbyggnader — inte att förväxla med tegelplåt." },
       { tone: "outline", label: "Livslängd", value: "100+ år", text: "Lertegel är det takmaterial som håller allra längst." },
       { tone: "accent", label: "Bärighet", value: "Kontrolleras alltid", text: "Lertegel väger mer än plåt — vi kontrollerar konstruktionen vid takkontrollen." },
-      { tone: "plain", label: "Pris", value: "Från ca 1 300 kr/m²", text: "Inkl. moms, före ROT-avdrag. Fast pris i offerten." },
+      { tone: "plain", label: "Pris", value: "Fast pris efter takkontroll", text: "Inkl. moms, före ROT-avdrag. Fast pris i offerten." },
     ],
     block: {
       kind: "matrix",
@@ -330,14 +330,14 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       heading: "Lertegel jämfört med betong och tegelplåt",
       intro:
         "Tegel eller betong? Och vad är egentligen skillnaden mellan lertegel och tegelplåt? Vi går igenom alternativen på plats innan offerten skrivs.",
-      columns: ["Material", "Pris/m²", "Livslängd", "Passar"],
+      columns: ["Material", "Pris", "Livslängd", "Passar"],
       rows: [
-        ["Lertegel", "Från ca 1 300 kr", "100+ år", "Äldre hus och kulturbyggnader som ska behålla sin karaktär"],
-        ["Betongpannor", "Från ca 1 200 kr", "30–50 år", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
-        ["Tegelplåt (profilerad plåt)", "Från ca 1 200 kr", "40–50 år", "Tegelutseende till lägre vikt och pris än lertegel"],
-        ["Dubbelfalsat plåttak", "Från ca 2 000 kr", "50–70 år", "Vindutsatta lägen och kustnära hus"],
+        ["Lertegel", "Fast pris", "100+ år", "Äldre hus och kulturbyggnader som ska behålla sin karaktär"],
+        ["Betongpannor", "Fast pris", "30–50 år", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
+        ["Tegelplåt (profilerad plåt)", "Fast pris", "40–50 år", "Tegelutseende till lägre vikt och pris än lertegel"],
+        ["Dubbelfalsat plåttak", "Fast pris", "50–70 år", "Vindutsatta lägen och kustnära hus"],
       ],
-      footnote: "Priser är inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlag.",
+      footnote: "Priset sätts efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlag.",
     },
     relatedLinks: [
       { to: "/blogg/plattak-vs-betongpannor", label: "Plåttak jämfört med betongpannor" },

@@ -327,8 +327,7 @@ const LocationPage = () => {
                   Vad kostar takbyte {prep} {location.name}?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Priset för ett takbyte {prep} {location.name} beror på takets storlek, lutning, materialval och underlagets skick. 
-                  Som riktpris ligger TP20-plåttak från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². 
+                  Priset för ett takbyte {prep} {location.name} beror på takets storlek, lutning, materialval och underlagets skick, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak.
                   {location.isIsland
                     ? ` Transportkostnad till ${location.name} ingår alltid i vår offert — inga dolda tillägg.`
                     : ` Du får alltid fast pris efter besiktning — inga dolda tillägg.`}

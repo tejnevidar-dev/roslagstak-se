@@ -711,7 +711,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar ett takbyte på en villa i Åkersberga?",
       answer:
-        "Priset beror på takets storlek, material och underlagets skick — från ca 1 200 kr/m² i TP20-plåt till 2 000+ kr/m² i dubbelfalsat. Riktpriserna på vår prislista är en bra utgångspunkt, men vi lämnar alltid ett fast pris efter kostnadsfri takkontroll.",
+        "Priset beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Vi lämnar alltid ett fast pris efter kostnadsfri takkontroll — aldrig innan.",
     },
     primaryKeyword: "takläggare Åkersberga",
     lat: 59.4794,
@@ -860,7 +860,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Bromma?",
       answer:
-        "En villa i Bromma med 130–170 m² takyta landar oftast mellan 160 000 och 340 000 kr beroende på material och underlagets skick — från ca 1 200 kr/m² i TP20-plåt till 2 000+ kr/m² i dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
+        "Priset för en villa i Bromma beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
     },
     primaryKeyword: "takläggare Bromma",
     lat: 59.34,
@@ -1030,7 +1030,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takomläggning i Sollentuna?",
       answer:
-        "Takomläggning i Sollentuna med ny underlagspapp, ny läkt och nytt takmaterial kostar från ca 1 200 kr/m² i plåt och ca 1 300 kr/m² i betongpannor, beroende på takets skick. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
+        "Takomläggning i Sollentuna med ny underlagspapp, ny läkt och nytt takmaterial i plåt eller betongpannor, till ett pris som beror på takets skick. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
     },
     primaryKeyword: "takläggare Sollentuna",
     lat: 59.4289,
@@ -1198,7 +1198,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Huddinge?",
       answer:
-        "En villa i Huddinge med 130–170 m² takyta landar oftast mellan 160 000 och 340 000 kr beroende på material och underlag — från ca 1 200 kr/m² i TP20-plåt till 2 000+ kr/m² i dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
+        "Priset för en villa i Huddinge beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
     },
     primaryKeyword: "takläggare Huddinge",
     lat: 59.2375,
@@ -1305,7 +1305,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Vällingby?",
       answer:
-        "En villa i Vällingby med 130–170 m² takyta landar oftast mellan 160 000 och 340 000 kr beroende på material och underlagets skick — från ca 1 200 kr/m² i TP20-plåt till 2 000+ kr/m² i dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
+        "Priset för en villa i Vällingby beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
     },
     primaryKeyword: "takläggare Vällingby",
     lat: 59.3819,
@@ -1391,7 +1391,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Älvsjö?",
       answer:
-        "En villa i Älvsjö med 130–170 m² takyta landar oftast mellan 160 000 och 340 000 kr beroende på material och underlag — från ca 1 200 kr/m² i TP20-plåt till 2 000+ kr/m² i dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
+        "Priset för en villa i Älvsjö beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
     },
     primaryKeyword: "takläggare Älvsjö",
     lat: 59.3019,

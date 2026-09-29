@@ -158,7 +158,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
     specs: [
       { k: "Material", v: "Lertegel" },
       { k: "Livslängd", v: "100+ år" },
-      { k: "Pris", v: "Från ca 1 300 kr/m²" },
+      { k: "Pris", v: "Fast pris efter takkontroll" },
     ],
     specHeading: "Lertegel jämfört med andra taktyper",
     lead: "Lertegel är det klassiska valet för äldre hus och kulturbyggnader — och håller längst av alla takmaterial.",
@@ -172,7 +172,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
     longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
-    priceRange: "Från ca 1 200 kr/m² (TP20) till 2 000+ kr/m² (dubbelfalsat). Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, oavsett material. Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
     benefits: [
       "Rivning av befintligt yttertak",
       "Ny råspont och ventilation vid behov",
@@ -197,7 +197,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takrenovering: {
     longDesc: "En takrenovering innebär att vi åtgärdar problem och förlänger livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
-    priceRange: "Från ca 300 kr/m² beroende på skadans omfattning. Alltid fast pris efter besiktning. ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri besiktning, beroende på skadans omfattning. ROT-avdrag tillkommer.",
     benefits: [
       "Lägre kostnad än komplett takomläggning",
       "Snabbare genomförande",
@@ -217,7 +217,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takavvattning: {
     longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i aluminium, koppar eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
-    priceRange: "Från ca 250 kr/löpmeter för hängrännor i aluminium. Komplett system med stuprör från ca 15 000 kr. ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, för hängrännor i aluminium eller koppar och komplett system med stuprör. ROT-avdrag tillkommer.",
     benefits: [
       "Skyddar fasad och grund mot vattenskador",
       "Hängrännor i aluminium, koppar eller lackerad plåt",
@@ -237,7 +237,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takkupor: {
     longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. Med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum och öka boendeytan avsevärt.",
-    priceRange: "Takkupa från ca 50 000 kr. Takfönster (Velux) från ca 15 000 kr inkl. montering. ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, för både takkupa och takfönster (Velux) inkl. montering. ROT-avdrag tillkommer.",
     benefits: [
       "Mer dagsljus på vindsvåningen",
       "Ökat boendeyta och husvärde",
@@ -277,7 +277,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   platarbeten: {
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar.",
-    priceRange: "Beslag och detaljer från ca 2 000 kr. Taktäckning med plåt från ca 1 200 kr/m². ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, för både beslag/detaljer och taktäckning med plåt. ROT-avdrag tillkommer.",
     benefits: [
       "Certifierade plåtslagare",
       "Taktäckning med alla typer av plåt",
@@ -297,7 +297,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takvard: {
     longDesc: "Takvård handlar om att underhålla och skydda ditt tak för att förlänga dess livslängd och bevara husets utseende. Vi utför taktvätt där vi tar bort mossa, alger och smuts med skonsamma metoder som inte skadar takmaterialet. Vi utför även takmålning med specialfärger anpassade för tak — oavsett om det är betongpannor, tegelpannor eller plåttak. Ett välskött tak håller längre, ser bättre ut och skyddar bättre mot väder och vind.",
-    priceRange: "Taktvätt från ca 80 kr/m². Takmålning från ca 150 kr/m². ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning. ROT-avdrag tillkommer.",
     benefits: [
       "Professionell taktvätt med skonsam metod",
       "Borttagning av mossa, alger och lavar",
@@ -317,7 +317,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   "eternit-asbest": {
     longDesc: "Många äldre hus i Roslagen och skärgården har tak av eternitplattor som innehåller asbest — ett hälsofarligt material som kräver specialhantering vid rivning. Vi samordnar saneringen med en behörig saneringsfirma, som utför rivningen enligt Arbetsmiljöverkets föreskrifter med skyddsutrustning, slussystem och godkänd emballering, och transporterar materialet till godkänd deponi. Vi utför inte asbestsanering själva. Därefter utför vi komplett takomläggning med modernt material så att du får ett säkert, hållbart och vackert tak.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll — sanering (via saneringsfirman) plus nytt tak från ca 1 200 kr/m². Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer på takarbetet.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll — sanering (via saneringsfirman) plus nytt tak. Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer på takarbetet.",
     benefits: [
       "Sanering av behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter",
       "Vi samordnar hela processen åt dig",
@@ -337,7 +337,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   tegeltak: {
     longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet för äldre hus och kulturbyggnader, med ett uttryck som plåt eller betong inte kan ersätta. Lertegel kan hålla över 100 år, men kräver en konstruktion som tål vikten (ca 40–50 kg/m²) och minst 22 graders taklutning. Vi kontrollerar alltid bärigheten vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
-    priceRange: "Från ca 1 300 kr/m² inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlagets skick.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlagets skick.",
     benefits: [
       "Klassiskt uttryck som håller husets karaktär",
       "Lång livslängd — kan hålla över 100 år",

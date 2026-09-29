@@ -27,7 +27,7 @@ export const generateLocationFAQs = (
   faqs.push(
     {
       question: `Vad kostar ett takbyte ${prep} ${name}?`,
-      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval. Som riktpris ligger TP20-plåttak från ca 1 200 kr/m² och dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger ytterligare 30% rabatt på arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
+      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak. ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger ytterligare 30% rabatt på arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
     },
     {
       question: `Hur lång tid tar ett takbyte ${prep} ${name}?`,
@@ -76,7 +76,7 @@ export const generateServiceLocationFAQs = (
     return tidy([
       {
         question: `Vad kostar taktvätt ${prep} ${locationName}?`,
-        answer: `Priset för taktvätt ${prep} ${locationName} ligger normalt mellan 80–150 kr/m² beroende på takets storlek, lutning och nedsmutsningsgrad. För ett villatak på 150 m² hamnar totalpriset oftast mellan 12 000 och 22 000 kr inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri takkontroll."}`,
+        answer: `Priset för taktvätt ${prep} ${locationName} beror på takets storlek, lutning och nedsmutsningsgrad, inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri takkontroll."}`,
       },
       {
         question: `Hur ofta behöver jag tvätta taket ${prep} ${locationName}?`,
@@ -88,7 +88,7 @@ export const generateServiceLocationFAQs = (
       },
       {
         question: `Kan ni utföra både taktvätt och takmålning ${prep} ${locationName}?`,
-        answer: `Ja, vi erbjuder komplett takvård ${prep} ${locationName} — både taktvätt och takmålning. När taket är rent och torrt kan vi måla med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning kostar från ca 150 kr/m² inklusive grundning och två strykningar.`,
+        answer: `Ja, vi erbjuder komplett takvård ${prep} ${locationName} — både taktvätt och takmålning. När taket är rent och torrt kan vi måla med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning inkluderar grundning och två strykningar, fast pris efter takkontroll.`,
       },
       {
         question: `Ingår ROT-avdrag vid taktvätt ${prep} ${locationName}?`,
@@ -105,8 +105,8 @@ export const generateServiceLocationFAQs = (
     {
       question: `Vad kostar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
       answer: isTakbyte
-        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag. Riktpriser: TP20 från ca 1 200 kr/m², dubbelfalsat plåttak från ca 2 000 kr/m². ${isIsland ? "Transport till ön ingår i priset." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
-        : `En takrenovering ${prep} ${locationName} kostar från ca 300 kr/m² beroende på åtgärd. ${isIsland ? "Transport till ön ingår." : "Fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
+        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak. ${isIsland ? "Transport till ön ingår i priset." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
+        : `En takrenovering ${prep} ${locationName} har ett pris som beror på åtgärdens omfattning. ${isIsland ? "Transport till ön ingår." : "Fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
     },
     {
       question: `Hur lång tid tar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,

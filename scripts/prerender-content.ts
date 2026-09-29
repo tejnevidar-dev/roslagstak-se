@@ -421,22 +421,22 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/priser": {
-    title: "Vad kostar takbyte? Priser per m² 2026 — Roslagen",
+    title: "Vad kostar takbyte? Fast pris 2026 — Roslagen",
     description:
-      "Prislista för takbyte: TP20 från ca 1 200 kr/m², betongpannor och tegelplåt från ca 1 300 kr/m², dubbelfalsat från ca 2 000 kr/m². Fast pris efter takkontroll.",
+      "Vad kostar ett takbyte i Roslagen? Fast pris efter kostnadsfri takkontroll, oavsett material — TP20, betongpannor, tegel eller dubbelfalsat plåttak.",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro:
-      "Riktpriser för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
+      "Fast pris efter kostnadsfri takkontroll för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
     paragraphs: [
-      "TP20 plåttak från ca 1 200 kr/m². Tegelprofilerad plåt och betongpannor från ca 1 300–1 400 kr/m². Dubbelfalsat plåttak (bandtäckning) från ca 2 000 kr/m². Taktvätt 80–150 kr/m² och takmålning från ca 150 kr/m².",
+      "Vi lägger TP20 plåttak, tegelprofilerad plåt, betongpannor, dubbelfalsat plåttak (bandtäckning) och lertegel, samt utför taktvätt och takmålning. Exakt pris beror på material, takets storlek och skick.",
       "Priset styrs av takets storlek, lutning, antal genomföringar samt underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.",
-      "Exempel: ett TP20-tak på 100 m² kostar från cirka 120 000 kr, 130 m² från cirka 156 000 kr och 160 m² från cirka 192 000 kr. Ett dubbelfalsat tak på 130 m² kostar från cirka 260 000 kr. Priserna är riktpriser — exakt pris får du efter besiktning.",
+      "Vi går igenom taket, mäter och bedömer skicket vid takkontrollen, och du får ett skriftligt fast pris innan något arbete börjar. Priset gäller sedan hela vägen, oavsett husets storlek eller materialval.",
       "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter hela ansökan och drar av beloppet direkt på fakturan, så du behöver aldrig ligga ute med pengarna.",
       "Faktorer som påverkar priset: takets lutning och komplexitet, antal genomföringar som skorstenar och takkupor, underlagets skick, samt logistik — på öar utan bro tillkommer båttransport. Allt specificeras i offerten innan arbetet börjar.",
-      "Vill du jämföra taktyper? På sidan Taktyper ser du livslängd, underhållsbehov och vad som passar just ditt hus. I bloggen hittar du fördjupande prisguider för 2026.",
-      "Så budgeterar du smart: boka besiktningen tidigt så hinner du jämföra materialalternativ i lugn takt. Överväg att samordna takbytet med byte av vindskivor, hängrännor eller taksäkerhet — marginalkostnaden blir lägre när ställningen ändå står uppe. Och glöm inte att ROT-avdraget gäller per person, två delägare kan alltså få upp till 100 000 kr tillsammans.",
-      "Alla priser på sidan är riktpriser baserade på våra utförda projekt i Roslagen och Storstockholm. Exakt pris för ditt tak får du alltid skriftligt efter den kostnadsfria takkontrollen.",
-      "Vad ingår i kvadratmeterpriset? Rivning och bortforsling av gamla taket, underlagspapp, strö- och bärläkt, tätskikt i valt material, plåtbeslag kring skorsten och genomföringar, taksäkerhet och städning. Det enda som kan tillkomma är skador på råspont eller takstolar som inte går att se förrän gamla taket är rivet — då stannar vi upp och prisar tillägget separat innan vi fortsätter.",
+      "Vill du jämföra taktyper? På sidan Taktyper ser du livslängd, underhållsbehov och vad som passar just ditt hus. I bloggen hittar du fördjupande guider för 2026.",
+      "Så budgeterar du smart: boka takkontrollen tidigt så hinner du jämföra materialalternativ i lugn takt. Överväg att samordna takbytet med byte av vindskivor, hängrännor eller taksäkerhet — marginalkostnaden blir lägre när ställningen ändå står uppe. Och glöm inte att ROT-avdraget gäller per person, två delägare kan alltså få upp till 100 000 kr tillsammans.",
+      "Alla priser är fasta priser, satta efter en kostnadsfri takkontroll på plats — aldrig innan. Exakt pris för ditt tak får du alltid skriftligt efter kontrollen.",
+      "Vad ingår i priset? Rivning och bortforsling av gamla taket, underlagspapp, strö- och bärläkt, tätskikt i valt material, plåtbeslag kring skorsten och genomföringar, taksäkerhet och städning. Det enda som kan tillkomma är skador på råspont eller takstolar som inte går att se förrän gamla taket är rivet — då stannar vi upp och prisar tillägget separat innan vi fortsätter.",
       "Jämför du offerter från flera firmor? Titta på vad som faktiskt ingår, inte bara totalsumman. Fråga efter garantitider, om beslag och taksäkerhet ingår, och om priset är fast eller ett ungefärligt upplägg.",
     ],
     links: [
@@ -563,7 +563,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
     paragraphs: [
       "Vi rengör taket med lågtryckstvätt eller manuell borstning och behandlar därefter med miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.",
-      "Taktvätt kostar normalt 80–150 kr/m² och takmålning från ca 150 kr/m² inklusive grundning och två strykningar. ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
+      "Vi lämnar alltid fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning med grundning och två strykningar. ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
     ],
     links: [...primaryLinks, ...serviceLinks],
   },

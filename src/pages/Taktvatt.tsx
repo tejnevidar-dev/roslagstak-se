@@ -89,7 +89,7 @@ const guarantees = [
 const faqs = [
   {
     q: "Vad kostar taktvätt i Roslagen?",
-    a: "Taktvätt i Roslagen kostar 80–150 kr/m² inklusive biocidbehandling — med ROT-avdrag blir nettopriset 56–105 kr/m². För en normalvilla på 130 m² takyta landar totalpriset oftast på 10 400–19 500 kr brutto, eller 7 280–13 650 kr efter ROT. Vill du även ha takmålning kostar det 200–320 kr/m² (140–224 kr/m² efter ROT). Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri takkontroll.",
+    a: "Priset beror på takets storlek, lutning och nedsmutsningsgrad, inklusive biocidbehandling. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden direkt på fakturan. Vill du även ha takmålning ingår det i samma offert. Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri takkontroll.",
   },
   {
     q: "Hur ofta bör man tvätta taket?",
@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     q: "Är taktvätt verkligen lönsamt jämfört med takbyte?",
-    a: "Ja, om taket är helt och underliggande konstruktion är frisk är taktvätt 10–20 gånger billigare än ett takbyte. En taktvätt på en normalvilla kostar 10 400–19 500 kr (brutto) och förlänger livslängden med 10–15 år. Ett komplett takbyte kostar 156 000–260 000 kr för samma yta. Vi gör alltid en ärlig bedömning vid besiktningen — om pannorna är vittrade eller underlagspappen är dålig rekommenderar vi takomläggning istället.",
+    a: "Ja, om taket är helt och underliggande konstruktion är frisk är taktvätt betydligt billigare än ett takbyte och förlänger livslängden med 10–15 år. Vi gör alltid en ärlig bedömning vid besiktningen — om pannorna är vittrade eller underlagspappen är dålig rekommenderar vi takomläggning istället.",
   },
   {
     q: "Tvättar ni även hängrännor och stuprör?",
@@ -165,7 +165,7 @@ const seasonGuide = [
 ];
 
 const comparison = [
-  { aspect: "Kostnad", clean: "80–150 kr/m²", replace: "1 200–2 000 kr/m²", winner: "clean" },
+  { aspect: "Kostnad", clean: "Betydligt lägre", replace: "Högre", winner: "clean" },
   { aspect: "Tidsåtgång", clean: "1–2 dagar", replace: "1–3 veckor", winner: "clean" },
   { aspect: "Förlängd livslängd", clean: "10–15 år", replace: "30–50 år", winner: "replace" },
   { aspect: "ROT-avdrag", clean: "Ja, 30 %", replace: "Ja, 30 %", winner: "tie" },
@@ -338,7 +338,7 @@ const Taktvatt = () => {
     <>
       <SEOHead
         title="Taktvätt Roslagen — Bort med mossa, lavar & alger"
-        description="Taktvätt i Roslagen från 80 kr/m². Vi tar bort mossa, lavar och alger på betong-, tegel- och plåttak. Fast pris, ROT-avdrag 30 % och 10 års utförandegaranti. Kostnadsfri offert."
+        description="Taktvätt i Roslagen — fast pris efter kostnadsfri takkontroll. Vi tar bort mossa, lavar och alger på betong-, tegel- och plåttak. ROT-avdrag 30 % och 10 års utförandegaranti."
         canonical={pageUrl}
         type="article"
         geoPosition="59.6237;18.8842"
@@ -696,38 +696,12 @@ const Taktvatt = () => {
             </h2>
             <p className="text-muted-foreground text-center mb-10">
               Priset för taktvätt varierar beroende på takets storlek, lutning, mängd mossa och tillgänglighet.
-              Här är våra ungefärliga priser, både före och efter ROT-avdrag.
+              Vi lämnar alltid ett fast pris efter kostnadsfri takkontroll — för taktvätt, taktvätt med
+              takmålning och ren mossborttagning. ROT-avdrag ger 30 % rabatt på arbetskostnaden, direkt på
+              fakturan.
             </p>
-            <div className="bg-card border border-border rounded-xl overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-secondary">
-                  <tr>
-                    <th className="text-left p-4 font-semibold text-foreground">Tjänst</th>
-                    <th className="text-left p-4 font-semibold text-foreground">Pris/m²</th>
-                    <th className="text-left p-4 font-semibold text-foreground">Med ROT</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border">
-                  <tr>
-                    <td className="p-4 text-muted-foreground">Taktvätt + biocidbehandling</td>
-                    <td className="p-4 text-muted-foreground">80–150 kr</td>
-                    <td className="p-4 text-foreground font-medium">56–105 kr</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 text-muted-foreground">Taktvätt + takmålning</td>
-                    <td className="p-4 text-muted-foreground">200–320 kr</td>
-                    <td className="p-4 text-foreground font-medium">140–224 kr</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 text-muted-foreground">Endast mossborttagning</td>
-                    <td className="p-4 text-muted-foreground">50–90 kr</td>
-                    <td className="p-4 text-foreground font-medium">35–63 kr</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
             <p className="text-xs text-muted-foreground text-center mt-4">
-              Priserna är ungefärliga. Vi lämnar alltid skriftlig offert med fast pris efter besiktning.
+              Vi lämnar alltid skriftlig offert med fast pris efter besiktning.
             </p>
           </div>
         </section>
