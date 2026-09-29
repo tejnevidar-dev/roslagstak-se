@@ -85,8 +85,8 @@ const projectSummaries = [
 ];
 
 /**
- * Textspegling av de PUBLICERADE posterna i src/data/problems.ts (bara de tre första — se
- * kommentaren i ProblemsPage.tsx). Håll i synk manuellt, samma skäl som projectSummaries ovan.
+ * Textspegling av alla poster i src/data/problems.ts. Håll i synk manuellt, samma skäl som
+ * projectSummaries ovan (Node/esbuild kan inte importera .tsx-filer med bildimporter).
  */
 const problemSummaries = [
   {
@@ -128,6 +128,104 @@ const problemSummaries = [
       "Symptom: gröna eller mörka mattor av mossa, lav och alger, oftast på norrsidan och under träd. Mossrester i hängrännorna.",
       "Vanliga orsaker: skugga och fukt, träd nära huset, ett tak som torkar långsamt. Porösa ytor binder mer påväxt.",
       "Åtgärder som används: skonsam rengöring och behandling av taket, rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas.",
+    ],
+  },
+  {
+    slug: "rostig-plat",
+    title: "Rostig plåt och rostiga beslag",
+    metaTitle: "Rost på plåttak och beslag – när behöver det åtgärdas?",
+    metaDescription:
+      "Rostig takplåt, fotplåt eller skorstensbeslag? Så bedömer du läget, vad som händer om du väntar och vilka åtgärder som finns.",
+    intro:
+      "Rost börjar oftast ytligt och går att åtgärda enkelt — men obehandlad kan den till slut gå igenom plåten.",
+    paragraphs: [
+      "Symptom: rostfläckar eller flagnande färg på plåttak, fotplåt, vindskiveplåt, ränndalar eller skorstensbeslag. Rostränder på fasaden under plåten.",
+      "Vanliga orsaker: skadad eller sliten ytbehandling, repor, stående vatten, saltluft i kustnära lägen, felaktiga material i kontakt med varandra.",
+      "Åtgärder som används: rengöring och ny ytbehandling när rosten är ytlig, byte av enskilda plåtdetaljer, eller nytt plåttak när plåten är uttjänt.",
+    ],
+  },
+  {
+    slug: "fukt-pa-vinden",
+    title: "Fukt eller mögel på vinden",
+    metaTitle: "Fukt eller mögel på vinden – läcka eller kondens?",
+    metaDescription:
+      "Mörka fläckar, droppar eller mögellukt på vinden? Så skiljer du läckage från kondens och vad som behöver göras.",
+    intro:
+      "Fukt på vinden beror antingen på ett läckage genom yttertaket eller på kondens från inomhusluft — åtgärden skiljer sig helt åt.",
+    paragraphs: [
+      "Symptom: mörka fläckar eller ränder på råsponten, droppar eller frost på undersidan av taket en kall morgon, fuktig isolering, mögellukt.",
+      "Vanliga orsaker: läckage genom yttertaket (pannor, beslag, genomföringar) eller kondens, när varm fuktig inomhusluft når den kalla vinden och ventilationen i takfot och nock inte räcker.",
+      "Åtgärder som används: åtgärd av läckan, förbättrad ventilation, tätning mot varm inomhusluft, och byte av skadat underlag eller råspont när det krävs.",
+    ],
+  },
+  {
+    slug: "igensatta-hangrannor",
+    title: "Igensatta hängrännor",
+    metaTitle: "Igensatta hängrännor – därför ska du rensa före vintern",
+    metaDescription:
+      "Löv och barr i hängrännan fryser och får vatten att rinna över. Så ser du problemet och när rännorna behöver lagas eller bytas.",
+    intro:
+      "Igensatta hängrännor är ett litet problem som blir stort på vintern, när vattnet som rinner över fryser vid takfoten.",
+    paragraphs: [
+      "Symptom: vatten som rinner över kanten när det regnar, växter eller löv i rännan, fuktfläckar eller påväxt på fasaden, istappar längs takfoten på vintern.",
+      "Vanliga orsaker: löv, barr och mossa, fel lutning mot stupröret, hängrännor som har släppt eller läcker i skarvarna.",
+      "Åtgärder som används: rensning, justering av lutning och fästen, tätning av skarvar, eller nya hängrännor och stuprör när de är uttjänta.",
+    ],
+  },
+  {
+    slug: "rutten-raspont",
+    title: "Rutten eller skadad råspont",
+    metaTitle: "Rutten råspont – tecken, orsaker och åtgärder",
+    metaDescription:
+      "Mjuk, mörk eller rutten råspont syns ofta först på vinden. Så känner du igen den, varför den uppstår och vad som görs åt det.",
+    intro:
+      "Råsponten är takets bärande underlag. När den ruttnar syns det oftast först som mjuka, mörka brädor på vinden.",
+    paragraphs: [
+      "Symptom: mörka, mjuka eller svampangripna brädor på vinden, sviktande takyta, gamla fuktränder som återkommer, mögellukt.",
+      "Vanliga orsaker: fukt över lång tid från ett läckage, kondens på grund av dålig ventilation eller ett underlag som har slutat skydda.",
+      "Åtgärder som används: byte av skadade delar av råsponten (ofta i samband med takbyte, när underlaget ändå är öppet) och åtgärd av fuktkällan.",
+    ],
+  },
+  {
+    slug: "kondens-pa-vinden",
+    title: "Kondens på vinden",
+    metaTitle: "Kondens på vinden – därför bildas den och så åtgärdas den",
+    metaDescription:
+      "Droppar eller frost på undersidan av taket en kall morgon är ofta kondens, inte läckage. Så skiljer du dem åt och vad som hjälper.",
+    intro:
+      "Kondens sprids ofta över stora ytor på vinden, till skillnad från ett läckage som brukar ha en tydlig punkt.",
+    paragraphs: [
+      "Symptom: droppar, rimfrost eller fukt på undersidan av yttertaket, särskilt kalla, klara morgnar, med fukt spridd över stora ytor och inte en tydlig läckpunkt.",
+      "Vanliga orsaker: varm, fuktig inomhusluft som läcker upp till den kalla vinden, för lite ventilation genom takfot och nock, eller igensatta ventilationsspalter.",
+      "Åtgärder som används: tätning mot bostaden (vindslucka, genomföringar), förbättrad ventilation i takfot och nock. Vid omfattande fuktskador även åtgärder på underlaget.",
+    ],
+  },
+  {
+    slug: "dalig-underlagspapp",
+    title: "Dålig underlagspapp eller undertak",
+    metaTitle: "Dålig underlagspapp – därför är den takets viktigaste skydd",
+    metaDescription:
+      "Underlagspappen är takets andra skydd mot vatten. Så märker du när den har slutat fungera och vad som krävs för att byta den.",
+    intro:
+      "Underlagspappen är takets reservskydd. När den slutar fungera märks det ofta som läckage på flera ställen samtidigt.",
+    paragraphs: [
+      "Symptom: läckage som inte går att härleda till en enskild trasig panna, fuktfläckar på flera ställen på vinden, synligt spröd, sprucken eller trasig papp där den syns från vinden.",
+      "Vanliga orsaker: åldrad papp som har blivit spröd, skador vid tidigare arbeten på taket, fukt som har stått kvar.",
+      "Åtgärder som används: nytt underlag kräver normalt att yttertaket tas bort, och görs därför vanligen som en omläggning eller ett takbyte med nytt underlag och ny läkt.",
+    ],
+  },
+  {
+    slug: "istappar-pa-taket",
+    title: "Istappar och isbildning vid takfoten",
+    metaTitle: "Istappar och is vid takfoten – vad beror det på?",
+    metaDescription:
+      "Stora istappar och isvallar vid takfoten kan tyda på värmeläckage eller igensatta hängrännor. Så minskar du risken och när du ska kontakta en takläggare.",
+    intro:
+      "Stora istappar är ofta ett tecken på att värme läcker upp genom taket och smälter snön ojämnt.",
+    paragraphs: [
+      "Symptom: stora istappar längs takfoten, isvallar i hängrännorna, vatten som tränger in vid takfoten under töväder.",
+      "Vanliga orsaker: värme från bostaden som smälter snön på taket, så att vattnet fryser vid den kalla takfoten. Igensatta hängrännor. Otillräcklig ventilation.",
+      "Åtgärder som används: rensning eller byte av hängrännor, förbättrad ventilation och tätning mot vinden så att mindre värme når yttertaket.",
     ],
   },
 ];

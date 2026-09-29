@@ -7,10 +7,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import { problems, SAKERHETSRUTA } from "@/data/problems";
 
-/* Marknadschefens instruktion 2026-09-29: publicera hubb + 3 sidor först, verifiera, sedan resten.
-   De övriga 7 problemen finns redan i src/data/problems.ts (granskat innehåll) men listas inte här
-   än — ta bort .slice(0, 3) när fler är verifierade och redo att länkas in. */
-const published = problems.slice(0, 3);
+/* Marknadschefens instruktion 2026-09-29: hubb + 3 sidor publicerades först och verifierades live
+   (build/validate/sitemap/link-audit gröna, 0 dubbletter/0 trasiga länkar). Nu publiceras resten. */
+const published = problems;
 
 const ProblemsPage = () => {
   const jsonLd = {

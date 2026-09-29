@@ -121,6 +121,48 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/takproblem/rostig-plat</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/fukt-pa-vinden</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/igensatta-hangrannor</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/rutten-raspont</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/kondens-pa-vinden</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/dalig-underlagspapp</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/istappar-pa-taket</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/omraden</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
