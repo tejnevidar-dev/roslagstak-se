@@ -343,11 +343,18 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare på Rådmansö — takbyte, tegelplåt och takrenovering nära Norrtälje. Fast pris och kostnadsfri takkontroll.",
+      "Takbyte och takomläggning på Rådmansö öster om Norrtälje, i Gräddö, Räfsnäs, Nenninge och Lågarö. Villor och fritidshus. Kostnadsfri takkontroll.",
     longDescription:
-      "Rådmansö är porten till skärgården, med kort väg till Norrtälje. Vi utför takbyte, takrenovering och plåtarbeten på Rådmansö till fast pris — kontakta oss så bokar vi in en kostnadsfri takkontroll.",
+      "Rådmansö är en halvö omkring en mil öster om Norrtälje, där bland annat Kapellskär, Gräddö och Räfsnäs ligger. Rådmansö socken omfattar den östra delen av halvön och den yttre skärgården mellan Svenska Högarna och Söderarm, och det är här E18 slutar sin sträckning i Sverige, vid Kapellskärs hamn. Socknen beskrivs som en kuperad skogsbygd med inslag av odlingsbygd, främst i väster, och kala skär ute i skärgården. Rådmansö församling bildades i slutet av 1500-talet som ett kapellag utbrutet ur Frötuna. Vid kommunreformen 1862 blev socknen en egen landskommun, som 1952 gick upp i Frötuna landskommun och sedan 1971 ingår i Norrtälje kommun. Gräddö by nämns första gången 1547, blev vid slutet av 1800-talet ett populärt turistmål med tornförsedda sommarhus och pensionat, fick ett båtvarv 1924 och Viking Lines färjetrafik till Mariehamn 1959, innan trafiken flyttade till Kapellskär året därpå. I dag har Rådmansö en blandning av villor, lantbruk och fritidshus. Enligt hitta.se är husen i delområden som Rådmansby, Lågarö, Nenninge, Djursnäs och Gräddö byggda under en lång period, från 1920-talet till 1980-talet, med tyngdpunkt på 1950–1980.",
     extraContent:
-      "Rådmansö har en blandning av permanentboenden och fritidshus. Vi utför takbyten, takomläggningar och mindre arbeten som byte av hängrännor, stuprör och vindskivor, och lämnar alltid fast pris efter kostnadsfri takkontroll.",
+      "På Rådmansö står hus från nästan ett sekel sida vid sida, från sekelskiftets sommarhus till villor från 1970- och 80-talen. De flesta husen är i dag runt 45–75 år gamla, och taken kan redan ha lagts om en eller flera gånger. I fritidshus som har byggts om till permanentbostäder kan taket ha kompletterats vid olika tillfällen. Därför går det inte att säga något generellt om skicket. Varje hus får en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun.",
+    factBox: [
+      { label: "Kommun", value: "Norrtälje" },
+      { label: "Delområden", value: "Rådmansby, Lågarö, Nenninge, Brevik, Djursnäs, Knuven, Eknö, Gräddö, Koholma" },
+      { label: "Hustyper", value: "Villor, lantbruk och fritidshus" },
+      { label: "Byggperiod", value: "Blandat 1920–1980-tal, mest 1950–1980" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 050" },
+    ],
     uniqueFAQ: {
       question: "Hur snabbt kan ni komma till Rådmansö för en takkontroll?",
       answer:
