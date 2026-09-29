@@ -1,6 +1,6 @@
 /**
- * Skärpt innehållskontroll (Marknadschefens granskning 2026-09-29, före steg 12).
- * Två separata mått på den PRERENDERADE textspeglingen (prerender-content.ts):
+ * Skärpt innehållskontroll (Marknadschefens beslut 2026-09-29, punkt C, efter granskningen
+ * före steg 12). Två separata mått på den PRERENDERADE textspeglingen (prerender-content.ts):
  *
  * 1. MINSTA ORDANTAL per sidtyp — LOCATION och SERVICE_LOCATION ska ha >= 400 unika ord.
  * 2. NÄRA-DUBBLETTKONTROLL — Jaccard-likhet på 5-ords shingles mellan syskonsidor av samma typ
@@ -8,9 +8,10 @@
  *    combo-sidorna genereras av EN mallfunktion per tjänst — se service.generateContent i
  *    src/data/service-location-combos.ts). > 0,8 = FAIL.
  *
- * Det här är ett RAPPORTVERKTYG, inte en publiceringsgrind än — 636 sidor byggdes innan den här
- * gränsen fanns, och en hård spärr skulle blockera hela sajten. Numren är underlaget för
- * Marknadschefens beslut om steg 12 (vidare ort/tjänst×ort-expansion).
+ * HÅRD GRIND för NYA sidor: en LOCATION/SERVICE_LOCATION-sida som inte finns i
+ * src/data/content-depth-exempt.ts (grandfather-listan från 2026-09-29) MÅSTE klara båda måtten,
+ * annars stoppar bygget (process.exit(1)). Befintliga sidor i listan varnar bara — listan ska
+ * KRYMPA när de får riktigt unikt innehåll, inte växa.
  *
  * Kör: bun scripts/content-depth-check.ts
  */
@@ -18,7 +19,10 @@ import { locations, type LocationData } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
+import { contentDepthExempt } from "../src/data/content-depth-exempt";
 import { prerenderContent } from "./prerender-content";
+
+const exemptSet = new Set(contentDepthExempt);
 
 const MIN_WORDS = 400;
 const JACCARD_FAIL = 0.8;
@@ -115,5 +119,31 @@ for (const g of serviceGroups) {
   const wc = g.entries.map((e) => e.words.length);
   console.log(`    ${g.service}: ${g.entries.length} sidor, ${g.dupes.length} dubblettpar, medianlikhet högst: ${g.dupes[0].score.toFixed(3)} (t.ex. ${g.dupes[0].a} ~ ${g.dupes[0].b})`);
 }
+
+/* ---------- hård grind: alla FAILANDE sidor som INTE finns i grandfather-listan ---------- */
+const failingPaths = new Set<string>();
+for (const e of locationBelowMin) failingPaths.add(e.path);
+for (const d of locationDupes) {
+  failingPaths.add(d.a);
+  failingPaths.add(d.b);
+}
+for (const e of comboBelowMin) failingPaths.add(e.path);
+for (const g of serviceGroups) for (const d of g.dupes) {
+  failingPaths.add(d.a);
+  failingPaths.add(d.b);
+}
+const newFailures = [...failingPaths].filter((p) => !exemptSet.has(p)).sort();
+const exemptFailures = [...failingPaths].filter((p) => exemptSet.has(p));
+
+console.log(`\n--- Grind ---`);
+console.log(`Failande sidor totalt: ${failingPaths.size} (${exemptFailures.length} i grandfather-listan, varnar bara)`);
+if (newFailures.length > 0) {
+  console.log(`STOPPAR BYGGET: ${newFailures.length} sida(or) failar gränsen och finns INTE i src/data/content-depth-exempt.ts:`);
+  for (const p of newFailures) console.log(`  - ${p}`);
+} else {
+  console.log(`✓ Inga nya sidor failar gränsen.`);
+}
+console.log("");
+process.exit(newFailures.length ? 1 : 0);
 
 console.log("");

@@ -19,7 +19,7 @@
     "validate:schema": "node scripts/validate-structured-data.mjs",
     "predev": "bun scripts/generate-location-index.ts && bun scripts/generate-sitemap.ts",
     "prebuild": "bun scripts/generate-location-index.ts && bun scripts/generate-sitemap.ts",
-    "postbuild": "bun scripts/validate-structured-data.mjs && bun scripts/check-sitemap.ts && bun scripts/link-audit.ts && bun scripts/geo-graph-audit.ts && bun scripts/thin-content-check.ts",
+    "postbuild": "bun scripts/validate-structured-data.mjs && bun scripts/check-sitemap.ts && bun scripts/link-audit.ts && bun scripts/geo-graph-audit.ts && bun scripts/thin-content-check.ts && bun scripts/content-depth-check.ts",
     "verify": "bun run build",
     "seo:weekly-report": "bun scripts/seo-weekly-report.ts"
   },
