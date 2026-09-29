@@ -430,13 +430,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Norrtälje — din lokala partner för takbyte, takrenovering och plåtarbeten i Norrtäljeområdet.",
     longDescription:
-      "Norrtälje är vår hemmabas, vilket ger korta resvägar till din fastighet. Vi tar uppdrag i staden och i kommunen: takbyte, takrenovering, takreparation och plåtarbeten på villor och andra byggnader. Du får en kostnadsfri takkontroll och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för besiktning.",
+      "Vi arbetar i Norrtälje stad och i hela kommunen: takbyte, takrenovering, takreparation och plåtarbeten på villor och andra byggnader. Du får en kostnadsfri takkontroll och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för takkontroll.",
     extraContent:
-      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten, takavvattning med hängrännor och stuprör samt takinspektion. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll och skriftlig rapport, fast pris i offerten utan löpande timpris, utförande enligt AMA, och slutbesiktning med skriftlig garanti i avtalet och fotodokumentation. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
+      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten och takavvattning med hängrännor och stuprör. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll, fast pris i offerten utan löpande timpris och utförande enligt AMA. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
     uniqueFAQ: {
       question: "Är RoslagsTak en lokal takläggare i Norrtälje?",
       answer:
-        "Ja, Norrtälje är vår hemmabas. Vi tar uppdrag i hela kommunen, och takkontrollen är alltid kostnadsfri. Ring oss eller boka via formuläret, så återkommer vi inom 24 timmar.",
+        "Ja, vi arbetar i Norrtälje och i hela kommunen, och takkontrollen är alltid kostnadsfri. Ring oss eller boka via formuläret, så återkommer vi inom 24 timmar.",
     },
     primaryKeyword: "takläggare Norrtälje",
     lat: 59.7667,
@@ -537,13 +537,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Rimbo — takbyte, takomläggning och takrenovering med fast pris. Lokal takläggare i Roslagen med kostnadsfri takkontroll.",
     longDescription:
-      "Rimbo är en av Roslagens största tätorter och här finns allt från 70-talsvillor med betongpannor till äldre gårdar med lertegel och plåttak. Inlandsklimatet i Rimbo innebär stora temperatursvängningar och mycket snölast under vintern — vilket sliter på pannor, läkt och infästningar. Vi utför takbyten och takomläggningar i Rimbo året runt och dimensionerar alltid taksäkerhet och snörasskydd efter fastighetens läge. Med vår bas i Norrtälje är Rimbo bara ett kort stycke bort, vilket håller nere etableringskostnaden för dig.",
+      "Rimbo är en av Roslagens största tätorter och här finns allt från 70-talsvillor med betongpannor till äldre gårdar med lertegel och plåttak. Inlandsklimatet i Rimbo innebär stora temperatursvängningar och mycket snölast under vintern — vilket sliter på pannor, läkt och infästningar. Vi utför takbyten och takomläggningar i Rimbo året runt och bedömer behovet av taksäkerhet och snörasskydd efter fastighetens läge vid takkontrollen.",
     extraContent:
-      "I Rimbo möter vi ofta villatak från 60- och 70-talet där betongpannorna börjat frostspränga och underlagspappen torkat sönder. I de fallen är takomläggning med ny papp, ny läkt och nytt takmaterial oftast den mest ekonomiska lösningen på sikt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll i Rimbo och kan ofta starta inom några veckor.",
+      "I Rimbo möter vi ofta villatak från 60- och 70-talet där betongpannorna börjat frostspränga och underlagspappen torkat sönder. I de fallen är takomläggning med ny papp, ny läkt och nytt takmaterial oftast den mest ekonomiska lösningen på sikt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll i Rimbo.",
     uniqueFAQ: {
       question: "Hur snabbt kan ni starta ett takbyte i Rimbo?",
       answer:
-        "Rimbo ligger nära vår bas i Norrtälje, vilket gör att vi ofta kan påbörja ett takbyte inom 2–4 veckor efter godkänd offert. Vi utför arbeten i Rimbo året runt — plåttak kan monteras även under vintern så länge underlaget är torrt och isfritt.",
+        "Vi utför arbeten i Rimbo året runt — plåttak kan monteras även under vintern så länge underlaget är torrt och isfritt. Exakt startdatum får du i offerten efter takkontrollen, och vi svarar alltid inom 24 timmar på din förfrågan.",
     },
     primaryKeyword: "takläggare Rimbo",
     lat: 59.7469,
@@ -558,9 +558,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Hallstavik — takbyte, plåttak och takrenovering i norra Roslagen. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Hallstavik i norra Roslagen har en tät villabebyggelse med många hus från industriortens expansiva år. Taken här är ofta 40–50 år gamla och har nått slutet av sin livslängd. Vi utför takbyten, takomläggningar och takrenoveringar i Hallstavik och rekommenderar oftast TP20-plåt eller dubbelfalsat plåttak — lätt, tåligt och underhållsfritt. Vi hanterar allt från byggställning och rivning till ny taksäkerhet och avvattning, och lämnar fast pris efter kostnadsfri takkontroll.",
+      "Hallstavik i norra Roslagen har en tät villabebyggelse med hus från flera decennier. Många äldre tak har nått slutet av sin förväntade livslängd, då betongpannor och plåt med tiden tappar sin funktion. Vi utför takbyten, takomläggningar och takrenoveringar i Hallstavik och rekommenderar oftast TP20-plåt eller dubbelfalsat plåttak — lätt, tåligt och underhållsfritt. Vi hanterar allt från byggställning och rivning till ny taksäkerhet och avvattning, och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
-      "Många fastigheter i Hallstavik ligger nära skog och vegetation, vilket ger snabb mossbildning på norrsidan av taket. Där rekommenderar vi taktvätt och biocidbehandling som förebyggande åtgärd innan skadorna blir så stora att hela taket måste bytas. Vi utför både taktvätt, takmålning och kompletta takbyten i Hallstavik.",
+      "Många fastigheter i Hallstavik ligger nära skog och vegetation, vilket kan ge snabbare mossbildning på norrsidan av taket. Där rekommenderar vi taktvätt som förebyggande åtgärd innan påväxten hinner skada takytan. Vi utför både taktvätt, takmålning och kompletta takbyten i Hallstavik.",
     uniqueFAQ: {
       question: "Vilket takmaterial passar bäst på villor i Hallstavik?",
       answer:
@@ -711,7 +711,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar ett takbyte på en villa i Åkersberga?",
       answer:
-        "En normalstor villa i Åkersberga med 130–160 m² takyta landar oftast mellan 160 000 och 320 000 kr beroende på material och underlagets skick — från ca 1 200 kr/m² i TP20-plåt till 2 000+ kr/m² i dubbelfalsat.",
+        "Priset beror på takets storlek, material och underlagets skick — från ca 1 200 kr/m² i TP20-plåt till 2 000+ kr/m² i dubbelfalsat. Riktpriserna på vår prislista är en bra utgångspunkt, men vi lämnar alltid ett fast pris efter kostnadsfri takkontroll.",
     },
     primaryKeyword: "takläggare Åkersberga",
     lat: 59.4794,
@@ -747,13 +747,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Vallentuna — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll.",
     longDescription:
-      "Vallentuna har en stor villabebyggelse där många tak nu är 30–50 år gamla. Betongpannor med frostsprängning, sliten underlagspapp och gamla taksäkerhetsanordningar är de vanligaste orsakerna till att fastighetsägare i Vallentuna kontaktar oss. Vi utför kompletta takbyten och takomläggningar i Vallentuna — rivning, ny råspont vid behov, ny papp, ny läkt, nytt takmaterial, ny avvattning och ny taksäkerhet.",
+      "Vallentuna har en stor villabebyggelse med hus från flera decennier. Betongpannor kan drabbas av frostsprängning och underlagspapp torkar ut och spricker med åren, vilket är vanliga skäl till att ett tak till slut behöver bytas eller läggas om. Vi utför kompletta takbyten och takomläggningar i Vallentuna — rivning, ny råspont vid behov, ny papp, ny läkt, nytt takmaterial, ny avvattning och ny taksäkerhet.",
     extraContent:
-      "Vallentuna ligger i inlandet med kalla vintrar och betydande snölast. Vi bedömer därför alltid behovet av snörasskydd över entréer och uteplatser, och kontrollerar att takstolar och infästningar klarar lasten innan nytt material monteras.",
+      "Vallentuna ligger i inlandet med kalla vintrar och betydande snölast. Vi bedömer behovet av snörasskydd över entréer och uteplatser vid takkontrollen, och kontrollerar att takstolar och infästningar klarar lasten innan nytt material monteras.",
     uniqueFAQ: {
       question: "Hur snabbt kan ni börja ett takbyte i Vallentuna?",
       answer:
-        "Vi har normalt 2–4 veckors framförhållning för takbyten i Vallentuna, och kan ofta boka besiktningen inom en vecka. Startdatum och tidsplan skriver vi in i offerten så att du vet vad som gäller innan du beställer.",
+        "Det beror på säsong och vår aktuella bokningsläge — vi ger dig ett tydligt startdatum i offerten efter takkontrollen, så att du vet vad som gäller innan du beställer. Vi svarar alltid inom 24 timmar på din förfrågan.",
     },
     primaryKeyword: "takläggare Vallentuna",
     lat: 59.5342,
@@ -770,7 +770,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Täby har allt från radhusområden och 60-talsvillor till stora fristående hus med komplexa takkonstruktioner. Vi utför takbyten, takomläggningar, bandtäckning och plåtarbeten i Täby med fast pris efter kostnadsfri takkontroll. Vi arbetar enligt AMA-standard, lämnar 10 års utförandegaranti och sköter hela projektet — ställning, rivning, avfall, nytt tak, avvattning och taksäkerhet.",
     extraContent:
-      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid besiktningen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Processen är densamma för alla jobb i Täby: kostnadsfri takkontroll med skriftlig rapport, fast pris i offerten för hela jobbet — rivning, material, arbete, ställning och bortforsling — utan löpande timpris, utförande enligt AMA och slutbesiktning med skriftlig garanti i avtalet och foton. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år, och vi tar uppdrag i hela Täby med grannkommunerna Vallentuna, Åkersberga och Vaxholm.",
+      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid takkontrollen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Processen är densamma för alla jobb i Täby: kostnadsfri takkontroll, fast pris i offerten för hela jobbet — rivning, material, arbete, ställning och bortforsling — utan löpande timpris, och utförande enligt AMA. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år, och vi tar uppdrag i hela Täby med grannkommunerna Vallentuna, Åkersberga och Vaxholm.",
     uniqueFAQ: {
       question: "Hjälper ni med bygglov och grannhänsyn vid takbyte i Täby?",
       answer:
