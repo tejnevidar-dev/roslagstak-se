@@ -38,6 +38,12 @@ const LocationPage = () => {
   if (!location) return <NotFound />;
 
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
+  /* Geografisk graf (SEO Phase 2.7): bara 2 av 139 orter har ett exakt projekt. Genom att visa ett
+     referensjobb från en grannort (ärligt märkt "i närområdet", aldrig "här") får många fler
+     ortssidor en riktig location↔project-länk utan att påstå lokal närvaro som inte finns. */
+  const nearbyProject = !locationProject
+    ? projects.find((p) => nearby.some((n) => n.slug === p.locationSlug))
+    : undefined;
   const prep = location.isIsland ? "på" : "i";
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
@@ -402,6 +408,11 @@ const LocationPage = () => {
                     {locationProject && (
                       <Link to={`/projekt/${locationProject.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                         <ArrowRight className="w-3 h-3" /> Referensjobb: {locationProject.title}
+                      </Link>
+                    )}
+                    {nearbyProject && (
+                      <Link to={`/projekt/${nearbyProject.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> Referensjobb i närområdet: {nearbyProject.title}
                       </Link>
                     )}
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">
