@@ -78,6 +78,14 @@ export const services = [
     description:
       "Säker rivning och deponering av eternit- och asbesttak enligt Arbetsmiljöverkets krav — inklusive nytt tak efteråt.",
   },
+  {
+    icon: IconRoofNew,
+    slug: "tegeltak",
+    title: "Tegeltak i lertegel",
+    short: "Klassiskt tegel",
+    description:
+      "Vi lägger tegeltak i lertegel — det klassiska materialvalet för äldre hus och kulturbyggnader, med fast pris efter kostnadsfri takkontroll.",
+  },
 ];
 
 

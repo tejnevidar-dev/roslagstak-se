@@ -23,6 +23,7 @@ import imgLakt from "@/assets/roof-build-05-lakt.jpg";
 import imgPannor from "@/assets/roof-build-06-pannor.jpg";
 import imgDronePoster from "@/assets/hero-drone-poster.jpg";
 import imgBlidoLakeview from "@/assets/project-blido-lakeview.jpg";
+import imgLertegel from "@/assets/roof-type-lertegel.jpg";
 
 /** Hero-foto per tjänst — dokumentära bilder från eget arbete. */
 const serviceImages: Record<string, string> = {
@@ -34,6 +35,7 @@ const serviceImages: Record<string, string> = {
   platarbeten: imgBeslag,
   takvard: imgDronePoster,
   "eternit-asbest": imgRooferWork,
+  tegeltak: imgLertegel,
 };
 
 /** Närbild i specifikationskolumnen — alltid en annan bild än heron. Tjänster utan riktig bild visar ingen närbild. */
@@ -150,6 +152,18 @@ const serviceMeta: Record<string, ServiceMeta> = {
     lead: "Asbest kräver skyddsutrustning, emballering och dokumenterad transport till deponi.",
     craftLine: "Eternit ska inte kapas, brytas eller högtryckstvättas. Den ska saneras.",
     photoNote: "Arbete på plats med full skyddsutrustning enligt regelverket.",
+  },
+  tegeltak: {
+    accentLine: "nytt tak med fast pris.",
+    specs: [
+      { k: "Material", v: "Lertegel" },
+      { k: "Livslängd", v: "100+ år" },
+      { k: "Pris", v: "Från ca 1 300 kr/m²" },
+    ],
+    specHeading: "Lertegel jämfört med andra taktyper",
+    lead: "Lertegel är det klassiska valet för äldre hus och kulturbyggnader — och håller längst av alla takmaterial.",
+    craftLine: "Lertegel kräver en konstruktion som tål vikten. Vi kontrollerar bärigheten innan vi offererar.",
+    photoNote: "Lertegeltak — det klassiska materialvalet för äldre hus och kulturbyggnader.",
   },
 };
 
@@ -319,6 +333,25 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Inspektion av underlag och eventuell reparation",
       "Montering av nytt takmaterial",
       "Slutbesiktning och dokumentation",
+    ],
+  },
+  tegeltak: {
+    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet för äldre hus och kulturbyggnader, med ett uttryck som plåt eller betong inte kan ersätta. Lertegel kan hålla över 100 år, men kräver en konstruktion som tål vikten (ca 40–50 kg/m²) och minst 22 graders taklutning. Vi kontrollerar alltid bärigheten vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
+    priceRange: "Från ca 1 300 kr/m² inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlagets skick.",
+    benefits: [
+      "Klassiskt uttryck som håller husets karaktär",
+      "Lång livslängd — kan hålla över 100 år",
+      "Fast pris efter kostnadsfri takkontroll",
+      "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI",
+    ],
+    process: [
+      "Kostnadsfri takkontroll — vi bedömer konstruktion, bärighet och taklutning",
+      "Skriftlig offert med fast pris",
+      "Rivning av befintligt tak och kontroll av råspont",
+      "Ny underlagspapp, ströläkt och bärläkt dimensionerad för tegelvikten",
+      "Montering av lertegel samt plåtbeslag kring skorsten och genomföringar",
+      "Taksäkerhet och takavvattning",
+      "Slutbesiktning och skriftlig garanti",
     ],
   },
 };
@@ -650,6 +683,24 @@ const ServiceDetail = () => {
 
         {blocks.blockPlacement === "after-spec" && specificBlock}
 
+        {slug === "platarbeten" && (
+          <section id="falsat" className="scroll-mt-24 border-b border-border bg-background py-20 lg:py-28">
+            <div className="mx-auto max-w-3xl px-6">
+              <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+                <span aria-hidden="true" className="h-px w-12 bg-primary" />
+                Bandtäckning
+              </p>
+              <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
+                Dubbelfalsat plåttak – bandtäckning med fast pris
+              </h2>
+              <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
+                Vi lägger dubbelfalsade plåttak (bandtäckning) och TP20. Fast pris efter kostnadsfri takkontroll.
+                Bandtäckning har falsade fogar utan synliga skruvhål, klarar ner till 3,6° taklutning och passar
+                särskilt vindutsatta och kustnära lägen — se jämförelsen ovan för livslängd per metall.
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* Vad ingår — faktarutor */}
         <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">

@@ -244,12 +244,30 @@ const RoofTypes = () => {
                       </div>
                     </div>
 
-                    <a
-                      href="/offert"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
-                    >
-                      Få offert för {roof.name.toLowerCase()}
-                    </a>
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href="/offert"
+                        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
+                      >
+                        Få offert för {roof.name.toLowerCase()}
+                      </a>
+                      {roof.id === "lertegel" && (
+                        <a
+                          href="/tjanster/tegeltak"
+                          className="inline-flex items-center gap-2 border border-foreground/20 text-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:border-foreground/40 transition-colors"
+                        >
+                          Läs mer om tegeltak i lertegel
+                        </a>
+                      )}
+                      {roof.id === "dubbelfalsat" && (
+                        <a
+                          href="/tjanster/platarbeten#falsat"
+                          className="inline-flex items-center gap-2 border border-foreground/20 text-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:border-foreground/40 transition-colors"
+                        >
+                          Läs mer om dubbelfalsat plåttak
+                        </a>
+                      )}
+                    </div>
                   </div>
                 )}
               </article>

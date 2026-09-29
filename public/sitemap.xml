@@ -390,6 +390,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/tjanster/tegeltak</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/tjanster/taktvatt</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
