@@ -37,16 +37,10 @@ const steps = [
   },
 ];
 
-const prices = [
-  { label: "TP20 plåttak", value: "från ca 1 200 kr/m²" },
-  { label: "Betongpannor och tegelplåt", value: "från ca 1 300 kr/m²" },
-  { label: "Dubbelfalsat plåttak (bandtäckning)", value: "från ca 2 000 kr/m²" },
-];
-
 const faqs = [
   {
     q: "Vad kostar ett takbyte?",
-    a: "Priset beror på takets storlek, lutning, material och skick. Riktpriserna ovan är utgångspunkter, och efter den kostnadsfria takkontrollen får du ett fast pris. Det priset gäller.",
+    a: "Priset beror på takets storlek, lutning, material och skick. Efter den kostnadsfria takkontrollen får du ett fast pris. Det priset gäller.",
   },
   {
     q: "Vad ingår i priset?",
@@ -159,6 +153,10 @@ const AdLandingPage = () => {
           </div>
         </section>
 
+        {/* TILLFÄLLIGT BORTTAG 2026-09-29 (Marknadschefen/juristen, #1l): prissektionen visade
+            "från ca 1 200/1 300/2 000 kr/m²", under CRM:s golv (MFL 10 §, vilseledande).
+            Återställ med riktpriser när Vidar beslutat P1 (ledning/jurist/prisjamforelse-mfl-bedomning.md) —
+            se git-historiken för den borttagna `prices`-listan och <ul>-renderingen. */}
         <section className="border-y border-border bg-secondary py-14 md:py-20" aria-labelledby="ad-price-heading">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-4">
@@ -168,22 +166,12 @@ const AdLandingPage = () => {
               >
                 Vad kostar ett takbyte?
               </h2>
-              <p className="mt-4 max-w-[38ch] leading-relaxed text-muted-foreground">
-                Riktpriser inklusive material och arbete. Efter takkontrollen får du ett fast pris.
-              </p>
             </div>
             <div className="lg:col-span-8">
-              <ul className="border-t border-foreground/15">
-                {prices.map((p) => (
-                  <li key={p.label} className="flex flex-wrap items-baseline justify-between gap-2 border-b border-foreground/15 py-4">
-                    <span className="text-foreground">{p.label}</span>
-                    <span className="font-display text-lg text-foreground">{p.value}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-5 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground">
-                ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Det
-                dras av direkt på fakturan.
+              <p className="max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground">
+                Fast pris efter kostnadsfri takkontroll — utan förpliktelser. ROT-avdraget ger 30 %
+                skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år, och dras av direkt på
+                fakturan.
               </p>
             </div>
           </div>
