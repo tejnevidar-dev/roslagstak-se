@@ -97,6 +97,7 @@ const staticRoutes = [
   "/material",
   "/material/betongpannor",
   "/material/tp20-plattak",
+  "/material/papptak",
   "/blogg",
   "/kontakt",
   "/radgivning",

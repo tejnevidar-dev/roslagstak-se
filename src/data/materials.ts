@@ -129,6 +129,44 @@ export const materials: Material[] = [
     visibleScrews: "Nej",
     minLutning: "Enligt tillverkaren",
   },
+  {
+    slug: "papptak",
+    href: "/material/papptak",
+    title: "Papptak",
+    hubDescription: "Tätt och lätt, för låglutande tak.",
+    weight: "Lätt",
+    visibleScrews: "Nej",
+    minLutning: "Enligt tillverkaren",
+    detail: {
+      metaTitle: "Papptak – takpapp för låglutande tak, för- och nackdelar",
+      metaDescription:
+        "Papptak är ett lätt och tätt tak för flacka och låglutande tak. Så fungerar takpapp, när den passar och vad du ska tänka på vid omläggning.",
+      intro:
+        "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak. Du hittar det på garage, carportar, uthus och tillbyggnader, men också på hus med låg taklutning. Till skillnad från pannor och profilplåt bygger papptaket på att hela ytan är ett sammanhängande tätskikt.",
+      funktion:
+        "Takpapp är en duk av glasfiber eller polyester som har impregnerats och belagts med bitumen. Den läggs direkt på ett fast underlag, oftast råspont, i våder som överlappar varandra. Skarvarna fogas så att ytan blir tät. Beroende på system läggs taket i ett eller flera lager, med en underpapp under en ytpapp. Ytpappen har ofta ett skikt av skiffer eller granulat på ovansidan, som skyddar mot solens UV-ljus och ger taket dess färg.",
+      anvandning:
+        "Flacka och låglutande tak, där pannor inte kan läggas för att vattnet inte rinner av tillräckligt snabbt. Papptak används på garage, carportar, förråd, uthus och tillbyggnader, och på bostadshus med låg lutning. Vilka lutningar ett visst papptakssystem är gjort för anger tillverkaren.",
+      livslangd:
+        "Beror på pappens kvalitet, antal lager, taklutning, sol och hur väl avvattningen fungerar. Ytpapp åldras främst av solljus och av vatten som blir stående. Tillverkarens uppgifter och garantier gäller.",
+      fordelar:
+        "Lätt material som inte belastar takstolarna som pannor gör. Fungerar på flacka tak där andra material inte kan användas. Ytan blir sammanhängande utan fogar mellan pannor eller skruvar genom materialet.",
+      nackdelar:
+        "Hela tätheten hänger på skarvarna och anslutningarna, så arbetet måste vara noggrant utfört. Solen och vatten som blir stående sliter på ytan. Uttrycket är enklare än ett pannat tak eller ett falsat plåttak.",
+      passarNar:
+        "Taket är flackt eller har låg lutning, byggnaden är lätt i konstruktionen (garage, carport, uthus, tillbyggnad), eller huset har papptak i dag och ska få ett nytt tätt tak av samma slag.",
+      underhall:
+        "Se till att vatten inte blir stående på taket: rensa hängrännor, brunnar och utkastare, och ta bort löv och grenar. Titta efter blåsor, sprickor, lösa skarvar och partier där skiffret har släppt. Mossa tas bort skonsamt, aldrig med högtryckstvätt.",
+      vanligaFel:
+        "Läckage vid skarvar och vid anslutningar mot vägg, skorsten och genomföringar. Stående vatten på flacka partier. Åldrad ytpapp med sprickor eller blåsor.",
+      kostnadsdrivare:
+        "Takets storlek, antal lager, anslutningar och genomföringar, avvattningen, råspontens skick och om ställning behövs.",
+      delAvTaksystemet:
+        "Råspont, underpapp och ytpapp (beroende på system), anslutningar och plåtdetaljer (fotplåt, vindskivor) och avvattning. Vid ett takbyte kan råsponten ses över när den gamla pappen är borta.",
+      hallIsar:
+        "Ytpapp på ett papptak är det synliga tätskiktet. Underlagspapp under pannor eller plåt är ett dolt andra skydd på andra taktyper.",
+    },
+  },
 ];
 
 export const getMaterial = (slug: string) => materials.find((m) => m.slug === slug && m.detail);

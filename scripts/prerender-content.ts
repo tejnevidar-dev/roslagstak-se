@@ -278,6 +278,21 @@ const materialSummaries = [
     ogImage: "/og/material-tp20-plattak.jpg",
     ogImageAlt: "Närbild på trapetsprofilerad TP20-plåt",
   },
+  {
+    slug: "papptak",
+    href: "/material/papptak",
+    title: "Papptak",
+    metaTitle: "Papptak – takpapp för låglutande tak, för- och nackdelar",
+    metaDescription:
+      "Papptak är ett lätt och tätt tak för flacka och låglutande tak. Så fungerar takpapp, när den passar och vad du ska tänka på vid omläggning.",
+    intro:
+      "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak. Du hittar det på garage, carportar, uthus och tillbyggnader, men också på hus med låg taklutning.",
+    paragraphs: [
+      "Funktion: en duk av glasfiber eller polyester som impregnerats och belagts med bitumen, och som läggs i våder som överlappar varandra på ett fast underlag, oftast råspont. Ytpappen har ofta ett skikt av skiffer eller granulat som skyddar mot UV-ljus.",
+      "Fördelar: lätt material som inte belastar takstolarna, fungerar på flacka tak där andra material inte kan användas. Nackdelar: hela tätheten hänger på skarvarna och anslutningarna, och ytan sliter av sol och stående vatten.",
+      "Passar när taket är flackt eller har låg lutning, byggnaden är lätt i konstruktionen (garage, carport, uthus, tillbyggnad), eller huset har papptak i dag och ska få ett nytt tätt tak av samma slag.",
+    ],
+  },
 ];
 
 const PHONE = "070-154 36 39";
@@ -545,6 +560,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Lertegel: det klassiska teglet, åldras med patina. Läs mer på /tjanster/tegeltak.",
       "TP20-plåttak: lätt profilplåt, snabb att lägga.",
       "Dubbelfalsat plåttak: bandtäckning utan synliga skruvar. Läs mer på /tjanster/platarbeten.",
+      "Papptak: tätt och lätt, för låglutande tak.",
     ],
     links: [
       ...primaryLinks,
@@ -552,6 +568,7 @@ const staticPages: Record<string, PrerenderPage> = {
       { href: "/tjanster/tegeltak", label: "Lertegel (tegeltak)" },
       { href: "/material/tp20-plattak", label: "TP20-plåttak" },
       { href: "/tjanster/platarbeten", label: "Dubbelfalsat plåttak" },
+      { href: "/material/papptak", label: "Papptak" },
     ],
   },
   "/tjanster/taktvatt": {
