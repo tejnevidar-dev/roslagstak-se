@@ -16,7 +16,7 @@ const sections = [
   },
   {
     title: "Marknadsföring (Google Ads och Meta)",
-    text: "Om du även godkänner marknadsföring kan Google Ads och Meta (Facebook/Instagram) se att du besökt sajten, så att vi kan visa relevant annonsering och mäta vilka annonser som ger förfrågningar. Google Ads sätter cookies som _gcl_au (lagras ca 90 dagar). Metas pixel sätter _fbp och, om du kommer via en annons, _fbc (lagras ca 90 dagar). Vi skickar aldrig namn, telefonnummer, e-post eller annat du skrivit i ett formulär till Google eller Meta – ingen \"advanced matching\" eller \"enhanced conversions\", bara att ett besök eller en förfrågan skett. Google och Meta kan föra över uppgifter till länder utanför EU, till exempel USA, med stöd av EU:s beslut om tillräcklig skyddsnivå eller standardavtalsklausuler. Utan ditt godkännande laddas ingen av dessa och inga marknadsföringscookies sätts.",
+    text: "Om du även godkänner marknadsföring kan Google Ads och Meta (Facebook/Instagram) se att du besökt sajten, så att vi kan visa relevant annonsering och mäta vilka annonser som ger förfrågningar. Google Ads sätter cookies som _gcl_au (lagras ca 90 dagar). Metas pixel sätter _fbp och, om du kommer via en annons, _fbc (lagras ca 90 dagar). Vi skickar aldrig namn, telefonnummer, e-post eller annat du skrivit i ett formulär till Google eller Meta – ingen \"advanced matching\" eller \"enhanced conversions\", bara att ett besök eller en förfrågan skett. Google och Meta kan föra över uppgifter till länder utanför EU, till exempel USA, med stöd av EU:s beslut om tillräcklig skyddsnivå eller standardavtalsklausuler. Har du kommit till oss via en Google-annons och godkänt marknadsföring, meddelar vi också Google när en takkontroll har genomförts eller ett avtal har signerats, och avtalets värde. Det sker med annonsens klick-id, aldrig med ditt namn, din telefon, din e-post eller din adress. Utan ditt godkännande laddas ingen av dessa och inga marknadsföringscookies sätts.",
   },
 ];
 
@@ -77,6 +77,13 @@ const CookiesPage = () => (
                 <li>
                   <strong className="text-foreground">Marknadsföring via sms eller mejl:</strong> bara om du har sagt
                   ja. Du kan när som helst ta tillbaka ditt samtycke.
+                </li>
+                <li>
+                  <strong className="text-foreground">Google-annonsering:</strong> har du kommit till oss via en
+                  Google-annons och godkänt marknadsföring, meddelar vi Google när en takkontroll har genomförts
+                  eller ett avtal har signerats, och avtalets värde, kopplat till annonsens klick-id — aldrig med
+                  ditt namn, din telefon, din e-post eller din adress. Grunden är ditt samtycke (artikel 6.1 a), och
+                  du kan när som helst ta tillbaka det.
                 </li>
               </ul>
 
