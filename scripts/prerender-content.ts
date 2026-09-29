@@ -230,6 +230,43 @@ const problemSummaries = [
   },
 ];
 
+/**
+ * Textspegling av de posterna i src/data/materials.ts som har en egen sida (`detail` satt) —
+ * lertegel och dubbelfalsat länkar till sina befintliga tjänstesidor och behöver ingen spegling.
+ */
+const materialSummaries = [
+  {
+    slug: "betongpannor",
+    href: "/material/betongpannor",
+    title: "Betongpannor",
+    metaTitle: "Betongpannor – egenskaper, för- och nackdelar",
+    metaDescription:
+      "Betongpannor är ett vanligt val på svenska villatak. Så fungerar de, vad som talar för och emot och vad du ska tänka på vid ett takbyte.",
+    intro:
+      "Betongpannor är ett av de vanligaste takmaterialen på svenska villor — tåliga och klassiska i uttrycket, men tunga nog att kräva en konstruktion som klarar vikten.",
+    paragraphs: [
+      "Funktion: pannor av betong som läggs på bärläkt över ströläkt och underlag. Pannorna leder bort vattnet, och underlaget är det andra skyddet.",
+      "Fördelar: klassiskt pannat utseende, finns i flera kulörer, tåligt material, enskilda pannor kan bytas. Nackdelar: tunga, så takstolarna måste klara vikten.",
+      "Passar när du vill ha ett traditionellt pannat tak och huset tål vikten. Vanligt vid byte från äldre pannor.",
+    ],
+  },
+  {
+    slug: "tp20-plattak",
+    href: "/material/tp20-plattak",
+    title: "TP20-plåttak",
+    metaTitle: "TP20 plåttak – egenskaper, för- och nackdelar",
+    metaDescription:
+      "TP20 är en trapetsprofilerad takplåt. Så fungerar den, var den passar och vad du ska tänka på jämfört med pannor och falsat.",
+    intro:
+      "TP20 är en trapetsprofilerad takplåt — lätt, snabb att lägga och ett vanligt val på villor, fritidshus och lägre takdelar.",
+    paragraphs: [
+      "Funktion: trapetsprofilerad plåt i långa längder som skruvas på läkt över underlag. Profilen ger styvhet och leder bort vattnet.",
+      "Fördelar: lätt jämfört med pannor, snabb att lägga, finns i flera kulörer, fungerar på lägre lutningar. Nackdelar: skruvar och skarvar måste sitta rätt och kontrolleras.",
+      "Passar när du vill ha ett lätt tak, har låg lutning eller vill ha plåttakets uttryck, eller på lägre takdelar i kombination med pannor.",
+    ],
+  },
+];
+
 const PHONE = "070-154 36 39";
 
 const primaryLinks = [
@@ -479,6 +516,27 @@ const staticPages: Record<string, PrerenderPage> = {
     paragraphs: problemSummaries.map((p) => `${p.title}: ${p.intro}`),
     links: [...primaryLinks, ...problemSummaries.map((p) => ({ href: `/takproblem/${p.slug}`, label: p.title }))],
   },
+  "/material": {
+    title: "Takmaterial – betongpannor, lertegel, plåt och falsat",
+    description:
+      "Jämför takmaterial: betongpannor, lertegel, TP20-plåt och dubbelfalsat plåttak. Vikt, synliga skruvar och vad som passar ditt hus.",
+    h1: "Takmaterial – vad passar ditt hus?",
+    intro:
+      "Betongpannor, lertegel, plåt eller falsat — materialet avgör utseende, vikt och underhåll. Här går vi igenom vad som skiljer dem åt.",
+    paragraphs: [
+      "Betongpannor: klassiskt pannat tak, tåligt men tungt.",
+      "Lertegel: det klassiska teglet, åldras med patina. Läs mer på /tjanster/tegeltak.",
+      "TP20-plåttak: lätt profilplåt, snabb att lägga.",
+      "Dubbelfalsat plåttak: bandtäckning utan synliga skruvar. Läs mer på /tjanster/platarbeten.",
+    ],
+    links: [
+      ...primaryLinks,
+      { href: "/material/betongpannor", label: "Betongpannor" },
+      { href: "/tjanster/tegeltak", label: "Lertegel (tegeltak)" },
+      { href: "/material/tp20-plattak", label: "TP20-plåttak" },
+      { href: "/tjanster/platarbeten", label: "Dubbelfalsat plåttak" },
+    ],
+  },
   "/tjanster/taktvatt": {
     title: "Taktvätt och takmålning — bort med mossa och lav",
     description:
@@ -533,6 +591,19 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: problem.intro,
       paragraphs: problem.paragraphs,
       links: [...primaryLinks, { href: "/takproblem", label: "Alla takproblem" }, { href: "/takkontroll", label: "Kostnadsfri takkontroll" }],
+    };
+  }
+
+  if (clean.startsWith("/material/")) {
+    const material = materialSummaries.find((m) => m.slug === clean.slice("/material/".length));
+    if (!material) return null;
+    return {
+      title: material.metaTitle,
+      description: material.metaDescription,
+      h1: material.title,
+      intro: material.intro,
+      paragraphs: material.paragraphs,
+      links: [...primaryLinks, { href: "/material", label: "Alla material" }, { href: "/priser", label: "Priser för takarbeten" }],
     };
   }
 

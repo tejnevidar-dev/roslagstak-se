@@ -16,6 +16,7 @@ import { brfLocationSlugs } from "../src/data/brf-locations";
 import { regionSlugs } from "../src/data/regions";
 import { projects } from "../src/data/projects";
 import { problems } from "../src/data/problems";
+import { materials } from "../src/data/materials";
 
 const args = process.argv.slice(2);
 const mdPath = args.find((a) => a.startsWith("--md="))?.split("=")[1];
@@ -66,6 +67,7 @@ const staticRoutes = [
   "/cookies",
   "/projekt",
   "/takproblem",
+  "/material",
 ];
 const serviceRoutes = serviceSlugs.map((s) => `/tjanster/${s}`);
 const blogRoutes = blogSlugs.map((s) => `/blogg/${s}`);
@@ -75,6 +77,7 @@ const regionRoutes = Object.values(regionSlugs).map((s) => `/omraden/${s}`);
 const brfRoutes = brfLocationSlugs.map((s) => `/brf/${s}`);
 const projectRoutes = projects.map((p) => `/projekt/${p.slug}`);
 const problemRoutes = problems.map((p) => `/takproblem/${p.slug}`);
+const materialRoutes = materials.filter((m) => m.detail).map((m) => m.href);
 
 const routes = [
   ...staticRoutes,
@@ -86,6 +89,7 @@ const routes = [
   ...brfRoutes,
   ...projectRoutes,
   ...problemRoutes,
+  ...materialRoutes,
 ];
 const routeSet = new Set(routes);
 
@@ -145,6 +149,15 @@ for (const link of links) {
     continue;
   }
   for (const hit of hits) inbound.set(hit, (inbound.get(hit) ?? 0) + 1);
+}
+
+/* MaterialsPage.tsx renderar to={m.href} (en variabel, inte en literal eller mall-sträng), så
+   regexen ovan kan inte läsa av länken statiskt. Vi vet från src/data/materials.ts att /material
+   länkar till varje materials-post, så vi räknar dem här i stället för att förlita oss på regex
+   (annars felrapporteras /material/betongpannor och /material/tp20-plattak som orphans). */
+for (const href of materials.map((m) => m.href)) {
+  const match = toMatcher(href);
+  for (const hit of routes.filter(match)) inbound.set(hit, (inbound.get(hit) ?? 0) + 1);
 }
 
 /* ---------- 5. resultat ---------- */

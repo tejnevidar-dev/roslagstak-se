@@ -47,6 +47,8 @@ const ProjectsPage = lazy(() => import("./pages/ProjectsPage.tsx"));
 const ProjectPage = lazy(() => import("./pages/ProjectPage.tsx"));
 const ProblemsPage = lazy(() => import("./pages/ProblemsPage.tsx"));
 const ProblemPage = lazy(() => import("./pages/ProblemPage.tsx"));
+const MaterialsPage = lazy(() => import("./pages/MaterialsPage.tsx"));
+const MaterialPage = lazy(() => import("./pages/MaterialPage.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -80,6 +82,8 @@ const App = () => (
               <Route path="/projekt/:slug" element={<ProjectPage />} />
               <Route path="/takproblem" element={<ProblemsPage />} />
               <Route path="/takproblem/:slug" element={<ProblemPage />} />
+              <Route path="/material" element={<MaterialsPage />} />
+              <Route path="/material/:slug" element={<MaterialPage />} />
               <Route path="/brf" element={<BrfPage />} />
               {adLandingSlugs.map((slug) => (
                 <Route key={slug} path={`/offert/${slug}`} element={<AdLandingPage />} />
