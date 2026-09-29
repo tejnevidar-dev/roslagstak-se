@@ -817,7 +817,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
 
   const combo = comboByUrl.get(clean);
   if (combo) {
-    const override = combo.serviceSlug === "takbyte" ? comboOverrides[combo.locationSlug] : undefined;
+    const override = comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`];
     return {
       title: override?.title ?? `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`,
       description: override?.description ?? combo.description,

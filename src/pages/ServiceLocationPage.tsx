@@ -45,9 +45,9 @@ const ServiceLocationPage = () => {
 
   if (!combo) return <NotFound />;
 
-  /* Storstockholms största kommuner (sprint-offensiv-2026-09-28 punkt 3): egen, längre och
-     unik text för /takbyte-<ort> i stället för den korta mallgenererade combo-texten. */
-  const override = combo.serviceSlug === "takbyte" ? comboOverrides[combo.locationSlug] : undefined;
+  /* Egen, längre och unik text för vissa tjänst×ort-kombinationer i stället för den korta
+     mallgenererade combo-texten (sprint-offensiv-2026-09-28 punkt 3, #14/#1r 2026-09-29). */
+  const override = comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`];
 
   const loc = locations.find((l) => l.slug === combo.locationSlug);
   const nearbyInService = loc?.nearbyLocations
