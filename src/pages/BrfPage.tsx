@@ -287,7 +287,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
         )}
       </button>
       <p className="text-center text-[13px] text-muted-foreground">
-        Vi svarar inom 24 timmar. Besiktning och offert är kostnadsfria och förpliktar inte till något.
+        Vi svarar inom 24 timmar. Takkontroll och offert är kostnadsfria och förpliktar inte till något.
       </p>
       <p className="text-center text-xs text-muted-foreground">
         Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}

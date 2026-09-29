@@ -195,7 +195,6 @@ export const contentDepthExempt: string[] = [
   "/taklaggare-edsbro",
   "/taklaggare-edsviken",
   "/taklaggare-ekero",
-  "/taklaggare-enebyberg",
   "/taklaggare-enkoping",
   "/taklaggare-enskede",
   "/taklaggare-eskilstuna",

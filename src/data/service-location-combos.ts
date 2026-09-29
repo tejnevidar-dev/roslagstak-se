@@ -68,7 +68,7 @@ const serviceTypes = [
             `Vi tar uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
           ),
       `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval — TP20-plåttak eller dubbelfalsat. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr/person/år).`,
-      `Besiktning och offert för takomläggning är kostnadsfria ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i vårt offertformulär — vi återkopplar inom 24 timmar.`,
+      `Takkontroll och offert för takomläggning är kostnadsfria ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i vårt offertformulär — vi återkopplar inom 24 timmar.`,
     ],
   },
 ];

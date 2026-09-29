@@ -42,7 +42,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/brf",
     label: "Takbyte för BRF",
-    description: "Besiktning, fast offert och serviceavtal för bostadsrättsföreningar.",
+    description: "Takkontroll, fast offert och serviceavtal för bostadsrättsföreningar.",
   },
   {
     to: "/hur-det-gar-till",

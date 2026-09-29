@@ -278,6 +278,20 @@ const LocationPage = () => {
                   {location.extraContent}
                 </p>
 
+                {/* Faktaruta — villaområden med egen, källbelagd data (SEO-programmet våg 0+) */}
+                {location.factBox && (
+                  <dl className="mb-6 grid gap-x-6 gap-y-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2">
+                    {location.factBox.map((fact) => (
+                      <div key={fact.label}>
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
+                          {fact.label}
+                        </dt>
+                        <dd className="text-sm text-muted-foreground">{fact.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+
                 {/* Unikt lokalt innehåll per ort — klimat, bebyggelse och logistik */}
                 {localSections.blocks.map((block) => (
                   <div key={block.heading}>

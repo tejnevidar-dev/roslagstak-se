@@ -513,7 +513,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vi samlar våra omdömen på Google istället för att publicera egenskrivna recensioner här på sajten. Det gör att du kan läsa omdömena i original, skrivna av verifierade kunder, direkt i vår Google-företagsprofil.",
       "Följ länken till Google för att se aktuella omdömen, stjärnbetyg och bilder från utförda takprojekt. Har du själv anlitat oss får du gärna lämna ett omdöme — det hjälper andra husägare i Roslagen att välja takläggare.",
       "Det vi hör oftast från kunderna: att kommunikationen är tydlig från första kontakten, att priset som avtalats är det som faktureras, och att plåtarbetet utförs med noggrannhet. Många lyfter också att vi löser materialtransport till öar utan broförbindelse som en självklar del av projektet.",
-      "Vi utför takbyte, takrenovering, plåtarbeten och takvård i hela Roslagen och Storstockholm. Besiktning och offert är alltid kostnadsfria, och du får 10 års utförandegaranti på allt arbete.",
+      "Vi utför takbyte, takrenovering, plåtarbeten och takvård i hela Roslagen och Storstockholm. Takkontroll och offert är alltid kostnadsfria, och du får 10 års utförandegaranti på allt arbete.",
       "Så kan du själv bedöma en takfirma: be om referenser från projekt i din närhet, kontrollera att företaget har ansvarsförsäkring och F-skatt, och be att få garantierna skriftligt i offerten. Ett seriöst företag lämnar alltid fast pris efter kostnadsfri takkontroll — aldrig ett pris per telefon.",
       "Vill du veta mer om hur vi arbetar innan du bestämmer dig? Läs om vår process steg för steg, våra riktpriser eller boka en kostnadsfri rådgivning där vi går igenom ditt tak tillsammans.",
       "Därför väljer vi att länka till Google istället för att skriva egna omdömen: omdömen på Google kan inte redigeras eller plockas bort av oss, vilket gör dem mer trovärdiga än citat på en egen hemsida. Där ser du hela bilden — både betyg, texter och hur vi svarar.",
@@ -854,6 +854,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       paragraphs: [
         loc.longDescription,
         loc.extraContent,
+        ...(loc.factBox ? [loc.factBox.map((f) => `${f.label}: ${f.value}.`).join(" ")] : []),
         geoFactsParagraph(loc),
         `${loc.uniqueFAQ.question} ${loc.uniqueFAQ.answer}`,
         `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,

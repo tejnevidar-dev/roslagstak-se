@@ -207,7 +207,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Reparation av rötskadat virke",
     ],
     process: [
-      "Besiktning och skadebedömning",
+      "Takkontroll och skadebedömning",
       "Offert med tydlig åtgärdslista",
       "Reparation av skadat underlag",
       "Byte av trasiga pannor/plåtsektioner",
@@ -227,7 +227,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Prydligt och hållbart resultat",
     ],
     process: [
-      "Besiktning av befintligt system",
+      "Takkontroll av befintligt system",
       "Dimensionering och materialval",
       "Demontering av gammalt system",
       "Montering av nya hängrännor",
@@ -287,7 +287,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
     ],
     process: [
-      "Besiktning och uppmätning",
+      "Takkontroll och uppmätning",
       "Materialval och färgval",
       "Tillverkning av specialbeslag",
       "Montering och falsning",
