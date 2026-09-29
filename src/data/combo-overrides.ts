@@ -29,12 +29,12 @@ const CTA = (name: string, prep: string) =>
 
 export const comboOverrides: Record<string, ComboOverride> = {
   nacka: {
-    title: "Takbyte i Nacka — fast pris, 10 års garanti",
+    title: "Takbyte i Nacka — fast pris, 10 års utförandegaranti",
     description:
       "Takbyte i Nacka: villor, radhus och skärgårdsfastigheter. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Nacka sträcker sig från tätbebyggda delar nära Stockholms innerstad till skärgårdsnära villaområden mot Saltsjön och Baggensfjärden. Bebyggelsen är blandad: villor och radhus från 1950- till 1980-talet i områden som Fisksätra, Saltsjö-Duvnäs och Älta, sekelskifteshus i de äldre delarna, och nyare flerbostadshus i centrala Nacka och Sickla. Den variationen gör att vi möter allt från enkla sadeltak till mer komplicerade tak med flera takfall, kupor och burspråk.",
-      "Kustnära läge mot Saltsjön innebär att salt luft och slagregn från öster sliter mer på takmaterial och plåtbeslag än i inlandet. Vi ser regelbundet frostsprängda betongpannor och rostangripna beslag på äldre villatak i Nacka, särskilt på tak som vetter mot vattnet. Rätt materialval och korrekt utförda anslutningar vid skorstenar och genomföringar är avgörande för hur länge ett tak håller i det klimatet.",
+      "Kustnära läge mot Saltsjön innebär att salt luft och slagregn från öster sliter mer på takmaterial och plåtbeslag än i inlandet. I kustnära lägen är frostsprängda betongpannor och rostangripna beslag vanliga på äldre villatak, särskilt på tak som vetter mot vattnet. Rätt materialval och korrekt utförda anslutningar vid skorstenar och genomföringar är avgörande för hur länge ett tak håller i det klimatet.",
       "Vi utför takbyte i Nacka med samtliga vanliga material: TP20-plåttak för fritidshus och enklare byggnader, dubbelfalsat plåttak (bandtäckning) för permanentboenden i exponerade lägen, betongpannor och tegelplåt för villor där ett traditionellt utseende är viktigt, samt lertegel för äldre och kulturhistoriskt intressanta hus. Materialvalet avgörs av takets lutning, husets karaktär och budget, och vi går igenom alternativen vid takkontrollen.",
       "Har fastigheten i Nacka ett äldre eternittak samordnar vi saneringen med en behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter, innan det nya taket läggs. Vi utför inte asbestsanering själva.",
       INCLUDES("Nacka", "i"),
@@ -46,7 +46,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   lidingo: {
-    title: "Takbyte på Lidingö — fast pris, 10 års garanti",
+    title: "Takbyte på Lidingö — fast pris, 10 års utförandegaranti",
     description:
       "Takbyte på Lidingö: villor och skärgårdsfastigheter nära vatten. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
@@ -63,7 +63,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   solna: {
-    title: "Takbyte i Solna — fast pris, 10 års garanti",
+    title: "Takbyte i Solna — fast pris, 10 års utförandegaranti",
     description:
       "Takbyte i Solna: från Råsunda och Bergshamra till Arenastaden. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
@@ -80,7 +80,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   huddinge: {
-    title: "Takbyte i Huddinge — fast pris, 10 års garanti",
+    title: "Takbyte i Huddinge — fast pris, 10 års utförandegaranti",
     description:
       "Takbyte i Huddinge: villaområden och flerbostadshus från flera decennier. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
@@ -96,7 +96,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   jarfalla: {
-    title: "Takbyte i Järfälla — fast pris, 10 års garanti",
+    title: "Takbyte i Järfälla — fast pris, 10 års utförandegaranti",
     description:
       "Takbyte i Järfälla: villaområden i Jakobsberg, Kallhäll och Barkarby. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
@@ -112,7 +112,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   "upplands-vasby": {
-    title: "Takbyte i Upplands Väsby — fast pris, 10 års garanti",
+    title: "Takbyte i Upplands Väsby — fast pris & garanti",
     description:
       "Takbyte i Upplands Väsby: villor och radhus från 1970- och 80-talet. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
@@ -128,7 +128,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   stockholm: {
-    title: "Takbyte i Stockholm — fast pris, 10 års garanti",
+    title: "Takbyte i Stockholm — fast pris, 10 års utförandegaranti",
     description:
       "Takbyte i Stockholm: från innerstadens fastigheter till villaförorterna. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [

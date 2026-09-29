@@ -200,6 +200,9 @@ const ServiceLocationPage = () => {
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <Award className="w-4 h-4 text-primary" /> AMA-standard
               </div>
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <CheckCircle className="w-4 h-4 text-primary" /> En kontaktperson hela vägen
+              </div>
             </div>
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
               <a
@@ -212,7 +215,7 @@ const ServiceLocationPage = () => {
                 to="/takkontroll"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
               >
-                Boka kostnadsfri takkontroll <ArrowRight className="w-3.5 h-3.5" />
+                Boka kostnadsfri takkontroll — utan förpliktelser <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
