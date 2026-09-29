@@ -45,6 +45,7 @@ export const locationIndex: LocationSummary[] = [
   { slug: "osterskar", name: "Österskär", region: "Österåker", isIsland: false },
   { slug: "vallentuna", name: "Vallentuna", region: "Roslagens inland", isIsland: false },
   { slug: "taby", name: "Täby", region: "Roslagens inland", isIsland: false },
+  { slug: "ella-gard", name: "Ella gård", region: "Roslagens inland", isIsland: false },
   { slug: "stockholm", name: "Stockholm", region: "Stockholms stad", isIsland: false },
   { slug: "sodermalm", name: "Södermalm", region: "Stockholms stad", isIsland: false },
   { slug: "ostermalm", name: "Östermalm", region: "Stockholms stad", isIsland: false },

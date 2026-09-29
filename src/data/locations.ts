@@ -787,6 +787,35 @@ export const locations: LocationData[] = [
     lng: 18.0686,
     nearbyLocations: ["Vallentuna", "Åkersberga", "Vaxholm"],
   },
+  {
+    slug: "ella-gard",
+    name: "Ella gård",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Ella gård i Täby. Kostnadsfri takkontroll utan förpliktelser, fast pris och hänsyn till kommunens riktlinjer för kulturmiljön.",
+    longDescription:
+      "Ella gård i Täby är ett av Sveriges första kedjehusområden. Bygget började 1955, bara ett år efter att jordbruket på den gamla gården hade lagts ned, och under en period på femton år växte cirka 500 hus fram. Först byggdes den norra delen, sedan den södra. I början av 1970-talet kompletterades området västerut med två delområden med låga grupphus. Husen är byggda efter 1950-talets ideal om grannskap och rationellt byggande: prefabricerade trähus på betongplatta, ordnade i grupper längs slingrande gator och omgivna av stora gröna ytor. Enligt kommunens beskrivning kännetecknas bebyggelsen av sadeltak med tegelpannor, stående träpanel och vita fönsterfoder, och de ursprungliga takkuporna är inramade av svart plåt. Området beskrivs av Täby kommun som mycket välbevarat, och i kommunens kulturmiljöprogram finns riktlinjer för hur husen ska förändras.",
+    extraContent:
+      "Den som byter tak i Ella gård behöver ta hänsyn till kulturmiljön. Enligt Täby kommuns råd och riktlinjer för Ella gård bör takpannor av lertegel användas, och större förändringar av husens tidstypiska arkitektur bör undvikas. Det gäller alltså inte bara vilket material som läggs, utan också detaljer som takkupornas plåtinklädnad och hur taket ansluter till fasaden. Om ett konkret takbyte kräver lov eller anmälan avgör kommunen. Många av husen byggdes under 1950- och 60-talen — tak från den tiden kan redan ha lagts om en gång, men där det inte har skett är underlagspapp, läkt och plåtdetaljer ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. Eftersom husen i ett kvarter ofta är likadana och byggda samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris.",
+    factBox: [
+      { label: "Kommun", value: "Täby" },
+      { label: "Hustyper", value: "Kedjehus och radhus (grupphus)" },
+      { label: "Byggperiod", value: "1955–ca 1970, två delområden tidigt 1970-tal" },
+      { label: "Antal hus i ursprungsplanen", value: "Ca 500" },
+      { label: "Kulturmiljö", value: "Täby kommuns riktlinje: \"Takpannor av lertegel bör användas\"" },
+      { label: "Ägda småhus i området", value: "Ca 1 500 (SCB, 2025)" },
+    ],
+    uniqueFAQ: {
+      question: "Måste jag använda lertegel om jag byter tak i Ella gård?",
+      answer:
+        "Täby kommun har en riktlinje för Ella gård om att takpannor av lertegel bör användas, för att bevara områdets tidstypiska karaktär, men det är en rekommendation, inte ett krav. Om ett konkret takbyte kräver lov eller anmälan avgör kommunen. Vi tar med riktlinjerna i underlaget när vi tar fram offerten.",
+    },
+    primaryKeyword: "takläggare Ella gård",
+    lat: 59.4447,
+    lng: 18.0539,
+    nearbyLocations: ["Täby", "Vallentuna", "Åkersberga"],
+  },
   // =================== STORSTOCKHOLM ===================
   {
     slug: "stockholm",
