@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, MapPin, Layers, CalendarDays } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -43,6 +44,16 @@ const ProjectPage = () => {
         image={OG_IMAGES[project.slug]}
         imageAlt={project.heroAlt}
       />
+      <Helmet>
+        {/* LCP-bilden (#1h/#1k): förladdar rätt AVIF-storlek innan React hunnit rendera <picture>. */}
+        <link
+          rel="preload"
+          as="image"
+          // @ts-expect-error -- imagesrcset/imagesizes stöds av moderna browsers men saknas i React:s typer
+          imagesrcset={project.heroResponsive.avifSrcSet}
+          imagesizes="(min-width: 1024px) 896px, 100vw"
+        />
+      </Helmet>
       <Header />
       <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -65,7 +76,19 @@ const ProjectPage = () => {
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">{project.summary}</p>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-border">
-            <img src={project.heroImage} alt={project.heroAlt} className="w-full object-cover" />
+            <picture>
+              <source type="image/avif" srcSet={project.heroResponsive.avifSrcSet} sizes="(min-width: 1024px) 896px, 100vw" />
+              <source type="image/webp" srcSet={project.heroResponsive.webpSrcSet} sizes="(min-width: 1024px) 896px, 100vw" />
+              <img
+                src={project.heroImage}
+                alt={project.heroAlt}
+                width={project.heroResponsive.width}
+                height={project.heroResponsive.height}
+                fetchPriority="high"
+                decoding="async"
+                className="w-full object-cover"
+              />
+            </picture>
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">

@@ -24,13 +24,37 @@
  * summary/description skrivs av SEO utifrån 1, 2, 4, 5, 8 — bara det som är ifyllt, inget hittat på.
  */
 import imgBlidoHero from "@/assets/project-blido-hero.jpg";
+import imgBlidoHeroAvif480 from "@/assets/project-blido-hero-480.avif";
+import imgBlidoHeroAvif768 from "@/assets/project-blido-hero-768.avif";
+import imgBlidoHeroAvif1080 from "@/assets/project-blido-hero-1080.avif";
+import imgBlidoHeroWebp480 from "@/assets/project-blido-hero-480.webp";
+import imgBlidoHeroWebp768 from "@/assets/project-blido-hero-768.webp";
+import imgBlidoHeroWebp1080 from "@/assets/project-blido-hero-1080.webp";
 import imgBlidoDetail1 from "@/assets/project-blido-detail-1.jpg";
 import imgBlidoDetail2 from "@/assets/project-blido-detail-2.jpg";
 import imgSingoHero from "@/assets/project-singo-hero.jpg";
+import imgSingoHeroAvif480 from "@/assets/project-singo-hero-480.avif";
+import imgSingoHeroAvif768 from "@/assets/project-singo-hero-768.avif";
+import imgSingoHeroAvif1080 from "@/assets/project-singo-hero-1080.avif";
+import imgSingoHeroAvif1440 from "@/assets/project-singo-hero-1440.avif";
+import imgSingoHeroWebp480 from "@/assets/project-singo-hero-480.webp";
+import imgSingoHeroWebp768 from "@/assets/project-singo-hero-768.webp";
+import imgSingoHeroWebp1080 from "@/assets/project-singo-hero-1080.webp";
+import imgSingoHeroWebp1440 from "@/assets/project-singo-hero-1440.webp";
 import imgSingoDetail1 from "@/assets/project-singo-detail-1.jpg";
 import type { MaterialSlug } from "@/data/materials";
 import { locations, type LocationData } from "@/data/locations";
 import { distanceKm } from "@/data/service-reach";
+
+/* Responsiva hero-varianter (AVIF/WebP, genererade av scripts/gen-responsive-hero.mjs från
+   källbilderna i src/assets/), SEO-fynd #1h/#1k: /projekt/takbyte-singo hade LCP 8,9 s på en
+   692 kB ooptimerad JPEG. heroImage (originalet) är alltid sista fallback i <picture>. */
+export interface ResponsiveHero {
+  avifSrcSet: string;
+  webpSrcSet: string;
+  width: number;
+  height: number;
+}
 
 export interface Project {
   slug: string;
@@ -46,6 +70,7 @@ export interface Project {
   description: string[];
   heroImage: string;
   heroAlt: string;
+  heroResponsive: ResponsiveHero;
   gallery: { src: string; alt: string }[];
 }
 
@@ -71,6 +96,12 @@ export const projects: Project[] = [
     ],
     heroImage: imgBlidoHero,
     heroAlt: "Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring.",
+    heroResponsive: {
+      avifSrcSet: `${imgBlidoHeroAvif480} 480w, ${imgBlidoHeroAvif768} 768w, ${imgBlidoHeroAvif1080} 1080w`,
+      webpSrcSet: `${imgBlidoHeroWebp480} 480w, ${imgBlidoHeroWebp768} 768w, ${imgBlidoHeroWebp1080} 1080w`,
+      width: 1125,
+      height: 844,
+    },
     gallery: [
       {
         src: imgBlidoDetail1,
@@ -103,6 +134,12 @@ export const projects: Project[] = [
     ],
     heroImage: imgSingoHero,
     heroAlt: "Nytt tak på Singö i Grisslehamn med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna, med utsikt över fjärden.",
+    heroResponsive: {
+      avifSrcSet: `${imgSingoHeroAvif480} 480w, ${imgSingoHeroAvif768} 768w, ${imgSingoHeroAvif1080} 1080w, ${imgSingoHeroAvif1440} 1440w`,
+      webpSrcSet: `${imgSingoHeroWebp480} 480w, ${imgSingoHeroWebp768} 768w, ${imgSingoHeroWebp1080} 1080w, ${imgSingoHeroWebp1440} 1440w`,
+      width: 1440,
+      height: 1080,
+    },
     gallery: [
       {
         src: imgSingoDetail1,
