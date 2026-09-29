@@ -24,15 +24,15 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takläggare på Blidö — takbyte, takrenovering och takomläggning. Vi utgår från Blidö och tar oss ut med material och utrustning för alla typer av takprojekt i skärgården.",
+      "Takläggare på Blidö — takbyte, takrenovering och takomläggning. Vi tar oss ut med material och utrustning för alla typer av takprojekt i skärgården.",
     longDescription:
       "Blidö utsätts för kraftig vind och saltluft året runt — förhållanden som sliter hårt på tak. Många fastighetsägare på Blidö upptäcker för sent att underlagspappen gett vika eller att plåtbeslagen rostat. Oavsett om din fastighet ligger vid bryggan eller djupt inne på ön — vi når dig och levererar ett tak som står emot Roslagens väder i decennier.",
     extraContent:
-      "Den korta resvägen håller ner etableringskostnaden för dig som har hus på Blidö.",
+      "Vi planerar materialtransporten till Blidö via Blidöleden som en del av offerten, så du behöver inte arrangera något själv.",
     uniqueFAQ: {
       question: "Hur når RoslagsTak Blidö med material för takbyte?",
       answer:
-        "Vi utgår från Blidö och har etablerade logistikrutiner via Blidöleden. Material levereras direkt till ön, och vi samordnar ofta flera projekt för att minimera transportkostnader. All logistik ingår i offerten — du behöver inte arrangera något själv.",
+        "Material levereras till ön via Blidöleden. All logistik ingår i offerten — du behöver inte arrangera något själv.",
     },
     primaryKeyword: "takläggare Blidö",
     lat: 59.6167,
@@ -241,11 +241,11 @@ export const locations: LocationData[] = [
     longDescription:
       "Humlö är en av de mindre öarna i norra Roslagen, men takproblemen är desamma som på de större: salt, fukt och vind sliter på material som inte är dimensionerat för skärgården. Resultatet är alltid detsamma — ett professionellt utfört tak med 10 års utförandegaranti, oavsett hur avlägsen adressen är.",
     extraContent:
-      "Humlö ligger relativt nära Svartlöga och Norröra, och vi kombinerar gärna takprojekt på dessa öar för effektivare logistik. På Humlö ser vi ofta äldre tak med sliten papp eller rostiga beslag — problem som snabbt kan leda till fuktskador i underliggande konstruktion. En tidig takinspektion kan spara stora pengar. Kontakta oss för en kostnadsfri bedömning av taket på din fastighet på Humlö.",
+      "Humlö ligger relativt nära Svartlöga och Norröra. På äldre skärgårdstak är sliten papp och rostiga beslag vanliga problem, eftersom salt och fukt bryter ner material snabbare än på fastlandet — problem som kan leda till fuktskador i underliggande konstruktion om de får sitta för länge. Kontakta oss för en kostnadsfri bedömning av taket på din fastighet på Humlö.",
     uniqueFAQ: {
-      question: "Är det möjligt att få takinspektion på Humlö utan kostnad?",
+      question: "Är det möjligt att få takkontroll på Humlö utan kostnad?",
       answer:
-        "Ja, vi erbjuder kostnadsfri takinspektion även på öar som Humlö. Vi samordnar ofta besiktningar med andra arbeten i norra skärgården. Kontakta oss så bokar vi in ett besök — du får en skriftlig rapport med vår bedömning och rekommendation.",
+        "Ja, vi erbjuder kostnadsfri takkontroll även på öar som Humlö. Kontakta oss så bokar vi in ett besök — du får en bedömning och ett prisförslag vid takkontrollen.",
     },
     primaryKeyword: "takläggare Humlö",
     lat: 59.6167,
@@ -323,15 +323,15 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare på Rådmansö — takbyte, tegelplåt och takrenovering nära Norrtälje. Snabb service och konkurrenskraftiga priser.",
+      "Takläggare på Rådmansö — takbyte, tegelplåt och takrenovering nära Norrtälje. Fast pris och kostnadsfri takkontroll.",
     longDescription:
-      "Rådmansö är porten till skärgården och ligger bara minuter från vår bas i Norrtälje. Det innebär att vi kan erbjuda snabb service och konkurrenskraftiga priser till fastighetsägare på Rådmansö. Närheten gör att vi ofta kan påbörja arbetet snabbare än på mer avlägsna platser — kontakta oss så bokar vi in en kostnadsfri takkontroll.",
+      "Rådmansö är porten till skärgården, med kort väg till Norrtälje. Vi utför takbyte, takrenovering och plåtarbeten på Rådmansö till fast pris — kontakta oss så bokar vi in en kostnadsfri takkontroll.",
     extraContent:
-      "Rådmansö har en blandning av permanentboenden och fritidshus, och vi har arbetat med alla typer av fastigheter här. Tack vare närheten till vår bas har vi ofta korta ledtider i området. Många fastighetsägare på Rådmansö väljer oss för att vi kan vara på plats snabbt och erbjuda fast pris redan vid första besöket. Vi utför även mindre arbeten som byte av hängrännor, stuprör och vindskivor.",
+      "Rådmansö har en blandning av permanentboenden och fritidshus. Vi utför takbyten, takomläggningar och mindre arbeten som byte av hängrännor, stuprör och vindskivor, och lämnar alltid fast pris efter kostnadsfri takkontroll.",
     uniqueFAQ: {
-      question: "Hur snabbt kan ni komma till Rådmansö för en takinspektion?",
+      question: "Hur snabbt kan ni komma till Rådmansö för en takkontroll?",
       answer:
-        "Rådmansö ligger nära vår bas, så vi kan ofta boka in en kostnadsfri takinspektion inom några dagar. Ring oss på 070-154 36 39 så hittar vi en tid som passar. Vi ger alltid en skriftlig rapport med bedömning och prisförslag.",
+        "Ring oss på 070-154 36 39 eller boka via formuläret, så hittar vi en tid som passar. Vi svarar alltid inom 24 timmar och ger dig en bedömning och ett prisförslag vid takkontrollen.",
     },
     primaryKeyword: "takläggare Rådmansö",
     lat: 59.6667,
@@ -475,11 +475,11 @@ export const locations: LocationData[] = [
     longDescription:
       "Singö i norra Roslagen är en plats där skärgårdskänslan möter lantlig charm. Bebyggelsen varierar — äldre torp, sommarvillor och nyare fritidshus — och alla behöver tak som tål det nordliga skärgårdsklimatet.",
     extraContent:
-      "Singö har en blandning av fast boende och sommarboende, och taken här speglar det — allt från klassiska tegelpannetak till enklare papptak på äldre stugor. Kontakta oss för en kostnadsfri bedömning — vi arbetar ofta i Singö-området.",
+      "Singö har en blandning av fast boende och sommarboende, och taken här speglar det — allt från klassiska tegelpannetak till enklare papptak på äldre stugor. Kontakta oss för en kostnadsfri bedömning av taket på din fastighet på Singö.",
     uniqueFAQ: {
       question: "Kan ni samordna takbyte på Singö med projekt i Grisslehamn?",
       answer:
-        "Ja, vi samordnar ofta projekt på Singö med arbeten i Grisslehamn och på Väddö. Det minskar restidskostnaden och kan ge dig ett förmånligare pris. Ring oss så planerar vi tillsammans.",
+        "Ja, vi kan samordna projekt på Singö med arbeten i Grisslehamn och på Väddö där det passar tidsmässigt, vilket kan minska restidskostnaden. Ring oss så planerar vi tillsammans.",
     },
     primaryKeyword: "takläggare Singö",
     lat: 60.0,
@@ -494,14 +494,14 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Grisslehamn — takbyte och takrenovering i norra Roslagen. Dubbelfalsat plåttak och TP20 för hårda kustförhållanden.",
     longDescription:
-      "Grisslehamn längst norrut i Roslagen är en kustort med direktkontakt med öppet hav — och det märks på taken. Vind, regn och salt sliter hårdare här än på de flesta andra platser i regionen. Vi utför regelbundet takprojekt i Grisslehamn och har lärt oss vilka material och metoder som ger längst livslängd. Dubbelfalsat plåttak och TP20 med rätt underlag är ofta det vi rekommenderar i dessa förhållanden. Kontakta oss för en kostnadsfri bedömning — vi ger dig rak och ärlig rådgivning.",
+      "Grisslehamn längst norrut i Roslagen är en kustort med direktkontakt med öppet hav — och det märks på taken. Vind, regn och salt sliter hårdare här än på de flesta andra platser i regionen. Dubbelfalsat plåttak och TP20 med rätt underlag och förstärkta infästningar är ofta det vi rekommenderar i dessa förhållanden. Kontakta oss för en kostnadsfri bedömning — vi ger dig rak och ärlig rådgivning.",
     extraContent:
-      "Grisslehamn ligger exponerat mot Ålands hav och är en av de mest vindbelastade platserna i Roslagen. Taken här måste klara extrema vindlaster och salt stänk. Vi har installerat flera TP20-tak och dubbelfalsade plåttak i Grisslehamn med förstärkta infästningar anpassade för det hårda klimatet. Kontakta oss om du behöver en erfaren takläggare i Grisslehamn.",
+      "Grisslehamn ligger exponerat mot Ålands hav och är en av de mest vindbelastade platserna i Roslagen. Taken här måste klara extrema vindlaster och salt stänk, vilket ställer högre krav på materialval och infästningar än i mer skyddade lägen. Kontakta oss om du vill ha en bedömning av vad som passar just ditt tak i Grisslehamn.",
     uniqueFAQ: {
       question:
         "Vilka speciella krav ställer Grisslehamns klimat på takmaterial?",
       answer:
-        "Grisslehamn ligger exponerat mot Ålands hav med starka vindar och salt luft. Vi rekommenderar korrosionsbeständig plåt med förstärkta infästningar. Dubbelfalsat plåt eller TP20 med rätt underlag ger längst livslängd i dessa förhållanden. Undvik betongpannor — de riskerar frostsprängning i det hårda klimatet.",
+        "Grisslehamn ligger exponerat mot Ålands hav med starka vindar och salt luft. Vi rekommenderar korrosionsbeständig plåt med förstärkta infästningar. Dubbelfalsat plåt eller TP20 med rätt underlag ger längst livslängd i dessa förhållanden, medan betongpannor kan vara mer utsatta för frostsprängning i det hårda klimatet.",
     },
     primaryKeyword: "takläggare Grisslehamn",
     lat: 60.1,
@@ -854,9 +854,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Bromma — takbyte, takrenovering och plåtarbeten i västra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Bromma har en varierad bebyggelse — från 1920-talsvillor i Bromma trädgårdsstad till radhus och 70-talsvillor i Blackeberg och Riksby. Många tak i Bromma är nu 30–50 år gamla och mogna för omläggning eller byte. Vi utför takbyten och takomläggningar i Bromma med både plåttak (TP20, dubbelfalsat) och betongpannor, alltid med ny taksäkerhet, fungerande ventilation och avvattning. Vi går igenom pris och tidsplan i förväg, så att offerten blir realistisk för Brommas villaområden.",
+      "Bromma har en varierad bebyggelse — från 1920-talsvillor i Bromma trädgårdsstad till radhus och 70-talsvillor i Blackeberg och Riksby. På hus av den åldern är det vanligt att taket förr eller senare blir moget för omläggning eller byte. Vi utför takbyten och takomläggningar i Bromma med både plåttak (TP20, dubbelfalsat) och betongpannor, alltid med ny taksäkerhet, fungerande ventilation och avvattning. Vi går igenom pris och tidsplan i förväg, så att offerten blir realistisk för Brommas villaområden.",
     extraContent:
-      "I Bromma ser vi ofta tak där underlagspappen torkat sönder och betongpannor börjat frostspränga — ett typiskt förlopp för tak i denna ålder. I de fallen är omläggning med ny papp, ny läkt och antingen nya pannor eller plåt oftast bäst ekonomi. Vi lämnar fast pris efter kostnadsfri takkontroll och kan ofta starta inom några veckor.",
+      "På äldre villatak i Bromma är det vanligt att underlagspappen torkar sönder och betongpannor börjar frostspränga med åren. I de fallen är omläggning med ny papp, ny läkt och antingen nya pannor eller plåt oftast bäst ekonomi. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Bromma?",
       answer:
