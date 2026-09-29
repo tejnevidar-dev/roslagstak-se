@@ -14,7 +14,7 @@ import { getLocationBySlug, locations } from "@/data/locations";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { regionSlugs } from "@/data/regions";
-import { projects } from "@/data/projects";
+import { projects, getNearbyProject } from "@/data/projects";
 import NotFound from "./NotFound";
 import {
   Accordion,
@@ -39,11 +39,11 @@ const LocationPage = () => {
 
   const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
   /* Geografisk graf (SEO Phase 2.7): bara 2 av 139 orter har ett exakt projekt. Genom att visa ett
-     referensjobb från en grannort (ärligt märkt "i närområdet", aldrig "här") får många fler
-     ortssidor en riktig location↔project-länk utan att påstå lokal närvaro som inte finns. */
-  const nearbyProject = !locationProject
-    ? projects.find((p) => nearby.some((n) => n.slug === p.locationSlug))
-    : undefined;
+     referensjobb från en grannort (samma region eller ≤30 km, se getNearbyProject) får många fler
+     ortssidor en riktig location↔project-länk — alltid med orten utskriven, aldrig bara "i
+     närområdet" utan angiven plats (Marknadschefen 2026-09-29, regel 5). */
+  const nearbyProject = getNearbyProject(location);
+  const nearbyProjectKommun = nearbyProject?.locationName.split(",")[1]?.trim();
   const prep = location.isIsland ? "på" : "i";
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
@@ -413,6 +413,7 @@ const LocationPage = () => {
                     {nearbyProject && (
                       <Link to={`/projekt/${nearbyProject.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                         <ArrowRight className="w-3 h-3" /> Referensjobb i närområdet: {nearbyProject.title}
+                        {nearbyProjectKommun ? `, ${nearbyProjectKommun}` : ""}
                       </Link>
                     )}
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">

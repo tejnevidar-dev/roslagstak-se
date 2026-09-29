@@ -29,6 +29,7 @@ import imgBlidoDetail2 from "@/assets/project-blido-detail-2.jpg";
 import imgSingoHero from "@/assets/project-singo-hero.jpg";
 import imgSingoDetail1 from "@/assets/project-singo-detail-1.jpg";
 import type { MaterialSlug } from "@/data/materials";
+import { locations, type LocationData } from "@/data/locations";
 
 export interface Project {
   slug: string;
@@ -109,3 +110,32 @@ export const projects: Project[] = [
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 export const getProjectsByMaterial = (materialSlug: MaterialSlug) =>
   projects.filter((p) => p.materialSlugs.includes(materialSlug));
+
+const NEARBY_PROJECT_MAX_KM = 30;
+
+const distanceKm = (a: LocationData, b: LocationData) => {
+  const R = 6371;
+  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
+  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
+  const s =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((a.lat * Math.PI) / 180) * Math.cos((b.lat * Math.PI) / 180) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(s));
+};
+
+/**
+ * Ett referensjobb att visa på en ortssida som saknar ett eget projekt — men bara om det verkligen
+ * ligger nära (Marknadschefen 2026-09-29, regel 5: aldrig ett vilseledande "i närområdet"). Kräver
+ * ≤30 km fågelvägen. Bara avstånd, inte "samma region" — några av de namngivna regionerna
+ * (t.ex. Norra skärgården, 57 km mellan ytterpunkterna) är för stora för att räknas som närområde
+ * på egen hand. Länktexten på anropsstället ska alltid skriva ut projektets egen ort (locationName),
+ * aldrig bara "i närområdet" utan angiven plats.
+ */
+export const getNearbyProject = (location: LocationData) => {
+  if (projects.some((p) => p.locationSlug === location.slug)) return undefined;
+  return projects.find((p) => {
+    const projectLocation = locations.find((l) => l.slug === p.locationSlug);
+    if (!projectLocation) return false;
+    return distanceKm(location, projectLocation) <= NEARBY_PROJECT_MAX_KM;
+  });
+};
