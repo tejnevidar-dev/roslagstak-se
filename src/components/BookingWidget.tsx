@@ -18,12 +18,12 @@ const todayISO = () => new Date().toISOString().slice(0, 10);
 const slotLabel: Record<Slot, string> = {
   formiddag: "Förmiddag",
   eftermiddag: "Eftermiddag",
-  ring_mig: "Ring mig inom 1 timme",
+  ring_mig: "Ring mig så snart som möjligt",
 };
 
 /**
  * Boka kostnadsfri takkontroll: namn, telefon, ort (valfritt) + välj dag/del av dag,
- * eller "ring mig inom 1 h" när sajten är öppen (mån–fre 07–20, lör–sön 09–19).
+ * eller "ring mig så snart som möjligt" när sajten är öppen (mån–fre 07–20, lör–sön 09–19).
  * Skriver till samma quote_requests-tabell och samma trigger som övriga formulär (ingen
  * ny hemlighet eller databaskoppling behövs). Bokningsraden står tydligt märkt i meddelandet
  * så att CRM:s befintliga leadhantering ser den. En renare integration mot CRM:s dedikerade
@@ -52,7 +52,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
 
     const bookingLine =
       form.slot === "ring_mig"
-        ? "Bokning: ring mig inom 1 timme"
+        ? "Bokning: ring mig så snart som möjligt"
         : `Bokning: ${form.date} (${slotLabel[form.slot]})`;
     const message = [
       "Bokning kostnadsfri takkontroll",
@@ -172,7 +172,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
             }`}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            {openNow ? "Ring mig inom 1 timme" : `Vi ringer vid nästa öppning, ${nextOpeningLabel()}`}
+            {openNow ? "Ring mig så snart som möjligt" : `Vi ringer vid nästa öppning, ${nextOpeningLabel()}`}
           </button>
         )}
       </div>
@@ -193,6 +193,10 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
           </>
         )}
       </button>
+      <p className="text-xs text-muted-foreground">
+        Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
+        <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
+      </p>
     </form>
   );
 };

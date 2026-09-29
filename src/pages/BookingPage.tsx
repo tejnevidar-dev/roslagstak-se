@@ -24,7 +24,7 @@ const BookingPage = () => (
   <>
     <SEOHead
       title="Boka kostnadsfri takkontroll"
-      description="Boka en kostnadsfri takkontroll: välj dag och tid, eller be oss ringa inom en timme. Fast pris, utan förpliktelser."
+      description="Boka en kostnadsfri takkontroll: välj dag och tid, eller be oss ringa upp. Fast pris, utan förpliktelser."
       canonical="https://roslagstak.se/boka-takkontroll"
       noindex
     />

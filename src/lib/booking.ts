@@ -52,14 +52,14 @@ export const nextOpeningLabel = (now: Date = new Date()): string => {
 
 /**
  * Text att visa på tackskärmen direkt efter att formuläret skickats in (vi skickar inget
- * mail/sms från CRM). "ring_mig" = 1 h under öppettid, annars nästa öppning.
- * "boka" (vald dag/del av dag) = vi återkommer inom 2 h under öppettid för att bekräfta tiden.
+ * mail/sms från CRM). Vi lovar bara svar inom 24 h (beslut.md) — inget kortare tidslöfte
+ * här förrän Vidar beslutat om bemanning/tider för det.
  */
 export const confirmationText = (kind: "ring_mig" | "boka", now: Date = new Date()): string => {
   if (isWithinOpeningHours(now)) {
     return kind === "ring_mig"
-      ? "Vi ringer dig inom 1 timme, från 070-154 36 39."
-      : "Vi hör av oss inom 2 timmar för att bekräfta tiden, från 070-154 36 39.";
+      ? "Vi ringer dig så snart som möjligt, från 070-154 36 39."
+      : "Vi hör av oss för att bekräfta tiden, från 070-154 36 39.";
   }
   return `Vi hör av oss ${nextOpeningLabel(now)}, från 070-154 36 39.`;
 };
