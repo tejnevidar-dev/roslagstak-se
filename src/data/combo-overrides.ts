@@ -31,7 +31,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   nacka: {
     title: "Takbyte i Nacka — fast pris, 10 års utförandegaranti",
     description:
-      "Takbyte i Nacka: villor, radhus och skärgårdsfastigheter. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte i Nacka: villor, radhus och skärgårdsfastigheter. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Nacka sträcker sig från tätbebyggda delar nära Stockholms innerstad till skärgårdsnära villaområden mot Saltsjön och Baggensfjärden. Bebyggelsen är blandad: villor och radhus från 1950- till 1980-talet i områden som Fisksätra, Saltsjö-Duvnäs och Älta, sekelskifteshus i de äldre delarna, och nyare flerbostadshus i centrala Nacka och Sickla. Den variationen gör att vi möter allt från enkla sadeltak till mer komplicerade tak med flera takfall, kupor och burspråk.",
       "Kustnära läge mot Saltsjön innebär att salt luft och slagregn från öster sliter mer på takmaterial och plåtbeslag än i inlandet. I kustnära lägen är frostsprängda betongpannor och rostangripna beslag vanliga på äldre villatak, särskilt på tak som vetter mot vattnet. Rätt materialval och korrekt utförda anslutningar vid skorstenar och genomföringar är avgörande för hur länge ett tak håller i det klimatet.",
@@ -48,7 +48,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   lidingo: {
     title: "Takbyte på Lidingö — fast pris, 10 års utförandegaranti",
     description:
-      "Takbyte på Lidingö: villor och skärgårdsfastigheter nära vatten. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte på Lidingö: villor och skärgårdsfastigheter nära vatten. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Lidingö är en ö strax utanför Stockholms innerstad, med en villabebyggelse som sträcker sig från representativa sekelskifteshus i Gångsätra och Bodal till modernistiska villor från 1930- och 1940-talet och senare tillbyggda hus i Käppala, Larsberg och Högsätra. Många fastigheter har stora, väl synliga tak, vilket gör att takets material och utförande syns tydligt i gatubilden.",
       "Öns läge mellan Lilla Värtan och Kyrkviken innebär att husen på Lidingö utsätts för salt luft och kraftiga vindar från flera väderstreck, särskilt i de yttre delarna mot Elfvik och Käppala. Det ställer högre krav på plåtbeslag, infästningar och ventilation under takmaterialet än vid inlandsläge, och det är ofta beslag och anslutningar — inte själva takytan — som ger vika först på äldre tak.",
@@ -65,7 +65,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   solna: {
     title: "Takbyte i Solna — fast pris, 10 års utförandegaranti",
     description:
-      "Takbyte i Solna: från Råsunda och Bergshamra till Arenastaden. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte i Solna: från Råsunda och Bergshamra till Arenastaden. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Solna är en av Stockholms mest tätbebyggda kommuner, med allt från flerbostadshus i Råsunda och Bergshamra till villaområden i Huvudsta och Ulriksdal och moderna nybyggnationer i Arenastaden. Den äldre bebyggelsen har ofta plåttak eller tegelpannor från 1900-talets första hälft, medan villaområdena från 1950- och 60-talet oftast har betongpannor eller äldre bandtäckt plåt.",
       "I Solnas tätbebyggda kvarter är det ofta logistiken snarare än själva takarbetet som avgör hur ett projekt planeras: ställning, materialupplag och avfallshantering måste samordnas med parkeringsregler, gårdsutrymmen och grannars behov. Vi går igenom logistikplanen med dig innan arbetet startar, så att projektet stör så lite som möjligt.",
@@ -82,7 +82,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   huddinge: {
     title: "Takbyte i Huddinge — fast pris, 10 års utförandegaranti",
     description:
-      "Takbyte i Huddinge: villaområden och flerbostadshus från flera decennier. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte i Huddinge: villaområden och flerbostadshus från flera decennier. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Huddinge har en varierad bebyggelse, från villaområden i Segeltorp och Snättringe med hus från 1950- till 1970-talet, till flerbostadshus från miljonprogramsåren i Flemingsberg och Vårby, och nyare bostadsområden i Storängen och Skogås. Den stora variationen i husens ålder gör att vi möter allt från originaltak som närmar sig slutet av sin livslängd till relativt nya tak som bara behöver punktinsatser.",
       "På villor från 1950- och 60-talet i Huddinge är det vanligt att betongpannorna börjar frostspränga och underlagspappen torkat ut, vilket gör en takomläggning till bättre ekonomi över tid än att fortsätta laga punktvis. Vi går igenom underlagets skick noggrant vid takkontrollen, eftersom det ofta är avgörande för om en renovering räcker eller om ett komplett takbyte är rätt val.",
@@ -98,7 +98,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   jarfalla: {
     title: "Takbyte i Järfälla — fast pris, 10 års utförandegaranti",
     description:
-      "Takbyte i Järfälla: villaområden i Jakobsberg, Kallhäll och Barkarby. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte i Järfälla: villaområden i Jakobsberg, Kallhäll och Barkarby. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Järfälla har vuxit fram kring flera villa- och radhusområden — Jakobsberg, Kallhäll, Viksjö och det snabbt växande Barkarbystaden — med bebyggelse som spänner från 1960-talsvillor till helt nybyggda kvarter. De äldre villaområdena har ofta betongpannor eller äldre plåttak som nu närmar sig eller passerat sin förväntade livslängd, medan nyare områden som Barkarbystaden har moderna taklösningar från start.",
       "I Mälardalens inlandsklimat, som Järfälla tillhör, är det framför allt snölast och temperaturväxlingar mellan årstiderna som sliter på tak — snölast ställer krav på takstolarnas dimensionering och på snörasskyddens placering, medan upprepade frysningar och upptiningar påskyndar frostsprängning i äldre betongpannor. Vi kontrollerar alltid takstolarnas skick och bedömer behovet av snörasskydd när vi byter tak i Järfälla.",
@@ -114,7 +114,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   "upplands-vasby": {
     title: "Takbyte i Upplands Väsby — fast pris & garanti",
     description:
-      "Takbyte i Upplands Väsby: villor och radhus från 1970- och 80-talet. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte i Upplands Väsby: villor och radhus från 1970- och 80-talet. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Upplands Väsby har en stor andel villa- och radhusbebyggelse från 1970- och 80-talet, samt nyare bostadsområden kring Väsby centrum och Runby. Många av kommunens hus har nu tak som är 30–50 år gamla, vilket är i det åldersspann där betongpannor ofta börjar frostspränga och underlagspappen torkar ut och spricker — de vanligaste tecknen på att det är dags att planera ett takbyte.",
       "Som inlandskommun i norra Storstockholm får Upplands Väsby framför allt sliten av snölast och temperaturväxlingar snarare än salt luft. Vi bedömer alltid behovet av snörasskydd över entréer och uteplatser och kontrollerar takstolarnas bärförmåga innan nytt, tyngre material som betongpannor monteras.",
@@ -130,7 +130,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   stockholm: {
     title: "Takbyte i Stockholm — fast pris, 10 års utförandegaranti",
     description:
-      "Takbyte i Stockholm: från innerstadens fastigheter till villaförorterna. Kostnadsfri takkontroll, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte i Stockholm: från innerstadens fastigheter till villaförorterna. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
       "Stockholm rymmer en stor spännvidd av bebyggelse: sekelskiftesfastigheter med bandtäckt plåt eller tegel i innerstadskvarteren, funktionalistiska flerbostadshus från 1930- och 40-talet, villaförorter från efterkrigstiden och moderna nyproduktionsområden. Ett takbyte i Stockholm handlar därför sällan om ett standardtak — takets historia, husets skyddsvärde och den omgivande bebyggelsen påverkar ofta materialval och utförande.",
       "Att byta tak i tätbebyggda delar av Stockholm ställer särskilda krav på logistik. Trånga gator, parkeringsregler, avspärrningar och grannhänsyn gör att ställning, materialupplag och avfallshantering måste planeras i detalj och ofta bokas i förväg med fastighetsägare eller bostadsrättsförening. Vi tar hand om den planeringen och håller löpande kontakt med dig genom hela projektet.",
