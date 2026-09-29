@@ -34,4 +34,11 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# AdsBot-Google ignorerar redan "User-agent: *" (och därmed Disallow: /*?*), så annonsklick med
+# ?utm_... blockeras inte idag. Egen grupp ändå, som skydd mot framtida ändringar i den generella
+# gruppen (Google Ads-agentens förslag 2026-09-29). Microsoft Ads-motsvarigheten läggs till när den
+# annonseringen startar.
+User-agent: AdsBot-Google
+Allow: /
+
 Sitemap: https://roslagstak.se/sitemap.xml
