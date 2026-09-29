@@ -19,7 +19,8 @@
     "validate:schema": "node scripts/validate-structured-data.mjs",
     "predev": "bun scripts/generate-location-index.ts && bun scripts/generate-sitemap.ts",
     "prebuild": "bun scripts/generate-location-index.ts && bun scripts/generate-sitemap.ts",
-    "postbuild": "node scripts/validate-structured-data.mjs"
+    "postbuild": "node scripts/validate-structured-data.mjs && bun scripts/check-sitemap.ts && bun scripts/link-audit.ts && bun scripts/geo-graph-audit.ts && bun scripts/thin-content-check.ts",
+    "verify": "bun run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

@@ -1,0 +1,11 @@
+#!/bin/sh
+# Deploy-grind (SEO-programmet Marknadschefens steg 14): kör hela kvalitetskedjan innan en push
+# lämnar den här klonen. Blockerar push om build, validate-structured-data, check-sitemap,
+# link-audit, geo-graph-audit eller thin-content-check failar.
+#
+# Aktivera i en klon (lokal, versionshanteras inte automatiskt av git):
+#   cp scripts/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+set -e
+cd "$(git rev-parse --show-toplevel)" || exit 1
+echo "[pre-push] kör bun run verify (build + alla kvalitetskontroller) innan push..."
+bun run verify
