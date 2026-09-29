@@ -94,11 +94,33 @@ const CookiesPage = () => (
                 behandlar uppgifterna för vår räkning. Vi säljer aldrig dina uppgifter.
               </p>
 
-              <h3 className="mt-6 font-display text-lg text-foreground">Hur länge vi sparar dem</h3>
+              <h3 className="mt-6 font-display text-lg text-foreground">Hur länge vi sparar dina uppgifter</h3>
+              <ul className="mt-2 space-y-2 text-[17px] leading-relaxed text-muted-foreground">
+                <li>
+                  <strong className="text-foreground">Förfrågningar som inte leder till avtal</strong> sparas i upp
+                  till 24 månader efter vår senaste kontakt, så att vi kan följa upp din förfrågan. Därefter
+                  anonymiseras de, så att de inte längre kan kopplas till dig. Har du sagt ja till att få erbjudanden
+                  från oss sparar vi dina kontaktuppgifter tills du säger nej. Vi frågar dig igen om vi inte har haft
+                  kontakt på tre år.
+                </li>
+                <li>
+                  <strong className="text-foreground">Avtal och utförda jobb</strong> sparas i sin helhet i 11 år
+                  efter avslutat arbete, eftersom du kan reklamera fel i upp till tio år. Därefter sparar vi bara de
+                  uppgifter om fastigheten, arbetet och materialet som behövs för garantier som följer huset (till
+                  exempel tillverkarens tätskiktsgaranti på upp till 30 år), dock längst 31 år. Namn, telefon, e-post
+                  och priser tas då bort.
+                </li>
+                <li>
+                  <strong className="text-foreground">Fakturor och bokföringsunderlag</strong>, inklusive underlag
+                  för ROT-avdrag, sparas i 7 år enligt bokföringslagen.
+                </li>
+                <li>
+                  Du kan när som helst invända mot att vi sparar dina uppgifter eller be oss radera dem. Då gör vi
+                  det, utom när lag kräver att vi sparar dem.
+                </li>
+              </ul>
               <p className="mt-2 text-[17px] leading-relaxed text-muted-foreground">
-                Förfrågningar som inte leder till något avtal raderas senast 12 månader efter sista kontakten.
-                Uppgifter om utförda jobb sparas så länge garantin och reklamationsrätten gäller (upp till 10 år).
-                Fakturor och bokföringsunderlag sparas i 7 år enligt bokföringslagen.
+                <strong className="text-foreground">Vi säljer aldrig dina uppgifter.</strong>
               </p>
 
               <h3 className="mt-6 font-display text-lg text-foreground">Dina rättigheter</h3>
