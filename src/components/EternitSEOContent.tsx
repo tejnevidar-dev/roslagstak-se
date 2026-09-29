@@ -18,7 +18,7 @@ const eternitFaqs = [
   },
   {
     question: "Hur vet jag om mitt eternittak innehåller asbest?",
-    answer: "Eternitplattor tillverkade före 1977 innehåller nästan alltid asbest. Plattor från 1977–1986 kan innehålla asbest. Är du osäker kan vi ta ett materialprov och skicka det till laboratorium för analys — helt kostnadsfritt vid besiktning.",
+    answer: "Eternitplattor tillverkade före 1977 innehåller nästan alltid asbest. Plattor från 1977–1986 kan innehålla asbest. Är du osäker kan vi ta ett materialprov och skicka det till laboratorium för analys — helt kostnadsfritt vid takkontroll.",
   },
   {
     question: "Kan ni hjälpa till med eternitsanering på öar i skärgården?",

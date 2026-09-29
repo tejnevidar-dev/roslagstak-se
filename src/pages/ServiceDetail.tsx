@@ -74,7 +74,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
     specs: [
       { k: "Åtgärd", v: "Punktinsats" },
       { k: "Underlag", v: "Papp och råspont" },
-      { k: "Pris", v: "Fast efter besiktning" },
+      { k: "Pris", v: "Fast efter takkontroll" },
     ],
     specHeading: "Vad vi åtgärdar — och vad vi låter vara",
     lead: "Renovering handlar om att byta rätt delar: skadad papp, rötat virke och trasiga pannor.",
@@ -191,13 +191,13 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Montering av nytt takmaterial",
       "Installation av ny taksäkerhet och avvattning",
       "Slutsamråd med kund och ansvarig säljare för att säkerställa att allt är korrekt utfört enligt offert",
-      "Slutbesiktning och skriftlig garanti",
+      "Slutgenomgång och skriftlig garanti",
       "Rivning av byggställning och avetablering från fastigheten",
     ],
   },
   takrenovering: {
     longDesc: "En takrenovering innebär att vi åtgärdar problem och förlänger livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
-    priceRange: "Fast pris efter kostnadsfri besiktning, beroende på skadans omfattning. ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. ROT-avdrag tillkommer.",
     benefits: [
       "Lägre kostnad än komplett takomläggning",
       "Snabbare genomförande",
@@ -292,7 +292,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Tillverkning av specialbeslag",
       "Montering och falsning",
       "Täthetskontroll",
-      "Slutbesiktning",
+      "Slutgenomgång",
     ],
   },
   takvard: {
@@ -332,7 +332,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Emballering och transport till godkänd deponi (saneringsfirman)",
       "Inspektion av underlag och eventuell reparation",
       "Montering av nytt takmaterial",
-      "Slutbesiktning och dokumentation",
+      "Slutgenomgång",
     ],
   },
   tegeltak: {
@@ -351,7 +351,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Ny underlagspapp, ströläkt och bärläkt dimensionerad för tegelvikten",
       "Montering av lertegel samt plåtbeslag kring skorsten och genomföringar",
       "Taksäkerhet och takavvattning",
-      "Slutbesiktning och skriftlig garanti",
+      "Slutgenomgång och skriftlig garanti",
     ],
   },
 };

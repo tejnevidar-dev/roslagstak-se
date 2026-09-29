@@ -74,7 +74,7 @@ describe("LocalBusiness-schema", () => {
 
 describe("FAQPage-schema", () => {
   const faqs = [
-    { question: "Vad kostar ett takbyte?", answer: "Priset sätts efter besiktning av taket." },
+    { question: "Vad kostar ett takbyte?", answer: "Priset sätts efter takkontroll av taket." },
     { question: "Hur lång tid tar det?", answer: "Ett normalt villatak tar 1–2 veckor." },
   ];
 

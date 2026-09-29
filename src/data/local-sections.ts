@@ -177,8 +177,8 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
   ][v];
 
   const inspectNote = loc.isIsland
-    ? `Vid besiktningen ${prep} ${loc.name} lägger vi extra vikt på beslag, infästningar och takfot, eftersom saltet angriper metall först där.`
-    : `Vid besiktningen ${prep} ${loc.name} börjar vi i rännor, genomföringar och nordsidan — det är där skadorna brukar visa sig först.`;
+    ? `Vid takkontrollen ${prep} ${loc.name} lägger vi extra vikt på beslag, infästningar och takfot, eftersom saltet angriper metall först där.`
+    : `Vid takkontrollen ${prep} ${loc.name} börjar vi i rännor, genomföringar och nordsidan — det är där skadorna brukar visa sig först.`;
 
   const accessPara = loc.isIsland
     ? `${p.access.charAt(0).toUpperCase() + p.access.slice(1)}. Vi bokar transport och lossningsplats innan arbetet startar, så att rivningsavfall och nytt material inte behöver ligga och vänta på tomten ${prep} ${loc.name}.`

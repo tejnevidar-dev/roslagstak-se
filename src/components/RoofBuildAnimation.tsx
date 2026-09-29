@@ -90,8 +90,8 @@ const STEPS: Step[] = [
   {
     id: "snorasskydd",
     label: "Snörasskydd",
-    title: "Snörasskydd & slutbesiktning",
-    body: "Sist monteras snörasskydden ovanför takfoten — sedan städning, dokumentation och slutbesiktning.",
+    title: "Snörasskydd & slutgenomgång",
+    body: "Sist monteras snörasskydden ovanför takfoten — sedan städning, dokumentation och slutgenomgång.",
     detail: "Du får skriftlig garanti i avtalet och en genomgång av hela taket på plats.",
     image: roofSnorasskydd,
     alt: "Fotorealistisk 3D-visualisering av monterat snörasskydd på ett färdigt skärgårdstak",

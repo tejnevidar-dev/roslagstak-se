@@ -14,7 +14,7 @@ const processFaqs = [
   {
     question: "Hur lång tid tar ett takbyte?",
     answer:
-      "Ett normalt villatak på 130–170 m² tar oftast 1–2 veckor från rivning till slutbesiktning, förutsatt att vädret tillåter. Behöver råsponten bytas eller taket har många genomföringar och kupor tar det längre tid. Du får en tidplan i offerten.",
+      "Ett normalt villatak på 130–170 m² tar oftast 1–2 veckor från rivning till slutgenomgång, förutsatt att vädret tillåter. Behöver råsponten bytas eller taket har många genomföringar och kupor tar det längre tid. Du får en tidplan i offerten.",
   },
   {
     question: "Behöver jag bygglov för takbyte?",
@@ -37,9 +37,9 @@ const processFaqs = [
       "Skadad råspont syns först när det gamla taket är rivet. Vi visar dig omfattningen och lämnar ett pris på tilläggsarbetet innan vi fortsätter. Inget extraarbete utförs utan att du godkänt det.",
   },
   {
-    question: "Vad ingår i slutbesiktningen?",
+    question: "Vad ingår i slutgenomgången?",
     answer:
-      "Vi går igenom taket tillsammans med dig: infästningar, plåtdetaljer, avvattning, taksäkerhet och städning av tomten. Du får skriftlig garanti i avtalet, materialdokumentation och bilder från arbetet.",
+      "Vi går igenom taket tillsammans med dig: infästningar, plåtdetaljer, avvattning, taksäkerhet och städning av tomten. Du får skriftlig garanti i avtalet och materialdokumentation.",
   },
 ];
 

@@ -122,7 +122,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       eyebrow: "Skadebild",
       heading: "Läs av ditt tak innan vi kommer",
       intro:
-        "De flesta takskador ger tydliga signaler långt innan taket börjar läcka in i rummet. Så tolkar vi dem vid besiktningen.",
+        "De flesta takskador ger tydliga signaler långt innan taket börjar läcka in i rummet. Så tolkar vi dem vid takkontrollen.",
       items: [
         { sign: "Fuktfläckar på vindens undertak", meaning: "Hål eller spricka i underlagspappen", action: "Byte av papp på berörd takfall, kontroll av råspont" },
         { sign: "Mossa i tjocka sammanhängande tuvor", meaning: "Ytskiktet håller kvar fukt permanent", action: "Rengöring, behandling och byte av vittrade pannor" },
@@ -354,7 +354,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/projekt/takbyte-singo", label: "Referensjobb: takbyte på Singö" },
   ],
   takrenovering: [
-    { to: "/tjanster/takinspektion", label: "Boka kostnadsfri takbesiktning" },
+    { to: "/tjanster/takinspektion", label: "Boka kostnadsfri takkontroll" },
     { to: "/tjanster/takomlaggning", label: "När räcker inte renovering?" },
     { to: "/takreparation", label: "Takreparation vid läckage och skador" },
     { to: "/akut-lackage", label: "Akut läckage i taket" },
@@ -366,7 +366,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
   ],
   takkupor: [{ to: "/tjanster/platarbeten", label: "Plåtinklädnad runt kupor" }],
   takinspektion: [
-    { to: "/tjanster/takrenovering", label: "Vanliga åtgärder efter besiktning" },
+    { to: "/tjanster/takrenovering", label: "Vanliga åtgärder efter takkontroll" },
     { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   ],
   platarbeten: [

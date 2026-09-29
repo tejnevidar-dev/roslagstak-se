@@ -65,7 +65,7 @@ const Hero = () => {
             <span className="italic text-accent">i decennier framöver.</span>
           </h1>
           <p className="mt-3 max-w-[46ch] text-[17px] leading-[1.65] text-primary-foreground/80 lg:mt-6">
-            Vi tar hand om hela processen — från första besiktningen till sista plåtdetaljen.
+            Vi tar hand om hela processen — från första takkontrollen till sista plåtdetaljen.
             Takbyte, takrenovering och akut takläckage för villor, BRF:er och företag i hela
             Roslagen och Storstockholm.
           </p>

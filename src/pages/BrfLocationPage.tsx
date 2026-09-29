@@ -20,8 +20,8 @@ const BrfLocationPage = () => {
     prep,
     region: loc.region,
     paragraphs: [
-      `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en besiktning. ${climate} ${inspect}`,
-      `${buildings} Styrelsen får ett skriftligt underlag med foton och ett fast pris att besluta på.`,
+      `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll. ${climate} ${inspect}`,
+      `${buildings} Styrelsen får ett skriftligt underlag och ett fast pris att besluta på.`,
     ],
     nearby: loc.nearbyLocations
       .map((name) => locations.find((l) => l.name === name))

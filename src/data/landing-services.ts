@@ -87,10 +87,10 @@ export const landingServices: LandingService[] = [
     extraHeading: "Reparation eller nytt tak?",
     extraParagraphs: [
       "Ibland räcker en reparation, ibland är taket i så dåligt skick att ett takbyte blir bättre ekonomi över tid. Vi ger en ärlig bedömning och föreslår aldrig ett takbyte om en renovering räcker.",
-      "Är skadorna många, är underlaget rötskadat på stora ytor eller är takmaterialet uttjänt är ett takbyte oftast det bästa valet. Vid besiktningen går vi igenom alternativen med dig.",
+      "Är skadorna många, är underlaget rötskadat på stora ytor eller är takmaterialet uttjänt är ett takbyte oftast det bästa valet. Vid takkontrollen går vi igenom alternativen med dig.",
     ],
     priceNote:
-      "Priset beror på skadans omfattning, takmaterial och hur åtkomligt taket är. Vi arbetar endast till fast pris och lämnar det efter besiktningen. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Priset beror på skadans omfattning, takmaterial och hur åtkomligt taket är. Vi arbetar endast till fast pris och lämnar det efter takkontrollen. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
     faqTitle: "Frågor om takreparation",
     faqs: [
       {
@@ -106,7 +106,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Hur vet jag om jag ska reparera eller byta tak?",
         answer:
-          "Det avgörs av takets ålder, skick och hur omfattande skadorna är. Vid besiktningen bedömer vi underlag, papp och takmaterial och ger en ärlig rekommendation. Vi föreslår inte ett takbyte om en reparation räcker.",
+          "Det avgörs av takets ålder, skick och hur omfattande skadorna är. Vid takkontrollen bedömer vi underlag, papp och takmaterial och ger en ärlig rekommendation. Vi föreslår inte ett takbyte om en reparation räcker.",
       },
       {
         question: "Får jag garanti på reparationen?",
@@ -296,7 +296,7 @@ export const landingServices: LandingService[] = [
       "Vilka regler som gäller just din situation avgörs av Skatteverket. Vi går gärna igenom hur det ser ut för ditt tak när vi lämnar offert.",
     ],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget räknas av från arbetskostnaden i offerten.",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget räknas av från arbetskostnaden i offerten.",
     faqTitle: "Frågor om ROT-avdrag på tak",
     faqs: [
       {
@@ -372,7 +372,7 @@ export const landingServices: LandingService[] = [
       "Ibland räcker en reparation, ibland är taket i så dåligt skick att ett takbyte blir bättre ekonomi. Vi ger en ärlig bedömning.",
     ],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
     faqTitle: "Frågor om akut läckage",
     faqs: [
       {
@@ -438,11 +438,11 @@ export const landingServices: LandingService[] = [
     ],
     extraHeading: "Aluminium, koppar eller lackerad plåt?",
     extraParagraphs: [
-      "Materialet väljs efter hus, läge och budget. Vid besiktningen går vi igenom alternativen med dig.",
+      "Materialet väljs efter hus, läge och budget. Vid takkontrollen går vi igenom alternativen med dig.",
       "Under tiden går det bra att läsa mer om hur takavvattning fungerar på sidan om takavvattning.",
     ],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
     faqTitle: "Frågor om hängrännor och stuprör",
     faqs: [
       {
@@ -511,7 +511,7 @@ export const landingServices: LandingService[] = [
       "Läs mer om metallerna på sidan om plåtarbeten.",
     ],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter besiktning. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
     faqTitle: "Frågor om plåtarbeten",
     faqs: [
       {
@@ -580,7 +580,7 @@ export const landingServices: LandingService[] = [
       "Ibland räcker en reparation. Vi ger en ärlig bedömning och föreslår aldrig ett takbyte om en renovering räcker.",
     ],
     priceNote:
-      "Priset beror på takets storlek, lutning, material och skick. Vi arbetar endast till fast pris och lämnar det efter besiktning.",
+      "Priset beror på takets storlek, lutning, material och skick. Vi arbetar endast till fast pris och lämnar det efter takkontroll.",
     faqTitle: "Frågor om att planera takbyte",
     faqs: [
       {
@@ -594,7 +594,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Vad kostar ett takbyte?",
         answer:
-          "Det beror på takets storlek, lutning, material och skick. Efter besiktning får du ett fast pris. Vi arbetar endast till fast pris.",
+          "Det beror på takets storlek, lutning, material och skick. Efter takkontroll får du ett fast pris. Vi arbetar endast till fast pris.",
       },
       {
         question: "Vilken garanti får jag?",

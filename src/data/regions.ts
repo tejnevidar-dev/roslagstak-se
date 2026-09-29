@@ -95,7 +95,7 @@ export const regionLongText: Record<string, string[]> = {
   ],
   Kusten: [
     "Längs Roslagens kust står villor från 1960-talet och framåt tillsammans med äldre trähus nära vattnet. Fuktig kustluft och slagregn från öster gör att underlagspappen åldras snabbare än inåt land.",
-    "Framkomligheten är god, så etableringen går fort. Vi börjar besiktningen i rännor, genomföringar och på nordsidan — det är där skadorna brukar visa sig först.",
+    "Framkomligheten är god, så etableringen går fort. Vi börjar takkontrollen i rännor, genomföringar och på nordsidan — det är där skadorna brukar visa sig först.",
   ],
   Rådmansöhalvön: [
     "På Rådmansöhalvön möter vi gårdar, ombyggda ekonomibyggnader och friliggande villor på stora tomter. Vind från flera väderstreck och snölast i skogsläge påverkar både nock och takfot.",
@@ -147,6 +147,6 @@ export const regionLongText: Record<string, string[]> = {
   ],
   Mälardalen: [
     "Vi tar uppdrag i Mälardalen, där förutsättningarna för taken är välkända: slättlandskap med öppna, blåsiga lägen, snölast under vintern och fukt nära Mälaren och Östersjökusten. Bebyggelsen spänner från äldre stadskärnor med tegel och plåt till villaområden och flerbostadshus från efterkrigstiden.",
-    "Här tar vi uppdrag från både villaägare och bostadsrättsföreningar. För föreningar lämnar vi ett skriftligt underlag efter en kostnadsfri besiktning, med fast pris, tidplan och skriftlig garanti efter slutbesiktning, så att styrelsen kan besluta.",
+    "Här tar vi uppdrag från både villaägare och bostadsrättsföreningar. För föreningar lämnar vi ett skriftligt underlag efter en kostnadsfri takkontroll, med fast pris, tidplan och skriftlig garanti efter slutgenomgång, så att styrelsen kan besluta.",
   ],
 };

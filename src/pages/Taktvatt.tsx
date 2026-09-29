@@ -76,14 +76,14 @@ const process = [
   { step: "6", title: "Biocidbehandling", desc: "Miljögodkänt medel som dödar sporer och hindrar mossa från att komma tillbaka snabbt." },
   { step: "7", title: "Rengöring av hängrännor", desc: "Vi tömmer och spolar ur rännor och stuprör så takavvattningen fungerar." },
   { step: "8", title: "Eventuell takmålning", desc: "Två strykningar med UV-beständig takfärg om du valt målning i offerten." },
-  { step: "9", title: "Slutbesiktning & dokumentation", desc: "Genomgång på plats samt före- och efterbilder för ditt arkiv och försäkring." },
+  { step: "9", title: "Slutgenomgång", desc: "Genomgång på plats innan sista fakturan." },
 ];
 
 const guarantees = [
   { icon: ShieldCheck, title: "10 års utförandegaranti", desc: "På utfört arbete. Du får garantin skriftligt." },
   { icon: Award, title: "Fast pris efter kostnadsfri takkontroll", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
   { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Godkänd för F-skatt med ansvarsförsäkring för hela arbetet." },
-  { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutbesiktning — alltid samma person att ringa." },
+  { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutgenomgång — alltid samma person att ringa." },
 ];
 
 const faqs = [
@@ -129,7 +129,7 @@ const faqs = [
   },
   {
     q: "Behöver jag vara hemma när ni utför taktvätten?",
-    a: "Nej, du behöver inte vara hemma. Många av våra kunder med fritidshus på Blidö, Ljusterö, Yxlan och i skärgården anlitar oss helt på distans. Vi behöver bara tillgång till vatten (utomhuskran eller motsvarande) och en parkeringsplats för servicebilen. Vi dokumenterar arbetet med före- och efterbilder och skickar en utförlig rapport via e-post eller sms när jobbet är klart.",
+    a: "Nej, du behöver inte vara hemma. Många av våra kunder med fritidshus på Blidö, Ljusterö, Yxlan och i skärgården anlitar oss helt på distans. Vi behöver bara tillgång till vatten (utomhuskran eller motsvarande) och en parkeringsplats för servicebilen. Vi hör av oss via sms eller telefon när jobbet är klart.",
   },
   {
     q: "Hur tar man bort mossa på taket?",
@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     q: "Är taktvätt verkligen lönsamt jämfört med takbyte?",
-    a: "Ja, om taket är helt och underliggande konstruktion är frisk är taktvätt betydligt billigare än ett takbyte och förlänger livslängden med 10–15 år. Vi gör alltid en ärlig bedömning vid besiktningen — om pannorna är vittrade eller underlagspappen är dålig rekommenderar vi takomläggning istället.",
+    a: "Ja, om taket är helt och underliggande konstruktion är frisk är taktvätt betydligt billigare än ett takbyte och förlänger livslängden med 10–15 år. Vi gör alltid en ärlig bedömning vid takkontrollen — om pannorna är vittrade eller underlagspappen är dålig rekommenderar vi takomläggning istället.",
   },
   {
     q: "Tvättar ni även hängrännor och stuprör?",
@@ -149,11 +149,11 @@ const faqs = [
   },
   {
     q: "Kan svart algpåväxt försvinna helt efter taktvätt?",
-    a: "Ja, svarta strimmor från cyanobakterier (Gloeocapsa magma) försvinner helt efter taktvätt med biocidbehandling. Algerna lossnar dock inte direkt — det tar 2–6 veckor efter biocidbehandlingen innan regn och vind har spolat bort de döda kolonierna och taket ser helt rent ut. Vi förklarar detta vid slutbesiktningen så du vet vad du ska förvänta dig.",
+    a: "Ja, svarta strimmor från cyanobakterier (Gloeocapsa magma) försvinner helt efter taktvätt med biocidbehandling. Algerna lossnar dock inte direkt — det tar 2–6 veckor efter biocidbehandlingen innan regn och vind har spolat bort de döda kolonierna och taket ser helt rent ut. Vi förklarar detta vid slutgenomgången så du vet vad du ska förvänta dig.",
   },
   {
     q: "Erbjuder ni serviceavtal för regelbunden takvård?",
-    a: "Ja, vi tecknar serviceavtal för villaägare, bostadsrättsföreningar och näringsfastigheter i Roslagen. Avtalet inkluderar årlig okulärbesiktning, rensning av hängrännor en gång per år och taktvätt vart 5:e–7:e år till rabatterat pris. Perfekt för fritidshusägare som vill slippa tänka på underhåll — vi rapporterar löpande med bilder och text.",
+    a: "Ja, vi tecknar serviceavtal för villaägare, bostadsrättsföreningar och näringsfastigheter i Roslagen. Avtalet inkluderar årlig okulärkontroll, rensning av hängrännor en gång per år och taktvätt vart 5:e–7:e år till rabatterat pris. Perfekt för fritidshusägare som vill slippa tänka på underhåll — vi hör av oss efter varje besök.",
   },
 ];
 

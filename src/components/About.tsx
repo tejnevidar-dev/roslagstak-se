@@ -98,9 +98,9 @@ const About = () => {
                 takläggare.
               </p>
               <p>
-                Vi tar hand om hela projektet: besiktning, materialval, bygglov när det behövs,
+                Vi tar hand om hela projektet: takkontroll, materialval, bygglov när det behövs,
                 ställning, rivning, nytt tak och bortforsling av allt avfall. Du har samma
-                kontaktperson från första besöket till slutbesiktningen, och du får veta vad som
+                kontaktperson från första besöket till slutgenomgången, och du får veta vad som
                 händer varje dag arbetet pågår.
               </p>
               <p>

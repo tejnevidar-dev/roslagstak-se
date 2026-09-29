@@ -478,7 +478,7 @@ const LocationPage = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {far
-                    ? `Vi tar uppdrag ${prep} ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri besiktning och fast pris.`
+                    ? `Vi tar uppdrag ${prep} ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri takkontroll och fast pris.`
                     : "Vi är en lokal takläggare med stark förankring i Roslagen."}
                   {far
                     ? ""

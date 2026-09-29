@@ -17,7 +17,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/offert",
     label: "Räkna ut din offert",
-    description: "Konfigurera taket och få ett prisförslag direkt — eller boka besiktning.",
+    description: "Konfigurera taket och få ett prisförslag direkt — eller boka takkontroll.",
   },
   {
     to: "/taktyper",
@@ -47,7 +47,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/hur-det-gar-till",
     label: "Så går ett takbyte till",
-    description: "Steg för steg från besiktning till slutbesiktning och plåtdetaljer.",
+    description: "Steg för steg från takkontroll till slutgenomgång och plåtdetaljer.",
   },
   {
     to: "/offert#faq",

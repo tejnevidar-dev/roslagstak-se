@@ -47,7 +47,7 @@ const serviceTypes = [
         : byDistance(
             loc,
             `Vi utför regelbundet takrenoveringar ${prep} ${loc.name} och kan ofta påbörja arbetet inom 2–4 veckor.`,
-            `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in besiktning och start efter överenskommelse.`,
+            `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
           ),
       `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag tillkommer.`,
       `Boka en kostnadsfri takinspektion ${prep} ${loc.name}. Vi bedömer takets skick och ger dig en ärlig rekommendation — renovering eller takbyte. Kontakta oss så återkopplar vi inom 24 timmar.`,
@@ -125,8 +125,8 @@ const specialistServices = [
         ? `Plåttak är extra lämpligt ${prep} ${loc.name} eftersom materialet är lätt att transportera med båt och tål saltluft bättre än betongpannor, som frostspränger när mossa håller kvar fukt.`
         : byDistance(
             loc,
-            `Vi lägger plåttak ${prep} ${loc.name} året runt och kan ofta starta inom några veckor efter besiktning.`,
-            `Vi lägger plåttak ${prep} ${loc.name} året runt och bokar in start efter besiktning och överenskommelse.`,
+            `Vi lägger plåttak ${prep} ${loc.name} året runt och kan ofta starta inom några veckor efter takkontroll.`,
+            `Vi lägger plåttak ${prep} ${loc.name} året runt och bokar in start efter takkontroll och överenskommelse.`,
           ),
       `Ett plåttak ${prep} ${loc.name} — TP20, tegelprofilerad plåt eller dubbelfalsat. Fast pris efter kostnadsfri takkontroll, som inkluderar montage, beslag och bortforsling av gammalt material. ROT-avdrag tillkommer.`,
       `Begär kostnadsfri offert på plåttak ${prep} ${loc.name} — vi hjälper dig välja profil, kulör och rätt korrosionsklass för läget. Ring 070-154 36 39.`,

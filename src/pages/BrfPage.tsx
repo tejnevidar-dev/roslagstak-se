@@ -26,7 +26,7 @@ const facts = [
 
 const steps = [
   {
-    title: "Takbesiktning",
+    title: "Takkontroll",
     text: "Vi går igenom taket på plats och bedömer skick, underlag och vilka åtgärder som behövs. Takkontrollen är kostnadsfri.",
   },
   {
@@ -43,11 +43,11 @@ const steps = [
   },
   {
     title: "Genomförande",
-    text: "Rivning, underlag, nytt tak och plåtdetaljer. Varje moment dokumenteras med foton och arbetsplatsen städas löpande.",
+    text: "Rivning, underlag, nytt tak och plåtdetaljer. Arbetsplatsen städas löpande.",
   },
   {
-    title: "Slutbesiktning och skriftlig garanti",
-    text: "Vi går igenom arbetet tillsammans med er och lämnar skriftlig garanti och fotodokumentation som styrelsen kan spara till nästa mandatperiod.",
+    title: "Slutgenomgång och skriftlig garanti",
+    text: "Vi går igenom arbetet tillsammans med er och lämnar skriftlig garanti som styrelsen kan spara till nästa mandatperiod.",
   },
 ];
 
@@ -62,11 +62,11 @@ const boende = [
   },
   {
     title: "Ordning på arbetsplatsen",
-    text: "Arbetsplatsen städas löpande och lämnas ren efter slutbesiktningen, med bortforsling av det gamla taket.",
+    text: "Arbetsplatsen städas löpande och lämnas ren efter slutgenomgången, med bortforsling av det gamla taket.",
   },
   {
     title: "En fast kontaktperson",
-    text: "Styrelsen har en person att ringa under hela projektet, från besiktning till slutbesiktning.",
+    text: "Styrelsen har en person att ringa under hela projektet, från takkontroll till slutgenomgång.",
   },
 ];
 
@@ -74,22 +74,22 @@ const brfFaqs = [
   {
     question: "Hur går ett takbyte till för en bostadsrättsförening?",
     answer:
-      "Det börjar med en kostnadsfri takbesiktning, därefter får föreningen en skriftlig offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet dokumenteras med foton och avslutas med slutbesiktning och skriftlig garanti.",
+      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en skriftlig offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång och skriftlig garanti.",
   },
   {
-    question: "Behöver föreningen en besiktning före ett takbyte?",
+    question: "Behöver föreningen en takkontroll före ett takbyte?",
     answer:
-      "Vi rekommenderar det. En besiktning visar takets skick, om det räcker med reparation eller om taket behöver bytas, och ger styrelsen ett underlag för underhållsplan och budget. Vår besiktning är kostnadsfri och förpliktar inte till något.",
+      "Vi rekommenderar det. En takkontroll visar takets skick, om det räcker med reparation eller om taket behöver bytas, och ger styrelsen ett underlag för underhållsplan och budget. Vår takkontroll är kostnadsfri och förpliktar inte till något.",
   },
   {
     question: "Vad kostar ett takbyte för en BRF?",
     answer:
-      "Priset beror på takyta, taktyp, lutning, antal genomföringar och underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri besiktning, så att styrelsen har ett konkret underlag att besluta på. Riktpriser per material finns på sidan Priser.",
+      "Priset beror på takyta, taktyp, lutning, antal genomföringar och underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri takkontroll, så att styrelsen har ett konkret underlag att besluta på. Riktpriser per material finns på sidan Priser.",
   },
   {
     question: "Vilken garanti får föreningen?",
     answer:
-      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Garantihandlingar och fotodokumentation lämnas efter slutbesiktning, så att de går att spara i föreningens arkiv.",
+      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Garantihandlingar lämnas efter slutgenomgång, så att de går att spara i föreningens arkiv.",
   },
   {
     question: "Kan ni ta hand om takservice och snöskottning löpande?",
@@ -134,7 +134,7 @@ const initialForm = {
   address: "",
   buildings: "",
   area: "",
-  topic: "Takbesiktning",
+  topic: "Takkontroll",
   message: "",
 };
 
@@ -196,7 +196,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
         <CheckCircle className="h-8 w-8 text-accent" aria-hidden="true" />
         <h3 className="font-display text-2xl text-foreground">Tack, vi har tagit emot förfrågan.</h3>
         <p className="max-w-md leading-relaxed text-muted-foreground">
-          Vi återkommer inom 24 timmar för att stämma av tid för besiktning. Vill ni prata direkt går det bra att
+          Vi återkommer inom 24 timmar för att stämma av tid för takkontroll. Vill ni prata direkt går det bra att
           ringa 070-154 36 39.
         </p>
         <button
@@ -244,7 +244,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
         <div>
           <label htmlFor="brf-topic" className={labelClass}>Gäller</label>
           <select id="brf-topic" value={form.topic} onChange={set("topic")} className={inputClass}>
-            <option>Takbesiktning</option>
+            <option>Takkontroll</option>
             <option>Takbyte</option>
             <option>Takrenovering</option>
             <option>Serviceavtal</option>
@@ -305,7 +305,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
     ? [
         {
           question: `Tar ni uppdrag från bostadsrättsföreningar${inPlace}?`,
-          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takbesiktning och lämnar ett skriftligt underlag med fast pris som styrelsen kan besluta på. Efter slutbesiktning får föreningen skriftlig garanti och fotodokumentation.`,
+          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takkontroll och lämnar ett skriftligt underlag med fast pris som styrelsen kan besluta på. Efter slutgenomgång får föreningen skriftlig garanti.`,
         },
         ...brfFaqs,
       ]
@@ -328,8 +328,8 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         title={place ? `Takbyte BRF${inPlace} — bostadsrättsföreningar` : "Takbyte för BRF — bostadsrättsföreningar"}
         description={
           place
-            ? `Takbyte, takbesiktning och serviceavtal för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri besiktning, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.`
-            : "Takbyte, takbesiktning och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti, F-skatt och ansvarsförsäkring."
+            ? `Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.`
+            : "Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti, F-skatt och ansvarsförsäkring."
         }
         canonical={`https://roslagstak.se${pagePath}`}
       />
@@ -368,7 +368,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 <span className="italic text-accent">med underlag styrelsen kan besluta på.</span>
               </h1>
               <p className="mt-7 max-w-[52ch] text-[18px] leading-relaxed text-muted-foreground md:text-[19px]">
-                Från kostnadsfri takbesiktning och fast offert till slutbesiktning och skriftlig garanti. Vi arbetar i
+                Från kostnadsfri takkontroll och fast offert till slutgenomgång och skriftlig garanti. Vi arbetar i
                 {place ? `${place.name} och närområdet` : "Storstockholm, Roslagen och Mälardalen"}.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -376,7 +376,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                   href="#forfragan"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-8 py-4 text-[16px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
                 >
-                  Boka kostnadsfri takbesiktning <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  Boka kostnadsfri takkontroll <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
                 <a
                   href="tel:0701543639"
@@ -436,9 +436,9 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
               </p>
               <ul className="mt-8 border-t border-border">
                 {[
-                  ["Besiktningsrapport", "Takets skick dokumenterat med foton, som grund för underhållsplan och beslut."],
+                  ["Takkontroll", "Takets skick bedömt på plats, som grund för underhållsplan och beslut."],
                   ["Fast offert", "Ett skriftligt pris som gäller, med tydligt vad som ingår."],
-                  ["Garantivillkor", "Fotodokumentation och skriftlig garanti efter slutbesiktning."],
+                  ["Garantivillkor", "Skriftlig garanti efter slutgenomgång."],
                 ].map(([title, text]) => (
                   <li key={title} className="grid gap-1 border-b border-border py-5 sm:grid-cols-[13rem_1fr] sm:gap-6">
                     <span className="font-display text-lg text-foreground">{title}</span>
@@ -498,7 +498,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 Så går ett takbyte till i en förening
               </h2>
               <p className="mt-6 max-w-[42ch] text-[17px] leading-relaxed text-muted-foreground">
-                Sex steg från första besiktningen till skriftlig garanti. Beslutet ligger hos föreningen, och vi ser till
+                Sex steg från första takkontrollen till skriftlig garanti. Beslutet ligger hos föreningen, och vi ser till
                 att underlaget finns när det behövs.
               </p>
             </div>
@@ -535,8 +535,8 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
               <div className="md:pr-14">
                 <h3 className="font-display text-[1.9rem] leading-tight">Takbyte och takrenovering</h3>
                 <p className="mt-4 max-w-[46ch] leading-relaxed text-primary-foreground/75">
-                  Komplett takbyte eller renovering, från besiktning till slutbesiktning. Vi lämnar fast pris efter
-                  kostnadsfri besiktning.
+                  Komplett takbyte eller renovering, från takkontroll till slutgenomgång. Vi lämnar fast pris efter
+                  kostnadsfri takkontroll.
                 </p>
                 <ul className="mt-8 border-t border-primary-foreground/20 text-primary-foreground/90">
                   {[
@@ -568,7 +568,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                   ))}
                 </ul>
                 <p className="mt-6 text-[15px] leading-relaxed text-primary-foreground/60">
-                  Vi tar uppdrag för pannbyten och takbesiktningar på flerbostadshus.
+                  Vi tar uppdrag för pannbyten och takkontroller på flerbostadshus.
                 </p>
                 <a
                   href="#forfragan"
@@ -596,7 +596,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
             <div className="space-y-6 text-[18px] leading-relaxed text-muted-foreground lg:col-span-7">
               <p>
                 Ett tak som byts i tid går att planera in i budget och underhållsplan. Ett akut takbyte blir en
-                oplanerad kostnad som styrelsen måste lösa snabbt. Med en besiktning i god tid vet ni vad taket
+                oplanerad kostnad som styrelsen måste lösa snabbt. Med en takkontroll i god tid vet ni vad taket
                 kräver och när.
               </p>
               <p>
@@ -605,7 +605,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 bank.
               </p>
               <p>
-                Osäker på när det är dags? Boka en kostnadsfri besiktning så får ni ett besked om takets skick, utan
+                Osäker på när det är dags? Boka en kostnadsfri takkontroll så får ni ett besked om takets skick, utan
                 förpliktelser.
               </p>
             </div>
@@ -645,7 +645,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 id="brf-form-heading"
                 className="font-display text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-balance text-foreground"
               >
-                Boka kostnadsfri takbesiktning
+                Boka kostnadsfri takkontroll
               </h2>
               <p className="mt-6 max-w-[42ch] text-[17px] leading-relaxed text-muted-foreground">
                 Berätta kort om föreningen och taket. Vi återkommer inom 24 timmar och bokar en tid som passar
