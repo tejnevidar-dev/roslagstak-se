@@ -329,7 +329,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "taklaggare-norrtalje-guide",
     title: "Takläggare i Norrtälje — komplett guide till takbyte 2026",
-    excerpt: "Söker du takläggare i Norrtälje? Guide med priser, material och tips. Lokal takfirma med fast pris och 10 års garanti. Kostnadsfri offert.",
+    excerpt: "Söker du takläggare i Norrtälje? Guide med priser, material och tips. Lokal takfirma med fast pris och 10 års utförandegaranti. Kostnadsfri offert.",
     date: "2026-04-05",
     readTime: "6 min",
     keywords: ["takläggare norrtälje", "takbyte norrtälje", "tak norrtälje", "takrenovering norrtälje", "takfirma norrtälje"],
@@ -386,7 +386,7 @@ export const blogPosts: BlogPost[] = [
       "Kostar det mer att byta tak på en ö utan bro? Ja, transportkostnaden tillkommer. Men den är ofta lägre än man tror, särskilt om vi kan samordna med andra projekt i området. Vi är transparenta med alla kostnader — transporttillägget specificeras separat i offerten.",
       "Så förbereder du fastigheten: visa oss var båten kan lägga till, att vägen från bryggan till huset är framkomlig, och att det finns el på plats — annars tar vi med elverk. Berätta också om det finns känsliga rabatter eller ledstänger nära huset så skyddar vi dem under arbetet.",
       "Väder och säsong: arbeten på öar planeras med större marginaler än på fastlandet. Stark vind påverkar både båttransport och montage, så vi följer prognoserna dag för dag och bygger in buffertdagar i tidplanen. Högsäsongen juni–augusti bokas ofta upp tidigt — hör av dig i god tid.",
-      "Du kontaktar oss, vi gör besiktning och offert, vi planerar logistiken och du får ett nytt tak med 10 års garanti. Ring 070-154 36 39 för en kostnadsfri offert — vi tar oss dit andra inte vågar.",      "Tidplan på öar: räkna med något längre total tid än på fastlandet eftersom väderfönster och båtlogistik styr. Ett fritidshustak tar normalt 1–2 veckor på plats. Vi planerar alltid med buffertdagar och informerar dig löpande.",
+      "Du kontaktar oss, vi gör besiktning och offert, vi planerar logistiken och du får ett nytt tak med 10 års utförandegaranti. Ring 070-154 36 39 för en kostnadsfri offert — vi tar oss dit andra inte vågar.",      "Tidplan på öar: räkna med något längre total tid än på fastlandet eftersom väderfönster och båtlogistik styr. Ett fritidshustak tar normalt 1–2 veckor på plats. Vi planerar alltid med buffertdagar och informerar dig löpande.",
       "Boende och uppehåll: vid större projekt på öar utan snabb förbindelse ordnar vi boende nära arbetsplatsen för att inte förlora produktionstid på dagspendling. Det ingår i planeringen och specificeras i offerten.",
       "Och för dig som bara besöker ön på sommaren: vi kan genomföra hela projektet medan du inte är där. Nyckelhantering, fotouppdateringar varje dag och slutbesiktning på distans ingår i vårt arbetssätt. Många av våra ö-projekt genomförs helt utan att kunden behöver närvara mer än vid start och slut.",
 

@@ -569,13 +569,15 @@ const staticPages: Record<string, PrerenderPage> = {
   },
 };
 
+const truncateAtWord = (text: string, maxLen: number): string =>
+  text.length <= maxLen ? text : `${text.slice(0, maxLen).replace(/\s+\S*$/, "")}…`;
+
 const serviceIntro = (title: string, description: string): PrerenderPage => ({
   title: `${title} i Roslagen & Storstockholm`,
-  description:
-    `${description} Fast pris efter kostnadsfri takkontroll, 10 års garanti. Ring ${PHONE}.`.slice(
-      0,
-      158,
-    ),
+  description: truncateAtWord(
+    `${description} Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti. Ring ${PHONE}.`,
+    158,
+  ),
   h1: `${title} i Roslagen`,
   intro: description,
   paragraphs: [
@@ -734,7 +736,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const places = locations.filter((l) => l.region === region);
     return {
       title: `Takläggare i ${region}`,
-      description: `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri takkontroll, 10 års garanti. Ring ${PHONE}.`,
+      description: `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti. Ring ${PHONE}.`,
       h1: `Takläggare i ${region}`,
       intro: regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
