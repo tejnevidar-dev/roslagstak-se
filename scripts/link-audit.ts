@@ -12,6 +12,9 @@ import { resolve, join } from "node:path";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
+import { brfLocationSlugs } from "../src/data/brf-locations";
+import { regionSlugs } from "../src/data/regions";
+import { projects } from "../src/data/projects";
 
 const args = process.argv.slice(2);
 const mdPath = args.find((a) => a.startsWith("--md="))?.split("=")[1];
@@ -49,11 +52,26 @@ const staticRoutes = [
   "/blogg",
   "/kontakt",
   "/tjanster/takvard",
+  "/takkontroll",
+  "/rot-avdrag",
+  "/akut-lackage",
+  "/hangrannor",
+  "/platslagare",
+  "/takreparation",
+  "/takbyte-var-2027",
+  "/boka-takkontroll",
+  "/omraden",
+  "/brf",
+  "/cookies",
+  "/projekt",
 ];
 const serviceRoutes = serviceSlugs.map((s) => `/tjanster/${s}`);
 const blogRoutes = blogSlugs.map((s) => `/blogg/${s}`);
 const locationRoutes = locations.map((l) => `/taklaggare-${l.slug}`);
 const comboRoutes = locations.filter((l) => hasServiceCombos(l.region)).flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`));
+const regionRoutes = Object.values(regionSlugs).map((s) => `/omraden/${s}`);
+const brfRoutes = brfLocationSlugs.map((s) => `/brf/${s}`);
+const projectRoutes = projects.map((p) => `/projekt/${p.slug}`);
 
 const routes = [
   ...staticRoutes,
@@ -61,6 +79,9 @@ const routes = [
   ...blogRoutes,
   ...locationRoutes,
   ...comboRoutes,
+  ...regionRoutes,
+  ...brfRoutes,
+  ...projectRoutes,
 ];
 const routeSet = new Set(routes);
 
@@ -78,6 +99,8 @@ for (const file of files) {
   const patterns = [
     /\sto=(?:"([^"]+)"|\{`([^`]+)`\})([\s\S]{0,400})/g,
     /\bto:\s*(?:"([^"]+)"|`([^`]+)`)\s*,\s*label:\s*(?:"([^"]+)"|`([^`]+)`)/g,
+    // to: canonicalPath(`/tjanster/${s.slug}`) — dynamisk label (s.title), fångar bara path för räkning.
+    /\bto:\s*canonicalPath\(`([^`]+)`\)/g,
   ];
   for (const [i, re] of patterns.entries()) {
     for (const m of src.matchAll(re)) {

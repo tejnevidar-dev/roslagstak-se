@@ -359,6 +359,14 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
+  /* Roterande "systertjänster": de 4 NÄSTA tjänsterna i listan (cirkulärt), inte alltid de
+     första 4 — annars fick tjänster längre ner (takvård, eternit-asbest, tegeltak) aldrig en
+     inkommande länk härifrån (Phase 2.16, link-audit-full-2026.md). */
+  const serviceIndex = services.findIndex((s) => s.slug === slug);
+  const sisterServices =
+    serviceIndex === -1
+      ? []
+      : Array.from({ length: 4 }, (_, i) => services[(serviceIndex + 1 + i) % services.length]);
   const details = slug ? serviceDetails[slug] : null;
   const serviceImage = (slug && serviceImages[slug]) || imgDronePoster;
   const detailImage = slug ? detailImages[slug] : undefined;
@@ -906,10 +914,7 @@ const ServiceDetail = () => {
                 { to: "/taktyper", label: "Taktyper & material" },
                 { to: "/hur-det-gar-till", label: "Så går ett takbyte till" },
                 { to: "/offert#faq", label: "Vanliga frågor om takarbete" },
-                ...services
-                  .filter((s) => s.slug !== slug)
-                  .slice(0, 4)
-                  .map((s) => ({ to: canonicalPath(`/tjanster/${s.slug}`), label: s.title })),
+                ...sisterServices.map((s) => ({ to: canonicalPath(`/tjanster/${s.slug}`), label: s.title })),
                 ...(blocks.relatedLinks ?? []),
 
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
