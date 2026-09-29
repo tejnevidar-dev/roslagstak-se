@@ -74,9 +74,9 @@ export const services = [
     icon: IconAsbestos,
     slug: "eternit-asbest",
     title: "Eternit & asbestsanering",
-    short: "Säker rivning",
+    short: "Säker sanering",
     description:
-      "Säker rivning och deponering av eternit- och asbesttak enligt Arbetsmiljöverkets krav — inklusive nytt tak efteråt.",
+      "Vi samordnar säker sanering av eternit- och asbesttak med en behörig firma enligt Arbetsmiljöverkets krav — och lägger nytt tak efteråt.",
   },
   {
     icon: IconRoofNew,

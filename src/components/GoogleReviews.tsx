@@ -1,6 +1,30 @@
 import { Star, ExternalLink, ShieldCheck, MapPin } from "lucide-react";
+import { googleReviews } from "@/data/google-reviews";
 
 const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=RoslagsTak+recensioner";
+
+/** Ordagranna Google-omdömen, när src/data/google-reviews.ts har några. */
+const ReviewCards = () => {
+  if (googleReviews.length === 0) return null;
+  return (
+    <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+      {googleReviews.map((r) => (
+        <li key={`${r.author}-${r.date}`} className="rounded-2xl border border-border bg-card p-5">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex gap-0.5" aria-hidden="true">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className={`h-4 w-4 ${i < r.rating ? "fill-primary text-primary" : "text-border"}`} />
+              ))}
+            </div>
+            <span className="text-xs text-muted-foreground">Källa: Google · {r.date}</span>
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-foreground">"{r.text}"</p>
+          <p className="mt-2 text-xs font-semibold text-muted-foreground">— {r.author}</p>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 interface GoogleReviewsProps {
   /** Rubrik ovanför knappen. */
@@ -122,6 +146,7 @@ const GoogleReviews = ({
           </li>
         ))}
       </ul>
+      <ReviewCards />
       <a
         href={GOOGLE_REVIEWS_URL}
         target="_blank"
