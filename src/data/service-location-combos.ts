@@ -28,7 +28,7 @@ const serviceTypes = [
         ? `${loc.name} nås ${loc.region === "Norra skärgården" ? "med båt" : "via väg eller färja"}, och vi tar hand om materialtransport och logistik till ön. Vi planerar varje takbyte noggrant för att minimera kostnader och störningar.`
         : byDistance(
             loc,
-            `Med vår bas i Norrtälje når vi ${loc.name} snabbt och effektivt. Korta resvägar gör att vi kan hålla nere etableringskostnaden vid takbyten i området.`,
+            `Vi når ${loc.name} snabbt och effektivt. Korta resvägar gör att vi kan hålla nere etableringskostnaden vid takbyten i området.`,
             `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att etableringskostnaden hålls nere och offerten blir tydlig.`,
           ),
       `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat plåttak. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
@@ -64,7 +64,7 @@ const serviceTypes = [
         ? `Som specialister på takarbeten i skärgården hanterar vi all materialtransport till ${loc.name}. Vi samordnar logistik och planerar projektet noggrant — du behöver inte arrangera något själv.`
         : byDistance(
             loc,
-            `Vår bas i Norrtälje gör att vi når ${loc.name} snabbt. Vi samordnar ofta flera projekt i området, vilket ger dig ett konkurrenskraftigt pris på din takomläggning.`,
+            `Vi når ${loc.name} snabbt. Vi samordnar ofta flera projekt i området, vilket ger dig ett konkurrenskraftigt pris på din takomläggning.`,
             `Vi tar uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
           ),
       `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval — TP20-plåttak eller dubbelfalsat. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr/person/år).`,
@@ -84,7 +84,7 @@ const taktvattService = {
       ? `Vi utför taktvätt på öar i skärgården. Vi samordnar transport av utrustning, vatten och kemikalier till ${loc.name} och planerar arbetet noggrant så att det går smidigt — även om ön saknar broförbindelse. Många hus ${prep} ${loc.name} har problem med kraftig mossbildning på grund av det fuktiga skärgårdsklimatet, och regelbunden taktvätt är ofta avgörande för att undvika dyra takbyten.`
       : byDistance(
           loc,
-          `Med vår bas i Norrtälje når vi ${loc.name} snabbt. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
+          `Vi når ${loc.name} snabbt. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
           `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
         ),
     `Priset för taktvätt ${prep} ${loc.name} beror på takets storlek, lutning, material och nedsmutsningsgrad, inkl. behandling med biocid. Med ROT-avdrag på 30 % av arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.`,
@@ -107,7 +107,7 @@ const specialistServices = [
         ? `Att bandtäcka ett tak ${prep} ${loc.name} kräver planering — plåtbanden är långa och måste hanteras varsamt vid båttransport. Vi har rutiner för detta och tillverkar delar av banden på plats när logistiken kräver det.`
         : byDistance(
             loc,
-            `Från vår bas i Norrtälje når vi ${loc.name} enkelt med plåtband och falsutrustning, vilket håller nere transportkostnaden för din bandtäckning.`,
+            `Vi når ${loc.name} enkelt med plåtband och falsutrustning, vilket håller nere transportkostnaden för din bandtäckning.`,
             `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
           ),
       `Bandtäckning ${prep} ${loc.name} i förzinkad eller färgbelagd plåt, koppar eller zink. Priset styrs av materialval och takets komplexitet — antal vinklar, kupor och genomföringar. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,

@@ -336,7 +336,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   tegeltak: {
-    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Lertegel kan hålla över 100 år, men kräver en konstruktion som tål vikten (ca 40–50 kg/m²) och minst 22 graders taklutning. Vi kontrollerar alltid bärigheten vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
+    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Lertegel kan hålla över 100 år, men kräver en konstruktion som tål vikten (ca 40–50 kg/m²) och minst 22 graders taklutning. Vi kontrollerar alltid bärigheten vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlagets skick.",
     benefits: [
       "Klassiskt uttryck som håller husets karaktär",
@@ -734,9 +734,10 @@ const ServiceDetail = () => {
               <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
                 Vi lägger dubbelfalsade plåttak (bandtäckning) vid takbyte, med fast pris efter kostnadsfri
                 takkontroll. Bandtäckning är plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga
-                skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Tekniken
-                passar både äldre hus och moderna villor, och kan formas efter kupor, ränndalar och andra detaljer
-                på taket.
+                skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Banorna
+                hålls på plats av dolda klammer som fästs i underlaget, så att plåten kan röra sig med
+                temperaturen utan att skarvarna tar skada. Tekniken passar både äldre hus och moderna villor,
+                och kan formas efter kupor, ränndalar och andra detaljer på taket.
               </p>
             </div>
           </section>

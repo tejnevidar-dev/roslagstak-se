@@ -365,7 +365,7 @@ const comboByUrl = new Map(combos.map((c) => [c.url, c]));
 const home: PrerenderPage = {
   h1: "Takläggare i Roslagen — takbyte & takrenovering",
   intro:
-    "RoslagsTak är takläggare i Roslagen med bas på Blidö. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
+    "RoslagsTak är takläggare i Roslagen. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
     paragraphs: [
       "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), tegelplåt, pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA-standard av certifierade takläggare.",
       "Som skärgårdsspecialister hanterar vi all materialtransport och logistik till öar utan broförbindelse — från Blidö, Yxlan och Ljusterö till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma.",
