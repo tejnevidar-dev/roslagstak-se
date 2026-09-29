@@ -732,9 +732,11 @@ const ServiceDetail = () => {
                 Dubbelfalsat plåttak – bandtäckning med fast pris
               </h2>
               <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
-                Vi lägger dubbelfalsade plåttak (bandtäckning) och TP20. Fast pris efter kostnadsfri takkontroll.
-                Bandtäckning har falsade fogar utan synliga skruvhål, klarar ner till 3,6° taklutning och passar
-                särskilt vindutsatta och kustnära lägen — se jämförelsen ovan för livslängd per metall.
+                Vi lägger dubbelfalsade plåttak (bandtäckning) vid takbyte, med fast pris efter kostnadsfri
+                takkontroll. Bandtäckning är plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga
+                skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Tekniken
+                passar både äldre hus och moderna villor, och kan formas efter kupor, ränndalar och andra detaljer
+                på taket.
               </p>
             </div>
           </section>
