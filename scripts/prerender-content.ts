@@ -343,7 +343,7 @@ const staticPages: Record<string, PrerenderPage> = {
   ...landingPages,
   "/": home,
   "/offert": {
-    title: "Offert på takbyte — fast pris efter besiktning",
+    title: "Offert på takbyte — fast pris efter kostnadsfri takkontroll",
     description:
       "Räkna fram ett prisförslag på takbyte direkt, eller boka kostnadsfri takkontroll. Fast pris, 10 års utförandegaranti och återkoppling inom 24 timmar.",
     h1: "Få offert på takbyte i Roslagen",
@@ -426,7 +426,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vad kostar ett takbyte i Roslagen? Fast pris efter kostnadsfri takkontroll, oavsett material — TP20, betongpannor, tegel eller dubbelfalsat plåttak.",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro:
-      "Fast pris efter kostnadsfri takkontroll för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
+      "Fast pris efter kostnadsfri takkontroll för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag på 30 % av arbetskostnaden.",
     paragraphs: [
       "Vi lägger TP20 plåttak, tegelprofilerad plåt, betongpannor, dubbelfalsat plåttak (bandtäckning) och lertegel, samt utför taktvätt och takmålning. Exakt pris beror på material, takets storlek och skick.",
       "Priset styrs av takets storlek, lutning, antal genomföringar samt underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.",
@@ -457,7 +457,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Följ länken till Google för att se aktuella omdömen, stjärnbetyg och bilder från utförda takprojekt. Har du själv anlitat oss får du gärna lämna ett omdöme — det hjälper andra husägare i Roslagen att välja takläggare.",
       "Det vi hör oftast från kunderna: att kommunikationen är tydlig från första kontakten, att priset som avtalats är det som faktureras, och att plåtarbetet utförs med noggrannhet. Många lyfter också att vi löser materialtransport till öar utan broförbindelse som en självklar del av projektet.",
       "Vi utför takbyte, takrenovering, plåtarbeten och takvård i hela Roslagen och Storstockholm. Besiktning och offert är alltid kostnadsfria, och du får 10 års utförandegaranti på allt arbete.",
-      "Så kan du själv bedöma en takfirma: be om referenser från projekt i din närhet, kontrollera att företaget har ansvarsförsäkring och F-skatt, och be att få garantierna skriftligt i offerten. Ett seriöst företag lämnar alltid fast pris efter besiktning — aldrig ett pris per telefon.",
+      "Så kan du själv bedöma en takfirma: be om referenser från projekt i din närhet, kontrollera att företaget har ansvarsförsäkring och F-skatt, och be att få garantierna skriftligt i offerten. Ett seriöst företag lämnar alltid fast pris efter kostnadsfri takkontroll — aldrig ett pris per telefon.",
       "Vill du veta mer om hur vi arbetar innan du bestämmer dig? Läs om vår process steg för steg, våra riktpriser eller boka en kostnadsfri rådgivning där vi går igenom ditt tak tillsammans.",
       "Därför väljer vi att länka till Google istället för att skriva egna omdömen: omdömen på Google kan inte redigeras eller plockas bort av oss, vilket gör dem mer trovärdiga än citat på en egen hemsida. Där ser du hela bilden — både betyg, texter och hur vi svarar.",
       "Vi bygger kontinuerligt upp våra omdömen i takt med att projekt slutförs. Varje kund får efter slutbesiktningen en förfrågan om att dela sin upplevelse — helt frivilligt och utan någon form av ersättning.",
@@ -563,7 +563,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
     paragraphs: [
       "Vi rengör taket med lågtryckstvätt eller manuell borstning och behandlar därefter med miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.",
-      "Vi lämnar alltid fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning med grundning och två strykningar. ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
+      "Vi lämnar alltid fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning med grundning och två strykningar. ROT-avdrag på 30 % av arbetskostnaden.",
     ],
     links: [...primaryLinks, ...serviceLinks],
   },
@@ -582,7 +582,7 @@ const serviceIntro = (title: string, description: string): PrerenderPage => ({
   intro: description,
   paragraphs: [
     `RoslagsTak utför ${title.toLowerCase()} i hela Roslagen och Stockholms norra skärgård. Allt arbete utförs enligt AMA-standard av certifierade takläggare, med 10 års utförandegaranti.`,
-    "Vi lämnar fast pris efter kostnadsfri takkontroll och hanterar all logistik — även till öar utan broförbindelse. ROT-avdrag ger 30 % rabatt på arbetskostnaden.",
+    "Vi lämnar fast pris efter kostnadsfri takkontroll och hanterar all logistik — även till öar utan broförbindelse. ROT-avdrag på 30 % av arbetskostnaden.",
     `Ring ${PHONE} eller begär kostnadsfri offert — vi återkopplar inom 24 timmar.`,
   ],
   links: [...primaryLinks, ...serviceLinks, ...locationLinks.slice(0, 24)],
@@ -786,10 +786,10 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     return {
       title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
       description: ortSeoOverrides[loc.slug]?.description ?? (loc.isIsland
-        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
+        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
         : isNearBase(loc)
-          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
-          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`),
+          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
+          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`),
       h1: `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`,
       intro: loc.description,
       paragraphs: [

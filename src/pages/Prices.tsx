@@ -35,7 +35,7 @@ const priceData = [
   {
     category: "Övriga tjänster",
     items: [
-      { name: "Takrenovering", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter besiktning." },
+      { name: "Takrenovering", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter kostnadsfri takkontroll." },
       { name: "Takavvattning (hängrännor)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör, fast pris i offerten." },
       { name: "Takkupa", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
       { name: "Takfönster (Velux)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },

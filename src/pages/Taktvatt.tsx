@@ -81,7 +81,7 @@ const process = [
 
 const guarantees = [
   { icon: ShieldCheck, title: "10 års utförandegaranti", desc: "På utfört arbete. Du får garantin skriftligt." },
-  { icon: Award, title: "Fast pris efter besiktning", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
+  { icon: Award, title: "Fast pris efter kostnadsfri takkontroll", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
   { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Godkänd för F-skatt med ansvarsförsäkring för hela arbetet." },
   { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutbesiktning — alltid samma person att ringa." },
 ];
@@ -89,7 +89,7 @@ const guarantees = [
 const faqs = [
   {
     q: "Vad kostar taktvätt i Roslagen?",
-    a: "Priset beror på takets storlek, lutning och nedsmutsningsgrad, inklusive biocidbehandling. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden direkt på fakturan. Vill du även ha takmålning ingår det i samma offert. Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri takkontroll.",
+    a: "Priset beror på takets storlek, lutning och nedsmutsningsgrad, inklusive biocidbehandling. Med ROT-avdrag på 30 % av arbetskostnaden direkt på fakturan. Vill du även ha takmålning ingår det i samma offert. Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri takkontroll.",
   },
   {
     q: "Hur ofta bör man tvätta taket?",
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     q: "Ingår ROT-avdrag på taktvätt?",
-    a: "Ja, både taktvätt, mossborttagning och takmålning är ROT-berättigade tjänster. Du får 30 % rabatt på arbetskostnaden direkt på fakturan upp till 50 000 kr per person och år. Vi sköter all administration mot Skatteverket — du behöver bara uppge personnummer och fastighetsbeteckning. Materialkostnader (biocid, färg) omfattas inte av ROT.",
+    a: "Ja, både taktvätt, mossborttagning och takmålning är ROT-berättigade tjänster. ROT-avdrag på 30 % av arbetskostnaden dras direkt på fakturan upp till 50 000 kr per person och år. Vi sköter all administration mot Skatteverket — du behöver bara uppge personnummer och fastighetsbeteckning. Materialkostnader (biocid, färg) omfattas inte av ROT.",
   },
   {
     q: "När på året är det bäst att tvätta taket?",
@@ -376,7 +376,7 @@ const Taktvatt = () => {
               </h1>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed max-w-2xl">
                 Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år.
-                Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med fast pris efter besiktning och 10 års utförandegaranti.
+                Vi tvättar betongpannor, tegelpannor och plåttak skonsamt — med fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <a href="/offert" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors animate-subtle-pulse">
@@ -697,11 +697,11 @@ const Taktvatt = () => {
             <p className="text-muted-foreground text-center mb-10">
               Priset för taktvätt varierar beroende på takets storlek, lutning, mängd mossa och tillgänglighet.
               Vi lämnar alltid ett fast pris efter kostnadsfri takkontroll — för taktvätt, taktvätt med
-              takmålning och ren mossborttagning. ROT-avdrag ger 30 % rabatt på arbetskostnaden, direkt på
+              takmålning och ren mossborttagning. ROT-avdrag på 30 % av arbetskostnaden, direkt på
               fakturan.
             </p>
             <p className="text-xs text-muted-foreground text-center mt-4">
-              Vi lämnar alltid skriftlig offert med fast pris efter besiktning.
+              Vi lämnar alltid skriftlig offert med fast pris efter kostnadsfri takkontroll.
             </p>
           </div>
         </section>
@@ -946,7 +946,7 @@ const Taktvatt = () => {
               <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Svar inom 24h</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris</span>
-                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris efter besiktning</span>
+                <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Fast pris efter kostnadsfri takkontroll</span>
                 <span className="inline-flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> 10 års utförandegaranti</span>
               </div>
             </div>

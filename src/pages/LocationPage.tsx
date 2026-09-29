@@ -166,10 +166,10 @@ const LocationPage = () => {
 
   // SEO-optimized meta description — under 160 chars, keyword-first
   const metaDescription = location.isIsland
-    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
+    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
     : far
-      ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`
-      : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert.`;
+      ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
+      : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`;
 
   // Title: keep under 60 chars for Google SERP
   const override = ortSeoOverrides[location.slug];
@@ -330,8 +330,8 @@ const LocationPage = () => {
                   Priset för ett takbyte {prep} {location.name} beror på takets storlek, lutning, materialval och underlagets skick, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak.
                   {location.isIsland
                     ? ` Transportkostnad till ${location.name} ingår alltid i vår offert — inga dolda tillägg.`
-                    : ` Du får alltid fast pris efter besiktning — inga dolda tillägg.`}
-                  {" "}Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr per person och år).
+                    : ` Du får alltid fast pris efter kostnadsfri takkontroll — inga dolda tillägg.`}
+                  {" "}Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr per person och år).
                 </p>
 
                 {/* Prisexempel — riktpriser per vanlig takstorlek */}

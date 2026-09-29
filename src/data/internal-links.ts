@@ -32,7 +32,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/takreparation",
     label: "Takreparation",
-    description: "Läckage, trasiga pannor och skadad plåt. Fast pris efter besiktning.",
+    description: "Läckage, trasiga pannor och skadad plåt. Fast pris efter kostnadsfri takkontroll.",
   },
   {
     to: "/rot-avdrag",

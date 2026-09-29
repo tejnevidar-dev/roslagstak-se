@@ -409,7 +409,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Vätö — takbyte och takrenovering mellan Norrtälje och skärgården. Ofta förmånliga priser tack vare samordning.",
     longDescription:
-      "Vätö ligger strategiskt mellan Norrtälje och skärgården — ett område vi passerar dagligen på väg till projekt ute på öarna. Det gör att vi ofta kan erbjuda förmånliga priser till fastighetsägare på Vätö. Här finns många villor och fritidshus med tak som behöver ses över. Oavsett om det handlar om ett komplett takbyte eller en mindre renovering, finns vi nära och kan agera snabbt. Vi ger alltid fast pris efter besiktning — inga överraskningar på fakturan.",
+      "Vätö ligger strategiskt mellan Norrtälje och skärgården — ett område vi passerar dagligen på väg till projekt ute på öarna. Det gör att vi ofta kan erbjuda förmånliga priser till fastighetsägare på Vätö. Här finns många villor och fritidshus med tak som behöver ses över. Oavsett om det handlar om ett komplett takbyte eller en mindre renovering, finns vi nära och kan agera snabbt. Vi ger alltid fast pris efter kostnadsfri takkontroll — inga överraskningar på fakturan.",
     extraContent:
       "Vätö är en av de platser vi passerar allra mest — och det märks i priserna vi kan erbjuda. Genom att kombinera arbete på Vätö med pågående projekt i skärgården minskar vi restidskostnaderna. Fastighetsägare på Vätö får därför ofta ett förmånligt pris utan att kompromissa på kvaliteten.",
     uniqueFAQ: {
@@ -627,7 +627,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Utför ni takbyte på ladugårdar och uthus i Edsbro?",
       answer:
-        "Ja, vi lägger tak på både bostadshus, uthus, ladugårdar och garage i Edsbro. Stora takytor i TP20-plåt blir ofta förvånansvärt prisvärda per kvadratmeter. Vi lämnar fast pris efter besiktning och kan dela upp projektet i etapper om du vill.",
+        "Ja, vi lägger tak på både bostadshus, uthus, ladugårdar och garage i Edsbro. Stora takytor i TP20-plåt blir ofta förvånansvärt prisvärda per kvadratmeter. Vi lämnar fast pris efter kostnadsfri takkontroll och kan dela upp projektet i etapper om du vill.",
     },
     primaryKeyword: "takläggare Edsbro",
     lat: 59.8667,
@@ -860,7 +860,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Bromma?",
       answer:
-        "Priset för en villa i Bromma beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
+        "Priset för en villa i Bromma beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
     },
     primaryKeyword: "takläggare Bromma",
     lat: 59.34,
@@ -1030,7 +1030,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takomläggning i Sollentuna?",
       answer:
-        "Takomläggning i Sollentuna med ny underlagspapp, ny läkt och nytt takmaterial i plåt eller betongpannor, till ett pris som beror på takets skick. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
+        "Takomläggning i Sollentuna med ny underlagspapp, ny läkt och nytt takmaterial i plåt eller betongpannor, till ett pris som beror på takets skick. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
     },
     primaryKeyword: "takläggare Sollentuna",
     lat: 59.4289,
@@ -1198,7 +1198,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Huddinge?",
       answer:
-        "Priset för en villa i Huddinge beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
+        "Priset för en villa i Huddinge beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
     },
     primaryKeyword: "takläggare Huddinge",
     lat: 59.2375,
@@ -1305,7 +1305,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Vällingby?",
       answer:
-        "Priset för en villa i Vällingby beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
+        "Priset för en villa i Vällingby beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
     },
     primaryKeyword: "takläggare Vällingby",
     lat: 59.3819,
@@ -1391,7 +1391,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar takbyte på en villa i Älvsjö?",
       answer:
-        "Priset för en villa i Älvsjö beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag får du 30 % rabatt på arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
+        "Priset för en villa i Älvsjö beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll.",
     },
     primaryKeyword: "takläggare Älvsjö",
     lat: 59.3019,
@@ -1533,7 +1533,7 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Hammarby Sjöstad — takbyte, takrenovering och plåtarbeten i Hammarby Sjöstad. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Hammarby Sjöstad — takbyte, takrenovering och plåtarbeten i Hammarby Sjöstad. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Hammarby Sjöstad är modern sjönära stadsdel med flacka tak och stora takterrasser. Bebyggelsen består till stor del av moderna flerbostadshus med papp-, duk- och plåttak från 2000-talet, och det är just åldern på taken som gör att många fastighetsägare i Hammarby Sjöstad hör av sig till oss. Vi utför takbyte, takrenovering och takomläggning i Hammarby Sjöstad med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takbesiktning, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
@@ -1604,7 +1604,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Hägersten?",
       answer:
-        "Priset för ett takbyte i Hägersten ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Hägersten ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Hägersten",
     lat: 59.3006,
@@ -1638,7 +1638,7 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Aspudden — takbyte, takrenovering och plåtarbeten i Aspudden. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Aspudden — takbyte, takrenovering och plåtarbeten i Aspudden. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Aspudden — småskalig stadsdel med tät kvartersbebyggelse — har ett fastighetsbestånd med 1920–30-talsfastigheter med tegel- och plåttak. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt i Aspudden: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — besiktning, materialval, ställning, takarbete och bortforsling.",
     extraContent:
@@ -1709,7 +1709,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Edsberg?",
       answer:
-        "Priset för ett takbyte i Edsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Edsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Edsberg",
     lat: 59.4408,
@@ -1743,7 +1743,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Norrviken — takbyte, takrenovering och plåtarbeten i Norrviken. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Norrviken — takbyte, takrenovering och plåtarbeten i Norrviken. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Vi tar uppdrag för takbyte och takrenovering i Norrviken (sjönära villaområde i Sollentuna). Här handlar det oftast om äldre villor med tegel- och plåttak, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter besiktningen får du ett fast pris, en tidplan och besked om vad som ingår — inga tillägg i efterhand.",
     extraContent:
@@ -1808,13 +1808,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Jakobsberg — takbyte, takrenovering och plåtarbeten i Jakobsberg. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
-      "Bland flerbostadshus från miljonprogrammet och villaområden ser vi ofta att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter besiktning.",
+      "Bland flerbostadshus från miljonprogrammet och villaområden ser vi ofta att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Jakobsberg — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter besiktningen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Vi tar gärna flera projekt i samma kvarter samtidigt, vilket håller nere kostnaden för ställning och transporter. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takbesiktning i Jakobsberg.",
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Jakobsberg?",
       answer:
-        "Priset för ett takbyte i Jakobsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Jakobsberg ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Jakobsberg",
     lat: 59.4231,
@@ -1848,7 +1848,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Kallhäll — takbyte, takrenovering och plåtarbeten i Kallhäll. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Kallhäll — takbyte, takrenovering och plåtarbeten i Kallhäll. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Kallhäll är norra Järfälla vid Mälaren. Bebyggelsen består till stor del av villor och radhus från 1960–80-tal, och det är just åldern på taken som gör att många fastighetsägare i Kallhäll hör av sig till oss. Vi utför takbyte, takrenovering och takomläggning i Kallhäll med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en skriftlig offert med fast pris. Vi sköter ställning, transporter och bortforsling — du behöver inte hyra eller beställa något själv.",
     extraContent:
@@ -1919,7 +1919,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Kungsängen?",
       answer:
-        "Priset för ett takbyte i Kungsängen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Kungsängen ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Kungsängen",
     lat: 59.4783,
@@ -1953,7 +1953,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Blackeberg — takbyte, takrenovering och plåtarbeten i Blackeberg. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Blackeberg — takbyte, takrenovering och plåtarbeten i Blackeberg. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Blackeberg — funkisstadsdel i västra Bromma — har ett fastighetsbestånd med smalhus från 1950-talet och villor. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Blackeberg: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris och tydlig tidplan, och tar hand om hela processen från besiktning till bortforslat avfall.",
     extraContent:
@@ -2024,7 +2024,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Ängby?",
       answer:
-        "Priset för ett takbyte i Ängby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Ängby ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Ängby",
     lat: 59.3372,
@@ -2058,7 +2058,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Akalla — takbyte, takrenovering och plåtarbeten i Akalla. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Akalla — takbyte, takrenovering och plåtarbeten i Akalla. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Vi tar uppdrag för takbyte och takrenovering i Akalla (norra Järvaområdet). Här handlar det oftast om miljonprogramsbebyggelse med papp- och plåttak, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter besiktningen får du ett fast pris, en tidplan och besked om vad som ingår — inga tillägg i efterhand.",
     extraContent:
@@ -2123,13 +2123,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Fisksätra — takbyte, takrenovering och plåtarbeten i Fisksätra. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
-      "Bland flerbostadshus från 1970-talet ser vi ofta att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter besiktning.",
+      "Bland flerbostadshus från 1970-talet ser vi ofta att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Fisksätra — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter besiktningen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Vi tar gärna flera projekt i samma kvarter samtidigt, vilket håller nere kostnaden för ställning och transporter. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takbesiktning i Fisksätra.",
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Fisksätra?",
       answer:
-        "Priset för ett takbyte i Fisksätra ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Fisksätra ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Fisksätra",
     lat: 59.2925,
@@ -2163,7 +2163,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Älta — takbyte, takrenovering och plåtarbeten i Älta. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Älta — takbyte, takrenovering och plåtarbeten i Älta. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Älta är tätort mellan Nacka och Tyresö. Bebyggelsen består till stor del av radhus, villor och flerbostadshus, och det är just åldern på taken som gör att många fastighetsägare i Älta hör av sig till oss. Vi utför takbyte, takrenovering och takomläggning i Älta med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Besiktning och offert är kostnadsfria, och priset vi lämnar är det du betalar. Ställning, leveranser, avfall och slutstädning ingår i vårt ansvar.",
     extraContent:
@@ -2234,7 +2234,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Hemmesta?",
       answer:
-        "Priset för ett takbyte i Hemmesta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Hemmesta ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Hemmesta",
     lat: 59.3175,
@@ -2268,7 +2268,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Brandbergen — takbyte, takrenovering och plåtarbeten i Brandbergen. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Brandbergen — takbyte, takrenovering och plåtarbeten i Brandbergen. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Brandbergen — bostadsområde i Haninge — har ett fastighetsbestånd med flerbostadshus med stora flacka takytor. Taken börjar närma sig slutet av sin livslängd, och då är omläggning oftast bättre ekonomi än lappning. RoslagsTak utför kompletta takprojekt i Brandbergen: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Du har en kontaktperson genom hela projektet, från besiktningen till slutgenomgången på plats.",
     extraContent:
@@ -2339,7 +2339,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Västerhaninge?",
       answer:
-        "Priset för ett takbyte i Västerhaninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Västerhaninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Västerhaninge",
     lat: 59.12,
@@ -2373,7 +2373,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Dalarö — takbyte, takrenovering och plåtarbeten i Dalarö. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Dalarö — takbyte, takrenovering och plåtarbeten i Dalarö. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Vi tar uppdrag för takbyte och takrenovering i Dalarö (kustsamhälle med skärgårdsklimat). Här handlar det oftast om trävillor och sommarhus i saltutsatt läge, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter besiktningen får du ett fast pris, en tidplan och besked om vad som ingår — inga tillägg i efterhand.",
     extraContent:
@@ -2438,13 +2438,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Skogås — takbyte, takrenovering och plåtarbeten i Skogås. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
-      "Bland flerbostadshus och radhus ser vi ofta att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter besiktning.",
+      "Bland flerbostadshus och radhus ser vi ofta att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Skogås — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter besiktningen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Vi tar gärna flera projekt i samma kvarter samtidigt, vilket håller nere kostnaden för ställning och transporter. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takbesiktning i Skogås.",
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Skogås?",
       answer:
-        "Priset för ett takbyte i Skogås ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Skogås ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Skogås",
     lat: 59.2286,
@@ -2478,7 +2478,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Bandhagen — takbyte, takrenovering och plåtarbeten i Bandhagen. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Bandhagen — takbyte, takrenovering och plåtarbeten i Bandhagen. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Bandhagen är söderförort med grön karaktär. Bebyggelsen består till stor del av smalhus och radhus från 1950-talet, och det är just åldern på taken som gör att många fastighetsägare i Bandhagen hör av sig till oss. Vi utför takbyte, takrenovering och takomläggning i Bandhagen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takbesiktning, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
@@ -2549,7 +2549,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Tumba?",
       answer:
-        "Priset för ett takbyte i Tumba ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Tumba ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Tumba",
     lat: 59.1994,
@@ -2583,7 +2583,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Norsborg — takbyte, takrenovering och plåtarbeten i Norsborg. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Norsborg — takbyte, takrenovering och plåtarbeten i Norsborg. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Norsborg — norra Botkyrka vid Mälaren — har ett fastighetsbestånd med miljonprogramsbebyggelse och radhus. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt i Norsborg: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — besiktning, materialval, ställning, takarbete och bortforsling.",
     extraContent:
@@ -2654,7 +2654,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Rönninge?",
       answer:
-        "Priset för ett takbyte i Rönninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter besiktningen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
+        "Priset för ett takbyte i Rönninge ligger normalt mellan 1 200 och 2 000 kr per kvadratmeter beroende på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
     },
     primaryKeyword: "takläggare Rönninge",
     lat: 59.2011,
@@ -2688,7 +2688,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Edsviken — takbyte, takrenovering och plåtarbeten i Edsviken. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Edsviken — takbyte, takrenovering och plåtarbeten i Edsviken. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Edsviken är villaområdet kring viken med samma namn, på gränsen mellan Sollentuna, Danderyd och Solna. Här finns allt från sekelskiftesvillor och funkishus till nyare enfamiljshus, ofta med sadeltak i tegel, betongpannor eller falsad plåt. Det sjönära läget innebär mer vind och fukt än längre in i landet, vilket sliter extra på plåtdetaljer, hängrännor och underlagspapp. Vi utför takbyte, takrenovering och takomläggning i Edsviken med material anpassat efter husets ålder och stil, kostnadsfri takbesiktning, fast pris och en tidsplan som håller. Ställning, materialleverans, avfallshantering och slutstädning ingår alltid.",
     extraContent:
@@ -2710,7 +2710,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Uppsala — takbyte, takrenovering och plåtarbeten för villor och bostadsrättsföreningar. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Uppsala — takbyte, takrenovering och plåtarbeten för villor och bostadsrättsföreningar. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Uppsala är en av landets äldsta universitetsstäder, med bebyggelse som sträcker sig från äldre kvarter längs Fyrisån till villaområden i Luthagen och Kvarngärdet och flerbostadshus från 60- och 70-talen i Gottsunda och Sunnersta. Staden ligger på den öppna Uppsalaslätten, där vind och snö får fritt spelrum över taken. Vi tar uppdrag i Uppsala med takbyte, takrenovering och plåtarbeten, både för villaägare och för bostadsrättsföreningar. Alla uppdrag börjar med en kostnadsfri takkontroll och slutar med ett fast pris.",
     extraContent:
@@ -2752,7 +2752,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Bålsta — takbyte, takrenovering och plåtarbeten i Håbo. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Bålsta — takbyte, takrenovering och plåtarbeten i Håbo. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Bålsta är centralort i Håbo kommun vid Mälaren, med villaområden, radhus och flerbostadshus från olika decennier. Närheten till vatten och skog innebär fukt, mossa på nordsidor och löv som samlas i rännor och bakom skorstenar. Vi tar uppdrag i Bålsta med takbyte, takrenovering, takavvattning och taktvätt, för både villaägare och bostadsrättsföreningar.",
     extraContent:
@@ -2815,7 +2815,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Eskilstuna — takbyte, takrenovering och plåtarbeten. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Eskilstuna — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Eskilstuna ligger vid Eskilstunaån med en gammal industri- och verkstadsstad i botten. Bebyggelsen spänner från äldre kvarter nära ån till villaområden och flerbostadshus från efterkrigstiden. Taken varierar därefter, med tegel och plåt på äldre byggnader och betongpannor och papp på senare bebyggelse. Vi tar uppdrag i Eskilstuna med takbyte, takrenovering, plåtarbeten och takavvattning.",
     extraContent:
@@ -2836,7 +2836,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Strängnäs — takbyte, takrenovering och plåtarbeten vid Mälaren. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Strängnäs — takbyte, takrenovering och plåtarbeten vid Mälaren. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Strängnäs är en gammal domkyrkostad på en halvö i Mälaren, med välbevarade kvarter, sjönära villor och nyare områden längre från centrum. Läget vid vattnet ger fuktig luft och vind som slits på beslag, vindskivor och underlagspapp. Vi tar uppdrag i Strängnäs med takbyte, takrenovering, bandtäckning och plåtarbeten.",
     extraContent:
@@ -2878,7 +2878,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Nykvarn — takbyte, takrenovering och plåtarbeten. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Nykvarn — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Nykvarn är en mindre kommun nära Södertälje med villaområden, radhus och lantbruksfastigheter. Bebyggelsen är blandad, från äldre gårdar till villor byggda i olika omgångar, och taken ser därefter ut. Vi tar uppdrag i Nykvarn med takbyte, takrenovering, takavvattning och plåtarbeten.",
     extraContent:
@@ -2920,7 +2920,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Nyköping — takbyte, takrenovering och plåtarbeten. Fast pris efter besiktning och 10 års utförandegaranti.",
+      "Takläggare i Nyköping — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Nyköping ligger vid Nyköpingsån nära Östersjön, med äldre stadskvarter, villaområden och flerbostadshus. Kustnära läge ger fukt, vind och saltpåverkan som slitar på beslag och plåtdetaljer, och mossa etablerar sig lätt på skuggiga takytor. Vi tar uppdrag i Nyköping med takbyte, takrenovering, plåtarbeten och takavvattning.",
     extraContent:

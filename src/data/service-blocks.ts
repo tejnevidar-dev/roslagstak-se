@@ -136,7 +136,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takavvattning: {
     seoTitle: "Hängrännor & Stuprör Roslagen — Takavvattning",
     seoDescription:
-      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta och fast pris efter besiktning.",
+      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta och fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "accent", label: "Dimension", value: "125 / 150 mm", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet." },

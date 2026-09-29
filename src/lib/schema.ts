@@ -26,7 +26,7 @@ export const services: { slug: string; name: string; description: string }[] = [
     slug: "takomlaggning",
     name: "Takomläggning",
     description:
-      "Komplett omläggning av taket med ny underlagspapp, ny läkt och nytt takmaterial. Fast pris efter besiktning.",
+      "Komplett omläggning av taket med ny underlagspapp, ny läkt och nytt takmaterial. Fast pris efter kostnadsfri takkontroll.",
   },
   {
     slug: "takrenovering",
@@ -89,7 +89,7 @@ export const buildLocalBusinessSchema = () => ({
   paymentAccepted: "Faktura",
   parentOrganization: { "@id": ORG_ID },
   description:
-    "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och eternitsanering med fast pris efter besiktning, 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+    "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och eternitsanering med fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
   address: {
     "@type": "PostalAddress",
     addressLocality: NAP.addressLocality,

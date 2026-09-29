@@ -27,7 +27,7 @@ export const generateLocationFAQs = (
   faqs.push(
     {
       question: `Vad kostar ett takbyte ${prep} ${name}?`,
-      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak. ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger ytterligare 30% rabatt på arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
+      answer: `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning och materialval, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak. ${isIsland ? "Transportkostnad till ön ingår alltid i vår offert." : "Du får alltid fast pris efter kostnadsfri takkontroll."} ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för en kostnadsfri offert — vi återkommer inom 24 timmar.`,
     },
     {
       question: `Hur lång tid tar ett takbyte ${prep} ${name}?`,
@@ -76,7 +76,7 @@ export const generateServiceLocationFAQs = (
     return tidy([
       {
         question: `Vad kostar taktvätt ${prep} ${locationName}?`,
-        answer: `Priset för taktvätt ${prep} ${locationName} beror på takets storlek, lutning och nedsmutsningsgrad, inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri takkontroll."}`,
+        answer: `Priset för taktvätt ${prep} ${locationName} beror på takets storlek, lutning och nedsmutsningsgrad, inkl. behandling med biocidmedel mot mossa och alger. Med ROT-avdrag på 30 % av arbetskostnaden direkt på fakturan. ${isIsland ? "Transport av utrustning till ön ingår alltid i vår offert." : "Vi lämnar alltid fast pris efter kostnadsfri takkontroll."}`,
       },
       {
         question: `Hur ofta behöver jag tvätta taket ${prep} ${locationName}?`,
@@ -105,8 +105,8 @@ export const generateServiceLocationFAQs = (
     {
       question: `Vad kostar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,
       answer: isTakbyte
-        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak. ${isIsland ? "Transport till ön ingår i priset." : "Du får alltid fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`
-        : `En takrenovering ${prep} ${locationName} har ett pris som beror på åtgärdens omfattning. ${isIsland ? "Transport till ön ingår." : "Fast pris efter besiktning."} ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
+        ? `Priset för takbyte ${prep} ${locationName} beror på takets storlek, material och underlag, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak. ${isIsland ? "Transport till ön ingår i priset." : "Du får alltid fast pris efter kostnadsfri takkontroll."} ROT-avdrag på 30 % av arbetskostnaden.`
+        : `En takrenovering ${prep} ${locationName} har ett pris som beror på åtgärdens omfattning. ${isIsland ? "Transport till ön ingår." : "Fast pris efter kostnadsfri takkontroll."} ROT-avdrag på 30 % av arbetskostnaden.`,
     },
     {
       question: `Hur lång tid tar ${serviceName.toLowerCase()} ${prep} ${locationName}?`,

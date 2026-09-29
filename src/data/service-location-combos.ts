@@ -31,7 +31,7 @@ const serviceTypes = [
             `Med vår bas i Norrtälje når vi ${loc.name} snabbt och effektivt. Korta resvägar gör att vi kan hålla nere etableringskostnaden vid takbyten i området.`,
             `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att etableringskostnaden hålls nere och offerten blir tydlig.`,
           ),
-      `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat plåttak. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag ger dig 30% rabatt på arbetskostnaden.`,
+      `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat plåttak. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Kontakta oss för en kostnadsfri takkontroll och offert för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
     ],
   },
@@ -49,7 +49,7 @@ const serviceTypes = [
             `Vi utför regelbundet takrenoveringar ${prep} ${loc.name} och kan ofta påbörja arbetet inom 2–4 veckor.`,
             `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in besiktning och start efter överenskommelse.`,
           ),
-      `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter besiktning. ROT-avdrag tillkommer.`,
+      `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag tillkommer.`,
       `Boka en kostnadsfri takinspektion ${prep} ${loc.name}. Vi bedömer takets skick och ger dig en ärlig rekommendation — renovering eller takbyte. Kontakta oss så återkopplar vi inom 24 timmar.`,
     ],
   },
@@ -58,7 +58,7 @@ const serviceTypes = [
     name: "Takomläggning",
     verb: "lägga om tak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak utför professionell takomläggning ${prep} ${loc.name} — vi lägger om tak med TP20, dubbelfalsat plåttak, tegelplåt, pannplåt och betongpannor. Vi ger fast pris efter besiktning och 10 års utförandegaranti till fastighetsägare ${prep} ${loc.name}.`,
+      `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak utför professionell takomläggning ${prep} ${loc.name} — vi lägger om tak med TP20, dubbelfalsat plåttak, tegelplåt, pannplåt och betongpannor. Vi ger fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti till fastighetsägare ${prep} ${loc.name}.`,
       `Takomläggning ${prep} ${loc.name} innebär att befintligt takmaterial byts ut mot nytt. Vi inspekterar underlaget, byter råspont och underlagspapp vid behov, och monterar det nya takmaterialet. Vi ser alltid till att taksäkerhet, ventilation och takavvattning uppfyller gällande krav.`,
       loc.isIsland
         ? `Som specialister på takarbeten i skärgården hanterar vi all materialtransport till ${loc.name}. Vi samordnar logistik och planerar projektet noggrant — du behöver inte arrangera något själv.`
@@ -67,7 +67,7 @@ const serviceTypes = [
             `Vår bas i Norrtälje gör att vi når ${loc.name} snabbt. Vi samordnar ofta flera projekt i området, vilket ger dig ett konkurrenskraftigt pris på din takomläggning.`,
             `Vi tar uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
           ),
-      `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval — TP20-plåttak eller dubbelfalsat. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag får du 30% rabatt på arbetskostnaden (upp till 50 000 kr/person/år).`,
+      `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval — TP20-plåttak eller dubbelfalsat. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr/person/år).`,
       `Besiktning och offert för takomläggning är kostnadsfria ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i vårt offertformulär — vi återkopplar inom 24 timmar.`,
     ],
   },
@@ -87,7 +87,7 @@ const taktvattService = {
           `Med vår bas i Norrtälje når vi ${loc.name} snabbt. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
           `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
         ),
-    `Priset för taktvätt ${prep} ${loc.name} beror på takets storlek, lutning, material och nedsmutsningsgrad, inkl. behandling med biocid. Med ROT-avdrag får du 30% rabatt på arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.`,
+    `Priset för taktvätt ${prep} ${loc.name} beror på takets storlek, lutning, material och nedsmutsningsgrad, inkl. behandling med biocid. Med ROT-avdrag på 30 % av arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.`,
     `Förutom taktvätt utför vi även takmålning ${prep} ${loc.name}. När taket är rent och torrt målar vi med specialfärg för tak (akrylat eller silikonbaserad) som ger UV-skydd, fuktskydd och ett fräscht utseende i 10–15 år. Takmålning inkluderar grundning och två strykningar, fast pris efter takkontroll. Vi målar i alla standardfärger — tegelröd, svart, mörkgrå, brun eller efter eget val.`,
     `Bäst tid för taktvätt ${prep} ${loc.name} är från april till oktober när det är torrt och plusgrader. Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på takets exponering. Boka en kostnadsfri takkontroll så bedömer vi takets skick och ger dig en ärlig rekommendation. Ring 070-154 36 39 eller fyll i offertformuläret — vi återkopplar inom 24 timmar.`,
   ],
@@ -110,7 +110,7 @@ const specialistServices = [
             `Från vår bas i Norrtälje når vi ${loc.name} enkelt med plåtband och falsutrustning, vilket håller nere transportkostnaden för din bandtäckning.`,
             `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
           ),
-      `Bandtäckning ${prep} ${loc.name} i förzinkad eller färgbelagd plåt, koppar eller zink. Priset styrs av materialval och takets komplexitet — antal vinklar, kupor och genomföringar. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
+      `Bandtäckning ${prep} ${loc.name} i förzinkad eller färgbelagd plåt, koppar eller zink. Priset styrs av materialval och takets komplexitet — antal vinklar, kupor och genomföringar. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Vill du veta vad bandtäckning ${prep} ${loc.name} skulle kosta för just ditt tak? Ring 070-154 36 39 eller begär kostnadsfri offert — vi kommer ut, mäter och lämnar fast pris inom 24 timmar.`,
     ],
   },
@@ -160,7 +160,7 @@ const specialistServices = [
       loc.isIsland
         ? `På ${loc.name} rekommenderar vi ofta tegelprofilerad plåt istället för lertegel — samma utseende men en bråkdel av vikten, vilket sänker transportkostnaden och belastningen på takstolarna.`
         : `Vi utför tegeltaksarbeten regelbundet ${prep} ${loc.name} och har god tillgång till både nytt och kulörmatchat äldre tegel.`,
-      `Tegeltak ${prep} ${loc.name} i lertegel eller tegelprofilerad plåt, inklusive montage och beslag. Fast pris efter kostnadsfri takkontroll. ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
+      `Tegeltak ${prep} ${loc.name} i lertegel eller tegelprofilerad plåt, inklusive montage och beslag. Fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Begär kostnadsfri offert på tegeltak ${prep} ${loc.name} — vi mäter, fotograferar och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
     ],
   },
@@ -174,7 +174,7 @@ const specialistServices = [
       loc.isIsland
         ? `Vi tar med tvättutrustning, färg och skyddsutrustning till ${loc.name} och planerar arbetet efter väderfönstret — takfärg behöver torrt väder och plusgrader.`
         : `Vi målar tak ${prep} ${loc.name} från april till oktober och kan oftast boka in dig inom några veckor.`,
-      `Takmålning ${prep} ${loc.name}, inklusive tvätt, grundning och två strykningar, fast pris efter takkontroll. Ett målat tak håller normalt 10–15 år innan det behöver göras om. ROT-avdrag ger 30% rabatt på arbetskostnaden.`,
+      `Takmålning ${prep} ${loc.name}, inklusive tvätt, grundning och två strykningar, fast pris efter takkontroll. Ett målat tak håller normalt 10–15 år innan det behöver göras om. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Undrar du om ditt tak ${prep} ${loc.name} går att måla eller om det är dags för byte? Boka kostnadsfri takkontroll — vi säger som det är. Ring 070-154 36 39.`,
     ],
   },
@@ -197,7 +197,7 @@ export const generateCombos = (): ServiceLocationCombo[] => {
         prep,
         url: `/${service.slug}-${loc.slug}`,
         title: `${service.name} ${prep} ${loc.name} — Takläggare RoslagsTak`,
-        description: `${service.name} ${prep} ${loc.name}. Professionell takläggare. Fast pris efter besiktning, 10 års utförandegaranti och kostnadsfri offert, utan förpliktelser.`,
+        description: `${service.name} ${prep} ${loc.name}. Professionell takläggare. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert, utan förpliktelser.`,
         content: service.generateContent(loc, prep),
       });
     }
