@@ -56,7 +56,7 @@ const benefits = [
   {
     icon: ShieldCheck,
     title: "Försäkringsvänligt underhåll",
-    desc: "Många försäkringsbolag kräver löpande takunderhåll. Vi dokumenterar arbetet med före- och efterbilder.",
+    desc: "Många försäkringsbolag kräver löpande takunderhåll. Regelbunden taktvätt är ett enkelt sätt att uppfylla det.",
   },
 ];
 
@@ -216,7 +216,6 @@ const tabContent: Record<string, { title: string; desc: string; bullets: string[
       "Komplett tvätt och biocidbehandling på 1–2 dagar",
       "Vi täcker fasad, fönster och rabatter innan vi börjar",
       "Hängrännor och stuprör rensas och spolas",
-      "Före- och efterbilder för försäkringsbolag och eget arkiv",
     ],
   },
   skargardshus: {
@@ -537,14 +536,12 @@ const Taktvatt = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Innan vi börjar är taket täckt av tjocka mosskuddar, vita lavar och svarta algstrimmor.
                 Efter vår taktvätt med biocidbehandling är taket helt rent och skyddat i 5–8 år framåt.
-                Vi dokumenterar alltid arbetet med riktiga före- och efterbilder från ditt eget tak.
               </p>
               <ul className="space-y-3">
                 {[
                   "Mossan borstas bort manuellt — inte högtrycksspolad",
                   "Biocidbehandling dödar sporer och förhindrar återväxt",
                   "Hängrännor rengörs så takavvattningen fungerar",
-                  "Allt arbete dokumenteras med före- och efterbilder",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />

@@ -94,7 +94,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Kan ni byta tak på Yxlan om jag inte är på plats?",
       answer:
-        "Ja, vi utför ofta takbyten på Yxlan när fastighetsägaren inte är på plats. Vi dokumenterar arbetet med bilder och håller dig uppdaterad löpande. Takkontroll och offert kan göras vid ett separat besök, och nycklar kan överlämnas på plats.",
+        "Ja, vi utför ofta takbyten på Yxlan när fastighetsägaren inte är på plats. Vi håller dig uppdaterad löpande under arbetet. Takkontroll och offert kan göras vid ett separat besök, och nycklar kan överlämnas på plats.",
     },
     primaryKeyword: "takläggare Yxlan",
     lat: 59.6333,

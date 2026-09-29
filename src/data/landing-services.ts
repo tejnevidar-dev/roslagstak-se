@@ -81,7 +81,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Reparation och slutkontroll",
-        text: "Vi utför reparationen, kontrollerar resultatet och dokumenterar arbetet med foton.",
+        text: "Vi utför reparationen och kontrollerar resultatet tillsammans med dig innan vi lämnar platsen.",
       },
     ],
     extraHeading: "Reparation eller nytt tak?",

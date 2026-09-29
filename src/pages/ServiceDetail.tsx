@@ -270,9 +270,8 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
       "Boka takkontroll (telefon eller formulär)",
       "Vi besöker din fastighet",
       "Grundlig inspektion av tak, underlag och avvattning",
-      "Fotografering och dokumentation",
-      "Skriftlig rapport skickas till dig",
-      "Genomgång av resultat och rekommendationer",
+      "Genomgång av resultat och rekommendationer på plats",
+      "Skriftligt fast pris i offerten",
     ],
   },
   platarbeten: {
@@ -638,9 +637,8 @@ const ServiceDetail = () => {
                 <div className="mt-8 gap-12 text-[15px] leading-[1.85] text-muted-foreground md:columns-2 [&>p]:mb-6">
                   <p>{details.longDesc}</p>
                   <p>
-                    Våra projektledare dokumenterar varje steg fotografiskt, så du får en fullständig
-                    historik över de dolda lager som utgör takets verkliga skydd. Vi arbetar med
-                    material som tål saltstänk, hård vind och tunga snölaster i Roslagen och skärgården.
+                    Vi arbetar med material som tål saltstänk, hård vind och tunga snölaster i
+                    Roslagen och skärgården.
                   </p>
                 </div>
               </Reveal>
