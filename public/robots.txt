@@ -41,4 +41,7 @@ Allow: /
 User-agent: AdsBot-Google
 Allow: /
 
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
 Sitemap: https://roslagstak.se/sitemap.xml
