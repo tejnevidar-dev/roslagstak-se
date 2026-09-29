@@ -356,6 +356,13 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
 };
 
+/* Flera källor (sisterServices, blocks.relatedLinks, hårdkodade länkar) kan råka peka på
+   samma "to" — dedupe så listan aldrig får dubbla React-keys eller dubblettlänkar. */
+const dedupeByTo = <T extends { to: string }>(links: T[]): T[] => {
+  const seen = new Set<string>();
+  return links.filter((l) => (seen.has(l.to) ? false : (seen.add(l.to), true)));
+};
+
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
@@ -907,7 +914,7 @@ const ServiceDetail = () => {
               Relaterat innehåll
             </h2>
             <ul className="mt-10 grid border-t border-border sm:grid-cols-2 lg:grid-cols-3">
-              {[
+              {dedupeByTo([
                 { to: "/priser", label: "Se prislista" },
                 { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
                 { to: "/blogg/rot-avdrag-takbyte", label: "ROT-avdrag vid takbyte" },
@@ -920,7 +927,7 @@ const ServiceDetail = () => {
                 { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
                 { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
                 { to: "/recensioner", label: "Omdömen på Google" },
-              ].map((link) => (
+              ]).map((link) => (
                 <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
                   <Link
                     to={link.to}

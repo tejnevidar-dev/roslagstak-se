@@ -15,6 +15,7 @@ import { hasServiceCombos } from "../src/data/service-slugs";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { regionSlugs } from "../src/data/regions";
 import { projects } from "../src/data/projects";
+import { problems } from "../src/data/problems";
 
 const args = process.argv.slice(2);
 const mdPath = args.find((a) => a.startsWith("--md="))?.split("=")[1];
@@ -64,6 +65,7 @@ const staticRoutes = [
   "/brf",
   "/cookies",
   "/projekt",
+  "/takproblem",
 ];
 const serviceRoutes = serviceSlugs.map((s) => `/tjanster/${s}`);
 const blogRoutes = blogSlugs.map((s) => `/blogg/${s}`);
@@ -72,6 +74,7 @@ const comboRoutes = locations.filter((l) => hasServiceCombos(l.region)).flatMap(
 const regionRoutes = Object.values(regionSlugs).map((s) => `/omraden/${s}`);
 const brfRoutes = brfLocationSlugs.map((s) => `/brf/${s}`);
 const projectRoutes = projects.map((p) => `/projekt/${p.slug}`);
+const problemRoutes = problems.map((p) => `/takproblem/${p.slug}`);
 
 const routes = [
   ...staticRoutes,
@@ -82,6 +85,7 @@ const routes = [
   ...regionRoutes,
   ...brfRoutes,
   ...projectRoutes,
+  ...problemRoutes,
 ];
 const routeSet = new Set(routes);
 

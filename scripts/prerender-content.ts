@@ -84,6 +84,54 @@ const projectSummaries = [
   },
 ];
 
+/**
+ * Textspegling av de PUBLICERADE posterna i src/data/problems.ts (bara de tre första — se
+ * kommentaren i ProblemsPage.tsx). Håll i synk manuellt, samma skäl som projectSummaries ovan.
+ */
+const problemSummaries = [
+  {
+    slug: "lackage-vid-skorsten",
+    title: "Läckage vid skorstenen",
+    metaTitle: "Läckage vid skorstenen – orsaker och vad du gör",
+    metaDescription:
+      "Fuktfläck i taket nära skorstenen? Så hittar du orsaken, när det är akut och när du behöver en takläggare. Kostnadsfri takkontroll.",
+    intro:
+      "Fuktfläckar nära skorstenen är ett av de vanligaste takproblemen — oftast handlar det om beslaget runt skorstenen, inte om själva murverket.",
+    paragraphs: [
+      "Symptom: fuktfläckar eller droppmärken i taket eller på väggen nära skorstenen, fukt eller mörka ränder på råsponten runt skorstenen på vinden, flagnande färg eller fuktskador på skorstenens murverk inomhus.",
+      "Vanliga orsaker: skorstensbeslaget (plåten runt skorstenen) har släppt, rostat eller spruckit. Fogen mellan beslag och murverk har släppt. Skadat murverk eller skadad skorstenshuv. Pannor närmast skorstenen ligger fel.",
+      "Åtgärder som används: nytt eller omlagt skorstensbeslag, ny fog, byte av pannor runt skorstenen. Är taket i övrigt uttjänt kan ett takbyte vara bättre än att laga en detalj.",
+    ],
+  },
+  {
+    slug: "trasiga-takpannor",
+    title: "Trasiga eller förskjutna takpannor",
+    metaTitle: "Trasiga eller förskjutna takpannor – vad gör man?",
+    metaDescription:
+      "Spruckna, lösa eller förskjutna takpannor släpper in vatten i underlaget. Så ser du det från marken och så åtgärdas det.",
+    intro:
+      "Pannor som glidit eller spruckit — ofta efter storm — släpper snabbt in vatten i underlaget om de inte åtgärdas.",
+    paragraphs: [
+      "Symptom: pannor som ligger snett, har glidit ner, har spruckit eller saknas, ofta efter storm. Mörka partier eller glipor i takytan.",
+      "Vanliga orsaker: storm och kraftig vind, frostsprängning, att någon har gått på taket, lösa eller rostade fästen, eller att läkten under har gett efter.",
+      "Åtgärder som används: byte av enstaka pannor och omfästning. Vid många skador, eller om underlaget är skadat, kan omläggning eller takbyte vara rätt.",
+    ],
+  },
+  {
+    slug: "mossa-pa-taket",
+    title: "Mossa och påväxt på taket",
+    metaTitle: "Mossa på taket – farligt eller bara fult?",
+    metaDescription:
+      "När mossa och påväxt blir ett problem för taket, vad du kan göra själv och när det är dags att kontakta en takläggare.",
+    intro: "Lite mossa är oftast bara estetiskt. Tjocka mattor håller däremot kvar fukt och kan skada taket över tid.",
+    paragraphs: [
+      "Symptom: gröna eller mörka mattor av mossa, lav och alger, oftast på norrsidan och under träd. Mossrester i hängrännorna.",
+      "Vanliga orsaker: skugga och fukt, träd nära huset, ett tak som torkar långsamt. Porösa ytor binder mer påväxt.",
+      "Åtgärder som används: skonsam rengöring och behandling av taket, rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas.",
+    ],
+  },
+];
+
 const PHONE = "070-154 36 39";
 
 const primaryLinks = [
@@ -323,6 +371,16 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
     links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Takrenovering på Blidö" }, { href: "/projekt/takbyte-singo", label: "Takbyte på Singö" }],
   },
+  "/takproblem": {
+    title: "Takproblem – tecken, orsaker och vad du gör",
+    description:
+      "Läcker taket, mossa, fukt på vinden eller istappar? Här är de vanligaste takproblemen, hur du känner igen dem och när det är dags att ringa en takläggare.",
+    h1: "Vanliga takproblem – så känner du igen dem",
+    intro:
+      "Ett tak säger sällan ifrån förrän skadan har pågått ett tag. Här har vi samlat de vanligaste takproblemen villaägare upptäcker.",
+    paragraphs: problemSummaries.map((p) => `${p.title}: ${p.intro}`),
+    links: [...primaryLinks, ...problemSummaries.map((p) => ({ href: `/takproblem/${p.slug}`, label: p.title }))],
+  },
   "/tjanster/taktvatt": {
     title: "Taktvätt och takmålning — bort med mossa och lav",
     description:
@@ -365,6 +423,19 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const slug = clean.slice("/tjanster/".length);
     const service = services.find((s) => s.slug === slug);
     return service ? serviceIntro(service.title, service.description) : null;
+  }
+
+  if (clean.startsWith("/takproblem/")) {
+    const problem = problemSummaries.find((p) => p.slug === clean.slice("/takproblem/".length));
+    if (!problem) return null;
+    return {
+      title: problem.metaTitle,
+      description: problem.metaDescription,
+      h1: problem.title,
+      intro: problem.intro,
+      paragraphs: problem.paragraphs,
+      links: [...primaryLinks, { href: "/takproblem", label: "Alla takproblem" }, { href: "/takkontroll", label: "Kostnadsfri takkontroll" }],
+    };
   }
 
   if (clean.startsWith("/projekt/")) {
