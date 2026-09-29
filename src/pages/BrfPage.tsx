@@ -27,7 +27,7 @@ const facts = [
 const steps = [
   {
     title: "Takbesiktning",
-    text: "Vi går igenom taket på plats, fotograferar och bedömer skick, underlag och vilka åtgärder som behövs. Besiktningen är kostnadsfri.",
+    text: "Vi går igenom taket på plats och bedömer skick, underlag och vilka åtgärder som behövs. Takkontrollen är kostnadsfri.",
   },
   {
     title: "Åtgärdsförslag och fast offert",

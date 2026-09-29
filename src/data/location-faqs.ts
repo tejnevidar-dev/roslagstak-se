@@ -47,7 +47,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Hur bokar jag en kostnadsfri takinspektion ${prep} ${name}?`,
-      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret på vår hemsida. Vi gör en kostnadsfri takinspektion ${prep} ${name} där vi bedömer takets skick och ger en skriftlig rapport med rekommendation. ${isIsland ? "Vi samordnar ofta inspektioner med pågående arbeten i skärgården." : "Vi kan ofta vara på plats inom en vecka."}`,
+      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret på vår hemsida. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en muntlig bedömning och rekommendation. ${isIsland ? "Vi samordnar ofta inspektioner med pågående arbeten i skärgården." : "Vi kan ofta vara på plats inom en vecka."}`,
     },
     {
       question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,

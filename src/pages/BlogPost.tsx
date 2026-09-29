@@ -169,7 +169,7 @@ const BlogPost = () => {
                   {i === 3 && post.content.length > 6 && (
                     <aside className="rounded-2xl border border-border bg-card p-5" aria-label="Kostnadsfri takkontroll">
                       <p className="text-sm text-card-foreground">
-                        <strong className="font-semibold">Osäker på hur ditt tak mår?</strong> Vi gör en kostnadsfri takkontroll med skriftlig rapport och foton, utan förbindelser.
+                        <strong className="font-semibold">Osäker på hur ditt tak mår?</strong> Vi gör en kostnadsfri takkontroll på plats, utan förbindelser.
                       </p>
                       <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
                         <Link to="/takkontroll" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">

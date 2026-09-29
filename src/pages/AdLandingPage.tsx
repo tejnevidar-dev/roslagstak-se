@@ -25,7 +25,7 @@ const trust = [
 const steps = [
   {
     title: "Kostnadsfri takkontroll",
-    text: "Vi återkommer inom 24 timmar och bokar en tid. På plats går vi igenom taket, fotograferar och mäter.",
+    text: "Vi återkommer inom 24 timmar och bokar en tid. På plats går vi igenom taket och mäter.",
   },
   {
     title: "Skriftlig offert med fast pris",
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "Vad ingår i priset?",
-    a: "Rivning och bortforsling av gamla taket, underlagspapp och läkt vid behov, tätskikt, plåtbeslag, taksäkerhet och städning. Hittar vi skadad råspont när gamla taket är rivet fotograferar vi, visar dig omfattningen och lämnar ett pris på tillägget innan vi fortsätter.",
+    a: "Rivning och bortforsling av gamla taket, underlagspapp och läkt vid behov, tätskikt, plåtbeslag, taksäkerhet och städning. Hittar vi skadad råspont när gamla taket är rivet visar vi dig omfattningen och lämnar ett pris på tillägget innan vi fortsätter.",
   },
   {
     q: "Hur fungerar ROT-avdraget?",

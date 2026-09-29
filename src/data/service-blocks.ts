@@ -190,22 +190,22 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takinspektion: {
-    seoTitle: "Kostnadsfri Takbesiktning Roslagen — Skriftlig rapport",
+    seoTitle: "Kostnadsfri Takinspektion Roslagen — Fast pris",
     seoDescription:
-      "Kostnadsfri takinspektion i Roslagen och skärgården. Vi kontrollerar ytskikt, papp, råspont, avvattning, ventilation och taksäkerhet och lämnar skriftlig rapport med foton.",
+      "Kostnadsfri takinspektion i Roslagen och skärgården. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "accent", label: "Kostnad", value: "0 kr", text: "Helt kostnadsfri och utan förbindelser — även på öar." },
-      { tone: "primary", label: "Tid på plats", value: "45–90 min", text: "Beroende på takets storlek, lutning och åtkomst." },
-      { tone: "outline", label: "Kontrollpunkter", value: "22 punkter", text: "Från ytskikt och beslag till ventilation och taksäkerhet." },
-      { tone: "plain", label: "Leverans", value: "Rapport med foto", text: "Skriftligt underlag med åtgärdsförslag och prisuppskattning." },
+      { tone: "primary", label: "Tid på plats", value: "Ca 1–2 timmar", text: "Beroende på takets storlek, lutning och åtkomst." },
+      { tone: "outline", label: "Genomgång", value: "Hela taket", text: "Från ytskikt och beslag till ventilation och taksäkerhet." },
+      { tone: "plain", label: "Efteråt", value: "Fast pris", text: "Behöver taket åtgärdas får du ett fast pris i offerten." },
     ],
     block: {
       kind: "checklist",
-      eyebrow: "Besiktningsprotokoll",
-      heading: "Det här kontrollerar vi — punkt för punkt",
+      eyebrow: "Vad vi tittar på",
+      heading: "Det här går vi igenom",
       intro:
-        "Vi går igenom taket i fyra block och dokumenterar varje avvikelse med foto. Du får protokollet skriftligt oavsett om du beställer arbete eller inte.",
+        "Vi går igenom taket i fyra block: ytskikt, underlag, plåt och genomföringar samt avvattning och säkerhet.",
       groups: [
         {
           title: "Ytskikt",
@@ -221,7 +221,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         },
         {
           title: "Avvattning och säkerhet",
-          items: ["Hängrännor: fall och fästen", "Stuprör och utkastare", "Snörasskydd och takstege", "Taksäkerhet enligt gällande krav"],
+          items: ["Hängrännor: fall och fästen", "Stuprör och utkastare", "Takstege", "Taksäkerhet enligt gällande krav"],
         },
       ],
     },

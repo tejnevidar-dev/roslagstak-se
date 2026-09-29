@@ -2844,7 +2844,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Hur går en takkontroll till i Enköping?",
       answer:
-        "Vi besöker fastigheten, går igenom taket, fotograferar och bedömer skicket på takmaterial, underlag, beslag och avvattning. Efter takkontrollen får du en rekommendation och ett fast pris. Besiktningen är kostnadsfri och förpliktar inte till något.",
+        "Vi besöker fastigheten, går igenom taket och bedömer skicket på takmaterial, underlag, beslag och avvattning. Efter takkontrollen får du en rekommendation och ett fast pris. Takkontrollen är kostnadsfri och förpliktar inte till något.",
     },
     primaryKeyword: "takläggare Enköping",
     lat: 59.6361,

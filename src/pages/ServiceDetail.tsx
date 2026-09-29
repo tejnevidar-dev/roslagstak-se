@@ -109,13 +109,13 @@ const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "innan skadan kostar.",
     specs: [
       { k: "Pris", v: "Kostnadsfri" },
-      { k: "Leverans", v: "Skriftlig rapport" },
+      { k: "Tid på plats", v: "Ca 1–2 timmar" },
       { k: "Omfattning", v: "Tak, underlag, ventilation" },
     ],
-    specHeading: "Vad vi kontrollerar vid en besiktning",
-    lead: "Vi bedömer takets återstående livslängd — inte bara hur det ser ut från marken.",
+    specHeading: "Vad vi tittar på vid en takkontroll",
+    lead: "Vi går igenom taket på plats — inte bara hur det ser ut från marken.",
     craftLine: "Det som avgör takets skick ligger under pannorna.",
-    photoNote: "Sprucken plåt och lossnande pannor — exempel på skador vi upptäcker vid besiktning.",
+    photoNote: "Sprucken plåt och lossnande pannor — exempel på skador vi upptäcker vid en takkontroll.",
   },
   platarbeten: {
     accentLine: "beslag och bandtäckning.",
@@ -256,15 +256,15 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   takinspektion: {
-    longDesc: "En regelbunden takinspektion förebygger dyra skador. Vi utför grundliga besiktningar där vi kontrollerar takmaterialets skick, underlagspapp, råspont, taksäkerhet, avvattningssystem och ventilation. Du får en skriftlig rapport med foton och tydliga åtgärdsförslag. Vår inspektion är helt kostnadsfri och utan förbindelser.",
+    longDesc: "En regelbunden takinspektion förebygger dyra skador. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och går igenom takmaterialets skick, underlagspapp, råspont, taksäkerhet, avvattningssystem och ventilation. Du får en muntlig bedömning och tydliga åtgärdsförslag. Vår inspektion är helt kostnadsfri och utan förbindelser.",
     priceRange: "Helt kostnadsfritt — inga dolda avgifter.",
     benefits: [
       "Helt kostnadsfri och utan förbindelser",
-      "Skriftlig rapport med foton",
+      "En av våra säljare tittar på taket på plats",
       "Identifierar problem innan de blir dyra",
       "Kontrollerar takmaterial, underlag och ventilation",
-      "Bedömer återstående livslängd",
-      "Tydliga åtgärdsförslag med prisuppskattning",
+      "Ärlig bedömning av takets skick",
+      "Tydliga åtgärdsförslag",
     ],
     process: [
       "Boka takkontroll (telefon eller formulär)",

@@ -172,7 +172,7 @@ export const blogPosts: BlogPost[] = [
       "Tänk också på att tecknen inte alltid syns utifrån. Fukt på vinden, mörka fläckar på undertaket eller en svag lukt av mögel är signaler som bör undersökas direkt — även om takytan ser frisk ut.",
       "När är det dags att byta istället för att laga? En tumregel: om mer än en tredjedel av taket behöver åtgärdas, eller om underlagspappen är genomfuktig på flera ställen, är ett komplett byte nästan alltid det ekonomiskt kloka valet. Punktlagningar på ett gammalt tak blir snabbt dyrare än ett nytt tak räknat per år.",
       "Det är också värt att veta att livslängden i tabellen förutsätter korrekt montage. Ett premiumtak som lagts fel — med för gles läkt, fel underlagspapp eller slarviga beslag — kan börja läcka efter bara några år. Därför är utförandet minst lika viktigt som materialet.",
-      "Vill du veta hur ditt tak mår? Vi gör kostnadsfri takinspektion i hela Roslagen. Vi bedömer takets skick och ger dig en ärlig prognos för återstående livslängd.",
+      "Vill du veta hur ditt tak mår? Vi gör en kostnadsfri takkontroll i hela Roslagen. En av våra säljare tittar på taket på plats och ger dig en ärlig bedömning.",
     ],
   },
   {
@@ -185,7 +185,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       "De flesta husägare tänker inte på taket förrän det läcker. Men regelbundna takinspektioner kan avslöja problem tidigt — innan de hinner orsaka dyra fuktskador i stomme, isolering och invändiga ytor.",
       "Vi rekommenderar takinspektion vart 3–5 år, eller efter kraftiga stormar. I skärgården, där taken utsätts för extremt väder, kan det vara klokt att inspektera oftare.",
-      "Så går vår takinspektion till: Vi klättrar upp på taket och inspekterar ytskikt, underlagspapp (om synlig), plåtbeslag runt skorstenar och ventiler, hängrännor, stuprör, takstege och gångbrygga. Vi fotograferar och dokumenterar alla fynd.",
+      "Så går vår takinspektion till: en av våra säljare tittar på taket på plats och går igenom ytskikt, underlagspapp (om synlig), plåtbeslag runt skorstenar och ventiler, hängrännor, stuprör, takstege och gångbrygga.",
       "Efter inspektionen berättar vi vad vi sett och ger vår rekommendation — renovering, reparation eller takbyte. Vi är alltid ärliga och rekommenderar aldrig onödiga åtgärder.",
       "Vår takinspektion är helt kostnadsfri. Vi genomför inspektioner i Roslagen, Storstockholm och Mälardalen.",
       "Vad tittar vi på? Ytskiktets skick (plåt, pannor eller papp), alla plåtbeslag kring skorsten, ventiler och takkupor, hängrännor och stuprör, taksäkerhetsutrustning som takstegar och gångbryggor, samt tecken på fukt eller dålig ventilation på vinden.",

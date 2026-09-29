@@ -161,7 +161,7 @@ const specialistServices = [
         ? `På ${loc.name} rekommenderar vi ofta tegelprofilerad plåt istället för lertegel — samma utseende men en bråkdel av vikten, vilket sänker transportkostnaden och belastningen på takstolarna.`
         : `Vi utför tegeltaksarbeten regelbundet ${prep} ${loc.name} och har god tillgång till både nytt och kulörmatchat äldre tegel.`,
       `Tegeltak ${prep} ${loc.name} i lertegel eller tegelprofilerad plåt, inklusive montage och beslag. Fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
-      `Begär kostnadsfri offert på tegeltak ${prep} ${loc.name} — vi mäter, fotograferar och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
+      `Begär kostnadsfri offert på tegeltak ${prep} ${loc.name} — vi mäter och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
     ],
   },
   {

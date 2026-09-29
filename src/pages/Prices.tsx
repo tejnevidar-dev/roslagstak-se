@@ -39,7 +39,7 @@ const priceData = [
       { name: "Takavvattning (hängrännor)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör, fast pris i offerten." },
       { name: "Takkupa", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
       { name: "Takfönster (Velux)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
-      { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig besiktning med skriftlig rapport och åtgärdsförslag." },
+      { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig genomgång av taket med åtgärdsförslag." },
     ],
   },
   {

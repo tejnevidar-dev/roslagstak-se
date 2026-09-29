@@ -54,7 +54,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Rötskadad råspont",
-        text: "Skadat virke byts ut innan taket täcks igen. Vi fotograferar och visar dig omfattningen först.",
+        text: "Skadat virke byts ut innan taket täcks igen. Vi visar dig omfattningen först.",
       },
       {
         title: "Skadad plåt och rost",
@@ -73,7 +73,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Kostnadsfri takkontroll",
-        text: "Vi tittar på taket och orsaken till skadan, fotograferar och bedömer om en reparation räcker.",
+        text: "Vi tittar på taket och orsaken till skadan och bedömer om en reparation räcker.",
       },
       {
         title: "Fast pris",
@@ -136,39 +136,39 @@ export const landingServices: LandingService[] = [
     path: "/takkontroll",
     seoTitle: "Kostnadsfri takkontroll av ditt tak — fast pris",
     seoDescription:
-      "Kostnadsfri takkontroll: vi går igenom tak, underlag och avvattning och du får en skriftlig rapport med foton. Utan förpliktelser. Svar inom 24 timmar.",
+      "Kostnadsfri takkontroll: en av våra säljare tittar på taket på plats, ca 1–2 timmar. Utan förpliktelser. Fast pris i offerten om något behöver åtgärdas. Svar inom 24 timmar.",
     breadcrumb: "Kostnadsfri takkontroll",
     eyebrow: "Takkontroll",
     h1: "Kostnadsfri takkontroll.",
     h1Accent: "Utan förpliktelser.",
     intro:
-      "Vi går igenom taket på plats och bedömer skick, underlag och avvattning. Du får en skriftlig rapport med foton och tydliga åtgärdsförslag, utan kostnad och utan förpliktelser.",
-    listHeading: "Vad vi kontrollerar",
-    listIntro: "Det som avgör ett taks skick ligger ofta under takmaterialet. Därför tittar vi på hela taket.",
+      "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Kostnadsfritt och utan förpliktelser — du betalar inget och binder dig inte till något.",
+    listHeading: "Vad vi tittar på",
+    listIntro: "Det som avgör ett taks skick ligger ofta under takmaterialet. Därför går vi igenom hela taket.",
     list: [
       {
         title: "Takmaterialet",
-        text: "Pannor eller plåt: sprickor, förskjutningar, rost samt mossa och alger som håller kvar fukt.",
+        text: "Vi tittar efter sprickor, förskjutningar, rost samt mossa och alger som håller kvar fukt.",
       },
       {
-        title: "Underlagspapp och råspont",
-        text: "Skador och fukt under takmaterialet, som inte syns från marken.",
+        title: "Underlag och råspont",
+        text: "Vi bedömer skador och fukt under takmaterialet, där det går att se.",
       },
       {
         title: "Plåtdetaljer och genomföringar",
-        text: "Beslag runt skorstenar, ventiler och andra genomföringar, där tak oftast läcker.",
+        text: "Vi går igenom beslag runt skorstenar, ventiler och andra genomföringar.",
       },
       {
         title: "Takavvattning",
-        text: "Hängrännor, stuprör och fall, så att vattnet leds bort från fasad och grund.",
+        text: "Vi kontrollerar hängrännor, stuprör och fall.",
       },
       {
         title: "Taksäkerhet",
-        text: "Takstege, gångbrygga och snörasskydd.",
+        text: "Vi tittar på takstege och gångbrygga.",
       },
       {
         title: "Ventilation",
-        text: "Att taket och vinden får den ventilation som behövs.",
+        text: "Vi bedömer om taket och vinden har den ventilation som behövs.",
       },
     ],
     stepsHeading: "Så går takkontrollen till",
@@ -178,16 +178,16 @@ export const landingServices: LandingService[] = [
         text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar och bokar en tid.",
       },
       {
-        title: "Vi besöker fastigheten",
-        text: "Vi går igenom tak, underlag och avvattning och fotograferar.",
+        title: "Vi tittar på taket på plats",
+        text: "Det tar ungefär 1–2 timmar. Kostnadsfritt och utan förpliktelser.",
       },
       {
-        title: "Skriftlig rapport",
-        text: "Du får en rapport med foton, en bedömning av takets skick och återstående livslängd samt åtgärdsförslag med prisuppskattning.",
+        title: "Fast pris i offerten",
+        text: "Behöver taket åtgärdas får du ett fast pris, där det framgår vad som ingår.",
       },
       {
-        title: "Genomgång",
-        text: "Vi går igenom resultatet med dig. Du bestämmer själv om något ska åtgärdas.",
+        title: "Du bestämmer själv",
+        text: "Vi går igenom vad vi sett med dig. Du bestämmer själv om och när något ska åtgärdas.",
       },
     ],
     extraHeading: "När är det läge för en takkontroll?",
@@ -200,26 +200,30 @@ export const landingServices: LandingService[] = [
     faqTitle: "Frågor om takkontroll",
     faqs: [
       {
+        question: "Vad händer vid takkontrollen?",
+        answer:
+          "En av våra säljare kommer ut och tittar på taket på plats. Det tar ungefär 1–2 timmar. Berätta gärna vad du själv har sett, till exempel fuktfläckar, trasiga pannor eller läckande hängrännor, så att vi vet vad vi ska titta extra på.",
+      },
+      {
         question: "Kostar takkontrollen något?",
-        answer: "Nej, den är helt kostnadsfri och förpliktar inte till något.",
+        answer: "Nej. Takkontrollen är kostnadsfri och utan förpliktelser: du betalar inget och binder dig inte till något.",
       },
       {
         question: "Vad får jag efter kontrollen?",
+        answer: "Behöver taket åtgärdas får du en offert med fast pris, där det framgår vad som ingår. Du bestämmer själv om och när något ska göras.",
+      },
+      {
+        question: "Hur och när kan jag boka?",
+        answer: "Fyll i formuläret eller ring 070-154 36 39. Vi svarar inom 24 timmar. Takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19.",
+      },
+      {
+        question: "Gäller ROT-avdraget?",
         answer:
-          "En skriftlig rapport med foton, en bedömning av takets skick och tydliga åtgärdsförslag med prisuppskattning.",
+          "Själva takkontrollen är kostnadsfri. Om du sedan anlitar oss drar vi ROT-avdraget direkt på fakturan: 30 % av arbetskostnaden. Det förutsätter att du har rätt till fullt ROT-avdrag (högst 50 000 kr per person och år) och har betalat tillräckligt med skatt.",
       },
       {
-        question: "Måste jag beställa något efteråt?",
-        answer: "Nej. Du bestämmer själv om något ska åtgärdas.",
-      },
-      {
-        question: "Är takkontroll samma sak som takinspektion?",
-        answer:
-          "Ja. Hos oss är takkontroll och takinspektion samma sak: en genomgång av taket med skriftlig rapport. Du kan läsa mer under Takinspektion.",
-      },
-      {
-        question: "Hur snabbt får jag svar?",
-        answer: "Vi återkommer inom 24 timmar.",
+        question: "Vem har jag kontakt med?",
+        answer: "Du har en kontaktperson genom hela processen, från takkontrollen till färdigt tak.",
       },
       {
         question: "Vilka områden arbetar ni i?",
@@ -366,9 +370,9 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       { title: "Du kontaktar oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
-      { title: "Besiktning", text: "Vi tittar på taket, hittar var vattnet kommer in och fotograferar." },
+      { title: "Takkontroll", text: "Vi tittar på taket på plats och letar efter var vattnet kommer in." },
       { title: "Fast pris", text: "Du får en skriftlig offert med tydlig åtgärdslista och fast pris." },
-      { title: "Reparation", text: "Vi utför reparationen, kontrollerar resultatet och dokumenterar med foton." },
+      { title: "Reparation", text: "Vi utför reparationen och kontrollerar resultatet innan vi lämnar platsen." },
     ],
     extraHeading: "Var läcker tak oftast?",
     extraParagraphs: [
@@ -560,11 +564,11 @@ export const landingServices: LandingService[] = [
     h1: "Planera ditt takbyte till våren 2027.",
     h1Accent: "Börja med en kostnadsfri takkontroll.",
     intro:
-      "Ett takbyte går smidigast när det planeras i god tid. Boka en kostnadsfri takkontroll nu, så får du en skriftlig bedömning av taket och en offert med fast pris. Därefter bestämmer vi tidpunkt tillsammans.",
+      "Ett takbyte går smidigast när det planeras i god tid. Boka en kostnadsfri takkontroll nu, så tittar en av våra säljare på taket på plats och du får en offert med fast pris. Därefter bestämmer vi tidpunkt tillsammans.",
     listHeading: "Fördelen med att planera i god tid",
     listIntro: "Ett takbyte är ett stort beslut. Ju tidigare du har underlaget, desto lugnare kan du välja.",
     list: [
-      { title: "Du vet takets skick", text: "Takkontrollen ger dig en skriftlig rapport med foton och en bedömning av återstående livslängd." },
+      { title: "Du vet takets skick", text: "En av våra säljare tittar på taket på plats och ger dig en muntlig bedömning." },
       { title: "Du får ett fast pris", text: "Offerten är skriftlig och specificerad. Vi arbetar endast till fast pris." },
       { title: "Tid att jämföra", text: "Du kan jämföra offerter och material i lugn och ro innan du bestämmer dig." },
       { title: "Tid att planera ekonomin", text: "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Kom ihåg att avdraget gäller per år." },
@@ -574,7 +578,7 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       { title: "Boka takkontroll", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
-      { title: "Takkontroll", text: "Vi går igenom tak, underlag och avvattning och fotograferar. Du får en skriftlig rapport." },
+      { title: "Takkontroll", text: "Vi går igenom tak, underlag och avvattning på plats, ca 1–2 timmar." },
       { title: "Offert med fast pris", text: "Du får en skriftlig offert där arbete och material redovisas var för sig." },
       { title: "Tidplan", text: "Om du vill gå vidare bestämmer vi tidpunkt för takbytet tillsammans." },
     ],

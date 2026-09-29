@@ -34,7 +34,7 @@ const processFaqs = [
   {
     question: "Vad händer om ni hittar röta i råsponten?",
     answer:
-      "Skadad råspont syns först när det gamla taket är rivet. Vi fotograferar, visar dig omfattningen och lämnar ett pris på tilläggsarbetet innan vi fortsätter. Inget extraarbete utförs utan att du godkänt det.",
+      "Skadad råspont syns först när det gamla taket är rivet. Vi visar dig omfattningen och lämnar ett pris på tilläggsarbetet innan vi fortsätter. Inget extraarbete utförs utan att du godkänt det.",
   },
   {
     question: "Vad ingår i slutbesiktningen?",
