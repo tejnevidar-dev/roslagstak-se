@@ -1,14 +1,34 @@
 /**
- * Riktiga referensjobb (projektarkiv, SEO-programmet avsnitt 10/backlog #3).
- * Endast belagda fakta från Vidar, med kundens samtycke till marknadsföring (dokumenterat i
+ * Riktiga referensjobb (projektarkiv, SEO-programmet avsnitt 10/backlog #3) — samtidigt "motorn"
+ * för projekt↔tjänst↔ort↔material (SEO-programmet Phase II steg 9). Endast belagda fakta från
+ * Vidar, med kundens samtycke till marknadsföring (dokumenterat i
  * ledning/marknad/innehall/material/<mapp>/fakta.md). Aldrig kundens namn eller adress/väg —
  * bara "<plats>, <kommun>". Gissa aldrig yta, tidsåtgång eller pris där det inte är angivet.
+ *
+ * serviceSlug, locationSlug och materialSlugs driver de automatiska länkarna:
+ * - ProjectPage länkar till /tjanster/<serviceSlug>, /taklaggare-<locationSlug> och en /material-
+ *   sida per materialSlug (getMaterial i src/data/materials.ts).
+ * - MaterialPage (src/pages/MaterialPage.tsx) visar automatiskt "Hos oss"-länkar till alla projekt
+ *   som har det materialet, via getProjectsByMaterial nedan — inga länkar hårdkodas där.
+ * Lägg alltid till nya materialSlugs i src/data/materials.ts FÖRST, annars blir länken tom.
+ *
+ * MALL FÖR NYA JOBB — fält från ledning/marknad/innehall/jobbformular.md → Project-schemat:
+ *   1. ORT                          → locationName ("<ort>, <kommun>"), locationSlug (slugifierat)
+ *   2. NÄR JOBBET BLEV KLART        → period (t.ex. "oktober 2026")
+ *   3. KUNDENS SAMTYCKE             → krav: bara JA går in i projects.ts. NEJ → inget projekt.
+ *   4. VAD GJORDES                  → serviceName/serviceSlug (välj matchande tjänst i src/components/Services.tsx)
+ *   5. MATERIAL                     → material (fritext för visning) + materialSlugs (slugs från materials.ts)
+ *   6. BILDER/FILM                  → heroImage/heroAlt + gallery (efter Innehålls bildkontroll, se punkt 7)
+ *   7. SYNS NÅGOT SOM MÅSTE BORT    → måste vara åtgärdat (suddat/beskuret) INNAN bilden läggs in här
+ *   8. NÅGOT SÄRSKILT               → vävs in i description där det är relevant, aldrig gissat
+ * summary/description skrivs av SEO utifrån 1, 2, 4, 5, 8 — bara det som är ifyllt, inget hittat på.
  */
 import imgBlidoHero from "@/assets/project-blido-hero.jpg";
 import imgBlidoDetail1 from "@/assets/project-blido-detail-1.jpg";
 import imgBlidoDetail2 from "@/assets/project-blido-detail-2.jpg";
 import imgSingoHero from "@/assets/project-singo-hero.jpg";
 import imgSingoDetail1 from "@/assets/project-singo-detail-1.jpg";
+import type { MaterialSlug } from "@/data/materials";
 
 export interface Project {
   slug: string;
@@ -18,6 +38,7 @@ export interface Project {
   serviceName: string;
   serviceSlug: string;
   material: string;
+  materialSlugs: MaterialSlug[];
   period: string;
   summary: string;
   description: string[];
@@ -35,6 +56,7 @@ export const projects: Project[] = [
     serviceName: "Takrenovering",
     serviceSlug: "takrenovering",
     material: "Betongpannor (Benders, svart)",
+    materialSlugs: ["betongpannor"],
     period: "sommaren 2026",
     summary:
       "Komplett takrenovering på ett fritidshus på Blidö, med nya betongpannor i svart. Befintlig råspont behölls.",
@@ -64,6 +86,7 @@ export const projects: Project[] = [
     serviceName: "Takomläggning",
     serviceSlug: "takomlaggning",
     material: "Betongpannor på huvudtaket, TP20-plåt på de lägre delarna (båda röda)",
+    materialSlugs: ["betongpannor", "tp20-plattak"],
     period: "september 2026",
     summary:
       "Komplett takbyte på ett hus på Singö med utsikt över fjärden — röda betongpannor på huvudtaket och röd TP20-plåt på de lägre takdelarna.",
@@ -84,3 +107,5 @@ export const projects: Project[] = [
 ];
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
+export const getProjectsByMaterial = (materialSlug: MaterialSlug) =>
+  projects.filter((p) => p.materialSlugs.includes(materialSlug));

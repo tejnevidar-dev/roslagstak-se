@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getMaterial, type MaterialDetail } from "@/data/materials";
+import { getProjectsByMaterial } from "@/data/projects";
 
 const sections: { key: keyof MaterialDetail; heading: string }[] = [
   { key: "funktion", heading: "Funktion" },
@@ -26,6 +27,7 @@ const MaterialPage = () => {
 
   if (!material || !material.detail) return <NotFound />;
   const { detail } = material;
+  const relatedProjects = getProjectsByMaterial(material.slug);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -92,6 +94,19 @@ const MaterialPage = () => {
             <div className="mt-8 rounded-2xl border border-border bg-card p-6">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Hos oss</p>
               <p className="mt-2 leading-relaxed text-muted-foreground">{detail.hosOss}</p>
+              {relatedProjects.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {relatedProjects.map((p) => (
+                    <Link
+                      key={p.slug}
+                      to={`/projekt/${p.slug}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-primary/25 px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                    >
+                      {p.title} <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 

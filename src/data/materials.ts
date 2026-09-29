@@ -132,3 +132,6 @@ export const materials: Material[] = [
 ];
 
 export const getMaterial = (slug: string) => materials.find((m) => m.slug === slug && m.detail);
+
+/** Giltiga material-slugs, för att typa Project.materialSlugs i src/data/projects.ts. */
+export type MaterialSlug = (typeof materials)[number]["slug"];

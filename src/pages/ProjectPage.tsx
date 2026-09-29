@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getProject } from "@/data/projects";
+import { materials } from "@/data/materials";
 
 const ProjectPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -63,6 +64,21 @@ const ProjectPage = () => {
                 <Layers className="h-4 w-4" aria-hidden="true" /> Material
               </p>
               <p className="mt-2 text-sm text-foreground">{project.material}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.materialSlugs.map((slug) => {
+                  const m = materials.find((mat) => mat.slug === slug);
+                  if (!m) return null;
+                  return (
+                    <Link
+                      key={slug}
+                      to={m.href}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+                    >
+                      {m.title} <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
             <div className="rounded-2xl border border-border bg-card p-5">
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
