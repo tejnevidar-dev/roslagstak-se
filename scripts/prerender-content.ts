@@ -55,7 +55,7 @@ const services = [
 const projectSummaries = [
   {
     slug: "takrenovering-blido",
-    title: "Takrenovering på Blidö",
+    title: "Nytt tak på Blidö",
     locationName: "Blidö, Norrtälje",
     locationSlug: "blido",
     serviceName: "Takrenovering",
@@ -63,33 +63,35 @@ const projectSummaries = [
     material: "Betongpannor (Benders, svart)",
     period: "sommaren 2026",
     summary:
-      "Komplett takrenovering på ett fritidshus på Blidö, med nya betongpannor i svart. Befintlig råspont behölls.",
+      "Komplett takbyte på ett hus på Blidö i Norrtälje kommun, med svarta betongpannor från Benders, nytt underlag, ny läkt, nya plåtdetaljer och nya hängrännor. Befintlig råspont behölls.",
     description: [
-      "Ett fritidshus på Blidö i Norrtälje kommun, omgärdat av skog med utsikt mot fjärden, fick sommaren 2026 en komplett takrenovering. Nytt underlag, ny läkt, nya plåtdetaljer kring skorstenar och genomföringar samt nya hängrännor lades hela vägen — den befintliga råsponten var i så pass gott skick att den kunde behållas.",
-      "Nytt ytmaterial blev betongpannor från Benders i svart, ett robust och prisvärt val som är vanligt på fritidshus i Roslagens skärgård.",
-      "Jobbet är utfört av RoslagsTak med kundens samtycke till att bilderna publiceras i marknadsföring.",
+      "Huset ligger i skogen på Blidö i Norrtälje kommun. Uppdraget var ett komplett takbyte, från underlag till avvattning.",
+      "Nytt ytmaterial är betongpannor från Benders i svart.",
+      "Nytt underlag, ny läkt, nya betongpannor, nya plåtdetaljer, nya skorstensbeslag och nya hängrännor. Den befintliga råsponten behölls.",
+      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke.",
     ],
     ogImage: "/og/project-blido-hero.jpg",
-    ogImageAlt: "Nylagt svart betongpannetak på fritidshus på Blidö, sett från altansidan med skog runtomkring",
+    ogImageAlt: "Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring.",
   },
   {
     slug: "takbyte-singo",
-    title: "Takbyte på Singö",
+    title: "Nytt tak på Singö",
     locationName: "Singö, Grisslehamn",
     locationSlug: "singo",
-    serviceName: "Takomläggning",
+    serviceName: "Takbyte",
     serviceSlug: "takomlaggning",
     material: "Betongpannor på huvudtaket, TP20-plåt på de lägre delarna (båda röda)",
     period: "september 2026",
     summary:
-      "Komplett takbyte på ett hus på Singö med utsikt över fjärden — röda betongpannor på huvudtaket och röd TP20-plåt på de lägre takdelarna.",
+      "Komplett takbyte på ett hus på Singö i Grisslehamn, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Delar av råsponten byttes.",
     description: [
-      "På Singö i Grisslehamn, Norrtälje kommun, genomförde RoslagsTak i september 2026 ett komplett takbyte på ett hus med utsikt över fjärden. Delar av råsponten byttes ut där den var skadad, resten behölls.",
-      "Taket har två material: röda betongpannor på huvudbyggnadens tak, och röd TP20-plåt (trapetsprofilerad plåt) på de lägre takdelarna — ett vanligt sätt att hålla nere vikten och kostnaden på tillbyggnader utan att tumma på utseendet.",
-      "Jobbet är utfört av RoslagsTak med kundens samtycke till att bilderna publiceras i marknadsföring, inklusive startsidans hero-bild.",
+      "Huset ligger på Singö i Grisslehamn, Norrtälje kommun, med utsikt över fjärden. Uppdraget var ett komplett takbyte.",
+      "Två material i samma röda kulör: betongpannor på huvudtaket och TP20, en trapetsprofilerad plåt, på de lägre delarna.",
+      "Komplett takbyte, inklusive byte av delar av råsponten. Resten av råsponten behölls.",
+      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke, även på startsidan.",
     ],
     ogImage: "/og/project-singo-hero.jpg",
-    ogImageAlt: "Rött tak på hus på Singö i Grisslehamn med utsikt över fjärden, drönarbild snett ovanifrån",
+    ogImageAlt: "Nytt tak på Singö i Grisslehamn med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna, med utsikt över fjärden.",
   },
 ];
 
@@ -575,10 +577,10 @@ const staticPages: Record<string, PrerenderPage> = {
     h1: "Riktiga takprojekt i Roslagen",
     intro: "Här visar vi jobb vi faktiskt utfört, med kundens samtycke. Riktiga bilder, riktiga material — inga påhittade case.",
     paragraphs: [
-      "Takrenovering på Blidö: nya betongpannor från Benders i svart, sommaren 2026.",
-      "Takbyte på Singö, Grisslehamn: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
+      "Nytt tak på Blidö: nya betongpannor från Benders i svart, sommaren 2026.",
+      "Nytt tak på Singö, Grisslehamn: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
     ],
-    links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Takrenovering på Blidö" }, { href: "/projekt/takbyte-singo", label: "Takbyte på Singö" }],
+    links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Nytt tak på Blidö" }, { href: "/projekt/takbyte-singo", label: "Nytt tak på Singö" }],
   },
   "/takproblem": {
     title: "Takproblem – tecken, orsaker och vad du gör",
