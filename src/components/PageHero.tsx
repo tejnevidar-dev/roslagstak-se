@@ -2,16 +2,24 @@ interface PageHeroProps {
   eyebrow?: string;
   title: string;
   text?: string;
+  /** Mindre padding så att telefon/CTA/förtroenderad ryms i första mobilskärmen (sprint-offensiv punkt 4). */
+  compact?: boolean;
 }
 
 /* Kompakt sidtopp för undersidor — matchar den mörka hero-identiteten */
-const PageHero = ({ eyebrow, title, text }: PageHeroProps) => (
+const PageHero = ({ eyebrow, title, text, compact }: PageHeroProps) => (
   <section className="relative overflow-hidden border-b border-border bg-secondary text-foreground">
     <div
       aria-hidden="true"
       className="pointer-events-none absolute -right-24 -top-24 h-[26rem] w-[26rem] rounded-full bg-accent/15 blur-3xl"
     />
-    <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-32 md:pb-24 md:pt-40">
+    <div
+      className={
+        compact
+          ? "relative mx-auto max-w-7xl px-6 pb-4 pt-16 md:pb-8 md:pt-20"
+          : "relative mx-auto max-w-7xl px-6 pb-16 pt-32 md:pb-24 md:pt-40"
+      }
+    >
       {eyebrow && (
         <p className="mb-5 inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">
           {eyebrow}

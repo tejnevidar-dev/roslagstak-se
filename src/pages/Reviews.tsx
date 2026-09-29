@@ -47,15 +47,16 @@ const Reviews = () => {
       <Header />
       <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <div className="pt-24">
+        <div className="pt-20">
           <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Omdömen" }]} withSchema={false} />
         </div>
         <PageHero
+          compact
           eyebrow="Omdömen"
           title="Omdömen om RoslagsTak"
           text="Alla våra omdömen finns på Google, där de är kopplade till riktiga konton och inte kan ändras av oss. Vi har medvetet tagit bort egenskrivna kundcitat från sajten — det säger ingenting om hur vi faktiskt jobbar."
         />
-        <div className="container mx-auto px-4 pt-16 pb-20">
+        <div className="container mx-auto px-4 pt-2 pb-20">
           <div className="max-w-4xl">
             <QuickContactFacts />
             <div className="mt-10">

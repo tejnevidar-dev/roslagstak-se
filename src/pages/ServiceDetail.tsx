@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Phone, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Award, Clock, Phone, PlayCircle, Shield } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -465,7 +465,7 @@ const ServiceDetail = () => {
         {/* Hero — asymmetriskt dokumentärt rutnät */}
         <section className="bg-background pb-16 pt-12 lg:pb-20 lg:pt-16">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4 lg:gap-8">
               <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
                 <span aria-hidden="true" className="h-px w-10 bg-primary" />
                 Tjänstebeskrivning / Roslagen
@@ -488,6 +488,29 @@ const ServiceDetail = () => {
                     <span className="text-[15px] font-medium text-foreground">{s.v}</span>
                   </div>
                 ))}
+              </div>
+
+              <div>
+                <Link
+                  to="/takkontroll"
+                  className="text-[14px] font-semibold text-accent underline-offset-4 hover:underline"
+                >
+                  Boka kostnadsfri takkontroll
+                </Link>
+                <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-muted-foreground" aria-label="Fakta om RoslagsTak">
+                  <li className="inline-flex items-center gap-1.5">
+                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> 10 års utförandegaranti
+                  </li>
+                  <li className="inline-flex items-center gap-1.5">
+                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> 30 års tätskiktsgaranti via MATAKI
+                  </li>
+                  <li className="inline-flex items-center gap-1.5">
+                    <Award className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> Fast pris
+                  </li>
+                  <li className="inline-flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> Svar inom 24 h
+                  </li>
+                </ul>
               </div>
 
               <div className="mt-2 flex flex-col gap-4 sm:flex-row">

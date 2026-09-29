@@ -55,22 +55,37 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-10 pt-40 lg:pb-14 lg:pt-48">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-10 pt-24 lg:pb-14 lg:pt-48">
         <motion.div className="max-w-[38rem]" {...fade(0)}>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
             Takläggare i Roslagen &amp; Stockholm
           </p>
-          <h1 className="mt-5 max-w-[20ch] font-display text-[clamp(2rem,4.4vw,3.4rem)] font-semibold leading-[1.1] tracking-[-0.015em] text-primary-foreground">
+          <h1 className="mt-3 max-w-[20ch] font-display text-[clamp(2rem,4.4vw,3.4rem)] font-semibold leading-[1.1] tracking-[-0.015em] text-primary-foreground">
             Ett tak du kan lita på —{" "}
             <span className="italic text-accent">i decennier framöver.</span>
           </h1>
-          <p className="mt-6 max-w-[46ch] text-[17px] leading-[1.65] text-primary-foreground/80">
+          <p className="mt-3 max-w-[46ch] text-[17px] leading-[1.65] text-primary-foreground/80 lg:mt-6">
             Vi tar hand om hela processen — från första besiktningen till sista plåtdetaljen.
             Takbyte, takrenovering och akut takläckage för villor, BRF:er och företag i hela
             Roslagen och Storstockholm.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <p className="mt-3 text-[14px] text-primary-foreground/80 lg:mt-4">
+            <Link to="/takkontroll" className="font-semibold text-accent underline-offset-4 hover:underline">
+              Boka kostnadsfri takkontroll
+            </Link>
+            <span aria-hidden="true"> · </span>
+            <Link to="/rot-avdrag" className="underline-offset-4 hover:underline">
+              ROT-avdrag på tak
+            </Link>
+          </p>
+          <ul className="mt-3 flex max-w-[46ch] flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-primary-foreground/75 lg:mt-6" aria-label="Fakta om RoslagsTak">
+            {["10 års utförandegaranti", "30 års tätskiktsgaranti via MATAKI", "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"].map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
+
+          <div className="mt-4 flex flex-wrap gap-4 lg:mt-8">
             <a
               href="/offert"
               className="hero-offer-pulse group inline-flex items-center gap-3 bg-cta px-8 py-4 text-[17px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
@@ -89,20 +104,6 @@ const Hero = () => {
               Ring 070-154 36 39
             </a>
           </div>
-          <p className="mt-4 text-[14px] text-primary-foreground/80">
-            <Link to="/takkontroll" className="font-semibold text-accent underline-offset-4 hover:underline">
-              Boka kostnadsfri takkontroll
-            </Link>
-            <span aria-hidden="true"> · </span>
-            <Link to="/rot-avdrag" className="underline-offset-4 hover:underline">
-              ROT-avdrag på tak
-            </Link>
-          </p>
-          <ul className="mt-6 flex max-w-[46ch] flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-primary-foreground/75" aria-label="Fakta om RoslagsTak">
-            {["10 års utförandegaranti", "30 års tätskiktsgaranti via MATAKI", "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"].map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
         </motion.div>
       </div>
 

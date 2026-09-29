@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
  * (sprint-offensiv-2026-09-28.md punkt 4) så att det syns i första skärmen på mobil.
  */
 const QuickContactFacts = () => (
-  <div className="mt-6 border-t border-border pt-6">
+  <div className="mt-4 border-t border-border pt-4">
     <div className="flex flex-wrap gap-x-6 gap-y-2">
       <a
         href="tel:0701543639"
@@ -23,7 +23,7 @@ const QuickContactFacts = () => (
         Boka kostnadsfri takkontroll <ArrowRight className="w-3.5 h-3.5" />
       </Link>
     </div>
-    <div className="mt-4 flex flex-wrap gap-4">
+    <div className="mt-3 flex flex-wrap gap-4">
       <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
         <Shield className="w-4 h-4 text-primary" /> 10 års utförandegaranti
       </div>

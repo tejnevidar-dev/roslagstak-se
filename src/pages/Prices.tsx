@@ -97,16 +97,17 @@ const Prices = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <main>
-        <div className="pt-24">
+        <div className="pt-20">
           <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Priser" }]} />
         </div>
         <PageHero
+          compact
           eyebrow="Prislista 2026"
           title="Vad kostar takbyte och takrenovering i Roslagen?"
           text="Riktpriser för alla typer av takarbeten, inkl. moms och före ROT-avdrag. Alla priser inkluderar material och arbete. ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan. Kostnadsfri offert med exakt pris."
         />
 
-        <div className="container mx-auto px-4 pt-16 pb-20">
+        <div className="container mx-auto px-4 pt-2 pb-20">
           <div className="max-w-4xl mx-auto mb-12">
             <QuickContactFacts />
           </div>
