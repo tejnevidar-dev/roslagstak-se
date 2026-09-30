@@ -66,7 +66,6 @@ const routeActiveLabel = (pathname: string): string | null => {
   if (pathname === "/hur-det-gar-till") return "Så går det till";
   if (pathname === "/priser" || pathname === "/offert") return "Få offert";
   if (/^\/(kontakt|radgivning|konsultation|boka)/.test(pathname)) return "Kontakt";
-  if (pathname === "/om-oss") return "Om oss";
   return null;
 };
 

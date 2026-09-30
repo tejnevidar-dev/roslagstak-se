@@ -1,44 +1,45 @@
 import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import Reveal from "@/components/Reveal";
-import rooferImg from "@/assets/roofer-work.jpg";
+import aboutImg from "@/assets/project-blido-hero.jpg";
 
 const coreValues = [
   {
     icon: Heart,
     title: "Tillgänglighet",
     description:
-      "Du ska aldrig behöva jaga din takläggare. Vi svarar i telefon, återkommer inom 24 timmar och håller dig uppdaterad genom hela projektet — oavsett om det gäller en snabb fråga eller ett komplett takbyte.",
+      "Du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19.",
   },
   {
     icon: ShieldCheck,
-    title: "Ansvar",
+    title: "En kontaktperson",
     description:
-      "Vi står bakom varje takpanna, plåtskiva och skarv vi lägger. Med skriftligt avtal, 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI vet du exakt vad som gäller — även flera år efter att vi lämnat tomten.",
+      "Samma person tar hand om dig från första kontakten till färdigt tak. Du behöver inte förklara ditt tak för någon ny på vägen.",
   },
   {
     icon: Award,
-    title: "Hantverk",
+    title: "Tydliga villkor",
     description:
-      "Våra takläggare och plåtslagare är utbildade och arbetar enligt AMA och branschens säkerhetskrav. Rätt underlagspapp, rätt infästning och rätt plåtdetaljer — det är där ett tak avgörs.",
+      "Fast pris i offerten, där det framgår vad som ingår. 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
   },
   {
     icon: Zap,
-    title: "Ordning på arbetsplatsen",
+    title: "Hantverk enligt AMA",
     description:
-      "Ett takprojekt påverkar din vardag. Därför planerar vi noga, håller tidplanen, täcker in vad som behöver skyddas och lämnar tomten städad och fri från spik och avfall.",
+      "Vi arbetar enligt AMA, branschens gemensamma beskrivning av hur material och utförande ska vara. Det är i underlaget, infästningen och plåtdetaljerna som ett tak avgörs.",
   },
 ];
 
 
 const benefits = [
-  "Certifierade takläggare",
-  "Fast pris — inga dolda kostnader",
-  "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
-  "Roslagen och hela Storstockholm",
-  "Kostnadsfritt hembesök och offert",
-  "Samma kontaktperson genom hela projektet",
+  "En kontaktperson genom hela processen",
+  "Fast pris efter kostnadsfri takkontroll",
+  "10 års utförandegaranti",
+  "30 års tätskiktsgaranti via MATAKI",
+  "ROT-avdraget dras direkt på fakturan",
+  "Roslagen, Storstockholm och Mälardalen",
 ];
 
 
@@ -59,8 +60,8 @@ const About = () => {
             <div className="relative">
               <figure className="relative m-0 aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[0_50px_100px_-50px_rgba(12,35,64,0.75)]">
                 <motion.img
-                  src={rooferImg}
-                  alt="Professionell takläggare arbetar på tak vid Roslagens kust"
+                  src={aboutImg}
+                  alt="Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring."
                   width={800}
                   height={1000}
                   loading="lazy"
@@ -72,7 +73,7 @@ const About = () => {
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-accent">
                   Roslagen &amp; Storstockholm
                 </span>
-                <span className="mt-1 block font-display text-xl">Egna takläggare på plats</span>
+                <span className="mt-1 block font-display text-xl">Riktiga tak, riktiga bilder</span>
 
               </figcaption>
             </div>
@@ -87,27 +88,37 @@ const About = () => {
               id="about-heading"
               className="mt-6 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.14] text-foreground"
             >
-              Ett tak som håller —{" "}
-              <span className="italic text-accent">och en firma som svarar.</span>
+              Ett tak som håller,{" "}
+              <span className="italic text-accent">och en kontaktperson som svarar.</span>
             </h2>
             <div className="mt-8 space-y-6 text-[18px] font-light leading-relaxed text-marine">
               <p>
-                RoslagsTak är en takfirma med rötterna i Norrtälje och Roslagens skärgård. Idag
-                utför vi takbyte, takrenovering, takvård och plåtarbeten i hela Roslagen och i
-                hela Storstockholm — allt arbete enligt branschstandard AMA och av erfarna
-                takläggare.
+                RoslagsTak byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm
+                och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och
+                papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs
+                enligt AMA, och du får alltid ett fast pris.
               </p>
               <p>
-                Vi tar hand om hela projektet: takkontroll, materialval, bygglov när det behövs,
-                ställning, rivning, nytt tak och bortforsling av allt avfall. Du har samma
-                kontaktperson från första besöket till slutgenomgången, och du får veta vad som
-                händer varje dag arbetet pågår.
+                Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom
+                hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och
+                utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2
+                timmar, och behöver något göras får du en offert med fast pris där det framgår vad som
+                ingår. Du bestämmer själv om och när.
               </p>
               <p>
-                Vi är dessutom vana vid lägen där andra tvekar — öar utan broförbindelse, smala
-                infarter och tak nära vatten och saltluft. Oavsett om du har en villa i Stockholm,
-                ett radhus i Täby eller en sommarstuga på Blidö får du kostnadsfritt hembesök,
-                fast pris och en tydlig tidplan innan du bestämmer dig.
+                Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett
+                komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya
+                plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Grisslehamn blev ett takbyte
+                klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre
+                delarna och delvis ny råspont. Båda jobben finns med bilder under{" "}
+                <Link to="/projekt" className="text-accent underline underline-offset-4 hover:no-underline">
+                  Projekt
+                </Link>
+                , och våra omdömen från Google finns under{" "}
+                <Link to="/recensioner" className="text-accent underline underline-offset-4 hover:no-underline">
+                  Recensioner
+                </Link>
+                .
               </p>
             </div>
 
@@ -131,14 +142,13 @@ const About = () => {
           <div className="grid grid-cols-12 gap-y-10 lg:gap-16">
             <div className="col-span-12 lg:col-span-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-                Våra ledord
+                Så jobbar vi
               </p>
               <h3 className="mt-6 font-display text-[clamp(1.6rem,2.5vw,2.2rem)] font-bold leading-[1.16]">
-                Så jobbar vi — varje projekt, varje tak
+                Så jobbar vi
               </h3>
               <p className="mt-5 text-[17px] font-light leading-relaxed text-primary-foreground/75">
-                Fyra löften som styr hur vi bemöter dig, planerar projektet och utför själva
-                takläggningen.
+                Fyra saker som styr hur vi tar hand om dig och ditt tak.
               </p>
 
             </div>

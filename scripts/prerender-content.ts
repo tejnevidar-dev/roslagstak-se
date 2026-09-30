@@ -428,11 +428,17 @@ const home: PrerenderPage = {
       "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), tegelplåt, pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA-standard av certifierade takläggare.",
       "Som skärgårdsspecialister hanterar vi all materialtransport och logistik till öar utan broförbindelse — från Blidö, Yxlan och Ljusterö till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma.",
       "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
-      "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet samt städning och bortforsling. Du får en kontaktperson som följer projektet från takkontroll till slutgenomgång.",
+      "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet. Du får en kontaktperson som följer projektet från takkontroll till slutgenomgång.",
       "Du får garantihandlingar skriftligt: 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+      // Om oss-sektionen (components/About.tsx, #1z) — samma text som React
+      "Om RoslagsTak. Ett tak som håller, och en kontaktperson som svarar.",
+      "RoslagsTak byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.",
+      "Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar, och behöver något göras får du en offert med fast pris där det framgår vad som ingår. Du bestämmer själv om och när.",
+      "Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Grisslehamn blev ett takbyte klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre delarna och delvis ny råspont. Båda jobben finns med bilder under Projekt, och våra omdömen från Google finns under Recensioner.",
+      "Så jobbar vi. Tillgänglighet: du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19. En kontaktperson: samma person tar hand om dig från första kontakten till färdigt tak. Tydliga villkor: fast pris i offerten, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, ROT-avdraget dras direkt på fakturan. Hantverk enligt AMA.",
       `Begär kostnadsfri takkontroll och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
     ],
-  links: [...primaryLinks, ...serviceLinks, ...locationLinks],
+  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/recensioner", label: "Recensioner" }, ...serviceLinks, ...locationLinks],
 };
 
 const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
