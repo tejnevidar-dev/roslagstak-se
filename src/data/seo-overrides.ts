@@ -164,6 +164,21 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Hässelby villastad, Backlura och Johannelund, med villor från 1900-talet och radhus från 1970-talet. Kostnadsfri takkontroll.",
   },
+  langbro: {
+    title: "Takbyte i Långbro, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Långbro i Söderort, med villor från sekelskiftet och småstugor från 1940-talet. Kostnadsfri takkontroll och fast pris.",
+  },
+  orby: {
+    title: "Takbyte i Örby villastad, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Örby villastad i Söderort, med villor från 1890-talet till 1970-talet. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  "solhem-lunda": {
+    title: "Takbyte i Solhem, Spånga – fast pris",
+    description:
+      "Takbyte och takomläggning i Solhems villastad och Lunda i Spånga, med trävillor från 1904 och hus från 1920-talet till 2000-talet. Kostnadsfri takkontroll.",
+  },
   "ella-gard": {
     title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
     description:

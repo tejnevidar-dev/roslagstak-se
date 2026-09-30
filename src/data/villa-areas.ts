@@ -10,6 +10,8 @@ export interface VillaArea {
   name: string;
   types: string;
   period: string;
+  /** Godkänd kommunrad från Innehåll (områden utan egen sida). Visas i stället för hustyper + byggperiod. */
+  note?: string;
   /** Egen sida på sajten, t.ex. "/taklaggare-ella-gard". Bara sidor som finns. */
   href?: string;
 }
@@ -24,6 +26,19 @@ export const VILLA_AREAS_SOURCE =
 
 /** Nyckel = ortsslug för kommunsidan (/taklaggare-<slug>) eller regionslug (/omraden/<slug>). */
 export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
+  ekero: {
+    municipality: "Ekerö",
+    areas: [
+      { name: "Träkvista", types: "Villor, kedjehus och radhus", period: "Främst 1960- och 1980-tal (hitta.se)", note: "Träkvista på Ekerön har mest villor, kedjehus och radhus och var Ekerö kommuns mittpunkt fram till 1990, då Ekerö centrum invigdes. Enligt hitta.se är husen i Träkvista främst byggda på 1960- och 1980-talen." },
+    ],
+  },
+  tyreso: {
+    municipality: "Tyresö",
+    areas: [
+      { name: "Brevikshalvön (Raksta, Bergholm, Solberga, Dyvik, Ällmora)", types: "Villor", period: "Villaområde sedan 1930-talet", note: "På Brevikshalvön, som före 1930 ingick i Tyresögodset, bebyggdes skogs- och jordbruksmarken under 1900-talet med sommarnöjen och fritidshus, och sedan 1930-talet har halvön utvecklats till ett villaområde. Raksta omtalas första gången 1562, som ett torp under Tyresö slott." },
+      { name: "Hanviken och Skälsätra (Trollbäcken)", types: "Småhus", period: "Avstyckat från Kumla gård", note: "Hanviken och Skälsätra styckades av från Kumla gård, stamfastigheten för stora delar av västra Tyresö, vars huvudbyggnad från 1700-talet och allé fortfarande finns kvar. Trollbäcken hette Kumla fram till 1947, och bebyggelsen består mest av småhus." },
+    ],
+  },
   nacka: {
     municipality: "Nacka",
     areas: [
@@ -38,6 +53,10 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Kälvesta", types: "Radhus, kedjehus, atriumhus och villor", period: "1966 till mitten av 1970-talet (Wikipedia)", href: "/taklaggare-kalvesta" },
       { name: "Norra Ängby", types: "Småstugor/villor i trä (1–2 plan), radhus", period: "1930–1941 (huvuddelen 1931–38), enplansvillor 1948–49", href: "/taklaggare-angby" },
       { name: "Hässelby villastad", types: "Villor, radhus, kedjehus", period: "Villor från 1900, radhus/kedjehus 1970-tal (Backlura)", href: "/taklaggare-hasselby" },
+      { name: "Långbro", types: "Villor och småstugor", period: "Villor ca 1899–1903, småstugor 1943–49", href: "/taklaggare-langbro" },
+      { name: "Örby", types: "Villor", period: "Sent 1800-tal–1970-tal", href: "/taklaggare-orby" },
+      { name: "Solhem och Lunda", types: "Villor, kedjehus, radhus, parhus", period: "1904–07, 1920–30-tal, 1960-tal, 2000-tal", href: "/taklaggare-solhem-lunda" },
+      { name: "Nälsta", types: "Villor, radhus och flerfamiljshus", period: "Stadsdel från 1953", note: "Nälsta by är känd sedan 1300-talet, och namnet, skrivet Nærdharstaff 1354, kommer enligt Wikipedia från gudomsnamnet Njärd. Området köptes av Stockholms stad 1931, och stadsdelen bildades 1953, med blandad bebyggelse av villor, radhus och flerfamiljshus." },
     ],
   },
   "upplands-vasby": {
@@ -61,7 +80,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Näsbypark", types: "Villor, kedjehus, radhus och parhus", period: "Villor 1930–40-tal, grupphus 1955–1976 (kommunen)", href: "/taklaggare-nasbypark" },
       { name: "Ensta", types: "Villor", period: "1940–1960-tal, förtätning på 1970-talet (kommunen)", href: "/taklaggare-ensta" },
       { name: "Erikslund", types: "Parhus, kedjehus och grupphus", period: "1972–1973 (kommunen)", href: "/taklaggare-erikslund" },
-      { name: "Ella Park", types: "Villor och kedjehus", period: "Främst 1950–60-tal (kommunen)" },
+      { name: "Ella Park", types: "Villor och kedjehus", period: "Främst 1950–60-tal (kommunen)", note: "Enligt Täby kommun styckades skogsmarken som hörde till gården Ellas utmarker av för villor i slutet av 1920-talet, först längs dagens Täbyvägen, och området präglas i dag av villor från 1930-talet och framåt, med ett tydligt inslag av 1950- och 60-talens tegel- och putsarkitektur." },
       { name: "Vallabrink", types: "Villor och kedjehus", period: "Främst 1960–70-tal (kommunen)", href: "/taklaggare-vallabrink" },
       { name: "Gribby-Myräng", types: "Villor och radhus", period: "Löttingelund 1970–80-tal (kommunen)", href: "/taklaggare-gribbylund" },
       { name: "Karlslund", types: "Parhus och kedjehus i ett och ett halvt plan", period: "1975–1976", href: "/taklaggare-karlslund" },
@@ -77,7 +96,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Viby", types: "Villor, kedjehus och radhus", period: "1970-tal (Wikipedia)", href: "/taklaggare-viby" },
       { name: "Norrviken", types: "Villor och radhus", period: "Villastad 1906–1940-tal, radhus 1960–80-tal (Wikipedia)", href: "/taklaggare-norrviken" },
       { name: "Edsviken", types: "Villor, inslag av radhus", period: "Främst 1920–30-tal (Wikipedia)", href: "/taklaggare-edsviken" },
-      { name: "Töjnan", types: "Villor", period: "Mest 1920- och 1970-tal (hitta.se)" },
+      { name: "Töjnan", types: "Villor", period: "Mest 1920- och 1970-tal (hitta.se)", note: "Töjnan är ett namnsatt område i västra delen av kommundelen Tureberg, som gränsar till bland annat Fågelsången, Bagarby, Knista och Häggvik. Enligt hitta.se är husen främst byggda på 1920- och 1970-talen." },
       { name: "Tegelhagen", types: "Kedjehus och radhus", period: "Slutet av 1970-talet (hitta.se)", href: "/taklaggare-tegelhagen-silverdal" },
       { name: "Vaxmora", types: "Villor och radhus", period: "Mest 1960- och 1970-tal (hitta.se)" },
       { name: "Eriksberg", types: "Villor", period: "Villastad från 1920–30-talet (Wikipedia)" },
@@ -122,10 +141,10 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
     areas: [
       { name: "Brevik, Lervik och Flaxenvik", types: "Villor, kedjehus och radhus", period: "Villor mest 1950–1970-tal, Tråsättra 1970- och 1980-tal (hitta.se)", href: "/taklaggare-brevik" },
       { name: "Österskär", types: "Villor och kedjehus", period: "Mest 1970- och 1990-tal (hitta.se), äldre trävillor från sekelskiftet (Wikipedia)", href: "/taklaggare-osterskar" },
-      { name: "Stava, Smedby och Sjökarby", types: "Villor och radhus", period: "Mest 1950–1970-tal (hitta.se)" },
+      { name: "Stava, Smedby och Sjökarby", types: "Villor och radhus", period: "Mest 1950–1970-tal (hitta.se)", note: "Stava gård nämns i skrift redan på 1200-talet och ägdes under 1500-talet av Clas Eriksson Fleming, som senare blev amiral. Enligt hitta.se är villorna i Stora Stava främst byggda på 1950- och 1960-talen, och radhusen och villorna vid Smedby skolväg på 1960- och 1970-talen." },
       { name: "Skånsta", types: "Radhus, kedjehus och villor", period: "Mest 1960- och 1980-tal (hitta.se)" },
       { name: "Margretelund", types: "Kedjehus och villor", period: "Mest 1970- och 1990-tal (hitta.se)" },
-      { name: "Svinninge", types: "Villor", period: "Mest 1950- och 1960-tal (hitta.se), utbyggnad 1990–1995 (Wikipedia)" },
+      { name: "Svinninge", types: "Villor", period: "Mest 1950- och 1960-tal (hitta.se), utbyggnad 1990–1995 (Wikipedia)", note: "Svinninge ligger mellan Åkersberga och Vaxholm och växte kraftigt västerut mellan 1990 och 1995, då småorterna Svinninge och Hästängsudd blev en del av tätorten. Enligt hitta.se är villorna i Svinninge främst byggda på 1950- och 1960-talen." },
       { name: "Täljö och Runö", types: "Villor, radhus och kedjehus", period: "Täljö mest 1950- och 1960-tal (hitta.se)" },
     ],
   },
@@ -135,6 +154,8 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
 export const villaAreasParagraph = (key: string): string | null => {
   const data = villaAreasByPage[key];
   if (!data) return null;
-  const rows = data.areas.map((a) => `${a.name}: ${a.types.toLowerCase()}, ${a.period.charAt(0).toLowerCase()}${a.period.slice(1)}.`);
+  const rows = data.areas.map((a) =>
+    a.note ? `${a.name}: ${a.note}` : `${a.name}: ${a.types.toLowerCase()}, ${a.period.charAt(0).toLowerCase()}${a.period.slice(1)}.`,
+  );
   return `Villaområden i ${data.municipality}. ${rows.join(" ")} ${VILLA_AREAS_SOURCE}`;
 };

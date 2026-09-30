@@ -123,6 +123,9 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-viksjo", area: "Viksjö västra, Järfälla (befintlig sida förstärkt)", wave: 3 },
   { path: "/taklaggare-angby", area: "Norra Ängby, Stockholm (befintlig sida förstärkt)", wave: 3 },
   { path: "/taklaggare-hasselby", area: "Hässelby villastad, Stockholm (befintlig sida förstärkt)", wave: 3 },
+  { path: "/taklaggare-langbro", area: "Långbro, Stockholm", wave: 3 },
+  { path: "/taklaggare-orby", area: "Örby, Stockholm", wave: 3 },
+  { path: "/taklaggare-solhem-lunda", area: "Solhem-Lunda, Stockholm", wave: 3 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };

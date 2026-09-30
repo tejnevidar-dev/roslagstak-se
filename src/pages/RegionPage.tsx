@@ -112,7 +112,7 @@ const RegionPage = () => {
                             )}
                           </dt>
                           <dd className="text-sm text-muted-foreground">
-                            {area.types}. {area.period}.
+                            {area.note ?? `${area.types}. ${area.period}.`}
                           </dd>
                         </div>
                       ))}

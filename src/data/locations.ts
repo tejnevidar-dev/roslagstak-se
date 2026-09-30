@@ -963,6 +963,69 @@ export const locations: LocationData[] = [
     nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
   },
   {
+    slug: "langbro",
+    name: "Långbro",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Långbro i Söderort, med villor från sekelskiftet och småstugor från 1940-talet. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Långbro har fått sitt namn efter den medeltida kavelbro som gjorde det möjligt att ta sig över det sanka området längs Göta landsväg. Stadsdelen ligger i Söderort och gränsar till Solberga, Älvsjö, Långsjö, Herrängen och Fruängen. Terrängen är kuperad, och Långbro gård med Långbrogårdsparken ligger 46 meter över havet. Längs en åsrygg vid Johan Skyttes väg har det legat gravar från senare delen av vikingatiden, och den första skriftliga källan är från 1477, när en Per i Longabro nämns i Stockholms rådhusrätt. Området hörde till Brännkyrka socken och blev en del av Stockholms stad 1913. Villabebyggelsen började vid förra sekelskiftet. År 1899 började Alfred Söderlund, kallad Långbrokungen, stycka av tomter från Långbro gård, och det området fick namnet Långbrodal. År 1903 började Långbro villasamhälle, även kallat Linboda, byggas närmare gården. Långbro sjukhus togs i bruk 1910. Stadsdelen bildades 1934 och fick sina nuvarande gränser 1940. Under 1940-talet tredubblades befolkningen genom en stor utbyggnad av småhus. Stockholms stads småstugebyrå hade ett centrallager i Långbro, och husen byggdes med delvis färdiga byggelement. Enligt Wikipedia var de vanligaste hustyperna här \"Typ XIV\", ett hus i en våning på cirka 70 kvadratmeter, och \"Typ X\", ett hus i två våningar på cirka 85 kvadratmeter. Gator, belysning, vatten och avlopp saknades till en början, och även den äldre villabebyggelsen fick vatten och avlopp först i slutet av 1930-talet. I dag domineras stadsdelen av villabebyggelse med omkring 1 350 villor och småhus, kompletterad med bostadsrätter, bland annat på området kring det tidigare sjukhuset.",
+    extraContent:
+      "Långbro har två tydliga generationer av småhus. Sekelskiftesvillorna är över hundra år gamla, och småstugorna från 1943–49 är i dag runt 75–80 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlag, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. Eftersom många småstugor byggdes efter samma typritningar kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    factBox: [{"label":"Kommun","value":"Stockholm (Hägersten-Älvsjö)"},{"label":"Hustyper","value":"Villor och småstugor"},{"label":"Byggperiod","value":"Villor ca 1899–1903, småstugor 1943–49"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 380 (Områdesfakta 2025)"}],
+    sourceLink: {"label":"Wikipedia: Långbro","url":"https://sv.wikipedia.org/wiki/L%C3%A5ngbro"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Långbro, Stockholm",
+    uniqueFAQ: {"question":"När byggdes husen i Långbro?","answer":"Byggperiod enligt källorna: villor ca 1899–1903, småstugor 1943–49. Hustyper: villor och småstugor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad."},
+    primaryKeyword: "takläggare Långbro",
+    lat: 59.276,
+    lng: 18.029,
+    nearbyLocations: ["Älvsjö","Hägersten","Örby"],
+  },
+  {
+    slug: "orby",
+    name: "Örby",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Örby villastad i Söderort, med villor från 1890-talet till 1970-talet. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Örby ligger i Söderort, ungefär fem kilometer söder om Gamla stan, och gränsar till Bandhagen, Stureby, Älvsjö, Örby slott, Högdalen och Hagsätra. Villastaden började byggas i slutet av 1800-talet, när drygt 600 hektar mark från Örby slott såldes till markexploatörerna Fritz P. Dalheimer och J.E. Lignell. Enligt Wikipedia var de första nybyggarna 1898 bland annat ångfartygsmaskinister, telegrafister, smeder och målare. Ursprungligen styckades 1 187 tomter av, mellan 1 500 och 4 000 kvadratmeter stora. Örby blev municipalsamhälle 1904 och en del av Stockholms stad 1913. Till skillnad från flera andra äldre villastäder i Stockholm fanns det ingen stadsplan för Örby när tomterna såldes, och tomterna såldes med äganderätt. Köparna kunde bygga efter eget tycke på stora tomter, och det gav enligt beskrivningen av stadsdelen en stor variation av hustyper och storlekar, bland annat flera större villor med snickarglädje, av vilka många står kvar. Utan stadsplan dröjde också gator, el och vatten. De första gångbanorna av plank och 42 gatlampor ordnade invånarna själva genom insamling på 1910-talet, och först på 1940-talet var vägar, vatten och avlopp fullt utbyggda. De luftledningar som fortfarande finns kvar påminner om den tiden. De stora tomterna har sedan styckats av i omgångar. I dag är de flesta villatomterna på 600–1 000 kvadratmeter, och stadsdelen består huvudsakligen av villor från olika epoker, från slutet av 1800-talet fram till 1970-talet, med enstaka nyare inslag. Det gör att olika stilideal ofta möts i samma kvarter.",
+    extraContent:
+      "I Örby spänner husen över nästan ett sekel, och det finns ingen typisk takålder. De äldsta villorna är över hundra år gamla, medan husen från 1960- och 70-talen är runt 50–65 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. På de äldsta villorna kan takets form, takfot och detaljer vara en viktig del av husets karaktär, och det är värt att tänka på redan när materialet väljs. Varje hus får en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    factBox: [{"label":"Kommun","value":"Stockholm (Enskede-Årsta-Vantör)"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"Sent 1800-tal–1970-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 270 (Områdesfakta 2025)"}],
+    sourceLink: {"label":"Wikipedia: Örby, Stockholms kommun","url":"https://sv.wikipedia.org/wiki/%C3%96rby,_Stockholms_kommun"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Örby, Stockholm",
+    uniqueFAQ: {"question":"När byggdes husen i Örby?","answer":"Byggperiod enligt källorna: sent 1800-tal–1970-tal. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad."},
+    primaryKeyword: "takläggare Örby",
+    lat: 59.265,
+    lng: 18.045,
+    nearbyLocations: ["Älvsjö","Högdalen","Långbro"],
+  },
+  {
+    slug: "solhem-lunda",
+    name: "Solhem och Lunda",
+    region: "Västerort",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Solhems villastad och Lunda i Spånga, med trävillor från 1904 och hus från 1920-talet till 2000-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Solhem ligger i Västerort och hör till Järva stadsdelsområde, med Bromsten, Tensta, Lunda, Kälvesta och Sundbyberg som grannar. Marken hörde tidigare till gårdarna Värsta och Kälvesta, och bostadsbyggandet tog fart efter att järnvägen mellan Stockholm och Västerås invigdes 1876. År 1904 började AB Solhems Villastad sälja tomter. Bland grundarna fanns Lars Magnus Ericsson, grundaren av Ericsson, och John Bernström, chef för AB Separator. Namnet Solhem fastställdes samma år, sedan namnet Värsta hade förkastats. Bolaget ville ge området en enhetlig stil och tillhandahöll typritningar, och det fanns många regler att följa. Husen fick till exempel bara ha ett kök, så att ägarna inte skulle hyra ut delar av dem. Enligt Wikipedia har de flesta av de första husen träfasader och plankstomme, spröjsade fönster och ofta både öppen förstukvist och veranda, och de flesta målades faluröda med vita knutar. Bland de första invånarna fanns målare, stenarbetare, snickare, postbetjänter och skomakare. År 1907 fanns 160 hus och flera butiker. Eftersom Spånga station låg i Solhem blev området något av en centralort i Spånga socken, och stationen fick 1908 ett stationshus ritat av arkitekten Erik Lallerstedt, som revs 1975. Solhem blev municipalsamhälle 1908 och en del av Stockholms stad 1949. Under 1920- och 30-talen ökade antalet hus i något lugnare takt, och 1930 var 425 tomter bebyggda. På 1930-talet växte Spånga torg fram, med låga hyreshus och butiker i bottenvåningen. Enligt alla.csv finns i Solhem-Lunda hus från 1904–07, 1920- och 30-talen, 1960-talet och 2000-talet, med villor, kedjehus, radhus och parhus.",
+    extraContent:
+      "Husen i Solhem och Lunda spänner över mer än hundra år. De äldsta trävillorna från Solhems villastad är över hundra år gamla, husen från 1920- och 30-talen runt 90–100 år och husen från 1960-talet runt 60 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. På de gamla trävillorna är taket en del av husens karaktär, och det är värt att tänka på när materialet väljs. Varje hus får en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    factBox: [{"label":"Kommun","value":"Stockholm (Järva)"},{"label":"Delområden","value":"Solhem, Lunda"},{"label":"Hustyper","value":"Villor, kedjehus, radhus, parhus"},{"label":"Byggperiod","value":"1904–07, 1920–30-tal, 1960-tal, 2000-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 2 000"}],
+    sourceLink: {"label":"Wikipedia: Solhem","url":"https://sv.wikipedia.org/wiki/Solhem"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Solhem och Lunda, Spånga",
+    uniqueFAQ: {"question":"När byggdes husen i Solhem och Lunda?","answer":"Byggperiod enligt källorna: 1904–07, 1920–30-tal, 1960-tal, 2000-tal. Hustyper: villor, kedjehus, radhus, parhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad."},
+    primaryKeyword: "takläggare Solhem och Lunda",
+    lat: 59.383,
+    lng: 17.898,
+    nearbyLocations: ["Spånga","Kälvesta","Tensta"],
+  },
+  {
     slug: "storangen",
     name: "Storängen och Saltsjö-Duvnäs",
     region: "Östra Stockholm",

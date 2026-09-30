@@ -903,6 +903,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/taklaggare-langbro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-orby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-solhem-lunda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/taklaggare-storangen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
