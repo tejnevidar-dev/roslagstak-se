@@ -434,7 +434,7 @@ export const blogPosts: BlogPost[] = [
       "Vi arbetar även på Vaxholms öar — Rindö, Skarpö, Resarö och Tynningö bland andra. Öarna nås med bro eller bilfärja, vilket gör logistiken enkel och priserna desamma som på fastlandet.",
       "Kontakta oss för en kostnadsfri takinspektion i Vaxholm. Vi bedömer ditt taks skick och rekommenderar den bästa lösningen — renovering eller byte. Ring 070-154 36 39.",      "Skärgårdsklimatet i Vaxholm ställer krav: saltluft och slagregn gör att vi alltid rekommenderar kvalitetsbehandlad plåt eller aluminium, samt varmförzinkad taksäkerhet. Det är små merkostnader som fördubblar hållbarheten i kustläge.",
       "Efter avslutat arbete får du de skriftliga garantivillkoren och en genomgång av skötselråd för ditt nya tak. Vi finns kvar i området och återkommer gärna för framtida inspektioner och underhåll.",
-      "Tänk också på att Vaxholm är en av de orter där vi ofta samordnar flera projekt. Bor dina grannar också i ett hus med äldre tak? Be dem höra av sig samtidigt — samordnade projekt i samma område ger bättre priser för alla parter och kortare total störningstid i grannskapet.",
+      "Bor dina grannar också i ett hus med äldre tak? Be dem höra av sig samtidigt — samordnade projekt i samma område ger bättre priser för alla parter och kortare total störningstid i grannskapet.",
 
     ],
   },

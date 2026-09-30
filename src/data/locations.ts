@@ -323,9 +323,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Spillersboda — takbyte, takrenovering och plåtarbeten längs Roslagens kust. Lokal takläggare med snabb service.",
     longDescription:
-      "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem vi åtgärdar hos fastighetsägare i Spillersboda. Vi erbjuder en kostnadsfri takkontroll utan förpliktelser. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte. Ärlighet och kvalitet är våra ledord.",
+      "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem på tak längs kusten. Vi erbjuder en kostnadsfri takkontroll utan förpliktelser. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte. Ärlighet och kvalitet är våra ledord.",
     extraContent:
-      "Spillersboda är en av de platser längs Roslagskusten där vi ofta arbetar. Fastighetsägare i Spillersboda uppskattar vår ärlighet — vi rekommenderar aldrig ett takbyte om en renovering räcker. Den lokala närvaron ger korta restider och snabb återkoppling.",
+      "Längs Roslagskusten sliter havsluften på både pannor och plåt. Vi rekommenderar aldrig ett takbyte om en renovering räcker, och du får svar inom 24 timmar.",
     uniqueFAQ: {
       question:
         "Hur påverkar havsluften i Spillersboda takets livslängd?",
