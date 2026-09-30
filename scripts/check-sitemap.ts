@@ -97,6 +97,8 @@ const staticRoutes = [
   "/takproblem/stormskador-pa-taket",
   "/takproblem/lackage-vid-takfonster-och-genomforingar",
   "/takproblem/svackor-i-taket",
+  "/takproblem/lackande-ranndal",
+  "/takproblem/ruttna-vindskivor-och-takfot",
   "/material",
   "/material/betongpannor",
   "/material/tp20-plattak",

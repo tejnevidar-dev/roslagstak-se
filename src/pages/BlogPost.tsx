@@ -7,6 +7,24 @@ import Footer from "@/components/Footer";
 import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";
 import QuickContactFacts from "@/components/QuickContactFacts";
 import NotFound from "./NotFound";
+import { INLINE_MD, isHeading, stripInlineMd } from "@/lib/inline-md";
+
+/** Renderar [text](/l\u00E4nk) som intern l\u00E4nk och **text** som fet, resten som vanlig text. */
+const renderInline = (text: string) =>
+  text.split(INLINE_MD).map((part, i) => {
+    const link = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
+    if (link)
+      return link[2].startsWith("/") ? (
+        <Link key={i} to={link[2]} className="text-primary underline underline-offset-4 hover:no-underline">
+          {link[1]}
+        </Link>
+      ) : (
+        link[1]
+      );
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) return <strong key={i} className="font-semibold text-foreground">{bold[1]}</strong>;
+    return part;
+  });
 
 /** Tjänstesida som passar artikelns ämne bäst (första träff vinner), för internlänkning från blogg till tjänst. */
 const serviceForSlug = (slug: string): { to: string; label: string } | null => {
@@ -49,7 +67,7 @@ const BlogPost = () => {
   if (!post) return <NotFound />;
 
   const url = `https://roslagstak.se/blogg/${post.slug}`;
-  const articleBody = post.content.join("\n\n");
+  const articleBody = post.content.map(stripInlineMd).join("\n\n");
   const wordCount = articleBody.split(/\s+/).filter(Boolean).length;
 
   const jsonLd = {
@@ -181,16 +199,20 @@ const BlogPost = () => {
                       </div>
                     </aside>
                   )}
-                  <p className="text-muted-foreground leading-relaxed">
-                    {lead ? (
-                      <>
-                        <strong className="font-semibold text-foreground">{lead[1]}.</strong>{" "}
-                        {paragraph.slice(lead[0].length)}
-                      </>
-                    ) : (
-                      paragraph
-                    )}
-                  </p>
+                  {isHeading(paragraph) ? (
+                    <h2 className="font-display text-xl text-foreground pt-2">{paragraph.slice(3)}</h2>
+                  ) : (
+                    <p className="text-muted-foreground leading-relaxed">
+                      {lead ? (
+                        <>
+                          <strong className="font-semibold text-foreground">{lead[1]}.</strong>{" "}
+                          {renderInline(paragraph.slice(lead[0].length))}
+                        </>
+                      ) : (
+                        renderInline(paragraph)
+                      )}
+                    </p>
+                  )}
                   </Fragment>
                 );
               })}

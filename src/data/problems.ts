@@ -367,6 +367,62 @@ export const problems: Problem[] = [
     ],
     relatedProject: "takbyte-singo",
   },
+  {
+    slug: "lackande-ranndal",
+    title: "Läckande ränndal",
+    metaTitle: "Läckande ränndal – tecken, orsaker och vad du gör",
+    metaDescription:
+      "Fukt där två takfall möts? Så känner du igen ett läckage i ränndalen, vad det kan bero på och när ränndalen behöver göras om. Kostnadsfri takkontroll.",
+    intro:
+      "En ränndal är den inåtvända vinkeln där två takfall möts, till exempel där en tillbyggnad eller en kupa ansluter mot huvudtaket. Allt vatten från båda takfallen samlas där och rinner ner längs ränndalen, och därför är den en av takets mest belastade delar. Här går vi igenom hur ett läckage i ränndalen visar sig, vad det kan bero på och vad du kan göra innan taket kontrolleras.",
+    symptom:
+      "Fuktfläckar i innertaket eller på väggen under den del av taket där två takfall möts. På vinden syns mörka ränder, droppmärken eller fukt på råsponten längs ränndalens linje. Utifrån kan du se löv, barr och mossa som har samlats i ränndalen, pannor som ligger snett eller har glidit ner i den, eller plåt som ser rostig, bucklig eller lös ut. Läckaget märks ofta mest vid kraftigt regn eller när snö och is smälter, eftersom vattenmängden i ränndalen då är som störst.",
+    orsaker:
+      "Ränndalsplåten har rostat, spruckit eller fått hål, eller skarvarna i den har släppt. Löv, barr och skräp har bildat en damm som tvingar vattnet åt sidan och in under pannorna. Pannorna närmast ränndalen är fel kapade eller ligger för långt ut eller för långt in, så att vattnet inte leds ner i plåten. Is som bildas i ränndalen kan lyfta vatten över plåtens kant. Under plåten kan underlaget ha åldrats, så att vatten som tar sig förbi inte längre stoppas.",
+    akut:
+      "När vatten droppar in, när fukten når isolering eller elinstallationer, eller när fläckarna växer för varje regn. Samla då upp vattnet, flytta undan det som kan ta skada, fota och kontakta en takläggare. Ett läckage i ränndalen fortsätter ofta att växa, eftersom så mycket vatten passerar just där, så även en liten fläck ska kontrolleras.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: ränndalsplåtens skick och skarvar, hur pannorna närmast ränndalen ligger och om skräp eller is hindrar vattnet. Där vinden går att komma åt följs fuktspåren längs ränndalen därifrån, eftersom vattnet kan rinna en bit innan det syns. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+    atgarder:
+      "Rensning av ränndalen när det bara är skräp som dämmer. Justering eller omläggning av pannorna närmast ränndalen. Ny ränndalsplåt när den gamla har rostat eller spruckit, och då ofta även nytt underlag i ränndalen, eftersom pannorna ändå måste lyftas. Är taket i övrigt uttjänt, med slitet underlag och flera svaga punkter, kan ett takbyte vara bättre än att göra om ränndalen för sig. Vid ett takbyte görs alla ränndalar om.",
+    gorInteSjalv:
+      "Gå inte upp på taket för att rensa eller laga ränndalen. Den ligger ofta högt och i en vinkel där det är lätt att halka, och pannorna runt den kan sitta löst. Du kan titta från marken, med kikare eller mobilkamerans zoom, fota fuktspåren på vinden och notera när det läcker: vid regn, snösmältning eller blåst.",
+    related: [
+      { to: "/takproblem/igensatta-hangrannor", label: "Igensatta hängrännor" },
+      { to: "/takproblem/lackage-vid-takfonster-och-genomforingar", label: "Läckage vid takfönster och genomföringar" },
+      { to: "/takproblem/dalig-underlagspapp", label: "Dålig underlagspapp" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/platarbeten", label: "Plåtarbeten" },
+    ],
+  },
+  {
+    slug: "ruttna-vindskivor-och-takfot",
+    title: "Ruttna vindskivor eller takfotsbrädor",
+    metaTitle: "Ruttna vindskivor och takfot – tecken och åtgärder",
+    metaDescription:
+      "Flagnande färg, mjukt trä eller mörka fläckar på vindskivor och takfot? Så hittar du orsaken, vad du gör själv och när det hänger ihop med taket.",
+    intro:
+      "Vindskivorna sitter längs takets gavlar och takfotsbrädorna längs takets nedre kant. De skyddar takets kanter mot väder och vind och ger huset dess avslutning. Eftersom de sitter ytterst får de ta emot mycket regn, sol och fukt. När träet börjar ruttna är det ofta ett tecken på att vatten har kommit dit det inte ska, och ibland ligger orsaken uppe på taket.",
+    symptom:
+      "Färg som flagnar eller släpper i flagor, trä som har mörknat, spruckit eller känns mjukt där du säkert når det från marken eller från ett fönster. Brädor som har släppt, bågnar eller har glipor i skarvarna. Mossa, alger eller svarta fläckar på träet. Under takfoten kan du ibland se droppmärken eller fuktränder på fasaden. På vinden kan det finnas fukt eller mörk råspont närmast takfoten eller gaveln.",
+    orsaker:
+      "Vatten som rinner över kanten när hängrännorna är igensatta eller lutar fel. Fotplåt eller vindskiveplåt som saknas, har släppt eller är för kort, så att vatten kommer åt träets ändar. Ett läckage längre upp på taket där vattnet följer underlaget ner till takfoten. Is som bildas vid takfoten och tvingar smältvatten in under pannorna. Färg som har åldrats så att träet inte längre skyddas, eller kontakt med växtlighet som håller kvar fukten.",
+    akut:
+      "När brädor har släppt och kan falla ner, när vatten kommer in på vinden eller i väggen, eller när rötan har gått så långt att takets kant inte längre sitter stadigt. Spärra då av under den skadade delen och kontakta en takläggare. En vindskiva som bara har flagnande färg är sällan akut, men den ska målas eller ses över innan träet hinner ta skada.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: vindskivor och takfotsbrädor, fotplåt och vindskiveplåt, hängrännornas skick och lutning och om pannorna närmast kanten ligger som de ska. Där vinden går att komma åt syns därifrån om råspont eller takfot har blivit fuktig. Syftet är att hitta var vattnet kommer ifrån, så att inte bara brädan byts medan orsaken finns kvar.",
+    atgarder:
+      "Byte av ruttna vindskivor och takfotsbrädor, gärna med ny vindskiveplåt eller fotplåt som skyddar träets kanter. Rensning, justering eller byte av hängrännor om de är orsaken. Om vatten kommer från taket ska det läckaget åtgärdas samtidigt, och skadad råspont närmast kanten kan behöva bytas. Vid ett takbyte ses vindskivor, takfot och plåtdetaljer över som en del av arbetet.",
+    gorInteSjalv:
+      "Arbete på hög stege eller uppe på taket vid takfoten. Kanten är den plats där fallrisken är störst, och ruttet trä kan släppa när du belastar det. Du kan fota skadorna från marken, hålla hängrännorna fria där du säkert når dem från marken och notera var på huset rötan sitter. Det hjälper till att hitta orsaken.",
+    related: [
+      { to: "/takproblem/igensatta-hangrannor", label: "Igensatta hängrännor" },
+      { to: "/takproblem/istappar-pa-taket", label: "Istappar och isbildning vid takfoten" },
+      { to: "/takproblem/rutten-raspont", label: "Rutten eller skadad råspont" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/platarbeten", label: "Plåtarbeten" },
+    ],
+  },
 ];
 
 export const getProblem = (slug: string) => problems.find((p) => p.slug === slug);
