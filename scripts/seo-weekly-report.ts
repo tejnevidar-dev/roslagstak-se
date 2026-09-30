@@ -107,6 +107,10 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-karlslund", area: "Karlslund (Täby kyrkby), Täby", wave: 3 },
   { path: "/taklaggare-midgard-byle", area: "Midgård och Byle (Täby kyrkby), Täby", wave: 3 },
   { path: "/taklaggare-roslags-nasby", area: "Roslags-Näsby, Täby", wave: 3 },
+  { path: "/taklaggare-viggbyholm", area: "Viggbyholm, Täby", wave: 3 },
+  { path: "/taklaggare-vallatorp-visinge", area: "Vallatorp och Visinge, Täby", wave: 3 },
+  { path: "/taklaggare-osterskar", area: "Österskär, Österåker (befintlig sida förstärkt)", wave: 3 },
+  { path: "/taklaggare-tegelhagen-silverdal", area: "Tegelhagen-Silverdal, Sollentuna", wave: 3 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };

@@ -84,6 +84,26 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Roslags-Näsby i Täby, med villor från tidigt 1900-tal och 1930-talet och senare årsringar. Kostnadsfri takkontroll och fast pris.",
   },
+  viggbyholm: {
+    title: "Takbyte i Viggbyholm, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i Viggbyholm i Täby, en villastad främst från 1918–1935 vid Roslagsbanan. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  "vallatorp-visinge": {
+    title: "Takbyte i Vallatorp och Visinge, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i Vallatorp, Lövbrunna och Visinge i Täby, med grupphus från 1970- och 80-talen och villor från 2000-talet. Kostnadsfri takkontroll.",
+  },
+  osterskar: {
+    title: "Takbyte i Österskär, Åkersberga – fast pris",
+    description:
+      "Takbyte och takomläggning i Österskär i Österåker, med trävillor från sekelskiftet, fritidshus från 1920–30-talen och villor från 1970–90-talen. Kostnadsfri takkontroll.",
+  },
+  "tegelhagen-silverdal": {
+    title: "Takbyte i Tegelhagen och Silverdal, Sollentuna",
+    description:
+      "Takbyte och takomläggning i Tegelhagen och Silverdal i Sollentuna, med kedjehus från 1970-talet och radhus från 2000-talet. Kostnadsfri takkontroll.",
+  },
   "ella-gard": {
     title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
     description:

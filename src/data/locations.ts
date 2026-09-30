@@ -750,21 +750,18 @@ export const locations: LocationData[] = [
     name: "Österskär",
     region: "Österåker",
     isIsland: false,
-    description:
-      "Takläggare i Österskär — takbyte, bandtäckning och takrenovering i sjönära läge. Fast pris och 10 års utförandegaranti.",
-    longDescription:
-      "Österskär är ett sjönära villaområde i Österåker med många äldre, arkitektoniskt påkostade hus — brutna tak, torn, kupor och valmade takfall. Sådana tak kräver skicklig plåtslagning snarare än snabb takläggning. Vi utför bandtäckning, plåtarbeten och kompletta takbyten i Österskär och plåtslår beslag kring skorstenar, kupor och takfönster för hand.",
-    extraContent:
-      "På äldre hus i Österskär är det viktigt att bevara takets uttryck. Vi arbetar med dubbelfalsad bandtäckning i förzinkad eller färgbelagd plåt, och i koppar eller zink när kunden vill ha ett exklusivt och patinerande resultat. Kostnadsfri takkontroll och fast pris ingår alltid.",
-    uniqueFAQ: {
-      question: "Klarar ni komplicerade tak med torn och kupor i Österskär?",
-      answer:
-        "Ja. Många hus i Österskär har brutna takfall, torn och kupor. Vi använder dubbelfalsad bandtäckning som formas efter takets geometri och plåtslår alla beslag på plats. Det är hantverksmässigt mer krävande, men ger både bättre täthet och rätt utseende.",
-    },
+    description: "Takbyte och takomläggning i Österskär i Österåker, med trävillor från sekelskiftet, fritidshus från 1920–30-talen och villor från 1970–90-talen. Kostnadsfri takkontroll.",
+    longDescription: "Österskär är ett villaområde i tätorten Åkersberga, på en kuperad halvö mellan Trälhavets vikar Tunaviken och Sätterfjärden. Här ligger Roslagsbanans stationer Tunagård och Österskär, den senare slutstation på linjen. På halvön finns också Tunaborgen, med anor från 1200-talet. Österskär är fortfarande en egen postort, och alla fastigheter heter Tuna. Namnet kom till genom en pristävling vid förra sekelskiftet, när ett trettiotal tomter vid Trälhavet och Tunaviken styckades av från Tuna gård. Tidigare hette platsen Tunanäs eller Biskopsudden, och den enda bebyggelsen var Biskopstuna, ursprungligen från 1600-talet, och ett dragontorp. Vid sekelskiftet ägde direktören Abel Bergman större delen av det som i dag är Österskär. Han styckade av tomter och annonserade om \"välbelägna tomter i barr- och löfskog\" med goda kommunikationer med ångbåt och järnväg. Enligt Wikipedia byggdes då stora trävillor med snickarglädje och punschverandor. År 1906 förlängdes Roslagsbanan till Österskär av AB Åkersberga-Trälhavet. Generalkonsul E.W. Wallin köpte Tuna gård 1909 och styckade av ytterligare 250 tomter, och Österskärs Havsbad anlades. Ångbåtsbryggan stod klar 1912, och 1919 tillkom stationen Tunagård. Under 1920- och 30-talen byggdes allt fler fritidshus, och Österskär blev en sommarort för stockholmare. År 1935 hade Österskär 277 invånare, och från 1950 räknas det som sammanvuxet med Åkersberga. När Österskärsskolan byggdes 1968 tog den stora bofasta expansionen fart, med nya hus och sommarstugor som byggdes om till permanentbostäder. I dag är i princip hela halvön bebyggd, och enligt hitta.se är villorna och kedjehusen främst byggda på 1970- och 1990-talen.",
+    extraContent: "I Österskär står sekelskiftets trävillor nära fritidshus från 1920- och 30-talen och villor från 1970- till 1990-talet. De äldsta husen är över hundra år gamla, medan de flesta villorna och kedjehusen är runt 30–55 år. Taken kan redan ha lagts om en eller flera gånger, och i omvandlade sommarstugor kan taket ha byggts om eller byggts på vid olika tillfällen. Därför går det inte att säga något generellt om skicket. På de gamla trävillorna är takets form och detaljer en del av husets karaktär, och det är värt att tänka på redan när materialet väljs. Om ett byte av material eller kulör kräver lov eller anmälan avgör Österåkers kommun. Varje hus får en egen takkontroll och ett eget pris.",
+    uniqueFAQ: {"question":"När byggdes husen i Österskär?","answer":"Byggperiod enligt källorna: trävillor från sekelskiftet, fritidshus 1920–30-tal, villor och kedjehus mest 1970- och 1990-tal. Hustyper: villor och kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Österåkers kommun."},
     primaryKeyword: "takläggare Österskär",
     lat: 59.4667,
     lng: 18.35,
-    nearbyLocations: ["Åkersberga", "Vaxholm", "Ljusterö"],
+    nearbyLocations: ["Åkersberga","Brevik"],
+    factBox: [{"label":"Kommun","value":"Österåker"},{"label":"Delområden","value":"Österskär, Sättra, Valhallsvägen, Geijersvägen, Lindholmen"},{"label":"Hustyper","value":"Villor och kedjehus"},{"label":"Byggperiod","value":"Trävillor från sekelskiftet, fritidshus 1920–30-tal, villor och kedjehus mest 1970- och 1990-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 810"}],
+    sourceLink: {"label":"Wikipedia: Österskär","url":"https://sv.wikipedia.org/wiki/%C3%96stersk%C3%A4r"},
+    parentLocation: {"name":"Österåker","slug":"akersberga"},
+    h1Override: "Takläggare i Österskär, Åkersberga",
   },
   {
     slug: "vallentuna",
@@ -964,6 +961,69 @@ export const locations: LocationData[] = [
     lat: 59.5413,
     lng: 18.0881,
     nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
+  },
+  {
+    slug: "viggbyholm",
+    name: "Viggbyholm",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Viggbyholm i Täby, en villastad främst från 1918–1935 vid Roslagsbanan. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Viggbyholm har vuxit fram ur en av Täbys gamla byar, med rötter i vikingatiden och ett namn, Vighby, som är dokumenterat sedan 1200-talet. Byn hade tre gårdar och skulle tillsammans med grannbyn Kjula utrusta en roddare för ledungsflottan. På 1600-talet köpte adelsmannen Israel Lagerfeldt byarna Vikby, Kjula och Fällbro och bildade ett säteri. Den nuvarande huvudbyggnaden på Viggbyholms gård uppfördes 1907 på det äldre husets grund, flyglarna är från 1700-talet, och på gården startades 1928 internatskolan Viggbyholmsskolan. Villasamhället växte fram med Roslagsbanans förlängning till Österskär. En hållplats anordnades vid Viggbyholm 1903, och från 1910 fanns en riktig station. Enligt Täby kommun var det startskottet för en gradvis utbyggnad, från de första villorna norr om järnvägen till den mer storslagna planen för Viggbyholms Park- och Trädgårdsstad på höjderna ner mot Stora Värtan. Planens breda allékantade gator och offentliga byggnader blev aldrig av, men kvartersstrukturen genomfördes. Stationshuset från 1908 finns kvar och är välbevarat. År 1919 togs en mönsterbok med villor och sportstugor fram, med ritningar av bland andra Jacob J:son Gate, Torben A. Grut och Cyrillus Johansson. Målet var en enhetlig karaktär med klassicerande villor och nationalromantiska sportstugor. Intresset var till en början svalt, och 1918 var omkring 70 tomter bebyggda, främst med sommarstugor. Byggnadsplanen bygger på grundplanen från 1918 och fastställdes med kompletteringar 1935. Enligt kommunen präglas området fortfarande av den gamla planens grundstruktur, med villor och några kvarvarande enkla fritidshus från alla 1900-talets decennier, och med häckar och låga staket mot gatan. En av de få kvarvarande sommarstugorna, vid Bryggvägen, är från 1922.",
+    extraContent:
+      "Villorna i Viggbyholm är främst från 1918–1935 och i dag runt 90–105 år gamla, med inslag från 1960-talet och senare. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. I en villastad med klassicerande villor och nationalromantiska sportstugor är takets form och detaljer ofta en del av husets karaktär, och det är värt att tänka på redan när materialet väljs. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun. Varje hus får en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Viggbyholm västra, norra, sydväst och sydöst"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"Villastad främst 1918–1935, en del 1960-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 480"}],
+    sourceLink: {"label":"Täby kommun: Viggbyholm (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/viggbyholm"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Viggbyholm, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Viggbyholm?","answer":"Byggperiod enligt källorna: villastad främst 1918–1935, en del 1960-tal. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Viggbyholm",
+    lat: 59.446,
+    lng: 18.1,
+    nearbyLocations: ["Täby","Näsbypark","Vallabrink"],
+  },
+  {
+    slug: "vallatorp-visinge",
+    name: "Vallatorp och Visinge",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Vallatorp, Lövbrunna och Visinge i Täby, med grupphus från 1970- och 80-talen och villor från 2000-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Vallatorp, Lövbrunna och Visinge ligger i norra Täby, tre områden med olika historia som i dag hänger ihop. Vallatorp byggdes i slutet av 1970-talet. Enligt Täby kommun planerades området på tidens typiska sätt, som grannskapsenheter med en liten centrummiljö, bostadskvarter, återvändsgator och bilfria gårdar. Här finns flerfamiljshus, radhus, parhus och kedjehus, och kommunen beskriver hur husgrupperna har var sin färgsättning men ett gemensamt formspråk och en genomtänkt trafikplanering. Det lokala centrumet består av terrasserade flerbostadshus i brunt tegel från 1980, ritade av Bertil Schröder på Höjer och Ljungqvist arkitektkontor, och kommunens råd för kvarteren är att behålla den enhetliga färgsättningen och de ursprungliga fönsterformaten. Lövbrunna var tidigare en gårdsmiljö, där en gles villabebyggelse växte fram under 2000-talets första decennium. Den gamla gården revs 2005, men spår finns kvar, bland annat den trädkantade infarten, som i dag är gång- och cykelväg. Ny bebyggelse i traditionell stil från 2007–2008 har ersatt gårdsbebyggelsen, och kvarteret där huvudbyggnaden stod har gestaltats med den gamla gårdsmiljön som förebild. Här finns villor, parhus och mindre flerfamiljshus. Villaområdet Visinge har vuxit fram sedan 1950-talet. Till en början var det ett sommarstugeområde, som med tiden har förtätats och blivit ett område med permanentboende. När området fick en station på Roslagsbanan på 1980-talet började grupphusområden byggas, och det är enligt kommunen den bebyggelsen som främst präglar Visinge i dag: småskaliga trähus i samstämmig färgskala med naturmark insprängd mellan husen.",
+    extraContent:
+      "Grupphusen i Vallatorp är i dag runt 45 år gamla, grupphusen i Visinge runt 40 år och husen i Lövbrunna runt 20 år. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. I grupphusområdena, där husen byggdes samtidigt och är likadana, kan grannar ha nytta av att planera takbyten i samma veva. Kommunens råd om enhetlig färgsättning i Vallatorp är bra att ha med sig när materialet väljs. Varje hus får alltid en egen takkontroll och ett eget pris, och om ett byte kräver lov eller anmälan avgör Täby kommun.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Vallatorp norra/södra, Lövbrunna, Visinge"},{"label":"Hustyper","value":"Radhus, parhus, kedjehus, villor"},{"label":"Byggperiod","value":"Vallatorp slutet av 1970-talet, Visinge grupphus 1980-tal, Lövbrunna 2007–2008"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 510 + 470"}],
+    sourceLink: {"label":"Täby kommun: Vallatorp – Lövbrunna – Visinge (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/vallatorp---lovbrunna---visinge"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Vallatorp och Visinge, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Vallatorp och Visinge?","answer":"Byggperiod enligt källorna: Vallatorp slutet av 1970-talet, Visinge grupphus 1980-tal, Lövbrunna 2007–2008. Hustyper: radhus, parhus, kedjehus, villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Vallatorp och Visinge",
+    lat: 59.48,
+    lng: 18.07,
+    nearbyLocations: ["Täby","Karlslund","Erikslund"],
+  },
+  {
+    slug: "tegelhagen-silverdal",
+    name: "Tegelhagen och Silverdal",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Tegelhagen och Silverdal i Sollentuna, med kedjehus från 1970-talet och radhus från 2000-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Tegelhagen och Silverdal ligger i kommundelen Helenelund i södra Sollentuna, mellan motorvägen och Edsviken. Båda har fått sina namn från gamla torp. Torpet Tegelhagen är känt sedan 1666, då det kallades Tegelslagaren efter tegelslagaren Klement som bodde där och troligen arbetade vid Ulriksdals tegelbruk. I början av 1800-talet byggdes torpet ut till sommarbostad åt stockholmsborgare, och 1884 lät grosshandlaren Carl Schnell uppföra en slottsliknande villa med 20 rum. Under andra världskriget tog krigsmakten över gården, och 1971 brann den ner. Strax intill ligger Kasby, tidigare torpet Kassverkan, känt sedan 1640-talet, där stugans äldsta delar anses vara från 1700-talet. Bostadsområdet Tegelhagen byggdes strax nordväst om det gamla torpet på 1970-talet, med kedjehus, parvillor och radhus i två våningar. Enligt beskrivningarna av området domineras det av stora bilfria områden med kedjehus. Silverdal har en ännu längre historia. Torpet Silverdal är belagt sedan 1730-talet, först under namnet Skogsdal. Legenden säger att drottning Kristinas häst tappade en silversko här under kröningståget 1650, men enligt Wikipedia är det mycket osannolikt, eftersom platsen inte låg på vägen. Silverdals gård har varit krog, tingshus och lanthandel, och i dag återstår manbyggnaden och den lilla smedjan. Grannen Rådan omnämns redan 1599 och har varit torp, rättarboställe, herrgård, internatskola, militärförläggning och polishögskola. Sollentuna kommun köpte Rådan 1989, och det gjorde det möjligt att bygga ett nytt bostadsområde väster om gården. Silverdal byggdes som en trädgårdsstad med omkring 1 000 bostäder, skolor och arbetsplatser, i etapper från 2002, och 2023 ansågs den ursprungliga planen vara genomförd.",
+    extraContent:
+      "De två delarna har helt olika ålder. Kedjehusen, parvillorna och radhusen i Tegelhagen är i dag runt 45–55 år gamla, medan husen i Silverdal är byggda från 2002 och framåt och därför betydligt yngre. I Tegelhagen kan taken redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. I kedjehusområdena, där husen byggdes samtidigt och ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun.",
+    factBox: [{"label":"Kommun","value":"Sollentuna"},{"label":"Delområden","value":"Tegelhagen, Silverdal"},{"label":"Hustyper","value":"Kedjehus, parvillor, radhus"},{"label":"Byggperiod","value":"Tegelhagen 1970-tal, Silverdal från 2002"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 610"}],
+    sourceLink: {"label":"Wikipedia: Tegelhagen","url":"https://sv.wikipedia.org/wiki/Tegelhagen"},
+    parentLocation: {"name":"Sollentuna","slug":"sollentuna"},
+    h1Override: "Takläggare i Tegelhagen och Silverdal, Sollentuna",
+    uniqueFAQ: {"question":"När byggdes husen i Tegelhagen och Silverdal?","answer":"Byggperiod enligt källorna: Tegelhagen 1970-tal, Silverdal från 2002. Hustyper: kedjehus, parvillor, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun."},
+    primaryKeyword: "takläggare Tegelhagen och Silverdal",
+    lat: 59.39,
+    lng: 17.99,
+    nearbyLocations: ["Sollentuna","Viby","Edsviken","Helenelund"],
   },
   {
     slug: "ensta",

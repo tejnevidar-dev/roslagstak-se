@@ -57,6 +57,8 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Karlslund", types: "Parhus och kedjehus i ett och ett halvt plan", period: "1975–1976", href: "/taklaggare-karlslund" },
       { name: "Midgård och Byle", types: "Radhus (Midgård, 231 bostäder), villor, kedjehus, radhus (Byle)", period: "Midgård 1972–73, Byle villor 1907–1910-tal och radhus 1974", href: "/taklaggare-midgard-byle" },
       { name: "Roslags-Näsby", types: "Villor, radhus (samt flerbostadshus)", period: "Villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal", href: "/taklaggare-roslags-nasby" },
+      { name: "Viggbyholm", types: "Villor", period: "Villastad främst 1918–1935, en del 1960-tal", href: "/taklaggare-viggbyholm" },
+      { name: "Vallatorp och Visinge", types: "Radhus, parhus, kedjehus, villor", period: "Vallatorp slutet av 1970-talet, Visinge grupphus 1980-tal, Lövbrunna 2007–2008", href: "/taklaggare-vallatorp-visinge" },
     ],
   },
   sollentuna: {
@@ -66,7 +68,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Norrviken", types: "Villor och radhus", period: "Villastad 1906–1940-tal, radhus 1960–80-tal (Wikipedia)", href: "/taklaggare-norrviken" },
       { name: "Edsviken", types: "Villor, inslag av radhus", period: "Främst 1920–30-tal (Wikipedia)", href: "/taklaggare-edsviken" },
       { name: "Töjnan", types: "Villor", period: "Mest 1920- och 1970-tal (hitta.se)" },
-      { name: "Tegelhagen", types: "Kedjehus och radhus", period: "Slutet av 1970-talet (hitta.se)" },
+      { name: "Tegelhagen", types: "Kedjehus och radhus", period: "Slutet av 1970-talet (hitta.se)", href: "/taklaggare-tegelhagen-silverdal" },
       { name: "Vaxmora", types: "Villor och radhus", period: "Mest 1960- och 1970-tal (hitta.se)" },
       { name: "Eriksberg", types: "Villor", period: "Villastad från 1920–30-talet (Wikipedia)" },
     ],
