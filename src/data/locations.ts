@@ -963,6 +963,90 @@ export const locations: LocationData[] = [
     nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
   },
   {
+    slug: "snattringe",
+    name: "Snättringe",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Snättringe i Huddinge, med villor från 1920- och 30-talen och radhus från 1960-talet. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Snättringe ligger söder om Långsjön, väster om Stuvsta och öster om Segeltorp, och är sedan 2018 en egen kommundel i Huddinge. Namnet stavades i äldre handlingar Snettingen eller Snättingen, som 1628, och enligt en teori syftade det ursprungligen på Långsjöns smala form med spetsiga ändar. Snättringe var länge ett torp under Fullersta gård. På 1820-talet bodde prosten Johan Fredrik Gleisman på gården, och han lät bygga torpet Marieberg nere vid Långsjön, senare Matineholm. Konstnären Per Krafft den yngre ägde Snättringe gård 1830–1850. Gården avsöndrades från Fullersta 1854 och friköptes 1873 av Hugo Stegeman, som samtidigt byggde den nuvarande manbyggnaden. Den restaurerades i början av 1970-talet. Matineholms vitputsade huvudbyggnad är från 1888, och där tillbringade August Strindberg sin sista sommar 1911. Villabebyggelsen började i början av 1900-talet genom Snättringe Tomt AB, med en första styckningskarta på 142 tomter. Enligt Wikipedia gick försäljningen trögt: kommunikationerna var dåliga, och marken mellan Snättringe och Stuvsta var sank och ibland översvämmad, så att man fick lägga ut plankor för att komma fram. Häradsvägen anlades i mitten av 1920-talet som nödhjälpsarbete. Efter 1925 kom nya avstyckningsplaner genom Huddinge Egnahem, Snättringe blev municipalsamhälle 1928, och på 1950- och 60-talen anslöts området till kommunalt vatten och avlopp. Längs Tranvägen ligger kvarteret Assessorn, 36 radhus i rött tegel från början av 1960-talet, ritade av arkitekten Esmail Kuhang. Enligt kommunen är kvarteret en särskilt värdefull kulturmiljö. Enligt alla.csv är villorna i Snättringe främst från 1920- och 30-talen, med radhus från tidigt 1960-tal och inslag fram till 2010-talet. Delar av området ingår i kulturmiljön Segersminne–Snättringe gård.",
+    extraContent:
+      "Villorna från 1920- och 30-talen är i dag runt 90–100 år gamla, och radhusen i kvarteret Assessorn runt 65 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. I kvarteret Assessorn och i kulturmiljön kring Segersminne och Snättringe gård är det klokt att ta reda på vad som gäller innan ett byte av material eller kulör. Det avgör Huddinge kommun. I radhuslängorna, där husen byggdes samtidigt, kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Huddinge"},{"label":"Hustyper","value":"Mest villor, en del radhus"},{"label":"Byggperiod","value":"Villor 1920–30-tal, radhus tidigt 1960-tal, inslag till 2010-tal"},{"label":"Kulturmiljö","value":"Kv. Assessorn (särskilt värdefull), Segersminne–Snättringe gård"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 2 600"}],
+    sourceLink: {"label":"Wikipedia: Snättringe","url":"https://sv.wikipedia.org/wiki/Sn%C3%A4ttringe"},
+    parentLocation: {"name":"Huddinge","slug":"huddinge"},
+    h1Override: "Takläggare i Snättringe, Huddinge",
+    uniqueFAQ: {"question":"När byggdes husen i Snättringe?","answer":"Byggperiod enligt källorna: villor 1920–30-tal, radhus tidigt 1960-tal, inslag till 2010-tal. Hustyper: mest villor, en del radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun."},
+    primaryKeyword: "takläggare Snättringe",
+    lat: 59.256,
+    lng: 17.958,
+    nearbyLocations: ["Huddinge","Segeltorp","Stuvsta"],
+  },
+  {
+    slug: "solgard-sorskogen",
+    name: "Solgård och Sörskogen",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Solgård och Sörskogen i Huddinge, med villor från tidigt 1900-tal, kedjehus från 1960-talet och radhus från 1970-talet.",
+    longDescription:
+      "Solgård och Sörskogen ligger söder om Huddinge centrum, i den del av Huddinge som växte fram som stationssamhälle när järnvägen mellan Stockholm och södra Sverige byggdes ut på 1860-talet. Solgård ramas in av järnvägen och Huddingevägen, Storängsleden och sjön Orlången. Enligt Wikipedia var området tidigare främst sommarstugor men har sedan mitten av 1900-talet blivit ett område med permanentboende, där villor av olika ålder dominerar. De södra delarna ligger på kullar som når 60 meter över havet, och en del villor ligger på branta tomter längs sluttningarna. I de norra delarna, runt Sördalavägen, finns villastadshus från början av 1900-talet i nationalromantisk stil, byggda samtidigt som villorna vid Solvägen och Helgedalsvägen närmare Huddinge centrum. Författaren Karin Boye bodde en tid vid Solvägen, i Villa Björkebo, som i dag är riven. Här ligger också Solgårds fornborg, en av Huddinges åtta fornborgar. Sörskogen ligger mellan Huddinge centrum och Flemingsbergsviken, en del av Orlången. Stadsplanen ritades i två etapper av arkitekten Gösta Nordin: Sörskogen I 1962 och Sörskogen II 1972. Den äldre delen har villor och kedjehus från 1960-talet, ett hundratal meter in i skogen från Lännavägen. Kedjehusen, med panelade och gulmålade fasader, ritades av FFNS. Den nyare delen, längre upp i skogen, har radhus från 1970-talet med fasader i rött tegel, ritade av Gösta Nordin. Vägarna är uppkallade efter svampar. Villorna och kedjehusen ligger längs Champinjon- och Musseronvägen och radhusen längs Bläcksvamps-, Flugsvamps- och Taggsvampsvägen, och området binds samman av Tryffelvägen.",
+    extraContent:
+      "Villastadshusen i Solgård är i dag över hundra år gamla, kedjehusen i Sörskogen runt 60 år och radhusen runt 50 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. På villor som ligger på branta tomter kan åtkomsten påverka hur ett takbyte planeras. I kedjehus- och radhusområdena i Sörskogen, där husen byggdes samtidigt, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun.",
+    factBox: [{"label":"Kommun","value":"Huddinge"},{"label":"Delområden","value":"Solgård, Sörskogen (koppling till RegSO ej verifierad)"},{"label":"Hustyper","value":"Villor, kedjehus, radhus"},{"label":"Byggperiod","value":"Solgård: villastadshus tidigt 1900-tal, Sörskogen: villor/kedjehus 1960-tal + radhus 1970-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 800 (SCB, 2025; RegSO-koppling ej verifierad)"}],
+    sourceLink: {"label":"Wikipedia: Sjödalen-Fullersta","url":"https://sv.wikipedia.org/wiki/Sj%C3%B6dalen-Fullersta"},
+    parentLocation: {"name":"Huddinge","slug":"huddinge"},
+    h1Override: "Takläggare i Solgård och Sörskogen, Huddinge",
+    uniqueFAQ: {"question":"När byggdes husen i Solgård och Sörskogen?","answer":"Byggperiod enligt källorna: Solgård: villastadshus tidigt 1900-tal, Sörskogen: villor/kedjehus 1960-tal + radhus 1970-tal. Hustyper: villor, kedjehus, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun."},
+    primaryKeyword: "takläggare Solgård och Sörskogen",
+    lat: 59.231,
+    lng: 17.99,
+    nearbyLocations: ["Huddinge","Fullersta","Stuvsta"],
+  },
+  {
+    slug: "molna",
+    name: "Mölna",
+    region: "Östra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Mölna och Östra Mölna radhusområde på Lidingö, med villor och radhus från 1950- och 60-talen. Kostnadsfri takkontroll.",
+    longDescription:
+      "Mölna ligger på södra Lidingö och har fått sitt namn från Mölna gård, vars ägor sträckte sig mellan Kottlasjön i norr och Lilla Värtan i söder, med Skärsätra gård i väster och Breviks stora ägor i öster. Gården har långa traditioner av både vattenkvarn och väderkvarn, som går tillbaka till 1500-talet, troligen ännu längre. Namnet Mölna kommer av \"mölla\", som betyder kvarn. Gårdens nuvarande huvudbyggnad är från 1814 och paviljongen från 1876. Vid gården finns rester av den äldre kvarnmiljön, bland annat kvarndammen och stenkantade vattenrännor, en sista rest av Mölnaån mellan Kottlasjön och Lilla Värtan. Mölna gårds ägor började bebyggas med villor och radhus huvudsakligen på 1950- och 60-talen, sedan stadsplaner hade upprättats i omgångar med början 1953. Enligt Wikipedia sparades mycket natur mellan villaområdena. I början av 1960-talet bebyggdes skogsområdet i östra delen av ägorna med Östra Mölna radhusområde, 52 radhus och sex villor ritade av arkitekten Nils Tesch. Genom Lidingö stads kulturinventering 1995 har området fått officiell status som kulturhistoriskt omistlig miljö. I strandområdet väster om gården byggdes på 1950- och 60-talen flera villor, bland dem den villa som Nils Tesch ritade åt sig själv 1959. Den stora Mölnaängen, mellan gården och radhusområdet, förblev obebyggd, och gårdens parkliknande trädgård gestaltades på 1960-talet av landskapsarkitekten Walter Bauer. Vid Lilla Värtan ligger Mölna brygga, som var den första bryggan på Lidingön som regelbundet angjordes av skärgårdsbåtar i linjetrafik, och längs stranden går en promenad till Kappsta naturreservat.",
+    extraContent:
+      "Villorna och radhusen i Mölna är i dag främst runt 60–70 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. I Östra Mölna radhusområde, som Lidingö stad klassar som kulturhistoriskt omistlig miljö, är det särskilt viktigt att ta reda på vad som gäller innan ett byte av material eller kulör. Det avgör Lidingö stad. Radhusen byggdes samtidigt, och grannar kan ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Lidingö"},{"label":"Delområden","value":"Mölna, Östra Mölna radhusområde (Stockby östra, Ekholmsnäs i RegSO)"},{"label":"Hustyper","value":"Villor, radhus, kedjehus"},{"label":"Byggperiod","value":"Främst 1950- och 1960-tal, Östra Mölna tidigt 1960-tal"},{"label":"Kulturmiljö","value":"Östra Mölna: kulturhistoriskt omistlig miljö (Lidingö stad 1995)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 680"}],
+    sourceLink: {"label":"Wikipedia: Mölna","url":"https://sv.wikipedia.org/wiki/M%C3%B6lna"},
+    parentLocation: {"name":"Lidingö","slug":"lidingo"},
+    h1Override: "Takläggare i Mölna, Lidingö",
+    uniqueFAQ: {"question":"När byggdes husen i Mölna?","answer":"Byggperiod enligt källorna: främst 1950- och 1960-tal, Östra Mölna tidigt 1960-tal. Hustyper: villor, radhus, kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Lidingö stad."},
+    primaryKeyword: "takläggare Mölna",
+    lat: 59.356,
+    lng: 18.172,
+    nearbyLocations: ["Lidingö","Sticklinge","Brevik, Käppala och Gåshaga"],
+  },
+  {
+    slug: "sticklinge",
+    name: "Sticklinge",
+    region: "Östra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Norra och Södra Sticklinge och Kyttinge på Lidingö, med villor från 1980- och 1990-talen. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Sticklinge ligger på nordvästra Lidingö och har varit bebott åtminstone sedan vikingatiden. I södra Sticklinge, längs vägskälet Tyktorpsvägen och Kyttingevägen, ligger ett av Lidingös största forntida gravfält, med ett sextiotal gravar från yngre järnåldern. Väster om Sticklinge udde gick en vikingatida farled, och på en kulle norr om Rödstugan finns en så kallad farledsgrav. Sticklinge by nämns i de första texterna om Lidingö från tidigt 1600-tal. Platsen spelade en särskild roll för öns förbindelser med fastlandet. I slutet av 1480-talet, när släkten Banér på Djursholms slott tog över Lidingö, ordnades en roddfärja mellan Rödstuguviken och Ekudden på Djursholmssidan. Färjehållaren bodde i Rödstugan, som har gett viken dess namn. Färjan användes av bönderna, för postgången och för att hämta prästen från Danderyd till högmässan. Sticklinge gård ägdes på 1800-talet av Johan August Zetterberg och sedan av hans son Harald, som på 1880-talet lät bygga om huvudbyggnaden efter ritningar av Otto August Mankell. År 1926 blev huset klubbhus för Lidingö golfklubb, vars bana, Sveriges första 18-hålsbana, invigdes 1927 på gårdens marker. Huset brann 1980, och i dag påminner Patron Haralds väg om den tidigare ägaren. Villaområdet i Norra Sticklinge började som ett sommarstugeområde tidigt på 1930-talet. Först 1978 beslutade Lidingö stad att området skulle stadsplaneras, och det fick då kommunalt vatten och avlopp, ny elförsörjning, upprustade vägar och gatubelysning. Enligt beskrivningen av området bebyggdes det därefter på relativt kort tid med större villor för permanentboende. Södra Sticklinge, även kallat Sticklingehöjden, var skog och byggdes i etapper i början av 1990-talet med villor, parhus och radhus. År 2009 fanns omkring 600 fristående villafastigheter i området. I Sticklinge ligger också Kyttinge, med ett fyrtiotal villor, och Trolldalen, ett av Sveriges äldsta sportstugeområden.",
+    extraContent:
+      "De flesta villorna i Norra och Södra Sticklinge är i dag runt 30–45 år gamla, och enligt hitta.se är husen främst byggda på 1980- och 1990-talen. Taken kan redan ha lagts om, men där det inte har skett är det ofta dags att se över underlagspapp, plåtdetaljer och hängrännor. Varje hus får en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Lidingö stad.",
+    factBox: [{"label":"Kommun","value":"Lidingö"},{"label":"Delområden","value":"Norra och Södra Sticklinge, Kyttinge"},{"label":"Hustyper","value":"Villor (Södra Sticklinge även parhus och radhus)"},{"label":"Byggperiod","value":"Norra Sticklinge efter stadsplanen 1978, Södra Sticklinge tidigt 1990-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 100"}],
+    sourceLink: {"label":"Wikipedia: Sticklinge","url":"https://sv.wikipedia.org/wiki/Sticklinge"},
+    parentLocation: {"name":"Lidingö","slug":"lidingo"},
+    h1Override: "Takläggare i Sticklinge, Lidingö",
+    uniqueFAQ: {"question":"När byggdes husen i Sticklinge?","answer":"Byggperiod enligt källorna: Norra Sticklinge efter stadsplanen 1978, Södra Sticklinge tidigt 1990-tal. Hustyper: villor (Södra Sticklinge även parhus och radhus). Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Lidingö stad."},
+    primaryKeyword: "takläggare Sticklinge",
+    lat: 59.372,
+    lng: 18.13,
+    nearbyLocations: ["Lidingö","Mölna"],
+  },
+  {
     slug: "viggbyholm",
     name: "Viggbyholm",
     region: "Roslagens inland",
@@ -2970,42 +3054,36 @@ export const locations: LocationData[] = [
     name: "Skogås",
     region: "Södra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Skogås — takbyte, takrenovering och plåtarbeten i Skogås. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
-    longDescription:
-      "Bland flerbostadshus och radhus är det vanligt att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter kostnadsfri takkontroll.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Skogås — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Skogås.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Skogås?",
-      answer:
-        "Priset för ett takbyte i Skogås beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
-    },
+    description: "Takbyte och takomläggning i Östra Skogås och Mörtvik i Huddinge, med radhus, kedjehus och villor från slutet av 1970-talet. Kostnadsfri takkontroll.",
+    longDescription: "Skogås ligger i Huddinges nordöstra del, med Trångsund i norr och väster och sjön Drevviken i öster. Kommundelen består från norr till söder av Mörtvik, Östra Skogås, Västra Skogås, Länna och Gräsvreten. Enligt Wikipedia saknar namnet Skogås historisk anknytning och skapades troligen av stadsplanerare på 1930-talet, efter landskapets skog och åsar. Trakten har ändå en lång historia. Redan under vikingatiden användes Drevviken som transportväg, med en färdled ut till Östersjön, och Länna var en av angöringsplatserna. Söder om Länna gård finns ett gravfält från yngre järnåldern. Länna gästgivaregård, i drift från 1630-talet till 1902, låg vid Dalarövägen, en av Stockholms viktiga färdvägar söderut. Före och under första världskriget var området en del av Södra fronten, en försvarslinje genom Huddinge och Tyresö, och rester som Lännafortet och Magelungsfortet finns kvar. Skogås har vuxit fram på utmarker som i norr hörde till Trångsunds gård och i söder till Länna gård. Nynäsbanan drogs fram 1901, men Skogås fick egen station först 1932. Mörtviks gård nämns första gången i början av 1700-talet och var ett torp under Trångsund, som efterhand blev en självständig gård. I början av 1940-talet styckades marken av till sommarstugetomter. De första stadsplanerna för Skogås kom 1961 och 1964, med punkthus och lamellhus kring centrum. Östra Skogås och Mörtvik började planläggas under senare delen av 1970-talet, och målet var enligt Wikipedia ett område med några få flerbostadshus och i övrigt en småskalig bebyggelse med radhus, kedjehus och villor. I Mörtvik finns också en badplats och entrén till Trångsundsskogens naturreservat.",
+    extraContent: "Radhusen, kedjehusen och villorna i Östra Skogås och Mörtvik är i dag runt 40–45 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. I radhus- och kedjehusområdena, där husen byggdes samtidigt och är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun.",
+    uniqueFAQ: {"question":"När byggdes husen i Skogås?","answer":"Byggperiod enligt källorna: planlagt från slutet av 1970-talet. Hustyper: radhus, kedjehus, villor (och några flerbostadshus). Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun."},
     primaryKeyword: "takläggare Skogås",
     lat: 59.2286,
     lng: 18.1428,
-    nearbyLocations: ["Trångsund", "Farsta", "Huddinge"],
+    nearbyLocations: ["Huddinge","Trångsund","Stuvsta"],
+    factBox: [{"label":"Kommun","value":"Huddinge"},{"label":"Delområden","value":"Östra Skogås, Mörtvik"},{"label":"Hustyper","value":"Radhus, kedjehus, villor (och några flerbostadshus)"},{"label":"Byggperiod","value":"Planlagt från slutet av 1970-talet"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 300"}],
+    sourceLink: {"label":"Wikipedia: Skogås","url":"https://sv.wikipedia.org/wiki/Skog%C3%A5s"},
+    parentLocation: {"name":"Huddinge","slug":"huddinge"},
+    h1Override: "Takläggare i Östra Skogås och Mörtvik, Huddinge",
   },
   {
     slug: "segeltorp",
     name: "Segeltorp",
     region: "Södra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Segeltorp — takbyte, takrenovering och plåtarbeten i Segeltorp. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
-    longDescription:
-      "Segeltorp — villaområde mellan Huddinge och Skärholmen — har ett fastighetsbestånd med villor från 1940–70-tal. Taken börjar närma sig slutet av sin livslängd, och då är omläggning oftast bättre ekonomi än lappning. RoslagsTak utför kompletta takprojekt i Segeltorp: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Segeltorp — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Segeltorp.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Segeltorp?",
-      answer:
-        "Priset för ett takbyte i Segeltorp beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
-    },
+    description: "Takbyte och takomläggning i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talet och radhus från 1950-talet. Kostnadsfri takkontroll.",
+    longDescription: "Segeltorp ligger i Huddinges nordvästra del, på gränsen mot Stockholm, och består från norr till söder av delområdena Jakobslund, Smista, Juringe, Kråkvik och Kolartorp. Namnet kommer från gården Segerstorp, som i husförhörslängderna från 1751 står som dagsverkstorp under Vårby säteri. Enligt en tolkning kommer förleden från ett gammalt ord för vattensjuk mark. Området har en lång historia. På en karta över Vårby sätegård från 1703 finns flera torp vid sockengränsen, och landsvägen till Södertälje, i dag Gamla Södertäljevägen, som färdigställdes 1670, går genom området. Altartorp har rötter från 1540-talet och finns kvar, ombyggt. Kolartorp har använts av Vårby gårds kolare och blev senare soldattorp, och Fullersta kvarn var i bruk från 1689 till slutet av 1800-talet. Mitt i området ligger Juringe gård, där ett gravfält vittnar om bebyggelse redan under yngre järnåldern. Namnet Juringe finns belagt från 1538 och kommer troligen från ett gammalt ord för vildsvin. I början av 1900-talet började tomter styckas av för villor, och namnet ändrades då från Segerstorp till Segeltorp. Segeltorp blev municipalsamhälle 1924 och var det sista i Huddinge att gå upp i den gemensamma organisationen, 1953. Enligt Wikipedia berodde dröjsmålet på försök att bli en del av Stockholms stad, som misslyckades. År 1952 bodde 2 850 personer här. Själva gården Segeltorp, vid dagens Dalvägen, revs 1964, när radhusbebyggelsen växte fram i området. Enligt alla.csv består bebyggelsen av villor från tidigt 1900-tal och radhus främst från 1950-talet.",
+    extraContent: "De äldsta villorna i Segeltorp är i dag runt hundra år gamla, och radhusen från 1950- och 60-talen runt 60–75 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlag, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. I radhusområdena, där husen byggdes samtidigt och är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun.",
+    uniqueFAQ: {"question":"När byggdes husen i Segeltorp?","answer":"Byggperiod enligt källorna: villor tidigt 1900-tal, radhus främst 1950-tal. Hustyper: villor, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun."},
     primaryKeyword: "takläggare Segeltorp",
     lat: 59.2794,
     lng: 17.945,
-    nearbyLocations: ["Huddinge", "Skärholmen", "Stuvsta"],
+    nearbyLocations: ["Huddinge","Snättringe","Fullersta"],
+    factBox: [{"label":"Kommun","value":"Huddinge"},{"label":"Delområden","value":"Jakobslund, Smista, Juringe (samt Kråkvik, Kolartorp i kommundelen)"},{"label":"Hustyper","value":"Villor, radhus"},{"label":"Byggperiod","value":"Villor tidigt 1900-tal, radhus främst 1950-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 600"}],
+    sourceLink: {"label":"Wikipedia: Segeltorp (kommundel)","url":"https://sv.wikipedia.org/wiki/Segeltorp_(kommundel)"},
+    parentLocation: {"name":"Huddinge","slug":"huddinge"},
+    h1Override: "Takläggare i Segeltorp, Huddinge",
   },
   {
     slug: "bandhagen",

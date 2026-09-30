@@ -111,6 +111,12 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-vallatorp-visinge", area: "Vallatorp och Visinge, Täby", wave: 3 },
   { path: "/taklaggare-osterskar", area: "Österskär, Österåker (befintlig sida förstärkt)", wave: 3 },
   { path: "/taklaggare-tegelhagen-silverdal", area: "Tegelhagen-Silverdal, Sollentuna", wave: 3 },
+  { path: "/taklaggare-snattringe", area: "Snättringe, Huddinge", wave: 3 },
+  { path: "/taklaggare-solgard-sorskogen", area: "Sjödalen södra (Solgård, Sörskogen), Huddinge", wave: 3 },
+  { path: "/taklaggare-segeltorp", area: "Segeltorp, Huddinge (befintlig sida förstärkt)", wave: 3 },
+  { path: "/taklaggare-skogas", area: "Östra Skogås och Mörtvik, Huddinge (befintlig sida förstärkt)", wave: 3 },
+  { path: "/taklaggare-molna", area: "Mölna (Stockby östra-Mölna-Ekholmsnäs), Lidingö", wave: 3 },
+  { path: "/taklaggare-sticklinge", area: "Sticklinge, Lidingö", wave: 3 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };

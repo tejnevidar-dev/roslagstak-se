@@ -104,6 +104,36 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Tegelhagen och Silverdal i Sollentuna, med kedjehus från 1970-talet och radhus från 2000-talet. Kostnadsfri takkontroll.",
   },
+  snattringe: {
+    title: "Takbyte i Snättringe, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Snättringe i Huddinge, med villor från 1920- och 30-talen och radhus från 1960-talet. Kostnadsfri takkontroll och fast pris.",
+  },
+  "solgard-sorskogen": {
+    title: "Takbyte i Solgård och Sörskogen, Huddinge",
+    description:
+      "Takbyte och takomläggning i Solgård och Sörskogen i Huddinge, med villor från tidigt 1900-tal, kedjehus från 1960-talet och radhus från 1970-talet.",
+  },
+  segeltorp: {
+    title: "Takbyte i Segeltorp, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talet och radhus från 1950-talet. Kostnadsfri takkontroll.",
+  },
+  skogas: {
+    title: "Takbyte i Skogås och Mörtvik, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Östra Skogås och Mörtvik i Huddinge, med radhus, kedjehus och villor från slutet av 1970-talet. Kostnadsfri takkontroll.",
+  },
+  molna: {
+    title: "Takbyte i Mölna, Lidingö – fast pris",
+    description:
+      "Takbyte och takomläggning i Mölna och Östra Mölna radhusområde på Lidingö, med villor och radhus från 1950- och 60-talen. Kostnadsfri takkontroll.",
+  },
+  sticklinge: {
+    title: "Takbyte i Sticklinge, Lidingö – fast pris",
+    description:
+      "Takbyte och takomläggning i Norra och Södra Sticklinge och Kyttinge på Lidingö, med villor från 1980- och 1990-talen. Kostnadsfri takkontroll och fast pris.",
+  },
   "ella-gard": {
     title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
     description:
