@@ -11,6 +11,7 @@ import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "@/data/regions";
 import NotFound from "./NotFound";
+import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
 
 /** Hubbsida per område: /omraden/<region-slug> — samlar ortsidorna i regionen. */
 const RegionPage = () => {
@@ -90,6 +91,36 @@ const RegionPage = () => {
               ))}
             </section>
           )}
+
+          <div className="max-w-3xl">
+                {/* Villaområden i kommunen (villaområden våg 0, #1m) — samma <dl>-stil som faktarutan */}
+                {villaAreasByPage[regionSlugs[region]] && (
+                  <section aria-labelledby="villaomraden">
+                    <h3 id="villaomraden" className="mt-10 font-display text-xl text-foreground mb-3">
+                      Villaområden i {villaAreasByPage[regionSlugs[region]].municipality}
+                    </h3>
+                    <dl className="mb-3 grid gap-x-6 gap-y-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2">
+                      {villaAreasByPage[regionSlugs[region]].areas.map((area) => (
+                        <div key={area.name}>
+                          <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
+                            {area.href ? (
+                              <Link to={area.href} className="underline underline-offset-4 hover:no-underline">
+                                {area.name}
+                              </Link>
+                            ) : (
+                              area.name
+                            )}
+                          </dt>
+                          <dd className="text-sm text-muted-foreground">
+                            {area.types}. {area.period}.
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <p className="mb-6 text-xs text-muted-foreground">{VILLA_AREAS_SOURCE}</p>
+                  </section>
+                )}
+          </div>
 
           <section className="mt-14" aria-labelledby="orter">
             <h2

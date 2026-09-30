@@ -18,6 +18,7 @@ import { buildLocalSections } from "@/data/local-sections";
 import { regionSlugs } from "@/data/regions";
 import { projects, getNearbyProject } from "@/data/projects";
 import NotFound from "./NotFound";
+import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
 import {
   Accordion,
   AccordionContent,
@@ -318,6 +319,34 @@ const LocationPage = () => {
                       {location.sourceLink.label}
                     </a>
                   </p>
+                )}
+
+                {/* Villaområden i kommunen (villaområden våg 0, #1m) — samma <dl>-stil som faktarutan */}
+                {villaAreasByPage[location.slug] && (
+                  <section aria-labelledby="villaomraden">
+                    <h3 id="villaomraden" className="font-display text-xl text-foreground mb-3">
+                      Villaområden i {villaAreasByPage[location.slug].municipality}
+                    </h3>
+                    <dl className="mb-3 grid gap-x-6 gap-y-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2">
+                      {villaAreasByPage[location.slug].areas.map((area) => (
+                        <div key={area.name}>
+                          <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
+                            {area.href ? (
+                              <Link to={area.href} className="underline underline-offset-4 hover:no-underline">
+                                {area.name}
+                              </Link>
+                            ) : (
+                              area.name
+                            )}
+                          </dt>
+                          <dd className="text-sm text-muted-foreground">
+                            {area.types}. {area.period}.
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <p className="mb-6 text-xs text-muted-foreground">{VILLA_AREAS_SOURCE}</p>
+                  </section>
                 )}
 
                 {/* Unikt lokalt innehåll per ort — klimat, bebyggelse och logistik */}

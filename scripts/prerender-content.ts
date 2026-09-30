@@ -19,6 +19,7 @@ import { isNearBase, distanceFromBaseKm, distanceFromTabyKm, distanceKm } from "
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
+import { villaAreasParagraph } from "../src/data/villa-areas";
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
@@ -824,6 +825,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
         ...(regionLongText[region] ?? []),
+        ...(villaAreasParagraph(regionSlugs[region]) ? [villaAreasParagraph(regionSlugs[region])!] : []),
         `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
       ],
       links: [
@@ -883,6 +885,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         loc.extraContent,
         ...(loc.factBox ? [loc.factBox.map((f) => `${f.label}: ${f.value}.`).join(" ")] : []),
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
+        ...(villaAreasParagraph(loc.slug) ? [villaAreasParagraph(loc.slug)!] : []),
         geoFactsParagraph(loc),
         `${loc.uniqueFAQ.question} ${loc.uniqueFAQ.answer}`,
         `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,
