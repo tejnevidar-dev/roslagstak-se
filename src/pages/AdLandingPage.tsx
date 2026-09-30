@@ -32,7 +32,7 @@ const steps = [
   },
   {
     title: "Vi utför jobbet",
-    text: "Vi sköter hela arbetet, städar och går igenom resultatet tillsammans med dig. Du får skriftlig garanti.",
+    text: "Vi utför arbetet och går igenom resultatet tillsammans med dig. Du får skriftlig garanti.",
   },
 ];
 

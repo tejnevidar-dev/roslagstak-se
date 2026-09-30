@@ -162,7 +162,7 @@ const seasonGuide = [
 
 const comparison = [
   { aspect: "Kostnad", clean: "Betydligt lägre", replace: "Högre", winner: "clean" },
-  { aspect: "Tidsåtgång", clean: "1–2 dagar", replace: "1–3 veckor", winner: "clean" },
+  { aspect: "Tidsåtgång", clean: "1–2 dagar", replace: "Beror på taket", winner: "clean" },
   { aspect: "Förlängd livslängd", clean: "10–15 år", replace: "30–50 år", winner: "replace" },
   { aspect: "ROT-avdrag", clean: "Ja, 30 %", replace: "Ja, 30 %", winner: "tie" },
   { aspect: "Störning för boende", clean: "Minimal", replace: "Stor — riv & bygg", winner: "clean" },

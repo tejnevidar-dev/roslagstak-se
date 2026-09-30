@@ -109,13 +109,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Furusund — takbyte, tegelplåttak och takrenovering.",
     longDescription:
-      "Furusund har anor som skärgårdsort och bebyggelsen speglar det — sekelskifteshus, klassiska sommarstugor och nyare villor. Många tak i Furusund har nått sin livslängd och behöver bytas eller renoveras. Vi finns regelbundet i Furusundsområdet och kan ofta kombinera projekt i närområdet, vilket ger dig ett fördelaktigt pris. Med vår kunskap om lokala förhållanden — från de salta vindarna till den fuktiga hösten — väljer vi material som verkligen håller. RoslagsTak är det självklara valet för fastighetsägare i Furusund som vill ha ett tak utan kompromisser.",
+      "Furusund har anor som skärgårdsort och bebyggelsen speglar det — sekelskifteshus, klassiska sommarstugor och nyare villor. Många tak i Furusund har nått sin livslängd och behöver bytas eller renoveras. Salta vindar och fuktiga höstar ställer krav på materialvalet, och det går vi igenom vid den kostnadsfria takkontrollen.",
     extraContent:
       "Furusund fungerar som knutpunkt för öarna i mellersta skärgården, och vi passerar dagligen genom Furusund på väg ut till Blidö, Yxlan och öarna i ytterskärgården. Det innebär att vi ofta kan erbjuda fastighetsägare i Furusund ett förmånligt pris genom att samordna med pågående projekt i närheten. Kontakta oss för en kostnadsfri takkontroll i Furusund.",
     uniqueFAQ: {
       question: "Hur snabbt kan ni påbörja ett takbyte i Furusund?",
       answer:
-        "Eftersom vi arbetar regelbundet i Furusundsområdet kan vi ofta påbörja arbetet inom 1–3 veckor efter beställning. Vi samordnar gärna med andra projekt i närheten, vilket kan ge ett förmånligt pris. Ring oss för att diskutera ditt projekt — vi ger alltid en realistisk tidsplan.",
+        "Ring oss för att diskutera ditt projekt. Takkontrollen är kostnadsfri och utan förpliktelser, och du får ett fast pris i offerten.",
     },
     primaryKeyword: "takläggare Furusund",
     lat: 59.65,
@@ -323,7 +323,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Spillersboda — takbyte, takrenovering och plåtarbeten längs Roslagens kust. Lokal takläggare med snabb service.",
     longDescription:
-      "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem vi åtgärdar hos fastighetsägare i Spillersboda. Med vår lokala närvaro kan vi ofta vara på plats inom kort och erbjuda en kostnadsfri takkontroll. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte. Ärlighet och kvalitet är våra ledord.",
+      "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem vi åtgärdar hos fastighetsägare i Spillersboda. Vi erbjuder en kostnadsfri takkontroll utan förpliktelser. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte. Ärlighet och kvalitet är våra ledord.",
     extraContent:
       "Spillersboda är en av de platser längs Roslagskusten där vi ofta arbetar. Fastighetsägare i Spillersboda uppskattar vår ärlighet — vi rekommenderar aldrig ett takbyte om en renovering räcker. Den lokala närvaron ger korta restider och snabb återkoppling.",
     uniqueFAQ: {

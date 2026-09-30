@@ -85,7 +85,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Prisbild", value: "Fast pris efter takkontroll", text: "TP20-plåt i nedre spannet, dubbelfalsat i övre. Fast pris i offerten." },
-      { tone: "outline", label: "Tidsåtgång", value: "1–3 veckor", text: "Normalvilla med ställning, rivning, nytt underlag och ytskikt." },
+      { tone: "outline", label: "Tidsåtgång", value: "Efter takets storlek", text: "Beror på takets storlek, underlagets skick och väder." },
       { tone: "accent", label: "Livslängd", value: "40–70 år", text: "Beror på val av ytskikt, lutning och exponering mot saltluft." },
       { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Allt dolt material byts — papp, läkt, beslag och avvattning." },
     ],
