@@ -151,10 +151,6 @@ const faqs = [
     q: "Kan svart algpåväxt försvinna helt efter taktvätt?",
     a: "Ja, svarta strimmor från cyanobakterier (Gloeocapsa magma) försvinner helt efter taktvätt med biocidbehandling. Algerna lossnar dock inte direkt — det tar 2–6 veckor efter biocidbehandlingen innan regn och vind har spolat bort de döda kolonierna och taket ser helt rent ut. Vi förklarar detta vid slutgenomgången så du vet vad du ska förvänta dig.",
   },
-  {
-    q: "Erbjuder ni serviceavtal för regelbunden takvård?",
-    a: "Ja, vi tecknar serviceavtal för villaägare, bostadsrättsföreningar och näringsfastigheter i Roslagen. Avtalet inkluderar årlig okulärkontroll, rensning av hängrännor en gång per år och taktvätt vart 5:e–7:e år till rabatterat pris. Perfekt för fritidshusägare som vill slippa tänka på underhåll — vi hör av oss efter varje besök.",
-  },
 ];
 
 const seasonGuide = [

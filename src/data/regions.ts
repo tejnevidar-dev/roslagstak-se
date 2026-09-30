@@ -51,7 +51,7 @@ export const regionIntros: Record<string, string> = {
   "Sydvästra Stockholm":
     "Sjönära villatak och kommunala takprojekt sydväst om Stockholm.",
   Mälardalen:
-    "Takbyte, takrenovering och serviceavtal för villor och bostadsrättsföreningar i Uppsala, Västerås, Eskilstuna och övriga Mälardalen.",
+    "Takbyte och takrenovering för villor och bostadsrättsföreningar i Uppsala, Västerås, Eskilstuna och övriga Mälardalen.",
 };
 
 /** URL-slug per region — används av områdeshubbarna (/omraden/<slug>). */

@@ -92,11 +92,6 @@ const brfFaqs = [
       "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Garantihandlingar lämnas efter slutgenomgång, så att de går att spara i föreningens arkiv.",
   },
   {
-    question: "Kan ni ta hand om takservice och snöskottning löpande?",
-    answer:
-      "Ja. Vi erbjuder serviceavtal med regelbunden takkontroll, rengöring och snöskottning. Upplägg och pris anpassas efter föreningens byggnader, så kontakta oss för en genomgång.",
-  },
-  {
     question: "Hur minimerar ni störningen för de boende?",
     answer:
       "Vi planerar ställning och tidplan tillsammans med styrelsen, skyddar fasad och mark, städar löpande och ger föreningen en fast kontaktperson under hela projektet.",
@@ -242,7 +237,6 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
             <option>Takkontroll</option>
             <option>Takbyte</option>
             <option>Takrenovering</option>
-            <option>Serviceavtal</option>
             <option>Vet ej än</option>
           </select>
         </div>
@@ -323,8 +317,8 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         title={place ? `Takbyte BRF${inPlace} — bostadsrättsföreningar` : "Takbyte för BRF — bostadsrättsföreningar"}
         description={
           place
-            ? `Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.`
-            : "Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI."
+            ? `Takbyte och takkontroll för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.`
+            : "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI."
         }
         canonical={`https://roslagstak.se${pagePath}`}
       />
@@ -552,24 +546,21 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
               </div>
 
               <div className="md:pl-14">
-                <h3 className="font-display text-[1.9rem] leading-tight">Serviceavtal</h3>
+                <h3 className="font-display text-[1.9rem] leading-tight">Takkontroll</h3>
                 <p className="mt-4 max-w-[46ch] leading-relaxed text-primary-foreground/75">
-                  Taket sköts löpande under ett avtal i stället för när något redan gått fel. Upplägg och pris
-                  anpassas efter föreningens byggnader.
+                  Allt börjar med en kostnadsfri takkontroll, utan förpliktelser. Därefter får föreningen en
+                  offert med fast pris att ta ställning till.
                 </p>
                 <ul className="mt-8 border-t border-primary-foreground/20 text-primary-foreground/90">
-                  {["Regelbunden takkontroll", "Rengöring av taket", "Snöskottning"].map((item) => (
+                  {["Kostnadsfri takkontroll utan förpliktelser", "Fast pris efter takkontrollen", "En kontaktperson hela vägen", "Svar inom 24 timmar"].map((item) => (
                     <li key={item} className="border-b border-primary-foreground/20 py-3.5">{item}</li>
                   ))}
                 </ul>
-                <p className="mt-6 text-[15px] leading-relaxed text-primary-foreground/60">
-                  Vi tar uppdrag för pannbyten och takkontroller på flerbostadshus.
-                </p>
                 <a
                   href="#forfragan"
                   className="mt-6 inline-flex items-center gap-2 font-semibold text-accent underline decoration-2 underline-offset-[6px] hover:text-primary-foreground"
                 >
-                  Fråga om serviceavtal <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  Boka kostnadsfri takkontroll <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
             </div>
