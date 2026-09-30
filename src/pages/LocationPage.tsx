@@ -19,6 +19,7 @@ import { regionSlugs } from "@/data/regions";
 import { projects, getNearbyProject } from "@/data/projects";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
+import { NAP, OPENING_HOURS, ORG_ID } from "@/lib/schema";
 import {
   Accordion,
   AccordionContent,
@@ -69,8 +70,9 @@ const LocationPage = () => {
     "@id": `https://roslagstak.se/taklaggare-${location.slug}#business`,
     name: "RoslagsTak",
     url: `https://roslagstak.se/taklaggare-${location.slug}`,
-    telephone: "+46701543639",
-    email: "info@roslagstak.se",
+    telephone: NAP.telephone,
+    email: NAP.email,
+    parentOrganization: { "@id": ORG_ID },
     image: "https://roslagstak.se/og-image.jpg",
     logo: "https://roslagstak.se/og-image.jpg",
     sameAs: [
@@ -84,38 +86,21 @@ const LocationPage = () => {
         latitude: location.lat,
         longitude: location.lng,
       },
+      ...(location.parentLocation
+        ? { containedInPlace: { "@type": "Place", name: location.parentLocation.name, url: `https://roslagstak.se/taklaggare-${location.parentLocation.slug}` } }
+        : {}),
     },
     description: `${location.primaryKeyword} — ${location.description}`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Blidö",
-      addressLocality: "Norrtälje",
-      postalCode: "76493",
-      addressRegion: "Stockholms län",
-      addressCountry: "SE",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: location.lat,
-      longitude: location.lng,
+      addressLocality: NAP.addressLocality,
+      addressRegion: NAP.addressRegion,
+      addressCountry: NAP.addressCountry,
     },
     priceRange: "$$",
     currenciesAccepted: "SEK",
-    paymentAccepted: "Faktura, Swish, Bankgiro",
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "07:00",
-        closes: "17:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "08:00",
-        closes: "15:00",
-      },
-    ],
+    paymentAccepted: "Faktura",
+    openingHoursSpecification: OPENING_HOURS,
     knowsAbout: [
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
       "Dubbelfalsat plåttak", "Tegelplåt", "Pannplåt", "Takavvattning",
@@ -211,7 +196,7 @@ const LocationPage = () => {
         <div className="pt-24">
           <Breadcrumbs
             items={[
-              { name: "Hem", path: "/" },
+              { name: "Startsidan", path: "/" },
               { name: "Områden", path: "/omraden" },
               { name: location.region, path: regionHref },
               ...(location.parentLocation

@@ -19,7 +19,12 @@ import { isNearBase, distanceFromBaseKm, distanceFromTabyKm, distanceKm } from "
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
-import { villaAreasParagraph } from "../src/data/villa-areas";
+import { villaAreasParagraph, villaAreasByPage } from "../src/data/villa-areas";
+
+const villaAreaLinks = (key: string) =>
+  (villaAreasByPage[key]?.areas ?? [])
+    .filter((a) => a.href)
+    .map((a) => ({ href: a.href!, label: `Takläggare i ${a.name}` }));
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
@@ -831,6 +836,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       links: [
         ...primaryLinks,
         { href: "/omraden", label: "Alla områden i Roslagen och Storstockholm" },
+        ...villaAreaLinks(regionSlugs[region]),
         ...places.map((l) => ({
           href: `/taklaggare-${l.slug}`,
           label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
@@ -893,6 +899,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       links: [
         ...primaryLinks,
         ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
+        ...villaAreaLinks(loc.slug),
         ...combos
           .filter((c) => c.locationSlug === loc.slug)
           .map((c) => ({ href: c.url, label: `${c.serviceName} ${c.prep} ${c.locationName}` })),

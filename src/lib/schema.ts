@@ -67,6 +67,22 @@ export const services: { slug: string; name: string; description: string }[] = [
   },
 ];
 
+/** Öppettider — samma som på kontaktsidan (Mån–Lör 07–20, Sön 09–20). Delas av alla LocalBusiness-noder. */
+export const OPENING_HOURS = [
+  {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "07:00",
+    closes: "20:00",
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: "Sunday",
+    opens: "09:00",
+    closes: "20:00",
+  },
+];
+
 /** Unika regioner i ortsdatan — används som areaServed på områdesnivå. */
 export const serviceRegions = Array.from(new Set(locations.map((l) => l.region)));
 
@@ -101,20 +117,7 @@ export const buildLocalBusinessSchema = () => ({
     ...serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
     ...locations.map((loc) => ({ "@type": "Place", name: loc.name })),
   ],
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "07:00",
-      closes: "20:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: "09:00",
-      closes: "20:00",
-    },
-  ],
+  openingHoursSpecification: OPENING_HOURS,
   knowsAbout: [
     "Takbyte",
     "Takomläggning",

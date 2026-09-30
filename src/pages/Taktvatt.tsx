@@ -269,7 +269,7 @@ const Taktvatt = () => {
       telephone: "+46-70-154-36-39",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Blidö",
+        addressLocality: "Norrtälje",
         addressRegion: "Stockholms län",
         addressCountry: "SE",
       },
