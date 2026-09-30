@@ -82,7 +82,7 @@ const process = [
 const guarantees = [
   { icon: ShieldCheck, title: "10 års utförandegaranti", desc: "På utfört arbete. Du får garantin skriftligt." },
   { icon: Award, title: "Fast pris efter kostnadsfri takkontroll", desc: "Inga timdebiteringar eller överraskningar. Du vet exakt vad taktvätten kostar innan vi börjar." },
-  { icon: FileCheck, title: "F-skatt & fullt försäkrade", desc: "Godkänd för F-skatt med ansvarsförsäkring för hela arbetet." },
+  { icon: FileCheck, title: "Svar inom 24 timmar", desc: "Vi återkommer inom 24 timmar på din förfrågan." },
   { icon: Phone, title: "Personlig kontakt hela vägen", desc: "Du har en dedikerad kontaktperson från offert till slutgenomgång — alltid samma person att ringa." },
 ];
 
@@ -243,7 +243,6 @@ const tabContent: Record<string, { title: string; desc: string; bullets: string[
     desc: "Vi utför taktvätt på hotell, restauranger, vandrarhem och kommersiella fastigheter i hela Roslagen. Avdragsgillt som driftkostnad och kan utföras med minimal störning för verksamheten.",
     bullets: [
       "Arbete utanför öppettider eller säsong",
-      "F-skatt, fullt försäkrade och referenser från besöksnäringen",
       "Skriftliga avtal med servicenivåer (SLA)",
       "Volymrabatt vid flera fastigheter",
     ],

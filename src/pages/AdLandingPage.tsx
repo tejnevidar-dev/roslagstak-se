@@ -16,7 +16,6 @@ const PHONE_DISPLAY = "070-154 36 39";
 const PHONE_HREF = "tel:0701543639";
 
 const trust = [
-  "F-skatt och ansvarsförsäkring",
   "10 års utförandegaranti",
   "30 års tätskiktsgaranti (MATAKI)",
   "Arbete enligt AMA",
@@ -222,7 +221,7 @@ const AdLandingPage = () => {
       </main>
 
       <footer className="border-t border-border bg-background px-5 py-6 text-center text-[13px] text-muted-foreground">
-        RoslagsTak · F-skatt · Ansvarsförsäkring ·{" "}
+        RoslagsTak ·{" "}
         <a href="/" className="underline underline-offset-4 hover:text-foreground">
           roslagstak.se
         </a>{" "}

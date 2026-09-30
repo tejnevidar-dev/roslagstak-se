@@ -20,7 +20,7 @@ import heroImg from "@/assets/roof-brf-hero.jpg";
 const facts = [
   { label: "Utförande", value: "10 års utförandegaranti" },
   { label: "Tätskikt", value: "30 års garanti genom MATAKI" },
-  { label: "Företaget", value: "F-skatt och ansvarsförsäkring" },
+  { label: "Offert", value: "Fast pris efter kostnadsfri takkontroll" },
   { label: "Standard", value: "Arbete enligt AMA Hus" },
 ];
 
@@ -95,11 +95,6 @@ const brfFaqs = [
     question: "Kan ni ta hand om takservice och snöskottning löpande?",
     answer:
       "Ja. Vi erbjuder serviceavtal med regelbunden takkontroll, rengöring och snöskottning. Upplägg och pris anpassas efter föreningens byggnader, så kontakta oss för en genomgång.",
-  },
-  {
-    question: "Har ni F-skatt och ansvarsförsäkring?",
-    answer:
-      "Ja, RoslagsTak har F-skatt och ansvarsförsäkring. Har föreningen krav på ytterligare dokumentation vid upphandling är ni välkomna att höra av er.",
   },
   {
     question: "Hur minimerar ni störningen för de boende?",
@@ -328,8 +323,8 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         title={place ? `Takbyte BRF${inPlace} — bostadsrättsföreningar` : "Takbyte för BRF — bostadsrättsföreningar"}
         description={
           place
-            ? `Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.`
-            : "Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti, F-skatt och ansvarsförsäkring."
+            ? `Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.`
+            : "Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI."
         }
         canonical={`https://roslagstak.se${pagePath}`}
       />

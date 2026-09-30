@@ -13,7 +13,6 @@ import { getLandingService } from "@/data/landing-services";
 import NotFound from "@/pages/NotFound";
 
 const trust = [
-  "F-skatt och ansvarsförsäkring",
   "10 års utförandegaranti",
   "30 års tätskiktsgaranti (MATAKI)",
   "Fast pris efter takkontroll",

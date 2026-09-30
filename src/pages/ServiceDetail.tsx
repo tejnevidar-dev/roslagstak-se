@@ -826,8 +826,8 @@ const ServiceDetail = () => {
                   d: details.priceRange ?? "Fast pris efter kostnadsfri takkontroll.",
                 },
                 {
-                  t: "Garanti och försäkring",
-                  d: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Vi har F-skatt.",
+                  t: "Garanti",
+                  d: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
                 },
                 {
                   t: "Skärgård och logistik",

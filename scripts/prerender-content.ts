@@ -462,7 +462,7 @@ const staticPages: Record<string, PrerenderPage> = {
   "/brf": {
     title: "Takbyte för BRF — bostadsrättsföreningar",
     description:
-      "Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.",
+      "Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     h1: "Takbyte för bostadsrättsföreningar, med underlag styrelsen kan besluta på",
     intro:
       "Från kostnadsfri takkontroll och fast offert till slutgenomgång och garantibevis. Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
@@ -470,7 +470,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk. Vi bygger arbetet på tre underlag som går att spara och jämföra: en tydlig bedömning av takets skick, fast offert och garantihandlingar efter slutgenomgång.",
       "Så går ett takbyte till i en förening: takkontroll, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande samt slutgenomgång och garantibevis.",
       "Vi erbjuder takbyte och takrenovering samt serviceavtal med regelbunden takkontroll, rengöring och snöskottning. Upplägg och pris för serviceavtal anpassas efter föreningens byggnader.",
-      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. RoslagsTak har F-skatt och ansvarsförsäkring.",
+      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
       "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
       `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
     ],
@@ -846,7 +846,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const prep = loc.isIsland ? "på" : "i";
     return {
       title: `Takbyte BRF ${prep} ${loc.name} — bostadsrättsföreningar`,
-      description: `Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, F-skatt och ansvarsförsäkring.`,
+      description: `Takbyte, takkontroll och serviceavtal för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.`,
       h1: `Takbyte för bostadsrättsföreningar ${prep} ${loc.name}, med underlag styrelsen kan besluta på`,
       intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång och garantibevis. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
       paragraphs: [
