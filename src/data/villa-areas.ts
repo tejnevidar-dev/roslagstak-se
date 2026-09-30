@@ -24,16 +24,35 @@ export const VILLA_AREAS_SOURCE =
 
 /** Nyckel = ortsslug för kommunsidan (/taklaggare-<slug>) eller regionslug (/omraden/<slug>). */
 export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
+  stockholm: {
+    municipality: "Stockholm",
+    areas: [
+      { name: "Kälvesta", types: "Radhus, kedjehus, atriumhus och villor", period: "1966 till mitten av 1970-talet (Wikipedia)", href: "/taklaggare-kalvesta" },
+    ],
+  },
+  "upplands-vasby": {
+    municipality: "Upplands Väsby",
+    areas: [
+      { name: "Bollstanäs", types: "Radhus, kedjehus och villor", period: "Främst 1970- och 1980-tal (hitta.se)", href: "/taklaggare-bollstanas" },
+    ],
+  },
+  danderyd: {
+    municipality: "Danderyd",
+    areas: [
+      { name: "Nora och Kevinge", types: "Villor, kedjehus och radhus", period: "Nora trädgårdsstad från 1926, Kevinge 1950–60-tal (Wikipedia, hitta.se)", href: "/taklaggare-nora-kevinge" },
+      { name: "Enebyberg", types: "Villor, rad- och kedjehus", period: "Villor 1906–1940-tal, rad- och kedjehus 1960–70-tal", href: "/taklaggare-enebyberg" },
+    ],
+  },
   taby: {
     municipality: "Täby",
     areas: [
       { name: "Ella gård", types: "Kedjehus och radhus", period: "1955 till omkring 1970 (kommunen)", href: "/taklaggare-ella-gard" },
       { name: "Skarpäng", types: "Villor, radhus och grupphus", period: "Typhus från 1970- och 1980-talet (kommunen)", href: "/taklaggare-skarpang" },
-      { name: "Näsbypark", types: "Villor, kedjehus, radhus och parhus", period: "Villor 1930–40-tal, grupphus 1955–1976 (kommunen)" },
+      { name: "Näsbypark", types: "Villor, kedjehus, radhus och parhus", period: "Villor 1930–40-tal, grupphus 1955–1976 (kommunen)", href: "/taklaggare-nasbypark" },
       { name: "Ensta", types: "Villor", period: "1940–1960-tal, förtätning på 1970-talet (kommunen)" },
       { name: "Erikslund", types: "Parhus, kedjehus och grupphus", period: "1972–1973 (kommunen)" },
       { name: "Ella Park", types: "Villor och kedjehus", period: "Främst 1950–60-tal (kommunen)" },
-      { name: "Vallabrink", types: "Villor och kedjehus", period: "Främst 1960–70-tal (kommunen)" },
+      { name: "Vallabrink", types: "Villor och kedjehus", period: "Främst 1960–70-tal (kommunen)", href: "/taklaggare-vallabrink" },
       { name: "Gribby-Myräng", types: "Villor och radhus", period: "Löttingelund 1970–80-tal (kommunen)" },
     ],
   },
@@ -55,7 +74,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Stuvsta", types: "Villor samt rad- och kedjehus", period: "Villor 1920–1930-tal, rad- och kedjehus 1980–1990-tal", href: "/taklaggare-stuvsta" },
       { name: "Trångsund", types: "Villor, småhus och radhus", period: "Styckning 1911–1928, stor småhusutbyggnad tidigt 1960-tal", href: "/taklaggare-trangsund" },
       { name: "Segeltorp", types: "Villor och radhus", period: "Villor tidigt 1900-tal, radhus främst 1950-tal", href: "/taklaggare-segeltorp" },
-      { name: "Fullersta norra", types: "Villor", period: "Mest 1960–1970-tal, villor 1920–1930-tal längs Fullerstavägen" },
+      { name: "Fullersta norra", types: "Villor", period: "Mest 1960–1970-tal, villor 1920–1930-tal längs Fullerstavägen", href: "/taklaggare-fullersta" },
       { name: "Snättringe", types: "Mest villor, en del radhus", period: "Villor 1920–1930-tal, radhus tidigt 1960-tal" },
       { name: "Sjödalen södra (Solgård, Sörskogen)", types: "Villor, kedjehus och radhus", period: "Sörskogen: villor och kedjehus 1960-tal, radhus 1970-tal" },
       { name: "Östra Skogås och Mörtvik", types: "Villor, radhus och kedjehus", period: "Från slutet av 1970-talet" },
@@ -64,7 +83,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
   lidingo: {
     municipality: "Lidingö",
     areas: [
-      { name: "Brevik, Käppala och Gåshaga", types: "Villor, kedjehus och radhus", period: "Käppala villastad från 1910-talet, Brevik i huvudsak från 1960-talet, Gåshaga 2000–2020 (Wikipedia)" },
+      { name: "Brevik, Käppala och Gåshaga", types: "Villor, kedjehus och radhus", period: "Käppala villastad från 1910-talet, Brevik i huvudsak från 1960-talet, Gåshaga 2000–2020 (Wikipedia)", href: "/taklaggare-brevik-kappala-gashaga" },
       { name: "Sticklinge", types: "Villor", period: "Norra Sticklinge efter stadsplanen 1978, Södra Sticklinge tidigt 1990-tal (Wikipedia)" },
       { name: "Mölna", types: "Villor, radhus och kedjehus", period: "Främst 1950- och 1960-tal (Wikipedia)" },
       { name: "Östra Rudboda, Yttringe och Elfvik", types: "Radhus, kedjehus och villor", period: "Östra Rudboda mitten av 1970-talet (Wikipedia)" },
@@ -75,7 +94,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
   jarfalla: {
     municipality: "Järfälla",
     areas: [
-      { name: "Jakobsberg västra", types: "Villor, kedjehus och radhus", period: "Tomter styckade på 1920–30-talet (kommunen), mest 1950–1970-tal (hitta.se)" },
+      { name: "Jakobsberg västra", types: "Villor, kedjehus och radhus", period: "Tomter styckade på 1920–30-talet (kommunen), mest 1950–1970-tal (hitta.se)", href: "/taklaggare-jakobsberg" },
       { name: "Fjällen och Fastebol (Viksjö)", types: "Kedjehus, radhus och villor", period: "Fastebol 1966–67, Andeboda 1967–70, Fjällen tidigt 1980-tal (Wikipedia)" },
       { name: "Viksjö västra", types: "Kedjehus, radhus och villor", period: "1969 till tidigt 1980-tal (Wikipedia)" },
       { name: "Barkarby västra och Skälby östra", types: "Villor, inslag av kedjehus och radhus", period: "Tomter styckade från 1926 (kommunen), mest 1950- och 1960-tal (hitta.se)" },

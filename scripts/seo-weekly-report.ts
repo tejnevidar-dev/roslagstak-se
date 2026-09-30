@@ -86,16 +86,24 @@ writeFileSync(SNAPSHOT_PATH, JSON.stringify(currentPaths));
    .seo-vag1-baslinje.json och skrivs aldrig över). Beslutsregel (seo-plan-omraden.md
    avsnitt 5): ≥ 3 av 5 indexerade inom 14 dagar (2026-10-14), inga kvalitetsvarningar.
    Indexering i Google kräver GSC — tills dess mäts sajtens egna förutsättningar. */
-const WAVE1 = [
-  { path: "/taklaggare-ella-gard", area: "Ella gård, Täby" },
-  { path: "/taklaggare-skarpang", area: "Skarpäng, Täby" },
-  { path: "/taklaggare-viby", area: "Viby-Järvafältet, Sollentuna" },
-  { path: "/taklaggare-brevik", area: "Brevik-Lervik-Flaxenvik, Österåker" },
-  { path: "/taklaggare-ormsta", area: "Vallentuna östra (Ormsta), Vallentuna" },
+/** Alla publicerade villaområdessidor per våg. Lägg till en rad när en sida publiceras. */
+const WAVES: { path: string; area: string; wave: number }[] = [
+  { path: "/taklaggare-ella-gard", area: "Ella gård, Täby", wave: 1 },
+  { path: "/taklaggare-skarpang", area: "Skarpäng, Täby", wave: 1 },
+  { path: "/taklaggare-viby", area: "Viby-Järvafältet, Sollentuna", wave: 1 },
+  { path: "/taklaggare-brevik", area: "Brevik-Lervik-Flaxenvik, Österåker", wave: 1 },
+  { path: "/taklaggare-ormsta", area: "Vallentuna östra (Ormsta), Vallentuna", wave: 1 },
+  { path: "/taklaggare-nasbypark", area: "Näsbypark, Täby", wave: 2 },
+  { path: "/taklaggare-vallabrink", area: "Vallabrink, Täby", wave: 2 },
+  { path: "/taklaggare-kalvesta", area: "Kälvesta, Stockholm", wave: 2 },
+  { path: "/taklaggare-fullersta", area: "Fullersta norra, Huddinge", wave: 2 },
+  { path: "/taklaggare-brevik-kappala-gashaga", area: "Brevik-Käppala-Gåshaga, Lidingö", wave: 2 },
+  { path: "/taklaggare-bollstanas", area: "Bollstanäs, Upplands Väsby", wave: 2 },
+  { path: "/taklaggare-nora-kevinge", area: "Danderyd västra (Nora, Kevinge), Danderyd", wave: 2 },
+  { path: "/taklaggare-jakobsberg", area: "Jakobsberg västra, Järfälla (befintlig sida förstärkt)", wave: 2 },
 ];
-const WAVE1_BASELINE_DATE = "2026-09-30";
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
-type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number };
+type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };
 const inlinkCount = new Map<string, number>();
 for (const from of currentPaths) {
   const page = prerenderContent(from);
@@ -104,7 +112,7 @@ for (const from of currentPaths) {
     if (href !== from) inlinkCount.set(href, (inlinkCount.get(href) ?? 0) + 1);
   }
 }
-const wave1Rows: Wave1Row[] = WAVE1.map(({ path }) => {
+const wave1Rows: Wave1Row[] = WAVES.map(({ path }) => {
   const page = prerenderContent(path);
   const words = page ? [page.intro, ...page.paragraphs].join(" ").split(/\s+/).filter(Boolean).length : 0;
   const htmlPath = resolve(`dist${path}.html`);
@@ -119,19 +127,24 @@ const wave1Rows: Wave1Row[] = WAVE1.map(({ path }) => {
   }
   return { path, inSitemap: currentPaths.includes(path), indexable, canonical, inlinks: inlinkCount.get(path) ?? 0, words };
 });
-let wave1Baseline: { date: string; rows: Wave1Row[] };
-if (existsSync(WAVE1_BASELINE_PATH)) {
-  wave1Baseline = JSON.parse(readFileSync(WAVE1_BASELINE_PATH, "utf8"));
-} else {
-  wave1Baseline = { date: WAVE1_BASELINE_DATE, rows: wave1Rows };
-  writeFileSync(WAVE1_BASELINE_PATH, JSON.stringify(wave1Baseline, null, 2));
+/* Utgångsläget fryses per sida första gången sidan finns med (datum per rad) och skrivs aldrig över. */
+const wave1Baseline: { date: string; rows: Wave1Row[] } = existsSync(WAVE1_BASELINE_PATH)
+  ? JSON.parse(readFileSync(WAVE1_BASELINE_PATH, "utf8"))
+  : { date: today, rows: [] };
+let baselineChanged = false;
+for (const r of wave1Rows) {
+  if (!wave1Baseline.rows.some((x) => x.path === r.path) && r.inSitemap && r.indexable === "ja") {
+    wave1Baseline.rows.push({ ...r, date: today });
+    baselineChanged = true;
+  }
 }
+if (baselineChanged) writeFileSync(WAVE1_BASELINE_PATH, JSON.stringify(wave1Baseline, null, 2));
 const wave1Table = [
-  "| Sida | Område | I sitemap | Indexerbar | Canonical | Inlänkar (utg.→nu) | Ord prerender (utg.→nu) | Indexerad i Google |",
-  "|---|---|---|---|---|---|---|---|",
+  "| Våg | Sida | Område | I sitemap | Indexerbar | Canonical | Utgångsläge | Inlänkar (utg.→nu) | Ord prerender (utg.→nu) | Indexerad i Google |",
+  "|---|---|---|---|---|---|---|---|---|---|",
   ...wave1Rows.map((r, i) => {
     const b = wave1Baseline.rows.find((x) => x.path === r.path);
-    return `| ${r.path} | ${WAVE1[i].area} | ${r.inSitemap ? "ja" : "NEJ"} | ${r.indexable} | ${r.canonical} | ${b?.inlinks ?? "–"}→${r.inlinks} | ${b?.words ?? "–"}→${r.words} | väntar på GSC |`;
+    return `| ${WAVES[i].wave} | ${r.path} | ${WAVES[i].area} | ${r.inSitemap ? "ja" : "NEJ"} | ${r.indexable} | ${r.canonical} | ${b?.date ?? wave1Baseline.date} | ${b?.inlinks ?? "–"}→${r.inlinks} | ${b?.words ?? "–"}→${r.words} | väntar på GSC |`;
   }),
 ].join("\n");
 
@@ -193,8 +206,8 @@ lines.push(
 );
 lines.push(
   section(
-    "8. Villaområden våg 1 — 14-dagarsmätning",
-    `Utgångsläge ${wave1Baseline.date} (fryst i ledning/marknad/.seo-vag1-baslinje.json). Avläsning 2026-10-14. Beslutsregel: ≥ 3 av 5 indexerade i Google inom 14 dagar och inga kvalitetsvarningar. Inlänkar = antal andra sitemap-sidor vars förrenderade HTML länkar hit. Ord = förrenderad brödtext (samma mått som content-depth-check, gräns 400).\n\n${wave1Table}`,
+    "8. Villaområden — mätning per våg",
+    `Utgångsläget fryses per sida i ledning/marknad/.seo-vag1-baslinje.json (datum per rad). Våg 2 publicerades utan 14 dagars väntan (Vidars beslut 2026-09-30); indexering följs upp 14 dagar efter respektive utgångsläge. Inlänkar = antal andra sitemap-sidor vars förrenderade HTML länkar hit. Ord = förrenderad brödtext (samma mått som content-depth-check, gräns 400).\n\n${wave1Table}`,
   ),
 );
 lines.push(

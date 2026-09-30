@@ -965,6 +965,153 @@ export const locations: LocationData[] = [
     lng: 18.0881,
     nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
   },
+  {
+    slug: "nasbypark",
+    name: "Näsbypark",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Näsbypark i Täby: villor från 1930-talet, grupphus som Norskogen och kvarteret Hägern. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Näsbypark har vuxit fram kring Näsby slott vid Näsbyviken. Slottet uppfördes efter ritningar av Nicodemus Tessin den äldre och är, med park och alléer, Täbys enda byggnadsminne. Det brann 1897 och köptes 1902 av Carl Robert Lamm, som tillsammans med sin hustru Dora byggde upp det igen. År 1907 bildades Näsby Fastighets AB, som började stycka tomter. Det strandnära området Näsby slottspark planlades först, och enligt Täby kommun var över 200 tomter bebyggda redan 1933. Kommunen beskriver hur Lamm ville bevara parkstrukturen, och de stora tomterna, grönytorna och det slingrande vägnätet med trädkantade huvudgator som Slottsvägen och Centralvägen präglar fortfarande området. Med järnvägen på 1930-talet, Sjökrigsskolan på slottet från 1940-talet och motorvägen på 1950-talet byggdes villabeståndet gradvis ut. En stadsplan från 1953 gjorde Näsbypark till en modern stadsdel med eget centrum, som invigdes 1961. Grupphusområdena är något av ett kännetecken. Enligt kommunens beskrivning har Norskogen 197 bostäder i villor, parhus och radhus från 1957–59, ritade av Gustaf Lettström och tillverkade av Mockfjärdshus, med flacka tak och fasader av finprofilerad aluminiumplåt. De \"engelska radhusen\" är egentligen kedjehus i rött tegel från 1955, ritade av Gunnar Jacobson. Kvarteret Hägern från 1975–76 har kedjehus med branta tak täckta med svarta betongpannor och små takkupor i svartmålad plåt. Kvarteret Tranan från 1998–99 har parhus och enbostadshus med sadeltak av röda betongpannor, och två av husen har tak av svartmålad bandplåt.",
+    extraContent:
+      "Husen i Näsbypark spänner över nästan hundra år. Villorna från 1930- och 40-talen är i dag runt 80–95 år gamla, grupphusen från 1955–76 runt 50–70 år och husen i Tranan runt 25 år. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. I grupphusområdena är enhetligheten en viktig del av miljön. För Norskogen finns områdesriktlinjer som syftar till att området ska behålla sin enhetlighet, och för de engelska radhusen är kommunens råd att bevara den enhetliga karaktären och den ursprungliga färgsättningen. Vid ett takbyte i sådana kvarter är det därför klokt att välja material och kulör i linje med kommunens riktlinjer. Grannar i samma kvarter kan ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte kräver lov eller anmälan avgör Täby kommun.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Norskogen, Näsbypark östra, västra och södra"},{"label":"Hustyper","value":"Villor, kedjehus, radhus, parhus"},{"label":"Byggperiod","value":"Villor 1930–40-tal, grupphus 1955–1976, parhus 1998–99"},{"label":"Tak (belagt per kvarter)","value":"Hägern: svarta betongpannor · Tranan: röda betongpannor (två hus med svartmålad bandplåt) · Norskogen: flacka tak"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 520"}],
+    sourceLink: {"label":"Täby kommun: Näsbypark (kulturmiljö, råd och riktlinjer)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/nasbypark"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Näsbypark, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Näsbypark?","answer":"Byggperiod enligt källorna: Villor 1930–40-tal, grupphus 1955–1976, parhus 1998–99. Hustyper: villor, kedjehus, radhus, parhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Näsbypark",
+    lat: 59.4285,
+    lng: 18.0965,
+    nearbyLocations: ["Täby","Ella gård","Skarpäng","Vallabrink"],
+  },
+  {
+    slug: "vallabrink",
+    name: "Vallabrink",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Östra och Västra Vallabrink i Täby, med typvillor och kedjehus från 1960- och 70-talen. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Vallabrink ligger på kuperad skogsmark som tidigare hörde till den närbelägna gården Valla. Genom stadsdelen går Täbyvägen, som följer den ursprungliga vägen norrut mot Täby kyrka. Enligt Täby kommun var vägen, tillsammans med den gamla Hagbyvägen, länge en anhalt med en vägkrog, som finns omtalad en bit in på 1700-talet. Tomter började styckas av från Valla gårds utmark gradvis på 1930-talet, men bebyggelsen förblev gles fram till 1960-talet, när nya stadsplaner antogs. Planeringen skedde i två etapper med tio års mellanrum, och Täbyvägen blev gränsen mellan dem. Östra Vallabrink, mot Ella park, byggdes först. Där planlades i början av 1960-talet ett fyrtiotal kedjehus och minst lika många villor, och de enstaka äldre husen som redan fanns fick ingå i den nya planen. Västra Vallabrink, på andra sidan vägen, kom senare och präglas enligt kommunen främst av 1970-talets typhus. Kommunen beskriver Vallabrink som dominerat av typvillor från framför allt 1960- och 70-talen, med tidstypisk karaktär i tegel och trä. Det går från 1960-talets putsade tegelhus till 1970-talets villor i en och en halv plan, med sadeltak och djupa takutsprång. Som exempel nämner kommunen en suterrängvilla från 1972 vid Brinkvägen, med gavlar av mexitegel, och en villa från 1982 vid Klippvägen, med fasader av mexitegel och tak av svarta betongpannor.",
+    extraContent:
+      "De flesta husen i Vallabrink är i dag runt 50–65 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. De djupa takutsprången från 1970-talet är en del av husens karaktär, och takfot och vindskivor behöver ses över i samma arbete. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. I kedjehusområdet i Östra Vallabrink är husen byggda samtidigt, och där kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Östra och Västra Vallabrink"},{"label":"Hustyper","value":"Villor och kedjehus"},{"label":"Byggperiod","value":"Främst 1960–70-tal (tomter från 1930-talet)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 570"}],
+    sourceLink: {"label":"Täby kommun: Vallabrink (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/vallabrink"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Vallabrink, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Vallabrink?","answer":"Byggperiod enligt källorna: Främst 1960–70-tal (tomter från 1930-talet). Hustyper: villor och kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Vallabrink",
+    lat: 59.4555,
+    lng: 18.056,
+    nearbyLocations: ["Täby","Ella gård","Näsbypark"],
+  },
+  {
+    slug: "kalvesta",
+    name: "Kälvesta",
+    region: "Västerort",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Kälvesta i Västerort, med radhus, kedjehus, atriumhus och villor från 1966–75. Kostnadsfri takkontroll utan förpliktelser.",
+    longDescription:
+      "Kälvesta i nordvästra Hässelby-Vällingby är en stadsdel med radhus och villor, som i beskrivningar av stadsdelen kallas ett \"horisontellt\" miljonprogramsområde. Stadsdelen gränsar till Vinsta i sydväst, Hässelby villastad i väster, Solhem i sydost, Lunda i nordost och Skälby i Järfälla i norr. Platsen har brukats länge. Kälvesta gravhögar är Stockholms kommuns största gravfält, med omkring 145 fornlämningar: högar, runda och rektangulära stensättningar, treuddar och skeppsformiga stensättningar. Kälvesta gamla by i Spånga socken har anor från medeltiden och delades under 1700-talet upp på flera gårdar. På 1930- och 40-talen styckades marken av till handelsträdgårdar, småbruk och villor, och några av de villorna finns fortfarande kvar. Stockholms stad köpte området 1949, när större delen av Spånga införlivades med Stockholm, och stadsdelen bildades 1953. Namnet kommer från byn, och ändelsen -sta betyder plats. Det moderna Kälvesta planerades successivt mellan 1963 och 1974, i samråd med arkitektkontoret Höjer & Ljungqvist, som ritade för radhus och kedjehus. De första husen började byggas 1966, och byggandet pågick till mitten av 1970-talet. Enligt beskrivningarna av stadsdelen finns här omkring 2 000 enfamiljsbostäder: radhus, kedjehus, atriumhus och fristående villor längs Sörgårdsvägen, där flertalet bor i radhus om fyra rum och kök.",
+    extraContent:
+      "Husen i Kälvesta är i dag runt 50–60 år gamla. Taken kan redan ha lagts om, men där det inte har skett är det ofta dags att se över underlagspapp, läkt, plåtdetaljer och hängrännor. På radhus och kedjehus hänger taken ihop med grannens, och anslutningarna mellan husen behöver då utföras så att de fungerar tillsammans med grannens tak. Eftersom husen i ett kvarter ofta är likadana och byggda samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    factBox: [{"label":"Kommun","value":"Stockholm (Hässelby-Vällingby)"},{"label":"Hustyper","value":"Radhus, kedjehus, atriumhus, villor"},{"label":"Byggperiod","value":"1966 – mitten av 1970-talet (planlagt 1963–1974)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 500"}],
+    sourceLink: {"label":"Wikipedia: Kälvesta","url":"https://sv.wikipedia.org/wiki/K%C3%A4lvesta"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Kälvesta, Stockholm",
+    uniqueFAQ: {"question":"När byggdes husen i Kälvesta?","answer":"Byggperiod enligt källorna: 1966 – mitten av 1970-talet (planlagt 1963–1974). Hustyper: radhus, kedjehus, atriumhus, villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad."},
+    primaryKeyword: "takläggare Kälvesta",
+    lat: 59.3705,
+    lng: 17.848,
+    nearbyLocations: ["Hässelby","Vällingby","Spånga"],
+  },
+  {
+    slug: "fullersta",
+    name: "Fullersta",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Fullersta i Huddinge, med villor från 1920-talet och bebyggelse från 1960- och 70-talen. Kostnadsfri takkontroll utan förpliktelser.",
+    longDescription:
+      "Fullersta nämns i skrift första gången 1356, då byn bestod av fyra hemman. Äldre namnformer är Fullestum från 1369 och Fullista från 1535. Enligt en tolkning kommer förleden från Fullerstaån, som på våren kunde föra stora vattenmängder från sjön Gömmaren till Trehörningen, och fynd tyder på att det har funnits en bosättning här sedan folkvandringstiden, för omkring 1 500 år sedan. Gården blev säteri 1656, och den nuvarande gårdsbyggnaden uppfördes 1850 av godsägaren Pehr Pettersson, kallad Patron Pehr. I början av 1900-talet tog exploateringen fart. Gårdens siste jordbrukande ägare, Carl-Erik Lindell, lade ner jordbruket och började 1902 sälja \"vackra tomter för villor och egna hem\" vid Huddinge järnvägsstation under namnet Huddinge villastad. Efter några ägarbyten tog AB Upplandshem över försäljningen. År 1918 gjorde arkitekten Arvid Stille en stadsplan för 52 hektar och 208 tomter, som enligt beskrivningen tog stor hänsyn till terrängen och den befintliga miljön. Planen genomfördes dock inte helt. Fullersta var eget municipalsamhälle mellan 1924 och 1946. Nära Huddinge centrum finns i dag äldre villabebyggelse från Huddinge villastad och Hörningsnäs villastad, med några k-märkta villor i nationalromantisk stil. Innan Huddinge centrum byggdes var Fullerstatorget ortens samlingspunkt. Enligt hitta.se är bebyggelsen i Fullersta främst från 1960- och 1970-talen, med villor från 1920- och 1930-talen längs Fullerstavägen. Sedan 2018 är Fullersta en egen kommundel, med drygt 7 700 invånare.",
+    extraContent:
+      "I Fullersta står hus från mycket olika tider nära varandra. Villorna längs Fullerstavägen är i dag runt 90–100 år gamla, medan husen från 1960- och 70-talen är runt 50–65 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. På äldre villor kan takets form, takfot och detaljer vara en del av husets karaktär, och det är värt att tänka på redan när materialet väljs. Om huset är k-märkt, eller om ett byte av material eller kulör kräver lov eller anmälan, avgör Huddinge kommun. Det är klokt att ta reda på det innan materialet bestäms. Varje hus får en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Huddinge"},{"label":"Hustyper","value":"Villor (samt flerbostadshus i kommundelen)"},{"label":"Byggperiod","value":"Främst 1960–70-tal, villor 1920–30-tal längs Fullerstavägen"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 600"}],
+    sourceLink: {"label":"Wikipedia: Fullersta","url":"https://sv.wikipedia.org/wiki/Fullersta"},
+    parentLocation: {"name":"Huddinge","slug":"huddinge"},
+    h1Override: "Takläggare i Fullersta, Huddinge",
+    uniqueFAQ: {"question":"När byggdes husen i Fullersta?","answer":"Byggperiod enligt källorna: Främst 1960–70-tal, villor 1920–30-tal längs Fullerstavägen. Hustyper: villor (samt flerbostadshus i kommundelen). Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun."},
+    primaryKeyword: "takläggare Fullersta",
+    lat: 59.2395,
+    lng: 17.975,
+    nearbyLocations: ["Huddinge","Stuvsta","Trångsund","Segeltorp"],
+  },
+  {
+    slug: "brevik-kappala-gashaga",
+    name: "Brevik, Käppala och Gåshaga",
+    region: "Östra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Brevik, Käppala och Gåshaga på Lidingö, från 1910-talsvillor till nya radhus. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Den östra delen av södra Lidingö, med Brevik, Käppala och Gåshaga, har en gemensam historia. Här låg några av öns första större lantbruksgårdar, och namnet Brevik betyder \"breda viken\". Breviks gård nämns 1498 som Bredewijk, och Käppala finns med som Kiepla på den äldsta kända kartan över Lidingön, från 1661. Under lång tid ingick gårdarna i Djursholms gods, och när fideikommisset upplöstes 1774 blev de självständiga. Gåshaga gård fick sin fastighet lagfaren vid den stora skogsdelningen samma år. Villastaden började ta form 1906–1907, när finansmannen Allan Abenius köpte Brevik, Käppala och Gåshaga och lät stycka upp marken till \"den vita villastaden vid segelleden\", med Halvkakssundet och Lilla Värtan utanför. Storhetstiden kom på 1910-talet, då påkostade villor i jugendstil byggdes efter ritningar av kända arkitekter. Tre villor i Brevik är i dag byggnadsminnen: Villa Högudden från 1876, Villa Klippudden från 1910 och Högberga gård från 1916, ritad av Carl Westman. I Käppala planerades gatunätet på 1910-talet, men byggandet kom igång först efter första världskriget, till en början med villor och sportstugor. Under krigen och 1930-talets depression stannade byggandet nästan helt av och kom inte i gång igen förrän på 1960-talet. Enligt beskrivningen av stadsdelen består bebyggelsen i Brevik därför av en blandning av större villor från 1900-talets början och, i huvudsak, villor från 1960-talet och framåt. Gåshagas mark mot havet var länge reserverad för industrier och båtvarv men har efterhand bebyggts med radhus, villor och flerbostadshus, och enligt Wikipedia byggdes nya villor och radhus där mellan 2000 och 2020.",
+    extraContent:
+      "I området står hus från tre olika sekel. Jugendvillorna är i dag över hundra år gamla, villorna från 1960- och 70-talen runt 50–65 år, och husen i Gåshaga från 2000-talet är betydligt yngre. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. På de äldre villorna är takets form, material och detaljer ofta en del av husets karaktär. Om ett hus är byggnadsminne, eller om ett byte av material eller kulör kräver lov eller anmälan, avgör Lidingö stad. Det är klokt att ta reda på det innan materialet väljs. Varje hus får en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Lidingö"},{"label":"Delområden","value":"Brevik, Käppala, Gåshaga"},{"label":"Hustyper","value":"Villor, kedjehus, radhus"},{"label":"Byggperiod","value":"Villor från 1910-talet, i huvudsak 1960-tal och framåt (Brevik), villastad från 1910-talet (Käppala), nya villor och radhus 2000–2020 (Gåshaga)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 300"}],
+    sourceLink: {"label":"Wikipedia: Brevik, Lidingö","url":"https://sv.wikipedia.org/wiki/Brevik,_Liding%C3%B6"},
+    parentLocation: {"name":"Lidingö","slug":"lidingo"},
+    h1Override: "Takläggare i Brevik, Käppala och Gåshaga, Lidingö",
+    uniqueFAQ: {"question":"När byggdes husen i Brevik, Käppala och Gåshaga?","answer":"Byggperiod enligt källorna: Villor från 1910-talet, i huvudsak 1960-tal och framåt (Brevik), villastad från 1910-talet (Käppala), nya villor och radhus 2000–2020 (Gåshaga). Hustyper: villor, kedjehus, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Lidingö stad."},
+    primaryKeyword: "takläggare Brevik, Käppala och Gåshaga",
+    lat: 59.352,
+    lng: 18.225,
+    nearbyLocations: ["Lidingö"],
+  },
+  {
+    slug: "bollstanas",
+    name: "Bollstanäs",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Bollstanäs, Upplands Väsby, med radhus, kedjehus och villor från 1970- och 80-talen. Kostnadsfri takkontroll utan förpliktelser.",
+    longDescription:
+      "Bollstanäs ligger öster om E4 och Uppsalavägen, vid Norrvikens nordvästra strand, med Rotebro i Sollentuna i söder och Täby i sydost. Området var tidigare en del av Fresta socken, som 1952 blev Upplands-Väsby landskommun, och räknas i dag tillsammans med Odenslunda som en av Upplands Väsbys fem kommundelar. Historien går tillbaka till en förhistorisk by, Grimsta. År 1789 köptes den av kamreren Johan Henrik Boll, som lät bygga en herrgård. Från 1794 kallades gården Bollstanäs, och det är därifrån namnet kommer. Nästa stora förändring kom 1907, när gården köptes av Rotebro-Bollstanäs Småbruks AB, som styckade av tomter. I mitten av 1910-talet fanns ett fyrtiotal egnahem och handelsträdgårdar i Bollstanäs, och orten har sedan dess utvecklats som villa- och trädgårdsstad. Tillväxten har varit stor. År 1950 bodde knappt 1 000 personer i Bollstanäs och Odenslunda tillsammans, och i dag har kommundelen omkring 10 000 invånare. Enligt beskrivningen av orten domineras den i dag av modern villa- och radhusbebyggelse, och enligt hitta.se är husen främst byggda på 1970- och 1980-talen, med radhus, kedjehus och villor. I nordväst gränsar Bollstanäs till handelsområdet Bredden, och i området finns bland annat Bollstanäs skola, Breddenskolan och Grimstaskolan.",
+    extraContent:
+      "De flesta husen i Bollstanäs är i dag runt 40–55 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. I radhus- och kedjehusområdena är husen ofta likadana och byggda samtidigt, och taken hänger ihop med grannens. Där kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Upplands Väsby kommun.",
+    factBox: [{"label":"Kommun","value":"Upplands Väsby"},{"label":"Hustyper","value":"Radhus, kedjehus, villor"},{"label":"Byggperiod","value":"Främst 1970- och 1980-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 300"}],
+    sourceLink: {"label":"Wikipedia: Bollstanäs","url":"https://sv.wikipedia.org/wiki/Bollstan%C3%A4s"},
+    parentLocation: {"name":"Upplands Väsby","slug":"upplands-vasby"},
+    h1Override: "Takläggare i Bollstanäs, Upplands Väsby",
+    uniqueFAQ: {"question":"När byggdes husen i Bollstanäs?","answer":"Byggperiod enligt källorna: Främst 1970- och 1980-tal. Hustyper: radhus, kedjehus, villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Upplands Väsby kommun."},
+    primaryKeyword: "takläggare Bollstanäs",
+    lat: 59.504,
+    lng: 17.927,
+    nearbyLocations: ["Upplands Väsby","Norrviken"],
+  },
+  {
+    slug: "nora-kevinge",
+    name: "Nora och Kevinge",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Nora trädgårdsstad, Kevinge och Klingsta i Danderyd, med villor från 1920-talet och framåt. Kostnadsfri takkontroll.",
+    longDescription:
+      "Den västra delen av kommundelen Danderyd, med Nora trädgårdsstad, Klingsta, Kevinge, Sätra och Rinkeby, ligger på mark som har brukats sedan vikingatiden. Nora gård, en knapp kilometer väster om Danderyds kyrka, nämns i skrift första gången 1310. Namnet kommer från ordet nor, ett smalt sund som fanns söder om gården, och i berget finns Norahällen, en runristning från 1000-talet. Författaren August Blanche var informator på gården sommaren 1827, och gårdens tidigare huvudbyggnad från 1700-talet kallas i dag Blanchegården. Vid Kvarnparken står fortfarande en vattenkvarn från 1700-talet. Villasamhället tog fart 1926, när bankiren Gunnar Kassman köpte Nora gård och började stycka av tomter. Utbyggnaden gick fort: 1930 hade Nora omkring 250 villor och 1 000 invånare, och egen bussförbindelse med Jarlaplan. Nora torg blev centrum för hela kommundelen, med affärer, post, bank och brandstation, fram till 1960-talet, när handeln flyttade till Mörby centrum. Längre västerut, vid Edsviken, ligger Kevinge gård. Gården tros ha varit befolkad sedan vikingatiden, och på en avsats ovanför stranden finns ett gravfält med sju stensättningar. Den nuvarande huvudbyggnaden i sten uppfördes efter 1791, och under 1800-talet gjorde justitierådet Gabriel Poppius Kevinge till en mönstergård. Hans dotter gifte sig med kemisten Jöns Jacob Berzelius, och på gårdens gamla ägor står den naturminnesförklarade Berzelii ek. Enligt hitta.se är villorna och kedjehusen i Nora främst byggda på 1920- och 1930-talen, villorna och radhusen i Kevinge på 1950- och 1960-talen, och husen i Kevinge strand på 1930- och 1980-talen.",
+    extraContent:
+      "Husen i området spänner över sextio år. Villorna i Nora trädgårdsstad är i dag runt 90–100 år gamla, husen i Kevinge runt 60–75 år. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. I en trädgårdsstad från 1920-talet är takens form och material ofta en viktig del av miljön, och det är värt att tänka på redan när materialet väljs. Om ett byte av material eller kulör kräver lov eller anmälan, eller om särskilda bevarandekrav gäller för ditt hus, avgör Danderyds kommun. Varje hus får en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Danderyd"},{"label":"Delområden","value":"Nora trädgårdsstad, Klingsta, Kevinge, Sätra, Rinkeby"},{"label":"Hustyper","value":"Villor, kedjehus, radhus"},{"label":"Byggperiod","value":"Nora 1920–30-tal (trädgårdsstad från 1926), Kevinge 1950–60-tal, Kevinge strand 1930- och 1980-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 300"}],
+    sourceLink: {"label":"Wikipedia: Nora, Danderyds kommun","url":"https://sv.wikipedia.org/wiki/Nora,_Danderyds_kommun"},
+    parentLocation: {"name":"Danderyd","slug":"danderyd"},
+    h1Override: "Takläggare i Nora och Kevinge, Danderyd",
+    uniqueFAQ: {"question":"När byggdes husen i Nora och Kevinge?","answer":"Byggperiod enligt källorna: Nora 1920–30-tal (trädgårdsstad från 1926), Kevinge 1950–60-tal, Kevinge strand 1930- och 1980-tal. Hustyper: villor, kedjehus, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Danderyds kommun."},
+    primaryKeyword: "takläggare Nora och Kevinge",
+    lat: 59.4,
+    lng: 18.02,
+    nearbyLocations: ["Danderyd","Enebyberg","Stocksund"],
+  },
   // =================== STORSTOCKHOLM ===================
   {
     slug: "stockholm",
@@ -1996,21 +2143,18 @@ export const locations: LocationData[] = [
     name: "Jakobsberg",
     region: "Nordvästra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Jakobsberg — takbyte, takrenovering och plåtarbeten i Jakobsberg. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
-    longDescription:
-      "Bland flerbostadshus från miljonprogrammet och villaområden är det vanligt att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter kostnadsfri takkontroll.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Jakobsberg — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Jakobsberg.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Jakobsberg?",
-      answer:
-        "Priset för ett takbyte i Jakobsberg beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
-    },
+    description: "Takbyte och takomläggning i villaområdena i västra Jakobsberg, Järfälla, med hus från 1950- till 1970-talet. Kostnadsfri takkontroll utan förpliktelser.",
+    longDescription: "Jakobsberg har fått sitt namn från en gård. Säteriet anlades på 1650-talet på Vibble bys mark, och när majoren Jakob Lilliehöök dog 1657, bara ett halvår efter bröllopet, gav hans änka Brita Cruus gården namnet Jakobsberg till hans minne. Hon bodde kvar som änka i nästan sextio år. Sedan 1919 finns Jakobsbergs folkhögskola i gårdens huvudbyggnad, och vid folkhögskolan står en runsten från 1000-talet. Bygden är betydligt äldre än gården. Vid Kvarnbackens sluttning ligger kommunens största järnåldersgravfält, med ett nittiotal synliga högar och stensättningar. Högst upp på backen har det stått en väderkvarn sedan 1780-talet. Kvarnen brann 1980 och de två kopior som byggdes brann 1997 och 2005, och i dag finns bara grunden kvar. Villasamhället växte fram under 1920- och 30-talen. Enligt Järfälla kommuns beskrivning av ortens historia styckade Mälareprovinsernas Egnahem AB, senare AB Upplands-hem, då upp Jakobsbergs gård i småbruk, trädgårdsbruk och villatomter. I västra Jakobsberg ligger villaområdena kring Alpvägen, Folkhögskolevägen, Mälarvägen och månadsgatorna från Aprilvägen till Decembervägen, med villor, kedjehus och radhus. Enligt hitta.se är husen här främst byggda på 1950- och 1960-talen, till exempel kring Alpvägen och Åsvägen, och på 1960- och 1970-talen, kring bland annat Backvägen, Vintervägen och Vårvägen. Jakobsberg ligger drygt en och en halv mil norr om centrala Stockholm och är i dag Järfällas kommersiella och administrativa centrum, med ett köpcentrum från 1962 och pendeltågsstation.",
+    extraContent: "De flesta husen i västra Jakobsberg är i dag runt 50–75 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. På gator där kedjehus och radhus byggdes samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun.",
+    uniqueFAQ: {"question":"När byggdes husen i Jakobsberg?","answer":"Byggperiod enligt källorna: Tomter styckade 1920–30-tal (kommunen), hus främst 1950–70-tal (hitta.se). Hustyper: villor, kedjehus, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun."},
     primaryKeyword: "takläggare Jakobsberg",
     lat: 59.4231,
     lng: 17.8342,
-    nearbyLocations: ["Järfälla", "Barkarby", "Viksjö"],
+    nearbyLocations: ["Järfälla","Barkarby","Viksjö","Kallhäll"],
+    factBox: [{"label":"Kommun","value":"Järfälla"},{"label":"Delområde","value":"Villaområdena väster om Jakobsbergs centrum (Alpvägen, Folkhögskolevägen, Aprilvägen–Decembervägen, Mälarvägen)"},{"label":"Hustyper","value":"Villor, kedjehus, radhus"},{"label":"Byggperiod","value":"Tomter styckade 1920–30-tal (kommunen), hus främst 1950–70-tal (hitta.se)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 100"}],
+    sourceLink: {"label":"Järfälla kommun: Järfällas historia","url":"https://www.jarfalla.se/kommunochpolitik/kommunarkivet/jarfallashistoria.4.49c72f5418de88c69e928ab.html"},
+    parentLocation: {"name":"Järfälla","slug":"jarfalla"},
+    h1Override: "Takläggare i Jakobsberg, Järfälla",
   },
   {
     slug: "barkarby",
