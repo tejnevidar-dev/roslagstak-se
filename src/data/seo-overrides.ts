@@ -54,6 +54,36 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i villaområdena i västra Jakobsberg, Järfälla, med hus från 1950- till 1970-talet. Kostnadsfri takkontroll utan förpliktelser.",
   },
+  ensta: {
+    title: "Takbyte i Ensta, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i Ensta villastad i Täby, med tegel- och putsvillor från 1940- till 1960-talet. Kostnadsfri takkontroll och fast pris.",
+  },
+  erikslund: {
+    title: "Takbyte i Erikslund, Täby – grupphus, fast pris",
+    description:
+      "Takbyte och takomläggning i grupphusområdet Erikslund i Täby, med parhus från 1972–73. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  gribbylund: {
+    title: "Takbyte i Gribbylund, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i Gribbylund, Myrängen och Löttingelund i Täby, med typhus, radhus och kedjehus från 1970- och 80-talen. Kostnadsfri takkontroll.",
+  },
+  karlslund: {
+    title: "Takbyte i Karlslund, Täby kyrkby – fast pris",
+    description:
+      "Takbyte och takomläggning i Karlslund och Täby kyrkby, med parhus och kedjehus från 1975–76. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  "midgard-byle": {
+    title: "Takbyte i Byle och Midgård, Täby kyrkby – fast pris",
+    description:
+      "Takbyte och takomläggning i Byle villastad och radhusområdet Midgård i Täby kyrkby, med villor från 1900-talets början och radhus från 1970-talet.",
+  },
+  "roslags-nasby": {
+    title: "Takbyte i Roslags-Näsby, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i Roslags-Näsby i Täby, med villor från tidigt 1900-tal och 1930-talet och senare årsringar. Kostnadsfri takkontroll och fast pris.",
+  },
   "ella-gard": {
     title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
     description:

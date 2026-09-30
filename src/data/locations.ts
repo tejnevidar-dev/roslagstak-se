@@ -966,6 +966,132 @@ export const locations: LocationData[] = [
     nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
   },
   {
+    slug: "ensta",
+    name: "Ensta",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Ensta villastad i Täby, med tegel- och putsvillor från 1940- till 1960-talet. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Ensta har vuxit fram på båda sidor om Roslagsbanans hållplats, som kom till 1911. Platsen är betydligt äldre än villorna. Ensta krog har sitt ursprung på 1600-talet och var det första gästgiveriet för den som reste från Stockholm mot Roslagen längs Roslagsvägen, även kallad Postvägen, landsvägen mellan Stockholm, Norrtälje och Grisslehamn. Från 1780-talet fram till 1844 var Ensta också tingsplats för Danderyds skeppslag. Drygt 500 meter söder om stationen står en av de få kvarvarande banvaktarstugorna, från 1885, där banvaktaren sänkte grindarna vid landsvägen när tåget skulle passera. Enligt Täby kommun var villabyggandet sparsamt i början, men 1930-talets styckningsplan för Ensta villastad fick det att ta fart, och byggandet var särskilt intensivt under 1940–60-talen. På 1970-talet gjorde kommunens förnyelseplanering det möjligt att stycka befintliga villatomter till fler tomter, och nya enhetliga kvarter växte fram i det tidigare skogsområdet i norr. Kommunen beskriver ett skiftande villabestånd med både äldre villor och moderna typhus, där intrycket fortfarande domineras av efterkrigstidens varierade tegel- och putsarkitektur. Det slingrande vägnätet och de lummiga, kuperade tomterna finns kvar. Högt över husen står vattentornet från 1964. Vid den östra delen av Hjortvägen lyfter kommunen fram villor från 1950- och 60-talen med en hög andel ursprungliga material och detaljer. Husen har en eller två våningar, fasader i rött eller gult tegel och grå putsad sockel, och byggnaderna är ofta uppdelade i delar som förskjuts mot varandra. Kommunens råd är bland annat att behålla ursprungliga entrépartier, tegelfasader och nätta takutsprång. Enligt hitta.se är husen i Ensta främst byggda på 1950- och 1970-talen.",
+    extraContent:
+      "De flesta husen i Ensta är i dag runt 50–85 år gamla. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. På villorna från 1950- och 60-talen är takutsprången och detaljerna en del av husens karaktär, och det är värt att tänka på redan när materialet väljs. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun. Varje hus får en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Ensta villastad, Kullagränd"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"1940–1960-tal, förtätning 1970-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 530"}],
+    sourceLink: {"label":"Täby kommun: Ensta (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/ensta"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Ensta, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Ensta?","answer":"Byggperiod enligt källorna: 1940–1960-tal, förtätning 1970-tal. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Ensta",
+    lat: 59.4345,
+    lng: 18.064,
+    nearbyLocations: ["Täby","Näsbypark","Roslags-Näsby"],
+  },
+  {
+    slug: "erikslund",
+    name: "Erikslund",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i grupphusområdet Erikslund i Täby, med parhus från 1972–73. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Erikslund är enligt Täby kommun ett enhetligt grupphusområde från första halvan av 1970-talet. Ett skogbeklätt och glest bebyggt torplandskap omvandlades där på kort tid till en tät låghusstad med över 300 bostäder. Området byggdes 1972–1973 av Platzer bygg, med arkitekten Bengt Börtin. Planeringen följde tidens ideal om grannskapsenheter. Husen ligger utmed intima, bilfria gaturum och runt lekvänliga gårdar, medan infarter, parkeringsytor och garage är samlade i områdets ytterkanter, ett tydligt exempel på den trafikseparering som var en viktig princip på 1970-talet. Kommunen beskriver Erikslund som ett konsekvent planerat och genomfört miljonprogramsområde med rationellt byggande i mänsklig skala. Parhusen har två våningar och flacka tak. Fasaderna är klädda med täckmålad lockpanel, med vita horisontella skivtäckta fält över fönstren på både entré- och trädgårdssidan. Fönstren är enkla, vita och utan spröjs, större mot trädgården och små och högt sittande mot entrén, och gavlarna saknar fönster. Kommunen noterar att husen har enkla, raka former utan takfot, med bara en bockad plåt i övergången mellan tak och vägg. Trädgårdarna är inhägnade av plank och låga förråd, och husgrupperna har olika färgsättning, så att de går att skilja åt. Kommunens råd för området är att värna grupphusområdets tidstypiska uttryck och karaktärsdrag, så att miljön förblir enhetlig både i arkitektur och planmönster, och att behålla kvarterens enhetliga färgsättning och ursprungliga fönsterformat.",
+    extraContent:
+      "Husen i Erikslund är i dag runt 50 år gamla. Taken kan redan ha lagts om, men där det inte har skett är det ofta dags att se över underlaget och plåtdetaljerna. På hus med flacka tak och utan takfot är övergången mellan tak och vägg, den bockade plåten, en viktig detalj, både för tätheten och för husens enhetliga uttryck. Eftersom husen byggdes samtidigt och är likadana kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte kräver lov eller anmälan avgör Täby kommun, och kommunens riktlinjer om enhetlighet är bra att ha med sig när materialet väljs.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Hustyper","value":"Parhus i grupphusområde, över 300 bostäder"},{"label":"Byggperiod","value":"1972–1973"},{"label":"Tak (belagt)","value":"Flacka tak, ingen takfot, bockad plåt mellan tak och vägg (material okänt)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 600"}],
+    sourceLink: {"label":"Täby kommun: Erikslund (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/erikslund"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Erikslund, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Erikslund?","answer":"Byggperiod enligt källorna: 1972–1973. Hustyper: parhus i grupphusområde, över 300 bostäder. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Erikslund",
+    lat: 59.455,
+    lng: 18.075,
+    nearbyLocations: ["Täby","Vallabrink","Gribbylund och Löttingelund"],
+  },
+  {
+    slug: "gribbylund",
+    name: "Gribbylund och Löttingelund",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Gribbylund, Myrängen och Löttingelund i Täby, med typhus, radhus och kedjehus från 1970- och 80-talen. Kostnadsfri takkontroll.",
+    longDescription:
+      "Gribbylund ligger vid Rönningesjön, på mark där människor har rört sig sedan stenåldern. I slutet av stenåldern låg vattnet omkring 25 meter högre än i dag, och stora delar av området stack upp som öar i ett skärgårdslandskap. Från bronsåldern och järnåldern finns flera gravfält, bland annat ett med en så kallad domarring, och vid Löttingelundsvägen finns en gammal fångstgrop för varg. Johanneskällan, en trefaldighetskälla, är dokumenterad sedan 1700-talet. På 1400-talet hade byn Gribby fyra gårdar och grannbyn Libby två. År 1793 köptes byarna av slottsbyggmästaren Abraham Robsahm, som byggde nya mangårds- och ekonomibyggnader och kallade godset Grefbylund, senare Gribbylund. Gårdens huvudbyggnad från 1880-talet står kvar vid en allé från Gribbylundsvägen. Villabebyggelsen började 1919, när Gribbylunds kristna egnahemsförening köpte gården och började stycka marken till sommarstugetomter. Enligt Täby kommun började en omvandling till permanentboende på stora tomter på 1940-talet, men kommundelen förblev glest bebyggd med villor och sommarhus fram till 1970-talet, då planeringen av dagens täta villakvarter tog fart. Löttingelund växte fram på 1970- och 80-talen, först genom att sommarstugor byggdes om och sedan genom att de stora tomterna styckades av. Där finns också dragontorpet Råstugan, som nämns redan 1772 och har skydd i detaljplan. Kommunen beskriver villabebyggelsen som till största delen typhus från 1970- och 80-talen, med flera områden med radhus och kedjehus. Ett exempel är kvarteret Kammaren, ett välbevarat kedjehuskvarter från 1976 med tegel i bottenvåningen, branta tak med röda betongpannor, gavlar i brunmålad träpanel och tomter på cirka 300 kvadratmeter. I kvarteret Soffan finns parhus och radhus i två våningar med sadeltak av röda betongpannor. Enligt hitta.se är husen i området främst byggda på 1980- och 1990-talen.",
+    extraContent:
+      "De flesta husen i Gribbylund och Löttingelund är i dag runt 35–55 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. I kedjehus- och radhuskvarteren är husen ofta likadana och byggda samtidigt, och där kan grannar ibland ha nytta av att planera takbyten i samma veva. För kvarteret Kammaren är kommunens råd att behålla originalkulörer, och det är bra att ha med sig när materialet väljs. Varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte kräver lov eller anmälan avgör Täby kommun.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Gribbylund västra, Myrängen, Löttingelund"},{"label":"Hustyper","value":"Villor (typhus), radhus, kedjehus"},{"label":"Byggperiod","value":"Typhus 1970–80-tal, Löttingelund 1970–80-tal"},{"label":"Tak (belagt per kvarter)","value":"Kammaren och Soffan: röda betongpannor"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 100"}],
+    sourceLink: {"label":"Täby kommun: Gribbylund – Löttingelund – Hästängen (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/gribbylund---lottingelund---hastangen"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Gribbylund och Löttingelund, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Gribbylund och Löttingelund?","answer":"Byggperiod enligt källorna: typhus 1970–80-tal, Löttingelund 1970–80-tal. Hustyper: villor (typhus), radhus, kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Gribbylund och Löttingelund",
+    lat: 59.457,
+    lng: 18.115,
+    nearbyLocations: ["Täby","Erikslund","Vallabrink"],
+  },
+  {
+    slug: "karlslund",
+    name: "Karlslund",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Karlslund och Täby kyrkby, med parhus och kedjehus från 1975–76. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Karlslund ligger i södra delen av Täby kyrkby, en av de äldsta bebyggelserna i Täby. I norra delen av kyrkbyn, där Kyrkvägen korsar ett kärr, lät Jarlabanke bygga en bro för nästan tusen år sedan, en vägbank av risknippen och jord kantad med stenar. Runstenar restes för att visa vem som hade byggt den, och Jarlabankes bro är i dag en av Täbys mest kända sevärdheter. Den moderna kyrkbyn tog form med järnvägen. När Roslagsbanan öppnade 1885 ökade byggandet, och med avstyckningsplanen från 1907 bebyggdes odlingsmarkerna kring gårdarna Täby och Byle med en ny villastad, planerad med slingrande vägar och stora tomter. År 1925 bodde 1 250 personer i kyrkbyn, och här fanns affärer, konditori, bank, smedja, mejeri och Täbys första sjukvårdsmottagning. I området kring Byle upptäcktes på 1920-talet en mineralkälla, och Hemberga brunn blev ett utflyktsmål med bad och pensionat. Enligt kommunen bromsades utbyggnaden av första världskriget, och nästa stora våg kom på 1970-talet, då en ny stadsplan gjorde att många äldre fastigheter styckades av och både radhus och villor byggdes. Karlslund hör till den utbyggnaden. Enligt Täby kommun uppfördes parhus och kedjehus i ett och ett halvt plan här åren 1975–76. Byggnadsvolymerna är förskjutna mot varandra, de svarta sadeltaken är uppbrutna av takkupor och balkonger, och fasaderna i träpanel är målade gula eller röda. I närheten ligger radhusområdena Midgård från 1972–73, med flacka pulpettak, och Miklagård från 1975–76, med spetsiga sadeltak av röda betongpannor. Många av egnahemshusen från början av 1900-talet finns också kvar i kyrkbyn, bland annat vid Skolvägen, Lokevägen och Nannavägen.",
+    extraContent:
+      "Parhusen och kedjehusen i Karlslund är i dag runt 50 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. På tak med takkupor är anslutningarna runt kuporna en extra punkt att ha koll på. Eftersom husen byggdes samtidigt och har samma form kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Hustyper","value":"Parhus och kedjehus i ett och ett halvt plan"},{"label":"Byggperiod","value":"1975–1976"},{"label":"Tak (belagt)","value":"Svarta sadeltak med takkupor (material ej angivet)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 520"}],
+    sourceLink: {"label":"Täby kommun: Täby kyrkby (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/taby-kyrkby"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Karlslund och Täby kyrkby",
+    uniqueFAQ: {"question":"När byggdes husen i Karlslund?","answer":"Byggperiod enligt källorna: 1975–1976. Hustyper: parhus och kedjehus i ett och ett halvt plan. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Karlslund",
+    lat: 59.493,
+    lng: 18.06,
+    nearbyLocations: ["Täby","Midgård och Byle","Ella gård"],
+  },
+  {
+    slug: "midgard-byle",
+    name: "Midgård och Byle",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Byle villastad och radhusområdet Midgård i Täby kyrkby, med villor från 1900-talets början och radhus från 1970-talet.",
+    longDescription:
+      "Täby kyrkby och Byle var från början två separata stationslägen på Roslagsbanan, som med tiden har vuxit ihop. Enligt Täby kommun låg det andra stationsläget, i dag borttaget, i nordöstra delen av kyrkbyn, väster om gården Byle. Med de två stationerna vid de gamla gårdarna Täby och Byle blev Täby snart en av Stockholmstraktens större villastäder, och i den äldre planeringen lades villorna främst på skogsklädda höjder i söder och på jordbruksmarken i norr. I Byle upptäcktes på 1920-talet en källa med mineralhaltigt vatten, och Hemberga brunn med pensionat blev ett utflyktsmål för storstadsbor som ville bada. Brunnen utvecklades sedan till en mineralvattenkälla med samma namn. Enligt kommunen finns många av egnahemshusen från början av 1900-talet kvar, särskilt vid de gamla stationslägena. I de äldre delarna märks den tidiga villastadens planering tydligt, med stora lummiga trädgårdar, husen långt in på tomten och gröna ytor mellan kvarteren. Enligt alla.csv är villorna i Byle villastad från 1907 och 1910-talet, och där finns också radhus från 1974. Midgård, nära stationen, är kyrkbyns största radhusområde, med 231 bostäder i 32 längor, byggt 1972–1973. Kommunen beskriver radhusen som tvåvåningshus med flacka pulpettak med takband, stående panel och en horisontell list mellan våningarna, och fönster utan foder och spröjs. Formspråket är rationellt och enkelt. Andra spår av kyrkbyns historia är Täbys äldsta brandstation vid Vikingavägen från 1937, Täbys första höga hus vid stationen från 1955 och torpet Runborg från omkring 1800, byggt för en båtsman och i dag skyddat i detaljplan.",
+    extraContent:
+      "Egnahemsvillorna i Byle är i dag över hundra år gamla, radhusen i Midgård runt 50 år och radhusen i Byle från 1974 lika gamla. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. På de flacka pulpettaken i Midgård är takbandet och anslutningarna viktiga detaljer. I Midgårds radhuslängor, där husen byggdes samtidigt och delar tak med grannen, kan grannar ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Midgård, Byle villastad, Byle allé (del av Täby kyrkby)"},{"label":"Hustyper","value":"Radhus (Midgård, 231 bostäder), villor, kedjehus, radhus (Byle)"},{"label":"Byggperiod","value":"Midgård 1972–73, Byle villor 1907–1910-tal och radhus 1974"},{"label":"Tak (belagt)","value":"Midgård: flacka pulpettak med takband"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 670 + 580"}],
+    sourceLink: {"label":"Täby kommun: Täby kyrkby (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/taby-kyrkby"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Midgård och Byle, Täby kyrkby",
+    uniqueFAQ: {"question":"När byggdes husen i Midgård och Byle?","answer":"Byggperiod enligt källorna: Midgård 1972–73, Byle villor 1907–1910-tal och radhus 1974. Hustyper: radhus (Midgård, 231 bostäder), villor, kedjehus, radhus (Byle). Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Midgård och Byle",
+    lat: 59.4965,
+    lng: 18.0555,
+    nearbyLocations: ["Täby","Karlslund","Ella gård"],
+  },
+  {
+    slug: "roslags-nasby",
+    name: "Roslags-Näsby",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Roslags-Näsby i Täby, med villor från tidigt 1900-tal och 1930-talet och senare årsringar. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Roslags-Näsby har varit en viktig knutpunkt i Täby sedan Roslagsbanan drogs fram på 1880-talet. Här passerade också Stockholmsvägen, landsvägen mellan Stockholm, Vaxholm och Norrtälje. Enligt Täby kommun växte villaområdet fram i anslutning till stationen, på mark som då hörde till Näsby slott. Området planerades enligt det tidiga 1900-talets trädgårdsinspirerade ideal, med en planstruktur som följer terrängen, slingrande vägar och lummiga tomter. De första villorna placerades främst på höglänta skogspartier, och från 1930-talet bredde villasamhället ut sig allt mer över den tidigare odlingsmarken. Ytterbyskolan, vars första byggnad uppfördes 1906, kom till när Täby tog steget från jordbruksbygd till villastäder längs Roslagsbanan. De nuvarande skolbyggnaderna är från 1926 och 1944. När Täby blev köping 1948 fick Roslags-Näsby en ny roll som kommuncentrum. Det gamla kommunhuset från 1950, en tegelbyggnad med valmat sadeltak ritad av Sture Elmén, finns kvar och är i dag ombyggt till bostäder, och intill ligger elverkshuset från 1960. Centrumanläggningen med butiker i tvåvåningshus byggdes 1955. Norr om stationen växte ett industriområde fram längs Stockholmsvägen efter stadsplanen för Åva tomtområde 1930, med bland annat Hallbergs skruvfabrik. Kommunen beskriver villabebyggelsen i Roslags-Näsby i dag som blandad, med årsringar från flera olika tidsepoker. Väster om järnvägen finns ett område med äldre villabebyggelse bevarat intill den nya bostadsbebyggelsen. Enligt hitta.se är många av husen byggda på 1960- och 1970-talen, och enligt alla.csv finns både villor och radhus i området.",
+    extraContent:
+      "I Roslags-Näsby står villor från början av 1900-talet nära hus från 1960- och 70-talen. De äldsta villorna är över hundra år gamla, 1930-talets villor runt 90 år och de yngre husen runt 50–65 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. På de äldre villorna från trädgårdsstadens tid kan takets form och detaljer vara en del av husets karaktär, och det är värt att tänka på redan när materialet väljs. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun. Varje hus får en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Täby"},{"label":"Delområden","value":"Roslags-Näsby norra/södra, Sågtorp, Mosstorp, Storstugan"},{"label":"Hustyper","value":"Villor, radhus (samt flerbostadshus)"},{"label":"Byggperiod","value":"Villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 660"}],
+    sourceLink: {"label":"Täby kommun: Roslags-Näsby – Lahäll (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/roslags-nasby---lahall"},
+    parentLocation: {"name":"Täby","slug":"taby"},
+    h1Override: "Takläggare i Roslags-Näsby, Täby",
+    uniqueFAQ: {"question":"När byggdes husen i Roslags-Näsby?","answer":"Byggperiod enligt källorna: villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal. Hustyper: villor, radhus (samt flerbostadshus). Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun."},
+    primaryKeyword: "takläggare Roslags-Näsby",
+    lat: 59.439,
+    lng: 18.059,
+    nearbyLocations: ["Täby","Ensta","Näsbypark"],
+  },
+  {
     slug: "nasbypark",
     name: "Näsbypark",
     region: "Roslagens inland",
