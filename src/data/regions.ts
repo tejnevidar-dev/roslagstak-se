@@ -114,7 +114,7 @@ export const regionLongText: Record<string, string[]> = {
     "Avstånden är korta, men tomtgränserna ofta trånga. Vi planerar lyft och materialplacering tillsammans med dig innan arbetet startar.",
   ],
   "Stockholms stad": [
-    "I innerstaden arbetar vi på flerbostadshus, radhus och stadsvillor med brutna tak, många genomföringar och trånga takytor mellan brandgavlar. Bandtäckt plåt, falsad zink och tegel dominerar.",
+    "I innerstaden finns flerbostadshus, radhus och stadsvillor med brutna tak, många genomföringar och trånga takytor mellan brandgavlar. Bandtäckt plåt, falsad zink och tegel dominerar.",
     "Avspärrning, upplåtelse av gata och tidsfönster för lyft behöver bokas i förväg. Vi tar hand om den planeringen och håller kontakten med förening eller fastighetsägare under hela projektet.",
   ],
   "Norra Stockholm": [

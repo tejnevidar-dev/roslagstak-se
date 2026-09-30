@@ -163,7 +163,7 @@ const LocationPage = () => {
     ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
     : far
       ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
-      : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Lokal takläggare, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`;
+      : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`;
 
   // Title: keep under 60 chars for Google SERP
   const override = ortSeoOverrides[location.slug];

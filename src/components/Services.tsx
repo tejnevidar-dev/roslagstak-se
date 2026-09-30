@@ -60,7 +60,7 @@ export const services = [
     title: "Plåtarbeten",
     short: "Plåtslagare",
     description:
-      "Bandtäckning, skorstensinklädnad, fotplåt och beslag utförda av erfarna plåtslagare — där tak oftast läcker.",
+      "Bandtäckning, skorstensinklädnad, fotplåt och beslag — där tak oftast läcker.",
   },
   {
     icon: IconRoofCare,

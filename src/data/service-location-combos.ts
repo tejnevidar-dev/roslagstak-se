@@ -173,7 +173,7 @@ const specialistServices = [
       `Vi börjar med tvätt och borttagning av mossa och alger, skrapar och rostskyddsbehandlar där det behövs, grundar och stryker sedan två gånger med takfärg avsedd för utsatta lägen. Nära kusten ${prep} ${loc.name} är rätt färgsystem avgörande — saltluft bryter ner billig färg på några år.`,
       loc.isIsland
         ? `Vi tar med tvättutrustning, färg och skyddsutrustning till ${loc.name} och planerar arbetet efter väderfönstret — takfärg behöver torrt väder och plusgrader.`
-        : `Vi målar tak ${prep} ${loc.name} från april till oktober och kan oftast boka in dig inom några veckor.`,
+        : `Vi målar tak ${prep} ${loc.name} från april till oktober och bokar in arbetet efter överenskommelse.`,
       `Takmålning ${prep} ${loc.name}, inklusive tvätt, grundning och två strykningar, fast pris efter takkontroll. Ett målat tak håller normalt 10–15 år innan det behöver göras om. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Undrar du om ditt tak ${prep} ${loc.name} går att måla eller om det är dags för byte? Boka kostnadsfri takkontroll — vi säger som det är. Ring 070-154 36 39.`,
     ],

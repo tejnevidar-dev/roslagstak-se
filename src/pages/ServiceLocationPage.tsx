@@ -133,8 +133,8 @@ const ServiceLocationPage = () => {
   const metaDescription =
     override?.description ??
     (loc?.isIsland
-      ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — specialist på öar i skärgården. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti. Ring 070-154 36 39.`
-      : `${combo.serviceName} ${combo.prep} ${combo.locationName} — lokal takläggare. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`);
+      ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — takläggare i skärgården. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti. Ring 070-154 36 39.`
+      : `${combo.serviceName} ${combo.prep} ${combo.locationName} — takläggare med fast pris. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`);
 
   // Title under 60 chars
   const seoTitle = override?.title ?? `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;

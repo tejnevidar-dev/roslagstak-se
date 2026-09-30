@@ -418,8 +418,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "takbyte-vaxholm-skargarden",
-    title: "Takbyte i Vaxholm — pris, tips & lokal takläggare",
-    excerpt: "Takbyte i Vaxholm? Vi guidar dig genom priser, materialval och processen. Lokal takläggare med erfarenhet av Vaxholms unika bebyggelse.",
+    title: "Takbyte i Vaxholm — pris, tips och materialval",
+    excerpt: "Takbyte i Vaxholm? Vi guidar dig genom priser, materialval och processen. Kostnadsfri takkontroll och fast pris.",
     date: "2026-04-03",
     readTime: "5 min",
     keywords: ["takbyte vaxholm", "takläggare vaxholm", "tak vaxholm", "takrenovering vaxholm", "takfirma vaxholm"],
@@ -482,7 +482,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "taklaggare-radmanso-vato",
     title: "Takläggare på Rådmansö & Vätö — lokal service i Roslagen",
-    excerpt: "Takbyte och takrenovering på Rådmansö och Vätö. Lokal takläggare med kort resväg och konkurrenskraftiga priser.",
+    excerpt: "Takbyte och takrenovering på Rådmansö och Vätö. Kostnadsfri takkontroll och fast pris.",
     date: "2026-03-18",
     readTime: "5 min",
     keywords: ["takläggare rådmansö", "takbyte rådmansö", "takläggare vätö", "takbyte vätö", "tak rådmansö", "takrenovering vätö"],

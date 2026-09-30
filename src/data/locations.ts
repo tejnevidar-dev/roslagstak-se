@@ -321,7 +321,7 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare i Spillersboda — takbyte, takrenovering och plåtarbeten längs Roslagens kust. Lokal takläggare med snabb service.",
+      "Takläggare i Spillersboda — takbyte, takrenovering och plåtarbeten längs Roslagens kust. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem på tak längs kusten. Vi erbjuder en kostnadsfri takkontroll utan förpliktelser. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte.",
     extraContent:
@@ -413,7 +413,7 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare på Väddö — takbyte, lertegeltak och takrenovering nära Grisslehamn. Lokal takläggare med erfarenhet av Väddö.",
+      "Takläggare på Väddö — takbyte, lertegeltak och takrenovering nära Grisslehamn. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Väddö sträcker sig från Norrtälje norrut mot Grisslehamn och rymmer en varierad bebyggelse — från jordbruksfastigheter med stora takytor till sommarstugor nära vattnet. Du får en takläggare som förstår Väddös förhållanden: de kalla vintrarna, den fuktiga havsluften och vikten av att välja material som klarar det. Ring oss — vi svarar inom 24 timmar.",
     extraContent:
@@ -461,7 +461,7 @@ export const locations: LocationData[] = [
     extraContent:
       "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten och takavvattning med hängrännor och stuprör. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll, fast pris i offerten utan löpande timpris och utförande enligt AMA. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
     uniqueFAQ: {
-      question: "Är RoslagsTak en lokal takläggare i Norrtälje?",
+      question: "Tar RoslagsTak uppdrag i Norrtälje?",
       answer:
         "Ja, vi arbetar i Norrtälje och i hela kommunen, och takkontrollen är alltid kostnadsfri. Ring oss eller boka via formuläret, så återkommer vi inom 24 timmar.",
     },
@@ -562,7 +562,7 @@ export const locations: LocationData[] = [
     region: "Roslagens inland",
     isIsland: false,
     description:
-      "Takläggare i Rimbo — takbyte, takomläggning och takrenovering med fast pris. Lokal takläggare i Roslagen med kostnadsfri takkontroll.",
+      "Takläggare i Rimbo — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Rimbo är en av Roslagens största tätorter och här finns allt från 70-talsvillor med betongpannor till äldre gårdar med lertegel och plåttak. Inlandsklimatet i Rimbo innebär stora temperatursvängningar och mycket snölast under vintern — vilket sliter på pannor, läkt och infästningar. Vi utför takbyten och takomläggningar i Rimbo året runt och bedömer behovet av taksäkerhet och snörasskydd efter fastighetens läge vid takkontrollen.",
     extraContent:
@@ -667,7 +667,7 @@ export const locations: LocationData[] = [
     region: "Roslagens inland",
     isIsland: false,
     description:
-      "Takläggare i Riala — takbyte, takrenovering och taktvätt. Lokal takläggare i Roslagen med kostnadsfri takkontroll.",
+      "Takläggare i Riala — takbyte, takrenovering och taktvätt. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Riala ligger mellan Norrtälje och Åkersberga med gles bebyggelse, skogstomter och många sjönära hus. Skuggiga tomter och fuktig luft gör att mossa och alger växer snabbt på taken i Riala — särskilt på betongpannor. Vi utför taktvätt, biocidbehandling, takmålning och kompletta takbyten i Riala med fast pris efter kostnadsfri takkontroll.",
     extraContent:

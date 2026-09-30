@@ -920,7 +920,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: ortSeoOverrides[loc.slug]?.description ?? (loc.isIsland
         ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
         : isNearBase(loc)
-          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Lokal takläggare, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
+          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
           : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`),
       h1: loc.h1Override ??
         (loc.parentLocation
