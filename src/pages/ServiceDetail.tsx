@@ -109,8 +109,8 @@ const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "innan skadan kostar.",
     specs: [
       { k: "Pris", v: "Kostnadsfri" },
-      { k: "Tid på plats", v: "Ca 1–2 timmar" },
-      { k: "Omfattning", v: "Tak, underlag, ventilation" },
+      { k: "Förpliktelser", v: "Inga" },
+      { k: "Omfattning", v: "Tak, plåt, avvattning" },
     ],
     specHeading: "Vad vi tittar på vid en takkontroll",
     lead: "Vi går igenom taket på plats — inte bara hur det ser ut från marken.",
@@ -256,13 +256,13 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   takinspektion: {
-    longDesc: "En regelbunden takinspektion förebygger dyra skador. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och går igenom takmaterialets skick, underlagspapp, råspont, taksäkerhet, avvattningssystem och ventilation. Du får en muntlig bedömning och tydliga åtgärdsförslag. Vår inspektion är helt kostnadsfri och utan förbindelser.",
+    longDesc: "En regelbunden takinspektion förebygger dyra skador. Vi tittar på taket på plats, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Du får en muntlig bedömning och tydliga åtgärdsförslag. Vår inspektion är helt kostnadsfri och utan förbindelser.",
     priceRange: "Helt kostnadsfritt — inga dolda avgifter.",
     benefits: [
       "Helt kostnadsfri och utan förbindelser",
       "En av våra säljare tittar på taket på plats",
       "Identifierar problem innan de blir dyra",
-      "Kontrollerar takmaterial, underlag och ventilation",
+      "Tittar på takmaterial, plåtdetaljer och avvattning",
       "Ärlig bedömning av takets skick",
       "Tydliga åtgärdsförslag",
     ],

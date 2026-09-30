@@ -50,9 +50,9 @@ export const services = [
     icon: IconInspection,
     slug: "takinspektion",
     title: "Takinspektion",
-    short: "Besiktning & rapport",
+    short: "Kostnadsfri takkontroll",
     description:
-      "Vi går igenom taket punkt för punkt och du får en tydlig rapport med skicket, åtgärdsförslag och kostnad.",
+      "Vi tittar på taket på plats och du får en muntlig bedömning av skicket och förslag på åtgärder, utan förpliktelser.",
   },
   {
     icon: IconSheetMetal,
