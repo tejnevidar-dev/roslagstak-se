@@ -86,7 +86,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     factCards: [
       { tone: "primary", label: "Prisbild", value: "Fast pris efter takkontroll", text: "TP20-plåt i nedre spannet, dubbelfalsat i övre. Fast pris i offerten." },
       { tone: "outline", label: "Tidsåtgång", value: "Efter takets storlek", text: "Beror på takets storlek, underlagets skick och väder." },
-      { tone: "accent", label: "Livslängd", value: "40–70 år", text: "Beror på val av ytskikt, lutning och exponering mot saltluft." },
+      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "30 års tätskiktsgaranti via MATAKI." },
       { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Allt dolt material byts — papp, läkt, beslag och avvattning." },
     ],
     block: {
@@ -95,12 +95,12 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       heading: "Fyra ytskikt vi lägger — och vad som skiljer dem",
       intro:
         "Valet av ytskikt styr både pris, livslängd och hur taket tål Roslagens saltluft. Vi går igenom alternativen på plats innan offerten skrivs.",
-      columns: ["Material", "Pris", "Livslängd", "Passar"],
+      columns: ["Material", "Pris", "Kännetecken", "Passar"],
       rows: [
-        ["Profilerad plåt (TP20)", "Fast pris", "40–50 år", "Fritidshus, uthus, enkla sadeltak"],
-        ["Betongpanna", "Fast pris", "50–60 år", "Villor med bärkraftig konstruktion"],
-        ["Tegelpanna", "Fast pris", "60–70 år", "Äldre hus med traditionellt uttryck"],
-        ["Dubbelfalsat plåttak", "Fast pris", "60–80 år", "Vindutsatta lägen, låg lutning, kustnära"],
+        ["Profilerad plåt (TP20)", "Fast pris", "Lätt, skruvad profilplåt", "Fritidshus, uthus, enkla sadeltak"],
+        ["Betongpanna", "Fast pris", "Tung, flera kulörer", "Villor med bärkraftig konstruktion"],
+        ["Tegelpanna", "Fast pris", "Tung, åldras med patina", "Äldre hus med traditionellt uttryck"],
+        ["Dubbelfalsat plåttak", "Fast pris", "Lätt, inga synliga skruvar", "Klassiskt, stramt uttryck och tak med kupor och ränndalar"],
       ],
       footnote: "Priset sätts efter kostnadsfri takkontroll, inklusive material och arbete, före ROT-avdrag. Ställning och avfall specificeras separat i offerten.",
     },
@@ -114,8 +114,8 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     factCards: [
       { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Punktinsats kostar en bråkdel av en komplett omläggning." },
       { tone: "primary", label: "Vanligast", value: "Underlagspapp", text: "Läckan sitter oftast i pappen eller i beslag, inte i pannan." },
-      { tone: "plain", label: "Tidsåtgång", value: "1–5 dagar", text: "Beroende på skadans omfattning och åtkomst till taket." },
-      { tone: "accent", label: "Vinst", value: "+10–20 år", text: "Rätt insats i tid skjuter upp hela takbytet betydligt." },
+      { tone: "plain", label: "Tidsåtgång", value: "Efter skadans omfattning", text: "Beror på skadans omfattning och åtkomst till taket." },
+      { tone: "accent", label: "Vinst", value: "Rätt insats i tid", text: "Kan skjuta upp ett helt takbyte." },
     ],
     block: {
       kind: "signals",
@@ -142,7 +142,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       { tone: "accent", label: "Dimension", value: "125 / 150 mm", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet." },
       { tone: "primary", label: "Fall", value: "3–5 mm/m", text: "För lite fall ger stående vatten, för mycket syns på fasaden." },
       { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Aluminium; koppar ligger högre. Komplett system, fast pris i offerten." },
-      { tone: "plain", label: "Livslängd", value: "25–50 år", text: "Lackerad plåt i nedre spannet, koppar i det övre." },
+      { tone: "plain", label: "Takkontroll", value: "Kostnadsfri", text: "Vi tittar på rännor, stuprör och avvattning på plats, utan förpliktelser." },
     ],
     block: {
       kind: "dimension",
@@ -244,12 +244,12 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       heading: "Fyra metaller — egenskaper i kustklimat",
       intro:
         "Saltluft ställer högre krav på metallval än inlandsklimat. Vi väljer material efter avstånd till öppet vatten, lutning och husets karaktär.",
-      columns: ["Metall", "Livslängd", "Underhåll", "Kustnära lämplighet"],
+      columns: ["Metall", "Kännetecken", "Underhåll", "Kustnära lägen"],
       rows: [
-        ["Lackerad stålplåt", "40–50 år", "Ommålning efter 25–30 år", "God med rätt lackkvalitet"],
-        ["Aluminium", "50–60 år", "Nära noll", "Mycket god — korroderar inte"],
-        ["Zink", "60–80 år", "Nära noll", "God, får jämn patina"],
-        ["Koppar", "80–100 år", "Inget", "Mycket god, ädlar sig grön"],
+        ["Lackerad stålplåt", "Vanligast, många kulörer", "Håll lacken hel, åtgärda repor tidigt", "Lackkvaliteten avgör"],
+        ["Aluminium", "Lätt", "Kontrollera fogar och anslutningar", "Rostar inte som stål"],
+        ["Zink", "Får patina med tiden", "Kontrollera fogar och anslutningar", "Tillverkarens anvisningar gäller"],
+        ["Koppar", "Blir grön med tiden", "Kontrollera fogar och anslutningar", "Tillverkarens anvisningar gäller"],
       ],
       footnote: "Alla falsade tak utförs med rörliga klammer så att plåten kan arbeta vid temperaturväxlingar.",
     },
@@ -264,7 +264,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       { tone: "outline", label: "Taktvätt", value: "Fast pris efter takkontroll", text: "Skonsam metod anpassad efter panna, plåt eller papp." },
       { tone: "primary", label: "Takmålning", value: "Fast pris efter takkontroll", text: "Grundning och två skikt specialfärg för tak." },
       { tone: "accent", label: "Intervall", value: "Var 5–8 år", text: "Beroende på trädskugga, väderstreck och takmaterial." },
-      { tone: "plain", label: "Effekt", value: "+10 år", text: "Rätt underhåll förlänger ytskiktets livslängd påtagligt." },
+      { tone: "plain", label: "Effekt", value: "Friskare yta", text: "Rätt underhåll skyddar ytskiktet mot påväxt och fukt." },
     ],
     block: {
       kind: "season",
@@ -320,7 +320,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus — inte att förväxla med tegelplåt." },
-      { tone: "outline", label: "Livslängd", value: "100+ år", text: "Lertegel håller mycket länge." },
+      { tone: "outline", label: "Uttryck", value: "Åldras med patina", text: "Enskilda pannor som spricker kan bytas utan att hela taket görs om." },
       { tone: "accent", label: "Bärighet", value: "Kontrolleras alltid", text: "Lertegel väger mer än plåt — vi kontrollerar konstruktionen vid takkontrollen." },
       { tone: "plain", label: "Pris", value: "Fast pris efter takkontroll", text: "Inkl. moms, före ROT-avdrag. Fast pris i offerten." },
     ],
@@ -330,12 +330,12 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       heading: "Lertegel jämfört med betong och tegelplåt",
       intro:
         "Tegel eller betong? Och vad är egentligen skillnaden mellan lertegel och tegelplåt? Vi går igenom alternativen på plats innan offerten skrivs.",
-      columns: ["Material", "Pris", "Livslängd", "Passar"],
+      columns: ["Material", "Pris", "Kännetecken", "Passar"],
       rows: [
-        ["Lertegel", "Fast pris", "100+ år", "Äldre och nyare hus som ska behålla sin karaktär"],
-        ["Betongpannor", "Fast pris", "30–50 år", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
-        ["Tegelplåt (profilerad plåt)", "Fast pris", "40–50 år", "Tegelutseende till lägre vikt och pris än lertegel"],
-        ["Dubbelfalsat plåttak", "Fast pris", "50–70 år", "Vindutsatta lägen och kustnära hus"],
+        ["Lertegel", "Fast pris", "Bränd lera, åldras med patina", "Äldre och nyare hus som ska behålla sin karaktär"],
+        ["Betongpannor", "Fast pris", "Gjuten betong, flera kulörer", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
+        ["Tegelplåt (profilerad plåt)", "Fast pris", "Plåt pressad för att likna tegel", "Tegelutseende till lägre vikt och pris än lertegel"],
+        ["Dubbelfalsat plåttak", "Fast pris", "Plåtbanor utan synliga skruvar", "Klassiskt, stramt uttryck"],
       ],
       footnote: "Priset sätts efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlag.",
     },

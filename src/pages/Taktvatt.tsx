@@ -112,8 +112,8 @@ const faqs = [
     a: "Efter en taktvätt med biocidbehandling håller sig taket rent i 5–8 år innan ny mosspåväxt börjar synas. Lägger man dessutom på två strykningar UV-beständig takfärg får man ytterligare skydd och 10–15 års hållbarhet. I skärgårdsmiljö med saltluft och hög luftfuktighet kan intervallet vara något kortare — vi rekommenderar då en lättare uppfräschning vart 5:e år.",
   },
   {
-    q: "Kan ni tvätta tak på öar utan broförbindelse?",
-    a: "Ja, vi är specialister på skärgårdsmiljö och utför taktvätt på fritidshus och permanentbostäder på öar i hela Roslagens skärgård — Husarö, Ingmarsö, Möja, Arholma, Fejan, Svartlöga, Söderöra, Norröra, Gräskö och fler. Vi tar med all utrustning, biocid och fallskydd med egen båt från Blidö och behöver bara att du anger en brygga eller landningsplats. Båttransport ingår i offerten utan extra kostnad upp till 30 minuters körtid från Blidö.",
+    q: "Tvättar ni tak på öar i skärgården?",
+    a: "Ja, vi tar uppdrag i Roslagens skärgård och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ditt tak går vi igenom vid den kostnadsfria takkontrollen, och du får fast pris i offerten.",
   },
   {
     q: "Hur lång tid tar en taktvätt?",
@@ -129,7 +129,7 @@ const faqs = [
   },
   {
     q: "Behöver jag vara hemma när ni utför taktvätten?",
-    a: "Nej, du behöver inte vara hemma. Många av våra kunder med fritidshus på Blidö, Ljusterö, Yxlan och i skärgården anlitar oss helt på distans. Vi behöver bara tillgång till vatten (utomhuskran eller motsvarande) och en parkeringsplats för servicebilen. Vi hör av oss via sms eller telefon när jobbet är klart.",
+    a: "Det går vi igenom innan arbetet. Vi behöver tillgång till vatten (utomhuskran eller motsvarande), och du har en kontaktperson som du kan nå under hela jobbet.",
   },
   {
     q: "Hur tar man bort mossa på taket?",
@@ -216,22 +216,21 @@ const tabContent: Record<string, { title: string; desc: string; bullets: string[
   },
   skargardshus: {
     title: "Taktvätt på skärgårdshus & ö-bostäder",
-    desc: "Hus på Blidö, Ljusterö, Yxlan, Husarö, Möja och andra öar i Roslagens skärgård har ofta extra tjock mosspåväxt på grund av hög luftfuktighet och saltluft. Vi är specialister på ö-logistik och tar med utrustning på båt.",
+    desc: "Hus på Blidö, Ljusterö, Yxlan, Husarö, Möja och andra öar i Roslagens skärgård har ofta extra tjock mosspåväxt på grund av hög luftfuktighet och saltluft. Vi tar uppdrag i skärgården, och takets skick går vi igenom vid den kostnadsfria takkontrollen.",
     bullets: [
-      "Båttransport till öar utan broförbindelse",
+      "Uppdrag i skärgården",
       "Anpassad metodik för takpannor i kustklimat",
       "Vi kan utföra arbetet medan du är hemma — perfekt för fritidshus",
-      "Säsongsservice — vi samordnar med dina besök på ön",
     ],
   },
   fritidshus: {
     title: "Taktvätt på fritidshus",
-    desc: "Äger du ett fritidshus i Roslagen och vill slippa tänka på underhåll? Vi tar fullt ansvar för taktvätten — inspekterar, tvättar och dokumenterar utan att du behöver vara på plats.",
+    desc: "Äger du ett fritidshus i Roslagen? Vi går igenom takets skick vid en kostnadsfri takkontroll och lämnar fast pris för taktvätten.",
     bullets: [
-      "Nyckelfri service med digital återrapportering",
-      "Bilder och rapport skickas direkt till din e-post",
-      "Avtalsbaserad service för regelbundet underhåll",
-      "Samordning med andra hantverkare vid behov",
+      "Kostnadsfri takkontroll utan förpliktelser",
+      "Fast pris i offerten",
+      "En kontaktperson hela vägen",
+      "Svar inom 24 timmar",
     ],
   },
   naringsfastighet: {
@@ -762,7 +761,7 @@ const Taktvatt = () => {
               Taktvätt i hela Roslagen
             </h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-              Vi utför taktvätt på villor, fritidshus och skärgårdshus i alla orter i Roslagen — även på öar utan broförbindelse.
+              Vi utför taktvätt på villor, fritidshus och skärgårdshus i Roslagen, också på öar i skärgården.
               Klicka på din ort för att läsa mer om våra taktjänster där.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">

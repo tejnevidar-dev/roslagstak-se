@@ -51,7 +51,7 @@ const REGION_PROFILES: Record<string, RegionProfile> = {
       "öppet läge mot Ålands hav ger salt dimma, sidvind och isbildning i takfoten under vintern",
     buildings: "sommarstugor från 1950–70-talet, sjöbodar och några få permanentbebodda gårdar",
     materials: "ojämnt lagd korrugerad plåt, äldre pannplåt och tegel som lagts om i etapper",
-    access: "materialet går ut med båt eller pråm, så varje leverans planeras mot väder och tidtabell",
+    access: "material och utrustning går sjövägen, och det påverkar hur ett takbyte planeras",
   },
   "Mellersta skärgården": {
     weather: "saltluft året runt och kraftiga vindbyar över öppna fjärdar sliter på beslag och nockplåt",

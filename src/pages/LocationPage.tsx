@@ -493,12 +493,12 @@ const LocationPage = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {far
                     ? `Vi tar uppdrag ${prep} ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri takkontroll och fast pris.`
-                    : "Vi är en lokal takläggare med stark förankring i Roslagen."}
+                    : `Vi tar uppdrag ${prep} ${location.name} och i hela Roslagen, med kostnadsfri takkontroll och fast pris.`}
                   {far
                     ? ""
                     : location.isIsland
-                    ? ` Vi tar uppdrag för takbyten på öar utan broförbindelse. Vi hanterar all materialtransport till ${location.name} sjövägen och planerar logistiken så att ditt takprojekt genomförs smidigt och effektivt.`
-                    : ` Med lokal närvaro i Norrtälje når vi ${location.name} snabbt och kan ofta hålla nere kostnaden genom att samordna med andra projekt i området.`}
+                    ? ` Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.`
+                    : ""}
                   {" "}Alla arbeten utförs enligt AMA Hus med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.
                 </p>
 

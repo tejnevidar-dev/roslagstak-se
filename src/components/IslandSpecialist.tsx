@@ -3,21 +3,21 @@ import { Anchor, Ship, Wrench, CheckCircle, ArrowRight } from "lucide-react";
 const highlights = [
   {
     icon: Ship,
-    title: "Materialtransport sjövägen",
+    title: "Uppdrag i skärgården",
     description:
-      "Vi transporterar allt material — takpannor, plåt, virke och verktyg — med båt till öar utan broförbindelse.",
+      "Vi tar uppdrag på öar i Roslagens skärgård. Förutsättningarna för just ditt tak går vi igenom vid den kostnadsfria takkontrollen.",
   },
   {
     icon: Wrench,
-    title: "Anpassad logistik",
+    title: "Riktiga jobb",
     description:
-      "Varje ö-projekt kräver unik planering. Vi samordnar båttransporter, boendelösningar och arbetsscheman för att minimera störningar och hålla tidsplanen.",
+      "Vi har gjort kompletta takbyten på Blidö i Norrtälje och på Singö i Grisslehamn. Båda finns med bilder under Projekt.",
   },
   {
     icon: Anchor,
-    title: "Skärgårdslogistik",
+    title: "Fast pris",
     description:
-      "Vi tar uppdrag på öar som Svartlöga, Norröra, Söderöra, Humlö, Gräskö, Finnhamn och Ingmarsö, även där man bara kommer fram med båt.",
+      "Offerten har fast pris där det framgår vad som ingår, även för ett tak på en ö. 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
   },
 ];
 
@@ -45,19 +45,22 @@ const IslandSpecialist = () => {
         {/* Heading */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
-            Ö-specialisten
+            Skärgården
           </p>
           <h2
             id="island-heading"
             className="font-display text-3xl md:text-4xl text-foreground mb-4"
           >
-            Takläggare på öar utan broförbindelse
+            Takläggare i skärgården
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Vi utför <strong>takbyten på öar som bara nås med båt</strong>.
-            RoslagsTak är specialiserade på den logistik och de utmaningar som
-            skärgårdens mest avlägsna öar innebär — och vi har kompetensen att
-            hantera varje steg, från materialtransport till färdigt tak.
+            Vi tar uppdrag för <strong>takbyten och takrenoveringar på öar</strong> i
+            Roslagens skärgård. På Blidö och Singö har vi gjort kompletta takbyten, och du
+            hittar båda under{" "}
+            <a href="/projekt" className="text-primary underline underline-offset-4 hover:no-underline">
+              Projekt
+            </a>
+            .
           </p>
         </div>
 
@@ -85,24 +88,18 @@ const IslandSpecialist = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-card border border-border rounded-2xl p-8 md:p-10">
             <h3 className="font-display text-xl text-card-foreground mb-4">
-              Takbyte på ö utan bro — så gör vi
+              Takbyte på en ö — så går det till
             </h3>
             <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
               <p>
-                Att byta tak på en <strong>ö utan broförbindelse</strong> kräver
-                mer än bara hantverksskicklighet. Det kräver noggrann
-                logistikplanering, rätt utrustning och erfarenhet av att arbeta
-                under de förhållanden som skärgården ställer. Vi på RoslagsTak
-                har gjort detta i årtionden.
+                På en ö utan bilväg går material och utrustning sjövägen, och det
+                påverkar planeringen av ett takbyte. Hur det löses för just ditt tak
+                går vi igenom vid takkontrollen, och det står i offerten.
               </p>
               <p>
                 Processen börjar med en <strong>kostnadsfri takkontroll</strong>{" "}
-                där vi åker ut till din ö, inspekterar taket och planerar hela
-                projektet. Vi beräknar materialbehov, koordinerar
-                båttransporter och säkerställer att allt — från{" "}
-                <strong>takpannor och plåt</strong> till{" "}
-                <strong>underlagspapp och verktyg</strong> — finns på plats innan
-                arbetet börjar.
+                utan förpliktelser. Behöver något göras får du en offert med fast
+                pris, där det framgår vad som ingår.
               </p>
               <p>
                 Vi tar uppdrag för <strong>takbyten</strong> och{" "}
@@ -117,14 +114,13 @@ const IslandSpecialist = () => {
                       : ""}
                   </span>
                 ))}
-                . Dessa öar saknar bilväg — allt material fraktas sjövägen.
-                Trots det levererar vi samma höga kvalitet och{" "}
-                <strong>10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI</strong> som på fastlandet.
+                . Samma villkor gäller som på fastlandet: fast pris,{" "}
+                <strong>10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI</strong>.
               </p>
               <p>
                 Behöver du en{" "}
-                <strong>takläggare på en ö i Roslagen</strong>? Kontakta oss —
-                vi tar oss dit andra inte når.
+                <strong>takläggare på en ö i Roslagen</strong>? Kontakta oss, så
+                bokar vi en kostnadsfri takkontroll.
               </p>
             </div>
 

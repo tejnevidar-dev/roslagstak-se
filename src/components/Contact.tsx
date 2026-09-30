@@ -69,7 +69,7 @@ const Contact = () => {
                 { icon: Phone, label: "070-154 36 39", href: "tel:+46701543639" },
                 { icon: Mail, label: "info@roslagstak.se", href: "mailto:info@roslagstak.se" },
                 { icon: MapPin, label: "Blidö, Norrtälje " },
-                { icon: Clock, label: "Mån–Lör 07:00–20:00 | Sön 09:00–20:00" },
+                { icon: Clock, label: "Mån–Fre 07:00–20:00 | Lör–Sön 09:00–19:00" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3 text-foreground">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">

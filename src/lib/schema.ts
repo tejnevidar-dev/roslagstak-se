@@ -67,19 +67,19 @@ export const services: { slug: string; name: string; description: string }[] = [
   },
 ];
 
-/** Öppettider — samma som på kontaktsidan (Mån–Lör 07–20, Sön 09–20). Delas av alla LocalBusiness-noder. */
+/** Telefontider (beslut 2026-09-28): mån–fre 07–20, lör–sön 09–19. Samma som kontaktsidan och bokningen (lib/booking.ts). Delas av alla LocalBusiness-noder. */
 export const OPENING_HOURS = [
   {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     opens: "07:00",
     closes: "20:00",
   },
   {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: "Sunday",
+    dayOfWeek: ["Saturday", "Sunday"],
     opens: "09:00",
-    closes: "20:00",
+    closes: "19:00",
   },
 ];
 

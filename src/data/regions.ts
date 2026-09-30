@@ -21,7 +21,7 @@ export const regionOrder = [
 
 export const regionIntros: Record<string, string> = {
   "Norra skärgården":
-    "Takbyte och takrenovering i ytterskärgården. Vi tar oss ut till öar dit andra inte når — med material och verktyg.",
+    "Takbyte och takrenovering i ytterskärgården. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
   "Mellersta skärgården":
     "Takbyte och takrenovering på öar i mellersta Roslagen. Från sommarstugor till permanentboenden.",
   Kusten:
@@ -87,7 +87,7 @@ export const regionPath = (region: string): string | undefined =>
 export const regionLongText: Record<string, string[]> = {
   "Norra skärgården": [
     "Ytterskärgården norr om Blidö är den mest krävande miljön vi arbetar i. Öppet läge mot Ålands hav ger saltdimma, sidvind och isbildning i takfoten, och det är nästan alltid beslag, infästningar och nockplåt som ger upp först — inte själva takytan.",
-    "Nästan allt material går ut med båt eller pråm. Vi bokar transport och lossningsplats innan arbetet startar, så att rivningsavfall och nya plåtar inte behöver ligga och vänta på tomten. Det gör att ett takbyte här kräver mer planering, men lika många arbetsdagar på plats som på fastlandet.",
+    "Nästan allt material går ut med båt eller pråm, och det påverkar hur ett takbyte planeras. Förutsättningarna för just ditt tak går vi igenom vid takkontrollen, så att rivningsavfall och nya plåtar inte behöver ligga och vänta på tomten. Det gör att ett takbyte här kräver mer planering, men lika många arbetsdagar på plats som på fastlandet.",
   ],
   "Mellersta skärgården": [
     "I mellersta skärgården blandas rödfärgade skärgårdsstugor med nybyggda permanenthus. Saltluft året runt och kraftiga vindbyar över öppna fjärdar sliter framför allt på beslag, vindskivor och nockplåt.",

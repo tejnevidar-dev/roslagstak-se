@@ -710,8 +710,8 @@ const ServiceDetail = () => {
               )}
 
               <p className="border-l-2 border-accent pl-6 text-[15px] leading-relaxed text-muted-foreground">
-                Vi jobbar med tak i Roslagen och skärgården året runt — och löser logistiken även när
-                sista biten går med båt.
+                Vi tar uppdrag i Roslagen, Storstockholm och skärgården, och har gjort kompletta
+                takbyten på Blidö och Singö.
               </p>
             </aside>
           </div>
@@ -830,8 +830,8 @@ const ServiceDetail = () => {
                   d: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
                 },
                 {
-                  t: "Skärgård och logistik",
-                  d: "Vi arbetar även på öar utan broförbindelse och planerar båttransport av material och ställning i offerten.",
+                  t: "Skärgården",
+                  d: "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
                 },
               ].map((f, i) => (
                 <Reveal key={f.t} delay={i * 0.06}>

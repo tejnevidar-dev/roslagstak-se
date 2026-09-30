@@ -30,11 +30,11 @@ const eternitFaqs = [
   },
   {
     question: "Kan jag få ROT-avdrag för eternitsanering?",
-    answer: "Ja, arbetskostnaden för både sanering och nytt tak berättigar till ROT-avdrag (30% skattereduktion, max 50 000 kr per person och år). Vi hjälper dig med ansökan och pappersarbete.",
+    answer: "Ja, arbetskostnaden för både sanering och nytt tak berättigar till ROT-avdrag (30% skattereduktion, max 50 000 kr per person och år). Avdraget dras direkt på fakturan.",
   },
   {
     question: "Hur lång tid tar det att sanera och byta ett eternittak?",
-    answer: "Ett normalt villatak tar ca 3–5 arbetsdagar för sanering och nytt tak. På öar kan det ta 1–2 dagar extra beroende på logistik och väderförhållanden. Vi planerar projektet noggrant för att minimera störningar.",
+    answer: "Det beror på takets storlek, hur saneringen behöver göras och vädret. Saneringen utförs av ett företag med tillstånd från Arbetsmiljöverket, och hur arbetet planeras går vi igenom innan offerten.",
   },
   {
     question: "Vilka hälsorisker innebär eternittak med asbest?",
@@ -79,7 +79,7 @@ const EternitSEOContent = () => {
           Eternitsanering i skärgården — specialkompetens krävs
         </h3>
         <p className="text-foreground leading-relaxed mb-4">
-          Att sanera eternittak på en ö utan broförbindelse kräver extra planering. Farligt avfall måste emballeras säkert och transporteras med båt till godkänd deponi på fastlandet. Vi samordnar transporten även till avlägsna öar.
+          Att sanera eternittak på en ö kräver extra planering. Farligt avfall måste emballeras säkert och transporteras till godkänd deponi, och det görs av saneringsföretaget med tillstånd. Förutsättningarna för just ditt tak går vi igenom vid takkontrollen.
         </p>
         <h3 className="font-display text-xl text-foreground mb-3 mt-8">
           Sanering görs alltid av ett företag med tillstånd

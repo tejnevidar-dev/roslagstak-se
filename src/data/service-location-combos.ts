@@ -25,11 +25,11 @@ const serviceTypes = [
       `Planerar du ett takbyte ${prep} ${loc.name}? RoslagsTak är din takläggare för takbyte ${prep} ${loc.name}. Vi utför kompletta takbyten med alla typer av material — TP20 plåttak, dubbelfalsat plåttak, tegelplåt, pannplåt, betongpannor och lertegeltak.`,
       `Ett takbyte ${prep} ${loc.name} innebär att vi river det gamla takmaterialet, inspekterar och vid behov byter råspont och underlagspapp, och sedan monterar nytt takmaterial. Vi installerar alltid ny taksäkerhet (takstege, gångbrygga, snörasskydd) och ser till att takavvattningen fungerar optimalt.`,
       loc.isIsland
-        ? `${loc.name} nås ${loc.region === "Norra skärgården" ? "med båt" : "via väg eller färja"}, och vi tar hand om materialtransport och logistik till ön. Vi planerar varje takbyte noggrant för att minimera kostnader och störningar.`
+        ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi når ${loc.name} snabbt och effektivt. Korta resvägar gör att vi kan hålla nere etableringskostnaden vid takbyten i området.`,
-            `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att etableringskostnaden hålls nere och offerten blir tydlig.`,
+            `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att offerten blir tydlig.`,
+            `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att offerten blir tydlig.`,
           ),
       `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat plåttak. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Kontakta oss för en kostnadsfri takkontroll och offert för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
@@ -43,10 +43,10 @@ const serviceTypes = [
       `Behöver ditt tak ${prep} ${loc.name} renoveras? RoslagsTak utför takrenoveringar ${prep} ${loc.name} — från byte av enstaka pannor och lagning av läckor till omfattande renovering med nytt underlag och ny underlagspapp.`,
       `En takrenovering ${prep} ${loc.name} är ofta ett billigare alternativ till komplett takbyte. Vi åtgärdar de problem som finns utan att byta hela taket. Det kan handla om att byta trasiga pannor, reparera plåtbeslag runt skorstenar, laga fuktskador i råsponten eller byta sliten underlagspapp.`,
       loc.isIsland
-        ? `Vi tar uppdrag för takrenoveringar på öar i skärgården och hanterar all logistik — inklusive materialtransport till ${loc.name}.`
+        ? `Vi tar uppdrag för takrenoveringar på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi utför regelbundet takrenoveringar ${prep} ${loc.name} och kan ofta påbörja arbetet inom 2–4 veckor.`,
+            `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
             `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
           ),
       `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag tillkommer.`,
@@ -61,10 +61,10 @@ const serviceTypes = [
       `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak utför professionell takomläggning ${prep} ${loc.name} — vi lägger om tak med TP20, dubbelfalsat plåttak, tegelplåt, pannplåt och betongpannor. Vi ger fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti till fastighetsägare ${prep} ${loc.name}.`,
       `Takomläggning ${prep} ${loc.name} innebär att befintligt takmaterial byts ut mot nytt. Vi inspekterar underlaget, byter råspont och underlagspapp vid behov, och monterar det nya takmaterialet. Vi ser alltid till att taksäkerhet, ventilation och takavvattning uppfyller gällande krav.`,
       loc.isIsland
-        ? `Som specialister på takarbeten i skärgården hanterar vi all materialtransport till ${loc.name}. Vi samordnar logistik och planerar projektet noggrant — du behöver inte arrangera något själv.`
+        ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi når ${loc.name} snabbt. Vi samordnar ofta flera projekt i området, vilket ger dig ett konkurrenskraftigt pris på din takomläggning.`,
+            `Vi tar uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
             `Vi tar uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
           ),
       `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval — TP20-plåttak eller dubbelfalsat. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr/person/år).`,
@@ -81,10 +81,10 @@ const taktvattService = {
     `Behöver du taktvätt ${prep} ${loc.name}? RoslagsTak utför professionell taktvätt ${prep} ${loc.name}. Vi tar bort mossa, alger, lavar och smuts från ditt tak med skonsamma metoder som inte skadar takmaterialet — oavsett om du har betongpannor, tegelpannor, eternit eller plåttak. En regelbunden taktvätt ${prep} ${loc.name} förlänger takets livslängd med upp till 10–15 år och sparar dig tiotusentals kronor i framtida takbyten.`,
     `Mossa och alger trivs särskilt bra ${prep} ${loc.name} på grund av närheten till hav, sjöar och skog som ger fuktig luft. När mossan växer på taket håller den kvar fukten mot takmaterialet, vilket leder till frostsprängning på betong- och tegelpannor samt rost på plåttak. Vår taktvätt ${prep} ${loc.name} börjar med en grundlig rengöring där vi använder lågtryckstvätt eller manuell borstning beroende på takmaterial. Därefter behandlar vi taket med ett miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.`,
     loc.isIsland
-      ? `Vi utför taktvätt på öar i skärgården. Vi samordnar transport av utrustning, vatten och kemikalier till ${loc.name} och planerar arbetet noggrant så att det går smidigt — även om ön saknar broförbindelse. Många hus ${prep} ${loc.name} har problem med kraftig mossbildning på grund av det fuktiga skärgårdsklimatet, och regelbunden taktvätt är ofta avgörande för att undvika dyra takbyten.`
+      ? `Vi utför taktvätt på öar i skärgården, också ${prep} ${loc.name}. Det fuktiga skärgårdsklimatet ger ofta kraftig mossbildning, och takets skick går vi igenom vid den kostnadsfria takkontrollen.`
       : byDistance(
           loc,
-          `Vi når ${loc.name} snabbt. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
+          `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
           `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
         ),
     `Priset för taktvätt ${prep} ${loc.name} beror på takets storlek, lutning, material och nedsmutsningsgrad, inkl. behandling med biocid. Med ROT-avdrag på 30 % av arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.`,
@@ -104,10 +104,10 @@ const specialistServices = [
       `Söker du bandtäckning ${prep} ${loc.name}? RoslagsTak utför dubbelfalsad bandtäckning — den mest hållbara takläggningen som finns för kustnära hus. Vi täcker taket med långa plåtband som falsas ihop två gånger, vilket ger en helt tät yta utan genomgående skruvhål. Resultatet är ett tak som klarar 60–80 år ${prep} ${loc.name}.`,
       `Bandtäckning ${prep} ${loc.name} passar särskilt bra på tak med låg lutning, valmade tak, torn och tak med många vinklar. Vi arbetar med förzinkad stålplåt, färgbelagd plåt samt koppar och zink när kunden vill ha ett exklusivt uttryck. Falsarna görs på plats med falsmaskin, och alla beslag kring skorsten, takfönster och ventilation plåtslås för hand.`,
       loc.isIsland
-        ? `Att bandtäcka ett tak ${prep} ${loc.name} kräver planering — plåtbanden är långa och måste hanteras varsamt vid båttransport. Vi har rutiner för detta och tillverkar delar av banden på plats när logistiken kräver det.`
+        ? `Att bandtäcka ett tak ${prep} ${loc.name} kräver planering, eftersom plåtbanden är långa. Förutsättningarna går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi når ${loc.name} enkelt med plåtband och falsutrustning, vilket håller nere transportkostnaden för din bandtäckning.`,
+            `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
             `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
           ),
       `Bandtäckning ${prep} ${loc.name} i förzinkad eller färgbelagd plåt, koppar eller zink. Priset styrs av materialval och takets komplexitet — antal vinklar, kupor och genomföringar. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
@@ -122,11 +122,11 @@ const specialistServices = [
       `Plåttak ${prep} ${loc.name} är ett vanligt och prisvärt val för både villor och flerbostadshus. RoslagsTak monterar alla typer av plåttak: TP20 trapetsprofil, pannplåt, tegelprofilerad plåt och dubbelfalsat plåttak. Plåt är lätt, tåligt mot salt och vind och kräver minimalt underhåll — perfekt för hus ${prep} ${loc.name}.`,
       `Vid montering av plåttak ${prep} ${loc.name} kontrollerar vi alltid råspont, underlagspapp och läkt innan den nya plåten läggs. Vi använder färgbelagd stålplåt med hög korrosionsklass, monterar nya nockbeslag, vindskivebeslag och fotplåtar samt kompletterar med taksäkerhet enligt gällande krav.`,
       loc.isIsland
-        ? `Plåttak är extra lämpligt ${prep} ${loc.name} eftersom materialet är lätt att transportera med båt och tål saltluft bättre än betongpannor, som frostspränger när mossa håller kvar fukt.`
+        ? `Plåttak är ett lätt material, och i skärgården sliter saltluften på både pannor och plåt. Vilket material som passar ${prep} ${loc.name} går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi lägger plåttak ${prep} ${loc.name} året runt och kan ofta starta inom några veckor efter takkontroll.`,
-            `Vi lägger plåttak ${prep} ${loc.name} året runt och bokar in start efter takkontroll och överenskommelse.`,
+            `Vi lägger plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
+            `Vi lägger plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
           ),
       `Ett plåttak ${prep} ${loc.name} — TP20, tegelprofilerad plåt eller dubbelfalsat. Fast pris efter kostnadsfri takkontroll, som inkluderar montage, beslag och bortforsling av gammalt material. ROT-avdrag tillkommer.`,
       `Begär kostnadsfri offert på plåttak ${prep} ${loc.name} — vi hjälper dig välja profil, kulör och rätt korrosionsklass för läget. Ring 070-154 36 39.`,
@@ -140,11 +140,11 @@ const specialistServices = [
       `Ska du byta till eller lägga om betongpannor ${prep} ${loc.name}? RoslagsTak lägger betongpannetak ${prep} ${loc.name} — både vid komplett takbyte och vid omläggning där befintliga pannor läggs tillbaka på ny underlagspapp och ny läkt.`,
       `Betongpannor ${prep} ${loc.name} har lång livslängd men blir känsliga när mossa och alger håller kvar fukt i ytan, vilket leder till frostsprängning. Vi byter alltid trasiga pannor, ser över nock- och valmpannor, kontrollerar att underlagspappen är hel och att ventilationen under pannorna fungerar.`,
       loc.isIsland
-        ? `Betongpannor är tunga, vilket gör transporten till ${loc.name} till en central del av projektet. Vi räknar alltid in båt- eller färjelogistik i offerten och bedömer om takstolarna klarar lasten.`
+        ? `Betongpannor är tunga, och på en ö påverkar det planeringen av arbetet ${prep} ${loc.name}. Vid takkontrollen bedömer vi också om takstolarna klarar lasten.`
         : byDistance(
             loc,
-            `Vi når ${loc.name} snabbt från Norrtälje och har alltid tillgång till både nya pannor och matchande begagnade pannor för lagning.`,
-            `Vi tar med både nya pannor och matchande begagnade pannor för lagning till ${loc.name}.`,
+            `Vi tar uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
+            `Vi tar uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
           ),
       `Ett tak med betongpannor ${prep} ${loc.name}, vid nyläggning eller omläggning av befintliga pannor med ny papp och läkt. Vi lämnar fast pris efter kostnadsfri takkontroll. ROT-avdrag ger 30% på arbetskostnaden.`,
       `Osäker på om ditt betongpannetak ${prep} ${loc.name} ska renoveras eller bytas? Boka en kostnadsfri takinspektion — vi ger en ärlig rekommendation. Ring 070-154 36 39.`,
@@ -159,7 +159,7 @@ const specialistServices = [
       `Vid arbete med tegeltak ${prep} ${loc.name} river vi gammalt tegel varsamt, byter underlagspapp och läkt, och lägger sedan nytt eller återanvänt tegel med korrekt överlapp. Vi plåtslår runt skorsten och genomföringar och ser till att luftspalten under teglet är fri så taket kan torka.`,
       loc.isIsland
         ? `På ${loc.name} rekommenderar vi ofta tegelprofilerad plåt istället för lertegel — samma utseende men en bråkdel av vikten, vilket sänker transportkostnaden och belastningen på takstolarna.`
-        : `Vi utför tegeltaksarbeten regelbundet ${prep} ${loc.name} och har god tillgång till både nytt och kulörmatchat äldre tegel.`,
+        : `Vi lägger tegeltak ${prep} ${loc.name}, både i lertegel och tegelprofilerad plåt.`,
       `Tegeltak ${prep} ${loc.name} i lertegel eller tegelprofilerad plåt, inklusive montage och beslag. Fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Begär kostnadsfri offert på tegeltak ${prep} ${loc.name} — vi mäter och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
     ],

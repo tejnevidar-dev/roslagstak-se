@@ -5,7 +5,7 @@ import { locationIndex as locations } from "@/data/location-index";
 
 const regionDescriptions: Record<string, string> = {
   "Norra skärgården":
-    "Takbyte och takrenovering i ytterskärgården. Vi tar oss ut till öar dit andra inte når — med material och verktyg.",
+    "Takbyte och takrenovering i ytterskärgården. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
   "Mellersta skärgården":
     "Takbyte och takrenovering på öar i mellersta Roslagen. Från sommarstugor till permanentboenden.",
   Kusten:
@@ -85,8 +85,8 @@ const ServiceArea = () => {
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
                 Vi utför takbyte, takrenovering, takvård och plåtarbeten i {areas.length} områden i
-                Roslagen och hela Storstockholm. Bor du på en ö utan broförbindelse tar vi oss dit
-                sjövägen — med material, verktyg och ställning.
+                Roslagen och hela Storstockholm. Vi tar också uppdrag i skärgården och har gjort
+                kompletta takbyten på Blidö och Singö.
               </p>
 
 
@@ -107,8 +107,8 @@ const ServiceArea = () => {
                   Stockholm eller en stuga i skärgården.
                 </p>
                 <p className="mt-6 border-t border-border pt-5 text-[14px] leading-relaxed text-muted-foreground">
-                  <span className="font-semibold text-foreground">Ö utan broförbindelse?</span> Inget
-                  hinder — vi har lång erfarenhet av att frakta material och utrustning sjövägen.
+                  <span className="font-semibold text-foreground">Hus på en ö?</span> Vi tar uppdrag i
+                  skärgården. Förutsättningarna går vi igenom vid den kostnadsfria takkontrollen.
                 </p>
 
               </div>
@@ -175,18 +175,18 @@ const ServiceArea = () => {
               <p>
                 Behöver du en <strong className="font-semibold">takläggare i Roslagen</strong> eller <strong className="font-semibold">takläggare i Stockholm</strong>? RoslagsTak utför alla typer av takarbeten — från
                 <strong className="font-semibold"> takbyte på Blidö</strong> och <strong className="font-semibold">takrenovering på Ljusterö</strong> till
-                <strong className="font-semibold"> takomläggning i Norrtälje</strong> och <strong className="font-semibold">plåttak på Yxlan</strong>. Vi är den takläggare
-                som tar sig ut till öar i hela norra skärgården — <strong className="font-semibold">även öar utan broförbindelse</strong>.
+                <strong className="font-semibold"> takomläggning i Norrtälje</strong> och <strong className="font-semibold">plåttak på Yxlan</strong>. Vi tar också uppdrag
+                på <strong className="font-semibold">öar i norra skärgården</strong>.
               </p>
               <p>
-                Vi tar uppdrag för <strong className="font-semibold">takbyte på öar som bara nås med båt</strong>.
-                På Husarö, Finnhamn och Ingmarsö, liksom Svartlöga, Söderöra, Norröra, Humlö och Gräskö
-                tar vi uppdrag där allt material transporteras sjövägen.
+                Vi tar uppdrag för <strong className="font-semibold">takbyte på öar i skärgården</strong>,
+                till exempel på Husarö, Finnhamn och Ingmarsö, liksom Svartlöga, Söderöra, Norröra,
+                Humlö och Gräskö.
                 Högmarsö och Arholma tillhör också vårt verksamhetsområde, liksom Furusund, Rådmansö och Vätö.
               </p>
               <p>
                 Längs kusten arbetar vi i Spillersboda, Bergshamra och Svartnö. På Väddö och upp mot
-                Singö, Grisslehamn och Arholma hittar du oss regelbundet. I Vaxholm och Norrtälje tar
+                Singö, Grisslehamn och Arholma tar vi också uppdrag. I Vaxholm och Norrtälje tar
                 vi uppdrag på villor, fritidshus och radhus.
               </p>
               <p>
