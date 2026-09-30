@@ -48,6 +48,23 @@ const services = [
   ),
 ].map((m) => ({ slug: m[1], title: m[2], description: m[3] }));
 
+/* Tjänstesidornas längre brödtext (longDesc i ServiceDetail.tsx), läst med regex av samma skäl
+   som ovan, så att den förrenderade HTML:en visar samma text som React-sidan (#1v, 2026-09-30). */
+const serviceDetailSource = readFileSync(resolve("src/pages/ServiceDetail.tsx"), "utf8");
+const serviceLongDesc = new Map(
+  [...serviceDetailSource.matchAll(/^  "?([a-z-]+)"?: \{\r?\n\s*longDesc:\s*"([^"]+)"/gm)].map(
+    (m) => [m[1], m[2]] as [string, string],
+  ),
+);
+
+/* Extra stycken som React renderar som egen JSX-sektion (inte i serviceDetails). Håll i synk
+   manuellt med ServiceDetail.tsx. */
+const serviceExtraParagraphs: Record<string, string[]> = {
+  platarbeten: [
+    "Dubbelfalsat plåttak – bandtäckning med fast pris. Vi lägger dubbelfalsade plåttak (bandtäckning) vid takbyte, med fast pris efter kostnadsfri takkontroll. Bandtäckning är plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Banorna hålls på plats av dolda klammer som fästs i underlaget, så att plåten kan röra sig med temperaturen utan att skarvarna tar skada. Tekniken passar både äldre hus och moderna villor, och kan formas efter kupor, ränndalar och andra detaljer på taket.",
+  ],
+};
+
 /**
  * Textspegling av src/data/projects.ts, utan bildimporterna (esbuild/Node kan inte
  * lösa Vite-bildimporter). Håll fälten i synk manuellt vid ändringar i projects.ts.
@@ -661,7 +678,7 @@ const NEARBY_PROJECT_MAX_KM = 30;
 const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
   const prep = loc.isIsland ? "på" : "i";
   const parts: string[] = [
-    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje och cirka ${Math.round(distanceFromTabyKm(loc))} km från Täby. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
+    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från Norrtälje och cirka ${Math.round(distanceFromTabyKm(loc))} km från Täby. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
   ];
 
   const exactProject = projectSummaries.find((p) => p.locationSlug === loc.slug);
@@ -699,7 +716,12 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
   if (clean.startsWith("/tjanster/")) {
     const slug = clean.slice("/tjanster/".length);
     const service = services.find((s) => s.slug === slug);
-    return service ? serviceIntro(service.title, service.description) : null;
+    if (!service) return null;
+    const page = serviceIntro(service.title, service.description);
+    const extra = [serviceLongDesc.get(slug), ...(serviceExtraParagraphs[slug] ?? [])].filter(
+      (p): p is string => Boolean(p),
+    );
+    return { ...page, paragraphs: [...extra, ...page.paragraphs] };
   }
 
   if (clean.startsWith("/takproblem/")) {

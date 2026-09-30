@@ -335,7 +335,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     ],
   },
   tegeltak: {
-    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Lertegel kan hålla över 100 år, men kräver en konstruktion som tål vikten (ca 40–50 kg/m²) och minst 22 graders taklutning. Vi kontrollerar alltid bärigheten vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
+    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga, så takstolarna måste vara dimensionerade för vikten, och taket måste ha minst den lutning som tillverkaren anger för pannmodellen. Bärigheten bedöms vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlagets skick.",
     benefits: [
       "Klassiskt uttryck som håller husets karaktär",
