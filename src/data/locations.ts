@@ -963,6 +963,48 @@ export const locations: LocationData[] = [
     nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
   },
   {
+    slug: "storangen",
+    name: "Storängen och Saltsjö-Duvnäs",
+    region: "Östra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Storängen, Lillängen och Saltsjö-Duvnäs i Nacka, med trävillor från 1904 och radhus från 1960-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Storängen ligger vid Saltsjöbanan i centrala Nacka, mellan Lillängen och Saltsjö-Duvnäs, strax sydost om Nacka Forum. Villasamhället grundades 1904 av Tjänstemännens Egnahemsförening vid Storängen, som skrev kontrakt med Järnvägsaktiebolaget Stockholm-Saltsjön, bolaget bakom Saltsjöbanan. Bolaget ordnade stadsplan, vägar, vatten och avlopp och så småningom en järnvägsstation. Nybyggnadsområdet var en vidsträckt äng mellan Järlasjön och Värmdövägen, och huvudvägarna drogs så att de strålade samman vid stationen. Den första villan, Villa Lodén vid dagens John Lodéns väg, började byggas den 30 juni 1904. Redan 1909 var 107 av omkring 160 tomter bebyggda. En byggnadsordning från 1905 föreskrev en egen byggnadsnämnd, eftersom det ännu inte fanns någon kommunal. De flesta villorna är arkitektritade, bland annat av Ragnar Östberg, Torben Grut och Carl Westman, och flest hus, 14 stycken inklusive stationshuset, ritade Gustaf Hugo Sandberg. Villorna är stora trävillor i nationalromantisk stil. Egnahemsföreningen finns fortfarande kvar, i dag som intresseförening för de boende, och 2013 fanns drygt 150 villor i området. Vid en kulturhistorisk inventering 1979 bedömdes 18 av 156 undersökta byggnader som \"omistliga\" och 35 som \"värdefulla\", och hela området bedömdes som en omistlig kulturmiljö. År 1987 förklarades Storängen som riksintresse för kulturmiljövården. Enligt alla.csv finns i området även funkisvillor från 1930- och 40-talen, villor från 1910- och 20-talen i Saltsjö-Duvnäs och radhusen Röda och Vita raden från 1964–67.",
+    extraContent:
+      "Trävillorna från Storängens första år är i dag över hundra år gamla, funkisvillorna runt 80–95 år och radhusen från 1960-talet runt 60 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. I ett område som är riksintresse för kulturmiljövården är takets form, material och kulör en viktig del av miljön. Innan ett byte av material eller kulör är det därför extra viktigt att ta reda på vad som gäller. Det avgör Nacka kommun. I radhuslängorna, där husen byggdes samtidigt, kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Nacka"},{"label":"Delområden","value":"Storängen, Lillängen, Saltsjö-Duvnäs"},{"label":"Hustyper","value":"Villor, radhus"},{"label":"Byggperiod","value":"Storängen från 1904, funkisvillor 1930–40-tal, Duvnäs 1910–20-tal, radhus 1964–67"},{"label":"Kulturmiljö","value":"Riksintresse för kulturmiljövården (1987)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 200"}],
+    sourceLink: {"label":"Wikipedia: Storängen","url":"https://sv.wikipedia.org/wiki/Stor%C3%A4ngen"},
+    parentLocation: {"name":"Nacka","slug":"nacka"},
+    h1Override: "Takläggare i Storängen och Saltsjö-Duvnäs, Nacka",
+    uniqueFAQ: {"question":"När byggdes husen i Storängen och Saltsjö-Duvnäs?","answer":"Byggperiod enligt källorna: Storängen från 1904, funkisvillor 1930–40-tal, Duvnäs 1910–20-tal, radhus 1964–67. Hustyper: villor, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Nacka kommun."},
+    primaryKeyword: "takläggare Storängen och Saltsjö-Duvnäs",
+    lat: 59.311,
+    lng: 18.172,
+    nearbyLocations: ["Nacka","Saltsjöbaden","Saltsjö-Boo"],
+  },
+  {
+    slug: "lannersta",
+    name: "Lännersta",
+    region: "Östra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Lännersta i Boo, Nacka, med villor från 1930-talet och framåt och äldre sommarvillor. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Lännersta ligger i sydvästra delen av kommundelen Boo i Nacka, från Värmdöleden i norr till Lännerstasundet i söder. Området har fått sitt namn från Lännersta gård, som finns dokumenterad i skrift redan på 1430-talet. Namnet kommer från \"Landesta\" eller \"Landestow\", som betyder landningsställe, eftersom en av Lännerstasundets gamla hamnplatser låg här. År 1478 drogs gården in till kronan, och 1545 fick amiralen Jacob Bagge både Lännersta och Boo gård som gåva för sina förtjänster. Bagge bosatte sig på Boo gård, och Lännersta, som tidigare var ett torp, blev ladugård under Boo. Så förblev det fram till 1829, då rörelsen gick i konkurs och godset splittrades. I slutet av 1800-talet omfattade Lännersta gård 600 tunnland, och ägaren C.F. Wahlberg började stycka marken till villatomter. År 1911 beskrevs Lännersta villastad i sin egen marknadsföring som \"sällsynt vacker\" med villor som låg isolerade från varandra, så att den lantliga prägeln bevarades. AB Lännersta bildades 1918, men tomtförsäljningen gick trögt. År 1931 bildades Lännersta Villaägareförening, och 1937 var egendomen styckad i 925 tomter. Till en början var medlemskap i föreningen obligatoriskt, och fastighetsägarna anlade vägnätet på egen bekostnad. Enligt Wikipedia präglas bebyggelsen i dag huvudsakligen av villor från 1930-talet och framåt, med några enstaka större sommarvillor från slutet av 1800-talet och början av 1900-talet. Tidigare sommarstugeområden har omvandlats till permanenta villor. Den största delen av Lännersta är detaljplanelagd med skyddsbestämmelser för kulturhistoriskt intressant bebyggelse, och här finns bland annat Lännersta gård från 1700-talet och Villa Lindängen från 1870-talet.",
+    extraContent:
+      "Villorna i Lännersta är i dag främst mellan 50 och 95 år gamla, och de äldsta sommarvillorna är över hundra år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. I omvandlade sommarstugor kan taket ha byggts om eller byggts på vid olika tillfällen. Eftersom stora delar av området har skyddsbestämmelser i detaljplanen är det klokt att ta reda på vad som gäller innan ett byte av material eller kulör. Det avgör Nacka kommun. Varje hus får en egen takkontroll och ett eget pris.",
+    factBox: [{"label":"Kommun","value":"Nacka"},{"label":"Delområde","value":"Lännersta (övriga delar av Södra Boo ej verifierade)"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"Tomter styckade till 1937 (925 st), villor främst från 1930-talet och framåt"},{"label":"Kulturmiljö","value":"Detaljplan med skyddsbestämmelser för stora delar"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 2 050 (SCB, 2025; avser hela RegSO)"}],
+    sourceLink: {"label":"Wikipedia: Lännersta","url":"https://sv.wikipedia.org/wiki/L%C3%A4nnersta"},
+    parentLocation: {"name":"Nacka","slug":"nacka"},
+    h1Override: "Takläggare i Lännersta, Boo",
+    uniqueFAQ: {"question":"När byggdes husen i Lännersta?","answer":"Byggperiod enligt källorna: tomter styckade till 1937 (925 st), villor främst från 1930-talet och framåt. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Nacka kommun."},
+    primaryKeyword: "takläggare Lännersta",
+    lat: 59.31,
+    lng: 18.24,
+    nearbyLocations: ["Nacka","Saltsjö-Boo","Saltsjöbaden"],
+  },
+  {
     slug: "snattringe",
     name: "Snättringe",
     region: "Södra Stockholm",
@@ -1876,21 +1918,18 @@ export const locations: LocationData[] = [
     name: "Hässelby",
     region: "Västerort",
     isIsland: false,
-    description:
-      "Takläggare i Hässelby — takbyte, takrenovering och plåtarbeten i västra Stockholm. Fast pris och 10 års utförandegaranti.",
-    longDescription:
-      "Hässelby har en av Stockholms mest välbevarade trädgårdsstadsbebyggelse, med villor från 1920- och 30-talet längs Hässelby strandstigen och radhus från miljonprogramtiden i Hässelby gård. Taken varierar från tegelpannor på äldre villor till plåttak på nyare hus. Många tak i Hässelby är nu 40–60 år gamla och mogna för omläggning eller byte. Vi utför takbyten och takrenoveringar i Hässelby med material som bevarar trädgårdsstadens karaktär — dubbelfalsad plåt i klassiska kulörer och tegelpannor där originalet fanns.",
-    extraContent:
-      "I Hässelby trädgårdsstad är hänsyn till den kulturhistoriska bebyggelsen avgörande. Vid takbyte väljer vi material och kulörer som passar husens arkitektur och bevarar detaljer som vindskivor och plåtbeslag. Vi lämnar fast pris efter kostnadsfri takkontroll.",
-    uniqueFAQ: {
-      question: "Ställer Hässelby trädgårdsstad särskilda krav på takbyte?",
-      answer:
-        "Ja, Hässelby trädgårdsstad är kulturhistoriskt värdefull och taklösningen bör anpassas till husens karaktär. Vi väljer material och kulörer som passar originalet — ofta dubbelfalsad plåt eller tegelpannor — och bevarar detaljer som vindskivor och beslag. Boka en kostnadsfri takkontroll så ger vi en rekommendation för din fastighet.",
-    },
+    description: "Takbyte och takomläggning i Hässelby villastad, Backlura och Johannelund, med villor från 1900-talet och radhus från 1970-talet. Kostnadsfri takkontroll.",
+    longDescription: "Hässelby villastad är Stockholms västligaste stadsdel och gränsar till Hässelby strand, Hässelby gård, Vinsta, Kälvesta, Järfälla och, över Mälaren, Ekerö. Området var i stort sett obebyggt fram till slutet av 1800-talet, med bara gårdarna Riddersvik och Lövsta. Stockholms stad köpte egendomarna 1885 och byggde en sopstation vid Mälaren, som togs i bruk 1889, samtidigt som Spånga–Lövsta järnväg öppnade. De som arbetade vid anläggningen behövde bostäder. Staden byggde två kaserner 1892, och ägaren till Hässelby slott, greve Carl Trolle-Bonde, arrenderade ut tomter till arbetarna. År 1900 började han sälja tomter genom AB Hässelby Egendom, både till arbetare och till trädgårdsmästare, som lockades av god tillgång på gödsel. Enligt Wikipedia präglade handelsträdgårdarna med sina drivbänkar och växthus stadsdelen under större delen av 1900-talet. Från 1910 erbjöds också byggnation av villor och sommarhus på mindre tomter. Orten, som tidigare kallades Riddersvik, blev municipalsamhälle 1913 och egen köping 1926, samma år som den första stadsplanen togs fram. Löfsta Handelsförening, bildad 1898, beskrivs som den första konsumföreningen i Storstockholm. Hässelby villastad införlivades med Stockholms stad 1949. På 1950-talet såldes många handelsträdgårdar till byggföretag, och marken bebyggdes med bostäder. Persontrafiken på järnvägen upphörde 1956, och soptågen, kallade Silverpilen, gick fram till 1970. Enligt alla.csv omfattar området också Backlura, med radhus och kedjehus från 1970-talet, Johannelund, Loviselund och Hässelby södra villastad.",
+    extraContent: "I Hässelby villastad står hus från hela 1900-talet nära varandra. De äldsta villorna är över hundra år gamla, efterkrigstidens villor runt 60–75 år och radhusen och kedjehusen i Backlura runt 50 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. I radhus- och kedjehusområdena, där husen byggdes samtidigt, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    uniqueFAQ: {"question":"När byggdes husen i Hässelby?","answer":"Byggperiod enligt källorna: villor från 1900, radhus/kedjehus 1970-tal (Backlura). Hustyper: villor, radhus, kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad."},
     primaryKeyword: "takläggare Hässelby",
     lat: 59.3764,
     lng: 17.8667,
-    nearbyLocations: ["Vällingby", "Bromma", "Spånga"],
+    nearbyLocations: ["Vällingby","Kälvesta","Bromma"],
+    factBox: [{"label":"Kommun","value":"Stockholm (Hässelby-Vällingby)"},{"label":"Delområden","value":"Hässelby villastad, Backlura, Johannelund, Loviselund, Hässelby södra villastad"},{"label":"Hustyper","value":"Villor, radhus, kedjehus"},{"label":"Byggperiod","value":"Villor från 1900, radhus/kedjehus 1970-tal (Backlura)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 4 760 (Områdesfakta 2025)"}],
+    sourceLink: {"label":"Wikipedia: Hässelby villastad","url":"https://sv.wikipedia.org/wiki/H%C3%A4sselby_villastad"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Hässelby villastad",
   },
   {
     slug: "vallingby",
@@ -2473,21 +2512,18 @@ export const locations: LocationData[] = [
     name: "Viksjö",
     region: "Nordvästra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Viksjö — takbyte, takrenovering och plåtarbeten i Viksjö. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
-    longDescription:
-      "Vi utför takbyte, takomläggning och plåtarbeten i Viksjö, stort villaområde i västra Järfälla. Bebyggelsen består till stor del av 1970-talsvillor med betongpannor och låglutande tak, och de skador vi oftast hittar vid takkontroll är spröd underlagspapp, rostiga beslag och otäta genomföringar kring skorsten och ventilation. Vi går igenom hela takkonstruktionen innan vi lämnar fast pris, och du har samma kontaktperson från takkontroll till slutgenomgång.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Viksjö — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Viksjö.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Viksjö?",
-      answer:
-        "Priset för ett takbyte i Viksjö beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi kontrollerar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
-    },
+    description: "Takbyte och takomläggning i Högby, Råstensvägen, Avstyckningsvägen, Skulpturvägen och Sandvik i Viksjö, med hus från 1969–1982. Kostnadsfri takkontroll.",
+    longDescription: "Viksjö byggdes ut på mycket kort tid. Enligt dispositionsplanen från 1965 skulle här byggas 2 750 småhus och 900 lägenheter i flerfamiljshus för 12 000 invånare. När byggandet pågick som mest intensivt stod enligt Wikipedia ett hus klart om dagen, och folkmängden ökade från 4 992 till 12 947 mellan 1970 och 1980. Det färdiga Viksjö omfattade omkring 5 500 bostäder, varav 70 procent i småhus. Wikipedia beskriver också hur området rymmer en rik variation av 1960- och 70-talens vanligaste hustyper. I norra och västra Viksjö byggdes flera enhetliga områden efter varandra. I Högby, längs Högbyvägen, uppfördes 180 radhus i 30 längor om sex hus, 1969 och 1970. De är av samma typ som i Andeboda: radhus i två plan med flacka tegeltäckta sadeltak. Nära platsen för det gamla torpet Högby, vid gränsen till det som 1995 blev Görvälns naturreservat, byggdes 1970–71 kedjehusen vid Råstensvägen, sammanlagt 157 småhus, bland dem souterrängvillor vid Triangelvägen och Polygonvägen. År 1972 byggdes 72 kedjehus i ett plan vid Gränsvägen, Tunnlandsvägen och Arealvägen, och 1972–73 kom 86 souterrängvillor i två till tre våningar vid Avstyckningsvägen, där planen lades om för att spara ekdungarna. I slutet av 1970-talet byggdes villorna vid Skulpturvägen, med Krokivägen, Statyvägen och Reliefvägen, helt utan statliga lån, på tomter som delvis har kvar den ursprungliga vegetationen. Därefter fortsatte utbyggnaden sydväst om Hummelmoravägen i Sandvik, med en blandning av hustyper och upplåtelseformer i början av 1980-talet.",
+    extraContent: "Radhusen i Högby och kedjehusen vid Råstensvägen och Arealvägen är i dag runt 50–55 år gamla, villorna vid Skulpturvägen runt 45 år och husen i Sandvik runt 40–45 år. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. På souterrängvillorna i sluttning kan åtkomsten påverka hur ett takbyte planeras. I radhuslängorna och kedjehusområdena, där husen byggdes samtidigt, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun.",
+    uniqueFAQ: {"question":"När byggdes husen i Viksjö?","answer":"Byggperiod enligt källorna: Högby 1969–70, Råstensvägen 1970–71, Arealvägen m.fl. 1972, Avstyckningsvägen 1972–73, Skulpturvägen slutet av 1970-talet, Sandvik tidigt 1980-tal. Hustyper: kedjehus, radhus, villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun."},
     primaryKeyword: "takläggare Viksjö",
     lat: 59.4192,
     lng: 17.8006,
-    nearbyLocations: ["Jakobsberg", "Kallhäll", "Barkarby"],
+    nearbyLocations: ["Järfälla","Jakobsberg","Kallhäll"],
+    factBox: [{"label":"Kommun","value":"Järfälla"},{"label":"Delområden","value":"Högby, Råstensvägen, Lantmäterivägens förlängning, Avstyckningsvägen, Skulpturvägen, Sandvik, Tallen"},{"label":"Hustyper","value":"Kedjehus, radhus, villor"},{"label":"Byggperiod","value":"Högby 1969–70, Råstensvägen 1970–71, Arealvägen m.fl. 1972, Avstyckningsvägen 1972–73, Skulpturvägen slutet av 1970-talet, Sandvik tidigt 1980-tal"},{"label":"Tak (belagt)","value":"Högby: flacka tegeltäckta sadeltak (samma typ som Andeboda)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 700"}],
+    sourceLink: {"label":"Wikipedia: Viksjö, Järfälla kommun","url":"https://sv.wikipedia.org/wiki/Viksj%C3%B6,_J%C3%A4rf%C3%A4lla_kommun"},
+    parentLocation: {"name":"Järfälla","slug":"jarfalla"},
+    h1Override: "Takläggare i norra och västra Viksjö, Järfälla",
   },
   {
     slug: "bro",
@@ -2620,21 +2656,18 @@ export const locations: LocationData[] = [
     name: "Ängby",
     region: "Västerort",
     isIsland: false,
-    description:
-      "Takläggare i Ängby — takbyte, takrenovering och plåtarbeten i Ängby. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
-    longDescription:
-      "Ängby — klassisk villastad i Bromma — har ett fastighetsbestånd med funkisvillor från 1930-talet med brant tak. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt i Ängby: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — takkontroll, materialval, ställning, takarbete och bortforsling.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Ängby — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Ängby.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Ängby?",
-      answer:
-        "Priset för ett takbyte i Ängby beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad.",
-    },
+    description: "Takbyte och takomläggning i Norra Ängby i Bromma, med småstugor och radhus från 1930-talet. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription: "Norra Ängby i Västerort räknas till Stockholms trädgårdsstäder och gränsar bland annat till Bromma kyrka, Åkeshov, Södra Ängby, Blackeberg och Beckomberga. I östra delen ligger Kyrksjölötens naturreservat. Marken har brukats sedan länge: i Björklunds hage finns ett gravfält med 68 gravar från järnåldern, och vid Runstensvägen står Ängbystenen kvar på den plats där den restes på 1100-talet. Karsviks Östergård vid Tegnebyvägen är en kvarleva från de gamla bondebyarnas tid. Stockholms stad köpte redan 1904 bland annat egendomarna Åkeshov och Stora Ängby för framtida bebyggelse, men arbetet med vägar, vatten och avlopp började först hösten 1930. Stadsplanen från 1930 signerades av stadsplanedirektören Albert Lilienberg och arkitekten Thure Bergentz. Enligt Wikipedia byggdes här 1 320 egna hem under åren 1930–1941: trähus i ett eller två plan samt ett radhusområde. De flesta husen byggdes genom självbyggeri, organiserat av Stockholms stads småstugebyrå och fastighetskontoret, med fastighetsdirektören Axel Dahlberg som drivande kraft och Edvin Engström som arkitekt. Den blivande husägaren betalade ingen kontantinsats, utan gjorde i stället eget byggarbete motsvarande en del av byggkostnaden. År 1931 stod de första 201 husen klara, huvudsakligen i ett och ett halvt plan, och byggandet fortsatte under hela 1930-talet. Marken upplåts med tomträtt, och i dag kan husägare också köpa sin tomt. Utmed Bällstavägen uppförde HSB radhus 1931, och i områdets mitt ligger Ängby torg, ett typiskt trädgårdsstadstorg vars första hus stod klara 1930. År 1956 besökte drottning Elizabeth II en småstuga på Anundsvägen under sitt statsbesök.",
+    extraContent: "Småstugorna och radhusen i Norra Ängby är i dag runt 85–95 år gamla, och enplansvillorna från 1948–49 är runt 75 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlag, läkt och plåtdetaljer ofta det som behöver ses över. Eftersom många hus byggdes efter samma typritningar kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad, och i en trädgårdsstad är det klokt att ta reda på det innan materialet väljs.",
+    uniqueFAQ: {"question":"När byggdes husen i Ängby?","answer":"Byggperiod enligt källorna: 1930–1941 (huvuddelen 1931–38), enplansvillor 1948–49. Hustyper: småstugor/villor i trä (1–2 plan), radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad."},
     primaryKeyword: "takläggare Ängby",
     lat: 59.3372,
     lng: 17.8981,
-    nearbyLocations: ["Blackeberg", "Abrahamsberg", "Bromma"],
+    nearbyLocations: ["Bromma","Nockeby","Blackeberg"],
+    factBox: [{"label":"Kommun","value":"Stockholm (Bromma)"},{"label":"Hustyper","value":"Småstugor/villor i trä (1–2 plan), radhus"},{"label":"Byggperiod","value":"1930–1941 (huvuddelen 1931–38), enplansvillor 1948–49"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 500 (Områdesfakta 2025)"}],
+    sourceLink: {"label":"Wikipedia: Norra Ängby","url":"https://sv.wikipedia.org/wiki/Norra_%C3%84ngby"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Norra Ängby, Bromma",
   },
   {
     slug: "kista",
@@ -2704,21 +2737,18 @@ export const locations: LocationData[] = [
     name: "Saltsjöbaden",
     region: "Östra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Saltsjöbaden — takbyte, takrenovering och plåtarbeten i Saltsjöbaden. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
-    longDescription:
-      "Saltsjöbaden är kustnära villasamhälle i Nacka. Bebyggelsen består till stor del av sekelskiftesvillor med komplexa tak och plåtdetaljer. Vi utför takbyte, takrenovering och takomläggning i Saltsjöbaden med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Saltsjöbaden — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Du får ett fast pris som är räknat på ditt tak — inte ett uppskattat spann. Bor du granne med någon som också ska byta tak går det ofta att samordna arbetena och sänka etableringskostnaden. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Saltsjöbaden.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Saltsjöbaden?",
-      answer:
-        "Priset för ett takbyte i Saltsjöbaden beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Priset sätts efter takkontroll på plats och innehåller rivning, material, ställning, arbete och bortforsling av avfall. På arbetskostnaden gäller ROT-avdrag med 30 %.",
-    },
+    description: "Takbyte och takomläggning i Saltsjöbaden, med villastaden på Neglingeön från 1890-talet och senare villakvarter. Kostnadsfri takkontroll och fast pris.",
+    longDescription: "Saltsjöbaden ligger i Nacka, ungefär en och en halv mil från Stockholm, och omfattar Neglingeön, en halvö på cirka 75 hektar mellan Baggensfjärden och Neglingeviken, samt områdena väster om viken med bland annat Igelboda, Neglinge, Tattby och Solsidan. Orten grundades på 1890-talet på initiativ av K.A. Wallenberg och Ernest Thiel, som ville skapa en villa- och badort vid Östersjökusten nära Stockholm. Idén föddes under en resa till badorten Trouville-sur-Mer i Normandie, och marken köptes 1889 från godset Erstavik. Grand Hotel Saltsjöbaden stod färdigt 1893, och här slöts Saltsjöbadsavtalet mellan LO och SAF 1938. Det gamla namnet Rösunda, efter ett fiskartorp, byttes mot Saltsjöbaden. Från den tidigare lantliga bebyggelsen finns Neglinge gårds tre hus kvar, i dag hembygdsgård, och de räknas tillsammans med fiskartorpet Rösunda som ortens äldsta bevarade byggnader. Villabebyggelsen började på Neglingeön. Enligt Wikipedia visar en tomtkarta från 1892 120 avstyckade tomter, och 1896 var minst 64 av dem bebyggda med villor, främst längs Ringvägens östra del och vid Saltsjöpromenaden. Enligt alla.csv, som bygger på Wikipedia, växte villastaden fram mellan 1891 och 1912, då en stadsplan kom till, och den byggdes sedan ut efter andra världskriget. Stadsbilden präglas fortfarande av arkitektritade villor, och Saltsjöbaden är i dag riksintresse för kulturmiljövården.",
+    extraContent: "I Saltsjöbaden står villor från 1890-talet sida vid sida med hus från efterkrigstiden och senare. De äldsta villorna är över hundra år gamla, medan efterkrigstidens hus är runt 60–75 år. Taken kan redan ha lagts om en eller flera gånger, och därför går det inte att säga något generellt om skicket. På de äldre arkitektritade villorna är takets form, material och detaljer ofta en viktig del av husets uttryck. Eftersom Saltsjöbaden är riksintresse för kulturmiljövården är det extra viktigt att ta reda på vad som gäller innan ett byte av material eller kulör. Om det kräver lov eller anmälan avgör Nacka kommun. Varje hus får en egen takkontroll och ett eget pris.",
+    uniqueFAQ: {"question":"När byggdes husen i Saltsjöbaden?","answer":"Byggperiod enligt källorna: villastad 1891–1912, utbyggnad efter andra världskriget. Hustyper: villor (villastad). Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Nacka kommun."},
     primaryKeyword: "takläggare Saltsjöbaden",
     lat: 59.2828,
     lng: 18.3078,
-    nearbyLocations: ["Fisksätra", "Nacka", "Saltsjö-Boo"],
+    nearbyLocations: ["Nacka","Fisksätra","Storängen och Saltsjö-Duvnäs"],
+    factBox: [{"label":"Kommun","value":"Nacka"},{"label":"Delområden","value":"Neglinge, Tattby, Igelboda, Solsidan, Rösunda, Pålnäs, Skogsö, Ljuskärr, Älgö"},{"label":"Hustyper","value":"Villor (villastad)"},{"label":"Byggperiod","value":"Villastad 1891–1912, utbyggnad efter andra världskriget"},{"label":"Kulturmiljö","value":"Riksintresse för kulturmiljövården"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 2 100"}],
+    sourceLink: {"label":"Wikipedia: Saltsjöbaden","url":"https://sv.wikipedia.org/wiki/Saltsj%C3%B6baden"},
+    parentLocation: {"name":"Nacka","slug":"nacka"},
+    h1Override: "Takläggare i Saltsjöbaden, Nacka",
   },
   {
     slug: "fisksatra",

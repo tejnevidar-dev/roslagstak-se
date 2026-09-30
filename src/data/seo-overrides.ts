@@ -134,6 +134,36 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Norra och Södra Sticklinge och Kyttinge på Lidingö, med villor från 1980- och 1990-talen. Kostnadsfri takkontroll och fast pris.",
   },
+  saltsjobaden: {
+    title: "Takbyte i Saltsjöbaden, Nacka – fast pris",
+    description:
+      "Takbyte och takomläggning i Saltsjöbaden, med villastaden på Neglingeön från 1890-talet och senare villakvarter. Kostnadsfri takkontroll och fast pris.",
+  },
+  storangen: {
+    title: "Takbyte i Storängen, Nacka – fast pris",
+    description:
+      "Takbyte och takomläggning i Storängen, Lillängen och Saltsjö-Duvnäs i Nacka, med trävillor från 1904 och radhus från 1960-talet. Kostnadsfri takkontroll.",
+  },
+  lannersta: {
+    title: "Takbyte i Lännersta, Boo – fast pris",
+    description:
+      "Takbyte och takomläggning i Lännersta i Boo, Nacka, med villor från 1930-talet och framåt och äldre sommarvillor. Kostnadsfri takkontroll och fast pris.",
+  },
+  viksjo: {
+    title: "Takbyte i Viksjö, Järfälla – kedjehus och radhus",
+    description:
+      "Takbyte och takomläggning i Högby, Råstensvägen, Avstyckningsvägen, Skulpturvägen och Sandvik i Viksjö, med hus från 1969–1982. Kostnadsfri takkontroll.",
+  },
+  angby: {
+    title: "Takbyte i Norra Ängby, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Norra Ängby i Bromma, med småstugor och radhus från 1930-talet. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  hasselby: {
+    title: "Takbyte i Hässelby villastad – fast pris",
+    description:
+      "Takbyte och takomläggning i Hässelby villastad, Backlura och Johannelund, med villor från 1900-talet och radhus från 1970-talet. Kostnadsfri takkontroll.",
+  },
   "ella-gard": {
     title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
     description:

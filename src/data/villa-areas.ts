@@ -24,10 +24,20 @@ export const VILLA_AREAS_SOURCE =
 
 /** Nyckel = ortsslug för kommunsidan (/taklaggare-<slug>) eller regionslug (/omraden/<slug>). */
 export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
+  nacka: {
+    municipality: "Nacka",
+    areas: [
+      { name: "Saltsjöbaden", types: "Villor (villastad)", period: "Villastad 1891–1912, utbyggnad efter andra världskriget", href: "/taklaggare-saltsjobaden" },
+      { name: "Storängen och Saltsjö-Duvnäs", types: "Villor, radhus", period: "Storängen från 1904, funkisvillor 1930–40-tal, Duvnäs 1910–20-tal, radhus 1964–67", href: "/taklaggare-storangen" },
+      { name: "Lännersta", types: "Villor", period: "Tomter styckade till 1937 (925 st), villor främst från 1930-talet och framåt", href: "/taklaggare-lannersta" },
+    ],
+  },
   stockholm: {
     municipality: "Stockholm",
     areas: [
       { name: "Kälvesta", types: "Radhus, kedjehus, atriumhus och villor", period: "1966 till mitten av 1970-talet (Wikipedia)", href: "/taklaggare-kalvesta" },
+      { name: "Norra Ängby", types: "Småstugor/villor i trä (1–2 plan), radhus", period: "1930–1941 (huvuddelen 1931–38), enplansvillor 1948–49", href: "/taklaggare-angby" },
+      { name: "Hässelby villastad", types: "Villor, radhus, kedjehus", period: "Villor från 1900, radhus/kedjehus 1970-tal (Backlura)", href: "/taklaggare-hasselby" },
     ],
   },
   "upplands-vasby": {
@@ -101,7 +111,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
     areas: [
       { name: "Jakobsberg västra", types: "Villor, kedjehus och radhus", period: "Tomter styckade på 1920–30-talet (kommunen), mest 1950–1970-tal (hitta.se)", href: "/taklaggare-jakobsberg" },
       { name: "Fjällen och Fastebol (Viksjö)", types: "Kedjehus, radhus och villor", period: "Fastebol 1966–67, Andeboda 1967–70, Fjällen tidigt 1980-tal (Wikipedia)" },
-      { name: "Viksjö västra", types: "Kedjehus, radhus och villor", period: "1969 till tidigt 1980-tal (Wikipedia)" },
+      { name: "Viksjö västra", types: "Kedjehus, radhus och villor", period: "1969 till tidigt 1980-tal (Wikipedia)", href: "/taklaggare-viksjo" },
       { name: "Barkarby västra och Skälby östra", types: "Villor, inslag av kedjehus och radhus", period: "Tomter styckade från 1926 (kommunen), mest 1950- och 1960-tal (hitta.se)" },
       { name: "Skälby västra", types: "Villor, radhus och kedjehus", period: "Tomter styckade 1921 (kommunen), mest 1950- och 1960-tal (hitta.se)" },
       { name: "Stäket", types: "Villor", period: "Villasamhälle från 1904 (Wikipedia)" },

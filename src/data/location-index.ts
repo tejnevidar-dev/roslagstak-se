@@ -50,6 +50,8 @@ export const locationIndex: LocationSummary[] = [
   { slug: "viby", name: "Viby", region: "Norra Stockholm", isIsland: false },
   { slug: "brevik", name: "Brevik", region: "Österåker", isIsland: false },
   { slug: "ormsta", name: "Ormsta", region: "Roslagens inland", isIsland: false },
+  { slug: "storangen", name: "Storängen och Saltsjö-Duvnäs", region: "Östra Stockholm", isIsland: false },
+  { slug: "lannersta", name: "Lännersta", region: "Östra Stockholm", isIsland: false },
   { slug: "snattringe", name: "Snättringe", region: "Södra Stockholm", isIsland: false },
   { slug: "solgard-sorskogen", name: "Solgård och Sörskogen", region: "Södra Stockholm", isIsland: false },
   { slug: "molna", name: "Mölna", region: "Östra Stockholm", isIsland: false },
