@@ -1719,6 +1719,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/taklaggare-hoglandet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-skarsatra</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-stora-mossen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/brf/stockholm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

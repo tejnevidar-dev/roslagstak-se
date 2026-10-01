@@ -169,6 +169,10 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-kungsangen", area: "Kungsängen, Upplands-Bro (befintlig sida förstärkt)", wave: 9 },
   { path: "/taklaggare-loharad", area: "Lohärad och Estuna, Norrtälje", wave: 9 },
   { path: "/taklaggare-vasterhaninge", area: "Västerhaninge, Haninge (Norrskogen tillagt, befintlig sida förstärkt)", wave: 9 },
+  { path: "/taklaggare-hoglandet", area: "Höglandet, Stockholm (Bromma)", wave: 10 },
+  { path: "/taklaggare-skarsatra", area: "Skärsätra, Lidingö", wave: 10 },
+  { path: "/taklaggare-stora-mossen", area: "Stora Mossen, Stockholm (Bromma)", wave: 10 },
+  { path: "/taklaggare-nasbypark", area: "Näsbypark, Täby (Näsby allé/Centralvägen tillagt, befintlig sida förstärkt)", wave: 10 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };
