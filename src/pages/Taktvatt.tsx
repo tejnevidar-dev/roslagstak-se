@@ -805,7 +805,7 @@ const Taktvatt = () => {
             <div className="max-w-3xl mx-auto">
               <GoogleReviews
                 title="Omdömen från taktvätt-kunder"
-                intro="Vi publicerar inga egenskrivna kundcitat. Omdömen om vårt arbete finns på vår Google-företagsprofil, med namn och datum."
+                intro="Omdömena är hämtade från Google. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Namn och datum visas i original."
               />
             </div>
           </div>

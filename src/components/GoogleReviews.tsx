@@ -57,9 +57,7 @@ const GoogleReviews = ({
 }: GoogleReviewsProps) => {
   const text =
     intro ??
-    `Vi skriver inga egna omdömen här. Alla recensioner${
-      place ? ` – även från jobb ${place} –` : ""
-    } ligger publikt på vår Google-företagsprofil, där du kan läsa dem i original och lämna ett eget om vi har jobbat hos dig.`;
+    `Omdömena är hämtade från Google${place ? `, även från jobb ${place}` : ""}. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Läs dem i original på vår företagsprofil, och lämna gärna ett eget om vi har jobbat hos dig.`;
 
   if (variant === "inline") {
     return (

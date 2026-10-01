@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Vad ingår i priset?",
-    a: "Rivning och bortforsling av gamla taket, underlagspapp och läkt vid behov, tätskikt, plåtbeslag och taksäkerhet. Hittar vi skadad råspont när gamla taket är rivet visar vi dig omfattningen och lämnar ett pris på tillägget innan vi fortsätter.",
+    a: "Rivning och bortforsling av gamla taket, underlagspapp och läkt vid behov, tätskikt, plåtbeslag och taksäkerhet. Hittar vi skadad råspont när gamla taket är rivet visar vi dig omfattningen och lämnar ett pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande, förutom om något akut måste skyddas mot skada och vi inte får tag på dig.",
   },
   {
     q: "Hur fungerar ROT-avdraget?",

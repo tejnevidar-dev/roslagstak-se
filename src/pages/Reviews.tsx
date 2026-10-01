@@ -41,7 +41,7 @@ const Reviews = () => {
     <>
       <SEOHead
         title="Omdömen — takläggare i Roslagen & Storstockholm | RoslagsTak"
-        description="Läs omdömen om RoslagsTak direkt på vår Google-företagsprofil. Vi publicerar inga egenskrivna recensioner — bara verifierade omdömen från kunder."
+        description="Läs omdömen om RoslagsTak direkt på vår Google-företagsprofil. Vi publicerar inga egenskrivna recensioner och kan inte kontrollera vem som skriver på Google."
         canonical="https://roslagstak.se/recensioner"
       />
       <Header />
@@ -54,7 +54,7 @@ const Reviews = () => {
           compact
           eyebrow="Omdömen"
           title="Omdömen om RoslagsTak"
-          text="Alla våra omdömen finns på Google, där de är kopplade till riktiga konton och inte kan ändras av oss. Vi har medvetet tagit bort egenskrivna kundcitat från sajten — det säger ingenting om hur vi faktiskt jobbar."
+          text="Omdömena är hämtade från Google. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Vi har medvetet tagit bort egenskrivna kundcitat från sajten."
         />
         <div className="container mx-auto px-4 pt-2 pb-20">
           <div className="max-w-4xl">

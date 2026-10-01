@@ -588,7 +588,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vanliga frågor om offerten: Är takkontrollen verkligen gratis? Ja, takkontroll och offert är alltid kostnadsfria och du förbinder dig inte till något.",
       "Vi tar uppdrag i hela Roslagen och Storstockholm — från Norrtälje, Vaxholm och Österåker till Täby, Sollentuna, Nacka och öarna i skärgården.",
       "Offerten specificerar arbetskostnaden separat så att ROT-avdraget är tydligt, och vi drar av beloppet direkt på fakturan.",
-      "Vad händer om vi hittar skador under arbetet? Skadad råspont syns först när det gamla taket är rivet. Då kontaktar vi dig och specificerar tillägget innan vi fortsätter.",
+      "Vad händer om vi hittar skador under arbetet? Skadad råspont syns först när det gamla taket är rivet. Hittar vi något visar vi dig omfattningen och lämnar ett skriftligt pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande. Det enda undantaget är om något akut måste skyddas mot skada, till exempel ett öppet tak inför regn, och vi inte får tag på dig. Då gör vi bara det som är nödvändigt.",
       `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi återkopplar inom 24 timmar.`,
     ],
     links: [...primaryLinks, ...serviceLinks],
@@ -679,12 +679,12 @@ const staticPages: Record<string, PrerenderPage> = {
   "/recensioner": {
     title: "Recensioner — läs kundernas omdömen på Google",
     description:
-      "Läs RoslagsTaks omdömen direkt på Google, i original och skrivna av kunderna själva.",
+      "Läs RoslagsTaks omdömen direkt på Google, hämtade i original. Vi kan inte kontrollera vem som skriver dem på Google.",
     h1: "Recensioner från takprojekt i Roslagen",
     intro:
       "Våra omdömen finns på Google, där du kan läsa dem i original.",
     paragraphs: [
-      "Vi samlar våra omdömen på Google istället för att publicera egenskrivna recensioner här på sajten. Det gör att du kan läsa omdömena i original, skrivna av verifierade kunder, direkt i vår Google-företagsprofil.",
+      "Vi samlar våra omdömen på Google istället för att publicera egenskrivna recensioner här på sajten. Omdömena är hämtade från Google i original. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google.",
       "Följ länken till Google för att se aktuella omdömen och stjärnbetyg. Har du själv anlitat oss får du gärna lämna ett omdöme — det hjälper andra husägare i Roslagen att välja takläggare.",
       "Vi utför takbyte, takrenovering, plåtarbeten och takvård i hela Roslagen och Storstockholm. Takkontroll och offert är alltid kostnadsfria, och du får 10 års utförandegaranti på allt arbete.",
       "Så kan du själv bedöma en takfirma: be om referenser från projekt i din närhet, kontrollera att företaget har ansvarsförsäkring och F-skatt, och be att få garantierna skriftligt i offerten. Ett seriöst företag lämnar alltid fast pris efter kostnadsfri takkontroll — aldrig ett pris per telefon.",

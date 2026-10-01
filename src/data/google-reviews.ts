@@ -5,6 +5,10 @@
  * det namn och det datum som visas på Google. Ingen recension får läggas till här utan att
  * den faktiskt finns på profilen (regel 5: aldrig påhittade recensioner).
  *
+ * Juristens O5 (rapportmall-recensionskit-granskning.md): visa ALLA omdömen som finns på
+ * Google, eller ett neutralt urval (de senaste) — aldrig bara ett urval av de bästa. Lägg
+ * till nya recensioner i den ordning de kommer på Google, strunta i betyget.
+ *
  * Tom lista = inga recensioner inklistrade ännu. GoogleReviews-komponenten visar då bara
  * länken till Google-profilen (som idag) — den hittar aldrig på recensioner för att fylla listan.
  */
