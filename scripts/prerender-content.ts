@@ -929,7 +929,14 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: loc.description,
       paragraphs: [
         loc.longDescription,
-        loc.extraContent,
+        ...(loc.extraContent ? [loc.extraContent] : []),
+        ...(loc.extraSections ?? []).map((sec) => `${sec.heading}. ${sec.text}`),
+        ...(loc.process
+          ? [
+              `Så går det till. ${loc.process.steps.map((st, n) => `${n + 1}. ${st.replace(/\*\*/g, "")}`).join(" ")}`,
+              ...loc.process.paragraphs,
+            ]
+          : []),
         ...(loc.factBox ? [loc.factBox.map((f) => `${f.label}: ${f.value}.`).join(" ")] : []),
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
         ...(villaAreasParagraph(loc.slug) ? [villaAreasParagraph(loc.slug)!] : []),

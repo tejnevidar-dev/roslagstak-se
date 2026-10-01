@@ -274,9 +274,59 @@ const LocationPage = () => {
                   {location.longDescription}
                 </p>
 
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {location.extraContent}
-                </p>
+                {location.extraContent && (
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    {location.extraContent}
+                  </p>
+                )}
+
+                {/* Områdessidor: egna rubriker ur Innehålls text (t.ex. "Vad det betyder för taket") */}
+                {location.extraSections?.map((section) => (
+                  <div key={section.heading}>
+                    <h3 className="font-display text-xl text-foreground mb-3">{section.heading}</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">{section.text}</p>
+                  </div>
+                ))}
+
+                {/* Områdessidor: "Så går det till" + garanti/ROT + slutmening, samma text som i prerender */}
+                {location.process && (
+                  <div>
+                    <h3 className="font-display text-xl text-foreground mb-3">Så går det till</h3>
+                    <ol className="mb-4 list-decimal space-y-2 pl-5 text-muted-foreground leading-relaxed">
+                      {location.process.steps.map((step) => (
+                        <li key={step}>
+                          {step.split(/(\*\*[^*]+\*\*)/).map((part, i) =>
+                            part.startsWith("**") ? (
+                              <strong key={i} className="font-semibold text-foreground">
+                                {part.slice(2, -2)}
+                              </strong>
+                            ) : (
+                              part
+                            ),
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+                    {location.process.paragraphs.map((para) => {
+                      const [before, after] = para.split("roslagstak.se/takkontroll");
+                      return (
+                        <p key={para} className="text-muted-foreground leading-relaxed mb-6">
+                          {after === undefined ? (
+                            para
+                          ) : (
+                            <>
+                              {before}
+                              <Link to="/takkontroll" className="text-primary underline underline-offset-4 hover:no-underline">
+                                roslagstak.se/takkontroll
+                              </Link>
+                              {after}
+                            </>
+                          )}
+                        </p>
+                      );
+                    })}
+                  </div>
+                )}
 
                 {/* Faktaruta — villaområden med egen, källbelagd data (SEO-programmet våg 0+) */}
                 {location.factBox && (

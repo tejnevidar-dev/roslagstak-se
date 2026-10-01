@@ -97,7 +97,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   osterskar: {
     title: "Takbyte i Österskär, Åkersberga – fast pris",
     description:
-      "Takbyte och takomläggning i Österskär i Österåker, med trävillor från sekelskiftet, fritidshus från 1920–30-talen och villor från 1970–90-talen. Kostnadsfri takkontroll.",
+      "Takbyte i Österskär i Österåker: trävillor från sekelskiftet, fritidshus från 1920–30-talen och villor från 1970–90-talen. Kostnadsfri takkontroll.",
   },
   "tegelhagen-silverdal": {
     title: "Takbyte i Tegelhagen och Silverdal, Sollentuna",
@@ -117,7 +117,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   segeltorp: {
     title: "Takbyte i Segeltorp, Huddinge – fast pris",
     description:
-      "Takbyte och takomläggning i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talet och radhus från 1950-talet. Kostnadsfri takkontroll.",
+      "Takbyte i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talet och radhus från 1950-talet. Kostnadsfri takkontroll.",
   },
   skogas: {
     title: "Takbyte i Skogås och Mörtvik, Huddinge – fast pris",
