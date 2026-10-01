@@ -89,6 +89,10 @@ const MaterialPage = () => {
                 <Link to="/priser" className="font-semibold text-primary hover:underline">
                   Se riktpriser på /priser
                 </Link>
+                . Läs också om{" "}
+                <Link to="/tjanster/takomlaggning" className="font-semibold text-primary hover:underline">
+                  takbyte och takomläggning
+                </Link>
                 .
               </p>
             </div>

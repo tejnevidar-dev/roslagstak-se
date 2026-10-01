@@ -8,6 +8,7 @@ import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";
 import QuickContactFacts from "@/components/QuickContactFacts";
 import NotFound from "./NotFound";
 import { INLINE_MD, isHeading, stripInlineMd } from "@/lib/inline-md";
+import { relatedForPost } from "@/data/blog-related";
 
 /** Renderar [text](/l\u00E4nk) som intern l\u00E4nk och **text** som fet, resten som vanlig text. */
 const renderInline = (text: string) =>
@@ -227,6 +228,11 @@ const BlogPost = () => {
                     <ArrowRight className="w-3 h-3" /> Om vår tjänst: {serviceForSlug(post.slug)!.label}
                   </Link>
                 )}
+                {relatedForPost(post).map((r) => (
+                  <Link key={r.to} to={r.to} className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline sm:col-span-2">
+                    <ArrowRight className="w-3 h-3" /> {r.label}
+                  </Link>
+                ))}
                 {locationForSlug(post.slug) && (
                   <Link to={locationForSlug(post.slug)!.to} className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline sm:col-span-2">
                     <ArrowRight className="w-3 h-3" /> {locationForSlug(post.slug)!.label}

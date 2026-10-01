@@ -38,11 +38,14 @@ const ProblemPage = () => {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      { "@type": "Question", name: "Vad är symptomen?", acceptedAnswer: { "@type": "Answer", text: problem.symptom } },
-      { "@type": "Question", name: "Vad är vanliga orsaker?", acceptedAnswer: { "@type": "Answer", text: problem.orsaker } },
-      { "@type": "Question", name: "När är det akut?", acceptedAnswer: { "@type": "Answer", text: problem.akut } },
-    ],
+    /* Bara rubriker som står som frågor på sidan, med exakt samma rubrik och text (fas 2.19). */
+    mainEntity: sections
+      .filter((sec) => sec.heading.endsWith("?"))
+      .map((sec) => ({
+        "@type": "Question",
+        name: sec.heading,
+        acceptedAnswer: { "@type": "Answer", text: problem[sec.key] as string },
+      })),
   };
 
   return (
@@ -59,7 +62,7 @@ const ProblemPage = () => {
         <div className="pt-24">
           <Breadcrumbs
             items={[
-              { name: "Hem", path: "/" },
+              { name: "Startsidan", path: "/" },
               { name: "Takproblem", path: "/takproblem" },
               { name: problem.title },
             ]}
@@ -124,7 +127,12 @@ const ProblemPage = () => {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            {problem.related.map((r) => (
+            {[
+              ...problem.related,
+              ...(problem.related.some((r) => r.to === "/tjanster/takomlaggning")
+                ? []
+                : [{ to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" }]),
+            ].map((r) => (
               <Link
                 key={r.to}
                 to={r.to}

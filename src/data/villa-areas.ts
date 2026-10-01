@@ -26,10 +26,32 @@ export const VILLA_AREAS_SOURCE =
 
 /** Nyckel = ortsslug för kommunsidan (/taklaggare-<slug>) eller regionslug (/omraden/<slug>). */
 export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
+  salem: {
+    municipality: "Salem",
+    areas: [
+      { name: "Rönninge", types: "Villor och kedjehus", period: "Villasamhälle från 1896, mest 1960- och 1990-tal", href: "/taklaggare-ronninge" },
+    ],
+  },
+  vallentuna: {
+    municipality: "Vallentuna",
+    areas: [
+      { name: "Vallentuna östra (Ormsta, Bällsta, Molnby)", types: "Villor, kedjehus och radhus", period: "Ormsta 1950–70-tal, Bällsta 1960- och 2000-tal, Molnby 1980- och 2000-tal", href: "/taklaggare-ormsta" },
+      { name: "Västra tätorten (Snapptuna, Rickeby)", types: "", period: "", note: "Enligt hitta.se är husen i Snapptuna främst byggda på 1960- och 1970-talen och i Rickeby på 1970- och 1980-talen. Båda är bostadsområden i Vallentuna tätort, som har vuxit fram längs Roslagsbanan." },
+      { name: "Södra tätorten (Uthamra, Kragstalund)", types: "", period: "", note: "Kragstalund har en egen hållplats på Roslagsbanan, och enligt hitta.se är husen där främst från 1970- och 1980-talen, medan Uthamra är byggt på 2000- och 2010-talen." },
+    ],
+  },
+  norrtalje: {
+    municipality: "Norrtälje",
+    areas: [
+      { name: "Rådmansö", types: "Villor, lantbruk och fritidshus", period: "Blandat 1920–1980-tal, mest 1950–1980", href: "/taklaggare-radmanso" },
+      { name: "Frötuna (Frötuna, Rösa, Björnövägen, Frötuna Hammarby, Norrboda, Björnösund)", types: "", period: "", note: "Frötuna socken har medeltida ursprung och ligger sydost om Norrtälje, på västra delen av Rådmansöhalvön, en sjörik och kuperad skogsbygd med odlingsbygd i norr. Enligt hitta.se är husen här byggda under flera perioder, från sekelskiftet via 1950- och 1970-talen till 2000-talet." },
+    ],
+  },
   ekero: {
     municipality: "Ekerö",
     areas: [
       { name: "Träkvista", types: "Villor, kedjehus och radhus", period: "Främst 1960- och 1980-tal (hitta.se)", note: "Träkvista på Ekerön har mest villor, kedjehus och radhus och var Ekerö kommuns mittpunkt fram till 1990, då Ekerö centrum invigdes. Enligt hitta.se är husen i Träkvista främst byggda på 1960- och 1980-talen." },
+      { name: "Älvnäs, Brunna och Närlunda", types: "Kedjehus och villor", period: "Främst 1960- och 1970-tal (hitta.se)", note: "Älvnäs ligger på Ekerön vid Långtarmen, och namnet finns belagt sedan 1476, då det skrevs Elffwenäs i Stockholms stads tänkeböcker. Enligt hitta.se är husen i Älvnäs, Brunna och Närlunda, som består av kedjehus och villor, främst byggda på 1960- och 1970-talen." },
     ],
   },
   tyreso: {

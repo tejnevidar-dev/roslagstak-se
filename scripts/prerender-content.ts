@@ -15,6 +15,12 @@ import { locations } from "../src/data/locations";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks } from "../src/lib/inline-md";
+import { relatedForPost } from "../src/data/blog-related";
+
+const MONEY_LINKS = [
+  { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
+  { href: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
+];
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { isNearBase, distanceFromBaseKm, distanceFromTabyKm, distanceKm } from "../src/data/service-reach";
 import { hasServiceCombos } from "../src/data/service-slugs";
@@ -779,7 +785,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: problem.title,
       intro: problem.intro,
       paragraphs: problem.paragraphs,
-      links: [...primaryLinks, { href: "/takproblem", label: "Alla takproblem" }, { href: "/takkontroll", label: "Kostnadsfri takkontroll" }],
+      links: [...primaryLinks, { href: "/takproblem", label: "Alla takproblem" }, ...MONEY_LINKS],
     };
   }
 
@@ -792,7 +798,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: material.title,
       intro: material.intro,
       paragraphs: material.paragraphs,
-      links: [...primaryLinks, { href: "/material", label: "Alla material" }, { href: "/priser", label: "Priser för takarbeten" }],
+      links: [...primaryLinks, { href: "/material", label: "Alla material" }, { href: "/priser", label: "Priser för takarbeten" }, ...MONEY_LINKS],
       ogImage: material.ogImage,
       ogImageAlt: material.ogImageAlt,
     };
@@ -831,6 +837,8 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       links: [
         ...primaryLinks,
         ...post.content.flatMap(inlineMdLinks),
+        ...relatedForPost(post).map((r) => ({ href: r.to, label: r.label })),
+        ...MONEY_LINKS,
         ...blogPosts
           .filter((p) => p.slug !== post.slug)
           .slice(0, 8)
@@ -946,6 +954,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ],
       links: [
         ...primaryLinks,
+        ...MONEY_LINKS,
         ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
         ...villaAreaLinks(loc.slug),
         ...combos
