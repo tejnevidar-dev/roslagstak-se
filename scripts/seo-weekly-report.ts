@@ -156,6 +156,17 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-alta", area: "Älta, Nacka (befintlig sida förstärkt)", wave: 8 },
   { path: "/taklaggare-resaro", area: "Resarö, Vaxholm", wave: 8 },
   { path: "/taklaggare-ingaro", area: "Ingarö, Värmdö (befintlig sida förstärkt)", wave: 8 },
+  { path: "/taklaggare-duvbo", area: "Duvbo, Sundbyberg", wave: 9 },
+  { path: "/taklaggare-smedslatten", area: "Smedslätten, Stockholm (Bromma)", wave: 9 },
+  { path: "/taklaggare-pershagen", area: "Pershagen, Södertälje", wave: 9 },
+  { path: "/taklaggare-glado-kvarn", area: "Gladö kvarn och Lissma, Huddinge", wave: 9 },
+  { path: "/taklaggare-enskede", area: "Gamla Enskede, Stockholm (befintlig sida förstärkt)", wave: 9 },
+  { path: "/taklaggare-jarna", area: "Järna, Södertälje (befintlig sida förstärkt)", wave: 9 },
+  { path: "/taklaggare-riala", area: "Riala, Länna och Rö, Norrtälje (befintlig sida förstärkt)", wave: 9 },
+  { path: "/taklaggare-vaddo", area: "Roslagsbro och Väddö, Norrtälje (befintlig sida förstärkt)", wave: 9 },
+  { path: "/taklaggare-dalaro", area: "Dalarö, Haninge (befintlig sida förstärkt)", wave: 9 },
+  { path: "/taklaggare-nockeby", area: "Nockeby, Stockholm (befintlig sida förstärkt)", wave: 9 },
+  { path: "/taklaggare-kungsangen", area: "Kungsängen, Upplands-Bro (befintlig sida förstärkt)", wave: 9 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };

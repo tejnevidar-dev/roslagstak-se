@@ -426,20 +426,46 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare på Väddö — takbyte, lertegeltak och takrenovering nära Grisslehamn. Kostnadsfri takkontroll och fast pris.",
+      "Takbyte och takomläggning i Roslagsbro och på Väddö nordost om Norrtälje, från Brosjön till Älmsta och Grisslehamn. Kostnadsfri takkontroll.",
     longDescription:
-      "Väddö sträcker sig från Norrtälje norrut mot Grisslehamn och rymmer en varierad bebyggelse — från jordbruksfastigheter med stora takytor till sommarstugor nära vattnet. Du får en takläggare som förstår Väddös förhållanden: de kalla vintrarna, den fuktiga havsluften och vikten av att välja material som klarar det. Ring oss — vi svarar inom 24 timmar.",
-    extraContent:
-      "Väddö har många jordbruksfastigheter med stora takytor — ladugårdar, lador och ekonomibyggnader som behöver tak i gott skick. Vi hanterar även äldre gårdar med lertegel och tradition att bevara. Kontakta oss för ett hembesök och offert.",
+      "Nordost om Norrtälje ligger Roslags-Bro socken, med Norrtäljeviken i söder och Brosjön i väster. I öster når socknen ut till Bagghusfjärden. Wikipedia beskriver Roslags-Bro som en kuperad trakt med mycket sjöar och skog och med odlingsbygd i dalar som en gång var fjärdar. Namnet skrevs Bro år 1322 och syftar på en bro över Broströmmen vid kyrkan. Fram till 1886 hette socknen bara Bro. Väddö är den norra delen av en ö i norra Roslagen, omkring 100 kilometer nordost om Stockholm. Väddö kanal och Väddöviken skiljer ön från fastlandet. Kanalen började anläggas 1819 och invigdes 1840. Tre broar leder över: Trästabron i norr, som invigdes 1998, Älmstabron i mitten och Bagghusbron i söder. Väddö socken beskrivs som berglänt, med en förkastningsbrant i öster och viss odlingsbygd väster om den. Mitt på ön ligger Älmsta, som delvis ligger på fastlandet och nämndes första gången 1557 med sju gårdar. Sydost om Kasberget ligger Kista hembygdsgård, enligt Wikipedia den enda gården på Väddö som klarade sig undan rysshärjningarna 1719, med byggnader från 1700- och 1800-talen. Nära öns nordspets ligger Grisslehamn, som flyttades till sin nuvarande plats efter en brand 1754. Enligt hitta.se är husen längs Roslagsbrovägen mest byggda på 1940- och 1960-talen och husen kring kyrkan på 1920-talet.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Norrtälje" },
+      { label: "Delområden", value: "Roslagsbro, Bredsättra, Harö, Loö, Nedernäs, Väddö" },
+      { label: "Hustyper", value: "Villor och småbruk, inslag av fritidshus" },
+      { label: "Byggperiod", value: "Roslagsbrovägen mest 1940- och 1960-tal, kring kyrkan 1920-tal (Väddö-delen inte belagd)" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 400" },
+    ],
+    sourceLink: { label: "Wikipedia: Väddö", url: "https://sv.wikipedia.org/wiki/V%C3%A4dd%C3%B6" },
+    parentLocation: { name: "Norrtälje", slug: "norrtalje" },
+    h1Override: "Takläggare i Roslagsbro och på Väddö",
     uniqueFAQ: {
-      question: "Kan ni lägga tak på stora lantbruksbyggnader på Väddö?",
+      question: "När byggdes husen i Roslagsbro och på Väddö?",
       answer:
-        "TP20-plåttak är ofta det mest kostnadseffektiva valet för stora takytor. Vi lämnar fast pris och kan påbörja arbetet med kort ledtid.",
+        "Byggperiod enligt källorna: längs Roslagsbrovägen mest 1940- och 1960-tal, kring kyrkan 1920-tal. För Väddö-delen är byggperioden inte belagd i de källor vi använder. Hustyper: villor och småbruk, med inslag av fritidshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun.",
     },
     primaryKeyword: "takläggare Väddö",
     lat: 59.95,
     lng: 18.95,
     nearbyLocations: ["Grisslehamn", "Singö", "Norrtälje"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Husen från 1920-talet är i dag runt 100 år gamla, de från 1940-talet runt 80 år och de från 1960-talet runt 60 år. På hus i de åldrarna kan taken redan ha lagts om, och det går inte att läsa av takets skick på husets byggår. Det som spelar roll är vad som gjordes senast och hur underlagspapp, läkt, plåtdetaljer och hängrännor ser ut i dag. På ett småbruk eller en gård står ofta bostadshus och ekonomibyggnader från olika tider, och varje tak bedöms för sig. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Roslagsbro eller på Väddö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "vato",
@@ -680,20 +706,46 @@ export const locations: LocationData[] = [
     region: "Roslagens inland",
     isIsland: false,
     description:
-      "Takläggare i Riala — takbyte, takrenovering och taktvätt. Kostnadsfri takkontroll och fast pris.",
+      "Takbyte och takomläggning i Riala, Länna och Rö söder om Norrtälje, från kyrkbyn Riala till kusten vid Penningby. Kostnadsfri takkontroll.",
     longDescription:
-      "Riala ligger mellan Norrtälje och Åkersberga med gles bebyggelse, skogstomter och många sjönära hus. Skuggiga tomter och fuktig luft gör att mossa och alger växer snabbt på taken i Riala — särskilt på betongpannor. Vi utför taktvätt, biocidbehandling, takmålning och kompletta takbyten i Riala med fast pris efter kostnadsfri takkontroll.",
-    extraContent:
-      "Ett vanligt scenario i Riala är att taket ser sämre ut än det är: under mossan finns ofta fullt fungerande pannor. Då räcker taktvätt och behandling, kanske kompletterat med byte av enstaka pannor. Vi säger alltid som det är — om taket kan räddas rekommenderar vi inte ett onödigt takbyte.",
+      "Söder och sydväst om Norrtälje ligger de tre socknarna Riala, Länna och Rö, som alla sedan 1971 hör till Norrtälje kommun. Riala är både tätort och kyrkby, med Riala kyrka, en skola och en idrottshall. Enligt Wikipedia räknades orten som småort fram till år 2000, eftersom andelen fritidsbebyggelse var för hög för att den skulle klassas som tätort. Riala socken beskrivs som en kuperad skogsbygd med gott om sjöar och mossar och med odlingsbygd i smala dalgångar, mellan E18 och länsväg 276, med sjön Largen i söder. I sydväst ligger Sättra och Norrsjön, där det enligt Wikipedia finns fritidshusbebyggelse. Sockennamnet nämns första gången i ett medeltida brev från 1228, och kyrkans långhus dateras till slutet av 1200-talet. Länna socken ligger vid kusten, kring Länna kyrksjö, Rialaån och Penningbyån, och omfattar flera öar i den inre skärgården. Här ligger Penningby slott, vars gods är känt sedan 1339. På 1400-talet byggdes en borg på platsen. Slottet eldhärjades 1831 och är byggnadsminne sedan 1980. Rö socken ligger kring Norrtäljeån och sjöarna Rösjön, Sparren, Viren och Angarn, med odlad slättbygd i mitten och skogsbygd runt om. Enligt hitta.se är husen i Riala mest byggda på 1980-talet och husen vid Penningby på 1920- och 1980-talen.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Norrtälje" },
+      { label: "Delområden", value: "Riala, Riala Ekeby, Länna, Penningby, Lackavik, Grovsta, Rö, Rimbo landsbygd" },
+      { label: "Hustyper", value: "Villor, gårdar, fritidshusbebyggelse" },
+      { label: "Byggperiod", value: "Riala mest 1980-tal, Penningby 1920- och 1980-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 2 900" },
+    ],
+    sourceLink: { label: "Wikipedia: Riala", url: "https://sv.wikipedia.org/wiki/Riala" },
+    parentLocation: { name: "Norrtälje", slug: "norrtalje" },
+    h1Override: "Takläggare i Riala, Länna och Rö",
     uniqueFAQ: {
-      question: "Behöver mitt tak i Riala tvättas eller bytas?",
+      question: "När byggdes husen i Riala, Länna och Rö?",
       answer:
-        "Det avgörs av underlaget. Är pannorna hela och underlagspappen tät räcker taktvätt med biocidbehandling. Har frostsprängning börjat eller pappen torkat sönder är omläggning bättre ekonomi. Vi gör en kostnadsfri takkontroll i Riala och ger en ärlig rekommendation.",
+        "Byggperiod enligt källorna: Riala mest från 1980-talet, husen vid Penningby från 1920- och 1980-talet. Hustyper: villor, gårdar och fritidshusbebyggelse. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun.",
     },
     primaryKeyword: "takläggare Riala",
     lat: 59.6167,
     lng: 18.4,
     nearbyLocations: ["Norrtälje", "Åkersberga", "Rimbo"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Husen från 1980-talet är i dag runt 40 år gamla och husen från 1920-talet runt 100 år. På de äldre husen kan taken redan ha lagts om, och husets ålder säger därför lite om hur taket mår. Det som avgör är vad som finns under ytan i dag: underlagspapp, läkt, plåtdetaljer och hängrännor. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Riala, Länna eller Rö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "graddo",
@@ -2258,20 +2310,45 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Enskede — takbyte och takrenovering i södra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Gamla Enskede, trädgårdsstaden i Söderort som i huvudsak stod färdig 1913. Kostnadsfri takkontroll.",
     longDescription:
-      "Enskede är en av Stockholms äldsta trädgårdsstäder med villabebyggelse från 1900- och 1910-talen, blandat med nyare bostadsområden. Taken på de äldsta husen är ofta tegeltak och plåttak från tidigt 1900-tal. Vi utför takbyten och takrenoveringar i Enskede med respekt för trädgårdsstadens kulturhistoriska värden — tegelpannor, dubbelfalsad plåt och handfalsade beslag. Många tak är nu mogna för omläggning.",
-    extraContent:
-      "I Enskede trädgårdsstad anpassar vi material och kulörer till husens ålder och arkitektur. Vi bevarar gärna ursprungliga detaljer när de går att renovera och föreslår inte ett helt takbyte om en riktad renovering räcker. Vi lämnar fast pris efter kostnadsfri takkontroll.",
+      "Gamla Enskede är en stadsdel och trädgårdsstad i Söderort i Stockholm. Fram till slutet av 1800-talet var området en lantlig del av Brännkyrka socken, med åkermark som hörde till Enskede gård. Stockholms stad köpte gårdens kvarvarande 606 hektar 1904 och planerade marken för egnahem. Stadsplanen från 1907 ritades av Per Olof Hallman, och den 26 juni 1908 togs det första spadtaget. Tanken var enligt Wikipedia att vanliga människor skulle kunna skaffa sig ett hus med två rum och kök, källare och trädgård. Från början skulle stadsdelen till stor del bestå av radhus längs de svängda gatorna, men intresset var svalt, och i Hallmans bearbetade plan från 1922 fanns bara de sex längorna vid Margaretavägen kvar. De byggdes 1908–1909 efter ritningar av Victor Bodin, omfattar 37 fastigheter och är blåmärkta av Stadsmuseet i Stockholm. Enligt Wikipedia stod området i huvudsak färdigt redan 1913 och utgörs främst av parhus och enfamiljshus. På 1930- och 1940-talen byggdes Svampområdet söder om Sockenvägen med småhus, nästan alla ritade av arkitekten Edvin Engström. I östra delen av stadsdelen ligger Dalen, ett bostadsområde med 280 radhus och 20 flerfamiljshus som stod färdigt 1982.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Enskede-Årsta-Vantör)" },
+      { label: "Hustyper", value: "Parhus och enfamiljshus, radhus vid Margaretavägen och i Dalen, småhus i Svampområdet" },
+      { label: "Byggperiod", value: "1908–1913 (i huvudsak färdigt 1913), Svampområdet 1930–1940-tal, Dalen färdigt 1982" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 900" },
+    ],
+    sourceLink: { label: "Wikipedia: Gamla Enskede", url: "https://sv.wikipedia.org/wiki/Gamla_Enskede" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Gamla Enskede, Stockholm",
     uniqueFAQ: {
-      question: "Behöver jag bygglov för takbyte i Enskede trädgårdsstad?",
+      question: "När byggdes husen i Gamla Enskede?",
       answer:
-        "Ett takbyte med samma material och kulör kräver oftast inget bygglov, men Enskede är en kulturhistoriskt värdefull trädgårdsstad där materialval kan behöva anpassas. Vi hjälper dig kontrollera vad som gäller för din fastighet och anpassar utförandet. Boka en kostnadsfri takkontroll så vägleder vi dig.",
+        "Byggperiod enligt källorna: 1908–1913 (i huvudsak färdigt 1913), Svampområdet 1930- till 1940-talet och Dalen färdigt 1982. Hustyper: parhus och enfamiljshus, med radhus vid Margaretavägen och i Dalen. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
     },
     primaryKeyword: "takläggare Enskede",
     lat: 59.2917,
     lng: 18.0867,
     nearbyLocations: ["Stockholm", "Älvsjö", "Skarpnäck"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Husen i trädgårdsstadens första del är i dag runt 115 år gamla, småhusen i Svampområdet mellan knappt 80 och drygt 90 år och radhusen i Dalen runt 45 år. På hus som har stått i över hundra år kan taken redan ha lagts om, och därför säger husets ålder lite om hur taket mår. Det går bara att avgöra på plats, där underlag, plåtdetaljer, skorstensanslutningar och hängrännor syns. Stadsmuseet har inventerat stadsdelens byggnader och gett nio anläggningar blå märkning och ett stort antal grön märkning. Den som tänker byta material eller kulör på ett sådant hus bör ta reda på vad som gäller innan arbetet planeras. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Gamla Enskede och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "skarpnack",
@@ -2837,20 +2914,46 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Kungsängen — takbyte och takrenovering i Kungsängen. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Kungsängen, med villor från 1910-talet och framåt och enplansvillor och kedjehus från 1950- och 1960-talen. Kostnadsfri takkontroll.",
     longDescription:
-      "Kungsängen är Upplands-Bros centralort vid Mälaren. Bebyggelsen består till stor del av villaområden och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Kungsängen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Kungsängen — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Kungsängen.",
+      "Kungsängen är centralort i Upplands-Bro kommun. Socknen och kyrkan har hetat Näs sedan medeltiden, efter Lennartsnäshalvön, och Kungsängens kyrka har delar från 1200-talet. Namnet Kungsängen kom med järnvägen. När Stockholm-Västerås-Bergslagens Järnväg öppnade 1876 drogs linjen genom obebyggd mark, och stationen hamnade omkring två kilometer sydost om den dåvarande ortskärnan vid Tibble gård. Den nuvarande idrottsplatsen hade enligt Wikipedia varit en kungsäng sedan slutet av 1500-talet. Ny bebyggelse växte upp kring stationen och vid stranden nedanför, och 1903 anlades Ryds gjuteri vid stranden öster om stationen. Kring Prästhagsvägen ligger enligt Wikipedia flera exempel på villor från 1910-talet, som församlingens komminister lät bygga på prästgårdens mark. Under 1920-talet började det som i dag är Kungsängens centrum att bebyggas, och en av de första villorna där var Villa Skoga. År 1952 bodde 270 personer i Kungsängen. Sedan gick det fort: en stor del av villorna och höghusen uppfördes under 1950- och 1960-talen. Wikipedia nämner Rankhusvägen som ett välbevarat exempel på tidens enplansvillor och Ekhammarsvägen som ett exempel på kedjehus. De sju punkthusen på Kungshöjden byggdes 1965, och villorna vid västra delen av Strandvägen ritades av Rolf Thies och uppfördes 1967. Pendeltågen började gå hit 1968, och under 1980-talet kompletterades bebyggelsen kring stationen och torget.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Upplands-Bro" },
+      { label: "Delområden", value: "Prästhagsvägen, Rankhusvägen, Ekhammarsvägen, Strandvägen, centrum" },
+      { label: "Hustyper", value: "Villor, enplansvillor, kedjehus, punkthus" },
+      { label: "Byggperiod", value: "Villor från 1910-talet, centrum från 1920-talet, huvuddelen 1950- och 1960-tal, Strandvägen 1967, komplettering 1980-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 570" },
+    ],
+    sourceLink: { label: "Wikipedia: Kungsängen", url: "https://sv.wikipedia.org/wiki/Kungs%C3%A4ngen" },
+    parentLocation: { name: "Upplands-Bro", slug: "upplands-bro" },
+    h1Override: "Takläggare i Kungsängen, Upplands-Bro",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Kungsängen?",
+      question: "När byggdes husen i Kungsängen?",
       answer:
-        "Priset för ett takbyte i Kungsängen beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
+        "Byggperiod enligt källorna: villor från 1910-talet, centrum från 1920-talet, huvuddelen av villorna och höghusen från 1950- och 1960-talet, Strandvägens villor 1967, och komplettering under 1980-talet. Hustyper: villor, enplansvillor, kedjehus och punkthus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Upplands-Bro kommun.",
     },
     primaryKeyword: "takläggare Kungsängen",
     lat: 59.4783,
     lng: 17.7472,
     nearbyLocations: ["Bro", "Upplands-Bro", "Kallhäll"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Villorna vid Prästhagsvägen är i dag runt 110 år gamla, och enplansvillorna och kedjehusen från 1950- och 1960-talen mellan 60 och 75 år. Villorna vid Strandvägen närmar sig 60. Taken kan redan ha lagts om, och husets ålder säger därför inget säkert om takets skick. Där taket inte har bytts på länge är det underlagspapp, läkt, plåtdetaljer och hängrännor som behöver ses över först. På kedjehus möter taket grannens, och anslutningen behöver utföras så att den fungerar ihop med grannens tak. Om ett byte av material eller kulör kräver lov eller anmälan avgör Upplands-Bro kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i centrala Kungsängen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "marsta",
@@ -2897,23 +3000,48 @@ export const locations: LocationData[] = [
   {
     slug: "nockeby",
     name: "Nockeby",
-    region: "Västerort",
+    region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Nockeby — takbyte och takrenovering i Nockeby. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Nockeby i Bromma, en villastadsdel som planerades och byggdes på 1930-talet. Kostnadsfri takkontroll utan förpliktelser.",
     longDescription:
-      "Nockeby är exklusivt villaområde vid Mälaren. Bebyggelsen består till stor del av stora villor med tegel- och plåttak. Vi utför takbyte, takrenovering och takomläggning i Nockeby med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Nockeby — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Nockeby.",
+      "Nockeby är en stadsdel i Västerort i Stockholm och hör till Bromma trädgårdsstad, tillsammans med bland annat Höglandet, Ålsten och Smedslätten. Spårvagnen på Nockebybanan går hit från Alvik, och hållplatsen Nockeby är banans slutpunkt. Namnet nämns första gången år 1400, som Nokkaby. Ur den byn växte säteriet Åkeshov fram under 1600-talet. Stockholms stad köpte Åkeshov 1904, och 1932 fick stadsdelen sitt namn efter byn. Vid Nockebybron fanns bebyggelse långt tidigare: den första bron blev färdig 1787, och enligt Wikipedia uppfördes flera sommarhus bortåt bron vid slutet av 1800-talet. Stadsdelen stadsplanerades och byggdes på 1930-talet, efter en plan av Albert Lilienberg. De flesta tomterna uppläts för villabyggande mellan 1926 och 1933, och spårvagnen förlängdes hit 1929. Wikipedia skriver att området planerades för villor och domineras av villor, och att husen ofta har två fulla våningar. Gatorna följer den kuperade terrängen. I planbeskrivningen från den 8 augusti 1930 står att husen ska vara fristående eller sammanbyggda två och två i tomtgränsen, och att hus som kopplas ihop på det sättet ska ges ett enhetligt utseende. Nockeby torg anlades i början av 1930-talet med flerfamiljshus och butiker i bottenvåningen. Husen vid torget har enligt Wikipedia slätputsade fasader och ritades av Edvin Engström. Sankta Birgitta kyrka, ritad av Rolf Bergh, invigdes 1962.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Bromma)" },
+      { label: "Hustyper", value: "Villor (fristående eller sammanbyggda två och två), flerfamiljshus vid Nockeby torg" },
+      { label: "Byggperiod", value: "1930-tal (tomter upplåtna 1926–1933), sommarhus vid Nockebybron från slutet av 1800-talet" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 590" },
+    ],
+    sourceLink: { label: "Wikipedia: Nockeby", url: "https://sv.wikipedia.org/wiki/Nockeby" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Nockeby, Stockholm",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Nockeby?",
+      question: "När byggdes husen i Nockeby?",
       answer:
-        "Priset för ett takbyte i Nockeby beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi kontrollerar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
+        "Byggperiod enligt källorna: till övervägande del 1930-tal, med tomter upplåtna för villabyggande 1926–1933, och enstaka sommarhus vid Nockebybron från slutet av 1800-talet. Hustyper: villor, fristående eller sammanbyggda två och två, samt flerfamiljshus vid Nockeby torg. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
     },
     primaryKeyword: "takläggare Nockeby",
     lat: 59.3283,
     lng: 17.9036,
     nearbyLocations: ["Bromma", "Ängby", "Hässelby"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Villorna i Nockeby är till övervägande del från 1930-talet och är i dag runt 90 år gamla. På hus i den åldern kan taket redan ha lagts om, och husets ålder säger därför lite om takets skick. Det som spelar roll är vad som gjordes senast och hur plåtdetaljer, skorstensanslutningar och hängrännor ser ut i dag. På hus som är sammanbyggda två och två möts taken i tomtgränsen, och arbetet vid anslutningen behöver fungera ihop med grannens tak. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Nockeby och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "abrahamsberg",
@@ -3377,20 +3505,46 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Dalarö — takbyte och takrenovering i Dalarö. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Dalarö, skärgårdsorten i Haninge med hus från badortstiden på 1800-talet och fritidshus från 1950-talet. Kostnadsfri takkontroll.",
     longDescription:
-      "Vi tar uppdrag för takbyte och takrenovering i Dalarö (kustsamhälle med skärgårdsklimat). Här handlar det oftast om trävillor och sommarhus i saltutsatt läge, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter takkontrollen får du ett fast pris och besked om vad som ingår.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Dalarö — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Dalarö.",
+      "Dalarö är en tätort i Haninge kommun och en skärgårdsort i Stockholms södra skärgård. Orten ligger vid den stora farleden söderifrån in mot Stockholm, och Wikipedia beskriver socknen som en kuperad bergs- och skogsbygd. Samhället har anor från 1630-talet. Ett första tullhus inrättades 1636, när Dalarö blev yttre tullstation för Stockholm. Det tullhus som står kvar byggdes 1788 efter ritningar av Erik Palmstedt och är byggnadsminne sedan 1935. När garnisonen lades ner 1854 blev Dalarö i stället badort, med hotell, restauranger och småbåtshamn. Ett kallbadhus hade öppnat 1849, och ett par år senare kom ett varmbadhus. Societetshuset är uppfört i timmer i två våningar och fick enligt Wikipedia troligen sitt nuvarande utseende på 1860-talet, med en fasad i schweizerstil. Tullvaktstugan vid vattnet är från 1861 och ritad i samma stil. Mellan 1876 och utgången av 1951 var Dalarö ett municipalsamhälle. Väster om Dalarö ligger Schweizerdalen, som 1937 var ett villaområde i municipalsamhället. Enligt Wikipedia exploaterades området i början av 1950-talet för havsbad och fritidsbebyggelse, och av de 328 fastigheterna där bebos i dag drygt hälften permanent. Sedan 2015 räknas Schweizerdalen, Smådalarö och Malmen-Kolbotten till tätorten Dalarö.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Haninge" },
+      { label: "Delområden", value: "Dalarö, Schweizerdalen, Smådalarö, Malmen-Kolbotten" },
+      { label: "Hustyper", value: "Bebyggelse från badortstiden, villor, fritidshus" },
+      { label: "Byggperiod", value: "Samhälle sedan 1630-talet, badort från 1854, Schweizerdalen exploaterat i början av 1950-talet" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 660" },
+    ],
+    sourceLink: { label: "Wikipedia: Dalarö", url: "https://sv.wikipedia.org/wiki/Dalar%C3%B6" },
+    parentLocation: { name: "Haninge", slug: "haninge" },
+    h1Override: "Takläggare i Dalarö, Haninge",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Dalarö?",
+      question: "När byggdes husen på Dalarö?",
       answer:
-        "Priset för ett takbyte i Dalarö beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter en kostnadsfri takkontroll lämnar vi ett fast pris där rivning, material, ställning, arbete och bortforsling är specificerade. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
+        "Byggperiod enligt källorna: samhälle sedan 1630-talet, badort från 1854, och Schweizerdalen exploaterat i början av 1950-talet för havsbad och fritidsbebyggelse. Hustyper: bebyggelse från badortstiden, villor och fritidshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Haninge kommun.",
     },
     primaryKeyword: "takläggare Dalarö",
     lat: 59.1339,
     lng: 18.4064,
     nearbyLocations: ["Haninge", "Handen", "Nynäshamn"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "På Dalarö står hus från mycket olika tider. Husen från badortens första årtionden, som societetshuset och tullvaktstugan, är i dag runt 160 år gamla, medan fritidshus från Schweizerdalens utbyggnad i början av 1950-talet är runt 75 år. Taken kan redan ha lagts om, och husets ålder säger därför inget säkert om takets skick. Den som vill byta material eller kulör bör ta reda på vad som gäller först. Om ett byte av material eller kulör kräver lov eller anmälan avgör Haninge kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du på Dalarö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "stuvsta",
@@ -3695,20 +3849,46 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Järna — takbyte och takrenovering i Järna. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takbyte och takomläggning i Järna, med villastaden vid stationen, egnahem från 1930- och 1940-talen och villor från 1950–1970-talen. Kostnadsfri takkontroll.",
     longDescription:
-      "Järna är tätort i Södertälje kommun. Bebyggelsen består till stor del av villor, gårdar och äldre trähusbebyggelse. Vi utför takbyte, takrenovering och takomläggning i Järna med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Järna — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Järna.",
+      "Järna är en tätort i Södertälje kommun. Enligt Södertälje kommuns kulturmiljöinventering ligger orten högt på en ås, med den flacka Järnaslätten nedanför i öster, och järnvägen delar den i två delar med en bro emellan. Fram till sent 1800-tal var området obebyggt, med undantag av några torpstugor, kyrkan och skolan. Järnvägen till Stockholm kom 1861, och kring stationen växte ett samhälle fram. Marken mellan stationen och kyrkan ägdes av grevinnan Löwen på Kallfors gård. På initiativ av församlingens klockare Carl Johan Wadström, som kallades Järnakungen, planlades den för Järna villastad, och tomter såldes. Där anlades enligt kommunen stora villor på luftiga tomter fram till 1920-talet. Affärshuset Birka från 1903 och konsumbutiken Kullen från 1917 står kvar, och 1913 öppnades Nyköpingsbanan. Kommunen beskriver också småhus av egnahemskaraktär från 1930- och 1940-talen, indragna på små tomter med förgårdsmark och med panelade fasader. Stadsplanen som antogs 1941 hade arkitekten Cyrillus Johansson upprättat redan 1924, och under samma period styckades egnahemsområdet Epagärdet av. Södra Starrbäcken består enligt kommunen till stor del av friliggande småhus från 1950- och 1960-talen på relativt små tomter. Eneområdet nedanför åsen bebyggdes med typhusvillor under sent 1960-tal och tidigt 1970-tal.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Södertälje" },
+      { label: "Delområden", value: "Villastaden mellan stationen och kyrkan, Epagärdet, Södra Starrbäcken, Ene" },
+      { label: "Hustyper", value: "Villor, egnahem, friliggande småhus" },
+      { label: "Byggperiod", value: "Villastaden till 1920-talet, egnahem 1930–1940-tal, Södra Starrbäcken 1950–1960-tal, Ene sent 1960-tal och tidigt 1970-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 850" },
+    ],
+    sourceLink: { label: "Södertälje kommun: kulturmiljöinventering, Järna", url: "https://www.sodertalje.se/contentassets/801b52a57aed44f592a5d6bf3ff8bb96/3-jarna.pdf" },
+    parentLocation: { name: "Södertälje", slug: "sodertalje" },
+    h1Override: "Takläggare i Järna, Södertälje",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Järna?",
+      question: "När byggdes husen i Järna?",
       answer:
-        "Priset för ett takbyte i Järna beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
+        "Byggperiod enligt källorna: villastaden fram till 1920-talet, egnahem från 1930- och 1940-talen, Södra Starrbäcken från 1950- och 1960-talen och Ene från sent 1960-tal till tidigt 1970-tal. Hustyper: villor, egnahem och friliggande småhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Södertälje kommun.",
     },
     primaryKeyword: "takläggare Järna",
     lat: 59.0928,
     lng: 17.5658,
     nearbyLocations: ["Södertälje", "Rönninge", "Salem"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "I Järna står hus från drygt hundra år sida vid sida. Villorna i villastaden är i dag runt 100–120 år gamla, egnahemmen från 1930- och 1940-talen runt 80–95 år, småhusen i Södra Starrbäcken runt 60–75 år och typhusvillorna i Ene mellan 50 och 60 år. Taken kan redan ha lagts om, och husets ålder räcker därför inte för att bedöma taket. Det avgörande är underlagspapp, läkt, plåtdetaljer och hängrännor, och i vilket skick de är i dag. Om ett byte av material eller kulör kräver lov eller anmälan avgör Södertälje kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Järna och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "edsviken",
@@ -4916,6 +5096,192 @@ export const locations: LocationData[] = [
       paragraphs: [
         "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
         "Bor du på Resarö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "duvbo",
+    name: "Duvbo",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Duvbo, Hästhagen och Tulemarken i Sundbyberg, där tomterna började säljas 1899. Kostnadsfri takkontroll.",
+    longDescription:
+      "Duvbo är en stadsdel i Sundbyberg som enligt Wikipedia domineras av cirka 300 äldre villor, med en mindre andel flerbostadshus. I öster ligger Centrala Sundbyberg och i väster Rissne, och i norr skiljer ett grönområde Duvbo från flerbostadshusen i Hallonbergen. Samhället grundades som en förstad till Stockholm längs Västeråsbanan. Bolaget AB Hem på landet, med Carl Alm som verkställande direktör, köpte Dufvebols gård, lät kartlägga marken och styckade den i tomter på cirka 1 000–1 200 kvadratmeter. Sommaren 1899 började tomterna säljas, och den 3 juli 1903 blev Duvbo ett eget municipalsamhälle i dåvarande Spånga landskommun. År 1923 köpte municipalfullmäktige mark från Rissne ägor, och öster om det gamla Duvbo växte Nya Duvbo fram på 98 tomter. Vid nyåret 1949 fördes Duvbo över till Sundbybergs stad. Enligt Wikipedia byggdes Duvbo före privatbilismens genombrott, med smala och slingrande gator. Nästan alla villor har fått omfattande tillbyggnader, några ursprungliga hus har rivits och ersatts av nya, och en del tomter har styckats. Riksantikvarieämbetet utsåg 1987 Duvbo till ett bostadsområde av riksintresse. Till Duvbo räknas ofta de cirka 50 villorna i Hästhagen, åtta kvarter med namn efter träd som stadsplanelades 1925. Norr om Tulegatan ligger Tulemarken, som enligt Wikipedia i första hand bebyggdes med funkisvillor under 1930-talet.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Sundbyberg" },
+      { label: "Delområden", value: "Duvbo (gamla och nya), Hästhagen, Tulemarken" },
+      { label: "Hustyper", value: "Äldre villor, en mindre andel flerbostadshus, funkisvillor i Tulemarken" },
+      { label: "Byggperiod", value: "Tomtförsäljning från 1899, Nya Duvbo från 1923, Hästhagen planlagt 1925, Tulemarken 1930-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 560" },
+    ],
+    sourceLink: { label: "Wikipedia: Duvbo", url: "https://sv.wikipedia.org/wiki/Duvbo" },
+    parentLocation: { name: "Sundbyberg", slug: "sundbyberg" },
+    h1Override: "Takläggare i Duvbo, Sundbyberg",
+    uniqueFAQ: {
+      question: "När byggdes husen i Duvbo?",
+      answer:
+        "Byggperiod enligt källorna: tomtförsäljning från 1899, Nya Duvbo från 1923, Hästhagen stadsplanelagt 1925 och Tulemarken under 1930-talet. Hustyper: äldre villor, en mindre andel flerbostadshus och funkisvillor i Tulemarken. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sundbybergs stad.",
+    },
+    primaryKeyword: "takläggare Duvbo",
+    lat: 59.3676,
+    lng: 17.9643,
+    nearbyLocations: ["Sundbyberg"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Tomterna i det gamla Duvbo började säljas 1899, och de tidigaste husen kan därför vara drygt 120 år gamla. Husen i Nya Duvbo och Hästhagen hör hemma i 1920-talet och är i dag runt 100 år, medan funkisvillorna i Tulemarken är runt 90 år. Efter så lång tid kan taken redan ha lagts om, och årtalet på huset räcker inte för att bedöma hur taket mår. På ett hus som har byggts till möts takytor från olika tider. Skarvarna, ränndalarna och plåten där tillbyggnaden ansluter till det ursprungliga huset är ställen som är värda en noggrann titt, liksom skorstenar och hängrännor. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sundbybergs stad. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Duvbo, Hästhagen eller Tulemarken och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "smedslatten",
+    name: "Smedslätten",
+    region: "Stockholms stad",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Smedslätten i Bromma, där de första villorna byggdes 1922 och radhusen vid gården kom 1962–1964. Kostnadsfri takkontroll.",
+    longDescription:
+      "Smedslätten i Bromma har sitt namn efter Smedslättens gård nära Mälaren. Stadsdelen hör till Bromma trädgårdsstad och ligger sydväst om Äppelviken och öster om Ålsten, med Nyängsvägen som gräns i norr och Alviksvägen som huvudväg genom området. En stor del av stadsdelen är enligt Wikipedia tät blandskog, och Nockebybanan stannar vid Klövervägen och Smedslätten. År 1922 köpte Stockholms stad en stor del av gårdens mark av Magna Sunnerdahl, och samma år byggdes de första villorna. Stadsplanen från 1922 ville enligt Wikipedia efterlikna en småstadsgata: husen ställdes längs gatulinjen, så att trädgårdarna på baksidan tillsammans bildade en grön mitt i varje kvarter. Ett trettiotal av de tidiga villorna uppfördes av monteringsfärdiga byggelement. Stadsbyggnadskontorets arkitekt Thure Bergentz ritade 20 typhus för Smedslätten 1922–1924, och enligt Wikipedia står några av dem kvar i ursprunglig utformning. Flertalet av de övriga husen ritades av Edvin Engström och Gustaf Pettersson vid stadens egnahemsbyrå. Spårvägen förlängdes hit den 1 oktober 1923. Marken närmast gården bebyggdes senare. Från 1938 kom hyreshus och radhus längs Havsfruvägen, innan kriget avbröt byggandet. Åren 1962–1964 uppfördes 83 radhus kring gården, vid Skogsfrugränd och Flädermorsbacken, efter ritningar av Jon Höjer och Sture Ljungqvist. Vid Bergviksvägen blev 33 fastigheter av kedje- och radhustyp färdiga 1962.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Bromma)" },
+      { label: "Hustyper", value: "Villor (bland dem typhus), radhus, kedjehus, hyreshus vid Smedslättstorget och Alviksvägen" },
+      { label: "Byggperiod", value: "Villor från 1922 och under 1920-talet, hyreshus och radhus 1938–1940, radhus och kedjehus 1962–1964" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 500" },
+    ],
+    sourceLink: { label: "Wikipedia: Smedslätten", url: "https://sv.wikipedia.org/wiki/Smedsl%C3%A4tten" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Smedslätten, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Smedslätten?",
+      answer:
+        "Byggperiod enligt källorna: villor från 1922 och under 1920-talet, hyreshus och radhus från 1938, och radhus/kedjehus 1962–1964. Hustyper: villor (bland dem typhus), radhus, kedjehus och enstaka hyreshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Smedslätten",
+    lat: 59.3208,
+    lng: 17.9646,
+    nearbyLocations: ["Stockholm", "Ålsten"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Villorna från 1920-talets första år är i dag runt 100 år gamla, radhusen från 1938 närmar sig 90 och husen från 1960-talets första hälft är drygt 60 år. På hundraåriga hus kan taken redan ha lagts om, och då är det den senaste omläggningen som avgör skicket, inte byggåret. På hus från 1960-talet är det underlagspapp, läkt, plåtdetaljer och hängrännor som brukar behöva ses över, om det inte redan är gjort. På radhus och kedjehus hänger taken ihop med grannens, och anslutningen mellan husen behöver utföras så att den fungerar åt båda håll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Smedslätten och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "pershagen",
+    name: "Pershagen",
+    region: "Mälardalen",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Pershagen söder om Södertälje, ett villasamhälle som började styckas 1905 och växte på 1920- och 1930-talen. Kostnadsfri takkontroll.",
+    longDescription:
+      "Pershagen är en tätort i Södertälje kommun, omedelbart söder om centralorten och vid Hallsfjärdens västra strand. Genom orten går Nyköpingsvägen, gamla Riksettan, som tidigare var huvudvägen mellan Stockholm och Malmö. Enligt Wikipedia domineras orten av villabebyggelse, med några få flerfamiljshus i kvarteret Agnet. Ortens tillkomst hänger ihop med Bränninge gård, ett gods med rötter i 1300-talet där ett bruk anlades vid mitten av 1600-talet. Den norra delen av gårdens ägor kallades Pers hagen efter en Per som bodde där i slutet av 1800-talet. Marken såldes till godsägaren Justus Hellsten, som 1905 började exploatera den. Tomterna gick trögt att sälja, och omkring 1910 bodde bara 40 personer här. Senare ägare, bland dem direktören Karl Wilhelm Hagelin och ingenjören Henrik Hallström, fortsatte att stycka och sälja tomter på 1920- och 1930-talen. Södertälje kommuns kulturmiljöinventering beskriver hur området avstyckades som egnahemstomter och bebyggdes 1905–1912, och hur en andra expansion följde på 1920- och 1930-talen. Det var framför allt arbetare vid Vabis, järnvägen och Södertelge Verkstäder som bodde här. Bränningestrand, söder om Pershagen, blev främst ett område med sommarstugor, och först på 1920- och 1930-talen byggdes de två områdena samman. Enligt kommunen har den ursprungliga sekelskifteskaraktären förändrats kraftigt sedan 1950-talet, när de stora tomterna styckades av och bebyggelsen förtätades. Pershagens kapell, ritat av Martin Westerberg, kom till efter att Hallström hade donerat en tomt 1931, och det invigdes 1936.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Södertälje" },
+      { label: "Hustyper", value: "Villor (egnahem), några få flerfamiljshus" },
+      { label: "Byggperiod", value: "1905–1912, andra expansion 1920–1930-tal, förtätning sedan 1950-talet" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 680" },
+    ],
+    sourceLink: { label: "Wikipedia: Pershagen", url: "https://sv.wikipedia.org/wiki/Pershagen" },
+    parentLocation: { name: "Södertälje", slug: "sodertalje" },
+    h1Override: "Takläggare i Pershagen, Södertälje",
+    uniqueFAQ: {
+      question: "När byggdes husen i Pershagen?",
+      answer:
+        "Byggperiod enligt källorna: egnahem 1905–1912, en andra expansion på 1920- och 1930-talen, och förtätning sedan 1950-talet. Hustyper: villor (egnahem), med några få flerfamiljshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Södertälje kommun.",
+    },
+    primaryKeyword: "takläggare Pershagen",
+    lat: 59.1528,
+    lng: 17.6563,
+    nearbyLocations: ["Södertälje"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Egnahemmen från 1905–1912 är i dag runt 115–120 år gamla, och husen från den andra expansionen runt 90–105 år. Mellan dem står yngre hus på tomter som har styckats av sedan 1950-talet, och därför kan två grannhus i Pershagen skilja sig åt med flera decennier. På de tidigaste husen kan taken redan ha lagts om. Husets byggår berättar alltså inte hur taket mår i dag. Det gör underlaget, plåten kring skorsten och genomföringar och hängrännornas skick. Om ett byte av material eller kulör kräver lov eller anmälan avgör Södertälje kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Pershagen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "glado-kvarn",
+    name: "Gladö kvarn och Lissma",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Gladö kvarn och Lissma i Huddinge, där fritidshus från 1950-talet och framåt blir åretruntbostäder. Kostnadsfri takkontroll.",
+    longDescription:
+      "Gladö kvarn är en tätort i Huddinge kommun, på norra sidan av Kvarnsjön. Enligt Wikipedia består den huvudsakligen av villa- och fritidshusbebyggelse. Lissma är en by och gård i kommunens sydöstra del, och norr om byn och Lissmasjön ligger Kvarntorp, som Wikipedia beskriver som ett småhusområde för permanent- och fritidsboende. Huddinge kommun kallar kommundelsområdet Gladö-Lissma och skriver att det innefattar en stor del skog och naturmark. Namnet är gammalt. En vattenkvarn som hette Gladö Kvarn nämns redan 1331 i en förteckning över Strängnäs domkyrkas tillgångar. På 1500-talet anlades en vattendriven såg här, och 1527 gav Gustav Vasa gården till fogden Erik Larsson mot hundra tolfter sågade bräder om året. Mjölkvarnen, som kom senare, revs på 1940-talet, och fundamentet sitter kvar i bäckfåran. Bynamnet Lissma är känt sedan 1462, och 1916 styckades egendomen där till småbruk. På 1950-talet styckades marken norr om Kvarnsjön och på Hästvretens halvö till tomter för fritidshus. Sedan dess har enligt Wikipedia allt fler fritidshus blivit permanentbostäder. År 2015 fanns 442 fastigheter i Gladö kvarn: 269 var permanent bebodda, 158 var fritidshus och 15 stod obebodda. En detaljplan vann laga kraft i oktober 2013, och kommunen bygger ut vatten och avlopp och bygger om vägnätet i etapper. Huddinge kommun skriver i dag att omvandlingen fortsätter och att den hittills har gett omkring 100 nya bostäder.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Huddinge" },
+      { label: "Delområden", value: "Gladö kvarn, Lissma, Kvarntorp" },
+      { label: "Hustyper", value: "Villor och fritidshus, småhus för permanent- och fritidsboende" },
+      { label: "Byggperiod", value: "Tomter för fritidshus styckade på 1950-talet, omvandling till permanentboende pågår (detaljplan 2013)" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 670" },
+    ],
+    sourceLink: { label: "Wikipedia: Gladö kvarn (ort)", url: "https://sv.wikipedia.org/wiki/Glad%C3%B6_kvarn_(ort)" },
+    parentLocation: { name: "Huddinge", slug: "huddinge" },
+    h1Override: "Takläggare i Gladö kvarn, Huddinge",
+    uniqueFAQ: {
+      question: "När byggdes husen i Gladö kvarn och Lissma?",
+      answer:
+        "Byggperiod enligt källorna: tomter för fritidshus styckades på 1950-talet, och omvandlingen till permanentboende har pågått sedan dess med en detaljplan från 2013. Hustyper: villor och fritidshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun.",
+    },
+    primaryKeyword: "takläggare Gladö kvarn",
+    lat: 59.1942,
+    lng: 17.9855,
+    nearbyLocations: ["Huddinge"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Fritidshus som byggdes när tomterna styckades på 1950-talet är i dag runt 70 år gamla, medan husen som har kommit till under omvandlingen är betydligt yngre. Taken kan redan ha lagts om, och husets ålder säger därför inget säkert om takets skick. När ett fritidshus byggs till eller byggs om för att bo i året om möts tak från olika tider, och skarvarna mellan dem är värda en extra titt. Om ett byte av material eller kulör kräver lov eller anmälan avgör Huddinge kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Gladö kvarn eller Lissma och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       ],
     },
   },

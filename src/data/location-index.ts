@@ -134,7 +134,7 @@ export const locationIndex: LocationSummary[] = [
   { slug: "kungsangen", name: "Kungsängen", region: "Nordvästra Stockholm", isIsland: false },
   { slug: "marsta", name: "Märsta", region: "Nordvästra Stockholm", isIsland: false },
   { slug: "blackeberg", name: "Blackeberg", region: "Västerort", isIsland: false },
-  { slug: "nockeby", name: "Nockeby", region: "Västerort", isIsland: false },
+  { slug: "nockeby", name: "Nockeby", region: "Stockholms stad", isIsland: false },
   { slug: "abrahamsberg", name: "Abrahamsberg", region: "Västerort", isIsland: false },
   { slug: "angby", name: "Ängby", region: "Västerort", isIsland: false },
   { slug: "kista", name: "Kista", region: "Västerort", isIsland: false },
@@ -201,6 +201,10 @@ export const locationIndex: LocationSummary[] = [
   { slug: "malarhojden", name: "Mälarhöjden", region: "Stockholms stad", isIsland: false },
   { slug: "stureby", name: "Stureby", region: "Stockholms stad", isIsland: false },
   { slug: "resaro", name: "Resarö", region: "Kusten", isIsland: true },
+  { slug: "duvbo", name: "Duvbo", region: "Norra Stockholm", isIsland: false },
+  { slug: "smedslatten", name: "Smedslätten", region: "Stockholms stad", isIsland: false },
+  { slug: "pershagen", name: "Pershagen", region: "Mälardalen", isIsland: false },
+  { slug: "glado-kvarn", name: "Gladö kvarn och Lissma", region: "Södra Stockholm", isIsland: false },
 ];
 
 export const locationRegions = Array.from(new Set(locationIndex.map((l) => l.region)));
