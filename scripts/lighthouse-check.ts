@@ -19,6 +19,7 @@ const PAGES: { label: string; path: string }[] = [
   { label: "Offert (Norrtälje)", path: "/offert/norrtalje" },
   { label: "Takbyte Täby", path: "/takbyte-taby" },
   { label: "Projekt: Takbyte Singö", path: "/projekt/takbyte-singo" },
+  { label: "Projekt: Nytt tak Blidö", path: "/projekt/takrenovering-blido" },
   { label: "Material", path: "/material" },
   { label: "Takproblem", path: "/takproblem" },
   { label: "Priser", path: "/priser" },
@@ -34,6 +35,8 @@ interface Row {
   tbt: string;
   cls: string;
   tti: string;
+  lcpMs?: number;
+  clsValue?: number;
   error?: string;
 }
 
@@ -63,6 +66,8 @@ const runOne = (path: string): Omit<Row, "label" | "path"> => {
       tbt: a["total-blocking-time"]?.displayValue ?? "–",
       cls: a["cumulative-layout-shift"]?.displayValue ?? "–",
       tti: a["interactive"]?.displayValue ?? "–",
+      lcpMs: a["largest-contentful-paint"]?.numericValue,
+      clsValue: a["cumulative-layout-shift"]?.numericValue,
     };
   } catch {
     return {
@@ -105,4 +110,21 @@ const failed = rows.filter((r) => r.error);
 if (failed.length > 0) {
   console.error(`\n[lighthouse-check] ${failed.length} sida(or) kunde inte mätas:`);
   for (const r of failed) console.error(`  - ${r.label}: ${r.error}`);
+}
+
+/* CWV-budget (kör: bun run check:cwv). Faller med exit 1 om någon nyckelsida ligger över budget.
+   Körs manuellt eller i CI med Chrome installerat — inte i Cloudflare-bygget (ingen Chrome där,
+   och mätningen går mot produktion). Budget: LCP ≤ 4,0 s (Lighthouse mobil, strypt nät), CLS ≤ 0,1. */
+if (process.argv.includes("--budget")) {
+  const LCP_BUDGET_MS = 4000;
+  const CLS_BUDGET = 0.1;
+  const over = rows.filter((r) => !r.error && ((r.lcpMs ?? 0) > LCP_BUDGET_MS || (r.clsValue ?? 0) > CLS_BUDGET));
+  if (over.length > 0 || failed.length > 0) {
+    console.error(`
+[lighthouse-check] CWV-budget överskriden på ${over.length} sida(or):`);
+    for (const r of over) console.error(`  - ${r.label} (${r.path}): LCP ${r.lcp}, CLS ${r.cls}`);
+    process.exit(1);
+  }
+  console.error("
+[lighthouse-check] ✓ Alla sidor inom CWV-budget (LCP ≤ 4,0 s, CLS ≤ 0,1).");
 }

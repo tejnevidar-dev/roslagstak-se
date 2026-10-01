@@ -31,7 +31,9 @@ import imgBlidoHeroWebp480 from "@/assets/project-blido-hero-480.webp";
 import imgBlidoHeroWebp768 from "@/assets/project-blido-hero-768.webp";
 import imgBlidoHeroWebp1080 from "@/assets/project-blido-hero-1080.webp";
 import imgBlidoDetail1 from "@/assets/project-blido-detail-1.jpg";
+import imgBlidoDetail1Webp from "@/assets/project-blido-detail-1-1080.webp";
 import imgBlidoDetail2 from "@/assets/project-blido-detail-2.jpg";
+import imgBlidoDetail2Webp from "@/assets/project-blido-detail-2-1080.webp";
 import imgSingoHero from "@/assets/project-singo-hero.jpg";
 import imgSingoHeroAvif480 from "@/assets/project-singo-hero-480.avif";
 import imgSingoHeroAvif768 from "@/assets/project-singo-hero-768.avif";
@@ -42,6 +44,7 @@ import imgSingoHeroWebp768 from "@/assets/project-singo-hero-768.webp";
 import imgSingoHeroWebp1080 from "@/assets/project-singo-hero-1080.webp";
 import imgSingoHeroWebp1440 from "@/assets/project-singo-hero-1440.webp";
 import imgSingoDetail1 from "@/assets/project-singo-detail-1.jpg";
+import imgSingoDetail1Webp from "@/assets/project-singo-detail-1-1080.webp";
 import type { MaterialSlug } from "@/data/materials";
 import { locations, type LocationData } from "@/data/locations";
 import { distanceKm } from "@/data/service-reach";
@@ -71,7 +74,8 @@ export interface Project {
   heroImage: string;
   heroAlt: string;
   heroResponsive: ResponsiveHero;
-  gallery: { src: string; alt: string }[];
+  /** webp = 1080 px bred WebP-variant (scripts/gen-gallery-webp.mjs), width/height = originalets mått. */
+  gallery: { src: string; alt: string; webp?: string; width?: number; height?: number }[];
 }
 
 export const projects: Project[] = [
@@ -105,10 +109,16 @@ export const projects: Project[] = [
     gallery: [
       {
         src: imgBlidoDetail1,
+        webp: imgBlidoDetail1Webp,
+        width: 1440,
+        height: 1080,
         alt: "Närbild snett ovanifrån av nocken och de svarta betongpannorna på huset på Blidö, med skorstenar och nya plåtbeslag.",
       },
       {
         src: imgBlidoDetail2,
+        webp: imgBlidoDetail2Webp,
+        width: 1440,
+        height: 1080,
         alt: "Taket med svarta betongpannor på huset på Blidö sett från baksidan, med skorsten, altan och skog runt tomten.",
       },
     ],
@@ -143,6 +153,9 @@ export const projects: Project[] = [
     gallery: [
       {
         src: imgSingoDetail1,
+        webp: imgSingoDetail1Webp,
+        width: 1280,
+        height: 720,
         alt: "Taket på huset på Singö sett rakt ovanifrån, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre takdelarna.",
       },
     ],

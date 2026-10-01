@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "@/components/Reveal";
 import aboutImg from "@/assets/project-blido-hero.jpg";
+import aboutImgAvif from "@/assets/project-blido-hero-1080.avif";
+import aboutImgWebp from "@/assets/project-blido-hero-1080.webp";
 
 const coreValues = [
   {
@@ -59,6 +61,11 @@ const About = () => {
           <div ref={imgWrap} className="col-span-12 lg:col-span-5">
             <div className="relative">
               <figure className="relative m-0 aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[0_50px_100px_-50px_rgba(12,35,64,0.75)]">
+                {/* Bilden beskärs till 4:5 (object-cover), så höjden styr: 1080-varianten i AVIF/WebP
+                    räcker och är en tredjedel av JPG-originalet (Lighthouse image-delivery, 2026-10-01). */}
+                <picture className="contents">
+                <source type="image/avif" srcSet={aboutImgAvif} />
+                <source type="image/webp" srcSet={aboutImgWebp} />
                 <motion.img
                   src={aboutImg}
                   alt="Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring."
@@ -68,6 +75,7 @@ const About = () => {
                   className="h-[112%] w-full object-cover"
                   style={reduce ? undefined : { y: imgY }}
                 />
+                </picture>
               </figure>
               <figcaption className="absolute -bottom-5 left-6 z-10 rounded-2xl bg-primary px-6 py-4 text-primary-foreground shadow-xl">
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-accent">

@@ -143,7 +143,18 @@ const ProjectPage = () => {
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {project.gallery.map((img) => (
                 <div key={img.src} className="overflow-hidden rounded-2xl border border-border">
-                  <img src={img.src} alt={img.alt} loading="lazy" className="w-full object-cover" />
+                  <picture>
+                    {img.webp && <source type="image/webp" srcSet={img.webp} />}
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      width={img.width}
+                      height={img.height}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-auto w-full object-cover"
+                    />
+                  </picture>
                 </div>
               ))}
             </div>

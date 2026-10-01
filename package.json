@@ -14,6 +14,7 @@
     "test:watch": "vitest",
     "check:sitemap": "bun scripts/check-sitemap.ts",
     "check:sitemap:live": "bun scripts/check-sitemap.ts --live",
+    "check:cwv": "bun scripts/lighthouse-check.ts --budget",
     "location-index": "bun scripts/generate-location-index.ts",
     "sitemap": "bun scripts/generate-sitemap.ts",
     "validate:schema": "node scripts/validate-structured-data.mjs",
