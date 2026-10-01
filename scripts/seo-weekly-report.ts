@@ -142,6 +142,97 @@ for (const from of currentPaths) {
     if (href !== from) inlinkCount.set(href, (inlinkCount.get(href) ?? 0) + 1);
   }
 }
+
+/** Header.tsx + Footer.tsx:s globala navigering — visas på VARJE sida, till skillnad från
+    innehållslänkarna i prerender-content.ts (som bara speglar den sidspecifika brödtexten).
+    Klickdjupsgrafen nedan (Phase 2.16) måste räkna med dessa, annars felrapporteras sidor som
+    bara nås via headern/footern (t.ex. /brf, /hur-det-gar-till, /omraden, /cookies) som
+    oåtkomliga — de är fullt nåbara för riktiga besökare och JS-körande crawlers. */
+const GLOBAL_NAV_TARGETS = [
+  "/", "/priser", "/blogg", "/recensioner", "/kontakt", "/offert", "/brf", "/hur-det-gar-till",
+  "/omraden", "/cookies", "/akut-lackage", "/hangrannor", "/platslagare", "/rot-avdrag",
+  "/takbyte-var-2027", "/takkontroll", "/takreparation", "/taktyper",
+  "/tjanster/eternit-asbest", "/tjanster/platarbeten", "/tjanster/takavvattning",
+  "/tjanster/takinspektion", "/tjanster/takkupor", "/tjanster/takomlaggning",
+  "/tjanster/takrenovering", "/tjanster/taktvatt",
+];
+/** Kantlista path → [path, ...] för klickdjupsberäkningen (Phase 2.16), byggd från samma
+    sidinnehåll som ovan plus den globala navigeringen på varje sida. */
+const adjacency = new Map<string, Set<string>>();
+for (const from of currentPaths) {
+  const page = prerenderContent(from);
+  const targets = new Set(page ? page.links.map((l) => l.href) : []);
+  for (const navTarget of GLOBAL_NAV_TARGETS) targets.add(navTarget);
+  adjacency.set(from, targets);
+}
+
+/* ---------- 2.16 Link Equity Control: formell tier-indelning + klickdjup från "/" ----------
+   Klickdjup = kortaste antal klick från startsidan via den FAKTISKA länkgrafen (prerender-
+   speglingen, samma kantkälla som inlinkCount ovan) — skiljer sig från link-audit.ts:s
+   orphan-check, som bara räknar RÅA förekomster av to="..." i källkoden utan att bry sig om
+   länken faktiskt går att nå från "/". En sida kan ha "inlänkar" enligt link-audit.ts men ändå
+   vara oåtkomlig i praktiken om den sida som länkar till den själv aldrig nås från startsidan. */
+type Tier = 1 | 2 | 3 | 4;
+/* Kombosidorna (/<tjänst>-<ort>) känns inte igen på prefix, så de räknas in separat genom att
+   filtrera currentPaths mot samma mönster som link-audit.ts använder (tjänsteslug-ortslug). */
+const comboRoutesForTiers = new Set(
+  currentPaths.filter((p) => /^\/[a-z]+-[a-z0-9-]+$/.test(p) && !p.startsWith("/taklaggare-") && !p.startsWith("/omraden")),
+);
+const tierOf = (path: string): Tier => {
+  if (
+    path === "/" ||
+    path === "/priser" ||
+    path === "/offert" ||
+    path === "/takkontroll" ||
+    path === "/hur-det-gar-till" ||
+    path === "/taktyper" ||
+    path === "/rot-avdrag" ||
+    path === "/akut-lackage" ||
+    path === "/hangrannor" ||
+    path === "/platslagare" ||
+    path === "/takreparation" ||
+    path === "/boka-takkontroll" ||
+    path === "/brf" ||
+    path.startsWith("/tjanster/")
+  )
+    return 1;
+  if (
+    path.startsWith("/taklaggare-") ||
+    path.startsWith("/omraden") ||
+    path.startsWith("/brf/") ||
+    path.startsWith("/material") ||
+    path.startsWith("/takproblem") ||
+    path.startsWith("/projekt") ||
+    comboRoutesForTiers.has(path)
+  )
+    return 2;
+  if (path.startsWith("/blogg")) return 3;
+  return 4;
+};
+
+const depth = new Map<string, number>([["/", 0]]);
+const queue: string[] = ["/"];
+while (queue.length > 0) {
+  const current = queue.shift()!;
+  const d = depth.get(current)!;
+  for (const next of adjacency.get(current) ?? []) {
+    if (!depth.has(next)) {
+      depth.set(next, d + 1);
+      queue.push(next);
+    }
+  }
+}
+const unreachable = currentPaths.filter((p) => !depth.has(p));
+const tierStats = ([1, 2, 3, 4] as Tier[]).map((tier) => {
+  const pages = currentPaths.filter((p) => tierOf(p) === tier);
+  const depths = pages.map((p) => depth.get(p)).filter((d): d is number => d !== undefined);
+  const sorted = [...depths].sort((a, b) => a - b);
+  const median = sorted.length ? sorted[Math.floor(sorted.length / 2)] : 0;
+  const max = sorted.length ? sorted[sorted.length - 1] : 0;
+  const over3 = pages.filter((p) => (depth.get(p) ?? Infinity) > 3).length;
+  const unreached = pages.filter((p) => !depth.has(p)).length;
+  return { tier, count: pages.length, median, max, over3, unreached };
+});
 const wave1Rows: Wave1Row[] = WAVES.map(({ path }) => {
   const page = prerenderContent(path);
   const words = page ? [page.intro, ...page.paragraphs].join(" ").split(/\s+/).filter(Boolean).length : 0;
@@ -240,9 +331,35 @@ lines.push(
     `Utgångsläget fryses per sida i ledning/marknad/.seo-vag1-baslinje.json (datum per rad). Våg 2 publicerades utan 14 dagars väntan (Vidars beslut 2026-09-30); indexering följs upp 14 dagar efter respektive utgångsläge. Inlänkar = antal andra sitemap-sidor vars förrenderade HTML länkar hit. Ord = förrenderad brödtext (samma mått som content-depth-check, gräns 400).\n\n${wave1Table}`,
   ),
 );
+const tierNames: Record<Tier, string> = {
+  1: "Tier 1 — pengasidor (startsida, /priser, /offert, tjänstesidor, takkontroll, hur-det-gar-till m.fl.)",
+  2: "Tier 2 — stödsidor (ortssidor, tjänst+ort-combos, områden, BRF, material, takproblem, projekt)",
+  3: "Tier 3 — innehåll (blogg)",
+  4: "Tier 4 — övrigt (recensioner, kontakt, juridiska sidor m.fl.)",
+};
+const tierTable = [
+  "| Tier | Sidor | Medianklick från start | Max klick | > 3 klick | Oåtkomliga (ingen väg från \"/\") |",
+  "|---|---|---|---|---|---|",
+  ...tierStats.map(
+    (t) => `| ${tierNames[t.tier]} | ${t.count} | ${t.median} | ${t.max} | ${t.over3} | ${t.unreached} |`,
+  ),
+].join("\n");
 lines.push(
   section(
-    "9. Google Search Console",
+    "9. Länk-tiers och klickdjup (Phase 2.16, Link Equity Control)",
+    `Klickdjup = kortaste vägen från startsidan via den faktiska länkgrafen i prerender-speglingen (samma kantkälla som inlänksräkningen i avsnitt 8) — strängare mått än link-audit.ts:s orphan-check, som bara räknar råa \`to="..."\`-förekomster utan att följa kedjan tillbaka till "/". En sida kan se ut att ha inlänkar och ändå vara oåtkomlig i praktiken om sidan som länkar till den själv aldrig nås.\n\n${tierTable}\n\n${
+      unreachable.length === 0
+        ? "✓ Alla sitemap-sidor nås via minst en klickkedja från startsidan."
+        : `**${unreachable.length} sidor helt oåtkomliga från startsidan** (ingen väg i prerender-länkgrafen, oavsett antal klick):\n${unreachable
+            .slice(0, 30)
+            .map((p) => `- ${p}`)
+            .join("\n")}${unreachable.length > 30 ? `\n- …och ${unreachable.length - 30} till` : ""}`
+    }\n\n**Tolkning:** Tier 1 bör ligga på 0–1 klick (länkad direkt från startsidans meny/sektioner), Tier 2 på 1–2 klick (nådd från en tier 1-sida eller en ortssida), Tier 3 på 2–3 klick. Rader med hög "> 3 klick"-andel pekar på var internlänkningen (Fas 2.15) bör förstärkas näst.`,
+  ),
+);
+lines.push(
+  section(
+    "10. Google Search Console",
     "Väntar på GSC-åtkomst från Vidar (se ads/24-underlaget). Ingen riktig söktrafik-, CTR- eller positionsdata kan kopplas in förrän åtkomst finns — den här sektionen fylls i när den är klar.",
   ),
 );
@@ -251,7 +368,7 @@ lines.push(
    rapporten, så att den inte försvinner när seo-vecka.md skrivs över. */
 const LIGHTHOUSE_PATH = resolve("../ledning/marknad/lighthouse-senaste.md");
 if (existsSync(LIGHTHOUSE_PATH)) {
-  lines.push(section("10. Lighthouse / Core Web Vitals (senaste mätningen)", readFileSync(LIGHTHOUSE_PATH, "utf8")));
+  lines.push(section("11. Lighthouse / Core Web Vitals (senaste mätningen)", readFileSync(LIGHTHOUSE_PATH, "utf8")));
 }
 
 writeFileSync(REPORT_PATH, lines.join("\n"));

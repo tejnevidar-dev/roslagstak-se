@@ -628,7 +628,14 @@ const staticPages: Record<string, PrerenderPage> = {
       "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
       `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
     ],
-    links: [...primaryLinks, ...serviceLinks],
+    links: [
+      ...primaryLinks,
+      ...serviceLinks,
+      ...(brfLocationSlugs as readonly string[])
+        .map((slug) => locations.find((l) => l.slug === slug))
+        .filter((l): l is NonNullable<typeof l> => !!l)
+        .map((l) => ({ href: `/brf/${l.slug}`, label: `BRF ${l.isIsland ? "på" : "i"} ${l.name}` })),
+    ],
   },
   "/hur-det-gar-till": {
     title: "Så går ett takbyte till — steg för steg",
@@ -784,6 +791,7 @@ const staticPages: Record<string, PrerenderPage> = {
       { href: "/material/tp20-plattak", label: "TP20-plåttak" },
       { href: "/tjanster/platarbeten", label: "Dubbelfalsat plåttak" },
       { href: "/material/papptak", label: "Papptak" },
+      { href: "/material/underlagstak", label: "Underlagstak" },
     ],
   },
   "/tjanster/taktvatt": {
