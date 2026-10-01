@@ -202,7 +202,7 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
       { label: "Område", value: loc.region },
       { label: "Läge", value: loc.isIsland ? "Ö i skärgården" : "Fastland" },
       { label: "Närmaste orter", value: neighbourText },
-      { label: "Avstånd till Norrtälje", value: `${Math.round(distanceFromBaseKm(loc))} km` },
+      { label: "Avstånd till vår bas i Norrtälje", value: `${Math.round(distanceFromBaseKm(loc))} km` },
       { label: "Avstånd till Täby", value: `${Math.round(distanceFromTabyKm(loc))} km` },
       { label: "Koordinater", value: `${loc.lat.toFixed(3)}, ${loc.lng.toFixed(3)}` },
       { label: "Vanliga takmaterial", value: p.materials },

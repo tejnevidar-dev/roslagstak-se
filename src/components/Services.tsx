@@ -52,7 +52,7 @@ export const services = [
     title: "Takinspektion",
     short: "Kostnadsfri takkontroll",
     description:
-      "Vi tittar på taket på plats och du får en muntlig bedömning av skicket och förslag på åtgärder, utan förpliktelser.",
+      "Vi tittar på taket på plats och du får en rapport om takets skick och förslag på åtgärder, utan förpliktelser.",
   },
   {
     icon: IconSheetMetal,

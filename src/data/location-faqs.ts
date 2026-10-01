@@ -64,7 +64,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Hur bokar jag en kostnadsfri takkontroll ${prep} ${name}?`,
-      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en muntlig bedömning. Takkontrollen är kostnadsfri och utan förpliktelser.${isIsland ? " Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö." : ""}`,
+      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en rapport om takets skick. Takkontrollen är kostnadsfri och utan förpliktelser.${isIsland ? " Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö." : ""}`,
     },
     {
       question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,

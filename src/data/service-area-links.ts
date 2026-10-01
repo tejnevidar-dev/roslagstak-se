@@ -10,9 +10,9 @@
  * (den statiska kopian) — annars syns länkarna bara för besökare med JS, inte för crawlers som
  * läser den förrenderade HTML:en direkt (samma mönster som flera andra fynd denna sprint).
  */
-/* OBS: "takvard" (alias till /tjanster/taktvatt i generate-static-heads.mjs) och "takkupor" är
- * medvetet UTESLUTNA — båda väntar på Vidars besked (beslut.md 10f, backlog #1af) och ska inte
- * röras förrän det är klart. De 12 områdena fördelas i stället över de 7 andra tjänsterna. */
+/* Vidars beslut 10f (2026-10-01, beslut.md): taktvätt, takmålning och takkupor/takfönster
+ * erbjuds och får länkas som alla andra tjänster. "takvard" och "takkupor" ingår därför nu i
+ * fördelningen nedan, med ett extra inlänk vardera till två av de 12 områdena. */
 export const serviceAreaLinks: Record<string, { to: string; label: string }[]> = {
   takomlaggning: [
     { to: "/taklaggare-osterskar", label: "Takläggare i Österskär" },
@@ -36,4 +36,6 @@ export const serviceAreaLinks: Record<string, { to: string; label: string }[]> =
   ],
   "eternit-asbest": [{ to: "/taklaggare-bollstanas", label: "Takläggare i Bollstanäs" }],
   tegeltak: [{ to: "/taklaggare-tegelhagen-silverdal", label: "Takläggare i Tegelhagen och Silverdal" }],
+  takvard: [{ to: "/taklaggare-bollstanas", label: "Takläggare i Bollstanäs" }],
+  takkupor: [{ to: "/taklaggare-tegelhagen-silverdal", label: "Takläggare i Tegelhagen och Silverdal" }],
 };

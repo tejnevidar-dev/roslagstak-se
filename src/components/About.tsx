@@ -101,17 +101,18 @@ const About = () => {
             </h2>
             <div className="mt-8 space-y-6 text-[18px] font-light leading-relaxed text-marine">
               <p>
-                RoslagsTak byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm
-                och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och
-                papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs
-                enligt AMA, och du får alltid ett fast pris.
+                RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus
+                i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt,
+                dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och
+                plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.
               </p>
               <p>
                 Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom
                 hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och
                 utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2
-                timmar, och behöver något göras får du en offert med fast pris där det framgår vad som
-                ingår. Du bestämmer själv om och när.
+                timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas
+                får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du
+                bestämmer själv om och när.
               </p>
               <p>
                 Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett

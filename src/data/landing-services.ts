@@ -174,8 +174,8 @@ export const landingServices: LandingService[] = [
         text: "Det tar ungefär 1–2 timmar. Kostnadsfritt och utan förpliktelser.",
       },
       {
-        title: "Fast pris i offerten",
-        text: "Behöver taket åtgärdas får du ett fast pris, där det framgår vad som ingår.",
+        title: "Rapport och fast pris i offerten",
+        text: "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser.",
       },
       {
         title: "Du bestämmer själv",
@@ -202,7 +202,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vad får jag efter kontrollen?",
-        answer: "Behöver taket åtgärdas får du en offert med fast pris, där det framgår vad som ingår. Du bestämmer själv om och när något ska göras.",
+        answer: "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du bestämmer själv om och när något ska göras.",
       },
       {
         question: "Hur och när kan jag boka?",
@@ -560,7 +560,7 @@ export const landingServices: LandingService[] = [
     listHeading: "Fördelen med att planera i god tid",
     listIntro: "Ett takbyte är ett stort beslut. Ju tidigare du har underlaget, desto lugnare kan du välja.",
     list: [
-      { title: "Du vet takets skick", text: "En av våra säljare tittar på taket på plats och ger dig en muntlig bedömning." },
+      { title: "Du vet takets skick", text: "En av våra säljare tittar på taket på plats och du får en rapport om takets skick." },
       { title: "Du får ett fast pris", text: "Offerten är skriftlig och specificerad. Vi arbetar endast till fast pris." },
       { title: "Tid att jämföra", text: "Du kan jämföra offerter och material i lugn och ro innan du bestämmer dig." },
       { title: "Tid att planera ekonomin", text: "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Kom ihåg att avdraget gäller per år." },

@@ -530,7 +530,7 @@ const comboByUrl = new Map(combos.map((c) => [c.url, c]));
 const home: PrerenderPage = {
   h1: "Takläggare i Roslagen — takbyte & takrenovering",
   intro:
-    "RoslagsTak är takläggare i Roslagen. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
+    "RoslagsTak är takläggare i Roslagen med bas i Norrtälje. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
     paragraphs: [
       "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), tegelplåt, pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA-standard av certifierade takläggare.",
       "Vi tar också uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Båda finns med bilder under Projekt.",
@@ -539,8 +539,8 @@ const home: PrerenderPage = {
       "Du får garantihandlingar skriftligt: 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
       // Om oss-sektionen (components/About.tsx, #1z) — samma text som React
       "Om RoslagsTak. Ett tak som håller, och en kontaktperson som svarar.",
-      "RoslagsTak byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.",
-      "Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar, och behöver något göras får du en offert med fast pris där det framgår vad som ingår. Du bestämmer själv om och när.",
+      "RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.",
+      "Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du bestämmer själv om och när.",
       "Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Grisslehamn blev ett takbyte klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre delarna och delvis ny råspont. Båda jobben finns med bilder under Projekt, och våra omdömen från Google finns under Recensioner.",
       "Så jobbar vi. Tillgänglighet: du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19. En kontaktperson: samma person tar hand om dig från första kontakten till färdigt tak. Tydliga villkor: fast pris i offerten, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, ROT-avdraget dras direkt på fakturan. Hantverk enligt AMA.",
       `Begär kostnadsfri takkontroll och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
@@ -640,7 +640,7 @@ const staticPages: Record<string, PrerenderPage> = {
     paragraphs: [
       "Ordningen är råspont, underlagspapp, hängrännor och stuprör, vindskivor, ströläkt och bärläkt, takpannor eller plåt, samt avslutande plåtbeslag kring skorsten och genomföringar.",
       "Du har en kontaktperson genom hela processen, och arbetet avslutas med en slutgenomgång.",
-      "Steg 1 — takkontroll och offert: vi går igenom taket på plats och lämnar en skriftlig offert med fast pris. Kostnadsfritt och utan förpliktelser.",
+      "Steg 1 — takkontroll, rapport och offert: vi går igenom taket på plats, och du får en rapport om takets skick. Behöver taket åtgärdas lämnar vi också en skriftlig offert med fast pris. Kostnadsfritt och utan förpliktelser.",
       "Steg 2 — planering och material: när du accepterat offerten planerar vi arbetet tillsammans med dig och beställer materialet. Du har en fast kontaktperson.",
       "Steg 3 — ställning och skydd: ställningen reses innan arbetet börjar.",
       "Steg 4 — rivning: gamla taket rivs. Råsponten kontrolleras, och skadad råspont specificeras som tillägg innan vi fortsätter.",
@@ -721,7 +721,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser), hur lång tid tar det (det beror på takets storlek, underlagets skick och väder) och kan man bo kvar under arbetet (ja, i de flesta fall).",
       `Telefon: ${PHONE}. Du kan också mejla via formuläret på sidan — ange adress så återkommer vi med förslag på tid för takkontroll.`,
       "Inför takkontrollen behöver du inte förbereda något särskilt, men det underlättar om du vet ungefär hur stort taket är, vilket material det har idag och om du märkt några specifika problem som fläckar eller läckage. Vi tar med all mätutrustning.",
-      "Efter takkontrollen får du en skriftlig offert med fast pris och tydlig specifikation av vad som ingår — rivning, underlag, tätskikt, beslag, taksäkerhet och städning. Du bestämmer i din egen takt, utan påtryckningar.",
+      "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en skriftlig offert med fast pris och tydlig specifikation av vad som ingår — rivning, underlag, tätskikt, beslag, taksäkerhet och städning. Du bestämmer i din egen takt, utan påtryckningar.",
       "Välkommen att höra av dig oavsett om du planerar ett takbyte i år, funderar på taktvätt eller bara vill ha en bedömning av takets skick.",
       "För dig på en ö: vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Berätta var fastigheten ligger och hur den nås, så planerar vi takkontrollen därefter.",
       "Akta läckage? Om taket läcker just nu — ring direkt istället för att fylla i formuläret. Vi prioriterar akuta läckage och kan ofta komma ut för en provisorisk tätning inom kort.",
@@ -796,7 +796,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vi rengör taket med lågtryckstvätt eller manuell borstning och behandlar därefter med miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.",
       "Vi lämnar alltid fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning med grundning och två strykningar. ROT-avdrag på 30 % av arbetskostnaden.",
     ],
-    links: [...primaryLinks, ...serviceLinks],
+    links: [...primaryLinks, ...serviceLinks, { href: "/taklaggare-bollstanas", label: "Takläggare i Bollstanäs" }],
   },
 };
 
@@ -831,7 +831,7 @@ const NEARBY_PROJECT_MAX_KM = 30;
 const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
   const prep = loc.isIsland ? "på" : "i";
   const parts: string[] = [
-    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från Norrtälje och cirka ${Math.round(distanceFromTabyKm(loc))} km från Täby. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
+    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje och cirka ${Math.round(distanceFromTabyKm(loc))} km från Täby. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
   ];
 
   const exactProject = projectSummaries.find((p) => p.locationSlug === loc.slug);

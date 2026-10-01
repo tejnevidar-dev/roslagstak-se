@@ -28,7 +28,7 @@ const serviceTypes = [
         ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att offerten blir tydlig.`,
+            `Med vår bas i Norrtälje når vi ${loc.name} snabbt, och vi planerar resor, etablering och materialleverans i förväg, så att offerten blir tydlig.`,
             `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att offerten blir tydlig.`,
           ),
       `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat plåttak. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
@@ -46,7 +46,7 @@ const serviceTypes = [
         ? `Vi tar uppdrag för takrenoveringar på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
+            `Med vår bas i Norrtälje tar vi uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
             `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
           ),
       `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag tillkommer.`,
@@ -64,7 +64,7 @@ const serviceTypes = [
         ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi tar uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
+            `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
             `Vi tar uppdrag ${prep} ${loc.name} och samordnar gärna flera tak i samma område, vilket kan ge ett konkurrenskraftigt pris på din takomläggning.`,
           ),
       `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval — TP20-plåttak eller dubbelfalsat. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr/person/år).`,
@@ -84,7 +84,7 @@ const taktvattService = {
       ? `Vi utför taktvätt på öar i skärgården, också ${prep} ${loc.name}. Det fuktiga skärgårdsklimatet ger ofta kraftig mossbildning, och takets skick går vi igenom vid den kostnadsfria takkontrollen.`
       : byDistance(
           loc,
-          `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
+          `Med vår bas i Norrtälje tar vi uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
           `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
         ),
     `Priset för taktvätt ${prep} ${loc.name} beror på takets storlek, lutning, material och nedsmutsningsgrad, inkl. behandling med biocid. Med ROT-avdrag på 30 % av arbetskostnaden direkt på fakturan. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.`,
@@ -107,7 +107,7 @@ const specialistServices = [
         ? `Att bandtäcka ett tak ${prep} ${loc.name} kräver planering, eftersom plåtbanden är långa. Förutsättningarna går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
+            `Med vår bas i Norrtälje tar vi med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
             `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
           ),
       `Bandtäckning ${prep} ${loc.name} i förzinkad eller färgbelagd plåt, koppar eller zink. Priset styrs av materialval och takets komplexitet — antal vinklar, kupor och genomföringar. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
@@ -125,7 +125,7 @@ const specialistServices = [
         ? `Plåttak är ett lätt material, och i skärgården sliter saltluften på både pannor och plåt. Vilket material som passar ${prep} ${loc.name} går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
-            `Vi lägger plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
+            `Med vår bas i Norrtälje lägger vi plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
             `Vi lägger plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
           ),
       `Ett plåttak ${prep} ${loc.name} — TP20, tegelprofilerad plåt eller dubbelfalsat. Fast pris efter kostnadsfri takkontroll, som inkluderar montage, beslag och bortforsling av gammalt material. ROT-avdrag tillkommer.`,
@@ -143,7 +143,7 @@ const specialistServices = [
         ? `Betongpannor är tunga, och på en ö påverkar det planeringen av arbetet ${prep} ${loc.name}. Vid takkontrollen bedömer vi också om takstolarna klarar lasten.`
         : byDistance(
             loc,
-            `Vi tar uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
+            `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
             `Vi tar uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
           ),
       `Ett tak med betongpannor ${prep} ${loc.name}, vid nyläggning eller omläggning av befintliga pannor med ny papp och läkt. Vi lämnar fast pris efter kostnadsfri takkontroll. ROT-avdrag ger 30% på arbetskostnaden.`,

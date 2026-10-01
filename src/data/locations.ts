@@ -366,7 +366,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Hur snabbt kan ni komma till Rådmansö för en takkontroll?",
       answer:
-        "Ring oss på 070-154 36 39 eller boka via formuläret, så hittar vi en tid som passar. Vi svarar inom 24 timmar, och vid takkontrollen får du en muntlig bedömning.",
+        "Ring oss på 070-154 36 39 eller boka via formuläret, så hittar vi en tid som passar. Vi svarar inom 24 timmar, och efter takkontrollen får du en rapport om takets skick.",
     },
     primaryKeyword: "takläggare Rådmansö",
     lat: 59.6667,
