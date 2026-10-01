@@ -1624,6 +1624,41 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/taklaggare-bjorknas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-langsjo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-alsten</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-staket</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-nockebyhov</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-bromma-kyrka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-flysta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/brf/stockholm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

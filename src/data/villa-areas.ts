@@ -122,6 +122,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Tegelhagen", types: "Kedjehus och radhus", period: "Slutet av 1970-talet (hitta.se)", href: "/taklaggare-tegelhagen-silverdal" },
       { name: "Vaxmora", types: "Villor och radhus", period: "Mest 1960- och 1970-tal (hitta.se)", note: "Vaxmora i nordöstra Sollentuna är uppkallat efter ett torp i Törnskogen. Enligt hitta.se är villorna och radhusen främst byggda på 1960- och 1970-talen." },
       { name: "Eriksberg", types: "Villor", period: "Villastad från 1920–30-talet (Wikipedia)", note: "Eriksberg i Helenelund har fått sitt namn från torpet Eriksberg från 1819. Marken köptes upp för tomter 1918, villabyggandet tog enligt Wikipedia fart när Helenelund fick sin järnvägshållplats 1922, och 1926 upprättades stadsplanen för Eriksbergs villastad, ritad av arkitekten Arvid Stille. Enligt hitta.se är husen i dag främst från 1950- och 1960-talen." },
+      { name: "Kummelby", types: "Villor", period: "Mest 1930- och 1950-tal (hitta.se)", note: "Kummelby var en gård redan i förhistorisk tid. Marken köptes upp 1918 och bostadshus började byggas, och enligt hitta.se är husen främst från 1930- och 1950-talen. Gårdens byggnader revs 1953." },
     ],
   },
   huddinge: {
@@ -168,6 +169,8 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Margretelund", types: "Kedjehus och villor", period: "Mest 1970- och 1990-tal (hitta.se)" },
       { name: "Svinninge", types: "Villor", period: "Mest 1950- och 1960-tal (hitta.se), utbyggnad 1990–1995 (Wikipedia)", note: "Svinninge ligger mellan Åkersberga och Vaxholm och växte kraftigt västerut mellan 1990 och 1995, då småorterna Svinninge och Hästängsudd blev en del av tätorten. Enligt hitta.se är villorna i Svinninge främst byggda på 1950- och 1960-talen." },
       { name: "Täljö och Runö", types: "Villor, radhus och kedjehus", period: "Täljö mest 1950- och 1960-tal (hitta.se)" },
+      { name: "Rydbo", types: "Villor och radhus", period: "Radhus 1958–59 och 1980-tal (Wikipedia)", note: "Rydbo är en tätort vid Roslagsbanan, omkring tio kilometer från Åkersberga. Enligt Wikipedia består bostäderna av villor i blandade åldrar och två radhusområden, ett från 1958–59 vid Vasavägen och Brahevägen och ett från 1980-talet vid Brovallsvägen." },
+      { name: "Söra", types: "Villor och radhus", period: "1970-, 1980- och 1990-tal (Wikipedia)", note: "Söra i Åkersberga består enligt Wikipedia mestadels av villor och radhus byggda på 1970-, 1980- och 1990-talen, en till tre kilometer från Åkersberga centrum." },
     ],
   },
   haninge: {

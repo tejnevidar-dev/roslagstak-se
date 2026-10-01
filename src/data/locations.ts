@@ -2424,20 +2424,45 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Hägersten — takbyte och takrenovering i Hägersten. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Hägersten vid Mälaren, med äldre villor i väster och radhus från 1967–1971 vid Hägerstensbrinken. Kostnadsfri takkontroll.",
     longDescription:
-      "Hägersten är grönt villa- och flerfamiljsområde sydväst om innerstaden. Bebyggelsen består till stor del av villor från 1930-talet och trevåningshus med tegel- och plåttak. Vi utför takbyte, takrenovering och takomläggning i Hägersten med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Hägersten — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Hägersten.",
+      "Hägersten är en stadsdel i Söderort i Stockholm, vid Mälaren. Den gränsar enligt Wikipedia till bland annat Mälarhöjden, Västertorp, Hägerstensåsen, Aspudden och Gröndal. Namnet går tillbaka på torpet Haegrasteen, som nämns första gången i ett brev från 1432. Området hörde till Hägerstens gård, som avsöndrades från Årsta gård 1763, och gårdens nuvarande byggnad vid Hägerstensbrinken uppfördes omkring 1755. Vid stranden låg Fader Höks krog, känd sedan slutet av 1600-talet och omskriven av Bellman i två epistlar. Från 1860-talet blev det populärt att ha sommarnöje här. Wikipedia nämner Gunnarsberg vid Eolshällsvägen som det första, och Sagatun vid Brådstupsvägen, uppförd i fornnordisk stil 1881. Den första stadsplanen kom 1923 och gällde ett område väster om Storsvängen, men enligt Wikipedia fanns det då redan en stor mängd villor i stadsdelens västra del. År 1930 utökades planen, och villor byggdes också öster om Storsvängen och söder om S:t Mickelsgatan. Åren 1967–1971 uppfördes ett åttiotal radhus längs Hägerstensbrinken och Hägerstens allé, ritade av arkitektgruppen FFNS. De 59 radhusen vid Hägerstensbrinken ligger enligt Wikipedia i tre kvarter norr och väster om Hägerstens gård, högt över småbåtshamnen, och marken är så kuperad att husen i den brantaste delen fick tre våningar mot Mälaren och en mot gatan. Stadsmuseet i Stockholm har grönklassat dem. De 22 radhusen i kvarteret intill, vid Hägerstens allé, är gulklassade.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Hägersten-Älvsjö)" },
+      { label: "Hustyper", value: "Villor, radhus (och flerbostadshus)" },
+      { label: "Byggperiod", value: "Villor före 1923 och efter 1930, radhus vid Hägerstensbrinken 1967–1971" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 950" },
+    ],
+    sourceLink: { label: "Wikipedia: Hägersten", url: "https://sv.wikipedia.org/wiki/H%C3%A4gersten" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Hägersten, Stockholm",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Hägersten?",
+      question: "När byggdes husen i Hägersten?",
       answer:
-        "Priset för ett takbyte i Hägersten beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
+        "Byggperiod enligt källorna: villor före 1923 och från 1930 och framåt i västra Hägersten, radhusen vid Hägerstensbrinken och Hägerstens allé 1967–1971. Hustyper: villor och radhus, med inslag av flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
     },
     primaryKeyword: "takläggare Hägersten",
     lat: 59.3006,
     lng: 17.9856,
-    nearbyLocations: ["Aspudden", "Liljeholmen", "Skärholmen"],
+    nearbyLocations: ["Aspudden", "Liljeholmen", "Skärholmen", "Stockholm"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Villorna i västra Hägersten är i dag omkring hundra år gamla eller mer, och radhusen vid Hägerstensbrinken är runt 55 år. På så gamla hus kan taken redan ha lagts om, och därför säger husets ålder inte hur taket mår. Det som avgör är när underlagspapp, läkt och plåtdetaljer senast byttes, och det ser man först på plats. På radhusen hänger taken ihop längs längan, och anslutningen mot grannens tak behöver utföras så att den fungerar för båda husen. I en klassad miljö kan också utseendet på ett nytt tak ha betydelse. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Hägersten och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "grondal",
@@ -4158,6 +4183,332 @@ export const locations: LocationData[] = [
       paragraphs: [
         "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
         "Bor du i Uttran eller Broängen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "bjorknas",
+    name: "Björknäs och Eknäs",
+    region: "Östra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Björknäs vid Skurusundet i Nacka, med villor från sekelskiftet 1900 och framåt i kuperad terräng. Kostnadsfri takkontroll.",
+    longDescription:
+      "Björknäs ligger i västra Saltsjö-Boo i Nacka kommun, intill Skurusundet vid Skurubroarnas östra landfäste. Området har sitt namn efter Stora Björknäs gård och nämns i skrift redan 1436. Marken har historiskt hört till gårdarna Stora och Lilla Björknäs, och Eknäs gård avsöndrades från Stora Björknäs 1818. Enligt Wikipedia började jordbruksmarken delas upp i tomter efter 1873, då byggmästaren Carl Henrik Hallström flyttade in på Stora Björknäs och lät uppföra ett antal sommarvillor. Ångbåtarna gjorde stränderna vid Skurusundet tillgängliga, och mot slutet av 1800-talet började villor byggas också för permanentboende. Vid sekelskiftet 1900 styckades villatomter av i de centrala delarna, och 1915 invigdes Skurubron, som förbättrade landsvägen mellan Stockholm och Värmdö. På 1920-talet bildades Björknäs egnahemsområde. Villorna i den centrala delen byggdes enligt Wikipedia utan byggnadsplan, vilket tidigt gav en varierad bebyggelse som fortfarande präglar området. Flera av de nya Björknäsborna var hantverkare eller småföretagare som både ritade och byggde sina hus själva. Lilla Björknäs, norrut längs sundet, bebyggdes under slutet av 1800-talet med sommarvillor och blev senare ett sportstugeområde på brant kuperade tomter. Efter en ny detaljplan 2002 har det enligt Wikipedia ändrat karaktär, med nybyggda hus i nyfunkisstil. Under de senaste decennierna har Björknäs förtätats med nya villor, radhus och små flerbostadshus. Landskapet beskrivs som starkt kuperat, med gamla tallar, ekar och berghällar kvar mellan husen.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Nacka" },
+      { label: "Delområden", value: "Björknäs (Stora och Lilla Björknäs), Eknäs" },
+      { label: "Hustyper", value: "Villor, med inslag av radhus och små flerbostadshus" },
+      { label: "Byggperiod", value: "Sommarvillor från 1870-talet, villatomter från sekelskiftet 1900, egnahemsområde på 1920-talet, förtätning senaste decennierna" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 950" },
+    ],
+    sourceLink: { label: "Wikipedia: Björknäs, Nacka kommun", url: "https://sv.wikipedia.org/wiki/Bj%C3%B6rkn%C3%A4s,_Nacka_kommun" },
+    parentLocation: { name: "Nacka", slug: "nacka" },
+    h1Override: "Takläggare i Björknäs, Nacka",
+    uniqueFAQ: {
+      question: "När byggdes husen i Björknäs?",
+      answer:
+        "Byggperiod enligt källorna: sommarvillor från 1870-talet, villatomter från sekelskiftet 1900, ett egnahemsområde från 1920-talet och förtätning under de senaste decennierna. Hustyper: villor, med inslag av radhus och små flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Nacka kommun.",
+    },
+    primaryKeyword: "takläggare Björknäs",
+    lat: 59.3209,
+    lng: 18.2408,
+    nearbyLocations: ["Nacka"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "I Björknäs står hus från mycket olika tider sida vid sida: sommarvillor från 1800-talets slut, egnahem som är runt hundra år gamla och villor byggda efter 2002. Det går därför inte att säga något gemensamt om taken. På de äldre husen kan taket ha lagts om flera gånger, och det som betyder något är när underlagspapp, läkt och plåtdetaljer senast byttes. Med gamla tallar och ekar nära husen samlas barr och löv lätt i hängrännor och ränndalar, och det är värt att hålla dem rena. Om ett byte av material eller kulör kräver lov eller anmälan avgör Nacka kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Björknäs eller Eknäs och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "langsjo",
+    name: "Långsjö",
+    region: "Stockholms stad",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i villaområdet Långsjö i Söderort, med villor från 1920-talet och framåt och kedjehusen på Långsjöhöjden. Kostnadsfri takkontroll.",
+    longDescription:
+      "Långsjö är en stadsdel i Söderort i Stockholm. Den har fått sitt namn efter Långsjö gård vid Långsjön, sjön som avgränsar stadsdelen åt sydost och bildar kommungräns mot Huddinge. Gården, med sina två identiska huvudbyggnader, lät affärsmannen Robert Ditzinger uppföra åt sina båda söner 1882. År 1908 kom gårdens marker i AB Billiga Tomters ägo, på samma sätt som Herrängens gårds ägor. Gator och kvarter planerades i början av 1900-talet, och när den första stadsplanen för Långsjö fastställdes 1938 följde den enligt Wikipedia i stort sett det som redan fanns. Till en början var järnvägen från Älvsjö station den enda förbindelsen in till Stockholm. År 1922 kom en busslinje mellan Midsommarkransen och Långsjö, som 1930 togs över av Stockholms Spårvägar och blev linje 64. Bland de äldre villorna nämner Wikipedia en vid Strandängsstigen, ritad 1924 av arkitekten Rolf Solin, och en vid Myrvägen, ritad 1928 av Sten Westholm. Långsjöbadet invigdes 1938. Under senare delen av 1960-talet tillkom Långsjöhöjden. Marken var dittills inte planlagd, och där fanns bara skog och en del sommarstugor. År 1966 byggdes 63 kedjehus efter ritningar av arkitekterna Gösta Nordin och Hans Alfont, enligt Wikipedia modernistiska hus med fasader i rött tegel, på båda sidor om en gata som bildar en slinga. I dag beskrivs Långsjö som ett renodlat villaområde med omkring 900 bostäder.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Hägersten-Älvsjö)" },
+      { label: "Delområden", value: "Långsjö, Långsjöhöjden" },
+      { label: "Hustyper", value: "Villor, kedjehus" },
+      { label: "Byggperiod", value: "Villor från 1920-talet (stadsplan 1938), kedjehusen på Långsjöhöjden 1966" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 840" },
+    ],
+    sourceLink: { label: "Wikipedia: Långsjö", url: "https://sv.wikipedia.org/wiki/L%C3%A5ngsj%C3%B6" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Långsjö, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Långsjö?",
+      answer:
+        "Byggperiod enligt källorna: villor från 1920-talet (stadsplanen fastställdes 1938), kedjehusen på Långsjöhöjden 1966. Hustyper: villor och kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Långsjö",
+    lat: 59.2675,
+    lng: 17.9789,
+    nearbyLocations: ["Stockholm", "Herrängen"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Långsjö har två tydliga årgångar. Villorna från 1920-talet är i dag runt hundra år gamla, och kedjehusen på Långsjöhöjden är 60 år. På villorna från 1920-talet kan taket redan ha lagts om, och frågan är då hur länge sedan det var och vad som byttes under ytan: underlagspapp, läkt, plåt och hängrännor. Kedjehus är sammanbyggda med grannhuset. Där taken eller mellandelarna möts behöver anslutningen göras så att den håller tätt åt båda håll, och det är klokt att prata med grannen innan arbetet planeras. Eftersom de 63 husen är ritade och byggda på en gång har de samma förutsättningar, och grannar kan ibland ha nytta av att lägga om taken i samma veva. Varje hus får ändå en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Långsjö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "alsten",
+    name: "Ålsten",
+    region: "Stockholms stad",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Ålsten i Bromma, ett villaområde vid Mälaren där de flesta villorna byggdes mot slutet av 1920-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Ålsten är en stadsdel i Västerort i Stockholm och en del av Bromma trädgårdsstad. Den ligger vid Mälaren och gränsar till Höglandet i väster och till Smedslätten och Äppelviken i öster. I norr går gränsen vid vägen Västerled, mot Stora Mossen och Abrahamsberg. Ålstens gård, på en klippa väster om Ålstensängen, var en kungsgård som Gustav Vasa lät uppföra på 1500-talet. Gårdens namn är enligt Wikipedia först belagt som Asunda, omnämnt 1339, och först 1568 blev namnet Ålsten allmänt använt. Stockholms stad köpte egendomen 1905. I början av 1920-talet styckades området i tomter, stadsplanen fastställdes 1923, och 1926 lades jordbruket ner. Spårvägen drogs fram till hållplatsen Ålstens gård 1924. Flertalet villor byggdes enligt Wikipedia mot slutet av 1920-talet, och omkring 1934 var de sista färdiga. Området mellan Västerled och Nyängsvägen fick sina villor först 1938. De flesta uppfördes av byggmästare och ritades av arkitekterna Edvin Engström och Gustaf Pettersson, som var knutna till Fastighetskontorets egnahemsbyrå. Längs Ålstensgatan ligger radhusen som byggdes 1932–1933 av byggmästaren Olle Engkvist efter ritningar av Paul Hedqvist. De kallas Per Albin-radhusen efter statsminister Per Albin Hansson, som bodde i ett av dem. Enligt Wikipedia såldes radhusen som bostadsrätter, och Stadsmuseet i Stockholm har blåmärkt dem. Terrängen beskrivs som kuperad, med blandskog och mycket berg i dagen.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Bromma)" },
+      { label: "Hustyper", value: "Villor, radhus och flerfamiljshus längs Ålstensgatan" },
+      { label: "Byggperiod", value: "Villor från 1920-talets början till 1938 (flertalet mot slutet av 1920-talet), radhusen 1932–1933" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 810" },
+    ],
+    sourceLink: { label: "Wikipedia: Ålsten", url: "https://sv.wikipedia.org/wiki/%C3%85lsten" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Ålsten, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Ålsten?",
+      answer:
+        "Byggperiod enligt källorna: villor från början av 1920-talet till 1938, flertalet mot slutet av 1920-talet, och radhusen längs Ålstensgatan 1932–1933. Hustyper: villor, radhus och enstaka flerfamiljshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Ålsten",
+    lat: 59.3235,
+    lng: 17.9509,
+    nearbyLocations: ["Stockholm"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Villorna i Ålsten kom till under knappt två decennier och är i dag mellan knappt 90 och omkring 100 år gamla. På hus i den åldern kan taket redan ha lagts om, och husets ålder säger därför lite om takets skick. Det som spelar roll är vad som gjordes vid den senaste omläggningen och hur plåtdetaljer, skorstensanslutningar och hängrännor ser ut i dag. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Där skogen går nära tomterna hamnar barr och löv i hängrännor och ränndalar, som behöver hållas rena. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Ålsten och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "staket",
+    name: "Stäket",
+    region: "Nordvästra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Stäket längst norrut i Järfälla, med villor från 1904 och framåt och 1980-talets utbyggnad. Kostnadsfri takkontroll.",
+    longDescription:
+      "Stäket ligger längst norrut i Järfälla kommun, på östra sidan av Stäksundet, och hör till kommundelen Kallhäll-Stäket. Motorvägen E18 delar området i Norra Stäket och Södra Stäket. Enligt Wikipedia domineras bebyggelsen av friliggande villor och sommarbostäder. Platsen har länge varit en knutpunkt mellan land och vatten. I början av 1600-talet slog sig hantverkare som skomakare, smeder och skräddare ner här, och 1628 fanns som mest omkring 30 hushåll vid det som kallades Stäketfläcken. Den första järnvägsbron över sundet invigdes 1876, och från år 1900 stannade tågen i Stäket. När stationen hade kommit väcktes enligt Wikipedia idén om ett villasamhälle med Djursholm som förebild. Ägaren till Almare-Stäket, greve Gustaf Magnus Björnstjerna, lät stycka av tomter, och de första villorna byggdes 1904 på branten öster om järnvägsstationen. Villa Pardala uppfördes 1906 och Villa Ekeliden 1907. Ett trettiotal villor och sommarstugor kom till under 1900-talets första årtionden, men sedan stannade utbyggnaden av. Wikipedia pekar på avståndet till centrala Stockholm, de glesa tågförbindelserna och konkurrensen från mer etablerade samhällen. På 1940-talet började dagens villasamhälle i Norra Stäket att byggas, sedan AB Tomtcentralen hade köpt och styckat området. Vid Biskop Olovs väg uppfördes 28 kedjehus 1960. Stationen lades ner 1968, när pendeltågstrafiken startade på linjen. År 1982 antogs en stadsplan, och enligt Wikipedia präglas Norra Stäket i dag nästan helt av utbyggnaden under 1980-talet.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Järfälla" },
+      { label: "Delområden", value: "Norra Stäket, Södra Stäket" },
+      { label: "Hustyper", value: "Friliggande villor, sommarbostäder, kedjehus" },
+      { label: "Byggperiod", value: "Första villorna 1904, villasamhället i Norra Stäket från 1940-talet, kedjehus 1960, utbyggnad under 1980-talet" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 700" },
+    ],
+    sourceLink: { label: "Wikipedia: Stäket", url: "https://sv.wikipedia.org/wiki/St%C3%A4ket" },
+    parentLocation: { name: "Järfälla", slug: "jarfalla" },
+    h1Override: "Takläggare i Stäket, Järfälla",
+    uniqueFAQ: {
+      question: "När byggdes husen i Stäket?",
+      answer:
+        "Byggperiod enligt källorna: första villorna 1904, villasamhället i Norra Stäket från 1940-talet, kedjehus vid Biskop Olovs väg 1960, och utbyggnad under 1980-talet. Hustyper: friliggande villor, sommarbostäder och kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun.",
+    },
+    primaryKeyword: "takläggare Stäket",
+    lat: 59.4725,
+    lng: 17.7951,
+    nearbyLocations: ["Järfälla"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "I Stäket står hus från fyra skeden nära varandra. Villorna från seklets början är i dag runt 120 år gamla, husen från 1940-talets villasamhälle runt 80 år, kedjehusen vid Biskop Olovs väg drygt 65 år och 1980-talets hus runt 40 år. Taken kan redan ha lagts om, och husets ålder säger därför inget säkert om takets skick. Det som avgör är vad som finns under ytan i dag: underlagspapp, läkt, plåtdetaljer och hängrännor. På kedjehus möter taket grannens, och anslutningen behöver utföras så att den fungerar ihop med grannens tak. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Stäket och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "nockebyhov",
+    name: "Nockebyhov och Olovslund",
+    region: "Stockholms stad",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Nockebyhov och Olovslund i Bromma, med småstugor från 1920- och 1930-talen och radhus från efterkrigstiden. Kostnadsfri takkontroll.",
+    longDescription:
+      "Olovslund och Nockebyhov är två stadsdelar i Bromma i Stockholms västerort. Olovslund gränsar till Åkeslund i norr, Abrahamsberg i öster, Ålsten och Höglandet i söder och Nockeby i väster. Nockebyhov ligger nordväst om Nockeby och sträcker sig från Ängbybadet i väster till Drottningholmsvägen och Nockebybron i söder och till Åkeshov i nordost. Olovslund har sitt namn efter jordbrukaren Johannes Olsson, som byggde en stuga, Olovslunds torp, på mark som han arrenderade av Åkeshovs slott. Stadsdelen kom enligt Wikipedia till som en trädgårdsstad under andra hälften av 1920-talet, huvudsakligen genom självbyggeri på initiativ av Stockholms stads småstugebyrå. Byggarnas insats var det egna arbetet, som skulle motsvara 10 procent av byggkostnaden. Den första stommen restes den 21 maj 1927, och den 10 juli flyttade den första familjen in. Sammanlagt byggdes 135 småstugor 1927–1928. Husen vid Tapetserarvägen kom till 1938 och 1939 och målades genomgående vita. År 1986 blev Olovslund riksintresse för kulturminnesvården. Nockebyhov ligger på mark som Stockholms stad förvärvade 1904. Bebyggelsen är enligt Wikipedia blandad, med småhus från 1930-talet och radhus, kedjehus, punkthus och lamellhus från efterkrigstiden. Norr om Drottningholmsvägen anlades på 1930-talet ett småstugeområde med omkring 200 hus, som till övervägande del byggdes av ägarna själva, ofta efter ritningar av arkitekten Edvin Engström. Mellan Nockeby backe och Södra Ängby började bostadshusen byggas 1948–1949. Radhusområdet vid Rastvägen och rad- och kedjehusområdet Mälarblick är blåmärkta av Stadsmuseet. Mälarblick, med 36 radhus och 14 kedjehus, uppfördes 1961–1968. I sydväst gränsar Nockebyhov till Mälaren.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Bromma)" },
+      { label: "Delområden", value: "Olovslund, Nockebyhov (småstugeområdet norr om Drottningholmsvägen, Rastvägen, Mälarblick)" },
+      { label: "Hustyper", value: "Småstugor, villor, radhus, kedjehus" },
+      { label: "Byggperiod", value: "Olovslund 1927–28 och 1938–39, småstugor i Nockebyhov 1930-tal, bostadshus från 1948–49, Mälarblick 1961–68" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 610" },
+    ],
+    sourceLink: { label: "Wikipedia: Nockebyhov", url: "https://sv.wikipedia.org/wiki/Nockebyhov" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Nockebyhov och Olovslund, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Nockebyhov och Olovslund?",
+      answer:
+        "Byggperiod enligt källorna: Olovslunds småstugor 1927–1928 och 1938–1939, Nockebyhovs småstugeområde från 1930-talet, bostadshus från 1948–1949 och Mälarblick 1961–1968. Hustyper: småstugor, villor, radhus och kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Nockebyhov",
+    lat: 59.3345,
+    lng: 17.9086,
+    nearbyLocations: ["Stockholm"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Småstugorna i Olovslund är i dag nära hundra år gamla, och 1930-talets småstugor runt 90 år. Rad- och kedjehusen från efterkrigstiden är mellan knappt 60 och drygt 75 år. Så gamla hus har i regel fått taket omlagt minst en gång, och det går inte att utläsa takets skick ur byggåret. På rad- och kedjehus hänger taket ihop med grannens, och anslutningarna behöver utföras så att de fungerar tillsammans med grannens tak. Grannar i samma länga kan ibland ha nytta av att planera i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. I Olovslund, som är riksintresse, och i de blåmärkta rad- och kedjehusområdena är det klokt att stämma av med staden innan något ändras. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Nockebyhov eller Olovslund och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "bromma-kyrka",
+    name: "Bromma Kyrka",
+    region: "Stockholms stad",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i stadsdelen Bromma Kyrka, där villatomter började säljas 1905 och småstugor byggdes efter 1938. Kostnadsfri takkontroll.",
+    longDescription:
+      "Bromma Kyrka är en stadsdel i Västerort i Stockholm, kring kyrkan som har gett den dess namn. Den gränsar till Norra Ängby, Beckomberga, Eneby och Riksby. Stadsdelen bildades 1932, och 1940 bröts den norra delen ut till en egen stadsdel, Eneby. I början av 1900-talet ägdes marken enligt Wikipedia av Eneby gård, kyrkoherdebostället vid Bromma kyrka och Beckomberga gård. Eneby gårds dåvarande ägare började 1905 sälja tomter för villabebyggelse. En stor del av Bromma kyrkojord såldes 1918 för att bebyggas, och för det ändamålet bildades Föreningen Bromma Trädgårdar, som fanns kvar till 1946. År 1938 köpte staden återstoden av fastigheten, som bebyggdes med småstugor. Tomterna var från början mycket stora. Enligt Wikipedia låg de på mellan 4 000 och 7 000 kvadratmeter, och efter hand har de delats, så att tomterna nu är mellan 300 och 3 500 kvadratmeter. Gatunamnen berättar om ursprunget: flera vägar har namn efter kyrkoherdar och godsägare, till exempel Doktor Abrahams väg och Stierncronas väg, och andra namn syftar på kyrkliga företeelser, som Prebendet, Annexet och Vapenhuset. Fjorton vägar fick sina namn redan 1924. Spångavägen, som går från Brommaplan till Spånga, fick sitt namn 1938.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Bromma)" },
+      { label: "Hustyper", value: "Villor, småstugor" },
+      { label: "Byggperiod", value: "Tomtförsäljning från 1905, Bromma Trädgårdar från 1918, småstugor efter 1938" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 740" },
+    ],
+    sourceLink: { label: "Wikipedia: Bromma kyrka (stadsdel)", url: "https://sv.wikipedia.org/wiki/Bromma_kyrka_(stadsdel)" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Bromma Kyrka, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Bromma Kyrka?",
+      answer:
+        "Byggperiod enligt källorna: tomtförsäljning från 1905, Bromma Trädgårdar från 1918, och småstugor på den mark staden köpte 1938. Hustyper: villor och småstugor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Bromma Kyrka",
+    lat: 59.3544,
+    lng: 17.9208,
+    nearbyLocations: ["Stockholm"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Att tomter har sålts i omgångar och sedan delats betyder att hus från olika tider står sida vid sida. De villor som byggdes på de första tomterna efter 1905 är i dag över hundra år gamla, och småstugorna som kom till efter 1938 är över 80 år. På de avstyckade tomterna kan husen vara yngre. Det går därför inte att säga något gemensamt om taken i stadsdelen, och på de äldre husen kan taken ha lagts om mer än en gång. Vid en takkontroll är det underlagspapp, läkt, plåtdetaljer, skorstensanslutningar och hängrännor som visar hur taket mår, oavsett när huset byggdes. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Bromma Kyrka och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "flysta",
+    name: "Flysta",
+    region: "Stockholms stad",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i villastadsdelen Flysta i Västerort, där tomterna började styckas 1905. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Flysta är en stadsdel i den södra delen av Järva stadsdelsområde i Stockholms västerort. Enligt Wikipedia är den i huvudsak bebyggd med villor, men utmed Spångavägen finns också ett antal hyreshus. Platsen har varit bebodd länge. På Flystaberget finns ett röse, troligen från bronsåldern, och vid Skogslöparvägen ligger gravfält från vikingatiden. Namnet är belagt 1375, då en bonde vid namn Gunnar nämns i \"flyastum\". På den tidigaste kända kartan, från 1636, är en gårdsbyggnad markerad söder om Flystaberget, och vid storskiftet 1794 bestod byn av fyra gårdar med torp. År 1905 började marken styckas till villatomter. Enligt Spånga Egnahemsförening hade den förste nybyggaren sitt hus klart samma år, och under det följande årtiondet blev ett hundratal familjer bofasta i Flysta Villastad. År 1915 bildades Flysta municipalsamhälle, som gav ett visst självstyre inom Spånga landskommun. På 1920-talet hade samhället enligt föreningen omkring 600 invånare. Den 1 januari 1949 införlivades Spånga landskommun, och därmed Flysta, med Stockholm. Samhället hade då drygt 2 000 invånare. Året därpå blev Flysta en egen stadsdel.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Stockholm (Järva)" },
+      { label: "Hustyper", value: "Villor, hyreshus utmed Spångavägen" },
+      { label: "Byggperiod", value: "Från 1905" },
+      { label: "Ägda småhus (avrundat)", value: "Ca 660" },
+    ],
+    sourceLink: { label: "Wikipedia: Flysta", url: "https://sv.wikipedia.org/wiki/Flysta" },
+    parentLocation: { name: "Stockholm", slug: "stockholm" },
+    h1Override: "Takläggare i Flysta, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Flysta?",
+      answer:
+        "Byggperiod enligt källorna: villatomterna började styckas 1905, och samhället växte till drygt 2 000 invånare fram till 1949. Hustyper: villor, med hyreshus utmed Spångavägen. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Flysta",
+    lat: 59.3679,
+    lng: 17.905,
+    nearbyLocations: ["Stockholm"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Flysta växte från ett hus 1905 till ett samhälle med drygt 2 000 invånare 1949, och husen från de åren är i dag mellan ungefär 75 och 120 år gamla. På hus i den åldern har taket som regel lagts om, och byggåret säger därför lite om skicket. Det som går att bedöma på plats är underlagspapp, läkt, plåtdetaljer, skorstensanslutningar och hängrännor. Därför får varje hus en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Flysta och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       ],
     },
   },
