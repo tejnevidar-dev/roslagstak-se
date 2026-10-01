@@ -4,7 +4,9 @@
  */
 import { loadMetaPixel, resetMetaPixel } from "./metaPixel";
 
-const STORAGE_KEY = "rt_consent_v1";
+/** Exporterad så att generate-static-heads.mjs kan läsa samma nyckel i den inline-scriptade
+ *  samtyckeskontrollen för den statiska cookie-bannerkopian (#1ag), utan att hårdkoda den två gånger. */
+export const STORAGE_KEY = "rt_consent_v1";
 const GA_ID = "G-2XTVMBMSWY";
 
 export interface ConsentChoice {

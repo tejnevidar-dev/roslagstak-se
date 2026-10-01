@@ -47,6 +47,33 @@ await esbuild({
 });
 const { prerenderContent, thinComboPaths } = await import(pathToFileURL(bundlePath).href);
 
+/* Cookie-bannerns text och localStorage-nyckel kompileras från samma källfiler som
+   CookieBanner.tsx/consent.ts använder (#1ag, Lighthouse-fyndet: bannertexten var sidans LCP-
+   element och syntes först efter JS). Enda källan, aldrig en handkopierad andra text. */
+const consentBundlePath = resolve(tmpdir(), `consent-${process.pid}.mjs`);
+await esbuild({
+  entryPoints: [resolve("src/lib/cookie-banner-content.ts")],
+  outfile: consentBundlePath,
+  bundle: true,
+  format: "esm",
+  platform: "node",
+  target: "node18",
+  logLevel: "silent",
+});
+const { cookieBannerContent } = await import(pathToFileURL(consentBundlePath).href);
+
+const storageKeyBundlePath = resolve(tmpdir(), `consent-key-${process.pid}.mjs`);
+await esbuild({
+  entryPoints: [resolve("src/lib/consent.ts")],
+  outfile: storageKeyBundlePath,
+  bundle: true,
+  format: "esm",
+  platform: "node",
+  target: "node18",
+  logLevel: "silent",
+});
+const { STORAGE_KEY } = await import(pathToFileURL(storageKeyBundlePath).href);
+
 const INDEX_ROBOTS =
   "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
 const NOINDEX_ROBOTS = "noindex, nofollow";
@@ -101,6 +128,32 @@ const esc = (s) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+/* Statisk kopia av CookieBanner.tsx (#1ag): samma Tailwind-klasser, struktur och id:n som
+   komponenten, byggd av samma cookieBannerContent-källa. Visas i #root innan React hunnit
+   montera (och ersätter CookieBanner.tsx's egen rendering helt, se kommentaren i
+   CookieBanner.tsx om varför det inte blinkar). Döljs direkt av CSS:en i <head> om besökaren
+   redan har ett sparat val — se STATIC_COOKIE_HEAD nedan. Classerna är medvetet dubblerade
+   (css-klasser kan inte delas mellan en .tsx-fil och en byggsträng), men texten kan aldrig
+   glida isär eftersom den kommer från samma modul — scripts/check-cookie-banner-sync.mjs
+   verifierar ändå att de centrala strängarna faktiskt hamnade i den byggda HTML:en. */
+const staticCookieBannerHtml = `<div id="static-cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" class="fixed inset-x-3 bottom-3 z-[60] rounded-2xl border border-border bg-card p-5 shadow-[0_24px_60px_-20px_rgba(12,35,64,0.45)] md:inset-x-auto md:bottom-5 md:left-5 md:max-w-md">
+      <h2 id="cookie-title" class="font-display text-lg text-foreground">${esc(cookieBannerContent.title)}</h2>
+      <p id="cookie-text" class="mt-2 text-[14px] leading-relaxed text-muted-foreground">${esc(cookieBannerContent.text)} <a href="${esc(cookieBannerContent.linkHref)}" class="font-medium text-primary underline underline-offset-4">${esc(cookieBannerContent.linkLabel)}</a></p>
+      <div class="mt-4 flex flex-col gap-3">
+        <button type="button" disabled class="w-full rounded-full bg-primary px-4 py-3 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-primary/90">${esc(cookieBannerContent.acceptAll)}</button>
+        <div class="grid grid-cols-2 gap-3">
+          <button type="button" disabled class="rounded-full border-2 border-primary/25 px-4 py-3 text-[14px] font-semibold text-foreground transition-colors hover:bg-secondary">${esc(cookieBannerContent.necessaryOnly)}</button>
+          <button type="button" disabled class="rounded-full border-2 border-primary/25 px-4 py-3 text-[14px] font-semibold text-foreground transition-colors hover:bg-secondary">${esc(cookieBannerContent.analyticsOnly)}</button>
+        </div>
+      </div>
+    </div>`;
+
+/* CSS döljer den statiska kopian direkt (innan första paint) om ett sparat val redan finns, så
+   att den aldrig syns i onödan eller krockar visuellt med CookieBanner.tsx när React monterar.
+   Scriptet läser EXAKT samma localStorage-nyckel som consent.ts (STORAGE_KEY, importerad ovan). */
+const STATIC_COOKIE_HEAD = `<style>html[data-consent="set"] #static-cookie-banner{display:none}</style>
+    <script>(function(){try{if(window.localStorage.getItem(${JSON.stringify(STORAGE_KEY)})){document.documentElement.setAttribute("data-consent","set");}}catch(e){}})();</script>`;
+
 /** Static markup for the route's important text, injected inside #root. */
 const bodyFor = (path) => {
   const page = prerenderContent(path);
@@ -149,6 +202,9 @@ if (earlyHints) {
     `<meta charset="UTF-8" />\n    ${earlyHints}`,
   );
 }
+// Samtyckeskontrollen för cookie-bannern (#1ag) måste köras på VARJE sida, så den läggs i den
+// delade mallen innan loopen, inte per route.
+stripped = stripped.replace("<meta charset=\"UTF-8\" />", `<meta charset="UTF-8" />\n    ${STATIC_COOKIE_HEAD}`);
 
 let written = 0;
 let prerendered = 0;
@@ -211,10 +267,10 @@ for (const { path, robots } of routes) {
   }
 
   const body = robots === NOINDEX_ROBOTS ? "" : bodyFor(path);
-  if (body) {
-    html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
-    prerendered++;
-  }
+  if (body) prerendered++;
+  // Cookie-bannern (#1ag) hamnar på ALLA sidor, inklusive noindex — React ersätter hela #root
+  // vid montering, så den statiska kopian stannar aldrig kvar bredvid den riktiga.
+  html = html.replace('<div id="root"></div>', `<div id="root">${staticCookieBannerHtml}${body}</div>`);
   const out = path === "/" ? templatePath : resolve(dist, `.${path}.html`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, html);
@@ -252,7 +308,7 @@ const aliasEntries = [
   }
   html = html.replace(
     '<div id="root"></div>',
-    `<div id="root"><div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
+    `<div id="root">${staticCookieBannerHtml}<div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
       <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
       <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">Sidan finns inte</h1>
       <p>Adressen du följde finns inte på roslagstak.se.</p>
