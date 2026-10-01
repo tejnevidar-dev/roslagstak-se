@@ -483,7 +483,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
       "I offerten ingår allt som behövs för ett komplett takbyte: rivning och bortforsling av gamla taket, kontroll och byte av råspont och underlagspapp, ny strö- och bärläkt, valt tätskikt, kompletta plåtbeslag kring skorsten, ventiler och genomföringar, samt taksäkerhet i form av takstege, gångbrygga och nockfästen.",
       "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri takkontroll. På plats mäter vi taket, kontrollerar underlaget och pratar igenom materialval. Därefter får du en skriftlig offert med fast pris — det priset gäller, utan tillägg.",
-      "När du accepterat offerten planerar vi startdatum, beställer material och håller dig uppdaterad genom hela projektet. Du får garantihandlingar skriftligt i avtalet.",
+      "När du accepterat offerten planerar vi arbetet tillsammans med dig och beställer material. Du har en kontaktperson genom hela processen, och garantin står skriftligt i avtalet.",
       "Vanliga frågor om offerten: Är takkontrollen verkligen gratis? Ja, takkontroll och offert är alltid kostnadsfria och du förbinder dig inte till något.",
       "Vi tar uppdrag i hela Roslagen och Storstockholm — från Norrtälje, Vaxholm och Österåker till Täby, Sollentuna, Nacka och öarna i skärgården.",
       "Offerten specificerar arbetskostnaden separat så att ROT-avdraget är tydligt, och vi drar av beloppet direkt på fakturan.",
@@ -538,14 +538,14 @@ const staticPages: Record<string, PrerenderPage> = {
       "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager.",
     paragraphs: [
       "Ordningen är råspont, underlagspapp, hängrännor och stuprör, vindskivor, ströläkt och bärläkt, takpannor eller plåt, samt avslutande plåtbeslag kring skorsten och genomföringar.",
-      "Du får löpande återkoppling under projektet och en slutgenomgång innan vi lämnar arbetsplatsen.",
-      "Steg 1 — takkontroll och offert: vi går igenom taket på plats och lämnar en skriftlig offert med fast pris inom några dagar. Kostnadsfritt och utan förbindelser.",
-      "Steg 2 — planering och material: när du accepterat offerten bokar vi startdatum och beställer materialet. Du får en tidplan och en fast kontaktperson.",
-      "Steg 3 — ställning och skydd: vi reser ställning, skyddar fasad, rabatter och utemöbler med presenningar och skyddsplast.",
-      "Steg 4 — rivning: gamla taket rivs och sorteras för återvinning. Råsponten kontrolleras — skador prisas separat innan vi fortsätter.",
-      "Steg 5 — underlag: ny underlagspapp, ströläkt och bärläkt läggs. Ventilationen kontrolleras och åtgärdas vid behov.",
+      "Du har en kontaktperson genom hela processen, och arbetet avslutas med en slutgenomgång.",
+      "Steg 1 — takkontroll och offert: vi går igenom taket på plats och lämnar en skriftlig offert med fast pris. Kostnadsfritt och utan förpliktelser.",
+      "Steg 2 — planering och material: när du accepterat offerten planerar vi arbetet tillsammans med dig och beställer materialet. Du har en fast kontaktperson.",
+      "Steg 3 — ställning och skydd: ställningen reses innan arbetet börjar.",
+      "Steg 4 — rivning: gamla taket rivs. Råsponten kontrolleras, och skadad råspont specificeras som tillägg innan vi fortsätter.",
+      "Steg 5 — underlag: ny underlagspapp, ströläkt och bärläkt läggs.",
       "Steg 6 — tätskikt och beslag: det nya taket monteras tillsammans med plåtbeslag kring skorsten, ventiler och genomföringar, plus taksäkerhet och takavvattning.",
-      "Steg 7 — städning och slutgenomgång: vi städar tomten, går igenom hela arbetet tillsammans med dig och lämnar över garantihandlingar.",
+      "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Garantin står skriftligt i avtalet.",
     ],
     links: [...primaryLinks, ...serviceLinks],
   },
@@ -933,7 +933,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: loc.h1Override ??
         (loc.parentLocation
           ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
-          : `Takläggare ${prep} ${loc.name} — takbyte, takrenovering & plåtarbeten`),
+          : `Takläggare ${prep} ${loc.name} — takbyte & takrenovering`),
       intro: loc.description,
       paragraphs: [
         loc.longDescription,

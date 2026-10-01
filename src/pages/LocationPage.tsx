@@ -222,7 +222,7 @@ const LocationPage = () => {
               {location.h1Override ??
                 (location.parentLocation
                   ? `Takläggare i ${location.name}, ${location.parentLocation.name}`
-                  : `Takläggare ${prep} ${location.name} — takbyte, takrenovering & plåtarbeten`)}
+                  : `Takläggare ${prep} ${location.name} — takbyte & takrenovering`)}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {location.description}

@@ -14,12 +14,12 @@ const processFaqs = [
   {
     question: "Hur lång tid tar ett takbyte?",
     answer:
-      "Ett normalt villatak på 130–170 m² tar oftast 1–2 veckor från rivning till slutgenomgång, förutsatt att vädret tillåter. Behöver råsponten bytas eller taket har många genomföringar och kupor tar det längre tid. Du får en tidplan i offerten.",
+      "Det beror på takets storlek, underlagets skick, antalet genomföringar och kupor och på vädret. Förutsättningarna för ditt tak går vi igenom vid takkontrollen.",
   },
   {
     question: "Behöver jag bygglov för takbyte?",
     answer:
-      "Byter du till likvärdigt material och behåller takets utseende krävs normalt inget bygglov. Byter du kulör, material eller gör takkupor kan bygglov eller anmälan behövas. Vi kontrollerar vad som gäller i din kommun och hjälper till med handlingarna.",
+      "Byter du till likvärdigt material och behåller takets utseende krävs normalt inget bygglov. Byter du kulör, material eller gör takkupor kan bygglov eller anmälan behövas. Det är kommunen som avgör vad som gäller.",
   },
   {
     question: "Vilka lager består ett tak av?",
@@ -29,7 +29,7 @@ const processFaqs = [
   {
     question: "Kan jag bo kvar under takbytet?",
     answer:
-      "Ja, i de allra flesta fall bor du kvar. Vi täcker in taket vid dagens slut och vid regn, håller uppfarten framkomlig och städar löpande. Är taket helt öppet en dag med varsel om kraftigt regn skjuter vi hellre på det momentet.",
+      "Ja, i de allra flesta fall bor du kvar. Hur arbetet läggs upp går vi igenom innan start, och du har en kontaktperson genom hela processen.",
   },
   {
     question: "Vad händer om ni hittar röta i råsponten?",
@@ -39,7 +39,7 @@ const processFaqs = [
   {
     question: "Vad ingår i slutgenomgången?",
     answer:
-      "Vi går igenom taket tillsammans med dig: infästningar, plåtdetaljer, avvattning, taksäkerhet och städning av tomten. Du får skriftlig garanti i avtalet och materialdokumentation.",
+      "Vi går igenom taket tillsammans med dig: infästningar, plåtdetaljer, avvattning och taksäkerhet. Garantin står skriftligt i avtalet.",
   },
 ];
 
@@ -89,7 +89,7 @@ const ProcessPage = () => {
         </Suspense>
         <FaqSection
           title="Frågor om hur ett takbyte går till"
-          intro="Tidplan, bygglov, boende under arbetet och vad som händer när vi hittar skador under det gamla taket."
+          intro="Tid, bygglov, boende under arbetet och vad som händer när vi hittar skador under det gamla taket."
           faqs={processFaqs}
           path="/hur-det-gar-till"
         />

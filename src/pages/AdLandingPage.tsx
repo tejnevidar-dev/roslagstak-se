@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Vad ingår i priset?",
-    a: "Rivning och bortforsling av gamla taket, underlagspapp och läkt vid behov, tätskikt, plåtbeslag, taksäkerhet och städning. Hittar vi skadad råspont när gamla taket är rivet visar vi dig omfattningen och lämnar ett pris på tillägget innan vi fortsätter.",
+    a: "Rivning och bortforsling av gamla taket, underlagspapp och läkt vid behov, tätskikt, plåtbeslag och taksäkerhet. Hittar vi skadad råspont när gamla taket är rivet visar vi dig omfattningen och lämnar ett pris på tillägget innan vi fortsätter.",
   },
   {
     q: "Hur fungerar ROT-avdraget?",
@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     q: "Behöver jag bygglov?",
-    a: "Byter du till likvärdigt material och behåller takets utseende krävs normalt inget bygglov. Byter du kulör eller material, eller bygger takkupor, kan bygglov eller anmälan behövas. Vi kontrollerar vad som gäller i din kommun.",
+    a: "Byter du till likvärdigt material och behåller takets utseende krävs normalt inget bygglov. Byter du kulör eller material, eller bygger takkupor, kan bygglov eller anmälan behövas. Det är kommunen som avgör vad som gäller.",
   },
 ];
 

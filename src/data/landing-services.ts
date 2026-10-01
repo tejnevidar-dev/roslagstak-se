@@ -42,11 +42,11 @@ export const landingServices: LandingService[] = [
     list: [
       {
         title: "Trasiga eller förskjutna pannor",
-        text: "Vi byter enstaka pannor eller plåtsektioner utan att byta hela taket.",
+        text: "Vi byter enstaka pannor utan att byta hela taket.",
       },
       {
         title: "Läckage kring skorsten och genomföringar",
-        text: "Plåtbeslag runt skorstenar, ventiler och genomföringar är där tak oftast läcker. Vi byter eller tätar beslagen.",
+        text: "Plåtbeslag runt skorstenar, ventiler och genomföringar är där tak oftast läcker. Vad som behöver göras bedömer vi vid takkontrollen.",
       },
       {
         title: "Sliten underlagspapp",
@@ -58,7 +58,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Skadad plåt och rost",
-        text: "Rostiga eller skadade plåtar och beslag lagas eller byts.",
+        text: "Rostiga eller skadade plåtar och beslag bedöms vid takkontrollen.",
       },
       {
         title: "Rännor och stuprör",
@@ -479,35 +479,35 @@ export const landingServices: LandingService[] = [
   {
     slug: "platslagare",
     path: "/platslagare",
-    seoTitle: "Plåtslagare för tak — bandtäckning och beslag",
+    seoTitle: "Plåt på taket — bandtäckning och plåtdetaljer",
     seoDescription:
-      "Plåtarbeten på tak: bandtäckning, falsat plåttak, skorstensbeslag, ränndalar och vindskiveplåt i stål, aluminium, koppar eller zink. Fast pris.",
+      "Dubbelfalsat plåttak och nya plåtdetaljer som en del av ett takbyte. Kontakta oss så tittar vi på taket. Kostnadsfri takkontroll och fast pris.",
     breadcrumb: "Plåtslagare",
     eyebrow: "Plåtarbeten",
-    h1: "Plåtslagare för ditt tak.",
+    h1: "Plåt på ditt tak.",
     h1Accent: "Fast pris efter kostnadsfri takkontroll.",
     intro:
-      "Bandtäckning, falsat plåttak och beslag kring skorstenar och genomföringar. Vi utför plåtarbeten i stål, aluminium, koppar och zink och lämnar ett skriftligt fast pris efter kostnadsfri takkontroll.",
-    listHeading: "Plåtarbeten vi utför",
+      "Dubbelfalsat plåttak (bandtäckning) och nya plåtdetaljer kring skorstenar och genomföringar ingår när vi byter eller lägger om ett tak. Gäller det ett enskilt plåtjobb: kontakta oss, så tittar vi på taket och berättar vad vi kan hjälpa till med.",
+    listHeading: "Plåtdetaljer på ett tak",
     listIntro: "Det är ofta plåtdetaljerna som avgör om ett tak håller tätt.",
     list: [
-      { title: "Bandtäckning", text: "Dubbelfalsad bandtäckning som klarar låg lutning där pannor inte fungerar." },
-      { title: "Falsat plåttak", text: "Falsat plåttak med rörliga klammer så att plåten kan arbeta vid temperaturväxlingar." },
-      { title: "Skorstensbeslag", text: "Beslag och inklädnad runt skorstenar, där tak oftast läcker." },
-      { title: "Ränndalar", text: "Ränndalar falsade och anpassade till takets lutning och material." },
-      { title: "Vindskiveplåt", text: "Plåt på vindskivor och takfot." },
-      { title: "Platstillverkade detaljer", text: "Beslag falsas och anpassas på plats efter husets mått." },
+      { title: "Bandtäckning", text: "Plåtbanor som fogas ihop med dubbelfals och fästs med dolda klammer, utan synliga skruvar." },
+      { title: "Falsat plåttak", text: "Klammerna gör att plåten kan röra sig med temperaturen utan att skarvarna tar skada." },
+      { title: "Skorstensbeslag", text: "Beslaget runt skorstenen är en av de vanligaste platserna för läckage." },
+      { title: "Ränndalar", text: "Den inåtvända vinkeln där två takfall möts, en av takets mest belastade delar." },
+      { title: "Vindskiveplåt", text: "Plåt som skyddar vindskivornas och takfotens kanter." },
+      { title: "Fotplåt", text: "Plåten längst ner på taket, som leder vattnet ut i hängrännan." },
     ],
     stepsHeading: "Så går det till",
     steps: [
       { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
-      { title: "Kostnadsfri takkontroll", text: "Vi tittar på taket och de plåtdetaljer som ska åtgärdas." },
-      { title: "Fast pris", text: "Du får en skriftlig offert med tydlig åtgärdslista och fast pris." },
-      { title: "Utförande", text: "Vi utför arbetet enligt AMA och lämnar 10 års utförandegaranti." },
+      { title: "Kostnadsfri takkontroll", text: "Vi tittar på taket och plåtdetaljerna på plats, utan förpliktelser." },
+      { title: "Besked och fast pris", text: "Du får veta vad vi kan hjälpa till med. Ingår plåten i ett takbyte får du en offert med fast pris." },
+      { title: "Takbyte enligt AMA", text: "Vid ett takbyte görs plåtdetaljerna om, med 10 års utförandegaranti." },
     ],
     extraHeading: "Vilken metall passar?",
     extraParagraphs: [
-      "Stål, aluminium, koppar och zink har olika livslängd och underhållsbehov. Saltluft ställer högre krav än inlandsklimat, och vi väljer material efter läge, lutning och husets karaktär.",
+      "Stål, aluminium, koppar och zink har olika egenskaper och underhållsbehov. Vilken metall som passar beror på läge, lutning och husets karaktär.",
       "Läs mer om metallerna på sidan om plåtarbeten.",
     ],
     priceNote:
@@ -517,11 +517,11 @@ export const landingServices: LandingService[] = [
       {
         question: "Vad kostar plåtarbeten på tak?",
         answer:
-          "Det beror på omfattning, material och åtkomst. Efter en kostnadsfri takkontroll får du ett fast pris. Vi arbetar endast till fast pris.",
+          "Det beror på omfattning, material och åtkomst. Plåtdetaljer gör vi i första hand som en del av ett takbyte eller en takomläggning, och då får du ett fast pris efter en kostnadsfri takkontroll.",
       },
       {
-        question: "Vilka metaller arbetar ni i?",
-        answer: "Stål, aluminium, koppar och zink.",
+        question: "Gör ni enskilda plåtjobb?",
+        answer: "Kontakta oss så tittar vi på taket och berättar vad vi kan hjälpa till med.",
       },
       {
         question: "Kan jag få ROT-avdrag på plåtarbeten?",

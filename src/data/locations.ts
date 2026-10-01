@@ -203,7 +203,7 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takläggare på Högmarsö — takbyte, takrenovering och plåtarbeten.",
+      "Takläggare på Högmarsö — takbyte och takrenovering.",
     longDescription:
       "Högmarsö är en lugnare ö i mellersta Roslagen, men klimatet är lika krävande som i resten av skärgården. Fukt, mossa och salt bryter långsamt ner takmaterial som inte är anpassat för miljön. TP20-plåttak med rätt underlag är ofta det optimala valet här — hållbart, underhållsfritt och estetiskt tilltalande.",
     extraContent:
@@ -331,7 +331,7 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare i Spillersboda — takbyte, takrenovering och plåtarbeten längs Roslagens kust. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Spillersboda — takbyte och takrenovering längs Roslagens kust. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Spillersboda ligger vackert längs Roslagens kustlinje, där den fuktiga havsluften påverkar taken mer än vad många tror. Mossa, fukt i råsponten och slitna beslag är vanliga problem på tak längs kusten. Vi erbjuder en kostnadsfri takkontroll utan förpliktelser. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte.",
     extraContent:
@@ -468,9 +468,9 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare i Norrtälje — din lokala partner för takbyte, takrenovering och plåtarbeten i Norrtäljeområdet.",
+      "Takläggare i Norrtälje — din lokala partner för takbyte och takrenovering i Norrtäljeområdet.",
     longDescription:
-      "Vi arbetar i Norrtälje stad och i hela kommunen: takbyte, takrenovering, takreparation och plåtarbeten på villor och andra byggnader. Du får en kostnadsfri takkontroll och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för takkontroll.",
+      "Vi arbetar i Norrtälje stad och i hela kommunen: takbyte, takrenovering och takreparation på villor och andra byggnader. Du får en kostnadsfri takkontroll och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för takkontroll.",
     extraContent:
       "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten och takavvattning med hängrännor och stuprör. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll, fast pris i offerten utan löpande timpris och utförande enligt AMA. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
     uniqueFAQ: {
@@ -642,7 +642,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Herräng ligger kustnära i norra Roslagen med en blandning av äldre gruvortsbebyggelse, villor och fritidshus. Saltmättad luft och vindexponering gör att billiga plåtkvaliteter och dåliga infästningar inte håller här. Vi väljer material med hög korrosionsklass och förstärkta infästningar vid takbyten i Herräng. Vi utför även takrenovering, plåtarbeten, taktvätt och takmålning — allt med fast pris och 10 års utförandegaranti.",
     extraContent:
-      "Många hus i Herräng har eternit- eller pannplåttak från mitten av 1900-talet. Har du eternittak hanterar vi asbestsanering enligt Arbetsmiljöverkets föreskrifter via behörig partner innan nytt tak monteras. Vi guidar dig genom hela processen och tar hand om dokumentation och avfallshantering.",
+      "Många hus i Herräng har eternit- eller pannplåttak från mitten av 1900-talet. Har du eternittak hanterar vi asbestsanering enligt Arbetsmiljöverkets föreskrifter via behörig partner innan nytt tak monteras.",
     uniqueFAQ: {
       question: "Har ni erfarenhet av eternittak i Herräng?",
       answer:
@@ -1562,7 +1562,7 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Stockholm — takbyte, takrenovering och plåtarbeten i hela Stockholms kommun. Takläggare med fast pris och 10 års utförandegaranti.",
+      "Takläggare i Stockholm — takbyte och takrenovering i hela Stockholms kommun. Takläggare med fast pris och 10 års utförandegaranti.",
     longDescription:
       "Stockholms bebyggelse sträcker sig från medeltida tegelhus i Gamla stan till funktionalistvillor från 30-talet och moderna nybyggen i Hammarby sjöstad. Den spridda bebyggelsen innebär lika många taktyper som stadsdelar — tegeltak i innerstaden, plåttak i industriområdena och betongpannor i miljonprogramsområdena. Vi lämnar alltid fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -1626,9 +1626,9 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Bromma — takbyte, takrenovering och plåtarbeten i västra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Bromma — takbyte och takrenovering i västra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Bromma har en varierad bebyggelse — från 1920-talsvillor i Bromma trädgårdsstad till radhus och 70-talsvillor i Blackeberg och Riksby. På hus av den åldern är det vanligt att taket förr eller senare blir moget för omläggning eller byte. Vi utför takbyten och takomläggningar i Bromma med både plåttak (TP20, dubbelfalsat) och betongpannor, alltid med ny taksäkerhet, fungerande ventilation och avvattning. Vi går igenom pris och tidsplan i förväg, så att offerten blir realistisk för Brommas villaområden.",
+      "Bromma har en varierad bebyggelse — från 1920-talsvillor i Bromma trädgårdsstad till radhus och 70-talsvillor i Blackeberg och Riksby. På hus av den åldern är det vanligt att taket förr eller senare blir moget för omläggning eller byte. Vi utför takbyten och takomläggningar i Bromma med både plåttak (TP20, dubbelfalsat) och betongpannor, alltid med ny taksäkerhet, fungerande ventilation och avvattning. Vi går igenom priset i förväg, så att offerten blir realistisk för Brommas villaområden.",
     extraContent:
       "På äldre villatak i Bromma kan underlagspappen torka sönder och betongpannor börja frostspränga med åren. I de fallen är omläggning med ny papp, ny läkt och antingen nya pannor eller plåt oftast bäst ekonomi. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     uniqueFAQ: {
@@ -1651,12 +1651,12 @@ export const locations: LocationData[] = [
     longDescription:
       "Kungsholmen har en blandning av tidiga bostadsrättsfastigheter, äldre trähus och nyare bostadsområden. Taken varierar från plåttak på industribyggnader vid Riddarfjärden till tegeltak på äldre bostadshus. Vi utför takbyten, takrenoveringar och plåtarbeten på Kungsholmen för både stora bostadsrättsfastigheter och mindre villor. Vi samordnar ställning, avfall och materialleverans i den tätta innerstaden.",
     extraContent:
-      "Vi ger offert, tidsplan och dokumentation som passar en bostadsrättsförenings beslutsprocess. Vi arbetar i innerstadsmiljö där hänsyn till boende och trafik är avgörande.",
+      "Vi ger offert som passar en bostadsrättsförenings beslutsprocess. Vi arbetar i innerstadsmiljö där hänsyn till boende och trafik är avgörande.",
     uniqueFAQ: {
       question:
         "Kan ni utföra takbyte för en bostadsrättsförening på Kungsholmen?",
       answer:
-        "Ja, vi utför takbyten på bostadsrättsfastigheter på Kungsholmen. Vi ger offert, tidsplan och dokumentation anpassad för en bostadsrättsförenings beslutsprocess, och samordnar arbetet så att boende störas så lite som möjligt. Kontakta oss så presenterar vi en plan för er fastighet.",
+        "Ja, vi utför takbyten på bostadsrättsfastigheter på Kungsholmen. Vi ger offert anpassad för en bostadsrättsförenings beslutsprocess, och samordnar arbetet så att boende störas så lite som möjligt. Kontakta oss så presenterar vi en plan för er fastighet.",
     },
     primaryKeyword: "takläggare Kungsholmen",
     lat: 59.3325,
@@ -1691,7 +1691,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Skärholmen — takbyte, takrenovering och plåtarbeten i sydvästra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Skärholmen — takbyte och takrenovering i sydvästra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Skärholmen och omgivande stadsdelar har en stor andel miljonprogrambebyggelse med stora bostadshus, radhus och centrumanläggningar. Taken är ofta plåttak och papptak från 1960- och 70-talet som nu nått sin livslängd. Vi utför takbyten och takrenoveringar i Skärholmen med material som passar både bostadshus och kommersiella fastigheter — TP20-plåt, bandtäckning och membrantak för flacka ytor. Vi hanterar stora takytor effektivt och kostnadseffektivt.",
     extraContent:
@@ -1699,7 +1699,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Kan ni byta tak på stora bostadshus i Skärholmen?",
       answer:
-        "Ja, vi utför takbyten på stora bostadshus och radhus i Skärholmen. Stora takytor monteras effektivt med TP20-plåt eller bandtäckning. Vi planerar ställning, material och avfall för att minimera störningar för boende. Kontakta oss för offert och tidsplan anpassad för er fastighet.",
+        "Ja, vi utför takbyten på stora bostadshus och radhus i Skärholmen. Stora takytor monteras effektivt med TP20-plåt eller bandtäckning. Vi planerar ställning, material och avfall för att minimera störningar för boende. Kontakta oss för offert anpassad för er fastighet.",
     },
     primaryKeyword: "takläggare Skärholmen",
     lat: 59.2756,
@@ -1712,7 +1712,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Farsta — takbyte, takrenovering och plåtarbeten i södra Stockholm. Fast pris, kostnadsfri takkontroll.",
+      "Takläggare i Farsta — takbyte och takrenovering i södra Stockholm. Fast pris, kostnadsfri takkontroll.",
     longDescription:
       "Farsta och stadsdelarna runt Farsta strand har en blandning av 50-talsvillor, 70-talsradhus och nyare bostadsområden. En del av bebyggelsen har tak från den perioden, där betongpannor kan börja frostspränga och underlagspapp torka och spricka med åren. Vi utför takbyten och takomläggningar i Farsta med både plåt och pannor, och lämnar alltid fast pris efter kostnadsfri takkontroll. Vi bedömer behovet av snörasskydd och ser till att taksäkerheten uppfyller svenska krav.",
     extraContent:
@@ -1754,15 +1754,15 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Sundbyberg — takbyte, takrenovering och plåtarbeten. Takläggare med fast pris och 10 års utförandegaranti.",
+      "Takläggare i Sundbyberg — takbyte och takrenovering. Takläggare med fast pris och 10 års utförandegaranti.",
     longDescription:
       "Sundbyberg är en tät kommun med en blandning av tidiga villaområden, bostadsrättsfastigheter och nyare bostadsbebyggelse kring stationerna. Många äldre villatak har betongpannor eller tegel från 50- och 60-talet som behöver omläggning. Vi utför takbyten och takrenoveringar i Sundbyberg med material som passar både äldre villor och moderna bostadshus.",
     extraContent:
-      "Genom att samordna projekt kan vi hålla nere kostnaden och korta ledtiderna. Vi lämnar offert och tidsplan anpassad för en bostadsrättsförenings beslutsprocess.",
+      "Genom att samordna projekt kan vi hålla nere kostnaden och korta ledtiderna. Vi lämnar offert anpassad för en bostadsrättsförenings beslutsprocess.",
     uniqueFAQ: {
       question: "Kan ni samordna takbyte för flera fastigheter i Sundbyberg?",
       answer:
-        "Ja, vi samordnar gärna takbyten för bostadsrättsföreningar eller grannfastigheter i Sundbyberg. Vi ger offert och tidsplan anpassad för en bostadsrättsförenings beslutsprocess. Kontakta oss för att diskutera ert projekt.",
+        "Ja, vi samordnar gärna takbyten för bostadsrättsföreningar eller grannfastigheter i Sundbyberg. Vi ger offert anpassad för en bostadsrättsförenings beslutsprocess. Kontakta oss för att diskutera ert projekt.",
     },
     primaryKeyword: "takläggare Sundbyberg",
     lat: 59.3612,
@@ -1817,7 +1817,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: true,
     description:
-      "Takläggare på Lidingö — takbyte, takrenovering och plåtarbeten på en ö nära Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare på Lidingö — takbyte och takrenovering på en ö nära Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Lidingö är en ö med exklusiv villabebyggelse, strandnära hus och bostadsrättsfastigheter — allt samlar på en ö med broförbindelse men ändå ö-karaktär. Taken utsätts för fukt från omgivande vatten och vind. Vi utför takbyten, bandtäckning och takrenoveringar på Lidingö med material som tål det fuktiga läget. Många hus har komplexa tak med brutna fall och kupor som kräver skicklig plåtslagning.",
     extraContent:
@@ -1838,7 +1838,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Nacka — takbyte, takrenovering och plåtarbeten i östra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Nacka — takbyte och takrenovering i östra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Nacka kommun sträcker sig från tät bebyggelse vid Järla och Sicklaö till skogsnära villor i Saltsjöbaden och Älta. Taken varierar från industribyggnaders plåttak till exklusiva villatak i Saltsjöbaden. Vi utför takbyten, takomläggningar och plåtarbeten i hela Nacka kommun med material anpassat för varje stadsdel. Många tak i Älta och Nackanäs är nu 30–40 år och mogna för omläggning.",
     extraContent:
@@ -1859,7 +1859,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Värmdö — takbyte, takrenovering och plåtarbeten i Stockholms södra skärgård. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Värmdö — takbyte och takrenovering i Stockholms södra skärgård. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Värmdö är en stor kommun som sträcker sig från tätorten Gustavsberg ut genom södra skärgården till öar som Sandhamn och Möja. Bebyggelsen varierar från villaområden till fritidshus och skärgårdsgårdar. Vi utför takbyten, takomläggningar och plåtarbeten med material valt för skärgårdsklimatet.",
     extraContent:
@@ -1880,7 +1880,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Tyresö — takbyte, takrenovering och plåtarbeten i södra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Tyresö — takbyte och takrenovering i södra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Tyresö sträcker sig från villabebyggelse i Bollmora till skog- och sjönära hus vid Tyresö slott och ut mot Älvudden. Bebyggelsen är en blandning av äldre villor, 70-talsradhus och nyare bostadsområden. Många tak är nu mogna för omläggning. Vi utför takbyten och takrenoveringar i Tyresö med både plåt och pannor, och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -1901,7 +1901,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Haninge — takbyte, takrenovering och plåtarbeten söder om Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Haninge — takbyte och takrenovering söder om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Haninge kommun omfattar Handen, Vendelsö, Dalarö och skärgårdsöarna ut mot Ornö och Utö. Bebyggelsen är varierad — villaområden, fritidshus och skärgårdsgårdar. Vi anpassar material efter det fuktiga, salta klimatet nära havet.",
     extraContent:
@@ -1922,7 +1922,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: true,
     description:
-      "Takläggare på Ekerö — takbyte, takrenovering och plåtarbeten på en ö i Mälaren. Fast pris och 10 års utförandegaranti.",
+      "Takläggare på Ekerö — takbyte och takrenovering på en ö i Mälaren. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Ekerö är en ö i Mälaren med en varierad bebyggelse — från kungsgårdshistoria i Drottningholm till villor i Mälarstrand och fritidshus ut mot ön. Taken utsätts för fukt och vind från Mälaren. Vi utför takbyten, takomläggningar och plåtarbeten på Ekerö med material valt för det sjönära klimatet. Många hus har tegeltak eller plåttak från 1950-talet som nu behöver omläggning.",
     extraContent:
@@ -1951,7 +1951,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Kan ni byta tak på bostadsrättsfastigheter i Järfälla?",
       answer:
-        "Ja, vi utför takbyten på bostadsrättsfastigheter och radhus i Järfälla. Vi ger offert och tidsplan anpassad för en bostadsrättsförenings beslutsprocess och planerar arbetet så att boende störas minimalt. Stora ytor monteras effektivt med TP20-plåt. Kontakta oss för offert.",
+        "Ja, vi utför takbyten på bostadsrättsfastigheter och radhus i Järfälla. Vi ger offert anpassad för en bostadsrättsförenings beslutsprocess och planerar arbetet så att boende störas minimalt. Stora ytor monteras effektivt med TP20-plåt. Kontakta oss för offert.",
     },
     primaryKeyword: "takläggare Järfälla",
     lat: 59.4189,
@@ -1964,7 +1964,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Huddinge — takbyte, takrenovering och plåtarbeten söder om Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Huddinge — takbyte och takrenovering söder om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Huddinge har en stor villabebyggelse och bostadsrättsområden i Flemingsberg, Fullregatorp och Stuvsta. Många tak från 60- och 70-talet är nu mogna för omläggning eller byte. Vi utför takbyten, takomläggningar och plåtarbeten i Huddinge med både plåttak och betongpannor.",
     extraContent:
@@ -1985,7 +1985,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Sigtuna — takbyte, takrenovering och plåtarbeten i en av Sveriges äldsta städer. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Sigtuna — takbyte och takrenovering i en av Sveriges äldsta städer. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Sigtuna är en av Sveriges äldsta städer med medeltida gaturum, tegelhus och en kulturmiljö som ställer höga krav på takläggning. Taken i centrala Sigtuna är ofta tegeltak och plåttak från tidigt 1900-tal. Vi utför takbyten, takrenoveringar och plåtarbeten i Sigtuna med respekt för den kulturhistoriska bebyggelsen — tegelpannor, dubbelfalsad plåt och handfalsade beslag.",
     extraContent:
@@ -2028,7 +2028,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Nynäshamn — takbyte, takrenovering och plåtarbeten i kustläge söder om Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Nynäshamn — takbyte och takrenovering i kustläge söder om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Nynäshamn ligger längst söderut i Stockholms län med direktkontakt med öppet hav — ett kustläge som sliter hårt på takmaterial med salt, vind och fukt. Bebyggelsen varierar från villor i tätorten till fritidshus ut mot kusten. Vi utför takbyten, takrenoveringar och plåtarbeten i Nynäshamn med material valt för det hårda kustklimatet — korrosionsbeständig plåt och förstärkta infästningar.",
     extraContent:
@@ -2071,7 +2071,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Vällingby — takbyte, takrenovering och plåtarbeten i västra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Vällingby — takbyte och takrenovering i västra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Vällingby växte fram som en av Europas mest uppmärksammade ABC-städer på 1950-talet, med en blandning av centrumanläggning, bostadshus och villabebyggelse. Taken i Vällingby speglar denna period — plåttak och tegeltak från 50- och 60-talet som nu nått sin livslängd. Vi utför takbyten, takomläggningar och plåtarbeten i Vällingby med material valt för den äldre bebyggelsens karaktär. Många tak har betongpannor som frostsprängt och underlagspapp som torkat sönder.",
     extraContent:
@@ -2092,7 +2092,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Spånga — takbyte, takrenovering och plåtarbeten i västra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Spånga — takbyte och takrenovering i västra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Spånga har en småortskaraktär med ursprunglig bebyggelse från tidigt 1900-tal, blandat med nyare villaområden och radhus. Taken varierar från äldre tegeltak på ursprungliga torp och villor till plåttak på 70-talsbebyggelse. Vi utför takbyten och takrenoveringar i Spånga med material som bevarar småortens karaktär. En del av 70-talsbebyggelsens tak är nu mogna för omläggning.",
     extraContent:
@@ -2114,7 +2114,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Vendelsö — takbyte, takrenovering och plåtarbeten i Haninge kommun. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Vendelsö — takbyte och takrenovering i Haninge kommun. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Vendelsö är en villamilstolpe i Haninge kommun, med 70- och 80-talsvillor och radhus i skogsnära läge. Många tak är nu 30–40 år gamla med betongpannor som frostspränger och underlagspapp som torkat sönder. Vi utför takbyten och takomläggningar i Vendelsö med både plåttak och betongpannor, alltid med ny taksäkerhet och fungerande ventilation. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2135,7 +2135,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Vega — takbyte, takrenovering och plåtarbeten i Haninge kommun. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Vega — takbyte och takrenovering i Haninge kommun. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Vega är ett expansivt bostadsområde i Haninge kommun, med nyare villor, radhus och bostadsrättsfastigheter. Taken är modernare men ställs likväl krav på avvattning, ventilation och snörasskydd enligt svenska normer. Vi utför takbyten, takomläggningar och plåtarbeten i Vega med material valt för lång livslängd. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2157,7 +2157,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Älvsjö — takbyte, takrenovering och plåtarbeten i södra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Älvsjö — takbyte och takrenovering i södra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Älvsjö har en blandning av villabebyggelse från tidigt 1900-tal och bostadsrättsfastigheter från miljonprogramtiden. Taken varierar från tegeltak på äldre villor till plåttak på bostadshus. En del av bebyggelsen från miljonprogramtiden har tak som med åren blir mogna för omläggning eller byte. Vi utför takbyten och takrenoveringar i Älvsjö med både plåttak och betongpannor, och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2178,7 +2178,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Enskede — takbyte, takrenovering och plåtarbeten i södra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Enskede — takbyte och takrenovering i södra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Enskede är en av Stockholms äldsta trädgårdsstäder med villabebyggelse från 1900- och 1910-talen, blandat med nyare bostadsområden. Taken på de äldsta husen är ofta tegeltak och plåttak från tidigt 1900-tal. Vi utför takbyten och takrenoveringar i Enskede med respekt för trädgårdsstadens kulturhistoriska värden — tegelpannor, dubbelfalsad plåt och handfalsade beslag. Många tak är nu mogna för omläggning.",
     extraContent:
@@ -2199,7 +2199,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Skarpnäck — takbyte, takrenovering och plåtarbeten i södra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Skarpnäck — takbyte och takrenovering i södra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Skarpnäck har en blandning av småhusbebyggelse, bostadsrättsområden och 70-talsradhus. Taken varierar från plåttak på bostadshus till betongpannor på villor och radhus. Många tak är nu 30–40 år gamla och mogna för omläggning. Vi utför takbyten och takrenoveringar i Skarpnäck med både plåttak och betongpannor, och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2221,7 +2221,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Botkyrka — takbyte, takrenovering och plåtarbeten sydväst om Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Botkyrka — takbyte och takrenovering sydväst om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Botkyrka kommun omfattar Tumba, Tullinge och Fittja, med stor andel miljonprogrambebyggelse och villaområden. Taken är ofta plåttak och papptak från 1960- och 70-talet som nu nått sin livslängd. Vi utför takbyten och takrenoveringar i Botkyrka med material som passar både bostadshus och villor — TP20-plåt, bandtäckning och membrantak för flacka ytor. Vi hanterar stora takytor effektivt.",
     extraContent:
@@ -2242,7 +2242,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Salem — takbyte, takrenovering och plåtarbeten sydväst om Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Salem — takbyte och takrenovering sydväst om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Salem är en liten kommun vid sjön Bornsjön med villabebyggelse i Rönninge och Salem. Taken är ofta villatak med betongpannor eller plåt från 70- och 80-talet, nu mogna för omläggning. Sjönära läge ställer krav på material med god fukttålighet. Vi utför takbyten och takrenoveringar i Salem med material valt för det sjönära klimatet, och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2263,7 +2263,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Södertälje — takbyte, takrenovering och plåtarbeten sydväst om Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Södertälje — takbyte och takrenovering sydväst om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Södertälje är en industri- och hamnstad vid Södertäljeviken och Mälaren, med en blandning av innerstadsbebyggelse, villaområden och bostadsrättsfastigheter. Taken varierar från tegeltak i centrum till plåttak på industribyggnader. Vi utför takbyten, takomläggningar och plåtarbeten i Södertälje för både villatak och större fastigheter. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2285,7 +2285,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Upplands-Bro — takbyte, takrenovering och plåtarbeten nordväst om Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Upplands-Bro — takbyte och takrenovering nordväst om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Upplands-Bro kommun omfattar Kungsängen, Bro och Brunna, med villabebyggelse och bostadsrättsområden i ett sjö- och skogsnära läge. Taken varierar från betongpannor på 70-talsvillor till plåttak på nyare hus. Vi utför takbyten, takomläggningar och plåtarbeten i Upplands-Bro med material valt för det varierade klimatet. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2307,9 +2307,9 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Hammarby Sjöstad — takbyte, takrenovering och plåtarbeten i Hammarby Sjöstad. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Hammarby Sjöstad — takbyte och takrenovering i Hammarby Sjöstad. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Hammarby Sjöstad är modern sjönära stadsdel med flacka tak och stora takterrasser. Bebyggelsen består till stor del av moderna flerbostadshus med papp-, duk- och plåttak från 2000-talet. Vi utför takbyte, takrenovering och takomläggning i Hammarby Sjöstad med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
+      "Hammarby Sjöstad är modern sjönära stadsdel med flacka tak och stora takterrasser. Bebyggelsen består till stor del av moderna flerbostadshus med papp-, duk- och plåttak från 2000-talet. Vi utför takbyte, takrenovering och takomläggning i Hammarby Sjöstad med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
       "Vi går igenom förutsättningarna i Hammarby Sjöstad — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Hammarby Sjöstad.",
     uniqueFAQ: {
@@ -2328,9 +2328,9 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Liljeholmen — takbyte, takrenovering och plåtarbeten i Liljeholmen. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Liljeholmen — takbyte och takrenovering i Liljeholmen. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Vi utför takbyte, takomläggning och plåtarbeten i Liljeholmen, tät stadsdel i södra innerstaden med blandad bebyggelse. Bebyggelsen består till stor del av bostadsrättsfastigheter från 1930-tal blandat med nyproduktion, och de skador vi oftast hittar vid takkontroll är spröd underlagspapp, rostiga beslag och otäta genomföringar kring skorsten och ventilation. Vi går igenom hela takkonstruktionen innan vi lämnar fast pris, och du har samma kontaktperson från takkontroll till slutgenomgång.",
+      "Vi utför takbyte och takomläggning i Liljeholmen, tät stadsdel i södra innerstaden med blandad bebyggelse. Bebyggelsen består till stor del av bostadsrättsfastigheter från 1930-tal blandat med nyproduktion, och de skador vi oftast hittar vid takkontroll är spröd underlagspapp, rostiga beslag och otäta genomföringar kring skorsten och ventilation. Vi går igenom hela takkonstruktionen innan vi lämnar fast pris, och du har samma kontaktperson från takkontroll till slutgenomgång.",
     extraContent:
       "Vi går igenom förutsättningarna i Liljeholmen — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Liljeholmen.",
     uniqueFAQ: {
@@ -2349,9 +2349,9 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Årsta — takbyte, takrenovering och plåtarbeten i Årsta. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Årsta — takbyte och takrenovering i Årsta. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Årsta — klassisk folkhemsstadsdel med stora sammanhängande takytor — har ett fastighetsbestånd med lamellhus från 1940–50-tal och villor i Årsta villastad. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Årsta: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris och tydlig tidplan, och tar hand om hela processen från takkontroll till bortforslat avfall.",
+      "Årsta — klassisk folkhemsstadsdel med stora sammanhängande takytor — har ett fastighetsbestånd med lamellhus från 1940–50-tal och villor i Årsta villastad. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Årsta: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Årsta — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Du får ett fast pris som är räknat på ditt tak — inte ett uppskattat spann. Bor du granne med någon som också ska byta tak går det ofta att samordna arbetena och sänka etableringskostnaden. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Årsta.",
     uniqueFAQ: {
@@ -2370,9 +2370,9 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Hägersten — takbyte, takrenovering och plåtarbeten i Hägersten. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takläggare i Hägersten — takbyte och takrenovering i Hägersten. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
-      "Hägersten är grönt villa- och flerfamiljsområde sydväst om innerstaden. Bebyggelsen består till stor del av villor från 1930-talet och trevåningshus med tegel- och plåttak. Vi utför takbyte, takrenovering och takomläggning i Hägersten med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar. Ställning, leveranser, avfall och slutstädning ingår i vårt ansvar.",
+      "Hägersten är grönt villa- och flerfamiljsområde sydväst om innerstaden. Bebyggelsen består till stor del av villor från 1930-talet och trevåningshus med tegel- och plåttak. Vi utför takbyte, takrenovering och takomläggning i Hägersten med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar.",
     extraContent:
       "Vi går igenom förutsättningarna i Hägersten — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Hägersten.",
     uniqueFAQ: {
@@ -2391,7 +2391,7 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Gröndal — takbyte, takrenovering och plåtarbeten i Gröndal. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Gröndal — takbyte och takrenovering i Gröndal. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
       "Gröndal är en kuperad stadsdel vid Mälaren, med branta tak på stjärnhus och funkisfastigheter från 1940-talet. Vid en kostnadsfri takkontroll kontrollerar vi underlagspapp, läkt, råspont, plåtbeslag och ventilation under taket — det är där ett takbyte avgörs. Du får en skriftlig bedömning och ett fast pris innan något arbete påbörjas.",
     extraContent:
@@ -2412,7 +2412,7 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Aspudden — takbyte, takrenovering och plåtarbeten i Aspudden. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Aspudden — takbyte och takrenovering i Aspudden. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Aspudden — småskalig stadsdel med tät kvartersbebyggelse — har ett fastighetsbestånd med 1920–30-talsfastigheter med tegel- och plåttak. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt i Aspudden: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — takkontroll, materialval, ställning, takarbete och bortforsling.",
     extraContent:
@@ -2433,7 +2433,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Häggvik — takbyte, takrenovering och plåtarbeten i Häggvik. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Häggvik — takbyte och takrenovering i Häggvik. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Häggvik är villa- och radhusområde i södra Sollentuna. Bebyggelsen består till stor del av villor och radhus från 1960–70-tal med betongpannor. Vi utför takbyte, takrenovering och takomläggning i Häggvik med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en skriftlig offert med fast pris.",
     extraContent:
@@ -2454,7 +2454,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Helenelund — takbyte, takrenovering och plåtarbeten i Helenelund. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Helenelund — takbyte och takrenovering i Helenelund. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Vi lägger tak i Helenelund, pendlingsnära del av Sollentuna, där villor och radhus från 1960–70-tal dominerar. Äldre tak i området har ofta samma problem under pannorna: sliten papp, uttorkade tätningar och beslag som börjat rosta. Vi byter det som behöver bytas, säkerställer rätt ventilation och lämnar 10 års utförandegaranti på arbetet.",
     extraContent:
@@ -2475,7 +2475,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Edsberg — takbyte, takrenovering och plåtarbeten i Edsberg. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takläggare i Edsberg — takbyte och takrenovering i Edsberg. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
       "Edsberg — villa- och flerfamiljsområde vid Edsviken — har ett fastighetsbestånd med 1970-talsbebyggelse med flacka tak och äldre villor. Taken börjar närma sig slutet av sin livslängd, och då är omläggning oftast bättre ekonomi än lappning. RoslagsTak utför kompletta takprojekt i Edsberg: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
     extraContent:
@@ -2496,9 +2496,9 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Rotebro — takbyte, takrenovering och plåtarbeten i Rotebro. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Rotebro — takbyte och takrenovering i Rotebro. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
-      "Rotebro är norra delen av Sollentuna kommun. Bebyggelsen består till stor del av villaområden och radhuslängor med betongpannor. Vi utför takbyte, takrenovering och takomläggning i Rotebro med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
+      "Rotebro är norra delen av Sollentuna kommun. Bebyggelsen består till stor del av villaområden och radhuslängor med betongpannor. Vi utför takbyte, takrenovering och takomläggning i Rotebro med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
       "Vi går igenom förutsättningarna i Rotebro — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Rotebro.",
     uniqueFAQ: {
@@ -2517,9 +2517,9 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Norrviken — takbyte, takrenovering och plåtarbeten i Norrviken. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Norrviken — takbyte och takrenovering i Norrviken. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Vi tar uppdrag för takbyte och takrenovering i Norrviken (sjönära villaområde i Sollentuna). Här handlar det oftast om äldre villor med tegel- och plåttak, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter takkontrollen får du ett fast pris, en tidplan och besked om vad som ingår — inga tillägg i efterhand.",
+      "Vi tar uppdrag för takbyte och takrenovering i Norrviken (sjönära villaområde i Sollentuna). Här handlar det oftast om äldre villor med tegel- och plåttak, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter takkontrollen får du ett fast pris och besked om vad som ingår.",
     extraContent:
       "Vi går igenom förutsättningarna i Norrviken — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Norrviken.",
     uniqueFAQ: {
@@ -2538,9 +2538,9 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Stocksund — takbyte, takrenovering och plåtarbeten i Stocksund. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Stocksund — takbyte och takrenovering i Stocksund. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Stocksund — exklusivt villaområde i Danderyd — har ett fastighetsbestånd med sekelskiftesvillor med brant taklutning och plåtdetaljer. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Stocksund: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris och tydlig tidplan, och tar hand om hela processen från takkontroll till bortforslat avfall.",
+      "Stocksund — exklusivt villaområde i Danderyd — har ett fastighetsbestånd med sekelskiftesvillor med brant taklutning och plåtdetaljer. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Stocksund: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Stocksund — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Stocksund.",
     uniqueFAQ: {
@@ -2609,7 +2609,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Barkarby — takbyte, takrenovering och plåtarbeten i Barkarby. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Barkarby — takbyte och takrenovering i Barkarby. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
       "Barkarby — expansiv stadsdel i Järfälla — har ett fastighetsbestånd med nyproduktion med flacka tak blandat med äldre villor. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt i Barkarby: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — takkontroll, materialval, ställning, takarbete och bortforsling.",
     extraContent:
@@ -2630,7 +2630,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Kallhäll — takbyte, takrenovering och plåtarbeten i Kallhäll. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Kallhäll — takbyte och takrenovering i Kallhäll. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Kallhäll är norra Järfälla vid Mälaren. Bebyggelsen består till stor del av villor och radhus från 1960–80-tal. Vi utför takbyte, takrenovering och takomläggning i Kallhäll med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en skriftlig offert med fast pris.",
     extraContent:
@@ -2672,7 +2672,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Bro — takbyte, takrenovering och plåtarbeten i Bro. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Bro — takbyte och takrenovering i Bro. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Bro — tätort i Upplands-Bro — har ett fastighetsbestånd med villor, radhus och lantbruksfastigheter. Taken börjar närma sig slutet av sin livslängd, och då är omläggning oftast bättre ekonomi än lappning. RoslagsTak utför kompletta takprojekt i Bro: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
     extraContent:
@@ -2693,9 +2693,9 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Kungsängen — takbyte, takrenovering och plåtarbeten i Kungsängen. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takläggare i Kungsängen — takbyte och takrenovering i Kungsängen. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
-      "Kungsängen är Upplands-Bros centralort vid Mälaren. Bebyggelsen består till stor del av villaområden och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Kungsängen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
+      "Kungsängen är Upplands-Bros centralort vid Mälaren. Bebyggelsen består till stor del av villaområden och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Kungsängen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
       "Vi går igenom förutsättningarna i Kungsängen — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Kungsängen.",
     uniqueFAQ: {
@@ -2714,7 +2714,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Märsta — takbyte, takrenovering och plåtarbeten i Märsta. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Märsta — takbyte och takrenovering i Märsta. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
       "Märsta är Sigtuna kommuns största tätort med radhus och flerbostadshus från 1970-talet. Vid en kostnadsfri takkontroll kontrollerar vi underlagspapp, läkt, råspont, plåtbeslag och ventilation under taket — det är där ett takbyte avgörs. Du får en skriftlig bedömning och ett fast pris innan något arbete påbörjas.",
     extraContent:
@@ -2735,9 +2735,9 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Blackeberg — takbyte, takrenovering och plåtarbeten i Blackeberg. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Blackeberg — takbyte och takrenovering i Blackeberg. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Blackeberg — funkisstadsdel i västra Bromma — har ett fastighetsbestånd med smalhus från 1950-talet och villor. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Blackeberg: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris och tydlig tidplan, och tar hand om hela processen från takkontroll till bortforslat avfall.",
+      "Blackeberg — funkisstadsdel i västra Bromma — har ett fastighetsbestånd med smalhus från 1950-talet och villor. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Blackeberg: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Blackeberg — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Blackeberg.",
     uniqueFAQ: {
@@ -2756,9 +2756,9 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Nockeby — takbyte, takrenovering och plåtarbeten i Nockeby. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Nockeby — takbyte och takrenovering i Nockeby. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Nockeby är exklusivt villaområde vid Mälaren. Bebyggelsen består till stor del av stora villor med tegel- och plåttak. Vi utför takbyte, takrenovering och takomläggning i Nockeby med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar. Ställning, leveranser, avfall och slutstädning ingår i vårt ansvar.",
+      "Nockeby är exklusivt villaområde vid Mälaren. Bebyggelsen består till stor del av stora villor med tegel- och plåttak. Vi utför takbyte, takrenovering och takomläggning i Nockeby med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar.",
     extraContent:
       "Vi går igenom förutsättningarna i Nockeby — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Nockeby.",
     uniqueFAQ: {
@@ -2777,7 +2777,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Abrahamsberg — takbyte, takrenovering och plåtarbeten i Abrahamsberg. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Abrahamsberg — takbyte och takrenovering i Abrahamsberg. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Vi lägger tak i Abrahamsberg, trädgårdsstad i Bromma, där funkisvillor och trevåningshus från 1930–40-tal dominerar. Äldre tak i området har ofta samma problem under pannorna: sliten papp, uttorkade tätningar och beslag som börjat rosta. Vi byter det som behöver bytas, säkerställer rätt ventilation och lämnar 10 års utförandegaranti på arbetet.",
     extraContent:
@@ -2819,7 +2819,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Kista — takbyte, takrenovering och plåtarbeten i Kista. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Kista — takbyte och takrenovering i Kista. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
       "Kista är kontors- och bostadsstadsdel i nordvästra Stockholm. Bebyggelsen består till stor del av flacka tak på kontorsfastigheter och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Kista med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en skriftlig offert med fast pris.",
     extraContent:
@@ -2840,9 +2840,9 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Akalla — takbyte, takrenovering och plåtarbeten i Akalla. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Akalla — takbyte och takrenovering i Akalla. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Vi tar uppdrag för takbyte och takrenovering i Akalla (norra Järvaområdet). Här handlar det oftast om miljonprogramsbebyggelse med papp- och plåttak, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter takkontrollen får du ett fast pris, en tidplan och besked om vad som ingår — inga tillägg i efterhand.",
+      "Vi tar uppdrag för takbyte och takrenovering i Akalla (norra Järvaområdet). Här handlar det oftast om miljonprogramsbebyggelse med papp- och plåttak, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter takkontrollen får du ett fast pris och besked om vad som ingår.",
     extraContent:
       "Vi går igenom förutsättningarna i Akalla — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Akalla.",
     uniqueFAQ: {
@@ -2861,7 +2861,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Tensta — takbyte, takrenovering och plåtarbeten i Tensta. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Tensta — takbyte och takrenovering i Tensta. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Tensta — del av Järvafältet — har ett fastighetsbestånd med flerbostadshus från 1970-talet med stora takytor. Taken börjar närma sig slutet av sin livslängd, och då är omläggning oftast bättre ekonomi än lappning. RoslagsTak utför kompletta takprojekt i Tensta: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
     extraContent:
@@ -2903,7 +2903,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Fisksätra — takbyte, takrenovering och plåtarbeten i Fisksätra. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takläggare i Fisksätra — takbyte och takrenovering i Fisksätra. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
       "Bland flerbostadshus från 1970-talet är det vanligt att underlagspappen tjänat ut långt före själva taktäckningen — då räcker det sällan att byta enstaka pannor. Vi går igenom konstruktionen, föreslår den lösning som ger bäst ekonomi över 30 år och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
@@ -2924,9 +2924,9 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Saltsjö-Boo — takbyte, takrenovering och plåtarbeten i Saltsjö-Boo. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Saltsjö-Boo — takbyte och takrenovering i Saltsjö-Boo. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
-      "Saltsjö-Boo — sjönära villaområde i norra Nacka — har ett fastighetsbestånd med villor från 1950-tal till nyproduktion. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Saltsjö-Boo: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris och tydlig tidplan, och tar hand om hela processen från takkontroll till bortforslat avfall.",
+      "Saltsjö-Boo — sjönära villaområde i norra Nacka — har ett fastighetsbestånd med villor från 1950-tal till nyproduktion. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Saltsjö-Boo: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Saltsjö-Boo — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Saltsjö-Boo.",
     uniqueFAQ: {
@@ -2945,9 +2945,9 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Älta — takbyte, takrenovering och plåtarbeten i Älta. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Älta — takbyte och takrenovering i Älta. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Älta är tätort mellan Nacka och Tyresö. Bebyggelsen består till stor del av radhus, villor och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Älta med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar. Ställning, leveranser, avfall och slutstädning ingår i vårt ansvar.",
+      "Älta är tätort mellan Nacka och Tyresö. Bebyggelsen består till stor del av radhus, villor och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Älta med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar.",
     extraContent:
       "Vi går igenom förutsättningarna i Älta — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Älta.",
     uniqueFAQ: {
@@ -2966,9 +2966,9 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Gustavsberg — takbyte, takrenovering och plåtarbeten i Gustavsberg. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Gustavsberg — takbyte och takrenovering i Gustavsberg. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Vi utför takbyte, takomläggning och plåtarbeten i Gustavsberg, Värmdös centralort med bruksbebyggelse. Bebyggelsen består till stor del av äldre bruksbostäder, villor och nyproduktion, och de skador vi oftast hittar vid takkontroll är spröd underlagspapp, rostiga beslag och otäta genomföringar kring skorsten och ventilation. Vi går igenom hela takkonstruktionen innan vi lämnar fast pris, och du har samma kontaktperson från takkontroll till slutgenomgång.",
+      "Vi utför takbyte och takomläggning i Gustavsberg, Värmdös centralort med bruksbebyggelse. Bebyggelsen består till stor del av äldre bruksbostäder, villor och nyproduktion, och de skador vi oftast hittar vid takkontroll är spröd underlagspapp, rostiga beslag och otäta genomföringar kring skorsten och ventilation. Vi går igenom hela takkonstruktionen innan vi lämnar fast pris, och du har samma kontaktperson från takkontroll till slutgenomgång.",
     extraContent:
       "Vi går igenom förutsättningarna i Gustavsberg — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Gustavsberg.",
     uniqueFAQ: {
@@ -2987,7 +2987,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare på Ingarö — takbyte, takrenovering och plåtarbeten på Ingarö. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare på Ingarö — takbyte och takrenovering på Ingarö. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Ingarö — skärgårdsnära ö i Värmdö kommun — har ett fastighetsbestånd med fritidshus och permanentboenden i utsatt läge. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt på Ingarö: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — takkontroll, materialval, ställning, takarbete och bortforsling.",
     extraContent:
@@ -3008,7 +3008,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Hemmesta — takbyte, takrenovering och plåtarbeten i Hemmesta. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takläggare i Hemmesta — takbyte och takrenovering i Hemmesta. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
       "Hemmesta är tätort i centrala Värmdö. Bebyggelsen består till stor del av villaområden och radhus. Vi utför takbyte, takrenovering och takomläggning i Hemmesta med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en skriftlig offert med fast pris.",
     extraContent:
@@ -3029,7 +3029,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Trollbäcken — takbyte, takrenovering och plåtarbeten i Trollbäcken. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Trollbäcken — takbyte och takrenovering i Trollbäcken. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
       "Trollbäcken är ett stort villaområde i Tyresö med villor från 1950–70-tal med betongpannor. Vid en kostnadsfri takkontroll kontrollerar vi underlagspapp, läkt, råspont, plåtbeslag och ventilation under taket — det är där ett takbyte avgörs. Du får en skriftlig bedömning och ett fast pris innan något arbete påbörjas.",
     extraContent:
@@ -3050,7 +3050,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Brandbergen — takbyte, takrenovering och plåtarbeten i Brandbergen. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Brandbergen — takbyte och takrenovering i Brandbergen. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Brandbergen — bostadsområde i Haninge — har ett fastighetsbestånd med flerbostadshus med stora flacka takytor. Taken börjar närma sig slutet av sin livslängd, och då är omläggning oftast bättre ekonomi än lappning. RoslagsTak utför kompletta takprojekt i Brandbergen: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
     extraContent:
@@ -3071,9 +3071,9 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Handen — takbyte, takrenovering och plåtarbeten i Handen. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Handen — takbyte och takrenovering i Handen. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Handen är Haninges centralort. Bebyggelsen består till stor del av blandad bebyggelse med villor och bostadsrättsfastigheter. Vi utför takbyte, takrenovering och takomläggning i Handen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
+      "Handen är Haninges centralort. Bebyggelsen består till stor del av blandad bebyggelse med villor och bostadsrättsfastigheter. Vi utför takbyte, takrenovering och takomläggning i Handen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
       "Vi går igenom förutsättningarna i Handen — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Handen.",
     uniqueFAQ: {
@@ -3092,7 +3092,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Jordbro — takbyte, takrenovering och plåtarbeten i Jordbro. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Jordbro — takbyte och takrenovering i Jordbro. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Vi lägger tak i Jordbro, södra Haninge, där radhus och flerbostadshus från 1970-talet dominerar. Äldre tak i området har ofta samma problem under pannorna: sliten papp, uttorkade tätningar och beslag som börjat rosta. Vi byter det som behöver bytas, säkerställer rätt ventilation och lämnar 10 års utförandegaranti på arbetet.",
     extraContent:
@@ -3113,9 +3113,9 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Västerhaninge — takbyte, takrenovering och plåtarbeten i Västerhaninge. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takläggare i Västerhaninge — takbyte och takrenovering i Västerhaninge. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
-      "Västerhaninge — tätort i södra Haninge — har ett fastighetsbestånd med villor, radhus och äldre gårdsbebyggelse. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Västerhaninge: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris och tydlig tidplan, och tar hand om hela processen från takkontroll till bortforslat avfall.",
+      "Västerhaninge — tätort i södra Haninge — har ett fastighetsbestånd med villor, radhus och äldre gårdsbebyggelse. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Västerhaninge: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Västerhaninge — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Västerhaninge.",
     uniqueFAQ: {
@@ -3134,9 +3134,9 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Tungelsta — takbyte, takrenovering och plåtarbeten i Tungelsta. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Tungelsta — takbyte och takrenovering i Tungelsta. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
-      "Tungelsta är trädgårdssamhälle söder om Västerhaninge. Bebyggelsen består till stor del av äldre villor och handelsträdgårdsbebyggelse. Vi utför takbyte, takrenovering och takomläggning i Tungelsta med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar. Ställning, leveranser, avfall och slutstädning ingår i vårt ansvar.",
+      "Tungelsta är trädgårdssamhälle söder om Västerhaninge. Bebyggelsen består till stor del av äldre villor och handelsträdgårdsbebyggelse. Vi utför takbyte, takrenovering och takomläggning i Tungelsta med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar.",
     extraContent:
       "Vi går igenom förutsättningarna i Tungelsta — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Tungelsta.",
     uniqueFAQ: {
@@ -3155,9 +3155,9 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Dalarö — takbyte, takrenovering och plåtarbeten i Dalarö. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Dalarö — takbyte och takrenovering i Dalarö. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Vi tar uppdrag för takbyte och takrenovering i Dalarö (kustsamhälle med skärgårdsklimat). Här handlar det oftast om trävillor och sommarhus i saltutsatt läge, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter takkontrollen får du ett fast pris, en tidplan och besked om vad som ingår — inga tillägg i efterhand.",
+      "Vi tar uppdrag för takbyte och takrenovering i Dalarö (kustsamhälle med skärgårdsklimat). Här handlar det oftast om trävillor och sommarhus i saltutsatt läge, och vi anpassar material, infästning och plåtdetaljer efter husets ålder och läge. Efter takkontrollen får du ett fast pris och besked om vad som ingår.",
     extraContent:
       "Vi går igenom förutsättningarna i Dalarö — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Dalarö.",
     uniqueFAQ: {
@@ -3276,9 +3276,9 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Bandhagen — takbyte, takrenovering och plåtarbeten i Bandhagen. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Bandhagen — takbyte och takrenovering i Bandhagen. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Bandhagen är söderförort med grön karaktär. Bebyggelsen består till stor del av smalhus och radhus från 1950-talet. Vi utför takbyte, takrenovering och takomläggning i Bandhagen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
+      "Bandhagen är söderförort med grön karaktär. Bebyggelsen består till stor del av smalhus och radhus från 1950-talet. Vi utför takbyte, takrenovering och takomläggning i Bandhagen med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
       "Vi går igenom förutsättningarna i Bandhagen — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Därför kan vi lämna ett konkret pris direkt efter takkontrollen i stället för ett brett prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Bandhagen.",
     uniqueFAQ: {
@@ -3297,9 +3297,9 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Högdalen — takbyte, takrenovering och plåtarbeten i Högdalen. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Högdalen — takbyte och takrenovering i Högdalen. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Vi utför takbyte, takomläggning och plåtarbeten i Högdalen, stadsdel i söderort. Bebyggelsen består till stor del av flerbostadshus från 1950-talet med plåt- och papptak, och de skador vi oftast hittar vid takkontroll är spröd underlagspapp, rostiga beslag och otäta genomföringar kring skorsten och ventilation. Vi går igenom hela takkonstruktionen innan vi lämnar fast pris, och du har samma kontaktperson från takkontroll till slutgenomgång.",
+      "Vi utför takbyte och takomläggning i Högdalen, stadsdel i söderort. Bebyggelsen består till stor del av flerbostadshus från 1950-talet med plåt- och papptak, och de skador vi oftast hittar vid takkontroll är spröd underlagspapp, rostiga beslag och otäta genomföringar kring skorsten och ventilation. Vi går igenom hela takkonstruktionen innan vi lämnar fast pris, och du har samma kontaktperson från takkontroll till slutgenomgång.",
     extraContent:
       "Vi går igenom förutsättningarna i Högdalen — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Högdalen.",
     uniqueFAQ: {
@@ -3318,9 +3318,9 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Hökarängen — takbyte, takrenovering och plåtarbeten i Hökarängen. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Hökarängen — takbyte och takrenovering i Hökarängen. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Hökarängen — klassisk söderförort — har ett fastighetsbestånd med trevåningshus och radhus från 1940–50-tal. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Hökarängen: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris och tydlig tidplan, och tar hand om hela processen från takkontroll till bortforslat avfall.",
+      "Hökarängen — klassisk söderförort — har ett fastighetsbestånd med trevåningshus och radhus från 1940–50-tal. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Hökarängen: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Hökarängen — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Du får ett fast pris som är räknat på ditt tak — inte ett uppskattat spann. Bor du granne med någon som också ska byta tak går det ofta att samordna arbetena och sänka etableringskostnaden. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Hökarängen.",
     uniqueFAQ: {
@@ -3339,9 +3339,9 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Tumba — takbyte, takrenovering och plåtarbeten i Tumba. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takläggare i Tumba — takbyte och takrenovering i Tumba. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
     longDescription:
-      "Tumba är Botkyrkas största tätort. Bebyggelsen består till stor del av villaområden, radhus och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Tumba med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar. Ställning, leveranser, avfall och slutstädning ingår i vårt ansvar.",
+      "Tumba är Botkyrkas största tätort. Bebyggelsen består till stor del av villaområden, radhus och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Tumba med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Takkontroll och offert är kostnadsfria, och priset vi lämnar är det du betalar.",
     extraContent:
       "Vi går igenom förutsättningarna i Tumba — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Tumba.",
     uniqueFAQ: {
@@ -3360,7 +3360,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Tullinge — takbyte, takrenovering och plåtarbeten i Tullinge. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Tullinge — takbyte och takrenovering i Tullinge. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
       "Tullinge är ett villaområde i Botkyrka med villor från 1960–80-tal med betongpannor. Vid en kostnadsfri takkontroll kontrollerar vi underlagspapp, läkt, råspont, plåtbeslag och ventilation under taket — det är där ett takbyte avgörs. Du får en skriftlig bedömning och ett fast pris innan något arbete påbörjas.",
     extraContent:
@@ -3381,7 +3381,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Norsborg — takbyte, takrenovering och plåtarbeten i Norsborg. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Norsborg — takbyte och takrenovering i Norsborg. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Norsborg — norra Botkyrka vid Mälaren — har ett fastighetsbestånd med miljonprogramsbebyggelse och radhus. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt i Norsborg: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — takkontroll, materialval, ställning, takarbete och bortforsling.",
     extraContent:
@@ -3402,7 +3402,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Alby — takbyte, takrenovering och plåtarbeten i Alby. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Alby — takbyte och takrenovering i Alby. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Alby är del av norra Botkyrka. Bebyggelsen består till stor del av flerbostadshus från 1970-talet med stora takytor. Vi utför takbyte, takrenovering och takomläggning i Alby med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en skriftlig offert med fast pris.",
     extraContent:
@@ -3423,7 +3423,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Fittja — takbyte, takrenovering och plåtarbeten i Fittja. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Fittja — takbyte och takrenovering i Fittja. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
       "Vi lägger tak i Fittja, nordöstra Botkyrka, där miljonprogramshus med flacka papp- och duktak dominerar. Äldre tak i området har ofta samma problem under pannorna: sliten papp, uttorkade tätningar och beslag som börjat rosta. Vi byter det som behöver bytas, säkerställer rätt ventilation och lämnar 10 års utförandegaranti på arbetet.",
     extraContent:
@@ -3473,9 +3473,9 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Järna — takbyte, takrenovering och plåtarbeten i Järna. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Järna — takbyte och takrenovering i Järna. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
-      "Järna är tätort i Södertälje kommun. Bebyggelsen består till stor del av villor, gårdar och äldre trähusbebyggelse. Vi utför takbyte, takrenovering och takomläggning i Järna med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll, ett fast pris och en tidplan vi håller oss till. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
+      "Järna är tätort i Södertälje kommun. Bebyggelsen består till stor del av villor, gårdar och äldre trähusbebyggelse. Vi utför takbyte, takrenovering och takomläggning i Järna med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Du får en kostnadsfri takkontroll och ett fast pris. Vi ordnar ställning, materialleverans, bortforsling av avfall och städning efter oss.",
     extraContent:
       "Vi går igenom förutsättningarna i Järna — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Järna.",
     uniqueFAQ: {
@@ -3494,9 +3494,9 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Edsviken — takbyte, takrenovering och plåtarbeten i Edsviken. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Edsviken — takbyte och takrenovering i Edsviken. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Edsviken är villaområdet kring viken med samma namn, på gränsen mellan Sollentuna, Danderyd och Solna. Här finns allt från sekelskiftesvillor och funkishus till nyare enfamiljshus, ofta med sadeltak i tegel, betongpannor eller falsad plåt. Det sjönära läget innebär mer vind och fukt än längre in i landet, vilket sliter extra på plåtdetaljer, hängrännor och underlagspapp. Vi utför takbyte, takrenovering och takomläggning i Edsviken med material anpassat efter husets ålder och stil, kostnadsfri takkontroll, fast pris och en tidsplan som håller. Ställning, materialleverans, avfallshantering och slutstädning ingår alltid.",
+      "Edsviken är villaområdet kring viken med samma namn, på gränsen mellan Sollentuna, Danderyd och Solna. Här finns allt från sekelskiftesvillor och funkishus till nyare enfamiljshus, ofta med sadeltak i tegel, betongpannor eller falsad plåt. Det sjönära läget innebär mer vind och fukt än längre in i landet, vilket sliter extra på plåtdetaljer, hängrännor och underlagspapp. Vi utför takbyte, takrenovering och takomläggning i Edsviken med material anpassat efter husets ålder och stil, kostnadsfri takkontroll och fast pris.",
     extraContent:
       "Vi går igenom förutsättningarna i Edsviken — smala villagator, stora tomter med träd och hus nära vattnet där väderpåfrestningen är större. Det påverkar både val av material och hur vi planerar ställning och kranbil, och gör att vi kan lämna en realistisk offert direkt efter takkontrollen istället för luddiga prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Edsviken.",
     uniqueFAQ: {
@@ -3516,9 +3516,9 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Uppsala — takbyte, takrenovering och plåtarbeten för villor och bostadsrättsföreningar. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Uppsala — takbyte och takrenovering för villor och bostadsrättsföreningar. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Uppsala är en av landets äldsta universitetsstäder, med bebyggelse som sträcker sig från äldre kvarter längs Fyrisån till villaområden i Luthagen och Kvarngärdet och flerbostadshus från 60- och 70-talen i Gottsunda och Sunnersta. Staden ligger på den öppna Uppsalaslätten, där vind och snö får fritt spelrum över taken. Vi tar uppdrag i Uppsala med takbyte, takrenovering och plåtarbeten, både för villaägare och för bostadsrättsföreningar. Alla uppdrag börjar med en kostnadsfri takkontroll och slutar med ett fast pris.",
+      "Uppsala är en av landets äldsta universitetsstäder, med bebyggelse som sträcker sig från äldre kvarter längs Fyrisån till villaområden i Luthagen och Kvarngärdet och flerbostadshus från 60- och 70-talen i Gottsunda och Sunnersta. Staden ligger på den öppna Uppsalaslätten, där vind och snö får fritt spelrum över taken. Vi tar uppdrag i Uppsala med takbyte och takrenovering, både för villaägare och för bostadsrättsföreningar. Alla uppdrag börjar med en kostnadsfri takkontroll och slutar med ett fast pris.",
     extraContent:
       "För en bostadsrättsförening i Uppsala är ett takbyte ett beslut som ska hålla för både styrelse och stämma. Därför lämnar vi en offert med fast pris, och garantin står skriftligt i avtalet. Äldre kvarter kan ha tegel- eller plåttak med många genomföringar och trånga takytor, medan nyare områden oftast har enklare sadeltak. Boka en kostnadsfri takkontroll så går vi igenom vad som passar just ert tak.",
     uniqueFAQ: {
@@ -3537,7 +3537,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Knivsta — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Knivsta — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Knivsta ligger mellan Stockholm och Uppsala och har vuxit snabbt med nya villaområden och radhus intill den äldre bebyggelsen kring centrum. Nybyggda hus har oftast enkla sadeltak i betongpannor eller plåt, medan äldre villor kan behöva ny underlagspapp, läkt och beslag. Vi tar uppdrag i Knivsta med takbyte, takrenovering, takavvattning och plåtarbeten, med kostnadsfri takkontroll och fast pris.",
     extraContent:
@@ -3558,7 +3558,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Bålsta — takbyte, takrenovering och plåtarbeten i Håbo. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Bålsta — takbyte och takrenovering i Håbo. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Bålsta är centralort i Håbo kommun vid Mälaren, med villaområden, radhus och flerbostadshus från olika decennier. Närheten till vatten och skog innebär fukt, mossa på nordsidor och löv som samlas i rännor och bakom skorstenar. Vi tar uppdrag i Bålsta med takbyte, takrenovering, takavvattning och taktvätt, för både villaägare och bostadsrättsföreningar.",
     extraContent:
@@ -3579,7 +3579,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Enköping — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Enköping — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Enköping är en mälarstad med en välbevarad stadskärna och villaområden som ligger utspridda över slättlandskapet runt staden. Äldre trähus och tegelbyggnader i centrum har ofta tak med många detaljer, medan nyare områden har enklare tak i betongpannor eller plåt. Vi tar uppdrag i Enköping med takbyte, takrenovering, bandtäckning och plåtarbeten.",
     extraContent:
@@ -3600,15 +3600,15 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Västerås — takbyte, takrenovering och plåtarbeten för villor och bostadsrättsföreningar. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Västerås — takbyte och takrenovering för villor och bostadsrättsföreningar. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Västerås är Mälardalens största stad, belägen vid Mälaren och Svartån, med en blandning av äldre stadsbebyggelse, villaområden och stora bostadsrättsföreningar och flerbostadshus. Storleken ger en stor variation av taktyper, från tegeltak på äldre hus till plåt och papp på flacka tak. Vi tar uppdrag i Västerås med takbyte, takrenovering och plåtarbeten, både för villaägare och för föreningar.",
+      "Västerås är Mälardalens största stad, belägen vid Mälaren och Svartån, med en blandning av äldre stadsbebyggelse, villaområden och stora bostadsrättsföreningar och flerbostadshus. Storleken ger en stor variation av taktyper, från tegeltak på äldre hus till plåt och papp på flacka tak. Vi tar uppdrag i Västerås med takbyte och takrenovering, både för villaägare och för föreningar.",
     extraContent:
-      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: takkontroll, fast offert, tidplan och en fast kontaktperson under hela projektet. Vi lämnar skriftlig garanti när arbetet är klart. Kontakta oss för en kostnadsfri takkontroll i Västerås.",
+      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: takkontroll, fast offert och en fast kontaktperson under hela projektet. Vi lämnar skriftlig garanti när arbetet är klart. Kontakta oss för en kostnadsfri takkontroll i Västerås.",
     uniqueFAQ: {
       question: "Kan ni ta uppdrag åt större bostadsrättsföreningar i Västerås?",
       answer:
-        "Ja, vi tar uppdrag från bostadsrättsföreningar i Västerås. Vi börjar med en kostnadsfri takkontroll och lämnar ett fast pris och en tidplan som styrelsen kan besluta på. Hör av dig så går vi igenom fastigheten och vilken omfattning som passar.",
+        "Ja, vi tar uppdrag från bostadsrättsföreningar i Västerås. Vi börjar med en kostnadsfri takkontroll och lämnar ett fast pris som styrelsen kan besluta på. Hör av dig så går vi igenom fastigheten och vilken omfattning som passar.",
     },
     primaryKeyword: "takläggare Västerås",
     lat: 59.6099,
@@ -3621,7 +3621,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Eskilstuna — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Eskilstuna — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Eskilstuna ligger vid Eskilstunaån med en gammal industri- och verkstadsstad i botten. Bebyggelsen spänner från äldre kvarter nära ån till villaområden och flerbostadshus från efterkrigstiden. Taken varierar därefter, med tegel och plåt på äldre byggnader och betongpannor och papp på senare bebyggelse. Vi tar uppdrag i Eskilstuna med takbyte, takrenovering, plåtarbeten och takavvattning.",
     extraContent:
@@ -3642,7 +3642,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Strängnäs — takbyte, takrenovering och plåtarbeten vid Mälaren. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Strängnäs — takbyte och takrenovering vid Mälaren. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Strängnäs är en gammal domkyrkostad på en halvö i Mälaren, med välbevarade kvarter, sjönära villor och nyare områden längre från centrum. Läget vid vattnet ger fuktig luft och vind som slits på beslag, vindskivor och underlagspapp. Vi tar uppdrag i Strängnäs med takbyte, takrenovering, bandtäckning och plåtarbeten.",
     extraContent:
@@ -3663,7 +3663,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Mariefred — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Mariefred — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Mariefred är en liten stad vid Mälaren med välbevarad trähusbebyggelse och tegeltak, och med villor och fritidshus i sjönära lägen runt omkring. Äldre hus kräver ofta varsamhet vid takarbete, medan sjönära villor mest slits av fukt och vind. Vi tar uppdrag i Mariefred med takbyte, takrenovering, plåtarbeten och takavvattning.",
     extraContent:
@@ -3684,7 +3684,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Nykvarn — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Nykvarn — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Nykvarn är en mindre kommun nära Södertälje med villaområden, radhus och lantbruksfastigheter. Bebyggelsen är blandad, från äldre gårdar till villor byggda i olika omgångar, och taken ser därefter ut. Vi tar uppdrag i Nykvarn med takbyte, takrenovering, takavvattning och plåtarbeten.",
     extraContent:
@@ -3705,7 +3705,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Gnesta — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Gnesta — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Gnesta är en mindre ort i Södermanland med villor, radhus och äldre gårdar, omgiven av skog och öppna landskap. Snölast, lövfall och fukt i skogsnära lägen påverkar taken, särskilt rännor, takfot och nordsidor. Vi tar uppdrag i Gnesta med takbyte, takrenovering, takavvattning och plåtarbeten.",
     extraContent:
@@ -3726,7 +3726,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Nyköping — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Nyköping — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Nyköping ligger vid Nyköpingsån nära Östersjön, med äldre stadskvarter, villaområden och flerbostadshus. Kustnära läge ger fukt, vind och saltpåverkan som slitar på beslag och plåtdetaljer, och mossa etablerar sig lätt på skuggiga takytor. Vi tar uppdrag i Nyköping med takbyte, takrenovering, plåtarbeten och takavvattning.",
     extraContent:
@@ -3747,7 +3747,7 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Trosa — takbyte, takrenovering och plåtarbeten. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Trosa — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
       "Trosa är en kuststad vid Trosaån med välbevarad småstadsmiljö, sommarhus och villor i kustnära lägen. Salt luft, fukt och vind från Östersjön slits på beslag, vindskivor och underlagspapp, och äldre träbebyggelse kräver rätt detaljer. Vi tar uppdrag i Trosa med takbyte, takrenovering, bandtäckning och plåtarbeten.",
     extraContent:
