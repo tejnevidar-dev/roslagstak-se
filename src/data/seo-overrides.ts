@@ -4,6 +4,56 @@
  * Bara belagda uppgifter: takkontroll, fast pris, 10 års utförandegaranti, svar inom 24 h.
  */
 export const ortSeoOverrides: Record<string, { title: string; description: string }> = {
+  ormsta: {
+    title: "Takbyte i Vallentuna – Ormsta och Bällsta, fast pris",
+    description:
+      "Takbyte och takomläggning i Ormsta, Bällsta, Västra Bällsta och Molnby i Vallentuna. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  brevik: {
+    title: "Takbyte i Brevik och Lervik, Österåker – fast pris",
+    description:
+      "Takbyte och takomläggning i Brevik, Lervik, Flaxenvik och Skärgårdsstad i Österåker. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  viby: {
+    title: "Takbyte i Viby, Sollentuna – fast pris",
+    description:
+      "Takbyte och takomläggning i Viby i Sollentuna, med villor, radhus och kedjehus från 1960- till 1980-talet. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  skarpang: {
+    title: "Takbyte i Skarpäng, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i Skarpäng i Täby, ett villaområde med typhus från 1970- och 80-talen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  "ella-gard": {
+    title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
+    description:
+      "Takbyte och takomläggning i Ella gård i Täby. Kostnadsfri takkontroll utan förpliktelser, fast pris och hänsyn till kommunens riktlinjer för kulturmiljön.",
+  },
+  radmanso: {
+    title: "Takbyte på Rådmansö, Norrtälje – fast pris",
+    description:
+      "Takbyte och takomläggning på Rådmansö öster om Norrtälje, i Gräddö, Räfsnäs, Nenninge och Lågarö. Villor och fritidshus. Kostnadsfri takkontroll.",
+  },
+  enebyberg: {
+    title: "Takbyte i Enebyberg, Danderyd – fast pris",
+    description:
+      "Takbyte och takomläggning i Enebyberg: villor från 1900-talets första hälft och kedjehus från 1970-talet vid Eneby gård. Kostnadsfri takkontroll.",
+  },
+  ronninge: {
+    title: "Takbyte i Rönninge, Salem – fast pris",
+    description:
+      "Takbyte och takomläggning i Rönninge i Salems kommun, ett villasamhälle från 1896 med blandad bebyggelse. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  trangsund: {
+    title: "Takbyte i Trångsund, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Trångsund vid Drevviken och Magelungen. Villor från styckningsåren och småhus från 1960-talet. Kostnadsfri takkontroll.",
+  },
+  stuvsta: {
+    title: "Takbyte i Stuvsta, Huddinge – fast pris",
+    description:
+      "Takbyte i Stuvsta i Huddinge, från 1920-talsvillor till rad- och kedjehus i Myrängen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
   taby: {
     title: "Takrenovering och takbyte i Täby — fast pris",
     description:
@@ -178,30 +228,5 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     title: "Takbyte i Solhem, Spånga – fast pris",
     description:
       "Takbyte och takomläggning i Solhems villastad och Lunda i Spånga, med trävillor från 1904 och hus från 1920-talet till 2000-talet. Kostnadsfri takkontroll.",
-  },
-  "ella-gard": {
-    title: "Takbyte i Ella gård, Täby – lertegel och fast pris",
-    description:
-      "Takbyte och takomläggning i Ella gård i Täby. Kostnadsfri takkontroll utan förpliktelser, fast pris och hänsyn till kommunens riktlinjer för kulturmiljön.",
-  },
-  skarpang: {
-    title: "Takbyte i Skarpäng, Täby – fast pris",
-    description:
-      "Takbyte och takomläggning i Skarpäng i Täby, ett villaområde med typhus från 1970- och 80-talen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
-  },
-  viby: {
-    title: "Takbyte i Viby, Sollentuna – fast pris",
-    description:
-      "Takbyte och takomläggning i Viby i Sollentuna, med villor, radhus och kedjehus från 1960- till 1980-talet. Kostnadsfri takkontroll utan förpliktelser.",
-  },
-  brevik: {
-    title: "Takbyte i Brevik och Lervik, Österåker – fast pris",
-    description:
-      "Takbyte och takomläggning i Brevik, Lervik, Flaxenvik och Skärgårdsstad i Österåker. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
-  },
-  ormsta: {
-    title: "Takbyte i Vallentuna – Ormsta och Bällsta, fast pris",
-    description:
-      "Takbyte och takomläggning i Ormsta, Bällsta, Västra Bällsta och Molnby i Vallentuna. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
   },
 };

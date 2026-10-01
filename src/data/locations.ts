@@ -352,10 +352,8 @@ export const locations: LocationData[] = [
     name: "Rådmansö",
     region: "Kusten",
     isIsland: false,
-    description:
-      "Takbyte och takomläggning på Rådmansö öster om Norrtälje, i Gräddö, Räfsnäs, Nenninge och Lågarö. Villor och fritidshus. Kostnadsfri takkontroll.",
-    longDescription:
-      "Rådmansö är en halvö omkring en mil öster om Norrtälje, där bland annat Kapellskär, Gräddö och Räfsnäs ligger. Rådmansö socken omfattar den östra delen av halvön och den yttre skärgården mellan Svenska Högarna och Söderarm, och det är här E18 slutar sin sträckning i Sverige, vid Kapellskärs hamn. Socknen beskrivs som en kuperad skogsbygd med inslag av odlingsbygd, främst i väster, och kala skär ute i skärgården. Rådmansö församling bildades i slutet av 1500-talet som ett kapellag utbrutet ur Frötuna. Vid kommunreformen 1862 blev socknen en egen landskommun, som 1952 gick upp i Frötuna landskommun och sedan 1971 ingår i Norrtälje kommun. Gräddö by nämns första gången 1547, blev vid slutet av 1800-talet ett populärt turistmål med tornförsedda sommarhus och pensionat, fick ett båtvarv 1924 och Viking Lines färjetrafik till Mariehamn 1959, innan trafiken flyttade till Kapellskär året därpå. I dag har Rådmansö en blandning av villor, lantbruk och fritidshus. Enligt hitta.se är husen i delområden som Rådmansby, Lågarö, Nenninge, Djursnäs och Gräddö byggda under en lång period, från 1920-talet till 1980-talet, med tyngdpunkt på 1950–1980.",
+    description: "Takbyte och takomläggning på Rådmansö öster om Norrtälje, i Gräddö, Räfsnäs, Nenninge och Lågarö. Villor och fritidshus. Kostnadsfri takkontroll.",
+    longDescription: "Rådmansö är en halvö omkring en mil öster om Norrtälje, där bland annat Kapellskär, Gräddö och Räfsnäs ligger. Rådmansö socken omfattar den östra delen av halvön och den yttre skärgården mellan Svenska Högarna och Söderarm, och det är här E18 slutar sin sträckning i Sverige, vid Kapellskärs hamn. Socknen beskrivs som en kuperad skogsbygd med inslag av odlingsbygd, främst i väster, och kala skär ute i skärgården. Rådmansö församling bildades i slutet av 1500-talet som ett kapellag utbrutet ur Frötuna. Vid kommunreformen 1862 blev socknen en egen landskommun, som 1952 gick upp i Frötuna landskommun och sedan 1971 ingår i Norrtälje kommun. År 2000 bodde omkring 1 760 personer i socknen. Gräddö by nämns första gången 1547. Härifrån embarkerade svenska trupper 1739 inför hattarnas ryska krig, och 1809 avseglade expeditionskåren mot Ratan i Västerbotten. Vid slutet av 1800-talet blev Gräddö ett populärt turistmål. Enligt Wikipedia byggdes då en mängd tornförsedda sommarhus, och flera pensionat startades. Gräddö båtvarv grundades 1924 och byggde motorkryssare och segelbåtar, och 1959 startade Viking Line färjetrafik från Gräddö till Mariehamn, innan trafiken året därpå flyttade till Kapellskär. År 2015 avgränsade SCB för första gången en tätort här, med Nabbo, Gräddö och Räfsnäs. I dag har Rådmansö en blandning av villor, lantbruk och fritidshus. Enligt hitta.se är husen i delområden som Rådmansby, Lågarö, Nenninge, Djursnäs och Gräddö byggda under en lång period, från 1920-talet till 1980-talet, med tyngdpunkt på 1950–1980.",
     extraContent:
       "",
     factBox: [
@@ -374,7 +372,8 @@ export const locations: LocationData[] = [
     lat: 59.6667,
     lng: 18.85,
     nearbyLocations: ["Norrtälje", "Blidö", "Furusund"],
-    parentLocation: { name: "Norrtälje", slug: "norrtalje" },
+    parentLocation: {"name":"Norrtälje","slug":"norrtalje"},
+    sourceLink: {"label":"Wikipedia: Rådmansö","url":"https://sv.wikipedia.org/wiki/R%C3%A5dmans%C3%B6"},
     h1Override: "Takläggare på Rådmansö, Norrtälje",
     extraSections: [{ heading: "Vad det betyder för taket", text: "På Rådmansö står hus från nästan ett sekel sida vid sida, från sekelskiftets sommarhus till villor från 1970- och 80-talen. De flesta husen är i dag runt 45–75 år gamla, och taken kan redan ha lagts om en eller flera gånger. I fritidshus som har byggts om till permanentbostäder kan taket ha kompletterats vid olika tillfällen. Därför går det inte att säga något generellt om skicket. Varje hus får en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du på Rådmansö? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
@@ -827,10 +826,8 @@ export const locations: LocationData[] = [
     name: "Ella gård",
     region: "Roslagens inland",
     isIsland: false,
-    description:
-      "Takbyte och takomläggning i Ella gård i Täby. Kostnadsfri takkontroll utan förpliktelser, fast pris och hänsyn till kommunens riktlinjer för kulturmiljön.",
-    longDescription:
-      "Ella gård i Täby är ett av Sveriges första kedjehusområden. Bygget började 1955, bara ett år efter att jordbruket på den gamla gården hade lagts ned, och under en period på femton år växte cirka 500 hus fram. Först byggdes den norra delen, sedan den södra. I början av 1970-talet kompletterades området västerut med två delområden med låga grupphus. Husen är byggda efter 1950-talets ideal om grannskap och rationellt byggande: prefabricerade trähus på betongplatta, ordnade i grupper längs slingrande gator och omgivna av stora gröna ytor. Enligt kommunens beskrivning kännetecknas bebyggelsen av sadeltak med tegelpannor, stående träpanel och vita fönsterfoder, och de ursprungliga takkuporna är inramade av svart plåt. Området beskrivs av Täby kommun som mycket välbevarat, och i kommunens kulturmiljöprogram finns riktlinjer för hur husen ska förändras.",
+    description: "Takbyte och takomläggning i Ella gård i Täby. Kostnadsfri takkontroll utan förpliktelser, fast pris och hänsyn till kommunens riktlinjer för kulturmiljön.",
+    longDescription: "Ella gård i Täby är ett av Sveriges första kedjehusområden. Bygget började 1955, bara ett år efter att jordbruket på den gamla gården hade lagts ned, och under en period på femton år växte cirka 500 hus fram. Först byggdes den norra delen, sedan den södra. I början av 1970-talet kompletterades området västerut med två delområden med låga grupphus. Husen är byggda efter 1950-talets ideal om grannskap och rationellt byggande: prefabricerade trähus på betongplatta, ordnade i grupper längs slingrande gator och omgivna av stora gröna ytor. Karaktären är tydlig och enhetlig. Enligt kommunens beskrivning kännetecknas bebyggelsen av sadeltak med tegelpannor, stående träpanel och vita fönsterfoder, och de ursprungliga takkuporna är inramade av svart plåt. Området beskrivs av Täby kommun som mycket välbevarat, och i kommunens kulturmiljöprogram finns riktlinjer för hur husen ska förändras.",
     extraContent:
       "",
     factBox: [
@@ -845,7 +842,7 @@ export const locations: LocationData[] = [
       label: "Täby kommun: Ella gård (kulturmiljö, råd och riktlinjer)",
       url: "https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/ella-gard",
     },
-    parentLocation: { name: "Täby", slug: "taby" },
+    parentLocation: {"name":"Täby","slug":"taby"},
     uniqueFAQ: {
       question: "Måste jag använda lertegel om jag byter tak i Ella gård?",
       answer:
@@ -855,7 +852,8 @@ export const locations: LocationData[] = [
     lat: 59.4447,
     lng: 18.0539,
     nearbyLocations: ["Täby", "Vallentuna", "Åkersberga"],
-    extraSections: [{ heading: "Vad det betyder för taket", text: "Den som byter tak i Ella gård behöver ta hänsyn till kulturmiljön. Enligt Täby kommuns råd och riktlinjer för Ella gård bör takpannor av lertegel användas, och större förändringar av husens tidstypiska arkitektur bör undvikas. Det gäller alltså inte bara vilket material som läggs, utan också detaljer som takkupornas plåtinklädnad och hur taket ansluter till fasaden. Om ett konkret takbyte kräver lov eller anmälan avgör kommunen. Många av husen byggdes under 1950- och 60-talen — tak från den tiden kan redan ha lagts om en gång, men där det inte har skett är underlagspapp, läkt och plåtdetaljer ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. Eftersom husen i ett kvarter ofta är likadana och byggda samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris." }],
+    h1Override: "Takläggare i Ella gård, Täby",
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Den som byter tak i Ella gård behöver ta hänsyn till kulturmiljön. Enligt Täby kommuns råd och riktlinjer för Ella gård bör takpannor av lertegel användas, och större förändringar av husens tidstypiska arkitektur bör undvikas. Det gäller alltså inte bara vilket material som läggs, utan också detaljer som takkupornas plåtinklädnad och hur taket ansluter till fasaden. Om ett konkret takbyte kräver lov eller anmälan avgör kommunen, och det är klokt att kontrollera det innan arbetet planeras. Många av husen byggdes under 1950- och 60-talen. Tak från den tiden kan redan ha lagts om en gång, men där det inte har skett är underlagspapp, läkt och plåtdetaljer ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. Eftersom husen i ett kvarter ofta är likadana och byggda samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva. Det kan göra planering och logistik enklare, men varje hus får alltid en egen takkontroll och ett eget pris." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris.** Du får en offert med fast pris, där kommunens riktlinjer för Ella gård tas med i underlaget.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Ella gård och funderar på att byta eller lägga om taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
@@ -863,12 +861,10 @@ export const locations: LocationData[] = [
     name: "Skarpäng",
     region: "Roslagens inland",
     isIsland: false,
-    description:
-      "Takbyte och takomläggning i Skarpäng i Täby, ett villaområde med typhus från 1970- och 80-talen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
-    longDescription:
-      "Skarpäng ligger i kuperad terräng i sydvästra Täby, på gränsen mot Sollentuna och Danderyd. Namnet kommer från ängen Skarpängen, som finns med på en karta över Ella från 1715. Där beskrivs den som en skarp och torr äng, alltså en mark med mager och torr jord. Längst i söder finns torpet Skarpäng, anlagt vid mitten av 1700-talet, som har gett kommundelen dess namn. Liksom flera andra villaområden i Täby började Skarpäng som en gles bebyggelse på stora tomter, främst sommarstugor. Förvandlingen till tätt villaområde tog fart med 1960-talets förnyelseplanering och 1970-talets nya stadsplaner. Enligt Täby kommuns beskrivning präglas området i dag helt av typhus från 1970- och 80-talen, med fasader i mexitegel och trä. I norr finns enligt kommunen flera grupphusområden med radhus och friliggande hus.",
+    description: "Takbyte och takomläggning i Skarpäng i Täby, ett villaområde med typhus från 1970- och 80-talen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription: "Skarpäng ligger i kuperad terräng i sydvästra Täby, på gränsen mot Sollentuna och Danderyd. Namnet kommer från ängen Skarpängen, som finns med på en karta över Ella från 1715. Där beskrivs den som en skarp och torr äng, alltså en mark med mager och torr jord. Längst i söder finns torpet Skarpäng, anlagt vid mitten av 1700-talet, som har gett kommundelen dess namn. Liksom flera andra villaområden i Täby började Skarpäng som en gles bebyggelse på stora tomter, främst sommarstugor. Förvandlingen till tätt villaområde tog fart med 1960-talets förnyelseplanering och 1970-talets nya stadsplaner. Enligt Täby kommuns beskrivning präglas området i dag helt av typhus från 1970- och 80-talen, med fasader i mexitegel och trä. Ett kännetecken är 1970-talets medvetna markutnyttjande med skafttomter, och husen är placerade med hänsyn till terrängen och växtligheten. I norr finns enligt kommunen flera grupphusområden med radhus och friliggande hus. Vid Rösjövägen ligger ett litet centrum från första halvan av 1980-talet.",
     extraContent:
-      "Ett kvarter sticker ut: i Knäpparen uppfördes husen 1978–1979 efter ritningar av arkitekten Gustaf Lettström, med fasader av rödbrunt eller sandfärgat tegel och mörkbruna vindskivor och fönstersnickerier. Täby kommuns råd och riktlinjer för Knäpparen är att behålla bruna fönstersnickerier, ursprungliga tegelfasader och svarta tak — det gäller bara det kvarteret, inte hela Skarpäng. Vid ett takbyte i kvarteret är det klokt att ta hänsyn till det redan när materialet väljs.",
+      "Kvarteret Knäpparen: Ett kvarter sticker ut. I Knäpparen uppfördes husen 1978–1979 efter ritningar av arkitekten Gustaf Lettström, med fasader av rödbrunt eller sandfärgat tegel och mörkbruna vindskivor och fönstersnickerier. Täby kommuns råd och riktlinjer för Knäpparen är att behålla bruna fönstersnickerier, ursprungliga tegelfasader och svarta tak. Vid ett takbyte i kvarteret är det därför klokt att ta hänsyn till det redan när materialet väljs.",
     factBox: [
       { label: "Kommun", value: "Täby" },
       { label: "Hustyper", value: "Villor, radhus, grupphus" },
@@ -880,8 +876,7 @@ export const locations: LocationData[] = [
       label: "Täby kommun: Skarpäng (kulturmiljö, råd och riktlinjer)",
       url: "https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/skarpang",
     },
-    parentLocation: { name: "Täby", slug: "taby" },
-    h1Override: "Takläggare i Skarpäng, Täby",
+    parentLocation: {"name":"Täby","slug":"taby"},
     uniqueFAQ: {
       question: "Gäller kulturmiljöriktlinjerna hela Skarpäng?",
       answer:
@@ -891,7 +886,8 @@ export const locations: LocationData[] = [
     lat: 59.4440,
     lng: 18.0194,
     nearbyLocations: ["Täby", "Sollentuna", "Vallentuna"],
-    extraSections: [{ heading: "Vad det betyder för taket", text: "De flesta husen i Skarpäng är i dag runt 40–50 år gamla. Taken kan redan ha lagts om, men där det inte har skett är det ofta dags att se över underlagspapp, läkt, plåtdetaljer och hängrännor. I grupphusområdena är husen ofta likadana och byggda samtidigt, och då kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun." }],
+    h1Override: "Takläggare i Skarpäng, Täby",
+    extraSections: [{ heading: "Vad det betyder för taket", text: "De flesta husen i Skarpäng är i dag runt 40–50 år gamla. Taken kan redan ha lagts om, men där det inte har skett är det ofta dags att se över underlagspapp, läkt, plåtdetaljer och hängrännor. I ett område med skafttomter och kuperad terräng kan åtkomsten till huset dessutom påverka hur ett takbyte planeras. I grupphusområdena är husen ofta likadana och byggda samtidigt, och då kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten, där kommunens riktlinjer tas med i underlaget om huset ligger i Knäpparen.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Skarpäng och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
@@ -899,12 +895,10 @@ export const locations: LocationData[] = [
     name: "Viby",
     region: "Norra Stockholm",
     isIsland: false,
-    description:
-      "Takbyte och takomläggning i Viby i Sollentuna, med villor, radhus och kedjehus från 1960- till 1980-talet. Kostnadsfri takkontroll utan förpliktelser.",
-    longDescription:
-      "Viby i norra Sollentuna har en historia som sträcker sig långt före villaområdena. Här finns gravfält och boplatser från yngre järnåldern, och vid nuvarande Rävgärdsvägen finns en runristning i berghällen från mitten av 1000-talet, som räknas som det äldsta kända skriftliga meddelandet från trakten. Namnet kommer från Viby gård, ett tidigare säteri som är känt i skrift sedan 1409. På en karta från 1687 sträcker sig gårdens ägor från sjön Ravalen och dagens Uppsalavägen i öster till Översjön i väster, med flera torp under sig. Herrgården från 1820-talet står kvar och ägs i dag av Sollentuna hembygdsförening. Den moderna bebyggelsen växte fram när gårdens ekonomibyggnader revs på 1960-talet. Enligt beskrivningar av kommundelen består bebyggelsen i dag huvudsakligen av villor och radhus, fördelade på områdena Lilla Viby, Östra Viby, Viby gård och Södra Viby. Enligt hitta.se är husen främst byggda på 1960- och 1980-talen.",
+    description: "Takbyte och takomläggning i Viby i Sollentuna, med villor, radhus och kedjehus från 1960- till 1980-talet. Kostnadsfri takkontroll utan förpliktelser.",
+    longDescription: "Viby i norra Sollentuna har en historia som sträcker sig långt före villaområdena. Här finns gravfält och boplatser från yngre järnåldern, och vid nuvarande Rävgärdsvägen finns en runristning i berghällen från mitten av 1000-talet, som räknas som det äldsta kända skriftliga meddelandet från trakten. Namnet kommer från Viby gård, ett tidigare säteri som är känt i skrift sedan 1409. På en karta från 1687 sträcker sig gårdens ägor från sjön Ravalen och dagens Uppsalavägen i öster till Översjön i väster, med flera torp under sig. Herrgården från 1820-talet står kvar och ägs i dag av Sollentuna hembygdsförening. Den moderna bebyggelsen växte fram när gårdens ekonomibyggnader revs på 1960-talet och Vibys ägor började bebyggas med bostäder. Redan vid tätortsavgränsningen 1960 räknades den framväxande bebyggelsen som en egen tätort, och sedan 1970 räknas den som sammanvuxen med Sollentuna. Enligt beskrivningar av kommundelen består bebyggelsen i dag huvudsakligen av villor och radhus, fördelade på områdena Lilla Viby, Östra Viby, Viby gård och Södra Viby. Enligt hitta.se är husen främst byggda på 1960- och 1980-talen. Kommundelen gränsar till Rotebro, Norrviken, Häggvik och Järvafältet, och med knappt 5 700 invånare är Viby den femte största kommundelen i Sollentuna sett till invånarantal.",
     extraContent:
-      "Kommundelen gränsar till Rotebro, Norrviken, Häggvik och Järvafältet, och med knappt 5 700 invånare är Viby den femte största kommundelen i Sollentuna sett till invånarantal.",
+      "",
     factBox: [
       { label: "Kommun", value: "Sollentuna" },
       { label: "Delområden", value: "Lilla Viby, Östra Viby, Viby gård, Södra Viby" },
@@ -912,8 +906,7 @@ export const locations: LocationData[] = [
       { label: "Byggperiod", value: "1960- och 1980-tal" },
       { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 300" },
     ],
-    parentLocation: { name: "Sollentuna", slug: "sollentuna" },
-    h1Override: "Takläggare i Viby, Sollentuna",
+    parentLocation: {"name":"Sollentuna","slug":"sollentuna"},
     uniqueFAQ: {
       question: "Hur gammal är bebyggelsen i Viby?",
       answer:
@@ -923,6 +916,8 @@ export const locations: LocationData[] = [
     lat: 59.4578,
     lng: 17.8952,
     nearbyLocations: ["Sollentuna", "Täby", "Upplands Väsby"],
+    sourceLink: {"label":"Wikipedia: Viby, Sollentuna","url":"https://sv.wikipedia.org/wiki/Viby,_Sollentuna"},
+    h1Override: "Takläggare i Viby, Sollentuna",
     extraSections: [{ heading: "Vad det betyder för taket", text: "De flesta husen i Viby är i dag runt 40–60 år gamla. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag, och därför börjar vi alltid med att titta på taket på plats. I radhus- och kedjehusområdena är husen ofta likadana och byggda samtidigt. Där kan grannar ibland ha nytta av att planera takbyten i samma veva, även om varje hus alltid får en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Viby och funderar på att byta eller lägga om taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
@@ -931,10 +926,8 @@ export const locations: LocationData[] = [
     name: "Brevik",
     region: "Österåker",
     isIsland: false,
-    description:
-      "Takbyte och takomläggning i Brevik, Lervik, Flaxenvik och Skärgårdsstad i Österåker. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
-    longDescription:
-      "Öster om Åkersberga, ut mot kusten, ligger ett område med flera mindre delar: Brevik, Lervik, Flaxenvik, Ekhammar, Gröndal, Tråsättra, Skärgårdsstad, Översättra och södra Margretelund. Tillsammans bildar de ett stort sammanhängande småhusområde. Bebyggelsen har vuxit fram under lång tid. Enligt hitta.se är villorna i Brevik och Gröndal främst byggda på 1950- och 1960-talen, och villorna i Lervik på 1930- och 1970-talen. I Tråsättra finns kedjehus och radhus från 1970- och 1980-talen. Skärgårdsstad har en egen historia: området ligger vid kusten, mellan Solbergasjön, Bosjön och Isättraviken, cirka sju kilometer från Åkersberga och till stor del omgivet av skog. Här fanns tidigare gruvhantering, och när den lades ned togs en detaljplan fram för bostäder. Skärgårdsstad bebyggdes främst under 1980- och 90-talen, och gatorna är uppkallade efter de bönder som ursprungligen ägde marken eller efter gruvdriften. Området har en egen samfällighetsförening. Närheten till Åkersberga har präglat hela området sedan järnvägen kom — Åkersberga station öppnade 1901 vid den dåvarande kustbanan, och orten är i dag centralort i Österåkers kommun.",
+    description: "Takbyte och takomläggning i Brevik, Lervik, Flaxenvik och Skärgårdsstad i Österåker. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription: "Öster om Åkersberga, ut mot kusten, ligger ett område med flera mindre delar: Brevik, Lervik, Flaxenvik, Ekhammar, Gröndal, Tråsättra, Skärgårdsstad, Översättra och södra Margretelund. Tillsammans bildar de ett stort sammanhängande småhusområde. Bebyggelsen har vuxit fram under lång tid. Enligt hitta.se är villorna i Brevik och Gröndal främst byggda på 1950- och 1960-talen, och villorna i Lervik på 1930- och 1970-talen. I Tråsättra finns kedjehus och radhus från 1970- och 1980-talen. Skärgårdsstad har en egen historia. Området ligger vid kusten, mellan Solbergasjön, Bosjön och Isättraviken, cirka sju kilometer från Åkersberga och till stor del omgivet av skog. Här fanns tidigare gruvhantering, och när den lades ned togs en detaljplan fram för bostäder. Skärgårdsstad bebyggdes främst under 1980- och 90-talen, och gatorna är uppkallade efter de bönder som ursprungligen ägde marken eller efter gruvdriften. Området har en egen samfällighetsförening. Närheten till Åkersberga har präglat hela området sedan järnvägen kom. Åkersberga station öppnade 1901 vid den dåvarande kustbanan, och orten är i dag centralort i Österåkers kommun.",
     extraContent:
       "",
     factBox: [
@@ -944,8 +937,7 @@ export const locations: LocationData[] = [
       { label: "Byggperiod", value: "Brevik/Gröndal 1950–60-tal, Lervik 1930- och 70-tal, Tråsättra 1970–80-tal, Skärgårdsstad 1980–90-tal" },
       { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 800" },
     ],
-    parentLocation: { name: "Österåker", slug: "akersberga" },
-    h1Override: "Takläggare i Brevik, Lervik och Flaxenvik, Österåker",
+    parentLocation: {"name":"Österåker","slug":"akersberga"},
     uniqueFAQ: {
       question: "Är bebyggelsen i Brevik-området enhetlig?",
       answer:
@@ -955,6 +947,8 @@ export const locations: LocationData[] = [
     lat: 59.4593,
     lng: 18.3624,
     nearbyLocations: ["Åkersberga", "Vaxholm", "Ljusterö"],
+    sourceLink: {"label":"Wikipedia: Skärgårdsstad","url":"https://sv.wikipedia.org/wiki/Sk%C3%A4rg%C3%A5rdsstad"},
+    h1Override: "Takläggare i Brevik, Lervik och Flaxenvik, Österåker",
     extraSections: [{ heading: "Vad det betyder för taket", text: "I ett område med hus från 1930-talet till 1990-talet finns ingen typisk takålder. Villorna från 1950- och 60-talen är i dag runt 60–70 år gamla, kedjehusen och radhusen i Tråsättra runt 40–50 år, och husen i Skärgårdsstad runt 30–40 år. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. Det enda säkra sättet att veta vad taket behöver är att titta på det på plats. I Tråsättra och Skärgårdsstad, där husen ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Österåkers kommun." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. ROT-avdraget på 30 % av arbetskostnaden drar vi direkt på fakturan.","Bor du i Brevik, Lervik, Flaxenvik eller Skärgårdsstad? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
@@ -963,20 +957,17 @@ export const locations: LocationData[] = [
     name: "Ormsta",
     region: "Roslagens inland",
     isIsland: false,
-    description:
-      "Takbyte och takomläggning i Ormsta, Bällsta, Västra Bällsta och Molnby i Vallentuna. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
-    longDescription:
-      "Vallentuna tätort har vuxit fram längs Roslagsbanan, där mindre samhällen i södra delen av kommunen gradvis har vuxit ihop. I norr sträcker sig tätorten upp till Ormsta, och i de östra och norra delarna ligger bostadsområden som Ormsta, Bällsta, Västra Bällsta och, enligt hitta.se, Molnby. Enligt beskrivningar av ortens historia fanns det på 1930- och 40-talen bland annat två tegelbruk i centralorten, och befolkningen växte snabbt efter kriget: från omkring 2 300 invånare 1944 till nästan 5 900 år 1952. Ormsta, i tätortens nordligaste del, gränsar till Åby i söder, Lingsberg i öster och Ubby i norr. Området fick sin station på Roslagsbanan 1957. Enligt hitta.se är husen i Ormsta främst byggda på 1950- och 1970-talen, i Bällsta på 1960- och 2000-talen, i Västra Bällsta på 1970- och 1980-talen och i Molnby på 1980- och 2000-talen.",
+    description: "Takbyte och takomläggning i Ormsta, Bällsta, Västra Bällsta och Molnby i Vallentuna. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription: "Vallentuna tätort har vuxit fram längs Roslagsbanan, där mindre samhällen i södra delen av kommunen gradvis har vuxit ihop. I norr sträcker sig tätorten upp till Ormsta, och i de östra och norra delarna ligger bostadsområden som Ormsta, Bällsta, Västra Bällsta och, enligt hitta.se, Molnby. Enligt beskrivningar av ortens historia fanns det på 1930- och 40-talen bland annat två tegelbruk i centralorten, och befolkningen växte snabbt efter kriget: från omkring 2 300 invånare 1944 till nästan 5 900 år 1952. Ormsta, i tätortens nordligaste del, gränsar till Åby i söder, Lingsberg i öster och Ubby i norr. Området fick sin station på Roslagsbanan 1957, mellan Ormsta och Snapptuna. Bebyggelsen i de olika delarna speglar ortens utbyggnad i etapper. Enligt hitta.se är husen i Ormsta främst byggda på 1950- och 1970-talen, i Bällsta på 1960- och 2000-talen, i Västra Bällsta på 1970- och 1980-talen och i Molnby på 1980- och 2000-talen. I området finns villor, kedjehus och radhus. Det gör östra Vallentuna till ett område där hus från fem decennier ligger nära varandra, från de tidiga villorna i Ormsta till de nyare kvarteren i Bällsta och Molnby.",
     extraContent:
-      "Det gör östra Vallentuna till ett område där hus från fem decennier ligger nära varandra, från de tidiga villorna i Ormsta till de nyare kvarteren i Bällsta och Molnby. De äldsta villorna från 1950- och 60-talen är i dag runt 60–70 år gamla, husen från 1970- och 80-talen runt 40–50 år, och de nyare husen från 2000-talet är i regel betydligt yngre. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. I kedjehusområdena, där husen byggdes samtidigt och ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Vallentuna kommun.",
+      "",
     factBox: [
       { label: "Kommun", value: "Vallentuna" },
       { label: "Delområden", value: "Ormsta, Bällsta, Västra Bällsta, Molnby" },
       { label: "Hustyper", value: "Villor, kedjehus, radhus" },
       { label: "Byggperiod", value: "Ormsta 1950–70-tal, Bällsta 1960- och 2000-tal, V. Bällsta 1970–80-tal, Molnby 1980- och 2000-tal" },
     ],
-    parentLocation: { name: "Vallentuna", slug: "vallentuna" },
-    h1Override: "Takläggare i Vallentuna – Ormsta, Bällsta och Molnby",
+    parentLocation: {"name":"Vallentuna","slug":"vallentuna"},
     uniqueFAQ: {
       question: "Är husen i Ormsta, Bällsta och Molnby från samma tid?",
       answer:
@@ -986,6 +977,9 @@ export const locations: LocationData[] = [
     lat: 59.5413,
     lng: 18.0881,
     nearbyLocations: ["Vallentuna", "Täby", "Åkersberga"],
+    sourceLink: {"label":"Wikipedia: Vallentuna","url":"https://sv.wikipedia.org/wiki/Vallentuna"},
+    h1Override: "Takläggare i Vallentuna – Ormsta, Bällsta och Molnby",
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Husen här spänner över ett halvt sekel. De äldsta villorna från 1950- och 60-talen är i dag runt 60–70 år gamla, husen från 1970- och 80-talen runt 40–50 år, och de nyare husen från 2000-talet är i regel betydligt yngre. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. I kedjehusområdena, där husen byggdes samtidigt och ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Vallentuna kommun." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Ormsta, Bällsta eller Molnby? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
@@ -1246,22 +1240,20 @@ export const locations: LocationData[] = [
     name: "Tegelhagen och Silverdal",
     region: "Norra Stockholm",
     isIsland: false,
-    description:
-      "Takbyte och takomläggning i Tegelhagen och Silverdal i Sollentuna, med kedjehus från 1970-talet och radhus från 2000-talet. Kostnadsfri takkontroll.",
-    longDescription:
-      "Tegelhagen och Silverdal ligger i kommundelen Helenelund i södra Sollentuna, mellan motorvägen och Edsviken. Båda har fått sina namn från gamla torp. Torpet Tegelhagen är känt sedan 1666, då det kallades Tegelslagaren efter tegelslagaren Klement som bodde där och troligen arbetade vid Ulriksdals tegelbruk. I början av 1800-talet byggdes torpet ut till sommarbostad åt stockholmsborgare, och 1884 lät grosshandlaren Carl Schnell uppföra en slottsliknande villa med 20 rum. Under andra världskriget tog krigsmakten över gården, och 1971 brann den ner. Strax intill ligger Kasby, tidigare torpet Kassverkan, känt sedan 1640-talet, där stugans äldsta delar anses vara från 1700-talet. Bostadsområdet Tegelhagen byggdes strax nordväst om det gamla torpet på 1970-talet, med kedjehus, parvillor och radhus i två våningar. Enligt beskrivningarna av området domineras det av stora bilfria områden med kedjehus. Silverdal har en ännu längre historia. Torpet Silverdal är belagt sedan 1730-talet, först under namnet Skogsdal. Legenden säger att drottning Kristinas häst tappade en silversko här under kröningståget 1650, men enligt Wikipedia är det mycket osannolikt, eftersom platsen inte låg på vägen. Silverdals gård har varit krog, tingshus och lanthandel, och i dag återstår manbyggnaden och den lilla smedjan. Grannen Rådan omnämns redan 1599 och har varit torp, rättarboställe, herrgård, internatskola, militärförläggning och polishögskola. Sollentuna kommun köpte Rådan 1989, och det gjorde det möjligt att bygga ett nytt bostadsområde väster om gården. Silverdal byggdes som en trädgårdsstad med omkring 1 000 bostäder, skolor och arbetsplatser, i etapper från 2002, och 2023 ansågs den ursprungliga planen vara genomförd.",
+    description: "Takbyte och takomläggning i Tegelhagen och Silverdal i Sollentuna, med kedjehus från 1970-talet och radhus från 2000-talet. Kostnadsfri takkontroll.",
+    longDescription: "Tegelhagen och Silverdal ligger i kommundelen Helenelund i södra Sollentuna, mellan motorvägen och Edsviken. Båda har fått sina namn från gamla torp. Torpet Tegelhagen är känt sedan 1666, då det kallades Tegelslagaren efter tegelslagaren Klement som bodde där och troligen arbetade vid Ulriksdals tegelbruk. I början av 1800-talet byggdes torpet ut till sommarbostad åt stockholmsborgare, och 1884 lät grosshandlaren Carl Schnell uppföra en slottsliknande villa med 20 rum. Under andra världskriget tog krigsmakten över gården, och 1971 brann den ner. Strax intill ligger Kasby, tidigare torpet Kassverkan, känt sedan 1640-talet, där stugans äldsta delar anses vara från 1700-talet. Bostadsområdet Tegelhagen byggdes strax nordväst om det gamla torpet på 1970-talet, med kedjehus, parvillor och radhus i två våningar. Enligt beskrivningarna av området domineras det av stora bilfria områden med kedjehus. Silverdal har en ännu längre historia. Torpet Silverdal är belagt sedan 1730-talet, först under namnet Skogsdal. Legenden säger att drottning Kristinas häst tappade en silversko här under kröningståget 1650, men enligt Wikipedia är det mycket osannolikt, eftersom platsen inte låg på vägen. Silverdals gård har varit krog, tingshus och lanthandel, och i dag återstår manbyggnaden och den lilla smedjan. Grannen Rådan omnämns redan 1599 och har varit torp, rättarboställe, herrgård, internatskola, militärförläggning och polishögskola. Sollentuna kommun köpte Rådan 1989, och det gjorde det möjligt att bygga ett nytt bostadsområde väster om gården. Silverdal byggdes som en trädgårdsstad med omkring 1 000 bostäder, skolor och arbetsplatser, i etapper från 2002, och 2023 ansågs den ursprungliga planen vara genomförd.",
     extraContent:
       "",
     factBox: [{"label":"Kommun","value":"Sollentuna"},{"label":"Delområden","value":"Tegelhagen, Silverdal"},{"label":"Hustyper","value":"Kedjehus, parvillor, radhus"},{"label":"Byggperiod","value":"Tegelhagen 1970-tal, Silverdal från 2002"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 610"}],
     sourceLink: {"label":"Wikipedia: Tegelhagen","url":"https://sv.wikipedia.org/wiki/Tegelhagen"},
     parentLocation: {"name":"Sollentuna","slug":"sollentuna"},
-    h1Override: "Takläggare i Tegelhagen och Silverdal, Sollentuna",
     uniqueFAQ: {"question":"När byggdes husen i Tegelhagen och Silverdal?","answer":"Byggperiod enligt källorna: Tegelhagen 1970-tal, Silverdal från 2002. Hustyper: kedjehus, parvillor, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun."},
     primaryKeyword: "takläggare Tegelhagen och Silverdal",
     lat: 59.39,
     lng: 17.99,
     nearbyLocations: ["Sollentuna","Viby","Edsviken","Helenelund"],
-    extraSections: [{ heading: "Vad det betyder för taket", text: "De två delarna har helt olika ålder. Kedjehusen, parvillorna och radhusen i Tegelhagen är i dag runt 45–55 år gamla, medan husen i Silverdal är byggda från 2002 och framåt och därför betydligt yngre. I Tegelhagen kan taken redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. I kedjehusområdena, där husen byggdes samtidigt och ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun." }],
+    h1Override: "Takläggare i Tegelhagen och Silverdal, Sollentuna",
+    extraSections: [{ heading: "Vad det betyder för taket", text: "De två delarna har helt olika ålder. Kedjehusen, parvillorna och radhusen i Tegelhagen är i dag runt 45–55 år gamla, medan husen i Silverdal är byggda från 2002 och framåt och därför betydligt yngre. I Tegelhagen kan taken redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta i den ålder där det är dags att se över dem. I Silverdal handlar det oftare om att hålla koll på detaljer och avvattning. I kedjehusområdena, där husen byggdes samtidigt och ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Tegelhagen eller Silverdal? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
@@ -2566,12 +2558,9 @@ export const locations: LocationData[] = [
     name: "Enebyberg",
     region: "Norra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Enebyberg — takbyte, takrenovering och plåtarbeten i Enebyberg. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
-    longDescription:
-      "Enebyberg är ett villasamhälle som till stor del präglas av bebyggelse från 1900-talets första hälft. Historien som villastad börjar 1906, när ägaren av Enebybergs gård började stycka av mark i anslutning till det som i dag är Roslagsbanan. Året därpå bildades AB Enebybergs villastad och tomtförsäljningen kom igång, och 1914 var bebyggelsen så omfattande att Enebyberg blev municipalsamhälle. Stadsplanen från 1923 omfattade omkring 550 tomter. Villorna byggdes först i de östra delarna längs järnvägen, och på 1930-talet växte samhället väster om Breda vägen. Under 1940-talet var alla tomter bebyggda, och ny mark togs i anspråk först i slutet av 1960-talet, då rad- och kedjehusområden tillkom i västra Enebyberg, bland annat vid Eneby gård. Namnet går tillbaka på Enebybergs gård, vars huvudbyggnad från 1770-talet ligger i västra Enebyberg, intill Rinkebyskogen. Det ger Enebyberg två tydliga generationer av hus: den tidiga villastaden i öster och rad- och kedjehusen från 1960- och 70-talen i väster.",
-    extraContent:
-      "I den äldre villastaden har taken i regel bytts eller lagts om, ibland flera gånger, och skicket skiljer sig mycket mellan husen. Äldre villor kan ha brantare takfall, takkupor, skorstenar och plåtdetaljer som behöver hanteras med omsorg för att husets karaktär ska finnas kvar efter ett byte. Kedjehusen och radhusen från 1960- och 70-talen är i dag runt femtio år gamla — där taket inte har lagts om är underlagspapp, läkt och plåtdetaljer ofta i den ålder där det är dags att se över dem. Eftersom husen i ett kedjehusområde oftast är likadana och byggdes samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva, men varje hus får ändå en egen takkontroll och ett eget pris. Om ett takbyte kräver lov eller anmälan, till exempel vid byte av material eller kulör, avgör Danderyds kommun. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Enebyberg.",
+    description: "Takbyte och takomläggning i Enebyberg: villor från 1900-talets första hälft och kedjehus från 1970-talet vid Eneby gård. Kostnadsfri takkontroll.",
+    longDescription: "Enebyberg är ett villasamhälle som enligt beskrivningar av kommundelen till stor del präglas av bebyggelse från 1900-talets första hälft. Historien som villastad börjar 1906, när ägaren av Enebybergs gård började stycka av mark i anslutning till det som i dag är Roslagsbanan. Året därpå bildades AB Enebybergs villastad och tomtförsäljningen kom igång. 1914 var bebyggelsen så omfattande att Enebyberg blev municipalsamhälle. Stadsplanen från 1923 omfattade omkring 550 tomter. Villorna byggdes först i de östra delarna längs järnvägen, och på 1930-talet växte samhället väster om Breda vägen. Under 1940-talet var enligt uppgifterna alla tomter bebyggda. Ny mark togs i anspråk först i slutet av 1960-talet, och under 1970-talet tillkom rad- och kedjehusområden i västra Enebyberg, bland annat kedjehusen vid Eneby gård. Namnet går tillbaka på Enebybergs gård, vars huvudbyggnad uppfördes på 1770-talet. Gården stod länge övergiven och var rivningshotad, men 1975 beslutade kommunen att den skulle restaureras. Den ligger i västra Enebyberg, intill Rinkebyskogen. Det ger Enebyberg två tydliga generationer av hus: den tidiga villastaden i öster, där mycket av 1900-talets villaarkitektur finns kvar, och rad- och kedjehusen från 1960- och 70-talen i väster.",
+    extraContent: "Olika tak, olika frågor: I den äldre villastaden har taken i regel bytts eller lagts om, ibland flera gånger, och skicket skiljer sig mycket mellan husen. Äldre villor kan ha brantare takfall, takkupor, skorstenar och plåtdetaljer som behöver hanteras med omsorg för att husets karaktär ska finnas kvar efter ett byte. Kedjehusen och radhusen från 1960- och 70-talen är i dag runt femtio år gamla. Där taket inte har lagts om är underlagspapp, läkt och plåtdetaljer ofta i den ålder där det är dags att se över dem. Eftersom husen i ett kedjehusområde oftast är likadana och byggdes samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå en egen takkontroll och ett eget pris. Om ett takbyte kräver lov eller anmälan, till exempel vid byte av material eller kulör, avgör Danderyds kommun.",
     factBox: [
       { label: "Kommun", value: "Danderyd" },
       { label: "Delområden", value: "Östra/västra Enebyberg, Eneby gård" },
@@ -2588,7 +2577,9 @@ export const locations: LocationData[] = [
     lat: 59.4225,
     lng: 18.0294,
     nearbyLocations: ["Danderyd", "Täby", "Stocksund"],
-    parentLocation: { name: "Danderyd", slug: "danderyd" },
+    parentLocation: {"name":"Danderyd","slug":"danderyd"},
+    sourceLink: {"label":"Wikipedia: Enebyberg","url":"https://sv.wikipedia.org/wiki/Enebyberg"},
+    h1Override: "Takläggare i Enebyberg, Danderyd",
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.","Bor du i Enebyberg och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
@@ -3184,12 +3175,9 @@ export const locations: LocationData[] = [
     name: "Stuvsta",
     region: "Södra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Stuvsta — takbyte, takrenovering och plåtarbeten i Stuvsta. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
-    longDescription:
-      "Stuvsta växte fram kring järnvägen. När Stuvsta gård såldes 1908 köptes marken av privata exploatörer, och 1910 bildades ett fastighetsbolag som styckade tomter för egnahem. Tomtförsäljningen tog fart efter 1918, när stationen vid Västra stambanan öppnade. En tomtstyckningsplan kom 1926, och först 1947 fastställdes en stadsplan för området. Spåren av den tiden syns fortfarande: stationshuset från 1917–1918, ritat av arkitekten Folke Zetterwall, står kvar med ortens namn på gaveln, och Stuvstakyrkan från 1954 byggdes av tegel från en riven kyrka i Stockholm. I dag består Stuvsta till stor del av småhus, många av dem äldre friliggande villor. Rad- och kedjehus i Myrängen byggdes under 1980- och 1990-talen, och inom Stuvsta finns också områden som Solfagra, Kynäs, Segersminne och Stensängen — en ovanligt blandad kommundel, där en hundraårig villa och ett trettio år gammalt kedjehus kan ligga några kvarter från varandra.",
-    extraContent:
-      "För de äldre villorna från 1920- och 1930-talen har taket ofta bytts eller lagts om minst en gång sedan huset byggdes, men det är inte alltid känt när eller hur — ett äldre tak kan dessutom ha detaljer som kräver omsorg vid ett byte, till exempel takkupor, skorstenar och äldre plåtarbeten. Rad- och kedjehusen i Myrängen från 1980- och 90-talen har kommit upp i en ålder där många ägare börjar fundera på takets underlag, plåtdetaljer och hängrännor. Eftersom husen i en länga oftast är likadana och byggdes samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva — varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett konkret takbyte kräver lov eller anmälan, till exempel vid byte av material eller kulör, avgör Huddinge kommun. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Stuvsta.",
+    description: "Takbyte i Stuvsta i Huddinge, från 1920-talsvillor till rad- och kedjehus i Myrängen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription: "Stuvsta växte fram kring järnvägen. När Stuvsta gård såldes 1908 köptes marken av privata exploatörer, och 1910 bildades ett fastighetsbolag som styckade tomter för egnahem. Tomtförsäljningen tog fart efter 1918, när stationen vid Västra stambanan öppnade. Närheten till tåget gjorde tomterna attraktiva för pendlare. En tomtstyckningsplan kom 1926, och först 1947 fastställdes en stadsplan för området. Spåren av den tiden syns fortfarande. Stationshuset från 1917–1918, ritat av arkitekten Folke Zetterwall, står kvar med ortens namn på gaveln, och Stuvstakyrkan från 1954 byggdes av tegel från en riven kyrka i Stockholm. Det är en påminnelse om att Stuvsta är ett samhälle med lång historia. I dag består Stuvsta till stor del av småhus, många av dem äldre friliggande villor. Enligt beskrivningar av kommundelen byggdes dessutom rad- och kedjehus i Myrängen under 1980- och 1990-talen. Inom Stuvsta finns också områden som Solfagra, Kynäs, Segersminne och Stensängen. Det gör Stuvsta till en ovanligt blandad kommundel, där en hundraårig villa och ett trettio år gammalt kedjehus kan ligga några kvarter från varandra.",
+    extraContent: "Två generationer av tak: För de äldre villorna från 1920- och 1930-talen har taket ofta bytts eller lagts om minst en gång sedan huset byggdes, men det är inte alltid känt när eller hur. Därför är det svårt att säga något generellt om skicket. Ett äldre tak kan dessutom ha detaljer som kräver omsorg vid ett byte, till exempel takkupor, skorstenar och äldre plåtarbeten. Rad- och kedjehusen i Myrängen från 1980- och 90-talen har kommit upp i en ålder där många ägare börjar fundera på takets underlag, plåtdetaljer och hängrännor. Eftersom husen i en länga oftast är likadana och byggdes samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett konkret takbyte kräver lov eller anmälan, till exempel vid byte av material eller kulör, avgör Huddinge kommun. Det är klokt att kontrollera det innan arbetet planeras.",
     factBox: [
       { label: "Kommun", value: "Huddinge" },
       { label: "Delområden", value: "Myrängen, Solfagra, Kynäs, Segersminne, Stensängen" },
@@ -3206,7 +3194,9 @@ export const locations: LocationData[] = [
     lat: 59.2444,
     lng: 17.9928,
     nearbyLocations: ["Huddinge", "Segeltorp", "Trångsund"],
-    parentLocation: { name: "Huddinge", slug: "huddinge" },
+    parentLocation: {"name":"Huddinge","slug":"huddinge"},
+    sourceLink: {"label":"Wikipedia: Stuvsta","url":"https://sv.wikipedia.org/wiki/Stuvsta"},
+    h1Override: "Takläggare i Stuvsta, Huddinge",
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten, inget timpris.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Funderar du på att byta eller lägga om taket i Stuvsta? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
@@ -3214,12 +3204,9 @@ export const locations: LocationData[] = [
     name: "Trångsund",
     region: "Södra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Trångsund — takbyte, takrenovering och plåtarbeten i Trångsund. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
-    longDescription:
-      "Mellan sjöarna Drevviken och Magelungen i nordöstra Huddinge ligger Trångsund. Namnet kommer från det trånga sundet i Drevviken. Trångsund nämns första gången 1636 som ett torp, som med tiden blev en mindre herrgård. År 1762 köpte arkitekten Carl Fredrik Adelcrantz Trångsunds gård och lät uppföra en ny mangårdsbyggnad. I samband med 1960-talets utbyggnad fick kommundelen sitt centrum, och Tacksägelsekyrkan, ritad av arkitekten Sture Frölén, invigdes 1957. Kommundelen består av åtta delområden: Sjöängen, Nytorp, Stortorp, Hammartorp, Fållan, Mellansjö, Orlångsjö och Svartvik. Bebyggelsen har vuxit fram i etapper: Nynäsbanan blev klar 1901, med egen station i Trångsund, men styckningsplanerna omsattes först i slutet av 1920-talet. I Stortorp skapades mellan 1911 och 1928 över 600 tomter, och i Sjöängen styckades fastigheter av från Trångsunds herrgård. Resultatet är ett område där villor från olika decennier ligger sida vid sida: tidiga hus på styckningstomterna längs järnvägen och en stor våg av småhus från 1960-talet.",
-    extraContent:
-      "Ett hus från 1960-talet är i dag över sextio år gammalt. Tak från den tiden kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och avvattning ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. De äldre husen från styckningsåren har ofta byggts om och renoverats i flera omgångar, och skicket varierar därför mycket — där kan det också finnas äldre detaljer som skorstenar, takkupor och plåtarbeten som behöver hanteras med omsorg vid ett byte. Om ett takbyte med nytt material eller ny kulör kräver lov eller anmälan avgör Huddinge kommun. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Trångsund.",
+    description: "Takbyte och takomläggning i Trångsund vid Drevviken och Magelungen. Villor från styckningsåren och småhus från 1960-talet. Kostnadsfri takkontroll.",
+    longDescription: "Mellan sjöarna Drevviken och Magelungen i nordöstra Huddinge ligger Trångsund. Namnet kommer från det trånga sundet i Drevviken. Trångsund nämns första gången 1636 som ett torp, som med tiden blev en mindre herrgård. År 1762 köpte arkitekten Carl Fredrik Adelcrantz Trångsunds gård och lät uppföra en ny mangårdsbyggnad. I samband med 1960-talets utbyggnad fick kommundelen sitt centrum, och Tacksägelsekyrkan, ritad av arkitekten Sture Frölén, invigdes 1957. Platsen har gamla anor. Vid Magelungen ligger Fållan, där stockholmare hade sommarnöjen redan på 1700-talet och där Carl Michael Bellman tillbringade sommaren 1773. Gården finns kvar än i dag. Kommundelen består av åtta delområden: Sjöängen, Nytorp, Stortorp, Hammartorp, Fållan, Mellansjö, Orlångsjö och Svartvik. Bebyggelsen har vuxit fram i etapper. Nynäsbanan blev klar 1901, med egen station i Trångsund, men de styckningsplaner som gjordes då omsattes först i slutet av 1920-talet. I Stortorp skapades mellan 1911 och 1928 över 600 tomter, och i Sjöängen styckades fastigheter av från Trångsunds herrgård. Under 1930- och 40-talen ökade byggandet, och i början av 1960-talet byggdes enligt beskrivningar av kommundelens historia för fullt, både flerbostadshus och småhus. Resultatet är ett område där villor från olika decennier ligger sida vid sida: tidiga hus på styckningstomterna längs järnvägen och en stor våg av småhus från 1960-talet.",
+    extraContent: "Tak från olika tider: Ett hus från 1960-talet är i dag över sextio år gammalt. Tak från den tiden kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och avvattning ofta i den ålder där det är dags att se över dem. Ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. De äldre husen från styckningsåren har ofta byggts om och renoverats i flera omgångar, och skicket varierar därför mycket. Där kan det också finnas äldre detaljer som skorstenar, takkupor och plåtarbeten som behöver hanteras med omsorg vid ett byte. Om ett takbyte med nytt material eller ny kulör kräver lov eller anmälan avgör Huddinge kommun.",
     factBox: [
       { label: "Kommun", value: "Huddinge" },
       { label: "Delområden", value: "Sjöängen, Nytorp, Stortorp, Hammartorp, Fållan, Mellansjö, Orlångsjö, Svartvik" },
@@ -3236,7 +3223,9 @@ export const locations: LocationData[] = [
     lat: 59.2258,
     lng: 18.1069,
     nearbyLocations: ["Skogås", "Huddinge", "Farsta"],
-    parentLocation: { name: "Huddinge", slug: "huddinge" },
+    parentLocation: {"name":"Huddinge","slug":"huddinge"},
+    sourceLink: {"label":"Wikipedia: Trångsund","url":"https://sv.wikipedia.org/wiki/Tr%C3%A5ngsund"},
+    h1Override: "Takläggare i Trångsund, Huddinge",
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. ROT-avdraget på 30 % av arbetskostnaden drar vi direkt på fakturan.","Bor du i Trångsund och undrar hur taket mår? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
@@ -3454,12 +3443,9 @@ export const locations: LocationData[] = [
     name: "Rönninge",
     region: "Sydvästra Stockholm",
     isIsland: false,
-    description:
-      "Takläggare i Rönninge — takbyte, takrenovering och plåtarbeten i Rönninge. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
-    longDescription:
-      "Rönninge är ett av de äldre villasamhällena söder om Stockholm. Sedan järnvägsstationen vid stambanan öppnat 1888 blev marken intressant för tomtstyckning, och 1896 styckades egendomen upp i 151 större och mindre tomter av ett nybildat villatomtbolag. Byggandet tog fart först efter sekelskiftet 1900, och resultatet blev en blandad villabebyggelse med både enklare och mer påkostade hus, med stationen som samhällets naturliga mittpunkt. Samhället har äldre rötter än villastaden — namnet nämns första gången i slutet av 1500-talet, som namn på ett torp under Uttringe, och Rönninge gård blev säteri på 1600-talet med en huvudbyggnad från 1662 som står kvar än i dag. År 1915 blev Rönninge municipalsamhälle, och när Salem åter blev en egen kommun 1983 blev Rönninge dess centralort. I dag rymmer kommundelen också områden som Mölleskogen, Garnudden, Skogsängen och Säbyholm, med hus främst byggda på 1960- och 1990-talen och blandade utbyggnadsår.",
-    extraContent:
-      "I ett samhälle som byggts ut under mer än hundra år finns ingen typisk takålder. Ett hus från 1960-talet är i dag över sextio år gammalt, och har taket inte lagts om är underlagspapp, läkt och plåtdetaljer ofta i den ålder där det är dags att se över dem. Hus från 1990-talet närmar sig åldern där hängrännor, beslag och genomföringar brukar behöva kontrolleras. I de äldsta villorna har taket i regel bytts, ibland flera gånger, och där kan det finnas äldre detaljer som behöver hanteras varsamt. Om just ditt hus har särskilda kulturhistoriska värden, eller om ett byte av material eller kulör kräver lov eller anmälan, avgör kommunen. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Rönninge.",
+    description: "Takbyte och takomläggning i Rönninge i Salems kommun, ett villasamhälle från 1896 med blandad bebyggelse. Kostnadsfri takkontroll utan förpliktelser.",
+    longDescription: "Rönninge är ett av de äldre villasamhällena söder om Stockholm. Sedan järnvägsstationen vid stambanan öppnat 1888 blev marken intressant för tomtstyckning, och 1896 styckades egendomen upp i 151 större och mindre tomter av ett nybildat villatomtbolag. Tomterna såldes snabbt, men byggandet tog fart först efter sekelskiftet 1900. Resultatet blev, enligt beskrivningar av ortens historia, en blandad villabebyggelse med både enklare och mer påkostade hus, med stationen som samhällets naturliga mittpunkt. Samhället har äldre rötter än villastaden. Namnet nämns första gången i slutet av 1500-talet, som namn på ett torp under Uttringe. Rönninge gård blev säteri på 1600-talet, och huvudbyggnaden från 1662 står kvar än i dag. Den köptes 1904 av Frälsningsarmén och är i dag en kursgård i privat regi. År 1915 blev Rönninge municipalsamhälle, och när Salem åter blev en egen kommun 1983 blev Rönninge dess centralort. Stationen har fortsatt att vara ortens nav, och sedan 1968 går pendeltågen härifrån mot Stockholm och Södertälje. Sedan dess har Rönninge fortsatt att växa i etapper, och i dag rymmer kommundelen också områden som Mölleskogen, Garnudden, Skogsängen och Säbyholm. Enligt hitta.se är husen i Rönninge främst byggda på 1960- och 1990-talen, med blandade utbyggnadsår. Rönninge är centralort i Salems kommun och har den största samlingen småhus i kommunen.",
+    extraContent: "Vad blandningen betyder för taket: I ett samhälle som byggts ut under mer än hundra år finns ingen typisk takålder. Ett hus från 1960-talet är i dag över sextio år gammalt, och har taket inte lagts om är underlagspapp, läkt och plåtdetaljer ofta i den ålder där det är dags att se över dem. Hus från 1990-talet närmar sig åldern där hängrännor, beslag och genomföringar brukar behöva kontrolleras. I de äldsta villorna har taket i regel bytts, ibland flera gånger, och där kan det finnas äldre detaljer som behöver hanteras varsamt. Om just ditt hus har särskilda kulturhistoriska värden, eller om ett byte av material eller kulör kräver lov eller anmälan, avgör kommunen. Det är klokt att kontrollera det innan arbetet planeras.",
     factBox: [
       { label: "Kommun", value: "Salem" },
       { label: "Delområden", value: "Mölleskogen, Garnudden, Skogsängen, Säbyholm" },
@@ -3476,7 +3462,9 @@ export const locations: LocationData[] = [
     lat: 59.2011,
     lng: 17.7367,
     nearbyLocations: ["Salem", "Tumba", "Södertälje"],
-    parentLocation: { name: "Salem", slug: "salem" },
+    parentLocation: {"name":"Salem","slug":"salem"},
+    sourceLink: {"label":"Wikipedia: Rönninge, Salems kommun","url":"https://sv.wikipedia.org/wiki/R%C3%B6nninge,_Salems_kommun"},
+    h1Override: "Takläggare i Rönninge, Salem",
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris**, inget löpande timpris.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Har du hus i Rönninge och vill veta vad taket behöver? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {

@@ -232,6 +232,36 @@ const aliasEntries = [
   ["/konsultation", "/kontakt"],
   ["/boka", "/kontakt"],
 ];
+/* 404.html (2026-10-01, mjuk 404): utan den här filen behandlar Cloudflare Pages sajten som en
+   SPA och svarar 200 med startsidans HTML (titel + index,follow) på VARJE okänd adress. Med
+   404.html i roten svarar Pages i stället med statuskod 404 och den här filen. Varje riktig
+   route har en egen statisk fil (se loopen ovan + alias), så inga riktiga sidor påverkas.
+   Filen är fortfarande SPA-skalet: React startar och visar NotFound-sidan (eller, som skyddsnät,
+   rätt sida om en route skulle sakna statisk fil). */
+{
+  let html = stripped
+    .replace(/<title>[^<]*<\/title>/, "<title>Sidan finns inte | RoslagsTak</title>")
+    .replace(/<meta name="robots" content="[^"]*" \/>/, '<meta name="robots" content="noindex, follow" />')
+    .replace(/\s*<link rel="canonical" href="[^"]*" \/>/g, "")
+    .replace(
+      /<meta name="description" content="[^"]*" \/>/,
+      '<meta name="description" content="Sidan du letar efter finns inte. Gå till startsidan eller boka en kostnadsfri takkontroll." />',
+    );
+  if (!/name="robots" content="noindex, follow"/.test(html)) {
+    html = html.replace("</head>", '  <meta name="robots" content="noindex, follow" />\n  </head>');
+  }
+  html = html.replace(
+    '<div id="root"></div>',
+    `<div id="root"><div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
+      <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
+      <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">Sidan finns inte</h1>
+      <p>Adressen du följde finns inte på roslagstak.se.</p>
+      <nav aria-label="Sidlänkar"><ul><li><a href="/">Till startsidan</a></li><li><a href="/takkontroll">Kostnadsfri takkontroll</a></li><li><a href="/omraden">Områden</a></li><li><a href="/kontakt">Kontakt</a></li></ul></nav>
+    </div></div>`,
+  );
+  writeFileSync(resolve(dist, "404.html"), html);
+}
+
 let aliases = 0;
 for (const [alias, target] of aliasEntries) {
   const targetUrl = `${SITE_URL}${target}`;

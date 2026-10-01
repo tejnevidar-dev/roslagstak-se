@@ -194,6 +194,18 @@ if (existsSync(resolve(dist, "index.html"))) {
     else if (canonical.replace(/\/$/, "") !== url.replace(/\/$/, ""))
       fail(url, `canonical mismatch: head says ${canonical}`);
   }
+  /* Sedan 2026-10-01 finns dist/404.html, så Cloudflare Pages svarar 404 på allt som saknar en
+     egen statisk fil. Därför måste VARJE känd route (även noindex-sidor utanför sitemap) ha en
+     statisk fil — annars får en riktig sida statuskod 404. */
+  if (existsSync(resolve(dist, "404.html"))) {
+    for (const route of knownRoutes) {
+      if (route === "/" || route.includes(":") || route.includes("*")) continue;
+      if (!existsSync(resolve(dist, `.${route}.html`)) && !existsSync(resolve(dist, `.${route}`, "index.html")))
+        fail(`${SITE_URL}${route}`, "känd route saknar statisk fil i dist → skulle svara 404 (404.html finns)");
+    }
+  } else {
+    fail(`${SITE_URL}/404.html`, "dist/404.html saknas → okända adresser svarar 200 med startsidan (mjuk 404)");
+  }
 } else {
   warn(sitemapPath, "no dist build found — run `npm run build` to check prerendered head tags");
 }

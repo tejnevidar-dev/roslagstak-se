@@ -146,7 +146,12 @@ if (existsSync(dist)) {
     const html = raw.replace(/<!--[\s\S]*?-->/g, "");
     htmlChecked++;
     const canon = html.match(/<link rel="canonical"[^>]*>/g) ?? [];
-    if (canon.length !== 1) err(rel, `${canon.length} canonical-taggar (ska vara 1)`);
+    // 404.html ska INTE ha canonical (den svarar för alla okända adresser) och ska vara noindex.
+    const is404 = /[\\/]404\.html$/.test(rel);
+    if (is404) {
+      if (canon.length !== 0) err(rel, "404.html får inte ha canonical");
+      if (!/<meta name="robots" content="noindex/.test(html)) err(rel, "404.html måste vara noindex");
+    } else if (canon.length !== 1) err(rel, `${canon.length} canonical-taggar (ska vara 1)`);
     const robots = html.match(/<meta name="robots"[^>]*>/g) ?? [];
     if (robots.length !== 1) err(rel, `${robots.length} robots-taggar (ska vara 1)`);
     for (const m of html.matchAll(
