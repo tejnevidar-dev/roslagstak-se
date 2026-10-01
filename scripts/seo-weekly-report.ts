@@ -247,6 +247,13 @@ lines.push(
   ),
 );
 
+/* Senaste Lighthouse-mätningen (manuell, ledning/marknad/lighthouse-senaste.md) tas med i
+   rapporten, så att den inte försvinner när seo-vecka.md skrivs över. */
+const LIGHTHOUSE_PATH = resolve("../ledning/marknad/lighthouse-senaste.md");
+if (existsSync(LIGHTHOUSE_PATH)) {
+  lines.push(section("10. Lighthouse / Core Web Vitals (senaste mätningen)", readFileSync(LIGHTHOUSE_PATH, "utf8")));
+}
+
 writeFileSync(REPORT_PATH, lines.join("\n"));
 console.log(`[seo-weekly-report] skrivet till ledning/marknad/seo-vecka.md`);
 console.log(
