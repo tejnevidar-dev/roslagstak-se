@@ -471,22 +471,24 @@ export const locations: LocationData[] = [
     slug: "vato",
     name: "Vätö",
     region: "Kusten",
-    isIsland: false,
+    isIsland: true,
     description:
-      "Takläggare på Vätö — takbyte och takrenovering mellan Norrtälje och skärgården. Ofta förmånliga priser tack vare samordning.",
+      "Takbyte och takomläggning på Vätö: torp och gårdar från 1800-talet, stenhuggarnas små villor och fritidshus från 1960- och 1970-talen. Kostnadsfri takkontroll.",
     longDescription:
-      "Vätö ligger strategiskt mellan Norrtälje och skärgården — ett område vi passerar dagligen på väg till projekt ute på öarna. Det gör att vi ofta kan erbjuda förmånliga priser till fastighetsägare på Vätö. Här finns många villor och fritidshus med tak som behöver ses över. Oavsett om det handlar om ett komplett takbyte eller en mindre renovering, finns vi nära och kan agera snabbt. Vi ger alltid fast pris efter kostnadsfri takkontroll — inga överraskningar på fakturan.",
+      "Vätö är en ö i Norrtälje kommun med samhället Harg mitt på ön. Fram till 1993 tog man sig över med färja från fastlandet. Då ersattes den av Vätöbron. Kyrkan omtalas första gången på 1300-talet. Ön har levt på sten och sjöfart. Enligt Wikipedia var brytning och försäljning av sandsten en betydande näring under 1600- och 1700-talen, och när stenen började tryta tog bondeseglationen över. Rosättra Båtvarv anlades 1886. Granitbrytningen började 1892, och den röda graniten användes bland annat till Riksdagshuset och Kungliga Operan i Stockholm. Vätö stenhuggeri vid Karlsängen hade som mest 500 anställda. Många av arbetarna kom utifrån och lät enligt Wikipedia bygga små villor med hög stenfot, som fortfarande hör till öns bebyggelse. I dag består Vätö av ett inland med jordbruk, åkrar och skog och av kuster med huvudsakligen fritidshus. Wikipedia beskriver en stor andel äldre bebyggelse, mest torp och gårdar från 1800-talets andra hälft, och dessutom stenhuggartorp som kom till när stenhuggerierna skapade ett behov av bostäder. Den norra delen av ön har en annan karaktär, med fritidshus från 1960- och 1970-talen som delvis ligger i grupper. Björkö och Arholma hörde till Vätö socken fram till 1914. På södra Björkö ligger enligt Wikipedia flera redargårdar från omkring 1840, och på Arholma finns skärgårdsbebyggelse främst från 1800-talet.",
     extraContent:
-      "Vätö är en av de platser vi passerar allra mest — och det märks i priserna vi kan erbjuda. Fastighetsägare på Vätö får därför ofta ett förmånligt pris utan att kompromissa på kvaliteten.",
-    uniqueFAQ: {
-      question: "Varför är takbyte på Vätö ofta billigare än på öarna?",
-      answer:
-        "Vätö ligger längs vår dagliga färdväg ut till skärgården. Det innebär att vi kan samordna projekt och minska restidskostnaderna, vilket ger ett förmånligare pris. Du får samma kvalitet och garanti som på alla andra platser vi arbetar.",
-    },
+      "",
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Delområden i RegSO","value":"Vätö, Björkö, Arholma, del av Väddö"},{"label":"Hustyper","value":"Torp och gårdar, stenhuggartorp, små villor med hög stenfot, fritidshus"},{"label":"Byggperiod","value":"Torp och gårdar från 1800-talets andra hälft, fritidshus på norra delen från 1960- och 1970-talen"},{"label":"Ägda småhus i RegSO (avrundat)","value":"Ca 1 520 (SCB, 2025)"}],
+    sourceLink: {"label":"Wikipedia: Vätö","url":"https://sv.wikipedia.org/wiki/V%C3%A4t%C3%B6"},
+    parentLocation: {"name":"Norrtälje","slug":"norrtalje"},
+    h1Override: "Takläggare på Vätö, Norrtälje",
+    uniqueFAQ: {"question":"När byggdes husen på Vätö?","answer":"Byggperiod enligt källorna: torp och gårdar från 1800-talets andra hälft, fritidshus på norra delen från 1960- och 1970-talen. Hustyper: torp och gårdar, stenhuggartorp, små villor med hög stenfot och fritidshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun."},
     primaryKeyword: "takläggare Vätö",
     lat: 59.7,
     lng: 18.7833,
     nearbyLocations: ["Rådmansö", "Blidö", "Norrtälje"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Torpen och gårdarna från 1800-talets andra hälft är i dag mellan 125 och 175 år gamla, och fritidshusen på norra Vätö mellan runt 50 och drygt 65 år. På de äldre husen kan taken redan ha lagts om, kanske flera gånger, så byggåret berättar lite om taket som ligger där nu. Det som räknas är underlaget, läkten, plåten kring skorstenen och hur vattnet leds bort. Ett fritidshus som har byggts till eller används året om kan ha fått tak i flera omgångar, och skarven mellan delarna behöver ses över. På en gård finns ofta fler tak än bostadshusets, till exempel uthus och bodar, som det kan löna sig att titta på vid samma tillfälle. Wikipedia anger att kulturlandskapet på ön har högt kulturhistoriskt värde, så ta reda på vad som gäller för ditt hus innan du väljer nytt material. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du på Vätö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
     slug: "norrtalje",
@@ -601,20 +603,22 @@ export const locations: LocationData[] = [
     region: "Roslagens inland",
     isIsland: false,
     description:
-      "Takläggare i Rimbo — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll och fast pris.",
+      "Takbyte och takomläggning i Rimbo, järnvägssamhället som fick sin första stadsplan på 1920-talet och har vuxit i årsringar sedan dess. Kostnadsfri takkontroll.",
     longDescription:
-      "Rimbo är en av Roslagens största tätorter och här finns allt från 70-talsvillor med betongpannor till äldre gårdar med lertegel och plåttak. Inlandsklimatet i Rimbo innebär stora temperatursvängningar och mycket snölast under vintern — vilket sliter på pannor, läkt och infästningar. Vi utför takbyten och takomläggningar i Rimbo året runt och bedömer behovet av taksäkerhet och snörasskydd efter fastighetens läge vid takkontrollen.",
+      "Rimbo ligger längs riksväg 77, två mil väster om Norrtälje. Platsen blev enligt Wikipedia tidigt en marknadsplats, eftersom vattenled och landsväg möttes här, och namnet finns i skrift från 1303. Kyrkan är en stenkyrka från 1400-talets senare hälft. Dagens samhälle växte fram kring järnvägen. Banan mellan Länna och Norrtälje öppnades via Rimbo 1884, året efter kom järnvägen från Stockholm, och 1898 togs sträckan mot Hallstavik i bruk. Runt den knutpunkten växte samhället upp en bit från kyrkan, och 1914 blev Rimbo municipalsamhälle. Norrtälje kommun skriver att fyra av socknens byar, Håsta, Viby, Tomta och Asplund, med tiden blev stationssamhället. Under 1920-talet antogs Rimbos första stadsplan. Enligt kommunen finns gatustrukturen från den planen till stor del kvar i de centrala delarna, och planen var påverkad av trädgårdsstadens ideal: boulevarder, gator med alléer och villor i lummiga kvarter med stora trädgårdar. Järnvägarna började avvecklas under 1960-talet, och 1981 lades den sista linjen ner, när persontrafiken mellan Rimbo och Kårsta upphörde. Sedan 1971 hör orten till Norrtälje kommun. I tätorten är fördelningen mellan småhus och flerbostadshus relativt jämn, skriver kommunen, som beskriver Rimbos framväxt som årsringar. Enligt hitta.se är husen mest från 1970- och 1980-talen. Fördjupningen av översiktsplanen räknar med omkring 2 000 nya bostäder fram till 2050, som ännu en årsring.",
     extraContent:
-      "I Rimbo finns det ofta villatak från 60- och 70-talet där betongpannorna börjat frostspränga och underlagspappen torkat sönder. I de fallen är takomläggning med ny papp, ny läkt och nytt takmaterial oftast den mest ekonomiska lösningen på sikt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll i Rimbo.",
-    uniqueFAQ: {
-      question: "Hur snabbt kan ni starta ett takbyte i Rimbo?",
-      answer:
-        "Vi utför arbeten i Rimbo året runt — plåttak kan monteras även under vintern så länge underlaget är torrt och isfritt. Exakt startdatum får du i offerten efter takkontrollen, och vi svarar alltid inom 24 timmar på din förfrågan.",
-    },
+      "",
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Hustyper","value":"Småhus och flerbostadshus, \"relativt jämn\" fördelning"},{"label":"Byggperiod","value":"Första stadsplanen under 1920-talet (villor i trädgårdsstadens anda), husen mest från 1970- och 1980-talen enligt hitta.se"},{"label":"Ägda småhus i RegSO (avrundat)","value":"Ca 920 (SCB 2025)"}],
+    sourceLink: {"label":"Norrtälje kommun: Fördjupning av översiktsplanen för Rimbo","url":"https://www.norrtalje.se/info/bygga-bo-miljo/norrtalje-vaxer/samhallsplanering/oversiktsplanering/fordjupning-av-oversiktsplanen-for-rimbo/allmanna-intressen/kulturmiljo-och-landskapsbild/"},
+    parentLocation: {"name":"Norrtälje","slug":"norrtalje"},
+    h1Override: "Takläggare i Rimbo, Norrtälje",
+    uniqueFAQ: {"question":"När byggdes husen i Rimbo?","answer":"Byggperiod enligt källorna: första stadsplanen under 1920-talet (villor i trädgårdsstadens anda), husen mest från 1970- och 1980-talen enligt hitta.se. Hustyper: småhus och flerbostadshus med relativt jämn fördelning. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun."},
     primaryKeyword: "takläggare Rimbo",
     lat: 59.7469,
     lng: 18.3639,
     nearbyLocations: ["Norrtälje", "Edsbro", "Riala"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "I Rimbo kan två grannkvarter ha kommit till med ett halvt sekel emellan. Husen från 1970- och 1980-talen är mellan runt 40 och drygt 55 år. På de äldre husen kan taken redan ha lagts om, och då är det inte husets byggår som avgör skicket, utan vad som gjordes senast och hur det gjordes. På hus från 1970- och 1980-talen som inte har fått nytt tak är det underlaget under ytskiktet som brukar bestämma om det räcker med en reparation eller om hela taket bör läggas om. Det syns sällan från marken. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Rimbo och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
     slug: "hallstavik",
@@ -5448,6 +5452,52 @@ export const locations: LocationData[] = [
     nearbyLocations: ["Enskede","Skarpnäck"],
     extraSections: [{ heading: "Vad det betyder för taket", text: "Småhusen från 1920-talets början är i dag drygt 100 år gamla, och villorna i Kärringstan mellan knappt 90 och drygt 100 år. Radhusen i kvarteret Barnmorskan är runt 16–18 år. På de äldre husen kan taket ha lagts om flera gånger, så husets ålder avslöjar inte hur taket mår. Det som räknas är vad som finns under ytan i dag och hur plåtdetaljer, skorstensanslutningar och hängrännor har klarat sig sedan senaste omläggningen. I ett dubbelhus delar två hushåll på samma tak, och det som görs på den ena halvan behöver anslutas till den andra. Då är det ofta enklast att grannarna planerar tillsammans. På hus med inredd vind går takfönster, kupor och skorstenar genom taket, och varje sådan genomföring behöver kontrolleras. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris." }],
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Enskededalen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
+  },
+  {
+    slug: "tallkrogen",
+    name: "Tallkrogen",
+    region: "Stockholms stad",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Tallkrogen i Söderort, där omkring 950 småstugor byggdes av ägarna själva 1933–1945. Kostnadsfri takkontroll.",
+    longDescription:
+      "Tallkrogen är en stadsdel i Söderort i Stockholm som gränsar till Gamla Enskede, Gubbängen och Svedmyra. Enligt Wikipedia räknas den till Stockholms trädgårdsstäder. Namnet kommer från en krog vid den gamla landsvägen mot Dalarö, som nämns redan 1668. Marken hörde en gång till Östberga gård, och här låg torpen Mossens gård och Lövlund. Stockholms stad köpte Mossens mark 1905, men det dröjde till 1930-talet innan något byggdes. Stadsdelen bildades 1933, och samma år ritade stadsplaneraren Albert Lilienberg den första stadsplanen. Gatorna lades enligt Wikipedia ut som löparbanor runt en idrottsarena. Den delen kallas Olympiaområdet och har gatunamn som Maratonvägen, Kulstötarvägen och Diskusvägen. Bebyggelsen består enligt Wikipedia till övervägande del av småhus. Omkring 950 stugor restes med självbyggeri fram till 1945. Olympiaområdet byggdes 1933–1934, och de flesta stugorna där hade bara två rum. Det finns ungefär tio hustyper, alla ritade av arkitekten Edvin Engström, och den första stugan byggdes på Kulstötarvägen 14. Husen uppfördes i regi av Stockholms stads småstugebyrå, och tomterna uppläts med tomträtt. Enligt Stockholmskällan bildades småstugebyrån 1927 som en avdelning inom stadens fastighetskontor, och ägarna deltog själva i bygget för att hålla kostnaderna nere. Området kring Tallkrogsvägen byggdes 1935, centrumet vid Tallkrogsplan invigdes 1943 och tunnelbanestationen öppnade 1950. Wikipedia anger också att ungefär hälften av bostäderna, räknat till antalet, är hyreslägenheter, bland annat i husen kring Torögatan från 1949–1952.",
+    extraContent:
+      "",
+    factBox: [{"label":"Kommun","value":"Stockholm (Farsta stadsdelsområde)"},{"label":"Hustyper","value":"Småstugor (självbyggeri, ungefär tio hustyper), hyreshus"},{"label":"Byggperiod","value":"Småstugorna 1933–1945 (Olympiaområdet 1933–1934, kring Tallkrogsvägen 1935), hyreshusen kring Torögatan 1949–1952"},{"label":"Ägda småhus (avrundat)","value":"Ca 940"}],
+    sourceLink: {"label":"Wikipedia: Tallkrogen","url":"https://sv.wikipedia.org/wiki/Tallkrogen"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Tallkrogen, Stockholm",
+    uniqueFAQ: {"question":"När byggdes husen i Tallkrogen?","answer":"Byggperiod enligt källorna: småstugorna 1933–1945 (Olympiaområdet 1933–1934, kring Tallkrogsvägen 1935), hyreshusen kring Torögatan 1949–1952. Hustyper: småstugor från självbyggeri i ungefär tio hustyper, samt hyreshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad."},
+    primaryKeyword: "takläggare Tallkrogen",
+    lat: 59.2715,
+    lng: 18.0861,
+    nearbyLocations: ["Enskede","Skarpnäck"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Småstugorna i Tallkrogen byggdes mellan 1933 och 1945 och är i dag mellan drygt 80 och drygt 90 år gamla. Taken kan redan ha lagts om, och husets ålder säger därför lite om hur taket mår. Det går bara att avgöra på plats, genom att se på underlag, läkt, plåtdetaljer, skorstensanslutning och hängrännor. En stuga som från början hade två rum kan ha fått en tillbyggnad eller en inredd övervåning längre fram. Då möts tak från olika tider, och skarven mellan gammalt och nytt är ett ställe som är värt att se över. Takkupor och takfönster som har satts in i efterhand är andra sådana ställen. När ett tiotal hustyper återkommer gata efter gata syns ett nytt tak bredvid grannarnas. Ta därför reda på vad som gäller innan du bestämmer dig. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Tallkrogen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
+  },
+  {
+    slug: "viksberg",
+    name: "Viksberg och Viksäter",
+    region: "Sydvästra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Viksberg, Viksäter och Ragnhildsborg norr om Södertälje, där fritidshus har blivit åretruntboende. Kostnadsfri takkontroll.",
+    longDescription:
+      "Norr om Södertälje, mellan Mälaren och gränsen mot Salem, ligger Viksberg och Viksäter. Sedan 2015 räknas de enligt Wikipedia som en gemensam tätort, och fram till 1974 hörde trakten till Salems socken. Södertälje kommun beskriver landskapet i en förstudie från 2016: höjdryggar med skog, och däremellan dalgångar med åkrar, hagar och golfbanor. Viksbergs gård är ett tidigare säteri som fick sina säterirättigheter 1681. Söder om gården låg ett tegelbruk som finns i räkenskaper från 1765 och som lades ner efter en brand i början av 1940-talet. Kapellet intill uppfördes 1901. Kommunen skriver att trakten norr och öster om gården präglas av småbruk och egnahem som bildades 1914, och att det i sydost finns spridda små hus av tidig egnahemskaraktär. Sedan kom fritidshusen. Halvön Holmen har enligt kommunen ett stort antal små fritidshus som har placerats efter terrängen, från 1930-talets sportstugor och framåt. Viksäter bebyggdes under 1960-talet som fritidshusområde. Under 1990-talet flyttade allt fler dit för gott, och 2007 kom en ny detaljplan med större byggrätter. Kommunen vill ändå att Viksäter ska behålla sin karaktär av \"hus i skog\". När förstudien skrevs fanns ungefär 800 bebyggda fastigheter i Viksberg, Viksäter, Talbystrand och Holmen. De nyaste husen ligger längs Viksbergsvägen. Ekgårdens småhusområde, nordväst om Ritorp, fick sin första detaljplan 2004, och fler områden för småhus och radhus planlades 2013–2015. Vid Ragnhildsborg, intill Linasundet närmast staden, finns enligt kommunen både gammal och ny villabebyggelse i kuperad terräng.",
+    extraContent:
+      "",
+    factBox: [{"label":"Kommun","value":"Södertälje"},{"label":"Delområden","value":"Viksberg, Viksäter, Holmen, Talbystrand, Ekgården, Ragnhildsborg"},{"label":"Hustyper","value":"Egnahem, fritidshus som blivit åretruntbostäder, villor, småhus och radhus i de senaste planerna"},{"label":"Byggperiod","value":"Egnahemsbildningar 1914, sportstugor på Holmen från 1930-talet, Viksäter 1960-talet, småhusplaner 2004 och 2013–2015"},{"label":"Ägda småhus i RegSO (avrundat)","value":"Ca 1 070 (SCB, 2025)"}],
+    sourceLink: {"label":"Södertälje kommun: Förstudie Viksberg (2016)","url":"https://www.sodertalje.se/globalassets/politiska-dokument/stadsbyggnadsnamnden/2017-sammantradeshandlingar/2017-05-30/arende-11.pdf"},
+    parentLocation: {"name":"Södertälje","slug":"sodertalje"},
+    h1Override: "Takläggare i Viksberg och Viksäter, Södertälje",
+    uniqueFAQ: {"question":"När byggdes husen i Viksberg och Viksäter?","answer":"Byggperiod enligt källorna: egnahemsbildningar 1914, sportstugor på Holmen från 1930-talet, Viksäter 1960-talet, småhusplaner 2004 och 2013–2015. Hustyper: egnahem, fritidshus som blivit åretruntbostäder, villor, samt småhus och radhus i de senaste planerna. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Södertälje kommun."},
+    primaryKeyword: "takläggare Viksberg",
+    lat: 59.2498,
+    lng: 17.6142,
+    nearbyLocations: ["Södertälje","Järna"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Här ligger hus från ett helt sekel sida vid sida. Egnahemmen kan vara drygt 100 år, sportstugorna på Holmen upp emot 90 år och fritidshusen i Viksäter runt 60 år, medan husen längs Viksbergsvägen är högst ett tjugotal år. På de äldre husen kan taken redan ha lagts om, så det är dagens skick som räknas och inte byggåret. Ett fritidshus som har byggts ut för att bo i året om har ofta fått tak i etapper. Där den nya delen möter den gamla behöver underlag och plåt höra ihop, och det stället bör ses över noga. Om ett byte av material eller kulör kräver lov eller anmälan avgör Södertälje kommun. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Viksberg eller Viksäter och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
 ];
 
