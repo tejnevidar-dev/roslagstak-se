@@ -146,6 +146,16 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-nockebyhov", area: "Nockebyhov och Olovslund, Stockholm (Bromma)", wave: 7 },
   { path: "/taklaggare-bromma-kyrka", area: "Bromma Kyrka, Stockholm (Bromma)", wave: 7 },
   { path: "/taklaggare-flysta", area: "Flysta, Stockholm (Järva)", wave: 7 },
+  { path: "/taklaggare-vidja", area: "Vidja och Högmora, Huddinge", wave: 8 },
+  { path: "/taklaggare-glomsta", area: "Glömsta, Huddinge", wave: 8 },
+  { path: "/taklaggare-kummelnas", area: "Kummelnäs, Nacka", wave: 8 },
+  { path: "/taklaggare-hersby", area: "Hersby och Herserud, Lidingö", wave: 8 },
+  { path: "/taklaggare-malarhojden", area: "Mälarhöjden, Stockholm", wave: 8 },
+  { path: "/taklaggare-stureby", area: "Stureby, Stockholm", wave: 8 },
+  { path: "/taklaggare-vendelso", area: "Vendelsö och Norrby, Haninge (befintlig sida förstärkt)", wave: 8 },
+  { path: "/taklaggare-alta", area: "Älta, Nacka (befintlig sida förstärkt)", wave: 8 },
+  { path: "/taklaggare-resaro", area: "Resarö, Vaxholm", wave: 8 },
+  { path: "/taklaggare-ingaro", area: "Ingarö, Värmdö (befintlig sida förstärkt)", wave: 8 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };
