@@ -12,8 +12,8 @@ import QuickContactFacts from "@/components/QuickContactFacts";
 const points = [
   {
     icon: ShieldCheck,
-    title: "Bara verifierade omdömen",
-    text: "Vi publicerar inga omdömen som vi själva har skrivit. Det du läser på Google är lämnat av kunder, med namn och datum, och kan inte redigeras av oss.",
+    title: "Hämtade från Google, inte skrivna av oss",
+    text: "Vi publicerar inga omdömen som vi själva har skrivit och ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Namn och datum visas i original, och vi kan inte redigera det.",
   },
   {
     icon: MessageSquare,

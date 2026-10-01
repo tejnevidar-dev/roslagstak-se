@@ -131,7 +131,7 @@ const GoogleReviews = ({
           ))}
         </div>
         <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
-          Verifierade omdömen på Google
+          Omdömen hämtade från Google
         </span>
       </div>
       <h2 className="mt-5 font-display text-2xl text-foreground">{title}</h2>
