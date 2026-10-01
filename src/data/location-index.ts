@@ -185,6 +185,8 @@ export const locationIndex: LocationSummary[] = [
   { slug: "lindholmen", name: "Lindholmen", region: "Roslagens inland", isIsland: false },
   { slug: "sjoberg", name: "Sjöberg", region: "Norra Stockholm", isIsland: false },
   { slug: "lahall", name: "Lahäll", region: "Roslagens inland", isIsland: false },
+  { slug: "stenhamra", name: "Stenhamra", region: "Sydvästra Stockholm", isIsland: false },
+  { slug: "uttran", name: "Uttran och Broängen", region: "Sydvästra Stockholm", isIsland: false },
 ];
 
 export const locationRegions = Array.from(new Set(locationIndex.map((l) => l.region)));

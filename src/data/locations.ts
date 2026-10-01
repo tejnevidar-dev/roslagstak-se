@@ -3206,20 +3206,46 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Västerhaninge — takbyte och takrenovering i Västerhaninge. Fast pris utan dolda tillägg och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Västerhaninge, med villor och grupphus från 1940-talet och framåt. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
     longDescription:
-      "Västerhaninge — tätort i södra Haninge — har ett fastighetsbestånd med villor, radhus och äldre gårdsbebyggelse. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Västerhaninge: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
-    extraContent:
-      "Vi går igenom förutsättningarna i Västerhaninge — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Västerhaninge.",
+      "Västerhaninge är en tätort och kommundel i Haninge kommun på Södertörn, omkring 25 kilometer från Stockholms innerstad. Bygden är gammal. Västerhaninge kyrka uppfördes på 1200-talet, och det första kända belägget för ortnamnet är från omkring 1314, då det skrevs Westrahanunge. Även Ribby, Nedersta och Fors är enligt Wikipedia skriftligt kända sedan 1300-talet. Tillsammans med Jordbrogravfältet bildar Åbygravfältet, som till stor del sannolikt ligger under den gamla kyrkbyn, Nordens största kända gravfält från äldre järnåldern. Stationssamhället kom till efter att Nynäsbanan invigdes den 28 december 1901. Vid kyrkan fanns då stationshus, gästgiveri, handelsbod och apotek. Järnvägen blev enligt Wikipedia avgörande för utvecklingen under 1900-talet, särskilt efter 1950, då befolkningen ökade och nya bostadsområden byggdes. Åren 1933–34 rätades Nynäsvägen, och då tillkom också det första finförgrenade vägnätet för den nya villabebyggelsen sydväst om kyrkan. Mellan 1953 och 1970 uppfördes de flesta av ortens flerfamiljshus, 1969 invigdes Västerhaninge köpcentrum och 1973 kom pendeltågen i gång. I dag finns enligt Wikipedia både bostadsrätter, hyresrätter och flera områden med villor och grupphus, där de äldsta är från mitten av 1940-talet. Under senare år har nya bostadsområden tillkommit, som Ribby ängar, Skarplöt och Nedersta. Närbutiker finns ute i bostadsområdena, bland annat i Åby och Ribby, och i norr tar Hanvedens skogar vid.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Haninge" },
+      { label: "Delområden", value: "Ribby, Nödesta (centrala Västerhaninge)" },
+      { label: "Hustyper", value: "Villor, egnahem, radhus, kedjehus" },
+      { label: "Byggperiod", value: "Från mitten av 1940-talet, mest efter 1950" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 680" },
+    ],
+    sourceLink: { label: "Wikipedia: Västerhaninge", url: "https://sv.wikipedia.org/wiki/V%C3%A4sterhaninge" },
+    parentLocation: { name: "Haninge", slug: "haninge" },
+    h1Override: "Takläggare i Västerhaninge, Haninge",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Västerhaninge?",
+      question: "När byggdes husen i Västerhaninge?",
       answer:
-        "Priset för ett takbyte i Västerhaninge beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Du får ett fast pris efter takkontrollen, med rivning, material, ställning, arbete och avfallshantering specificerat. Arbetskostnaden är ROT-berättigad. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
+        "Byggperiod enligt källorna: de äldsta villorna och grupphusen från mitten av 1940-talet, mest av småhusbebyggelsen från decennierna efter 1950. Hustyper: villor, egnahem, radhus och kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Haninge kommun.",
     },
     primaryKeyword: "takläggare Västerhaninge",
-    lat: 59.12,
-    lng: 18.0964,
-    nearbyLocations: ["Jordbro", "Tungelsta", "Handen"],
+    lat: 59.1222,
+    lng: 18.1086,
+    nearbyLocations: ["Haninge", "Jordbro", "Tungelsta", "Handen"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "De äldsta villorna och grupphusen i centrala Västerhaninge är i dag runt 80 år gamla, och mycket av småhusbebyggelsen kom till under decennierna efter 1950. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. I de nyaste områdena är taken betydligt yngre. I grupphusområden, där husen är byggda samtidigt och ofta är likadana, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Haninge kommun, och det är klokt att kontrollera det innan materialet väljs.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Västerhaninge och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
   },
   {
     slug: "tungelsta",
@@ -4040,6 +4066,98 @@ export const locations: LocationData[] = [
       paragraphs: [
         "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
         "Bor du i Lahäll och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "stenhamra",
+    name: "Stenhamra",
+    region: "Sydvästra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Stenhamra på Färingsö, med villor, kedjehus och radhus främst från 1960- till 1980-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Stenhamra är en tätort i Ekerö kommun, på västra sidan av Färingsö i Mälaren. Orten är mest känd för sitt stenbrott. Enligt Wikipedia bröts här en stor del av Stockholms gat- och kantsten, från 1884 fram till 1919 med full styrka, och omkring 100 arbetare sysselsattes året runt. Den enda förbindelsen med Stockholm var sjövägen, så stenen fraktades på pråmar. Driften lades ner 1937. Tjänstebostäderna som Stockholms stad höll med för stenhuggarnas familjer finns kvar, och stenbrottet, bostäderna, skolan och konsumbutiken är tillsammans klassade som riksintresse för kulturmiljövården. I det delvis vattenfyllda stenbrottet har flera filmer spelats in, bland annat Pippi Långstrump och Bröderna Lejonhjärta. Det moderna Stenhamra har en annan historia. Bär- och fruktdryckestillverkaren Stockmos har haft sin fabrik här sedan 1932, och på 1940-talet omfattade odlingarna 10 000 fruktträd. Enligt Wikipedia var det Sveriges största fruktodling norr om Skåne. Åren 1968–1970 byggdes ett villaområde på markerna. Fruktträd finns fortfarande kvar i området. Enligt hitta.se är husen byggda i flera omgångar: kring Dalbovägen och Alvikens gårdsväg främst på 1950- och 1960-talen, kring Apelvägen och Silvavägen på 1960- och 1970-talen, kring Fållvägen och Ramundvägen på 1970- och 1980-talen och vid Stockby strand på 1990- och 2000-talen. Bebyggelsen består av villor, kedjehus och radhus. I Stenhamra med omgivning bor omkring 3 600 personer, och de flesta som arbetar pendlar inom Stockholmsområdet.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Ekerö" },
+      { label: "Hustyper", value: "Villor, kedjehus, radhus" },
+      { label: "Byggperiod", value: "Villaområdet 1968–1970, övrigt 1950–1980-tal, Stockby strand 1990–2000-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 050" },
+    ],
+    sourceLink: { label: "Wikipedia: Stenhamra", url: "https://sv.wikipedia.org/wiki/Stenhamra" },
+    parentLocation: { name: "Ekerö", slug: "ekero" },
+    h1Override: "Takläggare i Stenhamra, Ekerö",
+    uniqueFAQ: {
+      question: "När byggdes husen i Stenhamra?",
+      answer:
+        "Byggperiod enligt källorna: villaområdet på den gamla fruktodlingen 1968–1970, övrig bebyggelse 1950- till 1980-talet, och vid Stockby strand 1990- till 2000-talet. Hustyper: villor, kedjehus och radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Ekerö kommun.",
+    },
+    primaryKeyword: "takläggare Stenhamra",
+    lat: 59.3347,
+    lng: 17.6874,
+    nearbyLocations: ["Ekerö"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "De flesta husen i Stenhamra är i dag runt 40–65 år gamla, och villorna på den gamla fruktodlingen drygt 55 år. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. Husen vid Stockby strand är betydligt yngre. På kedjehus och radhus hänger taken ihop med grannens, och anslutningarna mellan husen behöver utföras så att de fungerar tillsammans med grannens tak. I områden med många fruktträd och annan växtlighet nära husen samlas löv lätt i hängrännor och ränndalar, och det är värt att hålla dem rena. Om ett byte av material eller kulör kräver lov eller anmälan avgör Ekerö kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Stenhamra och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "uttran",
+    name: "Uttran och Broängen",
+    region: "Sydvästra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i villasamhället Uttran och i Broängen i Tumba, med hus främst från 1950- till 1980-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Uttran ligger i Botkyrka kommun, vid den östra delen av sjön Uttran, på gränsen mot Salems kommun. Området räknas i dag som sammanvuxet med Tumba. I början av 1900-talet anlades två sanatorier vid sjön, Söderby sjukhus och Uttrans sjukhus, och för dem inrättades en egen hållplats för lokaltåg. Stationen drogs in i början av 1970-talet. Två av de gamla stationsbyggnaderna i trä används enligt Wikipedia som bostäder, och gångtunneln under spåren finns kvar. Uttran hörde till Grödinge kommun fram till 1971, då den blev en del av Botkyrka. Enligt Wikipedia är Uttran till största delen ett villasamhälle i ett kuperat landskap med flera bäckraviner, vid sjöns sydöstra sida. I söder och sydväst ligger Vinterskogens naturreservat, och i sydost tar Broängen vid. Broängen är ett mindre bostadsområde i södra Tumba. Området är känt sedan medeltiden och var utmark till Skrävsta gård, och fram till 1920-talet var det huvudsakligen jordbruksbygd under Broängens gård. I dag består Broängen huvudsakligen av villor och radhus. Enligt hitta.se är husen i Uttran främst byggda på 1960- och 1980-talen och i Broängen på 1950- och 1960-talen. Bebyggelsen är en blandning av villor, kedjehus och radhus.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Botkyrka" },
+      { label: "Hustyper", value: "Villor, kedjehus, radhus" },
+      { label: "Byggperiod", value: "Uttran 1960- och 1980-tal, Broängen 1950–1960-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 060" },
+    ],
+    sourceLink: { label: "Wikipedia: Uttran", url: "https://sv.wikipedia.org/wiki/Uttran" },
+    parentLocation: { name: "Tumba", slug: "tumba" },
+    h1Override: "Takläggare i Uttran och Broängen, Tumba",
+    uniqueFAQ: {
+      question: "När byggdes husen i Uttran och Broängen?",
+      answer:
+        "Byggperiod enligt källorna: Uttran främst 1960- och 1980-tal, Broängen 1950- och 1960-tal. Hustyper: villor, kedjehus och radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Botkyrka kommun.",
+    },
+    primaryKeyword: "takläggare Uttran",
+    lat: 59.1921,
+    lng: 17.8052,
+    nearbyLocations: ["Tumba", "Rönninge"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Husen i Broängen är i dag runt 60–75 år gamla och i Uttran runt 40–65 år. Taken kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. I ett kuperat område med raviner och mycket skog nära husen samlas löv och barr lätt i hängrännor och ränndalar, och åtkomsten till huset kan påverka hur ett takbyte planeras. På kedjehus och radhus hänger taken ihop med grannens, och anslutningarna mellan husen behöver utföras så att de fungerar tillsammans med grannens tak. Om ett byte av material eller kulör kräver lov eller anmälan avgör Botkyrka kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Uttran eller Broängen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       ],
     },
   },
