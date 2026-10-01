@@ -5,7 +5,8 @@
  *
  * Lertegel och dubbelfalsat plåttak har redan egna, live sidor (/tjanster/tegeltak och
  * /tjanster/platarbeten#falsat) — de får INTE en dubblettsida här, bara ett hubbkort som länkar dit.
- * Bara betongpannor och TP20 är nya sidor (`href` pekar internt, `detail` är satt).
+ * Betongpannor, TP20, papptak och underlagstak (underlagspapp/råspont) är egna sidor
+ * (`href` pekar internt, `detail` är satt).
  */
 
 export interface MaterialDetail {
@@ -165,6 +166,46 @@ export const materials: Material[] = [
         "Råspont, underpapp och ytpapp (beroende på system), anslutningar och plåtdetaljer (fotplåt, vindskivor) och avvattning. Vid ett takbyte kan råsponten ses över när den gamla pappen är borta.",
       hallIsar:
         "Ytpapp på ett papptak är det synliga tätskiktet. Underlagspapp under pannor eller plåt är ett dolt andra skydd på andra taktyper.",
+    },
+  },
+  {
+    slug: "underlagstak",
+    href: "/material/underlagstak",
+    title: "Underlagspapp och råspont",
+    hubDescription: "Takets andra skydd, under pannorna och plåten.",
+    weight: "Lätt",
+    visibleScrews: "Nej",
+    minLutning: "–",
+    detail: {
+      metaTitle: "Underlagspapp och råspont – takets underlag förklarat",
+      metaDescription:
+        "Under pannor och plåt ligger takets andra skydd: råspont och underlagspapp. Så fungerar underlaget, när det byts och varför det avgör om taket håller tätt.",
+      intro:
+        "Det du ser av ett tak är pannorna eller plåten. Det som håller huset torrt när en panna spricker, när snö blåser in eller när kondens bildas på undersidan är lagret under: underlaget. På de flesta villatak består det av råspont med en underlagspapp eller underlagsduk ovanpå. Underlaget syns aldrig från marken, men det är det som avgör om ett tak behöver lagas, läggas om eller bytas.",
+      funktion:
+        "Råsponten är ett sammanhängande brädgolv av spontade brädor som spikas på takstolarna. Den bär upp resten av taket och ger något att fästa i. Ovanpå den ligger underlagspappen eller underlagsduken, som är takets vattentäta skikt. På den spikas ströläkt i takfallets riktning, så att vatten som tar sig förbi ytmaterialet kan rinna ner mot takfoten, och på ströläkten ligger bärläkten som pannorna eller plåten fästs i. Ytmaterialet tar det mesta av vädret. Underlaget tar hand om resten.",
+      anvandning:
+        "Under betongpannor, lertegel och profilerad plåt på lutande tak. Falsat plåttak läggs också på ett fast underlag med ett underlagsmaterial under plåten. På ett papptak fungerar det annorlunda: där ligger takpappen direkt på råsponten och är själv det synliga tätskiktet. Vilket underlagsmaterial som passar beror på ytmaterialet och taklutningen, och tillverkarens anvisningar gäller.",
+      livslangd:
+        "Underlaget ligger skyddat under ytmaterialet, men det åldras ändå av värme, kyla och fukt. Hur länge det håller beror på materialet, på hur väl taket är ventilerat och på om ytmaterialet har släppt igenom vatten under lång tid. Ofta är det underlaget, inte pannorna, som avgör när ett tak behöver göras om. Tillverkarens uppgifter och garantier gäller.",
+      fordelar:
+        "Ett helt underlag ger taket två skydd i stället för ett. En sprucken panna eller en plåt som har släppt behöver då inte betyda att vatten kommer in i huset. Råsponten ger ett fast underlag att arbeta på och fästa i, och den ger taket stadga.",
+      nackdelar:
+        "Underlaget går inte att se eller bedöma från marken, och skador upptäcks ofta sent, först när fukt syns på vinden eller i innertaket. Det går inte att byta underlagspappen utan att lyfta bort ytmaterialet och läkten. Därför görs det normalt i samband med en omläggning eller ett takbyte, inte som en egen åtgärd.",
+      passarNar:
+        "Frågan är sällan om taket ska ha ett underlag, utan om det befintliga håller. Underlagspapp och läkt byts när taket läggs om. Råsponten bedöms när taket är öppet: är den torr och frisk kan den ligga kvar, är den fuktskadad byts de delar som har tagit skada.",
+      underhall:
+        "Underlaget sköts genom att resten av taket sköts. Byt trasiga pannor innan vatten hinner rinna in under lång tid, håll hängrännor och ränndalar rena och se till att vinden är ventilerad så att fukt kan vädras ut. Titta på vinden någon gång om året, gärna efter regn: mörka fläckar, droppmärken eller mjukt trä på råspontens undersida är tecken som ska tas på allvar.",
+      vanligaFel:
+        "Underlagspapp som har blivit spröd och spruckit, vilket ofta märks som läckage på flera ställen samtidigt. Råspont som har blivit mörk, mjuk eller rutten efter ett läckage som har pågått länge. Läkt som har ruttnat så att pannorna inte längre ligger stadigt. Kondens på råspontens undersida när vinden är dåligt ventilerad.",
+      kostnadsdrivare:
+        "Takets storlek och form, hur mycket av råsponten som behöver bytas, antalet genomföringar och anslutningar och åtkomsten. Hur mycket råspont som måste bytas syns ofta först när taket är öppet.",
+      delAvTaksystemet:
+        "Takstolar, råspont, underlagspapp eller underlagsduk, ströläkt, bärläkt och sedan ytmaterialet, med plåtdetaljer och avvattning. Vid en takomläggning eller ett takbyte byts underlagspapp och läkt, och råsponten ses över när det gamla taket är borta.",
+      hosOss:
+        "Vid ett takbyte byts underlag och läkt, och råsponten bedöms när taket är öppet. På Blidö behölls den, och på Singö byttes delar av den. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      hallIsar:
+        "Underlagspapp ligger dold under pannor eller plåt och är takets andra skydd. Takpapp (ytpapp) på ett papptak är själva det synliga taket. Råspont är brädlagret under pappen, och läkt är reglarna ovanpå som pannorna vilar på.",
     },
   },
 ];

@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, MapPin, Layers, CalendarDays } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import { renderInline } from "@/lib/inline-md";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -134,7 +135,7 @@ const ProjectPage = () => {
           <div className="mt-10 space-y-5">
             {project.description.map((paragraph, i) => (
               <p key={i} className="leading-relaxed text-muted-foreground">
-                {paragraph}
+                {renderInline(paragraph)}
               </p>
             ))}
           </div>

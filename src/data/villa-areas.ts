@@ -120,8 +120,8 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Edsviken", types: "Villor, inslag av radhus", period: "Främst 1920–30-tal (Wikipedia)", href: "/taklaggare-edsviken" },
       { name: "Töjnan", types: "Villor", period: "Mest 1920- och 1970-tal (hitta.se)", note: "Töjnan är ett namnsatt område i västra delen av kommundelen Tureberg, som gränsar till bland annat Fågelsången, Bagarby, Knista och Häggvik. Enligt hitta.se är husen främst byggda på 1920- och 1970-talen." },
       { name: "Tegelhagen", types: "Kedjehus och radhus", period: "Slutet av 1970-talet (hitta.se)", href: "/taklaggare-tegelhagen-silverdal" },
-      { name: "Vaxmora", types: "Villor och radhus", period: "Mest 1960- och 1970-tal (hitta.se)" },
-      { name: "Eriksberg", types: "Villor", period: "Villastad från 1920–30-talet (Wikipedia)" },
+      { name: "Vaxmora", types: "Villor och radhus", period: "Mest 1960- och 1970-tal (hitta.se)", note: "Vaxmora i nordöstra Sollentuna är uppkallat efter ett torp i Törnskogen. Enligt hitta.se är villorna och radhusen främst byggda på 1960- och 1970-talen." },
+      { name: "Eriksberg", types: "Villor", period: "Villastad från 1920–30-talet (Wikipedia)", note: "Eriksberg i Helenelund har fått sitt namn från torpet Eriksberg från 1819. Marken köptes upp för tomter 1918, villabyggandet tog enligt Wikipedia fart när Helenelund fick sin järnvägshållplats 1922, och 1926 upprättades stadsplanen för Eriksbergs villastad, ritad av arkitekten Arvid Stille. Enligt hitta.se är husen i dag främst från 1950- och 1960-talen." },
     ],
   },
   huddinge: {
@@ -143,7 +143,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Sticklinge", types: "Villor", period: "Norra Sticklinge efter stadsplanen 1978, Södra Sticklinge tidigt 1990-tal (Wikipedia)", href: "/taklaggare-sticklinge" },
       { name: "Mölna", types: "Villor, radhus och kedjehus", period: "Främst 1950- och 1960-tal (Wikipedia)", href: "/taklaggare-molna" },
       { name: "Östra Rudboda, Yttringe och Elfvik", types: "Radhus, kedjehus och villor", period: "Östra Rudboda mitten av 1970-talet (Wikipedia)" },
-      { name: "Mosstorp", types: "Villor och radhus", period: "Villasamhälle, stadsplan 1913 och 1940-talet (Wikipedia)" },
+      { name: "Mosstorp", types: "Villor och radhus", period: "Villasamhälle, stadsplan 1913 och 1940-talet (Wikipedia)", note: "Mosstorp är enligt Wikipedia ett utpräglat villasamhälle som började stadsplaneras redan 1907 av Per Olof Hallman, på uppdrag av Lidingö villastad. Stadsplanen för den norra delen fastställdes 1913, och på 1940-talet tillkom planer för de södra delarna." },
       { name: "Bo och Rudboda", types: "Villor, radhus och kedjehus", period: "Rudboda från 1960-talet, Toftvägens radhus 1962–64 (Wikipedia)" },
     ],
   },
@@ -153,7 +153,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Jakobsberg västra", types: "Villor, kedjehus och radhus", period: "Tomter styckade på 1920–30-talet (kommunen), mest 1950–1970-tal (hitta.se)", href: "/taklaggare-jakobsberg" },
       { name: "Fjällen och Fastebol (Viksjö)", types: "Kedjehus, radhus och villor", period: "Fastebol 1966–67, Andeboda 1967–70, Fjällen tidigt 1980-tal (Wikipedia)" },
       { name: "Viksjö västra", types: "Kedjehus, radhus och villor", period: "1969 till tidigt 1980-tal (Wikipedia)", href: "/taklaggare-viksjo" },
-      { name: "Barkarby västra och Skälby östra", types: "Villor, inslag av kedjehus och radhus", period: "Tomter styckade från 1926 (kommunen), mest 1950- och 1960-tal (hitta.se)" },
+      { name: "Barkarby västra och Skälby östra", types: "Villor, inslag av kedjehus och radhus", period: "Tomter styckade från 1926 (kommunen), mest 1950- och 1960-tal (hitta.se)", href: "/taklaggare-barkarby" },
       { name: "Skälby västra", types: "Villor, radhus och kedjehus", period: "Tomter styckade 1921 (kommunen), mest 1950- och 1960-tal (hitta.se)" },
       { name: "Stäket", types: "Villor", period: "Villasamhälle från 1904 (Wikipedia)" },
     ],
@@ -168,6 +168,18 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Margretelund", types: "Kedjehus och villor", period: "Mest 1970- och 1990-tal (hitta.se)" },
       { name: "Svinninge", types: "Villor", period: "Mest 1950- och 1960-tal (hitta.se), utbyggnad 1990–1995 (Wikipedia)", note: "Svinninge ligger mellan Åkersberga och Vaxholm och växte kraftigt västerut mellan 1990 och 1995, då småorterna Svinninge och Hästängsudd blev en del av tätorten. Enligt hitta.se är villorna i Svinninge främst byggda på 1950- och 1960-talen." },
       { name: "Täljö och Runö", types: "Villor, radhus och kedjehus", period: "Täljö mest 1950- och 1960-tal (hitta.se)" },
+    ],
+  },
+  haninge: {
+    municipality: "Haninge",
+    areas: [
+      { name: "Tungelsta", types: "Villor", period: "Station på Nynäsbanan 1901 (Wikipedia)", note: "Tungelsta, en del av Västerhaninge tätort, har enligt Wikipedia traditioner inom trädgårdsnäring med flera handelsträdgårdar, och i utkanterna är bebyggelsen gles med äldre villor på stora tomter. Stationen på Nynäsbanan invigdes 1901." },
+    ],
+  },
+  botkyrka: {
+    municipality: "Botkyrka",
+    areas: [
+      { name: "Tullinge", types: "Villor och radhus", period: "Villastad kring sekelskiftet 1900, radhus mest 1965–1975 (Wikipedia)", note: "Tullinge planerades enligt Wikipedia som villastad kring sekelskiftet 1900, med Jacob Tegnér som drivande, och fick en egen hållplats 1903 när stambanan byggdes ut till dubbelspår. De flesta av dagens radhusområden byggdes mellan 1965 och 1975." },
     ],
   },
 };

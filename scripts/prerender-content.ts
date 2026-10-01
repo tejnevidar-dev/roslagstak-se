@@ -96,9 +96,9 @@ const projectSummaries = [
     summary:
       "Komplett takbyte på ett hus på Blidö i Norrtälje kommun, med svarta betongpannor från Benders, nytt underlag, ny läkt, nya plåtdetaljer och nya hängrännor. Befintlig råspont behölls.",
     description: [
-      "Huset ligger i skogen på Blidö i Norrtälje kommun. Uppdraget var ett komplett takbyte, från underlag till avvattning.",
-      "Nytt ytmaterial är betongpannor från Benders i svart.",
-      "Nytt underlag, ny läkt, nya betongpannor, nya plåtdetaljer, nya skorstensbeslag och nya hängrännor. Den befintliga råsponten behölls.",
+      "Huset ligger i skogen på Blidö i Norrtälje kommun. Uppdraget var ett komplett takbyte, från underlag till avvattning, och arbetet gjordes sommaren 2026.",
+      "Råsponten: den befintliga råsponten behölls. Nytt underlag och ny läkt lades ovanpå. Nytt ytmaterial är betongpannor från Benders i svart. Plåtdetaljerna och skorstensbeslagen byttes, och huset fick nya hängrännor.",
+      "Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, och ROT-avdraget dras direkt på fakturan.",
       "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke.",
     ],
     ogImage: "/og/project-blido-hero.jpg",
@@ -116,9 +116,9 @@ const projectSummaries = [
     summary:
       "Komplett takbyte på ett hus på Singö i Grisslehamn, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Delar av råsponten byttes.",
     description: [
-      "Huset ligger på Singö i Grisslehamn, Norrtälje kommun, med utsikt över fjärden. Uppdraget var ett komplett takbyte.",
-      "Två material i samma röda kulör: betongpannor på huvudtaket och TP20, en trapetsprofilerad plåt, på de lägre delarna.",
-      "Komplett takbyte, inklusive byte av delar av råsponten. Resten av råsponten behölls.",
+      "Huset ligger på Singö i Grisslehamn, Norrtälje kommun, med utsikt över fjärden. Uppdraget var ett komplett takbyte, som blev färdigt i september 2026.",
+      "Råsponten: delar av råsponten byttes, resten behölls. Huset har ett huvudtak och lägre takdelar som fick olika material i samma röda kulör — betongpannor på huvudtaket och TP20-plåt på de lägre delarna.",
+      "Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, och ROT-avdraget dras direkt på fakturan.",
       "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke, även på startsidan.",
     ],
     ogImage: "/og/project-singo-hero.jpg",
@@ -346,6 +346,91 @@ const problemSummaries = [
       "Gör inte själv: Arbete på hög stege eller uppe på taket vid takfoten. Kanten är den plats där fallrisken är störst, och ruttet trä kan släppa när du belastar det. Du kan fota skadorna från marken, hålla hängrännorna fria där du säkert når dem från marken och notera var på huset rötan sitter. Det hjälper till att hitta orsaken.",
     ],
   },
+  {
+    slug: "lackande-plattak",
+    title: "Läckande plåttak",
+    metaTitle: "Läckande plåttak – vanliga orsaker och vad du gör",
+    metaDescription:
+      "Läcker plåttaket? Så känner du igen läckage vid skruvar, skarvar och falsar, vad du kan göra själv och när taket behöver kontrolleras.",
+    intro:
+      "Ett plåttak är tätt så länge plåten, skarvarna och infästningarna är hela. När det börjar läcka sitter orsaken sällan mitt i en plåt, utan där plåtarna möts, där de är fästa eller där något går igenom taket.",
+    paragraphs: [
+      "Symptom: Fuktfläckar i innertaket som ofta följer en rak linje, längs en skarv eller en rad av skruvar. Droppar eller fuktränder på undersidan av taket på vinden, i ett garage eller ett uthus där plåten syns inifrån. Utifrån kan du se skruvar som står upp, saknas eller har rostiga brickor, plåtar som har glidit isär i en skarv, en fals som har öppnat sig, rost i kanter och skarvar eller plåt som har bucklats av en gren eller av snö och is.",
+      "Vanliga orsaker: På skruvad plåt har tätningsbrickan under skruven åldrats, eller skruven har släppt eller dragits snett så att vatten följer med in. Skarvarna mellan plåtarna överlappar för lite eller har öppnats. På falsat plåttak har en fals öppnat sig eller ett fäste släppt. Nockplåt, fotplåt eller anslutningar mot skorsten, vägg och genomföringar har släppt eller rostat.",
+      "När är det akut? När vatten droppar in, när fukten når isolering eller el, eller när en plåt har lossnat och kan blåsa av. En plåt som fladdrar i blåsten ska åtgärdas snabbt, eftersom den både kan släppa in vatten och falla ner.",
+      "Så undersöks det: Vid takkontrollen tittar vi på taket på plats: skruvar och brickor, skarvar och falsar, nock, fotplåt och alla anslutningar, och om plåtens ytbehandling är hel. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Åtgärder som används: Byte av skruvar och brickor där de har släppt. Nya eller omlagda plåtdetaljer vid nock, fot och anslutningar. Byte av enstaka plåtar som har fått hål eller bucklats. Är plåten genomrostad på flera ställen kan ett nytt plåttak vara en bättre lösning än att laga ett läckage i taget.",
+      "Gör inte själv: Gå inte upp på plåttaket. Plåt är hal, särskilt när den är fuktig, frostig eller sned. Täta inte skarvar och skruvar på måfå med fogmassa, eftersom det kan stänga in fukt och göra det svårare att hitta orsaken.",
+    ],
+  },
+  {
+    slug: "skadad-takpapp-pa-papptak",
+    title: "Blåsor och sprickor i takpappen",
+    metaTitle: "Blåsor och sprickor i takpapp – tecken och åtgärder",
+    metaDescription:
+      "Blåsor, sprickor, släppta skarvar eller stående vatten på papptaket? Så känner du igen skadorna och vet när taket behöver kontrolleras.",
+    intro:
+      "På ett papptak är pappen själva tätskiktet. Det finns inga pannor ovanför som tar det mesta av vädret, så en skada i pappen kan släppa in vatten direkt.",
+    paragraphs: [
+      "Symptom: Blåsor eller bubblor i pappen, sprickor i ytan, skarvar som har släppt eller rest sig, och kanter som har lossnat vid takfot, vindskivor eller uppvik mot en vägg. Vatten som står kvar i pölar långt efter att det har slutat regna.",
+      "Vanliga orsaker: Pappen har åldrats av sol, kyla och värme och blivit spröd. Skarvar har inte svetsats eller klistrats tätt, eller har släppt med tiden. Taket har för lite fall eller har satt sig, så att vatten blir stående. Takbrunnar och utlopp är igensatta av löv.",
+      "När är det akut? När vatten kommer in, när en skarv har öppnat sig helt eller när pappen har lossnat i en kant så att vinden kan ta tag i den. Stående vatten på ett tak som inte läcker är inte akut, men det ska ses över.",
+      "Så undersöks det: Vid takkontrollen tittar vi på taket på plats: pappens yta och skarvar, kanter och uppvik, plåtdetaljer, brunnar och utlopp och hur vattnet rinner av. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Åtgärder som används: Lagning av enstaka skador och skarvar när pappen i övrigt är i gott skick. Rensning av brunnar och utlopp. Är pappen sliten över stora ytor läggs ett nytt papptak, och då byts också skadade delar av underlaget.",
+      "Gör inte själv: Gå inte på ett papptak som har blåsor, sprickor eller mjuka partier. Stick inte hål på blåsor. Du kan fota skadorna från en säker plats och hålla utlopp och stuprör rena där du når dem från marken.",
+    ],
+  },
+  {
+    slug: "losa-nockpannor",
+    title: "Lösa eller spruckna nockpannor",
+    metaTitle: "Lösa nockpannor – tecken, orsaker och åtgärder",
+    metaDescription:
+      "Har nockpannorna flyttat sig, spruckit eller ramlat ner? Så ser du det från marken, varför det händer och när nocken behöver läggas om.",
+    intro:
+      "Nocken är takets högsta linje, där de två takfallen möts. Nockpannorna sitter mest utsatt av allt på taket, eftersom vinden tar som hårdast just där.",
+    paragraphs: [
+      "Symptom: Nockpannor som ligger snett, har glidit isär eller saknas, så att nocklinjen inte längre är rak och jämn. Bitar av pannor på marken efter en blåsig natt. Bruk eller tätning som har ramlat ner i hängrännan.",
+      "Vanliga orsaker: Fästena som håller nockpannorna har rostat eller släppt, eller pannorna är lagda i bruk som har spruckit och vittrat. Kraftig vind har lyft pannor som redan satt löst. Nocktätningen under pannorna har åldrats, så att vatten och snö kan blåsa in även när pannorna ligger kvar.",
+      "När är det akut? När nockpannor har ramlat ner eller ligger så löst att de kan falla mot gång, uteplats eller bil, och när vatten kommer in på vinden. En nockpanna som ligger lite snett är inte akut, men den ska åtgärdas före nästa storm.",
+      "Så undersöks det: Vid takkontrollen tittar vi på taket på plats: hur nockpannorna ligger och är fästa, i vilket skick nocktätningen och nockbrädan är och om pannorna närmast nocken har rört sig. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Åtgärder som används: Omläggning av nocken med nya fästen och ny nocktätning, och byte av spruckna nockpannor. Är pannorna och underlaget i övrigt uttjänta kan ett takbyte vara en bättre lösning.",
+      "Gör inte själv: Gå inte upp till nocken. Det är den högsta och mest utsatta platsen på taket, och lösa pannor kan glida under fötterna. Du kan titta längs nocklinjen från marken eller med kikare.",
+    ],
+  },
+  {
+    slug: "porosa-betongpannor",
+    title: "Porösa eller vittrade betongpannor",
+    metaTitle: "Porösa betongpannor – tecken på att ytan är sliten",
+    metaDescription:
+      "Har betongpannorna tappat färgen, blivit sträva eller börjat släppa sand? Så känner du igen slitna pannor och vet när taket bör kontrolleras.",
+    intro:
+      "Betongpannor har ett ytskikt som ger kulören och skyddar betongen under. Med tiden slits det av sol, regn och frost, och pannan blir sträv och suger åt sig mer vatten.",
+    paragraphs: [
+      "Symptom: Pannor som har bleknat, blivit grå och flammiga eller har tappat sin ursprungliga kulör. En sträv, sandig yta, och sand eller grus från pannorna som samlas i hängrännorna. Mycket mossa och lav, särskilt i skuggiga lägen.",
+      "Vanliga orsaker: Ytskiktet har slitits bort av väder och vind. Frost spränger ytan när pannan har sugit åt sig vatten. Mossa och lav håller kvar fukt och påskyndar slitaget. Hård rengöring, till exempel med högtryck på nära håll, kan ta bort ytskiktet i förtid.",
+      "När är det akut? Sällan. Porösa pannor är ett långsamt förlopp. Det blir bråttom först när pannor spricker och faller sönder, eller när underlaget samtidigt är slitet så att vatten kommer in.",
+      "Så undersöks det: Vid takkontrollen tittar vi på taket på plats: pannornas yta och kanter, hur mycket påväxt det finns, om pannor har spruckit och hur nock, plåtdetaljer och hängrännor ser ut. Efter bedömningen får du veta vad som behöver göras och ett fast pris.",
+      "Åtgärder som används: Byte av enstaka spruckna pannor och skonsam borttagning av mossa när pannorna i övrigt håller. Är pannorna slitna över hela taket är en takomläggning med nytt underlag, ny läkt och nya pannor det som håller i längden.",
+      "Gör inte själv: Gå inte upp på taket, och tvätta inte pannorna med högtryck på nära håll. Sköra pannor kan spricka under fötterna, och hård tvätt kan skada ytan ytterligare.",
+    ],
+  },
+  {
+    slug: "lackage-vid-takkupa",
+    title: "Läckage vid takkupa",
+    metaTitle: "Läckage vid takkupa – var det brukar läcka och varför",
+    metaDescription:
+      "Fukt i taket eller väggen vid takkupan? Så hittar du var vattnet kan komma in, vad du kan göra själv och när kupans anslutningar behöver ses över.",
+    intro:
+      "En takkupa bryter takfallet och ger ljus och ståhöjd, men den ger också taket flera nya skarvar. Det är oftast i anslutningarna mot huvudtaket, inte i själva kupan, som ett läckage börjar.",
+    paragraphs: [
+      "Symptom: Fuktfläckar eller missfärgning i innertaket intill kupan, i kupans sidoväggar eller under fönstret. Färg som bubblar eller flagnar på kupans insida. Utifrån kan du se löv och barr som har samlats i vinklarna vid kupans sidor, eller plåt som ser rostig eller lös ut.",
+      "Vanliga orsaker: Plåten i vinklarna mellan kupan och huvudtaket har rostat, spruckit eller släppt. Anslutningen mellan kupans väggar och taket är otät. Löv, snö och is blir liggande vid kupans sidor och dämmer vattnet. Kupans eget tak, fönsterbleck eller fönsteranslutning kan också läcka.",
+      "När är det akut? När vatten droppar in, när fukten når isolering eller el, eller när fläckarna växer för varje regn. Fukt som pågår länge vid en kupa kan skada både råsponten och kupans egen stomme.",
+      "Så undersöks det: Vid takkontrollen tittar vi på taket på plats: plåten i kupans vinklar, anslutningarna mot kupans väggar, kupans eget tak och fönsterbleck och hur pannorna närmast ligger. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Åtgärder som används: Ny plåt i vinklarna och nya anslutningar mot kupans väggar, omläggning av pannorna närmast och nytt underlag runt kupan där det är skadat. Vid ett takbyte görs alla anslutningar runt kupan om.",
+      "Gör inte själv: Arbete uppe på taket vid kupan. Vinklarna intill en kupa är trånga och hala, och det är lätt att trampa sönder plåt eller pannor. Du kan fota fuktfläckarna och titta på kupan från marken.",
+    ],
+  },
 ];
 
 /**
@@ -400,6 +485,21 @@ const materialSummaries = [
       "Funktion: en duk av glasfiber eller polyester som impregnerats och belagts med bitumen, och som läggs i våder som överlappar varandra på ett fast underlag, oftast råspont. Ytpappen har ofta ett skikt av skiffer eller granulat som skyddar mot UV-ljus.",
       "Fördelar: lätt material som inte belastar takstolarna, fungerar på flacka tak där andra material inte kan användas. Nackdelar: hela tätheten hänger på skarvarna och anslutningarna, och ytan sliter av sol och stående vatten.",
       "Passar när taket är flackt eller har låg lutning, byggnaden är lätt i konstruktionen (garage, carport, uthus, tillbyggnad), eller huset har papptak i dag och ska få ett nytt tätt tak av samma slag.",
+    ],
+  },
+  {
+    slug: "underlagstak",
+    href: "/material/underlagstak",
+    title: "Underlagspapp och råspont",
+    metaTitle: "Underlagspapp och råspont – takets underlag förklarat",
+    metaDescription:
+      "Under pannor och plåt ligger takets andra skydd: råspont och underlagspapp. Så fungerar underlaget, när det byts och varför det avgör om taket håller tätt.",
+    intro:
+      "Det du ser av ett tak är pannorna eller plåten. Det som håller huset torrt när en panna spricker, när snö blåser in eller när kondens bildas på undersidan är lagret under: underlaget. På de flesta villatak består det av råspont med en underlagspapp eller underlagsduk ovanpå.",
+    paragraphs: [
+      "Funktion: råsponten är ett sammanhängande brädgolv som spikas på takstolarna och bär upp resten av taket. Ovanpå den ligger underlagspappen eller underlagsduken, takets vattentäta skikt. Ströläkt och bärläkt läggs ovanpå, och sist ytmaterialet.",
+      "Fördelar: ett helt underlag ger taket två skydd i stället för ett — en sprucken panna behöver inte betyda läckage in i huset. Nackdelar: underlaget går inte att bedöma från marken, och det går inte att byta utan att lyfta bort ytmaterialet och läkten.",
+      "Underlagspapp och läkt byts normalt i samband med en omläggning eller ett takbyte. Råsponten bedöms när taket är öppet — är den torr och frisk kan den ligga kvar, är den fuktskadad byts de delar som har tagit skada.",
     ],
   },
 ];

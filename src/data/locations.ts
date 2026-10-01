@@ -1029,6 +1029,60 @@ export const locations: LocationData[] = [
     process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Örby och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
+    slug: "skondal",
+    name: "Sköndal",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Sköndal i Söderort, med småstugor från 1940-talet och rad- och kedjehus från 1950- till 1970-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Sköndal är en stadsdel i Söderort, i Farsta stadsdelsområde, som gränsar till bland annat Farsta, Hökarängen, Gubbängen och Skarpnäcks gård. Stadsdelen bildades 1932, men platsen är äldre än så. Det äldsta belägget för namnet är från 1397, då gården skrevs Siondæ, och enligt Wikipedia ändrades namnet till Sköndal under drottning Kristina. De tre gårdarna Stora Sköndal, Skönstavik och Sköndalsbro finns fortfarande kvar vid Drevvikens strand. Perstorpsvägen är en del av den gamla färdvägen mellan Stockholm och Dalarö. Dagens småhusbebyggelse har kommit till i tydliga etapper. Den första stadsplanen fastställdes 1947 och omfattade ett småstugeområde med omkring 160 hus för självbyggeri i stadsdelens västra del, mot Nynäsvägen. Stockholms stads småstugebyrå tillhandahöll typritningar för tre varianter av stugor. Mellan Perstorpsvägen och Sköndalsvägen byggdes en bit in på 1950-talet radhus och flerfamiljshus, ritade av arkitekterna Ancker, Gate och Lindegren. Nästa etapp kom 1960, med radhus mot Stora Sköndal, och några år senare uppfördes 26 terrasserade radhus vid Drevviken. Norra Sköndal, norr om Tyresövägen, fick sin stadsplan 1968. Den föreskrev enligt Wikipedia radhus och kedjehus med garagelängor mellan husen. När Sköndals centrum byggdes 1969 var stadsdelen söder om Tyresövägen i huvudsak färdigbyggd.",
+    extraContent:
+      "",
+    factBox: [{"label":"Kommun","value":"Stockholm (Farsta stadsdelsområde)"},{"label":"Delområden","value":"Småstugeområdet i väster, Perstorpsvägen–Sköndalsvägen, norra Sköndal"},{"label":"Hustyper","value":"Småstugor, radhus, kedjehus"},{"label":"Byggperiod","value":"Småstugor från 1947, radhus 1950-tal och 1960, norra Sköndal efter 1968"},{"label":"Ägda småhus (avrundat)","value":"Ca 1 190 (Stockholms stad, Områdesfakta 2025)"}],
+    sourceLink: {"label":"Wikipedia: Sköndal","url":"https://sv.wikipedia.org/wiki/Sk%C3%B6ndal"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Sköndal, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Sköndal?",
+      answer:
+        "Byggperiod enligt källorna: småstugor från 1947, radhus och flerfamiljshus från 1950-talet och 1960, norra Sköndals radhus och kedjehus efter stadsplanen 1968. Hustyper: småstugor, radhus, kedjehus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Sköndal",
+    lat: 59.2552389,
+    lng: 18.1123844,
+    nearbyLocations: ["Farsta", "Hökarängen", "Skarpnäck"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Småstugorna i västra Sköndal är i dag runt 75–80 år gamla, radhusen från 1950- och 60-talen runt 60–70 år och rad- och kedjehusen i norra Sköndal drygt 50 år. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. På radhus och kedjehus hänger taken ihop med grannens, och anslutningarna mellan husen behöver utföras så att de fungerar tillsammans med grannens tak. Eftersom husen i en länga ofta är likadana och byggda samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Sköndal och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
+  },
+  {
+    slug: "herrangen",
+    name: "Herrängen",
+    region: "Södra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Herrängen i Söderort, med självbyggda villor från 1940- och 1950-talen och radhus från 1950-talet. Kostnadsfri takkontroll.",
+    longDescription:
+      "Herrängen är en stadsdel i Söderort som gränsar till Fruängen, Långbro och Långsjö, och till Snättringe och Segeltorp i Huddinge kommun. Namnet kommer från Herrängens gård, som uppfördes under senare delen av 1700-talet. Utbyggnaden började enligt Wikipedia när brukspatron J.E. Lignell förvärvade egendomen 1901. År 1908 gick området över till fastighetsbolaget Billiga tomter. Bebyggelsen växte långsamt, främst på grund av dåliga förbindelser med Stockholms innerstad, och 1913 bodde här fortfarande bara knappt 100 personer. Stockholms stad köpte det som återstod av marken först 1930, och då ordnades också en bussförbindelse till Södermalm. Under 1920-talet byggdes ett åttiotal villor, främst vid Långsjön och kring Herrängens gård. De flesta villorna kom till på 1940- och 1950-talen. Enligt Wikipedia byggdes de av ägarna själva, genom eget arbete men med instruktioner och material från staden. I början av 1950-talet uppfördes också några radhuslängor, och 1955 byggdes Herrängens skola. Sedan 1980- och 1990-talen har de äldsta villorna och sommarstugorna rivits och ersatts av moderna, prefabricerade villor.",
+    extraContent:
+      "",
+    factBox: [{"label":"Kommun","value":"Stockholm (Hägersten-Älvsjö)"},{"label":"Hustyper","value":"Villor, småstugor, radhus"},{"label":"Byggperiod","value":"1920-tal (ett åttiotal villor), mest 1940–50-tal, radhus tidigt 1950-tal, nyare villor efter 1980"},{"label":"Ägda småhus (avrundat)","value":"Ca 1 110 (Stockholms stad, Områdesfakta 2025)"}],
+    sourceLink: {"label":"Wikipedia: Herrängen","url":"https://sv.wikipedia.org/wiki/Herr%C3%A4ngen"},
+    parentLocation: {"name":"Stockholm","slug":"stockholm"},
+    h1Override: "Takläggare i Herrängen, Stockholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Herrängen?",
+      answer:
+        "Byggperiod enligt källorna: ett åttiotal villor på 1920-talet, de flesta villorna självbyggda på 1940- och 1950-talen, radhuslängor i början av 1950-talet, nyare villor efter 1980-talet. Hustyper: villor, småstugor, radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad.",
+    },
+    primaryKeyword: "takläggare Herrängen",
+    lat: 59.2734284,
+    lng: 17.9645874,
+    nearbyLocations: ["Långbro", "Segeltorp", "Snättringe"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Herrängen är en stadsdel med hus i flera åldrar. De självbyggda villorna från 1940- och 1950-talen är i dag runt 70–85 år gamla, medan de villor som har ersatt äldre hus sedan 1980-talet är betydligt yngre. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. Eftersom många av villorna byggdes av ägarna själva, och husen sedan har byggts om och till i olika omgångar, kan två grannhus från samma tid ha helt olika förutsättningar. Det är ett skäl till att varje tak behöver bedömas för sig. På radhusen från 1950-talet hänger taken ihop med grannens, och anslutningarna mellan husen behöver utföras så att de fungerar tillsammans med grannens tak. Om ett byte av material eller kulör kräver lov eller anmälan avgör Stockholms stad. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Herrängen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
+  },
+  {
     slug: "solhem-lunda",
     name: "Solhem och Lunda",
     region: "Västerort",
@@ -2538,20 +2592,53 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Stocksund — takbyte och takrenovering i Stocksund. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Stocksund i Danderyd, en villastad från 1890-talet med sekelskiftesvillor. Kostnadsfri takkontroll och fast pris.",
     longDescription:
-      "Stocksund — exklusivt villaområde i Danderyd — har ett fastighetsbestånd med sekelskiftesvillor med brant taklutning och plåtdetaljer. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Stocksund: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
+      "Stocksund är en kommundel i Danderyds kommun, vid Lilla Värtan och Stocksundets norra strand. Platsen har gamla anor. Stockby gård har enligt Wikipedia sannolikt rötter i slutet av 1200-talet, och namnet Stockby förekommer första gången i en offentlig handling 1361. Den nuvarande gårdsbyggnaden uppfördes 1740. Villasamhället växte fram i slutet av 1800-talet. År 1888 grundades Stockby AB, som köpte gårdens egendom och styckade av den till tomter under namnet Stocksunds Villaparker. Den första tomten såldes 1890. Enligt Wikipedia växte samhället relativt långsamt de första åren: vid slutet av 1905 fanns 95 villor, och 1910 hade bolaget sålt sammanlagt 350 villatomter. Samma år stod Stocksunds vattentorn färdigt, ritat av arkitekten David Lundegårdh. I Mörbyområdet, öster om Roslagsbanan, byggdes ett villasamhälle avsett för statstjänstemän, och där hade 94 villor uppförts 1917. På Långängen byggdes de första villorna redan på 1880-talet, och när lantbruket där upphörde 1932 fanns ett hundratal villor. Sikreno och Inverness blev en del av Stocksunds köping 1942. Bebyggelsen domineras fortfarande av villor. I det kuperade området kring Alpstigen, Donnerstigen, Bergstigen och Sturevägen ligger enligt Wikipedia flera av gamla Stocksunds villor från tiden runt sekelskiftet 1900, som kommunen har klassat som värdefulla eller omistliga. Kommunen betraktar området som särskilt värdefullt från kulturhistorisk synpunkt, och det är av riksintresse enligt Wikipedia. Villor med torn är ett återkommande inslag, och Villa Tallom på Långängen, uppförd 1904–1906, är byggnadsminne sedan 1979.",
     extraContent:
-      "Vi går igenom förutsättningarna i Stocksund — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Stocksund.",
+      "",
+    factBox: [{"label":"Kommun","value":"Danderyd"},{"label":"Delområden","value":"Gamla Stocksund, Mörby villaområde, Långängen, Inverness, Sikreno"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"Från 1890, utbyggnad under 1900-talet"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 190"}],
+    sourceLink: {"label":"Wikipedia: Stocksund","url":"https://sv.wikipedia.org/wiki/Stocksund"},
+    parentLocation: {"name":"Danderyd","slug":"danderyd"},
+    h1Override: "Takläggare i Stocksund, Danderyd",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Stocksund?",
+      question: "När byggdes husen i Stocksund?",
       answer:
-        "Priset för ett takbyte i Stocksund beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Vi kontrollerar taket kostnadsfritt och lämnar därefter ett fast pris med rivning, material, ställning och avfall inräknat. ROT-avdraget sänker arbetskostnaden med 30 %.",
+        "Byggperiod enligt källorna: från 1890, med utbyggnad under hela 1900-talet. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Danderyds kommun.",
     },
     primaryKeyword: "takläggare Stocksund",
-    lat: 59.3931,
-    lng: 18.085,
-    nearbyLocations: ["Danderyd", "Bergshamra", "Enebyberg"],
+    lat: 59.3845769,
+    lng: 18.0571915,
+    nearbyLocations: ["Danderyd", "Djursholm", "Enebyberg"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Husen i Stocksund är byggda under lång tid, från 1890-talet och framåt, och många av villorna är i dag över hundra år gamla. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. På äldre villor med torn, kupor och många vinklar finns fler anslutningar än på ett enkelt sadeltak, och det är i ränndalar, kring skorstenar och vid plåtdetaljer som ett tak oftast prövas. I ett område som kommunen bedömer som kulturhistoriskt värdefullt är det klokt att tänka på material och kulör tidigt. Om ett byte av material eller kulör kräver lov eller anmälan avgör Danderyds kommun. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Stocksund och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
+  },
+  {
+    slug: "djursholm",
+    name: "Djursholm",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Djursholms villastad, med villor från 1890-talet och framåt. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+    longDescription:
+      "Djursholm anlades som villastad 1889. Egendomen är känd sedan medeltiden, och namnet nämns första gången 1432. Villastaden kom till på initiativ av bankdirektören Henrik Palme. Enligt Wikipedia köpte det nybildade Djursholms AB den 1 600 hektar stora egendomen i juni 1889, och arbetet med att bygga upp villastaden började omedelbart. Redan i oktober samma år hade bolaget sålt 58 tomter. Palme beskrev i sitt prospekt 1889 hur villorna borde läggas på sluttningarna av kullarna, med fri utsikt och skydd av de parkträd som redan fanns. Bolaget ansvarade för vägar, vatten och avlopp, gatubelysning och den smalspåriga järnvägen Djursholmsbanan, och 1890 anlades Djursholms vattentorn. Det höglänta, kuperade området sydöst om slottet var ett av de första som bebyggdes, och många av villorna där är uppförda på 1890-talet och under 1900-talets första decennium. I Ekeby började marken exploateras år 1900, och området norr om Germaniaviken bebyggdes till största delen under 1900-talets första årtionden. Den första egentliga stadsplanen togs fram från 1907 av Per Olof Hallman. Enligt Wikipedia präglas den äldre bebyggelsen av en blandning av stilar, eftersom de flesta villorna uppfördes var för sig, oberoende av grannhusen. Tomterna är i allmänhet stora, och här finns allt från det första årets enkla trävillor till nationalromantik och jugend. Villan på Germaniavägen 21, från 1889, beskrivs som det bäst bevarade exemplet på det första årets villaproduktion. I andra delar av Djursholm finns 1920-talsklassicism, funkis och grupphus från andra halvan av 1900-talet.",
+    extraContent:
+      "",
+    factBox: [{"label":"Kommun","value":"Danderyd"},{"label":"Delområden","value":"Villastaden, Djursholms Ekeby, Germania"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"1890-tal–1910-tal, senare inslag"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 080"}],
+    sourceLink: {"label":"Wikipedia: Djursholm","url":"https://sv.wikipedia.org/wiki/Djursholm"},
+    parentLocation: {"name":"Danderyd","slug":"danderyd"},
+    h1Override: "Takläggare i Djursholm, Danderyd",
+    uniqueFAQ: {
+      question: "När byggdes husen i Djursholm?",
+      answer:
+        "Byggperiod enligt källorna: 1890-tal till 1910-tal, med senare inslag av 1920-talsklassicism, funkis och grupphus. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Danderyds kommun.",
+    },
+    primaryKeyword: "takläggare Djursholm",
+    lat: 59.3973535,
+    lng: 18.0880625,
+    nearbyLocations: ["Stocksund", "Danderyd", "Enebyberg"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "Många av villorna i södra Djursholm är i dag mer än hundra år gamla. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. Stora villor med torn, kupor, burspråk och flera takfall har många anslutningar, och det är där arbetet med plåtdetaljer, ränndalar och skorstensbeslag avgör hur tätt taket blir. Eftersom husen är byggda var för sig, i olika stilar, finns det sällan en lösning som passar hela kvarteret. I ett område med äldre, arkitektritade villor är det klokt att tänka på material och kulör tidigt. Om ett byte av material eller kulör kräver lov eller anmälan avgör Danderyds kommun. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Djursholm och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
     slug: "enebyberg",
@@ -2595,7 +2682,7 @@ export const locations: LocationData[] = [
     primaryKeyword: "takläggare Jakobsberg",
     lat: 59.4231,
     lng: 17.8342,
-    nearbyLocations: ["Järfälla","Barkarby","Viksjö","Kallhäll"],
+    nearbyLocations: ["Järfälla","Barkarby och Skälby","Viksjö","Kallhäll"],
     factBox: [{"label":"Kommun","value":"Järfälla"},{"label":"Delområde","value":"Villaområdena väster om Jakobsbergs centrum (Alpvägen, Folkhögskolevägen, Aprilvägen–Decembervägen, Mälarvägen)"},{"label":"Hustyper","value":"Villor, kedjehus, radhus"},{"label":"Byggperiod","value":"Tomter styckade 1920–30-tal (kommunen), hus främst 1950–70-tal (hitta.se)"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 100"}],
     sourceLink: {"label":"Järfälla kommun: Järfällas historia","url":"https://www.jarfalla.se/kommunochpolitik/kommunarkivet/jarfallashistoria.4.49c72f5418de88c69e928ab.html"},
     parentLocation: {"name":"Järfälla","slug":"jarfalla"},
@@ -2605,24 +2692,30 @@ export const locations: LocationData[] = [
   },
   {
     slug: "barkarby",
-    name: "Barkarby",
+    name: "Barkarby och Skälby",
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Barkarby — takbyte och takrenovering i Barkarby. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takbyte och takomläggning i villaområdena Barkarby och Skälby i Järfälla, med hus främst från 1950- och 1960-talen. Kostnadsfri takkontroll och fast pris.",
     longDescription:
-      "Barkarby — expansiv stadsdel i Järfälla — har ett fastighetsbestånd med nyproduktion med flacka tak blandat med äldre villor. En stor del av taken här är från samma byggår, vilket innebär att de nu behöver läggas om. RoslagsTak utför kompletta takprojekt i Barkarby: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Hela projektet hålls samman av oss — takkontroll, materialval, ställning, takarbete och bortforsling.",
+      "Barkarby och Skälby bildar tillsammans kommundelen Barkarby-Skälby i södra Järfälla. Bygden har lång historia. Enligt Wikipedia visar boplatslämningar, gravfält och en medeltida bytomt i Barkarby hur människor har levt här från omkring 800 f.Kr. Barkarby nämns i jordeböckerna första gången 1538, och Skälby gård, som har gett Skälby dess namn, har funnits sedan 1500-talet. Gårdens nuvarande huvudbyggnad byggdes 1802. Villabebyggelsen har sin början i 1900-talets första år. Barkarby hemman och den intilliggande kyrkbyn köptes 1901 av Birger Svenonius, som planerade en omfattande villabebyggelse. Enligt Wikipedia blev bara en mindre del av villorna byggda, och huvuddelen av marken överläts på Barkarby villastads AB. Skälby hade från slutet av 1800-talet fram till 1956 en egen hållplats på Lövstabanan, järnvägen mellan Spånga och Lövsta. I dag beskrivs Skälby som ett villaområde, och villaområdet Barkarby gränsar direkt till det. Många av gatorna i Skälby har namn med anknytning till rymden, som Plutovägen. Sydväst om pendeltågsstationen ligger radhusområdet Vålberga. Enligt hitta.se är husen kring Almvägen, Bancovägen, Brasvägen och Barsbrovägen främst byggda på 1950- och 1960-talen, med enstaka hus från 2000- och 2010-talen. På det gamla flygfältet intill växer Barkarbystaden fram, med helt ny bebyggelse.",
     extraContent:
-      "Vi går igenom förutsättningarna i Barkarby — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Barkarby.",
+      "",
+    factBox: [{"label":"Kommun","value":"Järfälla"},{"label":"Delområden","value":"Björkeby, Barsbro, östra Skälby, Vålberga"},{"label":"Hustyper","value":"Villor, inslag av kedjehus och radhus"},{"label":"Byggperiod","value":"Främst 1950- och 1960-tal, enstaka 2000–2010-tal"},{"label":"Ägda småhus i SCB:s statistikområde (RegSO, 2025)","value":"Ca 1 100"}],
+    sourceLink: {"label":"Wikipedia: Barkarby","url":"https://sv.wikipedia.org/wiki/Barkarby"},
+    parentLocation: {"name":"Järfälla","slug":"jarfalla"},
+    h1Override: "Takläggare i Barkarby och Skälby, Järfälla",
     uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Barkarby?",
+      question: "När byggdes husen i Barkarby och Skälby?",
       answer:
-        "Priset för ett takbyte i Barkarby beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en skriftlig offert med fast pris — rivning, material, ställning, arbete och bortforsling ingår. Arbetsdelen ger 30 % ROT-avdrag.",
+        "Byggperiod enligt källorna: främst 1950- och 1960-tal, enstaka hus från 2000- och 2010-talen. Hustyper: villor, inslag av kedjehus och radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun.",
     },
-    primaryKeyword: "takläggare Barkarby",
-    lat: 59.4103,
-    lng: 17.8664,
-    nearbyLocations: ["Jakobsberg", "Järfälla", "Spånga"],
+    primaryKeyword: "takläggare Barkarby och Skälby",
+    lat: 59.4051955,
+    lng: 17.8643513,
+    nearbyLocations: ["Jakobsberg", "Viksjö", "Kälvesta"],
+    extraSections: [{ heading: "Vad det betyder för taket", text: "De flesta villorna i de äldre delarna av Barkarby och Skälby är i dag runt 60–75 år gamla. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. Det här är ett villaområde som har byggts om och kompletterats under lång tid, och två grannhus kan därför ha tak i helt olika ålder och material. På radhusen i Vålberga hänger taken ihop med grannens, och anslutningarna mellan husen behöver utföras så att de fungerar tillsammans med grannens tak. Om ett byte av material eller kulör kräver lov eller anmälan avgör Järfälla kommun. Varje hus får en egen takkontroll och ett eget pris." }],
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du i Barkarby eller Skälby och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
     slug: "kallhall",

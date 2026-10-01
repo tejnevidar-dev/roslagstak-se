@@ -229,4 +229,29 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Solhems villastad och Lunda i Spånga, med trävillor från 1904 och hus från 1920-talet till 2000-talet. Kostnadsfri takkontroll.",
   },
+  stocksund: {
+    title: "Takbyte i Stocksund, Danderyd – fast pris",
+    description:
+      "Takbyte och takomläggning i Stocksund i Danderyd, en villastad från 1890-talet med sekelskiftesvillor. Kostnadsfri takkontroll och fast pris.",
+  },
+  djursholm: {
+    title: "Takbyte i Djursholm, Danderyd – fast pris",
+    description:
+      "Takbyte och takomläggning i Djursholms villastad, med villor från 1890-talet och framåt. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+  },
+  skondal: {
+    title: "Takbyte i Sköndal – småstugor och radhus, fast pris",
+    description:
+      "Takbyte och takomläggning i Sköndal i Söderort, med småstugor från 1940-talet och rad- och kedjehus från 1950- till 1970-talet. Kostnadsfri takkontroll.",
+  },
+  herrangen: {
+    title: "Takbyte i Herrängen, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Herrängen i Söderort, med självbyggda villor från 1940- och 1950-talen och radhus från 1950-talet. Kostnadsfri takkontroll.",
+  },
+  barkarby: {
+    title: "Takbyte i Barkarby och Skälby, Järfälla – fast pris",
+    description:
+      "Takbyte och takomläggning i villaområdena Barkarby och Skälby i Järfälla, med hus främst från 1950- och 1960-talen. Kostnadsfri takkontroll och fast pris.",
+  },
 };
