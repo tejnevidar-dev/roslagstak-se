@@ -19,24 +19,24 @@ const priceData = [
   {
     category: "Plåttak",
     items: [
-      { name: "TP20 plåttak", priceRange: "Från 1 200 kr/m²", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
-      { name: "Pannplåttak", priceRange: "Från 1 300 kr/m²", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
-      { name: "Plegelplåttak", priceRange: "Från 1 300 kr/m²", description: "Plåtprofil som imiterar tegel. Stilrent och underhållsfritt." },
-      { name: "Dubbelfalsat plåttak", priceRange: "Ca 2 000 kr/m²", description: "Premiumprodukten. Helt vattentätt, extremt långlivat (50+ år)." },
+      { name: "TP20 plåttak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
+      { name: "Pannplåttak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
+      { name: "Plegelplåttak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Plåtprofil som imiterar tegel. Stilrent uttryck." },
+      { name: "Dubbelfalsat plåttak", priceRange: "Ca 2 000 kr/m² (efter ROT, inkl. moms)", description: "Premiumprodukten, mycket lång livslängd." },
     ],
   },
   {
     category: "Panntak",
     items: [
-      { name: "Betongpannetak", priceRange: "Från 1 200 kr/m²", description: "Beprövat och prisvärt. 30–50 års livslängd." },
-      { name: "Lertegeltak", priceRange: "Från 1 300 kr/m²", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
+      { name: "Betongpannetak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Beprövat och prisvärt, lång livslängd." },
+      { name: "Lertegeltak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
     ],
   },
   {
     category: "Övriga tjänster",
     items: [
       { name: "Takrenovering", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter kostnadsfri takkontroll." },
-      { name: "Takavvattning (hängrännor)", priceRange: "Från ca 23 000 kr", description: "Komplett system med stuprör, beroende på husets storlek och våningar." },
+      { name: "Takavvattning (hängrännor)", priceRange: "Från ca 23 000 kr (efter ROT, inkl. moms)", description: "Komplett system med stuprör, beroende på husets storlek och våningar." },
       { name: "Takkupa", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
       { name: "Takfönster (Velux)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
       { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig genomgång av taket med en rapport om takets skick." },
@@ -45,10 +45,10 @@ const priceData = [
   {
     category: "Tillval",
     items: [
-      { name: "Råspontbyte", priceRange: "Från 300 kr/m²", description: "Byte av skadat underlag vid takbyte." },
-      { name: "Skorstensinklädnad", priceRange: "Från 7 000 kr", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
-      { name: "Takstege + gångbrygga", priceRange: "Från 8 000 kr", description: "Komplett taksäkerhet enligt BBR." },
-      { name: "Snörasskydd", priceRange: "Från 600 kr/löpmeter", description: "Monteras vid takfot mot entréer och gångvägar." },
+      { name: "Råspontbyte", priceRange: "Från 300 kr/m² (efter ROT, inkl. moms)", description: "Byte av skadat underlag vid takbyte." },
+      { name: "Skorstensinklädnad", priceRange: "Från 7 000 kr (efter ROT, inkl. moms)", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
+      { name: "Takstege + gångbrygga", priceRange: "Från 8 000 kr (efter ROT, inkl. moms)", description: "Komplett taksäkerhet enligt BBR." },
+      { name: "Snörasskydd", priceRange: "Från 600 kr/löpmeter (efter ROT, inkl. moms)", description: "Monteras vid takfot mot entréer och gångvägar." },
     ],
   },
 ];
@@ -60,11 +60,11 @@ const priceFaqs = [
   },
   {
     question: "Ingår material i priset?",
-    answer: "Ja, alla våra priser inkluderar material, arbete, logistik, avfallshantering och byggställning. Krävs en mer komplex ställning kan ett tillägg tillkomma, och det framgår i så fall i offerten. Vi arbetar alltid med fasta priser utan dolda kostnader.",
+    answer: "Ja, alla våra priser inkluderar material, arbete, logistik och avfallshantering. Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten. Vi arbetar alltid med fasta priser utan dolda kostnader.",
   },
   {
     question: "Kan jag använda ROT-avdrag?",
-    answer: "Ja, takbyte och takrenovering är ROT-berättigade. Du får 30% skattereduktion på arbetskostnaden, max 50 000 kr per person och år. Avdraget syns direkt på fakturan och vi sköter ansökan mot Skatteverket.",
+    answer: "Ja, takbyte och takrenovering är ROT-berättigade. Du får 30% skattereduktion på arbetskostnaden, max 50 000 kr per person och år. Avdraget syns direkt på fakturan och vi sköter ansökan mot Skatteverket. Priserna på den här sidan förutsätter fullt ROT-avdrag och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre.",
   },
   {
     question: "Kostar det extra på öar i skärgården?",
@@ -113,7 +113,7 @@ const Prices = () => {
           </div>
           {/* Price tables */}
           <p className="max-w-4xl mx-auto text-xs text-muted-foreground mb-4">
-            Riktpriser nedan är efter ROT-avdrag och inkl. moms, med standardställning. Exakt pris för ditt tak får du alltid skriftligt efter en kostnadsfri takkontroll. Komplex ställning kan tillkomma och framgår i så fall i offerten.
+            Riktpriser nedan är efter ROT-avdrag och inkl. moms, med standardställning. Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten. Priserna förutsätter fullt ROT-avdrag: 30 % av arbetskostnaden, högst 50 000 kr per person och år, och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre. Exakt pris för ditt tak får du alltid skriftligt efter en kostnadsfri takkontroll.
           </p>
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {priceData.map((category) => (
@@ -142,8 +142,10 @@ const Prices = () => {
               <CheckCircle className="w-5 h-5 text-primary" /> Så fungerar ROT-avdraget vid takarbeten
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Takbyte och takrenovering berättigar till ROT-avdrag. Du får 30% skattereduktion på arbetskostnaden, 
+              Takbyte och takrenovering berättigar till ROT-avdrag. Du får 30% skattereduktion på arbetskostnaden,
               max 50 000 kr per person och år. Vi drar av ROT-avdraget direkt på fakturan — du betalar bara din del.
+              Priserna på den här sidan förutsätter fullt ROT-avdrag och att du har betalat tillräckligt med skatt.
+              Utan ROT, eller med mindre ROT kvar, blir priset högre.
             </p>
             <Link
               to="/blogg/rot-avdrag-takbyte"

@@ -334,7 +334,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       rows: [
         ["Lertegel", "Från 1 300 kr/m²", "Bränd lera, åldras med patina", "Äldre och nyare hus som ska behålla sin karaktär"],
         ["Betongpannor", "Från 1 200 kr/m²", "Gjuten betong, flera kulörer", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
-        ["Tegelplåt (profilerad plåt)", "Från 1 300 kr/m²", "Plåt pressad för att likna tegel", "Tegelutseende till lägre vikt och pris än lertegel"],
+        ["Tegelplåt (profilerad plåt)", "Från 1 300 kr/m²", "Plåt pressad för att likna tegel", "Tegelutseende till lägre vikt än lertegel"],
         ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Plåtbanor utan synliga skruvar", "Klassiskt, stramt uttryck"],
       ],
       footnote: "Riktpriser, efter ROT-avdrag och inkl. moms. Priset sätts efter kostnadsfri takkontroll. Exakt pris beror på takets storlek, lutning och underlag.",

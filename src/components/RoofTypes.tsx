@@ -207,7 +207,7 @@ const RoofTypes = () => {
                       </div>
                       <div className="flex items-center gap-2 text-sm">
                         <Coins className="w-4 h-4 text-primary" />
-                        <span className="text-muted-foreground">Pris:</span>
+                        <span className="text-muted-foreground">Pris (efter ROT, inkl. moms):</span>
                         <span className="font-semibold text-foreground">{roof.priceRange}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm">
