@@ -1,9 +1,10 @@
 import { useEffect, useState, useCallback, lazy, Suspense } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import SEOHead from "@/components/SEOHead";
 import SplashScreen, { shouldShowSplash } from "@/components/SplashScreen";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import Hero, { heroPosterSrcSet } from "@/components/Hero";
 import Services from "@/components/Services";
 import QuickAccess from "@/components/QuickAccess";
 import TrustBar from "@/components/TrustBar";
@@ -54,6 +55,17 @@ const Index = () => {
         description="RoslagsTak – takläggare i Roslagen. Takbyte, takrenovering & takomläggning på Blidö, Ljusterö, Vaxholm & Norrtälje. 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Kostnadsfri takkontroll och fast pris."
         canonical="https://roslagstak.se/"
       />
+      <Helmet>
+        {/* Hero-bilden är LCP-elementet på mobil sedan cookie-bannern slutade blockera paint
+            (#1ag punkt 1). Förladdar rätt AVIF-storlek innan React hunnit rendera <picture>. */}
+        <link
+          rel="preload"
+          as="image"
+          // @ts-expect-error -- imagesrcset/imagesizes stöds av moderna browsers men saknas i React:s typer
+          imagesrcset={heroPosterSrcSet.avif}
+          imagesizes={heroPosterSrcSet.sizes}
+        />
+      </Helmet>
       <Header />
       <main>
         <Hero />

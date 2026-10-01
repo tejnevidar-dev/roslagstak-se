@@ -3,6 +3,21 @@ import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import heroDroneVideo from "@/assets/hero-drone.mp4";
 import heroDronePoster from "@/assets/hero-drone-poster.jpg";
+import heroDronePosterAvif480 from "@/assets/hero-drone-poster-480.avif";
+import heroDronePosterAvif768 from "@/assets/hero-drone-poster-768.avif";
+import heroDronePosterAvif1080 from "@/assets/hero-drone-poster-1080.avif";
+import heroDronePosterWebp480 from "@/assets/hero-drone-poster-480.webp";
+import heroDronePosterWebp768 from "@/assets/hero-drone-poster-768.webp";
+import heroDronePosterWebp1080 from "@/assets/hero-drone-poster-1080.webp";
+
+/* Startsidans LCP-element på mobil sedan cookie-bannern slutade blockera paint (#1ag punkt 1,
+   Marknadschefen 2026-10-01) — srcset/sizes + moderna format håller nere bytes för just den
+   skärmstorlek som faktiskt visar bilden. */
+export const heroPosterSrcSet = {
+  avif: `${heroDronePosterAvif480} 480w, ${heroDronePosterAvif768} 768w, ${heroDronePosterAvif1080} 1080w`,
+  webp: `${heroDronePosterWebp480} 480w, ${heroDronePosterWebp768} 768w, ${heroDronePosterWebp1080} 1080w`,
+  sizes: "100vw",
+};
 
 /* Äkta drönarfoto/video från ett genomfört RoslagsTak-jobb (falsat plåttak, Blidö) —
    inte längre en platshållare. Videon (tyst, loopad, 10s) visas på md+ skärmar;
@@ -26,15 +41,19 @@ const Hero = () => {
       aria-label="Huvudsektion"
     >
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroDronePoster}
-          alt="Drönarfoto av nylagt falsat plåttak på skärgårdsvilla, Blidö"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          decoding="async"
-          className={`h-full w-full object-cover ${reduce ? "" : "md:hidden"}`}
-        />
+        <picture>
+          <source type="image/avif" srcSet={heroPosterSrcSet.avif} sizes={heroPosterSrcSet.sizes} />
+          <source type="image/webp" srcSet={heroPosterSrcSet.webp} sizes={heroPosterSrcSet.sizes} />
+          <img
+            src={heroDronePoster}
+            alt="Drönarfoto av nylagt falsat plåttak på skärgårdsvilla, Blidö"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
+            className={`h-full w-full object-cover ${reduce ? "" : "md:hidden"}`}
+          />
+        </picture>
         {!reduce && (
           <video
             autoPlay

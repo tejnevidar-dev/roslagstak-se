@@ -105,10 +105,19 @@ const chunkPrefixFor = (path) => {
   if (COMBO_RE.test(path)) return "ServiceLocationPage-";
   return null;
 };
+// Hero-bildens 480w AVIF (den som faktiskt visas på mobil, där LCP mäts) som statisk preload på
+// startsidan — Helmet-versionen i Index.tsx hinner inte köras innan webbläsarens preload-scanner
+// redan passerat <head> (#1ag punkt 1-uppföljning, Marknadschefen 2026-10-01).
+const heroPoster480 = assetFiles.find((f) => f.startsWith("hero-drone-poster-480") && f.endsWith(".avif"));
+
 const preloadFor = (path) => {
   const prefix = chunkPrefixFor(path);
   const file = prefix && assetFiles.find((f) => f.startsWith(prefix) && f.endsWith(".js"));
-  return file ? [`<link rel="modulepreload" crossorigin href="/assets/${file}" />`] : [];
+  const hints = file ? [`<link rel="modulepreload" crossorigin href="/assets/${file}" />`] : [];
+  if (path === "/" && heroPoster480) {
+    hints.push(`<link rel="preload" as="image" type="image/avif" href="/assets/${heroPoster480}" />`);
+  }
+  return hints;
 };
 
 const headFor = (path, robots) => {
