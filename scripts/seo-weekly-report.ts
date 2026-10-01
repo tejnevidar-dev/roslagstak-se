@@ -88,6 +88,11 @@ writeFileSync(SNAPSHOT_PATH, JSON.stringify(currentPaths));
    Indexering i Google kräver GSC — tills dess mäts sajtens egna förutsättningar. */
 /** Alla publicerade villaområdessidor per våg. Lägg till en rad när en sida publiceras. */
 const WAVES: { path: string; area: string; wave: number }[] = [
+  { path: "/taklaggare-stuvsta", area: "Stuvsta, Huddinge (befintlig sida förstärkt)", wave: 0 },
+  { path: "/taklaggare-trangsund", area: "Trångsund, Huddinge (befintlig sida förstärkt)", wave: 0 },
+  { path: "/taklaggare-ronninge", area: "Rönninge, Salem (befintlig sida förstärkt)", wave: 0 },
+  { path: "/taklaggare-enebyberg", area: "Enebyberg, Danderyd (befintlig sida förstärkt)", wave: 0 },
+  { path: "/taklaggare-radmanso", area: "Rådmansö, Norrtälje (våg 4, befintlig sida förstärkt)", wave: 4 },
   { path: "/taklaggare-ella-gard", area: "Ella gård, Täby", wave: 1 },
   { path: "/taklaggare-skarpang", area: "Skarpäng, Täby", wave: 1 },
   { path: "/taklaggare-viby", area: "Viby-Järvafältet, Sollentuna", wave: 1 },

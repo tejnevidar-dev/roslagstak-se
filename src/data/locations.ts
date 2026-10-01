@@ -364,6 +364,8 @@ export const locations: LocationData[] = [
     lat: 59.6667,
     lng: 18.85,
     nearbyLocations: ["Norrtälje", "Blidö", "Furusund"],
+    parentLocation: { name: "Norrtälje", slug: "norrtalje" },
+    h1Override: "Takläggare på Rådmansö, Norrtälje",
   },
   {
     slug: "bergshamra",
@@ -2509,6 +2511,7 @@ export const locations: LocationData[] = [
     lat: 59.4225,
     lng: 18.0294,
     nearbyLocations: ["Danderyd", "Täby", "Stocksund"],
+    parentLocation: { name: "Danderyd", slug: "danderyd" },
   },
   {
     slug: "jakobsberg",
@@ -3113,6 +3116,7 @@ export const locations: LocationData[] = [
     lat: 59.2444,
     lng: 17.9928,
     nearbyLocations: ["Huddinge", "Segeltorp", "Trångsund"],
+    parentLocation: { name: "Huddinge", slug: "huddinge" },
   },
   {
     slug: "trangsund",
@@ -3141,6 +3145,7 @@ export const locations: LocationData[] = [
     lat: 59.2258,
     lng: 18.1069,
     nearbyLocations: ["Skogås", "Huddinge", "Farsta"],
+    parentLocation: { name: "Huddinge", slug: "huddinge" },
   },
   {
     slug: "skogas",
@@ -3373,6 +3378,7 @@ export const locations: LocationData[] = [
     lat: 59.2011,
     lng: 17.7367,
     nearbyLocations: ["Salem", "Tumba", "Södertälje"],
+    parentLocation: { name: "Salem", slug: "salem" },
   },
   {
     slug: "jarna",
