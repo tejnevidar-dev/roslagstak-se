@@ -171,6 +171,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Täljö och Runö", types: "Villor, radhus och kedjehus", period: "Täljö mest 1950- och 1960-tal (hitta.se)" },
       { name: "Rydbo", types: "Villor och radhus", period: "Radhus 1958–59 och 1980-tal (Wikipedia)", note: "Rydbo är en tätort vid Roslagsbanan, omkring tio kilometer från Åkersberga. Enligt Wikipedia består bostäderna av villor i blandade åldrar och två radhusområden, ett från 1958–59 vid Vasavägen och Brahevägen och ett från 1980-talet vid Brovallsvägen." },
       { name: "Söra", types: "Villor och radhus", period: "1970-, 1980- och 1990-tal (Wikipedia)", note: "Söra i Åkersberga består enligt Wikipedia mestadels av villor och radhus byggda på 1970-, 1980- och 1990-talen, en till tre kilometer från Åkersberga centrum." },
+      { name: "Tuna (Tunagård)", types: "Villor, inslag av flerbostadshus", period: "Mest 1960- och 1970-tal (hitta.se)", note: "Tunagård är en av två stationer som AB Åkersberga-Trälhavet förlängde järnvägen med, tillsammans med Österskär, och enligt Wikipedia bebyggdes områdena med villor. Enligt hitta.se är flerbostadshusen och villorna kring Uranusvägen främst byggda på 1960- och 1970-talen." },
     ],
   },
   haninge: {
