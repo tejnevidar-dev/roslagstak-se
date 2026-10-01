@@ -27,6 +27,7 @@ import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
 import { villaAreasParagraph, villaAreasByPage } from "../src/data/villa-areas";
+import { serviceAreaLinks } from "../src/data/service-area-links";
 
 const villaAreaLinks = (key: string) =>
   (villaAreasByPage[key]?.areas ?? [])
@@ -773,7 +774,10 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const extra = [serviceLongDesc.get(slug), ...(serviceExtraParagraphs[slug] ?? [])].filter(
       (p): p is string => Boolean(p),
     );
-    return { ...page, paragraphs: [...extra, ...page.paragraphs] };
+    // Speglar ServiceDetail.tsx:s "Relaterat innehåll" (#1ag punkt 2) — annars syns de bara för
+    // besökare med JS, inte för crawlers som läser den här förrenderade HTML:en.
+    const areaLinks = (serviceAreaLinks[slug] ?? []).map((l) => ({ href: l.to, label: l.label }));
+    return { ...page, paragraphs: [...extra, ...page.paragraphs], links: [...page.links, ...areaLinks] };
   }
 
   if (clean.startsWith("/takproblem/")) {

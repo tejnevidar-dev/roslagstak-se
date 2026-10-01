@@ -12,6 +12,7 @@ import { canonicalPath } from "@/lib/canonical";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
 import { serviceBlocks } from "@/data/service-blocks";
+import { serviceAreaLinks } from "@/data/service-area-links";
 import imgRooferWork from "@/assets/roofer-work.jpg";
 import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
 import imgPapp from "@/assets/roof-build-02-papp.jpg";
@@ -361,6 +362,7 @@ const dedupeByTo = <T extends { to: string }>(links: T[]): T[] => {
   const seen = new Set<string>();
   return links.filter((l) => (seen.has(l.to) ? false : (seen.add(l.to), true)));
 };
+
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -925,8 +927,7 @@ const ServiceDetail = () => {
                 ...sisterServices.map((s) => ({ to: canonicalPath(`/tjanster/${s.slug}`), label: s.title })),
                 ...(blocks.relatedLinks ?? []),
 
-                { to: "/taklaggare-blido", label: "Takläggare på Blidö" },
-                { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" },
+                ...(serviceAreaLinks[service.slug] ?? []),
                 { to: "/recensioner", label: "Omdömen på Google" },
               ]).map((link) => (
                 <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
