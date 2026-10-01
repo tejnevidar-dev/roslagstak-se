@@ -517,14 +517,14 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Vaxholm — professionell takläggning nära Stockholm. Takbyte, pannplåt och takrenovering med lokal erfarenhet.",
     longDescription:
-      "Vaxholm är porten till Stockholms skärgård och har en unik blandning av kulturhistoriska trähus och moderna villor. Taken i Vaxholm utsätts för havsfukt och vind, samtidigt som estetiken är viktig — särskilt i de äldre delarna av staden. Pannplåt som matchar äldre arkitektur, dubbelfalsat plåt för moderna hus, eller lertegel för den som vill bevara originallook — vi har lösningen.",
+      "Vaxholm är porten till Stockholms skärgård och har en unik blandning av kulturhistoriska trähus och moderna villor. Estetiken är ofta viktig här, särskilt i de äldre delarna av staden, och vi anpassar materialval och utförande efter husets ålder och stil. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
-      "Vaxholm ställer höga krav på estetik, särskilt i de kulturhistoriskt värdefulla områdena. Vi arbetar med material och metoder som respekterar Vaxholms arkitektur — från handfalsat plåtbeslag till pannplåt i rätt kulör. Om du bor i Vaxholm och funderar på att byta tak, bokar vi in en kostnadsfri genomgång där vi diskuterar materialval som passar just ditt hus.",
+      "Vaxholm ställer höga krav på estetik, särskilt i de kulturhistoriskt värdefulla områdena. Om du bor i Vaxholm och funderar på att byta tak, bokar vi in en kostnadsfri genomgång där vi diskuterar materialval som passar just ditt hus.",
     uniqueFAQ: {
       question:
         "Tar RoslagsTak hänsyn till Vaxholms kulturhistoriska bebyggelse vid takbyte?",
       answer:
-        "Absolut. Vi anpassar materialval och utförande efter husets ålder och stil — pannplåt i traditionella kulörer, lertegel eller handfalsat beslag. Vi kan även hjälpa till med kontakt med kommunen om bygglov krävs.",
+        "Ja. Vi anpassar materialval och utförande efter husets ålder och stil, och går igenom alternativen med dig vid den kostnadsfria takkontrollen. Om ett byte av material eller kulör kräver lov eller anmälan avgör Vaxholms kommun.",
     },
     primaryKeyword: "takläggare Vaxholm",
     lat: 59.4,
@@ -2030,13 +2030,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Ekerö — takbyte och takrenovering på en ö i Mälaren. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Ekerö är en ö i Mälaren med en varierad bebyggelse — från kungsgårdshistoria i Drottningholm till villor i Mälarstrand och fritidshus ut mot ön. Taken utsätts för fukt och vind från Mälaren. Vi utför takbyten, takomläggningar och plåtarbeten på Ekerö med material valt för det sjönära klimatet. Många hus har tegeltak eller plåttak från 1950-talet som nu behöver omläggning.",
+      "Ekerö är en ö i Mälaren med en varierad bebyggelse — från kungsgårdshistoria i Drottningholm till villor i Mälarstrand och fritidshus ut mot ön. Vi utför takbyten, takomläggningar och plåtarbeten på Ekerö. Husens ålder och skick varierar mycket mellan de olika delarna av ön, och det är därför vi alltid börjar med en kostnadsfri takkontroll på plats.",
     extraContent:
       "Vid takbyte nära kulturhistorisk bebyggelse anpassar vi material och utförande efter husens karaktär. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     uniqueFAQ: {
-      question: "Ställer Ekerös läge i Mälaren särskilda krav på tak?",
+      question: "Vad bedömer ni vid en takkontroll på Ekerö?",
       answer:
-        "Ekerö omges av Mälaren vilket ger fuktigare luft än på fastlandet. Vi rekommenderar material med hög korrosionsklass på plåt och noggrann hantering av ventilation och underlagspapp. Tegelpannor och dubbelfalsad plåt är bra val. Boka en kostnadsfri takkontroll så ger vi en rekommendation för ditt hus.",
+        "Vi går igenom takmaterial, plåtdetaljer, underlagspapp och avvattning och ger dig en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Boka en kostnadsfri takkontroll så ger vi en rekommendation för ditt hus.",
     },
     primaryKeyword: "takläggare Ekerö",
     lat: 59.2789,
@@ -2895,7 +2895,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Bro — takbyte och takrenovering i Bro. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Bro — tätort i Upplands-Bro — har ett fastighetsbestånd med villor, radhus och lantbruksfastigheter. Taken börjar närma sig slutet av sin livslängd, och då är omläggning oftast bättre ekonomi än lappning. RoslagsTak utför kompletta takprojekt i Bro: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
+      "Bro — tätort i Upplands-Bro — har ett fastighetsbestånd med villor, radhus och lantbruksfastigheter. Takens ålder och skick varierar mycket mellan husen, och vid en takkontroll bedömer vi om en renovering räcker eller om det är dags för omläggning. RoslagsTak utför kompletta takprojekt i Bro: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
     extraContent:
       "Vi går igenom förutsättningarna i Bro — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Du får ett fast pris som är räknat på ditt tak — inte ett uppskattat spann. Bor du granne med någon som också ska byta tak går det ofta att samordna arbetena och sänka etableringskostnaden. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Bro.",
     uniqueFAQ: {
