@@ -17,9 +17,9 @@ const roofTypeFaqs = [
       "Dubbelfalsad bandtäckning i plåt har normalt längst teknisk livslängd med rätt underhåll, följt av lertegel. Betongpannor och TP20-plåt håller också länge, men vanligtvis kortare än tegel. Underlagspappen är oftast det som avgör när taket behöver läggas om.",
   },
   {
-    question: "Vad kostar de olika taktyperna?",
+    question: "Vad kostar de olika taktyperna per kvadratmeter?",
     answer:
-      "Priset beror på material, takets storlek och skick. Vi lämnar alltid ett fast pris efter kostnadsfri takkontroll, som inkluderar rivning, underlagspapp, läkt, material och arbete — aldrig ett pris innan vi sett taket.",
+      "Som riktpris, efter ROT-avdrag och inkl. moms: papptak ca 900 kr/m², TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt (tegelprofilerad plåt) från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Vi lämnar alltid ett fast pris efter kostnadsfri takkontroll, som inkluderar rivning, underlagspapp, läkt, material, arbete och byggställning — aldrig ett pris innan vi sett taket.",
   },
   {
     question: "Plåttak eller betongpannor — vad passar bäst nära havet?",

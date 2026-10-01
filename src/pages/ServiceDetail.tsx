@@ -159,7 +159,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
     specs: [
       { k: "Material", v: "Lertegel" },
       { k: "Livslängd", v: "100+ år" },
-      { k: "Pris", v: "Fast pris efter takkontroll" },
+      { k: "Pris", v: "Från 1 300 kr/m²" },
     ],
     specHeading: "Lertegel jämfört med andra taktyper",
     lead: "Lertegel är det klassiska valet som passar både äldre och nyare hus — och håller mycket länge.",
@@ -173,7 +173,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
     longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, oavsett material. Exakt pris beror på takets storlek, material och underlag. ROT-avdrag tillkommer.",
+    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Exakt pris beror på takets storlek, material och underlag.",
     benefits: [
       "Rivning av befintligt yttertak",
       "Ny råspont och ventilation vid behov",
@@ -218,7 +218,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   takavvattning: {
     longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i aluminium, koppar eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, för hängrännor i aluminium eller koppar och komplett system med stuprör. ROT-avdrag tillkommer.",
+    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör från ca 23 000 kr, beroende på husets storlek och våningar. Koppar ligger högre än aluminium.",
     benefits: [
       "Skyddar fasad och grund mot vattenskador",
       "Hängrännor i aluminium, koppar eller lackerad plåt",
@@ -277,7 +277,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   platarbeten: {
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, för både beslag/detaljer och taktäckning med plåt. ROT-avdrag tillkommer.",
+    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: taktäckning med plåt från 1 200 kr/m² (TP20) till ca 2 000 kr/m² (dubbelfalsat). Beslag och detaljer prissätts efter omfattning i offerten.",
     benefits: [
       "Certifierade plåtslagare",
       "Taktäckning med alla typer av plåt",
@@ -337,7 +337,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
   },
   tegeltak: {
     longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga, så takstolarna måste vara dimensionerade för vikten, och taket måste ha minst den lutning som tillverkaren anger för pannmodellen. Bärigheten bedöms vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlagets skick.",
+    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och tegelprofilerad plåt från 1 300 kr/m². Exakt pris beror på takets storlek, lutning och underlagets skick.",
     benefits: [
       "Klassiskt uttryck som håller husets karaktär",
       "Lång livslängd — kan hålla över 100 år",

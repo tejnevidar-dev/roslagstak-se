@@ -11,7 +11,7 @@ import { buildFaqSchema } from "@/lib/schema";
 const faqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: "Priset beror på taktyp, storlek och materialval. Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan. Offerten är alltid kostnadsfri — konfigurera din offert direkt på sidan eller kontakta oss för rådgivning.",
+    answer: "Som riktpris, efter ROT-avdrag och inkl. moms: betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Exakt pris beror på taktyp, storlek och materialval, och vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan. Offerten är alltid kostnadsfri — konfigurera din offert direkt på sidan eller kontakta oss för rådgivning.",
   },
   {
     question: "Lägger ni tak på öar i skärgården?",

@@ -19,36 +19,36 @@ const priceData = [
   {
     category: "Plåttak",
     items: [
-      { name: "TP20 plåttak", priceRange: "Fast pris efter takkontroll", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
-      { name: "Pannplåttak", priceRange: "Fast pris efter takkontroll", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
-      { name: "Plegelplåttak", priceRange: "Fast pris efter takkontroll", description: "Plåtprofil som imiterar tegel. Stilrent och underhållsfritt." },
-      { name: "Dubbelfalsat plåttak", priceRange: "Fast pris efter takkontroll", description: "Premiumprodukten. Helt vattentätt, extremt långlivat (50+ år)." },
+      { name: "TP20 plåttak", priceRange: "Från 1 200 kr/m²", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
+      { name: "Pannplåttak", priceRange: "Från 1 300 kr/m²", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
+      { name: "Plegelplåttak", priceRange: "Från 1 300 kr/m²", description: "Plåtprofil som imiterar tegel. Stilrent och underhållsfritt." },
+      { name: "Dubbelfalsat plåttak", priceRange: "Ca 2 000 kr/m²", description: "Premiumprodukten. Helt vattentätt, extremt långlivat (50+ år)." },
     ],
   },
   {
     category: "Panntak",
     items: [
-      { name: "Betongpannetak", priceRange: "Fast pris efter takkontroll", description: "Beprövat och prisvärt. 30–50 års livslängd." },
-      { name: "Lertegeltak", priceRange: "Fast pris efter takkontroll", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
+      { name: "Betongpannetak", priceRange: "Från 1 200 kr/m²", description: "Beprövat och prisvärt. 30–50 års livslängd." },
+      { name: "Lertegeltak", priceRange: "Från 1 300 kr/m²", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
     ],
   },
   {
     category: "Övriga tjänster",
     items: [
       { name: "Takrenovering", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Beroende på skadans omfattning. Alltid fast pris efter kostnadsfri takkontroll." },
-      { name: "Takavvattning (hängrännor)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Komplett system med stuprör, fast pris i offerten." },
+      { name: "Takavvattning (hängrännor)", priceRange: "Från ca 23 000 kr", description: "Komplett system med stuprör, beroende på husets storlek och våningar." },
       { name: "Takkupa", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
       { name: "Takfönster (Velux)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
-      { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig genomgång av taket med åtgärdsförslag." },
+      { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig genomgång av taket med en rapport om takets skick." },
     ],
   },
   {
     category: "Tillval",
     items: [
-      { name: "Råspontbyte", priceRange: "Fast pris efter takkontroll", description: "Byte av skadat underlag vid takbyte." },
-      { name: "Skorstensinklädnad", priceRange: "Pris efter takkontroll", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
-      { name: "Takstege + gångbrygga", priceRange: "Pris efter takkontroll", description: "Komplett taksäkerhet enligt BBR." },
-      { name: "Snörasskydd", priceRange: "Fast pris efter bedömning", description: "Monteras vid takfot mot entréer och gångvägar." },
+      { name: "Råspontbyte", priceRange: "Från 300 kr/m²", description: "Byte av skadat underlag vid takbyte." },
+      { name: "Skorstensinklädnad", priceRange: "Från 7 000 kr", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
+      { name: "Takstege + gångbrygga", priceRange: "Från 8 000 kr", description: "Komplett taksäkerhet enligt BBR." },
+      { name: "Snörasskydd", priceRange: "Från 600 kr/löpmeter", description: "Monteras vid takfot mot entréer och gångvägar." },
     ],
   },
 ];
@@ -56,11 +56,11 @@ const priceData = [
 const priceFaqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: "Priset beror på takets storlek, lutning, material och skick. Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan. Med ROT-avdrag (30% på arbetskostnaden) blir det avsevärt billigare.",
+    answer: "Som riktpris, efter ROT-avdrag och inkl. moms: betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Exakt pris beror på takets storlek, lutning, material och skick, och vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan.",
   },
   {
     question: "Ingår material i priset?",
-    answer: "Ja, alla våra priser inkluderar material, arbete, logistik och avfallshantering. Byggställning specificeras separat i offerten. Vi arbetar alltid med fasta priser utan dolda kostnader.",
+    answer: "Ja, alla våra priser inkluderar material, arbete, logistik, avfallshantering och byggställning. Krävs en mer komplex ställning kan ett tillägg tillkomma, och det framgår i så fall i offerten. Vi arbetar alltid med fasta priser utan dolda kostnader.",
   },
   {
     question: "Kan jag använda ROT-avdrag?",
@@ -90,8 +90,8 @@ const Prices = () => {
   return (
     <>
       <SEOHead
-        title="Vad kostar takbyte? Fast pris 2026 — Roslagen"
-        description="Vad kostar ett takbyte i Roslagen? Fast pris efter kostnadsfri takkontroll, oavsett material — TP20, betongpannor, tegel eller dubbelfalsat plåttak."
+        title="Vad kostar takbyte? Priser 2026, efter ROT — Roslagen"
+        description="Vad kostar ett takbyte i Roslagen? Riktpriser efter ROT-avdrag, inkl. moms: TP20 och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m²."
         canonical="https://roslagstak.se/priser"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -104,7 +104,7 @@ const Prices = () => {
           compact
           eyebrow="Priser 2026"
           title="Vad kostar takbyte och takrenovering i Roslagen?"
-          text="Fast pris efter kostnadsfri takkontroll, oavsett material. Alla priser inkluderar material och arbete, inkl. moms och före ROT-avdrag. ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan."
+          text="Riktpriserna nedan gäller efter ROT-avdrag och inkl. moms, med standardställning. Fast pris lämnas alltid efter en kostnadsfri takkontroll. ROT-avdraget (30 % på arbetskostnaden) dras av direkt på fakturan."
         />
 
         <div className="container mx-auto px-4 pt-2 pb-20">
@@ -112,6 +112,9 @@ const Prices = () => {
             <QuickContactFacts />
           </div>
           {/* Price tables */}
+          <p className="max-w-4xl mx-auto text-xs text-muted-foreground mb-4">
+            Riktpriser nedan är efter ROT-avdrag och inkl. moms, med standardställning. Exakt pris för ditt tak får du alltid skriftligt efter en kostnadsfri takkontroll. Komplex ställning kan tillkomma och framgår i så fall i offerten.
+          </p>
           <div className="max-w-4xl mx-auto space-y-8 mb-16">
             {priceData.map((category) => (
               <div key={category.category} className="bg-card border border-border rounded-2xl overflow-hidden">

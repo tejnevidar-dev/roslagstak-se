@@ -20,15 +20,15 @@ import {
 } from "@/components/ui/accordion";
 
 const servicePriceDescriptions: Record<string, string> = {
-  takbyte: "Fast pris efter kostnadsfri takkontroll, oavsett material. ROT-avdrag tillkommer.",
-  takomlaggning: "Fast pris efter kostnadsfri takkontroll, oavsett material. ROT-avdrag tillkommer.",
+  takbyte: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
+  takomlaggning: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
   takrenovering: "Fast pris efter kostnadsfri takkontroll, beroende på åtgärdens omfattning. ROT-avdrag tillkommer.",
   taktvatt: "Fast pris efter kostnadsfri takkontroll, inklusive biocidbehandling. ROT-avdrag tillkommer.",
   takmalning: "Fast pris efter kostnadsfri takkontroll, inklusive tvätt, grundning och två strykningar. ROT-avdrag tillkommer.",
-  bandtackning: "Fast pris efter kostnadsfri takkontroll, i förzinkad eller färgbelagd plåt. ROT-avdrag tillkommer.",
-  platttak: "Fast pris efter kostnadsfri takkontroll, oavsett material. ROT-avdrag tillkommer.",
-  betongpannor: "Fast pris efter kostnadsfri takkontroll. Omläggning av befintliga pannor ligger normalt lägre än nyläggning. ROT-avdrag tillkommer.",
-  tegeltak: "Fast pris efter kostnadsfri takkontroll, i lertegel eller tegelprofilerad plåt. ROT-avdrag tillkommer.",
+  bandtackning: "Riktpris, efter ROT-avdrag och inkl. moms: ca 2 000 kr/m² i förzinkad eller färgbelagd plåt. Fast pris efter kostnadsfri takkontroll.",
+  platttak: "Riktpris, efter ROT-avdrag och inkl. moms: TP20 från 1 200 kr/m², tegelprofilerad plåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
+  betongpannor: "Riktpris, efter ROT-avdrag och inkl. moms: från 1 200 kr/m². Omläggning av befintliga pannor ligger normalt lägre än nyläggning. Fast pris efter kostnadsfri takkontroll.",
+  tegeltak: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och tegelprofilerad plåt från 1 300 kr/m². Fast pris efter kostnadsfri takkontroll.",
 };
 
 const ServiceLocationPage = () => {
@@ -102,7 +102,7 @@ const ServiceLocationPage = () => {
       "@type": "Offer",
       priceCurrency: "SEK",
       description: servicePriceDescriptions[combo.serviceSlug] ??
-        "Fast pris efter kostnadsfri takkontroll — ställning och avfall specificeras i offerten.",
+        "Fast pris efter kostnadsfri takkontroll — byggställning ingår, avfallshantering ingår.",
     },
   };
 

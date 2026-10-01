@@ -84,7 +84,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Komplett takomläggning i Roslagen och skärgården: rivning, ny råspont, papp, läkt och nytt ytskikt. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Prisbild", value: "Fast pris efter takkontroll", text: "TP20-plåt i nedre spannet, dubbelfalsat i övre. Fast pris i offerten." },
+      { tone: "primary", label: "Prisbild", value: "1 200–2 000 kr/m²", text: "TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m² — efter ROT-avdrag, inkl. moms." },
       { tone: "outline", label: "Tidsåtgång", value: "Efter takets storlek", text: "Beror på takets storlek, underlagets skick och väder." },
       { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "30 års tätskiktsgaranti via MATAKI." },
       { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Allt dolt material byts — papp, läkt, beslag och avvattning." },
@@ -97,12 +97,12 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Valet av ytskikt styr både pris, livslängd och hur taket tål Roslagens saltluft. Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Kännetecken", "Passar"],
       rows: [
-        ["Profilerad plåt (TP20)", "Fast pris", "Lätt, skruvad profilplåt", "Fritidshus, uthus, enkla sadeltak"],
-        ["Betongpanna", "Fast pris", "Tung, flera kulörer", "Villor med bärkraftig konstruktion"],
-        ["Tegelpanna", "Fast pris", "Tung, åldras med patina", "Äldre hus med traditionellt uttryck"],
-        ["Dubbelfalsat plåttak", "Fast pris", "Lätt, inga synliga skruvar", "Klassiskt, stramt uttryck och tak med kupor och ränndalar"],
+        ["Profilerad plåt (TP20)", "Från 1 200 kr/m²", "Lätt, skruvad profilplåt", "Fritidshus, uthus, enkla sadeltak"],
+        ["Betongpanna", "Från 1 200 kr/m²", "Tung, flera kulörer", "Villor med bärkraftig konstruktion"],
+        ["Tegelpanna", "Från 1 300 kr/m²", "Tung, åldras med patina", "Äldre hus med traditionellt uttryck"],
+        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Lätt, inga synliga skruvar", "Klassiskt, stramt uttryck och tak med kupor och ränndalar"],
       ],
-      footnote: "Priset sätts efter kostnadsfri takkontroll, inklusive material och arbete, före ROT-avdrag. Ställning och avfall specificeras separat i offerten.",
+      footnote: "Riktpriser, efter ROT-avdrag och inkl. moms, med standardställning. Priset sätts efter kostnadsfri takkontroll. Komplex ställning kan tillkomma och framgår i så fall i offerten.",
     },
   },
 
@@ -141,7 +141,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     factCards: [
       { tone: "accent", label: "Dimension", value: "125 / 150 mm", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet." },
       { tone: "primary", label: "Fall", value: "3–5 mm/m", text: "För lite fall ger stående vatten, för mycket syns på fasaden." },
-      { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Aluminium; koppar ligger högre. Komplett system, fast pris i offerten." },
+      { tone: "outline", label: "Prisbild", value: "Från ca 23 000 kr", text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. Koppar ligger högre." },
       { tone: "plain", label: "Takkontroll", value: "Kostnadsfri", text: "Vi tittar på rännor, stuprör och avvattning på plats, utan förpliktelser." },
     ],
     block: {
@@ -322,7 +322,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus — inte att förväxla med tegelplåt." },
       { tone: "outline", label: "Uttryck", value: "Åldras med patina", text: "Enskilda pannor som spricker kan bytas utan att hela taket görs om." },
       { tone: "accent", label: "Bärighet", value: "Kontrolleras alltid", text: "Lertegel väger mer än plåt — vi kontrollerar konstruktionen vid takkontrollen." },
-      { tone: "plain", label: "Pris", value: "Fast pris efter takkontroll", text: "Inkl. moms, före ROT-avdrag. Fast pris i offerten." },
+      { tone: "plain", label: "Pris", value: "Från 1 300 kr/m²", text: "Efter ROT-avdrag, inkl. moms. Fast pris i offerten." },
     ],
     block: {
       kind: "matrix",
@@ -332,12 +332,12 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Tegel eller betong? Och vad är egentligen skillnaden mellan lertegel och tegelplåt? Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Kännetecken", "Passar"],
       rows: [
-        ["Lertegel", "Fast pris", "Bränd lera, åldras med patina", "Äldre och nyare hus som ska behålla sin karaktär"],
-        ["Betongpannor", "Fast pris", "Gjuten betong, flera kulörer", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
-        ["Tegelplåt (profilerad plåt)", "Fast pris", "Plåt pressad för att likna tegel", "Tegelutseende till lägre vikt och pris än lertegel"],
-        ["Dubbelfalsat plåttak", "Fast pris", "Plåtbanor utan synliga skruvar", "Klassiskt, stramt uttryck"],
+        ["Lertegel", "Från 1 300 kr/m²", "Bränd lera, åldras med patina", "Äldre och nyare hus som ska behålla sin karaktär"],
+        ["Betongpannor", "Från 1 200 kr/m²", "Gjuten betong, flera kulörer", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
+        ["Tegelplåt (profilerad plåt)", "Från 1 300 kr/m²", "Plåt pressad för att likna tegel", "Tegelutseende till lägre vikt och pris än lertegel"],
+        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Plåtbanor utan synliga skruvar", "Klassiskt, stramt uttryck"],
       ],
-      footnote: "Priset sätts efter kostnadsfri takkontroll, inkl. moms, före ROT-avdrag. Exakt pris beror på takets storlek, lutning och underlag.",
+      footnote: "Riktpriser, efter ROT-avdrag och inkl. moms. Priset sätts efter kostnadsfri takkontroll. Exakt pris beror på takets storlek, lutning och underlag.",
     },
     relatedLinks: [
       { to: "/blogg/plattak-vs-betongpannor", label: "Plåttak jämfört med betongpannor" },

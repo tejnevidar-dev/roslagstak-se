@@ -32,7 +32,7 @@ const roofTypes: RoofType[] = [
     pros: ["Mycket kostnadseffektivt", "Snabb montering — stora skivor", "Låg vikt (ca 3–5 kg/m²)", "Minimalt underhåll", "Brett färgutbud", "Fungerar även vid låg taklutning"],
     cons: ["Kan ge resonansljud vid kraftigt regn utan ljuddämpning", "Enklare estetik jämfört med falsad plåt", "Kondens kan uppstå utan korrekt ventilation och underlagspapp"],
     lifespan: "Lång livslängd",
-    priceRange: "Fast pris efter takkontroll",
+    priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, fritidshus, ekonomibyggnader, garage",
     image: imgTp20,
     imageAlt: "Närbild på trapetsprofilerad TP20-plåt",
@@ -45,7 +45,7 @@ const roofTypes: RoofType[] = [
     pros: ["Klassiskt tegelpanneliknande utseende", "Mycket lättare än riktigt tegel (ca 4–5 kg/m²)", "Snabbare montering än tegelpannor", "Underhållsfritt", "Tål kraftig vind väl"],
     cons: ["Inte lika autentiskt utseende som riktigt tegel", "Kan låta vid kraftigt regn", "Kräver en viss minsta taklutning"],
     lifespan: "Lång livslängd",
-    priceRange: "Fast pris efter takkontroll",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, sommarstugor, radhus",
     image: imgTegelplat,
     imageAlt: "Vått grått tak i tegelplåt med snörasskydd",
@@ -58,7 +58,7 @@ const roofTypes: RoofType[] = [
     pros: ["Unikt och karaktäristiskt utseende", "Svensk klassiker med lång tradition", "Passar kulturhistoriska byggnader", "Fungerar vid låga taklutningar", "Förzinkad för god rostbeständighet", "Lätt material"],
     cons: ["Mer begränsat färgutbud än modern profilerad plåt", "Kräver korrekt underlag (råspont + underlagspapp)"],
     lifespan: "Lång livslängd",
-    priceRange: "Fast pris efter takkontroll",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Kulturbyggnader, äldre villor, funkishus, lantbruksbyggnader, kyrkor",
     image: imgPannplat,
     imageAlt: "Svart pannplåt med karaktäristisk vågprofil",
@@ -71,7 +71,7 @@ const roofTypes: RoofType[] = [
     pros: ["Helt vattentätt — inga genomgående skruvar", "Mycket lång livslängd", "Fungerar vid låg taklutning", "Exklusivt och tidlöst utseende", "Materialval: koppar, zink, stål, aluminium", "Åldras vackert (koppar/zink)"],
     cons: ["Högsta materialkostnaden", "Kräver specialiserad plåtslagare", "Längre monteringstid", "Koppar och zink har högre kvadratmeterpris"],
     lifespan: "Mycket lång livslängd",
-    priceRange: "Fast pris efter takkontroll",
+    priceRange: "Ca 2 000 kr/m²",
     bestFor: "Exklusiva kustvillor, herrgårdar, kyrkor, kulturbyggnader",
     image: imgDubbelfalsat,
     imageAlt: "Dubbelfalsat plåttak i svart bandtäckning på modern timmerbyggnad",
@@ -84,7 +84,7 @@ const roofTypes: RoofType[] = [
     pros: ["Tidlöst och autentiskt utseende", "Naturligt och miljövänligt material", "Utmärkt ljud- och värmeisolering", "Åldras med värdighet", "Brandsäkert (obrännbart)", "Lång livslängd vid rätt underhåll"],
     cons: ["Tungt — kräver dimensionerad takstol (40–50 kg/m²)", "Risk för frostsprängning vid dålig kvalitet", "Enstaka pannor kan behöva bytas med åren", "Mossa och lav kan växa på skuggiga sidor", "Kräver en viss minsta taklutning"],
     lifespan: "Mycket lång livslängd",
-    priceRange: "Fast pris efter takkontroll",
+    priceRange: "Från 1 300 kr/m²",
     bestFor: "Äldre villor, kulturhistoriska byggnader, herrgårdar, skärgårdshus med karaktär",
     image: imgLertegel,
     imageAlt: "Närbild på tvåkupiga lertegelpannor i terrakotta",
@@ -97,7 +97,7 @@ const roofTypes: RoofType[] = [
     pros: ["Prisvärt jämfört med lertegel", "Brett utbud av profiler och färger", "God ljud- och värmeisolering", "Brandsäkert", "Svensk tillverkning (bl.a. Benders, Monier)"],
     cons: ["Tungt material (40–45 kg/m²)", "Ytan kan bli porös och absorbera fukt med åren", "Mossa och alger kan växa, kräver taktvätt", "Färgen kan blekna med tiden", "Kräver en viss minsta taklutning"],
     lifespan: "Lång livslängd",
-    priceRange: "Fast pris efter takkontroll",
+    priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, radhus, parhus — det trygga och beprövade valet",
     image: imgBetongpanne,
     imageAlt: "Närbild på svart betongpannetak med vågprofil",
@@ -123,7 +123,7 @@ const roofTypes: RoofType[] = [
     pros: ["Mycket prisvärt", "Lätt material", "Fungerar vid mycket låg taklutning", "Flexibelt — anpassar sig efter underlaget", "Enkel att lägga om"],
     cons: ["Kortare livslängd än övriga material", "Kräver regelbundet underhåll och omslagning", "Känsligt för UV-strålning — åldras av sol", "Mindre estetiskt tilltalande", "Kan bli spröd i extrem kyla"],
     lifespan: "Kortare livslängd, kräver omläggning med jämna mellanrum",
-    priceRange: "Fast pris efter takkontroll",
+    priceRange: "Ca 900 kr/m²",
     bestFor: "Garage, uthus, friggebodar, ekonomibyggnader, låglutande tak",
   },
 ];
@@ -281,9 +281,11 @@ const RoofTypes = () => {
             Vad kostar takbyte?
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan. Priset beror på
-            materialval, takets storlek och skick, och inkluderar material, arbete, logistik och
-            avfallshantering. ROT-avdrag (30% på arbetskostnaden) dras av direkt på fakturan.
+            Som riktpris, efter ROT-avdrag och inkl. moms: från 900 kr/m² (papptak) upp till ca 2 000 kr/m²
+            (dubbelfalsat plåttak). Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig
+            innan. Priset beror på materialval, takets storlek och skick, och inkluderar material, arbete,
+            byggställning och avfallshantering. ROT-avdrag (30% på arbetskostnaden) dras av direkt på
+            fakturan.
           </p>
         </div>
       </div>

@@ -651,14 +651,14 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks],
   },
   "/priser": {
-    title: "Vad kostar takbyte? Fast pris 2026 — Roslagen",
+    title: "Vad kostar takbyte? Priser 2026, efter ROT — Roslagen",
     description:
-      "Vad kostar ett takbyte i Roslagen? Fast pris efter kostnadsfri takkontroll, oavsett material — TP20, betongpannor, tegel eller dubbelfalsat plåttak.",
+      "Vad kostar ett takbyte i Roslagen? Riktpriser efter ROT-avdrag, inkl. moms: TP20 och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m².",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro:
-      "Fast pris efter kostnadsfri takkontroll för alla typer av takarbeten i Roslagen. Alla priser inkluderar material och arbete, och ROT-avdrag på 30 % av arbetskostnaden.",
+      "Riktpriser efter ROT-avdrag och inkl. moms, med standardställning. Fast pris lämnas alltid efter en kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
     paragraphs: [
-      "Vi lägger TP20 plåttak, tegelprofilerad plåt, betongpannor, dubbelfalsat plåttak (bandtäckning) och lertegel, samt utför taktvätt och takmålning. Exakt pris beror på material, takets storlek och skick.",
+      "Som riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt (tegelprofilerad plåt) från 1 300 kr/m², dubbelfalsat plåttak (bandtäckning) ca 2 000 kr/m². Exakt pris beror på material, takets storlek och skick.",
       "Priset styrs av takets storlek, lutning, antal genomföringar samt underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.",
       "Vi går igenom taket, mäter och bedömer skicket vid takkontrollen, och du får ett skriftligt fast pris innan något arbete börjar. Priset gäller sedan hela vägen, oavsett husets storlek eller materialval.",
       "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter hela ansökan och drar av beloppet direkt på fakturan, så du behöver aldrig ligga ute med pengarna.",
@@ -667,6 +667,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Så budgeterar du smart: boka takkontrollen tidigt så hinner du jämföra materialalternativ i lugn takt. Överväg att samordna takbytet med byte av vindskivor, hängrännor eller taksäkerhet — marginalkostnaden blir lägre när ställningen ändå står uppe. Och glöm inte att ROT-avdraget gäller per person, två delägare kan alltså få upp till 100 000 kr tillsammans.",
       "Alla priser är fasta priser, satta efter en kostnadsfri takkontroll på plats — aldrig innan. Exakt pris för ditt tak får du alltid skriftligt efter kontrollen.",
       "Vad ingår i priset? Rivning och bortforsling av gamla taket, underlagspapp, strö- och bärläkt, tätskikt i valt material, plåtbeslag kring skorsten och genomföringar, taksäkerhet och städning. Det enda som kan tillkomma är skador på råspont eller takstolar som inte går att se förrän gamla taket är rivet — då stannar vi upp och prisar tillägget separat innan vi fortsätter.",
+      "Riktpriser på vanliga tillägg, efter ROT-avdrag och inkl. moms: råspontbyte från 300 kr/m², skorstensinklädnad från 7 000 kr, takstege med gångbrygga från 8 000 kr, snörasskydd från 600 kr/löpmeter, komplett hängrännesystem med stuprör från ca 23 000 kr.",
       "Jämför du offerter från flera firmor? Titta på vad som faktiskt ingår, inte bara totalsumman. Fråga efter garantitider, om beslag och taksäkerhet ingår, och om priset är fast eller ett ungefärligt upplägg.",
     ],
     links: [

@@ -18,7 +18,7 @@ const tidy = (faqs: LocationFAQ[]): LocationFAQ[] =>
  * eller påståenden om lokal närvaro.
  */
 const PRICE = (prep: string, name: string) =>
-  `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning, materialval och underlagets skick. Du får alltid fast pris efter en kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan. Vi återkommer inom 24 timmar.`;
+  `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning, materialval och underlagets skick. Som riktpris, efter ROT-avdrag och inkl. moms, ligger betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m² och dubbelfalsat plåttak kring 2 000 kr/m². Du får alltid fast pris efter en kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan. Vi återkommer inom 24 timmar.`;
 const TIME = (what: string) =>
   `Hur lång tid ${what} tar beror på takets storlek, underlagets skick och vädret. Vid takkontrollen går vi igenom förutsättningarna för ditt tak, och i offerten framgår vad som ingår.`;
 const MATERIALS = (isIsland: boolean) =>
