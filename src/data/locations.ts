@@ -1613,7 +1613,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Arbetar ni med koppar- och zinkplåt på Östermalm?",
       answer:
-        "Ja, vi arbetar med koppar, zink och förzinkad stålplåt på exklusiva tak på Östermalm. Koppar ger ett patinerat utseende som passar klassiska stenstadshus, medan zink är ett slagtåligt och elegant alternativ. Vi plåtslår alla beslag för hand. Kontakta oss så diskuterar vi rätt material för din fastighet.",
+        "Ja, vi arbetar med koppar, zink och förzinkad stålplåt på exklusiva tak på Östermalm. Koppar ger ett patinerat utseende som passar klassiska stenstadshus, medan zink är ett slagtåligt och elegant alternativ. Kontakta oss så diskuterar vi rätt material för din fastighet.",
     },
     primaryKeyword: "takläggare Östermalm",
     lat: 59.3359,
@@ -1678,7 +1678,7 @@ export const locations: LocationData[] = [
       question:
         "Kan ni renovera plåtbeslag och hängrännor på ett äldre tak i Vasastan?",
       answer:
-        "Ja, vi plåtslår och byter rostiga beslag, vindskivor, nockbeslag och hängrännor på äldre tak i Vasastan. Ofta räcker en riktad renovering för att förlänga takets livslängd med 15–20 år. Vi ger en ärlig bedömning vid kostnadsfri takkontroll — om ett helt takbyte inte behövs säger vi det.",
+        "Hängrännor byter vi. Plåtbeslag gör vi i första hand som en del av ett takbyte eller en takomläggning, så kontakta oss så tittar vi på taket. Vid den kostnadsfria takkontrollen får du en bedömning av vad som behöver göras.",
     },
     primaryKeyword: "takläggare Vasastan",
     lat: 59.343,
@@ -1783,7 +1783,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vilket takmaterial passar brutna tak i Danderyd?",
       answer:
-        "För brutna takfall, torn och kupor i Danderyd rekommenderar vi dubbelfalsad bandtäckning — den formas efter takets geometri och ger bäst täthet. Koppar eller zink ger ett exklusivt, patinerande uttryck. Vi plåtslår alla beslag för hand. Boka en kostnadsfri takkontroll så rekommenderar vi rätt material för ditt hus.",
+        "För brutna takfall, torn och kupor i Danderyd rekommenderar vi dubbelfalsad bandtäckning — den formas efter takets geometri och ger bäst täthet. Koppar eller zink ger ett exklusivt, patinerande uttryck. Boka en kostnadsfri takkontroll så rekommenderar vi rätt material för ditt hus.",
     },
     primaryKeyword: "takläggare Danderyd",
     lat: 59.4044,
@@ -1821,7 +1821,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Lidingö är en ö med exklusiv villabebyggelse, strandnära hus och bostadsrättsfastigheter — allt samlar på en ö med broförbindelse men ändå ö-karaktär. Taken utsätts för fukt från omgivande vatten och vind. Vi utför takbyten, bandtäckning och takrenoveringar på Lidingö med material som tål det fuktiga läget. Många hus har komplexa tak med brutna fall och kupor som kräver skicklig plåtslagning.",
     extraContent:
-      "På Lidingö har många hus tak med tegelpannor eller plåt från 1920–1950-talet. Vid takbyte bevarar vi husens karaktär med material som matchar originalet — tegelprofilerad plåt för tegelutseende, eller dubbelfalsad plåt i klassiska kulörer. Vi plåtslår beslag runt skorstenar och kupor för hand. Kostnadsfri takkontroll och fast pris ingår.",
+      "På Lidingö har många hus tak med tegelpannor eller plåt från 1920–1950-talet. Vid takbyte bevarar vi husens karaktär med material som matchar originalet — tegelprofilerad plåt för tegelutseende, eller dubbelfalsad plåt i klassiska kulörer. Kostnadsfri takkontroll och fast pris ingår.",
     uniqueFAQ: {
       question: "Ställer Lidingös läge särskilda krav på takmaterial?",
       answer:
