@@ -1609,7 +1609,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Östermalm har en av Stockholms mest påkostade bebyggelse — stenstadspalats, grosshandlarvillor och ambassadbyggnader med tak som speglar både status och ålder. Taken här är ofta komplexa: brutna takfall, torn, balustrader och plåtdetaljer i koppar eller zink. Vi utför takbyten och takrenoveringar på Östermalm med material som matchar husens karaktär — från kopparplåt som patinerar vackert till dubbelfalsad stålplåt i klassiska kulörer. Hantverket är avgörande när taken syns från gatan.",
     extraContent:
-      "På Östermalm är estetiken lika viktig som funktionen. Vi plåtslår alla beslag runt skorstenar, takfönster och nockar för hand och väljer plåtkvaliteter och kulörer som passar husets arkitektur. Många fastigheter här har tak där originalmaterialet kan vara svårt att ersätta med modern standardplåt — vi hittar lösningar som bevarar utseendet med modern prestanda. Kontakta oss för en kostnadsfri konsultation.",
+      "På Östermalm är estetiken lika viktig som funktionen. Många fastigheter här har tak där originalmaterialet kan vara svårt att ersätta med modern standardplåt — vi hittar lösningar som bevarar utseendet med modern prestanda. Kontakta oss för en kostnadsfri konsultation.",
     uniqueFAQ: {
       question: "Arbetar ni med koppar- och zinkplåt på Östermalm?",
       answer:
@@ -1779,7 +1779,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Danderyd har en av regionens mest påkostade villabebyggelse — stora fristående hus med komplexa takfall, brutna tak, torn och kupor. Taken kräver skicklig plåtslagning snarare än standardläggning. Vi utför bandtäckning, plåtarbeten och kompletta takbyten i Danderyd med material som matchar husens nivå — dubbelfalsad plåt, tegelprofilerad plåt och i koppar eller zink när kunden vill ha ett exklusivt uttryck. Hantverket syns på tak som står ut i kvarteret.",
     extraContent:
-      "Vi plåtslår alla beslag runt skorstenar, kupor och takfönster för hand. Kostnadsfri takkontroll och fast pris ingår alltid.",
+      "Vid ett takbyte görs plåtdetaljerna runt skorstenar och kupor om. Kostnadsfri takkontroll och fast pris ingår alltid.",
     uniqueFAQ: {
       question: "Vilket takmaterial passar brutna tak i Danderyd?",
       answer:
