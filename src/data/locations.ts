@@ -584,9 +584,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Arholma — takbyte och takrenovering. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
     longDescription:
-      "Arholma är en av de nordligaste öarna i Stockholms skärgård — avlägset, vackert och med ett klimat som ställer extrema krav på byggnaders tak. Ditt tak på Arholma förtjänar en takläggare som verkligen förstår skärgården.",
+      "Arholma är en av de nordligaste öarna i Stockholms skärgård. Husens ålder och skick varierar mycket mellan fastigheterna på ön, och det är därför vi alltid börjar med en kostnadsfri takkontroll på plats.",
     extraContent:
-      "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
+      "",
     uniqueFAQ: {
       question: "Hur långt i förväg behöver jag boka takbyte på Arholma?",
       answer:
@@ -626,15 +626,15 @@ export const locations: LocationData[] = [
     region: "Norra Roslagen",
     isIsland: false,
     description:
-      "Takläggare i Hallstavik — takbyte, plåttak och takrenovering i norra Roslagen. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Hallstavik — takbyte och takrenovering i norra Roslagen. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Hallstavik i norra Roslagen har en tät villabebyggelse med hus från flera decennier. Många äldre tak har nått slutet av sin förväntade livslängd, då betongpannor och plåt med tiden tappar sin funktion. Vi utför takbyten, takomläggningar och takrenoveringar i Hallstavik och rekommenderar oftast TP20-plåt eller dubbelfalsat plåttak — lätt, tåligt och underhållsfritt. Vi hanterar allt från byggställning och rivning till ny taksäkerhet och avvattning, och lämnar fast pris efter kostnadsfri takkontroll.",
+      "Hallstavik i norra Roslagen har en tät villabebyggelse med hus från flera decennier. Husens ålder och skick varierar mycket mellan de olika delarna av orten, och det är därför vi alltid börjar med en kostnadsfri takkontroll på plats. Vi utför takbyten, takomläggningar och takrenoveringar i Hallstavik och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
-      "Många fastigheter i Hallstavik ligger nära skog och vegetation, vilket kan ge snabbare mossbildning på norrsidan av taket. Där rekommenderar vi taktvätt som förebyggande åtgärd innan påväxten hinner skada takytan. Vi utför både taktvätt, takmålning och kompletta takbyten i Hallstavik.",
+      "",
     uniqueFAQ: {
-      question: "Vilket takmaterial passar bäst på villor i Hallstavik?",
+      question: "Vad bedömer ni vid en takkontroll i Hallstavik?",
       answer:
-        "På villor i Hallstavik rekommenderar vi oftast plåttak — TP20 för budget eller dubbelfalsat för maximal livslängd. Plåt är lätt, klarar snölast och kräver minimalt underhåll. Har du redan betongpannor kan omläggning med ny papp och läkt vara ett prisvärt alternativ.",
+        "Vi går igenom takmaterial, plåtdetaljer, underlagspapp och avvattning och ger dig en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Boka en kostnadsfri takkontroll så ger vi en rekommendation för ditt hus.",
     },
     primaryKeyword: "takläggare Hallstavik",
     lat: 60.0522,
