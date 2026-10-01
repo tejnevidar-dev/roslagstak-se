@@ -3855,6 +3855,194 @@ export const locations: LocationData[] = [
     lng: 17.5525,
     nearbyLocations: ["Nyköping", "Gnesta", "Nynäshamn"],
   },
+  {
+    slug: "svalnas-osby",
+    name: "Svalnäs och Ösby",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i norra Djursholm, med villor i nationalromantik och jugend från 1900-talets första årtionden. Kostnadsfri takkontroll.",
+    longDescription:
+      "Norra Djursholm växte fram när den ursprungliga villastaden kring slottet och Värtan byggdes ut mot norr och väster. Enligt Wikipedia började Ösby-området bebyggas under andra halvan av 1890-talet, men byggandet tog fart först 1910. Där anslöt Djursholmsbanan till Roslagsbanan vid stationen Djursholms Ösby, som öppnade 1890 och gav villastaden en fast förbindelse med Stockholm. Svalnäs, längst i norr, är en gammal gård som nämns första gången i ett pergamentbrev från 1312. Egendomen köptes 1883 av bankdirektören Henrik Palme, som sex år senare blev den drivande kraften bakom Djursholms villastad. Han lät bygga en ny huvudbyggnad, ritad av arkitekten Fredrik Lilljekvist, och bodde där till sin död 1932. År 1897 sålde han 122 tunnland i Svalnässkogen, längs stranden norr om Framnäsviken, till Djursholms AB, som styckade av strandtomter för villor. Resten av Svalnäs införlivades i Djursholm 1934. Mellan 1912 och 1934 var Svalnäs slutstation på Djursholmsbanan. Enligt Wikipedia byggdes Svalnäs snabbt ut under 1900-talets första decennium och fick då en högborgerlig prägel. Villornas förhärskande stilar är nationalromantik och jugend, och bland arkitekterna fanns Lars Israel Wahlman, Axel Viktor Forsberg och Elis Benckert. Benckerts Villa Lagercrantz på Svalnäsvägen är byggnadsminne sedan 1979. Norr om Ösbysjön präglas bebyggelsen i stället av 1920-talets klassicism. I området ligger också Svalnäsgravfältet, från omkring 500 till 1000 e.Kr., och Djursholms golfbana.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Danderyd" },
+      { label: "Delområden", value: "Svalnäs, Djursholms Ösby" },
+      { label: "Hustyper", value: "Villor" },
+      { label: "Byggperiod", value: "Ösby från 1890-talet (fart 1910), Svalnäs 1900-talets första decennium, 1920-tal norr om Ösbysjön" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 920" },
+    ],
+    sourceLink: { label: "Wikipedia: Svalnäs", url: "https://sv.wikipedia.org/wiki/Svaln%C3%A4s" },
+    parentLocation: { name: "Danderyd", slug: "danderyd" },
+    h1Override: "Takläggare i Svalnäs och Ösby, Djursholm",
+    uniqueFAQ: {
+      question: "När byggdes husen i Svalnäs och Ösby?",
+      answer:
+        "Byggperiod enligt källorna: Ösby från 1890-talet med fart från 1910, Svalnäs under 1900-talets första decennium, och 1920-talsklassicism norr om Ösbysjön. Hustyper: villor i bland annat nationalromantik och jugend. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Danderyds kommun.",
+    },
+    primaryKeyword: "takläggare Svalnäs",
+    lat: 59.4124,
+    lng: 18.0872,
+    nearbyLocations: ["Djursholm", "Danderyd", "Stocksund"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Många av villorna i Svalnäs och Ösby är i dag runt hundra år gamla eller mer. Taken kan redan ha lagts om, en eller flera gånger, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. Villor i nationalromantik och jugend har ofta branta takfall, kupor, burspråk och torn, och varje sådan del ger taket fler anslutningar. Det är i ränndalar, runt skorstenar och vid plåtdetaljer som ett sådant tak prövas, och där är hantverket avgörande. I ett område med äldre, arkitektritade villor är det klokt att tänka på material och kulör tidigt. Om ett byte av material eller kulör kräver lov eller anmälan avgör Danderyds kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Svalnäs eller Ösby och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "lindholmen",
+    name: "Lindholmen",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Lindholmen norr om Vallentuna, en trädgårdsstad vid Roslagsbanan med villor från 1950-talet och framåt. Kostnadsfri takkontroll.",
+    longDescription:
+      "Lindholmen är en tätort i Vallentuna kommun, fem kilometer norr om Vallentuna, med egen station på Roslagsbanan. Platsen har en lång historia. Lindholmens gårds gamla stenhus, som numera är rivet, har enligt Wikipedia ansetts vara Gustav Vasas födelseplats, och ortens skola heter Gustav Vasa-skolan. Nära stationen låg byn Slumsta, som 1706 beskrevs som en by med två gårdar. På 1903 års karta syns att Roslagsbanan hade dragits genom den västra delen av Lindholmens ägor, med stationen knappt 300 meter från Slumsta. Enligt Wikipedia började Lindholmens trädgårdsstad anläggas i början av 1950-talet, på båda sidor om stationen. De första husen byggdes på traditionellt sätt på moränbackar och annan mark som inte gick att odla. Den östra delen anlades i det som kallades Djurgården, som en gång var tänkt som jaktpark till sätesgården. Sedan dess har stora delar av Slumstas ägor bebyggts. I Slumsta finns 55 villor från 1978, ritade av Bertil Engstrand, och 2007 byggdes Stockholms läns första passivhus i Lindholmen. Enligt hitta.se finns här hus från 1970- och 80-talen, 1990- och 2000-talen och 2010-talet, och kring Lindholmens gårds väg från 1920- och 1990-talen. Stationshuset står kvar, och öster om järnvägen ligger Vasakullen, Lindholmens gård, Storsjön och Lillsjön. Vallentuna kommun planerar för 400 till 600 nya bostäder i Lindholmen.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Vallentuna" },
+      { label: "Delområden", value: "Trädgårdsstaden, Slumsta, Djurgården" },
+      { label: "Hustyper", value: "Villor, inslag av flerbostadshus" },
+      { label: "Byggperiod", value: "Från tidigt 1950-tal, Slumsta 1978, delar 1970–2010-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 400" },
+    ],
+    sourceLink: { label: "Wikipedia: Lindholmen, Vallentuna kommun", url: "https://sv.wikipedia.org/wiki/Lindholmen,_Vallentuna_kommun" },
+    parentLocation: { name: "Vallentuna", slug: "vallentuna" },
+    h1Override: "Takläggare i Lindholmen, Vallentuna",
+    uniqueFAQ: {
+      question: "När byggdes husen i Lindholmen?",
+      answer:
+        "Byggperiod enligt källorna: trädgårdsstaden från tidigt 1950-tal, Slumsta från 1978, och inslag från 1970- till 2010-talet. Hustyper: villor, med inslag av flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Vallentuna kommun.",
+    },
+    primaryKeyword: "takläggare Lindholmen",
+    lat: 59.5844,
+    lng: 18.1052,
+    nearbyLocations: ["Vallentuna", "Ormsta"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Husen i Lindholmen är byggda under mer än sjuttio år. De äldsta villorna i trädgårdsstaden är i dag runt 70–75 år gamla, villorna i Slumsta närmare 50 år, och en stor del av bebyggelsen är yngre än så. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. I ett område som Slumsta, där husen är ritade och byggda samtidigt, kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Om ett byte av material eller kulör kräver lov eller anmälan avgör Vallentuna kommun.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Lindholmen och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "sjoberg",
+    name: "Sjöberg",
+    region: "Norra Stockholm",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Sjöberg i Sollentuna, med villor och radhus främst från 1970-talet och nyare villor på Falkberget. Kostnadsfri takkontroll.",
+    longDescription:
+      "Sjöberg är en kommundel i östra Sollentuna, mellan Edsviken, Rösjön och Rinkebyskogen. Den gränsar till Edsberg, Tureberg och Helenelund, till Danderyds kommun och till Skarpäng i Täby, och delas in i Östra Sjöberg, Västra Sjöberg och Falkberget. Trakten var bebodd redan under forntiden. Sjöbergs fornborg ligger på en hög platå och är omkring 210 gånger 100 meter stor, och enligt Wikipedia har borgmuren daterats till 400–550 e.Kr. Fornborgen har gett namn åt Borgvägen längs Edsvikens strand. Kommundelen har sitt namn efter Sjöbergs gård, intill fornborgen, där det ursprungligen låg ett torp under Hersby. Gårdens nuvarande huvudbyggnad uppfördes på 1850-talet. Under 1930-talet var Sjöberg ett stort sportstugeområde. Enligt Wikipedia gick en buss från Norra Bantorget till Edsviken, och därifrån en passbåt över till Sjöberg. Den nuvarande bebyggelsen i Östra och Västra Sjöberg är huvudsakligen uppförd under 1970-talet, då kommunen ersatte sommarstugeområdet med villor, radhus och bostadsrätter. Mot slutet av 1990-talet började Falkberget bebyggas med villor, och enligt hitta.se är husen där främst från 1990- och 2000-talen. I området finns Sjöbergs centrum, två skolor och Rösjöbadet.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Sollentuna" },
+      { label: "Delområden", value: "Östra Sjöberg, Västra Sjöberg, Falkberget, Kärrdal" },
+      { label: "Hustyper", value: "Villor, radhus" },
+      { label: "Byggperiod", value: "Huvudsakligen 1970-tal, Falkberget från slutet av 1990-talet" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 800 (RegSO Falkberget-Södra Sjöberg)" },
+    ],
+    sourceLink: { label: "Wikipedia: Sjöberg, Sollentuna kommun", url: "https://sv.wikipedia.org/wiki/Sj%C3%B6berg,_Sollentuna_kommun" },
+    parentLocation: { name: "Sollentuna", slug: "sollentuna" },
+    h1Override: "Takläggare i Sjöberg, Sollentuna",
+    uniqueFAQ: {
+      question: "När byggdes husen i Sjöberg?",
+      answer:
+        "Byggperiod enligt källorna: Östra och Västra Sjöberg huvudsakligen under 1970-talet, Falkberget från slutet av 1990-talet. Hustyper: villor och radhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun.",
+    },
+    primaryKeyword: "takläggare Sjöberg",
+    lat: 59.4261,
+    lng: 17.9947,
+    nearbyLocations: ["Sollentuna", "Edsviken", "Skarpäng"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "De flesta villorna och radhusen i Östra och Västra Sjöberg är i dag runt 50 år gamla, medan villorna på Falkberget är runt 20–30 år. Taken i de äldre delarna kan redan ha lagts om, men där det inte har skett är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. På Falkberget är taken yngre. På radhus hänger taken ihop med grannens, och anslutningarna mellan husen behöver utföras så att de fungerar tillsammans med grannens tak. Eftersom husen i en länga oftast är likadana och byggda samtidigt kan grannar ibland ha nytta av att planera takbyten i samma veva. Varje hus får ändå alltid en egen takkontroll och ett eget pris. Med skog och vatten nära inpå samlas löv och barr lätt i hängrännor och ränndalar, och det är värt att hålla dem rena. Om ett byte av material eller kulör kräver lov eller anmälan avgör Sollentuna kommun.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Sjöberg eller på Falkberget och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "lahall",
+    name: "Lahäll",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i villaområdet Lahäll i södra Täby, vid Näsbyviken och gränsen mot Djursholm. Kostnadsfri takkontroll och fast pris.",
+    longDescription:
+      "Lahäll ligger i den sydöstra delen av Täby kommun. Kommundelen gränsar i söder till Djursholm i Danderyd, i väster till Roslags-Näsby och i norr och öster till Näsbypark. Namnet kommer enligt Wikipedia av \"häll där man lastar\", men var den platsen låg är i dag okänt. På 1600-talet var Lahäll ett dagsverkstorp under Svalnäs, och 1723 blev torpet en del av Näsby säteri. Området började bebyggas i slutet av 1920-talet av Näsby fastighetsaktiebolag, och det kallades då Näsby västra park. I början byggdes mest sommarstugor, som sedan har ersatts av åretruntbostäder. År 1928 blev järnvägslinjen mellan Altorp och Lahäll klar, och Lahälls station var slutstation i nio år, innan banan 1937 förlängdes till Näsbypark. Lahäll hörde först till Danderyd. Fastighetsägarna ville egentligen att området skulle föras över till Djursholms stad, men enligt Wikipedia blev avloppsfrågan avgörande: Täby kunde erbjuda kommunalt vatten och avlopp, vilket Djursholm inte kunde. År 1947 fördes Lahäll över till Täby. Efter det ökade byggandet, och tillsammans med Näsbypark utvecklades området till ett grönskande villaområde. Vid Näsbyviken finns en småbåtshamn. Enligt hitta.se är husen i Lahäll främst byggda på 1960- och 2000-talen.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Täby" },
+      { label: "Delområden", value: "Lahäll, Näsbygård" },
+      { label: "Hustyper", value: "Villor och flerbostadshus" },
+      { label: "Byggperiod", value: "Från slutet av 1920-talet, ökat byggande efter 1947, främst 1960- och 2000-tal enligt hitta.se" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 390" },
+    ],
+    sourceLink: { label: "Wikipedia: Lahäll", url: "https://sv.wikipedia.org/wiki/Lah%C3%A4ll" },
+    parentLocation: { name: "Täby", slug: "taby" },
+    h1Override: "Takläggare i Lahäll, Täby",
+    uniqueFAQ: {
+      question: "När byggdes husen i Lahäll?",
+      answer:
+        "Byggperiod enligt källorna: från slutet av 1920-talet, med ökat byggande efter 1947 och husen i dag främst från 1960- och 2000-talet. Hustyper: villor och flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun.",
+    },
+    primaryKeyword: "takläggare Lahäll",
+    lat: 59.4265,
+    lng: 18.0711,
+    nearbyLocations: ["Täby", "Näsbypark", "Roslags-Näsby"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Lahäll har byggts ut och om under snart hundra år, från sommarstugor till villor, och husen är därför i mycket olika åldrar. En stor del av villorna är i dag runt 60 år gamla, medan andra är byggda eller ersatta under 2000-talet. Taken kan redan ha lagts om, och därför går det inte att säga något generellt om skicket. Där taket inte har bytts på länge är underlagspapp, läkt, plåtdetaljer och hängrännor ofta det som behöver ses över. När äldre hus har byggts till i flera omgångar möts ofta tak från olika tider på samma hus. Om ett byte av material eller kulör kräver lov eller anmälan avgör Täby kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Lahäll och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
 ];
 
 export const getLocationBySlug = (slug: string) =>

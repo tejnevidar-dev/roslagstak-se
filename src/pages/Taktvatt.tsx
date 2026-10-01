@@ -55,8 +55,8 @@ const benefits = [
   },
   {
     icon: ShieldCheck,
-    title: "Försäkringsvänligt underhåll",
-    desc: "Många försäkringsbolag kräver löpande takunderhåll. Regelbunden taktvätt är ett enkelt sätt att uppfylla det.",
+    title: "Fast pris efter kostnadsfri takkontroll",
+    desc: "Vi tittar på taket innan vi lämnar pris, så att du vet exakt vad som ingår innan arbetet börjar.",
   },
 ];
 
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     q: "Ingår ROT-avdrag på taktvätt?",
-    a: "Ja, både taktvätt, mossborttagning och takmålning är ROT-berättigade tjänster. ROT-avdrag på 30 % av arbetskostnaden dras direkt på fakturan upp till 50 000 kr per person och år. Vi sköter all administration mot Skatteverket — du behöver bara uppge personnummer och fastighetsbeteckning. Materialkostnader (biocid, färg) omfattas inte av ROT.",
+    a: "Ja, både taktvätt, mossborttagning och takmålning är ROT-berättigade tjänster. ROT-avdrag på 30 % av arbetskostnaden dras direkt på fakturan, upp till 50 000 kr per person och år — du betalar bara din del. Det förutsätter att du har rätt till fullt ROT-avdrag och har betalat tillräckligt med skatt. Materialkostnader (biocid, färg) omfattas inte av ROT.",
   },
   {
     q: "När på året är det bäst att tvätta taket?",
@@ -157,7 +157,7 @@ const seasonGuide = [
   { season: "Vår (april–maj)", icon: Sprout, desc: "Bästa starten på säsongen. Tjälen har gått ur marken och taket är torrt — perfekt för biocidbehandling som hinner verka hela sommaren." },
   { season: "Sommar (juni–augusti)", icon: Sun, desc: "Högsäsong för taktvätt. Torrt väder, långa dagar och optimal torktid för takmålning. Boka tidigt — kötiderna är längst nu." },
   { season: "Höst (september–oktober)", icon: Leaf, desc: "Sista chansen innan vintern. Vi rensar hängrännor och tvättar bort sommarens algpåväxt så taket är rustat för vintern." },
-  { season: "Vinter (november–mars)", icon: Snowflake, desc: "Vi utför inte taktvätt vintertid, men tar emot bokningar för våren. Boka i god tid för bästa pris och datum." },
+  { season: "Vinter (november–mars)", icon: Snowflake, desc: "Vi utför inte taktvätt vintertid, men tar emot bokningar för våren." },
 ];
 
 const comparison = [

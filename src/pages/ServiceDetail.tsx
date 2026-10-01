@@ -103,7 +103,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
     ],
     specHeading: "Konstruktion, tätning och invändig finish",
     lead: "En kupa är lika mycket plåtarbete som snickeri — tätningen avgör resultatet.",
-    craftLine: "Runt kupor och genomföringar avgörs om taket håller tätt i 30 år.",
+    craftLine: "Runt kupor och genomföringar avgörs om taket håller tätt.",
     photoNote: "Färdigt tak med två takkupor — tätt inklätt i plåt runt varje kupa.",
   },
   takinspektion: {

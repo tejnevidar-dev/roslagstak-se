@@ -79,7 +79,7 @@ const About = () => {
               </figure>
               <figcaption className="absolute -bottom-5 left-6 z-10 rounded-2xl bg-primary px-6 py-4 text-primary-foreground shadow-xl">
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-accent">
-                  Roslagen &amp; Storstockholm
+                  Bas i Norrtälje
                 </span>
                 <span className="mt-1 block font-display text-xl">Riktiga tak, riktiga bilder</span>
 

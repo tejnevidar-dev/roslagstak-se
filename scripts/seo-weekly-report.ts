@@ -131,6 +131,10 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-langbro", area: "Långbro, Stockholm", wave: 3 },
   { path: "/taklaggare-orby", area: "Örby, Stockholm", wave: 3 },
   { path: "/taklaggare-solhem-lunda", area: "Solhem-Lunda, Stockholm", wave: 3 },
+  { path: "/taklaggare-svalnas-osby", area: "Svalnäs och Ösby, Danderyd (Djursholm norra)", wave: 6 },
+  { path: "/taklaggare-lindholmen", area: "Lindholmen, Vallentuna", wave: 6 },
+  { path: "/taklaggare-sjoberg", area: "Sjöberg, Sollentuna", wave: 6 },
+  { path: "/taklaggare-lahall", area: "Lahäll, Täby", wave: 6 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };
