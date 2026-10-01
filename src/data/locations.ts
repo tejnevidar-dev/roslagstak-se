@@ -3439,11 +3439,11 @@ export const locations: LocationData[] = [
     description:
       "Takbyte och takomläggning i Västerhaninge, med villor och grupphus från 1940-talet och framåt. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
     longDescription:
-      "Västerhaninge är en tätort och kommundel i Haninge kommun på Södertörn, omkring 25 kilometer från Stockholms innerstad. Bygden är gammal. Västerhaninge kyrka uppfördes på 1200-talet, och det första kända belägget för ortnamnet är från omkring 1314, då det skrevs Westrahanunge. Även Ribby, Nedersta och Fors är enligt Wikipedia skriftligt kända sedan 1300-talet. Tillsammans med Jordbrogravfältet bildar Åbygravfältet, som till stor del sannolikt ligger under den gamla kyrkbyn, Nordens största kända gravfält från äldre järnåldern. Stationssamhället kom till efter att Nynäsbanan invigdes den 28 december 1901. Vid kyrkan fanns då stationshus, gästgiveri, handelsbod och apotek. Järnvägen blev enligt Wikipedia avgörande för utvecklingen under 1900-talet, särskilt efter 1950, då befolkningen ökade och nya bostadsområden byggdes. Åren 1933–34 rätades Nynäsvägen, och då tillkom också det första finförgrenade vägnätet för den nya villabebyggelsen sydväst om kyrkan. Mellan 1953 och 1970 uppfördes de flesta av ortens flerfamiljshus, 1969 invigdes Västerhaninge köpcentrum och 1973 kom pendeltågen i gång. I dag finns enligt Wikipedia både bostadsrätter, hyresrätter och flera områden med villor och grupphus, där de äldsta är från mitten av 1940-talet. Under senare år har nya bostadsområden tillkommit, som Ribby ängar, Skarplöt och Nedersta. Närbutiker finns ute i bostadsområdena, bland annat i Åby och Ribby, och i norr tar Hanvedens skogar vid.",
+      "Västerhaninge är en tätort och kommundel i Haninge kommun på Södertörn, omkring 25 kilometer från Stockholms innerstad. Bygden är gammal. Västerhaninge kyrka uppfördes på 1200-talet, och det första kända belägget för ortnamnet är från omkring 1314, då det skrevs Westrahanunge. Även Ribby, Nedersta och Fors är enligt Wikipedia skriftligt kända sedan 1300-talet. Tillsammans med Jordbrogravfältet bildar Åbygravfältet, som till stor del sannolikt ligger under den gamla kyrkbyn, Nordens största kända gravfält från äldre järnåldern. Stationssamhället kom till efter att Nynäsbanan invigdes den 28 december 1901. Vid kyrkan fanns då stationshus, gästgiveri, handelsbod och apotek. Järnvägen blev enligt Wikipedia avgörande för utvecklingen under 1900-talet, särskilt efter 1950, då befolkningen ökade och nya bostadsområden byggdes. Åren 1933–34 rätades Nynäsvägen, och då tillkom också det första finförgrenade vägnätet för den nya villabebyggelsen sydväst om kyrkan. Mellan 1953 och 1970 uppfördes de flesta av ortens flerfamiljshus, 1969 invigdes Västerhaninge köpcentrum och 1973 kom pendeltågen i gång. I dag finns enligt Wikipedia både bostadsrätter, hyresrätter och flera områden med villor och grupphus, där de äldsta är från mitten av 1940-talet. Under senare år har nya bostadsområden tillkommit, som Ribby ängar, Skarplöt och Nedersta. Närbutiker finns ute i bostadsområdena, bland annat i Åby och Ribby, och i norr tar Hanvedens skogar vid. Väster om järnvägen ligger Norrskogen och Jägartorp. Enligt Haninge kommuns kulturmiljöinventering köpte bolaget AB Hem på landet omkring 1919 cirka 100 hektar av gårdarna Ribbys mark, för att stycka den till små jordbruk och villatomter och främja egnahemsbyggandet. En villa från 1921, byggd av en snickare som kallades Millimeter-Kalle, räknas till de första husen i Norrskogen. Vid mitten av 1940-talet fanns ungefär 90 bostads- och trädgårdslägenheter på Ribbys tidigare marker. Byggandet av egnahem, villor och småhus ökade från 1940-talet och tog fart under 1950- och 1960-talen, då de befintliga villaområdena förtätades och ny mark bebyggdes vid Ribbylund, Jägartorp och norra Norrskogen.",
     extraContent: "",
     factBox: [
       { label: "Kommun", value: "Haninge" },
-      { label: "Delområden", value: "Ribby, Nödesta (centrala Västerhaninge)" },
+      { label: "Delområden", value: "Ribby, Nödesta, Norrskogen, Jägartorp (centrala och västra Västerhaninge)" },
       { label: "Hustyper", value: "Villor, egnahem, radhus, kedjehus" },
       { label: "Byggperiod", value: "Från mitten av 1940-talet, mest efter 1950" },
       { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 680" },
@@ -5282,6 +5282,53 @@ export const locations: LocationData[] = [
       paragraphs: [
         "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
         "Bor du i Gladö kvarn eller Lissma och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      ],
+    },
+  },
+  {
+    slug: "loharad",
+    name: "Lohärad och Estuna",
+    region: "Roslagens inland",
+    isIsland: false,
+    description:
+      "Takbyte och takomläggning i Lohärad och Estuna nordväst om Norrtälje, i bygden kring sjön Erken och Svanberga. Kostnadsfri takkontroll.",
+    longDescription:
+      "Lohärad och Estuna är två socknar nordväst om Norrtälje, på var sin sida om sjön Erken. Båda har medeltida ursprung och hör sedan 1971 till Norrtälje kommun. Lohärads socken beskrivs i Wikipedia som en småkuperad skogsbygd med mindre slättområden i sydost och nordväst. Här finns 19 mindre byar, bland dem Gribby, Hållsta, Nyckelby och Söderby, och fem sjöar: Alsnaren, Falken, Fyrsjön, Trehörningen och Viksjön. Namnet skrevs Lohärrädhe år 1337. Lohärads kyrka ligger omkring tolv kilometer från Norrtälje. Den första kyrkan byggdes under första delen av 1200-talet, och på 1670-talet rasade tornet och krossade vapenhuset. Estuna socken är enligt Wikipedia en kuperad slättbygd med kalkrik moränlera och inslag av skog. Söder om Erken breder ett starkt uppodlat slättlandskap ut sig. När socknen kartlades på 1600-talet bestod den av 28 byar. Vid Erken ligger Stjärnholm, där huvudbyggnaden uppfördes i början av 1700-talet, och Norra Malma, en herrgård som 1928 donerades till Uppsala universitet. Åren 1950–1951 byggdes forskningsstationen Erkenlaboratoriet ett stycke väster om gården. Tätorten Svanberga ligger vid Erken, tio kilometer norr om Norrtälje, där riksväg 76 passerar. Här fanns en gästgivargård från 1600-talet. Enligt hitta.se är husen i Lohärad mest byggda på 1980- och 2000-talen och husen vid Svanbergavägen på 1970- och 1980-talen.",
+    extraContent: "",
+    factBox: [
+      { label: "Kommun", value: "Norrtälje" },
+      { label: "Delområden", value: "Lohärad, Estuna, Vämlinge, Stjärnholm, Svanberga" },
+      { label: "Hustyper", value: "Villor och lantbruk" },
+      { label: "Byggperiod", value: "Lohärad mest 1980- och 2000-tal, Svanbergavägen 1970–80-tal" },
+      { label: "Ägda småhus i SCB:s statistikområde (RegSO, 2025)", value: "Ca 1 000" },
+    ],
+    sourceLink: { label: "Wikipedia: Lohärads socken", url: "https://sv.wikipedia.org/wiki/Loh%C3%A4rads_socken" },
+    parentLocation: { name: "Norrtälje", slug: "norrtalje" },
+    h1Override: "Takläggare i Lohärad och Estuna, Norrtälje",
+    uniqueFAQ: {
+      question: "När byggdes husen i Lohärad och Estuna?",
+      answer:
+        "Byggperiod enligt källorna: Lohärad mest från 1980- och 2000-talet, och husen vid Svanbergavägen från 1970- och 1980-talet. Hustyper: villor och lantbruk. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun.",
+    },
+    primaryKeyword: "takläggare Lohärad",
+    lat: 59.808,
+    lng: 18.5597,
+    nearbyLocations: ["Norrtälje"],
+    extraSections: [
+      {
+        heading: "Vad det betyder för taket",
+        text: "Husen från 1970- och 1980-talen är i dag runt 40–55 år gamla, medan husen från 2000-talet är runt 20 år. På ett hus från 1970-talet kan taket redan ha lagts om. Har det inte skett är det underlagspapp, läkt, genomföringar och plåtanslutningar som behöver ses över först, eftersom det är där ett tak brukar släppa in vatten. På ett hus från 2000-talet handlar det oftare om tillsyn: rensa hängrännor, se över plåt och tätningar kring skorsten och ventilation. På ett lantbruk står bostadshus, ladugård och uthus ofta med tak från olika år, och varje tak får sin egen bedömning. Om ett byte av material eller kulör kräver lov eller anmälan avgör Norrtälje kommun. Varje hus får en egen takkontroll och ett eget pris.",
+      },
+    ],
+    process: {
+      steps: [
+        "**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+        "**Fast pris** i offerten.",
+        "**Utförande enligt AMA.**",
+      ],
+      paragraphs: [
+        "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+        "Bor du i Lohärad, Estuna eller Svanberga och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       ],
     },
   },
