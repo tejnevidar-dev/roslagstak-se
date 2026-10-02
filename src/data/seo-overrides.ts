@@ -429,4 +429,64 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Kallhälls villastad (Björkliden) i Järfälla, där egnahemstomter började styckas av 1912. Kostnadsfri takkontroll.",
   },
+  alvsjo: {
+    title: "Takbyte i Älvsjö villastad, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Älvsjö i Söderort, där villatomterna styckades 1908 och 1911 och stadsplanen kom 1921. Kostnadsfri takkontroll.",
+  },
+  holo: {
+    title: "Takbyte i Hölö, Södertälje – fast pris",
+    description:
+      "Takbyte och takomläggning i Hölö söder om Södertälje, ett stationssamhälle från 1913 med trävillor från 1910-talet och villaområden från 1960–1980-talen.",
+  },
+  stavsnas: {
+    title: "Takbyte i Stavsnäs, Värmdö – fast pris",
+    description:
+      "Takbyte och takomläggning i Stavsnäs på Fågelbrolandet, med sommarvillor från 1800-talets slut och villor på Stavsnäs gärde från 1960-talet och framåt.",
+  },
+  "enhorna-sandviken": {
+    title: "Takbyte i Sandviken, Enhörna – fast pris",
+    description:
+      "Takbyte och takomläggning i Sandviken på Enhörnalandet, med sommarvillor från sekelskiftet 1900 och sportstugor från 1930-talet och framåt. Kostnadsfri takkontroll.",
+  },
+  ursvik: {
+    title: "Takbyte i Ursvik, Sundbyberg – fast pris",
+    description:
+      "Takbyte och takomläggning i Ursvik i Sundbyberg, med villasamhället i Lilla Ursvik där 1940-talets kataloghus dominerar. Kostnadsfri takkontroll.",
+  },
+  "enskede-gard": {
+    title: "Takbyte i Enskede gård, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Enskede gård i Söderort, med Palmeska villastaden från 1907 och småvillor från 1920-talet. Kostnadsfri takkontroll.",
+  },
+  enskedefaltet: {
+    title: "Takbyte på Enskedefältet, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning på Enskedefältet i Söderort, småstugestadsdelen som byggdes av de boende själva 1930–1932. Kostnadsfri takkontroll.",
+  },
+  herrang: {
+    title: "Takbyte i Herräng, Norrtälje – fast pris",
+    description:
+      "Takbyte och takomläggning i Herräng: arbetarbostäder från 1905–1906, egnahem från 1920- och 1950-talen och senare villor. Kostnadsfri takkontroll.",
+  },
+  yxlan: {
+    title: "Takbyte på Yxlan och Blidö – fast pris",
+    description:
+      "Takbyte och takomläggning på Yxlan och Blidö: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
+  },
+  blido: {
+    title: "Takbyte på Yxlan och Blidö – fast pris",
+    description:
+      "Takbyte och takomläggning på Yxlan och Blidö: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
+  },
+  bergshamra: {
+    title: "Takbyte i Bergshamra, Norrtälje – fast pris",
+    description:
+      "Takbyte och takomläggning i Bergshamra söder om Norrtälje, där fritidshus blir permanentbostäder och nya småhus planeras. Kostnadsfri takkontroll.",
+  },
+  ljustero: {
+    title: "Takbyte på Ljusterö, Österåker – fast pris",
+    description:
+      "Takbyte och takomläggning på Ljusterö: sommarvillor från 1900-talets början, fritidshusområden från 1950- och 1960-talen. Kostnadsfri takkontroll.",
+  },
 };

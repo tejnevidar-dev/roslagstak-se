@@ -190,6 +190,18 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-skarpnack", area: "Skarpnäck, Stockholm (regel-5-fix + befintlig sida förstärkt)", wave: 13 },
   { path: "/taklaggare-haggvik", area: "Häggvik, Sollentuna (regel-5-fix + koordinater rättade + befintlig sida förstärkt)", wave: 13 },
   { path: "/taklaggare-kallhall", area: "Kallhälls villastad, Järfälla (regel-5-fix + befintlig sida förstärkt)", wave: 13 },
+  { path: "/taklaggare-holo", area: "Hölö, Södertälje", wave: 14 },
+  { path: "/taklaggare-stavsnas", area: "Stavsnäs, Värmdö", wave: 14 },
+  { path: "/taklaggare-enhorna-sandviken", area: "Sandviken, Enhörna (Södertälje)", wave: 14 },
+  { path: "/taklaggare-alvsjo", area: "Älvsjö, Stockholm (regel-5-fix + befintlig sida förstärkt)", wave: 14 },
+  { path: "/taklaggare-ursvik", area: "Ursvik (Lilla Ursvik), Sundbyberg", wave: 14 },
+  { path: "/taklaggare-enskede-gard", area: "Enskede gård, Stockholm", wave: 14 },
+  { path: "/taklaggare-enskedefaltet", area: "Enskedefältet, Stockholm", wave: 14 },
+  { path: "/taklaggare-herrang", area: "Herräng, Norrtälje (regel-5-fix + befintlig sida förstärkt)", wave: 14 },
+  { path: "/taklaggare-yxlan", area: "Yxlan, Norrtälje (regel-5-fix + befintlig sida förstärkt)", wave: 14 },
+  { path: "/taklaggare-blido", area: "Blidö, Norrtälje (regel-5-fix + befintlig sida förstärkt)", wave: 14 },
+  { path: "/taklaggare-bergshamra", area: "Bergshamra, Norrtälje (regel-5-fix + befintlig sida förstärkt)", wave: 14 },
+  { path: "/taklaggare-ljustero", area: "Ljusterö, Österåker (regel-5-fix + befintlig sida förstärkt)", wave: 14 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };

@@ -220,6 +220,12 @@ export const locationIndex: LocationSummary[] = [
   { slug: "eneby", name: "Eneby", region: "Stockholms stad", isIsland: false },
   { slug: "ballsta-bromma", name: "Bällsta", region: "Stockholms stad", isIsland: false },
   { slug: "ulvsunda", name: "Ulvsunda", region: "Stockholms stad", isIsland: false },
+  { slug: "holo", name: "Hölö", region: "Sydvästra Stockholm", isIsland: false },
+  { slug: "stavsnas", name: "Stavsnäs", region: "Östra Stockholm", isIsland: false },
+  { slug: "enhorna-sandviken", name: "Sandviken", region: "Sydvästra Stockholm", isIsland: false },
+  { slug: "ursvik", name: "Ursvik", region: "Norra Stockholm", isIsland: false },
+  { slug: "enskede-gard", name: "Enskede gård", region: "Södra Stockholm", isIsland: false },
+  { slug: "enskedefaltet", name: "Enskedefältet", region: "Södra Stockholm", isIsland: false },
 ];
 
 export const locationRegions = Array.from(new Set(locationIndex.map((l) => l.region)));
