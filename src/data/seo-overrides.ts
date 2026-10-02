@@ -254,4 +254,179 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i villaområdena Barkarby och Skälby i Järfälla, med hus främst från 1950- och 1960-talen. Kostnadsfri takkontroll och fast pris.",
   },
+  "svalnas-osby": {
+    title: "Takbyte i Svalnäs och Ösby, Djursholm – fast pris",
+    description:
+      "Takbyte och takomläggning i norra Djursholm, med villor i nationalromantik och jugend från 1900-talets första årtionden. Kostnadsfri takkontroll.",
+  },
+  lindholmen: {
+    title: "Takbyte i Lindholmen, Vallentuna – fast pris",
+    description:
+      "Takbyte och takomläggning i Lindholmen norr om Vallentuna, en trädgårdsstad vid Roslagsbanan med villor från 1950-talet och framåt. Kostnadsfri takkontroll.",
+  },
+  sjoberg: {
+    title: "Takbyte i Sjöberg, Sollentuna – fast pris",
+    description:
+      "Takbyte och takomläggning i Sjöberg i Sollentuna, med villor och radhus främst från 1970-talet och nyare villor på Falkberget. Kostnadsfri takkontroll.",
+  },
+  lahall: {
+    title: "Takbyte i Lahäll, Täby – fast pris",
+    description:
+      "Takbyte och takomläggning i villaområdet Lahäll i södra Täby, vid Näsbyviken och gränsen mot Djursholm. Kostnadsfri takkontroll och fast pris.",
+  },
+  stenhamra: {
+    title: "Takbyte i Stenhamra, Ekerö – fast pris",
+    description:
+      "Takbyte och takomläggning i Stenhamra på Färingsö, med villor, kedjehus och radhus främst från 1960- till 1980-talet. Kostnadsfri takkontroll.",
+  },
+  uttran: {
+    title: "Takbyte i Uttran och Broängen, Tumba – fast pris",
+    description:
+      "Takbyte och takomläggning i villasamhället Uttran och i Broängen i Tumba, med hus främst från 1950- till 1980-talet. Kostnadsfri takkontroll.",
+  },
+  duvbo: {
+    title: "Takbyte i Duvbo, Sundbyberg – fast pris",
+    description:
+      "Takbyte och takomläggning i Duvbo, Hästhagen och Tulemarken i Sundbyberg, där tomterna började säljas 1899. Kostnadsfri takkontroll.",
+  },
+  smedslatten: {
+    title: "Takbyte i Smedslätten, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Smedslätten i Bromma, där de första villorna byggdes 1922 och radhusen vid gården kom 1962–1964. Kostnadsfri takkontroll.",
+  },
+  pershagen: {
+    title: "Takbyte i Pershagen, Södertälje – fast pris",
+    description:
+      "Takbyte och takomläggning i Pershagen söder om Södertälje, ett villasamhälle som började styckas 1905 och växte på 1920- och 1930-talen. Kostnadsfri takkontroll.",
+  },
+  "glado-kvarn": {
+    title: "Takbyte i Gladö kvarn, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Gladö kvarn och Lissma i Huddinge, där fritidshus från 1950-talet och framåt blir åretruntbostäder. Kostnadsfri takkontroll.",
+  },
+  vidja: {
+    title: "Takbyte i Vidja och Högmora, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Vidja, Högmora och Ågesta i Huddinge, fritidshusområden som blir åretruntbostäder. Kostnadsfri takkontroll och fast pris.",
+  },
+  glomsta: {
+    title: "Takbyte i Glömsta, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Glömsta i norra Huddinge, ett tidigare fritidshusområde med villor från 1990- och 2000-talen. Kostnadsfri takkontroll.",
+  },
+  kummelnas: {
+    title: "Takbyte i Kummelnäs, Nacka – fast pris",
+    description:
+      "Takbyte och takomläggning i Kummelnäs och Velamsund i nordöstra Boo, villaområden som började som egnahem och sommarstugor. Kostnadsfri takkontroll.",
+  },
+  hersby: {
+    title: "Takbyte i Hersby och Herserud, Lidingö – fast pris",
+    description:
+      "Takbyte och takomläggning i Hersby, Herserud och Islinge på Lidingö, villastäder från 1900-talets början. Kostnadsfri takkontroll och fast pris.",
+  },
+  malarhojden: {
+    title: "Takbyte i Mälarhöjden, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Mälarhöjden vid Mälaren, med villor från sekelskiftet, 1920-talet och funkisåren. Kostnadsfri takkontroll och fast pris.",
+  },
+  stureby: {
+    title: "Takbyte i Stureby, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Stureby i Söderort, med villor främst från 1920–1960-talen och radhus från 1950- och 1960-talen. Kostnadsfri takkontroll.",
+  },
+  resaro: {
+    title: "Takbyte på Resarö, Vaxholm – fast pris",
+    description:
+      "Takbyte och takomläggning på Resarö i Vaxholm, sommarön som blev villaförort, med Ytterby och Björkvik. Kostnadsfri takkontroll och fast pris.",
+  },
+  loharad: {
+    title: "Takbyte i Lohärad och Estuna – fast pris",
+    description:
+      "Takbyte och takomläggning i Lohärad och Estuna nordväst om Norrtälje, i bygden kring sjön Erken och Svanberga. Kostnadsfri takkontroll.",
+  },
+  hoglandet: {
+    title: "Takbyte i Höglandet, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Höglandet i Bromma, med villor från 1920- och 1930-talen och äldre hus i Grönvik vid Mälaren. Kostnadsfri takkontroll.",
+  },
+  skarsatra: {
+    title: "Takbyte i Skärsätra, Lidingö – fast pris",
+    description:
+      "Takbyte och takomläggning i Skärsätra på södra Lidingö, en villastad som började byggas 1909 med mindre trävillor. Kostnadsfri takkontroll.",
+  },
+  "stora-mossen": {
+    title: "Takbyte i Stora Mossen, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Stora Mossen i Bromma, där drygt hälften av stadsdelen byggdes 1928–1929. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  "sodra-angby": {
+    title: "Takbyte i Södra Ängby, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Södra Ängby i Bromma, med omkring 500 funkisvillor uppförda 1933–1939. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  enskededalen: {
+    title: "Takbyte i Enskededalen, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Enskededalen, en trädgårdsstad i Söderort med småhus, dubbelhus och villor från 1920- och 1930-talen. Kostnadsfri takkontroll.",
+  },
+  tallkrogen: {
+    title: "Takbyte i Tallkrogen, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Tallkrogen i Söderort, där omkring 950 småstugor byggdes av ägarna själva 1933–1945. Kostnadsfri takkontroll.",
+  },
+  viksberg: {
+    title: "Takbyte i Viksberg och Viksäter, Södertälje – fast pris",
+    description:
+      "Takbyte och takomläggning i Viksberg, Viksäter och Ragnhildsborg norr om Södertälje, där fritidshus har blivit åretruntboende. Kostnadsfri takkontroll.",
+  },
+  appelviken: {
+    title: "Takbyte i Äppelviken, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Äppelviken i Bromma, trädgårdsstaden vid Mälaren där villorna huvudsakligen byggdes 1913–1922. Kostnadsfri takkontroll.",
+  },
+  ostertalje: {
+    title: "Takbyte i Östertälje, Södertälje – fast pris",
+    description:
+      "Takbyte och takomläggning i Östertälje, stadsdelen i sluttningen mot Södertälje kanal med villor från sekelskiftet och 1960-talet. Kostnadsfri takkontroll.",
+  },
+  bromsten: {
+    title: "Takbyte i Bromsten, Spånga – fast pris",
+    description:
+      "Takbyte och takomläggning i Bromsten i Västerort, där gårdens mark styckades i villatomter från 1899. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  svedmyra: {
+    title: "Takbyte i Svedmyra, Söderort – fast pris",
+    description:
+      "Takbyte och takomläggning i Svedmyra, där småhusen byggdes efter typritningar under 1930- och 1940-talen. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  eneby: {
+    title: "Takbyte i Eneby, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Eneby i Bromma, ett småstugeområde som började byggas 1939 på Eneby gårds mark. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  "ballsta-bromma": {
+    title: "Takbyte i Bällsta, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Bällsta i Bromma, ett småstugeområde med omkring 220 stugor från 1940-talet. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  ulvsunda: {
+    title: "Takbyte i Ulvsunda, Bromma – fast pris",
+    description:
+      "Takbyte och takomläggning i Ulvsunda trädgårdsstad i Bromma, där de flesta egna hemmen byggdes på 1920-talet. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  skarpnack: {
+    title: "Takbyte i Skarpnäck, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning i Skarpnäcks trädgårdsstad och Pungpinan, småstugeområden från 1920-talet. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  haggvik: {
+    title: "Takbyte i Häggvik, Sollentuna – fast pris",
+    description:
+      "Takbyte och takomläggning i Häggvik i Sollentuna, ett samhälle som växte fram på tomter som styckades av från 1917. Kostnadsfri takkontroll.",
+  },
+  kallhall: {
+    title: "Takbyte i Kallhälls villastad – fast pris",
+    description:
+      "Takbyte och takomläggning i Kallhälls villastad (Björkliden) i Järfälla, där egnahemstomter började styckas av 1912. Kostnadsfri takkontroll.",
+  },
 };

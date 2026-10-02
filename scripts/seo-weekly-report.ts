@@ -180,6 +180,16 @@ const WAVES: { path: string; area: string; wave: number }[] = [
   { path: "/taklaggare-vato", area: "Vätö, Norrtälje (regel-5-fix + befintlig sida förstärkt)", wave: 12 },
   { path: "/taklaggare-tallkrogen", area: "Tallkrogen, Stockholm (Farsta)", wave: 12 },
   { path: "/taklaggare-viksberg", area: "Viksberg och Viksäter, Södertälje", wave: 12 },
+  { path: "/taklaggare-appelviken", area: "Äppelviken, Stockholm (Bromma)", wave: 13 },
+  { path: "/taklaggare-ostertalje", area: "Östertälje, Södertälje", wave: 13 },
+  { path: "/taklaggare-bromsten", area: "Bromsten, Stockholm (Spånga)", wave: 13 },
+  { path: "/taklaggare-svedmyra", area: "Svedmyra, Stockholm (Farsta)", wave: 13 },
+  { path: "/taklaggare-eneby", area: "Eneby, Stockholm (Bromma)", wave: 13 },
+  { path: "/taklaggare-ballsta-bromma", area: "Bällsta, Stockholm (Bromma)", wave: 13 },
+  { path: "/taklaggare-ulvsunda", area: "Ulvsunda, Stockholm (Bromma)", wave: 13 },
+  { path: "/taklaggare-skarpnack", area: "Skarpnäck, Stockholm (regel-5-fix + befintlig sida förstärkt)", wave: 13 },
+  { path: "/taklaggare-haggvik", area: "Häggvik, Sollentuna (regel-5-fix + koordinater rättade + befintlig sida förstärkt)", wave: 13 },
+  { path: "/taklaggare-kallhall", area: "Kallhälls villastad, Järfälla (regel-5-fix + befintlig sida förstärkt)", wave: 13 },
 ];
 const WAVE1_BASELINE_PATH = resolve("../ledning/marknad/.seo-vag1-baslinje.json");
 type Wave1Row = { path: string; inSitemap: boolean; indexable: string; canonical: string; inlinks: number; words: number; date?: string };

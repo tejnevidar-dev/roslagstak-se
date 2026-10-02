@@ -1754,6 +1754,41 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/taklaggare-appelviken</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-ostertalje</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-bromsten</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-svedmyra</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-eneby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-ballsta-bromma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-ulvsunda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/brf/stockholm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
