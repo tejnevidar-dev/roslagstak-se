@@ -52,6 +52,17 @@ const slugOverrides: Record<string, string> = {
   "norrskogen-vasterhaninge-haninge.md": "vasterhaninge",
 };
 
+/** Godkända undantag: en enda CTA-fråga per sammanslagen sida ("Bor du i X ...?"), där X är
+ *  underbriefens delområdesnamn men sidans egen CTA redan frågar om den riktiga sidans namn.
+ *  Att tvinga in frågan en gång till skulle bara upprepa samma uppmaning med fel ortsnamn.
+ *  Marknadschefens godkännande 2026-10-03 (se commit). Håll listan kort — varje rad ska vara
+ *  en medveten, dokumenterad avvikelse, inte en genväg runt grinden. */
+const acceptedGaps: Record<string, string[]> = {
+  "nasby-slott-taby.md": ["Bor du vid Näsby slott eller Näsby allé och funderar på taket?"],
+  "norrskogen-vasterhaninge-haninge.md": ["Bor du i Norrskogen i Västerhaninge och funderar på taket?"],
+  "skalby-jarfalla.md": ["Bor du i Skälby och funderar på taket?"],
+};
+
 type Result = { file: string; slug: string | null; status: "ok" | "missing" | "no-slug" | "not-built"; missing: string[]; total: number };
 const results: Result[] = [];
 
@@ -90,7 +101,8 @@ for (const file of files) {
 
   const page = prerenderContent(`/taklaggare-${slug}`);
   const liveText = norm(page ? [page.intro, ...page.paragraphs].join(" ") : "");
-  const missing = meningar.filter((s) => !liveText.includes(norm(s)));
+  const accepted = acceptedGaps[file] ?? [];
+  const missing = meningar.filter((s) => !liveText.includes(norm(s)) && !accepted.includes(s));
 
   results.push({ file, slug, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
 }
