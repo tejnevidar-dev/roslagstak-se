@@ -23,6 +23,8 @@ import { services } from "@/components/Services";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
+import ServiceExtraSections from "@/components/ServiceExtraSections";
+import { serviceExtra } from "@/data/service-extra-sections";
 import { serviceBlocks } from "@/data/service-blocks";
 import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
 import imgPapp from "@/assets/roof-build-02-papp.jpg";
@@ -460,6 +462,8 @@ const ServiceDetail = () => {
             </div>
           </div>
         </section>
+
+        {slug && serviceExtra[slug] && <ServiceExtraSections extra={serviceExtra[slug]} />}
 
         {slug === "eternit-asbest" && (
           <section className="border-t border-border bg-secondary/40 py-20">

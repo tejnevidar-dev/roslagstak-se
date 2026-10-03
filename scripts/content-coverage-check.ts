@@ -188,7 +188,7 @@ for (const { dir, kind, fields } of pmDirs) {
     const raw = readFileSync(join(resolve(dir), file), "utf8").replace(/\r/g, "");
 
     const tsBlockMatch = raw.match(/```ts\n([\s\S]*?)```/);
-    type Entry = { slug: string; chunk: string };
+    type Entry = { slug: string; chunk: string; path?: string };
     const entries: Entry[] = [];
 
     if (tsBlockMatch) {
@@ -203,7 +203,9 @@ for (const { dir, kind, fields } of pmDirs) {
       }
     } else {
       const slugMatch = raw.match(new RegExp(`\\/${kind}\\/([a-z0-9-]+)`));
-      if (slugMatch) entries.push({ slug: slugMatch[1], chunk: raw });
+      const deepens = raw.match(/Texten fördjupar \/tjanster\/([a-z0-9-]+)/);
+      if (deepens) entries.push({ slug: deepens[1], chunk: raw, path: `/tjanster/${deepens[1]}` });
+      else if (slugMatch) entries.push({ slug: slugMatch[1], chunk: raw });
     }
 
     if (entries.length === 0) {
@@ -211,11 +213,12 @@ for (const { dir, kind, fields } of pmDirs) {
       continue;
     }
 
-    for (const { slug, chunk } of entries) {
+    for (const { slug, chunk, path } of entries) {
       if (only && !only.has(slug)) continue;
-      const page = prerenderContent(`/${kind}/${slug}`);
+      const pagePath = path ?? `/${kind}/${slug}`;
+      const page = prerenderContent(pagePath);
       if (!page) {
-        allResults.push({ page: `/${kind}/${slug}`, file, status: "not-built", missing: [], total: 0 });
+        allResults.push({ page: pagePath, file, status: "not-built", missing: [], total: 0 });
         continue;
       }
 
@@ -227,7 +230,7 @@ for (const { dir, kind, fields } of pmDirs) {
       const accepted = pmAcceptedGaps[file] ?? [];
       const missing = meningar.filter((s) => !liveText.includes(norm(s)) && !accepted.includes(s));
 
-      allResults.push({ page: `/${kind}/${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+      allResults.push({ page: pagePath, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
     }
   }
 }

@@ -7,6 +7,7 @@
 import { withRotForbehall } from "./prices";
 import { GARANTI_ETERNIT, GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, GARANTI_UTFORANDE, NO_TATSKIKT_SERVICE_SLUGS, RENOVERING_SERVICE_SLUGS } from "./guarantee";
 import { TAKSAKERHET_SLUG, taksakerhetDetails, taksakerhetMeta } from "./service-taksakerhet";
+import { serviceExtra } from "./service-extra-sections";
 import { serviceBlocks, type SpecificBlock } from "./service-blocks";
 import { serviceAreaLinks } from "./service-area-links";
 import { eternitFaqs, eternitLocal, eternitSections, ETERNIT_FAQ_HEADING } from "./eternit-content";
@@ -524,6 +525,14 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     SERVICE_COPY.craftCaption(service.title, slug),
     SERVICE_COPY.goodToKnowEyebrow,
     ...goodToKnowBoxes(slug).flatMap((b) => [{ h: b.t, level: 3 as const }, b.d]),
+    ...(serviceExtra[slug]
+      ? [
+          serviceExtra[slug].eyebrow,
+          { h: serviceExtra[slug].heading },
+          serviceExtra[slug].intro,
+          ...serviceExtra[slug].sections.flatMap((s) => [{ h: s.heading, level: 3 as const }, s.text]),
+        ]
+      : []),
     ...(slug === "eternit-asbest"
       ? [
           ...eternitSections.flatMap((sec) => [{ h: sec.heading, level: sec.level }, ...sec.paragraphs]),
