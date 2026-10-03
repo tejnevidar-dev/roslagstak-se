@@ -45,7 +45,14 @@ await esbuild({
   target: "node18",
   logLevel: "silent",
 });
-const { prerenderContent, thinComboPaths } = await import(pathToFileURL(bundlePath).href);
+const {
+  prerenderContent,
+  thinComboPaths,
+  buildOrganizationNode,
+  buildWebSiteNode,
+  buildWebPageNode,
+  buildBreadcrumbNode,
+} = await import(pathToFileURL(bundlePath).href);
 
 /* Cookie-bannerns text och localStorage-nyckel kompileras från samma källfiler som
    CookieBanner.tsx/consent.ts använder (#1ag, Lighthouse-fyndet: bannertexten var sidans LCP-
@@ -163,6 +170,10 @@ const staticCookieBannerHtml = `<div id="static-cookie-banner" role="dialog" ari
 const STATIC_COOKIE_HEAD = `<style>html[data-consent="set"] #static-cookie-banner{display:none}</style>
     <script>(function(){try{if(window.localStorage.getItem(${JSON.stringify(STORAGE_KEY)})){document.documentElement.setAttribute("data-consent","set");}}catch(e){}})();</script>`;
 
+/** JSON-LD-script (fas 2.19). "<" escapas så att texten aldrig kan stänga script-taggen. */
+const ldScript = (node) =>
+  `<script type="application/ld+json">${JSON.stringify(node).replace(/</g, "\\u003c")}</script>`;
+
 /** Static markup for the route's important text, injected inside #root. */
 const bodyFor = (path) => {
   const page = prerenderContent(path);
@@ -177,18 +188,7 @@ const bodyFor = (path) => {
     .map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`)
     .join("\n      ");
   const crumbs = page.breadcrumbs ?? [];
-  const breadcrumbSchema = crumbs.length
-    ? `<script type="application/ld+json">${JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: crumbs.map((c, i) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          name: c.name,
-          item: `${SITE_URL}${c.path}`,
-        })),
-      })}</script>`
-    : "";
+  const breadcrumbSchema = crumbs.length ? ldScript(buildBreadcrumbNode(crumbs)) : "";
   const breadcrumbNav = crumbs.length
     ? `<nav aria-label="Brödsmulor" style="font-size:0.875rem;color:#6b7280">${crumbs
         .map((c, i) => {
@@ -216,6 +216,20 @@ const bodyFor = (path) => {
 let stripped = template.replace(
   /\s*<link rel="alternate" hreflang="(?:sv|x-default)" href="[^"]*" \/>/g,
   "",
+);
+/* Fas 2.19: Organization, WebSite och WebPage ligger inte längre i index.html (där blev startsidans
+   WebPage-nod kvar på VARJE sida). De byggs i stället här från lib/schema-graph.ts, med en egen
+   WebPage per route. LocalBusiness-blocket i skalet rörs inte. */
+const GRAPH_TYPES = new Set(["Organization", "WebSite", "WebPage"]);
+stripped = stripped.replace(
+  /[ \t]*<script type="application\/ld\+json">([\s\S]*?)<\/script>[ \t]*\r?\n?/g,
+  (block, json) => {
+    try {
+      return GRAPH_TYPES.has(JSON.parse(json)["@type"]) ? "" : block;
+    } catch {
+      return block;
+    }
+  },
 );
 
 /* Prestanda: Vite lägger sin <script type="module"> och CSS-länk sist i <head>, efter flera KB
@@ -302,6 +316,24 @@ for (const { path, robots } of routes) {
       .replace(/<meta property="og:image:alt" content="[^"]*" \/>/, `<meta property="og:image:alt" content="${imageAlt}" />`)
       .replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${imageUrl}" />`);
   }
+
+  const unesc = (v) =>
+    v.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+  const graphNodes = [buildOrganizationNode(), buildWebSiteNode()];
+  if (page) {
+    const titleText = html.match(/<title>([^<]*)<\/title>/)?.[1];
+    const descText = html.match(/<meta name="description" content="([^"]*)" \/>/)?.[1];
+    graphNodes.push(
+      buildWebPageNode({
+        path,
+        name: unesc(titleText ?? page.h1),
+        description: descText ? unesc(descText) : undefined,
+        image: page.ogImage,
+        hasBreadcrumb: (page.breadcrumbs ?? []).length > 0,
+      }),
+    );
+  }
+  html = html.replace("</head>", `  ${graphNodes.map(ldScript).join("\n    ")}\n  </head>`);
 
   const body = robots === NOINDEX_ROBOTS ? "" : bodyFor(path);
   if (body) prerendered++;

@@ -44,6 +44,9 @@ import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { regionBySlug, regionIntros, regionLongText, regionNeighbors, regionSlugs } from "../src/data/regions";
 
+// Fas 2.19: samma schemanoder som React-sidorna, exponerade för generate-static-heads.mjs.
+export { buildOrganizationNode, buildWebSiteNode, buildWebPageNode, buildBreadcrumbNode } from "../src/lib/schema-graph";
+
 export interface PrerenderPage {
   h1: string;
   intro: string;

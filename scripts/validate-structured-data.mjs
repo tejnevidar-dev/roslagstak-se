@@ -154,15 +154,50 @@ if (existsSync(dist)) {
     } else if (canon.length !== 1) err(rel, `${canon.length} canonical-taggar (ska vara 1)`);
     const robots = html.match(/<meta name="robots"[^>]*>/g) ?? [];
     if (robots.length !== 1) err(rel, `${robots.length} robots-taggar (ska vara 1)`);
+    const nodes = [];
     for (const m of html.matchAll(
       /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,
     )) {
       try {
-        JSON.parse(m[1]);
+        nodes.push(JSON.parse(m[1]));
       } catch (e) {
         err(rel, `ogiltig JSON-LD i HTML: ${e.message}`);
       }
     }
+    checkGraph(rel, nodes, is404);
+  };
+
+  /* Fas 2.19, grafkontroll: varje @id-referens (objekt som bara har @id) måste peka på en nod som
+     definieras i samma HTML-fil, ingen @id definieras två gånger, och sidan har högst en WebPage-nod
+     vars url är sidans egen canonical (ingen startsides-WebPage på undersidor). */
+  const checkGraph = (rel, roots, is404) => {
+    const defined = new Map();
+    const refs = [];
+    const webPages = [];
+    const topIds = new Set(roots.map((r) => r?.["@id"]).filter(Boolean));
+    const visit = (n, top) => {
+      if (Array.isArray(n)) return n.forEach((x) => visit(x, false));
+      if (!n || typeof n !== "object") return;
+      const keys = Object.keys(n).filter((k) => k !== "@context");
+      if (n["@id"] && keys.length === 1) refs.push(n["@id"]);
+      else if (n["@id"] && n["@type"]) {
+        // Nod med @id + @type + namn inuti en annan nod är en referens med namn när samma @id också
+        // definieras på toppnivå (t.ex. author/publisher → #organization). Bara toppnivå räknas dubbelt.
+        if (!top && topIds.has(n["@id"])) return;
+        defined.set(n["@id"], (defined.get(n["@id"]) ?? 0) + 1);
+        if (/^(WebPage|CollectionPage|AboutPage|ContactPage)$/.test(n["@type"])) webPages.push(n);
+      }
+      for (const v of Object.values(n)) visit(v, false);
+    };
+    roots.forEach((r) => visit(r, true));
+    // Referenser med namn som hoppades över ovan måste ändå peka på en toppnivånod (topIds är definierade).
+    for (const id of refs) if (!defined.has(id)) err(rel, `@id-referensen ${id} saknar nod på sidan`);
+    for (const [id, count] of defined) if (count > 1) err(rel, `@id ${id} definieras ${count} gånger`);
+    if (is404) return;
+    if (webPages.length > 1) err(rel, `${webPages.length} WebPage-noder (ska vara högst 1)`);
+    const canon = readFileSync(join(dist, rel), "utf8").match(/<link rel="canonical" href="([^"]*)"/)?.[1];
+    if (webPages[0] && canon && webPages[0].url !== canon)
+      err(rel, `WebPage.url (${webPages[0].url}) matchar inte canonical (${canon})`);
   };
   walk(dist);
 } else {

@@ -1,24 +1,13 @@
 import { locationIndex as locations } from "@/data/location-index";
+import { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP, SAME_AS, buildBreadcrumbNode } from "./schema-graph";
+
+export { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP };
 
 /**
  * Central JSON-LD-byggare. Alla noder delar samma @id:n så att Google slår ihop
  * dem till en enda kunskapsgraf över företaget, tjänsterna och orterna.
  */
-export const SITE_URL = "https://roslagstak.se";
-export const ORG_ID = `${SITE_URL}/#organization`;
-export const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`;
-export const WEBSITE_ID = `${SITE_URL}/#website`;
 
-export const NAP = {
-  name: "RoslagsTak",
-  telephone: "+46701543639",
-  email: "info@roslagstak.se",
-  addressLocality: "Norrtälje",
-  addressRegion: "Stockholms län",
-  addressCountry: "SE",
-  lat: 59.765,
-  lng: 18.705,
-};
 
 /** Tjänsterna vi vill att Google kopplar till företaget. */
 export const services: { slug: string; name: string; description: string }[] = [
@@ -152,11 +141,7 @@ export const buildLocalBusinessSchema = () => ({
       },
     })),
   },
-  sameAs: [
-    "https://www.google.com/search?q=RoslagsTak+recensioner",
-    "https://www.hitta.se/s%C3%B6k?vad=roslagstak&var=norrt%C3%A4lje",
-    "https://www.eniro.se/q/roslagstak",
-  ],
+  sameAs: SAME_AS,
 });
 
 export interface FaqItem {
@@ -178,14 +163,5 @@ export const buildFaqSchema = (faqs: FaqItem[], pageUrl?: string) => ({
   })),
 });
 
-/** BreadcrumbList från en lista med [namn, sökväg]. */
-export const buildBreadcrumbSchema = (items: { name: string; path: string }[]) => ({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: items.map((item, i) => ({
-    "@type": "ListItem",
-    position: i + 1,
-    name: item.name,
-    item: item.path.startsWith("http") ? item.path : `${SITE_URL}${item.path}`,
-  })),
-});
+/** BreadcrumbList från en lista med [namn, sökväg]. @id kommer från sista stegets URL (lib/schema-graph.ts). */
+export const buildBreadcrumbSchema = (items: { name: string; path: string }[]) => buildBreadcrumbNode(items);

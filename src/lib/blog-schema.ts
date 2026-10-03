@@ -5,31 +5,29 @@
  */
 import type { BlogPost } from "../data/blog-posts";
 import { stripInlineMd } from "./inline-md";
+import { SITE_URL, articleId, organizationRef, webPageId } from "./schema-graph";
 
 export const buildBlogPostingSchema = (post: BlogPost) => {
-  const url = `https://roslagstak.se/blogg/${post.slug}`;
+  const url = `${SITE_URL}/blogg/${post.slug}`;
   const articleBody = post.content.map(stripInlineMd).join("\n\n");
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": articleId(url),
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
     inLanguage: "sv-SE",
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    mainEntityOfPage: { "@id": webPageId(url) },
+    isPartOf: { "@id": webPageId(url) },
     url,
-    image: "https://roslagstak.se/og-image.jpg",
+    image: `${SITE_URL}/og-image.jpg`,
     wordCount: articleBody.split(/\s+/).filter(Boolean).length,
     articleBody,
     keywords: post.keywords.join(", "),
-    author: { "@type": "Organization", name: "RoslagsTak", url: "https://roslagstak.se/" },
-    publisher: {
-      "@type": "Organization",
-      name: "RoslagsTak",
-      url: "https://roslagstak.se/",
-      logo: { "@type": "ImageObject", url: "https://roslagstak.se/og-image.jpg" },
-    },
+    author: organizationRef(),
+    publisher: { ...organizationRef(), url: `${SITE_URL}/`, logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` } },
     about: { "@type": "Place", name: "Roslagen, Stockholm, Sverige" },
   };
 };
