@@ -291,6 +291,13 @@
       "orsak": "T9 (juristen): behörig…, certifikat, ISO, asbest… och eternit… är förbjudna. Egna personnamn kan inte fångas av mönster och förbjuds i CRM:ets granskning."
     },
     {
+      "id": "rot-far-du",
+      "monster": "f[åa]r\\s+du\\s+(?:ett\\s+)?rot",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "R1 (juristens K5, T3, R2): skriv \"kan du få ROT-avdrag\", inte \"får du ROT-avdrag\"."
+    },
+    {
       "id": "platshallare-och-fel",
       "monster": "undefined|null|\\{\\{|\\}\\}|lorem|\\[\\w+\\]|\\bTODO\\b|\\s{2,}",
       "flaggor": "i",

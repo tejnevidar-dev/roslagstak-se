@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "status": "Genererad ur ledning/crm-ombyggnad/seo-cc-tillatna-pastaenden.md (Marknadschefen, version 1.1, juristens L1–L6 inlagda). Ägs av Marknadschefen och juristen (CODEOWNERS). Regeln är omvänd: det som inte står här får inte påstås. Garantisträngarna G3 och ROT-förbehållet R2 är hämtade ur guarantee.ts och prices.ts, som är facit.",
+  "version": "1.2",
+  "status": "Genererad ur ledning/crm-ombyggnad/seo-cc-tillatna-pastaenden.md (Marknadschefen, version 1.2 2026-10-03, K1 och R1 utökade efter juristens besked, juristens L1–L6 inlagda). Ägs av Marknadschefen och juristen (CODEOWNERS). Regeln är omvänd: det som inte står här får inte påstås. Garantisträngarna G3 och ROT-förbehållet R2 är hämtade ur guarantee.ts och prices.ts, som är facit.",
   "pastaenden": [
     {
       "id": "G1",
@@ -58,6 +58,7 @@
       "formuleringar": [
         "Kostnadsfri takkontroll",
         "Kostnadsfri takkontroll utan förpliktelser",
+        "Takkontroll utan förpliktelser",
         "Du betalar inget och binder dig inte"
       ],
       "villkor": "Alltid \"takkontroll\", aldrig \"besiktning\" eller \"inspektion\"",
@@ -86,9 +87,10 @@
       "pastaende": "ROT",
       "formuleringar": [
         "ROT-avdrag på 30 % av arbetskostnaden",
-        "ROT-avdraget dras direkt på fakturan"
+        "ROT-avdraget dras direkt på fakturan",
+        "ROT-avdraget dras på fakturan"
       ],
-      "villkor": "Aldrig \"30 % rabatt\". Aldrig ett ROT-belopp i kronor för kunden",
+      "villkor": "Skriv \"kan du få ROT-avdrag\", inte \"får du\" (juristens K5, T3, R2). Aldrig \"30 % rabatt\". Aldrig ett ROT-belopp i kronor för kunden. \"Takkontroll utan förpliktelser\" och \"ROT-avdraget dras på fakturan\" får stå på egen hand (juristen 2026-10-03)",
       "kalla": "Regel 5, juristen"
     },
     {

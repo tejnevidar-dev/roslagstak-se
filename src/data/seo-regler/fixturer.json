@@ -4,6 +4,8 @@
   "bra": [
     { "falt": "title", "text": "Takbyte i Täby – fast pris efter takkontroll" },
     { "falt": "title", "text": "Takläggare i Norrtälje – fast pris efter takkontroll" },
+    { "falt": "description", "text": "Takbyte i Täby: som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan." },
+    { "falt": "description", "text": "Takkontroll utan förpliktelser och fast pris på takbyte i Täby. ROT-avdraget dras på fakturan." },
     { "falt": "title", "text": "Takbyte i Älta, Nacka – fast pris" },
     { "falt": "title", "text": "Takbyte i Åkersberga – fast pris" },
     { "falt": "title", "text": "Överraskande fast pris på takbyte i Åkersberga" },
@@ -74,6 +76,7 @@
     { "falt": "description", "text": "Takexperter och proffs på takbyte i Täby, snabbast och tryggast.", "regel": "t4-superlativ-och-expert" },
     { "falt": "description", "text": "Takbyte i Täby, bättre än andra firmor och jämfört med konkurrenterna.", "regel": "t5-jamforelser" },
     { "falt": "description", "text": "Takbyte i Täby: tider kvar före vintern, fullbokat snart, omgående start.", "regel": "t6-tidspress" },
+    { "falt": "description", "text": "Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden vid takbyte i Täby.", "regel": "rot-far-du" },
     { "falt": "description", "text": "Takbyte i Täby: inga dolda kostnader, allt ingår och utan extra kostnad. Spara 20 000 kr.", "regel": "t7-prisloften" },
     { "falt": "description", "text": "Undvik dyra skador på taket i Täby, kostsamma följder om du väntar.", "regel": "t8-skrammande-kostnad" },
     { "falt": "description", "text": "Behörig takfirma i Täby med certifikat, sanerar asbest och eternit.", "regel": "t9-behorig-asbest-eternit" }
