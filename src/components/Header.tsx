@@ -16,7 +16,7 @@ const serviceItems: MenuItem[] = [
   { label: "Taksäkerhet", to: "/tjanster/taksakerhet" },
   { label: "Plåtarbeten", to: "/tjanster/platarbeten" },
   { label: "Takvård & taktvätt", to: "/tjanster/taktvatt" },
-  { label: "Eternit & asbestsanering", to: "/tjanster/eternit-asbest" },
+  { label: "Byta eternittak", to: "/tjanster/eternit-asbest" },
 ];
 
 const roofTypeItems: MenuItem[] = [

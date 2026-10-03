@@ -1,106 +1,74 @@
 /**
- * Text på eternit-/asbestsidan (/tjanster/eternit-asbest), enda källan för EternitSEOContent.tsx och för den
- * statiska HTML:en (scripts/prerender-content.ts via data/service-page.ts). Ordagrant flyttad ur komponenten
- * 2026-10-03 (fas 2.50 P0). 10i: texterna är inte ändrade i sak.
+ * Text på eternitsidan (/tjanster/eternit-asbest), enda källan för EternitSEOContent.tsx och för den statiska
+ * HTML:en (scripts/prerender-content.ts via data/service-page.ts).
+ *
+ * Skriven om 2026-10-03 efter juristens granskning (ledning/jurist/tjanstesida-eternit-granskning.md, A1–A8):
+ * utgår från guiden r (/blogg/eternittak-asbest-sanering, juristens E1–E6) och använder Arbetsmiljöverkets meningar
+ * ordagrant. Vår roll är bara att samordna med en behörig saneringsfirma och lägga det nya taket. Inga årtal utan
+ * källa, inga tider, inga saneringspriser, inga beskrivningar av saneringsfirmans metod, inget prov som vi tar.
  */
 export type EternitFaq = { question: string; answer: string };
 
 export const eternitFaqs: EternitFaq[] = [
   {
-    question: "Vad kostar det att riva ett eternittak?",
-    answer: "Kostnaden beror på takets storlek, mängden asbesthaltigt material och åtkomligheten, och sätts av den saneringsfirma vi samordnar med. Vi tar fram en offert på hela projektet — sanering och nytt tak — efter en kostnadsfri takkontroll.",
+    question: "Vad kostar det att byta ett eternittak?",
+    answer: "Det nya taket får du fast pris på i vår offert. Hur saneringen prissätts framgår av offerten.",
   },
   {
     question: "Får man riva eternittak själv?",
-    answer: "Nej. Rivning av asbesthaltigt material, till exempel eternitplattor, kräver tillstånd från Arbetsmiljöverket och särskild utbildning. Asbesten är farligt avfall. Anlita alltid ett företag som har Arbetsmiljöverkets tillstånd för asbestrivning.",
+    answer:
+      "Ett företag som river asbest måste ha tillstånd från Arbetsmiljöverket. Borra, såga, slipa eller bryt inte i skivorna själv, och gå inte upp på taket.",
   },
   {
     question: "Hur vet jag om mitt eternittak innehåller asbest?",
-    answer: "Eternitplattor tillverkade före 1977 innehåller nästan alltid asbest. Plattor från 1977–1986 kan innehålla asbest. Är du osäker kan vi ta ett materialprov och skicka det till laboratorium för analys — helt kostnadsfritt vid takkontroll.",
+    answer:
+      "Det går inte att se på skivorna. Arbetsmiljöverket skriver att asbest är förbjudet sedan 1982 men finns kvar i äldre byggnader, och att det ibland finns också i yngre. Behöver du veta säkert kan ett prov analyseras av ett laboratorium. Bryt inte loss en bit själv.",
   },
   {
-    question: "Kan ni hjälpa till med eternitsanering på öar i skärgården?",
-    answer: "Ja, på till exempel Blidö, Ljusterö, Svartlöga, Ingmarsö och Finnhamn. Vi samordnar hela projektet — takkontroll, sanering via ett företag med Arbetsmiljöverkets tillstånd och sjötransport av nytt material — och håller ihop det som en kontaktperson.",
+    question: "Kan ni riva eternittaket?",
+    answer: "Nej. Vi samordnar med en behörig saneringsfirma som river det. Vi lägger det nya taket.",
   },
   {
-    question: "Vad händer med det rivna eternitmaterialet?",
-    answer: "Allt asbestinnehållande material emballeras i godkända säckar och märks som farligt avfall. Saneringsfirman transporterar materialet till en godkänd deponi, och du får dokumentation på att saneringen utförts enligt gällande regler.",
+    question: "Kan jag få ROT-avdrag när jag byter eternittak?",
+    answer:
+      "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
   },
   {
-    question: "Kan jag få ROT-avdrag för eternitsanering?",
-    answer: "Ja, arbetskostnaden för både sanering och nytt tak berättigar till ROT-avdrag (30% skattereduktion, max 50 000 kr per person och år). Avdraget dras direkt på fakturan.",
-  },
-  {
-    question: "Hur lång tid tar det att sanera och byta ett eternittak?",
-    answer: "Det beror på takets storlek, hur saneringen behöver göras och vädret. Saneringen utförs av ett företag med tillstånd från Arbetsmiljöverket, och hur arbetet planeras går vi igenom innan offerten.",
-  },
-  {
-    question: "Vilka hälsorisker innebär eternittak med asbest?",
-    answer: "Asbest är cancerframkallande vid inandning av fibrer. Intakta eternitplattor är inte farliga, men vid rivning, borrning eller slipning frigörs mikroskopiska fibrer. Därför måste allt arbete ske med fullständig skyddsutrustning, slussystem och undertryck.",
+    question: "Vilka hälsorisker finns med asbest?",
+    answer:
+      "Det är farligt att andas in asbestfibrer, eftersom fibrerna kan orsaka flera allvarliga lungsjukdomar, till exempel cancer. Borra, såga, slipa eller bryt inte i skivorna själv, och gå inte upp på taket.",
   },
 ];
 
 export const eternitSections: { heading: string; level: 2 | 3; paragraphs: string[] }[] = [
   {
-    "heading": "Eternittak och asbest — vad behöver du veta?",
-    "level": 2,
-    "paragraphs": [
-      "Eternit är ett byggmaterial som var mycket vanligt i Sverige mellan 1930- och 1970-talet. Eternitplattor användes som takbeläggning på villor, fritidshus och ekonomibyggnader — inte minst i Roslagen och skärgården. Materialet består av cement blandat med asbestfibrer, vilket gör det extremt hållbart men också hälsofarligt vid rivning.",
-      "Om ditt hus är byggt före 1977 och har plattbeläggning på taket är sannolikheten stor att det är eternitplattor med asbest. Från 1977 ersattes asbesten successivt med andra fibrer, men plattor tillverkade fram till 1986 kan fortfarande innehålla asbest. Det enda sättet att vara helt säker är att låta ett laboratorium analysera ett materialprov."
-    ]
+    heading: "Eternittak och asbest — vad behöver du veta?",
+    level: 2,
+    paragraphs: [
+      "Eternit är ett namn på skivor av asbestcement, som länge användes på tak och fasader.",
+      "Det här säger Arbetsmiljöverket: asbest är förbjudet att använda i Sverige sedan 1982, men finns ofta kvar i äldre byggnader. Asbesthaltiga material kan ibland finnas även i yngre byggnader, eftersom produkter kan ha lagerhållits eller importerats efter förbudet. Det är farligt att andas in asbestfibrer, eftersom fibrerna kan orsaka flera allvarliga lungsjukdomar, till exempel cancer.",
+      "Vi återger vad myndigheten skriver. Vad som gäller för just ditt hus och ditt tak kan Arbetsmiljöverket och kommunen svara på.",
+    ],
   },
   {
-    "heading": "Varför ska man byta eternittak?",
-    "level": 3,
-    "paragraphs": [
-      "Eternit tillverkades fram till 1970-talet, och många eternittak i Roslagen är därför gamla och börjar bli porösa, spruckna eller mossbevuxna. Ett åldrat eternittak läcker ofta vid genomföringar och nockbeslag. Genom att sanera och byta till modernt takmaterial — exempelvis plåttak, betongpannor eller tegeltak — får du ett säkrare, tätare och snyggare tak."
-    ]
+    heading: "Vi sanerar inte själva",
+    level: 3,
+    paragraphs: [
+      "Vi river inte asbest och har inget tillstånd för det. När ett tak med eternit ska bytas samordnar vi med en behörig saneringsfirma. Saneringsfirman river och tar hand om det gamla materialet. När det är gjort lägger vi det nya taket.",
+      "Hur saneringen prissätts, och vem du får fakturan från, framgår av offerten. Vårt fasta pris gäller det som står i vår offert.",
+    ],
   },
-  {
-    "heading": "Eternitsanering i skärgården — specialkompetens krävs",
-    "level": 3,
-    "paragraphs": [
-      "Att sanera eternittak på en ö kräver extra planering. Farligt avfall måste emballeras säkert och transporteras till godkänd deponi, och det görs av saneringsföretaget med tillstånd. Förutsättningarna för just ditt tak går vi igenom vid takkontrollen."
-    ]
-  },
-  {
-    "heading": "Sanering görs alltid av ett företag med tillstånd",
-    "level": 3,
-    "paragraphs": [
-      "Rivning av eternit som innehåller asbest får bara göras av ett företag med tillstånd från Arbetsmiljöverket. Vi utför inte asbestsanering själva. Vi hjälper dig att planera hela takbytet och samordnar saneringen med ett företag som har rätt tillstånd, så att rivning, emballering, transport och deponering sker enligt gällande regler. Du som kund får en enda kontaktperson hos oss genom hela processen."
-    ]
-  }
 ];
 
-export const ETERNIT_FAQ_HEADING = "Vanliga frågor om eternittak och asbestsanering";
+export const ETERNIT_FAQ_HEADING = "Vanliga frågor om eternittak och asbest";
 
 export const eternitLocal = {
   heading: "Eternittak i din kommun",
-  text: "Vi hjälper dig med eternittak i hela Roslagen — från Vaxholm till Arholma — och samordnar saneringen.",
+  text: "Vi samordnar med en saneringsfirma och lägger det nya taket.",
   links: [
-  {
-    "to": "/taklaggare-blido",
-    "label": "Eternittak Blidö"
-  },
-  {
-    "to": "/taklaggare-ljustero",
-    "label": "Eternittak Ljusterö"
-  },
-  {
-    "to": "/taklaggare-norrtalje",
-    "label": "Eternittak Norrtälje"
-  },
-  {
-    "to": "/taklaggare-vaxholm",
-    "label": "Eternittak Vaxholm"
-  },
-  {
-    "to": "/taklaggare-furusund",
-    "label": "Eternittak Furusund"
-  },
-  {
-    "to": "/taklaggare-husaro",
-    "label": "Eternittak Husarö"
-  }
-],
+    { to: "/taklaggare-blido", label: "Eternittak Blidö" },
+    { to: "/taklaggare-norrtalje", label: "Eternittak Norrtälje" },
+    { to: "/taklaggare-vaxholm", label: "Eternittak Vaxholm" },
+    { to: "/taklaggare-furusund", label: "Eternittak Furusund" },
+  ],
 };

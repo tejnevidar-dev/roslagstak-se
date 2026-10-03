@@ -56,8 +56,8 @@ export const services: { slug: string; name: string; description: string }[] = [
   },
   {
     slug: "eternit-asbest",
-    name: "Eternitsanering och asbestrivning",
-    description: "Samordnad sanering av eternittak med en behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter, inklusive transport till godkänd deponi.",
+    name: "Byta eternittak",
+    description: "Byte av eternittak: saneringen görs av en saneringsfirma med tillstånd, och vi lägger det nya taket.",
   },
 ];
 
@@ -99,7 +99,7 @@ export const buildLocalBusinessSchema = () => ({
   paymentAccepted: "Faktura",
   parentOrganization: { "@id": ORG_ID },
   description:
-    "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och eternitsanering med fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+    "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och byte av eternittak med fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
   address: {
     "@type": "PostalAddress",
     addressLocality: NAP.addressLocality,
@@ -124,7 +124,7 @@ export const buildLocalBusinessSchema = () => ({
     "Takavvattning",
     "Takkontroll",
     "Taksäkerhet",
-    "Eternitsanering",
+    "Byta eternittak",
     "Takkupor",
     "Takfönster",
     "Taktvätt",

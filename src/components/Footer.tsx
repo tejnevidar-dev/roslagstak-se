@@ -19,7 +19,7 @@ const tjanster = [
   { to: "/platslagare", label: "Plåtslagare för tak" },
   { to: "/tjanster/taktvatt", label: "Takvård & taktvätt" },
   { to: "/taktvatt", label: "Taktvätt & mossborttagning" },
-  { to: "/tjanster/eternit-asbest", label: "Eternit & asbest" },
+  { to: "/tjanster/eternit-asbest", label: "Byta eternittak" },
 ];
 
 const genvagar = [

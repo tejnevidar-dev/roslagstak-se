@@ -282,29 +282,23 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   "eternit-asbest": {
-    seoTitle: "Eternitsanering & Asbestrivning Roslagen",
+    seoTitle: "Byta eternittak – sanering via behörig firma",
     seoDescription:
-      "Eternitsanering och asbestrivning i Roslagen och skärgården, samordnat med ett företag som har Arbetsmiljöverkets tillstånd. Emballering, transport till godkänd deponi och nytt tak. Kostnadsfri takkontroll.",
+      "Byta eternittak: saneringen görs av en behörig saneringsfirma, vi lägger det nya taket. Kostnadsfri takkontroll utan förpliktelser. Fast pris i vår offert.",
     blockPlacement: "before-spec",
     factCards: [
-      { tone: "primary", label: "Regelverk", value: "Arbetsmiljöverket", text: "Arbetsmiljöverkets föreskrifter styr hela hanteringen." },
-      { tone: "outline", label: "Tillstånd", value: "Krävs, söks av saneringsfirman", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket innan rivning får starta." },
-      { tone: "accent", label: "Sanering", value: "Fast pris efter takkontroll", text: "Sanering (via saneringsfirman) plus nytt tak. ROT-avdrag tillkommer på takarbetet." },
-      { tone: "plain", label: "Avfall", value: "Godkänd deponi", text: "Emballerat, märkt och transporterat med dokumenterad kvittens." },
+      { tone: "primary", label: "Sanering", value: "Görs av en firma med tillstånd", text: "Sanering: görs av en firma med tillstånd från Arbetsmiljöverket." },
+      { tone: "outline", label: "Takkontroll", value: "Kostnadsfri", text: "En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte." },
     ],
     block: {
       kind: "regulatory",
-      eyebrow: "Regelverk",
-      heading: "Så hanteras asbest lagligt — och vad du aldrig ska göra själv",
-      intro:
-        "Eternit får inte kapas, borras, brytas eller högtryckstvättas. Fibrerna frigörs i luften och är hälsofarliga. All hantering sker enligt Arbetsmiljöverkets föreskrifter.",
+      eyebrow: "Vem gör vad",
+      heading: "Saneringen görs av en annan firma, det nya taket gör vi",
+      intro: "Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma.",
       steps: [
-        { code: "01", title: "Materialbedömning", text: "Vi identifierar eternit och bedömer skick, åtkomst och rivningsmetod på plats." },
-        { code: "02", title: "Tillstånd", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket före rivning." },
-        { code: "03", title: "Saneringsplan", text: "Skyddszon, personlig skyddsutrustning, dammbindning och avfallsflöde fastställs skriftligt." },
-        { code: "04", title: "Kontrollerad rivning", text: "Plattorna lyfts hela, dammbinds och hanteras utan kapning eller brytning." },
-        { code: "05", title: "Emballering och transport", text: "Materialet dubbelemballeras, märks och transporteras till godkänd deponi med kvittens." },
-        { code: "06", title: "Nytt tak", text: "Underlaget kontrolleras och repareras innan nytt ytskikt monteras." },
+        { code: "01", title: "Vi", text: "Vi gör takkontrollen och lägger det nya taket: nytt underlag, ny läkt och nytt takmaterial." },
+        { code: "02", title: "Saneringsfirman", text: "Saneringsfirman river det gamla taket och tar hand om materialet." },
+        { code: "03", title: "Du", text: "Borra, såga, slipa eller bryt inte i skivorna själv, och gå inte upp på taket." },
       ],
     },
     relatedLinks: [

@@ -17,6 +17,8 @@ import { regionSlugs } from "../src/data/regions";
 import { projects } from "../src/data/projects";
 import { problems } from "../src/data/problems";
 import { materials } from "../src/data/materials";
+import { existsSync } from "node:fs";
+import { prerenderContent } from "./prerender-content";
 
 const args = process.argv.slice(2);
 const mdPath = args.find((a) => a.startsWith("--md="))?.split("=")[1];
@@ -267,9 +269,50 @@ for (const s of keyPageStats.filter((s) => s.inbound < 3)) {
 push("- Se till att varje tjänstesida länkar till `/priser`, `/offert#faq` och minst tre systertjänster.");
 push("- Varje ortssida bör länka till samtliga tjänst+ort-sidor för orten, `/priser`, `/taktyper` och `/hur-det-gar-till`.");
 
+/* ---------- 6. döda interna länkar i sidornas text (hela sajten) ----------
+   Varje sida i sitemapen speglas som statisk HTML (prerenderContent), med alla länkar sidan visar, också inline-länkar
+   i bloggbrödtext ([text](/sökväg)). En länk till en adress som inte finns i sitemapen, i appens routes eller som fil
+   i public/ är en död länk (404 live) och fäller bygget. */
+const sitemapPaths = new Set(
+  [...read(resolve("public/sitemap.xml")).matchAll(/<loc>([^<]+)<\/loc>/g)].map(
+    (m) => m[1].replace(/^https?:\/\/[^/]+/, "").replace(/\/$/, "") || "/",
+  ),
+);
+const livePath = (p: string) =>
+  sitemapPaths.has(p) ||
+  routeSet.has(p) ||
+  NOINDEX.includes(p) ||
+  ALIASES.includes(p) ||
+  p.startsWith("/offert/") ||
+  existsSync(resolve("public", "." + p));
+const dead = new Map<string, Set<string>>();
+for (const page of sitemapPaths) {
+  const content = prerenderContent(page);
+  if (!content) continue;
+  for (const l of content.links) {
+    const p = l.href.split("#")[0].split("?")[0].replace(/\/$/, "") || "/";
+    if (/^(https?:|mailto:|tel:)/.test(p) || !p.startsWith("/")) continue;
+    if (!livePath(p)) {
+      if (!dead.has(p)) dead.set(p, new Set());
+      dead.get(p)!.add(page);
+    }
+  }
+}
+lines.push("");
+lines.push("## Döda interna länkar i sidtexterna");
+lines.push("");
+if (dead.size === 0) lines.push("Inga döda länkar: alla interna länkar i sidtexterna går till en adress som finns i sitemapen.");
+else
+  for (const [p, from] of dead)
+    lines.push(`- \`${p}\` från ${[...from].slice(0, 5).join(", ")}${from.size > 5 ? ` och ${from.size - 5} till` : ""}`);
+
 const report = lines.join("\n") + "\n";
 if (mdPath) {
   writeFileSync(resolve(mdPath), report);
   console.log(`Rapport skriven: ${mdPath}`);
 }
 console.log(report);
+if (dead.size) {
+  console.error(`[link-audit] FEL: ${dead.size} döda interna länkar i sidtexterna (se ovan).`);
+  process.exit(1);
+}

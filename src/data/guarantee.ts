@@ -10,6 +10,10 @@ export const GARANTI_RENOVERING =
 /** Bara utförandegaranti, för arbeten som inte lägger nytt tätskikt (t.ex. montering av taksäkerhet, juristens T1). */
 export const GARANTI_UTFORANDE = "Vi lämnar 10 års utförandegaranti på det arbete vi utför.";
 
+/** Garantirutan på eternitsidan (juristen 2026-10-03): garantierna gäller vårt arbete, inte saneringen. */
+export const GARANTI_ETERNIT =
+  "Vi lämnar 10 års garanti på utförandet av det nya taket. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Saneringen utförs av saneringsfirman.";
+
 /** Tjänste-slugs i /tjanster/<slug> som aldrig ska nämna tätskiktsgaranti (MATAKI) eftersom inget nytt tätskikt läggs. */
 export const NO_TATSKIKT_SERVICE_SLUGS: readonly string[] = ["taksakerhet"];
 

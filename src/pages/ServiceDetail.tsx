@@ -24,7 +24,6 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
 import { serviceBlocks } from "@/data/service-blocks";
-import imgRooferWork from "@/assets/roofer-work.jpg";
 import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
 import imgPapp from "@/assets/roof-build-02-papp.jpg";
 import imgRannor from "@/assets/roof-build-03-rannor.jpg";
@@ -47,7 +46,6 @@ const serviceImages: Record<string, string> = {
   taksakerhet: imgSnoras,
   platarbeten: imgBeslag,
   takvard: imgDronePoster,
-  "eternit-asbest": imgRooferWork,
   tegeltak: imgLertegel,
 };
 
@@ -200,7 +198,7 @@ const ServiceDetail = () => {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[var(--shadow-elevated)]">
                 <img
                   src={serviceImage}
-                  alt={`${service.title} i Roslagen utförd av RoslagsTak`}
+                  alt={slug === "eternit-asbest" ? "Drönarfoto av nylagt tak på Blidö, Roslagens skärgård" : `${service.title} i Roslagen utförd av RoslagsTak`}
                   width={1200}
                   height={1500}
                   fetchPriority="high"
@@ -438,7 +436,7 @@ const ServiceDetail = () => {
             </div>
           </div>
           <div className="absolute inset-x-0 bottom-0 bg-primary/85 px-6 py-4 text-[11px] uppercase tracking-[0.2em] text-primary-foreground backdrop-blur-sm">
-            <span>{SERVICE_COPY.craftCaption(service.title)}</span>
+            <span>{SERVICE_COPY.craftCaption(service.title, service.slug)}</span>
           </div>
         </section>
 

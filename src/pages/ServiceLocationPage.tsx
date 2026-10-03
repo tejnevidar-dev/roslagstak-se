@@ -266,7 +266,7 @@ const ServiceLocationPage = () => {
                     <ArrowRight className="w-3 h-3" /> Kostnadsfri takkontroll
                   </Link>
                   <Link to="/tjanster/eternit-asbest" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                    <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
+                    <ArrowRight className="w-3 h-3" /> Byta eternittak
                   </Link>
                   <Link to="/blogg/rot-avdrag-takbyte" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> ROT-avdrag vid takbyte

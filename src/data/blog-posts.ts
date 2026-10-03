@@ -933,7 +933,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       "Båda ger ett slätt plåttak med stående falsar och utan synliga skruvar i takytan. På håll ser de lika ut. Skillnaden ligger i hur plåtbanorna fogas ihop, och det påverkar vilka tak de passar och vad de kostar. Här går vi igenom skillnaden, vad som avgör valet och vad falsad plåt kostar hos oss.",
       "## Bandtäckt, dubbelfalsad, bandplåt: samma sak",
-      "Orden används om varandra. **Bandtäckning** är metoden: plåten kommer i band som formas till långa banor och läggs från takfot till nock. **Dubbelfalsad** beskriver skarven: kanterna på två banor viks ihop två gånger, så att falsen står upp från takytan. **Bandplåt** är plåten som används. Banorna hålls fast av dolda klammer under falsen, så ingen skruv går igenom plåten. Läs mer på materialsidan om [dubbelfalsad plåt](/material/dubbelfalsat).",
+      "Orden används om varandra. **Bandtäckning** är metoden: plåten kommer i band som formas till långa banor och läggs från takfot till nock. **Dubbelfalsad** beskriver skarven: kanterna på två banor viks ihop två gånger, så att falsen står upp från takytan. **Bandplåt** är plåten som används. Banorna hålls fast av dolda klammer under falsen, så ingen skruv går igenom plåten. Läs mer på materialsidan om [dubbelfalsad plåt](/tjanster/platarbeten).",
       "## Vad är klicktak?",
       "Klicktak är färdigprofilerade plåtbanor där långsidan är formad så att nästa bana trycks, klickas, fast i den föregående. Falsen formas alltså i fabrik och inte på taket. Banorna skruvas i underlaget längs en kant som sedan täcks av nästa bana.",
       "## Skillnaden i praktiken",
@@ -1523,7 +1523,7 @@ export const blogPosts: BlogPost[] = [
       "Ett bandtäckt tak känns igen på de raka, upphöjda åsarna som löper från takfot till nock, med släta plåtytor emellan. Åsarna är skarvarna, och det syns inga skruvar. Samma tak kallas också dubbelfalsat plåttak eller falsat tak. Här går vi igenom hur metoden fungerar, vilka tak den passar och vad den kostar.",
       "## Så fungerar bandtäckning",
       "Namnet kommer av att plåten kommer till bygget som band på rulle. Banden kapas och bockas till banor som är lika långa som takfallet. Varje bana har uppvikta kanter, och där två banor möts viks kanterna om varandra i två steg. Det är den skarven som kallas dubbelfals. Under falsen sitter små fästen, klammer, som är skruvade i underlaget och greppar om plåtkanten. Plåten sitter alltså fast utan att någon skruv går igenom den, och den kan krympa och växa lite när det blir kallt och varmt.",
-      "Plåten läggs inte direkt på takstolarna. Den vilar på ett underlag, vanligen råspont med det underlagsmaterial som systemet föreskriver. Mer om materialet finns på sidan om [dubbelfalsad plåt](/material/dubbelfalsat).",
+      "Plåten läggs inte direkt på takstolarna. Den vilar på ett underlag, vanligen råspont med det underlagsmaterial som systemet föreskriver. Mer om materialet finns på sidan om [dubbelfalsad plåt](/tjanster/platarbeten).",
       "## Arbetet, steg för steg i sak",
       "1. Det gamla taket rivs, och underlaget kontrolleras. 2. Nytt underlag läggs. 3. Plåtbanorna läggs och falsas ihop på plats. 4. Detaljerna formas i samma plåt: kupor, ränndalar, nock, takfot och anslutningar mot skorsten och vägg. 5. Hängrännor och stuprör ses över eller byts.",
       "Det är detaljerna som skiljer bandtäckning från plåt i färdiga skivor. Falsade skarvar kan formas efter taket, och därför går metoden att använda där taket har många vinklar.",

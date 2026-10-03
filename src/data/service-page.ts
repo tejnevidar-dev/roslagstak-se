@@ -5,7 +5,7 @@
  * utan "@"-alias). Parity mot den renderade sidan testas i src/test/service-page-parity.test.ts.
  */
 import { withRotForbehall } from "./prices";
-import { GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, GARANTI_UTFORANDE, NO_TATSKIKT_SERVICE_SLUGS, RENOVERING_SERVICE_SLUGS } from "./guarantee";
+import { GARANTI_ETERNIT, GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, GARANTI_UTFORANDE, NO_TATSKIKT_SERVICE_SLUGS, RENOVERING_SERVICE_SLUGS } from "./guarantee";
 import { TAKSAKERHET_SLUG, taksakerhetDetails, taksakerhetMeta } from "./service-taksakerhet";
 import { serviceBlocks, type SpecificBlock } from "./service-blocks";
 import { serviceAreaLinks } from "./service-area-links";
@@ -109,16 +109,15 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "Rengjorda och behandlade betongpannor efter avslutat arbete.",
   },
   "eternit-asbest": {
-    accentLine: "säkert och enligt regelverk.",
+    accentLine: "– saneringen görs av en firma med tillstånd.",
     specs: [
-      { k: "Regelverk", v: "Arbetsmiljöverkets föreskrifter" },
-      { k: "Tillstånd", v: "Krävs, söks av saneringsfirman" },
-      { k: "Deponi", v: "Godkänd transport" },
+      { k: "Sanering", v: "Görs av en firma med tillstånd från Arbetsmiljöverket" },
+      { k: "Takkontroll", v: "Kostnadsfri" },
     ],
-    specHeading: "Sanering enligt Arbetsmiljöverkets föreskrifter — steg för steg",
-    lead: "Asbest kräver skyddsutrustning, emballering och dokumenterad transport till deponi.",
-    craftLine: "Eternit ska inte kapas, brytas eller högtryckstvättas. Den ska saneras.",
-    photoNote: "Arbete på plats med full skyddsutrustning enligt regelverket.",
+    specHeading: "Så går det till",
+    lead: "Vi river inte asbest och har inget tillstånd för det.",
+    craftLine: "Borra, såga, slipa eller bryt inte i skivorna själv, och gå inte upp på taket.",
+    photoNote: "",
   },
   tegeltak: {
     accentLine: "nytt tak med fast pris.",
@@ -277,23 +276,21 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   "eternit-asbest": {
-    longDesc: "Många äldre hus i Roslagen och skärgården har tak av eternitplattor som innehåller asbest — ett hälsofarligt material som kräver specialhantering vid rivning. Vi samordnar saneringen med en behörig saneringsfirma, som utför rivningen enligt Arbetsmiljöverkets föreskrifter med skyddsutrustning, slussystem och godkänd emballering, och transporterar materialet till godkänd deponi. Vi utför inte asbestsanering själva. Därefter utför vi komplett takomläggning med modernt material så att du får ett säkert, hållbart och vackert tak.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll — sanering (via saneringsfirman) plus nytt tak. Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer på takarbetet.",
+    longDesc:
+      "Eternit är ett namn på skivor av asbestcement, som länge användes på tak och fasader. Har du ett eternittak och funderar på att byta det finns det en sak som skiljer det från andra takbyten: det gamla materialet kan innehålla asbest, och ett företag som river det måste ha tillstånd från Arbetsmiljöverket. Vi river inte asbest och har inget tillstånd för det. När ett tak med eternit ska bytas samordnar vi med en behörig saneringsfirma. Saneringsfirman river och tar hand om det gamla materialet. När det är gjort lägger vi det nya taket.",
+    priceRange:
+      "Hur saneringen prissätts, och vem du får fakturan från, framgår av offerten. Vårt fasta pris gäller det som står i vår offert. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
     benefits: [
-      "Sanering av behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter",
-      "Vi samordnar hela processen åt dig",
-      "Tillstånd hos Arbetsmiljöverket söks och hanteras av saneringsfirman",
-      "Komplett takomläggning efter sanering",
-      "Fast pris efter kostnadsfri takkontroll",
+      "Kostnadsfri takkontroll utan förpliktelser",
+      "Vi samordnar med en behörig saneringsfirma, som river det gamla taket",
+      "Vi lägger det nya taket: nytt underlag, ny läkt och nytt takmaterial",
+      "Fast pris i vår offert för det nya taket",
     ],
     process: [
-      "Kostnadsfri takkontroll och materialprovtagning",
-      "Vi samordnar sanering med behörig saneringsfirma",
-      "Saneringsfirman söker tillstånd hos Arbetsmiljöverket före rivningen och river med skyddsåtgärder",
-      "Emballering och transport till godkänd deponi (saneringsfirman)",
-      "Inspektion av underlag och eventuell reparation",
-      "Montering av nytt takmaterial",
-      "Slutgenomgång",
+      "Kostnadsfri takkontroll utan förpliktelser: en av våra säljare tittar på taket på plats, ungefär 1–2 timmar.",
+      "Rapport och offert: efter takkontrollen får du en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris för det nya taket.",
+      "Saneringsfirman river det gamla taket och tar hand om materialet.",
+      "Vi lägger det nya taket.",
     ],
   },
   tegeltak: {
@@ -351,7 +348,8 @@ export const SERVICE_COPY = {
   scopeHeading: "Det här ingår i arbetet",
   scopeNote: "Allt specificeras i offerten — inga tillägg i efterhand utan att du godkänt dem.",
   craftEyebrow: "Hantverket",
-  craftCaption: (title: string) => `${title} — utfört i Roslagen`,
+  // Eternitsidan: inget "utfört i Roslagen" (juristen A1, vi har inga belagda saneringar).
+  craftCaption: (title: string, slug?: string) => (slug === "eternit-asbest" ? title : `${title} — utfört i Roslagen`),
   goodToKnowEyebrow: "Bra att veta",
   skargardenTitle: "Skärgården",
   skargardenText: "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
@@ -364,10 +362,10 @@ export const SERVICE_COPY = {
     slug === "eternit-asbest" ? "Har du eternittak med asbest?" : `Intresserad av ${title.toLowerCase()}?`,
   ctaText: (slug: string) =>
     slug === "eternit-asbest"
-      ? "Kontakta oss för kostnadsfri rådgivning om ditt eternittak. Vi hjälper dig vidare."
+      ? "Boka en kostnadsfri takkontroll så går vi igenom ditt eternittak."
       : "Kontakta oss för en kostnadsfri takkontroll och offert.",
   ctaOffert: "Få offert",
-  ctaAdvice: "Kostnadsfri rådgivning",
+  ctaAdvice: "Boka kostnadsfri takkontroll",
   relatedEyebrow: "Läs vidare",
   relatedHeading: "Relaterat innehåll",
   backToServices: "Tillbaka till alla tjänster",
@@ -395,7 +393,7 @@ export const goodToKnowBoxes = (slug: string): { t: string; d: string }[] => {
     },
     {
       t: SERVICE_COPY.guaranteeTitle,
-      d: NO_TATSKIKT_SERVICE_SLUGS.includes(slug) ? GARANTI_UTFORANDE : renovering ? GARANTI_RENOVERING : SERVICE_COPY.guaranteeStandard,
+      d: slug === "eternit-asbest" ? GARANTI_ETERNIT : NO_TATSKIKT_SERVICE_SLUGS.includes(slug) ? GARANTI_UTFORANDE : renovering ? GARANTI_RENOVERING : SERVICE_COPY.guaranteeStandard,
     },
     { t: SERVICE_COPY.skargardenTitle, d: SERVICE_COPY.skargardenText },
   ];
@@ -432,7 +430,7 @@ export const blockTexts = (block: SpecificBlock): string[] => {
 };
 
 /** Tjänster som visar ett detaljfoto med bildtext i sidokolumnen (bilden väljs i ServiceDetail.tsx). */
-export const SERVICE_DETAIL_PHOTO_SLUGS: readonly string[] = ["takomlaggning", "takavvattning", "platarbeten", "takvard", "eternit-asbest"];
+export const SERVICE_DETAIL_PHOTO_SLUGS: readonly string[] = ["takomlaggning", "takavvattning", "platarbeten", "takvard"];
 
 /** Kolumnrubriker i specialblocket "signals" (ServiceSpecificBlock.tsx). */
 export const SIGNALS_COLUMNS = ["Signal på taket", "Vad det betyder", "Vår åtgärd"];
@@ -523,7 +521,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     ...specific("after-scope"),
     SERVICE_COPY.craftEyebrow,
     meta.craftLine,
-    SERVICE_COPY.craftCaption(service.title),
+    SERVICE_COPY.craftCaption(service.title, slug),
     SERVICE_COPY.goodToKnowEyebrow,
     ...goodToKnowBoxes(slug).flatMap((b) => [{ h: b.t, level: 3 as const }, b.d]),
     ...(slug === "eternit-asbest"

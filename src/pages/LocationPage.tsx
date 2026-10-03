@@ -108,7 +108,7 @@ const LocationPage = () => {
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
       "Dubbelfalsat plåttak", "Tegelplåt", "Pannplåt", "Takavvattning",
       "Hängrännor", "Takkontroll", "Taksäkerhet",
-      "Eternitsanering", "Asbestrivning", "Takkupor", "Takfönster",
+      "Byta eternittak", "Takkupor", "Takfönster",
       "Taktvätt", "Takmålning",
     ],
     hasOfferCatalog: {
@@ -120,7 +120,7 @@ const LocationPage = () => {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takkontroll ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Plåtarbeten ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takavvattning ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Eternitsanering ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Byta eternittak ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Taktvätt ${prep} ${location.name}` } },
       ],
     },
@@ -423,7 +423,7 @@ const LocationPage = () => {
                     `Takrenovering och underhåll ${prep} ${location.name}`,
                     `Plåtarbeten, takavvattning och hängrännor`,
                     `TP20, dubbelfalsat, tegelplåt, pannplåt och lertegeltak`,
-                    `Eternitsanering och asbestrivning`,
+                    `Byta eternittak, med sanering via en saneringsfirma`,
                     `Takkupor och takfönster (Velux)`,
                     `Taktvätt och takmålning`,
                     `Kostnadsfri takinspektion`,
@@ -510,7 +510,7 @@ const LocationPage = () => {
                       </Link>
                     )}
                     <Link to="/tjanster/eternit-asbest" className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest
+                      <ArrowRight className="w-3 h-3" /> Byta eternittak
                     </Link>
                     <Link to="/tjanster/taktvatt" className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Taktvätt & takmålning
@@ -660,7 +660,7 @@ const LocationPage = () => {
                     { name: "Takkontroll", slug: "takinspektion" },
                     { name: "Takkupor & takfönster", slug: "takkupor" },
                     { name: "Taktvätt & takmålning", slug: "takvard" },
-                    { name: "Eternitsanering", slug: "eternit-asbest" },
+                    { name: "Byta eternittak", slug: "eternit-asbest" },
                   ].map((s) => (
                     <Link
                       key={s.slug}
