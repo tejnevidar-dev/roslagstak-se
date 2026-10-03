@@ -303,9 +303,9 @@ const ServiceLocationPage = () => {
             {/* Sidebar */}
             <aside className="space-y-6">
               <div className="bg-primary text-primary-foreground rounded-2xl p-6">
-                <h3 className="font-display text-lg mb-2">Kostnadsfri offert</h3>
+                <h3 className="font-display text-lg mb-2">Kostnadsfri takkontroll</h3>
                 <p className="text-sm opacity-90 mb-4">
-                  Få en offert för {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}. Vi återkopplar inom 24 timmar.
+                  Boka en kostnadsfri takkontroll för {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}. Vi återkopplar inom 24 timmar.
                 </p>
                 <Link
                   to="/offert"

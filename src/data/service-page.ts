@@ -16,6 +16,8 @@ import { buildBody, type BodyItem } from "../lib/body-items";
 import { LOCAL_BUSINESS_ID, SITE_URL, buildBreadcrumbNode } from "../lib/schema-graph";
 
 export type ServiceMeta = {
+  /** Tecken direkt efter tjänstens namn i H1, t.ex. ":" (H1 = namn + h1Sep + blanksteg + accentLine). */
+  h1Sep?: string;
   accentLine: string;
   specs: { k: string; v: string }[];
   specHeading: string;
@@ -102,7 +104,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     specs: [
       { k: "Metod", v: "Skonsam rengöring" },
       { k: "Färg", v: "Specialfärg för tak" },
-      { k: "Effekt", v: "Förlängd livslängd" },
+      { k: "Effekt", v: "Rent tak" },
     ],
     specHeading: "Rengöring, behandling och målning",
     lead: "Mossa håller fukt mot ytskiktet — rätt metod tar bort den utan att skada materialet.",
@@ -110,13 +112,14 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "Rengjorda och behandlade betongpannor efter avslutat arbete.",
   },
   "eternit-asbest": {
-    accentLine: "– saneringen görs av en firma med tillstånd.",
+    h1Sep: ":",
+    accentLine: "saneringen görs av en firma med tillstånd",
     specs: [
       { k: "Sanering", v: "Görs av en firma med tillstånd från Arbetsmiljöverket" },
       { k: "Takkontroll", v: "Kostnadsfri" },
     ],
-    specHeading: "Så går det till",
-    lead: "Vi river inte asbest och har inget tillstånd för det.",
+    specHeading: "Vem gör vad?",
+    lead: "Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma, som river det gamla taket. Vi lägger det nya.",
     craftLine: "Borra, såga, slipa eller bryt inte i skivorna själv, och gå inte upp på taket.",
     photoNote: "",
   },
@@ -163,7 +166,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takrenovering: {
-    longDesc: "En takrenovering innebär att vi åtgärdar problem och kan förlänga livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
+    longDesc: "En takrenovering innebär att vi åtgärdar problem på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. ROT-avdrag tillkommer.",
     benefits: [
       "Lägre kostnad än komplett takomläggning",
@@ -278,20 +281,20 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
   },
   "eternit-asbest": {
     longDesc:
-      "Eternit är ett namn på skivor av asbestcement, som länge användes på tak och fasader. Har du ett eternittak och funderar på att byta det finns det en sak som skiljer det från andra takbyten: det gamla materialet kan innehålla asbest, och ett företag som river det måste ha tillstånd från Arbetsmiljöverket. Vi river inte asbest och har inget tillstånd för det. När ett tak med eternit ska bytas samordnar vi med en behörig saneringsfirma. Saneringsfirman river och tar hand om det gamla materialet. När det är gjort lägger vi det nya taket.",
+      "Saneringsfirman: river det gamla taket och tar hand om materialet. Vi: takkontrollen, offerten på det nya taket, samordningen med saneringsfirman och det nya taket.",
     priceRange:
       "Hur saneringen prissätts, och vem du får fakturan från, framgår av offerten. Vårt fasta pris gäller det som står i vår offert. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
     benefits: [
       "Kostnadsfri takkontroll utan förpliktelser",
-      "Vi samordnar med en behörig saneringsfirma, som river det gamla taket",
-      "Vi lägger det nya taket: nytt underlag, ny läkt och nytt takmaterial",
-      "Fast pris i vår offert för det nya taket",
+      "Rapport och offert med fast pris för det nya taket",
+      "Samordning med saneringsfirman, som river det gamla taket",
+      "Vi lägger det nya taket, enligt AMA",
     ],
     process: [
-      "Kostnadsfri takkontroll utan förpliktelser: en av våra säljare tittar på taket på plats, ungefär 1–2 timmar.",
-      "Rapport och offert: efter takkontrollen får du en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris för det nya taket.",
+      "Boka en kostnadsfri takkontroll utan förpliktelser: säg till när du bokar att taket är av eternit. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar.",
+      "Rapport och offert: efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris för det nya taket.",
       "Saneringsfirman river det gamla taket och tar hand om materialet.",
-      "Vi lägger det nya taket.",
+      "Vi lägger det nya taket, enligt AMA.",
     ],
   },
   tegeltak: {
@@ -330,12 +333,12 @@ export const SERVICE_COPY = {
   chipTatskikt: "30 års tätskiktsgaranti via MATAKI",
   chipFastPris: "Fast pris",
   chipSvar: "Svar inom 24 h",
-  offertButton: "Begär kostnadsfri offert",
+  offertButton: "Boka kostnadsfri takkontroll",
   phone: "070-154 36 39",
   howLink: "Se hur ett takbyte går till",
   specEyebrow: "Teknisk specifikation",
   processHeading: (n: number) => `Arbetsgång i ${n} steg`,
-  asideTitle: "Begär offert",
+  asideTitle: "Boka takkontroll",
   asideText: "Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.",
   asideCta: "Starta förfrågan",
   photoLabel: "Foto",
@@ -367,7 +370,7 @@ export const SERVICE_COPY = {
     slug === "eternit-asbest"
       ? "Boka en kostnadsfri takkontroll så går vi igenom ditt eternittak."
       : "Kontakta oss för en kostnadsfri takkontroll och offert.",
-  ctaOffert: "Få offert",
+  ctaOffert: "Boka takkontroll",
   ctaAdvice: "Boka kostnadsfri takkontroll",
   relatedEyebrow: "Läs vidare",
   relatedHeading: "Relaterat innehåll",
@@ -557,7 +560,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
   return {
     title: blocks.seoTitle,
     description: blocks.seoDescription,
-    h1: `${service.title} ${meta.accentLine}`,
+    h1: `${service.title}${meta.h1Sep ?? ""} ${meta.accentLine}`,
     intro: service.description,
     paragraphs,
     headingAt,

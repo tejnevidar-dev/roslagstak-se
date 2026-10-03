@@ -32,7 +32,7 @@ const roofTypes: RoofType[] = [
     fullDesc: "TP20 (även kallat TRP20) är en trapetsprofilerad takplåt i förzinkad stålplåt. Siffran 20 anger profilens våghöjd i millimeter. Plåten levereras i långa skivor som sträcker sig från nock till takfot, vilket minimerar horisontella skarvar och minskar risken för läckage. TP20 är ett av de lättaste takmaterialen på marknaden med en vikt på ca 3–5 kg/m², vilket gör det lämpligt även för äldre byggnader med svagare takstolskonstruktion. Plåten finns i ett stort antal kulörer med plastisol- eller polyesterbeläggning.",
     pros: ["Mycket kostnadseffektivt", "Snabb montering — stora skivor", "Låg vikt (ca 3–5 kg/m²)", "Minimalt underhåll", "Brett färgutbud", "Fungerar även vid låg taklutning"],
     cons: ["Kan ge resonansljud vid kraftigt regn utan ljuddämpning", "Enklare estetik jämfört med falsad plåt", "Kondens kan uppstå utan korrekt ventilation och underlagspapp"],
-    lifespan: "Lång livslängd",
+    lifespan: "",
     priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, fritidshus, ekonomibyggnader, garage",
     image: imgTp20,
@@ -45,7 +45,7 @@ const roofTypes: RoofType[] = [
     fullDesc: "Tegelplåttak (även kallat takpanneplåt) är profilerade stålplåtskivor formade för att visuellt efterlikna traditionella tegelpannor. Varje skiva täcker flera 'pannor' vilket gör monteringen snabbare än verkliga tegelpannor. Plåten är förzinkad och ytbehandlad med plastisol eller polyester för lång hållbarhet. Det ger husägare möjligheten att få det klassiska tegelutseendet med plåtens fördelar: låg vikt, snabb montering och minimalt underhåll.",
     pros: ["Klassiskt tegelpanneliknande utseende", "Mycket lättare än riktigt tegel (ca 4–5 kg/m²)", "Snabbare montering än tegelpannor", "Underhållsfritt", "Tål kraftig vind väl"],
     cons: ["Inte lika autentiskt utseende som riktigt tegel", "Kan låta vid kraftigt regn", "Kräver en viss minsta taklutning"],
-    lifespan: "Lång livslängd",
+    lifespan: "",
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, sommarstugor, radhus",
     image: imgTegelplat,
@@ -58,7 +58,7 @@ const roofTypes: RoofType[] = [
     fullDesc: "Pannplåt är en genuint svensk takplåtstyp som först masstillverkades av Domnarvet i Borlänge i början av 1900-talet. Den har en karaktäristisk vågformad profil med rillor var 270:e mm som ger ett helt unikt utseende — pannplåten ska inte förväxlas med tegelplåt som imiterar tegelpannor. Pannplåten ger istället ett tidlöst, industriellt och genuint skandinaviskt uttryck. Den tillverkas i förzinkad stålplåt och finns i färger som svart, mörkröd, grafitgrå, tegelröd och ärggrön. Pannplåten passar lika bra på kulturminnesmärkta byggnader, kyrkor och funkishus som på moderna villor och lantbruksbyggnader.",
     pros: ["Unikt och karaktäristiskt utseende", "Svensk klassiker med lång tradition", "Passar kulturhistoriska byggnader", "Fungerar vid låga taklutningar", "Förzinkad för god rostbeständighet", "Lätt material"],
     cons: ["Mer begränsat färgutbud än modern profilerad plåt", "Kräver korrekt underlag (råspont + underlagspapp)"],
-    lifespan: "Lång livslängd",
+    lifespan: "",
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Kulturbyggnader, äldre villor, funkishus, lantbruksbyggnader, kyrkor",
     image: imgPannplat,
@@ -69,9 +69,9 @@ const roofTypes: RoofType[] = [
     name: "Dubbelfalsat plåttak (Bandtäckning)",
     shortDesc: "Premiummaterialet — elegant bandtäckning utan synliga fästdon.",
     fullDesc: "Dubbelfalsat plåttak, även kallat bandtäckning, är den mest exklusiva formen av plåttak. Plåtbanden löper i hela längder från nock till takfot och falsas ihop med dubbla stående falsar — helt utan genomgående skruvar eller fästdon. Detta ger ett helt vattentätt tak som fungerar ner till mycket låga taklutningar. Materialet kan vara förzinkad stålplåt, koppar, zink, rostfritt stål eller aluminium. Koppar och zink utvecklar en naturlig patina med åren. Bandtäckning har använts i Sverige sedan 1500-talet på kyrkor och herrgårdar och anses fortfarande vara det förnämsta taktäckningsmaterialet.",
-    pros: ["Helt vattentätt — inga genomgående skruvar", "Mycket lång livslängd", "Fungerar vid låg taklutning", "Exklusivt och tidlöst utseende", "Materialval: koppar, zink, stål, aluminium", "Åldras vackert (koppar/zink)"],
+    pros: ["Helt vattentätt — inga genomgående skruvar", "Fungerar vid låg taklutning", "Exklusivt och tidlöst utseende", "Materialval: koppar, zink, stål, aluminium", "Åldras vackert (koppar/zink)"],
     cons: ["Högsta materialkostnaden", "Kräver specialiserad plåtslagare", "Längre monteringstid", "Koppar och zink har högre kvadratmeterpris"],
-    lifespan: "Mycket lång livslängd",
+    lifespan: "",
     priceRange: "Ca 2 000 kr/m²",
     bestFor: "Exklusiva kustvillor, herrgårdar, kyrkor, kulturbyggnader",
     image: imgDubbelfalsat,
@@ -81,10 +81,10 @@ const roofTypes: RoofType[] = [
     id: "lertegel",
     name: "Lertegeltak",
     shortDesc: "Naturmaterial med hundraårig tradition — åldras vackert.",
-    fullDesc: "Lertegelpannor bränns i ugn vid hög temperatur och har använts som takmaterial i Sverige i flera hundra år. Varje panna får en unik, naturlig färgvariation som åldras vackert med tiden. Lertegel är ett tungt takmaterial (ca 40–50 kg/m²) som kräver en dimensionerad takstol, men belönar med oöverträffad charm och livslängd. Pannorna är brandsäkra, ger utmärkt ljudisolering och andas naturligt vilket minskar kondens. Lertegel är känsligt för frostsprängning om fukt tränger in, varför kvaliteten på pannorna och korrekt läggning är avgörande.",
-    pros: ["Tidlöst och autentiskt utseende", "Naturligt och miljövänligt material", "Utmärkt ljud- och värmeisolering", "Åldras med värdighet", "Brandsäkert (obrännbart)", "Lång livslängd vid rätt underhåll"],
+    fullDesc: "Lertegelpannor bränns i ugn vid hög temperatur och har använts som takmaterial i Sverige i flera hundra år. Varje panna får en unik, naturlig färgvariation som åldras vackert med tiden. Lertegel är ett tungt takmaterial (ca 40–50 kg/m²) som kräver en dimensionerad takstol, men belönar med charm. Pannorna är brandsäkra, ger utmärkt ljudisolering och andas naturligt vilket minskar kondens. Lertegel är känsligt för frostsprängning om fukt tränger in, varför kvaliteten på pannorna och korrekt läggning är avgörande.",
+    pros: ["Tidlöst och autentiskt utseende", "Naturligt och miljövänligt material", "Utmärkt ljud- och värmeisolering", "Åldras med värdighet", "Brandsäkert (obrännbart)"],
     cons: ["Tungt — kräver dimensionerad takstol (40–50 kg/m²)", "Risk för frostsprängning vid dålig kvalitet", "Enstaka pannor kan behöva bytas med åren", "Mossa och lav kan växa på skuggiga sidor", "Kräver en viss minsta taklutning"],
-    lifespan: "Mycket lång livslängd",
+    lifespan: "",
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Äldre villor, kulturhistoriska byggnader, herrgårdar, skärgårdshus med karaktär",
     image: imgLertegel,
@@ -94,10 +94,10 @@ const roofTypes: RoofType[] = [
     id: "betongpanne",
     name: "Betongpannetak",
     shortDesc: "Sveriges vanligaste takpanna — robust, prisvärt och tillförlitligt.",
-    fullDesc: "Betongpannor är det vanligaste takmaterialet i Sverige och har dominerat villamarknaden sedan 1950-talet. De tillverkas genom att gjuta en blandning av cement, sand och vatten i formar och härdas sedan. Pannorna finns i ett stort utbud av profiler (tvåkupig, enkupig, plan) och färger. De är tyngre än plåttak (ca 40–45 kg/m²) men lättare än lertegel. Betongpannor ger bra ljudisolering, är brandsäkra och har en bevisad livslängd i nordiskt klimat. Med åren kan ytan bli porös och mossa kan fästa, särskilt på norrsidan.",
+    fullDesc: "Betongpannor är det vanligaste takmaterialet i Sverige och har dominerat villamarknaden sedan 1950-talet. De tillverkas genom att gjuta en blandning av cement, sand och vatten i formar och härdas sedan. Pannorna finns i ett stort utbud av profiler (tvåkupig, enkupig, plan) och färger. De är tyngre än plåttak (ca 40–45 kg/m²) men lättare än lertegel. Betongpannor ger bra ljudisolering och är brandsäkra. Med åren kan ytan bli porös och mossa kan fästa, särskilt på norrsidan.",
     pros: ["Prisvärt jämfört med lertegel", "Brett utbud av profiler och färger", "God ljud- och värmeisolering", "Brandsäkert", "Svensk tillverkning (bl.a. Benders, Monier)"],
     cons: ["Tungt material (40–45 kg/m²)", "Ytan kan bli porös och absorbera fukt med åren", "Mossa och alger kan växa, kräver taktvätt", "Färgen kan blekna med tiden", "Kräver en viss minsta taklutning"],
-    lifespan: "Lång livslängd",
+    lifespan: "",
     priceRange: "Från 1 200 kr/m²",
     bestFor: "Villor, radhus, parhus — det trygga och beprövade valet",
     image: imgBetongpanne,
@@ -108,9 +108,9 @@ const roofTypes: RoofType[] = [
     name: "Glacerade pannor (Glaserade)",
     shortDesc: "Tegelpannor med glasyrbeläggning — exklusivt och självrengörande.",
     fullDesc: "Glacerade (glaserade) pannor är lertegelpannor som fått en tunn glasyrbeläggning inbränd vid hög temperatur. Glasyren ger en slät, glansig yta som gör att vatten, smuts, mossa och alger har mycket svårare att fästa. Detta ger en självrengörande effekt — taket behåller sitt utseende betydligt längre än obehandlat tegel. Glaserade pannor finns i ett brett färgspektrum, från klassiskt svart och rött till blått, grönt och vitt. Tack vare den slutna ytan absorberar de inte fukt, vilket eliminerar risken för frostsprängning.",
-    pros: ["Exklusivt glansigt utseende", "Självrengörande — mossa och smuts fastnar inte", "Ingen risk för frostsprängning (sluten yta)", "Färgbeständigt — bleknar inte", "Brett färgutbud", "Samma livslängd som lertegel"],
+    pros: ["Exklusivt glansigt utseende", "Självrengörande — mossa och smuts fastnar inte", "Ingen risk för frostsprängning (sluten yta)", "Färgbeständigt — bleknar inte", "Brett färgutbud"],
     cons: ["Dyrare än vanligt lertegel och betongpannor", "Tungt material (ca 40–50 kg/m²)", "Glasyren kan i sällsynta fall spricka vid hård mekanisk påverkan", "Kräver en viss minsta taklutning"],
-    lifespan: "Mycket lång livslängd",
+    lifespan: "",
     priceRange: "Fast pris efter takkontroll",
     bestFor: "Exklusiva villor, representativa fastigheter, skärgårdshus",
     image: imgGlacerade,
@@ -122,8 +122,8 @@ const roofTypes: RoofType[] = [
     shortDesc: "Ekonomiskt och smidigt — för låglutande tak och enklare byggnader.",
     fullDesc: "Takpapp (ytpapp) är ett asfaltbaserat takmaterial som rullas ut på ett underlag av råspont. Modern takpapp består av en stomme av glasfiberväv eller polyester som impregnerats med bitumen (asfalt). Det finns i flera kvaliteter, från enkel ytpapp till mer avancerad SBS-modifierad papp med bättre flexibilitet i kyla. Takpapp är det lättaste och billigaste takmaterialet och fungerar utmärkt på tak med låg lutning. Det används ofta som underlagspapp under andra takmaterial, men fungerar också som slutbeläggning på uthus, garage, friggebodar och ekonomibyggnader. OBS: Takpapp ska inte förväxlas med takshingel, som är en annan produkt.",
     pros: ["Mycket prisvärt", "Lätt material", "Fungerar vid mycket låg taklutning", "Flexibelt — anpassar sig efter underlaget", "Enkel att lägga om"],
-    cons: ["Kortare livslängd än övriga material", "Kräver regelbundet underhåll och omslagning", "Känsligt för UV-strålning — åldras av sol", "Mindre estetiskt tilltalande", "Kan bli spröd i extrem kyla"],
-    lifespan: "Kortare livslängd, kräver omläggning med jämna mellanrum",
+    cons: ["Kräver regelbundet underhåll och omslagning", "Känsligt för UV-strålning — åldras av sol", "Mindre estetiskt tilltalande", "Kan bli spröd i extrem kyla"],
+    lifespan: "",
     priceRange: "Ca 900 kr/m²",
     bestFor: "Garage, uthus, friggebodar, ekonomibyggnader, låglutande tak",
   },
@@ -138,12 +138,12 @@ const RoofTypes = () => {
         <SectionHeading
           meta="Materialbibliotek"
           id="rooftypes-heading"
-          title={<>Taktyper — <em className="font-normal italic text-primary">material, livslängd och pris</em></>}
+          title={<>Taktyper — <em className="font-normal italic text-primary">material och pris</em></>}
           intro={
             <>
-              Öppna en taktyp för att läsa om material, livslängd, fördelar och nackdelar. Osäker?{" "}
+              Öppna en taktyp för att läsa om material, fördelar och nackdelar. Osäker?{" "}
               <a href="/offert#radgivning" className="text-primary underline decoration-primary/40 hover:no-underline">
-                Boka kostnadsfri rådgivning
+                Boka kostnadsfri takkontroll
               </a>{" "}
               så hjälper vi dig välja. Vi lämnar alltid fast pris efter kostnadsfri takkontroll.
             </>
@@ -201,11 +201,13 @@ const RoofTypes = () => {
                     </div>
 
                     <div className="grid sm:grid-cols-3 gap-4">
-                      <div className="flex items-center gap-2 text-sm">
-                        <Clock className="w-4 h-4 text-primary" />
-                        <span className="text-muted-foreground">Livslängd:</span>
-                        <span className="font-semibold text-foreground">{roof.lifespan}</span>
-                      </div>
+                      {roof.lifespan && (
+                        <div className="flex items-center gap-2 text-sm">
+                          <Clock className="w-4 h-4 text-primary" />
+                          <span className="text-muted-foreground">Livslängd:</span>
+                          <span className="font-semibold text-foreground">{roof.lifespan}</span>
+                        </div>
+                      )}
                       <div className="flex items-center gap-2 text-sm">
                         <Coins className="w-4 h-4 text-primary" />
                         <span className="text-muted-foreground">Pris (efter ROT, inkl. moms):</span>
@@ -250,7 +252,7 @@ const RoofTypes = () => {
                         href="/offert"
                         className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
                       >
-                        Få offert för {roof.name.toLowerCase()}
+                        Boka takkontroll för {roof.name.toLowerCase()}
                       </a>
                       {roof.id === "lertegel" && (
                         <a

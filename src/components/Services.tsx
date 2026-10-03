@@ -39,7 +39,7 @@ export const services: Service[] = [
     title: "Takrenovering",
     short: "Laga & förlänga",
     description:
-      "Vi lagar skador och förlänger livslängden på ditt befintliga tak — en klok investering när taket inte behöver bytas helt.",
+      "Vi lagar skador på ditt befintliga tak, när taket inte behöver bytas helt.",
   },
   {
     icon: IconGutter,
@@ -87,7 +87,7 @@ export const services: Service[] = [
     title: "Byta eternittak",
     short: "Sanering via behörig firma",
     description:
-      "Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma, som river det gamla taket. Vi lägger det nya.",
+      "Eternit är skivor av asbestcement. Ska ett sådant tak bytas är arbetet delat mellan två företag: en saneringsfirma river det gamla taket, och vi lägger det nya.",
   },
   {
     icon: IconRoofNew,

@@ -228,9 +228,9 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   platarbeten: {
-    seoTitle: "Plåtarbeten & Bandtäckning Roslagen — Fast pris",
+    seoTitle: "Plåtarbeten på tak i Roslagen: skorstensbeslag, ränndalar",
     seoDescription:
-      "Plåtarbeten i Roslagen: bandtäckning, falsat plåttak, skorstensbeslag, ränndalar och vindskiveplåt. Fast pris efter kostnadsfri takkontroll.",
+      "Plåtarbeten på taket i Roslagen och Storstockholm: skorstensbeslag, ränndalar, fotplåt och vindskivor. Kostnadsfri takkontroll och fast pris i offerten.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Teknik", value: "Falsat & profilerat", text: "Dubbelfalsad bandtäckning eller profilerad plåt beroende på lutning." },
@@ -284,7 +284,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   "eternit-asbest": {
     seoTitle: "Byta eternittak – sanering via behörig firma",
     seoDescription:
-      "Byta eternittak: saneringen görs av en behörig saneringsfirma, vi lägger det nya taket. Kostnadsfri takkontroll utan förpliktelser. Fast pris i vår offert.",
+      "Har du eternittak? En firma med tillstånd river det gamla taket, vi lägger det nya. Fast pris på det nya taket i offerten. Kostnadsfri takkontroll.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "primary", label: "Sanering", value: "Görs av en firma med tillstånd", text: "Sanering: görs av en firma med tillstånd från Arbetsmiljöverket." },

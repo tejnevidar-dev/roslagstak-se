@@ -48,6 +48,86 @@
       "fore": "Eternit & asbestsanering säkert och enligt regelverk.",
       "efter": "Byta eternittak – saneringen görs av en firma med tillstånd.",
       "tid": "2026-10-03T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0001",
+      "path": "/blogg/takpapp-byte-livslangd",
+      "falt": "title",
+      "fore": "Takpapp: laga eller byta? Så avgör du",
+      "efter": "Byta takpapp eller laga? Papptak och underlagspapp",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0002",
+      "path": "/blogg/takpapp-byte-livslangd",
+      "falt": "description",
+      "fore": "Takpapp kan betyda papptak eller underlagspapp under pannor och plåt. Så ser du skador, när det går att laga och när pappen bör bytas.",
+      "efter": "Ska takpappen lagas eller bytas? Så ser du skador på papptak och underlagspapp, och så får du besked med en kostnadsfri takkontroll.",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0003",
+      "path": "/taklaggare-taby",
+      "falt": "title",
+      "fore": "Takrenovering och takbyte i Täby — fast pris",
+      "efter": "Takläggare i Täby – byta tak, fast pris",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0004",
+      "path": "/taklaggare-taby",
+      "falt": "description",
+      "fore": "Takrenovering, takbyte och plåtarbeten i Täby. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti. Ring 070-154 36 39 eller boka online.",
+      "efter": "Takbyte och takomläggning i Täby. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0005",
+      "path": "/taklaggare-vallentuna",
+      "falt": "title",
+      "fore": "Takläggare i Vallentuna — Takbyte & Takrenovering",
+      "efter": "Takläggare i Vallentuna – byta tak, fast pris",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0006",
+      "path": "/taklaggare-vallentuna",
+      "falt": "description",
+      "fore": "takläggare Vallentuna — takbyte & takrenovering i Vallentuna. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.",
+      "efter": "Takbyte och takomläggning i Vallentuna. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0007",
+      "path": "/blogg/hur-lange-haller-tak",
+      "falt": "title",
+      "fore": "Hur länge håller ett tak? Det avgör skicket, inte årtalet",
+      "efter": "Hur länge håller ett tak? Papp, plåt och pannor",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0008",
+      "path": "/blogg/hur-lange-haller-tak",
+      "falt": "description",
+      "fore": "Hur länge ett tak håller beror på material, underlag, utförande och fukt. Så bedömer du skicket och när en kostnadsfri takkontroll är nästa steg.",
+      "efter": "Hur länge håller ett papptak, ett plåttak eller ett pannat tak? Det beror på skicket, inte på årtalet. Så bedömer du taket. Kostnadsfri takkontroll.",
+      "tid": "2026-10-04T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0009",
+      "path": "/tjanster/platarbeten",
+      "falt": "title",
+      "fore": "Plåtarbeten & Bandtäckning Roslagen — Fast pris",
+      "efter": "Plåtarbeten på tak i Roslagen: skorstensbeslag, ränndalar",
+      "tid": "2026-10-04T01:05:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0010",
+      "path": "/tjanster/platarbeten",
+      "falt": "description",
+      "fore": "Plåtarbeten i Roslagen: bandtäckning, falsat plåttak, skorstensbeslag, ränndalar och vindskiveplåt. Fast pris efter kostnadsfri takkontroll.",
+      "efter": "Plåtarbeten på taket i Roslagen och Storstockholm: skorstensbeslag, ränndalar, fotplåt och vindskivor. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-04T01:05:00+02:00"
     }
   ]
 }

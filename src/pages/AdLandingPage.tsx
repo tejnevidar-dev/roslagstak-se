@@ -28,7 +28,7 @@ const steps = [
   },
   {
     title: "Skriftlig offert med fast pris",
-    text: "Du får ett fast pris där rivning, material, arbete och bortforsling är specificerade. Inga dolda tillägg.",
+    text: "Du får ett fast pris där rivning, material, arbete och bortforsling är specificerade. Tillägg bara efter ditt godkännande.",
   },
   {
     title: "Vi utför jobbet",
@@ -102,7 +102,7 @@ const AdLandingPage = () => {
               </h1>
               <p className="mt-5 max-w-[50ch] text-[18px] leading-relaxed text-muted-foreground">
                 Kostnadsfri takkontroll utan förpliktelser, en kontaktperson hela vägen och ett skriftligt fast pris.
-                Vi lägger betongpannor, lertegel, TP20 och falsat plåttak. Vi tar uppdrag i {landing.areas}.
+                Vi lägger betongpannor, lertegel, TP20 och dubbelfalsat plåttak (bandtäckning). Vi tar uppdrag i {landing.areas}.
               </p>
               <a
                 href={PHONE_HREF}
@@ -236,13 +236,13 @@ const AdLandingPage = () => {
           href={PHONE_HREF}
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-primary py-3.5 text-[15px] font-semibold text-primary-foreground"
         >
-          <Phone className="h-4 w-4" aria-hidden="true" /> Ring nu
+          <Phone className="h-4 w-4" aria-hidden="true" /> Ring
         </a>
         <a
           href="#forfragan"
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-cta py-3.5 text-[15px] font-semibold text-cta-foreground"
         >
-          Få offert
+          Boka takkontroll
         </a>
       </div>
     </>

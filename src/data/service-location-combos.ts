@@ -112,7 +112,7 @@ const specialistServices = [
             `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
           ),
       `Bandtäckning ${prep} ${loc.name} i förzinkad eller färgbelagd plåt, koppar eller zink. Som riktpris, efter ROT-avdrag och inkl. moms, ligger dubbelfalsat/bandtäckt plåt på ca 2 000 kr/m², beroende på materialval och takets komplexitet — antal vinklar, kupor och genomföringar. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
-      `Vill du veta vad bandtäckning ${prep} ${loc.name} skulle kosta för just ditt tak? Ring 070-154 36 39 eller begär kostnadsfri offert — vi kommer ut, mäter och lämnar fast pris inom 24 timmar.`,
+      `Vill du veta vad bandtäckning ${prep} ${loc.name} skulle kosta för just ditt tak? Ring 070-154 36 39 eller boka en kostnadsfri takkontroll — vi kommer ut, mäter och lämnar fast pris inom 24 timmar.`,
     ],
   },
   {
@@ -130,7 +130,7 @@ const specialistServices = [
             `Vi lägger plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
           ),
       `Ett plåttak ${prep} ${loc.name} — TP20, tegelprofilerad plåt eller dubbelfalsat. Som riktpris, efter ROT-avdrag och inkl. moms: TP20 från 1 200 kr/m², tegelprofilerad plåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll, som inkluderar montage, beslag och bortforsling av gammalt material. ROT-avdrag tillkommer.`,
-      `Begär kostnadsfri offert på plåttak ${prep} ${loc.name} — vi hjälper dig välja profil, kulör och rätt korrosionsklass för läget. Ring 070-154 36 39.`,
+      `Boka kostnadsfri takkontroll för plåttak ${prep} ${loc.name} — vi hjälper dig välja profil, kulör och rätt korrosionsklass för läget. Ring 070-154 36 39.`,
     ],
   },
   {
@@ -139,7 +139,7 @@ const specialistServices = [
     verb: "lägga betongpannor",
     generateContent: (loc: LocationData, prep: string) => [
       `Ska du byta till eller lägga om betongpannor ${prep} ${loc.name}? RoslagsTak lägger betongpannetak ${prep} ${loc.name} — både vid komplett takbyte och vid omläggning där befintliga pannor läggs tillbaka på ny underlagspapp och ny läkt.`,
-      `Betongpannor ${prep} ${loc.name} har lång livslängd men blir känsliga när mossa och alger håller kvar fukt i ytan, vilket leder till frostsprängning. Vi byter alltid trasiga pannor, ser över nock- och valmpannor, kontrollerar att underlagspappen är hel och att ventilationen under pannorna fungerar.`,
+      `Betongpannor ${prep} ${loc.name} kan bli känsliga när mossa och alger håller kvar fukt i ytan, vilket leder till frostsprängning. Vi byter alltid trasiga pannor, ser över nock- och valmpannor, kontrollerar att underlagspappen är hel och att ventilationen under pannorna fungerar.`,
       loc.isIsland
         ? `Betongpannor är tunga, och på en ö påverkar det planeringen av arbetet ${prep} ${loc.name}. Vid takkontrollen bedömer vi också om takstolarna klarar lasten.`
         : byDistance(
@@ -162,7 +162,7 @@ const specialistServices = [
         ? `På ${loc.name} rekommenderar vi ofta tegelprofilerad plåt istället för lertegel — samma utseende men en bråkdel av vikten, vilket sänker transportkostnaden och belastningen på takstolarna.`
         : `Vi lägger tegeltak ${prep} ${loc.name}, både i lertegel och tegelprofilerad plåt.`,
       `Tegeltak ${prep} ${loc.name} i lertegel eller tegelprofilerad plåt, inklusive montage och beslag. Som riktpris, efter ROT-avdrag och inkl. moms: lertegel från 1 300 kr/m², tegelprofilerad plåt från 1 300 kr/m². Fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
-      `Begär kostnadsfri offert på tegeltak ${prep} ${loc.name} — vi mäter och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
+      `Boka kostnadsfri takkontroll för tegeltak ${prep} ${loc.name} — vi mäter och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
     ],
   },
   {

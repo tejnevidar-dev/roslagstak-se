@@ -58,7 +58,7 @@ const Contact = () => {
           <div>
             <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Kontakta oss</p>
             <h2 id="contact-heading" className="font-display text-3xl md:text-4xl text-foreground mb-6">
-              Begär en kostnadsfri offert
+              Boka en kostnadsfri takkontroll
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Fyll i formuläret eller ring oss direkt. Vi återkommer inom 24 timmar med en offert anpassad efter ditt projekt.

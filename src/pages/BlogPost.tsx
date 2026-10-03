@@ -213,12 +213,12 @@ const BlogPost = () => {
             {/* CTA */}
             <div className="bg-primary/10 rounded-2xl p-8 mt-8 text-center">
               <h2 className="font-display text-xl text-foreground mb-2">Behöver du hjälp med ditt tak?</h2>
-              <p className="text-muted-foreground text-sm mb-4">Kostnadsfri offert — vi återkopplar inom 24 timmar.</p>
+              <p className="text-muted-foreground text-sm mb-4">Kostnadsfri takkontroll utan förpliktelser. Vi återkopplar inom 24 timmar.</p>
               <Link
                 to="/offert"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
               >
-                Konfigurera din offert <ArrowRight className="w-4 h-4" />
+                Boka kostnadsfri takkontroll <ArrowRight className="w-4 h-4" />
               </Link>
               <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
                 <a href="tel:0701543639" className="inline-flex items-center gap-2 font-semibold text-foreground hover:text-primary">

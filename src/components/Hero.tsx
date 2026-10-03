@@ -86,7 +86,7 @@ const Hero = () => {
           </h1>
           <p className="mt-3 max-w-[46ch] text-[17px] leading-[1.65] text-primary-foreground/80 lg:mt-6">
             Vi tar hand om hela processen — från första takkontrollen till sista plåtdetaljen.
-            Takbyte, takrenovering och akut takläckage för villor, BRF:er och företag i hela
+            Takbyte, takrenovering och takreparation för villor, BRF:er och företag i hela
             Roslagen och Storstockholm.
           </p>
 
@@ -110,7 +110,7 @@ const Hero = () => {
               href="/offert"
               className="hero-offer-pulse group inline-flex items-center gap-3 bg-cta px-8 py-4 text-[17px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
             >
-              Få kostnadsfri offert
+              Boka kostnadsfri takkontroll
               <ArrowRight
                 className="h-5 w-5 transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
                 aria-hidden="true"

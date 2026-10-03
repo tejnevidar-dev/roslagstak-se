@@ -77,6 +77,8 @@
     { "falt": "description", "text": "Takbyte i Täby, bättre än andra firmor och jämfört med konkurrenterna.", "regel": "t5-jamforelser" },
     { "falt": "description", "text": "Takbyte i Täby: tider kvar före vintern, fullbokat snart, omgående start.", "regel": "t6-tidspress" },
     { "falt": "description", "text": "Som privatperson får du ROT-avdrag på 30 % av arbetskostnaden vid takbyte i Täby.", "regel": "rot-far-du" },
+    { "falt": "description", "text": "Betongpannor i Täby med lång livslängd och fast pris efter kostnadsfri takkontroll.", "regel": "lang-livslangd" },
+    { "falt": "description", "text": "Taktvätt som förlänger takets livslängd, fast pris efter takkontroll.", "regel": "lang-livslangd" },
     { "falt": "description", "text": "Takbyte i Täby: inga dolda kostnader, allt ingår och utan extra kostnad. Spara 20 000 kr.", "regel": "t7-prisloften" },
     { "falt": "description", "text": "Undvik dyra skador på taket i Täby, kostsamma följder om du väntar.", "regel": "t8-skrammande-kostnad" },
     { "falt": "description", "text": "Behörig takfirma i Täby med certifikat, sanerar asbest och eternit.", "regel": "t9-behorig-asbest-eternit" }

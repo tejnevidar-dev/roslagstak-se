@@ -90,6 +90,7 @@ export const landingServices: LandingService[] = [
     extraParagraphs: [
       "Ibland räcker en reparation, ibland är taket i så dåligt skick att ett takbyte blir bättre ekonomi över tid. Vi ger en ärlig bedömning och föreslår aldrig ett takbyte om en renovering räcker.",
       "Är skadorna många, är underlaget rötskadat på stora ytor eller är takmaterialet uttjänt är ett takbyte oftast det bästa valet. Vid takkontrollen går vi igenom alternativen med dig.",
+      "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
       "Priset beror på skadans omfattning, takmaterial och hur åtkomligt taket är. Vi arbetar endast till fast pris och lämnar det efter takkontrollen. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
@@ -331,7 +332,7 @@ export const landingServices: LandingService[] = [
       },
     ],
     defaultTopic: "Takbyte",
-    formTitle: "Begär offert med ROT-avdrag",
+    formTitle: "Boka kostnadsfri takkontroll",
     related: [
       { to: "/blogg/rot-avdrag-takbyte", label: "Guide: ROT-avdrag vid takbyte" },
       { to: "/priser", label: "Priser för takbyte" },
@@ -372,6 +373,7 @@ export const landingServices: LandingService[] = [
     extraParagraphs: [
       "Läckage uppstår oftast kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken syns sällan där fuktfläcken kommer fram inomhus, så vi följer vattnet uppåt.",
       "Ibland räcker en reparation, ibland är taket i så dåligt skick att ett takbyte blir bättre ekonomi. Vi ger en ärlig bedömning.",
+      "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
       "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
@@ -442,6 +444,7 @@ export const landingServices: LandingService[] = [
     extraParagraphs: [
       "Materialet väljs efter hus, läge och budget. Vid takkontrollen går vi igenom alternativen med dig.",
       "Under tiden går det bra att läsa mer om hur takavvattning fungerar på sidan om takavvattning.",
+      "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
       "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",

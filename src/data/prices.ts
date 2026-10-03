@@ -10,13 +10,13 @@ export const priceData = [
       { name: "TP20 plåttak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Prisvärt och populärt val för fritidshus och enklare byggnader." },
       { name: "Pannplåttak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
       { name: "Plegelplåttak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Plåtprofil som imiterar tegel. Stilrent uttryck." },
-      { name: "Dubbelfalsat plåttak", priceRange: "Ca 2 000 kr/m² (efter ROT, inkl. moms)", description: "Premiumprodukten, mycket lång livslängd." },
+      { name: "Dubbelfalsat plåttak", priceRange: "Ca 2 000 kr/m² (efter ROT, inkl. moms)", description: "Premiumprodukten." },
     ],
   },
   {
     category: "Panntak",
     items: [
-      { name: "Betongpannetak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Beprövat och prisvärt, lång livslängd." },
+      { name: "Betongpannetak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Beprövat och prisvärt." },
       { name: "Lertegeltak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Klassiskt och traditionellt. Perfekt för äldre hus." },
     ],
   },

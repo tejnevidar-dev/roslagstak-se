@@ -144,7 +144,7 @@ const ServiceArea = () => {
               </p>
               <p>
                 Oavsett om du söker <strong className="font-semibold">takbyte i Stockholm</strong>, <strong className="font-semibold">takbyte i Roslagen</strong>, behöver en <strong className="font-semibold">takläggare på en ö utan bro</strong> eller
-                vill ha en <strong className="font-semibold">takrenovering på Väddö</strong> — kontakta oss för en kostnadsfri offert. Vi återkopplar inom 24 timmar.
+                vill ha en <strong className="font-semibold">takrenovering på Väddö</strong> — kontakta oss för en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar.
               </p>
             </div>
           </div>

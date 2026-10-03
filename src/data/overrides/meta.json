@@ -1,6 +1,34 @@
 {
   "version": 1,
   "poster": {
+    "/blogg/hur-lange-haller-tak": {
+      "title": {
+        "id": "manuell-2026-10-04-0007",
+        "text": "Hur länge håller ett tak? Papp, plåt och pannor",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0008",
+        "text": "Hur länge håller ett papptak, ett plåttak eller ett pannat tak? Det beror på skicket, inte på årtalet. Så bedömer du taket. Kostnadsfri takkontroll.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
+    "/blogg/takpapp-byte-livslangd": {
+      "title": {
+        "id": "manuell-2026-10-04-0001",
+        "text": "Byta takpapp eller laga? Papptak och underlagspapp",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0002",
+        "text": "Ska takpappen lagas eller bytas? Så ser du skador på papptak och underlagspapp, och så får du besked med en kostnadsfri takkontroll.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
     "/takbyte-taby": {
       "title": {
         "id": "seo-cc-2026-10-03-0002",
@@ -15,6 +43,34 @@
         "text": "Takläggare i Åkersberga – byta tak, fast pris",
         "andrad": "2026-10-03",
         "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
+      }
+    },
+    "/taklaggare-taby": {
+      "title": {
+        "id": "manuell-2026-10-04-0003",
+        "text": "Takläggare i Täby – byta tak, fast pris",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0004",
+        "text": "Takbyte och takomläggning i Täby. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
+    "/taklaggare-vallentuna": {
+      "title": {
+        "id": "manuell-2026-10-04-0005",
+        "text": "Takläggare i Vallentuna – byta tak, fast pris",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0006",
+        "text": "Takbyte och takomläggning i Vallentuna. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
     "/taklaggare-vaxholm": {

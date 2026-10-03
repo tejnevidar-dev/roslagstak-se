@@ -28,41 +28,6 @@ const CTA = (name: string, prep: string) =>
   `Boka en kostnadsfri takkontroll för ditt takbyte ${prep} ${name}. Ring 070-154 36 39 eller boka online — vi återkommer inom 24 timmar.`;
 
 export const comboOverrides: Record<string, ComboOverride> = {
-  "takbyte-nacka": {
-    title: "Takbyte i Nacka — fast pris, 10 års utförandegaranti",
-    description:
-      "Takbyte i Nacka: villor, radhus och skärgårdsfastigheter. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
-    content: [
-      "Nacka sträcker sig från tätbebyggda delar nära Stockholms innerstad till skärgårdsnära villaområden mot Saltsjön och Baggensfjärden. Bebyggelsen är blandad: villor och radhus från 1950- till 1980-talet i områden som Fisksätra, Saltsjö-Duvnäs och Älta, sekelskifteshus i de äldre delarna, och nyare flerbostadshus i centrala Nacka och Sickla. Den variationen gör att vi möter allt från enkla sadeltak till mer komplicerade tak med flera takfall, kupor och burspråk.",
-      "Vi tar uppdrag i hela Nacka kommun, bland annat i villaområdena i Saltsjöbaden. Takkontrollen är kostnadsfri och förpliktar inte till något.",
-      "Rätt materialval och korrekt utförda anslutningar vid skorstenar och genomföringar är avgörande för hur länge ett tak håller.",
-      "Vi utför takbyte i Nacka med samtliga vanliga material: TP20-plåttak för fritidshus och enklare byggnader, dubbelfalsat plåttak (bandtäckning) för permanentboenden i exponerade lägen, betongpannor och tegelplåt för villor där ett traditionellt utseende är viktigt, samt lertegel för äldre och kulturhistoriskt intressanta hus. Materialvalet avgörs av takets lutning, husets karaktär och budget, och vi går igenom alternativen vid takkontrollen.",
-      "Har fastigheten i Nacka ett äldre eternittak samordnar vi saneringen med en behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter, innan det nya taket läggs. Vi utför inte asbestsanering själva.",
-      INCLUDES("Nacka", "i"),
-      PROCESS,
-      ROT,
-      "Vad kostar ett takbyte i Nacka? Priset beror på takets storlek, lutning, material och underlagets skick — vi lämnar aldrig ett pris utan att först ha sett taket. Riktpriserna på vår prislista är en bra utgångspunkt inför budgeteringen.",
-      COMPARE("Nacka", "i"),
-      CTA("Nacka", "i"),
-    ],
-  },
-  "takbyte-lidingo": {
-    title: "Takbyte på Lidingö — fast pris, 10 års utförandegaranti",
-    description:
-      "Takbyte på Lidingö: villor och skärgårdsfastigheter nära vatten. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
-    content: [
-      "Lidingö är en ö strax utanför Stockholms innerstad, med en villabebyggelse som sträcker sig från representativa sekelskifteshus i Gångsätra och Bodal till modernistiska villor från 1930- och 1940-talet och senare tillbyggda hus i Käppala, Larsberg och Högsätra. Många fastigheter har stora, väl synliga tak, vilket gör att takets material och utförande syns tydligt i gatubilden.",
-      "Vi tar uppdrag på hela Lidingö, bland annat i villaområdet Sticklinge. Takkontrollen är kostnadsfri och förpliktar inte till något.",
-      "Vi utför takbyte på Lidingö med TP20-plåttak, dubbelfalsat plåttak, betongpannor, tegelplåt och lertegel. På de äldre villorna i de kulturhistoriskt värdefulla delarna av Lidingö används ofta lertegel eller falsad plåt för att bevara husets ursprungliga karaktär, medan nyare byggnader oftare får TP20 eller dubbelfalsat plåttak. Vi går igenom vad som passar just ditt hus vid takkontrollen.",
-      "Byte av taktäckningsmaterial eller kulör kan i vissa fall vara anmälningspliktigt på Lidingö, särskilt i områden med kulturhistoriska värden. Vi hjälper dig kontrollera vad som gäller för din fastighet innan arbetet påbörjas.",
-      "Har fastigheten ett äldre eternittak samordnar vi saneringen med en behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter, innan det nya taket läggs. Vi utför inte asbestsanering själva.",
-      INCLUDES("Lidingö", "på"),
-      PROCESS,
-      ROT,
-      COMPARE("Lidingö", "på"),
-      CTA("Lidingö", "på"),
-    ],
-  },
   "takbyte-solna": {
     title: "Takbyte i Solna — fast pris, 10 års utförandegaranti",
     description:
@@ -85,7 +50,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takbyte i Huddinge: villaområden och flerbostadshus från flera decennier. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
-      "Huddinge har en varierad bebyggelse, från villaområden i Segeltorp och Snättringe med hus från 1950- till 1970-talet, till flerbostadshus från miljonprogramsåren i Flemingsberg och Vårby, och nyare bostadsområden i Storängen och Skogås. Den stora variationen i husens ålder gör att vi möter allt från originaltak som närmar sig slutet av sin livslängd till relativt nya tak som bara behöver punktinsatser.",
+      "Huddinge har en varierad bebyggelse, från villaområden i Segeltorp och Snättringe med hus från 1950- till 1970-talet, till flerbostadshus från miljonprogramsåren i Flemingsberg och Vårby, och nyare bostadsområden i Storängen och Skogås. Variationen mellan husen är stor, och vad som behövs för just ditt tak ser vi vid takkontrollen.",
       "Vi tar uppdrag i hela Huddinge kommun, bland annat i villaområdena Stuvsta, Trångsund och Snättringe. Takkontrollen är kostnadsfri och förpliktar inte till något.",
       "På villor från 1950- och 60-talet i Huddinge kan betongpannorna börja frostspränga och underlagspappen torka ut, vilket gör en takomläggning till bättre ekonomi över tid än att fortsätta laga punktvis. Vi går igenom underlagets skick noggrant vid takkontrollen, eftersom det ofta är avgörande för om en renovering räcker eller om ett komplett takbyte är rätt val.",
       "Vi utför takbyte i Huddinge med TP20-plåttak, dubbelfalsat plåttak, betongpannor, tegelplåt och lertegel, och anpassar materialvalet efter husets ålder, taklutning och din budget. På villaområdena med enklare sadeltak är TP20 eller betongpannor ofta det mest kostnadseffektiva valet, medan dubbelfalsat plåttak passar bra på tak med mer komplicerad geometri.",
@@ -102,7 +67,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takbyte i Järfälla: villaområden i Jakobsberg, Kallhäll och Barkarby. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
     content: [
-      "Järfälla har vuxit fram kring flera villa- och radhusområden — Jakobsberg, Kallhäll, Viksjö och det snabbt växande Barkarbystaden — med bebyggelse som spänner från 1960-talsvillor till helt nybyggda kvarter. De äldre villaområdena har ofta betongpannor eller äldre plåttak som nu närmar sig eller passerat sin förväntade livslängd, medan nyare områden som Barkarbystaden har moderna taklösningar från start.",
+      "Järfälla har vuxit fram kring flera villa- och radhusområden — Jakobsberg, Kallhäll, Viksjö och det snabbt växande Barkarbystaden — med bebyggelse som spänner från 1960-talsvillor till helt nybyggda kvarter. De äldre villaområdena har ofta betongpannor eller äldre plåttak, medan nyare områden som Barkarbystaden har moderna taklösningar från start.",
       "I Mälardalens inlandsklimat, som Järfälla tillhör, är det framför allt snölast och temperaturväxlingar mellan årstiderna som sliter på tak — snölast ställer krav på takstolarnas dimensionering och på snörasskyddens placering, medan upprepade frysningar och upptiningar påskyndar frostsprängning i äldre betongpannor. Vi kontrollerar alltid takstolarnas skick och bedömer behovet av snörasskydd när vi byter tak i Järfälla.",
       "Vi utför takbyte i Järfälla med TP20-plåttak, dubbelfalsat plåttak, betongpannor, tegelplåt och lertegel. På villaområdena i Jakobsberg och Kallhäll är betongpannor och TP20 vanligast, medan dubbelfalsat plåttak eller lertegel oftare väljs på hus där ett mer exklusivt eller traditionellt utseende är prioriterat.",
       "Har fastigheten ett äldre eternittak samordnar vi saneringen med en behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter, innan det nya taket läggs. Vi utför inte asbestsanering själva.",
@@ -111,22 +76,6 @@ export const comboOverrides: Record<string, ComboOverride> = {
       ROT,
       COMPARE("Järfälla", "i"),
       CTA("Järfälla", "i"),
-    ],
-  },
-  "takbyte-upplands-vasby": {
-    title: "Takbyte i Upplands Väsby — fast pris & garanti",
-    description:
-      "Takbyte i Upplands Väsby: villor och radhus från 1970- och 80-talet. Kostnadsfri takkontroll utan förpliktelser, fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
-    content: [
-      "Upplands Väsby har en stor andel villa- och radhusbebyggelse från 1970- och 80-talet, samt nyare bostadsområden kring Väsby centrum och Runby. På hus från den perioden kan betongpannor börja frostspränga och underlagspappen torka ut och spricka med åren — tecken på att det är dags att planera ett takbyte.",
-      "Vi bedömer alltid behovet av snörasskydd över entréer och uteplatser och kontrollerar takstolarnas bärförmåga innan nytt, tyngre material som betongpannor monteras.",
-      "Vi utför takbyte i Upplands Väsby med TP20-plåttak, dubbelfalsat plåttak, betongpannor, tegelplåt och lertegel. På den typiska villa- och radhusbebyggelsen från 1970- och 80-talet är betongpannor och TP20-plåt de vanligaste valen, och vi ger dig en ärlig rekommendation utifrån husets ålder, taklutning och budget.",
-      "Har fastigheten ett äldre eternittak samordnar vi saneringen med en behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter, innan det nya taket läggs. Vi utför inte asbestsanering själva.",
-      INCLUDES("Upplands Väsby", "i"),
-      PROCESS,
-      ROT,
-      COMPARE("Upplands Väsby", "i"),
-      CTA("Upplands Väsby", "i"),
     ],
   },
   "takbyte-stockholm": {
@@ -1276,6 +1225,81 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. ROT-avdraget på 30 % av arbetskostnaden drar vi direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sollentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+    ],
+  },
+  "takbyte-nacka": {
+    title: "Takbyte i Nacka – fast pris efter takkontroll",
+    description:
+      "Takbyte i Nacka, från Saltsjöbaden och Storängen till Älta. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten. Svar inom 24 timmar.",
+    content: [
+      "Nacka ligger öster om Stockholm, och villorna här har byggts under mer än hundra år: i Saltsjöbaden, i Storängen och i Älta, för att nämna tre områden med olika historia. Ett takbyte i Nacka börjar därför med huset, inte med adressen. Här går vi igenom vad som skiljer områdena åt, vad ett takbyte omfattar och hur du får ett fast pris innan något arbete börjar.",
+      "## Tre områden, tre historier",
+      "Saltsjöbaden grundades på 1890-talet som villa- och badort. Enligt Wikipedia visar en tomtkarta från 1892 120 avstyckade tomter, och stadsbilden präglas fortfarande av arkitektritade villor. Storängen grundades 1904 av en egnahemsförening, och redan 1909 var 107 av omkring 160 tomter bebyggda, de flesta med stora trävillor i nationalromantisk stil. Båda områdena är i dag riksintresse för kulturmiljövården. I Älta började tomtförsäljningen i slutet av 1800-talet, och enligt Wikipedia var en stor del av de tidiga husen sommarhus. Kolarängen i norra Älta har bebyggelse huvudsakligen från 1950- till 1970-talen.",
+      "## Vad det betyder för taket",
+      "Hus som är över hundra år gamla kan ha fått taket omlagt flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Ett sommarhus som har blivit åretruntbostad har i regel byggts om och till, och då finns det ofta takdelar av olika ålder på samma hus. Därför går det inte att säga något generellt om taken i Nacka. Varje hus får en egen takkontroll och ett eget pris.",
+      "## Lertegel när huset ska behålla sitt uttryck",
+      "På en äldre villa är takets form, material och detaljer ofta en del av husets uttryck. Har huset tegeltak i dag är lertegel det material som behåller det: bränd lera som åldras med patina. Betongpannor ger ett liknande pannat uttryck. Båda är tunga material, och vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak. Dubbelfalsad plåt formas efter kupor, ränndalar och vinklar och passar tak med många anslutningar. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",
+      "## Det här ingår i ett takbyte",
+      "Ett takbyte omfattar normalt att det gamla ytmaterialet rivs, att underlaget byts och att ny läkt läggs innan det nya ytmaterialet kommer på plats. Plåtdetaljerna görs om: fotplåt, ränndalar, skorstensbeslag och genomföringar. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare, och inget extraarbete görs utan ditt godkännande.",
+      "## Vanliga frågor om takbyte i Nacka",
+      "**Behövs bygglov för att byta tak i Nacka?** För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. I Saltsjöbaden och Storängen, som är riksintressen för kulturmiljövården, är det extra viktigt att fråga innan du väljer material eller kulör.",
+      "**Kan ni säga vad ett takbyte kostar utan att se taket?** Nej. Priset beror på takets storlek, form, material och underlagets skick. Riktpriser per material finns på prissidan, och ditt pris står i offerten och är fast.",
+      "## Så går det till",
+      "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+      "2. **Fast pris** i offerten.",
+      "3. **Utförande enligt AMA.**",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden. Riktpriser finns på roslagstak.se/priser.",
+      "Boka en kostnadsfri takkontroll i Nacka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+    ],
+  },
+  "takbyte-lidingo": {
+    title: "Takbyte på Lidingö – fast pris efter takkontroll",
+    description:
+      "Takbyte på Lidingö: Hersby, Brevik, Sticklinge och resten av ön. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten. Svar inom 24 timmar.",
+    content: [
+      "Hur byter man tak på en villa med kupor, vinklar och hundra år på nacken? På Lidingö är det en vanlig fråga, eftersom en stor del av villastaden kom till i början av 1900-talet. Men ön har också villor från 1960-talet och hela områden från 1980- och 90-talen. Här går vi igenom vad som skiljer husen åt, vad ett takbyte omfattar och hur du får ett fast pris innan något arbete börjar.",
+      "## En villastad från 1906 och det som kom sedan",
+      "Hersby utgör enligt Wikipedia kärnan i Lidingö villastad, som bildades 1906. Stadsplanen upprättades 1907 av arkitekten Per Olof Hallman, med ett gatunät anpassat efter terrängen, och i kvarteret Holmia har villorna till stor del kvar sina ursprungliga exteriörer i nationalromantik och jugend. I Brevik, Käppala och Gåshaga började marken styckas 1906–1907. Där stannade byggandet nästan helt av under krigen och kom i gång igen först på 1960-talet, så bebyggelsen är en blandning av större villor från 1900-talets början och villor från 1960-talet och framåt. Norra Sticklinge började som sommarstugeområde på 1930-talet och bebyggdes med villor för permanentboende efter att området stadsplanerades 1978.",
+      "## Vad det betyder för taket",
+      "De tidigaste villorna är i dag omkring 110–120 år gamla, och på så gamla hus kan taket ha lagts om flera gånger. Villor från det tidiga 1900-talet har ofta sammansatta tak med kupor, vinklar och flera anslutningar i plåt, och ju fler detaljer ett tak har, desto större del av arbetet ligger i plåten. I områdena från 1980- och 90-talen är husen yngre, och där kan taket fortfarande vara det ursprungliga. Varje hus får en egen takkontroll och ett eget pris.",
+      "## Dubbelfalsad plåt på tak med många vinklar",
+      "Dubbelfalsad plåt, även kallad bandtäckning, formas efter taket och har dolda infästningar, så att ingen skruv går igenom plåten. Det gör materialet lämpat för tak med komplicerad form. Har huset tegeltak i dag och ska behålla uttrycket är lertegel alternativet, och betongpannor ger ett liknande pannat tak. På enklare takformer är TP20-plåt ett lätt alternativ. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",
+      "## Det här ingår i ett takbyte",
+      "Ett takbyte omfattar normalt att det gamla ytmaterialet rivs, att underlaget byts och att ny läkt läggs innan det nya ytmaterialet kommer på plats. Plåtdetaljerna görs om: fotplåt, ränndalar, skorstensbeslag och genomföringar. På ett tak med många vinklar är det ofta detaljerna som avgör hur omfattande arbetet blir, och därför behöver någon se taket innan priset sätts.",
+      "## Vanliga frågor om takbyte på Lidingö",
+      "**Behövs bygglov för att byta tak på Lidingö?** För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
+      "**Går det att behålla husets uttryck med ett nytt tak?** Ja, om det nya materialet väljs efter det gamla. Material, kulör och detaljer bestäms före arbetet och står i offerten.",
+      "## Så går det till",
+      "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+      "2. **Fast pris** i offerten.",
+      "3. **Utförande enligt AMA.**",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden. Riktpriser finns på roslagstak.se/priser.",
+      "Boka en kostnadsfri takkontroll på Lidingö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+    ],
+  },
+  "takbyte-upplands-vasby": {
+    title: "Takbyte i Upplands Väsby – fast pris efter takkontroll",
+    description:
+      "Takbyte i Upplands Väsby: villor, radhus och kedjehus. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten. Svar inom 24 timmar.",
+    content: [
+      "Radhus, kedjehus och villor som byggdes ungefär samtidigt: så ser en stor del av småhusen i Bollstanäs ut, en av Upplands Väsbys fem kommundelar. Enligt hitta.se är husen där främst byggda på 1970- och 1980-talen. När många hus är lika gamla blir frågan om taket ofta aktuell för flera grannar på en gång. Här går vi igenom vad ett takbyte omfattar, vilka material du kan välja mellan och hur du får ett fast pris innan något arbete börjar.",
+      "## Det här ingår i ett takbyte",
+      "Ett takbyte omfattar normalt att det gamla ytmaterialet rivs, att underlaget byts och att ny läkt läggs innan det nya ytmaterialet kommer på plats. Plåtdetaljerna görs om: fotplåt, ränndalar, skorstensbeslag och genomföringar. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare, och inget extraarbete görs utan ditt godkännande.",
+      "## Betongpannor, och alternativen",
+      "Ett hus som har betongpannor i dag bär redan den vikten, och nya betongpannor ger samma uttryck som förut. TP20-plåt är ett lätt alternativ på enkla takformer, och pannplåt ger utseendet av pannor utan vikten. Ska ett hus med lätt tak få ett tyngre material kan takstolarna behöva bedömas av en konstruktör. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",
+      "## Från småbruk till villastad",
+      "Bollstanäs har sitt namn efter en herrgård från slutet av 1700-talet. År 1907 köptes gården av ett småbruksbolag som styckade av tomter, och i mitten av 1910-talet fanns ett fyrtiotal egnahem och handelsträdgårdar. År 1950 bodde knappt 1 000 personer i Bollstanäs och Odenslunda tillsammans, och i dag har kommundelen omkring 10 000 invånare.",
+      "## Vad det betyder för taket",
+      "Hus från 1970- och 80-talen är i dag runt 40–55 år gamla. Taken kan redan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Varje hus får en egen takkontroll och ett eget pris.",
+      "## Vanliga frågor om takbyte i Upplands Väsby",
+      "**Går det att behålla husets uttryck med ett nytt tak?** Ja, om det nya materialet väljs efter det gamla. Material, kulör och detaljer bestäms före arbetet och står i offerten.",
+      "**Behövs bygglov för att byta tak i Upplands Väsby?** För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
+      "## Så går det till",
+      "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
+      "2. **Fast pris** i offerten.",
+      "3. **Utförande enligt AMA.**",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden. Riktpriser finns på roslagstak.se/priser.",
+      "Boka en kostnadsfri takkontroll i Upplands Väsby på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
   },
 };

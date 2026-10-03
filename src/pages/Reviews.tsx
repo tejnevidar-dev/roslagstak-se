@@ -87,7 +87,7 @@ const Reviews = () => {
                   to="/offert"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
                 >
-                  Få offert <ArrowRight className="w-4 h-4" />
+                  Boka kostnadsfri takkontroll <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   to="/offert#radgivning"

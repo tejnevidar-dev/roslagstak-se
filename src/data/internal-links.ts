@@ -22,7 +22,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/taktyper",
     label: "Taktyper & material",
-    description: "Jämför livslängd, taklutning och kostnad för de vanligaste taken.",
+    description: "Jämför material, taklutning och kostnad för de vanligaste taken.",
   },
   {
     to: "/takkontroll",

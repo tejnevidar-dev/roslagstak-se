@@ -64,7 +64,7 @@ const QuickAccess = () => (
               Takvård &amp; vad det kostar
             </h3>
             <p className="mt-5 max-w-[44ch] text-[17px] font-light leading-[1.68] opacity-90">
-              Taktvätt, behandling och takmålning som förlänger takets livslängd — eller räkna
+              Taktvätt, behandling och takmålning — eller räkna
               fram ett prisspann för just ditt tak på under en minut.
             </p>
           </div>

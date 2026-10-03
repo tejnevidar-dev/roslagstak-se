@@ -298,6 +298,13 @@
       "orsak": "R1 (juristens K5, T3, R2): skriv \"kan du få ROT-avdrag\", inte \"får du ROT-avdrag\"."
     },
     {
+      "id": "lang-livslangd",
+      "monster": "(?:mycket\\s+)?l[åa]ng\\s+livsl[äa]ngd|f[öo]rl[äa]ng[\\p{L}]*\\s+(?:\\p{L}+\\s+){0,2}livsl[äa]ng[\\p{L}]*",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "Livslängd får inte påstås (\"lång livslängd\", \"mycket lång livslängd\", \"förlänger livslängden\"): obelagt, Ads-fynd 2026-10-04."
+    },
+    {
       "id": "platshallare-och-fel",
       "monster": "undefined|null|\\{\\{|\\}\\}|lorem|\\[\\w+\\]|\\bTODO\\b|\\s{2,}",
       "flaggor": "i",

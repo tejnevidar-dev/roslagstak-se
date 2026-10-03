@@ -35,7 +35,7 @@ const StickyMobileCTA = () => {
         href="/offert"
         className="flex-1 flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-full text-sm font-semibold animate-subtle-pulse"
       >
-        Få offert
+        Boka takkontroll
         <ArrowRight className="w-4 h-4" />
       </a>
     </div>

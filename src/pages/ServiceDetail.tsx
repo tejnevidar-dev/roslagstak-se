@@ -125,7 +125,7 @@ const ServiceDetail = () => {
               </p>
 
               <h1 className="font-display text-[clamp(2.6rem,6.4vw,5.6rem)] font-extrabold leading-[0.88] tracking-[-0.045em] text-foreground">
-                {service.title}
+                {service.title}{meta.h1Sep}
                 <br />
                 <span className="text-accent">{meta.accentLine}</span>
               </h1>

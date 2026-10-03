@@ -7,7 +7,7 @@ const FreeConsultation = () => {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent-foreground/55">
-              Kostnadsfri rådgivning
+              Kostnadsfri takkontroll
             </p>
             <h2
               id="consultation-heading"
@@ -30,7 +30,7 @@ const FreeConsultation = () => {
           <div className="lg:col-span-7">
             <div className="border-t border-accent-foreground/20">
               {[
-                { no: "01", title: "Ring direkt", text: "Prata med en takläggare, inte en säljare.", href: "tel:+46701543639", cta: "Ring nu" },
+                { no: "01", title: "Ring direkt", text: "Prata med en takläggare, inte en säljare.", href: "tel:+46701543639", cta: "Ring" },
                 { no: "02", title: "Svar inom 24 timmar", text: "Skicka ett meddelande och få besked snabbt.", href: "#kontakt", cta: "Skicka meddelande" },
                 { no: "03", title: "Ingen förbindelse", text: "Kostnadsfri takkontroll och offert — inga krav.", href: "#offert", cta: "Räkna på ditt tak" },
               ].map((item) => (

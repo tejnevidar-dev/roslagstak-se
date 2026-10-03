@@ -172,7 +172,7 @@ const ProjectPage = () => {
               to="/offert"
               className="inline-flex items-center gap-2 rounded-full bg-cta px-6 py-3 text-sm font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
             >
-              Begär kostnadsfri offert <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Boka kostnadsfri takkontroll <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
         </div>
