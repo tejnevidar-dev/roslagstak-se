@@ -235,7 +235,7 @@ for (const file of readdirSync(resolve(guideDir)).filter((f) => f.endsWith(".md"
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: `/blogg/${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+  allResults.push({ page: `/blogg/${slug}`, file, status: !meningar.length ? "ok" : missing.length === meningar.length ? "not-built" : missing.length ? "missing" : "ok", missing, total: meningar.length });
 }
 
 /* ---------- 4) Tjänst×ort-texter (/takbyte-<ort> m.fl., ortstexter/) ---------- */
@@ -258,7 +258,7 @@ for (const file of readdirSync(resolve(comboDir)).filter((f) => f.endsWith(".md"
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: path, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+  allResults.push({ page: path, file, status: !meningar.length ? "ok" : missing.length === meningar.length ? "not-built" : missing.length ? "missing" : "ok", missing, total: meningar.length });
 }
 
 /* ---------- 5) Regiontexter (/omraden/<region>) ---------- */
