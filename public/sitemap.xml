@@ -241,6 +241,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/takproblem/yrsno-pa-vinden</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/is-i-ranndalen</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/material</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>

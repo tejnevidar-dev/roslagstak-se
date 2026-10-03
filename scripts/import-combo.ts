@@ -25,6 +25,10 @@ let added = 0;
 
 for (const file of files) {
   const raw = readFileSync(resolve(file), "utf8").replace(/\r/g, "");
+  if (!/\*\*Grind:\*\*\s*GODKÄND/.test(raw) && !/GODKÄND av Marknadschefen/.test(raw.split("\n").slice(0, 3).join("\n"))) {
+    console.error(`${file}: saknar raden "**Grind:** GODKÄND ...", byggs inte`);
+    process.exit(1);
+  }
   const slug = raw.match(/\*\*Slug:\*\*\s*\/([a-z0-9-]+)/)?.[1];
   const title = raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*·/)?.[1]?.trim();
   const description = raw.match(/\*\*Meta \(≤ 160\):\*\*\s*(.+)/)?.[1]?.trim();

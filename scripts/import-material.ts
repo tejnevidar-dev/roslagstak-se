@@ -16,6 +16,10 @@ if (!briefPath) {
   process.exit(2);
 }
 const raw = readFileSync(resolve(briefPath), "utf8").replace(/\r/g, "");
+if (!/\*\*Grind:\*\*\s*GODKÄND/.test(raw)) {
+  console.error('Briefen saknar raden "**Grind:** GODKÄND ...". En brief utan Grind-rad byggs aldrig.');
+  process.exit(1);
+}
 const one = (re: RegExp) => raw.match(re)?.[1]?.trim();
 
 const slug = one(/\*\*Slug:\*\*\s*\/material\/([a-z0-9-]+)/);

@@ -20,9 +20,13 @@ if (!briefPath) {
   process.exit(2);
 }
 const dateIdx = args.indexOf("--date");
-const date = dateIdx > -1 ? args[dateIdx + 1] : new Date().toISOString().slice(0, 10);
+let date = dateIdx > -1 ? args[dateIdx + 1] : new Date().toISOString().slice(0, 10);
 
 const raw = readFileSync(resolve(briefPath), "utf8").replace(/\r/g, "");
+if (!/\*\*Grind:\*\*\s*GODKÄND/.test(raw)) {
+  console.error('Briefen saknar raden "**Grind:** GODKÄND ...". En brief utan Grind-rad byggs aldrig.');
+  process.exit(1);
+}
 const field = (re: RegExp) => raw.match(re)?.[1]?.trim();
 const slug = field(/\*\*Slug:\*\*\s*\/blogg\/([a-z0-9-]+)/);
 const title = field(/\*\*(?:Ny titel|Titel) \(≤ 60\):\*\*\s*(.+)/)?.replace(/\s*\(\d+\)\s*$/, "");
@@ -77,17 +81,17 @@ const words = content.join(" ").split(/\s+/).length;
 const readTime = `${Math.max(1, Math.round(words / 200))} min`;
 const js = (s: string) => JSON.stringify(s);
 
-const serialize = (existingTail: string) =>
+const serialize = (updatedLine: string) =>
   `  {
     slug: ${js(slug)},
     title: ${js(title)},
     excerpt: ${js(excerpt)},
-    date: ${js(date)},
+    date: ${js(date)},${updatedLine}
     readTime: ${js(readTime)},
     keywords: [${keywords.map(js).join(",")}],
     content: [
 ${content.map((c) => `      ${js(c)},`).join("\n")}
-    ],${existingTail}
+    ],
   },`;
 
 const f = resolve("src/data/blog-posts.ts");
@@ -98,12 +102,17 @@ if (at > -1) {
   const start = src.lastIndexOf("\n  {\n", at) + 1;
   const end = src.indexOf("\n  },", at) + "\n  },".length;
   const block = src.slice(start, end);
-  const updated = block.match(/\n    updated: [^\n]*,/)?.[0] ?? "";
-  src = src.slice(0, start) + serialize(updated) + src.slice(end);
+  // Ersatt text: behåll det ursprungliga publiceringsdatumet och sätt "updated" till importdagen.
+  const oldDate = block.match(/\n    date: "([^"]+)"/)?.[1];
+  const stamp = date;
+  if (oldDate) date = oldDate;
+  const updatedLine = oldDate && oldDate !== stamp ? `\n    updated: ${js(stamp)},` : "";
+  src = src.slice(0, start) + serialize(updatedLine) + src.slice(end);
   console.log(`[import-guide] ersatte /blogg/${slug} (${content.length} stycken, ${words} ord)`);
 } else {
   const arrStart = src.indexOf("export const blogPosts: BlogPost[] = [\n") + "export const blogPosts: BlogPost[] = [\n".length;
   src = src.slice(0, arrStart) + serialize("") + "\n" + src.slice(arrStart);
+  // (nytt inlägg: date = importdagen, ingen updated)
   console.log(`[import-guide] nytt inlägg /blogg/${slug} (${content.length} stycken, ${words} ord)`);
 }
 writeFileSync(f, src);

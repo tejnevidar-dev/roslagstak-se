@@ -708,6 +708,67 @@ export const problems: Problem[] = [
       { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
     ],
   },
+  {
+    slug: "yrsno-pa-vinden",
+    title: "Snö som yr in på vinden",
+    metaTitle: "Snö på vinden – därför yr den in och så gör du",
+    metaDescription:
+      "Har det yrt in snö på vinden? Så tar du hand om den innan den smälter, var snön brukar komma in och när taket behöver ses över. Kostnadsfri takkontroll.",
+    intro:
+      "Efter ett snöfall med hård vind kan det ligga snö på vinden, som små drivor på isoleringen eller som ett tunt lager längs takfoten. Det är finkornig snö som vinden har tryckt in genom öppningar i taket. Lite yrsnö vid ett enstaka oväder är inget ovanligt på en kall, ventilerad vind. Kommer det mycket, eller på samma ställe varje gång, finns det en öppning som är värd att se över.",
+    symptom:
+      "Snö på isoleringen eller på vindsgolvet, ofta i en sträng längs takfoten, vid gavlarna eller under nocken. Snön kan också ligga runt en genomföring eller under ett ställe där en panna har flyttat sig. Efter några dagar syns i stället blöta fläckar i isoleringen, och ibland en fuktfläck i innertaket under. Ser du frost eller droppar på hela undersidan av taket och inte bara snö på vissa ställen är det oftare kondens.",
+    orsaker:
+      "En kall vind ska ventileras, och luften kommer in vid takfoten och går ut vid nock eller gavlar. Vid finkornig snö och hård vind kan snön följa med samma väg. Mer snö än så kommer in där det finns en större öppning: pannor som har glidit isär eller spruckit, en nockpanna som sitter löst, en gavelventil utan galler eller skydd, en otät anslutning runt en genomföring eller ett underlag som har gått sönder. På ett tak med pannor är det underlaget som ska hålla tätt mot snö som blåser in under pannorna.",
+    akut:
+      "När det ligger så mycket snö att den inte går att ta bort innan den smälter, när vatten redan har runnit ner i innertaket, eller när snön ligger nära el på vinden. Kommer det in stora mängder vid varje oväder har taket en öppning som behöver åtgärdas före nästa snöfall.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats. Berätta var på vinden snön låg och hur mycket det var, och fotografera gärna innan du tar bort den, eftersom det visar var den kom in. Där vinden går att komma åt jämförs platsen med taket utifrån: pannor, nock, gavlar, genomföringar och takfot. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+    atgarder:
+      "Lite yrsnö vid takfoten efter ett ovanligt hårt oväder kräver ofta ingen annan åtgärd än att snön tas bort. Kommer snön in genom en öppning rättas den till: pannor läggs tillbaka eller byts, nockpannor fästs, och en otät genomföring eller anslutning görs om. Är underlaget skadat på en begränsad yta kan det lagas där. Är underlaget dåligt på stora delar av taket är ett takbyte ofta bättre än att laga ett ställe i taget. Ventilationen vid takfot och nock ska inte täppas igen för att stänga ute snön, eftersom vinden då får problem med fukt i stället.",
+    gorInteSjalv:
+      "Gå inte upp på ett snöigt eller isigt tak. Täta inte ventilationsöppningar med skum, tyg eller plast. Det du kan göra är att ta bort snön från vinden medan den är torr: skyffla den försiktigt i en hink eller en säck och bär ut den. Gå bara på bjälkarna eller på landgången, inte på isoleringen. Har snön redan smält, lyft undan blöt lösull eller blöta skivor så att de får torka, och håll koll på innertaket under de närmaste dagarna.",
+    related: [
+      { to: "/takproblem/kondens-pa-vinden", label: "Kondens på vinden" },
+      { to: "/takproblem/fukt-pa-vinden", label: "Fukt och mögel på vinden" },
+      { to: "/takproblem/fuktflack-i-innertaket", label: "Fuktfläck i innertaket" },
+      { to: "/takproblem/trasiga-takpannor", label: "Trasiga takpannor" },
+      { to: "/takproblem/losa-nockpannor", label: "Lösa nockpannor" },
+      { to: "/takproblem/dalig-underlagspapp", label: "Dålig underlagspapp" },
+      { to: "/blogg/takkontroll-fore-vintern", label: "Takkontroll före vintern" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+    ],
+  },
+  {
+    slug: "is-i-ranndalen",
+    title: "Is i ränndalen",
+    metaTitle: "Is i ränndalen – därför dämmer den och det här gör du",
+    metaDescription:
+      "Is som bygger upp i ränndalen kan dämma smältvatten så att det tar sig in i taket. Så känner du igen det, vad du ska låta bli och när taket bör ses över.",
+    intro:
+      "Ränndalen är rännan där två takfall möts, och dit leds vatten från båda sidor. På vintern samlas också snö där. När snön smälter på dagen och fryser igen på natten kan det byggas upp is i ränndalen. Isen blir en damm, och smältvattnet bakom den blir stående i stället för att rinna av. En ränndal är gjord för vatten som rinner, inte för vatten som står.",
+    symptom:
+      "En tjock iskaka eller en isvall i ränndalen, ofta längst ner mot takfoten. Istappar där ränndalen slutar. Efter några dagars töväder kan det synas fukt på vinden under ränndalen eller en fuktfläck i innertaket längs linjen där takfallen möts. Läcker det bara vid tö efter en kall period och inte vid vanligt regn pekar det mot is snarare än mot ett hål i plåten.",
+    orsaker:
+      "Is bildas när snö smälter på en varmare del av taket och vattnet fryser igen på en kallare. Värme som läcker upp från huset till vinden värmer takytan, medan takfoten utanför ytterväggen är kall. Ränndalen tar emot smältvatten från två takfall och har ofta mer snö än resten av taket, så där går det fortast. Löv och barr som ligger kvar sedan hösten håller kvar vatten och gör det värre. När vattnet blir stående kan det ta sig över plåtens uppvikta kanter eller in i skarvar som är täta mot rinnande vatten.",
+    akut:
+      "När det droppar inne, när en fuktfläck växer under ränndalen eller när is och snö hänger ut över en entré, en gångväg eller en altan. Spärra av under taket där något kan falla ner. Läcker det inne, ställ ett kärl under, flytta undan det som kan ta skada och fotografera. Hör sedan av dig till en takläggare.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats. Det går bäst att bedöma ränndalen när den är fri från snö och is, så en kontroll kan behöva vänta tills det har tinat. Berätta var det har läckt eller var isen brukar bygga upp, och fotografera gärna medan isen ligger kvar. På plats bedöms ränndalens plåt, hur pannorna eller plåten ansluter mot den, underlaget intill och om det ligger skräp i rännan. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+    atgarder:
+      "Vad som hjälper beror på vad som finns under isen. En ränndal som är full av löv och barr rensas, helst före vintern. Är plåten rostig, för smal eller otät i skarvarna läggs en ny ränndal, och underlaget intill ses över samtidigt. Läcker värme upp från huset är det tilläggsisolering och tätning av vindsbjälklaget som minskar smältningen, och det är inte ett takarbete. Vid ett takbyte görs ränndalarna om tillsammans med resten av plåtarbetet.",
+    gorInteSjalv:
+      "Hugg inte bort is ur ränndalen med yxa, spett eller hammare: plåten under går lätt sönder, och då läcker ränndalen också när isen är borta. Strö inte vägsalt på taket. Gå inte upp på ett isigt tak. Det du kan göra är att rensa ränndalar och hängrännor på hösten om de går att nå säkert, och att hålla koll på vinden och innertaket under ränndalen när det töar.",
+    related: [
+      { to: "/takproblem/istappar-pa-taket", label: "Istappar och isbildning vid takfoten" },
+      { to: "/takproblem/lackande-ranndal", label: "Läckande ränndal" },
+      { to: "/takproblem/igensatta-hangrannor", label: "Igensatta hängrännor" },
+      { to: "/takproblem/fuktflack-i-innertaket", label: "Fuktfläck i innertaket" },
+      { to: "/takproblem/kondens-pa-vinden", label: "Kondens på vinden" },
+      { to: "/blogg/takkontroll-fore-vintern", label: "Takkontroll före vintern" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+    ],
+  },
 ];
 
 export const getProblem = (slug: string) => problems.find((p) => p.slug === slug);
