@@ -1840,7 +1840,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "När bör jag byta tak på min villa i Farsta?",
       answer:
-        "Tecken på att det är dags: frostsprängda betongpannor, sliten eller torkad underlagspapp, mossa som inte går bort vid tvätt, eller rostiga plåtbeslag. Många tak i Farsta från 60- och 70-talet är nu mogna för byte. Boka en kostnadsfri takkontroll så bedömer vi om omläggning eller komplett byte är bäst.",
+        "Tecken på att det är dags: frostsprängda betongpannor, sliten eller torkad underlagspapp, mossa som inte går bort vid tvätt, eller rostiga plåtbeslag. Boka en kostnadsfri takkontroll så bedömer vi om omläggning eller komplett byte är bäst för just ditt hus.",
     },
     primaryKeyword: "takläggare Farsta",
     lat: 59.2422,
@@ -3220,7 +3220,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Saltsjö-Boo — takbyte och takrenovering i Saltsjö-Boo. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
     longDescription:
-      "Saltsjö-Boo — sjönära villaområde i norra Nacka — har ett fastighetsbestånd med villor från 1950-tal till nyproduktion. Många tak i området har passerat sin tekniska livslängd, och takomläggning är därför en vanlig åtgärd här. RoslagsTak utför kompletta takprojekt i Saltsjö-Boo: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
+      "Saltsjö-Boo — sjönära villaområde i norra Nacka — har ett fastighetsbestånd med villor från 1950-tal till nyproduktion. Betongpannor kan drabbas av frostsprängning och underlagspapp torkar ut och spricker med åren, vilket är exempel på skäl till att ett tak till slut kan behöva bytas eller läggas om. RoslagsTak utför kompletta takprojekt i Saltsjö-Boo: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
     extraContent:
       "Vi går igenom förutsättningarna i Saltsjö-Boo — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilka material som fungerar bäst på husen här. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Saltsjö-Boo.",
     uniqueFAQ: {
