@@ -12,6 +12,7 @@ import {
 import { locations } from "@/data/locations";
 import { allServiceSlugs } from "@/data/service-location-combos";
 import { hasServiceCombos } from "@/data/service-slugs";
+import { isThinCombo } from "@/data/thin-combos";
 
 const sitemap = readFileSync(resolve(__dirname, "../../public/sitemap.xml"), "utf8");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());
@@ -54,12 +55,15 @@ describe("duplicate control", () => {
     expect(admin).toEqual([]);
   });
 
-  it("lists every location page and service-location combo exactly once", () => {
+  it("lists every location page and non-thin service-location combo exactly once", () => {
+    // Tunna tjänst+ort-sidor (utan egen text) är medvetet noindex och utanför sitemap
+    // (Marknadschefens beslut 2026-09-29, se thin-combos.ts) — testar bara de som ska vara med.
     const missing: string[] = [];
     for (const loc of locations) {
       if (!sitemapPaths.includes(`/taklaggare-${loc.slug}`)) missing.push(`/taklaggare-${loc.slug}`);
       if (!hasServiceCombos(loc.region)) continue;
       for (const service of allServiceSlugs) {
+        if (isThinCombo(service, loc)) continue;
         const path = `/${service}-${loc.slug}`;
         if (!sitemapPaths.includes(canonicalPath(path))) missing.push(path);
       }
