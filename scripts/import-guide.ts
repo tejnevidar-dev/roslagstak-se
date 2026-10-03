@@ -43,7 +43,8 @@ const keywords = kwLine
   .filter(Boolean);
 
 const afterRule = raw.split(/\n---\n/).slice(1).join("\n---\n");
-const bodyRaw = afterRule.split(/\n## Källor/)[0];
+// Brödtexten slutar vid "## Källor" eller vid en ändringsnotis ("- **Ändrat ÅÅÅÅ-MM-DD …"), som är redaktionell notering och inte publiceras.
+const bodyRaw = afterRule.split(/\n## Källor/)[0].split(/\n- \*\*Ändrat \d{4}-\d{2}-\d{2}/)[0];
 const lines = bodyRaw.split("\n");
 const content: string[] = [];
 let skippedTitle = false;
