@@ -89,8 +89,8 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     factCards: [
       { tone: "primary", label: "Prisbild", value: "1 200–2 000 kr/m²", text: "TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m² — efter ROT-avdrag, inkl. moms." },
       { tone: "outline", label: "Tidsåtgång", value: "Efter takets storlek", text: "Beror på takets storlek, underlagets skick och väder." },
-      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "30 års tätskiktsgaranti via MATAKI." },
-      { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Allt dolt material byts — papp, läkt, beslag och avvattning." },
+      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor." },
+      { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Papp, läkt och plåtdetaljer byts." },
     ],
     block: {
       kind: "matrix",
@@ -100,10 +100,10 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Valet av ytskikt styr både pris och utseende. Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Kännetecken", "Passar"],
       rows: [
-        ["Profilerad plåt (TP20)", "Från 1 200 kr/m²", "Lätt, skruvad profilplåt", "Fritidshus, uthus, enkla sadeltak"],
-        ["Betongpanna", "Från 1 200 kr/m²", "Tung, flera kulörer", "Villor med bärkraftig konstruktion"],
-        ["Tegelpanna", "Från 1 300 kr/m²", "Tung, åldras med patina", "Äldre hus med traditionellt uttryck"],
-        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Lätt, inga synliga skruvar", "Klassiskt, stramt uttryck och tak med kupor och ränndalar"],
+        ["Profilerad plåt (TP20)", "Från 1 200 kr/m²", "Lätt, skruvad profilplåt", "Enkla takformer"],
+        ["Betongpanna", "Från 1 200 kr/m²", "Tung, flera kulörer", "Kräver konstruktion som bär vikten"],
+        ["Tegelpanna", "Från 1 300 kr/m²", "Tung, åldras med patina", "Kräver konstruktion som bär vikten"],
+        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Lätt, inga synliga skruvar", "Tak med kupor och ränndalar"],
       ],
       footnote: `Riktpriser, efter ROT-avdrag och inkl. moms, med standardställning. Priset sätts efter kostnadsfri takkontroll. Komplex ställning kan tillkomma och framgår i så fall i offerten. ${ROT_FORBEHALL}`,
     },

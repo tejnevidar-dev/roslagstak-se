@@ -30,14 +30,13 @@ export const serviceMeta: Record<string, ServiceMeta> = {
   takomlaggning: {
     accentLine: "i skärgårdsmiljö.",
     specs: [
-      { k: "Tätskikt", v: "30 års garanti (MATAKI)" },
+      { k: "Tätskikt", v: "30 års garanti via MATAKI, på tillverkarens villkor" },
       { k: "Utförande", v: "AMA-standard" },
-      { k: "Läkt", v: "25 × 38 mm" },
     ],
     specHeading: "Teknisk specifikation och utförande",
-    lead: "Varje omläggning inleds med en fullständig analys av råspont, ventilation och avvattning.",
+    lead: "Varje omläggning börjar med en kostnadsfri takkontroll.",
     craftLine: "Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.",
-    photoNote: "Ny läkt monterad på diffusionsöppen underlagsduk.",
+    photoNote: "Ny läkt.",
   },
   takrenovering: {
     accentLine: "utan helt takbyte.",
@@ -141,28 +140,24 @@ export const serviceMeta: Record<string, ServiceMeta> = {
 
 export const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen. Allt arbete utförs enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
     priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Exakt pris beror på takets storlek, material och underlag.",
     benefits: [
       "Rivning av befintligt yttertak",
-      "Ny råspont och ventilation vid behov",
       "Nytt underlagspapp, fotplåtar och underbeslag runt genomföringar",
-      "Ny läkt, vindskivor, vindskiveplåtar och ny avvattning",
+      "Ny läkt och nya plåtdetaljer",
       "Plåtdetaljer såsom stoss och skorstensinklädnad",
       "Byggställning",
-      "Avfallshantering",
     ],
     process: [
       "Kostnadsfri takkontroll och offert",
       "Offert godkänns av kund",
-      "Logistikplanering påbörjas",
       "Byggställning monteras",
       "Rivning av befintligt yttertak",
       "Montering av nytt takmaterial",
-      "Installation av ny taksäkerhet och avvattning",
-      "Slutsamråd med kund och ansvarig säljare för att säkerställa att allt är korrekt utfört enligt offert",
-      "Slutgenomgång och skriftlig garanti",
-      "Rivning av byggställning och avetablering från fastigheten",
+      "Taksäkerhet och hängrännor, om de ingår i offerten",
+      "Slutgenomgång",
+      "Ställningen tas ner",
     ],
   },
   takrenovering: {
@@ -324,7 +319,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
  * strängar härifrån; paritetstestet (src/test/service-page-parity.test.ts) renderar sidan och
  * jämför mot speglingen i båda riktningarna.
  * ------------------------------------------------------------------------------------------- */
-const CAPTION_OWN_JOB_SLUGS: readonly string[] = ["takomlaggning", "takrenovering"];
+const CAPTION_OWN_JOB_SLUGS: readonly string[] = ["takomlaggning"];
 
 export const SERVICE_COPY = {
   heroEyebrow: "Tjänstebeskrivning / Roslagen",
@@ -355,7 +350,7 @@ export const SERVICE_COPY = {
   scopeNote: "Allt specificeras i offerten — inga tillägg i efterhand utan att du godkänt dem.",
   craftEyebrow: "Hantverket",
   // "utfört i Roslagen" bara där vi har belagda egna jobb (takbyte på Blidö och Singö). Övriga tjänster: bara tjänstens namn (juristen A1, regel 5).
-  craftCaption: (title: string, slug?: string) => (slug && CAPTION_OWN_JOB_SLUGS.includes(slug) ? `${title} — utfört i Roslagen` : title),
+  craftCaption: (title: string, slug?: string) => (slug && CAPTION_OWN_JOB_SLUGS.includes(slug) ? "Takbyte på Blidö" : title),
   goodToKnowEyebrow: "Bra att veta",
   skargardenTitle: "Skärgården",
   skargardenText: "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",

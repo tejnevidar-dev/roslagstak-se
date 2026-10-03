@@ -159,7 +159,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Takavvattning",
-        text: "Vi kontrollerar hängrännor, stuprör och fall.",
+        text: "Vi tittar på hängrännor och stuprör.",
       },
       {
         title: "Vinden",
@@ -187,8 +187,8 @@ export const landingServices: LandingService[] = [
     ],
     extraHeading: "När är det läge för en takkontroll?",
     extraParagraphs: [
-      "Boka en kontroll om du ser fuktfläckar i tak eller på vinden, trasiga eller förskjutna pannor, rost på plåt eller mossa och alger som håller kvar fukt. Också när taket börjar bli gammalt och du inte vet vilket skick det har.",
-      "En regelbunden kontroll förebygger dyra skador och ger dig ett underlag för att planera underhåll eller ett eventuellt takbyte.",
+      "Boka en kontroll om du ser fuktfläckar i tak eller på vinden, trasiga eller förskjutna pannor, rost på plåt eller mossa och alger som håller kvar fukt. Också när du inte vet när taket senast sågs över eller lades om.",
+      "En kontroll ger dig ett underlag för att planera underhåll eller ett eventuellt takbyte.",
     ],
     priceNote:
       "Takkontrollen är helt kostnadsfri och förpliktar inte till något. Behöver taket åtgärdas lämnar vi ett fast pris. Vi arbetar endast till fast pris.",
