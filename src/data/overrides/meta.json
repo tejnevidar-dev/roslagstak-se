@@ -59,6 +59,20 @@
         "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
+    "/taklaggare-upplands-vasby": {
+      "title": {
+        "id": "manuell-2026-10-04-0011",
+        "text": "Takläggare i Upplands Väsby – byta tak, fast pris",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bu), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0012",
+        "text": "Takbyte och takomläggning i Upplands Väsby. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bu), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
     "/taklaggare-vallentuna": {
       "title": {
         "id": "manuell-2026-10-04-0005",

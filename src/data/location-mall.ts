@@ -22,6 +22,14 @@ const NEARBY_PROJECT_MAX_KM = 30;
  */
 export const MALL_UNDANTAG: readonly string[] = ["taby", "vallentuna", "akersberga", "danderyd", "norrtalje", "vaxholm"];
 
+/**
+ * Öar som bara nås med båt (ingen belagd bilväg i datan). Mallens stycke 3, ingressen och avslutningen lovar där inte
+ * "kostnadsfri" takkontroll, eftersom frågan om takkontroll utan bilväg (10o) är obesvarad (Marknadschefen, backlog 1bu).
+ */
+export const OAR_UTAN_BILVAG: readonly string[] = [
+  "hogmarso", "husaro", "ingmarso", "finnhamn", "humlo", "svartloga", "sodorora", "norrora", "grasko", "arholma",
+];
+
 /** Orten har ingen riktig områdestext (import-omrade sätter alltid factBox) och är inte undantagen. */
 export const usesMall = (loc: LocationData): boolean => !loc.factBox && !MALL_UNDANTAG.includes(loc.slug);
 
@@ -66,7 +74,10 @@ export const applyMall = (loc: LocationData): LocationData => {
     n,
     1,
   );
-  const p3 = pick<string>(
+  const utanBilvag = OAR_UTAN_BILVAG.includes(loc.slug);
+  const p3 = utanBilvag
+    ? "Berätta var huset ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris."
+    : pick<string>(
     [
       "Takkontrollen är kostnadsfri och utan förpliktelser, och den tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
       "Du betalar inget för takkontrollen och binder dig inte till något. Den tar ungefär 1–2 timmar. Efteråt får du en rapport om takets skick, och om något behöver åtgärdas en offert med fast pris.",
@@ -129,7 +140,9 @@ export const applyMall = (loc: LocationData): LocationData => {
 
   return {
     ...loc,
-    description: `Takbyte, takomläggning och takrenovering ${prep} ${ort}. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.`,
+    description: utanBilvag
+      ? `Takbyte, takomläggning och takrenovering ${prep} ${ort}. Takkontroll utan förpliktelser och fast pris i offerten.`
+      : `Takbyte, takomläggning och takrenovering ${prep} ${ort}. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.`,
     longDescription: p1,
     extraContent: "",
     extraSections: [
@@ -137,7 +150,7 @@ export const applyMall = (loc: LocationData): LocationData => {
       { heading: "Takkontrollen", text: p3 },
       { heading: "Var vi finns", text: `${p4} ${p5}` },
       { heading: "Pris, ROT och villkor", text: p6 },
-      { heading: "Boka takkontroll", text: `Boka en kostnadsfri takkontroll ${prep} ${ort} på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.` },
+      { heading: "Boka takkontroll", text: `Boka en ${utanBilvag ? "" : "kostnadsfri "}takkontroll ${prep} ${ort} på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.` },
     ],
     uniqueFAQ: faq,
   };

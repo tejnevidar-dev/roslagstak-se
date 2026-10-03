@@ -123,20 +123,20 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: false,
     description:
-      "Takläggare i Furusund — takbyte, tegelplåttak och takrenovering.",
+      "Takbyte och takomläggning i Furusund, den gamla badorten i Norrtälje skärgård med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
     longDescription:
-      "Furusund har anor som skärgårdsort och bebyggelsen speglar det — sekelskifteshus, klassiska sommarstugor och nyare villor. Salta vindar och fuktiga höstar ställer särskilda krav på materialvalet, och det går vi igenom vid den kostnadsfria takkontrollen.",
+      "Furusund är en ö och småort i Norrtälje kommun, mellan Yxlan och Eknö i Blidö socken. Ön har gett namn åt Furusundsleden, farleden in mot Stockholm, och den präglas enligt Wikipedia i dag av många fritidsboende, särskilt på sommaren. Platsen har varit hamn länge. Viken där hamnen ligger användes som naturhamn i väntan på vind över Ålands hav, och i berget finns en inristad kompassros som troligen är från 1463. År 1811 inrättades en tullkammare här, och tullhuset från 1811–1812, byggt för 15 tullmän med familjer, är i dag värdshus. En karantänsstation fanns på ön från 1831 till 1856, och det gamla karantänssjukhuset blev senare sommarvilla. Badorten kom till vid mitten av 1800-talet. Ön köptes 1842 av en fabrikör som anlade hotell och kägelbana och 1855 lät bygga ett varmbadhus vid viken. Från 1882 byggdes badorten ut av nästa ägare, som gav hus, vägar och platser italienska namn som Isola Bella och Monte Bello. Från 1907 började tomter säljas av. Stora hotellet brann ner 1915, och efter första världskriget hade Furusund enligt Wikipedia förlorat sin popularitet som badort. Sommargästerna fortsatte ändå att komma. Sedan 1953 går det att köra bil hit. Då byggdes en vägbank från Eknö på Svartnö till Furusund, som en del av Sju strömmars väg från fastlandet.",
     extraContent:
-      "Furusund fungerar som knutpunkt för öarna i mellersta skärgården. Kontakta oss för en kostnadsfri takkontroll i Furusund, så får du ett fast pris i offerten.",
-    uniqueFAQ: {
-      question: "Hur snabbt kan ni påbörja ett takbyte i Furusund?",
-      answer:
-        "Ring oss för att diskutera ditt projekt. Takkontrollen är kostnadsfri och utan förpliktelser, och du får ett fast pris i offerten.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Furusund?","answer":"Byggperiod enligt källorna: tullhuset 1811–1812, badorten från 1840-talet och framför allt från 1882, tomtförsäljning från 1907. Hustyper: sommarvillor från badortstiden, fritidshus, tullhuset (värdshus). Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Furusund",
     lat: 59.65,
     lng: 18.9167,
-    nearbyLocations: ["Blidö", "Yxlan", "Rådmansö"],
+    nearbyLocations: ["Blidö","Yxlan","Rådmansö"],
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Hustyper","value":"Sommarvillor från badortstiden, fritidshus, tullhuset (värdshus)"},{"label":"Byggperiod","value":"Tullhuset 1811–1812, badorten från 1840-talet och framför allt från 1882, tomtförsäljning från 1907"},{"label":"Väg","value":"Bilväg sedan 1953 (vägbank från Eknö)"}],
+    sourceLink: {"label":"Wikipedia, Furusund","url":"https://sv.wikipedia.org/wiki/Furusund"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"På Furusund finns alltså hus från badortens tid, som i dag är över hundra år gamla, och fritidshus från senare årtionden. Husens ålder säger inte hur gammalt taket är. På ett så gammalt hus kan taket ha lagts om flera gånger, och hur underlaget ser ut i dag går inte att se från vägen. Två saker är värda att tänka på. På en sommarvilla från sekelskiftet är takets form, material och detaljer ofta en del av husets uttryck, och det nya materialet väljs efter det gamla om huset ska behålla det. Ett fritidshus kan också vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris. Eftersom bilvägen går ända fram kan material, ställning och container köras till huset som på fastlandet."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Furusund och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "husaro",
@@ -144,20 +144,20 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takläggare på Husarö — takbyte och takrenovering. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
+      "Takbyte och takomläggning på Husarö, lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
-      "Öns exponerade läge gör att taken utsätts för extremt väder, vilket ställer höga krav på både material och utförande. Vi använder enbart beprövade lösningar som tål skärgårdens hårda påfrestningar.",
+      "Husarö är en ö i mellersta Stockholms skärgård och hör till Österåkers kommun. Den ligger ungefär en distansminut norr om Finnhamn. Ön nås med båt: Waxholmsbolagets fartyg lägger till vid ångbåtsbryggan. Enligt Wikipedia har Husarö bara ett fåtal åretruntboende men desto fler sommargäster, och på ön finns ett hundratal sommarstugor. Husarö är en gammal lotsplats. Ön nämns redan på 1200-talet, som Husarn, i en beskrivning av en segelled. Lotsar har funnits här sedan 1400-talet, och 1740 blev Husarö officiell lotsplats. På segelfartygens tid lotsade husarölotsarna norrut till Furusund och söderut till Sandhamn. På 1800-talet arbetade som mest femton lotsar här. De blev färre efter hand, och 1912 lades lotsplatsen ner. I dag finns ett lotsmuseum i en av de gamla lotsgårdarna. Sommargästerna kom när ångbåtarna började gå i reguljär trafik 1881, och på sommaren kommer ett ångfartyg fortfarande hit på söndagar. Öns gamla skola lades ner på 1950-talet och är i dag scoutgård.",
     extraContent:
-      "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
-    uniqueFAQ: {
-      question: "Hur transporterar ni takmaterial till Husarö?",
-      answer:
-        "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen på Husarö?","answer":"Byggperiod enligt källorna: sommargäster från 1881, lotsplats till 1912. Hustyper: lotsgårdar, ett hundratal sommarstugor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Husarö",
     lat: 59.5333,
     lng: 18.6833,
-    nearbyLocations: ["Ingmarsö", "Finnhamn", "Ljusterö"],
+    nearbyLocations: ["Ingmarsö","Finnhamn","Ljusterö"],
+    factBox: [{"label":"Kommun","value":"Österåker"},{"label":"Hustyper","value":"Lotsgårdar, ett hundratal sommarstugor"},{"label":"Byggperiod","value":"Sommargäster från 1881, lotsplats till 1912"},{"label":"Väg","value":"Ingen bilväg, ångbåtsbrygga med Waxholmsbolagets fartyg"}],
+    sourceLink: {"label":"Wikipedia, Husarö","url":"https://sv.wikipedia.org/wiki/Husarö"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"På Husarö finns alltså hus från lotsarnas tid och ett hundratal sommarstugor som har kommit till sedan 1880-talet. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se utifrån. Tre saker är värda att tänka på. Ett fritidshus kan vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. En sommarstuga som har byggts till har ofta takdelar av olika ålder, och skarven mellan dem är värd en extra titt. Och till en ö utan bilväg behöver material, ställning och bortforsling planeras efter båt och brygga, och det går vi igenom innan arbetet börjar. Mer om det finns i takbyte på Husarö och Finnhamn. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Takkontroll.** Berätta var huset ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Har du hus på Husarö och funderar på taket? Hör av dig på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "finnhamn",
@@ -187,21 +187,20 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takläggare på Ingmarsö — takbyte och takrenovering. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
+      "Takbyte och takomläggning på Ingmarsö i Österåkers skärgård, en ö utan vägförbindelse. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
-      "Ingmarsö har en aktiv skärgårdsgemenskap med både året-runt-boende och sommarfirare. Bebyggelsen varierar från äldre röda stugor till nyare fritidshus — och alla behöver ett tak som fungerar. Vi tar hand om hela processen åt dig — från takkontroll till färdigt tak, med fast pris.",
+      "Ingmarsö är en ö i Österåkers kommun i Stockholms skärgård. Enligt Wikipedia hade ön 163 bofasta invånare år 2020, på drygt sex kvadratkilometer. Ön saknar vägförbindelse med fastlandet och trafikeras av skärgårdsbåtar och båttaxi till två bryggor, Ingmarsö Södra och Ingmarsö Norra. Ön nämns första gången i jordeboken 1539, då fyra bönder bodde här och betalade skatt, bland annat i torsk. År 1694 stod öns båtsmanstorp färdigt, och det finns fortfarande kvar vid Norrgården. Befolkningen växte under 1800-talet, och 1910 var 223 personer skrivna på ön. Skolhuset invigdes 1901. Det har byggts om och till och rymmer i dag förskola och bibliotek. Affären öppnade 1887 och har varit i gång sedan dess. På 1930-talet började sommargästerna komma. Enligt Wikipedia hyrde de rum av de bofasta, bodde på pensionatet eller byggde egna hus. I dag finns ett trettiotal företag på ön, bland annat ett båtvarv, en krog och en livsmedelsbutik, och en stiftelse arbetar för att hålla jordbrukslandskapet öppet.",
     extraContent:
-      "Ingmarsö har ett levande samhälle med både permanentboende och säsongsboende. Äldre tak kan ha betongpannor eller eternitplattor.",
-    uniqueFAQ: {
-      question:
-        "Hanterar ni bortforsling av gammalt takmaterial från Ingmarsö?",
-      answer:
-        "Ja. Vad som ingår i arbetet står i offerten, och priset i offerten är fast.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen på Ingmarsö?","answer":"Byggperiod enligt källorna: sommarhus från 1930-talet, skolhuset 1901. Hustyper: gårdar, båtsmanstorp (1694), sommarhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Ingmarsö",
     lat: 59.5,
     lng: 18.65,
-    nearbyLocations: ["Husarö", "Finnhamn", "Ljusterö"],
+    nearbyLocations: ["Husarö","Finnhamn","Ljusterö"],
+    factBox: [{"label":"Kommun","value":"Österåker"},{"label":"Hustyper","value":"Gårdar, båtsmanstorp (1694), sommarhus"},{"label":"Byggperiod","value":"Sommarhus från 1930-talet, skolhuset 1901"},{"label":"Väg","value":"Ingen vägförbindelse med fastlandet, två reguljära bryggor"}],
+    sourceLink: {"label":"Wikipedia, Ingmarsö","url":"https://sv.wikipedia.org/wiki/Ingmarsö"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"På Ingmarsö finns alltså gårdar med gamla anor, hus från 1800-talets och det tidiga 1900-talets bondesamhälle och sommarhus som har byggts sedan 1930-talet. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se utifrån. Tre saker är värda att tänka på. På en gård finns ofta fler tak än bostadshusets, till exempel uthus och bodar, som det kan löna sig att titta på vid samma tillfälle. Ett fritidshus kan vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. Och till en ö utan bilväg behöver material, ställning och bortforsling planeras efter båt och brygga, och det går vi igenom innan arbetet börjar. Mer om det finns i takbyte på ö och fritidshus. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Takkontroll.** Berätta var huset ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Har du hus på Ingmarsö och funderar på taket? Hör av dig på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "hogmarso",
@@ -209,21 +208,20 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takläggare på Högmarsö — takbyte och takrenovering.",
+      "Takbyte och takomläggning på Högmarsö, varvsön vid Furusundsleden i Norrtälje skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
-      "Högmarsö är en lugnare ö i mellersta Roslagen. Vi går igenom taket vid en kostnadsfri takkontroll och föreslår material efter husets skick.",
+      "Högmarsö är en ö i Norrtälje kommun, längs Furusundsleden innanför Yxlan och sydväst om Furusund. Enligt Wikipedia är ön två kvadratkilometer stor och har en fast befolkning på 40 personer. På sommaren växer befolkningen till drygt 1 000. Ön har varit bebodd sedan 1500-talet, men det var varvet som formade samhället. År 1876 startades ett varv här, på initiativ av flera redare i trakten, och fartygen byggdes i en hållbarare teknik än de traditionella skroven. År 1918 började varvet bygga stålfartyg, och under 1930- och 1940-talen låg också ett mindre varv för fritidsbåtar bredvid skeppsvarvet. Enligt Wikipedia växte ett samhälle fram i anslutning till varvet, med skolbyggnad och en frikyrka som uppfördes 1913. I dag finns en restaurang i varvets lokaler, och ett mindre varv för traditionen vidare.",
     extraContent:
-      "Högmarsö ligger nära Ljusterö och vi kombinerar ofta projekt på de två öarna. Det innebär att fastighetsägare på Högmarsö kan dra nytta av samordning och få ett förmånligt pris. Oavsett om du har en sommarstuga eller ett permanentboende rekommenderar vi en kostnadsfri takkontroll som utgångspunkt.",
-    uniqueFAQ: {
-      question:
-        "Hur sätts priset för ett takbyte på Högmarsö?",
-      answer:
-        "Priset beror på takets storlek, material och förutsättningarna på plats. Begär en offert så ser du vad det kostar. Priset är fast.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen på Högmarsö?","answer":"Byggperiod enligt källorna: varvet från 1876, frikyrkan 1913. Hustyper: hus från varvssamhället, fritidshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Högmarsö",
     lat: 59.4833,
     lng: 18.6,
-    nearbyLocations: ["Ljusterö", "Finnhamn", "Ingmarsö"],
+    nearbyLocations: ["Ljusterö","Finnhamn","Ingmarsö"],
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Hustyper","value":"Hus från varvssamhället, fritidshus"},{"label":"Byggperiod","value":"Varvet från 1876, frikyrkan 1913"},{"label":"Invånare","value":"40 fasta, drygt 1 000 på sommaren"}],
+    sourceLink: {"label":"Wikipedia, Högmarsö","url":"https://sv.wikipedia.org/wiki/Högmarsö"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"På Högmarsö finns alltså hus från varvssamhällets tid, som i dag är omkring hundra år gamla eller mer, och fritidshus. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se utifrån. Tre saker är värda att tänka på. Ett fritidshus kan vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. Ett hus som har byggts till har ofta takdelar av olika ålder, och skarven mellan dem är värd en extra titt. Och går det inte att köra bil fram till huset behöver material, ställning och bortforsling planeras efter båt och brygga, och det går vi igenom innan arbetet börjar. Mer om det finns i takbyte på ö och fritidshus. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris. Två kompletta takbyten i kommunen finns att se under projekt: Nytt tak på Blidö och Nytt tak på Singö."}],
+    process: {"steps":["**Takkontroll.** Berätta var huset ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Har du hus på Högmarsö och funderar på taket? Hör av dig på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "svartloga",
@@ -340,21 +338,20 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare i Spillersboda — takbyte och takrenovering längs Roslagens kust. Kostnadsfri takkontroll och fast pris.",
+      "Takbyte och takomläggning i Spillersboda, skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
     longDescription:
-      "Spillersboda ligger vackert längs Roslagens kustlinje. Vi erbjuder en kostnadsfri takkontroll utan förpliktelser. Vi rekommenderar den lösning som passar taket — ibland räcker en renovering, ibland behövs ett komplett byte.",
+      "Spillersboda ligger i Frötuna socken i Norrtälje kommun, vid kusten sydost om Norrtälje. Wikipedia beskriver det som ett skärgårdssamhälle som har gått från fiskar- och jordbrukartiden, via pensionatens och ångbåtarnas tid, till dagens samhälle. Orten nämns första gången 1535. På 1700-talet fanns tre gårdar här, två i Mutsunda och en i Spillersboda. I slutet av 1800-talet kom ångbåtarna: 1888 öppnades en affär vid ångbåtsbryggan, och 1894–1895 byggdes en ny affär i ett gult hus som fortfarande står kvar vid bryggan. Det kallas Tornvillan och blev senare ett av många pensionat i byn. Sågen startades 1903 och varvet 1919, och varvet hade enligt Wikipedia sin storhetstid på 1930-, 1940- och 1950-talen. Fram till slutet av 1940-talet gick Vaxholmsbolagets båtar hit i reguljär trafik, och från 1932 gick bussen från Norrtälje. I dag bor drygt 300 personer här året om, och därtill kommer omkring 1 500 fritidsboende. Andelen fritidshus är så hög att Spillersboda under en period inte räknades som tätort. Orten har en affär som är öppen året om, ett varv, en bygghandel och många bryggor, och den har enligt Wikipedia stor betydelse för öbor som handlar och reser härifrån.",
     extraContent:
-      "Vi rekommenderar aldrig ett takbyte om en renovering räcker, och du får svar inom 24 timmar.",
-    uniqueFAQ: {
-      question:
-        "Hur bedömer ni taket i Spillersboda?",
-      answer:
-        "Vid takkontrollen i Spillersboda kontrollerar vi beslag, infästningar och råspont och föreslår material efter takets skick.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Spillersboda?","answer":"Byggperiod enligt källorna: inte belagt per hus (Tornvillan 1894–1895). Hustyper: äldre hus från pensionatstiden, fritidshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Spillersboda",
     lat: 59.7,
     lng: 18.5833,
-    nearbyLocations: ["Norrtälje", "Bergshamra", "Rådmansö"],
+    nearbyLocations: ["Norrtälje","Bergshamra","Rådmansö"],
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Hustyper","value":"Äldre hus från pensionatstiden, fritidshus"},{"label":"Byggperiod","value":"Inte belagt per hus (Tornvillan 1894–1895)"},{"label":"Invånare","value":"Drygt 300 fasta, omkring 1 500 fritidsboende"}],
+    sourceLink: {"label":"Wikipedia, Spillersboda","url":"https://sv.wikipedia.org/wiki/Spillersboda"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Spillersboda har både äldre hus från pensionatstiden och ett stort antal fritidshus. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från vägen. Två saker är värda att tänka på. Ett fritidshus som har byggts till eller används året om har ofta takdelar av olika ålder, och skarven mellan dem är värd en extra titt. Ett fritidshus kan också vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Spillersboda och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "radmanso",
@@ -416,20 +413,20 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takläggare på Svartnö — takbyte och takrenovering i Roslagens kustmiljö. TP20, dubbelfalsat och pannplåt.",
+      "Takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Vi utför takbyte och takrenovering på Svartnö. Med 10 års utförandegaranti på alla våra arbeten kan du känna dig trygg. Boka en kostnadsfri takkontroll — vi ger dig en ärlig bedömning och fast pris.",
+      "Svartnö är en ö i Norrtälje skärgård, mellan Humlö och Furusund. Den östra halvan heter Eknö och var förr en egen ö, men landhöjningen har fått de två att växa ihop. På den sydvästra delen ligger Svartnö by, söder om vägen ut mot Furusund. I början av 1900-talet bestod byn enligt Wikipedia av sju bebyggda brukningsdelar med åker. Byn har, trots all fritidsbebyggelse, bevarat sin karaktär av bondeland, och det finns fortfarande djur i hagarna. Wikipedia beskriver bebyggelsen som en rad byggnader som tillsammans ger en enhetlig bild, trots att de enskilda husen har byggts om och förändrats. Byskolan från 1879 står kvar och är i stort sett orörd sedan den sista eleven gick ut 1939. På Eknösidan finns små jord- och skogsbruk, en fritidsbåtshamn och ett mindre varv. Där låg tidigare ett större jordbruk, Eknö gård, vars mark har styckats av och sålts efter hand. År 1945 invigdes vägen från fastlandet till Svartnö, som en del av Sju strömmars väg, med Svartnöbron. År 1953 förlängdes den med en vägbank från Eknö till Furusund, och en ny bro invigdes 1986.",
     extraContent:
-      "Svartnö är populärt bland fritidshusägare som vill bo nära havet. Salta vindar och ett utsatt läge ställer särskilda krav på materialvalet. Kontakta oss för en kostnadsfri takkontroll.",
-    uniqueFAQ: {
-      question: "När bör man byta tak på ett hus på Svartnö?",
-      answer:
-        "Tecken på att det är dags: mossa, fuktfläckar i underlaget, rostiga beslag eller spruckna pannor. Vi gör kostnadsfri takkontroll och ger dig en ärlig bedömning — ibland räcker det med en renovering istället för ett komplett byte.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Svartnö?","answer":"Byggperiod enligt källorna: inte belagt per hus (byskolan 1879). Hustyper: gårdar och byggnader i byn (ombyggda), fritidshus, små jord- och skogsbruk. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Svartnö",
     lat: 59.45,
     lng: 18.55,
-    nearbyLocations: ["Ljusterö", "Bergshamra", "Vaxholm"],
+    nearbyLocations: ["Ljusterö","Bergshamra","Vaxholm"],
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Delar","value":"Svartnö by, Eknö"},{"label":"Hustyper","value":"Gårdar och byggnader i byn (ombyggda), fritidshus, små jord- och skogsbruk"},{"label":"Byggperiod","value":"Inte belagt per hus (byskolan 1879)"},{"label":"Väg","value":"Bilväg sedan 1945, vägbank till Furusund 1953, ny bro 1986"}],
+    sourceLink: {"label":"Wikipedia, Svartnö","url":"https://sv.wikipedia.org/wiki/Svartnö"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"På Svartnö finns alltså gårdar med gamla anor, där husen har byggts om och förändrats, och fritidshus som har kommit till senare. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från vägen. Två saker är värda att tänka på. Ett hus som har byggts om och till har ofta takdelar av olika ålder, och skarven mellan dem är värd en extra titt. Och på en gård finns ofta fler tak än bostadshusets, till exempel uthus och bodar, som det kan löna sig att titta på vid samma tillfälle. Ett fritidshus kan dessutom vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris. Eftersom bilvägen går över ön kan material, ställning och container köras fram till huset som på fastlandet."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du på Svartnö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "vaddo",
@@ -703,20 +700,20 @@ export const locations: LocationData[] = [
     region: "Roslagens inland",
     isIsland: false,
     description:
-      "Takläggare i Edsbro — takbyte, takomläggning och takrenovering på landsbygden i Roslagen. Fast pris.",
+      "Takbyte och takomläggning i Edsbro, den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
-      "Edsbro är en klassisk Roslagsbygd med gårdar, äldre trähus och villor. Här finns många stora takytor — ladugårdar, uthus och huvudbyggnader — där rätt materialval får stor ekonomisk betydelse. Vi utför takbyten och takomläggningar i Edsbro med TP20-plåt, pannplåt, tegelplåt och betongpannor, och hjälper dig räkna på totalkostnaden per kvadratmeter innan du bestämmer dig.",
+      "Edsbro är en tätort i Norrtälje kommun och kyrkby i Edsbro socken. Enligt Wikipedia är det en gammal bruksort: här fanns ett vallonbruk med masugn och klensmedja, och ruinerna efter dem är välbevarade. Bruket kom till efter en brand. När Skebo bruk brann 1686 fördes masugnsrättigheterna över till Edsbro, och en masugn uppfördes med vattenkraft som drivkälla. Här tillverkades råjärn från 1686 till 1919, och järnet fraktades i pråmar över sjön Närdingen till Skebo för att förädlas. Masugnen har byggts om och på flera gånger, senast 1905. Slaggen från ugnen användes enligt Wikipedia som byggnadsmaterial i byggnaderna runt omkring. Platsen är betydligt äldre än bruket. Vid Edsbro-Kyrksjön ligger fornborgen Lundboborg, 210 meter lång, som troligen uppfördes under folkvandringstiden. På andra sidan sjön finns enligt Wikipedia ytterligare två fornborgar, som inte är arkeologiskt undersökta. Kyrkan är från 1200-talet.",
     extraContent:
-      "På lantbruksfastigheter i Edsbro rekommenderar vi ofta TP20-plåt på uthus och ekonomibyggnader, och dubbelfalsat eller tegelprofilerad plåt på huvudbyggnaden där utseendet väger tyngre. Vi kontrollerar alltid takstolarnas skick och snölastkapacitet innan nytt material monteras.",
-    uniqueFAQ: {
-      question: "Utför ni takbyte på ladugårdar och uthus i Edsbro?",
-      answer:
-        "Ja, vi lägger tak på både bostadshus, uthus, ladugårdar och garage i Edsbro. Stora takytor i TP20-plåt blir ofta förvånansvärt prisvärda per kvadratmeter. Vi lämnar fast pris efter kostnadsfri takkontroll och kan dela upp projektet i etapper om du vill.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Edsbro?","answer":"Byggperiod enligt källorna: inte belagt (bruket 1686–1919, masugnen påbyggd 1905). Hustyper: inte belagt. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Edsbro",
     lat: 59.8667,
     lng: 18.5,
-    nearbyLocations: ["Rimbo", "Norrtälje", "Bergshamra"],
+    nearbyLocations: ["Rimbo","Norrtälje","Bergshamra"],
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Hustyper","value":"Inte belagt"},{"label":"Byggperiod","value":"Inte belagt (bruket 1686–1919, masugnen påbyggd 1905)"}],
+    sourceLink: {"label":"Wikipedia, Edsbro","url":"https://sv.wikipedia.org/wiki/Edsbro"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Husets ålder säger inte hur gammalt taket är, och grannens tak säger inte mycket om ditt eget. Ett tak kan ha lagts om en eller flera gånger, och ett tak kan se helt ut från vägen och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. På en gård eller en äldre fastighet finns ofta fler tak än bostadshusets, till exempel uthus och bodar, som det kan löna sig att titta på vid samma tillfälle. Och ett hus som har byggts till har ofta takdelar av olika ålder, där skarven mellan dem är värd en extra titt. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Edsbro och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "riala",
@@ -1924,18 +1921,18 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Sollentuna — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Sollentuna har en varierad bebyggelse — från villor i Edsberg och Tureberg till radhus och bostadsrättsfastigheter. Betongpannor kan drabbas av frostsprängning och underlagspapp torkar ut och spricker med åren, vilket är skäl till att ett tak till slut kan behöva bytas eller läggas om. Vi utför takbyten och takomläggningar i Sollentuna med både plåttak och betongpannor, alltid med ny taksäkerhet och fungerande ventilation.",
+      "Sollentuna ligger norr om Stockholm, mellan Järfälla i väster och Danderyd och Täby i öster, med Edsviken som sträcker sig in i kommunen. Kommunen bildades 1971 ur Sollentuna köping. Den som söker takläggare i Sollentuna har ett hus i någon av kommundelarna längs järnvägen eller vid Edsviken, och de har byggts ut under olika årtionden. Här går vi igenom fyra av dem.",
     extraContent:
-      "I Sollentuna finns det ofta villatak med betongpannor där frostsprängning börjat och underlagspapp torkat sönder. I de fallen är omläggning med ny papp, ny läkt och antingen nya pannor eller plåt ofta det rimliga valet. Vi hjälper dig jämföra totalkostnad, inte bara pris per kvadratmeter idag.",
-    uniqueFAQ: {
-      question: "Vad kostar takomläggning i Sollentuna?",
-      answer:
-        "Takomläggning i Sollentuna med ny underlagspapp, ny läkt och nytt takmaterial i plåt eller betongpannor, till ett pris som beror på takets skick. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Sollentuna?","answer":"Byggperiod enligt källorna: tomter från 1917 (Häggvik), mest 1950–1980-tal, Falkberget 1990–2000-tal, Silverdal från 2002. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Sollentuna",
     lat: 59.4289,
     lng: 17.9511,
-    nearbyLocations: ["Täby", "Solna", "Upplands Väsby"],
+    nearbyLocations: ["Täby","Solna","Upplands Väsby"],
+    factBox: [{"label":"Kommun","value":"Sollentuna"},{"label":"Kommundelar som nämns","value":"Häggvik, Viby, Sjöberg (med Falkberget), Helenelund (Tegelhagen, Silverdal)"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"Tomter från 1917 (Häggvik), mest 1950–1980-tal, Falkberget 1990–2000-tal, Silverdal från 2002"}],
+    sourceLink: {"label":"Wikipedia, Sollentuna kommun","url":"https://sv.wikipedia.org/wiki/Sollentuna_kommun"},
+    extraSections: [{"heading":"Häggvik","text":"Häggvik ligger i den centrala delen av kommunen. År 1911 avstyckades en del av gårdens ägor, mark som varken passade för odling eller för boskap, och från 1917 styckades den i tomter. Sollentuna kommun beskriver hur villabebyggelsen omkring 1960 växte in över det sista av jordbrukslandskapet i Södra Häggvik. Enligt hitta.se är husen i Häggvik mest från 1950- och 1980-talen."},{"heading":"Viby","text":"Viby, i norr, har sitt namn från ett säteri som är känt i skrift sedan 1409. Den moderna bebyggelsen växte fram när gårdens ekonomibyggnader revs på 1960-talet och ägorna började bebyggas med bostäder. Redan 1960 räknades den framväxande bebyggelsen som en egen tätort. Enligt hitta.se är husen främst byggda på 1960- och 1980-talen."},{"heading":"Sjöberg","text":"Sjöberg ligger i öster, mellan Edsviken, Rösjön och Rinkebyskogen. Här låg tidigare ett sommarstugeområde. Den nuvarande bebyggelsen i Östra och Västra Sjöberg är huvudsakligen uppförd under 1970-talet, och mot slutet av 1990-talet började Falkberget bebyggas med villor. Där är husen enligt hitta.se främst från 1990- och 2000-talen."},{"heading":"Tegelhagen och Silverdal","text":"Tegelhagen och Silverdal ligger i söder, mellan motorvägen och Edsviken, och har båda namn efter gamla torp. Bostadsområdet Tegelhagen byggdes på 1970-talet. Silverdal byggdes som en trädgårdsstad med omkring 1 000 bostäder, i etapper från 2002."},{"heading":"Vad det betyder för taket","text":"Husen i de här delarna av Sollentuna är alltså mellan ett tjugotal och omkring sjuttio år gamla, med enstaka äldre hus från tomtstyckningarnas första tid. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Tre saker är värda att tänka på. - **Kvarter som byggdes samtidigt.** Där ser taken lika ut från gatan, men de har skötts och lagts om var för sig. Grannens tak säger inte mycket om ditt eget. - **Sommarstugor som har ersatts eller byggts om.** Ett hus som har byggts om och till har ofta takdelar av olika ålder, och skarven mellan dem är värd en extra titt. - **Hus från olika årtionden i samma område.** I flera kommundelar står villor från 1950-talet nära hus från 1980-talet eller senare. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."},{"heading":"Det här gör vi i Sollentuna","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag i Sollentuna. Mer om varje tjänst finns på sidorna om takbyte i Sollentuna, takomläggning i Sollentuna och takrenovering i Sollentuna. Grannkommunerna finns på sidan Norra Stockholm."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Sollentuna och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "lidingo",
@@ -1945,18 +1942,18 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Lidingö — takbyte och takrenovering på en ö nära Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Lidingö är en ö med exklusiv villabebyggelse, strandnära hus och bostadsrättsfastigheter — allt samlar på en ö med broförbindelse men ändå ö-karaktär. Taken utsätts för fukt från omgivande vatten och vind. Vi utför takbyten, bandtäckning och takrenoveringar på Lidingö med material som tål det fuktiga läget. Många hus har komplexa tak med brutna fall och kupor som kräver skicklig plåtslagning.",
+      "Lidingö är en ö i Stockholms inre skärgård, öster om staden, med Lilla Värtan mellan ön och fastlandet. Kommunen blev köping 1910 och stad 1926. Den som söker takläggare på Lidingö har ofta en villa i en av de villastäder som anlades i början av 1900-talet, men ön har också villaområden från 1950-talet och framåt. Här går vi igenom dem i den ordning de byggdes.",
     extraContent:
-      "På Lidingö har många hus tak med tegelpannor eller plåt från 1920–1950-talet. Vid takbyte bevarar vi husens karaktär med material som matchar originalet — tegelprofilerad plåt för tegelutseende, eller dubbelfalsad plåt i klassiska kulörer. Kostnadsfri takkontroll och fast pris ingår.",
-    uniqueFAQ: {
-      question: "Ställer Lidingös läge särskilda krav på takmaterial?",
-      answer:
-        "Lidingö omges av vatten vilket ger fuktigare luft än på fastlandet. Vi rekommenderar material med hög korrosionsklass på plåt och noggrann hantering av ventilation och underlagspapp. Dubbelfalsad plåt och tegelprofilerad plåt är bra val. Boka en kostnadsfri takkontroll så ger vi en rekommendation anpassad för ditt hus och läge.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen på Lidingö?","answer":"Byggperiod enligt källorna: från 1906 (villastaden) till 1990-talet (Södra Sticklinge) och 2000–2020 (Gåshaga). Hustyper: villor från 1900-talets början, villor från 1950-talet och framåt. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Lidingö",
     lat: 59.3667,
     lng: 18.1333,
-    nearbyLocations: ["Stockholm", "Nacka", "Danderyd"],
+    nearbyLocations: ["Stockholm","Nacka","Danderyd"],
+    factBox: [{"label":"Kommun","value":"Lidingö"},{"label":"Stadsdelar som nämns","value":"Hersby, Herserud, Brevik, Käppala, Gåshaga, Skärsätra, Mölna, Sticklinge"},{"label":"Hustyper","value":"Villor från 1900-talets början, villor från 1950-talet och framåt"},{"label":"Byggperiod","value":"Från 1906 (villastaden) till 1990-talet (Södra Sticklinge) och 2000–2020 (Gåshaga)"}],
+    sourceLink: {"label":"Wikipedia, Lidingö kommun","url":"https://sv.wikipedia.org/wiki/Lidingö_kommun"},
+    extraSections: [{"heading":"Villastaden från 1906","text":"Hersby, mitt på ön, utgör enligt Wikipedia kärnan i Lidingö villastad, som bildades 1906. Stadsplanen från 1907 har ett oregelbundet gatunät som är anpassat efter terrängen. Tomterna styckades stora, med boningshuset mitt på fastigheten, och i de först bebyggda kvarteren har villorna till stor del kvar sina ursprungliga exteriörer i nationalromantik och jugend. I Herserud, intill, började villatomter säljas 1906."},{"heading":"Brevik, Käppala och Gåshaga","text":"På den östra delen av södra ön ligger Brevik, Käppala och Gåshaga. Marken styckades 1906–1907 till en villastad vid segelleden, och storhetstiden kom på 1910-talet, då villor i jugendstil byggdes. Under krigen och 1930-talets depression stannade byggandet nästan helt av och kom i gång igen först på 1960-talet. Bebyggelsen i Brevik är därför en blandning av större villor från 1900-talets början och villor från 1960-talet och framåt. I Gåshaga byggdes nya villor mellan 2000 och 2020."},{"heading":"Skärsätra","text":"I Skärsätra, vid Lilla Värtan, började villorna uppföras 1909, och 1910 hade omkring 300 tomter sålts. Området ritades som ett kombinerat villa- och industrisamhälle, men villorna kom att dominera."},{"heading":"Mölna","text":"Mölna bebyggdes senare. Gårdens ägor började bebyggas huvudsakligen på 1950- och 1960-talen, sedan stadsplaner hade upprättats i omgångar med början 1953. Enligt Wikipedia sparades mycket natur mellan villaområdena."},{"heading":"Sticklinge","text":"Sticklinge, på nordvästra ön, började som ett sommarstugeområde tidigt på 1930-talet. År 1978 beslutade staden att området skulle stadsplaneras, och det bebyggdes därefter med villor för permanentboende. Södra Sticklinge byggdes i början av 1990-talet."},{"heading":"Vad det betyder för taket","text":"Villorna på Lidingö är alltså mellan ungefär 30 och 120 år gamla, beroende på var huset står. Husens ålder säger inte hur gammalt taket är. På de äldsta villorna kan taket ha lagts om flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Tre saker är värda att tänka på. - **Sammansatta tak.** Villor från det tidiga 1900-talet har ofta kupor, vinklar och flera anslutningar i plåt. Ju fler detaljer ett tak har, desto större del av arbetet ligger i plåten. - **Takets uttryck.** På en äldre villa är takets form, material och kulör en del av husets karaktär. Tre villor i Brevik är byggnadsminnen. - **Sommarstugor som har ersatts eller byggts om.** Ett hus som har byggts om och till har ofta takdelar av olika ålder, och skarven mellan dem är värd en extra titt. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."},{"heading":"Det här gör vi på Lidingö","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag på Lidingö. Mer om tjänsten finns på sidan om takbyte på Lidingö. Fler orter i närheten finns på sidan Östra Stockholm."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du på Lidingö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "nacka",
@@ -1966,18 +1963,18 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Nacka — takbyte och takrenovering i östra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Nacka kommun sträcker sig från tät bebyggelse vid Järla och Sicklaö till skogsnära villor i Saltsjöbaden och Älta. Taken varierar från industribyggnaders plåttak till exklusiva villatak i Saltsjöbaden. Vi utför takbyten, takomläggningar och plåtarbeten i hela Nacka kommun med material anpassat för varje stadsdel.",
+      "Nacka ligger öster om Stockholm, mellan Saltsjön i norr och Baggensfjärden i söder. Kommunen bildades 1971 av Nacka stad, Saltsjöbadens köping och Boo landskommun, och den har villaområden som har kommit till på mycket olika sätt. Den som söker takläggare i Nacka kan ha en villa från 1890-talet, ett egnahem från 1920-talet eller ett hus som började som sommarstuga. Här går vi igenom sex av områdena.",
     extraContent:
-      "I industriområdena vid Sickla lägger vi TP20 och membrantak på flacka ytor.",
-    uniqueFAQ: {
-      question: "Kan ni byta tak på både villor och industribyggnader i Nacka?",
-      answer:
-        "Ja, vi utför takbyten på både villor, bostadsrättsfastigheter och kommersiella byggnader i Nacka. Kontakta oss så rekommenderar vi rätt lösning för din fastighet.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Nacka?","answer":"Byggperiod enligt källorna: från 1870-talets sommarvillor (Björknäs) och 1890-talet (Saltsjöbaden) till 2008 (södra Hedvigslund). Hustyper: arkitektritade villor, trävillor, egnahem, sommarhus och sportstugor som har blivit villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Nacka",
     lat: 59.31,
     lng: 18.1639,
-    nearbyLocations: ["Stockholm", "Lidingö", "Värmdö"],
+    nearbyLocations: ["Stockholm","Lidingö","Värmdö"],
+    factBox: [{"label":"Kommun","value":"Nacka"},{"label":"Delar som nämns","value":"Saltsjöbaden, Storängen, Björknäs, Kummelnäs, Lännersta, Älta (Kolarängen, södra Hedvigslund)"},{"label":"Hustyper","value":"Arkitektritade villor, trävillor, egnahem, sommarhus och sportstugor som har blivit villor"},{"label":"Byggperiod","value":"Från 1870-talets sommarvillor (Björknäs) och 1890-talet (Saltsjöbaden) till 2008 (södra Hedvigslund)"}],
+    sourceLink: {"label":"Wikipedia, Nacka kommun","url":"https://sv.wikipedia.org/wiki/Nacka_kommun"},
+    extraSections: [{"heading":"Saltsjöbaden","text":"Saltsjöbaden grundades på 1890-talet som villa- och badort. Enligt Wikipedia visar en tomtkarta från 1892 120 avstyckade tomter, och 1896 var minst 64 av dem bebyggda med villor. Villastaden växte fram mellan 1891 och 1912 och byggdes sedan ut efter andra världskriget. Stadsbilden präglas fortfarande av arkitektritade villor, och Saltsjöbaden är riksintresse för kulturmiljövården."},{"heading":"Storängen","text":"Storängen, vid Saltsjöbanan, grundades 1904 av en egnahemsförening. Den första villan började byggas samma år, och redan 1909 var 107 av omkring 160 tomter bebyggda. Villorna är stora trävillor i nationalromantisk stil, de flesta arkitektritade. Storängen är riksintresse för kulturmiljövården sedan 1987."},{"heading":"Björknäs, Kummelnäs och Lännersta","text":"I Boo, i kommunens östra del, började många områden med sommarhus. - I **Björknäs** började jordbruksmarken delas upp i tomter efter 1873, och sommarvillor byggdes. Vid sekelskiftet 1900 styckades villatomter av i de centrala delarna, och på 1920-talet bildades ett egnahemsområde. Villorna i den centrala delen byggdes enligt Wikipedia utan byggnadsplan, vilket gav en varierad bebyggelse. - **Kummelnäs** består enligt Wikipedia av villaområden som från början var sommarstugeområden. En egnahemsförening köpte mark här 1907 och planlade den med vägar och tomter, och på 1930-talet tomtindelades stora områden för sportstugor. - I **Lännersta** var egendomen 1937 styckad i 925 tomter. Enligt Wikipedia präglas bebyggelsen i dag huvudsakligen av villor från 1930-talet och framåt, med några enstaka större sommarvillor från slutet av 1800-talet och början av 1900-talet."},{"heading":"Älta","text":"I Älta, i sydväst, började marken styckas för fritidshus och villor i slutet av 1800-talet. År 1925 var enligt Wikipedia omkring 1 000 tomter bebyggda, och en stor del av husen var sommarhus. Kolarängen i norra Älta har bebyggelse huvudsakligen från 1950- till 1970-talen, och i södra Hedvigslund byggdes ett nytt område från 2008."},{"heading":"Vad det betyder för taket","text":"Husen i Nacka är alltså allt från ett tjugotal till över 130 år gamla. Husens ålder säger inte hur gammalt taket är. På de äldre husen kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Tre saker är värda att tänka på. - **Sommarhus som har blivit åretruntbostad.** De har i regel byggts om och till, och då finns det ofta takdelar av olika ålder på samma hus. Skarven mellan dem är värd en extra titt. Ett fritidshus kan också vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. - **Arkitektritade villor.** På en äldre villa är takets form, material och detaljer en del av husets uttryck, och det nya materialet väljs efter det gamla om huset ska behålla det. - **Riksintressen.** I Saltsjöbaden och Storängen är det extra viktigt att fråga innan du väljer material eller kulör. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."},{"heading":"Det här gör vi i Nacka","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nacka. Mer om tjänsten finns på sidan om takbyte i Nacka. Fler orter i närheten finns på sidan Östra Stockholm."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Nacka och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "varmdo",
@@ -2071,18 +2068,18 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Järfälla — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Järfälla har en stor andel miljonprogrambebyggelse och villaområden från 70-talet, med bostadsrättsfastigheter i Jakobsberg och villor i Kallhäll och Stäket. Betongpannor kan drabbas av frostsprängning och underlagspapp torkar ut och spricker med åren, vilket är skäl till att ett tak till slut kan behöva bytas eller läggas om. Vi utför takbyten och takomläggningar i Järfälla med både plåttak och betongpannor, och hanterar stora takytor effektivt. Vi lämnar fast pris efter kostnadsfri takkontroll.",
+      "Järfälla ligger nordväst om Stockholm, vid Mälarens östra strand, med Sollentuna i öster och Upplands-Bro i nordväst. Kommunen bildades 1971 och har fyra kommundelar. Den som söker takläggare i Järfälla har ett hus i ett villaområde som kan vara allt från ett egnahemsområde från 1910-talet till en småhusstad från 1970-talet. Här går vi igenom dem i den ordning de byggdes.",
     extraContent:
-      "Stora takytor monteras effektivt med TP20-plåt. Vi planerar ställning, material och avfall så att boende störas minimalt.",
-    uniqueFAQ: {
-      question: "Kan ni byta tak på bostadsrättsfastigheter i Järfälla?",
-      answer:
-        "Ja, vi utför takbyten på bostadsrättsfastigheter och radhus i Järfälla. Vi ger offert anpassad för en bostadsrättsförenings beslutsprocess och planerar arbetet så att boende störas minimalt. Stora ytor monteras effektivt med TP20-plåt. Kontakta oss för offert.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Järfälla?","answer":"Byggperiod enligt källorna: från 1904 (Stäket) och 1912 (Kallhäll) till Viksjös utbyggnad 1963–1980. Hustyper: villor, egnahem, sommarbostäder, småhus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Järfälla",
     lat: 59.4189,
     lng: 17.8342,
-    nearbyLocations: ["Sollentuna", "Ekerö", "Upplands Väsby"],
+    nearbyLocations: ["Sollentuna","Ekerö","Upplands Väsby"],
+    factBox: [{"label":"Kommun","value":"Järfälla"},{"label":"Delar som nämns","value":"Barkarby och Skälby, Stäket, Kallhälls villastad (Björkliden), Jakobsberg, Viksjö"},{"label":"Hustyper","value":"Villor, egnahem, sommarbostäder, småhus"},{"label":"Byggperiod","value":"Från 1904 (Stäket) och 1912 (Kallhäll) till Viksjös utbyggnad 1963–1980"}],
+    sourceLink: {"label":"Wikipedia, Järfälla kommun","url":"https://sv.wikipedia.org/wiki/Järfälla_kommun"},
+    extraSections: [{"heading":"Barkarby och Skälby","text":"I Barkarby och Skälby, i söder, har villabebyggelsen sin början i 1900-talets första år, när mark köptes upp 1901 för en planerad villastad. Bara en mindre del av villorna blev byggda då. Enligt hitta.se är husen i flera av kvarteren främst byggda på 1950- och 1960-talen, med enstaka hus från 2000- och 2010-talen."},{"heading":"Stäket","text":"Stäket ligger längst i norr, vid Stäksundet. Tågen började stanna här år 1900, och de första villorna byggdes 1904 på branten öster om stationen. På 1940-talet började dagens villasamhälle i Norra Stäket att byggas. Enligt Wikipedia domineras bebyggelsen av friliggande villor och sommarbostäder. Området fördes över till Järfälla 1955."},{"heading":"Kallhälls villastad","text":"I Kallhälls villastad, som också kallas Björkliden, började tomter för egnahem styckas av 1912. Järfälla kommun beskriver i sin kulturmiljöplan bostadshus av egnahemstyp med enkel utformning, för det mesta i en våning med källare och inredd vind, på tomter som från början var stora. Enligt Wikipedia finns 210 villor här. Också det här området fördes över till Järfälla 1955."},{"heading":"Jakobsberg","text":"I Jakobsberg växte villasamhället enligt Järfälla kommun fram under 1920- och 1930-talen, när gårdens mark styckades i småbruk, trädgårdsbruk och villatomter. I västra Jakobsberg är husen enligt hitta.se främst byggda på 1950-, 1960- och 1970-talen."},{"heading":"Viksjö","text":"Viksjö byggdes ut på mycket kort tid. Exploateringen inleddes 1963, och när byggandet pågick som mest intensivt stod enligt Wikipedia ett hus klart om dagen. Folkmängden ökade från 4 992 till 12 947 mellan 1970 och 1980, och det färdiga Viksjö omfattade omkring 5 500 bostäder, varav 70 procent i småhus."},{"heading":"Vad det betyder för taket","text":"Villorna i Järfälla är alltså mellan ungefär 45 och drygt 110 år gamla, beroende på var huset står. Husens ålder säger inte hur gammalt taket är. På de äldre husen kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Tre saker är värda att tänka på. - **Egnahem som har byggts om.** Ett hus som har byggts om och till har ofta takdelar av olika ålder, och där de möts är skarven värd en extra titt. - **Småhusområden från samma år.** Där ser taken lika ut från gatan, men de har skötts och lagts om var för sig. - **Äldre miljöer.** Järfälla kommun har en kulturmiljöplan som beskriver flera av de äldre villaområdena. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."},{"heading":"Det här gör vi i Järfälla","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag i Järfälla. Mer om tjänsten finns på sidan om takbyte i Järfälla. Grannkommunerna finns på sidan Nordvästra Stockholm."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Järfälla och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "huddinge",
@@ -2135,18 +2132,18 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Upplands Väsby — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Upplands Väsby har en stor villabebyggelse och bostadsrättsområden från 70- och 80-talet. Betongpannor kan drabbas av frostsprängning och underlagspapp torkar ut och spricker med åren, vilket är skäl till att ett tak till slut kan behöva bytas eller läggas om. Vi utför takbyten, takomläggningar och plåtarbeten i Upplands Väsby med både plåttak och betongpannor, alltid med ny taksäkerhet och fungerande ventilation. Vi lämnar fast pris efter kostnadsfri takkontroll.",
+      "Upplands Väsby ligger mellan Stockholm och Uppsala, vid Mälarens östra strand, med Sollentuna i söder och Sigtuna i norr. E4 och järnvägen går rakt genom orten och delar den i en västlig, en central och en östlig del. Den som söker takläggare i Upplands Väsby har oftast ett hus som byggdes under årtiondena efter 1950, men kommunen har också äldre gårdar och helt nya kvarter. Här går vi igenom delarna.",
     extraContent:
-      "I Upplands Väsby finns det ofta villatak där omläggning med ny papp, ny läkt och plåt är ofta det rimliga valet. Vi hjälper dig jämföra totalkostnad, inte bara pris per kvadratmeter idag.",
-    uniqueFAQ: {
-      question: "När bör jag byta tak i Upplands Väsby?",
-      answer:
-        "Tecken på att det är dags: frostsprängda betongpannor, sliten underlagspapp, mossa som inte går bort vid tvätt eller rostiga beslag. Boka en kostnadsfri takkontroll så bedömer vi takets skick på ditt hus.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Upplands Väsby?","answer":"Byggperiod enligt källorna: mest 1950–1980-tal, nyare kvarter från 1990-talet och 2009, äldre gårdar på landsbygden. Hustyper: villor, på landsbygden villor och lantbruk. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Upplands Väsby",
     lat: 59.5167,
     lng: 17.9167,
-    nearbyLocations: ["Sollentuna", "Sigtuna", "Täby"],
+    nearbyLocations: ["Sollentuna","Sigtuna","Täby"],
+    factBox: [{"label":"Kommun","value":"Upplands Väsby"},{"label":"Delar som nämns","value":"Bollstanäs, Odenslunda (med Ekeby), Vilunda, Brunnby Vik, Brunnby Park, Hammarby och Vaxmyra"},{"label":"Hustyper","value":"Villor, på landsbygden villor och lantbruk"},{"label":"Byggperiod","value":"Mest 1950–1980-tal, nyare kvarter från 1990-talet och 2009, äldre gårdar på landsbygden"}],
+    sourceLink: {"label":"Wikipedia, Upplands Väsby","url":"https://sv.wikipedia.org/wiki/Upplands_Väsby"},
+    extraSections: [{"heading":"Från station till förort","text":"Järnvägen mellan Stockholm och Uppsala byggdes 1863–1866, och stationen fick namnet Väsby efter slottet Stora Väsby, vars ägor banan gick över. Enligt Wikipedia var Upplands Väsby i början av 1900-talet ett litet stationssamhälle. Den första stora industrin, Väsby Werkstäder, etablerades 1903 och tillverkade mässings- och kopparrör. Landskommunen bildades 1952, och orten växte mycket snabbt kring 1970. Väsby centrum öppnade 1972, på det som dessförinnan var åkermark."},{"heading":"Östra Väsby","text":"Öster om E4 ligger Bollstanäs och Odenslunda. Bollstanäs har sitt namn efter en herrgård från slutet av 1700-talet. År 1907 började tomter styckas av, och i mitten av 1910-talet fanns ett fyrtiotal egnahem och handelsträdgårdar. Enligt hitta.se är husen där i dag främst byggda på 1970- och 1980-talen. I Odenslunda är husen från 1950- och 1960-talen i den södra delen och från 1960- och 2000-talen i den norra, och vid Ekebyvägen ligger villor från 1990- och 2000-talen."},{"heading":"Centrala och västra Väsby","text":"I Vilunda är husen kring Vilundavägen enligt hitta.se från 1960- och 1970-talen. I Brunnby Vik är husen från 1960- och 1970-talen, och intill ligger Brunnby Park, som har byggts från 2009 med omkring 150 hus."},{"heading":"Landsbygden","text":"I Hammarby och Vaxmyra finns villor och lantbruk, och kring Hammarby kyrkväg står enligt hitta.se hus från 1700-talet och sekelskiftet 1900."},{"heading":"Vad det betyder för taket","text":"Husen i Upplands Väsby är alltså till stor del mellan 40 och 75 år gamla, med äldre gårdar på landsbygden och nya hus i de senast byggda kvarteren. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Tre saker är värda att tänka på. - **Kvarter som byggdes samtidigt.** Där ser taken lika ut från gatan, men de har skötts och lagts om var för sig. Grannens tak säger inte mycket om ditt eget. - **Kvarter som har byggts ut i omgångar.** I flera delar står hus från olika årtionden nära varandra, till exempel från 1960-talet och 2000-talet i samma område. - **Gårdar med flera tak.** På en gård finns ofta fler tak än bostadshusets, till exempel uthus och bodar, som det kan löna sig att titta på vid samma tillfälle. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."},{"heading":"Det här gör vi i Upplands Väsby","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag i Upplands Väsby. Mer om tjänsten finns på sidan om takbyte i Upplands Väsby. Grannkommunerna finns på sidan Norra Stockholm."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Upplands Väsby och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "nynashamn",

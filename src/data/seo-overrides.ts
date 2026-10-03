@@ -664,4 +664,39 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Älmsta, samhället vid Väddö kanal med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
   },
+  edsbro: {
+    title: "Takbyte i Edsbro – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Edsbro, den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  spillersboda: {
+    title: "Takbyte i Spillersboda – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Spillersboda, skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
+  },
+  furusund: {
+    title: "Takbyte i Furusund – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Furusund, den gamla badorten i Norrtälje skärgård med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
+  },
+  svartno: {
+    title: "Takbyte på Svartnö – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  hogmarso: {
+    title: "Takbyte på Högmarsö – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Högmarsö, varvsön vid Furusundsleden i Norrtälje skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+  },
+  ingmarso: {
+    title: "Takbyte på Ingmarsö – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Ingmarsö i Österåkers skärgård, en ö utan vägförbindelse. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+  },
+  husaro: {
+    title: "Takbyte på Husarö – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Husarö, lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+  },
 };
