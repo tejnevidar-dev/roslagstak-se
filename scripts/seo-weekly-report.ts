@@ -17,7 +17,7 @@
  */
 import { classify } from "./page-type";
 import { execSync } from "node:child_process";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { prerenderContent } from "./prerender-content";
 
@@ -489,8 +489,89 @@ lines.push(
   ),
 );
 
+/* ---------- 13. Historisk SEO-data (fas 2.47) ----------
+   En daterad ögonblicksbild per körning i ledning/marknad/snapshots/seo-ÅÅÅÅ-MM-DD.json (samma dag
+   skrivs över, andra dagar ligger kvar) och en jämförelsetabell över ALLA bilder i snapshots/jamforelse.md.
+   Innehåll per sidtyp: indexerbara sidor, median inlänkar, medelordantal; plus senaste Lighthouse-
+   raderna ur lighthouse-senaste.md. Gör att utvecklingen går att följa även utan Search Console. */
+const SNAP_DIR = resolve("../ledning/marknad/snapshots");
+mkdirSync(SNAP_DIR, { recursive: true });
+const wordsOf = (path: string) => {
+  const page = prerenderContent(path);
+  return page ? [page.intro, ...page.paragraphs].join(" ").split(/\s+/).filter(Boolean).length : 0;
+};
+const wordsByType = new Map<string, number[]>();
+for (const p of currentPaths) {
+  const t = classify(p).type;
+  wordsByType.set(t, [...(wordsByType.get(t) ?? []), wordsOf(p)]);
+}
+const snapTypes: Record<string, { pages: number; medianInlinks: number; noInlinks: number; avgWords: number }> = {};
+for (const [t, s] of Object.entries(nowStats)) {
+  const w = wordsByType.get(t) ?? [];
+  snapTypes[t] = {
+    pages: s.pages,
+    medianInlinks: s.medianInlinks,
+    noInlinks: s.noInlinks,
+    avgWords: w.length ? Math.round(w.reduce((a, b) => a + b, 0) / w.length) : 0,
+  };
+}
+// Lighthouse: första avsnittet (senaste mätningen) i lighthouse-senaste.md, rader "| /sökväg | score | FCP | LCP | TBT | CLS |".
+const lighthouseRows: { page: string; score: string; lcp: string; tbt: string; cls: string }[] = [];
+let lighthouseDate = "";
+if (existsSync(LIGHTHOUSE_PATH)) {
+  const first = readFileSync(LIGHTHOUSE_PATH, "utf8").replace(/\r/g, "").split(/\n---\n/)[0];
+  lighthouseDate = first.match(/Mätt (\d{4}-\d{2}-\d{2})/)?.[1] ?? "";
+  for (const m of first.matchAll(/^\| (\/[^|\s]*)[^|]*\|\s*([^|]+?)\s*\|\s*[^|]+\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|/gm)) {
+    lighthouseRows.push({ page: m[1], score: m[2], lcp: m[3], tbt: m[4], cls: m[5] });
+  }
+}
+const snapshot = {
+  date: today,
+  totalPages: Object.values(snapTypes).reduce((s, n) => s + n.pages, 0),
+  types: snapTypes,
+  lighthouse: { measured: lighthouseDate, rows: lighthouseRows },
+};
+writeFileSync(resolve(SNAP_DIR, `seo-${today}.json`), JSON.stringify(snapshot, null, 2));
+const snaps = readdirSync(SNAP_DIR)
+  .filter((f) => /^seo-\d{4}-\d{2}-\d{2}\.json$/.test(f))
+  .sort()
+  .map((f) => JSON.parse(readFileSync(resolve(SNAP_DIR, f), "utf8")) as typeof snapshot);
+const typeNames = [...new Set(snaps.flatMap((s) => Object.keys(s.types)))].sort();
+const lh = (s: (typeof snaps)[number], p: string) => s.lighthouse.rows.find((r) => r.page === p);
+writeFileSync(
+  resolve(SNAP_DIR, "jamforelse.md"),
+  [
+    "# Historisk SEO-data (fas 2.47)",
+    "",
+    "Skrivs av `bun scripts/seo-weekly-report.ts`: en daterad bild per körning (`seo-ÅÅÅÅ-MM-DD.json`). Kör veckovis. Sidor = indexerbara (sitemap), inlänkar = sidinnehållets länkar, ord = ingress + brödtext i prerender.",
+    "",
+    "## Sidor per typ",
+    `| Datum | Totalt | ${typeNames.join(" | ")} |`,
+    `|---|---|${typeNames.map(() => "---").join("|")}|`,
+    ...snaps.map((s) => `| ${s.date} | ${s.totalPages} | ${typeNames.map((t) => s.types[t]?.pages ?? "–").join(" | ")} |`),
+    "",
+    "## Median inlänkar / medelordantal per typ",
+    `| Datum | ${typeNames.join(" | ")} |`,
+    `|---|${typeNames.map(() => "---").join("|")}|`,
+    ...snaps.map((s) => `| ${s.date} | ${typeNames.map((t) => (s.types[t] ? `${s.types[t].medianInlinks} / ${s.types[t].avgWords}` : "–")).join(" | ")} |`),
+    "",
+    "## Lighthouse (startsidan, /takkontroll)",
+    "| Datum | Mätt | / score, LCP, TBT | /takkontroll score, LCP, TBT |",
+    "|---|---|---|---|",
+    ...snaps.map((s) => {
+      const f = (p: string) => {
+        const r = lh(s, p);
+        return r ? `${r.score}, ${r.lcp}, ${r.tbt}` : "–";
+      };
+      return `| ${s.date} | ${s.lighthouse.measured || "–"} | ${f("/")} | ${f("/takkontroll")} |`;
+    }),
+    "",
+  ].join("\n"),
+);
+
 writeFileSync(REPORT_PATH, lines.join("\n"));
 console.log(`[seo-weekly-report] skrivet till ledning/marknad/seo-vecka.md`);
+console.log(`[seo-weekly-report] ögonblicksbild: ledning/marknad/snapshots/seo-${today}.json (${snaps.length} sparade)`);
 console.log(
   `Sammanfattning: sitemap ${sitemapCheck.ok ? "OK" : "AVVIKELSER"}, titel-dubbletter ${titleDupes.length}, meta-dubbletter ${descriptionDupes.length}, ${isFirstRun ? "baslinje sparad" : `${newPages.length} nya sidor, ${removedPages.length} borttagna`}.`,
 );

@@ -25,7 +25,8 @@
     "verify": "bun run build",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "verify:local": "bun run typecheck && bun run verify && bun scripts/content-coverage-check.ts && bun scripts/check-breadcrumbs.mjs",
-    "seo:weekly-report": "bun scripts/seo-weekly-report.ts"
+    "seo:weekly-report": "bun scripts/seo-weekly-report.ts",
+    "seo:poang": "bun scripts/seo-poang.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
