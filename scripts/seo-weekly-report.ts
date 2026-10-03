@@ -15,6 +15,7 @@
  * Skriver: ledning/marknad/seo-vecka.md (skrivs över varje körning; historik i git-loggen)
  *          ledning/marknad/.seo-vecka-snapshot.json (sitemap-URL:er, för nästa körnings diff)
  */
+import { classify } from "./page-type";
 import { execSync } from "node:child_process";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
@@ -441,6 +442,52 @@ const LIGHTHOUSE_PATH = resolve("../ledning/marknad/lighthouse-senaste.md");
 if (existsSync(LIGHTHOUSE_PATH)) {
   lines.push(section("11. Lighthouse / Core Web Vitals (senaste mätningen)", readFileSync(LIGHTHOUSE_PATH, "utf8")));
 }
+
+/* ---------- 12. Utgångsläge per sidtyp inför mätningen 2026-10-14 (våg 1) ----------
+   Indexerbara sidor (= sitemap-URL:erna) per sidtyp och inlänkar från sidinnehåll (samma länkgraf
+   som avsnitt 8). Fryses första gången och skrivs aldrig över; kolumnen "Nu" följer bygget. */
+const TYPE_BASELINE_PATH = resolve("../ledning/marknad/.seo-typ-baslinje.json");
+type TypeStat = { pages: number; medianInlinks: number; minInlinks: number; noInlinks: number };
+const typeStats = (): Record<string, TypeStat> => {
+  const byType = new Map<string, number[]>();
+  for (const p of currentPaths) {
+    const t = classify(p).type;
+    byType.set(t, [...(byType.get(t) ?? []), inlinkCount.get(p) ?? 0]);
+  }
+  const out: Record<string, TypeStat> = {};
+  for (const [t, counts] of byType) {
+    const sorted = [...counts].sort((a, b) => a - b);
+    out[t] = {
+      pages: counts.length,
+      medianInlinks: sorted[Math.floor(sorted.length / 2)],
+      minInlinks: sorted[0],
+      noInlinks: counts.filter((c) => c === 0).length,
+    };
+  }
+  return out;
+};
+const nowStats = typeStats();
+let typeBaseline: { date: string; stats: Record<string, TypeStat> };
+if (existsSync(TYPE_BASELINE_PATH)) {
+  typeBaseline = JSON.parse(readFileSync(TYPE_BASELINE_PATH, "utf8"));
+} else {
+  typeBaseline = { date: today, stats: nowStats };
+  writeFileSync(TYPE_BASELINE_PATH, JSON.stringify(typeBaseline, null, 2));
+}
+const typeRows = Object.entries(nowStats)
+  .sort((a, b) => b[1].pages - a[1].pages)
+  .map(([t, n]) => {
+    const b = typeBaseline.stats[t];
+    return `| ${t} | ${b ? b.pages : "–"} | ${n.pages} | ${b ? b.medianInlinks : "–"} → ${n.medianInlinks} | ${b ? b.minInlinks : "–"} → ${n.minInlinks} | ${b ? b.noInlinks : "–"} → ${n.noInlinks} |`;
+  });
+const totalNow = Object.values(nowStats).reduce((s, n) => s + n.pages, 0);
+const totalBase = Object.values(typeBaseline.stats).reduce((s, n) => s + n.pages, 0);
+lines.push(
+  section(
+    "12. Utgångsläge inför mätningen 2026-10-14 (våg 1)",
+    `Frysta värden från ${typeBaseline.date} (filen \`.seo-typ-baslinje.json\`, skrivs aldrig över). Indexerbara sidor = sitemap-URL:erna. Inlänkar = sidinnehållets länkar (Header/Footer räknas inte).\n\n| Sidtyp | Indexerbara sidor, utgångsläge | Nu | Inlänkar median (utg → nu) | Min inlänkar | Sidor utan inlänk |\n|---|---|---|---|---|---|\n${typeRows.join("\n")}\n| **Totalt** | **${totalBase}** | **${totalNow}** | | | |`,
+  ),
+);
 
 writeFileSync(REPORT_PATH, lines.join("\n"));
 console.log(`[seo-weekly-report] skrivet till ledning/marknad/seo-vecka.md`);
