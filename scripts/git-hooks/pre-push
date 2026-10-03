@@ -7,5 +7,5 @@
 #   cp scripts/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
 set -e
 cd "$(git rev-parse --show-toplevel)" || exit 1
-echo "[pre-push] kör bun run verify (build + alla kvalitetskontroller) innan push..."
-bun run verify
+echo "[pre-push] kör bun run verify:local (build + alla kvalitetskontroller + innehållstäckning mot ledning/) innan push..."
+bun run verify:local
