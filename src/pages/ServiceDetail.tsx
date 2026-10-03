@@ -342,7 +342,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och tegelprofilerad plåt från 1 300 kr/m². Exakt pris beror på takets storlek, lutning och underlagets skick.",
     benefits: [
       "Klassiskt uttryck som håller husets karaktär",
-      "Lång livslängd — kan hålla över 100 år",
+      "Åldras med patina och passar både äldre och nyare hus",
       "Fast pris efter kostnadsfri takkontroll",
       "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI",
     ],
