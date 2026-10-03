@@ -24,19 +24,19 @@ const faqs = [
   },
   {
     question: "Hur lång garanti ger ni på takarbeten?",
-    answer: "Vi ger 10 års utförandegaranti på allt arbete vi utför och 30 års tätskiktsgaranti genom MATAKI. Alla våra takläggare är certifierade, och vi arbetar alltid enligt AMA-standard.",
+    answer: "Vi ger 10 års utförandegaranti på det arbete vi utför. Vid takbyte och takomläggning, när ett nytt tätskikt läggs, gäller dessutom 30 års tätskiktsgaranti genom MATAKI. Vi arbetar enligt AMA.",
   },
   {
     question: "Kan jag använda ROT-avdrag för takbyte?",
     answer: "Ja, takbyte och takrenovering berättigar till ROT-avdrag. Du kan få 30% skattereduktion på arbetskostnaden (max 50 000 kr per person och år). Vi hanterar ansökan mot Skatteverket och drar av avdraget på fakturan.",
   },
   {
-    question: "Hur snabbt kan ni påbörja mitt takprojekt?",
-    answer: "Vi återkopplar inom 24 timmar efter att du skickat in din förfrågan. Beroende på säsong och projektets storlek kan vi ofta påbörja arbetet inom 2–4 veckor. Akuta ärenden prioriteras.",
+    question: "Hur snabbt får jag svar på min förfrågan?",
+    answer: "Vi återkopplar inom 24 timmar efter att du skickat in din förfrågan. Därefter kommer vi överens om en kostnadsfri takkontroll, och startdatum för arbetet bestäms tillsammans med dig i offerten.",
   },
   {
     question: "Utför ni takinspektion?",
-    answer: "Ja, vi erbjuder en kostnadsfri takkontroll. Vi går igenom taket, underlagspapp, råspont, avvattning och taksäkerhet.",
+    answer: "Ja, vi erbjuder en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efteråt får du en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris.",
   },
   {
     question: "Vilka områden i Roslagen täcker ni?",

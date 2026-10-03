@@ -174,7 +174,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
 
 const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA-standard av certifierade takläggare med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA av våra takläggare med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
     priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Exakt pris beror på takets storlek, material och underlag.",
     benefits: [
       "Rivning av befintligt yttertak",
@@ -203,7 +203,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. ROT-avdrag tillkommer.",
     benefits: [
       "Lägre kostnad än komplett takomläggning",
-      "Snabbare genomförande",
+      "Fast pris efter kostnadsfri takkontroll",
       "Förlänger befintligt taks livslängd",
       "Åtgärdar läckor och fuktskador",
       "Byte av enstaka pannor eller plåtsektioner",
@@ -281,12 +281,12 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar.",
     priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: taktäckning med plåt från 1 200 kr/m² (TP20) till ca 2 000 kr/m² (dubbelfalsat). Beslag och detaljer prissätts efter omfattning i offerten.",
     benefits: [
-      "Certifierade plåtslagare",
+      "En kontaktperson hela vägen",
       "Taktäckning med alla typer av plåt",
       "Beslag runt skorstenar och genomföringar",
       "Ränndalar och vindskivor i plåt",
       "Material i stål, aluminium, koppar och zink",
-      "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
+      "10 års utförandegaranti på utfört arbete, 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs",
     ],
     process: [
       "Takkontroll och uppmätning",

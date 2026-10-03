@@ -11,7 +11,7 @@ export const GARANTI_RENOVERING =
 export const GARANTI_RENOVERING_CHIP = "30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)";
 
 /** Tjänste-slugs i /tjanster/<slug> som handlar om renovering, reparation eller hängrännor. */
-export const RENOVERING_SERVICE_SLUGS: readonly string[] = ["takrenovering", "takavvattning"];
+export const RENOVERING_SERVICE_SLUGS: readonly string[] = ["takrenovering", "takavvattning", "platarbeten"];
 
 /** Landningssidor (/takreparation, /akut-lackage, /hangrannor) som handlar om reparation och hängrännor. */
-export const RENOVERING_LANDING_SLUGS: readonly string[] = ["takreparation", "akut-lackage", "hangrannor"];
+export const RENOVERING_LANDING_SLUGS: readonly string[] = ["takreparation", "akut-lackage", "hangrannor", "platslagare"];

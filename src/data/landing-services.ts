@@ -531,7 +531,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Får jag garanti?",
-        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete.",
+        answer: GARANTI_RENOVERING,
       },
       {
         question: "Hur snabbt får jag svar?",
