@@ -3922,9 +3922,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Edsviken — takbyte och takrenovering i Edsviken. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Edsviken är villaområdet kring viken med samma namn, på gränsen mellan Sollentuna, Danderyd och Solna. Här finns allt från sekelskiftesvillor och funkishus till nyare enfamiljshus, ofta med sadeltak i tegel, betongpannor eller falsad plåt. Det sjönära läget innebär mer vind och fukt än längre in i landet, vilket sliter extra på plåtdetaljer, hängrännor och underlagspapp. Vi utför takbyte, takrenovering och takomläggning i Edsviken med material anpassat efter husets ålder och stil, kostnadsfri takkontroll och fast pris.",
+      "Edsviken är villaområdet kring viken med samma namn, på gränsen mellan Sollentuna, Danderyd och Solna. Här finns allt från sekelskiftesvillor och funkishus till nyare enfamiljshus. Vi utför takbyte, takrenovering och takomläggning i Edsviken med material anpassat efter husets ålder och stil, kostnadsfri takkontroll och fast pris.",
     extraContent:
-      "Vi går igenom förutsättningarna i Edsviken — smala villagator, stora tomter med träd och hus nära vattnet där väderpåfrestningen är större. Det påverkar både val av material och hur vi planerar ställning och kranbil, och gör att vi kan lämna en realistisk offert direkt efter takkontrollen istället för luddiga prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Edsviken.",
+      "Vi går igenom förutsättningarna i Edsviken — smala villagator, stora tomter med träd och hus nära vattnet. Det påverkar både val av material och hur vi planerar ställning och kranbil, och gör att vi kan lämna en realistisk offert direkt efter takkontrollen istället för luddiga prisintervall. Ska flera hus i samma kvarter byta tak samordnar vi gärna projekten — ställning och etablering blir billigare för alla. Ring 070-154 36 39 eller begär offert online så bokar vi en kostnadsfri takkontroll i Edsviken.",
     uniqueFAQ: {
       question: "Vad kostar det att byta tak i Edsviken?",
       answer:
