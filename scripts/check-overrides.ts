@@ -9,16 +9,20 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import {
   FALT,
+  INNEHALL_FALT,
+  innehallSomText,
   overridePath,
+  serializeInnehallFile,
   serializeAvstangd,
   serializeLogg,
   serializeMetaFile,
   type Avstangd,
+  type InnehallFile,
   type LoggFile,
   type MetaFile,
 } from "../src/data/overrides";
-import { checkPost, type Regel, type Sparrlista } from "../src/lib/overrides-validate";
-import { prerenderContent } from "./prerender-content";
+import { checkInnehallPost, checkPost, type Regel, type Sparrlista } from "../src/lib/overrides-validate";
+import { prerenderContent, prerenderContentRaw } from "./prerender-content";
 
 const dir = resolve("src/data/overrides");
 const reglerDir = resolve("src/data/seo-regler");
@@ -41,12 +45,13 @@ const parse = <T>(f: string): { raw: string; data: T } | null => {
 };
 
 const meta = parse<MetaFile>(resolve(dir, "meta.json"));
+const innehall = parse<InnehallFile>(resolve(dir, "innehall.json"));
 const logg = parse<LoggFile>(resolve(dir, "_logg.json"));
 const avst = parse<Avstangd>(resolve(dir, "_avstangd.json"));
 const monster = parse<{ monster: Regel[] }>(resolve(reglerDir, "forbjudna-monster.json"));
 const sparr = parse<Sparrlista>(resolve(reglerDir, "sparrlista.json"));
 
-if (!meta || !logg || !avst || !monster || !sparr) {
+if (!meta || !innehall || !logg || !avst || !monster || !sparr) {
   console.error("[check-overrides] FEL:\n  " + fel.join("\n  "));
   process.exit(1);
 }
@@ -56,6 +61,10 @@ if (meta.data.version !== 1) e("meta.json: version måste vara 1");
 if (typeof meta.data.poster !== "object" || Array.isArray(meta.data.poster)) e("meta.json: poster måste vara ett objekt");
 else if (meta.raw !== serializeMetaFile(meta.data))
   e("meta.json: formatet avviker från serializeMetaFile (src/data/overrides/index.ts): poster sorterade på sökväg, title före description, fältordning id/text/andrad/orsak, 2 blanksteg, LF och avslutande radbrytning");
+if (innehall.data.version !== 1) e("innehall.json: version måste vara 1");
+if (typeof innehall.data.poster !== "object" || Array.isArray(innehall.data.poster)) e("innehall.json: poster måste vara ett objekt");
+else if (innehall.raw !== serializeInnehallFile(innehall.data))
+  e("innehall.json: formatet avviker från serializeInnehallFile (src/data/overrides/index.ts): poster sorterade på sökväg, textblock före faq före lankar, fältordning id/rubrik/data/andrad/orsak, 2 blanksteg, LF och avslutande radbrytning");
 if (logg.data.version !== 1 || !Array.isArray(logg.data.rader)) e("_logg.json: ska vara { version: 1, rader: [...] }");
 else if (logg.raw !== serializeLogg(logg.data)) e("_logg.json: formatet avviker från serializeLogg");
 if (typeof avst.data.alla !== "boolean" || !Array.isArray(avst.data.ider)) e("_avstangd.json: ska vara { alla: boolean, ider: string[] }");
@@ -92,7 +101,33 @@ for (const [path, post] of Object.entries(poster)) {
     ids.set(falt.id, `${path} ${f}`);
   }
 }
-for (const id of avst.data.ider ?? []) if (!ids.has(id)) e(`_avstangd.json: id ${id} finns inte i meta.json`);
+const normText = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
+const innehallPoster = innehall.data.poster ?? {};
+const brodtexter = new Map<string, string>();
+for (const [path, post] of Object.entries(innehallPoster)) {
+  for (const m of checkInnehallPost(path, post, {
+    regler: monster.data.monster,
+    sparr: sparr.data,
+    kandaSidor,
+    basText: (p) => prerenderContentRaw(p)?.paragraphs.join(" "),
+  }))
+    e(`innehall.json ${m}`);
+  for (const f of INNEHALL_FALT) {
+    const falt = post[f];
+    if (!falt?.id) continue;
+    if (ids.has(falt.id)) e(`id ${falt.id} används av både ${ids.get(falt.id)} och ${path} (${f})`);
+    ids.set(falt.id, `${path} ${f}`);
+    // samma text får inte ligga på två sidor (duplicerat innehåll)
+    const texter = f === "textblock" ? (falt as { stycken: string[] }).stycken : f === "faq" ? (falt as { fragor: { svar: string }[] }).fragor.map((x) => x.svar) : [];
+    for (const t of texter ?? []) {
+      const n = normText(t);
+      const prev = brodtexter.get(n);
+      if (prev && prev !== path) e(`${path} ${f}: samma text ligger redan på ${prev}`);
+      brodtexter.set(n, path);
+    }
+  }
+}
+for (const id of avst.data.ider ?? []) if (!ids.has(id)) e(`_avstangd.json: id ${id} finns inte i meta.json eller innehall.json`);
 
 // 5. Loggkonsistens: varje fält har en loggrad med samma id, path, fält och efter-värde
 const rader = logg.data.rader ?? [];
@@ -100,6 +135,20 @@ const radIds = new Set<string>();
 for (const r of rader) {
   if (radIds.has(r.id)) e(`_logg.json: id ${r.id} förekommer på mer än en rad`);
   radIds.add(r.id);
+}
+for (const [path, post] of Object.entries(innehallPoster)) {
+  for (const f of INNEHALL_FALT) {
+    const falt = post[f];
+    if (!falt) continue;
+    const rad = rader.find((r) => r.id === falt.id);
+    if (!rad) e(`${path} ${f}: loggrad saknas i _logg.json (id ${falt.id})`);
+    else {
+      if (rad.path !== path) e(`${path} ${f}: loggraden för ${falt.id} har path ${rad.path}`);
+      if (rad.falt !== f) e(`${path} ${f}: loggraden för ${falt.id} gäller fältet ${rad.falt}`);
+      if (rad.efter !== innehallSomText(f, falt)) e(`${path} ${f}: loggradens "efter" stämmer inte med innehållet i innehall.json (id ${falt.id}); förväntat innehallSomText`);
+      if (rad.fore !== null && typeof rad.fore !== "string") e(`${path} ${f}: "fore" måste vara text eller null`);
+    }
+  }
 }
 for (const [path, post] of Object.entries(poster)) {
   for (const f of FALT) {
@@ -117,7 +166,6 @@ for (const [path, post] of Object.entries(poster)) {
 }
 
 // 6. Unikhet: en överstyrd titel eller beskrivning får inte bli identisk med någon annan sidas
-const normText = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
 const effective = { title: new Map<string, string>(), description: new Map<string, string>() };
 for (const p of kandaSidor) {
   const page = prerenderContent(p);
@@ -140,5 +188,5 @@ if (fel.length) {
   console.error(`[check-overrides] ${fel.length} fel:\n  ` + fel.join("\n  "));
   process.exit(1);
 }
-const antalFalt = Object.values(poster).reduce((n, p) => n + FALT.filter((f) => p[f]).length, 0);
-console.log(`[check-overrides] OK: ${Object.keys(poster).length} sidor, ${antalFalt} överstyrda fält, ${avst.data.alla ? "ALLA avstängda" : `${avst.data.ider.length} avstängda`}, ${rader.length} loggrader`);
+const antalFalt = Object.values(poster).reduce((n, p) => n + FALT.filter((f) => p[f]).length, 0) + Object.values(innehallPoster).reduce((n, p) => n + INNEHALL_FALT.filter((f) => p[f]).length, 0);
+console.log(`[check-overrides] OK: ${new Set([...Object.keys(poster), ...Object.keys(innehallPoster)]).size} sidor, ${antalFalt} överstyrda fält, ${avst.data.alla ? "ALLA avstängda" : `${avst.data.ider.length} avstängda`}, ${rader.length} loggrader`);

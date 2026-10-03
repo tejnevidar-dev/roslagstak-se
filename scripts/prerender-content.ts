@@ -82,6 +82,8 @@ export interface PrerenderPage {
 export { buildBody, type BodyItem } from "../src/lib/body-items";
 // SEO Command Center (S0): samma meta-funktion och beskärning som SEOHead, för generate-static-heads.mjs.
 export { resolveMeta } from "../src/data/overrides";
+import { buildOverrideBlocks } from "../src/data/overrides";
+import { applyOverrideBlocks } from "../src/lib/innehall-apply";
 export { fitTitle, fitDescription, withSuffix } from "../src/lib/seo-fit";
 
 /* Services live in a React component; read the data with a regex so the
@@ -466,7 +468,8 @@ const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
 };
 
 /** Important on-page text for a route, or null when the route has no prerender. */
-const prerenderContentRaw = (path: string): PrerenderPage | null => {
+/** Sidans innehåll utan SEO CC-tillägg (innehall.json): basen som tilläggen kontrolleras mot. */
+export const prerenderContentRaw = (path: string): PrerenderPage | null => {
   const clean = path === "/" ? "/" : path.replace(/\/+$/, "").toLowerCase();
 
   if (staticPages[clean]) return staticPages[clean];
@@ -828,8 +831,10 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
   return null;
 };
 export const prerenderContent = (path: string): PrerenderPage | null => {
-  const page = prerenderContentRaw(path);
-  if (!page) return page;
+  const raw = prerenderContentRaw(path);
+  if (!raw) return raw;
+  // SEO Command Center: tilläggsblock (textblock, FAQ, internlänkar) ur src/data/overrides/innehall.json
+  const page = applyOverrideBlocks(raw, buildOverrideBlocks(path));
   return {
     ...page,
     title: page.title ? fitTitle(page.title) : page.title,

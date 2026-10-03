@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useMemo } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logoWhite from "@/assets/roslagstak-logo-white.png";
+import ContentOverrides from "@/components/ContentOverrides";
 
 const tjanster = [
   { to: "/tjanster/takomlaggning", label: "Takomläggning" },
@@ -37,6 +38,8 @@ const genvagar = [
 const Footer = () => {
   const orgNr = useMemo(() => ["559", "539", "-", "3595"].join(""), []);
   return (
+    <>
+    <ContentOverrides />
     <footer className="bg-ink text-primary-foreground" role="contentinfo">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 border-b border-primary-foreground/15 pb-12 md:grid-cols-12">
@@ -104,6 +107,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

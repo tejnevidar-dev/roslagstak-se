@@ -100,3 +100,96 @@ export const checkPost = (path: string, post: MetaPost, ctx: PostKontext): strin
   }
   return fel;
 };
+
+/* ---- Innehållsöverstyrningar (textblock, FAQ, internlänkar) ---- */
+import type { FaqFalt, InnehallNamn, InnehallPost, LankarFalt, TextblockFalt } from "../data/overrides";
+import { INNEHALL_FALT } from "../data/overrides";
+
+export const INNEHALL_FIELDS: string[] = [...INNEHALL_FALT];
+const BAS_FIELDS = ["id", "rubrik", "andrad", "orsak"];
+const DATA_FIELD: Record<InnehallNamn, string> = { textblock: "stycken", faq: "fragor", lankar: "lankar" };
+
+/** Alla förbjudna mönster gäller för brödtext, oavsett vilket fält (title/description) regeln skrevs för. */
+export const checkBrodtext = (text: string, regler: Regel[], bas?: string): Traff[] =>
+  regler
+    .filter((r) => regexOf(r).test(text) && !(r.utom_om_bas_har_ordet && bas !== undefined && regexOf(r).test(bas)))
+    .map((r) => ({ regel: r.id, orsak: r.orsak }));
+
+export interface InnehallKontext extends PostKontext {
+  /** Sidans nuvarande text (alla stycken) före tillägget, för villkorade regler (T2). */
+  basText?: (path: string) => string | undefined;
+}
+
+const textFel = (where: string, s: unknown, min: number, max: number, regler: Regel[], bas?: string): string[] => {
+  const fel: string[] = [];
+  if (typeof s !== "string" || !s) return [`${where}: text krävs`];
+  if (s !== s.trim()) fel.push(`${where}: inledande eller avslutande blanksteg`);
+  if (s.length < min) fel.push(`${where}: kortare än ${min} tecken`);
+  if (s.length > max) fel.push(`${where}: längre än ${max} tecken (${s.length})`);
+  if (/[<>]|https?:|\{\{|\}\}|undefined|\n/.test(s)) fel.push(`${where}: får inte innehålla HTML, webbadresser, platshållare eller radbrytningar`);
+  for (const t of checkBrodtext(s, regler, bas)) fel.push(`${where}: bryter mot regeln ${t.regel}: ${t.orsak}`);
+  return fel;
+};
+
+export const checkInnehallFalt = (path: string, namn: InnehallNamn, falt: TextblockFalt | FaqFalt | LankarFalt, ctx: InnehallKontext): string[] => {
+  const fel: string[] = [];
+  const w = `${path} ${namn}`;
+  const e = (m: string) => fel.push(`${w}: ${m}`);
+  const bas = ctx.basText?.(path);
+  const tillatna = [...BAS_FIELDS, DATA_FIELD[namn]];
+  for (const k of Object.keys(falt)) if (!tillatna.includes(k)) e(`okänt fält "${k}"`);
+  if (typeof falt.id !== "string" || !ID_FORMAT.test(falt.id)) e(`id måste vara på formen seo-cc-ÅÅÅÅ-MM-DD-NNNN (fick ${JSON.stringify(falt.id)})`);
+  if (typeof falt.andrad !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(falt.andrad)) e("andrad måste vara ett ISO-datum (ÅÅÅÅ-MM-DD)");
+  if (typeof falt.orsak !== "string" || !falt.orsak.trim() || falt.orsak.length > 200) e("orsak krävs och får vara högst 200 tecken");
+  if (falt.rubrik !== undefined) fel.push(...textFel(`${w} rubrik`, falt.rubrik, 5, 70, ctx.regler, bas));
+  if (namn === "textblock") {
+    const s = (falt as TextblockFalt).stycken;
+    if (!Array.isArray(s) || s.length < 1 || s.length > 4) e("stycken måste vara en lista med 1–4 stycken");
+    else {
+      s.forEach((x, i) => fel.push(...textFel(`${w} stycke ${i + 1}`, x, 80, 700, ctx.regler, bas)));
+      if (s.join("").length > 1600) e("stycken är sammanlagt längre än 1600 tecken");
+    }
+  } else if (namn === "faq") {
+    const f = (falt as FaqFalt).fragor;
+    if (!Array.isArray(f) || f.length < 1 || f.length > 5) e("fragor måste vara en lista med 1–5 frågor");
+    else
+      f.forEach((x, i) => {
+        for (const k of Object.keys(x ?? {})) if (k !== "fraga" && k !== "svar") e(`fråga ${i + 1}: okänt fält "${k}"`);
+        fel.push(...textFel(`${w} fråga ${i + 1}`, x?.fraga, 15, 140, ctx.regler, bas));
+        if (typeof x?.fraga === "string" && !x.fraga.endsWith("?")) e(`fråga ${i + 1} måste sluta med ?`);
+        fel.push(...textFel(`${w} svar ${i + 1}`, x?.svar, 60, 600, ctx.regler, bas));
+      });
+  } else {
+    const l = (falt as LankarFalt).lankar;
+    if (!Array.isArray(l) || l.length < 1 || l.length > 5) e("lankar måste vara en lista med 1–5 länkar");
+    else {
+      const seen = new Set<string>();
+      l.forEach((x, i) => {
+        for (const k of Object.keys(x ?? {})) if (k !== "href" && k !== "text") e(`länk ${i + 1}: okänt fält "${k}"`);
+        const href = typeof x?.href === "string" ? x.href : "";
+        if (href !== overridePath(href) || !href.startsWith("/")) e(`länk ${i + 1}: href måste vara en kanonisk sökväg (gemener, inledande /, utan avslutande /, fick ${JSON.stringify(x?.href)})`);
+        else if (!ctx.kandaSidor.has(href)) e(`länk ${i + 1}: ${href} finns inte i sajten (sitemap)`);
+        else if (href === overridePath(path)) e(`länk ${i + 1}: sidan får inte länka till sig själv`);
+        if (seen.has(href)) e(`länk ${i + 1}: ${href} förekommer flera gånger`);
+        seen.add(href);
+        fel.push(...textFel(`${w} länktext ${i + 1}`, x?.text, 3, 60, ctx.regler, bas));
+      });
+    }
+  }
+  return fel;
+};
+
+export const checkInnehallPost = (path: string, post: InnehallPost, ctx: InnehallKontext): string[] => {
+  const fel: string[] = [];
+  const e = (m: string) => fel.push(`${path}: ${m}`);
+  if (path !== overridePath(path)) e(`sökvägen är inte kanonisk (förväntat ${overridePath(path)})`);
+  if (!ctx.kandaSidor.has(overridePath(path))) e("sidan finns inte i sajten (sitemap)");
+  if (isSparrad(path, ctx.sparr)) e("sidan står på spärrlistan (seo-regler/sparrlista.json)");
+  for (const k of Object.keys(post)) if (!INNEHALL_FIELDS.includes(k)) e(`okänt fält "${k}" (tillåtna: ${INNEHALL_FIELDS.join(", ")})`);
+  if (!post.textblock && !post.faq && !post.lankar) e("minst ett av textblock, faq och lankar krävs");
+  for (const namn of INNEHALL_FALT) {
+    const falt = post[namn];
+    if (falt) fel.push(...checkInnehallFalt(path, namn, falt, ctx));
+  }
+  return fel;
+};
