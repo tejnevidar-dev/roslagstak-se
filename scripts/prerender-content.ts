@@ -20,6 +20,7 @@ import { allServiceSlugs, generateCombos } from "../src/data/service-location-co
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks } from "../src/lib/inline-md";
 import { relatedForPost } from "../src/data/blog-related";
+import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -39,7 +40,7 @@ const villaAreaLinks = (key: string) =>
     .map((a) => ({ href: a.href!, label: `Takläggare i ${a.name}` }));
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
-import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "../src/data/regions";
+import { regionBySlug, regionIntros, regionLongText, regionNeighbors, regionSlugs } from "../src/data/regions";
 
 export interface PrerenderPage {
   h1: string;
@@ -559,6 +560,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         { href: "/takproblem", label: "Alla takproblem" },
         ...problem.related.map((r) => ({ href: r.to, label: r.label })),
+        ...guidesForTitle(problem.title, 2).map((g) => ({ href: `/blogg/${g.slug}`, label: g.title })),
         ...MONEY_LINKS,
       ],
       breadcrumbs: [
@@ -602,7 +604,13 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ],
       ogImage: og?.src,
       ogImageAlt: og?.alt,
-      links: [...primaryLinks, { href: "/material", label: "Alla material" }, { href: "/priser", label: "Priser för takarbeten" }, ...MONEY_LINKS],
+      links: [
+        ...primaryLinks,
+        { href: "/material", label: "Alla material" },
+        { href: "/priser", label: "Priser för takarbeten" },
+        ...guidesForTitle(material.title, 2).map((g) => ({ href: `/blogg/${g.slug}`, label: g.title })),
+        ...MONEY_LINKS,
+      ],
       breadcrumbs: [
         { name: "Startsidan", path: "/", visibleName: "Hem" },
         { name: "Material", path: "/material" },
@@ -651,10 +659,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...post.content.flatMap(inlineMdLinks),
         ...relatedForPost(post).map((r) => ({ href: r.to, label: r.label })),
         ...MONEY_LINKS,
-        ...blogPosts
-          .filter((p) => p.slug !== post.slug)
-          .slice(0, 8)
-          .map((p) => ({ href: `/blogg/${p.slug}`, label: p.title })),
+        ...relatedPosts(post, 4).map((p) => ({ href: `/blogg/${p.slug}`, label: p.title })),
       ],
     };
   }
@@ -700,6 +705,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { href: "/omraden", label: "Alla områden i Roslagen och Storstockholm" },
         ...villaAreaLinks(regionSlugs[region]),
         ...(rt ? rt.body.flatMap(inlineMdLinks) : []),
+        ...(regionNeighbors[region] ?? []).map((n) => ({ href: `/omraden/${regionSlugs[n]}`, label: `Takläggare i ${n}` })),
         ...places.map((l) => ({
           href: `/taklaggare-${l.slug}`,
           label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
@@ -780,6 +786,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       links: [
         ...primaryLinks,
         ...MONEY_LINKS,
+        { href: regionHref, label: `Takläggare i ${loc.region}` },
         ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
         ...villaAreaLinks(loc.slug),
         ...combos

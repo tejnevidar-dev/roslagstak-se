@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getProblem, SAKERHETSRUTA, type Problem } from "@/data/problems";
+import { guidesForTitle } from "@/data/related-posts";
 import { getProject } from "@/data/projects";
 
 const sections: { key: keyof Problem; heading: string }[] = [
@@ -147,7 +148,10 @@ const ProblemPage = () => {
         <RelatedLinks
           currentPath={`/takproblem/${problem.slug}`}
           title="Fler takproblem"
-          extraLinks={[{ to: "/takproblem", label: "Alla takproblem", description: "Fler vanliga tecken och åtgärder." }]}
+          extraLinks={[
+            { to: "/takproblem", label: "Alla takproblem", description: "Fler vanliga tecken och åtgärder." },
+            ...guidesForTitle(problem.title, 2).map((g) => ({ to: `/blogg/${g.slug}`, label: g.title, description: "Guide." })),
+          ]}
         />
       </main>
       <Footer />

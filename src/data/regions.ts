@@ -150,3 +150,23 @@ export const regionLongText: Record<string, string[]> = {
     "Här tar vi uppdrag från både villaägare och bostadsrättsföreningar. För föreningar lämnar vi ett skriftligt underlag efter en kostnadsfri takkontroll, med fast pris, tidplan och skriftlig garanti efter slutgenomgång, så att styrelsen kan besluta.",
   ],
 };
+
+/** Närliggande regioner (geografiskt), för länkar mellan regionsidor (fas 2.15). */
+export const regionNeighbors: Record<string, string[]> = {
+  "Norra skärgården": ["Rådmansöhalvön", "Mellersta skärgården", "Norra Roslagen"],
+  "Mellersta skärgården": ["Norra skärgården", "Kusten", "Österåker"],
+  Kusten: ["Norra Roslagen", "Rådmansöhalvön", "Roslagens inland", "Mellersta skärgården"],
+  "Rådmansöhalvön": ["Kusten", "Norra skärgården", "Mellersta skärgården"],
+  "Norra Roslagen": ["Kusten", "Roslagens inland", "Norra skärgården"],
+  "Roslagens inland": ["Norra Roslagen", "Österåker", "Norra Stockholm"],
+  Österåker: ["Roslagens inland", "Mellersta skärgården", "Norra Stockholm"],
+  "Stockholms stad": ["Norra Stockholm", "Östra Stockholm", "Södra Stockholm", "Västerort"],
+  "Norra Stockholm": ["Österåker", "Nordvästra Stockholm", "Stockholms stad"],
+  "Nordvästra Stockholm": ["Norra Stockholm", "Västerort", "Mälardalen"],
+  Västerort: ["Nordvästra Stockholm", "Stockholms stad", "Sydvästra Stockholm"],
+  "Östra Stockholm": ["Stockholms stad", "Sydöstra Stockholm", "Österåker"],
+  "Sydöstra Stockholm": ["Södra Stockholm", "Östra Stockholm"],
+  "Södra Stockholm": ["Stockholms stad", "Sydöstra Stockholm", "Sydvästra Stockholm"],
+  "Sydvästra Stockholm": ["Södra Stockholm", "Västerort", "Mälardalen"],
+  Mälardalen: ["Nordvästra Stockholm", "Sydvästra Stockholm", "Roslagens inland"],
+};

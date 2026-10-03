@@ -9,7 +9,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
-import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "@/data/regions";
+import { regionBySlug, regionIntros, regionLongText, regionNeighbors, regionSlugs } from "@/data/regions";
 import { regionTexts } from "@/data/region-texts";
 import { isHeading, renderInline } from "@/lib/inline-md";
 import NotFound from "./NotFound";
@@ -175,6 +175,11 @@ const RegionPage = () => {
 
           <RelatedLinks
             currentPath="/omraden"
+            extraLinks={(regionNeighbors[region] ?? []).map((n) => ({
+              to: `/omraden/${regionSlugs[n]}`,
+              label: `Takläggare i ${n}`,
+              description: "Närliggande område.",
+            }))}
             title="Nästa steg"
             intro="Priser, taktyper och hur ett takprojekt går till — oavsett vilken ort du bor i."
           />

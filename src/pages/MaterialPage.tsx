@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getMaterial, type MaterialDetail } from "@/data/materials";
+import { guidesForTitle } from "@/data/related-posts";
 import { getProjectsByMaterial } from "@/data/projects";
 
 /* Stabila sökvägar under public/og/ (kopior av samma foton som redan används på /taktyper,
@@ -151,7 +152,10 @@ const MaterialPage = () => {
         <RelatedLinks
           currentPath={material.href}
           title="Fler material"
-          extraLinks={[{ to: "/material", label: "Alla material", description: "Jämför betongpannor, lertegel, plåt och falsat." }]}
+          extraLinks={[
+            { to: "/material", label: "Alla material", description: "Jämför betongpannor, lertegel, plåt och falsat." },
+            ...guidesForTitle(material.title, 2).map((g) => ({ to: `/blogg/${g.slug}`, label: g.title, description: "Guide." })),
+          ]}
         />
       </main>
       <Footer />

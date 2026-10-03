@@ -9,6 +9,7 @@ import QuickContactFacts from "@/components/QuickContactFacts";
 import NotFound from "./NotFound";
 import { isHeading, stripInlineMd, renderInline } from "@/lib/inline-md";
 import { relatedForPost } from "@/data/blog-related";
+import { relatedPosts } from "@/data/related-posts";
 
 /** Tjänstesida som passar artikelns ämne bäst (första träff vinner), för internlänkning från blogg till tjänst. */
 const serviceForSlug = (slug: string): { to: string; label: string } | null => {
@@ -95,25 +96,8 @@ const BlogPost = () => {
     ],
   };
 
-  // Topical relevance: rank other posts by shared keywords for better internal linking signals
-  const otherPosts = (() => {
-    const postKw = new Set(post.keywords.map((k) => k.toLowerCase()));
-    return blogPosts
-      .filter((p) => p.slug !== slug)
-      .map((p) => ({
-        post: p,
-        score: p.keywords.reduce((s, k) => s + (postKw.has(k.toLowerCase()) ? 2 : 0), 0) +
-          p.keywords.reduce(
-            (s, k) =>
-              s +
-              (Array.from(postKw).some((pk) => pk.includes(k.toLowerCase()) || k.toLowerCase().includes(pk)) ? 1 : 0),
-            0,
-          ),
-      }))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 4)
-      .map((x) => x.post);
-  })();
+  // Topiskt relevanta guider (delad logik med prerender, src/data/related-posts.ts)
+  const otherPosts = relatedPosts(post, 4);
 
   return (
     <>
