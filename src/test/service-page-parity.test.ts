@@ -46,6 +46,21 @@ const renderedTexts = (slug: string): string[] => {
   return out;
 };
 
+const renderedHeadingList = (slug: string): string[] => {
+  const html = renderToStaticMarkup(
+    createElement(
+      MemoryRouter,
+      { initialEntries: [`/tjanster/${slug}`] },
+      createElement(Routes, null, createElement(Route, { path: "/tjanster/:slug", element: createElement(ServiceDetail) })),
+    ),
+  );
+  const doc = new DOMParser().parseFromString(`<body>${html}</body>`, "text/html");
+  // Löpnummer ("01") som ligger i samma rubrikelement är layout, inte rubriktext.
+  return [...doc.querySelectorAll("h2, h3")].map(
+    (h) => `${h.tagName.toLowerCase()}:${norm((h.textContent ?? "").replace(/^\d{2}(?=\D)/, ""))}`,
+  );
+};
+
 describe("tjänstesidornas spegling mot synlig text", () => {
   for (const { slug } of services) {
     it(`/tjanster/${slug}: statisk HTML = synlig text`, () => {
@@ -73,6 +88,13 @@ describe("tjänstesidornas spegling mot synlig text", () => {
         return !(parts.length > 1 && parts.every((p) => visibleBlob.includes(p)));
       });
       expect(stillMissing, "text i den statiska HTML:en som inte syns på sidan").toEqual([]);
+
+      // 3. rubriker: samma h2/h3 i speglingen som på den renderade sidan (G1)
+      const staticHeadings = Object.entries(page!.headingAt ?? {})
+        .map(([i, level]) => `h${level}:${norm(page!.paragraphs[Number(i)].replace(/[.:]$/, ""))}`)
+        .sort();
+      const renderedHeadings = renderedHeadingList(slug).sort();
+      expect(renderedHeadings, "rubriker på sidan och i speglingen ska vara desamma").toEqual(staticHeadings);
     });
   }
 });

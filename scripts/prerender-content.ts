@@ -19,7 +19,8 @@ import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
-import { stripInlineMd, inlineMdLinks } from "../src/lib/inline-md";
+import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
+import { buildBody } from "../src/lib/body-items";
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
@@ -71,7 +72,13 @@ export interface PrerenderPage {
   /** Extra JSON-LD-objekt som skrivs som <script type="application/ld+json"> i den statiska HTML:en (t.ex. BlogPosting). */
   jsonLd?: Record<string, unknown>[];
   ogImageAlt?: string;
+  /** Rubriknivå per styckeindex (2 eller 3). Stycken som står här skrivs som <h2>/<h3> i den statiska HTML:en
+   *  (G1 i konkurrentanalysen: crawlers utan JS ska se samma rubrikstruktur som besökaren). Texten i
+   *  paragraphs är oförändrad, så ordräkning och meningsgrind påverkas inte. */
+  headingAt?: Record<number, 2 | 3>;
 }
+
+export { buildBody, type BodyItem } from "../src/lib/body-items";
 
 /* Services live in a React component; read the data with a regex so the
    prerender never has to bundle JSX or lucide-react. */
@@ -474,6 +481,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: sp.h1,
       intro: sp.intro,
       paragraphs: sp.paragraphs,
+      headingAt: sp.headingAt,
       links: [
         ...primaryLinks,
         ...serviceLinks,
@@ -505,10 +513,13 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: problem.metaDescription,
       h1: problem.title,
       intro: problem.intro,
-      paragraphs: [
-        ...problemSections.map((s) => `${s.heading.endsWith("?") ? s.heading : s.heading + ":"} ${problem[s.key] as string}`),
+      ...buildBody([
+        ...problemSections.flatMap((s) => [
+          { h: s.heading, suffix: s.heading.endsWith("?") ? "" : ":" },
+          problem[s.key] as string,
+        ]),
         SAKERHETSRUTA,
-      ],
+      ]),
       links: [
         ...primaryLinks,
         { href: "/takproblem", label: "Alla takproblem" },
@@ -549,12 +560,13 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: d.metaDescription,
       h1: material.title,
       intro: d.intro,
-      paragraphs: [
-        ...materialSections.map((s) => `${s.heading}: ${d[s.key] as string}`),
-        `Kostnadsdrivare: ${d.kostnadsdrivare}`,
+      ...buildBody([
+        ...materialSections.flatMap((s) => [{ h: s.heading, suffix: ":" }, d[s.key] as string]),
+        { h: "Kostnadsdrivare", suffix: ":" },
+        d.kostnadsdrivare,
         ...(d.hallIsar ? [`Håll isär: ${d.hallIsar}`] : []),
         ...(d.hosOss ? [`Hos oss: ${d.hosOss}`] : []),
-      ],
+      ]),
       ogImage: og?.src,
       ogImageAlt: og?.alt,
       links: [
@@ -607,7 +619,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: post.excerpt,
       h1: post.title,
       intro: post.excerpt,
-      paragraphs: post.content.map(stripInlineMd),
+      ...buildBody(post.content.map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p)))),
       links: [
         ...primaryLinks,
         ...post.content.flatMap(inlineMdLinks),
@@ -659,11 +671,11 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: rt?.description ?? `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti. Ring ${PHONE}.`,
       h1: rt?.h1 ?? `Takläggare i ${region}`,
       intro: rt?.intro ?? regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
-      paragraphs: [
-        ...(rt ? rt.body.map(stripInlineMd) : []),
+      ...buildBody([
+        ...(rt ? rt.body.map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p))) : []),
         ...(villaAreasParagraph(regionSlugs[region]) ? [villaAreasParagraph(regionSlugs[region])!] : []),
         `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
-      ],
+      ]),
       links: [
         ...primaryLinks,
         { href: "/omraden", label: "Alla områden i Roslagen och Storstockholm" },
@@ -730,13 +742,14 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
           ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
           : `Takläggare ${prep} ${loc.name} — takbyte & takrenovering`),
       intro: loc.description,
-      paragraphs: [
+      ...buildBody([
         loc.longDescription,
         ...(loc.extraContent ? [loc.extraContent] : []),
-        ...(loc.extraSections ?? []).map((sec) => `${sec.heading}. ${sec.text}`),
+        ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, sec.text]),
         ...(loc.process
           ? [
-              `Så går det till. ${loc.process.steps.map((st, n) => `${n + 1}. ${st.replace(/\*\*/g, "")}`).join(" ")}`,
+              { h: "Så går det till", level: 3 as const, suffix: "." },
+              loc.process.steps.map((st, n) => `${n + 1}. ${st.replace(/\*\*/g, "")}`).join(" "),
               ...loc.process.paragraphs,
             ]
           : []),
@@ -746,7 +759,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         geoFactsParagraph(loc),
         `${loc.uniqueFAQ.question} ${withRotForbehall(loc.uniqueFAQ.answer)}`,
         `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,
-      ],
+      ]),
       links: [
         ...primaryLinks,
         ...MONEY_LINKS,

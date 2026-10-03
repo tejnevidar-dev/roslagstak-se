@@ -10,6 +10,7 @@ import { serviceBlocks, type SpecificBlock } from "./service-blocks";
 import { serviceAreaLinks } from "./service-area-links";
 import { eternitFaqs, eternitLocal, eternitSections, ETERNIT_FAQ_HEADING } from "./eternit-content";
 import { canonicalPath } from "../lib/canonical";
+import { buildBody, type BodyItem } from "../lib/body-items";
 import { LOCAL_BUSINESS_ID, SITE_URL, buildBreadcrumbNode } from "../lib/schema-graph";
 
 export type ServiceMeta = {
@@ -428,6 +429,24 @@ export const SERVICE_DETAIL_PHOTO_SLUGS: readonly string[] = ["takomlaggning", "
 /** Kolumnrubriker i specialblocket "signals" (ServiceSpecificBlock.tsx). */
 export const SIGNALS_COLUMNS = ["Signal på taket", "Vad det betyder", "Vår åtgärd"];
 
+/** Specialblockets text som stycken och rubriker (h2 = blockrubriken, h3 = stegets/gruppens/periodens titel). */
+export const blockItems = (block: SpecificBlock): BodyItem[] => {
+  const head: BodyItem[] = [block.eyebrow, { h: block.heading }, block.intro];
+  switch (block.kind) {
+    case "matrix":
+    case "dimension":
+      return [...head, ...block.columns, ...block.rows.flat(), ...(block.footnote ? [block.footnote] : [])];
+    case "signals":
+      return [...head, ...SIGNALS_COLUMNS, ...block.items.flatMap((i) => [i.sign, i.meaning, i.action])];
+    case "regulatory":
+      return [...head, ...block.steps.flatMap((st) => [st.code, { h: st.title, level: 3 as const }, st.text])];
+    case "checklist":
+      return [...head, ...block.groups.flatMap((g) => [{ h: g.title, level: 3 as const }, ...g.items])];
+    case "season":
+      return [...head, ...block.periods.flatMap((p) => [p.label, { h: p.title, level: 3 as const }, p.text])];
+  }
+};
+
 export type ServiceListItem = { slug: string; title: string; description: string };
 
 const dedupeByTo = <T extends { to: string }>(links: T[]): T[] => {
@@ -460,10 +479,10 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
   if (!service || !details) return null;
   const meta = serviceMeta[slug] ?? serviceMeta.takomlaggning;
   const blocks = serviceBlocks[slug] ?? serviceBlocks.takomlaggning;
-  const block = blockTexts(blocks.block);
+  const block = blockItems(blocks.block);
   const specific = (placement: "before-spec" | "after-spec" | "after-scope") =>
     blocks.blockPlacement === placement ? block : [];
-  const paragraphs: string[] = [
+  const items: BodyItem[] = [
     SERVICE_COPY.heroEyebrow,
     ...meta.specs.map((sp) => `${sp.k}: ${sp.v}`),
     SERVICE_COPY.takkontrollLink,
@@ -477,20 +496,20 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     ...blocks.factCards.flatMap((c) => [c.label, c.value, c.text]),
     ...specific("before-spec"),
     SERVICE_COPY.specEyebrow,
-    meta.specHeading,
+    { h: meta.specHeading },
     meta.lead,
     details.longDesc,
-    SERVICE_COPY.processHeading(details.process.length),
+    { h: SERVICE_COPY.processHeading(details.process.length), level: 3 },
     ...details.process,
-    SERVICE_COPY.asideTitle,
+    { h: SERVICE_COPY.asideTitle, level: 3 },
     SERVICE_COPY.asideText,
     SERVICE_COPY.asideCta,
     ...(SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) ? [SERVICE_COPY.photoLabel, meta.photoNote] : []),
     SERVICE_COPY.asideNote,
     ...specific("after-spec"),
-    ...(slug === "platarbeten" ? [SERVICE_COPY.falsat.eyebrow, SERVICE_COPY.falsat.heading, SERVICE_COPY.falsat.text] : []),
+    ...(slug === "platarbeten" ? [SERVICE_COPY.falsat.eyebrow, { h: SERVICE_COPY.falsat.heading }, SERVICE_COPY.falsat.text] : []),
     SERVICE_COPY.scopeEyebrow,
-    SERVICE_COPY.scopeHeading,
+    { h: SERVICE_COPY.scopeHeading },
     SERVICE_COPY.scopeNote,
     ...details.benefits,
     ...specific("after-scope"),
@@ -498,31 +517,33 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     meta.craftLine,
     SERVICE_COPY.craftCaption(service.title),
     SERVICE_COPY.goodToKnowEyebrow,
-    ...goodToKnowBoxes(slug).flatMap((b) => [b.t, b.d]),
+    ...goodToKnowBoxes(slug).flatMap((b) => [{ h: b.t, level: 3 as const }, b.d]),
     ...(slug === "eternit-asbest"
       ? [
-          ...eternitSections.flatMap((sec) => [sec.heading, ...sec.paragraphs]),
-          ETERNIT_FAQ_HEADING,
-          ...eternitFaqs.map((f) => f.question),
-          eternitLocal.heading,
+          ...eternitSections.flatMap((sec) => [{ h: sec.heading, level: sec.level }, ...sec.paragraphs]),
+          { h: ETERNIT_FAQ_HEADING },
+          ...eternitFaqs.map((f) => ({ h: f.question, level: 3 as const })),
+          { h: eternitLocal.heading },
           eternitLocal.text,
           ...eternitLocal.links.map((l) => l.label),
         ]
       : []),
-    SERVICE_COPY.ctaHeading(slug, service.title),
+    { h: SERVICE_COPY.ctaHeading(slug, service.title) },
     SERVICE_COPY.ctaText(slug),
     ...(slug === "eternit-asbest" ? [] : [SERVICE_COPY.ctaOffert]),
     SERVICE_COPY.ctaAdvice,
     SERVICE_COPY.relatedEyebrow,
-    SERVICE_COPY.relatedHeading,
+    { h: SERVICE_COPY.relatedHeading },
     SERVICE_COPY.backToServices,
   ];
+  const { paragraphs, headingAt } = buildBody(items);
   return {
     title: blocks.seoTitle,
     description: blocks.seoDescription,
     h1: `${service.title} ${meta.accentLine}`,
     intro: service.description,
     paragraphs,
+    headingAt,
     relatedLinks: serviceRelatedLinks(slug, services),
     /** Svar som bara syns när besökaren öppnar en dragspelsfråga (finns även i FAQPage-schemat). */
     hiddenAnswers: slug === "eternit-asbest" ? eternitFaqs.map((f) => f.answer) : [],

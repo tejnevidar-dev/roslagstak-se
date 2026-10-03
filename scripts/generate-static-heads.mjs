@@ -208,7 +208,13 @@ const bodyFor = (path) => {
       <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
       <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">${esc(page.h1)}</h1>
       <p style="font-size:1.05rem">${esc(page.intro)}</p>
-      ${page.paragraphs.map((p) => `<p>${esc(p)}</p>`).join("\n      ")}
+      ${page.paragraphs
+        .map((p, i) => {
+          const level = page.headingAt?.[i];
+          // Rubriker (G1): samma h2/h3 som React-sidan. Avslutande kolon/punkt hör till meningsgrinden, inte rubriken.
+          return level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${esc(p)}</p>`;
+        })
+        .join("\n      ")}
       <nav aria-label="Sidlänkar"><ul>${links
         .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)}</a></li>`)
         .join("")}</ul></nav>
