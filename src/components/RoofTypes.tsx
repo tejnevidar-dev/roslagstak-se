@@ -282,7 +282,7 @@ const RoofTypes = () => {
             Vad kostar takbyte?
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Som riktpris, efter ROT-avdrag och inkl. moms: från 900 kr/m² (papptak) upp till ca 2 000 kr/m²
+            Som riktpris, efter ROT-avdrag och inkl. moms: ca 900 kr/m² (papptak) upp till ca 2 000 kr/m²
             (dubbelfalsat plåttak). Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig
             innan. Priset beror på materialval, takets storlek och skick, och inkluderar material, arbete,
             byggställning och avfallshantering. ROT-avdrag (30% på arbetskostnaden) dras av direkt på

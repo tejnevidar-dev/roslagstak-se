@@ -160,7 +160,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takbyte och takomläggning i Enebyberg: villor från 1900-talets första hälft och kedjehus från 1970-talet vid Eneby gård. Kostnadsfri takkontroll.",
   },
   ronninge: {
-    title: "Takbyte i Rönninge, Salem – fast pris",
+    title: "Takläggare i Rönninge, Salem – takkontroll och fast pris",
     description:
       "Takbyte och takomläggning i Rönninge i Salems kommun, ett villasamhälle från 1896 med blandad bebyggelse. Kostnadsfri takkontroll utan förpliktelser.",
   },

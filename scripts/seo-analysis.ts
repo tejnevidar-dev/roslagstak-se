@@ -83,6 +83,19 @@ for (let i = 0; i < titleTokens.length; i++)
     if (s >= 0.8) similar.push({ a: titleTokens[i].path, b: titleTokens[j].path, j: s });
   }
 
+/* Ortssida ↔ combo (t.ex. /taklaggare-ronninge ↔ /takbyte-salem): olika sökavsikt ska ge olika titel. */
+const locPages = indexable.filter((x) => x.path.startsWith("/taklaggare-"));
+const comboPages = indexable.filter((x) => !x.path.startsWith("/taklaggare-") && /^\/(takbyte|takomlaggning|takrenovering|bandtackning|platttak|betongpannor|tegeltak|takmalning|taktvatt)-/.test(x.path));
+const locCombo: { a: string; b: string; j: number }[] = [];
+for (const c of comboPages) {
+  const ct = tokens(c.page!.title ?? "");
+  for (const l of locPages) {
+    const j = jaccard(ct, tokens(l.page!.title ?? ""));
+    if (j >= 0.6) locCombo.push({ a: l.path, b: c.path, j });
+  }
+}
+locCombo.sort((x, y) => y.j - x.j);
+
 /* ---------- 2.45/2.46 Täckningsmatriser ---------- */
 const byRegion = new Map<string, { pages: number; words: number; thin: number; comboIdx: number; comboAll: number }>();
 for (const l of locations) {
@@ -122,6 +135,9 @@ ${graphErrors.length ? graphErrors.map((e) => `- ${e}`).join("\n") : "Inga trasi
 **Titelpar med likhet ≥ 0,8 (Jaccard på betydelsebärande ord, ${similar.length} par):**
 ${similar.length ? similar.slice(0, 60).map((s) => `- ${s.j.toFixed(2)}  ${s.a}  ↔  ${s.b}`).join("\n") : "inga."}
 ${similar.length > 60 ? `\n… och ${similar.length - 60} till.` : ""}
+
+**Ortssida ↔ combo-sida med titellikhet ≥ 0,6 (${locCombo.length} par):**
+${locCombo.length ? locCombo.slice(0, 40).map((s) => `- ${s.j.toFixed(2)}  ${s.a}  ↔  ${s.b}`).join("\n") : "inga."}
 
 ## 2.46 Lokal täckningsmatris (region × kvalitet)
 | Region | Ortssidor | Snitt ord | Under 400 ord | Indexerade tjänst+ort | Projekt |

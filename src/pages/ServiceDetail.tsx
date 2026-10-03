@@ -159,7 +159,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "nytt tak med fast pris.",
     specs: [
       { k: "Material", v: "Lertegel" },
-      { k: "Livslängd", v: "100+ år" },
+      { k: "Livslängd", v: "Enligt tillverkaren" },
       { k: "Pris", v: "Från 1 300 kr/m²" },
     ],
     specHeading: "Lertegel jämfört med andra taktyper",
