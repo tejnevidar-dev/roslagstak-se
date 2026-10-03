@@ -22,6 +22,7 @@ import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody } from "../src/lib/body-items";
 import { problemsForLocation, regionLinksForProblems, takkontrollLink } from "../src/data/problem-links";
+import { hubLinksFor } from "../src/data/hub-links";
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
@@ -779,6 +780,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...combos
           .filter((c) => c.locationSlug === loc.slug)
           .map((c) => ({ href: c.url, label: `${c.serviceName} ${c.prep} ${c.locationName}` })),
+        ...hubLinksFor(loc.slug),
         ...loc.nearbyLocations
           .map((name) => locations.find((l) => l.name === name))
           .filter((l): l is (typeof locations)[number] => Boolean(l))

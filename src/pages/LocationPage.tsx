@@ -1,5 +1,6 @@
 import { GARANTI_RENOVERING } from "@/data/guarantee";
 import { problemsForLocation } from "@/data/problem-links";
+import { hubLinksFor } from "@/data/hub-links";
 import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
@@ -487,6 +488,11 @@ const LocationPage = () => {
                     </Link>
                     </>
                     )}
+                    {hubLinksFor(location.slug).map((h) => (
+                      <Link key={h.href} to={h.href} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> {h.label}
+                      </Link>
+                    ))}
                     {isBrfLocation(location.slug) && (
                       <Link to={`/brf/${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                         <ArrowRight className="w-3 h-3" /> Takbyte för BRF {prep} {location.name}
