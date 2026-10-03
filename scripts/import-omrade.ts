@@ -57,7 +57,7 @@ const parse = (file: string): Parsed => {
   const slug = raw.match(/\*\*Slug:\*\*\s*\/taklaggare-([a-z0-9-]+)/)?.[1];
   const titleLine = raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?·\s*\*\*Meta \(≤ 160\):\*\*\s*(.+)/);
   // Titel och meta kan ligga utanför briefen ("Titel och meta: enligt Marknadschefens beslut, ändras inte här"): då rörs varken description eller seo-overrides.
-  const titelUtanforBrief = /\*\*Titel och meta:\*\*\s*enligt/.test(raw);
+  const titelUtanforBrief = /\*\*Titel och meta:\*\*\s*(?:enligt|rörs inte|ändras inte)/.test(raw);
   if (!slug || (!titleLine && !titelUtanforBrief)) {
     console.error(`${file}: saknar Slug eller Titel/Meta i huvudet.`);
     process.exit(2);
