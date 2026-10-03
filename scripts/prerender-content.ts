@@ -624,6 +624,11 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ],
       ogImage: project.ogImage,
       ogImageAlt: project.ogImageAlt,
+      breadcrumbs: [
+        { name: "Startsidan", path: "/", visibleName: "Hem" },
+        { name: "Referensjobb", path: "/projekt" },
+        { name: project.title, path: `/projekt/${project.slug}` },
+      ],
     };
   }
 
