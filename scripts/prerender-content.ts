@@ -693,6 +693,11 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
           label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
         })),
       ],
+      breadcrumbs: [
+        { name: "Startsidan", path: "/" },
+        { name: "Områden", path: "/omraden" },
+        { name: region, path: clean },
+      ],
     };
   }
 
@@ -717,6 +722,11 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         { href: "/brf", label: "BRF & fastigheter" },
         { href: `/taklaggare-${loc.slug}`, label: `Takläggare ${prep} ${loc.name}` },
+      ],
+      breadcrumbs: [
+        { name: "Startsidan", path: "/", visibleName: "Hem" },
+        { name: "BRF & fastigheter", path: "/brf" },
+        { name: `BRF ${prep} ${loc.name}`, path: clean },
       ],
     };
   }
