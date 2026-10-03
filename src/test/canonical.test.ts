@@ -81,3 +81,16 @@ describe("duplicate control", () => {
     expect(bad).toEqual([]);
   });
 });
+
+describe("omdirigeringsregister", () => {
+  it("varje alias har datum och skäl, och inget mål är i sin tur ett alias (inga kedjor)", async () => {
+    const { REDIRECT_REGISTRY } = await import("@/lib/canonical");
+    for (const [alias, target] of Object.entries(CANONICAL_ALIASES)) {
+      expect(REDIRECT_REGISTRY[alias], `register saknas för ${alias}`).toBeDefined();
+      expect(REDIRECT_REGISTRY[alias].datum).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(REDIRECT_REGISTRY[alias].skal.length).toBeGreaterThan(10);
+      expect(CANONICAL_ALIASES[target], `${alias} → ${target} är en kedja`).toBeUndefined();
+    }
+    for (const alias of Object.keys(REDIRECT_REGISTRY)) expect(CANONICAL_ALIASES[alias], `${alias} står i registret men inte i CANONICAL_ALIASES`).toBeDefined();
+  });
+});

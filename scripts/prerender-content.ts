@@ -45,6 +45,7 @@ const villaAreaLinks = (key: string) =>
     .map((a) => ({ href: a.href!, label: `Takläggare i ${a.name}` }));
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
+import { CANONICAL_ALIASES } from "../src/lib/canonical";
 import { regionBySlug, regionIntros, regionNeighbors, regionSlugs } from "../src/data/regions";
 
 // Fas 2.19: samma schemanoder som React-sidorna, exponerade för generate-static-heads.mjs.
@@ -832,11 +833,18 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
 
   return null;
 };
+const aliasToCanonical = (href: string): string => {
+  const [pathPart, ...rest] = href.split("#");
+  const target = CANONICAL_ALIASES[pathPart.replace(/\/$/, "")];
+  return target ? [target, ...rest].join("#") : href;
+};
 export const prerenderContent = (path: string): PrerenderPage | null => {
   const raw = prerenderContentRaw(path);
   if (!raw) return raw;
   // SEO Command Center: tilläggsblock (textblock, FAQ, internlänkar) ur src/data/overrides/innehall.json
-  const page = applyOverrideBlocks(raw, buildOverrideBlocks(path));
+  const page0 = applyOverrideBlocks(raw, buildOverrideBlocks(path));
+  // Interna länkar pekar alltid på canonical adress, inte på ett alias (t.ex. /tjanster/takvard → /tjanster/taktvatt).
+  const page = { ...page0, links: page0.links.map((l) => ({ ...l, href: aliasToCanonical(l.href) })) };
   return {
     ...page,
     title: page.title ? fitTitle(page.title) : page.title,

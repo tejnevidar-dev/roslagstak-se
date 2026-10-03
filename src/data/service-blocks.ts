@@ -228,9 +228,9 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   platarbeten: {
-    seoTitle: "Plåtarbeten & Bandtäckning Roslagen — Certifierade",
+    seoTitle: "Plåtarbeten & Bandtäckning Roslagen — Fast pris",
     seoDescription:
-      "Plåtarbeten i Roslagen: bandtäckning, falsat plåttak, skorstensbeslag, ränndalar och vindskiveplåt i stål, aluminium, koppar och zink. Certifierade plåtslagare, fast pris.",
+      "Plåtarbeten i Roslagen: bandtäckning, falsat plåttak, skorstensbeslag, ränndalar och vindskiveplåt. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Teknik", value: "Falsat & profilerat", text: "Dubbelfalsad bandtäckning eller profilerad plåt beroende på lutning." },
@@ -343,11 +343,13 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
 /** Tjänstspecifika fördjupningslänkar som läggs till i "Läs vidare". */
 const extraRelated: Record<string, { to: string; label: string }[]> = {
   takomlaggning: [
+    { to: "/blogg/takpapp-byte-livslangd", label: "Takpapp: laga eller byta?" },
     { to: "/taktyper", label: "Jämför taktyper och material" },
     { to: "/hur-det-gar-till", label: "Se hur ett takbyte går till" },
     { to: "/projekt/takbyte-singo", label: "Referensjobb: takbyte på Singö" },
   ],
   takrenovering: [
+    { to: "/blogg/takpapp-byte-livslangd", label: "Takpapp: laga eller byta?" },
     { to: "/tjanster/takinspektion", label: "Boka kostnadsfri takkontroll" },
     { to: "/tjanster/takomlaggning", label: "När räcker inte renovering?" },
     { to: "/takreparation", label: "Takreparation vid läckage och skador" },
@@ -355,6 +357,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/projekt/takrenovering-blido", label: "Referensjobb: takrenovering på Blidö" },
   ],
   takavvattning: [
+    { to: "/blogg/hangrannor-stupror-skargard", label: "Hängrännor och stuprör: material och underhåll" },
     { to: "/tjanster/platarbeten", label: "Plåtarbeten och beslag" },
     { to: "/hangrannor", label: "Nya hängrännor och stuprör" },
   ],
@@ -364,10 +367,15 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   ],
   platarbeten: [
+    { to: "/blogg/bandtackt-plat-vs-klicktak", label: "Bandtäckt plåt eller klicktak" },
+    { to: "/blogg/bandtackning-tak-guide", label: "Bandtäckning: så går det till" },
     { to: "/platslagare", label: "Plåtslagare för ditt tak" },
     { to: "/tjanster/tegeltak", label: "Tegeltak i lertegel" },
   ],
-  takvard: [{ to: "/tjanster/takinspektion", label: "Kontroll före takvård" }],
+  takvard: [
+    { to: "/blogg/mala-plattak-guide-pris", label: "Måla plåttak: guide och pris" },
+    { to: "/tjanster/takinspektion", label: "Kontroll före takvård" },
+  ],
   tegeltak: [{ to: "/tjanster/platarbeten#falsat", label: "Dubbelfalsat plåttak (bandtäckning)" }],
 };
 

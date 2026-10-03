@@ -55,7 +55,7 @@ const GuidesTeaser = () => {
                 <figure className="relative m-0 overflow-hidden rounded-2xl bg-secondary shadow-[0_40px_90px_-55px_rgba(12,35,64,0.75)]">
                   <img
                     src={roofMacro}
-                    alt="Nylagd råspont på tak i Roslagens skärgård, eget arbete"
+                    alt="Nylagd råspont på ett tak"
                     width={900}
                     height={675}
                     loading="lazy"

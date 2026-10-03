@@ -19,6 +19,19 @@ export const CANONICAL_ALIASES: Record<string, string> = {
   "/tjanster/takvard": "/tjanster/taktvatt",
 };
 
+/**
+ * Omdirigeringsregister (fas 2.31): varje alias ovan har ett datum och ett skäl. Testet src/test/canonical.test.ts
+ * kräver en post per alias, och att inget mål i sin tur är ett alias (inga kedjor). Datum = när aliaset infördes
+ * (ÅÅÅÅ-MM-DD), skäl = varför.
+ */
+export const REDIRECT_REGISTRY: Record<string, { datum: string; skal: string }> = {
+  "/radgivning": { datum: "2026-03-24", skal: "Kort adress för affischer och annonser, samma sida som /kontakt" },
+  "/konsultation": { datum: "2026-03-24", skal: "Kort adress för affischer och annonser, samma sida som /kontakt" },
+  "/boka": { datum: "2026-03-24", skal: "Kort adress för affischer och annonser, samma sida som /kontakt" },
+  "/taktvatt": { datum: "2026-03-24", skal: "Äldre adress till takvårdssidan, en canonical: /tjanster/taktvatt" },
+  "/tjanster/takvard": { datum: "2026-09-29", skal: "Takvård och taktvätt är samma sida, en canonical: /tjanster/taktvatt" },
+};
+
 /** Paths that must never be indexed (admin area etc.). */
 export const NOINDEX_PREFIXES = ["/admin"];
 

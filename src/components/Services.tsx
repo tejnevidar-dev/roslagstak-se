@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Phone } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import { canonicalPath } from "@/lib/canonical";
 import roofProject from "@/assets/hero-drone-poster.jpg";
 import {
   IconRoofNew,
@@ -158,7 +159,7 @@ const Services = () => {
             >
               <Reveal className="h-full" delay={Math.min(i, 5) * 0.05}>
                 <Link
-                  to={`/tjanster/${service.slug}`}
+                  to={canonicalPath(`/tjanster/${service.slug}`)}
                   className="group relative flex h-full min-h-[19rem] flex-col p-8 transition-colors duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-secondary/70 lg:p-9"
                 >
                   <span

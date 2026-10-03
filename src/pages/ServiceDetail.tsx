@@ -35,7 +35,7 @@ import imgSnoras from "@/assets/roof-build-08-snorasskydd.jpg";
 import imgLakt from "@/assets/roof-build-05-lakt.jpg";
 import imgPannor from "@/assets/roof-build-06-pannor.jpg";
 import imgDronePoster from "@/assets/hero-drone-poster.jpg";
-import imgBlidoLakeview from "@/assets/project-blido-lakeview.jpg";
+import imgBlidoLakeview from "@/assets/project-blido-lakeview.webp";
 import imgLertegel from "@/assets/roof-type-lertegel.jpg";
 
 /** Hero-foto per tjänst — dokumentära bilder från eget arbete. */
@@ -200,7 +200,7 @@ const ServiceDetail = () => {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[var(--shadow-elevated)]">
                 <img
                   src={serviceImage}
-                  alt={slug === "eternit-asbest" ? "Drönarfoto av nylagt tak på Blidö, Roslagens skärgård" : `${service.title} i Roslagen utförd av RoslagsTak`}
+                  alt={slug === "eternit-asbest" ? "Drönarfoto av nylagt tak på Blidö, Roslagens skärgård" : `${service.title} i Roslagen`}
                   width={1200}
                   height={1500}
                   fetchPriority="high"
@@ -331,7 +331,7 @@ const ServiceDetail = () => {
                 <div className="overflow-hidden rounded-2xl bg-secondary">
                   <img
                     src={detailImage}
-                    alt={`Detalj från ${service.title.toLowerCase()} i Roslagen`}
+                    alt={`Detalj: ${service.title.toLowerCase()}`}
                     width={1200}
                     height={900}
                     loading="lazy"

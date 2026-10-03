@@ -19,7 +19,7 @@ import { classify } from "./page-type";
 import { execSync } from "node:child_process";
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
-import { prerenderContent } from "./prerender-content";
+import { prerenderContent, thinComboPaths } from "./prerender-content";
 
 const LIVE = process.argv.includes("--live");
 const REPORT_PATH = resolve("../ledning/marknad/seo-vecka.md");
@@ -568,6 +568,37 @@ writeFileSync(
     "",
   ].join("\n"),
 );
+
+// ---- Teknisk hälsa (fas 2.22): samlade räknare för orphan, noindex och döda interna länkar ----
+{
+  const sitemapSet = new Set(currentPaths);
+  const orphans = currentPaths.filter((p) => p !== "/" && (inlinkCount.get(p) ?? 0) === 0);
+  const noindexCombos = thinComboPaths.length;
+  const dead = new Map<string, number>();
+  for (const from of currentPaths) {
+    const page = prerenderContent(from);
+    if (!page) continue;
+    for (const l of new Set(page.links.map((x) => x.href.split("#")[0].split("?")[0].replace(/\/$/, "") || "/"))) {
+      if (!l.startsWith("/") || sitemapSet.has(l) || l.startsWith("/offert/") || thinComboPaths.includes(l)) continue;
+      if (["/radgivning", "/konsultation", "/boka"].includes(l) || l.startsWith("/admin")) continue;
+      dead.set(l, (dead.get(l) ?? 0) + 1);
+    }
+  }
+  lines.push(
+    section(
+      "Teknisk hälsa (samlade räknare, fas 2.22)",
+      [
+        "| Mått | Värde |",
+        "|---|---|",
+        `| Sidor i sitemapen | ${currentPaths.length} |`,
+        `| Orphan (sitemap-sidor utan inlänk från annan sida) | ${orphans.length}${orphans.length ? ": " + orphans.slice(0, 5).join(", ") : ""} |`,
+        `| Noindex (tjänst × ort utanför sitemapen, tunna kombinationer) | ${noindexCombos} |`,
+        `| Döda interna länkar i sidtexterna (länkmål utanför sitemapen) | ${dead.size}${dead.size ? ": " + [...dead.keys()].slice(0, 5).join(", ") : ""} |`,
+        "| 404 mot live | Kontrolleras mot produktion vid större ändringar (senast 441 av 441 svarar 200, 2026-10-03). Riktiga 404-förfrågningar kräver serverloggar (2.26). |",
+      ].join("\n"),
+    ),
+  );
+}
 
 writeFileSync(REPORT_PATH, lines.join("\n"));
 console.log(`[seo-weekly-report] skrivet till ledning/marknad/seo-vecka.md`);
