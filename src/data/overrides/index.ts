@@ -111,7 +111,7 @@ export const serializeMetaFile = (file: MetaFile): string => {
 export interface LoggRad {
   id: string;
   path: string;
-  falt: FaltNamn | "textblock" | "faq" | "lankar";
+  falt: FaltNamn | "h1" | "textblock" | "faq" | "lankar" | "alt";
   fore: string | null;
   efter: string;
   tid: string;

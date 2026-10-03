@@ -73,8 +73,8 @@ export const generateLocationFAQs = (
       answer: `Det beror på takets skick, framför allt underlaget. Vid den kostnadsfria takkontrollen ${prep} ${name} bedömer vi om en reparation räcker eller om taket behöver läggas om. Du bestämmer själv om och när du vill gå vidare.`,
     },
     {
-      question: `Har ni erfarenhet av eternittak och asbest ${prep} ${name}?`,
-      answer: `Vi utför inte asbestsanering själva. Saneringen samordnar vi med ett företag som har tillstånd från Arbetsmiljöverket, och därefter lägger vi det nya taket. Misstänker du att taket innehåller asbest kan du boka en kostnadsfri takkontroll.`,
+      question: `Kan ni byta ett eternittak ${prep} ${name}?`,
+      answer: `Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma, som river det gamla taket, och därefter lägger vi det nya taket. Misstänker du att taket innehåller asbest kan du boka en kostnadsfri takkontroll.`,
     },
   );
 

@@ -304,12 +304,12 @@ const staticPages: Record<string, PrerenderPage> = {
   "/blogg": {
     title: "Guider om tak — takbyte, priser och underhåll",
     description:
-      "Fördjupande guider om taktyper, kostnader, ROT-avdrag, taksäkerhet, asbestsanering och underhåll av tak i kustnära klimat.",
+      "Fördjupande guider om taktyper, kostnader, ROT-avdrag, taksäkerhet, eternittak och underhåll av tak.",
     h1: "Allt om tak i Roslagen",
     intro:
       "Tips, guider och nyheter om takbyte, takrenovering och takläggning i Roslagens skärgård.",
     paragraphs: [
-      "Här hittar du fördjupande guider om taktyper, kostnader, ROT-avdrag, taksäkerhet, asbestsanering, taktvätt och underhåll av tak i kustnära klimat.",
+      "Här hittar du fördjupande guider om taktyper, kostnader, ROT-avdrag, taksäkerhet, eternittak, taktvätt och underhåll av tak.",
     ],
     links: [
       ...primaryLinks,

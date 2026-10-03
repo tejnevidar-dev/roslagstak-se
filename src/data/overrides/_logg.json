@@ -32,6 +32,22 @@
       "fore": "Takrenovering i Täby – kostnadsfri takkontroll",
       "efter": "Takrenovering i Täby – renovera taket, fast pris",
       "tid": "2026-10-03T23:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-03-0001",
+      "path": "/tjanster/eternit-asbest",
+      "falt": "title",
+      "fore": "Eternitsanering & Asbestrivning Roslagen",
+      "efter": "Byta eternittak – sanering via behörig firma",
+      "tid": "2026-10-03T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-03-0002",
+      "path": "/tjanster/eternit-asbest",
+      "falt": "h1",
+      "fore": "Eternit & asbestsanering säkert och enligt regelverk.",
+      "efter": "Byta eternittak – saneringen görs av en firma med tillstånd.",
+      "tid": "2026-10-03T23:30:00+02:00"
     }
   ]
 }
