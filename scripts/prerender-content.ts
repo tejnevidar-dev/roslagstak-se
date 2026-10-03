@@ -649,6 +649,10 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         })),
         ...locationLinks,
       ],
+      breadcrumbs: [
+        { name: "Startsidan", path: "/" },
+        { name: "Områden", path: "/omraden" },
+      ],
     };
   }
 
