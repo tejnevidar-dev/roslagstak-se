@@ -142,7 +142,7 @@ export const serializeAvstangd = (a: Avstangd): string =>
  *     faq       = { id, rubrik?, fragor: { fraga, svar }[], andrad, orsak }
  *     lankar    = { id, rubrik?, lankar: { href, text }[], andrad, orsak }
  * Bara TILLÄGG: befintlig text, rubriker och länkar på sidan ändras aldrig. Id, avstängning (_avstangd.json, ett id
- * per fält), loggning (_logg.json, falt = "textblock" | "faq" | "lankar", efter = innehallSomText) och
+ * per fält), loggning (_logg.json, falt = "textblock" | "faq" | "lankar" | "alt", efter = innehallSomText) och
  * sökvägsspärren fungerar som för meta.json. Tom fil = exakt samma sajt.
  * ===================================================================================================== */
 import innehallJson from "./innehall.json";
@@ -162,17 +162,26 @@ export interface FaqFalt extends InnehallBas {
 export interface LankarFalt extends InnehallBas {
   lankar: { href: string; text: string }[];
 }
+export interface AltFalt extends InnehallBas {
+  bilder: { bild: string; alt: string }[];
+}
 export interface InnehallPost {
   textblock?: TextblockFalt;
   faq?: FaqFalt;
   lankar?: LankarFalt;
+  alt?: AltFalt;
 }
+export type InnehallAnyFalt = TextblockFalt | FaqFalt | LankarFalt | AltFalt;
 export interface InnehallFile {
   version: number;
   poster: Record<string, InnehallPost>;
 }
-export type InnehallNamn = "textblock" | "faq" | "lankar";
-export const INNEHALL_FALT: InnehallNamn[] = ["textblock", "faq", "lankar"];
+export type InnehallNamn = "textblock" | "faq" | "lankar" | "alt";
+export const INNEHALL_FALT: InnehallNamn[] = ["textblock", "faq", "lankar", "alt"];
+/** Namnet på datalistan i varje fält. */
+export const INNEHALL_DATA: Record<InnehallNamn, string> = { textblock: "stycken", faq: "fragor", lankar: "lankar", alt: "bilder" };
+/** Fält vars data är en lista av objekt, med objektens nycklar i fast ordning. */
+const OBJEKT_NYCKLAR: Partial<Record<InnehallNamn, string[]>> = { faq: ["fraga", "svar"], lankar: ["href", "text"], alt: ["bild", "alt"] };
 export const innehallFile = innehallJson as InnehallFile;
 
 export const activeInnehallPosts = (file: InnehallFile = innehallFile, off: Avstangd = avstangd): Record<string, InnehallPost> => {
@@ -184,7 +193,7 @@ export const activeInnehallPosts = (file: InnehallFile = innehallFile, off: Avst
       const falt = post[f];
       if (falt && !off.ider.includes(falt.id)) (aktiv as Record<string, unknown>)[f] = falt;
     }
-    if (aktiv.textblock || aktiv.faq || aktiv.lankar) out[overridePath(path)] = aktiv;
+    if (aktiv.textblock || aktiv.faq || aktiv.lankar || aktiv.alt) out[overridePath(path)] = aktiv;
   }
   return out;
 };
@@ -221,15 +230,15 @@ export const buildOverrideBlocks = (path: string, posts: Record<string, Innehall
 };
 
 /** Innehållet i ett fält som text (utan id, andrad, orsak): det som skrivs i loggens "fore" och "efter". Fast nyckelordning. */
-export const innehallSomText = (namn: InnehallNamn, falt: TextblockFalt | FaqFalt | LankarFalt): string => {
-  const data =
-    namn === "textblock"
-      ? (falt as TextblockFalt).stycken
-      : namn === "faq"
-        ? (falt as FaqFalt).fragor.map((f) => ({ fraga: f.fraga, svar: f.svar }))
-        : (falt as LankarFalt).lankar.map((l) => ({ href: l.href, text: l.text }));
-  const nyckel = namn === "textblock" ? "stycken" : namn === "faq" ? "fragor" : "lankar";
+export const innehallSomText = (namn: InnehallNamn, falt: InnehallAnyFalt): string => {
+  const nyckel = INNEHALL_DATA[namn];
+  const data = orderData(namn, (falt as unknown as Record<string, unknown>)[nyckel] as unknown[]);
   return JSON.stringify(falt.rubrik !== undefined ? { rubrik: falt.rubrik, [nyckel]: data } : { [nyckel]: data });
+};
+
+const orderData = (namn: InnehallNamn, data: unknown[]): unknown[] => {
+  const keys = OBJEKT_NYCKLAR[namn];
+  return keys ? data.map((x) => Object.fromEntries(keys.map((k) => [k, (x as Record<string, unknown>)[k]]))) : data;
 };
 
 export const serializeInnehallFile = (file: InnehallFile): string => {
@@ -240,15 +249,10 @@ export const serializeInnehallFile = (file: InnehallFile): string => {
     for (const f of INNEHALL_FALT) {
       const falt = post[f] as unknown as Record<string, unknown> | undefined;
       if (!falt) continue;
-      const nyckel = f === "textblock" ? "stycken" : f === "faq" ? "fragor" : "lankar";
+      const nyckel = INNEHALL_DATA[f];
       const o: Record<string, unknown> = { id: falt.id };
       if (falt.rubrik !== undefined) o.rubrik = falt.rubrik;
-      o[nyckel] =
-        f === "textblock"
-          ? falt[nyckel]
-          : (falt[nyckel] as Record<string, string>[]).map((x) =>
-              f === "faq" ? { fraga: x.fraga, svar: x.svar } : { href: x.href, text: x.text },
-            );
+      o[nyckel] = orderData(f, falt[nyckel] as unknown[]);
       o.andrad = falt.andrad;
       o.orsak = falt.orsak;
       ordered[f] = o;
@@ -256,4 +260,29 @@ export const serializeInnehallFile = (file: InnehallFile): string => {
     poster[path] = ordered;
   }
   return JSON.stringify({ version: file.version, poster }, null, 2) + "\n";
+};
+
+/* ---- Bild-alt: nyckel per bildfil ---- */
+/**
+ * Bildens nyckel = filnamnet utan katalog, query, filändelse och (för Vites hashade /assets/-filer) utan hashen.
+ * "/assets/hero-drone-poster-1080-Ab3dEf9x.webp" och "/src/assets/hero-drone-poster-1080.webp" ger båda
+ * "hero-drone-poster-1080". Samma funktion används av ContentOverrides (webbläsaren) och check-overrides (bygget).
+ */
+export const bildNyckel = (src: string): string => {
+  const utanQuery = src.split("#")[0].split("?")[0];
+  const fil = utanQuery.slice(utanQuery.lastIndexOf("/") + 1).replace(/\.[A-Za-z0-9]+$/, "");
+  const hashad = utanQuery.includes("/assets/") && /-[A-Za-z0-9_-]{8}$/.test(fil) && /[0-9A-Z]/.test(fil.slice(-8));
+  return decodeURIComponent(hashad ? fil.slice(0, -9) : fil).toLowerCase();
+};
+
+export interface AltOverrides {
+  /** bildNyckel → alt-text. */
+  alt: Record<string, string>;
+  ids: string[];
+}
+/** Alt-överstyrningar för en sida. null = inga. Ändrar bara alt-attributet på befintliga bilder, aldrig något annat. */
+export const buildAltOverrides = (path: string, posts: Record<string, InnehallPost> = activeInnehall): AltOverrides | null => {
+  const falt = posts[overridePath(path)]?.alt;
+  if (!falt) return null;
+  return { alt: Object.fromEntries(falt.bilder.map((b) => [b.bild.toLowerCase(), b.alt])), ids: [falt.id] };
 };

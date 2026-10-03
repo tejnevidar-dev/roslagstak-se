@@ -5,9 +5,10 @@
  *
  * Kör: bun scripts/check-overrides.ts
  */
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import {
+  bildNyckel,
   FALT,
   INNEHALL_FALT,
   innehallSomText,
@@ -101,6 +102,18 @@ for (const [path, post] of Object.entries(poster)) {
     ids.set(falt.id, `${path} ${f}`);
   }
 }
+// Bildnycklar: alla bildfiler i src/assets och public (alt-överstyrningar får bara peka på riktiga bilder)
+const bildNycklar = new Set<string>();
+const skanna = (d: string) => {
+  if (!existsSync(d)) return;
+  for (const n of readdirSync(d)) {
+    const full = resolve(d, n);
+    if (statSync(full).isDirectory()) skanna(full);
+    else if (/\.(jpe?g|png|webp|avif|gif|svg)$/i.test(n)) bildNycklar.add(bildNyckel(n));
+  }
+};
+skanna(resolve("src/assets"));
+skanna(resolve("public"));
 const normText = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
 const innehallPoster = innehall.data.poster ?? {};
 const brodtexter = new Map<string, string>();
@@ -110,6 +123,7 @@ for (const [path, post] of Object.entries(innehallPoster)) {
     sparr: sparr.data,
     kandaSidor,
     basText: (p) => prerenderContentRaw(p)?.paragraphs.join(" "),
+    bildNycklar,
   }))
     e(`innehall.json ${m}`);
   for (const f of INNEHALL_FALT) {

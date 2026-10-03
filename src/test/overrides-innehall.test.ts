@@ -6,6 +6,8 @@ import monster from "@/data/seo-regler/forbjudna-monster.json";
 import sparr from "@/data/seo-regler/sparrlista.json";
 import {
   activeInnehallPosts,
+  bildNyckel,
+  buildAltOverrides,
   buildOverrideBlocks,
   innehallFile,
   innehallSomText,
@@ -113,5 +115,42 @@ describe("kontroll av innehållsposter", () => {
     expect(l([{ href: "/finns-inte", text: "Okänd sida" }])).toMatch(/finns inte i sajten/);
     expect(l([{ href: "/taklaggare-taby", text: "Samma sida" }])).toMatch(/länka till sig själv/);
     expect(l([{ href: "/priser", text: "Priser här" }, { href: "/priser", text: "Priser igen" }])).toMatch(/flera gånger/);
+  });
+});
+
+describe("bild-alt", () => {
+  const altFalt = { id: "seo-cc-2026-10-12-0004", bilder: [{ bild: "hero-drone-poster-1080", alt: "Drönarfoto av nylagt plåttak på en villa på Blidö" }], ...bas };
+  const altFil: InnehallFile = { version: 1, poster: { "/taklaggare-taby": { alt: altFalt } } };
+  const altCtx = { ...ctx, bildNycklar: new Set(["hero-drone-poster-1080", "logo"]) };
+
+  it("bildNyckel ger samma nyckel för hashad byggfil, källfil och query", () => {
+    expect(bildNyckel("/assets/hero-drone-poster-1080-Ab3dEf9x.webp")).toBe("hero-drone-poster-1080");
+    expect(bildNyckel("/src/assets/hero-drone-poster-1080.webp?import")).toBe("hero-drone-poster-1080");
+    expect(bildNyckel("https://roslagstak.se/og/Takbyte-Taby.jpg")).toBe("takbyte-taby");
+    expect(bildNyckel("/assets/roslagstak-logo-white-Dk2f9aBc.png")).toBe("roslagstak-logo-white");
+    // ett ord på åtta tecken utan siffra eller versal är inte en hash
+    expect(bildNyckel("/assets/hero-takbyte.jpg")).toBe("hero-takbyte");
+  });
+  it("buildAltOverrides ger alt per bildnyckel och null utan post", () => {
+    const posts = activeInnehallPosts(altFil, { alla: false, ider: [] });
+    expect(buildAltOverrides("/taklaggare-taby", posts)).toEqual({ alt: { "hero-drone-poster-1080": altFalt.bilder[0].alt }, ids: [altFalt.id] });
+    expect(buildAltOverrides("/priser", posts)).toBeNull();
+    expect(buildAltOverrides("/taklaggare-taby")).toBeNull();
+    expect(activeInnehallPosts(altFil, { alla: false, ider: [altFalt.id] })).toEqual({});
+  });
+  it("serialiseringen är stabil och loggtexten har fast ordning", () => {
+    const text = serializeInnehallFile(altFil);
+    expect(serializeInnehallFile(JSON.parse(text))).toBe(text);
+    expect(innehallSomText("alt", altFalt)).toBe('{"bilder":[{"bild":"hero-drone-poster-1080","alt":"Drönarfoto av nylagt plåttak på en villa på Blidö"}]}');
+  });
+  it("godkänner en ren post och avvisar fel", () => {
+    expect(checkInnehallPost("/taklaggare-taby", { alt: altFalt }, altCtx)).toEqual([]);
+    const f = (bilder: { bild: string; alt: string }[]) => checkInnehallPost("/taklaggare-taby", { alt: { ...altFalt, bilder } }, altCtx).join();
+    expect(f([{ bild: "finns-inte", alt: altFalt.bilder[0].alt }])).toMatch(/ingen bildfil/);
+    expect(f([{ bild: "Hero.jpg", alt: altFalt.bilder[0].alt }])).toMatch(/filnamnet utan katalog/);
+    expect(f([{ bild: "logo", alt: "För kort" }])).toMatch(/kortare än 15/);
+    expect(f([{ bild: "logo", alt: "Bild på ett nylagt tak på en villa i Täby" }])).toMatch(/börja inte med/);
+    expect(f([{ bild: "logo", alt: "Nylagt tak på en villa i Täby, bästa takläggaren i Roslagen" }, { bild: "logo", alt: "Nylagt tak på en villa i Täby, sett från sidan" }])).toMatch(/superlativ|flera gånger/);
+    expect(checkInnehallPost("/taklaggare-taby", { alt: { ...altFalt, rubrik: "Rubrik här" } as never }, altCtx).join()).toMatch(/okänt fält "rubrik"/);
   });
 });

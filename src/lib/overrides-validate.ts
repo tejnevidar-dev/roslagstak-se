@@ -102,12 +102,11 @@ export const checkPost = (path: string, post: MetaPost, ctx: PostKontext): strin
 };
 
 /* ---- Innehållsöverstyrningar (textblock, FAQ, internlänkar) ---- */
-import type { FaqFalt, InnehallNamn, InnehallPost, LankarFalt, TextblockFalt } from "../data/overrides";
-import { INNEHALL_FALT } from "../data/overrides";
+import type { AltFalt, FaqFalt, InnehallAnyFalt, InnehallNamn, InnehallPost, LankarFalt, TextblockFalt } from "../data/overrides";
+import { INNEHALL_DATA, INNEHALL_FALT } from "../data/overrides";
 
 export const INNEHALL_FIELDS: string[] = [...INNEHALL_FALT];
 const BAS_FIELDS = ["id", "rubrik", "andrad", "orsak"];
-const DATA_FIELD: Record<InnehallNamn, string> = { textblock: "stycken", faq: "fragor", lankar: "lankar" };
 
 /** Alla förbjudna mönster gäller för brödtext, oavsett vilket fält (title/description) regeln skrevs för. */
 export const checkBrodtext = (text: string, regler: Regel[], bas?: string): Traff[] =>
@@ -118,6 +117,8 @@ export const checkBrodtext = (text: string, regler: Regel[], bas?: string): Traf
 export interface InnehallKontext extends PostKontext {
   /** Sidans nuvarande text (alla stycken) före tillägget, för villkorade regler (T2). */
   basText?: (path: string) => string | undefined;
+  /** Bildnycklar (bildNyckel) för bilderna i src/assets och public, för alt-överstyrningar. */
+  bildNycklar?: Set<string>;
 }
 
 const textFel = (where: string, s: unknown, min: number, max: number, regler: Regel[], bas?: string): string[] => {
@@ -131,12 +132,12 @@ const textFel = (where: string, s: unknown, min: number, max: number, regler: Re
   return fel;
 };
 
-export const checkInnehallFalt = (path: string, namn: InnehallNamn, falt: TextblockFalt | FaqFalt | LankarFalt, ctx: InnehallKontext): string[] => {
+export const checkInnehallFalt = (path: string, namn: InnehallNamn, falt: InnehallAnyFalt, ctx: InnehallKontext): string[] => {
   const fel: string[] = [];
   const w = `${path} ${namn}`;
   const e = (m: string) => fel.push(`${w}: ${m}`);
   const bas = ctx.basText?.(path);
-  const tillatna = [...BAS_FIELDS, DATA_FIELD[namn]];
+  const tillatna = [...BAS_FIELDS.filter((k) => namn !== "alt" || k !== "rubrik"), INNEHALL_DATA[namn]];
   for (const k of Object.keys(falt)) if (!tillatna.includes(k)) e(`okänt fält "${k}"`);
   if (typeof falt.id !== "string" || !ID_FORMAT.test(falt.id)) e(`id måste vara på formen seo-cc-ÅÅÅÅ-MM-DD-NNNN (fick ${JSON.stringify(falt.id)})`);
   if (typeof falt.andrad !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(falt.andrad)) e("andrad måste vara ett ISO-datum (ÅÅÅÅ-MM-DD)");
@@ -159,6 +160,22 @@ export const checkInnehallFalt = (path: string, namn: InnehallNamn, falt: Textbl
         if (typeof x?.fraga === "string" && !x.fraga.endsWith("?")) e(`fråga ${i + 1} måste sluta med ?`);
         fel.push(...textFel(`${w} svar ${i + 1}`, x?.svar, 60, 600, ctx.regler, bas));
       });
+  } else if (namn === "alt") {
+    const b = (falt as AltFalt).bilder;
+    if (!Array.isArray(b) || b.length < 1 || b.length > 10) e("bilder måste vara en lista med 1–10 bilder");
+    else {
+      const seen = new Set<string>();
+      b.forEach((x, i) => {
+        for (const k of Object.keys(x ?? {})) if (k !== "bild" && k !== "alt") e(`bild ${i + 1}: okänt fält "${k}"`);
+        const nyckel = typeof x?.bild === "string" ? x.bild : "";
+        if (!nyckel || nyckel !== nyckel.toLowerCase() || /[/.?#\s]/.test(nyckel)) e(`bild ${i + 1}: "bild" är filnamnet utan katalog, hash och ändelse, med gemener (t.ex. hero-drone-poster-1080), fick ${JSON.stringify(x?.bild)}`);
+        else if (ctx.bildNycklar && !ctx.bildNycklar.has(nyckel)) e(`bild ${i + 1}: ingen bildfil med nyckeln "${nyckel}" finns i src/assets eller public`);
+        if (seen.has(nyckel)) e(`bild ${i + 1}: "${nyckel}" förekommer flera gånger`);
+        seen.add(nyckel);
+        fel.push(...textFel(`${w} alt ${i + 1}`, x?.alt, 15, 125, ctx.regler, bas));
+        if (typeof x?.alt === "string" && /^(bild|foto|fotografi|image|picture)\b/i.test(x.alt)) e(`alt ${i + 1}: börja inte med "bild" eller "foto" (skärmläsare säger det redan)`);
+      });
+    }
   } else {
     const l = (falt as LankarFalt).lankar;
     if (!Array.isArray(l) || l.length < 1 || l.length > 5) e("lankar måste vara en lista med 1–5 länkar");
@@ -186,7 +203,7 @@ export const checkInnehallPost = (path: string, post: InnehallPost, ctx: Innehal
   if (!ctx.kandaSidor.has(overridePath(path))) e("sidan finns inte i sajten (sitemap)");
   if (isSparrad(path, ctx.sparr)) e("sidan står på spärrlistan (seo-regler/sparrlista.json)");
   for (const k of Object.keys(post)) if (!INNEHALL_FIELDS.includes(k)) e(`okänt fält "${k}" (tillåtna: ${INNEHALL_FIELDS.join(", ")})`);
-  if (!post.textblock && !post.faq && !post.lankar) e("minst ett av textblock, faq och lankar krävs");
+  if (!post.textblock && !post.faq && !post.lankar && !post.alt) e("minst ett av textblock, faq, lankar och alt krävs");
   for (const namn of INNEHALL_FALT) {
     const falt = post[namn];
     if (falt) fel.push(...checkInnehallFalt(path, namn, falt, ctx));

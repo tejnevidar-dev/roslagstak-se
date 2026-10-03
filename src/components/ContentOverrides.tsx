@@ -1,14 +1,33 @@
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { buildOverrideBlocks } from "@/data/overrides";
+import { bildNyckel, buildAltOverrides, buildOverrideBlocks } from "@/data/overrides";
 
 /**
- * Tilläggsblock från SEO Command Center (src/data/overrides/innehall.json): textblock, FAQ och internlänkar.
- * Läser samma modell som den statiska HTML:en (buildOverrideBlocks) och ligger sist på sidan, före sidfoten.
- * Utan överstyrningar för sidan renderas ingenting.
+ * Tilläggsblock från SEO Command Center (src/data/overrides/innehall.json): textblock, FAQ och internlänkar, samt
+ * alt-text för bilder. Blocken läser samma modell som den statiska HTML:en (buildOverrideBlocks) och ligger sist på
+ * sidan, före sidfoten. Alt-överstyrningarna sätter bara alt-attributet på befintliga bilder (matchade på filnamn,
+ * se bildNyckel) och följer med bilder som laddas in senare. Utan överstyrningar för sidan sker ingenting.
  */
 const ContentOverrides = () => {
   const { pathname } = useLocation();
   const blocks = buildOverrideBlocks(pathname);
+  const alt = buildAltOverrides(pathname);
+
+  useEffect(() => {
+    if (!alt) return;
+    const apply = (root: ParentNode) => {
+      root.querySelectorAll("img").forEach((img) => {
+        const text = alt.alt[bildNyckel(img.currentSrc || img.getAttribute("src") || "")];
+        if (text !== undefined && img.getAttribute("alt") !== text) img.setAttribute("alt", text);
+      });
+    };
+    apply(document);
+    const observer = new MutationObserver(() => apply(document));
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["src"] });
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
   if (!blocks) return null;
   return (
     <section className="border-t border-border bg-background py-16 md:py-20" data-seo-cc={blocks.ids.join(" ")}>
