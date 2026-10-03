@@ -1,3 +1,4 @@
+import { ROT_FORBEHALL } from "@/data/prices";
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Shield, Droplets, Sun, Clock, Coins } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
@@ -285,7 +286,7 @@ const RoofTypes = () => {
             (dubbelfalsat plåttak). Vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig
             innan. Priset beror på materialval, takets storlek och skick, och inkluderar material, arbete,
             byggställning och avfallshantering. ROT-avdrag (30% på arbetskostnaden) dras av direkt på
-            fakturan.
+            fakturan. {ROT_FORBEHALL}
           </p>
         </div>
       </div>

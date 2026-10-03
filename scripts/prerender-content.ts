@@ -14,7 +14,7 @@ import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials } from "../src/data/materials";
-import { priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
+import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks } from "../src/lib/inline-md";
@@ -771,7 +771,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
         ...(villaAreasParagraph(loc.slug) ? [villaAreasParagraph(loc.slug)!] : []),
         geoFactsParagraph(loc),
-        `${loc.uniqueFAQ.question} ${loc.uniqueFAQ.answer}`,
+        `${loc.uniqueFAQ.question} ${withRotForbehall(loc.uniqueFAQ.answer)}`,
         `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,
       ],
       links: [

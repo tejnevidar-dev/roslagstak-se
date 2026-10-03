@@ -1,3 +1,4 @@
+import { withRotForbehall } from "@/data/prices";
 import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -19,7 +20,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const servicePriceDescriptions: Record<string, string> = {
+const servicePriceDescriptionsRaw: Record<string, string> = {
   takbyte: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
   takomlaggning: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
   takrenovering: "Fast pris efter kostnadsfri takkontroll, beroende på åtgärdens omfattning. ROT-avdrag tillkommer.",
@@ -30,6 +31,10 @@ const servicePriceDescriptions: Record<string, string> = {
   betongpannor: "Riktpris, efter ROT-avdrag och inkl. moms: från 1 200 kr/m². Omläggning av befintliga pannor ligger normalt lägre än nyläggning. Fast pris efter kostnadsfri takkontroll.",
   tegeltak: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och tegelprofilerad plåt från 1 300 kr/m². Fast pris efter kostnadsfri takkontroll.",
 };
+const servicePriceDescriptions: Record<string, string> = Object.fromEntries(
+  Object.entries(servicePriceDescriptionsRaw).map(([k, v]) => [k, withRotForbehall(v)]),
+);
+
 
 const ServiceLocationPage = () => {
   const pathname = useLocation().pathname;

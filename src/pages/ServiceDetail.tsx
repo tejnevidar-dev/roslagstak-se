@@ -1,3 +1,4 @@
+import { withRotForbehall } from "@/data/prices";
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Award, Clock, Phone, PlayCircle, Shield } from "lucide-react";
@@ -417,7 +418,7 @@ const ServiceDetail = () => {
     "@type": "Service",
     name: service.title,
     description: details.longDesc,
-    ...(details.priceRange ? { offers: { "@type": "Offer", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "SEK", description: details.priceRange } } } : {}),
+    ...(details.priceRange ? { offers: { "@type": "Offer", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "SEK", description: withRotForbehall(details.priceRange) } } } : {}),
     provider: {
       "@type": "RoofingContractor",
       name: "RoslagsTak",
@@ -437,7 +438,7 @@ const ServiceDetail = () => {
       estimatedCost: {
         "@type": "MonetaryAmount",
         currency: "SEK",
-        value: details.priceRange,
+        value: withRotForbehall(details.priceRange),
       },
     } : {}),
     supply: details.benefits.slice(0, 5).map((b) => ({ "@type": "HowToSupply", name: b })),
@@ -825,7 +826,7 @@ const ServiceDetail = () => {
               {[
                 {
                   t: "Pris och ROT",
-                  d: details.priceRange ?? "Fast pris efter kostnadsfri takkontroll.",
+                  d: details.priceRange ? withRotForbehall(details.priceRange) : "Fast pris efter kostnadsfri takkontroll.",
                 },
                 {
                   t: "Garanti",

@@ -1,3 +1,4 @@
+import { ROT_FORBEHALL } from "./prices";
 /**
  * Tjänstspecifika block, faktakort och metadata.
  * Varje tjänstesida får egen struktur — inte bara egna färger:
@@ -102,7 +103,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         ["Tegelpanna", "Från 1 300 kr/m²", "Tung, åldras med patina", "Äldre hus med traditionellt uttryck"],
         ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Lätt, inga synliga skruvar", "Klassiskt, stramt uttryck och tak med kupor och ränndalar"],
       ],
-      footnote: "Riktpriser, efter ROT-avdrag och inkl. moms, med standardställning. Priset sätts efter kostnadsfri takkontroll. Komplex ställning kan tillkomma och framgår i så fall i offerten.",
+      footnote: `Riktpriser, efter ROT-avdrag och inkl. moms, med standardställning. Priset sätts efter kostnadsfri takkontroll. Komplex ställning kan tillkomma och framgår i så fall i offerten. ${ROT_FORBEHALL}`,
     },
   },
 
@@ -337,7 +338,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         ["Tegelplåt (profilerad plåt)", "Från 1 300 kr/m²", "Plåt pressad för att likna tegel", "Tegelutseende till lägre vikt än lertegel"],
         ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Plåtbanor utan synliga skruvar", "Klassiskt, stramt uttryck"],
       ],
-      footnote: "Riktpriser, efter ROT-avdrag och inkl. moms. Priset sätts efter kostnadsfri takkontroll. Exakt pris beror på takets storlek, lutning och underlag.",
+      footnote: `Riktpriser, efter ROT-avdrag och inkl. moms. Priset sätts efter kostnadsfri takkontroll. Exakt pris beror på takets storlek, lutning och underlag. ${ROT_FORBEHALL}`,
     },
     relatedLinks: [
       { to: "/blogg/plattak-vs-betongpannor", label: "Plåttak jämfört med betongpannor" },

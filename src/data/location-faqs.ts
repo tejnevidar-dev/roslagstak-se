@@ -1,3 +1,4 @@
+import { withRotForbehall } from "./prices";
 export interface LocationFAQ {
   question: string;
   answer: string;
@@ -38,13 +39,13 @@ export const generateLocationFAQs = (
 
   // Add unique FAQ first for prominence
   if (uniqueFAQ) {
-    faqs.push(uniqueFAQ);
+    faqs.push({ ...uniqueFAQ, answer: withRotForbehall(uniqueFAQ.answer) });
   }
 
   faqs.push(
     {
       question: `Vad kostar ett takbyte ${prep} ${name}?`,
-      answer: PRICE(prep, name),
+      answer: withRotForbehall(PRICE(prep, name)),
     },
     {
       question: `Hur lång tid tar ett takbyte ${prep} ${name}?`,
@@ -123,7 +124,7 @@ export const generateServiceLocationFAQs = (
     {
       question: `Vad kostar ${service} ${prep} ${locationName}?`,
       answer: isTakbyte
-        ? PRICE(prep, locationName)
+        ? withRotForbehall(PRICE(prep, locationName))
         : `Priset för en takrenovering ${prep} ${locationName} beror på vad som behöver åtgärdas. Du får fast pris efter kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.`,
     },
     {

@@ -1,3 +1,4 @@
+import { withRotForbehall } from "@/data/prices";
 import { lazy, Suspense, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -19,7 +20,7 @@ const roofTypeFaqs = [
   {
     question: "Vad kostar de olika taktyperna per kvadratmeter?",
     answer:
-      "Som riktpris, efter ROT-avdrag och inkl. moms: papptak ca 900 kr/m², TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt (tegelprofilerad plåt) från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Vi lämnar alltid ett fast pris efter kostnadsfri takkontroll, som inkluderar rivning, underlagspapp, läkt, material, arbete och byggställning — aldrig ett pris innan vi sett taket.",
+      withRotForbehall("Som riktpris, efter ROT-avdrag och inkl. moms: papptak ca 900 kr/m², TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt (tegelprofilerad plåt) från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Vi lämnar alltid ett fast pris efter kostnadsfri takkontroll, som inkluderar rivning, underlagspapp, läkt, material, arbete och byggställning — aldrig ett pris innan vi sett taket."),
   },
   {
     question: "Plåttak eller betongpannor — vad passar bäst nära havet?",
