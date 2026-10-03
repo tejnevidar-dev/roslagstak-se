@@ -255,7 +255,15 @@ const gaps = (exp.gaps ?? []) as { primaryKeyword: string; intent: string; impre
 out.push(`CRM:s egen gap-lista (${gaps.length} sökord utan dedikerad sida) mot vad sajten faktiskt har:`, "", "| Sökord | Visn. | Pos. | Föreslagen URL | Finns i sitemap? | Bedömning |", "|---|---|---|---|---|---|");
 for (const g of gaps.sort((a, b) => b.impressions - a.impressions)) {
   const finns = sitemap.has(g.recommendedUrl.replace(/\/+$/, "").toLowerCase());
-  out.push(`| ${g.primaryKeyword} | ${fmt(g.impressions)} | ${pos(g.position)} | ${g.recommendedUrl} | ${finns ? "ja" : "nej"} | ${finns ? "Sidan finns men rankar långt ner: förstärk (text och internlänkar), ingen ny URL" : "Saknas: kräver ny brief från Innehåll med Grind-rad, sitemap och internlänkar"} |`);
+  // Finns en annan sida vars adress innehåller sökordet (t.ex. "takinspektion" → /tjanster/takinspektion), saknas ingen sida.
+  const stam = g.primaryKeyword.toLowerCase().replace(/å|ä/g, "a").replace(/ö/g, "o").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const liknande = [...sitemap].filter((p) => stam.length >= 6 && p.includes(stam)).slice(0, 3);
+  const bedomning = finns
+    ? "Sidan finns men rankar långt ner: förstärk (text och internlänkar), ingen ny URL"
+    : liknande.length
+      ? `Sida finns redan (${liknande.join(", ")}): ingen ny URL, förstärk den i stället (kolla spärrlistan)`
+      : "Saknas: kräver ny brief från Innehåll med Grind-rad, sitemap och internlänkar";
+  out.push(`| ${g.primaryKeyword} | ${fmt(g.impressions)} | ${pos(g.position)} | ${g.recommendedUrl} | ${finns ? "ja" : "nej"} | ${bedomning} |`);
 }
 const orphanish = rows.filter((r) => r.impr >= 30 && r.pos != null && r.pos > 30 && !gaps.some((g) => g.primaryKeyword === r.keyword));
 out.push("", `Sökord med minst 30 visningar och position över 30 som inte redan står i CRM:s gap-lista: ${orphanish.length}`, "");
