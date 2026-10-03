@@ -841,7 +841,6 @@ export const blogPosts: BlogPost[] = [
     content: [
       "Att byta tak på en ö utan broförbindelse kräver mer planering än på fastlandet. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
       "Logistiken är nyckeln till ett lyckat takprojekt på en ö. Plåt, råspont, underlagspapp, beslag och verktyg — allt kommer i en samlad leverans för att minimera antalet transporter.",
-      "På Husarö har vi bland annat lagt TP20-plåttak på ett fritidshus med havsutsikt och dubbelfalsat plåttak på ett permanentboende.",
       "Ingmarsö har en blandning av permanentboende och fritidshus. Många äldre tak här har eternitplattor eller betongpannor som behöver bytas. Innehåller taket asbest samordnar vi saneringen med en behörig saneringsfirma innan vi lägger nytt tak.",
       "Kostar det mer att byta tak på en ö utan bro? Ja, transportkostnaden tillkommer. Vi är transparenta med alla kostnader — transporttillägget specificeras separat i offerten.",
       "Berätta också om det finns känsliga rabatter eller ledstänger nära huset så skyddar vi dem under arbetet.",
