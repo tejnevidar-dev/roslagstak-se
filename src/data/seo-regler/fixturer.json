@@ -3,7 +3,7 @@
   "status": "UTKAST 2026-10-03 av Hemsida & SEO. Kända bra och dåliga texter som BÅDE CI (src/test/overrides-regler.test.ts) och CRM kör mot samma regler, så att reglerna inte glider isär. Lägg till rader, ta aldrig bort utan granskning.",
   "bra": [
     { "falt": "title", "text": "Takbyte i Täby – fast pris efter takkontroll" },
-    { "falt": "title", "text": "Takläggare i Norrtälje – takkontroll utan förpliktelser" },
+    { "falt": "title", "text": "Takläggare i Norrtälje – fast pris efter takkontroll" },
     { "falt": "title", "text": "Takbyte i Älta, Nacka – fast pris" },
     { "falt": "title", "text": "Takbyte i Åkersberga – fast pris" },
     { "falt": "title", "text": "Överraskande fast pris på takbyte i Åkersberga" },
@@ -15,7 +15,7 @@
     { "falt": "description", "text": "Fast pris efter kostnadsfri takkontroll. Takbyte och takomläggning i Danderyd, vi har vår bas i Norrtälje." },
     { "falt": "description", "text": "Takbyte och takomläggning i Sollentuna med en kontaktperson hela vägen och ROT-avdrag på 30 % av arbetskostnaden." },
     { "falt": "description", "text": "Takbyte och takomläggning i Täby med kostnadsfri takkontroll utan förpliktelser, fast pris och svar inom 24 timmar. 10 års utförandegaranti." },
-    { "falt": "description", "text": "Takrenovering i Vallentuna med en kontaktperson hela vägen. Boka kostnadsfri takkontroll, vi svarar inom 24 timmar och ROT-avdraget dras på fakturan." }
+    { "falt": "description", "text": "Takrenovering i Vallentuna med en kontaktperson hela vägen. Boka kostnadsfri takkontroll, vi svarar inom 24 timmar och ROT-avdraget dras direkt på fakturan." }
   ],
   "villkorad": [
     {

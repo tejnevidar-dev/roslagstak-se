@@ -17,7 +17,7 @@
  * "speglingen är tunn", inte som "sidan är tunn för besökaren".
  * Åtgärd: ordgap > 0,3 → EXPAND, annars inlänksgap > 0,4 → RELINK, annars kannibalisering → UPDATE (titel), annars NO ACTION.
  */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { classify } from "./page-type";
 import { prerenderContent } from "./prerender-content";
@@ -92,6 +92,36 @@ for (const path of paths) {
 }
 rows.sort((a, b) => b.score - a.score || a.path.localeCompare(b.path));
 
+// ---- efterfrågan ur senaste Search Console-exporten (om den finns) ----
+type Demand = { impr: number; clicks: number; posW: number };
+const demand = new Map<string, Demand>();
+let exportNamn = "";
+{
+  const dir = resolve("../ledning/marknad/seo-data");
+  const exports = existsSync(dir) ? readdirSync(dir).filter((x) => /^seo-data-.*\.json$/.test(x)).sort() : [];
+  if (exports.length) {
+    exportNamn = exports[exports.length - 1];
+    const exp = JSON.parse(readFileSync(resolve(dir, exportNamn), "utf8")) as { keywords: { landingPage: string | null; impressions: number; clicks: number; position: number | null }[] };
+    for (const k of exp.keywords) {
+      if (!k.landingPage) continue;
+      let p = "/";
+      try {
+        p = new URL(k.landingPage).pathname.replace(/\/+$/, "").toLowerCase() || "/";
+      } catch {
+        continue;
+      }
+      const d = demand.get(p) ?? { impr: 0, clicks: 0, posW: 0 };
+      d.impr += k.impressions ?? 0;
+      d.clicks += k.clicks ?? 0;
+      d.posW += (k.position ?? 0) * (k.impressions ?? 0);
+      demand.set(p, d);
+    }
+  }
+}
+const maxImpr = Math.max(1, ...[...demand.values()].map((d) => d.impr));
+const eff = (p: string) => Math.log10(1 + (demand.get(p)?.impr ?? 0)) / Math.log10(1 + maxImpr);
+/** Prioritet = strukturpoäng × (0,3 + 0,7 × efterfrågan), efterfrågan log-skalad mot den mest visade sidan. */
+const prio = (r: Row) => Math.round(r.score * (0.3 + 0.7 * eff(r.path)));
 const byAction = new Map<string, number>();
 for (const r of rows) byAction.set(r.action, (byAction.get(r.action) ?? 0) + 1);
 const byType = new Map<string, Row[]>();
@@ -107,7 +137,7 @@ const table = (rs: Row[]) =>
 const out = [
   "# Förbättringspoäng per sida (fas 2.44)",
   "",
-  `Genererad ${today} av \`bun scripts/seo-poang.ts\`. **Ingen efterfrågedata:** poängen visar avstånd till vår egen kvalitetsnivå, viktat efter sidtypens affärsnärhet, inte sökvolym. När GSC-export finns läggs visningar till som fjärde faktor.`,
+  `Genererad ${today} av \`bun scripts/seo-poang.ts\`. Strukturpoängen visar avstånd till vår egen kvalitetsnivå, viktat efter sidtypens affärsnärhet. Om en Search Console-export finns i ledning/marknad/seo-data/ läggs efterfrågan till i en andra tabell (prioritet).`,
   "",
   "Formel: `100 × typvikt × (0,50 × ordgap + 0,35 × inlänksgap + 0,15 × titelpar)`. Ord = prerender-spegelns text (på /tjanster/* är den kortare än den synliga sidan, så EXPAND där betyder att speglingen är tunn). Målord per typ: orts-/tjänst-/problem-/materialsidor 400, guider 600, projekt 250. Inlänksmål 5. Typvikt: tjänst och tjänst × ort 1,0, ortssida 0,8, projekt och regionsida 0,7, problem och material 0,6, guide 0,5, BRF 0,1 (pausat).",
   "",
@@ -122,9 +152,27 @@ const out = [
     .sort((a, b) => b.avg - a.avg)
     .map((x) => `| ${x.t} | ${x.n} | ${x.avg} | ${x.high} |`),
   "",
-  "## Topp 40 att förbättra",
+  "## Topp 40 att förbättra (strukturpoäng)",
   table(rows.slice(0, 40)),
   "",
+  ...(exportNamn
+    ? [
+        `## Prioritet med efterfrågan (Search Console, ${exportNamn})`,
+        "",
+        "Prioritet = strukturpoäng × (0,3 + 0,7 × efterfrågan), där efterfrågan är log10(1 + visningar) i förhållande till den mest visade sidan. Sidor utan visningar får 30 % av sin strukturpoäng. **Visningarna kommer ur en topp-1 000-lista över sökord × sida, så sidor utan rader kan ändå ha visningar.** Klick är så få (28 totalt på 28 dagar) att de inte används i formeln.",
+        "",
+        "| Prioritet | Struktur | Sida | Typ | Visn. 28 d | Klick | Pos. | Åtgärd |",
+        "|---|---|---|---|---|---|---|---|",
+        ...[...rows]
+          .sort((a, b) => prio(b) - prio(a) || b.score - a.score)
+          .slice(0, 40)
+          .map((r) => {
+            const d = demand.get(r.path);
+            return `| ${prio(r)} | ${r.score} | ${r.path} | ${r.type} | ${d?.impr ?? 0} | ${d?.clicks ?? 0} | ${d && d.impr ? (d.posW / d.impr).toFixed(1) : "–"} | ${r.action} |`;
+          }),
+        "",
+      ]
+    : []),
 ].join("\n");
 
 writeFileSync(resolve("../ledning/marknad/seo-poang.md"), out);
