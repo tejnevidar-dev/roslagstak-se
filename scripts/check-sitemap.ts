@@ -22,6 +22,8 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
+import { problems } from "../src/data/problems";
+import { materials } from "../src/data/materials";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
@@ -84,31 +86,7 @@ const staticRoutes = [
   "/projekt/takrenovering-blido",
   "/projekt/takbyte-singo",
   "/takproblem",
-  "/takproblem/lackage-vid-skorsten",
-  "/takproblem/trasiga-takpannor",
-  "/takproblem/mossa-pa-taket",
-  "/takproblem/rostig-plat",
-  "/takproblem/fukt-pa-vinden",
-  "/takproblem/igensatta-hangrannor",
-  "/takproblem/rutten-raspont",
-  "/takproblem/kondens-pa-vinden",
-  "/takproblem/dalig-underlagspapp",
-  "/takproblem/istappar-pa-taket",
-  "/takproblem/stormskador-pa-taket",
-  "/takproblem/lackage-vid-takfonster-och-genomforingar",
-  "/takproblem/svackor-i-taket",
-  "/takproblem/lackande-ranndal",
-  "/takproblem/ruttna-vindskivor-och-takfot",
-  "/takproblem/lackande-plattak",
-  "/takproblem/skadad-takpapp-pa-papptak",
-  "/takproblem/losa-nockpannor",
-  "/takproblem/porosa-betongpannor",
-  "/takproblem/lackage-vid-takkupa",
   "/material",
-  "/material/betongpannor",
-  "/material/tp20-plattak",
-  "/material/papptak",
-  "/material/underlagstak",
   "/blogg",
   "/kontakt",
   "/radgivning",
@@ -127,6 +105,8 @@ const knownRoutes = new Set<string>([
   ...serviceSlugs.map((s) => `/tjanster/${s}`),
   ...blogSlugs.map((s) => `/blogg/${s}`),
   ...locations.map((l) => `/taklaggare-${l.slug}`),
+  ...problems.map((p) => `/takproblem/${p.slug}`),
+  ...materials.filter((m) => m.detail).map((m) => m.href),
   ...brfLocationSlugs.map((s) => `/brf/${s}`),
   ...Object.values(regionSlugs).map((s) => `/omraden/${s}`),
   ...locations.filter((l) => hasServiceCombos(l.region)).flatMap((l) => allServiceSlugs.map((s) => `/${s}-${l.slug}`)),

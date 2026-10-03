@@ -211,6 +211,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/takproblem/lackande-hangrannor</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/lackage-mellan-tak-och-vagg</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/rutten-lakt</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takproblem/alger-och-svarta-rander</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/material</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>

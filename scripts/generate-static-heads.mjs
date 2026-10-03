@@ -173,7 +173,31 @@ const bodyFor = (path) => {
     seen.add(l.href);
     return true;
   });
+  const crumbs = page.breadcrumbs ?? [];
+  const breadcrumbSchema = crumbs.length
+    ? `<script type="application/ld+json">${JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: crumbs.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c.name,
+          item: `${SITE_URL}${c.path}`,
+        })),
+      })}</script>`
+    : "";
+  const breadcrumbNav = crumbs.length
+    ? `<nav aria-label="Brödsmulor" style="font-size:0.875rem;color:#6b7280">${crumbs
+        .map((c, i) => {
+          const label = esc(c.visibleName ?? c.name);
+          const isLast = i === crumbs.length - 1;
+          return `${i > 0 ? " › " : ""}${isLast ? `<span>${label}</span>` : `<a href="${esc(c.path)}">${label}</a>`}`;
+        })
+        .join("")}</nav>`
+    : "";
   return `<div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
+      ${breadcrumbSchema}
+      ${breadcrumbNav}
       <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
       <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">${esc(page.h1)}</h1>
       <p style="font-size:1.05rem">${esc(page.intro)}</p>

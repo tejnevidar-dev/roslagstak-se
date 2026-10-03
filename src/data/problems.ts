@@ -564,6 +564,119 @@ export const problems: Problem[] = [
       { to: "/tjanster/takkupor", label: "Takkupor" },
     ],
   },
+  {
+    slug: "lackande-hangrannor",
+    title: "Hängrännor som läcker eller har släppt",
+    metaTitle: "Läckande hängrännor – skarvar, krokar och fel lutning",
+    metaDescription:
+      "Droppar hängrännan i en skarv, har den släppt från krokarna eller rinner vattnet åt fel håll? Så ser du felet och vet när rännan behöver bytas.",
+    intro:
+      "En hängränna ska göra en enda sak: ta emot vattnet från taket och leda det till stupröret. När den läcker, hänger snett eller har släppt från takfoten hamnar vattnet i stället på fasaden, i takfoten eller vid husgrunden. Det syns sällan som ett läckage inomhus, och därför får felet ofta pågå länge.",
+    symptom:
+      "Vatten som droppar från en skarv eller ett hörn även när rännan inte är full. Rännan hänger ner, buktar eller har släppt från en eller flera krokar. Vatten som blir stående i rännan i stället för att rinna mot stupröret. Stuprör som har glidit isär i en skarv eller lossnat från väggen. Mörka ränder, flagnande färg eller grön påväxt på fasaden under rännan, och jord som har spolats bort eller står blöt vid husgrunden.",
+    orsaker:
+      "Skarvar och gavlar har blivit otäta med tiden. Is och snö har tyngt ner rännan så att krokarna har böjts eller släppt. Rännan har från början för lite fall, eller har satt sig så att vattnet rinner åt fel håll. Rost har gått igenom plåten. Fotplåten, som ska leda vattnet från taket ner i rännan, saknas eller sitter fel, så att vattnet rinner bakom rännan. Takfotsbrädan som krokarna sitter i kan ha blivit mjuk av fukt.",
+    akut:
+      "När rännan hänger så löst att den kan falla ner, eller när vatten rinner in i takfoten eller väggen. Håll då undan under rännan och kontakta en takläggare. En skarv som droppar är inte akut, men vatten som rinner på samma ställe på fasaden år efter år ger till slut skador.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: rännornas lutning och infästning, skarvar och gavlar, stuprören och deras fästen, fotplåten och takfotens trä. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+    atgarder:
+      "Justering av lutningen och nya eller kompletterade krokar. Tätning eller byte av skarvar och gavlar. Byte av de delar som har rostat eller bucklats. Ny fotplåt där den saknas eller sitter fel, och byte av takfotsbräda där träet har tagit skada. Är rännorna slitna längs hela huset byts de i sin helhet, och det görs ofta i samband med ett takbyte.",
+    gorInteSjalv:
+      "Arbete från hög stege vid takfoten. Luta inte stegen mot rännan, eftersom den inte är gjord för att bära en människa. Du kan titta på rännorna från marken när det regnar, vilket är det bästa tillfället att se var vattnet tar vägen, och fota det du ser.",
+    related: [
+      { to: "/takproblem/igensatta-hangrannor", label: "Igensatta hängrännor" },
+      { to: "/takproblem/ruttna-vindskivor-och-takfot", label: "Ruttna vindskivor eller takfotsbrädor" },
+      { to: "/takproblem/istappar-pa-taket", label: "Istappar och isbildning vid takfoten" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/hangrannor", label: "Hängrännor" },
+    ],
+  },
+  {
+    slug: "lackage-mellan-tak-och-vagg",
+    title: "Läckage där taket möter en vägg",
+    metaTitle: "Läckage mellan tak och vägg – orsaker och åtgärder",
+    metaDescription:
+      "Fukt där ett lägre tak möter en högre vägg, till exempel vid en tillbyggnad eller ett garage? Så hittar du orsaken och vet när plåten behöver göras om.",
+    intro:
+      "På många hus möter ett tak en vägg: en tillbyggnad mot huvudhuset, ett garage mot gaveln, ett farstutak eller ett altantak mot fasaden. I den vinkeln ska en plåt leda vattnet från väggen ut på taket. Det är en av de anslutningar som oftast ger problem, eftersom två byggnadsdelar som rör sig olika ska hållas täta mot varandra.",
+    symptom:
+      "Fuktfläckar i innertaket eller högst upp på väggen i tillbyggnaden, längs den sida som ligger mot det högre huset. Färg som bubblar, tapet som släpper eller en mörk rand längs vinkeln. Utifrån kan du se plåt som har släppt från väggen, en fog som har spruckit, panel som har mörknat närmast taket eller löv och snö som blir liggande i vinkeln. Läckaget märks ofta vid slagregn mot väggen eller när snö smälter.",
+    orsaker:
+      "Plåten i vinkeln har släppt, rostat eller går för kort upp på väggen. Fogen mellan plåt och vägg har åldrats och spruckit. Fasadens panel eller puts går ner bakom plåten på fel sätt, så att vatten som rinner längs väggen hamnar innanför. Snö som ligger kvar i vinkeln smälter och når över plåtens kant. Tillbyggnaden har satt sig något, så att anslutningen har öppnats. Pannorna eller pappen närmast väggen ligger fel.",
+    akut:
+      "När vatten droppar in, når isolering eller el, eller när fläckarna växer för varje regn. Samla då upp vattnet, flytta undan det som kan ta skada, fota och kontakta en takläggare. Fukt som pågår länge i den här vinkeln kan skada både takets underlag och väggens stomme.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: plåten i vinkeln och hur högt den går, fogen mot väggen, hur fasaden ansluter och hur takets ytmaterial ligger närmast väggen. Där undersidan går att komma åt följs fuktspåren därifrån. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+    atgarder:
+      "Ny plåt i vinkeln, uppdragen tillräckligt högt på väggen och rätt ansluten mot fasaden. Omläggning av pannorna eller pappen närmast väggen. Byte av skadat underlag. Ibland behöver också fasadens nedersta del ses över, så att vattnet leds ut över plåten och inte bakom den. Vid ett takbyte görs anslutningen mot väggen om.",
+    gorInteSjalv:
+      "Arbete uppe på taket, och att stryka på tätningsmassa över plåt och fog. Det döljer felet och gör det svårare att åtgärda ordentligt. Du kan fota fläckarna, titta på vinkeln från marken och notera vid vilket väder det läcker.",
+    related: [
+      { to: "/takproblem/lackage-vid-takkupa", label: "Läckage vid takkupa" },
+      { to: "/takproblem/lackande-ranndal", label: "Läckande ränndal" },
+      { to: "/takproblem/lackage-vid-skorsten", label: "Läckage vid skorstenen" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/platarbeten", label: "Plåtarbeten" },
+    ],
+  },
+  {
+    slug: "rutten-lakt",
+    title: "Rutten läkt och pannor som glider",
+    metaTitle: "Rutten läkt – när pannorna börjar glida",
+    metaDescription:
+      "Glider pannorna ner eller ligger raderna ojämnt? Det kan vara läkten under som har ruttnat. Så känner du igen det och vet vad som behöver göras.",
+    intro:
+      "Takpannor ligger inte direkt på underlaget. De hänger på bärläkt, vågräta reglar som sitter på ströläkt ovanpå underlagspappen. Läkten syns aldrig utifrån, men den bär hela taket. När den blir fuktig och ruttnar tappar pannorna sitt fäste, och då börjar de glida, sjunka eller ligga ojämnt.",
+    symptom:
+      "Pannor som har glidit ner mot takfoten, så att det uppstår glipor högre upp. Rader av pannor som inte längre ligger rakt, eller ett parti där pannorna har sjunkit ner. Pannor som ligger löst och rör sig i blåst. Pannor som har hamnat i hängrännan. På vinden syns det inte alltid, eftersom läkten ligger ovanpå underlagspappen, men fukt eller ljus på ställen där pannor har flyttat sig är ett tecken.",
+    orsaker:
+      "Vatten som under lång tid har tagit sig in under pannorna, till exempel genom spruckna pannor, och blivit stående mot läkten. Ströläkt som saknas eller är för tunn, så att vatten och fukt inte kan rinna och vädras bort under bärläkten. Löv och skräp som har samlats under pannorna och håller kvar fukt. Läkt som helt enkelt har åldrats tillsammans med resten av taket. Spikar och fästen som har rostat av.",
+    akut:
+      "När pannor har glidit så att underlaget ligger öppet, eller när pannor ligger löst och kan falla ner mot gång, uteplats eller bil. Håll då undan under takkanten och kontakta en takläggare. Enstaka pannor som har flyttat sig lite är inte akut, men det ska undersökas varför.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: hur pannraderna ligger, om pannor är lösa, och hur läkten och underlaget ser ut där det går att se in under pannorna. Rutten läkt på ett ställe betyder ofta att läkten är i samma skick på fler ställen, eftersom den är lika gammal över hela taket. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+    atgarder:
+      "Är skadan avgränsad kan pannorna lyftas, läkten bytas på den delen och pannorna läggas tillbaka. Är läkten dålig över större delar av taket är en takomläggning den lösning som håller: det gamla ytmaterialet tas av, underlag och läkt byts, och taket läggs på nytt. Hela och friska pannor kan ibland återanvändas, annars läggs nya.",
+    gorInteSjalv:
+      "Gå inte upp på ett tak där pannorna glider. Läkten kan ge vika under foten, och lösa pannor ger inget fäste. Skjut inte tillbaka pannor från en stege. Du kan fota taket från marken, gärna i släpljus då ojämna rader syns tydligast, och spara pannor som har ramlat ner.",
+    related: [
+      { to: "/takproblem/trasiga-takpannor", label: "Trasiga eller förskjutna takpannor" },
+      { to: "/takproblem/dalig-underlagspapp", label: "Dålig underlagspapp" },
+      { to: "/takproblem/rutten-raspont", label: "Rutten eller skadad råspont" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/takomlaggning", label: "Takomläggning" },
+    ],
+    relatedProject: "takrenovering-blido",
+  },
+  {
+    slug: "alger-och-svarta-rander",
+    title: "Svarta ränder och alger på taket",
+    metaTitle: "Svarta ränder och alger på taket – vad det betyder",
+    metaDescription:
+      "Mörka strimmor, grön hinna eller fläckar på taket? Så skiljer du alger från mossa och skador, och vet när taket bör kontrolleras.",
+    intro:
+      "Mörka strimmor som rinner ner längs takfallet, en grön hinna på norrsidan eller svarta fläckar på pannorna är oftast alger och annan påväxt. Det ser tråkigt ut, men det är sällan ett läckage i sig. Däremot visar det var taket håller sig fuktigt längst, och det kan dölja skador som behöver ses över.",
+    symptom:
+      "Svarta eller mörkgrå strimmor som följer vattnets väg ner längs taket. En grön eller gröngrå hinna, främst på den sida som ligger i skugga eller under träd. Fläckar som är mörka när taket är blött och ljusnar när det torkar. Missfärgningen är ofta tydligast nedanför skorstenar, takfönster och andra ställen där vatten rinner långsamt.",
+    orsaker:
+      "Alger och annan påväxt trivs där ytan är fuktig länge: i skugga, i norrläge, under träd och nära vatten. En sträv och porös yta, till exempel på äldre betongpannor, ger bättre fäste än en slät. Löv och barr som blir liggande håller kvar fukt. Mörka ränder kan också vara smuts och sot som har följt med regnvattnet, eller rost som rinner från en plåtdetalj eller ett fäste högre upp.",
+    akut:
+      "Nej, inte i sig. Det som kan vara bråttom är det som påväxten döljer eller pekar på: en plåt som rostar, pannor som har blivit porösa eller ett ställe där vatten blir stående. Rostfärgade ränder från ett beslag ska ses över tidigare än en grön hinna.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats: vad missfärgningen består av, hur pannornas eller plåtens yta ser ut under den, om plåtdetaljer rostar och hur hängrännor och ränndalar fungerar. Efter bedömningen får du veta om något behöver göras och i så fall ett fast pris.",
+    atgarder:
+      "Ofta behövs ingenting annat än att taket hålls rent från löv och att rännorna fungerar. Är det rost åtgärdas eller byts den plåtdetalj som rostar. Är pannorna porösa och underlaget slitet kan en takomläggning vara det som löser grundproblemet. Vi erbjuder också taktvätt, och vid takkontrollen går vi igenom om det är rätt åtgärd för ditt tak.",
+    gorInteSjalv:
+      "Gå inte upp på ett tak med alger. En grön hinna är mycket hal, särskilt när den är fuktig. Tvätta inte taket med högtryck på nära håll, eftersom det kan skada ytan och pressa in vatten under pannorna. Du kan fota taket, hålla undan grenar som hänger över det och rensa hängrännorna där du säkert når dem från marken.",
+    related: [
+      { to: "/takproblem/mossa-pa-taket", label: "Mossa och påväxt på taket" },
+      { to: "/takproblem/porosa-betongpannor", label: "Porösa eller vittrade betongpannor" },
+      { to: "/takproblem/rostig-plat", label: "Rostig plåt och rostiga beslag" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+      { to: "/tjanster/taktvatt", label: "Taktvätt" },
+    ],
+  },
 ];
 
 export const getProblem = (slug: string) => problems.find((p) => p.slug === slug);
