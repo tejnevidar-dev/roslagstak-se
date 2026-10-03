@@ -128,7 +128,10 @@ for (const file of readdirSync(resolve(locDir)).filter((f) => f.endsWith(".md"))
   const missing = meningar.filter((s) => !liveText.includes(norm(s)) && !accepted.includes(s));
 
   const approved = approvedFiles.has(file) || /\*\*Grind:\*\*\s*GODKÄND/.test(raw);
-  const status = !missing.length ? "ok" : !approved && missing.length === meningar.length ? "not-built" : "missing";
+  // En brief utan Grind-rad som bara delar enstaka standardmeningar med sidan (juristens bygglovsmening, takkontrollen) är
+  // inte "delvis byggd": den räknas som inte byggd tills mindre än hälften av meningarna saknas.
+  const coveredShare = meningar.length ? (meningar.length - missing.length) / meningar.length : 1;
+  const status = !missing.length ? "ok" : !approved && (missing.length === meningar.length || coveredShare < 0.5) ? "not-built" : "missing";
   allResults.push({ page: `/taklaggare-${slug}`, file, status, missing: status === "missing" ? missing : [], total: meningar.length });
 }
 

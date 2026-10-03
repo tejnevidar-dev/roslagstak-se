@@ -56,7 +56,9 @@ const parse = (file: string): Parsed => {
   }
   const slug = raw.match(/\*\*Slug:\*\*\s*\/taklaggare-([a-z0-9-]+)/)?.[1];
   const titleLine = raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?·\s*\*\*Meta \(≤ 160\):\*\*\s*(.+)/);
-  if (!slug || !titleLine) {
+  // Titel och meta kan ligga utanför briefen ("Titel och meta: enligt Marknadschefens beslut, ändras inte här"): då rörs varken description eller seo-overrides.
+  const titelUtanforBrief = /\*\*Titel och meta:\*\*\s*enligt/.test(raw);
+  if (!slug || (!titleLine && !titelUtanforBrief)) {
     console.error(`${file}: saknar Slug eller Titel/Meta i huvudet.`);
     process.exit(2);
   }
@@ -132,8 +134,8 @@ const parse = (file: string): Parsed => {
   }
   return {
     slug,
-    title: titleLine[1].trim(),
-    meta: titleLine[2].replace(/\s*\(\d+\)\s*$/, "").trim(),
+    title: titleLine ? titleLine[1].trim() : "",
+    meta: titleLine ? titleLine[2].replace(/\s*\(\d+\)\s*$/, "").trim() : "",
     h1,
     longDescription: stripMd(introParas.join(" ")),
     extraSections: sections.map((s) => ({ heading: s.heading, text: stripMd(s.paras.join(" ")) })),
@@ -177,7 +179,7 @@ for (const file of files) {
   void kommun;
 
   const next: Record<string, unknown> = { ...cur };
-  next.description = p.meta;
+  if (p.meta) next.description = p.meta;
   next.longDescription = p.longDescription;
   next.extraContent = "";
   if (p.factBox.length) next.factBox = p.factBox;
@@ -212,13 +214,15 @@ for (const file of files) {
   const end = locSrc.indexOf("\n  },\n", at) + "\n  },".length;
   locSrc = locSrc.slice(0, start) + out.join("\n") + locSrc.slice(end);
 
-  // titel/meta i seo-overrides.ts
+  // titel/meta i seo-overrides.ts (bara om briefen har dem)
+  if (p.title && p.meta) {
   const entry = `  ${quoteKey(p.slug)}: {\n    title: ${js(p.title)},\n    description:\n      ${js(p.meta)},\n  },\n`;
   const re = new RegExp(`\\n  ${quoteKey(p.slug).replace(/[-]/g, "\\-")}: \\{\\n[\\s\\S]*?\\n  \\},\\n`);
   if (re.test(seoSrc)) seoSrc = seoSrc.replace(re, "\n" + entry);
   else {
     const close = seoSrc.indexOf("\n};", seoSrc.indexOf("export const ortSeoOverrides"));
     seoSrc = seoSrc.slice(0, close + 1) + entry + seoSrc.slice(close + 1);
+  }
   }
   console.log(`[import-omrade] /taklaggare-${p.slug}: ${p.longDescription.split(/\s+/).length} ord, ${p.extraSections.length} avsnitt, ${p.factBox.length} faktarader`);
 }
