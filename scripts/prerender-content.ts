@@ -401,6 +401,10 @@ const staticPages: Record<string, PrerenderPage> = {
       "Ett tak säger sällan ifrån förrän skadan har pågått ett tag. Här har vi samlat de vanligaste takproblemen villaägare upptäcker.",
     paragraphs: problems.map((p) => `${p.title}: ${p.intro}`),
     links: [...primaryLinks, ...problems.map((p) => ({ href: `/takproblem/${p.slug}`, label: p.title }))],
+    breadcrumbs: [
+      { name: "Startsidan", path: "/", visibleName: "Hem" },
+      { name: "Takproblem", path: "/takproblem" },
+    ],
   },
   "/material": {
     title: "Takmaterial – betongpannor, lertegel, plåt och falsat",
@@ -424,6 +428,10 @@ const staticPages: Record<string, PrerenderPage> = {
       { href: "/tjanster/platarbeten", label: "Dubbelfalsat plåttak" },
       { href: "/material/papptak", label: "Papptak" },
       { href: "/material/underlagstak", label: "Underlagstak" },
+    ],
+    breadcrumbs: [
+      { name: "Startsidan", path: "/", visibleName: "Hem" },
+      { name: "Material", path: "/material" },
     ],
   },
   "/tjanster/taktvatt": {
