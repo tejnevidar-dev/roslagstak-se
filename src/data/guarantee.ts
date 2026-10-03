@@ -7,6 +7,12 @@
 export const GARANTI_RENOVERING =
   "Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI.";
 
+/** Bara utförandegaranti, för arbeten som inte lägger nytt tätskikt (t.ex. montering av taksäkerhet, juristens T1). */
+export const GARANTI_UTFORANDE = "Vi lämnar 10 års utförandegaranti på det arbete vi utför.";
+
+/** Tjänste-slugs i /tjanster/<slug> som aldrig ska nämna tätskiktsgaranti (MATAKI) eftersom inget nytt tätskikt läggs. */
+export const NO_TATSKIKT_SERVICE_SLUGS: readonly string[] = ["taksakerhet"];
+
 /** Kort variant för trygghetsrader (chips). */
 export const GARANTI_RENOVERING_CHIP = "30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)";
 

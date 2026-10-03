@@ -40,6 +40,11 @@ export const services: { slug: string; name: string; description: string }[] = [
     description: "Kostnadsfri takkontroll av tak, underlagspapp, råspont, avvattning och taksäkerhet på plats.",
   },
   {
+    slug: "taksakerhet",
+    name: "Taksäkerhet",
+    description: "Montering av takstege, gångbrygga och snörasskydd, i samband med takbyte eller som eget arbete.",
+  },
+  {
     slug: "platarbeten",
     name: "Plåtarbeten och bandtäckning",
     description: "Fotplåt, vindskivor, skorstensbeslag och dubbelfalsad bandtäckning utförd enligt AMA Hus.",

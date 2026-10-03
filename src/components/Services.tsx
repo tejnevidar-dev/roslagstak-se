@@ -13,7 +13,17 @@ import {
   IconAsbestos,
 } from "@/components/icons/RoofIcons";
 
-export const services = [
+type Service = {
+  icon: typeof IconRoofNew;
+  slug: string;
+  title: string;
+  short: string;
+  description: string;
+  /** Visas inte som kort på startsidan (finns som tjänstesida, i menyn och i sitemap). */
+  hideOnHome?: boolean;
+};
+
+export const services: Service[] = [
   {
     icon: IconRoofNew,
     slug: "takomlaggning",
@@ -86,6 +96,15 @@ export const services = [
     description:
       "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med fast pris efter kostnadsfri takkontroll.",
   },
+  {
+    icon: IconSheetMetal,
+    slug: "taksakerhet",
+    title: "Taksäkerhet",
+    short: "Takstege & snörasskydd",
+    description:
+      "Taksäkerhet är den utrustning som gör att någon kan ta sig upp på taket och röra sig där säkrare, och som minskar risken för att snö och is rasar ner. Vi monterar takstege, gångbrygga och snörasskydd, antingen i samband med ett takbyte eller som ett eget arbete.",
+    hideOnHome: true,
+  },
 ];
 
 
@@ -132,7 +151,7 @@ const Services = () => {
 
         {/* Fast rutnät med hårstreck — gemensam baslinje för alla kort */}
         <ul className="grid grid-cols-1 border-l border-t border-border sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, i) => (
+          {services.filter((s) => !s.hideOnHome).map((service, i) => (
             <li
               key={service.slug}
               className="border-b border-r border-border"

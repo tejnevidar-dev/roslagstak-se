@@ -5,7 +5,8 @@
  * utan "@"-alias). Parity mot den renderade sidan testas i src/test/service-page-parity.test.ts.
  */
 import { withRotForbehall } from "./prices";
-import { GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, RENOVERING_SERVICE_SLUGS } from "./guarantee";
+import { GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, GARANTI_UTFORANDE, NO_TATSKIKT_SERVICE_SLUGS, RENOVERING_SERVICE_SLUGS } from "./guarantee";
+import { TAKSAKERHET_SLUG, taksakerhetDetails, taksakerhetMeta } from "./service-taksakerhet";
 import { serviceBlocks, type SpecificBlock } from "./service-blocks";
 import { serviceAreaLinks } from "./service-area-links";
 import { eternitFaqs, eternitLocal, eternitSections, ETERNIT_FAQ_HEADING } from "./eternit-content";
@@ -392,13 +393,25 @@ export const goodToKnowBoxes = (slug: string): { t: string; d: string }[] => {
       t: SERVICE_COPY.priceTitle,
       d: `${details?.priceRange ? withRotForbehall(details.priceRange) : SERVICE_COPY.priceFallback}${slug === "takinspektion" ? "" : SERVICE_COPY.addonsNote}`,
     },
-    { t: SERVICE_COPY.guaranteeTitle, d: renovering ? GARANTI_RENOVERING : SERVICE_COPY.guaranteeStandard },
+    {
+      t: SERVICE_COPY.guaranteeTitle,
+      d: NO_TATSKIKT_SERVICE_SLUGS.includes(slug) ? GARANTI_UTFORANDE : renovering ? GARANTI_RENOVERING : SERVICE_COPY.guaranteeStandard,
+    },
     { t: SERVICE_COPY.skargardenTitle, d: SERVICE_COPY.skargardenText },
   ];
 };
 
-export const tatskiktChip = (slug: string) =>
-  RENOVERING_SERVICE_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : SERVICE_COPY.chipTatskikt;
+/** Tätskiktschipet för en tjänst, eller null för arbeten som inte lägger nytt tätskikt (taksäkerhet). */
+export const tatskiktChip = (slug: string): string | null =>
+  NO_TATSKIKT_SERVICE_SLUGS.includes(slug)
+    ? null
+    : RENOVERING_SERVICE_SLUGS.includes(slug)
+      ? GARANTI_RENOVERING_CHIP
+      : SERVICE_COPY.chipTatskikt;
+
+// Taksäkerhet (/tjanster/taksakerhet): texten bor i service-taksakerhet.ts
+serviceMeta[TAKSAKERHET_SLUG] = taksakerhetMeta;
+serviceDetails[TAKSAKERHET_SLUG] = taksakerhetDetails;
 
 /** All synlig text i ett specialblock, i den ordning den visas. */
 export const blockTexts = (block: SpecificBlock): string[] => {
@@ -482,7 +495,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     ...meta.specs.map((sp) => `${sp.k}: ${sp.v}`),
     SERVICE_COPY.takkontrollLink,
     SERVICE_COPY.chipUtforande,
-    tatskiktChip(slug),
+    ...(tatskiktChip(slug) ? [tatskiktChip(slug)!] : []),
     SERVICE_COPY.chipFastPris,
     SERVICE_COPY.chipSvar,
     SERVICE_COPY.offertButton,

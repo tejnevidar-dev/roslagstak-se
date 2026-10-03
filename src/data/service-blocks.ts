@@ -1,5 +1,6 @@
 import { ROT_FORBEHALL } from "./prices";
 import { GARANTI_RENOVERING } from "./guarantee";
+import { TAKSAKERHET_SLUG, taksakerhetBlocks } from "./service-taksakerhet";
 /**
  * Tjänstspecifika block, faktakort och metadata.
  * Varje tjänstesida får egen struktur — inte bara egna färger:
@@ -375,6 +376,8 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
   takvard: [{ to: "/tjanster/takinspektion", label: "Kontroll före takvård" }],
   tegeltak: [{ to: "/tjanster/platarbeten#falsat", label: "Dubbelfalsat plåttak (bandtäckning)" }],
 };
+
+serviceBlocks[TAKSAKERHET_SLUG] = taksakerhetBlocks;
 
 for (const [slug, links] of Object.entries(extraRelated)) {
   const entry = serviceBlocks[slug];

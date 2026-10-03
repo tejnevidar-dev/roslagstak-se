@@ -44,6 +44,7 @@ const serviceImages: Record<string, string> = {
   takavvattning: imgRannor,
   takkupor: imgVindskivor,
   takinspektion: imgRaspont,
+  taksakerhet: imgSnoras,
   platarbeten: imgBeslag,
   takvard: imgDronePoster,
   "eternit-asbest": imgRooferWork,
@@ -153,9 +154,11 @@ const ServiceDetail = () => {
                   <li className="inline-flex items-center gap-1.5">
                     <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {SERVICE_COPY.chipUtforande}
                   </li>
-                  <li className="inline-flex items-center gap-1.5">
-                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {tatskiktChip(service.slug)}
-                  </li>
+                  {tatskiktChip(service.slug) && (
+                    <li className="inline-flex items-center gap-1.5">
+                      <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {tatskiktChip(service.slug)}
+                    </li>
+                  )}
                   <li className="inline-flex items-center gap-1.5">
                     <Award className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {SERVICE_COPY.chipFastPris}
                   </li>
