@@ -10,6 +10,8 @@ import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
 import { regionBySlug, regionIntros, regionLongText, regionSlugs } from "@/data/regions";
+import { regionTexts } from "@/data/region-texts";
+import { isHeading, renderInline } from "@/lib/inline-md";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
 
@@ -27,7 +29,8 @@ const RegionPage = () => {
   const path = `/omraden/${regionSlugs[region]}`;
   const places = locationIndex.filter((l) => l.region === region);
   const paragraphs = regionLongText[region] ?? [];
-  const intro = regionIntros[region] ?? "";
+  const text = regionTexts[region];
+  const intro = text?.intro ?? regionIntros[region] ?? "";
 
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -45,8 +48,8 @@ const RegionPage = () => {
   return (
     <>
       <SEOHead
-        title={`Takläggare i ${region} — takbyte & takrenovering`}
-        description={`Takläggare i ${region}: takbyte, takomläggning, plåtarbeten och takvård i ${places.length} orter. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.`}
+        title={text?.title ?? `Takläggare i ${region} — takbyte & takrenovering`}
+        description={text?.description ?? `Takläggare i ${region}: takbyte, takomläggning, plåtarbeten och takvård i ${places.length} orter. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.`}
         canonical={`https://roslagstak.se${path}`}
       />
       <JsonLd data={itemListSchema} />
@@ -79,7 +82,23 @@ const RegionPage = () => {
             </a>
           </div>
 
-          {paragraphs.length > 0 && (
+          {text && (
+            <section className="max-w-3xl border-t border-border pt-10">
+              {text.body.map((p, i) =>
+                isHeading(p) ? (
+                  <h2 key={i} className="mt-10 font-display text-2xl font-bold text-foreground first:mt-0">
+                    {p.slice(3)}
+                  </h2>
+                ) : (
+                  <p key={i} className="mt-4 text-[16px] font-light leading-relaxed text-muted-foreground">
+                    {renderInline(p)}
+                  </p>
+                ),
+              )}
+            </section>
+          )}
+
+          {!text && paragraphs.length > 0 && (
             <section className="max-w-3xl border-t border-border pt-10">
               <h2 className="font-display text-2xl font-bold text-foreground">
                 Takens förutsättningar i {region}

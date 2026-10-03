@@ -678,6 +678,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/blogg/jamfora-offerter-takbyte</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/blogg/tp20-eller-dubbelfalsat-platttak</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -2161,12 +2167,42 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/takbyte-sundbyberg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-danderyd</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-sollentuna</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/takbyte-lidingo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://roslagstak.se/takbyte-nacka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-tyreso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-haninge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-ekero</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2182,6 +2218,16 @@
   </url>
   <url>
     <loc>https://roslagstak.se/takbyte-upplands-vasby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-salem</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/takbyte-sodertalje</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

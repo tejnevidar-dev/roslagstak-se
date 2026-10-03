@@ -20,6 +20,8 @@ import { readFileSync, readdirSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { prerenderContent } from "./prerender-content";
 import { locations } from "../src/data/locations";
+import { regionBySlug } from "../src/data/regions";
+import { regionTexts } from "../src/data/region-texts";
 
 const norm = (s: string) =>
   s
@@ -253,6 +255,38 @@ for (const file of readdirSync(resolve(comboDir)).filter((f) => f.endsWith(".md"
     continue;
   }
   const body = raw.split(/\n## Text\s*\n/)[1]?.split(/\n## /)[0] ?? "";
+  const meningar = toSentences(body);
+  const liveText = norm([page.intro, ...page.paragraphs].join(" "));
+  const missing = meningar.filter((s) => !liveText.includes(norm(s)));
+  allResults.push({ page: path, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+}
+
+/* ---------- 5) Regiontexter (/omraden/<region>) ---------- */
+
+const regionDir = "../ledning/marknad/innehall/regiontexter";
+for (const file of readdirSync(resolve(regionDir)).filter((f) => f.endsWith(".md") && !f.startsWith("_"))) {
+  const raw = readFileSync(join(resolve(regionDir), file), "utf8").replace(/\r/g, "");
+  const path = raw.match(/\*\*Slug:\*\*\s*(\/omraden\/[a-z0-9-]+)/)?.[1];
+  if (!path) {
+    allResults.push({ page: "", file: `regiontexter/${file}`, status: "no-slug", missing: [], total: 0 });
+    continue;
+  }
+  if (only && !only.has(path.slice(1))) continue;
+  const page = prerenderContent(path);
+  const regionName = regionBySlug(path.slice("/omraden/".length));
+  if (!page || !regionName || !regionTexts[regionName]) {
+    allResults.push({ page: path, file, status: "not-built", missing: [], total: 0 });
+    continue;
+  }
+  // "### Orter i/på <region>" ersätts av sidens egen ortlista (härledd ur locations.ts) och ingår inte.
+  let skipSection = false;
+  const body = (raw.split(/\n## Regiontext[^\n]*\n/)[1]?.split(/\n## /)[0] ?? "")
+    .split("\n")
+    .filter((l) => {
+      if (l.startsWith("### ")) skipSection = /^### Orter (i|på) /.test(l);
+      return !skipSection;
+    })
+    .join("\n");
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));

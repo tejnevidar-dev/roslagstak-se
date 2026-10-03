@@ -14,6 +14,7 @@ import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials } from "../src/data/materials";
+import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
@@ -683,13 +684,14 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const region = regionBySlug(clean.slice("/omraden/".length));
     if (!region) return null;
     const places = locations.filter((l) => l.region === region);
+    const rt = regionTexts[region];
     return {
-      title: `Takläggare i ${region}`,
-      description: `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti. Ring ${PHONE}.`,
+      title: rt?.title ?? `Takläggare i ${region}`,
+      description: rt?.description ?? `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti. Ring ${PHONE}.`,
       h1: `Takläggare i ${region}`,
-      intro: regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
+      intro: rt?.intro ?? regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
-        ...(regionLongText[region] ?? []),
+        ...(rt ? rt.body.map(stripInlineMd) : (regionLongText[region] ?? [])),
         ...(villaAreasParagraph(regionSlugs[region]) ? [villaAreasParagraph(regionSlugs[region])!] : []),
         `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
       ],
@@ -697,6 +699,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         { href: "/omraden", label: "Alla områden i Roslagen och Storstockholm" },
         ...villaAreaLinks(regionSlugs[region]),
+        ...(rt ? rt.body.flatMap(inlineMdLinks) : []),
         ...places.map((l) => ({
           href: `/taklaggare-${l.slug}`,
           label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
