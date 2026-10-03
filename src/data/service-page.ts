@@ -35,7 +35,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     specHeading: "Teknisk specifikation och utförande",
     lead: "Varje omläggning inleds med en fullständig analys av råspont, ventilation och avvattning.",
     craftLine: "Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.",
-    photoNote: "Ny läkt monterad på diffusionsöppen underlagsduk — eget arbete i Roslagen.",
+    photoNote: "Ny läkt monterad på diffusionsöppen underlagsduk.",
   },
   takrenovering: {
     accentLine: "utan helt takbyte.",
@@ -92,9 +92,9 @@ export const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Teknik", v: "Falsning på plats" },
       { k: "Detaljer", v: "Skorsten och genomföring" },
     ],
-    specHeading: "Plåtdetaljer som håller mot kustklimat",
+    specHeading: "Plåtdetaljer: material och utförande",
     lead: "Plåtarbetet är takets tätning — beslagen tillverkas och falsas efter ditt hus.",
-    craftLine: "Plåtslageri är millimeterarbete. Salt och vind förlåter ingenting.",
+    craftLine: "Plåtslageri är millimeterarbete.",
     photoNote: "Snörasskydd och plåtdetaljer monterade efter taktäckning.",
   },
   takvard: {
@@ -321,6 +321,8 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
  * strängar härifrån; paritetstestet (src/test/service-page-parity.test.ts) renderar sidan och
  * jämför mot speglingen i båda riktningarna.
  * ------------------------------------------------------------------------------------------- */
+const CAPTION_OWN_JOB_SLUGS: readonly string[] = ["takomlaggning", "takrenovering"];
+
 export const SERVICE_COPY = {
   heroEyebrow: "Tjänstebeskrivning / Roslagen",
   takkontrollLink: "Boka kostnadsfri takkontroll",
@@ -349,8 +351,8 @@ export const SERVICE_COPY = {
   scopeHeading: "Det här ingår i arbetet",
   scopeNote: "Allt specificeras i offerten — inga tillägg i efterhand utan att du godkänt dem.",
   craftEyebrow: "Hantverket",
-  // Eternitsidan: inget "utfört i Roslagen" (juristen A1, vi har inga belagda saneringar).
-  craftCaption: (title: string, slug?: string) => (slug === "eternit-asbest" || slug === "taksakerhet" ? title : `${title} — utfört i Roslagen`),
+  // "utfört i Roslagen" bara där vi har belagda egna jobb (takbyte på Blidö och Singö). Övriga tjänster: bara tjänstens namn (juristen A1, regel 5).
+  craftCaption: (title: string, slug?: string) => (slug && CAPTION_OWN_JOB_SLUGS.includes(slug) ? `${title} — utfört i Roslagen` : title),
   goodToKnowEyebrow: "Bra att veta",
   skargardenTitle: "Skärgården",
   skargardenText: "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",

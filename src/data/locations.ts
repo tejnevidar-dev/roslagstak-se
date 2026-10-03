@@ -189,7 +189,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Ingmarsö — takbyte och takrenovering. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
     longDescription:
-      "Ingmarsö har en aktiv skärgårdsgemenskap med både året-runt-boende och sommarfirare. Bebyggelsen varierar från äldre röda stugor till nyare fritidshus — och alla behöver tak som klarar skärgårdens klimat. Vi tar hand om hela processen åt dig — från takkontroll till färdigt tak, med fast pris och utan överraskningar.",
+      "Ingmarsö har en aktiv skärgårdsgemenskap med både året-runt-boende och sommarfirare. Bebyggelsen varierar från äldre röda stugor till nyare fritidshus — och alla behöver ett tak som fungerar. Vi tar hand om hela processen åt dig — från takkontroll till färdigt tak, med fast pris.",
     extraContent:
       "Ingmarsö har ett levande samhälle med både permanentboende och säsongsboende. Äldre tak kan ha betongpannor eller eternitplattor.",
     uniqueFAQ: {
@@ -211,7 +211,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Högmarsö — takbyte och takrenovering.",
     longDescription:
-      "Högmarsö är en lugnare ö i mellersta Roslagen, men klimatet är lika krävande som i resten av skärgården. Fukt, mossa och salt bryter långsamt ner takmaterial som inte är anpassat för miljön. TP20-plåttak med rätt underlag är ofta det optimala valet här — hållbart, underhållsfritt och estetiskt tilltalande.",
+      "Högmarsö är en lugnare ö i mellersta Roslagen. Vi går igenom taket vid en kostnadsfri takkontroll och föreslår material efter husets skick.",
     extraContent:
       "Högmarsö ligger nära Ljusterö och vi kombinerar ofta projekt på de två öarna. Det innebär att fastighetsägare på Högmarsö kan dra nytta av samordning och få ett förmånligt pris. Oavsett om du har en sommarstuga eller ett permanentboende rekommenderar vi en kostnadsfri takkontroll som utgångspunkt.",
     uniqueFAQ: {
@@ -2030,7 +2030,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Haninge — takbyte och takrenovering söder om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Haninge kommun omfattar Handen, Vendelsö, Dalarö och skärgårdsöarna ut mot Ornö och Utö. Bebyggelsen är varierad — villaområden, fritidshus och skärgårdsgårdar. Vi anpassar material efter det fuktiga, salta klimatet nära havet.",
+      "Haninge kommun omfattar Handen, Vendelsö, Dalarö och skärgårdsöarna ut mot Ornö och Utö. Bebyggelsen är varierad — villaområden, fritidshus och skärgårdsgårdar. Vi anpassar material efter huset.",
     extraContent:
       "I tätorterna Handen och Vendelsö är det fastlandsförhållanden med villatak som behöver omläggning. Vi lämnar fast pris efter kostnadsfri takkontroll i hela kommunen.",
     uniqueFAQ: {
@@ -2426,7 +2426,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Salem — takbyte och takrenovering sydväst om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Salem är en liten kommun vid sjön Bornsjön med villabebyggelse i Rönninge och Salem. Taken är ofta villatak med betongpannor eller plåt från 70- och 80-talet. Sjönära läge ställer krav på material med god fukttålighet. Vi utför takbyten och takrenoveringar i Salem med material valt för det sjönära klimatet, och lämnar fast pris efter kostnadsfri takkontroll.",
+      "Salem är en liten kommun vid sjön Bornsjön med villabebyggelse i Rönninge och Salem. Taken är ofta villatak med betongpannor eller plåt från 70- och 80-talet. Vi utför takbyten och takrenoveringar i Salem och lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
       "I Salems sjönära villor rekommenderar vi material med hög korrosionsklass på plåt och noggrann hantering av ventilation och underlagspapp. Vid omläggning lägger vi ny papp, ny läkt och plåt eller pannor. Vi hjälper dig jämföra totalkostnad över 30 år.",
     uniqueFAQ: {
@@ -2469,7 +2469,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Upplands-Bro — takbyte och takrenovering nordväst om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Upplands-Bro kommun omfattar Kungsängen, Bro och Brunna, med villabebyggelse och bostadsrättsområden i ett sjö- och skogsnära läge. Taken varierar från betongpannor på 70-talsvillor till plåttak på nyare hus. Vi utför takbyten, takomläggningar och plåtarbeten i Upplands-Bro med material valt för det varierade klimatet. Vi lämnar fast pris efter kostnadsfri takkontroll.",
+      "Upplands-Bro kommun omfattar Kungsängen, Bro och Brunna, med villabebyggelse och bostadsrättsområden i ett sjö- och skogsnära läge. Taken varierar från betongpannor på 70-talsvillor till plåttak på nyare hus. Vi utför takbyten, takomläggningar och plåtarbeten i Upplands-Bro. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
       "I Upplands-Bro finns det ofta villatak där omläggning med ny papp, ny läkt och plåt är ofta det rimliga valet. Vi hjälper dig jämföra totalkostnad, inte bara pris per kvadratmeter idag. Vi bedömer alltid behovet av snörasskydd över entréer.",
     uniqueFAQ: {

@@ -20,7 +20,7 @@ export const taksakerhetMeta = {
   specHeading: "I samband med takbyte eller för sig",
   lead: "Byter du tak är det enklast att montera taksäkerheten samtidigt.",
   craftLine: "Takstege, gångbrygga och snörasskydd är egna poster med egna priser.",
-  photoNote: "Snörasskydd monterat vid takfoten — eget arbete i Roslagen.",
+  photoNote: "Snörasskydd monterat vid takfoten.",
 };
 
 export const taksakerhetDetails = {

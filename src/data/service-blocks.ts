@@ -241,15 +241,15 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     block: {
       kind: "matrix",
       eyebrow: "Metallval",
-      heading: "Fyra metaller — egenskaper i kustklimat",
+      heading: "Fyra metaller och deras egenskaper",
       intro:
-        "Saltluft ställer högre krav på metallval än inlandsklimat. Vi väljer material efter avstånd till öppet vatten, lutning och husets karaktär.",
-      columns: ["Metall", "Kännetecken", "Underhåll", "Kustnära lägen"],
+        "Vi väljer material efter taket, lutningen och husets karaktär.",
+      columns: ["Metall", "Kännetecken", "Underhåll"],
       rows: [
-        ["Lackerad stålplåt", "Vanligast, många kulörer", "Håll lacken hel, åtgärda repor tidigt", "Lackkvaliteten avgör"],
-        ["Aluminium", "Lätt", "Kontrollera fogar och anslutningar", "Rostar inte som stål"],
-        ["Zink", "Får patina med tiden", "Kontrollera fogar och anslutningar", "Tillverkarens anvisningar gäller"],
-        ["Koppar", "Blir grön med tiden", "Kontrollera fogar och anslutningar", "Tillverkarens anvisningar gäller"],
+        ["Lackerad stålplåt", "Vanligast, många kulörer", "Håll lacken hel, åtgärda repor tidigt"],
+        ["Aluminium", "Lätt", "Kontrollera fogar och anslutningar"],
+        ["Zink", "Får patina med tiden", "Kontrollera fogar och anslutningar"],
+        ["Koppar", "Blir grön med tiden", "Kontrollera fogar och anslutningar"],
       ],
       footnote: "Alla falsade tak utförs med rörliga klammer så att plåten kan arbeta vid temperaturväxlingar.",
     },

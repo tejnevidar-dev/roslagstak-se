@@ -568,9 +568,8 @@ const LocationPage = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {location.region === "Mälardalen"
-                    ? `${location.name} ligger i Mälardalen — ett område där öppna lägen med vind och snö, samt fukt nära vatten, ställer höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för läget.`
-                    : <>{location.name} tillhör {location.region} i Roslagen — ett område där klimatet med {location.isIsland ? "havsvind, salt och fukt" : "kustnära fukt och vind"} ställer 
-                  höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för {location.isIsland ? "skärgårdens hårda" : "det kustnära"} klimatet.</>} 
+                    ? `${location.name} ligger i Mälardalen. Vi rekommenderar material efter husets läge och skick.`
+                    : `${location.name} tillhör ${location.region} i Roslagen. Vi rekommenderar material efter husets läge och skick.`}{" "}
                   Kontakta oss för en kostnadsfri takkontroll {prep} {location.name} — vi ger dig en ärlig bedömning och fast pris utan förbindelser.
                 </p>
               </div>

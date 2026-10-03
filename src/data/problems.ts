@@ -176,7 +176,7 @@ export const problems: Problem[] = [
     related: [
       { to: "/hangrannor", label: "Nya hängrännor och stuprör" },
       { to: "/takreparation", label: "Takreparation vid läckage och skador" },
-      { to: "/blogg/hangrannor-stupror-skargard", label: "Hängrännor & stuprör i skärgårdsklimat" },
+      { to: "/blogg/hangrannor-stupror-skargard", label: "Hängrännor & stuprör: material och underhåll" },
     ],
   },
   {

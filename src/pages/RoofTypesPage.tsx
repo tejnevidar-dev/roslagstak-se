@@ -25,7 +25,7 @@ const roofTypeFaqs = [
   {
     question: "Plåttak eller betongpannor — vad passar bäst nära havet?",
     answer:
-      "Nära kusten rekommenderar vi plåt med hög korrosionsklass eller lertegel. Saltluft och kraftig vind sliter på infästningar, och pannor kan lyfta i utsatta lägen. Vi går igenom takets vindlast och läge vid takkontrollen.",
+      "Vilket material som passar beror på takets läge och vindlast. Det går vi igenom vid takkontrollen.",
   },
   {
     question: "Kan jag lägga plåttak direkt på gamla betongpannor?",
