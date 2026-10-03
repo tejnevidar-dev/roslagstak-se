@@ -15,7 +15,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
-import { getLocationBySlug, locations } from "@/data/locations";
+import { locations } from "@/data/locations";
+import { getLocationWithMall, usesMall } from "@/data/location-mall";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { regionSlugs } from "@/data/regions";
@@ -35,7 +36,7 @@ const LocationPage = () => {
   const pathname = useLocation().pathname;
   
   const resolvedSlug = slug || (pathname.startsWith("/taklaggare-") ? pathname.replace("/taklaggare-", "") : undefined);
-  const location = resolvedSlug ? getLocationBySlug(resolvedSlug) : undefined;
+  const location = resolvedSlug ? getLocationWithMall(resolvedSlug) : undefined;
   const locationProject = resolvedSlug ? projects.find((p) => p.locationSlug === resolvedSlug) : undefined;
 
   useEffect(() => {
@@ -106,7 +107,7 @@ const LocationPage = () => {
     openingHoursSpecification: OPENING_HOURS,
     knowsAbout: [
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
-      "Dubbelfalsat plåttak", "Tegelplåt", "Pannplåt", "Takavvattning",
+      "Dubbelfalsat plåttak", "Pannplåt", "Takavvattning",
       "Hängrännor", "Takkontroll", "Taksäkerhet",
       "Byta eternittak", "Takkupor", "Takfönster",
       "Taktvätt", "Takmålning",
@@ -162,7 +163,9 @@ const LocationPage = () => {
   const far = !location.isIsland && !isNearBase(location);
 
   // SEO-optimized meta description — under 160 chars, keyword-first
-  const metaDescription = location.isIsland
+  const metaDescription = usesMall(locations.find((l) => l.slug === location.slug) ?? location)
+    ? location.description
+    : location.isIsland
     ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
     : far
       ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
@@ -422,7 +425,7 @@ const LocationPage = () => {
                     `Takomläggning och takbyte ${prep} ${location.name}`,
                     `Takrenovering och underhåll ${prep} ${location.name}`,
                     `Plåtarbeten, takavvattning och hängrännor`,
-                    `TP20, dubbelfalsat, tegelplåt, pannplåt och lertegeltak`,
+                    `TP20, dubbelfalsat, pannplåt och lertegeltak`,
                     `Byta eternittak, med sanering via en saneringsfirma`,
                     `Takkupor och takfönster (Velux)`,
                     `Taktvätt och takmålning`,

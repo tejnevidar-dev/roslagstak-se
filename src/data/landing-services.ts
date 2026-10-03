@@ -1,5 +1,6 @@
 /** Innehåll för /takreparation och /takkontroll. Endast uppgifter som redan står på sajten eller som ägaren bekräftat. */
-import { GARANTI_RENOVERING } from "./guarantee";
+import { GARANTI_RENOVERING, GARANTI_UTFORANDE } from "./guarantee";
+import { ROT_FORBEHALL } from "./prices";
 
 export interface LandingService {
   slug: "takreparation" | "takkontroll" | "rot-avdrag" | "akut-lackage" | "hangrannor" | "platslagare" | "takbyte-var-2027";
@@ -48,15 +49,15 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Läckage kring skorsten och genomföringar",
-        text: "Plåtbeslag runt skorstenar, ventiler och genomföringar är där tak oftast läcker. Vad som behöver göras bedömer vi vid takkontrollen.",
+        text: "Plåtbeslag runt skorstenar, ventiler och genomföringar är där många läckage börjar. Vad som behöver göras bedömer vi vid takkontrollen.",
       },
       {
         title: "Sliten underlagspapp",
-        text: "Papp som blivit spröd eller trasig byts, så att taket blir tätt under takmaterialet.",
+        text: "Papp som har blivit spröd eller trasig byts.",
       },
       {
-        title: "Rötskadad råspont",
-        text: "Skadat virke byts ut innan taket täcks igen. Vi visar dig omfattningen först.",
+        title: "Skadad råspont",
+        text: "Skadad råspont byts innan taket täcks igen. Vi visar dig omfattningen först.",
       },
       {
         title: "Skadad plåt och rost",
@@ -71,7 +72,7 @@ export const landingServices: LandingService[] = [
     steps: [
       {
         title: "Kontakta oss",
-        text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar. Vid akut läckage: ring 070-154 36 39.",
+        text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar. Läcker det: ring 070-154 36 39.",
       },
       {
         title: "Kostnadsfri takkontroll",
@@ -79,21 +80,21 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Fast pris",
-        text: "Du får en skriftlig offert med tydlig åtgärdslista och fast pris.",
+        text: "Du får en offert med fast pris.",
       },
       {
-        title: "Reparation och slutkontroll",
-        text: "Vi utför reparationen och kontrollerar resultatet tillsammans med dig innan vi lämnar platsen.",
+        title: "Reparation och slutgenomgång",
+        text: "Vi utför det som står i offerten och går igenom resultatet tillsammans med dig.",
       },
     ],
     extraHeading: "Reparation eller nytt tak?",
     extraParagraphs: [
-      "Ibland räcker en reparation, ibland är taket i så dåligt skick att ett takbyte blir bättre ekonomi över tid. Vi ger en ärlig bedömning och föreslår aldrig ett takbyte om en renovering räcker.",
-      "Är skadorna många, är underlaget rötskadat på stora ytor eller är takmaterialet uttjänt är ett takbyte oftast det bästa valet. Vid takkontrollen går vi igenom alternativen med dig.",
+      "Ibland räcker en reparation, ibland behöver taket läggas om. Det ser vi vid takkontrollen.",
+      "Är skadorna många kan taket behöva läggas om. Vid takkontrollen går vi igenom alternativen med dig.",
       "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
-      "Priset beror på skadans omfattning, takmaterial och hur åtkomligt taket är. Vi arbetar endast till fast pris och lämnar det efter takkontrollen. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Priset beror på skadans omfattning, takmaterial och hur åtkomligt taket är. Vi arbetar endast till fast pris och lämnar det efter takkontrollen. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
     faqTitle: "Frågor om takreparation",
     faqs: [
       {
@@ -102,14 +103,14 @@ export const landingServices: LandingService[] = [
           "Det beror på skadans omfattning, takmaterial och åtkomst. Efter en kostnadsfri takkontroll får du ett fast pris. Vi arbetar endast till fast pris.",
       },
       {
-        question: "Vad ska jag göra vid akut läckage?",
+        question: "Vad ska jag göra om taket läcker?",
         answer:
-          "Ring oss på 070-154 36 39. Skydda under tiden det som kan ta skada inomhus: flytta möbler och värdesaker, ställ ett kärl under droppet och fotografera skadan. Bilderna kan vara bra om du gör en försäkringsanmälan.",
+          "Ring oss på 070-154 36 39. Skydda under tiden det som kan ta skada inomhus: flytta möbler och värdesaker, ställ ett kärl under droppet och fotografera skadan.",
       },
       {
         question: "Hur vet jag om jag ska reparera eller byta tak?",
         answer:
-          "Det avgörs av takets ålder, skick och hur omfattande skadorna är. Vid takkontrollen bedömer vi underlag, papp och takmaterial och ger en ärlig rekommendation. Vi föreslår inte ett takbyte om en reparation räcker.",
+          "Det avgörs av takets skick och hur omfattande skadorna är. Vid takkontrollen tittar vi på taket på plats. Är taket i så dåligt skick att en reparation inte räcker säger vi det.",
       },
       {
         question: "Får jag garanti på reparationen?",
@@ -118,7 +119,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Kan jag få ROT-avdrag på en takreparation?",
         answer:
-          "Ja, för privatpersoner ger ROT-avdraget 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Arbetskostnaden specificeras separat i offerten, och beloppet dras av direkt på fakturan.",
+          "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år. Avdraget dras av direkt på fakturan.",
       },
       {
         question: "Vilka områden arbetar ni i?",
@@ -259,15 +260,15 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Bara arbetet ger avdrag",
-        text: "Material, som pannor, plåt och papp, ger inget ROT-avdrag. Därför specificerar vi arbetskostnaden separat i offerten.",
+        text: "Material, som pannor, plåt och papp, ger inget ROT-avdrag.",
       },
       {
         title: "Avdraget görs på fakturan",
-        text: "Du betalar det som återstår efter avdraget. Vi hanterar ansökan till Skatteverket.",
+        text: "Avdraget görs på fakturan: du betalar det som återstår.",
       },
       {
         title: "För dig som äger bostaden",
-        text: "ROT-avdraget gäller privatpersoner som äger bostaden, till exempel villa eller fritidshus. För bostadsrättsföreningar gäller andra regler.",
+        text: "ROT-avdraget gäller privatpersoner som äger bostaden, till exempel villa eller fritidshus.",
       },
       {
         title: "Skatt att göra avdrag mot",
@@ -282,7 +283,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Offert med fast pris",
-        text: "Du får en skriftlig offert där arbetskostnad och materialkostnad redovisas var för sig.",
+        text: "Du får en skriftlig offert med fast pris.",
       },
       {
         title: "Arbetet utförs",
@@ -290,13 +291,13 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Faktura med ROT-avdrag",
-        text: "Avdraget dras av direkt på fakturan, så du slipper vänta på pengar tillbaka.",
+        text: "Avdraget dras av direkt på fakturan.",
       },
     ],
     extraHeading: "Vilka takarbeten ger ROT-avdrag?",
     extraParagraphs: [
-      "Takbyte, takomläggning, takrenovering och takreparation på din bostad ger ROT-avdrag på arbetskostnaden. Detsamma gäller plåtarbeten och takavvattning som ingår i arbetet.",
-      "Vilka regler som gäller just din situation avgörs av Skatteverket. Vi går gärna igenom hur det ser ut för ditt tak när vi lämnar offert.",
+      "Vid takbyte, takomläggning, takrenovering och takreparation på din bostad kan du få ROT-avdrag på arbetskostnaden. Detsamma gäller plåtarbeten och takavvattning som ingår i arbetet.",
+      "Vilka regler som gäller just din situation avgörs av Skatteverket.",
     ],
     priceNote:
       "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget räknas av från arbetskostnaden i offerten.",
@@ -309,21 +310,21 @@ export const landingServices: LandingService[] = [
       {
         question: "Gäller ROT-avdraget materialet?",
         answer:
-          "Nej. Avdraget gäller bara arbetskostnaden. Därför redovisar vi arbete och material separat i offerten.",
+          "Nej. Avdraget gäller bara arbetskostnaden.",
       },
       {
         question: "Hur får jag ROT-avdraget?",
         answer:
-          "Vi drar av det direkt på fakturan och ansöker om utbetalningen hos Skatteverket, så du betalar bara det som återstår.",
+          "Avdraget görs direkt på fakturan, så du betalar bara det som återstår.",
       },
       {
         question: "Kan bostadsrättsföreningar få ROT-avdrag?",
         answer:
-          "ROT-avdraget gäller privatpersoner. För bostadsrättsföreningar gäller andra regler, och vi går igenom det i offerten.",
+          "ROT-avdraget gäller privatpersoner.",
       },
       {
         question: "Kan jag få ROT-avdrag på en takreparation?",
-        answer: "Ja, på arbetskostnaden vid reparation, renovering och takbyte på din bostad.",
+        answer: "Som privatperson kan du få ROT-avdrag på arbetskostnaden vid reparation, renovering och takbyte på din bostad.",
       },
       {
         question: "Vad kostar ett takbyte?",
@@ -343,41 +344,41 @@ export const landingServices: LandingService[] = [
   {
     slug: "akut-lackage",
     path: "/akut-lackage",
-    seoTitle: "Akut läckage i taket — ring 070-154 36 39",
+    seoTitle: "Läckage i taket — ring 070-154 36 39",
     seoDescription:
-      "Läcker taket? Ring oss på 070-154 36 39 eller skicka en förfrågan. Vi gör en kostnadsfri takkontroll, lämnar fast pris och lagar. 10 års utförandegaranti.",
-    breadcrumb: "Akut läckage",
-    eyebrow: "Akut läckage",
+      "Läcker taket? Ring oss på 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka en förfrågan. Kostnadsfri takkontroll och fast pris. 10 års utförandegaranti.",
+    breadcrumb: "Läckage i taket",
+    eyebrow: "Läckage i taket",
     h1: "Läcker taket?",
-    h1Accent: "Ring oss, så tar vi det därifrån.",
+    h1Accent: "Så här gör du, och så hjälper vi dig.",
     intro:
-      "Ring 070-154 36 39 eller skicka formuläret. Vi gör en kostnadsfri takkontroll, hittar orsaken till läckaget och lämnar ett skriftligt fast pris för reparationen.",
+      "Ring 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka formuläret. Vi svarar inom 24 timmar och har ingen jour. Vi gör en kostnadsfri takkontroll, letar efter var vattnet kommer in och lämnar ett skriftligt fast pris för reparationen.",
     listHeading: "Gör så här medan du väntar",
     listIntro: "Några enkla åtgärder begränsar skadan tills vi har varit på plats.",
     list: [
       { title: "Skydda det som kan ta skada", text: "Flytta möbler och värdesaker undan från platsen där det droppar." },
       { title: "Fånga vattnet", text: "Ställ ett kärl under droppet så att golvet inte tar skada." },
-      { title: "Fotografera skadan", text: "Bilder på fuktfläckar och droppande vatten kan vara bra om du gör en försäkringsanmälan." },
+      { title: "Fotografera skadan", text: "Ta bilder av det du ser, och skriv upp när du upptäckte det." },
       { title: "Gå inte upp på taket", text: "Ett vått tak är halt. Lämna arbetet på taket till oss." },
       { title: "Kontakta oss", text: "Ring 070-154 36 39. Vi går igenom vad som hänt och bokar takkontroll." },
-      { title: "Anmäl till försäkringsbolaget", text: "Kontakta ditt försäkringsbolag om skadan kan täckas av hemförsäkringen." },
+      { title: "Kontakta försäkringsbolaget", text: "Kontakta ditt försäkringsbolag och fråga vad som gäller för dig." },
     ],
     stepsHeading: "Så går det till",
     steps: [
       { title: "Du kontaktar oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
       { title: "Takkontroll", text: "Vi tittar på taket på plats och letar efter var vattnet kommer in." },
-      { title: "Fast pris", text: "Du får en skriftlig offert med tydlig åtgärdslista och fast pris." },
-      { title: "Reparation", text: "Vi utför reparationen och kontrollerar resultatet innan vi lämnar platsen." },
+      { title: "Fast pris", text: "Du får en offert med fast pris." },
+      { title: "Reparation", text: "Vi utför det som står i offerten." },
     ],
-    extraHeading: "Var läcker tak oftast?",
+    extraHeading: "Var kan ett tak läcka?",
     extraParagraphs: [
-      "Läckage uppstår oftast kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken syns sällan där fuktfläcken kommer fram inomhus, så vi följer vattnet uppåt.",
-      "Ibland räcker en reparation, ibland är taket i så dåligt skick att ett takbyte blir bättre ekonomi. Vi ger en ärlig bedömning.",
+      "Många läckage börjar kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken sitter inte alltid där fuktfläcken kommer fram inomhus, så vi följer vattnet uppåt.",
+      "Ibland räcker en reparation, ibland behöver taket läggas om. Det ser vi vid takkontrollen.",
       "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
-    faqTitle: "Frågor om akut läckage",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+    faqTitle: "Frågor om läckage i taket",
     faqs: [
       {
         question: "Vad ska jag göra om taket läcker?",
@@ -386,7 +387,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Hur snabbt får jag svar?",
-        answer: "Vi återkommer inom 24 timmar. Vid akut läckage: ring oss direkt.",
+        answer: "Vi svarar inom 24 timmar och har ingen jour.",
       },
       {
         question: "Vad kostar det att laga ett läckage?",
@@ -399,7 +400,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Kan jag få ROT-avdrag?",
-        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
@@ -409,6 +410,7 @@ export const landingServices: LandingService[] = [
       { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
       { to: "/tjanster/platarbeten", label: "Plåtarbeten och beslag" },
       { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
+      { to: "/blogg/forsakring-takbyte-hemforsakring", label: "Försäkring och tak: fråga försäkringsbolaget först" },
     ],
   },
   {
@@ -416,38 +418,37 @@ export const landingServices: LandingService[] = [
     path: "/hangrannor",
     seoTitle: "Hängrännor och stuprör — byte och nyinstallation",
     seoDescription:
-      "Nya hängrännor och stuprör i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta, fast pris efter takkontroll och 10 års utförandegaranti.",
+      "Nya hängrännor och stuprör i lackerad plåt. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     breadcrumb: "Hängrännor och stuprör",
     eyebrow: "Takavvattning",
     h1: "Nya hängrännor och stuprör.",
-    h1Accent: "Dimensionerade efter ditt tak.",
+    h1Accent: "Fast pris efter kostnadsfri takkontroll.",
     intro:
       "Läcker rännorna, hänger de snett eller svämmar de över? Vi byter eller installerar kompletta avvattningssystem med hängrännor, stuprör, ränndalar och fotplåt, och lämnar ett fast pris efter kostnadsfri takkontroll.",
     listHeading: "Det här kan vi göra",
     listIntro: "Takavvattningen leder bort vattnet från tak, fasad och grund.",
     list: [
-      { title: "Nya hängrännor", text: "Rännor i aluminium, koppar eller lackerad plåt, valda efter hus och läge." },
-      { title: "Stuprör", text: "Nya stuprör med rätt antal och dimension för takytan." },
+      { title: "Nya hängrännor", text: "Hängrännor och stuprör i lackerad plåt." },
+      { title: "Stuprör", text: "Nya stuprör." },
       { title: "Ränndalar och fotplåt", text: "Falsas i plåt och anpassas till takets lutning och material." },
-      { title: "Dimensionering", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet, så att systemet inte svämmar över." },
-      { title: "Fall", text: "Rännorna läggs med rätt fall så att vattnet inte blir stående." },
+      { title: "Hur systemet läggs upp", text: "Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen." },
       { title: "Byte i samband med takbyte", text: "Byter du tak är det klokt att se över avvattningen samtidigt." },
     ],
     stepsHeading: "Så går det till",
     steps: [
       { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
       { title: "Kostnadsfri takkontroll", text: "Vi tittar på befintliga rännor, takyta och fasad." },
-      { title: "Fast pris", text: "Du får en skriftlig offert med material, dimension och fast pris." },
-      { title: "Montering", text: "Vi monterar systemet och kontrollerar att vattnet leds bort som det ska." },
+      { title: "Fast pris", text: "Du får en offert med fast pris." },
+      { title: "Montering", text: "Vi monterar hängrännor och stuprör." },
     ],
-    extraHeading: "Aluminium, koppar eller lackerad plåt?",
+    extraHeading: "Vilket material?",
     extraParagraphs: [
-      "Materialet väljs efter hus, läge och budget. Vid takkontrollen går vi igenom alternativen med dig.",
+      "Hängrännor och stuprör i lackerad plåt. Vid takkontrollen går vi igenom vad som gäller för ditt hus.",
       "Under tiden går det bra att läsa mer om hur takavvattning fungerar på sidan om takavvattning.",
       "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Riktpris för ett komplett system med stuprör: från ca 23 000 kr, efter ROT-avdrag och inkl. moms. " + ROT_FORBEHALL + " Vi arbetar endast till fast pris och lämnar det efter takkontroll.",
     faqTitle: "Frågor om hängrännor och stuprör",
     faqs: [
       {
@@ -457,15 +458,15 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vilka material finns?",
-        answer: "Aluminium, koppar och lackerad plåt.",
+        answer: "Hängrännor och stuprör i lackerad plåt.",
       },
       {
         question: "Kan jag få ROT-avdrag på hängrännor?",
-        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
       },
       {
         question: "Får jag garanti?",
-        answer: GARANTI_RENOVERING,
+        answer: GARANTI_UTFORANDE,
       },
       {
         question: "Hur snabbt får jag svar?",
@@ -487,7 +488,7 @@ export const landingServices: LandingService[] = [
     seoTitle: "Plåt på taket — bandtäckning och plåtdetaljer",
     seoDescription:
       "Dubbelfalsat plåttak och nya plåtdetaljer som en del av ett takbyte. Kontakta oss så tittar vi på taket. Kostnadsfri takkontroll och fast pris.",
-    breadcrumb: "Plåtslagare",
+    breadcrumb: "Plåt på taket",
     eyebrow: "Plåtarbeten",
     h1: "Plåt på ditt tak.",
     h1Accent: "Fast pris efter kostnadsfri takkontroll.",
@@ -498,8 +499,8 @@ export const landingServices: LandingService[] = [
     list: [
       { title: "Bandtäckning", text: "Plåtbanor som fogas ihop med dubbelfals och fästs med dolda klammer, utan synliga skruvar." },
       { title: "Falsat plåttak", text: "Klammerna gör att plåten kan röra sig med temperaturen utan att skarvarna tar skada." },
-      { title: "Skorstensbeslag", text: "Beslaget runt skorstenen är en av de vanligaste platserna för läckage." },
-      { title: "Ränndalar", text: "Den inåtvända vinkeln där två takfall möts, en av takets mest belastade delar." },
+      { title: "Skorstensbeslag", text: "Beslaget runt skorstenen är en plats där många läckage börjar." },
+      { title: "Ränndalar", text: "Den inåtvända vinkeln där två takfall möts, dit vatten rinner från två håll." },
       { title: "Vindskiveplåt", text: "Plåt som skyddar vindskivornas och takfotens kanter." },
       { title: "Fotplåt", text: "Plåten längst ner på taket, som leder vattnet ut i hängrännan." },
     ],
@@ -510,13 +511,10 @@ export const landingServices: LandingService[] = [
       { title: "Besked och fast pris", text: "Du får veta vad vi kan hjälpa till med. Ingår plåten i ett takbyte får du en offert med fast pris." },
       { title: "Takbyte enligt AMA", text: "Vid ett takbyte görs plåtdetaljerna om, med 10 års utförandegaranti." },
     ],
-    extraHeading: "Vilken metall passar?",
-    extraParagraphs: [
-      "Stål, aluminium, koppar och zink har olika egenskaper och underhållsbehov. Vilken metall som passar beror på läge, lutning och husets karaktär.",
-      "Läs mer om metallerna på sidan om plåtarbeten.",
-    ],
+    extraHeading: "Plåt vid takbyte",
+    extraParagraphs: ["Plåtdetaljerna görs om när vi byter eller lägger om ett tak. Läs mer på sidan om plåtarbeten."],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
     faqTitle: "Frågor om plåtarbeten",
     faqs: [
       {
@@ -530,7 +528,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Kan jag få ROT-avdrag på plåtarbeten?",
-        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
       },
       {
         question: "Får jag garanti?",
@@ -607,7 +605,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Kan jag få ROT-avdrag?",
-        answer: "Ja, för privatpersoner ger ROT-avdraget 30 % på arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
       },
       {
         question: "Vilka områden arbetar ni i?",

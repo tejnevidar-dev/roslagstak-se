@@ -32,7 +32,8 @@ const MONEY_LINKS = [
   { href: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
 ];
 import { brfLocationSlugs } from "../src/data/brf-locations";
-import { isNearBase, distanceFromBaseKm, distanceFromTabyKm, distanceKm } from "../src/data/service-reach";
+import { applyMall, usesMall } from "../src/data/location-mall";
+import { isNearBase, distanceFromBaseKm, distanceKm } from "../src/data/service-reach";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
@@ -129,18 +130,18 @@ const home: PrerenderPage = {
   intro:
     "RoslagsTak är takläggare i Roslagen med bas i Norrtälje. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
     paragraphs: [
-      "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), tegelplåt, pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA.",
+      "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA.",
       "Vi tar också uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Båda finns med bilder under Projekt.",
       "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
       "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet. Du får en kontaktperson som följer projektet från takkontroll till slutgenomgång.",
-      "Du får garantihandlingar skriftligt: 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
       // Om oss-sektionen (components/About.tsx, #1z) — samma text som React
       "Om RoslagsTak. Ett tak som håller, och en kontaktperson som svarar.",
       "RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.",
       "Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du bestämmer själv om och när.",
-      "Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Grisslehamn blev ett takbyte klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre delarna och delvis ny råspont. Båda jobben finns med bilder under Projekt, och våra omdömen från Google finns under Recensioner.",
+      "Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Norrtälje kommun blev ett takbyte klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre delarna och delvis ny råspont. Båda jobben finns med bilder under Projekt, och våra omdömen från Google finns under Recensioner.",
       "Så jobbar vi. Tillgänglighet: du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19. En kontaktperson: samma person tar hand om dig från första kontakten till färdigt tak. Tydliga villkor: fast pris i offerten, 10 års utförandegaranti på det arbete vi utför och 30 års tätskiktsgaranti via MATAKI när ett nytt tätskikt läggs, ROT-avdraget dras direkt på fakturan. Hantverk enligt AMA.",
-      `Begär kostnadsfri takkontroll och offert. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka rådgivning på /kontakt.`,
+      `Boka en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
   links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/recensioner", label: "Recensioner" }, ...serviceLinks, ...locationLinks],
 };
@@ -355,10 +356,10 @@ const staticPages: Record<string, PrerenderPage> = {
     description:
       "Se riktiga takprojekt vi utfört i Roslagen och Storstockholm, med bilder och fakta om material, omfattning och plats.",
     h1: "Riktiga takprojekt i Roslagen",
-    intro: "Här visar vi jobb vi faktiskt utfört, med kundens samtycke. Riktiga bilder, riktiga material — inga påhittade case.",
+    intro: "Här visar vi jobb vi har utfört, med kundens samtycke. Riktiga bilder, riktiga material.",
     paragraphs: [
       "Nytt tak på Blidö: nya betongpannor från Benders i svart, sommaren 2026.",
-      "Nytt tak på Singö, Grisslehamn: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
+      "Nytt tak på Singö i Norrtälje kommun: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
     ],
     links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Nytt tak på Blidö" }, { href: "/projekt/takbyte-singo", label: "Nytt tak på Singö" }],
     breadcrumbs: [{ name: "Startsidan", path: "/", visibleName: "Hem" }, { name: "Referensjobb", path: "/projekt" }],
@@ -440,7 +441,7 @@ const NEARBY_PROJECT_MAX_KM = 30;
 const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
   const prep = loc.isIsland ? "på" : "i";
   const parts: string[] = [
-    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje och cirka ${Math.round(distanceFromTabyKm(loc))} km från Täby. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
+    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
   ];
 
   const exactProject = projectSummaries.find((p) => p.locationSlug === loc.slug);
@@ -650,11 +651,11 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
   if (clean === "/omraden") {
     return {
       title: "Våra områden — Roslagen och hela Storstockholm",
-      description: `RoslagsTak utför takbyte, takrenovering och plåtarbeten i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad. Hitta din ort här.`,
+      description: "Takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen, Storstockholm och Mälardalen. Välj din ort och boka kostnadsfri takkontroll.",
       h1: "Takläggare i Roslagen och hela Storstockholm",
-      intro: `RoslagsTak utför takbyte, takomläggning, takrenovering, plåtarbeten och takvård i ${locations.length} orter — från ytterskärgårdens öar till Stockholms innerstad.`,
+      intro: "RoslagsTak tar uppdrag med takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen, Storstockholm och Mälardalen.",
       paragraphs: [
-        "Välj ditt område nedan för lokala priser, vanliga taktyper och hur ett takprojekt går till just där.",
+        "Välj ditt område nedan för att läsa om husen där och hur du bokar en takkontroll.",
         `Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
       ],
       links: [
@@ -737,13 +738,15 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
   }
 
   if (clean.startsWith("/taklaggare-")) {
-    const loc = locations.find((l) => l.slug === clean.slice("/taklaggare-".length));
-    if (!loc) return null;
+    const rawLoc = locations.find((l) => l.slug === clean.slice("/taklaggare-".length));
+    if (!rawLoc) return null;
+    const mall = usesMall(rawLoc);
+    const loc = applyMall(rawLoc);
     const prep = loc.isIsland ? "på" : "i";
     const regionHref = regionSlugs[loc.region] ? `/omraden/${regionSlugs[loc.region]}` : "/omraden";
     return {
       title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
-      description: ortSeoOverrides[loc.slug]?.description ?? (loc.isIsland
+      description: ortSeoOverrides[loc.slug]?.description ?? (mall ? loc.description : loc.isIsland
         ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
         : isNearBase(loc)
           ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
@@ -767,9 +770,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(loc.factBox ? [loc.factBox.map((f) => `${f.label}: ${f.value}.`).join(" ")] : []),
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
         ...(villaAreasParagraph(loc.slug) ? [villaAreasParagraph(loc.slug)!] : []),
-        geoFactsParagraph(loc),
+        ...(mall ? [] : [geoFactsParagraph(loc)]),
         `${loc.uniqueFAQ.question} ${withRotForbehall(loc.uniqueFAQ.answer)}`,
-        `Ring ${PHONE} för kostnadsfri takkontroll och offert ${prep} ${loc.name}.`,
+        `Ring ${PHONE} för en kostnadsfri takkontroll ${prep} ${loc.name}.`,
       ]),
       links: [
         ...primaryLinks,

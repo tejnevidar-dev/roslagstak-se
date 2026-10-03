@@ -20,14 +20,14 @@ const tidy = (faqs: LocationFAQ[]): LocationFAQ[] =>
  * eller påståenden om lokal närvaro.
  */
 const PRICE = (prep: string, name: string) =>
-  `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning, materialval och underlagets skick. Som riktpris, efter ROT-avdrag och inkl. moms, ligger betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m² och dubbelfalsat plåttak kring 2 000 kr/m². Du får alltid fast pris efter en kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan. Vi återkommer inom 24 timmar.`;
+  `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning, materialval och underlagets skick. Som riktpris, efter ROT-avdrag och inkl. moms, ligger betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m² och dubbelfalsat plåttak kring 2 000 kr/m². Du får alltid fast pris efter en kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, som dras direkt på fakturan. Vi återkommer inom 24 timmar.`;
 const TIME = (what: string) =>
   `Hur lång tid ${what} tar beror på takets storlek, underlagets skick och vädret. Vid takkontrollen går vi igenom förutsättningarna för ditt tak, och i offerten framgår vad som ingår.`;
 const MATERIALS = (isIsland: boolean) =>
-  `Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak. Vilket som passar beror på huset, takets lutning, konstruktionen och vilket uttryck du vill ha, och det går vi igenom vid takkontrollen.${isIsland ? " I skärgården sliter salt, vind och fukt på taket, och det påverkar materialvalet." : ""}`;
-const GUARANTEE = "Ja, vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Arbetet utförs enligt AMA.";
+  `Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak. Vilket som passar beror på huset, takets lutning, konstruktionen och vilket uttryck du vill ha, och det går vi igenom vid takkontrollen.`;
+const GUARANTEE = "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Arbetet utförs enligt AMA.";
 const ROT = (what: string, prep: string, name: string) =>
-  `Ja, ROT-avdrag gäller för ${what} ${prep} ${name}: 30 % av arbetskostnaden, högst 50 000 kr per person och år. Vi drar avdraget direkt på fakturan, så att du bara betalar din del.`;
+  `Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden för ${what} ${prep} ${name}, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Avdraget görs direkt på fakturan.`;
 
 // Generic FAQs used as base, with location name injected
 export const generateLocationFAQs = (
@@ -38,10 +38,8 @@ export const generateLocationFAQs = (
 ): LocationFAQ[] => {
   const faqs: LocationFAQ[] = [];
 
-  // Add unique FAQ first for prominence
-  if (uniqueFAQ) {
-    faqs.push({ ...uniqueFAQ, answer: withRotForbehall(uniqueFAQ.answer) });
-  }
+  // Unique FAQ först för synlighet, men aldrig om samma fråga redan finns bland de generella (mallens variant A)
+  const uniqueEntry = uniqueFAQ ? { ...uniqueFAQ, answer: withRotForbehall(uniqueFAQ.answer) } : undefined;
 
   faqs.push(
     {
@@ -78,7 +76,8 @@ export const generateLocationFAQs = (
     },
   );
 
-  return tidy(faqs);
+  const base = tidy(faqs);
+  return uniqueEntry && !base.some((f) => f.question === uniqueEntry.question) ? [...tidy([uniqueEntry]), ...base] : base;
 };
 
 // FAQs for service+location combo pages (takbyte-X, takrenovering-X)
@@ -96,7 +95,7 @@ export const generateServiceLocationFAQs = (
     return tidy([
       {
         question: `Vad kostar taktvätt ${prep} ${locationName}?`,
-        answer: `Priset för taktvätt ${prep} ${locationName} beror på takets storlek, lutning och hur mycket påväxt det finns. Du får fast pris efter kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.`,
+        answer: `Priset för taktvätt ${prep} ${locationName} beror på takets storlek, lutning och hur mycket påväxt det finns. Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, som dras direkt på fakturan.`,
       },
       {
         question: `Hur ofta behöver jag tvätta taket ${prep} ${locationName}?`,
@@ -126,7 +125,7 @@ export const generateServiceLocationFAQs = (
       question: `Vad kostar ${service} ${prep} ${locationName}?`,
       answer: isTakbyte
         ? withRotForbehall(PRICE(prep, locationName))
-        : `Priset för en takrenovering ${prep} ${locationName} beror på vad som behöver åtgärdas. Du får fast pris efter kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.`,
+        : `Priset för en takrenovering ${prep} ${locationName} beror på vad som behöver åtgärdas. Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, som dras direkt på fakturan.`,
     },
     {
       question: `Hur lång tid tar ${service} ${prep} ${locationName}?`,

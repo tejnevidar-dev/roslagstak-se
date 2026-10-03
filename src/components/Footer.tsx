@@ -14,7 +14,7 @@ const tjanster = [
   { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   { to: "/takreparation", label: "Takreparation" },
   { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
-  { to: "/akut-lackage", label: "Akut läckage" },
+  { to: "/akut-lackage", label: "Läckage i taket" },
   { to: "/hangrannor", label: "Hängrännor och stuprör" },
   { to: "/platslagare", label: "Plåtslagare för tak" },
   { to: "/tjanster/taktvatt", label: "Takvård & taktvätt" },

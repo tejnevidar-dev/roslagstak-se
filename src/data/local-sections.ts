@@ -1,5 +1,5 @@
 import type { LocationData } from "./locations";
-import { distanceFromBaseKm, distanceFromTabyKm } from "./service-reach";
+import { distanceFromBaseKm } from "./service-reach";
 
 /**
  * Unikt lokalt innehåll per ort för hubbsidorna (/taklaggare-<ort>).
@@ -177,7 +177,6 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
       { label: "Läge", value: loc.isIsland ? "Ö i skärgården" : "Fastland" },
       { label: "Närmaste orter", value: neighbourText },
       { label: "Avstånd till vår bas i Norrtälje", value: `${Math.round(distanceFromBaseKm(loc))} km` },
-      { label: "Avstånd till Täby", value: `${Math.round(distanceFromTabyKm(loc))} km` },
       { label: "Koordinater", value: `${loc.lat.toFixed(3)}, ${loc.lng.toFixed(3)}` },
       { label: "Vanliga takmaterial", value: p.materials },
     ],

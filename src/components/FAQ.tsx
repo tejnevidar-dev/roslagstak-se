@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "Vilka taktyper erbjuder ni?",
-    answer: "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), tegelplåttak, pannplåttak, betongpannetak, lertegeltak och papptak. Vi hjälper dig välja rätt material baserat på ditt hus och din budget.",
+    answer: "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), pannplåttak, betongpannetak, lertegeltak och papptak. Vi hjälper dig välja rätt material baserat på ditt hus och din budget.",
   },
   {
     question: "Hur lång garanti ger ni på takarbeten?",

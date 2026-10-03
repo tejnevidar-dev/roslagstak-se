@@ -644,4 +644,19 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning på Gräskö i Norrtälje skärgård: fritidshus från mellankrigstiden och 1960-talet. Kostnadsfri takkontroll, fast pris.",
   },
+  bromma: {
+    title: "Takbyte i Bromma – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll.",
+  },
+  farsta: {
+    title: "Takbyte i Farsta – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Farsta med omnejd: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll.",
+  },
+  hallstavik: {
+    title: "Takbyte i Hallstavik – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Hallstavik, brukssamhället vid Edeboviken som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
+  },
 };

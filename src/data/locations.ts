@@ -639,20 +639,20 @@ export const locations: LocationData[] = [
     region: "Norra Roslagen",
     isIsland: false,
     description:
-      "Takläggare i Hallstavik — takbyte och takrenovering i norra Roslagen. Fast pris och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Hallstavik, brukssamhället vid Edeboviken som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
     longDescription:
-      "Hallstavik i norra Roslagen har en tät villabebyggelse med hus från flera decennier. Husens ålder och skick varierar mycket mellan de olika delarna av orten, och det är därför vi alltid börjar med en kostnadsfri takkontroll på plats. Vi utför takbyten, takomläggningar och takrenoveringar i Hallstavik och lämnar fast pris efter kostnadsfri takkontroll.",
+      "Hallstavik är en tätort i norra delen av Norrtälje kommun, omkring fyra mil från Norrtälje, där Skeboån mynnar i Edeboviken. Orten är ung. Fram till början av 1900-talet var Hallsta en by som gränsade till grannbyarna Tulka, Skärsta och Gottsta. Sedan kom pappersbruket. Enligt Wikipedia byggdes det på Hallsta bys utmarker vid Edeboviken, och Hallsta pappersbruk grundades 1915. Bruket expanderade snabbt, och Hallstavik växte till ett brukssamhälle. Bruket finns kvar och har en egen hamn och en järnväg för gods. Det syns i hur husen har kommit till. Enligt hitta.se är husen i tätorten mest byggda på 1950- och 1960-talen, medan delar är från sekelskiftet 1900 till 1920-talet. Bebyggelsen består av både villor och flerbostadshus. Tidigare gick en smalspårig järnväg till Stockholm via Rimbo. Persontrafiken upphörde 1966, och i dag går riksväg 76 strax väster om samhället.",
     extraContent:
       "",
-    uniqueFAQ: {
-      question: "Vad bedömer ni vid en takkontroll i Hallstavik?",
-      answer:
-        "Vi går igenom takmaterial, plåtdetaljer, underlagspapp och avvattning och ger dig en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Boka en kostnadsfri takkontroll så ger vi en rekommendation för ditt hus.",
-    },
+    uniqueFAQ: {"question":"När byggdes husen i Hallstavik?","answer":"Byggperiod enligt källorna: tätorten mest 1950- och 1960-tal, delar sekelskiftet 1900 till 1920-tal. Hustyper: villor och flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Hallstavik",
     lat: 60.0522,
     lng: 18.5975,
-    nearbyLocations: ["Herräng", "Älmsta", "Väddö"],
+    nearbyLocations: ["Herräng","Älmsta","Väddö"],
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Hustyper","value":"Villor och flerbostadshus"},{"label":"Byggperiod","value":"Tätorten mest 1950- och 1960-tal, delar sekelskiftet 1900 till 1920-tal"},{"label":"Ägda småhus i RegSO (avrundat)","value":"Ca 980 (SCB 2025)"}],
+    sourceLink: {"label":"Wikipedia, Hallstavik","url":"https://sv.wikipedia.org/wiki/Hallstavik"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Husen från brukets första år är i dag omkring hundra år gamla eller mer, och husen från 1950- och 1960-talen mellan 60 och 75 år. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. I ett samhälle som har vuxit i två omgångar står hus av olika ålder nära varandra, så grannens tak säger inte mycket om ditt eget. Och ett hus som har byggts till har ofta takdelar av olika ålder, där skarven mellan dem är värd en extra titt. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris. Ett komplett takbyte i närheten finns att se under projekt: Nytt tak på Singö, i samma kommun."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Hallstavik och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "almsta",
@@ -1753,20 +1753,20 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Bromma — takbyte och takrenovering i västra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll.",
     longDescription:
-      "Bromma har en varierad bebyggelse — från 1920-talsvillor i Bromma trädgårdsstad till radhus och 70-talsvillor i Blackeberg och Riksby. På hus av den åldern är det vanligt att taket förr eller senare blir moget för omläggning eller byte. Vi utför takbyten och takomläggningar i Bromma med både plåttak (TP20, dubbelfalsat) och betongpannor, alltid med ny taksäkerhet, fungerande ventilation och avvattning. Vi går igenom priset i förväg, så att offerten blir realistisk för Brommas villaområden.",
+      "Bromma är en närförort i Västerort i Stockholm. Wikipedia beskriver den som utmärkt bland annat av sin trädgårdsstad, läget nära innerstaden och närheten till Mälaren. Bromma var en egen socken och kommun fram till 1916, då den uppgick i Stockholms stad. Villorna kom i flera omgångar. Enligt Wikipedia började ett villaområde byggas redan på 1880-talet, när mark styckades av från Mariehälls gård. Omkring 1905 bebyggdes delar av Ulvsunda och områden kring Bromma kyrka med villor på privat initiativ. I början av 1900-talet köpte Stockholms stad de stora godsen i Bromma och började bygga trädgårdsstäder, från Äppelviken 1913 och vidare ut mot Nockeby. Under 1910-, 1920- och 1930-talen växte det som kallas Gamla Bromma trädgårdsstad fram. Äppelviken är ett exempel på den tidiga trädgårdsstaden. Stadsplanen från 1910 har enligt Wikipedia mjukt svängda gator som följer terrängen, och tomterna började upplåtas och bebyggas 1913. Villorna är individuellt utformade, uppförda av en byggmästare eller en snickare, och när stadsdelen byggdes ut under 1910- och 1920-talen fick husen olika förebilder, som faluröda bergsmansgårdar, gulpanelade herrgårdar och bruntjärade dalastugor. Norra Ängby kom till på ett annat sätt. Där byggdes enligt Wikipedia 1 320 egna hem under åren 1930–1941, trähus i ett eller två plan, som självbyggeri under stadens ledning efter typritningar. Den blivande husägaren gjorde själv en del av byggarbetet i stället för att betala en kontantinsats. Stadsplanen från 1930 har slingrande bostadsgator, och hustyperna grupperades så att ett kvarter eller en gatusträckning fick ett enhetligt utseende. Södra Ängby är en tredje sorts område: omkring 500 villor uppförda 1933–1939 i funktionalistisk arkitektur. De byggdes enligt Wikipedia av enskilda byggmästare som sålde dem nyckelfärdiga. Bebyggelsen är sedan 1987 riksintresse för kulturmiljövården.",
     extraContent:
-      "På äldre villatak i Bromma kan underlagspappen torka sönder och betongpannor börja frostspränga med åren. I de fallen är omläggning med ny papp, ny läkt och antingen nya pannor eller plåt ofta det rimliga valet. Vi lämnar fast pris efter kostnadsfri takkontroll.",
-    uniqueFAQ: {
-      question: "Vad kostar takbyte på en villa i Bromma?",
-      answer:
-        "Priset för en villa i Bromma beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Bromma?","answer":"Byggperiod enligt källorna: villor från 1880-talet (Mariehäll) och omkring 1905, trädgårdsstad från 1913, Norra Ängby 1930–1941, Södra Ängby 1933–1939. Hustyper: individuellt ritade villor, egnahem i trä i ett eller två plan, funktionalistiska villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Bromma",
     lat: 59.34,
     lng: 17.9397,
-    nearbyLocations: ["Stockholm", "Solna", "Ekerö"],
+    nearbyLocations: ["Stockholm","Solna","Ekerö"],
+    factBox: [{"label":"Kommun","value":"Stockholm (Västerort)"},{"label":"Stadsdelar som nämns","value":"Äppelviken, Norra Ängby, Södra Ängby, Ulvsunda, Bromma kyrka, Nockeby, Mariehäll"},{"label":"Hustyper","value":"Individuellt ritade villor, egnahem i trä i ett eller två plan, funktionalistiska villor"},{"label":"Byggperiod","value":"Villor från 1880-talet (Mariehäll) och omkring 1905, trädgårdsstad från 1913, Norra Ängby 1930–1941, Södra Ängby 1933–1939"}],
+    sourceLink: {"label":"Wikipedia, Bromma","url":"https://sv.wikipedia.org/wiki/Bromma"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Husen i Bromma är alltså olika gamla beroende på var man bor. De tidigaste villorna i Äppelviken är i dag över hundra år, egnahemmen i Norra Ängby mellan 85 och 95 år och villorna i Södra Ängby omkring 90 år. Husens ålder säger inte hur gammalt taket är. På så gamla hus kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Två saker är värda att tänka på. I ett område där husen byggdes efter samma ritningar ser taken lika ut från gatan, men de har skötts och lagts om var för sig. Och på en individuellt ritad villa är takets form, material och detaljer en del av husets uttryck. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. I Södra Ängby, som är riksintresse, är det extra viktigt att fråga innan du väljer material eller kulör. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Bromma och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "kungsholmen",
@@ -1839,20 +1839,20 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Farsta — takbyte och takrenovering i södra Stockholm. Fast pris, kostnadsfri takkontroll.",
+      "Takbyte och takomläggning i Farsta med omnejd: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll.",
     longDescription:
-      "Farsta och stadsdelarna runt Farsta strand har en blandning av 50-talsvillor, 70-talsradhus och nyare bostadsområden. En del av bebyggelsen har tak från den perioden, där betongpannor kan börja frostspränga och underlagspapp torka och spricka med åren. Vi utför takbyten och takomläggningar i Farsta med både plåt och pannor, och lämnar alltid fast pris efter kostnadsfri takkontroll. Vi bedömer behovet av snörasskydd och ser till att taksäkerheten uppfyller svenska krav.",
+      "Farsta är en stadsdel i Söderort i Stockholm, omkring åtta kilometer söder om innerstaden. Marken hörde till Farsta gård, som staden köpte 1912. Enligt Wikipedia började det moderna Farsta planläggas på 1940-talet och byggdes under 1950-talets senare hälft, efter en generalplan från 1955, med flerfamiljshus kring ett centrum som invigdes 1960. Villorna och småstugorna ligger i stadsdelarna runt omkring, och de är äldre än centrumet. I Tallkrogen består den övervägande delen av bebyggelsen av småhus. Enligt Wikipedia restes omkring 950 stugor där med självbyggeri fram till 1945. Olympiaområdet byggdes 1933–1934, och de flesta stugorna där hade bara två rum. Det finns ungefär tio hustyper, alla ritade av arkitekten Edvin Engström, och husen uppfördes i regi av Stockholms stads småstugebyrå. Svedmyra var obebyggt fram till 1930, så när som på några gårdar och torp. På 1930-talet öppnades en spårvagnslinje, och runt hållplatsen började småstugor byggas med självbyggeri. Wikipedia skriver att ett stort antal småhus uppfördes under 1930- och 1940-talen efter typhusritningar, och att den östra delen av stadsdelen mest är bebyggd med villor. I Sköndal fastställdes den första stadsplanen 1947. Den omfattade ett småstugeområde med omkring 160 hus för självbyggeri i stadsdelens västra del, där staden genom småstugebyrån tillhandahöll typritningar för tre varianter av stugor.",
     extraContent:
-      "I Farsta finns det ofta tak där mossbildningen på norrsidan är kraftig, särskilt nära grönområden och vatten. Regelbunden taktvätt kan förlänga takets liv, men när pannorna börjat frostspränga är omläggning bättre ekonomi. Vi ger en ärlig rekommendation vid varje takkontroll.",
-    uniqueFAQ: {
-      question: "När bör jag byta tak på min villa i Farsta?",
-      answer:
-        "Tecken på att det är dags: frostsprängda betongpannor, sliten eller torkad underlagspapp, mossa som inte går bort vid tvätt, eller rostiga plåtbeslag. Boka en kostnadsfri takkontroll så bedömer vi om omläggning eller komplett byte är bäst för just ditt hus.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Farsta?","answer":"Byggperiod enligt källorna: tallkrogen 1933–1945, Svedmyra 1930- och 1940-talen, Sköndals småstugor efter stadsplanen 1947, Farsta centrum 1950-talets senare hälft. Hustyper: småstugor och villor byggda med självbyggeri efter typritningar. Stadsdelen Farsta: flerfamiljshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Farsta",
     lat: 59.2422,
     lng: 18.0919,
-    nearbyLocations: ["Stockholm", "Tyresö", "Haninge"],
+    nearbyLocations: ["Stockholm","Tyresö","Haninge"],
+    factBox: [{"label":"Kommun","value":"Stockholm (Söderort)"},{"label":"Stadsdelar som nämns","value":"Farsta, Tallkrogen, Svedmyra, Sköndal"},{"label":"Hustyper","value":"Småstugor och villor byggda med självbyggeri efter typritningar. Stadsdelen Farsta: flerfamiljshus"},{"label":"Byggperiod","value":"Tallkrogen 1933–1945, Svedmyra 1930- och 1940-talen, Sköndals småstugor efter stadsplanen 1947, Farsta centrum 1950-talets senare hälft"}],
+    sourceLink: {"label":"Wikipedia, Farsta","url":"https://sv.wikipedia.org/wiki/Farsta"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Småstugorna i Tallkrogen och Svedmyra är i dag mellan 80 och drygt 90 år gamla, och stugorna i Sköndal närmare 80 år. Husens ålder säger inte hur gammalt taket är. På hus i den åldern kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Två saker är värda att tänka på. Stugorna byggdes små. Har huset byggts till sedan dess finns det takdelar av olika ålder på samma hus, och skarven mellan dem är värd en extra titt. Och i ett område där husen byggdes efter samma typritningar ser taken lika ut från gatan, men de har skötts och lagts om var för sig. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Farsta, Tallkrogen, Svedmyra eller Sköndal och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "solna",

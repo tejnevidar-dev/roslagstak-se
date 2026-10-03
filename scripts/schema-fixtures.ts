@@ -5,6 +5,7 @@
  */
 import { buildBreadcrumbSchema, buildFaqSchema, buildLocalBusinessSchema, services, SITE_URL } from "../src/lib/schema";
 import { locations } from "../src/data/locations";
+import { applyMall } from "../src/data/location-mall";
 import { generateLocationFAQs, generateServiceLocationFAQs } from "../src/data/location-faqs";
 import { allServiceSlugs } from "../src/data/service-slugs";
 import { getCombo, serviceSlugsFromTypes } from "../src/data/service-location-combos";
@@ -58,7 +59,7 @@ export const collectSchemas = (): SchemaSample[] => {
       page: hub,
       kind: "FAQPage",
       schema: buildFaqSchema(
-        generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ),
+        generateLocationFAQs(loc.name, prep, loc.isIsland, applyMall(loc).uniqueFAQ),
         `${SITE_URL}${hub}`,
       ) as Record<string, unknown>,
     });

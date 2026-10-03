@@ -46,7 +46,7 @@ export const problems: Problem[] = [
     gorInteSjalv:
       "Arbete på taket och vid skorstenen. Du kan fota fläckarna, lägga något under som samlar upp vattnet och notera när det läcker (vid regn, snösmältning eller blåst).",
     related: [
-      { to: "/akut-lackage", label: "Akut läckage i taket" },
+      { to: "/akut-lackage", label: "Läckage i taket" },
       { to: "/platslagare", label: "Plåtslagare för ditt tak" },
       { to: "/takreparation", label: "Takreparation vid läckage och skador" },
     ],
@@ -698,7 +698,7 @@ export const problems: Problem[] = [
     gorInteSjalv:
       "Gå inte upp på taket för att leta efter läckan, och försök inte täta från utsidan med fogmassa eller presenning på egen hand. Måla inte över fläcken förrän orsaken är åtgärdad: då döljs spåret som visar om läckaget fortsätter. Det du kan göra är att fotografera fläcken med datum, rita en tunn blyertslinje runt den för att se om den växer, och titta på vinden med ficklampa efter mörka ränder eller blöt isolering ovanför fläcken.",
     related: [
-      { to: "/akut-lackage", label: "Akut läckage" },
+      { to: "/akut-lackage", label: "Läckage i taket" },
       { to: "/takproblem/lackage-vid-skorsten", label: "Läckage vid skorsten" },
       { to: "/takproblem/lackage-vid-takfonster-och-genomforingar", label: "Läckage vid takfönster och genomföringar" },
       { to: "/takproblem/lackande-ranndal", label: "Läckande ränndal" },

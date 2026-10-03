@@ -23,7 +23,7 @@ const serviceTypes = [
     name: "Takbyte",
     verb: "byta tak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Planerar du ett takbyte ${prep} ${loc.name}? RoslagsTak är din takläggare för takbyte ${prep} ${loc.name}. Vi utför kompletta takbyten med alla typer av material — TP20 plåttak, dubbelfalsat plåttak, tegelplåt, pannplåt, betongpannor och lertegeltak.`,
+      `Planerar du ett takbyte ${prep} ${loc.name}? RoslagsTak är din takläggare för takbyte ${prep} ${loc.name}. Vi utför kompletta takbyten med alla typer av material — TP20 plåttak, dubbelfalsat plåttak, pannplåt, betongpannor och lertegeltak.`,
       `Ett takbyte ${prep} ${loc.name} innebär att vi river det gamla takmaterialet, inspekterar och vid behov byter råspont och underlagspapp, och sedan monterar nytt takmaterial. Vi installerar alltid ny taksäkerhet (takstege, gångbrygga, snörasskydd) och ser till att takavvattningen fungerar optimalt.`,
       loc.isIsland
         ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
@@ -33,7 +33,7 @@ const serviceTypes = [
             `Vi tar uppdrag ${prep} ${loc.name} och planerar resor, etablering och materialleverans i förväg, så att offerten blir tydlig.`,
           ),
       `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick. Som riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt från 1 200 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
-      `Kontakta oss för en kostnadsfri takkontroll och offert för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
+      `Kontakta oss för en kostnadsfri takkontroll för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
     ],
   },
   {
@@ -59,7 +59,7 @@ const serviceTypes = [
     name: "Takomläggning",
     verb: "lägga om tak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak utför professionell takomläggning ${prep} ${loc.name} — vi lägger om tak med TP20, dubbelfalsat plåttak, tegelplåt, pannplåt och betongpannor. Vi ger fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti till fastighetsägare ${prep} ${loc.name}.`,
+      `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak utför professionell takomläggning ${prep} ${loc.name} — vi lägger om tak med TP20, dubbelfalsat plåttak, pannplåt och betongpannor. Vi ger fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti till fastighetsägare ${prep} ${loc.name}.`,
       `Takomläggning ${prep} ${loc.name} innebär att befintligt takmaterial byts ut mot nytt. Vi inspekterar underlaget, byter råspont och underlagspapp vid behov, och monterar det nya takmaterialet. Vi ser alltid till att taksäkerhet, ventilation och takavvattning uppfyller gällande krav.`,
       loc.isIsland
         ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
@@ -120,7 +120,7 @@ const specialistServices = [
     name: "Plåttak",
     verb: "lägga plåttak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Plåttak ${prep} ${loc.name} är ett vanligt och prisvärt val för både villor och flerbostadshus. RoslagsTak monterar alla typer av plåttak: TP20 trapetsprofil, pannplåt, tegelprofilerad plåt och dubbelfalsat plåttak. Plåt är lätt, tåligt mot salt och vind och kräver minimalt underhåll — perfekt för hus ${prep} ${loc.name}.`,
+      `Plåttak ${prep} ${loc.name} är ett vanligt och prisvärt val för både villor och flerbostadshus. RoslagsTak monterar alla typer av plåttak: TP20 trapetsprofil, pannplåt och dubbelfalsat plåttak. Plåt är lätt, tåligt mot salt och vind och kräver minimalt underhåll — perfekt för hus ${prep} ${loc.name}.`,
       `Vid montering av plåttak ${prep} ${loc.name} kontrollerar vi alltid råspont, underlagspapp och läkt innan den nya plåten läggs. Vi använder färgbelagd stålplåt med hög korrosionsklass, monterar nya nockbeslag, vindskivebeslag och fotplåtar samt kompletterar med taksäkerhet enligt gällande krav.`,
       loc.isIsland
         ? `Plåttak är ett lätt material. Vilket material som passar ${prep} ${loc.name} går vi igenom vid takkontrollen.`
@@ -129,7 +129,7 @@ const specialistServices = [
             `Med vår bas i Norrtälje lägger vi plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
             `Vi lägger plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
           ),
-      `Ett plåttak ${prep} ${loc.name} — TP20, tegelprofilerad plåt eller dubbelfalsat. Som riktpris, efter ROT-avdrag och inkl. moms: TP20 från 1 200 kr/m², tegelprofilerad plåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll, som inkluderar montage, beslag och bortforsling av gammalt material. ROT-avdrag tillkommer.`,
+      `Ett plåttak ${prep} ${loc.name} — TP20, pannplåt eller dubbelfalsat. Som riktpris, efter ROT-avdrag och inkl. moms: TP20 från 1 200 kr/m², pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll, som inkluderar montage, beslag och bortforsling av gammalt material. ROT-avdrag tillkommer.`,
       `Boka kostnadsfri takkontroll för plåttak ${prep} ${loc.name} — vi hjälper dig välja profil, kulör och rätt korrosionsklass för läget. Ring 070-154 36 39.`,
     ],
   },
@@ -156,12 +156,12 @@ const specialistServices = [
     name: "Tegeltak",
     verb: "lägga tegeltak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Tegeltak ${prep} ${loc.name} ger den klassiska röda skärgårdskaraktären. RoslagsTak lägger både lertegel och tegelprofilerad plåt ${prep} ${loc.name} — och hjälper dig välja utifrån husets stil, takets lutning och budget.`,
+      `Tegeltak ${prep} ${loc.name} ger den klassiska röda skärgårdskaraktären. RoslagsTak lägger både lertegel och pannplåt ${prep} ${loc.name} — och hjälper dig välja utifrån husets stil, takets lutning och budget.`,
       `Vid arbete med tegeltak ${prep} ${loc.name} river vi gammalt tegel varsamt, byter underlagspapp och läkt, och lägger sedan nytt eller återanvänt tegel med korrekt överlapp. Vi plåtslår runt skorsten och genomföringar och ser till att luftspalten under teglet är fri så taket kan torka.`,
       loc.isIsland
-        ? `På ${loc.name} rekommenderar vi ofta tegelprofilerad plåt istället för lertegel — samma utseende men en bråkdel av vikten, vilket sänker transportkostnaden och belastningen på takstolarna.`
-        : `Vi lägger tegeltak ${prep} ${loc.name}, både i lertegel och tegelprofilerad plåt.`,
-      `Tegeltak ${prep} ${loc.name} i lertegel eller tegelprofilerad plåt, inklusive montage och beslag. Som riktpris, efter ROT-avdrag och inkl. moms: lertegel från 1 300 kr/m², tegelprofilerad plåt från 1 300 kr/m². Fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
+        ? `På ${loc.name} lägger vi lertegel och pannplåt, och vilket som passar ditt tak går vi igenom vid takkontrollen.`
+        : `Vi lägger tegeltak ${prep} ${loc.name}, både i lertegel och pannplåt.`,
+      `Tegeltak ${prep} ${loc.name} i lertegel eller pannplåt, inklusive montage och beslag. Som riktpris, efter ROT-avdrag och inkl. moms: lertegel från 1 300 kr/m², pannplåt från 1 300 kr/m². Fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
       `Boka kostnadsfri takkontroll för tegeltak ${prep} ${loc.name} — vi mäter och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
     ],
   },

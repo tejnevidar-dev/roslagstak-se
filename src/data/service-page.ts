@@ -150,7 +150,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
       "Byggställning",
     ],
     process: [
-      "Kostnadsfri takkontroll och offert",
+      "Kostnadsfri takkontroll",
       "Offert godkänns av kund",
       "Byggställning monteras",
       "Rivning av befintligt yttertak",
@@ -356,7 +356,7 @@ export const SERVICE_COPY = {
   ctaText: (slug: string) =>
     slug === "eternit-asbest"
       ? "Boka en kostnadsfri takkontroll så går vi igenom ditt eternittak."
-      : "Kontakta oss för en kostnadsfri takkontroll och offert.",
+      : "Kontakta oss för en kostnadsfri takkontroll.",
   ctaOffert: "Boka takkontroll",
   ctaAdvice: "Boka kostnadsfri takkontroll",
   relatedEyebrow: "Läs vidare",

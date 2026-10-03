@@ -34,7 +34,7 @@ const ProjectsPage = () => {
         <PageHero
           eyebrow="Referensjobb"
           title="Riktiga takprojekt i Roslagen"
-          text="Här visar vi jobb vi faktiskt utfört, med kundens samtycke. Riktiga bilder, riktiga material — inga påhittade case."
+          text="Här visar vi jobb vi har utfört, med kundens samtycke. Riktiga bilder, riktiga material."
         />
         <div className="container mx-auto px-4 pb-20 pt-4">
           <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">

@@ -118,7 +118,7 @@ const About = () => {
               <p>
                 Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett
                 komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya
-                plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Grisslehamn blev ett takbyte
+                plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Norrtälje kommun blev ett takbyte
                 klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre
                 delarna och delvis ny råspont. Båda jobben finns med bilder under{" "}
                 <Link to="/projekt" className="text-accent underline underline-offset-4 hover:no-underline">
