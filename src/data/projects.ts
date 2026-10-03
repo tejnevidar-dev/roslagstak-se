@@ -46,6 +46,7 @@ import imgSingoHeroWebp1440 from "@/assets/project-singo-hero-1440.webp";
 import imgSingoDetail1 from "@/assets/project-singo-detail-1.jpg";
 import imgSingoDetail1Webp from "@/assets/project-singo-detail-1-1080.webp";
 import type { MaterialSlug } from "@/data/materials";
+import { projectTexts } from "@/data/project-texts";
 import { locations, type LocationData } from "@/data/locations";
 import { distanceKm } from "@/data/service-reach";
 
@@ -78,32 +79,12 @@ export interface Project {
   gallery: { src: string; alt: string; webp?: string; width?: number; height?: number }[];
 }
 
-export const projects: Project[] = [
-  {
-    slug: "takrenovering-blido",
-    title: "Nytt tak på Blidö",
-    locationName: "Blidö, Norrtälje",
-    locationSlug: "blido",
-    serviceName: "Takrenovering",
-    serviceSlug: "takrenovering",
-    material: "Betongpannor (Benders, svart)",
-    materialSlugs: ["betongpannor"],
-    period: "sommaren 2026",
-    summary:
-      "Komplett takbyte på ett hus på Blidö i Norrtälje kommun, med svarta betongpannor från Benders, nytt underlag, ny läkt, nya plåtdetaljer och nya hängrännor. Befintlig råspont behölls.",
-    description: [
-      "Huset ligger i skogen på Blidö i Norrtälje kommun. Uppdraget var ett komplett takbyte, från underlag till avvattning, och arbetet gjordes sommaren 2026.",
-      "**Råsponten.** Råsponten är brädlagret som resten av taket vilar på. På Blidö behölls den befintliga råsponten. Läs mer om [takets underlag](/material/underlagstak).",
-      "**Nytt underlag.** Ovanpå råsponten lades ett nytt underlag. Det är takets andra skydd, som tar hand om det vatten som kan ta sig förbi pannorna.",
-      "**Ny läkt.** På underlaget sattes ny läkt, som pannorna vilar på och fästs i.",
-      "**Nya pannor.** Det nya ytmaterialet är [betongpannor](/material/betongpannor) från Benders, i svart.",
-      "**Nya plåtdetaljer och skorstensbeslag.** Plåtdetaljerna byttes, och skorstenarna fick nya beslag. Det är vid skorstenar, kanter och andra anslutningar som ett tak prövas hårdast, och därför görs de om när taket byts.",
-      "**Nya hängrännor.** Avvattningen ingick också: huset fick nya hängrännor.",
-      "**Så jobbar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där vi tittar på taket på plats. Därefter får kunden ett fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, och ROT-avdraget dras direkt på fakturan.",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning).",
-    ],
+type ProjectImages = Pick<Project, "heroImage" | "heroResponsive" | "gallery">;
+
+/** Bilder per projekt-slug. Texten kommer från src/data/project-texts.ts. */
+const projectImages: Record<string, ProjectImages> = {
+  "takrenovering-blido": {
     heroImage: imgBlidoHero,
-    heroAlt: "Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring.",
     heroResponsive: {
       avifSrcSet: `${imgBlidoHeroAvif480} 480w, ${imgBlidoHeroAvif768} 768w, ${imgBlidoHeroAvif1080} 1080w`,
       webpSrcSet: `${imgBlidoHeroWebp480} 480w, ${imgBlidoHeroWebp768} 768w, ${imgBlidoHeroWebp1080} 1080w`,
@@ -127,30 +108,8 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: "takbyte-singo",
-    title: "Nytt tak på Singö",
-    locationName: "Singö, Grisslehamn",
-    locationSlug: "singo",
-    serviceName: "Takbyte",
-    serviceSlug: "takomlaggning",
-    material: "Betongpannor på huvudtaket, TP20-plåt på de lägre delarna (båda röda)",
-    materialSlugs: ["betongpannor", "tp20-plattak"],
-    period: "september 2026",
-    summary:
-      "Komplett takbyte på ett hus på Singö i Grisslehamn, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Delar av råsponten byttes.",
-    description: [
-      "Huset ligger på Singö i Grisslehamn, Norrtälje kommun, med utsikt över fjärden. Uppdraget var ett komplett takbyte, som blev färdigt i september 2026.",
-      "**Råsponten.** Råsponten är brädlagret som resten av taket vilar på. På Singö byttes delar av råsponten, och resten behölls. Läs mer om [takets underlag](/material/underlagstak).",
-      "**Två material, en kulör.** Huset har ett huvudtak och lägre takdelar, och de fick olika material i samma röda kulör.",
-      "**Betongpannor på huvudtaket.** Huvudtaket fick röda [betongpannor](/material/betongpannor), ett tungt material som ger ett klassiskt pannat tak.",
-      "**TP20-plåt på de lägre delarna.** De lägre takdelarna fick röd [TP20](/material/tp20-plattak), en trapetsprofilerad plåt som är lätt jämfört med pannor. På bilden rakt ovanifrån syns hur de två materialen möts.",
-      "**Två jobb att jämföra.** På [Blidö](/projekt/takrenovering-blido) behölls hela råsponten, och huset fick svarta betongpannor. På Singö byttes delar av råsponten, och taket fick pannor och plåt i rött. Vad som behöver göras avgörs av skicket på just det taket.",
-      "**Så jobbar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där vi tittar på taket på plats. Därefter får kunden ett fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, och ROT-avdraget dras direkt på fakturan.",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke, även på startsidan. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning).",
-    ],
+  "takbyte-singo": {
     heroImage: imgSingoHero,
-    heroAlt: "Nytt tak på Singö i Grisslehamn med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna, med utsikt över fjärden.",
     heroResponsive: {
       avifSrcSet: `${imgSingoHeroAvif480} 480w, ${imgSingoHeroAvif768} 768w, ${imgSingoHeroAvif1080} 1080w, ${imgSingoHeroAvif1440} 1440w`,
       webpSrcSet: `${imgSingoHeroWebp480} 480w, ${imgSingoHeroWebp768} 768w, ${imgSingoHeroWebp1080} 1080w, ${imgSingoHeroWebp1440} 1440w`,
@@ -167,7 +126,13 @@ export const projects: Project[] = [
       },
     ],
   },
-];
+};
+
+export const projects: Project[] = projectTexts.map((t) => {
+  const images = projectImages[t.slug];
+  if (!images) throw new Error(`Projektet ${t.slug} saknar bilder i projects.ts (projectImages)`);
+  return { ...t, ...images };
+});
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 export const getProjectsByMaterial = (materialSlug: MaterialSlug) =>

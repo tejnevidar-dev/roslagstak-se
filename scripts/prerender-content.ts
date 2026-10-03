@@ -14,6 +14,7 @@ import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials } from "../src/data/materials";
+import { projectTexts } from "../src/data/project-texts";
 import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
@@ -94,52 +95,8 @@ const serviceExtraParagraphs: Record<string, string[]> = {
   ],
 };
 
-/**
- * Textspegling av src/data/projects.ts, utan bildimporterna (esbuild/Node kan inte
- * lösa Vite-bildimporter). Håll fälten i synk manuellt vid ändringar i projects.ts.
- */
-const projectSummaries = [
-  {
-    slug: "takrenovering-blido",
-    title: "Nytt tak på Blidö",
-    locationName: "Blidö, Norrtälje",
-    locationSlug: "blido",
-    serviceName: "Takrenovering",
-    serviceSlug: "takrenovering",
-    material: "Betongpannor (Benders, svart)",
-    period: "sommaren 2026",
-    summary:
-      "Komplett takbyte på ett hus på Blidö i Norrtälje kommun, med svarta betongpannor från Benders, nytt underlag, ny läkt, nya plåtdetaljer och nya hängrännor. Befintlig råspont behölls.",
-    description: [
-      "Huset ligger i skogen på Blidö i Norrtälje kommun. Uppdraget var ett komplett takbyte, från underlag till avvattning, och arbetet gjordes sommaren 2026.",
-      "Råsponten: den befintliga råsponten behölls. Nytt underlag och ny läkt lades ovanpå. Nytt ytmaterial är betongpannor från Benders i svart. Plåtdetaljerna och skorstensbeslagen byttes, och huset fick nya hängrännor.",
-      "Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, och ROT-avdraget dras direkt på fakturan.",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke.",
-    ],
-    ogImage: "/og/project-blido-hero.jpg",
-    ogImageAlt: "Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring.",
-  },
-  {
-    slug: "takbyte-singo",
-    title: "Nytt tak på Singö",
-    locationName: "Singö, Grisslehamn",
-    locationSlug: "singo",
-    serviceName: "Takbyte",
-    serviceSlug: "takomlaggning",
-    material: "Betongpannor på huvudtaket, TP20-plåt på de lägre delarna (båda röda)",
-    period: "september 2026",
-    summary:
-      "Komplett takbyte på ett hus på Singö i Grisslehamn, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Delar av råsponten byttes.",
-    description: [
-      "Huset ligger på Singö i Grisslehamn, Norrtälje kommun, med utsikt över fjärden. Uppdraget var ett komplett takbyte, som blev färdigt i september 2026.",
-      "Råsponten: delar av råsponten byttes, resten behölls. Huset har ett huvudtak och lägre takdelar som fick olika material i samma röda kulör — betongpannor på huvudtaket och TP20-plåt på de lägre delarna.",
-      "Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI, och ROT-avdraget dras direkt på fakturan.",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke, även på startsidan.",
-    ],
-    ogImage: "/og/project-singo-hero.jpg",
-    ogImageAlt: "Nytt tak på Singö i Grisslehamn med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna, med utsikt över fjärden.",
-  },
-];
+/** Referensjobbens text kommer direkt ur src/data/project-texts.ts (ren data, ingen spegling). */
+const projectSummaries = projectTexts.map((t) => ({ ...t, ogImageAlt: t.heroAlt }));
 
 
 const PHONE = "070-154 36 39";
@@ -631,12 +588,13 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: project.summary,
       h1: project.title,
       intro: project.summary,
-      paragraphs: [...project.description, `Material: ${project.material}. Utfört: ${project.period}.`],
+      paragraphs: [...project.description.map(stripInlineMd), `Material: ${project.material}. Utfört: ${project.period}.`],
       links: [
         ...primaryLinks,
         { href: "/projekt", label: "Alla referensjobb" },
         { href: `/tjanster/${project.serviceSlug}`, label: project.serviceName },
         { href: `/taklaggare-${project.locationSlug}`, label: `Takläggare i ${project.locationName}` },
+        ...project.description.flatMap(inlineMdLinks),
       ],
       ogImage: project.ogImage,
       ogImageAlt: project.ogImageAlt,
