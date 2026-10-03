@@ -165,3 +165,17 @@ export const buildFaqSchema = (faqs: FaqItem[], pageUrl?: string) => ({
 
 /** BreadcrumbList från en lista med [namn, sökväg]. @id kommer från sista stegets URL (lib/schema-graph.ts). */
 export const buildBreadcrumbSchema = (items: { name: string; path: string }[]) => buildBreadcrumbNode(items);
+
+/**
+ * Samma LocalBusiness-nod utan de tunga listorna (alla orter, tjänstekatalog, knowsAbout), för
+ * övriga sidor än startsidan och kontaktsidan: samma @id och samma kontaktuppgifter, med regionerna
+ * som areaServed. Håller HTML-storleken nere på de drygt 2 200 statiska sidorna.
+ */
+export const buildLocalBusinessLeanSchema = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { areaServed, knowsAbout, hasOfferCatalog, ...rest } = buildLocalBusinessSchema();
+  return {
+    ...rest,
+    areaServed: serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
+  };
+};

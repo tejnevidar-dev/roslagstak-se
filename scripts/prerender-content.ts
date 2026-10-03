@@ -46,6 +46,7 @@ import { regionBySlug, regionIntros, regionLongText, regionNeighbors, regionSlug
 
 // Fas 2.19: samma schemanoder som React-sidorna, exponerade för generate-static-heads.mjs.
 export { buildOrganizationNode, buildWebSiteNode, buildWebPageNode, buildBreadcrumbNode } from "../src/lib/schema-graph";
+export { buildLocalBusinessSchema, buildLocalBusinessLeanSchema } from "../src/lib/schema";
 
 export interface PrerenderPage {
   h1: string;

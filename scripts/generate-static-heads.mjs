@@ -43,6 +43,7 @@ await esbuild({
   format: "esm",
   platform: "node",
   target: "node18",
+  alias: { "@": resolve("src") },
   logLevel: "silent",
 });
 const {
@@ -52,6 +53,8 @@ const {
   buildWebSiteNode,
   buildWebPageNode,
   buildBreadcrumbNode,
+  buildLocalBusinessSchema,
+  buildLocalBusinessLeanSchema,
 } = await import(pathToFileURL(bundlePath).href);
 
 /* Cookie-bannerns text och localStorage-nyckel kompileras från samma källfiler som
@@ -219,8 +222,8 @@ let stripped = template.replace(
 );
 /* Fas 2.19: Organization, WebSite och WebPage ligger inte längre i index.html (där blev startsidans
    WebPage-nod kvar på VARJE sida). De byggs i stället här från lib/schema-graph.ts, med en egen
-   WebPage per route. LocalBusiness-blocket i skalet rörs inte. */
-const GRAPH_TYPES = new Set(["Organization", "WebSite", "WebPage"]);
+   WebPage per route. LocalBusiness (RoofingContractor) byggs ur lib/schema.ts i stället för den handkopia som låg i skalet. */
+const GRAPH_TYPES = new Set(["Organization", "WebSite", "WebPage", "RoofingContractor"]);
 stripped = stripped.replace(
   /[ \t]*<script type="application\/ld\+json">([\s\S]*?)<\/script>[ \t]*\r?\n?/g,
   (block, json) => {
@@ -319,7 +322,9 @@ for (const { path, robots } of routes) {
 
   const unesc = (v) =>
     v.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
-  const graphNodes = [buildOrganizationNode(), buildWebSiteNode()];
+  // Full LocalBusiness (orter, tjänstekatalog) bara på startsidan och kontaktsidan, lean på övriga (HTML-storlek).
+  const localBusiness = path === "/" || path === "/kontakt" ? buildLocalBusinessSchema() : buildLocalBusinessLeanSchema();
+  const graphNodes = [localBusiness, buildOrganizationNode(), buildWebSiteNode()];
   if (page) {
     const titleText = html.match(/<title>([^<]*)<\/title>/)?.[1];
     const descText = html.match(/<meta name="description" content="([^"]*)" \/>/)?.[1];

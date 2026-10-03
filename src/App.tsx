@@ -9,8 +9,6 @@ import Index from "./pages/Index.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import CookieBanner from "./components/CookieBanner";
 import PixelPageViewTracker from "./components/PixelPageViewTracker";
-import JsonLd from "./components/JsonLd";
-import { buildLocalBusinessSchema } from "./lib/schema";
 import { locationIndex } from "./data/location-index";
 import { brfLocationSlugs } from "./data/brf-locations";
 import { adLandingSlugs } from "./data/ad-landings";
@@ -61,7 +59,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <JsonLd data={buildLocalBusinessSchema()} />
+        {/* Fas 2.19: LocalBusiness, Organization, WebSite och WebPage skrivs i den statiska <head> av generate-static-heads.mjs (en källa, lib/schema-graph.ts + lib/schema.ts). */}
         <BrowserRouter>
           <Suspense fallback={<RouteFallback />}>
             <Routes>

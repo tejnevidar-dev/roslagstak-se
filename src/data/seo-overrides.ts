@@ -364,11 +364,6 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Sköndal i Söderort, med småstugor från 1940-talet och rad- och kedjehus från 1950- till 1970-talet. Kostnadsfri takkontroll.",
   },
-  herrangen: {
-    title: "Takbyte i Herrängen, Stockholm – fast pris",
-    description:
-      "Takbyte och takomläggning i Herrängen i Söderort, med självbyggda villor från 1940- och 1950-talen och radhus från 1950-talet. Kostnadsfri takkontroll.",
-  },
   barkarby: {
     title: "Takbyte i Barkarby och Skälby, Järfälla – fast pris",
     description:
@@ -568,11 +563,6 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     title: "Takbyte i Sandviken, Enhörna – fast pris",
     description:
       "Takbyte och takomläggning i Sandviken på Enhörnalandet, med sommarvillor från sekelskiftet 1900 och sportstugor från 1930-talet och framåt. Kostnadsfri takkontroll.",
-  },
-  ursvik: {
-    title: "Takbyte i Ursvik, Sundbyberg – fast pris",
-    description:
-      "Takbyte och takomläggning i Ursvik i Sundbyberg, med villasamhället i Lilla Ursvik där 1940-talets kataloghus dominerar. Kostnadsfri takkontroll.",
   },
   "enskede-gard": {
     title: "Takbyte i Enskede gård, Stockholm – fast pris",

@@ -23,7 +23,8 @@
     "postbuild": "bun scripts/validate-structured-data.mjs && bun scripts/check-sitemap.ts && bun scripts/link-audit.ts && bun scripts/geo-graph-audit.ts && bun scripts/thin-content-check.ts && bun scripts/content-depth-check.ts && node scripts/check-cookie-banner-sync.mjs",
     "check:content-coverage": "bun scripts/content-coverage-check.ts",
     "verify": "bun run build",
-    "verify:local": "bun run verify && bun scripts/content-coverage-check.ts && bun scripts/check-breadcrumbs.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "verify:local": "bun run typecheck && bun run verify && bun scripts/content-coverage-check.ts && bun scripts/check-breadcrumbs.mjs",
     "seo:weekly-report": "bun scripts/seo-weekly-report.ts"
   },
   "dependencies": {
