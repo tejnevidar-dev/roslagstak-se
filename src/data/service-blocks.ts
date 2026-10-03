@@ -95,7 +95,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       eyebrow: "Materialval",
       heading: "Fyra ytskikt vi lägger — och vad som skiljer dem",
       intro:
-        "Valet av ytskikt styr både pris, livslängd och hur taket tål Roslagens saltluft. Vi går igenom alternativen på plats innan offerten skrivs.",
+        "Valet av ytskikt styr både pris och utseende. Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Kännetecken", "Passar"],
       rows: [
         ["Profilerad plåt (TP20)", "Från 1 200 kr/m²", "Lätt, skruvad profilplåt", "Fritidshus, uthus, enkla sadeltak"],
