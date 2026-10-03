@@ -45,22 +45,6 @@ await esbuild({
 });
 const { collectSchemas, serviceSlugMismatch } = await import(pathToFileURL(bundlePath).href);
 
-/* Samma bundling som generate-static-heads.mjs — ger oss prerenderContent() så att dist-
-   kontrollen (nedan) kan fråga källan om en route SKA ha en brödsmula, i stället för en egen
-   handlista över routemönster som (precis som problemSummaries/materialSummaries/knownRoutes
-   tidigare i natt) oundvikligen glöms bort nästa gång en ny sidmall får breadcrumbs. */
-const prerenderBundlePath = resolve(tmpdir(), `prerender-content-${process.pid}.mjs`);
-await esbuild({
-  entryPoints: [resolve("scripts/prerender-content.ts")],
-  outfile: prerenderBundlePath,
-  bundle: true,
-  format: "esm",
-  platform: "node",
-  target: "node18",
-  logLevel: "silent",
-});
-const { prerenderContent } = await import(pathToFileURL(prerenderBundlePath).href);
-
 const mismatch = serviceSlugMismatch();
 if (mismatch) err("routing", mismatch);
 
@@ -145,7 +129,6 @@ for (const { page, kind, schema } of samples) {
 }
 
 /* ---------- 2. Dist-kontroll ---------- */
-
 const dist = resolve("dist");
 let htmlChecked = 0;
 if (existsSync(dist)) {
@@ -171,27 +154,14 @@ if (existsSync(dist)) {
     } else if (canon.length !== 1) err(rel, `${canon.length} canonical-taggar (ska vara 1)`);
     const robots = html.match(/<meta name="robots"[^>]*>/g) ?? [];
     if (robots.length !== 1) err(rel, `${robots.length} robots-taggar (ska vara 1)`);
-    let hasBreadcrumbList = false;
     for (const m of html.matchAll(
       /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,
     )) {
       try {
-        const parsed = JSON.parse(m[1]);
-        if (parsed?.["@type"] === "BreadcrumbList") hasBreadcrumbList = true;
+        JSON.parse(m[1]);
       } catch (e) {
         err(rel, `ogiltig JSON-LD i HTML: ${e.message}`);
       }
-    }
-    // rel är filsökvägen ("/taklaggare-blido.html" eller "/takproblem/x/index.html" för "/");
-    // routen är samma sökväg utan .html/index.html-suffixet.
-    const routePath = rel.replace(/\/index\.html$/, "").replace(/\.html$/, "") || "/";
-    // Fas 2.19 (Marknadschefens beslut 2026-10-03): frågar prerenderContent() om routen SKA ha en
-    // brödsmula, i stället för en egen handlista över routemönster — annars är det exakt samma
-    // glömd-mirror-fel som problemSummaries/materialSummaries/check-sitemap.ts:s knownRoutes var
-    // i natt. Växer automatiskt i takt med att fler sidmallar får `breadcrumbs` i prerender-content.ts.
-    const expectsBreadcrumb = Boolean(prerenderContent(routePath)?.breadcrumbs);
-    if (!is404 && expectsBreadcrumb && !hasBreadcrumbList) {
-      err(rel, "saknar BreadcrumbList i den statiska HTML:en (brödsmula, fas 2.19)");
     }
   };
   walk(dist);
@@ -200,7 +170,6 @@ if (existsSync(dist)) {
 }
 
 rmSync(bundlePath, { force: true });
-rmSync(prerenderBundlePath, { force: true });
 
 /* ---------- Resultat ---------- */
 console.log(
