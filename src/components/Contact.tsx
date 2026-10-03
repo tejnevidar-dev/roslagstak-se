@@ -157,7 +157,7 @@ const Contact = () => {
                 <span>Vi tar emot din förfrågan – ett ögonblick...</span>
               </div>
             )}
-            <p className="text-xs text-muted-foreground text-center">Vi återkommer inom 24 timmar. Kostnadsfritt och utan förbindelser.</p>
+            <p className="text-xs text-muted-foreground text-center">Vi återkommer inom 24 timmar. Kostnadsfritt och utan förpliktelser.</p>
             <p className="text-xs text-muted-foreground text-center">
               Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
               <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.

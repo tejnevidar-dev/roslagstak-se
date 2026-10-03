@@ -166,10 +166,10 @@ const LocationPage = () => {
   const metaDescription = usesMall(locations.find((l) => l.slug === location.slug) ?? location)
     ? location.description
     : location.isIsland
-    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
+    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
     : far
-      ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
-      : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`;
+      ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
+      : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`;
 
   // Title: keep under 60 chars for Google SERP
   const override = ortSeoOverrides[location.slug];
@@ -605,10 +605,10 @@ const LocationPage = () => {
                   Boka en kostnadsfri takkontroll för ditt takprojekt {prep} {location.name}. Vi återkopplar inom 24 timmar.
                 </p>
                 <Link
-                  to="/offert"
+                  to="/takkontroll"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
                 >
-                  Konfigurera din offert <ArrowRight className="w-4 h-4" />
+                  Boka kostnadsfri takkontroll <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
                   href="tel:+46701543639"

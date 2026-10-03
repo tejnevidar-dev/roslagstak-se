@@ -308,10 +308,10 @@ const ServiceLocationPage = () => {
                   Boka en kostnadsfri takkontroll för {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}. Vi återkopplar inom 24 timmar.
                 </p>
                 <Link
-                  to="/offert"
+                  to="/takkontroll"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
                 >
-                  Konfigurera din offert <ArrowRight className="w-4 h-4" />
+                  Boka kostnadsfri takkontroll <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
                   href="tel:+46701543639"

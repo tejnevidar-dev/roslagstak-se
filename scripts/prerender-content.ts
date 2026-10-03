@@ -319,10 +319,10 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
   },
   "/kontakt": {
-    title: "Kontakt och kostnadsfri takrådgivning",
+    title: "Kontakt och kostnadsfri takkontroll",
     description:
-      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll och offert i hela Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
-    h1: "Boka rådgivning med en takexpert",
+      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i hela Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
+    h1: "Boka kostnadsfri takkontroll",
     intro: `Ring ${PHONE} eller fyll i formuläret. Vi återkopplar inom 24 timmar — helt kostnadsfritt och utan förbindelser.`,
     paragraphs: [
       "Vi erbjuder kostnadsfri takkontroll och offert i hela Roslagen och Storstockholm, också på öar i skärgården. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
@@ -747,10 +747,10 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     return {
       title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
       description: ortSeoOverrides[loc.slug]?.description ?? (mall ? loc.description : loc.isIsland
-        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
+        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
         : isNearBase(loc)
-          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`
-          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och kostnadsfri offert.`),
+          ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
+          : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`),
       h1: loc.h1Override ??
         (loc.parentLocation
           ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`

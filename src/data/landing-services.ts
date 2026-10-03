@@ -568,7 +568,7 @@ export const landingServices: LandingService[] = [
       { title: "Tid att jämföra", text: "Du kan jämföra offerter och material i lugn och ro innan du bestämmer dig." },
       { title: "Tid att planera ekonomin", text: "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Kom ihåg att avdraget gäller per år." },
       { title: "Du väljer tidpunkt", text: "Vi bestämmer tidpunkt för arbetet tillsammans med dig efter offerten." },
-      { title: "Ingen förbindelse", text: "Takkontrollen är kostnadsfri och förpliktar inte till något." },
+      { title: "Inga förpliktelser", text: "Takkontrollen är kostnadsfri och förpliktar inte till något." },
     ],
     stepsHeading: "Så går det till",
     steps: [

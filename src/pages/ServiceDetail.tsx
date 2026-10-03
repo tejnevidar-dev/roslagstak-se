@@ -174,7 +174,7 @@ const ServiceDetail = () => {
 
               <div className="mt-2 flex flex-col gap-4 sm:flex-row">
                 <Link
-                  to="/offert"
+                  to="/takkontroll"
                   className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-full bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
                 >
                   {SERVICE_COPY.offertButton}
@@ -317,7 +317,7 @@ const ServiceDetail = () => {
                   {SERVICE_COPY.asideText}
                 </p>
                 <Link
-                  to="/offert"
+                  to="/takkontroll"
                   className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-cta px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-cta-foreground transition-colors hover:bg-primary-foreground hover:text-primary animate-subtle-pulse"
                 >
                   {SERVICE_COPY.asideCta}
@@ -503,7 +503,7 @@ const ServiceDetail = () => {
               <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
                 {slug !== "eternit-asbest" && (
                   <Link
-                    to="/offert"
+                    to="/takkontroll"
                     className="group inline-flex items-center justify-center gap-3 rounded-full bg-card px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
                   >
                     {SERVICE_COPY.ctaOffert}
@@ -511,7 +511,7 @@ const ServiceDetail = () => {
                   </Link>
                 )}
                 <Link
-                  to="/offert#radgivning"
+                  to="/takkontroll"
                   className={`inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] transition-colors ${
                     slug === "eternit-asbest"
                       ? "rounded-full bg-card text-primary hover:bg-secondary animate-subtle-pulse"

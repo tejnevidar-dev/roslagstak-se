@@ -26,7 +26,7 @@ const ContactLanding = () => {
       name: name.trim(),
       phone: phone.trim(),
       email: email.trim(),
-      message: withUtm(message.trim() || "Önskar kostnadsfri rådgivning (via kontaktsida)"),
+      message: withUtm(message.trim() || "Önskar kostnadsfri takkontroll (via kontaktsida)"),
     });
 
     if (error) {
@@ -49,15 +49,15 @@ const ContactLanding = () => {
     setMessage("");
     toast({
       title: "Tack för din förfrågan!",
-      description: "Vi återkopplar inom 24 timmar för att boka in din kostnadsfria rådgivning.",
+      description: "Vi återkopplar inom 24 timmar för att boka in din kostnadsfria takkontroll.",
     });
   };
 
   return (
     <>
       <SEOHead
-        title="Kontakt & Kostnadsfri Rådgivning — RoslagsTak"
-        description="Boka kostnadsfri rådgivning med RoslagsTak. Ring 070-154 36 39 eller fyll i formuläret — vi återkopplar inom 24 timmar. Takläggare i Roslagen, Blidö, Norrtälje & skärgården."
+        title="Kontakt & Kostnadsfri Takkontroll — RoslagsTak"
+        description="Boka kostnadsfri takkontroll med RoslagsTak. Ring 070-154 36 39 eller fyll i formuläret — vi återkopplar inom 24 timmar. Takläggare i Roslagen, Blidö, Norrtälje & skärgården."
         canonical="https://roslagstak.se/kontakt"
       />
 
@@ -86,13 +86,13 @@ const ContactLanding = () => {
           <div className="container mx-auto px-4 max-w-3xl text-center space-y-5">
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
               <MessageCircle className="w-4 h-4" />
-              Kostnadsfri rådgivning
+              Kostnadsfri takkontroll
             </div>
             <h1 className="font-display text-3xl md:text-5xl text-accent-foreground">
-              Boka rådgivning med en takexpert
+              Boka kostnadsfri takkontroll
             </h1>
             <p className="text-accent-foreground/70 text-base md:text-lg leading-relaxed">
-              Ring oss direkt eller fyll i formuläret nedan. Vi återkopplar inom 24 timmar — helt kostnadsfritt och utan förbindelser.
+              Ring oss direkt eller fyll i formuläret nedan. Vi återkopplar inom 24 timmar — kostnadsfritt och utan förpliktelser.
             </p>
             <a
               href="tel:+46701543639"
@@ -115,8 +115,8 @@ const ContactLanding = () => {
                 <ul className="space-y-4 mb-8">
                   {[
                     { icon: MessageCircle, title: "1. Du hör av dig", text: "Ring eller fyll i formuläret — beskriv kort ditt projekt." },
-                    { icon: Clock, title: "2. Vi återkopplar inom 24h", text: "En takexpert kontaktar dig för rådgivning." },
-                    { icon: Shield, title: "3. Kostnadsfritt offertbesök", text: "Vi kommer ut, mäter och ger dig en offert utan förbindelser." },
+                    { icon: Clock, title: "2. Vi återkopplar inom 24h", text: "En av våra säljare kontaktar dig för att boka takkontrollen." },
+                    { icon: Shield, title: "3. Kostnadsfri takkontroll", text: "En av våra säljare tittar på taket på plats. Behöver taket åtgärdas får du en offert med fast pris." },
                   ].map((step) => (
                     <li key={step.title} className="flex gap-3">
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -156,9 +156,9 @@ const ContactLanding = () => {
               <form
                 className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-5 h-fit"
                 onSubmit={handleSubmit}
-                aria-label="Boka kostnadsfri rådgivning"
+                aria-label="Boka kostnadsfri takkontroll"
               >
-                <h2 className="font-display text-2xl text-foreground">Boka rådgivning</h2>
+                <h2 className="font-display text-2xl text-foreground">Boka kostnadsfri takkontroll</h2>
 
                 {submitted && (
                   <div className="flex items-start gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-4">
@@ -203,13 +203,13 @@ const ContactLanding = () => {
                     </>
                   ) : (
                     <>
-                      Boka kostnadsfri rådgivning
+                      Boka kostnadsfri takkontroll
                       <ArrowRight className="w-4 h-4" />
                     </>
                   )}
                 </button>
                 <p className="text-xs text-muted-foreground text-center">
-                  Vi återkommer inom 24 timmar. Kostnadsfritt och utan förbindelser.
+                  Vi återkommer inom 24 timmar. Kostnadsfritt och utan förpliktelser.
                 </p>
                 <p className="text-xs text-muted-foreground text-center">
                   Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}

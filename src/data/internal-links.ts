@@ -27,7 +27,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/takkontroll",
     label: "Kostnadsfri takkontroll",
-    description: "En av våra säljare tittar på taket på plats, ca 1–2 timmar, utan kostnad och utan förbindelser.",
+    description: "En av våra säljare tittar på taket på plats, ca 1–2 timmar, utan kostnad och utan förpliktelser.",
   },
   {
     to: "/takreparation",

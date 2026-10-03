@@ -327,7 +327,7 @@ export const SERVICE_COPY = {
   processHeading: (n: number) => `Arbetsgång i ${n} steg`,
   asideTitle: "Boka takkontroll",
   asideText: "Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.",
-  asideCta: "Starta förfrågan",
+  asideCta: "Boka takkontroll",
   photoLabel: "Foto",
   asideNote:
     "Vi tar uppdrag i Roslagen, Storstockholm och skärgården, och har gjort kompletta takbyten på Blidö och Singö.",
