@@ -208,6 +208,31 @@ export const materials: Material[] = [
         "Underlagspapp ligger dold under pannor eller plåt och är takets andra skydd. Takpapp (ytpapp) på ett papptak är själva det synliga taket. Råspont är brädlagret under pappen, och läkt är reglarna ovanpå som pannorna vilar på.",
     },
   },
+  {
+    slug: "pannplat",
+    href: "/material/pannplat",
+    title: "Pannplåt",
+    hubDescription: "Plåt med pannans form, lätt och snabb att lägga.",
+    weight: "Lätt",
+    visibleScrews: "Ja",
+    minLutning: "Enligt tillverkaren",
+    detail: {
+      metaTitle: "Pannplåt – tegelprofilerad plåt, för- och nackdelar",
+      metaDescription: "Pannplåt är stålplåt pressad i takpannans form. Så fungerar materialet, när det passar, vad som skiljer det från lertegel och vad du ska tänka på.",
+      intro: "Pannplåt är takplåt av stål som har pressats så att den ser ut som ett tak av takpannor. Den kallas också tegelprofilerad plåt eller tegelplåt. Materialet ger ett tak med pannans vågiga form och skuggor, men med plåtens låga vikt. Det gör pannplåt till ett alternativ när man vill behålla uttrycket av ett pannat tak utan att belasta konstruktionen som pannor gör.",
+      funktion: "Plåten levereras i skivor som täcker flera pannrader och flera pannor i bredd på en gång. Skivorna läggs på läkt över ett underlagstak och skruvas fast genom plåten med skruvar som har tätningsbricka. Skivorna överlappar varandra i sidled och i längsled, så att vattnet rinner från skiva till skiva ner mot takfoten. Vid nock, takfot, gavlar, ränndalar och genomföringar ansluts plåten med beslag som är anpassade efter profilen. Plåten har en ytbeläggning som ger färgen och skyddar stålet.",
+      anvandning: "Lutande tak på villor, fritidshus, garage och uthus. Pannplåt används både vid nybyggnad och när ett äldre tak ska bytas, särskilt när huset har haft pannor och man vill ha kvar samma uttryck. Vilka taklutningar en viss profil är gjord för anger tillverkaren.",
+      livslangd: "Beror på plåtens ytbeläggning, läget, hur infästningar och beslag är utförda och hur taket sköts. Det är ytbeläggningen som skyddar stålet, så skador i den bör åtgärdas innan rost får fäste. Tillverkarens uppgifter och garantier gäller.",
+      fordelar: "Lätt material som inte belastar takstolarna som betongpannor eller lertegel gör. Stora skivor gör att takytan täcks snabbt. Formen liknar ett pannat tak, vilket passar hus där ett slätt plåttak skulle ge ett annat uttryck. Det finns inga lösa pannor som kan glida eller blåsa av en och en. Ytan är slät, vilket ger mossa sämre fäste än på en sträv panna.",
+      nackdelar: "Skruvarna går igenom plåten, och varje skruv är en punkt som måste vara rätt dragen och tät. Kapade kanter och repor i ytbeläggningen är känsliga för rost. Regn och hagel hörs mer mot plåt än mot pannor, hur mycket beror på underlaget och isoleringen. På nära håll syns att det är plåt och inte pannor. En skadad skiva byts som en hel skiva, inte panna för panna.",
+      passarNar: "Du vill ha ett tak som ser ut som ett pannat tak men väger lite, till exempel när konstruktionen inte är byggd för tunga pannor. Du byter från pannor och vill behålla husets uttryck. Taket har en enkel form med få vinklar och genomföringar, där de stora skivorna kommer till sin rätt.",
+      underhall: "Titta över taket från marken en gång om året och efter hårt väder: lösa eller saknade skruvar, beslag som har rört sig, repor och begynnande rost. Håll taket fritt från löv och grenar som blir liggande i profilens dalar. Rensa hängrännorna så att vattnet kommer undan, se igensatta hängrännor. Gå inte på taket själv: plåten är hal och profilen kan bucklas av felaktig belastning.",
+      vanligaFel: "Läckage vid skruvar som har dragits snett, för hårt eller för löst, eller där tätningsbrickan har åldrats. Rost vid kapade kanter, repor och runt infästningar, se rostig plåt. Otäta anslutningar mot skorsten, vägg och genomföringar, där profilen gör tätningen svårare än på en plan yta. Läs mer om läckande plåttak.",
+      kostnadsdrivare: "Takets storlek och form, antalet vinklar, ränndalar och genomföringar, val av ytbeläggning, underlagets skick och om hängrännor och plåtdetaljer byts samtidigt.",
+      delAvTaksystemet: "Underlagstak, läkt, pannplåt, skruv med tätningsbricka, nock- och gavelbeslag, fotplåt, ränndalar, genomföringar och avvattning. Vid ett takbyte byts underlag och läkt, och råsponten kan ses över när det gamla taket är borta.",
+      hallIsar: "Pannplåt (tegelprofilerad plåt) är plåt som är pressad för att likna takpannor. Lertegel är pannor av bränd lera, läs mer på tegeltak. Betongpannor är gjutna pannor, se betongpannor. TP20 är trapetsprofilerad plåt med raka åsar i stället för pannform, se TP20. Dubbelfalsat plåttak har dolda infästningar och inga synliga skruvar, se plåtarbeten.",
+    },
+  },
 ];
 
 export const getMaterial = (slug: string) => materials.find((m) => m.slug === slug && m.detail);

@@ -199,6 +199,10 @@ const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
         `Ring ${PHONE} eller skicka en förfrågan på ${s.path}. Vi återkommer inom 24 timmar.`,
       ],
       links: [...primaryLinks, ...s.related.map((r) => ({ href: r.to, label: r.label }))],
+      breadcrumbs: [
+        { name: "Hem", path: "/" },
+        { name: s.breadcrumb, path: s.path },
+      ],
     } satisfies PrerenderPage,
   ]),
 );
@@ -225,6 +229,7 @@ const staticPages: Record<string, PrerenderPage> = {
       `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi återkopplar inom 24 timmar.`,
     ],
     links: [...primaryLinks, ...serviceLinks],
+    breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }],
   },
   "/taktyper": {
     title: "Taktyper — plåttak, tegel och betongpannor",
@@ -245,6 +250,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Osäker på vad som passar ditt hus? Boka en kostnadsfri takkontroll — vi tittar på konstruktion, lutning och läge och ger dig en ärlig rekommendation med fast pris.",
     ],
     links: [...primaryLinks, ...serviceLinks],
+    breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }],
   },
   "/brf": {
     title: "Takbyte för BRF — bostadsrättsföreningar",
@@ -289,6 +295,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Garantin står skriftligt i avtalet.",
     ],
     links: [...primaryLinks, ...serviceLinks],
+    breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }],
   },
   "/priser": {
     title: "Vad kostar takbyte? Priser 2026, efter ROT — Roslagen",
@@ -329,6 +336,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vi bygger kontinuerligt upp våra omdömen i takt med att projekt slutförs. Att lämna ett omdöme är helt frivilligt och sker utan någon form av ersättning.",
     ],
     links: [...primaryLinks, ...locationLinks.slice(0, 24)],
+    breadcrumbs: [{ name: "Startsidan", path: "/", visibleName: "Hem" }, { name: "Omdömen", path: "/recensioner" }],
   },
   "/blogg": {
     title: "Guider om tak — takbyte, priser och underhåll",
@@ -364,6 +372,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Akta läckage? Om taket läcker just nu — ring direkt istället för att fylla i formuläret. Vi prioriterar akuta läckage och kan ofta komma ut för en provisorisk tätning inom kort.",
     ],
     links: primaryLinks,
+    breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Kontakt", path: "/kontakt" }],
   },
   "/cookies": {
     title: "Cookies och integritet",
@@ -388,6 +397,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Nytt tak på Singö, Grisslehamn: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
     ],
     links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Nytt tak på Blidö" }, { href: "/projekt/takbyte-singo", label: "Nytt tak på Singö" }],
+    breadcrumbs: [{ name: "Startsidan", path: "/", visibleName: "Hem" }, { name: "Referensjobb", path: "/projekt" }],
   },
   "/takproblem": {
     title: "Takproblem – tecken, orsaker och vad du gör",
@@ -411,21 +421,10 @@ const staticPages: Record<string, PrerenderPage> = {
     intro:
       "Betongpannor, lertegel, plåt eller falsat — materialet avgör utseende, vikt och underhåll. Här går vi igenom vad som skiljer dem åt.",
     paragraphs: [
-      "Betongpannor: klassiskt pannat tak, tåligt men tungt.",
-      "Lertegel: det klassiska teglet, åldras med patina. Läs mer på /tjanster/tegeltak.",
-      "TP20-plåttak: lätt profilplåt, snabb att lägga.",
-      "Dubbelfalsat plåttak: bandtäckning utan synliga skruvar. Läs mer på /tjanster/platarbeten.",
-      "Papptak: tätt och lätt, för låglutande tak.",
+      ...materials.map((m) => `${m.title}: ${m.hubDescription}`),
+      "Vilket material som passar ditt hus beror på taket, lutningen, huset och uttrycket du vill ha. Boka en kostnadsfri takkontroll utan förpliktelser. Vi går upp på taket, och sedan får du ett fast pris för det material du väljer.",
     ],
-    links: [
-      ...primaryLinks,
-      { href: "/material/betongpannor", label: "Betongpannor" },
-      { href: "/tjanster/tegeltak", label: "Lertegel (tegeltak)" },
-      { href: "/material/tp20-plattak", label: "TP20-plåttak" },
-      { href: "/tjanster/platarbeten", label: "Dubbelfalsat plåttak" },
-      { href: "/material/papptak", label: "Papptak" },
-      { href: "/material/underlagstak", label: "Underlagstak" },
-    ],
+    links: [...primaryLinks, ...materials.map((m) => ({ href: m.href, label: m.title }))],
     breadcrumbs: [
       { name: "Startsidan", path: "/", visibleName: "Hem" },
       { name: "Material", path: "/material" },

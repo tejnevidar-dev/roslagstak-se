@@ -235,6 +235,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/takproblem/fuktflack-i-innertaket</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/material</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -261,6 +267,12 @@
   <url>
     <loc>https://roslagstak.se/material/underlagstak</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/material/pannplat</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -656,6 +668,12 @@
   <url>
     <loc>https://roslagstak.se/blogg/betongpannor-eller-lertegel</loc>
     <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/blogg/takkontroll-fore-vintern</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

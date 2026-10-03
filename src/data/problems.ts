@@ -677,6 +677,37 @@ export const problems: Problem[] = [
       { to: "/tjanster/taktvatt", label: "Taktvätt" },
     ],
   },
+  {
+    slug: "fuktflack-i-innertaket",
+    title: "Fuktfläck i innertaket",
+    metaTitle: "Fuktfläck i innertaket – var kommer vattnet ifrån?",
+    metaDescription:
+      "En gul eller mörk fläck i innertaket? Så ringar du in var vattnet kommer ifrån, vad du gör direkt och när taket behöver kontrolleras. Kostnadsfri takkontroll.",
+    intro:
+      "En fuktfläck i innertaket är ofta det första tecknet på att vatten har tagit sig in någonstans ovanför. Fläcken säger att något är fel, men sällan var. Vatten som kommer in genom taket kan rinna flera meter längs underlag, takstolar och isolering innan det syns i ett rum. Här går vi igenom hur du läser av fläcken, vilka orsaker som finns och hur du ringar in var vattnet kommer ifrån innan taket kontrolleras.",
+    symptom:
+      "En gulaktig eller brun fläck i innertaket, ofta med en mörkare kant. Färg som bubblar eller flagnar, tapet som släpper uppe vid taket, eller en taklist som har missfärgats. Fläcken kan växa efter regn eller när snö smälter och blekna däremellan. Ibland känns ytan fuktig eller mjuk, och i värsta fall droppar det. En unken lukt i rummet eller på vinden ovanför hör ofta ihop med fläcken. Lägg märke till var den sitter: nära en yttervägg, under en skorsten, under ett takfönster eller mitt i rummet.",
+    orsaker:
+      "En vanlig källa är en otät anslutning i taket snarare än själva takytan. Under en skorsten pekar fläcken mot beslaget runt den. Under eller intill ett takfönster, en ventilationshuv eller ett avloppsrör pekar den mot genomföringen. Längs en linje där två takfall möts pekar den mot ränndalen, och intill en kupa eller en tillbyggnad mot anslutningen mellan tak och vägg. En fläck vid ytterväggen kan komma från takfoten eller från hängrännor som svämmar över. En fläck mitt i takfallet tyder oftare på trasiga pannor, skadad plåt eller ett underlag som har åldrats. Alla fläckar är inte läckage utifrån: kondens på vinden, eller en vattenledning eller ett våtrum på våningen ovanför, kan ge samma bild.",
+    akut:
+      "När det droppar, när fläcken växer snabbt, när innertaket buktar eller när fukten är nära en lampa, ett eluttag eller annan el. Bryt då strömmen till det som berörs, ställ ett kärl under, flytta undan möbler och textilier och fotografera fläcken. Buktar innertaket står det vatten ovanför: håll dig undan från den delen av rummet. Hör sedan av dig till en takläggare, och kontakta ditt försäkringsbolag om skadan är stor.",
+    undersokning:
+      "Vid takkontrollen tittar vi på taket på plats. Berätta var fläcken sitter, när du såg den första gången och i vilket väder den växer, eftersom det ringar in var på taket vattnet kommer in. Där vinden går att komma åt följs fuktspåren därifrån, uppåt och bakåt från platsen ovanför fläcken, eftersom vattnet ofta har runnit en bit. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+    atgarder:
+      "Åtgärden beror på var vattnet kommer in. Ett otätt beslag eller en genomföring kan tätas eller göras om. Enstaka trasiga pannor byts, och en ränndal som har rostat får ny plåt. Visar det sig att underlaget har åldrats på stora delar av taket, eller att det finns flera läckage, är ett takbyte ofta bättre än att laga ett ställe i taget. Innertaket ska torka ut helt innan det spacklas och målas om, annars kommer fläcken tillbaka genom färgen. Är orsaken kondens eller en ledning inne i huset är det inte ett takarbete, och då säger vi det.",
+    gorInteSjalv:
+      "Gå inte upp på taket för att leta efter läckan, och försök inte täta från utsidan med fogmassa eller presenning på egen hand. Måla inte över fläcken förrän orsaken är åtgärdad: då döljs spåret som visar om läckaget fortsätter. Det du kan göra är att fotografera fläcken med datum, rita en tunn blyertslinje runt den för att se om den växer, och titta på vinden med ficklampa efter mörka ränder eller blöt isolering ovanför fläcken.",
+    related: [
+      { to: "/akut-lackage", label: "Akut läckage" },
+      { to: "/takproblem/lackage-vid-skorsten", label: "Läckage vid skorsten" },
+      { to: "/takproblem/lackage-vid-takfonster-och-genomforingar", label: "Läckage vid takfönster och genomföringar" },
+      { to: "/takproblem/lackande-ranndal", label: "Läckande ränndal" },
+      { to: "/takproblem/lackage-mellan-tak-och-vagg", label: "Läckage mellan tak och vägg" },
+      { to: "/takproblem/fukt-pa-vinden", label: "Fukt och mögel på vinden" },
+      { to: "/takproblem/kondens-pa-vinden", label: "Kondens på vinden" },
+      { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+    ],
+  },
 ];
 
 export const getProblem = (slug: string) => problems.find((p) => p.slug === slug);

@@ -40,7 +40,7 @@ const toSentences = (text: string) =>
   text
     .split("\n")
     .filter((l) => l.trim() && !l.startsWith("#"))
-    .map((l) => l.replace(/^\d+\.\s*/, ""))
+    .map((l) => l.replace(/^\d+\.\s*/, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"))
     .flatMap((l) => l.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g) || [])
     .map((s) => s.trim())
     .filter((s) => s.length > 25);
@@ -137,12 +137,13 @@ const MATERIAL_FIELDS = [
  *  stödja riktiga inline-länkar (större ändring av MaterialPage.tsx)? Till då: dokumenterat
  *  undantag, inte en tyst genväg. */
 const pmRiktprisGap = [
-  "Riktpriser finns på [/priser](/priser).",
-  "Ditt fasta pris får du efter en [kostnadsfri takkontroll](/takkontroll).",
+  "Riktpriser finns på /priser.",
+  "Ditt fasta pris får du efter en kostnadsfri takkontroll.",
 ];
 const pmAcceptedGaps: Record<string, string[]> = {
   "papptak.md": pmRiktprisGap,
   "underlagstak.md": pmRiktprisGap,
+  "pannplat.md": pmRiktprisGap,
 };
 
 type PmDir = { dir: string; kind: "takproblem" | "material"; fields: string[] };
@@ -207,6 +208,32 @@ for (const { dir, kind, fields } of pmDirs) {
       allResults.push({ page: `/${kind}/${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
     }
   }
+}
+
+/* ---------- 3) Guidetexter (/blogg/<slug>) ---------- */
+
+const guideDir = "../ledning/marknad/innehall/guidetexter";
+for (const file of readdirSync(resolve(guideDir)).filter((f) => f.endsWith(".md"))) {
+  const raw = readFileSync(join(resolve(guideDir), file), "utf8").replace(/\r/g, "");
+  const slug = raw.match(/\*\*Slug:\*\*\s*\/blogg\/([a-z0-9-]+)/)?.[1];
+  if (!slug) {
+    allResults.push({ page: "", file: `guidetexter/${file}`, status: "no-slug", missing: [], total: 0 });
+    continue;
+  }
+  if (only && !only.has(slug)) continue;
+  const page = prerenderContent(`/blogg/${slug}`);
+  if (!page) {
+    allResults.push({ page: `/blogg/${slug}`, file, status: "not-built", missing: [], total: 0 });
+    continue;
+  }
+  const body = (raw.split(/\n---\n/).slice(1).join("\n---\n").split(/\n## Källor/)[0] ?? "")
+    .split("\n")
+    .map((l) => l.replace(/^\s*- /, ""))
+    .join("\n");
+  const meningar = toSentences(body);
+  const liveText = norm([page.intro, ...page.paragraphs].join(" "));
+  const missing = meningar.filter((s) => !liveText.includes(norm(s)));
+  allResults.push({ page: `/blogg/${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
 }
 
 /* ---------- Rapport ---------- */
