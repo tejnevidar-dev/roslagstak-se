@@ -688,7 +688,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     return {
       title: rt?.title ?? `Takläggare i ${region}`,
       description: rt?.description ?? `Takbyte, takrenovering och plåtarbeten i ${region} — ${places.length} orter. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti. Ring ${PHONE}.`,
-      h1: `Takläggare i ${region}`,
+      h1: rt?.h1 ?? `Takläggare i ${region}`,
       intro: rt?.intro ?? regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
         ...(rt ? rt.body.map(stripInlineMd) : (regionLongText[region] ?? [])),

@@ -13,8 +13,12 @@ import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { regionBySlug } from "../src/data/regions";
 
-/** Bara texter som Marknadschefen har godkänt får byggas. Lägg till sluggen här när en brief är godkänd. */
-const APPROVED = new Set(["malardalen", "norra-skargarden", "radmansohalvon"]);
+/** Bara briefar med raden "**Grind:** GODKÄND ..." (Marknadschefens märkning) får byggas. */
+const isApproved = (raw: string) => /\*\*Grind:\*\*\s*GODKÄND/.test(raw);
+
+/** Rad som bara är en länklista ("**Ort:** [a](/x) · [b](/y)"): ersätts av sidens egen ortlista. */
+const isPureLinkList = (line: string) =>
+  line.replace(/\[[^\]]+\]\([^)]+\)/g, "").replace(/\*\*[^*]+:\*\*/g, "").replace(/[·\s]/g, "") === "";
 
 const dir = resolve("../ledning/marknad/innehall/regiontexter");
 const js = (s: string) => JSON.stringify(s);
@@ -26,12 +30,13 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
   const title = raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*·/)?.[1]?.trim();
   const description = raw.match(/\*\*Meta \(≤ 160\):\*\*\s*(.+)/)?.[1]?.trim();
   const region = slug ? regionBySlug(slug) : undefined;
-  if (slug && !APPROVED.has(slug)) {
+  const h1 = raw.match(/\*\*H1:\*\*\s*(.+?)\s*·/)?.[1]?.trim();
+  if (slug && !isApproved(raw)) {
     console.log(`[import-region] ${slug}: inte godkänd än, hoppar över`);
     continue;
   }
-  if (!slug || !title || !description || !region) {
-    console.error(`${file}: saknar Slug/Titel/Meta eller okänd region`, { slug, title, description, region });
+  if (!slug || !title || !description || !region || !h1) {
+    console.error(`${file}: saknar Slug/Titel/Meta/H1 eller okänd region`, { slug, title, description, region, h1 });
     process.exit(2);
   }
   const body = raw.split(/\n## Regiontext[^\n]*\n/)[1]?.split(/\n## /)[0] ?? "";
@@ -39,11 +44,14 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
   let skip = false;
   for (const line of body.split("\n").map((l) => l.trim()).filter(Boolean)) {
     if (line.startsWith("### ")) {
-      skip = /^### Orter (i|på) /.test(line);
+      skip = /^### Orter /.test(line);
       if (!skip) content.push("## " + line.slice(4));
       continue;
     }
-    if (!skip) content.push(line);
+    // I "### Orter …" utelämnas bara rena länklistor. Meningar där (t.ex. "Läs också om takbyte i …"
+    // eller hänvisning till grannregion) behålls som vanliga stycken.
+    if (skip && isPureLinkList(line)) continue;
+    content.push(line);
   }
   if (content.length < 5) {
     console.error(`${file}: för få stycken (${content.length})`);
@@ -51,6 +59,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
   }
   const [intro, ...rest] = content;
   entries.push(`  ${js(region)}: {
+    h1: ${js(h1)},
     title: ${js(title)},
     description: ${js(description)},
     intro: ${js(intro)},
@@ -69,6 +78,7 @@ writeFileSync(
  * "Takens förutsättningar"-text i regions.ts för de regioner som finns här.
  */
 export interface RegionText {
+  h1: string;
   title: string;
   description: string;
   intro: string;

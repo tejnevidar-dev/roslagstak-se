@@ -69,7 +69,7 @@ const RegionPage = () => {
               <MapPin className="h-3 w-3" aria-hidden="true" /> {region}
             </span>
             <h1 className="mt-5 font-display text-[clamp(2rem,4vw,3.2rem)] font-bold leading-[1.1] text-foreground">
-              Takläggare i {region}
+              {text?.h1 ?? `Takläggare i ${region}`}
             </h1>
             {intro && (
               <p className="mt-6 text-lg font-light leading-relaxed text-muted-foreground">{intro}</p>

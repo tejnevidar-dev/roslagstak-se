@@ -278,13 +278,16 @@ for (const file of readdirSync(resolve(regionDir)).filter((f) => f.endsWith(".md
     allResults.push({ page: path, file, status: "not-built", missing: [], total: 0 });
     continue;
   }
-  // "### Orter i/på <region>" ersätts av sidens egen ortlista (härledd ur locations.ts) och ingår inte.
-  let skipSection = false;
+  // Rena länklistor under "### Orter …" ersätts av sidans egen ortlista (härledd ur locations.ts) och
+  // ingår inte. Meningar i samma avsnitt ingår (samma regel som scripts/import-region.ts).
+  let inOrter = false;
+  const isPureLinkList = (l: string) =>
+    l.replace(/\[[^\]]+\]\([^)]+\)/g, "").replace(/\*\*[^*]+:\*\*/g, "").replace(/[·\s]/g, "") === "";
   const body = (raw.split(/\n## Regiontext[^\n]*\n/)[1]?.split(/\n## /)[0] ?? "")
     .split("\n")
     .filter((l) => {
-      if (l.startsWith("### ")) skipSection = /^### Orter (i|på) /.test(l);
-      return !skipSection;
+      if (l.startsWith("### ")) inOrter = /^### Orter /.test(l);
+      return !(inOrter && isPureLinkList(l.trim()));
     })
     .join("\n");
   const meningar = toSentences(body);
