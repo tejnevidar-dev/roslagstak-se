@@ -699,4 +699,29 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning på Husarö, lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
+  rindo: {
+    title: "Takbyte på Rindö – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning på Rindö och Skarpö i Vaxholm, öar med vägfärja och bro. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  tynningo: {
+    title: "Takbyte på Tynningö – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning på Tynningö i Vaxholm, sommarön med bilfärja. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  norrviken: {
+    title: "Takbyte i Norrviken – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Norrviken, Sollentunas villastad från 1906 med egnahem från 1930- och 1940-talen. Kostnadsfri takkontroll och fast pris.",
+  },
+  helenelund: {
+    title: "Takbyte i Helenelund – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Helenelund, Sollentunas sydligaste kommundel med villastäder från 1920- och 1930-talen. Kostnadsfri takkontroll och fast pris.",
+  },
+  rotebro: {
+    title: "Takbyte i Rotebro – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Rotebro i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
 };

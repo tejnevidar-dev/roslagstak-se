@@ -201,6 +201,8 @@ export const locationIndex: LocationSummary[] = [
   { slug: "malarhojden", name: "Mälarhöjden", region: "Stockholms stad", isIsland: false },
   { slug: "stureby", name: "Stureby", region: "Stockholms stad", isIsland: false },
   { slug: "resaro", name: "Resarö", region: "Kusten", isIsland: true },
+  { slug: "rindo", name: "Rindö", region: "Kusten", isIsland: true },
+  { slug: "tynningo", name: "Tynningö", region: "Kusten", isIsland: true },
   { slug: "duvbo", name: "Duvbo", region: "Norra Stockholm", isIsland: false },
   { slug: "smedslatten", name: "Smedslätten", region: "Stockholms stad", isIsland: false },
   { slug: "pershagen", name: "Pershagen", region: "Mälardalen", isIsland: false },
