@@ -218,7 +218,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takinspektion: {
-    longDesc: "En regelbunden takinspektion förebygger dyra skador. En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser.",
+    longDesc: "En regelbunden takkontroll förebygger dyra skador. En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser.",
     priceRange: "Helt kostnadsfritt — inga dolda avgifter.",
     benefits: [
       "Helt kostnadsfri och utan förbindelser",

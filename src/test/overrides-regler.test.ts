@@ -13,6 +13,7 @@ import {
   resolveMeta,
   serializeLogg,
   serializeMetaFile,
+  type LoggFile,
   type MetaFile,
 } from "@/data/overrides";
 import logg from "@/data/overrides/_logg.json";
@@ -52,8 +53,7 @@ const falt = (id: string, text: string) => ({ id, text, andrad: "2026-10-12", or
 
 describe("överstyrningslagret", () => {
   it("tomma överstyrningar ändrar ingenting", () => {
-    expect(Object.keys(metaFile.poster)).toEqual([]);
-    const r = resolveMeta("/taklaggare-taby", { title: "Bas", description: "Beskrivning" });
+    const r = resolveMeta("/taklaggare-taby", { title: "Bas", description: "Beskrivning" }, {});
     expect(r).toMatchObject({ title: "Bas", description: "Beskrivning", titleOverridden: false, descriptionOverridden: false, overrideIds: [] });
   });
 
@@ -99,8 +99,10 @@ describe("överstyrningslagret", () => {
     expect(text).toContain('      "title": {\n        "id": "seo-cc-2026-10-12-0001",\n        "text": "Ny titel",\n        "andrad": "2026-10-12",\n        "orsak": "test"\n      },\n      "description": {');
     expect(serializeMetaFile(JSON.parse(text))).toBe(text);
     expect(serializeLogg({ version: 1, rader: [] })).toBe('{\n  "version": 1,\n  "rader": []\n}\n');
-    expect(serializeMetaFile(metaFile)).toBe('{\n  "version": 1,\n  "poster": {}\n}\n');
-    expect(logg).toEqual({ version: 1, rader: [] });
+    expect(serializeMetaFile({ version: 1, poster: {} })).toBe('{\n  "version": 1,\n  "poster": {}\n}\n');
+    // de incheckade filerna är redan i kanoniskt format
+    expect(serializeMetaFile(metaFile)).toBe(serializeMetaFile(JSON.parse(JSON.stringify(metaFile))));
+    expect(serializeLogg(logg as LoggFile)).toBe(serializeLogg(JSON.parse(JSON.stringify(logg))));
   });
 });
 

@@ -29,8 +29,8 @@ if (!/\*\*Grind:\*\*\s*GODKÄND/.test(raw)) {
 }
 const field = (re: RegExp) => raw.match(re)?.[1]?.trim();
 const slug = field(/\*\*Slug:\*\*\s*\/blogg\/([a-z0-9-]+)/);
-const title = field(/\*\*(?:Ny titel|Titel) \(≤ 60\):\*\*\s*(.+)/)?.replace(/\s*\(\d+\)\s*$/, "");
-const excerpt = field(/\*\*Meta \(≤ 160\):\*\*\s*(.+)/)?.replace(/\s*\(\d+\)\s*$/, "");
+const title = field(/\*\*(?:Ny titel|Titel) \(≤ ?60\):\*\*\s*(.+)/)?.replace(/\s*\(\d+\)\s*$/, "");
+const excerpt = field(/\*\*Meta \(≤ ?160\):\*\*\s*(.+)/)?.replace(/\s*\(\d+\)\s*$/, "");
 const kwLine = field(/\*\*Primärt sökord:\*\*\s*(.+)/);
 if (!slug || !title || !excerpt || !kwLine) {
   console.error("Saknar Slug/titel/meta/sökord i briefens huvud.", { slug, title, excerpt, kwLine });

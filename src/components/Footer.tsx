@@ -9,7 +9,7 @@ const tjanster = [
   { to: "/tjanster/takrenovering", label: "Takrenovering" },
   { to: "/tjanster/takavvattning", label: "Takavvattning" },
   { to: "/tjanster/platarbeten", label: "Plåtarbeten" },
-  { to: "/tjanster/takinspektion", label: "Takinspektion" },
+  { to: "/tjanster/takinspektion", label: "Takkontroll" },
   { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   { to: "/takreparation", label: "Takreparation" },
   { to: "/rot-avdrag", label: "ROT-avdrag på tak" },

@@ -189,9 +189,9 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takinspektion: {
-    seoTitle: "Kostnadsfri Takinspektion Roslagen — Fast pris",
+    seoTitle: "Kostnadsfri Takkontroll Roslagen — Fast pris",
     seoDescription:
-      "Kostnadsfri takinspektion i Roslagen och skärgården. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
+      "Kostnadsfri takkontroll i Roslagen och skärgården. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "accent", label: "Kostnad", value: "0 kr", text: "Helt kostnadsfri och utan förbindelser — även på öar." },

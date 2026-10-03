@@ -12,7 +12,7 @@ const serviceItems: MenuItem[] = [
   { label: "Takrenovering", to: "/tjanster/takrenovering" },
   { label: "Takavvattning", to: "/tjanster/takavvattning" },
   { label: "Takkupor & fönster", to: "/tjanster/takkupor" },
-  { label: "Takinspektion", to: "/tjanster/takinspektion" },
+  { label: "Takkontroll", to: "/tjanster/takinspektion" },
   { label: "Plåtarbeten", to: "/tjanster/platarbeten" },
   { label: "Takvård & taktvätt", to: "/tjanster/taktvatt" },
   { label: "Eternit & asbestsanering", to: "/tjanster/eternit-asbest" },

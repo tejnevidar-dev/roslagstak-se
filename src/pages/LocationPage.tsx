@@ -107,7 +107,7 @@ const LocationPage = () => {
     knowsAbout: [
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
       "Dubbelfalsat plåttak", "Tegelplåt", "Pannplåt", "Takavvattning",
-      "Hängrännor", "Takinspektion", "Taksäkerhet",
+      "Hängrännor", "Takkontroll", "Taksäkerhet",
       "Eternitsanering", "Asbestrivning", "Takkupor", "Takfönster",
       "Taktvätt", "Takmålning",
     ],
@@ -117,7 +117,7 @@ const LocationPage = () => {
       itemListElement: [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takbyte ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takrenovering ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takinspektion ${prep} ${location.name}` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takkontroll ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Plåtarbeten ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takavvattning ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Eternitsanering ${prep} ${location.name}` } },
@@ -571,7 +571,7 @@ const LocationPage = () => {
                     ? `${location.name} ligger i Mälardalen — ett område där öppna lägen med vind och snö, samt fukt nära vatten, ställer höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för läget.`
                     : <>{location.name} tillhör {location.region} i Roslagen — ett område där klimatet med {location.isIsland ? "havsvind, salt och fukt" : "kustnära fukt och vind"} ställer 
                   höga krav på takmaterial och utförande. Vi rekommenderar alltid material anpassat för {location.isIsland ? "skärgårdens hårda" : "det kustnära"} klimatet.</>} 
-                  Kontakta oss för en kostnadsfri takinspektion {prep} {location.name} — vi ger dig en ärlig bedömning och fast pris utan förbindelser.
+                  Kontakta oss för en kostnadsfri takkontroll {prep} {location.name} — vi ger dig en ärlig bedömning och fast pris utan förbindelser.
                 </p>
               </div>
 
@@ -657,7 +657,7 @@ const LocationPage = () => {
                     { name: "Takrenovering", slug: "takrenovering" },
                     { name: "Takavvattning", slug: "takavvattning" },
                     { name: "Plåtarbeten", slug: "platarbeten" },
-                    { name: "Takinspektion", slug: "takinspektion" },
+                    { name: "Takkontroll", slug: "takinspektion" },
                     { name: "Takkupor & takfönster", slug: "takkupor" },
                     { name: "Taktvätt & takmålning", slug: "takvard" },
                     { name: "Eternitsanering", slug: "eternit-asbest" },

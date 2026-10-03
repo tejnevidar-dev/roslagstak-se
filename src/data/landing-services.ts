@@ -227,7 +227,7 @@ export const landingServices: LandingService[] = [
     defaultTopic: "Takkontroll",
     formTitle: "Boka kostnadsfri takkontroll",
     related: [
-      { to: "/tjanster/takinspektion", label: "Takinspektion" },
+      { to: "/tjanster/takinspektion", label: "Takkontroll" },
       { to: "/takreparation", label: "Takreparation" },
       { to: "/tjanster/takrenovering", label: "Takrenovering" },
       { to: "/blogg/tecken-byta-tak", label: "Tecken på att det är dags att byta tak" },

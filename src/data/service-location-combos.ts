@@ -51,7 +51,7 @@ const serviceTypes = [
             `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
           ),
       `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag tillkommer.`,
-      `Boka en kostnadsfri takinspektion ${prep} ${loc.name}. Vi bedömer takets skick och ger dig en ärlig rekommendation — renovering eller takbyte. Kontakta oss så återkopplar vi inom 24 timmar.`,
+      `Boka en kostnadsfri takkontroll ${prep} ${loc.name}. Vi bedömer takets skick och ger dig en ärlig rekommendation — renovering eller takbyte. Kontakta oss så återkopplar vi inom 24 timmar.`,
     ],
   },
   {
@@ -82,7 +82,7 @@ const taktvattService = {
     `Behöver du taktvätt ${prep} ${loc.name}? RoslagsTak utför professionell taktvätt ${prep} ${loc.name}. Vi tar bort mossa, alger, lavar och smuts från ditt tak med skonsamma metoder som inte skadar takmaterialet — oavsett om du har betongpannor, tegelpannor, eternit eller plåttak. En regelbunden taktvätt ${prep} ${loc.name} förlänger takets livslängd med upp till 10–15 år och sparar dig tiotusentals kronor i framtida takbyten.`,
     `Mossa och alger trivs särskilt bra ${prep} ${loc.name} på grund av närheten till hav, sjöar och skog som ger fuktig luft. När mossan växer på taket håller den kvar fukten mot takmaterialet, vilket leder till frostsprängning på betong- och tegelpannor samt rost på plåttak. Vår taktvätt ${prep} ${loc.name} börjar med en grundlig rengöring där vi använder lågtryckstvätt eller manuell borstning beroende på takmaterial. Därefter behandlar vi taket med ett miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.`,
     loc.isIsland
-      ? `Vi utför taktvätt på öar i skärgården, också ${prep} ${loc.name}. Det fuktiga skärgårdsklimatet ger ofta kraftig mossbildning, och takets skick går vi igenom vid den kostnadsfria takkontrollen.`
+      ? `Vi utför taktvätt på öar i skärgården, också ${prep} ${loc.name}. Takets skick går vi igenom vid den kostnadsfria takkontrollen.`
       : byDistance(
           loc,
           `Med vår bas i Norrtälje tar vi uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse. De vanligaste problemen på tak ${prep} ${loc.name} är mossa på norrsidor och alger nära träd och vegetation.`,
@@ -123,7 +123,7 @@ const specialistServices = [
       `Plåttak ${prep} ${loc.name} är ett vanligt och prisvärt val för både villor och flerbostadshus. RoslagsTak monterar alla typer av plåttak: TP20 trapetsprofil, pannplåt, tegelprofilerad plåt och dubbelfalsat plåttak. Plåt är lätt, tåligt mot salt och vind och kräver minimalt underhåll — perfekt för hus ${prep} ${loc.name}.`,
       `Vid montering av plåttak ${prep} ${loc.name} kontrollerar vi alltid råspont, underlagspapp och läkt innan den nya plåten läggs. Vi använder färgbelagd stålplåt med hög korrosionsklass, monterar nya nockbeslag, vindskivebeslag och fotplåtar samt kompletterar med taksäkerhet enligt gällande krav.`,
       loc.isIsland
-        ? `Plåttak är ett lätt material, och i skärgården sliter saltluften på både pannor och plåt. Vilket material som passar ${prep} ${loc.name} går vi igenom vid takkontrollen.`
+        ? `Plåttak är ett lätt material. Vilket material som passar ${prep} ${loc.name} går vi igenom vid takkontrollen.`
         : byDistance(
             loc,
             `Med vår bas i Norrtälje lägger vi plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
@@ -148,7 +148,7 @@ const specialistServices = [
             `Vi tar uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
           ),
       `Ett tak med betongpannor ${prep} ${loc.name}, vid nyläggning eller omläggning av befintliga pannor med ny papp och läkt. Som riktpris ligger betongpannor från 1 200 kr/m², efter ROT-avdrag och inkl. moms. Vi lämnar fast pris efter kostnadsfri takkontroll. ROT-avdrag ger 30% på arbetskostnaden.`,
-      `Osäker på om ditt betongpannetak ${prep} ${loc.name} ska renoveras eller bytas? Boka en kostnadsfri takinspektion — vi ger en ärlig rekommendation. Ring 070-154 36 39.`,
+      `Osäker på om ditt betongpannetak ${prep} ${loc.name} ska renoveras eller bytas? Boka en kostnadsfri takkontroll — vi ger en ärlig rekommendation. Ring 070-154 36 39.`,
     ],
   },
   {
@@ -171,7 +171,7 @@ const specialistServices = [
     verb: "måla tak",
     generateContent: (loc: LocationData, prep: string) => [
       `Takmålning ${prep} ${loc.name} är det billigaste sättet att förlänga takets liv och få tillbaka ett fräscht utseende. RoslagsTak målar plåttak, betongpannetak och eternittak ${prep} ${loc.name} — alltid efter grundlig rengöring och rostbehandling.`,
-      `Vi börjar med tvätt och borttagning av mossa och alger, skrapar och rostskyddsbehandlar där det behövs, grundar och stryker sedan två gånger med takfärg avsedd för utsatta lägen. Nära kusten ${prep} ${loc.name} är rätt färgsystem avgörande — saltluft bryter ner billig färg på några år.`,
+      `Vi börjar med tvätt och borttagning av mossa och alger, skrapar och rostskyddsbehandlar där det behövs, grundar och stryker sedan två gånger med takfärg avsedd för utsatta lägen.`,
       loc.isIsland
         ? `Vi tar med tvättutrustning, färg och skyddsutrustning till ${loc.name} och planerar arbetet efter väderfönstret — takfärg behöver torrt väder och plusgrader.`
         : `Vi målar tak ${prep} ${loc.name} från april till oktober och bokar in arbetet efter överenskommelse.`,

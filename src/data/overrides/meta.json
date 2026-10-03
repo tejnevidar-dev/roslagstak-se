@@ -1,4 +1,37 @@
 {
   "version": 1,
-  "poster": {}
+  "poster": {
+    "/takbyte-taby": {
+      "title": {
+        "id": "seo-cc-2026-10-03-0002",
+        "text": "Nytt tak i Täby – takbyte med fast pris",
+        "andrad": "2026-10-03",
+        "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
+      }
+    },
+    "/taklaggare-akersberga": {
+      "title": {
+        "id": "seo-cc-2026-10-03-0001",
+        "text": "Takläggare i Åkersberga – byta tak, fast pris",
+        "andrad": "2026-10-03",
+        "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
+      }
+    },
+    "/taklaggare-vaxholm": {
+      "title": {
+        "id": "seo-cc-2026-10-03-0003",
+        "text": "Takläggare i Vaxholm – byta tak, fast pris",
+        "andrad": "2026-10-03",
+        "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
+      }
+    },
+    "/takrenovering-taby": {
+      "title": {
+        "id": "seo-cc-2026-10-03-0004",
+        "text": "Takrenovering i Täby – renovera taket, fast pris",
+        "andrad": "2026-10-03",
+        "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
+      }
+    }
+  }
 }

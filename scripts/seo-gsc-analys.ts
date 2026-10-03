@@ -305,5 +305,27 @@ const gammalTitel = (exp.pages ?? []).filter((p: { url: string; title: string })
 if (gammalTitel.length)
   out.push("", `**Obs till CRM:** i exportens sidlista har ${gammalTitel.length} av ${exp.pages.length} sidor startsidans titel ("Takläggare Roslagen — Takbyte & Takrenovering | RoslagsTak") fast deras live-HTML har egen titel (kontrollerat 2026-10-03, t.ex. /blogg/rot-avdrag-takbyte). CRM:s crawler verkar läsa en äldre eller JavaScript-lös variant. Det påverkar bara CRM:s tekniska issue-lista, inte sajten.`);
 
+// ---- 7. manuella titeländringar (logg före/efter och läspunkt) ----
+{
+  type LoggRad = { id: string; path: string; falt: string; fore: string | null; efter: string; tid: string };
+  const logg = JSON.parse(readFileSync(resolve("src/data/overrides/_logg.json"), "utf8")) as { rader: LoggRad[] };
+  const manuella = logg.rader.filter((r) => r.falt === "title");
+  h("## 7. Titeländringar: före och efter, och läspunkt");
+  if (!manuella.length) out.push("Inga titeländringar loggade.");
+  else {
+    out.push(
+      `Källa: \`src/data/overrides/_logg.json\` (id per ändring). Baslinjen är exporten ${exportDate} (28 dagar före ändringen). Läspunkten är 28 dagar efter att ändringen gick live: jämför visningar, klick och position per sida mot baslinjen och beskriv utan slutsats om effekt (siffrorna är små och Google hinner inte alltid omvärdera inom 28 dagar). Manuella ändringar, inte mätförsök.`,
+      "",
+      "| Datum | Id | Sida | Före | Efter | Baslinje: visn. / klick / pos. | Läspunkt |",
+      "|---|---|---|---|---|---|---|",
+    );
+    for (const r of manuella) {
+      const s = pageMap.get(r.path) as { impr: number; clicks: number; pos: number | null } | undefined;
+      const las = new Date(Date.parse(r.tid.slice(0, 10)) + 28 * 86400000).toISOString().slice(0, 10);
+      out.push(`| ${r.tid.slice(0, 10)} | ${r.id} | ${r.path} | ${r.fore ?? "–"} | ${r.efter} | ${s ? `${fmt(s.impr)} / ${s.clicks} / ${pos(s.pos)}` : "inga rader"} | ${las} |`);
+    }
+  }
+}
+
 writeFileSync(resolve("../ledning/marknad/seo-gsc-analys.md"), out.join("\n") + "\n");
 console.log(`[seo-gsc-analys] ${rows.length} par, ${totImpr} visningar, ${totClicks} klick → ledning/marknad/seo-gsc-analys.md`);

@@ -49,7 +49,7 @@ export const services = [
   {
     icon: IconInspection,
     slug: "takinspektion",
-    title: "Takinspektion",
+    title: "Takkontroll",
     short: "Kostnadsfri takkontroll",
     description:
       "Vi tittar på taket på plats och du får en rapport om takets skick och förslag på åtgärder, utan förpliktelser.",

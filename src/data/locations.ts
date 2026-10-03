@@ -213,7 +213,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Högmarsö är en lugnare ö i mellersta Roslagen, men klimatet är lika krävande som i resten av skärgården. Fukt, mossa och salt bryter långsamt ner takmaterial som inte är anpassat för miljön. TP20-plåttak med rätt underlag är ofta det optimala valet här — hållbart, underhållsfritt och estetiskt tilltalande.",
     extraContent:
-      "Högmarsö ligger nära Ljusterö och vi kombinerar ofta projekt på de två öarna. Det innebär att fastighetsägare på Högmarsö kan dra nytta av samordning och få ett förmånligt pris. Oavsett om du har en sommarstuga eller ett permanentboende rekommenderar vi en kostnadsfri takinspektion som utgångspunkt.",
+      "Högmarsö ligger nära Ljusterö och vi kombinerar ofta projekt på de två öarna. Det innebär att fastighetsägare på Högmarsö kan dra nytta av samordning och få ett förmånligt pris. Oavsett om du har en sommarstuga eller ett permanentboende rekommenderar vi en kostnadsfri takkontroll som utgångspunkt.",
     uniqueFAQ: {
       question:
         "Är det dyrare att byta tak på Högmarsö jämfört med fastlandet?",
@@ -344,12 +344,12 @@ export const locations: LocationData[] = [
     longDescription:
       "Spillersboda ligger vackert längs Roslagens kustlinje. Vi erbjuder en kostnadsfri takkontroll utan förpliktelser. Vi rekommenderar alltid den lösning som ger bäst värde — ibland räcker en renovering, ibland behövs ett komplett byte.",
     extraContent:
-      "Längs Roslagskusten sliter havsluften på både pannor och plåt. Vi rekommenderar aldrig ett takbyte om en renovering räcker, och du får svar inom 24 timmar.",
+      "Vi rekommenderar aldrig ett takbyte om en renovering räcker, och du får svar inom 24 timmar.",
     uniqueFAQ: {
       question:
-        "Hur påverkar havsluften i Spillersboda takets livslängd?",
+        "Hur bedömer ni taket i Spillersboda?",
       answer:
-        "Den fuktiga luften från kusten gör att mossa och alger får fäste snabbare, och att plåtbeslag och spik rostar tidigare än längre in i landet. Vid takkontrollen i Spillersboda kontrollerar vi därför beslag, infästningar och råspont extra noga, och föreslår material som klarar kustklimatet.",
+        "Vid takkontrollen i Spillersboda kontrollerar vi beslag, infästningar och råspont och föreslår material efter takets skick.",
     },
     primaryKeyword: "takläggare Spillersboda",
     lat: 59.7,
@@ -418,13 +418,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Svartnö — takbyte och takrenovering i Roslagens kustmiljö. TP20, dubbelfalsat och pannplåt.",
     longDescription:
-      "Svartnö i Roslagens kustlandskap kombinerar havsnära boende med de utmaningar det innebär för byggnader — framför allt taken. Fukt, mossa och salt i luften bryter ner material som inte är anpassat. Med 10 års utförandegaranti på alla våra arbeten kan du känna dig trygg. Boka en kostnadsfri takinspektion — vi ger dig en ärlig bedömning och fast pris.",
+      "Vi utför takbyte och takrenovering på Svartnö. Med 10 års utförandegaranti på alla våra arbeten kan du känna dig trygg. Boka en kostnadsfri takkontroll — vi ger dig en ärlig bedömning och fast pris.",
     extraContent:
       "Svartnö är populärt bland fritidshusägare som vill bo nära havet. Salta vindar och ett utsatt läge ställer särskilda krav på materialvalet. Kontakta oss för en kostnadsfri takkontroll.",
     uniqueFAQ: {
       question: "När bör man byta tak på ett hus på Svartnö?",
       answer:
-        "Tecken på att det är dags: mossa, fuktfläckar i underlaget, rostiga beslag eller spruckna pannor. Vi gör kostnadsfri takinspektion och ger dig en ärlig bedömning — ibland räcker det med en renovering istället för ett komplett byte.",
+        "Tecken på att det är dags: mossa, fuktfläckar i underlaget, rostiga beslag eller spruckna pannor. Vi gör kostnadsfri takkontroll och ger dig en ärlig bedömning — ibland räcker det med en renovering istället för ett komplett byte.",
     },
     primaryKeyword: "takläggare Svartnö",
     lat: 59.45,
@@ -1988,7 +1988,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Värmdö — takbyte och takrenovering i Stockholms södra skärgård. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Värmdö är en stor kommun som sträcker sig från tätorten Gustavsberg ut genom södra skärgården till öar som Sandhamn och Möja. Bebyggelsen varierar från villaområden till fritidshus och skärgårdsgårdar. Vi utför takbyten, takomläggningar och plåtarbeten med material valt för skärgårdsklimatet.",
+      "Värmdö är en stor kommun som sträcker sig från tätorten Gustavsberg ut genom södra skärgården till öar som Sandhamn och Möja. Bebyggelsen varierar från villaområden till fritidshus och skärgårdsgårdar. Vi utför takbyten, takomläggningar och plåtarbeten.",
     extraContent:
       "I Gustavsberg och tätorten är det fastlandsförhållanden. Kostnadsfri takkontroll och fast pris ingår alltid.",
     uniqueFAQ: {
@@ -2157,13 +2157,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Nynäshamn — takbyte och takrenovering i kustläge söder om Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Nynäshamn ligger längst söderut i Stockholms län med direktkontakt med öppet hav — ett kustläge som sliter hårt på takmaterial med salt, vind och fukt. Bebyggelsen varierar från villor i tätorten till fritidshus ut mot kusten. Vi utför takbyten, takrenoveringar och plåtarbeten i Nynäshamn med material valt för det hårda kustklimatet — korrosionsbeständig plåt och förstärkta infästningar.",
+      "Nynäshamn ligger längst söderut i Stockholms län med direktkontakt med öppet hav. Bebyggelsen varierar från villor i tätorten till fritidshus ut mot kusten. Vi utför takbyten, takrenoveringar och plåtarbeten i Nynäshamn.",
     extraContent:
-      "I Nynäshamns exponerade kustläge rekommenderar vi dubbelfalsad plåt eller TP20 med hög korrosionsklass, eftersom saltluften bryter ner billig plåt snabbt. Vi ökar infästningstätheten vid takfot, nock och gavlar utöver standard. Kostnadsfri takkontroll och fast pris ingår alltid.",
+      "Vi ökar infästningstätheten vid takfot, nock och gavlar utöver standard. Kostnadsfri takkontroll och fast pris ingår alltid.",
     uniqueFAQ: {
       question: "Vilket takmaterial passar kustläget i Nynäshamn?",
       answer:
-        "Nynäshamn ligger exponerat mot havet med salt luft och stark vind. Vi rekommenderar dubbelfalsad plåt eller TP20 med hög korrosionsklass och förstärkta infästningar. Betongpannor riskerar frostsprängning i det hårda klimatet. Boka en kostnadsfri takkontroll så ger vi en rekommendation för ditt hus och läge.",
+        "Vilket material som passar beror på huset och läget. Boka en kostnadsfri takkontroll så ger vi en rekommendation för ditt hus och läge.",
     },
     primaryKeyword: "takläggare Nynäshamn",
     lat: 58.9039,
@@ -4167,7 +4167,7 @@ export const locations: LocationData[] = [
     uniqueFAQ: {
       question: "Vilket takmaterial passar nära kusten i Nyköping?",
       answer:
-        "Plåt med hög korrosionsklass, dubbelfalsad bandtäckning eller lertegel klarar kustklimat väl. Viktigast är rätt infästningar och beslag. Vi rekommenderar material vid en kostnadsfri takkontroll.",
+        "Viktigast är rätt infästningar och beslag. Vi rekommenderar material vid en kostnadsfri takkontroll.",
     },
     primaryKeyword: "takläggare Nyköping",
     lat: 58.7531,
@@ -4182,13 +4182,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Trosa — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Trosa är en kuststad vid Trosaån med välbevarad småstadsmiljö, sommarhus och villor i kustnära lägen. Salt luft, fukt och vind från Östersjön slits på beslag, vindskivor och underlagspapp, och äldre träbebyggelse kräver rätt detaljer. Vi tar uppdrag i Trosa med takbyte, takrenovering, bandtäckning och plåtarbeten.",
+      "Trosa är en kuststad vid Trosaån med välbevarad småstadsmiljö, sommarhus och villor i kustnära lägen. Vi tar uppdrag i Trosa med takbyte, takrenovering, bandtäckning och plåtarbeten.",
     extraContent:
-      "Fritidshus och permanentbostäder nära vattnet har samma krav: material och infästningar som tål kustklimat. Vi går igenom takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris. Kontakta oss så bokar vi en tid.",
+      "Vi går igenom takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris. Kontakta oss så bokar vi en tid.",
     uniqueFAQ: {
       question: "Tar ni uppdrag på fritidshus i Trosa?",
       answer:
-        "Ja, vi tar uppdrag på både permanentbostäder och fritidshus i Trosa. Vi bedömer takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris, med material som klarar kustklimat.",
+        "Ja, vi tar uppdrag på både permanentbostäder och fritidshus i Trosa. Vi bedömer takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris.",
     },
     primaryKeyword: "takläggare Trosa",
     lat: 58.8973,

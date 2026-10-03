@@ -19,7 +19,7 @@ const serviceForSlug = (slug: string): { to: string; label: string } | null => {
     [/eternit|asbest/, { to: "/tjanster/eternit-asbest", label: "Eternit och asbest" }],
     [/mossa|takmalning|tvatt/, { to: "/tjanster/taktvatt", label: "Takvård och taktvätt" }],
     [/hangrannor|stupror|avrinning/, { to: "/tjanster/takavvattning", label: "Takavvattning" }],
-    [/inspektion|hur-lange|tecken/, { to: "/tjanster/takinspektion", label: "Takinspektion" }],
+    [/inspektion|hur-lange|tecken/, { to: "/tjanster/takinspektion", label: "Takkontroll" }],
     [/plat|bandtack|epdm|snorasskydd|vindskivor|takstege|falsad/, { to: "/tjanster/platarbeten", label: "Plåtarbeten" }],
     [/renovering|papp|ventilation/, { to: "/tjanster/takrenovering", label: "Takrenovering" }],
     [/byta|takbyte|tak-pa|lagga-om|forbered|kostnad|material/, { to: "/tjanster/takomlaggning", label: "Takomläggning" }],

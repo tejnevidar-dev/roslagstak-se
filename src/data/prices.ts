@@ -27,7 +27,7 @@ export const priceData = [
       { name: "Takavvattning (hängrännor)", priceRange: "Från ca 23 000 kr (efter ROT, inkl. moms)", description: "Komplett system med stuprör, beroende på husets storlek och våningar." },
       { name: "Takkupa", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive konstruktion, taktäckning och plåtarbete." },
       { name: "Takfönster (Velux)", priceRange: "Kontakta oss för skräddarsydd rådgivning!", description: "Inklusive montering och vattenavledning." },
-      { name: "Takinspektion", priceRange: "Kostnadsfritt", description: "Grundlig genomgång av taket med en rapport om takets skick." },
+      { name: "Takkontroll", priceRange: "Kostnadsfritt", description: "Grundlig genomgång av taket med en rapport om takets skick." },
     ],
   },
   {
@@ -35,7 +35,7 @@ export const priceData = [
     items: [
       { name: "Råspontbyte", priceRange: "Från 300 kr/m² (efter ROT, inkl. moms)", description: "Byte av skadat underlag vid takbyte." },
       { name: "Skorstensinklädnad", priceRange: "Från 7 000 kr (efter ROT, inkl. moms)", description: "Byte av skorstenskrans eller ny hel inklädnad av skorstenet. " },
-      { name: "Takstege + gångbrygga", priceRange: "Från 8 000 kr (efter ROT, inkl. moms)", description: "Komplett taksäkerhet." },
+      { name: "Takstege + gångbrygga", priceRange: "Från 8 000 kr (efter ROT, inkl. moms)", description: "Takstege och gångbrygga." },
       { name: "Snörasskydd", priceRange: "Från 600 kr/löpmeter (efter ROT, inkl. moms)", description: "Monteras vid takfot mot entréer och gångvägar." },
     ],
   },

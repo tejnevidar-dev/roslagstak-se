@@ -1,4 +1,37 @@
 {
   "version": 1,
-  "rader": []
+  "rader": [
+    {
+      "id": "seo-cc-2026-10-03-0001",
+      "path": "/taklaggare-akersberga",
+      "falt": "title",
+      "fore": "Takläggare i Åkersberga — Takbyte & Takrenovering",
+      "efter": "Takläggare i Åkersberga – byta tak, fast pris",
+      "tid": "2026-10-03T23:00:00+02:00"
+    },
+    {
+      "id": "seo-cc-2026-10-03-0002",
+      "path": "/takbyte-taby",
+      "falt": "title",
+      "fore": "Takbyte i Täby – fast pris efter takkontroll",
+      "efter": "Nytt tak i Täby – takbyte med fast pris",
+      "tid": "2026-10-03T23:00:00+02:00"
+    },
+    {
+      "id": "seo-cc-2026-10-03-0003",
+      "path": "/taklaggare-vaxholm",
+      "falt": "title",
+      "fore": "Takläggare i Vaxholm — Takbyte & Takrenovering",
+      "efter": "Takläggare i Vaxholm – byta tak, fast pris",
+      "tid": "2026-10-03T23:00:00+02:00"
+    },
+    {
+      "id": "seo-cc-2026-10-03-0004",
+      "path": "/takrenovering-taby",
+      "falt": "title",
+      "fore": "Takrenovering i Täby – kostnadsfri takkontroll",
+      "efter": "Takrenovering i Täby – renovera taket, fast pris",
+      "tid": "2026-10-03T23:00:00+02:00"
+    }
+  ]
 }

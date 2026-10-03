@@ -48,13 +48,13 @@ interface RegionProfile {
 const REGION_PROFILES: Record<string, RegionProfile> = {
   "Norra skärgården": {
     weather:
-      "öppet läge mot Ålands hav ger salt dimma, sidvind och isbildning i takfoten under vintern",
+      "öppet läge mot Ålands hav ger sidvind och isbildning i takfoten under vintern",
     buildings: "sommarstugor från 1950–70-talet, sjöbodar och några få permanentbebodda gårdar",
     materials: "ojämnt lagd korrugerad plåt, äldre pannplåt och tegel som lagts om i etapper",
     access: "material och utrustning går sjövägen, och det påverkar hur ett takbyte planeras",
   },
   "Mellersta skärgården": {
-    weather: "saltluft året runt och kraftiga vindbyar över öppna fjärdar sliter på beslag och nockplåt",
+    weather: "kraftiga vindbyar över öppna fjärdar och mycket beslag och nockplåt att se över",
     buildings: "skärgårdsstugor med rödfärgad panel blandat med nybyggda permanenthus",
     materials: "dubbelfalsad plåt, TP20 och betongpannor på hus från 1970- och 80-talet",
     access: "färjeled och begränsad uppställningsplats gör att vi förbereder etableringen i detalj",
@@ -114,7 +114,7 @@ const REGION_PROFILES: Record<string, RegionProfile> = {
     access: "trånga gaturum där material lyfts in från gatan under kort tid",
   },
   "Östra Stockholm": {
-    weather: "saltbemängd luft från Saltsjön och hård vind mot fasader i öppet läge",
+    weather: "hård vind mot fasader i öppet läge vid Saltsjön",
     buildings: "villor på höjdlägen, sekelskifteshus och moderna arkitektritade hus",
     materials: "falsad plåt, zink och tegel med komplicerade takfall",
     access: "branta uppfarter och nivåskillnader som kräver extra säkring vid arbetet",
@@ -177,7 +177,7 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
   ][v];
 
   const inspectNote = loc.isIsland
-    ? `Vid takkontrollen ${prep} ${loc.name} lägger vi extra vikt på beslag, infästningar och takfot, eftersom saltet angriper metall först där.`
+    ? `Vid takkontrollen ${prep} ${loc.name} lägger vi extra vikt på beslag, infästningar och takfot.`
     : `Vid takkontrollen ${prep} ${loc.name} börjar vi i rännor, genomföringar och nordsidan — det är där skadorna brukar visa sig först.`;
 
   const accessPara = loc.isIsland

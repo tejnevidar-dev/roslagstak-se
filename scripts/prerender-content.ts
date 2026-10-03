@@ -319,11 +319,11 @@ const staticPages: Record<string, PrerenderPage> = {
   "/kontakt": {
     title: "Kontakt och kostnadsfri takrådgivning",
     description:
-      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takinspektion och offert i hela Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
+      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll och offert i hela Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
     h1: "Boka rådgivning med en takexpert",
     intro: `Ring ${PHONE} eller fyll i formuläret. Vi återkopplar inom 24 timmar — helt kostnadsfritt och utan förbindelser.`,
     paragraphs: [
-      "Vi erbjuder kostnadsfri takinspektion och offert i hela Roslagen och Storstockholm, också på öar i skärgården. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
+      "Vi erbjuder kostnadsfri takkontroll och offert i hela Roslagen och Storstockholm, också på öar i skärgården. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
       "När du hör av dig får du svar inom 24 timmar. Vi bokar en tid för takkontroll som passar dig, tittar på taket tillsammans med dig om du vill, och lämnar därefter en skriftlig offert med fast pris.",
       "Vi tar uppdrag i hela Roslagen — Norrtälje, Österåker, Vaxholm, Östhammar och alla öar — samt i hela Storstockholm från Täby och Sollentuna till Nacka och Södertälje.",
       "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser), hur lång tid tar det (det beror på takets storlek, underlagets skick och väder) och kan man bo kvar under arbetet (ja, i de flesta fall).",

@@ -263,7 +263,7 @@ const ServiceLocationPage = () => {
                     <ArrowRight className="w-3 h-3" /> Takavvattning
                   </Link>
                   <Link to="/tjanster/takinspektion" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                    <ArrowRight className="w-3 h-3" /> Kostnadsfri takinspektion
+                    <ArrowRight className="w-3 h-3" /> Kostnadsfri takkontroll
                   </Link>
                   <Link to="/tjanster/eternit-asbest" className="flex items-center gap-2 text-sm text-primary hover:underline">
                     <ArrowRight className="w-3 h-3" /> Eternitsanering & asbest

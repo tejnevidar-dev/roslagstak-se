@@ -187,7 +187,7 @@ const glossary = [
   { term: "Algpåväxt", def: "Svarta eller mörkgröna strimmor från cyanobakterier. Indikerar fuktigt mikroklimat på taket — vanligt nära havet." },
   { term: "Takmålning", def: "Två strykningar med UV-beständig akrylfärg som skyddar pannor och ger taket nytt utseende i 10–15 år." },
   { term: "ROT-avdrag", def: "Skattereduktion på 30 % av arbetskostnaden för reparation och underhåll i bostad. Gäller taktvätt och takmålning." },
-  { term: "Fallskydd", def: "Personlig skyddsutrustning (sele, lina, förankring) som krävs vid takarbete enligt Arbetsmiljöverket." },
+  { term: "Fallskydd", def: "Personlig skyddsutrustning (sele, lina, förankring) som används vid takarbete." },
 ];
 
 const climateFactors = [

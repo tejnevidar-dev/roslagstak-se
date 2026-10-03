@@ -35,7 +35,7 @@ const faqs = [
     answer: "Vi återkopplar inom 24 timmar efter att du skickat in din förfrågan. Därefter kommer vi överens om en kostnadsfri takkontroll, och startdatum för arbetet bestäms tillsammans med dig i offerten.",
   },
   {
-    question: "Utför ni takinspektion?",
+    question: "Utför ni takkontroll?",
     answer: "Ja, vi erbjuder en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efteråt får du en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris.",
   },
   {

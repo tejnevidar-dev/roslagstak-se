@@ -36,7 +36,7 @@ export const services: { slug: string; name: string; description: string }[] = [
   },
   {
     slug: "takinspektion",
-    name: "Takinspektion",
+    name: "Takkontroll",
     description: "Kostnadsfri takkontroll av tak, underlagspapp, råspont, avvattning och taksäkerhet på plats.",
   },
   {
@@ -117,7 +117,7 @@ export const buildLocalBusinessSchema = () => ({
     "Tegelplåt",
     "Betongpannor",
     "Takavvattning",
-    "Takinspektion",
+    "Takkontroll",
     "Taksäkerhet",
     "Eternitsanering",
     "Takkupor",
