@@ -14,7 +14,10 @@ permissions:
 
 jobs:
   guard:
-    if: startsWith(github.head_ref, 'seo-cc/')
+    # Gäller grenar som heter seo-cc/… OCH varje PR som öppnats av botens GitHub-konto, oavsett grennamn
+    # (IT-stöds fynd: en läckt nyckel kunde annars gå runt spärren med ett annat grennamn). Sätt repo-variabeln
+    # SEO_CC_BOT_LOGIN (Settings → Secrets and variables → Actions → Variables) till botens kontonamn.
+    if: startsWith(github.head_ref, 'seo-cc/') || (vars.SEO_CC_BOT_LOGIN != '' && github.event.pull_request.user.login == vars.SEO_CC_BOT_LOGIN)
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -23,11 +26,18 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
           PR: ${{ github.event.pull_request.number }}
+          CHANGED: ${{ github.event.pull_request.changed_files }}
         run: |
           set -euo pipefail
           files=$(gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[] | .filename, (.previous_filename // empty)')
           if [ -z "$files" ]; then
             echo "Ingen ändrad fil hittades, avvisar för säkerhets skull."
+            exit 1
+          fi
+          # GitHubs fil-API visar högst 3 000 filer: listan måste vara lika lång som PR:ens changed_files
+          listed=$(gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[] | .filename' | wc -l)
+          if [ "$listed" -ne "$CHANGED" ]; then
+            echo "::error::Fillistan ($listed) är inte lika lång som PR:ens changed_files ($CHANGED), avvisar."
             exit 1
           fi
           fel=0

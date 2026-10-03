@@ -46,9 +46,10 @@ const ctx = { regler, sparr, kandaSidor: new Set(["/", "/taklaggare-taby", "/pri
 const sida = { paragraphs: ["a"], links: [{ href: "/x", label: "X" }], headingAt: { 0: 2 as const } };
 
 describe("innehållsöverstyrningar: tomt = ingen skillnad", () => {
-  it("den incheckade filen är tom och ger inga block", () => {
-    expect(innehallFile).toEqual({ version: 1, poster: {} });
-    expect(buildOverrideBlocks("/taklaggare-taby")).toBeNull();
+  it("tomma poster ger inga block, och den incheckade filen är i kanoniskt format (oavsett innehåll)", () => {
+    expect(buildOverrideBlocks("/taklaggare-taby", {})).toBeNull();
+    expect(serializeInnehallFile({ version: 1, poster: {} })).toBe('{\n  "version": 1,\n  "poster": {}\n}\n');
+    expect(serializeInnehallFile(JSON.parse(JSON.stringify(innehallFile)))).toBe(serializeInnehallFile(innehallFile));
   });
   it("applyOverrideBlocks utan block returnerar samma objekt", () => {
     expect(applyOverrideBlocks(sida, null)).toBe(sida);
