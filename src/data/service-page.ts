@@ -349,7 +349,7 @@ export const SERVICE_COPY = {
   scopeNote: "Allt specificeras i offerten — inga tillägg i efterhand utan att du godkänt dem.",
   craftEyebrow: "Hantverket",
   // Eternitsidan: inget "utfört i Roslagen" (juristen A1, vi har inga belagda saneringar).
-  craftCaption: (title: string, slug?: string) => (slug === "eternit-asbest" ? title : `${title} — utfört i Roslagen`),
+  craftCaption: (title: string, slug?: string) => (slug === "eternit-asbest" || slug === "taksakerhet" ? title : `${title} — utfört i Roslagen`),
   goodToKnowEyebrow: "Bra att veta",
   skargardenTitle: "Skärgården",
   skargardenText: "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
