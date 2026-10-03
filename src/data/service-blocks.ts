@@ -289,7 +289,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     blockPlacement: "before-spec",
     factCards: [
       { tone: "primary", label: "Regelverk", value: "Arbetsmiljöverket", text: "Arbetsmiljöverkets föreskrifter styr hela hanteringen." },
-      { tone: "outline", label: "Tillstånd", value: "Krävs, ca 8 veckor", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket innan rivning får starta." },
+      { tone: "outline", label: "Tillstånd", value: "Krävs, söks av saneringsfirman", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket innan rivning får starta." },
       { tone: "accent", label: "Sanering", value: "Fast pris efter takkontroll", text: "Sanering (via saneringsfirman) plus nytt tak. ROT-avdrag tillkommer på takarbetet." },
       { tone: "plain", label: "Avfall", value: "Godkänd deponi", text: "Emballerat, märkt och transporterat med dokumenterad kvittens." },
     ],
@@ -301,7 +301,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Eternit får inte kapas, borras, brytas eller högtryckstvättas. Fibrerna frigörs i luften och är hälsofarliga. All hantering sker enligt Arbetsmiljöverkets föreskrifter.",
       steps: [
         { code: "01", title: "Materialbedömning", text: "Vi identifierar eternit och bedömer skick, åtkomst och rivningsmetod på plats." },
-        { code: "02", title: "Tillstånd", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket, vanligtvis cirka 8 veckor före rivning." },
+        { code: "02", title: "Tillstånd", text: "Saneringsfirman söker tillstånd hos Arbetsmiljöverket före rivning." },
         { code: "03", title: "Saneringsplan", text: "Skyddszon, personlig skyddsutrustning, dammbindning och avfallsflöde fastställs skriftligt." },
         { code: "04", title: "Kontrollerad rivning", text: "Plattorna lyfts hela, dammbinds och hanteras utan kapning eller brytning." },
         { code: "05", title: "Emballering och transport", text: "Materialet dubbelemballeras, märks och transporteras till godkänd deponi med kvittens." },

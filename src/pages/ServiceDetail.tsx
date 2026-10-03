@@ -148,7 +148,7 @@ const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "säkert och enligt regelverk.",
     specs: [
       { k: "Regelverk", v: "Arbetsmiljöverkets föreskrifter" },
-      { k: "Tillstånd", v: "Krävs, ca 8 veckor" },
+      { k: "Tillstånd", v: "Krävs, söks av saneringsfirman" },
       { k: "Deponi", v: "Godkänd transport" },
     ],
     specHeading: "Sanering enligt Arbetsmiljöverkets föreskrifter — steg för steg",
@@ -330,7 +330,7 @@ const serviceDetails: Record<string, { longDesc: string; benefits: string[]; pro
     process: [
       "Kostnadsfri takkontroll och materialprovtagning",
       "Vi samordnar sanering med behörig saneringsfirma",
-      "Saneringsfirman söker tillstånd hos Arbetsmiljöverket (ca 8 veckor före) och river med skyddsåtgärder",
+      "Saneringsfirman söker tillstånd hos Arbetsmiljöverket före rivningen och river med skyddsåtgärder",
       "Emballering och transport till godkänd deponi (saneringsfirman)",
       "Inspektion av underlag och eventuell reparation",
       "Montering av nytt takmaterial",
@@ -828,7 +828,7 @@ const ServiceDetail = () => {
               {[
                 {
                   t: "Pris och ROT",
-                  d: details.priceRange ? withRotForbehall(details.priceRange) : "Fast pris efter kostnadsfri takkontroll.",
+                  d: `${details.priceRange ? withRotForbehall(details.priceRange) : "Fast pris efter kostnadsfri takkontroll."}${slug === "takinspektion" ? "" : " Tillägg bara efter ditt godkännande."}`,
                 },
                 {
                   t: "Garanti",
