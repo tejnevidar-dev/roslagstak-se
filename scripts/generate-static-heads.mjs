@@ -173,6 +173,9 @@ const bodyFor = (path) => {
     seen.add(l.href);
     return true;
   });
+  const extraJsonLd = (page.jsonLd ?? [])
+    .map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`)
+    .join("\n      ");
   const crumbs = page.breadcrumbs ?? [];
   const breadcrumbSchema = crumbs.length
     ? `<script type="application/ld+json">${JSON.stringify({
@@ -197,6 +200,7 @@ const bodyFor = (path) => {
     : "";
   return `<div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
       ${breadcrumbSchema}
+      ${extraJsonLd}
       ${breadcrumbNav}
       <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
       <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">${esc(page.h1)}</h1>

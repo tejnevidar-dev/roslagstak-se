@@ -10,6 +10,7 @@ import NotFound from "./NotFound";
 import { isHeading, stripInlineMd, renderInline } from "@/lib/inline-md";
 import { relatedForPost } from "@/data/blog-related";
 import { relatedPosts } from "@/data/related-posts";
+import { buildBlogPostingSchema } from "@/lib/blog-schema";
 
 /** Tjänstesida som passar artikelns ämne bäst (första träff vinner), för internlänkning från blogg till tjänst. */
 const serviceForSlug = (slug: string): { to: string; label: string } | null => {
@@ -55,36 +56,7 @@ const BlogPost = () => {
   const articleBody = post.content.map(stripInlineMd).join("\n\n");
   const wordCount = articleBody.split(/\s+/).filter(Boolean).length;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.date,
-    dateModified: post.updated ?? post.date,
-    inLanguage: "sv-SE",
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    url,
-    image: "https://roslagstak.se/og-image.jpg",
-    wordCount,
-    articleBody,
-    keywords: post.keywords.join(", "),
-    author: {
-      "@type": "Organization",
-      name: "RoslagsTak",
-      url: "https://roslagstak.se/",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "RoslagsTak",
-      url: "https://roslagstak.se/",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://roslagstak.se/og-image.jpg",
-      },
-    },
-    about: { "@type": "Place", name: "Roslagen, Stockholm, Sverige" },
-  };
+  const jsonLd = buildBlogPostingSchema(post);
 
   const breadcrumbsLd = {
     "@context": "https://schema.org",

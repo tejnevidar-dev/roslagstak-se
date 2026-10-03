@@ -21,6 +21,7 @@ import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks } from "../src/lib/inline-md";
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
+import { buildBlogPostingSchema } from "../src/lib/blog-schema";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -62,6 +63,8 @@ export interface PrerenderPage {
    *  Sista steget har alltid sin egen path (behövs för schemats sista item), men renderas aldrig
    *  som länk i den synliga navigeringen (mirrors Breadcrumbs.tsx: sista steget är alltid text). */
   breadcrumbs?: { name: string; path: string; visibleName?: string }[];
+  /** Extra JSON-LD-objekt som skrivs som <script type="application/ld+json"> i den statiska HTML:en (t.ex. BlogPosting). */
+  jsonLd?: Record<string, unknown>[];
   ogImageAlt?: string;
 }
 
@@ -661,6 +664,12 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...MONEY_LINKS,
         ...relatedPosts(post, 4).map((p) => ({ href: `/blogg/${p.slug}`, label: p.title })),
       ],
+      breadcrumbs: [
+        { name: "Startsidan", path: "/" },
+        { name: "Blogg", path: "/blogg" },
+        { name: post.title, path: `/blogg/${post.slug}` },
+      ],
+      jsonLd: [buildBlogPostingSchema(post)],
     };
   }
 
