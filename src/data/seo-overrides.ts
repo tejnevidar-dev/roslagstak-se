@@ -590,14 +590,14 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takbyte och takomläggning i Herräng: arbetarbostäder från 1905–1906, egnahem från 1920- och 1950-talen och senare villor. Kostnadsfri takkontroll.",
   },
   yxlan: {
-    title: "Takbyte på Yxlan och Blidö – fast pris",
+    title: "Takbyte på Yxlan, Norrtälje – fast pris",
     description:
-      "Takbyte och takomläggning på Yxlan och Blidö: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
+      "Takbyte och takomläggning på Yxlan: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
   },
   blido: {
-    title: "Takbyte på Yxlan och Blidö – fast pris",
+    title: "Takbyte på Blidö, Norrtälje – fast pris",
     description:
-      "Takbyte och takomläggning på Yxlan och Blidö: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
+      "Takbyte och takomläggning på Blidö: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
   },
   bergshamra: {
     title: "Takbyte i Bergshamra, Norrtälje – fast pris",
