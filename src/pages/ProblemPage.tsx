@@ -8,6 +8,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getProblem, SAKERHETSRUTA, type Problem } from "@/data/problems";
 import { guidesForTitle } from "@/data/related-posts";
+import { regionLinksForProblems, takkontrollLink } from "@/data/problem-links";
 import { getProject } from "@/data/projects";
 
 const sections: { key: keyof Problem; heading: string }[] = [
@@ -133,11 +134,27 @@ const ProblemPage = () => {
               ...(problem.related.some((r) => r.to === "/tjanster/takomlaggning")
                 ? []
                 : [{ to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" }]),
+              ...(problem.related.some((r) => r.to === takkontrollLink.to) ? [] : [takkontrollLink]),
             ].map((r) => (
               <Link
                 key={r.to}
                 to={r.to}
                 className="inline-flex items-center gap-2 rounded-full border border-primary/25 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
+                {r.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6 pb-12">
+          <p className="mb-3 text-sm font-semibold text-foreground">Vi tar uppdrag i dessa områden</p>
+          <div className="flex flex-wrap gap-2">
+            {regionLinksForProblems().map((r) => (
+              <Link
+                key={r.to}
+                to={r.to}
+                className="inline-flex items-center rounded-full border border-primary/25 px-4 py-2 text-sm text-foreground transition-colors hover:bg-primary/10"
               >
                 {r.label}
               </Link>

@@ -1,4 +1,5 @@
 import { GARANTI_RENOVERING } from "@/data/guarantee";
+import { problemsForLocation } from "@/data/problem-links";
 import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
@@ -626,6 +627,21 @@ const LocationPage = () => {
                   </div>
                 </div>
               )}
+
+              <div className="bg-card border border-border rounded-2xl p-6">
+                <h3 className="font-display text-lg text-card-foreground mb-3">Vanliga takproblem</h3>
+                <div className="space-y-2">
+                  {problemsForLocation(location.slug).map((p) => (
+                    <Link
+                      key={p.to}
+                      to={p.to}
+                      className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                    >
+                      <ArrowRight className="w-3 h-3" /> {p.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
               <div className="bg-card border border-border rounded-2xl p-6">
                 <h3 className="font-display text-lg text-card-foreground mb-3">Våra taktjänster</h3>

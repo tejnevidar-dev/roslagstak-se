@@ -79,7 +79,12 @@ for (const m of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) kandaSidor.add(overrid
 const ids = new Map<string, string>();
 const poster = meta.data.poster ?? {};
 for (const [path, post] of Object.entries(poster)) {
-  for (const m of checkPost(path, post, { regler: monster.data.monster, sparr: sparr.data, kandaSidor })) e(`meta.json ${m}`);
+  for (const m of checkPost(path, post, {
+      regler: monster.data.monster,
+      sparr: sparr.data,
+      kandaSidor,
+      bas: (p, falt) => (prerenderContent(p) as { title?: string; description?: string } | null)?.[falt],
+    })) e(`meta.json ${m}`);
   for (const f of FALT) {
     const falt = post[f];
     if (!falt?.id) continue;

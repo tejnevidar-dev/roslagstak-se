@@ -21,6 +21,7 @@ import { allServiceSlugs, generateCombos } from "../src/data/service-location-co
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody } from "../src/lib/body-items";
+import { problemsForLocation, regionLinksForProblems, takkontrollLink } from "../src/data/problem-links";
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
@@ -527,6 +528,8 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         { href: "/takproblem", label: "Alla takproblem" },
         ...problem.related.map((r) => ({ href: r.to, label: r.label })),
+        { href: takkontrollLink.to, label: takkontrollLink.label },
+        ...regionLinksForProblems().map((r) => ({ href: r.to, label: r.label })),
         ...guidesForTitle(problem.title, 2).map((g) => ({ href: `/blogg/${g.slug}`, label: g.title })),
         ...MONEY_LINKS,
       ],
@@ -768,6 +771,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...MONEY_LINKS,
         { href: regionHref, label: `Takläggare i ${loc.region}` },
         ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
+        ...problemsForLocation(loc.slug).map((p) => ({ href: p.to, label: p.label })),
         ...villaAreaLinks(loc.slug),
         ...combos
           .filter((c) => c.locationSlug === loc.slug)

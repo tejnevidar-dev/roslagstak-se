@@ -34,6 +34,20 @@ describe("förbjudna mönster mot fixturer", () => {
   }
 });
 
+describe("villkorade regler (T2: MATAKI och tätskiktsgaranti)", () => {
+  for (const f of (fixturer as unknown as { villkorad: { regel: string; falt: "title" | "description"; text: string; bas_med_ordet: string; bas_utan_ordet: string }[] }).villkorad) {
+    it(`${f.regel}: godkänd om sidans nuvarande värde redan har ordet`, () => {
+      expect(checkText(f.falt, f.text, regler, f.bas_med_ordet).map((t) => t.regel)).not.toContain(f.regel);
+    });
+    it(`${f.regel}: underkänd om sidans nuvarande värde saknar ordet`, () => {
+      expect(checkText(f.falt, f.text, regler, f.bas_utan_ordet).map((t) => t.regel)).toContain(f.regel);
+    });
+    it(`${f.regel}: underkänd när basvärdet är okänt`, () => {
+      expect(checkText(f.falt, f.text, regler).map((t) => t.regel)).toContain(f.regel);
+    });
+  }
+});
+
 const falt = (id: string, text: string) => ({ id, text, andrad: "2026-10-12", orsak: "test" });
 
 describe("överstyrningslagret", () => {

@@ -192,6 +192,105 @@
       "orsak": "Juridiska besked (bygglov, ångerrätt) utanför de juristgodkända guiderna är förbjudna (L5)."
     },
     {
+      "id": "inga-overraskningar",
+      "monster": "inga\\s+överraskningar",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "L1: tilläggsarbete kan uppstå vid dolda fel, 'inga överraskningar' är ett obelagt löfte."
+    },
+    {
+      "id": "taklaggare-med-bas",
+      "monster": "takläggare\\s+med\\s+bas",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "L4: 'Takfirma med bas i Norrtälje' i stället, tills Vidar har svarat på 10j (vem som utför arbetet)."
+    },
+    {
+      "id": "erfarenhet-och-alder",
+      "monster": "erfar|utbildad|års\\s+erfarenhet|sedan\\s+(19|20)\\d\\d|\\d+\\s+(tak|kunder|projekt|jobb)\\b",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Erfarenhet, utbildning, år i branschen och antal tak, kunder, projekt eller jobb är obelagt."
+    },
+    {
+      "id": "tjanster-v1-10i",
+      "monster": "plåtslag|taktvätt|takmålning|takvård|takkup|takfönster|velux",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "V1/10i: tjänster systemet inte får skriva om förrän detaljlöftena är bekräftade (plåtslageri, taktvätt, takmålning, takvård, takkupor, takfönster)."
+    },
+    {
+      "id": "lokal",
+      "monster": "\\blokal(a|t)?\\b",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Bara B1-formuleringarna om bas i Norrtälje är tillåtna, 'lokal' i övrigt är förbjudet."
+    },
+    {
+      "id": "t1-sammansatta-garantiord",
+      "monster": "(?<![\\p{L}])(?!utförandegaranti|tätskiktsgaranti)[\\p{L}]+garanti[\\p{L}]*|(?<![\\p{L}])garantier(?![\\p{L}])|(?<![\\p{L}])garantera[\\p{L}]*",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T1 (juristen): alla sammansatta garantiord utom utförandegaranti och tätskiktsgaranti, samt 'garantier' och 'garantera…', är förbjudna."
+    },
+    {
+      "id": "t2-mataki-tatskikt",
+      "monster": "mataki|tätskiktsgaranti",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "utom_om_bas_har_ordet": true,
+      "orsak": "T2 (juristen): MATAKI och tätskiktsgaranti får inte läggas in i maskinella titlar och meta förrän MATAKI har svarat, om inte sidans nuvarande värde redan har ordet."
+    },
+    {
+      "id": "t3-narvaro",
+      "monster": "nära\\s+dig|vi\\s+finns\\s+i(?!\\s+norrtälje)|på\\s+plats\\s+i(?!\\s+norrtälje)|baserad[e]?\\s+i(?!\\s+norrtälje)",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T3 (juristen): 'nära dig', 'vi finns i', 'på plats i' och 'baserad i' är förbjudna utom för Norrtälje."
+    },
+    {
+      "id": "t4-superlativ-och-expert",
+      "monster": "billig|lägsta\\s+pris|snabbast|tryggast|nr\\s*1|#1|(?<![\\p{L}])(expert|specialist|proffs)[\\p{L}]*",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T4 (juristen): billig…, lägsta pris, snabbast, tryggast, nr 1, #1 samt expert…, specialist… och proffs… är förbjudna."
+    },
+    {
+      "id": "t5-jamforelser",
+      "monster": "bättre\\s+än|jämfört\\s+med|till\\s+skillnad\\s+från|andra\\s+firmor",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T5 (juristen): jämförelser med andra firmor är förbjudna."
+    },
+    {
+      "id": "t6-tidspress",
+      "monster": "bara\\s+i\\s+dag|tider\\s+kvar|fullbokat|(före|innan)\\s+vintern|omgående|snabb\\s+start",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T6 (juristen): bara i dag, tider kvar, fullbokat, före/innan vintern, omgående och snabb start är förbjudna."
+    },
+    {
+      "id": "t7-prisloften",
+      "monster": "inga\\s+dolda|allt\\s+ingår|utan\\s+extra\\s+kostnad|spara\\s+\\d|\\d+\\s*%\\s*billigare",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T7 (juristen): inga dolda, allt ingår, utan extra kostnad, spara N och N % billigare är förbjudna."
+    },
+    {
+      "id": "t8-skrammande-kostnad",
+      "monster": "undvik\\s+dyra|dyra\\s+skador|kostsam[\\p{L}]*",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T8 (juristen): undvik dyra, dyra skador och kostsam… är förbjudna."
+    },
+    {
+      "id": "t9-behorig-asbest-eternit",
+      "monster": "behörig[\\p{L}]*|certifikat|(?<![\\p{L}])iso(?![\\p{L}])|asbest[\\p{L}]*|eternit[\\p{L}]*",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "T9 (juristen): behörig…, certifikat, ISO, asbest… och eternit… är förbjudna. Egna personnamn kan inte fångas av mönster och förbjuds i CRM:ets granskning."
+    },
+    {
       "id": "platshallare-och-fel",
       "monster": "undefined|null|\\{\\{|\\}\\}|lorem|\\[\\w+\\]|\\bTODO\\b|\\s{2,}",
       "flaggor": "i",

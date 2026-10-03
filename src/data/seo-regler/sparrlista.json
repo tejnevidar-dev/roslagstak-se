@@ -2,6 +2,19 @@
   "version": 1,
   "status": "UTKAST 2026-10-03 av Hemsida & SEO. Ägs av Marknadschefen och juristen (CODEOWNERS). Sidor och fält som maskinella ändringar aldrig får röra.",
   "sidor_exakt": [
+    "/",
+    "/priser",
+    "/takkontroll",
+    "/rot-avdrag",
+    "/hur-det-gar-till",
+    "/platslagare",
+    "/tjanster/platarbeten",
+    "/akut-lackage",
+    "/om-oss",
+    "/recensioner",
+    "/blogg/bygglov-byta-tak",
+    "/blogg/jamfora-offerter-takbyte",
+    "/blogg/rot-avdrag-takbyte",
     "/offert",
     "/kontakt",
     "/cookies",
@@ -15,6 +28,8 @@
     "/tjanster/eternit-asbest"
   ],
   "sidor_prefix": [
+    "/tjanster/",
+    "/projekt/",
     "/offert/",
     "/brf",
     "/admin",
@@ -30,5 +45,5 @@
     "design, komponenter, bilder",
     "texter med Grind-rad (briefar)"
   ],
-  "anmarkning": "Öppen fråga till Marknadschefen: titel och metabeskrivning på ortssidor kommer i dag från godkända briefar (seo-overrides.ts). Förslag: titel/meta får överstyras av systemet även där, eftersom de inte är brödtext. Ändra i så fall inget här; säg nej om de ska spärras."
+  "anmarkning": "Marknadschefens beslut 2026-10-03: titel och meta på ortssidor FÅR överstyras av systemet även när de kommer ur briefar (seo-overrides.ts), men briefens brödtext och H1 är spärrade. Villkor som CRM ska upprätthålla (kan inte kontrolleras i sajtens bygge): (1) sidor yngre än 56 dagar ändras inte, (2) brieftiteln och briefmetan sparas som återställningsvärde i CRM:ets logg, (3) allt i överstyrningen måste klara tillåtna-listan (inget pris i titel eller meta i version 1). Alla tjänstesidor (/tjanster/) och projektsidor (/projekt/) kräver Vidars OK och är därför spärrade här. Startsidan (/) är spärrad för alla fält."
 }

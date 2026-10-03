@@ -13,6 +13,8 @@ export interface Regel {
   flaggor?: string;
   falt: ("title" | "description")[];
   orsak: string;
+  /** Regeln gäller inte om sidans nuvarande (bas)värde redan innehåller ordet (T2, MATAKI). */
+  utom_om_bas_har_ordet?: boolean;
 }
 export interface Sparrlista {
   sidor_exakt: string[];
@@ -34,8 +36,10 @@ const regexOf = (r: Regel) => {
 };
 
 /** Förbjudna mönster som träffar en text. Tom lista = texten är ren. */
-export const checkText = (falt: "title" | "description", text: string, regler: Regel[]): Traff[] =>
-  regler.filter((r) => r.falt.includes(falt) && regexOf(r).test(text)).map((r) => ({ regel: r.id, orsak: r.orsak }));
+export const checkText = (falt: "title" | "description", text: string, regler: Regel[], bas?: string): Traff[] =>
+  regler
+    .filter((r) => r.falt.includes(falt) && regexOf(r).test(text) && !(r.utom_om_bas_har_ordet && bas !== undefined && regexOf(r).test(bas)))
+    .map((r) => ({ regel: r.id, orsak: r.orsak }));
 
 export const ID_FORMAT = /^seo-cc-\d{4}-\d{2}-\d{2}-\d{4}$/;
 export const POST_FIELDS: string[] = [...FALT];
@@ -51,10 +55,12 @@ export interface PostKontext {
   sparr: Sparrlista;
   /** Sökvägar som finns i sajten (sitemap + startsidan). */
   kandaSidor: Set<string>;
+  /** Sidans nuvarande (råa) titel eller beskrivning före överstyrning, för villkorade regler (T2). */
+  bas?: (path: string, falt: FaltNamn) => string | undefined;
 }
 
 /** Fel för ett enskilt fält (titel eller beskrivning) i en post. */
-export const checkFalt = (path: string, namn: FaltNamn, falt: MetaFalt, regler: Regel[]): string[] => {
+export const checkFalt = (path: string, namn: FaltNamn, falt: MetaFalt, regler: Regel[], bas?: string): string[] => {
   const fel: string[] = [];
   const e = (m: string) => fel.push(`${path} ${namn}: ${m}`);
   for (const k of Object.keys(falt)) if (!FALT_FIELDS.includes(k)) e(`okänt fält "${k}"`);
@@ -75,7 +81,7 @@ export const checkFalt = (path: string, namn: FaltNamn, falt: MetaFalt, regler: 
     if (text.length > 160) e(`beskrivningen är längre än 160 tecken (${text.length})`);
     else if (fitDescription(text) !== text) e("beskrivningen skulle kapas av sajten");
   }
-  for (const t of checkText(namn, text, regler)) e(`bryter mot regeln ${t.regel}: ${t.orsak}`);
+  for (const t of checkText(namn, text, regler, bas)) e(`bryter mot regeln ${t.regel}: ${t.orsak}`);
   return fel;
 };
 
@@ -90,7 +96,7 @@ export const checkPost = (path: string, post: MetaPost, ctx: PostKontext): strin
   if (!post.title && !post.description) e("minst ett av title och description krävs");
   for (const namn of FALT) {
     const falt = post[namn];
-    if (falt) fel.push(...checkFalt(path, namn, falt, ctx.regler));
+    if (falt) fel.push(...checkFalt(path, namn, falt, ctx.regler, ctx.bas?.(path, namn)));
   }
   return fel;
 };

@@ -5,10 +5,26 @@
     { "falt": "title", "text": "Takbyte i Täby – fast pris efter takkontroll" },
     { "falt": "title", "text": "Takläggare i Norrtälje – takkontroll utan förpliktelser" },
     { "falt": "title", "text": "Takbyte i Älta, Nacka – fast pris" },
+    { "falt": "title", "text": "Takbyte i Åkersberga – fast pris" },
+    { "falt": "title", "text": "Överraskande fast pris på takbyte i Åkersberga" },
+    { "falt": "description", "text": "Takbyte i Österåker med kostnadsfri takkontroll, fast pris och en kontaktperson hela vägen. Vi svarar inom 24 timmar." },
+    { "falt": "description", "text": "Takbyte och takomläggning i Vallentuna, vi finns i Norrtälje. Kostnadsfri takkontroll utan förpliktelser och fast pris." },
     { "falt": "title", "text": "Takfirma med bas i Norrtälje – takkontroll" },
+    { "falt": "title", "text": "Takfirma med bas i Norrtälje" },
+    { "falt": "description", "text": "Takbyte i Täby med 10 års utförandegaranti, fast pris efter kostnadsfri takkontroll och svar inom 24 timmar." },
+    { "falt": "description", "text": "Fast pris efter kostnadsfri takkontroll. Takbyte och takomläggning i Danderyd, vi har vår bas i Norrtälje." },
+    { "falt": "description", "text": "Takbyte och takomläggning i Sollentuna med en kontaktperson hela vägen och ROT-avdrag på 30 % av arbetskostnaden." },
     { "falt": "description", "text": "Takbyte och takomläggning i Täby med kostnadsfri takkontroll utan förpliktelser, fast pris och svar inom 24 timmar. 10 års utförandegaranti." },
-    { "falt": "description", "text": "Takbyte i Norrtälje: 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs. Kostnadsfri takkontroll, fast pris." },
     { "falt": "description", "text": "Takrenovering i Vallentuna med en kontaktperson hela vägen. Boka kostnadsfri takkontroll, vi svarar inom 24 timmar och ROT-avdraget dras på fakturan." }
+  ],
+  "villkorad": [
+    {
+      "regel": "t2-mataki-tatskikt",
+      "falt": "description",
+      "text": "Takbyte i Norrtälje: 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs. Kostnadsfri takkontroll, fast pris.",
+      "bas_med_ordet": "Takbyte i Norrtälje med 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs. Kostnadsfri takkontroll och fast pris.",
+      "bas_utan_ordet": "Takbyte i Norrtälje med kostnadsfri takkontroll och fast pris. Vi svarar inom 24 timmar och har vår bas i Norrtälje."
+    }
   ],
   "daliga": [
     { "falt": "title", "text": "Takbyte som håller i 50 år", "regel": "livslangd-i-ar" },
@@ -38,6 +54,28 @@
     { "falt": "title", "text": "Klart i Täby: nytt tak på Villavägen 12", "regel": "sociala-rubriker" },
     { "falt": "description", "text": "Nytt tak på Villavägen 12 i Täby, postnummer 183 52.", "regel": "personer-och-adresser" },
     { "falt": "description", "text": "Takbyte i Täby: 30 års garanti på alla jobb.", "regel": "garanti-ord-utanfor-g1-g3" },
-    { "falt": "title", "text": "Takläggare med bas i Norrtälje och egna hantverkare", "regel": "obelagda-egenskaper" }
+    { "falt": "title", "text": "Takläggare med bas i Norrtälje och egna hantverkare", "regel": "obelagda-egenskaper" },
+    { "falt": "title", "text": "Takläggare med bas i Norrtälje", "regel": "taklaggare-med-bas" },
+    { "falt": "description", "text": "Takbyte i Täby med fast pris och inga överraskningar, kostnadsfri takkontroll.", "regel": "inga-overraskningar" },
+    { "falt": "description", "text": "Takbyte i Täby av erfarna takläggare med 20 års erfarenhet och 300 jobb bakom oss.", "regel": "erfarenhet-och-alder" },
+    { "falt": "description", "text": "Vi har gjort takbyten sedan 2015, och över 500 kunder har valt oss i Täby.", "regel": "erfarenhet-och-alder" },
+    { "falt": "title", "text": "Takvård och taktvätt i Täby – fast pris", "regel": "tjanster-v1-10i" },
+    { "falt": "description", "text": "Takkupor och takfönster (Velux) i Täby med fast pris efter kostnadsfri takkontroll.", "regel": "tjanster-v1-10i" },
+    { "falt": "title", "text": "Din lokala takfirma i Täby – fast pris", "regel": "lokal" },
+    { "falt": "description", "text": "Takbyte i Täby med lokala hantverkare, kostnadsfri takkontroll och fast pris.", "regel": "lokal" },
+    { "falt": "description", "text": "Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.", "regel": "absoluta-loften" },
+    { "falt": "title", "text": "Kvalitetsgaranti på takbyte i Täby", "regel": "t1-sammansatta-garantiord" },
+    { "falt": "description", "text": "Prisgaranti och fler garantier på alla takjobb i Täby.", "regel": "t1-sammansatta-garantiord" },
+    { "falt": "description", "text": "Vi garanterar att taket blir tätt efter takbyte i Täby.", "regel": "t1-sammansatta-garantiord" },
+    { "falt": "description", "text": "Takbyte i Täby med 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs, kostnadsfri takkontroll.", "regel": "t2-mataki-tatskikt" },
+    { "falt": "title", "text": "Takläggare nära dig i Täby", "regel": "t3-narvaro" },
+    { "falt": "description", "text": "Vi finns i Åkersberga och är baserade i Vallentuna, redo för ditt takbyte.", "regel": "t3-narvaro" },
+    { "falt": "title", "text": "Billigt takbyte i Täby – lägsta pris", "regel": "t4-superlativ-och-expert" },
+    { "falt": "description", "text": "Takexperter och proffs på takbyte i Täby, snabbast och tryggast.", "regel": "t4-superlativ-och-expert" },
+    { "falt": "description", "text": "Takbyte i Täby, bättre än andra firmor och jämfört med konkurrenterna.", "regel": "t5-jamforelser" },
+    { "falt": "description", "text": "Takbyte i Täby: tider kvar före vintern, fullbokat snart, omgående start.", "regel": "t6-tidspress" },
+    { "falt": "description", "text": "Takbyte i Täby: inga dolda kostnader, allt ingår och utan extra kostnad. Spara 20 000 kr.", "regel": "t7-prisloften" },
+    { "falt": "description", "text": "Undvik dyra skador på taket i Täby, kostsamma följder om du väntar.", "regel": "t8-skrammande-kostnad" },
+    { "falt": "description", "text": "Behörig takfirma i Täby med certifikat, sanerar asbest och eternit.", "regel": "t9-behorig-asbest-eternit" }
   ]
 }
