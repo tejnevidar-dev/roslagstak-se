@@ -40,7 +40,7 @@ const toSentences = (text: string) =>
   text
     .split("\n")
     .filter((l) => l.trim() && !l.startsWith("#"))
-    .map((l) => l.replace(/^\d+\.\s*/, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"))
+    .map((l) => l.replace(/^\d+\.\s*/, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*/g, ""))
     .flatMap((l) => l.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g) || [])
     .map((s) => s.trim())
     .filter((s) => s.length > 25);
@@ -234,6 +234,29 @@ for (const file of readdirSync(resolve(guideDir)).filter((f) => f.endsWith(".md"
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
   allResults.push({ page: `/blogg/${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+}
+
+/* ---------- 4) Tjänst×ort-texter (/takbyte-<ort> m.fl., ortstexter/) ---------- */
+
+const comboDir = "../ledning/marknad/innehall/ortstexter";
+for (const file of readdirSync(resolve(comboDir)).filter((f) => f.endsWith(".md") && !f.startsWith("_"))) {
+  const raw = readFileSync(join(resolve(comboDir), file), "utf8").replace(/\r/g, "");
+  const path = raw.match(/\*\*Slug:\*\*\s*(\/[a-z0-9-]+)/)?.[1];
+  if (!path) {
+    allResults.push({ page: "", file: `ortstexter/${file}`, status: "no-slug", missing: [], total: 0 });
+    continue;
+  }
+  if (only && !only.has(path.slice(1))) continue;
+  const page = prerenderContent(path);
+  if (!page) {
+    allResults.push({ page: path, file, status: "not-built", missing: [], total: 0 });
+    continue;
+  }
+  const body = raw.split(/\n## Text\s*\n/)[1]?.split(/\n## /)[0] ?? "";
+  const meningar = toSentences(body);
+  const liveText = norm([page.intro, ...page.paragraphs].join(" "));
+  const missing = meningar.filter((s) => !liveText.includes(norm(s)));
+  allResults.push({ page: path, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
 }
 
 /* ---------- Rapport ---------- */

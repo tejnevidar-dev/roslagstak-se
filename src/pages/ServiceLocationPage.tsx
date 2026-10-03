@@ -1,4 +1,5 @@
 import { withRotForbehall } from "@/data/prices";
+import { isHeading, renderInline } from "@/lib/inline-md";
 import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -228,9 +229,13 @@ const ServiceLocationPage = () => {
           {/* Content */}
           <div className="grid lg:grid-cols-3 gap-12 mb-20">
             <div className="lg:col-span-2 space-y-6">
-              {(override?.content ?? combo.content).map((paragraph, i) => (
-                <p key={i} className="text-muted-foreground leading-relaxed">{paragraph}</p>
-              ))}
+              {(override?.content ?? combo.content).map((paragraph, i) =>
+                isHeading(paragraph) ? (
+                  <h2 key={i} className="font-display text-xl text-foreground pt-2">{paragraph.slice(3)}</h2>
+                ) : (
+                  <p key={i} className="text-muted-foreground leading-relaxed">{renderInline(paragraph)}</p>
+                ),
+              )}
 
               {/* Internal links to related services */}
               <div className="bg-card border border-border rounded-2xl p-6 mt-8">

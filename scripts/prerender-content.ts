@@ -810,7 +810,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: override?.description ?? combo.description,
       h1: `${combo.serviceName} ${combo.prep} ${combo.locationName} — fast pris & 10 års utförandegaranti`,
       intro: override?.description ?? combo.description,
-      paragraphs: override?.content ?? combo.content,
+      paragraphs: (override?.content ?? combo.content).map(stripInlineMd),
       links: [
         ...primaryLinks,
         {
