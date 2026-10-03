@@ -172,10 +172,8 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
             },
           ]
         : []),
-      {
-        heading: `Så planerar vi arbetet ${prep} ${loc.name}`,
-        paragraphs: [accessPara, neighbourPara],
-      },
+      // Blocket "Så planerar vi arbetet" (container, lift, rivningsavfall, samordning av transporter) är borttaget på alla
+      // ortssidor: processlöften utan belägg, och bortforsling ligger hos Vidar (10v). Marknadschefen 2026-10-04.
     ],
     facts: [
       { label: "Område", value: loc.region },
