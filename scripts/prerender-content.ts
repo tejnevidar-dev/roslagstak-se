@@ -108,7 +108,7 @@ const primaryLinks = [
   { href: "/priser", label: "Priser för takarbeten" },
   { href: "/blogg", label: "Guider om tak" },
   { href: "/recensioner", label: "Recensioner" },
-  { href: "/kontakt", label: "Boka kostnadsfri rådgivning" },
+  { href: "/kontakt", label: "Boka kostnadsfri takkontroll" },
 ];
 
 const serviceLinks = services.map((s) => ({
@@ -248,15 +248,15 @@ const staticPages: Record<string, PrerenderPage> = {
     intro:
       "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager.",
     paragraphs: [
-      "Ordningen är råspont, underlagspapp, hängrännor och stuprör, vindskivor, ströläkt och bärläkt, takpannor eller plåt, samt avslutande plåtbeslag kring skorsten och genomföringar.",
+      "Ordningen är underlag, läkt, takmaterial och plåtdetaljer.",
       "Du har en kontaktperson genom hela processen, och arbetet avslutas med en slutgenomgång.",
       "Steg 1 — takkontroll, rapport och offert: vi går igenom taket på plats, och du får en rapport om takets skick. Behöver taket åtgärdas lämnar vi också en skriftlig offert med fast pris. Kostnadsfritt och utan förpliktelser.",
-      "Steg 2 — planering och material: när du accepterat offerten planerar vi arbetet tillsammans med dig och beställer materialet. Du har en fast kontaktperson.",
-      "Steg 3 — ställning och skydd: ställningen reses innan arbetet börjar.",
-      "Steg 4 — rivning: gamla taket rivs. Råsponten kontrolleras, och skadad råspont specificeras som tillägg innan vi fortsätter.",
+      "Steg 2 — planering: när du har accepterat offerten går vi igenom hur arbetet läggs upp innan vi börjar.",
+      "Steg 3 — ställning: ställningen reses innan arbetet börjar.",
+      "Steg 4 — rivning: gamla taket rivs. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare, och inget extraarbete görs utan ditt godkännande.",
       "Steg 5 — underlag: ny underlagspapp, ströläkt och bärläkt läggs.",
-      "Steg 6 — tätskikt och beslag: det nya taket monteras tillsammans med plåtbeslag kring skorsten, ventiler och genomföringar, plus taksäkerhet och takavvattning.",
-      "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Garantin står skriftligt i avtalet.",
+      "Steg 6 — tätskikt och beslag: det nya taket monteras tillsammans med plåtbeslag kring skorsten, ventiler och genomföringar, och taksäkerhet och hängrännor, om de ingår i offerten.",
+      "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
     ],
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }],

@@ -8,6 +8,8 @@ import {
   serviceDetails,
   serviceMeta,
   tatskiktChip,
+  showsUtforandeChip,
+  NO_HOW_LINK_SERVICE_SLUGS,
   type ServiceMeta,
 } from "@/data/service-page";
 import { RENOVERING_SERVICE_SLUGS } from "@/data/guarantee";
@@ -151,9 +153,11 @@ const ServiceDetail = () => {
                   {SERVICE_COPY.takkontrollLink}
                 </Link>
                 <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-muted-foreground" aria-label="Fakta om RoslagsTak">
-                  <li className="inline-flex items-center gap-1.5">
-                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {SERVICE_COPY.chipUtforande}
-                  </li>
+                  {showsUtforandeChip(service.slug) && (
+                    <li className="inline-flex items-center gap-1.5">
+                      <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {SERVICE_COPY.chipUtforande}
+                    </li>
+                  )}
                   {tatskiktChip(service.slug) && (
                     <li className="inline-flex items-center gap-1.5">
                       <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {tatskiktChip(service.slug)}
@@ -185,14 +189,16 @@ const ServiceDetail = () => {
                 </a>
               </div>
 
-              <Link
-                to="/hur-det-gar-till"
-                className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.26em] text-primary"
-              >
-                <PlayCircle className="h-4 w-4" aria-hidden="true" />
-                {SERVICE_COPY.howLink}
-                <span aria-hidden="true" className="h-px w-8 bg-primary transition-all group-hover:w-14" />
-              </Link>
+              {!NO_HOW_LINK_SERVICE_SLUGS.includes(service.slug) && (
+                <Link
+                  to="/hur-det-gar-till"
+                  className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.26em] text-primary"
+                >
+                  <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                  {SERVICE_COPY.howLink}
+                  <span aria-hidden="true" className="h-px w-8 bg-primary transition-all group-hover:w-14" />
+                </Link>
+              )}
             </div>
 
             {/* Dokumentärt foto */}

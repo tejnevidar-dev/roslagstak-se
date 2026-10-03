@@ -15,7 +15,13 @@ export const GARANTI_ETERNIT =
   "Vi lämnar 10 års garanti på utförandet av det nya taket. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Saneringen utförs av saneringsfirman.";
 
 /** Tjänste-slugs i /tjanster/<slug> som aldrig ska nämna tätskiktsgaranti (MATAKI) eftersom inget nytt tätskikt läggs. */
-export const NO_TATSKIKT_SERVICE_SLUGS: readonly string[] = ["taksakerhet"];
+export const NO_TATSKIKT_SERVICE_SLUGS: readonly string[] = ["taksakerhet", "takavvattning"];
+
+/** Tjänster som inte har någon garanti att nämna (en takkontroll har ingen garanti). Varken garantirutan eller chipsen visas. */
+export const NO_GARANTI_SERVICE_SLUGS: readonly string[] = ["takinspektion"];
+
+/** Tjänster där chipet om tätskiktsgaranti utelämnas (bara chipet "10 års utförandegaranti" visas). */
+export const NO_TATSKIKT_CHIP_SERVICE_SLUGS: readonly string[] = ["takrenovering"];
 
 /** Kort variant för trygghetsrader (chips). */
 export const GARANTI_RENOVERING_CHIP = "30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)";

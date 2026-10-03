@@ -4,8 +4,8 @@
  * speglingen ska vara lika fullständig som den synliga sidan. Bara relativa importer (esbuild-bundlad
  * utan "@"-alias). Parity mot den renderade sidan testas i src/test/service-page-parity.test.ts.
  */
-import { withRotForbehall } from "./prices";
-import { GARANTI_ETERNIT, GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, GARANTI_UTFORANDE, NO_TATSKIKT_SERVICE_SLUGS, RENOVERING_SERVICE_SLUGS } from "./guarantee";
+import { ROT_FORBEHALL, withRotForbehall } from "./prices";
+import { GARANTI_ETERNIT, GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, GARANTI_UTFORANDE, NO_GARANTI_SERVICE_SLUGS, NO_TATSKIKT_CHIP_SERVICE_SLUGS, NO_TATSKIKT_SERVICE_SLUGS, RENOVERING_SERVICE_SLUGS } from "./guarantee";
 import { TAKSAKERHET_SLUG, taksakerhetDetails, taksakerhetMeta } from "./service-taksakerhet";
 import { serviceExtra } from "./service-extra-sections";
 import { serviceBlocks, type SpecificBlock } from "./service-blocks";
@@ -46,21 +46,21 @@ export const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Pris", v: "Fast efter takkontroll" },
     ],
     specHeading: "Vad vi åtgärdar — och vad vi låter vara",
-    lead: "Renovering handlar om att byta rätt delar: skadad papp, rötat virke och trasiga pannor.",
-    craftLine: "Ett tak dör sällan överallt samtidigt — vi byter det som behöver bytas.",
+    lead: "Renovering handlar om att byta det som är skadat: underlagspapp, skadad råspont och trasiga pannor.",
+    craftLine: "Vi byter det som behöver bytas.",
     photoNote: "Skadat, mossbevuxet tegeltak — exakt den typ av skador vi bedömer och åtgärdar.",
   },
   takavvattning: {
     accentLine: "rännor och stuprör.",
     specs: [
-      { k: "Material", v: "Aluminium, koppar, plåt" },
-      { k: "Dimension", v: "Beräknad per takyta" },
+      { k: "Material", v: "Lackerad plåt" },
       { k: "Ränndalar", v: "Falsade i plåt" },
+      { k: "Takkontroll", v: "Kostnadsfri" },
     ],
     specHeading: "Dimensionering och montage av avvattning",
-    lead: "Vattnet ska bort från fasad och grund — dimension och fall avgör om systemet fungerar.",
-    craftLine: "Fel fall på rännan syns inte första året. Det syns på fasaden fem år senare.",
-    photoNote: "Nymonterade hängrännor med fotplåt och korrekt fall.",
+    lead: "Hängrännor och stuprör leder bort vattnet från taket.",
+    craftLine: "Hängrännor, stuprör och fotplåt hör ihop med taket.",
+    photoNote: "Hängrännor och fotplåt.",
   },
   takkupor: {
     accentLine: "mer ljus på vinden.",
@@ -82,20 +82,20 @@ export const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Omfattning", v: "Tak, plåt, avvattning" },
     ],
     specHeading: "Vad vi tittar på vid en takkontroll",
-    lead: "Vi går igenom taket på plats — inte bara hur det ser ut från marken.",
+    lead: "En av våra säljare tittar på taket på plats.",
     craftLine: "Det som avgör takets skick ligger under pannorna.",
     photoNote: "Sprucken plåt och lossnande pannor — exempel på skador vi upptäcker vid en takkontroll.",
   },
   platarbeten: {
     accentLine: "beslag och bandtäckning.",
     specs: [
-      { k: "Material", v: "Stål, alu, koppar, zink" },
-      { k: "Teknik", v: "Falsning på plats" },
+      { k: "Material", v: "Lackerad stålplåt" },
+      { k: "Teknik", v: "Falsat och profilerat" },
       { k: "Detaljer", v: "Skorsten och genomföring" },
     ],
     specHeading: "Plåtdetaljer: material och utförande",
-    lead: "Plåtarbetet är takets tätning — beslagen tillverkas och falsas efter ditt hus.",
-    craftLine: "Plåtslageri är millimeterarbete.",
+    lead: "Plåtdetaljerna anpassas efter taket.",
+    craftLine: "Det är i plåtdetaljerna ett tak hålls tätt.",
     photoNote: "Snörasskydd och plåtdetaljer monterade efter taktäckning.",
   },
   takvard: {
@@ -130,8 +130,8 @@ export const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Pris", v: "Från 1 300 kr/m²" },
     ],
     specHeading: "Lertegel jämfört med andra taktyper",
-    lead: "Lertegel är det klassiska valet som passar både äldre och nyare hus — och håller mycket länge.",
-    craftLine: "Lertegel kräver en konstruktion som tål vikten. Vi kontrollerar bärigheten innan vi offererar.",
+    lead: "Lertegel är det klassiska valet som passar både äldre och nyare hus.",
+    craftLine: "Lertegel åldras med patina i stället för att se slitet ut.",
     photoNote: "Lertegeltak — det klassiska materialvalet som passar både äldre och nyare hus.",
   },
 };
@@ -161,43 +161,37 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takrenovering: {
-    longDesc: "En takrenovering innebär att vi åtgärdar problem på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. ROT-avdrag tillkommer.",
+    longDesc: "En takrenovering innebär att vi åtgärdar problem på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller byta skadad råspont.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
     benefits: [
-      "Lägre kostnad än komplett takomläggning",
       "Fast pris efter kostnadsfri takkontroll",
-      "Kan förlänga befintligt taks livslängd",
       "Åtgärdar läckor och fuktskador",
       "Byte av enstaka pannor eller plåtsektioner",
-      "Reparation av rötskadat virke",
+      "Byte av skadad råspont",
     ],
     process: [
       "Takkontroll och skadebedömning",
-      "Offert med tydlig åtgärdslista",
-      "Reparation av skadat underlag",
+      "Offert med fast pris",
+      "Byte av skadad råspont",
       "Byte av trasiga pannor/plåtsektioner",
-      "Tätning och lagning av läckor",
-      "Slutkontroll och dokumentation",
+      "Lagning av det som står i offerten",
+      "Slutgenomgång",
     ],
   },
   takavvattning: {
-    longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i aluminium, koppar eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör från ca 23 000 kr, beroende på husets storlek och våningar. Koppar ligger högre än aluminium.",
+    longDesc: "Hängrännor och stuprör leder bort vattnet från taket. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i lackerad plåt. Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen.",
+    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör från ca 23 000 kr, beroende på husets storlek och våningar. " + ROT_FORBEHALL,
     benefits: [
-      "Skyddar fasad och grund mot vattenskador",
-      "Hängrännor i aluminium, koppar eller lackerad plåt",
-      "Stuprör med korrekt dimensionering",
-      "Lövinsamlare och galler vid behov",
-      "Material i aluminium, koppar eller lackerad plåt",
-      "Prydligt och hållbart resultat",
+      "Hängrännor och stuprör i lackerad plåt",
+      "Ränndalar och fotplåt",
+      "Byte av befintligt system",
     ],
     process: [
       "Takkontroll av befintligt system",
-      "Dimensionering och materialval",
       "Demontering av gammalt system",
       "Montering av nya hängrännor",
       "Installation av stuprör och anslutningar",
-      "Funktionskontroll",
+      "Slutgenomgång",
     ],
   },
   takkupor: {
@@ -217,12 +211,11 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takinspektion: {
-    longDesc: "En regelbunden takkontroll förebygger dyra skador. En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser.",
-    priceRange: "Helt kostnadsfritt — inga dolda avgifter.",
+    longDesc: "En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser.",
+    priceRange: "Takkontrollen är kostnadsfri och utan förpliktelser.",
     benefits: [
-      "Helt kostnadsfri och utan förbindelser",
+      "Kostnadsfri och utan förpliktelser",
       "En av våra säljare tittar på taket på plats",
-      "Identifierar problem innan de blir dyra",
       "Tittar på takmaterial, plåtdetaljer och avvattning",
       "Rapport om takets skick",
       "Fast pris i offerten om något behöver åtgärdas",
@@ -230,28 +223,25 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     process: [
       "Boka takkontroll (telefon eller formulär)",
       "Vi besöker din fastighet",
-      "Grundlig inspektion av tak, underlag och avvattning",
-      "Genomgång av resultat och rekommendationer på plats",
-      "Skriftligt fast pris i offerten",
+      "Vi tittar på taket på plats, ungefär 1–2 timmar",
+      "Du får en rapport om takets skick",
+      "Behöver taket åtgärdas får du en offert med fast pris",
     ],
   },
   platarbeten: {
-    longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar.",
+    longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar och ränndalar.",
     priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: taktäckning med plåt från 1 200 kr/m² (TP20) till ca 2 000 kr/m² (dubbelfalsat). Beslag och detaljer prissätts efter omfattning i offerten.",
     benefits: [
       "En kontaktperson hela vägen",
-      "Taktäckning med alla typer av plåt",
+      "Taktäckning med TP20, pannplåt eller dubbelfalsad plåt",
       "Beslag runt skorstenar och genomföringar",
-      "Ränndalar och vindskivor i plåt",
-      "Material i stål, aluminium, koppar och zink",
+      "Ränndalar och vindskiveplåt",
       "10 års utförandegaranti på utfört arbete, 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs",
     ],
     process: [
-      "Takkontroll och uppmätning",
-      "Materialval och färgval",
-      "Tillverkning av specialbeslag",
-      "Montering och falsning",
-      "Täthetskontroll",
+      "Takkontroll",
+      "Material och kulör bestäms",
+      "Plåtdetaljerna monteras",
       "Slutgenomgång",
     ],
   },
@@ -293,22 +283,24 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   tegeltak: {
-    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga, så takstolarna måste vara dimensionerade för vikten, och taket måste ha minst den lutning som tillverkaren anger för pannmodellen. Bärigheten bedöms vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och tegelprofilerad plåt från 1 300 kr/m². Exakt pris beror på takets storlek, lutning och underlagets skick.",
+    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga. Takstolarna behöver klara vikten, och tillverkaren anger vilken lutning pannan kräver. Lertegel är något annat än pannplåt (plåt som är pressad för att likna pannor), som vi också lägger. De är olika material med olika pris och vikt.",
+    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och pannplåt från 1 300 kr/m². Exakt pris beror på takets storlek, lutning och underlagets skick.",
     benefits: [
-      "Klassiskt uttryck som håller husets karaktär",
-      "Åldras med patina och passar både äldre och nyare hus",
+      "Rivning av befintligt tak",
+      "Nytt underlag och ny läkt",
+      "Lertegel",
+      "Plåtdetaljer kring skorsten och genomföringar",
       "Fast pris efter kostnadsfri takkontroll",
-      "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
     ],
     process: [
-      "Kostnadsfri takkontroll — vi bedömer konstruktion, bärighet och taklutning",
-      "Skriftlig offert med fast pris",
-      "Rivning av befintligt tak och kontroll av råspont",
-      "Ny underlagspapp, ströläkt och bärläkt dimensionerad för tegelvikten",
+      "Kostnadsfri takkontroll",
+      "Offert med fast pris",
+      "Rivning av befintligt tak",
+      "Nytt underlag och ny läkt",
       "Montering av lertegel samt plåtbeslag kring skorsten och genomföringar",
-      "Taksäkerhet och takavvattning",
-      "Slutgenomgång och skriftlig garanti",
+      "Taksäkerhet och hängrännor, om de ingår i offerten",
+      "Slutgenomgång",
     ],
   },
 };
@@ -358,7 +350,7 @@ export const SERVICE_COPY = {
   priceFallback: "Fast pris efter kostnadsfri takkontroll.",
   addonsNote: " Tillägg bara efter ditt godkännande.",
   guaranteeTitle: "Garanti",
-  guaranteeStandard: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+  guaranteeStandard: "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
   ctaHeading: (slug: string, title: string) =>
     slug === "eternit-asbest" ? "Har du eternittak med asbest?" : `Intresserad av ${title.toLowerCase()}?`,
   ctaText: (slug: string) =>
@@ -371,6 +363,12 @@ export const SERVICE_COPY = {
   relatedHeading: "Relaterat innehåll",
   backToServices: "Tillbaka till alla tjänster",
 };
+
+/** Sidor där länken "Se hur ett takbyte går till" inte hör hemma. */
+export const NO_HOW_LINK_SERVICE_SLUGS: readonly string[] = ["takavvattning", "takinspektion"];
+
+/** Visas chipet "10 års utförandegaranti"? Inte på takkontrollen, som inte har någon garanti. */
+export const showsUtforandeChip = (slug: string): boolean => !NO_GARANTI_SERVICE_SLUGS.includes(slug);
 
 /** Fasta länkar i "Relaterat innehåll" (före systertjänster och tjänstens egna länkar). */
 export const SERVICE_RELATED_FIXED: { to: string; label: string }[] = [
@@ -392,17 +390,21 @@ export const goodToKnowBoxes = (slug: string): { t: string; d: string }[] => {
       t: SERVICE_COPY.priceTitle,
       d: `${details?.priceRange ? withRotForbehall(details.priceRange) : SERVICE_COPY.priceFallback}${slug === "takinspektion" ? "" : SERVICE_COPY.addonsNote}`,
     },
-    {
-      t: SERVICE_COPY.guaranteeTitle,
-      d: slug === "eternit-asbest" ? GARANTI_ETERNIT : NO_TATSKIKT_SERVICE_SLUGS.includes(slug) ? GARANTI_UTFORANDE : renovering ? GARANTI_RENOVERING : SERVICE_COPY.guaranteeStandard,
-    },
+    ...(NO_GARANTI_SERVICE_SLUGS.includes(slug)
+      ? []
+      : [
+          {
+            t: SERVICE_COPY.guaranteeTitle,
+            d: slug === "eternit-asbest" ? GARANTI_ETERNIT : NO_TATSKIKT_SERVICE_SLUGS.includes(slug) ? GARANTI_UTFORANDE : renovering ? GARANTI_RENOVERING : SERVICE_COPY.guaranteeStandard,
+          },
+        ]),
     { t: SERVICE_COPY.skargardenTitle, d: SERVICE_COPY.skargardenText },
   ];
 };
 
 /** Tätskiktschipet för en tjänst, eller null för arbeten som inte lägger nytt tätskikt (taksäkerhet). */
 export const tatskiktChip = (slug: string): string | null =>
-  NO_TATSKIKT_SERVICE_SLUGS.includes(slug)
+  NO_GARANTI_SERVICE_SLUGS.includes(slug) || NO_TATSKIKT_SERVICE_SLUGS.includes(slug) || NO_TATSKIKT_CHIP_SERVICE_SLUGS.includes(slug)
     ? null
     : RENOVERING_SERVICE_SLUGS.includes(slug)
       ? GARANTI_RENOVERING_CHIP
@@ -421,6 +423,8 @@ export const blockTexts = (block: SpecificBlock): string[] => {
       return [...head, ...block.columns, ...block.rows.flat(), ...(block.footnote ? [block.footnote] : [])];
     case "signals":
       return [...head, ...SIGNALS_COLUMNS, ...block.items.flatMap((i) => [i.sign, i.meaning, i.action])];
+    case "lookup":
+      return [...head, ...block.columns, ...block.items.flatMap((i) => [i.sign, i.label])];
     case "regulatory":
       return [...head, ...block.steps.flatMap((s) => [s.code, s.title, s.text])];
     case "checklist":
@@ -445,6 +449,8 @@ export const blockItems = (block: SpecificBlock): BodyItem[] => {
       return [...head, ...block.columns, ...block.rows.flat(), ...(block.footnote ? [block.footnote] : [])];
     case "signals":
       return [...head, ...SIGNALS_COLUMNS, ...block.items.flatMap((i) => [i.sign, i.meaning, i.action])];
+    case "lookup":
+      return [...head, ...block.columns, ...block.items.flatMap((i) => [i.sign, i.label])];
     case "regulatory":
       return [...head, ...block.steps.flatMap((st) => [st.code, { h: st.title, level: 3 as const }, st.text])];
     case "checklist":
@@ -493,13 +499,13 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     SERVICE_COPY.heroEyebrow,
     ...meta.specs.map((sp) => `${sp.k}: ${sp.v}`),
     SERVICE_COPY.takkontrollLink,
-    SERVICE_COPY.chipUtforande,
+    ...(showsUtforandeChip(slug) ? [SERVICE_COPY.chipUtforande] : []),
     ...(tatskiktChip(slug) ? [tatskiktChip(slug)!] : []),
     SERVICE_COPY.chipFastPris,
     SERVICE_COPY.chipSvar,
     SERVICE_COPY.offertButton,
     SERVICE_COPY.phone,
-    SERVICE_COPY.howLink,
+    ...(NO_HOW_LINK_SERVICE_SLUGS.includes(slug) ? [] : [SERVICE_COPY.howLink]),
     ...blocks.factCards.flatMap((c) => [c.label, c.value, c.text]),
     ...specific("before-spec"),
     SERVICE_COPY.specEyebrow,

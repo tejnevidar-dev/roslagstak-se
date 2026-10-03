@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Reveal from "@/components/Reveal";
 import type { SpecificBlock } from "@/data/service-blocks";
 import { SIGNALS_COLUMNS } from "@/data/service-page";
@@ -96,6 +97,40 @@ const ServiceSpecificBlock = ({ block }: { block: SpecificBlock }) => {
                     <p className="text-[14px] leading-[1.65] text-muted-foreground">{it.meaning}</p>
                     <p className="border-l-2 border-accent pl-4 text-[14px] leading-[1.65] text-foreground">
                       {it.action}
+                    </p>
+                  </div>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    );
+  }
+
+  if (block.kind === "lookup") {
+    return (
+      <section className="border-y border-border bg-secondary/40 py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <BlockHead eyebrow={block.eyebrow} heading={block.heading} intro={block.intro} />
+
+          <ul className="mt-12 space-y-px bg-border">
+            <li className="hidden bg-primary px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-primary-foreground lg:grid lg:grid-cols-[1fr_1fr] lg:gap-8">
+              {block.columns.map((c) => (
+                <span key={c}>{c}</span>
+              ))}
+            </li>
+            {block.items.map((it) => (
+              <li key={it.sign} className="bg-card">
+                <Reveal>
+                  <div className="grid gap-4 px-6 py-6 lg:grid-cols-[1fr_1fr] lg:gap-8">
+                    <p className="font-display text-[16px] font-bold leading-snug tracking-[-0.015em] text-foreground">
+                      {it.sign}
+                    </p>
+                    <p className="border-l-2 border-accent pl-4 text-[14px] leading-[1.65] text-foreground">
+                      <Link to={it.to} className="underline underline-offset-4 hover:text-primary">
+                        {it.label}
+                      </Link>
                     </p>
                   </div>
                 </Reveal>

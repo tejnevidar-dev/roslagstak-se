@@ -1,5 +1,5 @@
 import { ROT_FORBEHALL } from "./prices";
-import { GARANTI_RENOVERING } from "./guarantee";
+import { GARANTI_RENOVERING, GARANTI_UTFORANDE } from "./guarantee";
 import { TAKSAKERHET_SLUG, taksakerhetBlocks } from "./service-taksakerhet";
 /**
  * Tjänstspecifika block, faktakort och metadata.
@@ -34,6 +34,15 @@ export type SpecificBlock =
       heading: string;
       intro: string;
       items: { sign: string; meaning: string; action: string }[];
+    }
+  /** Vad du ser → länk till den problemsida som förklarar det (utan diagnos och åtgärd) */
+  | {
+      kind: "lookup";
+      eyebrow: string;
+      heading: string;
+      intro: string;
+      columns: [string, string];
+      items: { sign: string; label: string; to: string }[];
     }
   /** Dimensioneringsguide med talvärden */
   | {
@@ -115,23 +124,22 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "before-spec",
     factCards: [
-      { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Punktinsats kostar en bråkdel av en komplett omläggning." },
-      { tone: "primary", label: "Vanligast", value: "Underlagspapp", text: "Läckan sitter oftast i pappen eller i beslag, inte i pannan." },
+      { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Du får det fasta priset i offerten." },
       { tone: "plain", label: "Tidsåtgång", value: "Efter skadans omfattning", text: "Beror på skadans omfattning och åtkomst till taket." },
-      { tone: "accent", label: "Vinst", value: "Rätt insats i tid", text: "Kan skjuta upp ett helt takbyte." },
+      { tone: "primary", label: "Takkontroll", value: "Kostnadsfri", text: "En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte." },
     ],
     block: {
-      kind: "signals",
+      kind: "lookup",
       eyebrow: "Skadebild",
-      heading: "Läs av ditt tak innan vi kommer",
-      intro:
-        "De flesta takskador ger tydliga signaler långt innan taket börjar läcka in i rummet. Så tolkar vi dem vid takkontrollen.",
+      heading: "Så kan skador se ut",
+      intro: "En del takskador syns innan det läcker in. Det här kan du titta efter.",
+      columns: ["Det du ser", "Läs mer"],
       items: [
-        { sign: "Fuktfläckar på vindens undertak", meaning: "Hål eller spricka i underlagspappen", action: "Byte av papp på berörd takfall, kontroll av råspont" },
-        { sign: "Mossa i tjocka sammanhängande tuvor", meaning: "Ytskiktet håller kvar fukt permanent", action: "Rengöring, behandling och byte av vittrade pannor" },
-        { sign: "Rostränder på plåt eller beslag", meaning: "Ytbehandlingen har släppt", action: "Byte av beslag eller ommålning av plåt" },
-        { sign: "Glappande eller spruckna pannor", meaning: "Frostsprängning eller läktrörelse", action: "Byte av enstaka pannor och kontroll av läktavstånd" },
-        { sign: "Mörka stråk längs fasaden", meaning: "Avvattningen läcker eller är underdimensionerad", action: "Justering av fall, byte av ränna eller stuprör" },
+        { sign: "Fuktfläckar på vindens undertak", label: "Fukt på vinden", to: "/takproblem/fukt-pa-vinden" },
+        { sign: "Mossa i tjocka sammanhängande tuvor", label: "Mossa på taket", to: "/takproblem/mossa-pa-taket" },
+        { sign: "Rostränder på plåt eller beslag", label: "Rostig plåt", to: "/takproblem/rostig-plat" },
+        { sign: "Glappande eller spruckna pannor", label: "Trasiga takpannor", to: "/takproblem/trasiga-takpannor" },
+        { sign: "Mörka stråk längs fasaden", label: "Läckande hängrännor", to: "/takproblem/lackande-hangrannor" },
       ],
     },
   },
@@ -139,28 +147,24 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takavvattning: {
     seoTitle: "Hängrännor & Stuprör Roslagen — Takavvattning",
     seoDescription:
-      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i aluminium, koppar eller lackerad plåt. Dimensionering efter takyta och fast pris efter kostnadsfri takkontroll.",
+      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i lackerad plåt. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "accent", label: "Dimension", value: "125 / 150 mm", text: "Rännstorlek väljs efter takyta, lutning och regnintensitet." },
-      { tone: "primary", label: "Fall", value: "3–5 mm/m", text: "För lite fall ger stående vatten, för mycket syns på fasaden." },
-      { tone: "outline", label: "Prisbild", value: "Från ca 23 000 kr", text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. Koppar ligger högre." },
+      { tone: "outline", label: "Prisbild", value: "Från ca 23 000 kr", text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. " + ROT_FORBEHALL },
       { tone: "plain", label: "Takkontroll", value: "Kostnadsfri", text: "Vi tittar på rännor, stuprör och avvattning på plats, utan förpliktelser." },
+      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_UTFORANDE },
     ],
     block: {
-      kind: "dimension",
-      eyebrow: "Dimensionering",
-      heading: "Så räknar vi fram rätt system för din takyta",
-      intro:
-        "Ett underdimensionerat system svämmar över vid kraftig nedbörd och skickar vattnet mot fasad och grund. Vi utgår från takets horisontella projektionsyta.",
-      columns: ["Takyta per takfall", "Hängränna", "Stuprör", "Antal stuprör"],
-      rows: [
-        ["Upp till 40 m²", "100 mm", "75 mm", "1"],
-        ["40–80 m²", "125 mm", "87 mm", "2"],
-        ["80–150 m²", "125–150 mm", "100 mm", "2"],
-        ["Över 150 m²", "150 mm", "100–120 mm", "3 eller fler"],
+      kind: "lookup",
+      eyebrow: "Läs mer",
+      heading: "Problem med hängrännor och stuprör",
+      intro: "Det här kan du titta efter. Vill du ha hjälp med ditt hus börjar vi med en kostnadsfri takkontroll.",
+      columns: ["Det du ser", "Läs mer"],
+      items: [
+        { sign: "Vatten rinner över rännans kant", label: "Igensatta hängrännor", to: "/takproblem/igensatta-hangrannor" },
+        { sign: "Det droppar eller rinner vid skarvarna", label: "Läckande hängrännor", to: "/takproblem/lackande-hangrannor" },
+        { sign: "Istappar vid takfoten", label: "Istappar på taket", to: "/takproblem/istappar-pa-taket" },
       ],
-      footnote: "Ränndalar och fotplåt falsas i plåt och anpassas alltid till takets lutning och material.",
     },
   },
 
@@ -195,33 +199,30 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Kostnadsfri takkontroll i Roslagen och skärgården. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
     blockPlacement: "before-spec",
     factCards: [
-      { tone: "accent", label: "Kostnad", value: "0 kr", text: "Helt kostnadsfri och utan förbindelser — även på öar." },
+      { tone: "accent", label: "Kostnad", value: "0 kr", text: "Kostnadsfri och utan förpliktelser." },
       { tone: "primary", label: "Tid på plats", value: "Ca 1–2 timmar", text: "Beroende på takets storlek, lutning och åtkomst." },
-      { tone: "outline", label: "Genomgång", value: "Hela taket", text: "Från ytskikt och beslag till ventilation och taksäkerhet." },
+      { tone: "outline", label: "Rapport", value: "Om takets skick", text: "Du får en rapport om takets skick efter besöket." },
       { tone: "plain", label: "Efteråt", value: "Fast pris", text: "Behöver taket åtgärdas får du ett fast pris i offerten." },
     ],
     block: {
       kind: "checklist",
       eyebrow: "Vad vi tittar på",
-      heading: "Det här går vi igenom",
+      heading: "Det här tittar vi på",
       intro:
-        "Vi går igenom taket i fyra block: ytskikt, underlag, plåt och genomföringar samt avvattning och säkerhet.",
+        "En av våra säljare tittar på taket på plats, med blotta ögat och utan ingrepp i taket.",
       groups: [
         {
-          title: "Ytskikt",
-          items: ["Pannor: sprickor, glapp, frostskador", "Plåt: rost, lackskador, infästningar", "Nock och valmning", "Mossa, alger och lavpåväxt"],
-        },
-        {
-          title: "Underlag",
-          items: ["Underlagspapp och skarvar", "Råspont: röta och missfärgning", "Läkt och läktavstånd", "Fuktindikation på vinden"],
-        },
-        {
-          title: "Plåt och genomföringar",
-          items: ["Skorstensbeslag och stoss", "Ventilationshuvar", "Ränndalar och fotplåt", "Vindskivor och gavelbeslag"],
-        },
-        {
-          title: "Avvattning och säkerhet",
-          items: ["Hängrännor: fall och fästen", "Stuprör och utkastare", "Takstege", "Taksäkerhet enligt gällande krav"],
+          title: "Vid takkontrollen",
+          items: [
+            "Ytmaterial",
+            "Nock",
+            "Plåtdetaljer och beslag",
+            "Genomföringar",
+            "Hängrännor och stuprör",
+            "Vindskivor och takfot",
+            "Underlaget där det går att se",
+            "Vinden, om den går att komma åt",
+          ],
         },
       ],
     },
@@ -234,24 +235,21 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Teknik", value: "Falsat & profilerat", text: "Dubbelfalsad bandtäckning eller profilerad plåt beroende på lutning." },
-      { tone: "outline", label: "Minsta lutning", value: "3,6°", text: "Dubbelfalsat klarar låg lutning där pannor inte fungerar." },
-      { tone: "accent", label: "Material", value: "4 metaller", text: "Stål, aluminium, koppar och zink — valda efter läge och uttryck." },
-      { tone: "plain", label: "Detaljer", value: "Platstillverkade", text: "Beslag falsas och anpassas på plats efter husets mått." },
+      { tone: "outline", label: "Takkontroll", value: "Kostnadsfri", text: "En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte." },
+      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_RENOVERING },
     ],
     block: {
-      kind: "matrix",
-      eyebrow: "Metallval",
-      heading: "Fyra metaller och deras egenskaper",
-      intro:
-        "Vi väljer material efter taket, lutningen och husets karaktär.",
-      columns: ["Metall", "Kännetecken", "Underhåll"],
-      rows: [
-        ["Lackerad stålplåt", "Vanligast, många kulörer", "Håll lacken hel, åtgärda repor tidigt"],
-        ["Aluminium", "Lätt", "Kontrollera fogar och anslutningar"],
-        ["Zink", "Får patina med tiden", "Kontrollera fogar och anslutningar"],
-        ["Koppar", "Blir grön med tiden", "Kontrollera fogar och anslutningar"],
+      kind: "lookup",
+      eyebrow: "Plåtdetaljer",
+      heading: "Där många läckage börjar",
+      intro: "Bandtäckning, skorstensinklädnad, fotplåt och beslag. Det här kan du titta efter.",
+      columns: ["Det du ser", "Läs mer"],
+      items: [
+        { sign: "Rostränder på plåt eller beslag", label: "Rostig plåt", to: "/takproblem/rostig-plat" },
+        { sign: "Fuktfläckar vid skorstenen", label: "Läckage vid skorsten", to: "/takproblem/lackage-vid-skorsten" },
+        { sign: "Vatten som läcker vid ränndalen", label: "Läckande ränndal", to: "/takproblem/lackande-ranndal" },
+        { sign: "Mörka eller ruttna vindskivor och takfot", label: "Ruttna vindskivor och takfot", to: "/takproblem/ruttna-vindskivor-och-takfot" },
       ],
-      footnote: "Alla falsade tak utförs med rörliga klammer så att plåten kan arbeta vid temperaturväxlingar.",
     },
   },
 
@@ -313,23 +311,23 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Byta till eller lägga om tegeltak? Kostnadsfri takkontroll utan förpliktelser, fast pris och 10 års utförandegaranti. Svar inom 24 h.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus — inte att förväxla med tegelplåt." },
+      { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus." },
       { tone: "outline", label: "Uttryck", value: "Åldras med patina", text: "Enskilda pannor som spricker kan bytas utan att hela taket görs om." },
-      { tone: "accent", label: "Bärighet", value: "Kontrolleras alltid", text: "Lertegel väger mer än plåt — vi kontrollerar konstruktionen vid takkontrollen." },
+      { tone: "accent", label: "Tungt material", value: "Lertegel väger mer", text: "Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak." },
       { tone: "plain", label: "Pris", value: "Från 1 300 kr/m²", text: "Efter ROT-avdrag, inkl. moms. Fast pris i offerten." },
     ],
     block: {
       kind: "matrix",
       eyebrow: "Materialval",
-      heading: "Lertegel jämfört med betong och tegelplåt",
+      heading: "Lertegel jämfört med betong och pannplåt",
       intro:
-        "Tegel eller betong? Och vad är egentligen skillnaden mellan lertegel och tegelplåt? Vi går igenom alternativen på plats innan offerten skrivs.",
-      columns: ["Material", "Pris", "Kännetecken", "Passar"],
+        "Tegel eller betong? Eller pannplåt, som ser ut som pannor men är plåt? Vi går igenom alternativen på plats innan offerten skrivs.",
+      columns: ["Material", "Pris", "Kännetecken"],
       rows: [
-        ["Lertegel", "Från 1 300 kr/m²", "Bränd lera, åldras med patina", "Äldre och nyare hus som ska behålla sin karaktär"],
-        ["Betongpannor", "Från 1 200 kr/m²", "Gjuten betong, flera kulörer", "De flesta villor på fastlandet, kräver bärkraftig konstruktion"],
-        ["Tegelplåt (profilerad plåt)", "Från 1 300 kr/m²", "Plåt pressad för att likna tegel", "Tegelutseende till lägre vikt än lertegel"],
-        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Plåtbanor utan synliga skruvar", "Klassiskt, stramt uttryck"],
+        ["Lertegel", "Från 1 300 kr/m²", "Bränd lera, åldras med patina"],
+        ["Betongpannor", "Från 1 200 kr/m²", "Gjuten betong, flera kulörer"],
+        ["Pannplåt", "Från 1 300 kr/m²", "Plåt pressad för att likna pannor"],
+        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Plåtbanor utan synliga skruvar"],
       ],
       footnote: `Riktpriser, efter ROT-avdrag och inkl. moms. Priset sätts efter kostnadsfri takkontroll. Exakt pris beror på takets storlek, lutning och underlag. ${ROT_FORBEHALL}`,
     },
@@ -353,7 +351,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/tjanster/takinspektion", label: "Boka kostnadsfri takkontroll" },
     { to: "/tjanster/takomlaggning", label: "När räcker inte renovering?" },
     { to: "/takreparation", label: "Takreparation vid läckage och skador" },
-    { to: "/akut-lackage", label: "Akut läckage i taket" },
+    { to: "/akut-lackage", label: "Läckage i taket" },
     { to: "/projekt/takrenovering-blido", label: "Referensjobb: takrenovering på Blidö" },
   ],
   takavvattning: [
@@ -377,7 +375,10 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/blogg/mala-plattak-guide-pris", label: "Måla plåttak: guide och pris" },
     { to: "/tjanster/takinspektion", label: "Kontroll före takvård" },
   ],
-  tegeltak: [{ to: "/tjanster/platarbeten#falsat", label: "Dubbelfalsat plåttak (bandtäckning)" }],
+  tegeltak: [
+    { to: "/tjanster/platarbeten#falsat", label: "Dubbelfalsat plåttak (bandtäckning)" },
+    { to: "/material/pannplat", label: "Pannplåt" },
+  ],
 };
 
 serviceBlocks[TAKSAKERHET_SLUG] = taksakerhetBlocks;

@@ -37,7 +37,7 @@ export const services: Service[] = [
     icon: IconRoofRepair,
     slug: "takrenovering",
     title: "Takrenovering",
-    short: "Laga & förlänga",
+    short: "Laga skador",
     description:
       "Vi lagar skador på ditt befintliga tak, när taket inte behöver bytas helt.",
   },
@@ -71,7 +71,7 @@ export const services: Service[] = [
     title: "Plåtarbeten",
     short: "Plåtslagare",
     description:
-      "Bandtäckning, skorstensinklädnad, fotplåt och beslag — där tak oftast läcker.",
+      "Bandtäckning, skorstensinklädnad, fotplåt och beslag — där många läckage börjar.",
   },
   {
     icon: IconRoofCare,

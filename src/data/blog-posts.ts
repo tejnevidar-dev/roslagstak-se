@@ -755,6 +755,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ["eternittak","eternit asbest","byta eternittak","asbest tak","riva eternittak","eternittak sanering"],
     content: [
       "Eternit är ett namn på skivor av asbestcement, som länge användes på tak och fasader. Har du ett eternittak och funderar på att byta det finns det en sak som skiljer det från andra takbyten: det gamla materialet kan innehålla asbest, och ett företag som river det måste ha tillstånd från Arbetsmiljöverket. Här går vi igenom vad Arbetsmiljöverket skriver om asbest och hur ett takbyte går till hos oss.",
+      "Hur ett takbyte på ett eternittak går till beskriver vi på sidan [byta eternittak](/tjanster/eternit-asbest).",
       "## Det här säger Arbetsmiljöverket",
       "Uppgifterna nedan kommer från Arbetsmiljöverkets sidor om asbest.",
       "**Förbudet:** asbest är förbjudet att använda i Sverige sedan 1982, men finns ofta kvar i äldre byggnader.",
@@ -1190,6 +1191,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ["snörasskydd", "snörasskydd tak", "snörasskydd pris", "krav snörasskydd", "montera snörasskydd", "snörasskydd plåttak", "snörasskydd pannor"],
     content: [
       "Snörasskydd är en trygghetsfråga för alla som har entréer eller gångvägar under ett tak. Den här guiden fokuserar på modellval, montering och pris. Vilka krav som gäller för ditt hus avgör kommunens byggnadsnämnd.",
+      "Snörasskydd hör till [taksäkerhet](/tjanster/taksakerhet), som vi beskriver på en egen sida.",
       "Det finns regler om taksäkerhet i Boverkets byggregler. De gäller i första hand när ett hus byggs eller ändras. Vad som gäller för ditt hus avgör kommunens byggnadsnämnd. Fråga dem om du är osäker på om och var snörasskydd behövs.",
       "Placering: Snörasskyddet monteras ovanför de platser som ska skyddas, till exempel entréer och gångvägar. Hur och var det ska sitta bedöms vid takkontrollen.",
       "Modeller för olika taktyper: Rörsnörasskydd (klassisk svart eller färgmatchad galvad/rostfri stålrör) — passar plåttak, betongpannor och tegelpannor. Plåtsnörasskydd (bockad plåtprofil) — främst för bandtäckta plåttak och låglutande tak. Punkthinder (små krokar i raster) — fungerar på vissa taktyper men ger sämre skydd än rörmodeller och rekommenderas inte längre av oss.",
@@ -1486,6 +1488,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ["hängrännor och stuprör","byta hängrännor","hängrännor pris","läckande hängränna","rensa hängrännor","takavvattning"],
     content: [
       "Hängrännorna tar emot allt vatten som rinner av taket och leder det via stuprören bort från huset. När de fungerar märks de inte. När de inte gör det rinner vattnet i stället nerför fasaden och ner vid grunden. Här går vi igenom hur du ser om rännorna gör sitt jobb, hur du sköter dem och när det är dags att byta.",
+      "Du kan läsa mer om hur vi arbetar med [hängrännor och stuprör](/tjanster/takavvattning).",
       "## Så ser du att något är fel",
       "**Vatten rinner över kanten när det regnar.** Rännan är igensatt, eller så lutar den åt fel håll.",
       "**Rännan hänger eller har släppt från takfoten.** Krokarna har böjts eller lossnat, ofta av snö och is.",
@@ -1546,6 +1549,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ["snörasskydd", "snörasskydd krav", "fallande snö tak ansvar"],
     content: [
       "Snörasskydd är inte bara en säkerhetsfråga — det är också en ansvarsfråga som varje fastighetsägare bör känna till. Som husägare kan du bli ansvarig om snö eller is från taket skadar någon. Den här artikeln fokuserar på ansvarsfrågan. Letar du efter placering, modeller och pris per meter finns den guiden i relaterade artiklar längst ned.",
+      "Snörasskydd hör till [taksäkerhet](/tjanster/taksakerhet), som vi beskriver på en egen sida.",
       "Det finns regler om taksäkerhet i Boverkets byggregler. De gäller i första hand när ett hus byggs eller ändras. Vad som gäller för ditt hus avgör kommunens byggnadsnämnd. Fråga dem om du är osäker på om och var snörasskydd behövs, till exempel över gata, gångväg, garageinfart eller parkering.",
       "Har din sotare eller ditt försäkringsbolag ställt krav på utrustning är det deras besked som gäller.",
       "Typer av snörasskydd: 1) räcken — det vanligaste, monteras vid takfoten. Klassiska räcken passar plåttak, pannor och papptak. 2) tegelkrokar — diskreta krokar mellan pannorna, passar bara tegeltak. 3) snöfångare i punkter — runda eller fyrkantiga, fördelar lasten över taket. Vi monterar alla typer.",

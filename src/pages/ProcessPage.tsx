@@ -39,7 +39,7 @@ const processFaqs = [
   {
     question: "Vad ingår i slutgenomgången?",
     answer:
-      "Vi går igenom taket tillsammans med dig: infästningar, plåtdetaljer, avvattning och taksäkerhet. Garantin står skriftligt i avtalet.",
+      "Vi går igenom taket tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
   },
 ];
 
