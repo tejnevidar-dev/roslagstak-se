@@ -42,7 +42,7 @@ const villaAreaLinks = (key: string) =>
     .map((a) => ({ href: a.href!, label: `Takläggare i ${a.name}` }));
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
-import { regionBySlug, regionIntros, regionLongText, regionNeighbors, regionSlugs } from "../src/data/regions";
+import { regionBySlug, regionIntros, regionNeighbors, regionSlugs } from "../src/data/regions";
 
 // Fas 2.19: samma schemanoder som React-sidorna, exponerade för generate-static-heads.mjs.
 export { buildOrganizationNode, buildWebSiteNode, buildWebPageNode, buildBreadcrumbNode } from "../src/lib/schema-graph";
@@ -660,7 +660,7 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: rt?.h1 ?? `Takläggare i ${region}`,
       intro: rt?.intro ?? regionIntros[region] ?? `Takbyte, takrenovering och plåtarbeten i ${region}.`,
       paragraphs: [
-        ...(rt ? rt.body.map(stripInlineMd) : (regionLongText[region] ?? [])),
+        ...(rt ? rt.body.map(stripInlineMd) : []),
         ...(villaAreasParagraph(regionSlugs[region]) ? [villaAreasParagraph(regionSlugs[region])!] : []),
         `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
       ],

@@ -23,6 +23,7 @@ const isPureLinkList = (line: string) =>
 const dir = resolve("../ledning/marknad/innehall/regiontexter");
 const js = (s: string) => JSON.stringify(s);
 const entries: string[] = [];
+const descEntries: string[] = [];
 
 for (const file of readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
   const raw = readFileSync(join(dir, file), "utf8").replace(/\r/g, "");
@@ -67,6 +68,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
 ${rest.map((c) => `      ${js(c)},`).join("\n")}
     ],
   },`);
+  descEntries.push(`  ${js(region)}: ${js(description)},`);
   console.log(`[import-region] ${region}: ${content.length} stycken`);
 }
 
@@ -91,4 +93,16 @@ ${entries.join("\n")}
 };
 `,
 );
-console.log(`[import-region] ${entries.length} regioner skrivna till src/data/region-texts.ts`);
+// Liten fil med bara metabeskrivningarna (korten på /omraden och startsidan), så att de sidorna inte drar in hela texterna.
+writeFileSync(
+  resolve("src/data/region-descriptions.ts"),
+  `/**
+ * Kort beskrivning per region (genererad av scripts/import-region.ts, samma briefar som region-texts.ts).
+ * Redigera inte för hand.
+ */
+export const regionDescriptions: Record<string, string> = {
+${descEntries.join("\n")}
+};
+`,
+);
+console.log(`[import-region] ${entries.length} regioner skrivna till src/data/region-texts.ts och region-descriptions.ts`);

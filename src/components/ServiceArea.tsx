@@ -2,67 +2,14 @@ import { Anchor, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { locationIndex as locations } from "@/data/location-index";
-
-const regionDescriptions: Record<string, string> = {
-  "Norra skärgården":
-    "Takbyte och takrenovering i ytterskärgården. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
-  "Mellersta skärgården":
-    "Takbyte och takrenovering på öar i mellersta Roslagen. Från sommarstugor till permanentboenden.",
-  Kusten:
-    "Takomläggning, takrenovering och plåtarbeten längs hela Roslagens kustlinje och på fastlandet runt Norrtälje.",
-  "Norra Roslagen":
-    "Takbyte, plåttak och takrenovering i Hallstavik, Älmsta, Herräng och norra Roslagen — material valt för hårt kustklimat.",
-  Rådmansöhalvön:
-    "Bandtäckning, plåttak och takbyte i Gräddö och Kapellskär, där vind och saltluft ställer högsta krav på infästningar.",
-  "Roslagens inland":
-    "Takomläggning och takbyte i Rimbo, Edsbro, Riala, Vallentuna och Täby — snölast, ventilation och taksäkerhet enligt gällande krav.",
-  Österåker:
-    "Takbyte, takomläggning och bandtäckning i Åkersberga och Österskär — från 70-talsvillor till komplexa tak med kupor och torn.",
-  "Stockholms stad":
-    "Takläggare i Stockholms innerstad — från Gamla stan och Södermalm till Östermalm, Kungsholmen och Vasastan. Takarbeten på kulturhistoriska tak och bostadsrättsfastigheter i tätbebyggda kvarter.",
-  "Norra Stockholm":
-    "Takbyte, takrenovering och plåtarbeten i Solna, Sundbyberg, Danderyd, Sollentuna och Upplands Väsby — norra Stockholms villabälte och bostadsrättsområden.",
-  "Nordvästra Stockholm":
-    "Takläggare i Järfälla, Upplands-Bro och Sigtuna — från miljonprogramstak till villatak och kulturhistorisk bebyggelse i Sigtuna.",
-  Västerort:
-    "Takbyte och takrenovering i Bromma, Hässelby, Vällingby och Spånga — västra Stockholms trädgårdsstäder och villaområden.",
-  "Östra Stockholm":
-    "Takläggare på Lidingö, i Nacka och Värmdö — östra Stockholms ö- och skärgårdskommuner med fukt- och vindkrav på takmaterial.",
-  "Sydöstra Stockholm":
-    "Takbyte och takrenovering i Tyresö, Haninge, Vendelsö, Vega och Nynäshamn — sydöstra Stockholms kust- och skärgårdsområden.",
-  "Södra Stockholm":
-    "Takläggare i Huddinge, Älvsjö, Enskede, Farsta, Skarpnäck och Skärholmen — södra Stockholms villor, radhus och bostadsrättsfastigheter.",
-  "Sydvästra Stockholm":
-    "Takbyte, takrenovering och plåtarbeten på Ekerö och i Botkyrka, Salem och Södertälje — sydvästra Stockholms sjönära och kommunala takprojekt.",
-  Mälardalen:
-    "Takbyte och takrenovering för villor och bostadsrättsföreningar i Uppsala, Västerås, Eskilstuna, Strängnäs och övriga Mälardalen.",
-};
-
-const regionOrder = [
-  "Norra skärgården",
-  "Mellersta skärgården",
-  "Kusten",
-  "Rådmansöhalvön",
-  "Norra Roslagen",
-  "Roslagens inland",
-  "Österåker",
-  "Stockholms stad",
-  "Norra Stockholm",
-  "Nordvästra Stockholm",
-  "Västerort",
-  "Östra Stockholm",
-  "Sydöstra Stockholm",
-  "Södra Stockholm",
-  "Sydvästra Stockholm",
-  "Mälardalen",
-];
+import { regionIntros, regionOrder } from "@/data/regions";
 
 const areas = regionOrder
   .filter((region) => locations.some((l) => l.region === region))
   .map((region) => ({
     region,
     locations: locations.filter((l) => l.region === region),
-    description: regionDescriptions[region] ?? "",
+    description: regionIntros[region] ?? "",
   }));
 
 /* Marin geografisektion: teal fält, vit sifferpanel och regioner som sjökortsrader */

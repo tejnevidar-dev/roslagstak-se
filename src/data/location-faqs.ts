@@ -100,7 +100,7 @@ export const generateServiceLocationFAQs = (
       },
       {
         question: `Hur ofta behöver jag tvätta taket ${prep} ${locationName}?`,
-        answer: `Det beror på hur utsatt taket är. Tak på norrsidor, under träd eller nära vatten får ofta mer mossa och alger.${isIsland ? " Det fuktiga skärgårdsklimatet gör att påväxten kan komma snabbare." : ""} Vid den kostnadsfria takkontrollen bedömer vi takets skick.`,
+        answer: `Det beror på hur utsatt taket är. Tak på norrsidor, under träd eller nära vatten får ofta mer mossa och alger. Vid den kostnadsfria takkontrollen bedömer vi takets skick.`,
       },
       {
         question: `Vilken metod använder ni för taktvätt ${prep} ${locationName}?`,

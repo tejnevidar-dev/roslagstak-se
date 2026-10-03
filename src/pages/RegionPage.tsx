@@ -9,7 +9,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
-import { regionBySlug, regionIntros, regionLongText, regionNeighbors, regionSlugs } from "@/data/regions";
+import { regionBySlug, regionIntros, regionNeighbors, regionSlugs } from "@/data/regions";
 import { regionTexts } from "@/data/region-texts";
 import { isHeading, renderInline } from "@/lib/inline-md";
 import NotFound from "./NotFound";
@@ -28,7 +28,6 @@ const RegionPage = () => {
 
   const path = `/omraden/${regionSlugs[region]}`;
   const places = locationIndex.filter((l) => l.region === region);
-  const paragraphs = regionLongText[region] ?? [];
   const text = regionTexts[region];
   const intro = text?.intro ?? regionIntros[region] ?? "";
 
@@ -95,19 +94,6 @@ const RegionPage = () => {
                   </p>
                 ),
               )}
-            </section>
-          )}
-
-          {!text && paragraphs.length > 0 && (
-            <section className="max-w-3xl border-t border-border pt-10">
-              <h2 className="font-display text-2xl font-bold text-foreground">
-                Takens förutsättningar i {region}
-              </h2>
-              {paragraphs.map((p) => (
-                <p key={p} className="mt-4 text-[16px] font-light leading-relaxed text-muted-foreground">
-                  {p}
-                </p>
-              ))}
             </section>
           )}
 

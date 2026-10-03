@@ -7,14 +7,15 @@
  *
  *  - varje namn i nearbyLocations måste matcha en riktig ort (annars tystnar länken)
  *  - nearbyLocations bör vara ömsesidigt (A grannar B ⇒ B bör granna A)
- *  - location.region måste finnas i regionSlugs, regionOrder, regionIntros och regionLongText
+ *  - location.region måste finnas i regionSlugs, regionOrder, regionIntros och regionTexts
  *    (annars blir breadcrumb/hub-länken /omraden generisk i stället för regionens egen sida)
  *  - varje region i regionOrder måste ha minst en ort (annars är hubben en tom sida)
  *
  * Kör: bunx tsx scripts/geo-graph-audit.ts
  */
 import { locations } from "../src/data/locations";
-import { regionOrder, regionSlugs, regionIntros, regionLongText } from "../src/data/regions";
+import { regionOrder, regionSlugs, regionIntros } from "../src/data/regions";
+import { regionTexts } from "../src/data/region-texts";
 
 const byName = new Map(locations.map((l) => [l.name, l]));
 const issues: string[] = [];
@@ -51,8 +52,8 @@ for (const loc of locations) {
   if (!regionIntros[loc.region]) {
     issues.push(`Regionen "${loc.region}" (via "${loc.name}") saknar text i regionIntros.`);
   }
-  if (!regionLongText[loc.region] || regionLongText[loc.region].length === 0) {
-    issues.push(`Regionen "${loc.region}" (via "${loc.name}") saknar brödtext i regionLongText.`);
+  if (!regionTexts[loc.region] || regionTexts[loc.region].body.length === 0) {
+    issues.push(`Regionen "${loc.region}" (via "${loc.name}") saknar godkänd regiontext i region-texts.ts.`);
   }
 }
 
