@@ -14,6 +14,7 @@ import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials } from "../src/data/materials";
+import { priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
 import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks } from "../src/lib/inline-md";
@@ -294,20 +295,16 @@ const staticPages: Record<string, PrerenderPage> = {
     description:
       "Vad kostar ett takbyte i Roslagen? Riktpriser efter ROT-avdrag, inkl. moms: TP20 och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m².",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
-    intro:
-      "Riktpriser efter ROT-avdrag och inkl. moms, med standardställning. Fast pris lämnas alltid efter en kostnadsfri takkontroll, och ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
+    intro: PRICE_HERO_TEXT,
     paragraphs: [
-      "Som riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt (tegelprofilerad plåt) från 1 300 kr/m², dubbelfalsat plåttak (bandtäckning) ca 2 000 kr/m². Exakt pris beror på material, takets storlek och skick.",
-      "Priset styrs av takets storlek, lutning, antal genomföringar samt underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — inga dolda kostnader.",
-      "Vi går igenom taket, mäter och bedömer skicket vid takkontrollen, och du får ett skriftligt fast pris innan något arbete börjar. Priset gäller sedan hela vägen, oavsett husets storlek eller materialval.",
-      "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Vi sköter hela ansökan och drar av beloppet direkt på fakturan, så du behöver aldrig ligga ute med pengarna.",
-      "Faktorer som påverkar priset: takets lutning och komplexitet, antal genomföringar som skorstenar och takkupor, underlagets skick, samt hur huset nås. Allt specificeras i offerten innan arbetet börjar.",
-      "Vill du jämföra taktyper? På sidan Taktyper ser du livslängd, underhållsbehov och vad som passar just ditt hus. I bloggen hittar du fördjupande guider för 2026.",
-      "Så budgeterar du smart: boka takkontrollen tidigt så hinner du jämföra materialalternativ i lugn takt. Överväg att samordna takbytet med byte av vindskivor, hängrännor eller taksäkerhet — marginalkostnaden blir lägre när ställningen ändå står uppe. Och glöm inte att ROT-avdraget gäller per person, två delägare kan alltså få upp till 100 000 kr tillsammans.",
-      "Alla priser är fasta priser, satta efter en kostnadsfri takkontroll på plats — aldrig innan. Exakt pris för ditt tak får du alltid skriftligt efter kontrollen.",
-      "Vad ingår i priset? Rivning och bortforsling av gamla taket, underlagspapp, strö- och bärläkt, tätskikt i valt material, plåtbeslag kring skorsten och genomföringar, taksäkerhet och städning. Det enda som kan tillkomma är skador på råspont eller takstolar som inte går att se förrän gamla taket är rivet — då stannar vi upp och prisar tillägget separat innan vi fortsätter.",
-      "Riktpriser på vanliga tillägg, efter ROT-avdrag och inkl. moms: råspontbyte från 300 kr/m², skorstensinklädnad från 7 000 kr, takstege med gångbrygga från 8 000 kr, snörasskydd från 600 kr/löpmeter, komplett hängrännesystem med stuprör från ca 23 000 kr.",
-      "Jämför du offerter från flera firmor? Titta på vad som faktiskt ingår, inte bara totalsumman. Fråga efter garantitider, om beslag och taksäkerhet ingår, och om priset är fast eller ett ungefärligt upplägg.",
+      PRICE_NOTE,
+      ...priceData.flatMap((cat) => [
+        `${cat.category}.`,
+        ...cat.items.map((it) => `${it.name}: ${it.priceRange}. ${it.description.trim()}`),
+      ]),
+      `${PRICE_ROT_TITLE}. ${PRICE_ROT_TEXT}`,
+      `${PRICE_FACTORS_TITLE} ${PRICE_FACTORS_TEXT}`,
+      ...priceFaqs.map((faq) => `${faq.question} ${faq.answer}`),
     ],
     links: [
       { href: "/blogg/kostnad-takbyte-2026", label: "Vad kostar ett takbyte? Hela guiden" },

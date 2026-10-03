@@ -4,6 +4,8 @@ export interface BlogPost {
   excerpt: string;
   content: string[];
   date: string;
+  /** Senast granskad/ändrad i sak (ÅÅÅÅ-MM-DD). Utelämnas = samma som date. Används som dateModified i schemat (fas 2.21). */
+  updated?: string;
   readTime: string;
   keywords: string[];
 }

@@ -60,7 +60,7 @@ const BlogPost = () => {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated ?? post.date,
     inLanguage: "sv-SE",
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,

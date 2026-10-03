@@ -9,10 +9,10 @@ export interface AdLanding {
 
 export const adLandings: AdLanding[] = [
   { slug: "taby", name: "Täby", prep: "i", areas: "Täby, Vallentuna, Danderyd, Åkersberga och närområdet" },
-  { slug: "norrtalje", name: "Norrtälje", prep: "i", areas: "Norrtälje, Rimbo, Hallstavik, Vätö och närområdet" },
+  { slug: "norrtalje", name: "Norrtälje", prep: "i", areas: "Norrtälje, Rimbo, Hallstavik, Vätö, Blidö, Singö, Grisslehamn och närområdet" },
   { slug: "vallentuna", name: "Vallentuna", prep: "i", areas: "Vallentuna, Täby, Åkersberga, Rimbo och närområdet" },
   { slug: "akersberga", name: "Åkersberga", prep: "i", areas: "Åkersberga, Österåker, Vallentuna, Täby och närområdet" },
-  { slug: "danderyd", name: "Danderyd", prep: "i", areas: "Danderyd, Täby, Sollentuna, Lidingö och närområdet" },
+  { slug: "danderyd", name: "Danderyd", prep: "i", areas: "Danderyd, Djursholm, Stocksund, Täby, Sollentuna, Lidingö och närområdet" },
   { slug: "sollentuna", name: "Sollentuna", prep: "i", areas: "Sollentuna, Danderyd, Täby, Vallentuna och närområdet" },
   { slug: "rimbo", name: "Rimbo", prep: "i", areas: "Rimbo, Norrtälje, Edsbro, Vallentuna och närområdet" },
   { slug: "hallstavik", name: "Hallstavik", prep: "i", areas: "Hallstavik, Norrtälje, Rimbo, Väddö och närområdet" },

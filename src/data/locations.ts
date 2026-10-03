@@ -549,13 +549,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare på Singö — takbyte och takrenovering i norra Roslagen. TP20, pannplåt och dubbelfalsat plåttak.",
     longDescription:
-      "Singö i norra Roslagen är en plats där skärgårdskänslan möter lantlig charm. Bebyggelsen varierar — äldre torp, sommarvillor och nyare fritidshus — och alla behöver tak som tål det nordliga skärgårdsklimatet.",
+      "Singö i norra Roslagen har en blandad bebyggelse med äldre torp, sommarvillor och nyare fritidshus. Vi tar uppdrag på Singö, och varje tak bedöms för sig vid en kostnadsfri takkontroll.",
     extraContent:
-      "Singö har en blandning av fast boende och sommarboende, och taken här speglar det — allt från klassiska tegelpannetak till enklare papptak på äldre stugor. Kontakta oss för en kostnadsfri bedömning av taket på din fastighet på Singö.",
+      "På Singö finns både fast boende och sommarboende. Hustyp och takmaterial varierar från fastighet till fastighet, och därför bedömer vi varje tak på plats innan vi lämnar ett fast pris. Kontakta oss för en kostnadsfri takkontroll på din fastighet på Singö.",
     uniqueFAQ: {
       question: "Kan ni samordna takbyte på Singö med projekt i Grisslehamn?",
       answer:
-        "Ja, vi kan samordna projekt på Singö med arbeten i Grisslehamn och på Väddö där det passar tidsmässigt, vilket kan minska restidskostnaden. Ring oss så planerar vi tillsammans.",
+        "Hör av dig och berätta var fastigheterna ligger, så tittar vi på om arbetena på Singö, i Grisslehamn och på Väddö kan planeras tillsammans.",
     },
     primaryKeyword: "takläggare Singö",
     lat: 60.0,
@@ -568,16 +568,16 @@ export const locations: LocationData[] = [
     region: "Norra skärgården",
     isIsland: false,
     description:
-      "Takläggare i Grisslehamn — takbyte och takrenovering i norra Roslagen. Dubbelfalsat plåttak och TP20 för hårda kustförhållanden.",
+      "Takläggare i Grisslehamn — takbyte och takrenovering i norra Roslagen. Kostnadsfri takkontroll och fast pris.",
     longDescription:
-      "Grisslehamn längst norrut i Roslagen är en kustort med direktkontakt med öppet hav — och det märks på taken. Vind, regn och salt sliter hårdare här än på de flesta andra platser i regionen. Dubbelfalsat plåttak och TP20 med rätt underlag och förstärkta infästningar är ofta det vi rekommenderar i dessa förhållanden. Kontakta oss för en kostnadsfri bedömning — vi ger dig rak och ärlig rådgivning.",
+      "Grisslehamn ligger längst norrut i Roslagen, vid kusten mot Ålands hav. Vi tar uppdrag i Grisslehamn och bedömer varje tak på plats vid en kostnadsfri takkontroll.",
     extraContent:
-      "Grisslehamn ligger exponerat mot Ålands hav och är en av de mest vindbelastade platserna i Roslagen. Taken här måste klara extrema vindlaster och salt stänk, vilket ställer högre krav på materialval och infästningar än i mer skyddade lägen. Kontakta oss om du vill ha en bedömning av vad som passar just ditt tak i Grisslehamn.",
+      "Grisslehamn ligger vid kusten, och läget kan påverka vilket material och vilka infästningar som passar. Det bedömer vi på plats vid takkontrollen, för varje tak för sig. Kontakta oss om du vill ha en bedömning av vad som passar just ditt tak i Grisslehamn.",
     uniqueFAQ: {
       question:
-        "Vilka speciella krav ställer Grisslehamns klimat på takmaterial?",
+        "Hur går en takkontroll i Grisslehamn till?",
       answer:
-        "Grisslehamn ligger exponerat mot Ålands hav med starka vindar och salt luft. Vi rekommenderar korrosionsbeständig plåt med förstärkta infästningar. Dubbelfalsat plåt eller TP20 med rätt underlag ger längst livslängd i dessa förhållanden, medan betongpannor kan vara mer utsatta för frostsprängning i det hårda klimatet.",
+        "Vi tittar på taket på plats, ungefär 1–2 timmar, utan kostnad och utan förpliktelser. Behöver något göras får du ett fast pris i offerten.",
     },
     primaryKeyword: "takläggare Grisslehamn",
     lat: 60.1,

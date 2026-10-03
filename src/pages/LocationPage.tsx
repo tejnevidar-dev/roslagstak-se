@@ -246,6 +246,9 @@ const LocationPage = () => {
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
               </div>
+              <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                <CheckCircle className="w-4 h-4 text-primary" /> En kontaktperson hela vägen · utan förpliktelser
+              </div>
             </div>
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
               <a
