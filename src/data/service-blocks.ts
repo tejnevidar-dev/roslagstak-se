@@ -363,6 +363,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
   ],
   takkupor: [{ to: "/tjanster/platarbeten", label: "Plåtinklädnad runt kupor" }],
   takinspektion: [
+    { to: "/blogg/takinspektion-guide", label: "Takinspektion: när, varför och hur det går till" },
     { to: "/tjanster/takrenovering", label: "Vanliga åtgärder efter takkontroll" },
     { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   ],

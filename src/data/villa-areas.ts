@@ -180,6 +180,44 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Tungelsta", types: "Villor", period: "Station på Nynäsbanan 1901 (Wikipedia)", note: "Tungelsta, en del av Västerhaninge tätort, har enligt Wikipedia traditioner inom trädgårdsnäring med flera handelsträdgårdar, och i utkanterna är bebyggelsen gles med äldre villor på stora tomter. Stationen på Nynäsbanan invigdes 1901." },
     ],
   },
+  // Kommuner med godkända områdessidor men utan kommunpost tidigare (2.35, 2026-10-04). Fält ur alla.csv, bara områden med egen sida och känd byggperiod, ingen ny text.
+  sundbyberg: {
+    municipality: "Sundbyberg",
+    areas: [
+      { name: "Duvbo, Hästhagen och Tulemarken", types: "Villor", period: "Äldre villor i Duvbo och Hästhagen, funkisvillor i Tulemarken från 1930-talet", href: "/taklaggare-duvbo" },
+      { name: "Ursvik och Brotorp", types: "Villor, radhus och nybyggda villor", period: "Lilla Ursvik 1930- och 1950-tal, Brotorp från 2007", href: "/taklaggare-ursvik" },
+    ],
+  },
+  sodertalje: {
+    municipality: "Södertälje",
+    areas: [
+      { name: "Järna centrum och södra delarna", types: "Villor, egnahem och radhus", period: "Sekelskiftet, egnahem 1930–1940-tal, villor 1950–1970-tal, radhus 1980–1990-tal", href: "/taklaggare-jarna" },
+      { name: "Pershagen", types: "Villor", period: "Avstyckning från 1905, utbyggnad 1920–1930-tal", href: "/taklaggare-pershagen" },
+      { name: "Östertälje", types: "Villor", period: "Till största delen från sekelskiftet och 1960-talet", href: "/taklaggare-ostertalje" },
+      { name: "Ragnhildsborg, Ritorp och Viksberg", types: "Villor och radhus", period: "Ritorp kring millennieskiftet, Viksberg mest 2000-tal", href: "/taklaggare-viksberg" },
+      { name: "Hölö", types: "Villor", period: "Trävillor från 1910–1920-tal", href: "/taklaggare-holo" },
+      { name: "Enhörna: Sandviken", types: "Villor och omvandlade sommarvillor", period: "Sommarvillor från 1890-talet", href: "/taklaggare-enhorna-sandviken" },
+    ],
+  },
+  varmdo: {
+    municipality: "Värmdö",
+    areas: [
+      { name: "Stavsnäs", types: "Villor och fritidshus", period: "Sommarvillor från sent 1800-tal, sommarhus under efterkrigstiden", href: "/taklaggare-stavsnas" },
+      { name: "Hemmesta", types: "Villor och radhus", period: "Tätort från 1965, utbyggnad från 1960-talet till 2010", href: "/taklaggare-hemmesta" },
+    ],
+  },
+  "upplands-bro": {
+    municipality: "Upplands-Bro",
+    areas: [
+      { name: "Centrala Kungsängen", types: "Villor, kedjehus och flerbostadshus", period: "Huvudsakligen 1950- och 1960-tal", href: "/taklaggare-kungsangen" },
+    ],
+  },
+  vaxholm: {
+    municipality: "Vaxholm",
+    areas: [
+      { name: "Resarö", types: "Villor och kedjehus", period: "Mest 1970-, 1980- och 2000-tal, enstaka från 1920-talet och sekelskiftet", href: "/taklaggare-resaro" },
+    ],
+  },
   botkyrka: {
     municipality: "Botkyrka",
     areas: [
