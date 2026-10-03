@@ -227,7 +227,7 @@ for (const { dir, kind, fields } of pmDirs) {
       const accepted = pmAcceptedGaps[file] ?? [];
       const missing = meningar.filter((s) => !liveText.includes(norm(s)) && !accepted.includes(s));
 
-      allResults.push({ page: `/${kind}/${slug}`, file, status: statusOf(raw, meningar.length, missing.length, false), missing, total: meningar.length });
+      allResults.push({ page: `/${kind}/${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
     }
   }
 }
@@ -278,7 +278,7 @@ for (const file of readdirSync(resolve(comboDir)).filter((f) => f.endsWith(".md"
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: path, file, status: statusOf(raw, meningar.length, missing.length, true), missing, total: meningar.length });
+  allResults.push({ page: path, file, status: !meningar.length ? "ok" : missing.length === meningar.length ? "not-built" : missing.length ? "missing" : "ok", missing, total: meningar.length });
 }
 
 /* ---------- 5) Regiontexter (/omraden/<region>) ---------- */
@@ -313,7 +313,7 @@ for (const file of readdirSync(resolve(regionDir)).filter((f) => f.endsWith(".md
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: path, file, status: statusOf(raw, meningar.length, missing.length, false), missing, total: meningar.length });
+  allResults.push({ page: path, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
 }
 
 /* ---------- Rapport ---------- */
