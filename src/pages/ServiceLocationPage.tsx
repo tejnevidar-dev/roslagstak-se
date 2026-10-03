@@ -1,4 +1,5 @@
 import { withRotForbehall } from "@/data/prices";
+import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { isHeading, renderInline } from "@/lib/inline-md";
 import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
@@ -325,7 +326,7 @@ const ServiceLocationPage = () => {
                 <h3 className="font-display text-lg text-card-foreground mb-4">Varför RoslagsTak?</h3>
                 <ul className="space-y-2">
                   {[
-                    "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
+                    combo.serviceSlug === "takrenovering" ? GARANTI_RENOVERING_CHIP.replace("30 års tätskiktsgaranti", "10 års utförandegaranti, 30 års tätskiktsgaranti") : "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
                     "Fast pris utan dolda kostnader",
                     "Samma kontaktperson genom hela projektet",
                     "Kostnadsfri takkontroll",

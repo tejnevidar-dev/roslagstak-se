@@ -1,4 +1,5 @@
 import { withRotForbehall } from "@/data/prices";
+import { GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, RENOVERING_SERVICE_SLUGS } from "@/data/guarantee";
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Award, Clock, Phone, PlayCircle, Shield } from "lucide-react";
@@ -377,6 +378,7 @@ const ServiceDetail = () => {
       ? []
       : Array.from({ length: 4 }, (_, i) => services[(serviceIndex + 1 + i) % services.length]);
   const details = slug ? serviceDetails[slug] : null;
+  const renovering = Boolean(slug && RENOVERING_SERVICE_SLUGS.includes(slug));
   const serviceImage = (slug && serviceImages[slug]) || imgDronePoster;
   const detailImage = slug ? detailImages[slug] : undefined;
   const bandImage = imgBlidoLakeview;
@@ -519,7 +521,7 @@ const ServiceDetail = () => {
                     <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> 10 års utförandegaranti
                   </li>
                   <li className="inline-flex items-center gap-1.5">
-                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> 30 års tätskiktsgaranti via MATAKI
+                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {renovering ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti via MATAKI"}
                   </li>
                   <li className="inline-flex items-center gap-1.5">
                     <Award className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> Fast pris
@@ -830,7 +832,7 @@ const ServiceDetail = () => {
                 },
                 {
                   t: "Garanti",
-                  d: "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+                  d: renovering ? GARANTI_RENOVERING : "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
                 },
                 {
                   t: "Skärgården",

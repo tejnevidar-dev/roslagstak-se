@@ -1,4 +1,6 @@
 /** Innehåll för /takreparation och /takkontroll. Endast uppgifter som redan står på sajten eller som ägaren bekräftat. */
+import { GARANTI_RENOVERING } from "./guarantee";
+
 export interface LandingService {
   slug: "takreparation" | "takkontroll" | "rot-avdrag" | "akut-lackage" | "hangrannor" | "platslagare" | "takbyte-var-2027";
   path: string;
@@ -110,7 +112,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Får jag garanti på reparationen?",
-        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete.",
+        answer: GARANTI_RENOVERING,
       },
       {
         question: "Kan jag få ROT-avdrag på en takreparation?",
@@ -391,7 +393,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Får jag garanti på reparationen?",
-        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete.",
+        answer: GARANTI_RENOVERING,
       },
       {
         question: "Kan jag få ROT-avdrag?",
@@ -460,7 +462,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Får jag garanti?",
-        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete.",
+        answer: GARANTI_RENOVERING,
       },
       {
         question: "Hur snabbt får jag svar?",

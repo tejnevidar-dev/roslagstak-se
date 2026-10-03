@@ -10,11 +10,12 @@ import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 import { getLandingService } from "@/data/landing-services";
+import { GARANTI_RENOVERING_CHIP, RENOVERING_LANDING_SLUGS } from "@/data/guarantee";
 import NotFound from "@/pages/NotFound";
 
-const trust = [
+const trustFor = (slug: string) => [
   "10 års utförandegaranti",
-  "30 års tätskiktsgaranti (MATAKI)",
+  RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti (MATAKI)",
   "Fast pris efter takkontroll",
   "Arbete enligt AMA",
   "Svar inom 24 timmar",
@@ -73,7 +74,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
                 </a>
               </div>
               <ul className="mt-9 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
-                {trust.map((t) => (
+                {trustFor(slug).map((t) => (
                   <li key={t} className="flex items-start gap-2.5 text-[15px] text-foreground">
                     <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                     {t}

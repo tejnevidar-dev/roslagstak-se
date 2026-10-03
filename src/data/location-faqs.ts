@@ -1,3 +1,4 @@
+import { GARANTI_RENOVERING } from "./guarantee";
 import { withRotForbehall } from "./prices";
 export interface LocationFAQ {
   question: string;
@@ -141,7 +142,7 @@ export const generateServiceLocationFAQs = (
     },
     {
       question: `Erbjuder ni garanti på ${service} ${prep} ${locationName}?`,
-      answer: GUARANTEE,
+      answer: service === "takrenovering" ? GARANTI_RENOVERING : GUARANTEE,
     },
   ]);
 };
