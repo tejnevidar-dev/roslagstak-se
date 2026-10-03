@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "status": "UTKAST 2026-10-03 av Hemsida & SEO. Ägs av Marknadschefen och juristen (CODEOWNERS). Sidor och fält som maskinella ändringar aldrig får röra.",
+  "sidor_exakt": [
+    "/offert",
+    "/kontakt",
+    "/cookies",
+    "/integritet",
+    "/villkor",
+    "/boka-takkontroll",
+    "/tjanster/takvard",
+    "/tjanster/taktvatt",
+    "/taktvatt",
+    "/tjanster/takkupor",
+    "/tjanster/eternit-asbest"
+  ],
+  "sidor_prefix": [
+    "/offert/",
+    "/brf",
+    "/admin",
+    "/taktvatt-",
+    "/takvard"
+  ],
+  "falt_aldrig_maskinellt": [
+    "h1 pa startsidan (10n, Vidars rubrik)",
+    "priser (prices.ts)",
+    "garantitexter (guarantee.ts)",
+    "robots, canonical, noindex, sitemap",
+    "URL:er och omdirigeringar",
+    "design, komponenter, bilder",
+    "texter med Grind-rad (briefar)"
+  ],
+  "anmarkning": "Öppen fråga till Marknadschefen: titel och metabeskrivning på ortssidor kommer i dag från godkända briefar (seo-overrides.ts). Förslag: titel/meta får överstyras av systemet även där, eftersom de inte är brödtext. Ändra i så fall inget här; säg nej om de ska spärras."
+}

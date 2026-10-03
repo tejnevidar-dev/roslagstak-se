@@ -1,3 +1,4 @@
+import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { ArrowRight, Award, Clock, Phone, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -28,7 +29,7 @@ const QuickContactFacts = () => (
         <Shield className="w-4 h-4 text-primary" /> 10 års utförandegaranti
       </div>
       <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-        <Shield className="w-4 h-4 text-primary" /> 30 års tätskiktsgaranti via MATAKI
+        <Shield className="w-4 h-4 text-primary" /> {GARANTI_RENOVERING_CHIP}
       </div>
       <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
         <Award className="w-4 h-4 text-primary" /> Fast pris, arbete enligt AMA

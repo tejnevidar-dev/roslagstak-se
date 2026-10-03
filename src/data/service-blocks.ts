@@ -1,4 +1,5 @@
 import { ROT_FORBEHALL } from "./prices";
+import { GARANTI_RENOVERING } from "./guarantee";
 /**
  * Tjänstspecifika block, faktakort och metadata.
  * Varje tjänstesida får egen struktur — inte bara egna färger:
@@ -163,29 +164,26 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takkupor: {
-    seoTitle: "Takkupor & Takfönster Roslagen — Bygglov & montage",
+    seoTitle: "Takkupor & Takfönster Roslagen — Fast pris",
     seoDescription:
-      "Takkupor och takfönster i Roslagen: konstruktion, plåtinklädnad, tätning och invändig finish. Vi hanterar bygglovsansökan och lämnar fast pris efter kostnadsfri takkontroll.",
+      "Takkupor och takfönster i Roslagen med fast pris efter kostnadsfri takkontroll. En av våra säljare tittar på taket på plats och du får en rapport om takets skick.",
     blockPlacement: "after-scope",
     factCards: [
-      { tone: "primary", label: "Bygglov", value: "Krävs oftast", text: "Vi tar fram ritningar och hanterar ansökan mot kommunen." },
-      { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Takkupa komplett, inklusive bygglovsansökan. Samma för takfönster, monterat." },
-      { tone: "accent", label: "Handläggning", value: "4–10 veckor", text: "Kommunens tid för bygglov — planera projektet i god tid." },
-      { tone: "plain", label: "Byggtid", value: "1–2 veckor", text: "Från öppning i takfall till färdig inklädnad och tätning." },
+      { tone: "primary", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Gäller både takkupa och takfönster (Velux), inklusive montering." },
+      { tone: "outline", label: "Takkontroll", value: "Kostnadsfri", text: "En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte." },
+      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_RENOVERING },
     ],
     block: {
-      kind: "regulatory",
-      eyebrow: "Bygglovsprocess",
-      heading: "Från idé till godkänd kupa",
+      kind: "checklist",
+      eyebrow: "Takkontroll",
+      heading: "Det här tittar vi på vid takkontrollen",
       intro:
-        "En takkupa ändrar husets yttre och volym, vilket i de flesta kommuner kräver bygglov. Vi driver processen så att du slipper pappersarbetet.",
-      steps: [
-        { code: "01", title: "Platsbesök och mått", text: "Vi mäter takfall, taklutning och vindsutrymme och bedömer vad konstruktionen tillåter." },
-        { code: "02", title: "Ritningar", text: "Fasad-, plan- och sektionsritning tas fram i den omfattning kommunen kräver." },
-        { code: "03", title: "Bygglovsansökan", text: "Vi skickar in ansökan och kompletterar vid frågor från byggnadsnämnden." },
-        { code: "04", title: "Startbesked", text: "Arbetet påbörjas först när startbesked finns — inget rivs i förväg." },
-        { code: "05", title: "Utförande", text: "Öppning, bärande konstruktion, plåtinklädnad, fönster, isolering och invändig finish." },
-        { code: "06", title: "Slutbesked", text: "Vi lämnar dokumentation och foton som underlag för kommunens slutbesked." },
+        "Takkontrollen är kostnadsfri och utan förpliktelser. Efteråt får du en rapport om takets skick, och behöver taket åtgärdas får du också en offert med fast pris.",
+      groups: [
+        {
+          title: "Vid takkontrollen",
+          items: ["Takmaterial", "Plåtdetaljer", "Avvattning", "Vinden, när den går att komma åt"],
+        },
       ],
     },
   },

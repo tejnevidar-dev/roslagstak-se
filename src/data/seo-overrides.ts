@@ -599,4 +599,49 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning på Ljusterö: sommarvillor från 1900-talets början, fritidshusområden från 1950- och 1960-talen. Kostnadsfri takkontroll.",
   },
+  arholma: {
+    title: "Takbyte på Arholma – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Arholma: redargårdar från 1800-talet, pensionat och fritidshus. Kostnadsfri takkontroll utan förpliktelser, fast pris.",
+  },
+  singo: {
+    title: "Takbyte på Singö, Norrtälje – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Singö: sex byar från medeltiden och många fritidshus. Vi har bytt tak här. Kostnadsfri takkontroll, fast pris.",
+  },
+  svartloga: {
+    title: "Takbyte på Svartlöga – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Svartlöga i Norrtälje ytterskärgård: en gammal by, sjöbodar och sommarhus. Kostnadsfri takkontroll, fast pris.",
+  },
+  graddo: {
+    title: "Takbyte i Gräddö, Rådmansö – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning i Gräddö på Rådmansö: sommarhus från slutet av 1800-talet och senare villor. Kostnadsfri takkontroll, fast pris.",
+  },
+  kapellskar: {
+    title: "Takbyte i Kapellskär, Rådmansö – fast pris",
+    description:
+      "Takbyte och takomläggning i Kapellskär och på yttersta Rådmansö. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  grisslehamn: {
+    title: "Takbyte i Grisslehamn – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning i Grisslehamn på Väddö: äldre boningshus, sommarvillor från 1900-talets början och senare villor. Kostnadsfri takkontroll.",
+  },
+  norrora: {
+    title: "Takbyte på Norröra – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Norröra i Norrtälje skärgård: en by återuppbyggd efter 1719, med hus flyttade från Svartlöga. Kostnadsfri takkontroll.",
+  },
+  sodorora: {
+    title: "Takbyte på Söderöra – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Söderöra i Norrtälje skärgård, en ö med omkring 180 fritidshus. Kostnadsfri takkontroll utan förpliktelser, fast pris.",
+  },
+  grasko: {
+    title: "Takbyte på Gräskö – fast pris i offerten",
+    description:
+      "Takbyte och takomläggning på Gräskö i Norrtälje skärgård: fritidshus från mellankrigstiden och 1960-talet. Kostnadsfri takkontroll, fast pris.",
+  },
 };

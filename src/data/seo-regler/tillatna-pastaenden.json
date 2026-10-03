@@ -1,0 +1,246 @@
+{
+  "version": "1.1",
+  "status": "Genererad ur ledning/crm-ombyggnad/seo-cc-tillatna-pastaenden.md (Marknadschefen, version 1.1, juristens L1–L6 inlagda). Ägs av Marknadschefen och juristen (CODEOWNERS). Regeln är omvänd: det som inte står här får inte påstås. Garantisträngarna G3 och ROT-förbehållet R2 är hämtade ur guarantee.ts och prices.ts, som är facit.",
+  "pastaenden": [
+    {
+      "id": "G1",
+      "pastaende": "Utförandegaranti",
+      "formuleringar": [
+        "10 års utförandegaranti",
+        "10 års garanti på utförandet"
+      ],
+      "villkor": "Aldrig bara \"10 års garanti\"",
+      "kalla": "Regel 5"
+    },
+    {
+      "id": "G2",
+      "pastaende": "Tätskiktsgaranti",
+      "formuleringar": [
+        "30 års tätskiktsgaranti via MATAKI",
+        "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor."
+      ],
+      "villkor": "Bara på sidor om takbyte och takomläggning, där nytt tätskikt läggs. Alltid med \"via MATAKI\" och ordet \"tätskikt\". L3: G2 och G3 får inte läggas in på nya ställen förrän MATAKI har svarat, bara stå kvar där de redan står",
+      "kalla": "Regel 5, Marknadschefens beslut 2026-10-05"
+    },
+    {
+      "id": "G3",
+      "pastaende": "Garanti på renovering, reparation, hängrännor, takproblem",
+      "formuleringar": [
+        "Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI.",
+        "30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)"
+      ],
+      "villkor": "Ordet \"garanti\" får bara förekomma i G1–G3",
+      "kalla": "Beslut 2026-10-05"
+    },
+    {
+      "id": "P1",
+      "pastaende": "Fast pris",
+      "formuleringar": [
+        "Fast pris",
+        "Fast pris i offerten",
+        "Fast pris efter kostnadsfri takkontroll"
+      ],
+      "villkor": "Aldrig \"inga tillägg\" och aldrig \"inga överraskningar\" (L1: tillägg kan uppstå)",
+      "kalla": "Regel 5, juristen"
+    },
+    {
+      "id": "P2",
+      "pastaende": "Tillägg",
+      "formuleringar": [
+        "Tillägg bara efter ditt godkännande"
+      ],
+      "villkor": "Den längre varianten med akut-undantaget bara ordagrant ur `ledning/jurist/saljstod-invandningar-granskning.md` punkt 3",
+      "kalla": "Juristen"
+    },
+    {
+      "id": "K1",
+      "pastaende": "Takkontroll",
+      "formuleringar": [
+        "Kostnadsfri takkontroll",
+        "Kostnadsfri takkontroll utan förpliktelser",
+        "Du betalar inget och binder dig inte"
+      ],
+      "villkor": "Alltid \"takkontroll\", aldrig \"besiktning\" eller \"inspektion\"",
+      "kalla": "Regel 5"
+    },
+    {
+      "id": "K2",
+      "pastaende": "Vad takkontrollen är",
+      "formuleringar": [
+        "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar"
+      ],
+      "villkor": "Aldrig \"går upp på taket\", aldrig \"mäter\"",
+      "kalla": "Vidar, kvalitetsgrinden"
+    },
+    {
+      "id": "K3",
+      "pastaende": "Efter takkontrollen",
+      "formuleringar": [
+        "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser."
+      ],
+      "villkor": "Aldrig \"skriftlig rapport med foton\", \"återstående livslängd\" eller \"prisuppskattning\"",
+      "kalla": "Vidar 10c, 2026-10-01"
+    },
+    {
+      "id": "R1",
+      "pastaende": "ROT",
+      "formuleringar": [
+        "ROT-avdrag på 30 % av arbetskostnaden",
+        "ROT-avdraget dras direkt på fakturan"
+      ],
+      "villkor": "Aldrig \"30 % rabatt\". Aldrig ett ROT-belopp i kronor för kunden",
+      "kalla": "Regel 5, juristen"
+    },
+    {
+      "id": "R2",
+      "pastaende": "ROT-förbehållet",
+      "formuleringar": [
+        "Priserna förutsätter fullt ROT-avdrag: 30 % av arbetskostnaden, högst 50 000 kr per person och år, och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre."
+      ],
+      "villkor": "Ska stå intill varje pris. Systemet får inte ändra eller flytta den",
+      "kalla": "Juristen 2026-10-04"
+    },
+    {
+      "id": "S1",
+      "pastaende": "Svarstid",
+      "formuleringar": [
+        "Vi svarar inom 24 timmar",
+        "Svar inom 24 timmar"
+      ],
+      "villkor": "Enda tillåtna tidslöftet",
+      "kalla": "Regel 5"
+    },
+    {
+      "id": "A1",
+      "pastaende": "Arbetssätt",
+      "formuleringar": [
+        "Arbete enligt AMA",
+        "Vi arbetar enligt AMA"
+      ],
+      "villkor": "–",
+      "kalla": "Regel 5"
+    },
+    {
+      "id": "U1",
+      "pastaende": "Kontaktperson",
+      "formuleringar": [
+        "En kontaktperson genom hela processen",
+        "En kontaktperson hela vägen, från takkontroll till färdigt tak"
+      ],
+      "villkor": "–",
+      "kalla": "Vidar 2026-09-26"
+    },
+    {
+      "id": "B1",
+      "pastaende": "Bas",
+      "formuleringar": [
+        "Vår bas i Norrtälje",
+        "Bas i Norrtälje",
+        "Takfirma med bas i Norrtälje"
+      ],
+      "villkor": "Aldrig Skärholmen som bas. Aldrig \"lokal takläggare i <annan ort>\". L4: inte \"Takläggare med bas …\" förrän Vidar har svarat på 10j (vem som utför arbetet)",
+      "kalla": "Vidar 10d, 2026-10-01"
+    },
+    {
+      "id": "B2",
+      "pastaende": "Arbetsområde",
+      "formuleringar": [
+        "Vi tar uppdrag i Roslagen och Storstockholm"
+      ],
+      "villkor": "\"Mälardalen\" bara på regionsidan Mälardalen, tills Vidar har svarat på hur långt uppdragen sträcker sig",
+      "kalla": "Beslut 2026-09-26"
+    },
+    {
+      "id": "T1",
+      "pastaende": "Bokningstider",
+      "formuleringar": [
+        "Måndag–fredag 07–20, lördag–söndag 09–19"
+      ],
+      "villkor": "–",
+      "kalla": "Vidar 2026-09-28"
+    },
+    {
+      "id": "J1",
+      "pastaende": "Egna jobb",
+      "formuleringar": [
+        "Vi har gjort kompletta takbyten på Blidö och Singö",
+        "projektfakta ordagrant ur `project-texts.ts`"
+      ],
+      "villkor": "Högst en gång per sida. Inga andra orter. Aldrig \"många\", \"regelbundet\", \"ofta\"",
+      "kalla": "fakta.md, samtycke JA"
+    },
+    {
+      "id": "M1",
+      "pastaende": "Material vi lägger",
+      "formuleringar": [
+        "Betongpannor, lertegel, TP20-plåt, pannplåt, dubbelfalsad plåt (bandtäckning), papptak"
+      ],
+      "villkor": "Bara som materialnamn, inga egenskaper utöver de godkända material- och guidetexterna",
+      "kalla": "Prislistan, godkända texter"
+    },
+    {
+      "id": "V1",
+      "pastaende": "Tjänster",
+      "formuleringar": [
+        "Takbyte, takomläggning, takrenovering, takreparation, hängrännor, takkontroll"
+      ],
+      "villkor": "Taktvätt, takmålning och takkupor/takfönster erbjuds (Vidar 10f) men systemet får inte skriva om dem förrän detaljlöftena är bekräftade (10i). Plåtslageri som egen tjänst: inte tillåtet",
+      "kalla": "Beslut.md"
+    }
+  ],
+  "priser": {
+    "villkor": [
+      "efter ROT-avdrag, inkl. moms i samma text som beloppet",
+      "ROT_FORBEHALL (prices.ts) på samma sida",
+      "Ställning: bara 'Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.'",
+      "Pris i titlar och metabeskrivningar: inte tillåtet i version 1 (beslut 10l hos Vidar)"
+    ],
+    "poster": [
+      {
+        "vad": "Betongpannor, TP20-plåt",
+        "form": "från 1 200 kr/m²",
+        "aldrig_fran": false
+      },
+      {
+        "vad": "Lertegel, pannplåt",
+        "form": "från 1 300 kr/m²",
+        "aldrig_fran": false
+      },
+      {
+        "vad": "Dubbelfalsad plåt",
+        "form": "ca 2 000 kr/m²",
+        "aldrig_fran": true
+      },
+      {
+        "vad": "Papptak",
+        "form": "ca 900 kr/m²",
+        "aldrig_fran": true
+      },
+      {
+        "vad": "Råspontbyte",
+        "form": "från 300 kr/m²",
+        "aldrig_fran": false
+      },
+      {
+        "vad": "Skorstensinklädnad",
+        "form": "från 7 000 kr",
+        "aldrig_fran": false
+      },
+      {
+        "vad": "Takstege och gångbrygga",
+        "form": "från 8 000 kr",
+        "aldrig_fran": false
+      },
+      {
+        "vad": "Snörasskydd",
+        "form": "från 600 kr/löpmeter",
+        "aldrig_fran": false
+      },
+      {
+        "vad": "Hängrännor med stuprör, komplett",
+        "form": "från ca 23 000 kr",
+        "aldrig_fran": false
+      }
+    ]
+  }
+}

@@ -55,6 +55,10 @@ const {
   buildBreadcrumbNode,
   buildLocalBusinessSchema,
   buildLocalBusinessLeanSchema,
+  resolveMeta,
+  fitTitle,
+  fitDescription,
+  withSuffix,
 } = await import(pathToFileURL(bundlePath).href);
 
 /* Cookie-bannerns text och localStorage-nyckel kompileras från samma källfiler som
@@ -283,11 +287,17 @@ for (const { path, robots } of routes) {
      do not execute JS would otherwise see 1 300+ identical titles. Mirrors
      SEOHead's rule of appending " | RoslagsTak" to short titles. */
   const page = robots === NOINDEX_ROBOTS ? null : prerenderContent(path);
-  if (page?.title) {
+  /* SEO Command Center (S0): överstyrning av titel/beskrivning via SAMMA funktion som SEOHead (resolveMeta, samma
+     beskärning och suffix). Utan överstyrning gäller exakt koden nedan som förut. */
+  const ov = page ? resolveMeta(path, { title: page.title ?? "", description: page.description ?? "" }) : null;
+  const overriddenTitle = ov?.titleOverridden ? withSuffix(fitTitle(ov.title)) : null;
+  const overriddenDescription = ov?.descriptionOverridden ? fitDescription(ov.description) : null;
+  if (overriddenTitle || page?.title) {
     const fullTitle =
-      page.title.length > 47 || page.title.includes("RoslagsTak")
+      overriddenTitle ??
+      (page.title.length > 47 || page.title.includes("RoslagsTak")
         ? page.title
-        : `${page.title} | RoslagsTak`;
+        : `${page.title} | RoslagsTak`);
     html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(fullTitle)}</title>`);
     html = html.replace(
       /<meta property="og:title" content="[^"]*" \/>/,
@@ -298,18 +308,19 @@ for (const { path, robots } of routes) {
       `<meta name="twitter:title" content="${esc(fullTitle)}" />`,
     );
   }
-  if (page?.description) {
+  const finalDescription = overriddenDescription ?? page?.description;
+  if (finalDescription) {
     html = html.replace(
       /<meta name="description" content="[^"]*" \/>/,
-      `<meta name="description" content="${esc(page.description)}" />`,
+      `<meta name="description" content="${esc(finalDescription)}" />`,
     );
     html = html.replace(
       /<meta property="og:description" content="[^"]*" \/>/,
-      `<meta property="og:description" content="${esc(page.description)}" />`,
+      `<meta property="og:description" content="${esc(finalDescription)}" />`,
     );
     html = html.replace(
       /<meta name="twitter:description" content="[^"]*" \/>/,
-      `<meta name="twitter:description" content="${esc(page.description)}" />`,
+      `<meta name="twitter:description" content="${esc(finalDescription)}" />`,
     );
   }
   if (page?.ogImage) {

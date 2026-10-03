@@ -93,7 +93,7 @@ const faqs = [
   },
   {
     q: "Hur ofta bör man tvätta taket?",
-    a: "Vi rekommenderar taktvätt vart 5:e till 10:e år beroende på läge. Hus i skuggiga lägen, nära skog, hav eller på öar i Roslagens skärgård behöver tvättas vart 5:e–7:e år, medan soliga tak inåt land klarar sig 8–10 år mellan tvättarna. Efter en taktvätt med biocidbehandling håller taket sig rent i 5–8 år, och med kompletterande takmålning förlängs intervallet till 10–15 år.",
+    a: "Det beror på hur utsatt taket är. Tak på norrsidor, under träd eller nära vatten får ofta mer mossa och alger. Vid den kostnadsfria takkontrollen bedömer vi takets skick och om en taktvätt behövs.",
   },
   {
     q: "Är högtryckstvätt skadligt för taket?",
@@ -108,8 +108,8 @@ const faqs = [
     a: "Bästa säsongen för taktvätt i Roslagen är april–oktober när det är torrt och temperaturen är över +5 °C. Våren (april–maj) är optimal för biocidbehandling som hinner verka hela sommaren, medan sommaren (juni–augusti) ger bäst torktid för efterföljande takmålning. Höstmånaderna september–oktober används för rensning av hängrännor och sista tvätten innan vintern. Vi tar emot bokningar året runt men utför inte taktvätt vid frost.",
   },
   {
-    q: "Hur länge håller en taktvätt?",
-    a: "Efter en taktvätt med biocidbehandling håller sig taket rent i 5–8 år innan ny mosspåväxt börjar synas. Lägger man dessutom på två strykningar UV-beständig takfärg får man ytterligare skydd och 10–15 års hållbarhet. I skärgårdsmiljö med saltluft och hög luftfuktighet kan intervallet vara något kortare — vi rekommenderar då en lättare uppfräschning vart 5:e år.",
+    q: "Vad händer efter en taktvätt?",
+    a: "Taket behandlas med biocid efter tvätten. Efteråt kan man lägga på två strykningar UV-beständig takfärg. Hur snabbt mossa och alger kommer tillbaka beror på läge, skuggning och takmaterial, och vid takkontrollen går vi igenom vad som passar ditt tak.",
   },
   {
     q: "Tvättar ni tak på öar i skärgården?",
@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     q: "Kan ni måla taket samtidigt som ni tvättar det?",
-    a: "Ja, takmålning utförs alltid efter en grundlig taktvätt — färgen fäster inte på smutsiga eller mossiga pannor. Vi rekommenderar takmålning på äldre betongpannor där ytskiktet börjat vittra eller färgen flagnar — det förlänger takets livslängd med ytterligare 10–15 år. Vi målar med två strykningar UV-beständig akrylfärg i valfri kulör (oftast tegelröd, svart eller grafitgrå). Plåttak målas med särskild plåtfärg, och tegelpannor målas oftast inte alls eftersom det glaserade ytskiktet är beständigt.",
+    a: "Ja, takmålning utförs alltid efter en grundlig taktvätt — färgen fäster inte på smutsiga eller mossiga pannor. Vi rekommenderar takmålning på äldre betongpannor där ytskiktet börjat vittra eller färgen flagnar. Vi målar med två strykningar UV-beständig akrylfärg i valfri kulör (oftast tegelröd, svart eller grafitgrå). Plåttak målas med särskild plåtfärg, och tegelpannor målas oftast inte alls eftersom det glaserade ytskiktet är beständigt.",
   },
   {
     q: "Behöver jag vara hemma när ni utför taktvätten?",
@@ -133,7 +133,7 @@ const faqs = [
   },
   {
     q: "Hur tar man bort mossa på taket?",
-    a: "Mossa på taket tas bort i tre steg: först manuell borstning av tjocka mosskuddar med mjuka borstar — aldrig metallskrapor som skadar ytskiktet. Därefter lågtryckstvätt (30–80 bar) uppifrån och ned så vatten inte pressas in under pannorna. Slutligen biocidbehandling med KemI-godkänt medel som dödar kvarvarande sporer och förhindrar återväxt i 5–8 år. Försök inte själv — fall från tak är en av Sveriges vanligaste arbetsplatsolyckor.",
+    a: "Mossa på taket tas bort i tre steg: först manuell borstning av tjocka mosskuddar med mjuka borstar — aldrig metallskrapor som skadar ytskiktet. Därefter lågtryckstvätt (30–80 bar) uppifrån och ned så vatten inte pressas in under pannorna. Slutligen biocidbehandling med KemI-godkänt medel som dödar kvarvarande sporer och motverkar återväxt. Försök inte själv — fall från tak är en av Sveriges vanligaste arbetsplatsolyckor.",
   },
   {
     q: "Vad är skillnaden på taktvätt och takvård?",
@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     q: "Är taktvätt verkligen lönsamt jämfört med takbyte?",
-    a: "Ja, om taket är helt och underliggande konstruktion är frisk är taktvätt betydligt billigare än ett takbyte och förlänger livslängden med 10–15 år. Vi gör alltid en ärlig bedömning vid takkontrollen — om pannorna är vittrade eller underlagspappen är dålig rekommenderar vi takomläggning istället.",
+    a: "Ja, om taket är helt och underliggande konstruktion är frisk är taktvätt betydligt billigare än ett takbyte. Vi gör alltid en ärlig bedömning vid takkontrollen — om pannorna är vittrade eller underlagspappen är dålig rekommenderar vi takomläggning istället.",
   },
   {
     q: "Tvättar ni även hängrännor och stuprör?",
@@ -439,8 +439,6 @@ const Taktvatt = () => {
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               Taktvätt innebär att vi rengör ditt tak från mossa, lavar, alger och smuts som med åren bryter ner takets ytskikt.
-              I Roslagens fuktiga skärgårdsklimat — med havsluft, regn och långa vintrar — växer mossan snabbt på betong- och tegelpannor.
-              En obehandlad mosspåväxt kan halvera takets livslängd och leda till läckage, frostsprängning och fuktskador.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Vi på <strong className="text-foreground">RoslagsTak</strong> är specialister på taktvätt och takvård i hela Roslagen och skärgården.

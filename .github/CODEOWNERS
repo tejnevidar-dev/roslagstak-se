@@ -1,0 +1,8 @@
+# SEO Command Center: regelfilerna och CI-spärrarna ändras bara av en människa via granskad PR.
+# Boten (grenar seo-cc/) får aldrig röra dem (se .github/workflows/seo-cc-guard.yml).
+# Tills Marknadschefen och juristen har egna GitHub-konton är ägaren repots ägare. Byt rad när de har det.
+/src/data/seo-regler/ @tejnevidar-dev
+/.github/ @tejnevidar-dev
+/src/data/overrides/index.ts @tejnevidar-dev
+/src/lib/overrides-validate.ts @tejnevidar-dev
+/scripts/check-overrides.ts @tejnevidar-dev

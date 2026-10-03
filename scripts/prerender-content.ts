@@ -79,6 +79,9 @@ export interface PrerenderPage {
 }
 
 export { buildBody, type BodyItem } from "../src/lib/body-items";
+// SEO Command Center (S0): samma meta-funktion och beskärning som SEOHead, för generate-static-heads.mjs.
+export { resolveMeta } from "../src/data/overrides";
+export { fitTitle, fitDescription, withSuffix } from "../src/lib/seo-fit";
 
 /* Services live in a React component; read the data with a regex so the
    prerender never has to bundle JSX or lucide-react. */
@@ -389,10 +392,10 @@ const staticPages: Record<string, PrerenderPage> = {
   "/tjanster/taktvatt": {
     title: "Taktvätt och takmålning — bort med mossa och lav",
     description:
-      "Professionell taktvätt och takmålning som förlänger takets livslängd. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
+      "Professionell taktvätt och takmålning. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
     h1: "Taktvätt i Roslagen — bort med mossa, lavar och alger",
     intro:
-      "Professionell taktvätt och takmålning som förlänger takets livslängd med upp till 15 år. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
+      "Professionell taktvätt och takmålning. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
     paragraphs: [
       "Vi rengör taket med lågtryckstvätt eller manuell borstning och behandlar därefter med miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.",
       "Vi lämnar alltid fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning med grundning och två strykningar. ROT-avdrag på 30 % av arbetskostnaden.",

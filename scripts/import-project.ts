@@ -71,8 +71,10 @@ if (errors.length) {
 
 const f = resolve("src/data/project-texts.ts");
 const src = readFileSync(f, "utf8");
-if (src.includes(`"slug": "${slug}"`) || src.includes(`slug: "${slug}"`)) {
-  console.error(`/projekt/${slug} finns redan i project-texts.ts. Redigera datan direkt.`);
+const replace = process.argv.includes("--replace");
+const exists = src.includes(`"slug": "${slug}"`) || src.includes(`slug: "${slug}"`);
+if (exists && !replace) {
+  console.error(`/projekt/${slug} finns redan i project-texts.ts. Kör med --replace för att ersätta texten ur briefen.`);
   process.exit(1);
 }
 const obj = {
@@ -91,6 +93,19 @@ const obj = {
   ...(ogImage ? { ogImage } : {}),
 };
 const entry = "  " + JSON.stringify(obj, null, 2).replace(/\n/g, "\n  ") + ",\n";
+if (exists) {
+  // Ersätt den befintliga posten (blandade radslut tillåtna): från "  {" före sluggen till "  },".
+  const at = src.search(new RegExp(`"slug": "${slug}"`));
+  const start = src.lastIndexOf("\n  {", at) + 1;
+  const stop = src.indexOf("\n  },", at) + "\n  },".length;
+  if (start === 0 || stop < at) {
+    console.error("Hittar inte posten i project-texts.ts");
+    process.exit(2);
+  }
+  writeFileSync(f, src.slice(0, start) + entry.replace(/,\n$/, ",") + src.slice(stop));
+  console.log(`[import-project] ersatte /projekt/${slug}`);
+  process.exit(0);
+}
 const end = src.lastIndexOf("];");
 if (end < 0) {
   console.error("Hittar inte slutet av projectTexts.");

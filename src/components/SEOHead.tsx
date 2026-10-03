@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { canonicalUrl, isNoindexPath } from "@/lib/canonical";
 import { fitDescription, fitTitle, withSuffix } from "@/lib/seo-fit";
+import { resolveMeta } from "@/data/overrides";
 
 interface SEOHeadProps {
   title: string;
@@ -23,13 +24,15 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ title: rawTitle, description: rawDescription, canonical, type = "website", geoPosition, geoPlacename, noindex, image, imageAlt }: SEOHeadProps) => {
-  const title = fitTitle(rawTitle);
-  const description = fitDescription(rawDescription);
-  const fullTitle = withSuffix(title);
   const { pathname } = useLocation();
   // Always run through the canonical resolver: alias routes (/boka, /taktvatt …)
   // collapse onto one URL, and trailing slashes/casing/query strings are stripped.
   const url = canonicalUrl(canonical ?? pathname);
+  // SEO Command Center: överstyrningar (src/data/overrides/meta.json) via samma funktion som den statiska HTML:en.
+  const meta = resolveMeta(new URL(url).pathname, { title: rawTitle, description: rawDescription });
+  const title = fitTitle(meta.title);
+  const description = fitDescription(meta.description);
+  const fullTitle = withSuffix(title);
   const shouldNoindex = noindex || isNoindexPath(pathname);
   const ogImage = image ? (image.startsWith("http") ? image : `https://roslagstak.se${image}`) : "https://roslagstak.se/og-image.jpg";
   const ogImageAlt = image ? (imageAlt ?? title) : title;

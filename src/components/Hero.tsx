@@ -1,3 +1,4 @@
+import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
@@ -99,7 +100,7 @@ const Hero = () => {
             </Link>
           </p>
           <ul className="mt-3 flex max-w-[46ch] flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-primary-foreground/75 lg:mt-6" aria-label="Fakta om RoslagsTak">
-            {["10 års utförandegaranti", "30 års tätskiktsgaranti via MATAKI", "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"].map((t) => (
+            {["10 års utförandegaranti", GARANTI_RENOVERING_CHIP, "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"].map((t) => (
               <li key={t}>{t}</li>
             ))}
           </ul>

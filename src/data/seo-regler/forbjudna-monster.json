@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "status": "UTKAST 2026-10-03 av Hemsida & SEO. Ägs av Marknadschefen och juristen: ändras bara via vanlig PR med granskning (CODEOWNERS). Bot-PR:er (grenar seo-cc/) får aldrig röra den här mappen.",
+  "monster": [
+    {
+      "id": "livslangd-i-ar",
+      "monster": "(livslängd|hållbarhet|håller)[^.]{0,30}\\d+\\s*(–|-)?\\s*\\d*\\s*år|\\d+\\s*(–|-)?\\s*\\d*\\s*års\\s+(livslängd|hållbarhet)|i\\s+decennier|generationer|för\\s+livet",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Livslängder i år är inte belagda (Marknadschefens beslut, regel 5)."
+    },
+    {
+      "id": "garanti-fel-ar",
+      "monster": "\\b(?!10\\b|30\\b)\\d{1,2}\\s*(–|-)?\\s*\\d*\\s*års\\s*(\\w+\\s)?\\w*garanti",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Bara 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI är belagda."
+    },
+    {
+      "id": "garanti-tatskikt-utan-forbehall",
+      "monster": "30\\s*års\\s*tätskiktsgaranti(?![^.]{0,60}(nytt tätskikt|takbyte|takomläggning|MATAKI))",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "30 års tätskiktsgaranti gäller bara när nytt tätskikt läggs och nämns med MATAKI (guarantee.ts)."
+    },
+    {
+      "id": "obelagda-egenskaper",
+      "monster": "certifierad|auktoriserad|försäkrad|ansvarsförsäkring|f-skatt|egna\\s+(hantverkare|montörer|takläggare|plåtslagare)|\\buc\\b|kollektivavtal|erfaren|utbildade|år\\s+i\\s+branschen|\\d+\\s+(lagda\\s+tak|kunder)",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Certifiering, försäkring, F-skatt, egna hantverkare och kollektivavtal är obelagda påståenden."
+    },
+    {
+      "id": "superlativ",
+      "monster": "\\b(bäst|bästa|billigast|billigaste|störst|största|ledande|nummer\\s*1|marknadens|sveriges|bäst\\s+i\\s+test|prisvärdast|prisvärt)\\b",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Jämförande och oprovade superlativ är inte belagda (marknadsföringslagen)."
+    },
+    {
+      "id": "tidslofte",
+      "monster": "inom\\s+(?!24\\s*(h\\b|timmar))\\d+\\s*(timmar|dagar|veckor|h\\b)|samma\\s+dag|nästa\\s+dag|\\d+\\s*(–|-)\\s*\\d+\\s*veckor|färdigt\\s+på",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Endast 'svar inom 24 timmar' är belagt som tidslöfte."
+    },
+    {
+      "id": "pris-i-text",
+      "monster": "\\d[\\d\\s.,]*\\s*(kr|kronor|:-|sek)(\\b|/)|från\\s+\\d|gratis\\s+offert",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Priser får bara komma ur prislistan (prices.ts). Maskinella meta-ändringar innehåller inga priser. Skriv 'kostnadsfri' och inte 'gratis'."
+    },
+    {
+      "id": "konkurrenter",
+      "monster": "vertex\\s*tak|beckmans|best\\s*tak|villatakexperten|moderna\\s*tak|daas\\s*bygg|takmästare|ilicko|takläggaren\\s+norrtälje",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Inget om konkurrenter på sajten eller i annonser."
+    },
+    {
+      "id": "klimatdiagnoser",
+      "monster": "saltluft|salt\\s+luft|havsluft|kustklimat|skärgårdsklimat|saltstänk|fuktig\\s+(kust|havs)luft",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Lokala klimatdiagnoser saknar källa."
+    },
+    {
+      "id": "omdomen-och-betyg",
+      "monster": "stjärnor|betyg\\s*\\d|\\d[,.]\\d\\s*/\\s*5|omdömen\\s+från\\s+kunder|nöjda\\s+kunder|referenser\\s+från",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Omdömen och betyg får bara visas som de står på Google, aldrig som egen metatext."
+    },
+    {
+      "id": "juridiskt-bolagsnamn",
+      "monster": "roslagstak\\s+ab\\b|vt6\\s*invest",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "RoslagsTak AB är inte bildat, och VT6 Invest nämns aldrig mot kund."
+    },
+    {
+      "id": "akut-och-jour",
+      "monster": "\\bakut|jour|dygnet\\s+runt|24\\s*/\\s*7|rycker\\s+ut",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Inga utryckningslöften. 'Akut' bara i godkänd text (juristen)."
+    },
+    {
+      "id": "garanti-ord-utanfor-g1-g3",
+      "monster": "garantibevis|livstidsgaranti|skriftlig\\s+garanti|\\bgaranti\\b(?!\\s+på\\s+utförandet)",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Ordet garanti får bara förekomma i G1–G3 (utförandegaranti, tätskiktsgaranti via MATAKI)."
+    },
+    {
+      "id": "takkontroll-fel-ord",
+      "monster": "besiktning|inspektion|skriftlig\\s+rapport|fotodokumentation|med\\s+foton|återstående\\s+livslängd|prisuppskattning|slutbesiktning|går\\s+upp\\s+på\\s+taket",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Det heter alltid takkontroll (K1–K3)."
+    },
+    {
+      "id": "rabatter-och-tillagg",
+      "monster": "rabatt|kampanj|erbjudande|inga\\s+tillägg|före\\s+rot|tidsbegränsad",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Inga rabatter, kampanjer eller 'inga tillägg' (P1, juristen)."
+    },
+    {
+      "id": "process-lofte",
+      "monster": "städar|bortforsling\\s+ingår|vi\\s+sköter\\s+(bygglov|ansökan)|tidplan|vi\\s+dokumenterar|båttransport",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Processlöften utöver det belagda är förbjudna."
+    },
+    {
+      "id": "lokal-narvaro",
+      "monster": "lokal\\s+takläggare\\s+i|rötterna\\s+i|hemmabas|vi\\s+rör\\s+oss|många\\s+kunder\\s+i|vanligt\\s+här|skärholmen",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Lokal närvaro utöver B1 (bas i Norrtälje) är förbjuden."
+    },
+    {
+      "id": "tjanster-vi-inte-far-skriva-om",
+      "monster": "solcell|snöskott|serviceavtal|\\bisoler|saneringen\\s+(utför|gör)s?\\s+(av\\s+oss|själva)",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Solceller, snöskottning, serviceavtal, isolering och eternitsanering i egen regi får inte skrivas om (lista 1.1, avsnitt 4)."
+    },
+    {
+      "id": "forsakring",
+      "monster": "försäkring\\w*\\s+(ersätter|täcker)|försäkringsärende|försäkringsanmälan|försäkringsutlåtande|utlåtande",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Inget om att försäkringen ersätter, hjälp med försäkringsärenden eller utlåtanden."
+    },
+    {
+      "id": "personer-och-adresser",
+      "monster": "(vägen|gatan|stigen|allén|backen|torget)\\s+\\d+|\\b\\d{3}\\s?\\d{2}\\b",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Inga adresser, husnummer eller postnummer. Personnamn och kundnamn får aldrig förekomma."
+    },
+    {
+      "id": "sociala-rubriker",
+      "monster": "\\bklart\\s+i\\b",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Inga rubriker av typen 'Klart i …'."
+    },
+    {
+      "id": "tidspress",
+      "monster": "boka\\s+nu|sista\\s+chansen|innan\\s+det\\s+är\\s+för\\s+sent|begränsat\\s+antal|just\\s+nu|passa\\s+på|boka\\s+innan|vänta\\s+inte",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Tidspress är förbjuden (L5)."
+    },
+    {
+      "id": "absoluta-loften",
+      "monster": "garanterat|helt\\s+vattentät|underhållsfri|problemfri|100\\s*%|\\bgratis\\b|\\balltid\\b|\\baldrig\\b",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Absoluta löften är förbjudna (L5). Skriv 'kostnadsfri' i stället för 'gratis'."
+    },
+    {
+      "id": "skramsel",
+      "monster": "taket\\s+kan\\s+rasa|riskerar\\s+fukt|hundratusentals|innan\\s+taket\\s+läcker|risk\\s+för\\s+(mögel|fuktskador)",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Skrämsel och obelagda följder är förbjudna (L5)."
+    },
+    {
+      "id": "varde-energi-miljo-halsa",
+      "monster": "höjer\\s+(husets\\s+)?värde|sänker\\s+energi|energikostnad|miljövänlig|klimatsmart|hälsosam",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Påståenden om värde, energi, miljö och hälsa är förbjudna (L5)."
+    },
+    {
+      "id": "godkannanden",
+      "monster": "godkänd\\s+av|rekommenderad\\s+av|medlem\\s+i|boverket|arbetsmiljöverket|branschorgan",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Myndigheters eller organs namn som kvalitetsstämpel är förbjudet (L5). MATAKI nämns bara via garantisträngarna."
+    },
+    {
+      "id": "juridiska-besked",
+      "monster": "\\bbygglov\\b|ångerrätt|du\\s+har\\s+rätt\\s+till|krävs\\s+inget|behövs\\s+inget",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Juridiska besked (bygglov, ångerrätt) utanför de juristgodkända guiderna är förbjudna (L5)."
+    },
+    {
+      "id": "platshallare-och-fel",
+      "monster": "undefined|null|\\{\\{|\\}\\}|lorem|\\[\\w+\\]|\\bTODO\\b|\\s{2,}",
+      "flaggor": "i",
+      "falt": ["title", "description"],
+      "orsak": "Platshållartext, dubbla blanksteg och mallrester."
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -39,7 +40,7 @@ const benefits = [
   "En kontaktperson genom hela processen",
   "Fast pris efter kostnadsfri takkontroll",
   "10 års utförandegaranti",
-  "30 års tätskiktsgaranti via MATAKI",
+  GARANTI_RENOVERING_CHIP,
   "ROT-avdraget dras direkt på fakturan",
   "Roslagen, Storstockholm och Mälardalen",
 ];

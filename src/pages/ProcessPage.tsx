@@ -19,7 +19,7 @@ const processFaqs = [
   {
     question: "Behöver jag bygglov för takbyte?",
     answer:
-      "Byter du till likvärdigt material och behåller takets utseende krävs normalt inget bygglov. Byter du kulör, material eller gör takkupor kan bygglov eller anmälan behövas. Det är kommunen som avgör vad som gäller.",
+      "För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
   },
   {
     question: "Vilka lager består ett tak av?",

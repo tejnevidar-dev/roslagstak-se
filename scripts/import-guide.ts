@@ -99,7 +99,12 @@ let src = readFileSync(f, "utf8");
 const marker = `    slug: "${slug}",`;
 const at = src.indexOf(marker);
 if (at > -1) {
-  const start = src.lastIndexOf("\n  {\n", at) + 1;
+  // blog-posts.ts har blandade radslut (CRLF/LF): sök efter "  {" och "  }," utan att anta radslutet efter klammern.
+  const start = src.lastIndexOf("\n  {", at) + 1;
+  if (start === 0) {
+    console.error(`Hittar inte början på posten ${slug} i blog-posts.ts (avbryter utan att skriva).`);
+    process.exit(2);
+  }
   const end = src.indexOf("\n  },", at) + "\n  },".length;
   const block = src.slice(start, end);
   // Ersatt text: behåll det ursprungliga publiceringsdatumet och sätt "updated" till importdagen.
@@ -110,7 +115,13 @@ if (at > -1) {
   src = src.slice(0, start) + serialize(updatedLine) + src.slice(end);
   console.log(`[import-guide] ersatte /blogg/${slug} (${content.length} stycken, ${words} ord)`);
 } else {
-  const arrStart = src.indexOf("export const blogPosts: BlogPost[] = [\n") + "export const blogPosts: BlogPost[] = [\n".length;
+  // Blandade radslut (CRLF/LF) i blog-posts.ts: hitta radens slut oavsett radslut, och avbryt om listan inte hittas.
+  const head = src.match(/export const blogPosts: BlogPost\[\] = \[\r?\n/);
+  if (!head || head.index === undefined) {
+    console.error("Hittar inte 'export const blogPosts: BlogPost[] = [' i blog-posts.ts (avbryter utan att skriva).");
+    process.exit(2);
+  }
+  const arrStart = head.index + head[0].length;
   src = src.slice(0, arrStart) + serialize("") + "\n" + src.slice(arrStart);
   // (nytt inlägg: date = importdagen, ingen updated)
   console.log(`[import-guide] nytt inlägg /blogg/${slug} (${content.length} stycken, ${words} ord)`);

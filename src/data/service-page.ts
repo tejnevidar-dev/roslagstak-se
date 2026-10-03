@@ -62,11 +62,11 @@ export const serviceMeta: Record<string, ServiceMeta> = {
   takkupor: {
     accentLine: "mer ljus på vinden.",
     specs: [
-      { k: "Bygglov", v: "Vi hanterar ansökan" },
+      { k: "Takkontroll", v: "Kostnadsfri" },
       { k: "Fönster", v: "Velux eller motsvarande" },
       { k: "Tätning", v: "Plåtbeslag runt kupa" },
     ],
-    specHeading: "Konstruktion, tätning och invändig finish",
+    specHeading: "Takkupor och takfönster",
     lead: "En kupa är lika mycket plåtarbete som snickeri — tätningen avgör resultatet.",
     craftLine: "Runt kupor och genomföringar avgörs om taket håller tätt.",
     photoNote: "Färdigt tak med två takkupor — tätt inklätt i plåt runt varje kupa.",
@@ -137,7 +137,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
 
 export const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA av våra takläggare med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
     priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Exakt pris beror på takets storlek, material och underlag.",
     benefits: [
       "Rivning av befintligt yttertak",
@@ -162,12 +162,12 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takrenovering: {
-    longDesc: "En takrenovering innebär att vi åtgärdar problem och förlänger livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
+    longDesc: "En takrenovering innebär att vi åtgärdar problem och kan förlänga livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. ROT-avdrag tillkommer.",
     benefits: [
       "Lägre kostnad än komplett takomläggning",
       "Fast pris efter kostnadsfri takkontroll",
-      "Förlänger befintligt taks livslängd",
+      "Kan förlänga befintligt taks livslängd",
       "Åtgärdar läckor och fuktskador",
       "Byte av enstaka pannor eller plåtsektioner",
       "Reparation av rötskadat virke",
@@ -202,23 +202,19 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takkupor: {
-    longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. Med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum och öka boendeytan avsevärt.",
+    longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux). Takkupor kan ge mer boyta på vinden.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, för både takkupa och takfönster (Velux) inkl. montering. ROT-avdrag tillkommer.",
     benefits: [
       "Mer dagsljus på vindsvåningen",
-      "Ökat boendeyta och husvärde",
+      "Kan ge mer boyta",
       "Bättre ventilation",
       "Karaktär och charm till huset",
       "Korrekt vattenavledning runt kupa/fönster",
-      "Energieffektiva takfönster",
     ],
     process: [
       "Platsbesök och planering",
-      "Bygglovsansökan vid behov",
-      "Konstruktionsberäkning",
       "Uppbyggnad av takkupa/fönsteröppning",
       "Taktäckning och plåtarbete",
-      "Isolering och invändig finishing",
     ],
   },
   takinspektion: {
@@ -261,13 +257,12 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takvard: {
-    longDesc: "Takvård handlar om att underhålla och skydda ditt tak för att förlänga dess livslängd och bevara husets utseende. Vi utför taktvätt där vi tar bort mossa, alger och smuts med skonsamma metoder som inte skadar takmaterialet. Vi utför även takmålning med specialfärger anpassade för tak — oavsett om det är betongpannor, tegelpannor eller plåttak. Ett välskött tak håller längre, ser bättre ut och skyddar bättre mot väder och vind.",
+    longDesc: "Takvård handlar om att underhålla ditt tak och bevara husets utseende. Vi utför taktvätt där vi tar bort mossa, alger och smuts med skonsamma metoder som inte skadar takmaterialet. Vi utför även takmålning med specialfärger anpassade för tak — oavsett om det är betongpannor, tegelpannor eller plåttak.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning. ROT-avdrag tillkommer.",
     benefits: [
       "Professionell taktvätt med skonsam metod",
       "Borttagning av mossa, alger och lavar",
       "Takmålning med specialfärg för tak",
-      "Förlänger takets livslängd avsevärt",
       "Fräschar upp husets utseende",
       "Skyddar takmaterialet mot fukt och UV",
     ],

@@ -53,7 +53,7 @@ export const eternitSections: { heading: string; level: 2 | 3; paragraphs: strin
     "heading": "Varför ska man byta eternittak?",
     "level": 3,
     "paragraphs": [
-      "Många eternittak i Roslagen är nu 50–70 år gamla och börjar bli porösa, spruckna eller mossbevuxna. Ett åldrat eternittak läcker ofta vid genomföringar och nockbeslag. Dessutom sänker ett eternittak husets marknadsvärde, och försäkringsbolag kan ha synpunkter på byggnader med asbesthaltigt material. Genom att sanera och byta till modernt takmaterial — exempelvis plåttak, betongpannor eller tegeltak — får du ett säkrare, tätare och snyggare tak med 30–50 års livslängd."
+      "Eternit tillverkades fram till 1970-talet, och många eternittak i Roslagen är därför gamla och börjar bli porösa, spruckna eller mossbevuxna. Ett åldrat eternittak läcker ofta vid genomföringar och nockbeslag. Genom att sanera och byta till modernt takmaterial — exempelvis plåttak, betongpannor eller tegeltak — får du ett säkrare, tätare och snyggare tak."
     ]
   },
   {

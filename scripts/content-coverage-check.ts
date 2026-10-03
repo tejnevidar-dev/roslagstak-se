@@ -35,6 +35,7 @@ const norm = (s: string) =>
     .replace(/\*\*/g, "") // markdown-fet **text** -> text (körs före kursiv-strippen nedan,
     // annars äter kursivregexen hälften av ett fetmarkeringspar och lämnar lösa asterisker)
     .replace(/\*([^*]+)\*/g, "$1") // markdown-kursiv *text* -> text
+    .replace(/\*/g, "") // lösa asterisker, t.ex. när en kursiv rad delas i två meningar
     .replace(/\s+/g, " ")
     .trim();
 
@@ -53,6 +54,12 @@ const verbose = process.argv.includes("--verbose");
 
 type Result = { page: string; file: string; status: "ok" | "missing" | "no-slug" | "not-built"; missing: string[]; total: number };
 const allResults: Result[] = [];
+
+/** En brief utan Grind-rad (Marknadschefens godkännande) blockerar aldrig: den räknas som "inte byggd" tills den godkänns. */
+const hasGrind = (raw: string) => /\*\*Grind:\*\*\s*GODKÄND/.test(raw);
+/** Statusen för en brief: saknade meningar underkänner bara en godkänd brief. */
+const statusOf = (raw: string, total: number, missing: number, zeroIsNotBuilt: boolean): "ok" | "missing" | "not-built" =>
+  !total || !missing ? "ok" : !hasGrind(raw) || (zeroIsNotBuilt && missing === total) ? "not-built" : "missing";
 
 /* ---------- 1) Ortssidor ---------- */
 
@@ -220,7 +227,7 @@ for (const { dir, kind, fields } of pmDirs) {
       const accepted = pmAcceptedGaps[file] ?? [];
       const missing = meningar.filter((s) => !liveText.includes(norm(s)) && !accepted.includes(s));
 
-      allResults.push({ page: `/${kind}/${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+      allResults.push({ page: `/${kind}/${slug}`, file, status: statusOf(raw, meningar.length, missing.length, false), missing, total: meningar.length });
     }
   }
 }
@@ -248,7 +255,7 @@ for (const file of readdirSync(resolve(guideDir)).filter((f) => f.endsWith(".md"
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: `/blogg/${slug}`, file, status: !meningar.length ? "ok" : missing.length === meningar.length ? "not-built" : missing.length ? "missing" : "ok", missing, total: meningar.length });
+  allResults.push({ page: `/blogg/${slug}`, file, status: statusOf(raw, meningar.length, missing.length, true), missing, total: meningar.length });
 }
 
 /* ---------- 4) Tjänst×ort-texter (/takbyte-<ort> m.fl., ortstexter/) ---------- */
@@ -271,7 +278,7 @@ for (const file of readdirSync(resolve(comboDir)).filter((f) => f.endsWith(".md"
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: path, file, status: !meningar.length ? "ok" : missing.length === meningar.length ? "not-built" : missing.length ? "missing" : "ok", missing, total: meningar.length });
+  allResults.push({ page: path, file, status: statusOf(raw, meningar.length, missing.length, true), missing, total: meningar.length });
 }
 
 /* ---------- 5) Regiontexter (/omraden/<region>) ---------- */
@@ -306,7 +313,7 @@ for (const file of readdirSync(resolve(regionDir)).filter((f) => f.endsWith(".md
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: path, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+  allResults.push({ page: path, file, status: statusOf(raw, meningar.length, missing.length, false), missing, total: meningar.length });
 }
 
 /* ---------- Rapport ---------- */

@@ -30,8 +30,8 @@ export const projectTexts: ProjectText[] = [
     "title": "Nytt tak på Blidö",
     "locationName": "Blidö, Norrtälje",
     "locationSlug": "blido",
-    "serviceName": "Takrenovering",
-    "serviceSlug": "takrenovering",
+    "serviceName": "Takbyte",
+    "serviceSlug": "takomlaggning",
     "material": "Betongpannor (Benders, svart)",
     "materialSlugs": [
       "betongpannor"

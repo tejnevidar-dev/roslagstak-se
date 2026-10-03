@@ -1,3 +1,4 @@
+import { GARANTI_RENOVERING } from "@/data/guarantee";
 import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
@@ -552,7 +553,7 @@ const LocationPage = () => {
                     : location.isIsland
                     ? ` Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.`
                     : ""}
-                  {" "}Alla arbeten utförs enligt AMA Hus med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.
+                  {" "}Alla arbeten utförs enligt AMA Hus. {GARANTI_RENOVERING}
                 </p>
 
                 <h3 className="font-display text-xl text-foreground mb-3">

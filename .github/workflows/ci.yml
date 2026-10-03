@@ -1,0 +1,29 @@
+name: ci
+
+# Kvalitetsgrindar före merge (SEO Command Center S0). Pre-push-hooken körs bara lokalt, så den här
+# körningen är det som gäller för pull requests och för maskinella ändringar via API.
+# Täckningsgrinden (content-coverage-check) läser ledning/ och körs därför bara lokalt (verify:local).
+# Kör: typkontroll, tester (inkl. regelfixturer och paritetstest), bygget med alla postbuild-grindar
+# (schema, sitemap, länkar, geografi, tunt innehåll, innehållsdjup, överstyrningskontroll).
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: bun install --frozen-lockfile
+      - run: bun run typecheck
+      - run: bun run test
+      - run: bun run build

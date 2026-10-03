@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "status": "UTKAST 2026-10-03 av Hemsida & SEO. Kända bra och dåliga texter som BÅDE CI (src/test/overrides-regler.test.ts) och CRM kör mot samma regler, så att reglerna inte glider isär. Lägg till rader, ta aldrig bort utan granskning.",
+  "bra": [
+    { "falt": "title", "text": "Takbyte i Täby – fast pris efter takkontroll" },
+    { "falt": "title", "text": "Takläggare i Norrtälje – takkontroll utan förpliktelser" },
+    { "falt": "title", "text": "Takbyte i Älta, Nacka – fast pris" },
+    { "falt": "title", "text": "Takfirma med bas i Norrtälje – takkontroll" },
+    { "falt": "description", "text": "Takbyte och takomläggning i Täby med kostnadsfri takkontroll utan förpliktelser, fast pris och svar inom 24 timmar. 10 års utförandegaranti." },
+    { "falt": "description", "text": "Takbyte i Norrtälje: 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs. Kostnadsfri takkontroll, fast pris." },
+    { "falt": "description", "text": "Takrenovering i Vallentuna med en kontaktperson hela vägen. Boka kostnadsfri takkontroll, vi svarar inom 24 timmar och ROT-avdraget dras på fakturan." }
+  ],
+  "daliga": [
+    { "falt": "title", "text": "Takbyte som håller i 50 år", "regel": "livslangd-i-ar" },
+    { "falt": "description", "text": "Taket får 40 års livslängd med vårt takbyte i Täby.", "regel": "livslangd-i-ar" },
+    { "falt": "title", "text": "Ett tak för generationer", "regel": "livslangd-i-ar" },
+    { "falt": "description", "text": "Vi ger 15 års garanti på alla takarbeten i Stockholm.", "regel": "garanti-fel-ar" },
+    { "falt": "description", "text": "30 års tätskiktsgaranti på alla jobb.", "regel": "garanti-tatskikt-utan-forbehall" },
+    { "falt": "description", "text": "Certifierade takläggare med F-skatt och full försäkring.", "regel": "obelagda-egenskaper" },
+    { "falt": "title", "text": "Bästa takläggaren i Roslagen", "regel": "superlativ" },
+    { "falt": "description", "text": "Vi kommer inom 2 dagar och är klara på 3 veckor.", "regel": "tidslofte" },
+    { "falt": "description", "text": "Takbyte från 1 200 kr/m² i Täby.", "regel": "pris-i-text" },
+    { "falt": "description", "text": "Få en gratis offert på takbyte idag.", "regel": "pris-i-text" },
+    { "falt": "description", "text": "Vi är bättre än Vertex Tak på takbyte i Täby.", "regel": "konkurrenter" },
+    { "falt": "description", "text": "Saltluften vid kusten sliter hårt på taken i Norrtälje.", "regel": "klimatdiagnoser" },
+    { "falt": "description", "text": "Betyg 5,0 av 5 från nöjda kunder.", "regel": "omdomen-och-betyg" },
+    { "falt": "title", "text": "RoslagsTak AB – takbyte i Täby", "regel": "juridiskt-bolagsnamn" },
+    { "falt": "description", "text": "Akut takläckage? Vi rycker ut dygnet runt.", "regel": "akut-och-jour" },
+    { "falt": "description", "text": "Takbyte i {{ort}} undefined.", "regel": "platshallare-och-fel" },
+    { "falt": "description", "text": "Boka nu, begränsat antal tider kvar för takbyte i Täby.", "regel": "tidspress" },
+    { "falt": "description", "text": "Ett garanterat tätt tak med underhållsfritt resultat.", "regel": "absoluta-loften" },
+    { "falt": "description", "text": "Skjut inte upp det: risk för mögel och fuktskador som kostar hundratusentals kronor.", "regel": "skramsel" },
+    { "falt": "description", "text": "Takbyte som höjer husets värde och sänker energikostnaden.", "regel": "varde-energi-miljo-halsa" },
+    { "falt": "description", "text": "Takläggare i Täby, rekommenderad av Boverket.", "regel": "godkannanden" },
+    { "falt": "description", "text": "Du behöver inget bygglov för takbyte i Täby.", "regel": "juridiska-besked" },
+    { "falt": "title", "text": "Solceller och takbyte i Täby", "regel": "tjanster-vi-inte-far-skriva-om" },
+    { "falt": "description", "text": "Försäkringen ersätter takbyte efter stormskada, vi hjälper dig med försäkringsärendet.", "regel": "forsakring" },
+    { "falt": "title", "text": "Klart i Täby: nytt tak på Villavägen 12", "regel": "sociala-rubriker" },
+    { "falt": "description", "text": "Nytt tak på Villavägen 12 i Täby, postnummer 183 52.", "regel": "personer-och-adresser" },
+    { "falt": "description", "text": "Takbyte i Täby: 30 års garanti på alla jobb.", "regel": "garanti-ord-utanfor-g1-g3" },
+    { "falt": "title", "text": "Takläggare med bas i Norrtälje och egna hantverkare", "regel": "obelagda-egenskaper" }
+  ]
+}

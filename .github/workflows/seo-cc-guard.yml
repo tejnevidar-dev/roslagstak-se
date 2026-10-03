@@ -1,0 +1,44 @@
+name: seo-cc-guard
+
+# Sökvägsspärr för SEO Command Center: en pull request från en gren som börjar på "seo-cc/" får BARA ändra filer
+# under src/data/overrides/. Regelfilerna (src/data/seo-regler/), koden, workflows och allt annat är spärrat för boten.
+# Körs med pull_request_target och läser fillistan via API:et, utan att checka ut eller köra PR:ens kod, så att en
+# PR inte kan ändra själva spärren. Gör jobbet "guard" till ett obligatoriskt statuskrav på main (GitHub-inställning).
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  pull-requests: read
+  contents: read
+
+jobs:
+  guard:
+    if: startsWith(github.head_ref, 'seo-cc/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Kontrollera att bara src/data/overrides/ ändras
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          files=$(gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[] | .filename, (.previous_filename // empty)')
+          if [ -z "$files" ]; then
+            echo "Ingen ändrad fil hittades, avvisar för säkerhets skull."
+            exit 1
+          fi
+          fel=0
+          while IFS= read -r f; do
+            case "$f" in
+              src/data/overrides/*) ;;
+              *)
+                echo "::error::Bot-PR rör en fil utanför src/data/overrides/: $f"
+                fel=1
+                ;;
+            esac
+          done <<< "$files"
+          if [ "$fel" -ne 0 ]; then exit 1; fi
+          echo "OK: alla ändrade filer ligger under src/data/overrides/"
