@@ -511,7 +511,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Vi arbetar i Norrtälje stad och i hela kommunen: takbyte, takrenovering och takreparation på villor och andra byggnader. Du får en kostnadsfri takkontroll och ett skriftligt fast pris innan något påbörjas. Ring oss så bokar vi tid för takkontroll.",
     extraContent:
-      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten och takavvattning med hängrännor och stuprör. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Begär en offert så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll, fast pris i offerten utan löpande timpris och utförande enligt AMA. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år.",
+      "Vi utför komplett takservice i Norrtälje med omnejd, från Rimbo och Hallstavik till Grisslehamn: takomläggning, takrenovering, plåtarbeten och takavvattning med hängrännor och stuprör. Allt arbete utförs enligt AMA. Vi lämnar 10 års utförandegaranti på det arbete vi utför. Boka en kostnadsfri takkontroll så återkommer vi inom 24 timmar. Processen är densamma för alla jobb i Norrtälje: kostnadsfri takkontroll, fast pris i offerten utan löpande timpris och utförande enligt AMA. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år.",
     uniqueFAQ: {
       question: "Tar RoslagsTak uppdrag i Norrtälje?",
       answer:
@@ -532,7 +532,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Vaxholm är porten till Stockholms skärgård och har en unik blandning av kulturhistoriska trähus och moderna villor. Estetiken är ofta viktig här, särskilt i de äldre delarna av staden, och vi anpassar materialval och utförande efter husets ålder och stil. Vi lämnar fast pris efter kostnadsfri takkontroll.",
     extraContent:
-      "Vaxholm ställer höga krav på estetik, särskilt i de kulturhistoriskt värdefulla områdena. Om du bor i Vaxholm och funderar på att byta tak, bokar vi in en kostnadsfri genomgång där vi diskuterar materialval som passar just ditt hus.",
+      "Vaxholm ställer höga krav på estetik, särskilt i de kulturhistoriskt värdefulla områdena. Om du bor i Vaxholm och funderar på att byta tak, bokar vi in en kostnadsfri takkontroll.",
     uniqueFAQ: {
       question:
         "Tar RoslagsTak hänsyn till Vaxholms kulturhistoriska bebyggelse vid takbyte?",
@@ -660,20 +660,20 @@ export const locations: LocationData[] = [
     region: "Norra Roslagen",
     isIsland: false,
     description:
-      "Takläggare i Älmsta — takbyte, takrenovering och plåttak på Väddölandet. Kostnadsfri takkontroll och fast pris.",
+      "Takbyte och takomläggning i Älmsta, samhället vid Väddö kanal med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
     longDescription:
-      "Älmsta är porten till Väddö och en naturlig knutpunkt i norra Roslagen. Bebyggelsen består av både permanentboenden och fritidshus. Vi utför kompletta takbyten, takomläggningar, plåtarbeten och taktvätt i Älmsta.",
+      "Älmsta är en tätort i Norrtälje kommun, där Väddö kanal mynnar i Väddöviken. Orten ligger på två sidor av vattnet. Den södra delen, Elmsta by, ligger på fastlandet, och den norra, med byarna Hammarby och Norrsundet, ligger på Väddö. Enligt Wikipedia hade tätorten 1 532 invånare 2022. Många i trakten skriver fortfarande namnet Elmsta. Platsen är gammal. När Elmsta nämns första gången, 1557, var det enligt Wikipedia redan en stor by med sju gårdar, och flera forngravar visar att bygden är äldre än så. Väddö kanal, som går rakt igenom orten, började anläggas 1819 och invigdes 1840. Över kanalen går Älmstabron, en klaffbro som öppnas för båtarna. Dagens samhälle är betydligt yngre än byn. Enligt hitta.se är husen kring Lärarvägen byggda på 1960- och 1980-talen och husen kring Norrtäljevägen på 1960- och 1990-talen. Bebyggelsen består av både villor och flerbostadshus. Norrtälje kommun beskriver i sin översiktsplan hur kanalen går genom orten som ett stråk av vatten och grönska, och hur Älmsta omges av naturområden som har betydelse för både friluftslivet och kulturmiljön. Delar av orten ligger enligt kommunen inom riksintresse för kulturmiljövården. Väddö folkhögskola och Roslagens Sjöfartsmuseum ligger här, och länsväg 283 går genom orten vidare mot Grisslehamn.",
     extraContent:
-      "I Älmsta finns det ofta äldre pannplåttak och tegeltak där beslagen runt skorsten och genomföringar rostat. Det är oftast där läckage börjar — inte i själva takytan. Vid varje takkontroll i Älmsta kontrollerar vi beslag, ränndalar och underlagspapp innan vi rekommenderar renovering eller komplett takbyte.",
-    uniqueFAQ: {
-      question: "Kan ni kombinera takarbete i Älmsta med projekt på Väddö?",
-      answer:
-        "Hör av dig och berätta var fastigheten ligger, så bokar vi en kostnadsfri takkontroll.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Älmsta?","answer":"Byggperiod enligt källorna: kring Lärarvägen 1960- och 1980-tal, kring Norrtäljevägen 1960- och 1990-tal. Hustyper: villor och flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Älmsta",
     lat: 60.0167,
     lng: 18.7,
-    nearbyLocations: ["Väddö", "Hallstavik", "Singö"],
+    nearbyLocations: ["Väddö","Hallstavik","Singö"],
+    factBox: [{"label":"Kommun","value":"Norrtälje"},{"label":"Delar","value":"Elmsta by (fastlandet), Hammarby och Norrsundet (Väddö)"},{"label":"Hustyper","value":"Villor och flerbostadshus"},{"label":"Byggperiod","value":"Kring Lärarvägen 1960- och 1980-tal, kring Norrtäljevägen 1960- och 1990-tal"},{"label":"Ägda småhus i RegSO (avrundat)","value":"Ca 360 (SCB 2025)"}],
+    sourceLink: {"label":"Norrtälje kommun, Översiktsplan 2050, Älmsta","url":"https://www.norrtalje.se/info/bygga-bo-miljo/norrtalje-vaxer/samhallsplanering/oversiktsplanering/oversiktsplan2050/mark-och-vattenanvandning/almsta/"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Villorna från 1960-talet är i dag omkring 60 år gamla, och husen från 1980- och 1990-talen mellan 30 och 45 år. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. I ett samhälle som har byggts ut i omgångar står hus av olika ålder nära varandra, så grannens tak säger inte mycket om ditt eget. Och ligger huset inom den del av orten som är riksintresse för kulturmiljövården är det extra viktigt att fråga innan du väljer material eller kulör. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris. Ett komplett takbyte i närheten finns att se under projekt: Nytt tak på Singö, i samma kommun."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Älmsta och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "herrang",
@@ -818,7 +818,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Åkersberga — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll.",
     longDescription:
-      "Åkersberga i Österåkers kommun har vuxit kraftigt och har en stor blandning av villaområden från 60-talet fram till nybyggda hus. Betongpannor kan drabbas av frostsprängning, underlagspapp kan torka och spricka med åren, och äldre taksäkerhet uppfyller inte alltid dagens krav. Vi utför takbyten och takomläggningar i Åkersberga med fast pris, byggställning, rivning, ny papp, ny läkt, nytt takmaterial och ny taksäkerhet.",
+      "Åkersberga i Österåkers kommun har vuxit kraftigt och har en stor blandning av villaområden från 60-talet fram till nybyggda hus. Vi utför takbyten och takomläggningar i Åkersberga med fast pris efter kostnadsfri takkontroll.",
     extraContent:
       "Plåt ger ett lättare tak än pannor, vilket kan vara en fördel vid omläggning. Vilket material som passar går vi igenom vid takkontrollen.",
     uniqueFAQ: {
@@ -860,13 +860,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Vallentuna — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll.",
     longDescription:
-      "Vallentuna har en stor villabebyggelse med hus från flera decennier. Betongpannor kan drabbas av frostsprängning och underlagspapp torkar ut och spricker med åren, vilket är exempel på skäl till att ett tak till slut kan behöva bytas eller läggas om. Vi utför kompletta takbyten och takomläggningar i Vallentuna — rivning, ny råspont vid behov, ny papp, ny läkt, nytt takmaterial, ny avvattning och ny taksäkerhet.",
+      "Vallentuna har en stor villabebyggelse med hus från flera decennier. Vi utför kompletta takbyten och takomläggningar i Vallentuna.",
     extraContent:
-      "Vallentuna ligger i inlandet med kalla vintrar och betydande snölast. Vi bedömer behovet av snörasskydd över entréer och uteplatser vid takkontrollen, och kontrollerar att takstolar och infästningar klarar lasten innan nytt material monteras.",
+      "Takkontrollen är kostnadsfri och utan förpliktelser, och du får ett fast pris i offerten.",
     uniqueFAQ: {
-      question: "Hur snabbt kan ni börja ett takbyte i Vallentuna?",
+      question: "Behövs bygglov för att byta tak i Vallentuna?",
       answer:
-        "Det beror på säsong och vår aktuella bokningsläge — vi ger dig ett tydligt startdatum i offerten efter takkontrollen, så att du vet vad som gäller innan du beställer. Vi svarar alltid inom 24 timmar på din förfrågan.",
+        "För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
     },
     primaryKeyword: "takläggare Vallentuna",
     lat: 59.5342,
@@ -881,13 +881,13 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Täby — takbyte, takomläggning, bandtäckning och takrenovering. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Täby har allt från radhusområden och 60-talsvillor till stora fristående hus med komplexa takkonstruktioner. Vi utför takbyten, takomläggningar, bandtäckning och plåtarbeten i Täby med fast pris efter kostnadsfri takkontroll. Vi arbetar enligt AMA-standard, lämnar 10 års utförandegaranti och sköter hela projektet — ställning, rivning, avfall, nytt tak, avvattning och taksäkerhet.",
+      "Täby har allt från radhusområden och 60-talsvillor till stora fristående hus med komplexa takkonstruktioner. Vi utför takbyten, takomläggningar, bandtäckning och plåtarbeten i Täby med fast pris efter kostnadsfri takkontroll. Vi arbetar enligt AMA-standard och lämnar 10 års utförandegaranti.",
     extraContent:
-      "På tätbebyggda tomter i Täby måste ställning, materialupplag och avfallshantering planeras med hänsyn till grannar och trånga ytor. Det går vi igenom med dig vid takkontrollen, innan arbetet startar. Vi lämnar 10 års utförandegaranti och, för tätskiktet, 30 års garanti genom MATAKI. Processen är densamma för alla jobb i Täby: kostnadsfri takkontroll, fast pris i offerten för hela jobbet — rivning, material, arbete, ställning och bortforsling — utan löpande timpris, och utförande enligt AMA. Som privatperson kan du använda ROT-avdrag på arbetskostnaden, 30 % upp till 50 000 kr per person och år, och vi tar uppdrag i hela Täby med grannkommunerna Vallentuna, Åkersberga och Vaxholm.",
+      "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Processen är densamma för alla jobb i Täby: kostnadsfri takkontroll, fast pris i offerten utan löpande timpris, och utförande enligt AMA. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, och vi tar uppdrag i hela Täby med grannkommunerna Vallentuna, Åkersberga och Vaxholm.",
     uniqueFAQ: {
-      question: "Hjälper ni med bygglov och grannhänsyn vid takbyte i Täby?",
+      question: "Behövs bygglov för att byta tak i Täby?",
       answer:
-        "Ett vanligt takbyte med samma kulör och material kräver normalt inget bygglov, men byte av taktäckningsmaterial eller kulör kan vara anmälningspliktigt i Täby. Vi vägleder dig och planerar ställning, upplag och avfall så att arbetet stör grannar så lite som möjligt.",
+        "För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
     },
     primaryKeyword: "takläggare Täby",
     lat: 59.4439,
@@ -1902,15 +1902,15 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Danderyd — takbyte, bandtäckning och takrenovering av exklusiva villatak. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Danderyd — takbyte, bandtäckning och takrenovering. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Danderyd har en av regionens mest påkostade villabebyggelse — stora fristående hus med komplexa takfall, brutna tak, torn och kupor. Taken kräver skicklig plåtslagning snarare än standardläggning. Vi utför bandtäckning, plåtarbeten och kompletta takbyten i Danderyd med material som matchar husens nivå — dubbelfalsad plåt, tegelprofilerad plåt och i koppar eller zink när kunden vill ha ett exklusivt uttryck. Hantverket syns på tak som står ut i kvarteret.",
+      "Danderyd har en av regionens mest påkostade villabebyggelse — stora fristående hus med komplexa takfall, brutna tak, torn och kupor. Vi utför bandtäckning, plåtarbeten och kompletta takbyten i Danderyd, med dubbelfalsad plåt eller pannplåt.",
     extraContent:
       "Vid ett takbyte görs plåtdetaljerna runt skorstenar och kupor om. Kostnadsfri takkontroll och fast pris ingår alltid.",
     uniqueFAQ: {
       question: "Vilket takmaterial passar brutna tak i Danderyd?",
       answer:
-        "För brutna takfall, torn och kupor i Danderyd rekommenderar vi dubbelfalsad bandtäckning — den formas efter takets geometri och ger bäst täthet. Koppar eller zink ger ett exklusivt, patinerande uttryck. Boka en kostnadsfri takkontroll så rekommenderar vi rätt material för ditt hus.",
+        "Vilket material som passar ett tak med brutna takfall, torn och kupor går vi igenom vid takkontrollen. Boka en kostnadsfri takkontroll i Danderyd.",
     },
     primaryKeyword: "takläggare Danderyd",
     lat: 59.4044,

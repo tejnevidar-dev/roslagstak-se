@@ -659,4 +659,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Hallstavik, brukssamhället vid Edeboviken som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
   },
+  almsta: {
+    title: "Takbyte i Älmsta – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Älmsta, samhället vid Väddö kanal med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
+  },
 };

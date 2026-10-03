@@ -163,10 +163,15 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
   return {
     intro: inspectNote,
     blocks: [
-      {
-        heading: `Takens förutsättningar ${prep} ${loc.name}`,
-        paragraphs: [buildingIntro, inspectNote],
-      },
+      // Hustyper, byggår och material per ort visas bara där orten har en angiven källa (sourceLink), annars döljs blocket.
+      ...(loc.sourceLink
+        ? [
+            {
+              heading: `Takens förutsättningar ${prep} ${loc.name}`,
+              paragraphs: [buildingIntro, inspectNote],
+            },
+          ]
+        : []),
       {
         heading: `Så planerar vi arbetet ${prep} ${loc.name}`,
         paragraphs: [accessPara, neighbourPara],
@@ -178,7 +183,7 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
       { label: "Närmaste orter", value: neighbourText },
       { label: "Avstånd till vår bas i Norrtälje", value: `${Math.round(distanceFromBaseKm(loc))} km` },
       { label: "Koordinater", value: `${loc.lat.toFixed(3)}, ${loc.lng.toFixed(3)}` },
-      { label: "Vanliga takmaterial", value: p.materials },
+      ...(loc.sourceLink ? [{ label: "Vanliga takmaterial", value: p.materials }] : []),
     ],
   };
 };

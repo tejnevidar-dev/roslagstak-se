@@ -15,8 +15,15 @@ import { distanceFromBaseKm, distanceKm } from "./service-reach";
 
 const NEARBY_PROJECT_MAX_KM = 30;
 
-/** Orten har ingen riktig områdestext (import-omrade sätter alltid factBox). */
-export const usesMall = (loc: LocationData): boolean => !loc.factBox;
+/**
+ * Nav-sidor och ortssidor med över 100 visningar på 28 dagar får aldrig mallen (Marknadschefen 2026-10-04, backlog 1bt):
+ * de behåller sin egen text, där bara meningar som bryter mot regel 5 är strukna. Fyra av dem har pågående titelmätningar.
+ * Mallen är för orter utan trafik. Underlag: ledning/marknad/innehall/ortslista-gammal-data-2026-10-04.md.
+ */
+export const MALL_UNDANTAG: readonly string[] = ["taby", "vallentuna", "akersberga", "danderyd", "norrtalje", "vaxholm"];
+
+/** Orten har ingen riktig områdestext (import-omrade sätter alltid factBox) och är inte undantagen. */
+export const usesMall = (loc: LocationData): boolean => !loc.factBox && !MALL_UNDANTAG.includes(loc.slug);
 
 const pick = <T,>(variants: [T, T, T], index: number, offset: number): T => variants[(index + offset) % 3];
 
