@@ -1,5 +1,16 @@
 import { withRotForbehall } from "@/data/prices";
-import { GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, RENOVERING_SERVICE_SLUGS } from "@/data/guarantee";
+import {
+  SERVICE_COPY,
+  SERVICE_DETAIL_PHOTO_SLUGS,
+  serviceRelatedLinks,
+  serviceSchemaNodes,
+  goodToKnowBoxes,
+  serviceDetails,
+  serviceMeta,
+  tatskiktChip,
+  type ServiceMeta,
+} from "@/data/service-page";
+import { RENOVERING_SERVICE_SLUGS } from "@/data/guarantee";
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Award, Clock, Phone, PlayCircle, Shield } from "lucide-react";
@@ -10,11 +21,9 @@ import GoogleReviews from "@/components/GoogleReviews";
 import Reveal from "@/components/Reveal";
 import { services } from "@/components/Services";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { canonicalPath } from "@/lib/canonical";
 import EternitSEOContent from "@/components/EternitSEOContent";
 import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
 import { serviceBlocks } from "@/data/service-blocks";
-import { serviceAreaLinks } from "@/data/service-area-links";
 import imgRooferWork from "@/assets/roofer-work.jpg";
 import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
 import imgPapp from "@/assets/roof-build-02-papp.jpg";
@@ -50,337 +59,12 @@ const detailImages: Partial<Record<string, string>> = {
   "eternit-asbest": imgRaspont,
 };
 
-type ServiceMeta = {
-  accentLine: string;
-  specs: { k: string; v: string }[];
-  specHeading: string;
-  lead: string;
-  craftLine: string;
-  photoNote: string;
-};
-
-const serviceMeta: Record<string, ServiceMeta> = {
-  takomlaggning: {
-    accentLine: "i skärgårdsmiljö.",
-    specs: [
-      { k: "Tätskikt", v: "30 års garanti (MATAKI)" },
-      { k: "Utförande", v: "AMA-standard" },
-      { k: "Läkt", v: "25 × 38 mm" },
-    ],
-    specHeading: "Teknisk specifikation och utförande",
-    lead: "Varje omläggning inleds med en fullständig analys av råspont, ventilation och avvattning.",
-    craftLine: "Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.",
-    photoNote: "Ny läkt monterad på diffusionsöppen underlagsduk — eget arbete i Roslagen.",
-  },
-  takrenovering: {
-    accentLine: "utan helt takbyte.",
-    specs: [
-      { k: "Åtgärd", v: "Punktinsats" },
-      { k: "Underlag", v: "Papp och råspont" },
-      { k: "Pris", v: "Fast efter takkontroll" },
-    ],
-    specHeading: "Vad vi åtgärdar — och vad vi låter vara",
-    lead: "Renovering handlar om att byta rätt delar: skadad papp, rötat virke och trasiga pannor.",
-    craftLine: "Ett tak dör sällan överallt samtidigt — vi byter det som behöver bytas.",
-    photoNote: "Skadat, mossbevuxet tegeltak — exakt den typ av skador vi bedömer och åtgärdar.",
-  },
-  takavvattning: {
-    accentLine: "rännor och stuprör.",
-    specs: [
-      { k: "Material", v: "Aluminium, koppar, plåt" },
-      { k: "Dimension", v: "Beräknad per takyta" },
-      { k: "Ränndalar", v: "Falsade i plåt" },
-    ],
-    specHeading: "Dimensionering och montage av avvattning",
-    lead: "Vattnet ska bort från fasad och grund — dimension och fall avgör om systemet fungerar.",
-    craftLine: "Fel fall på rännan syns inte första året. Det syns på fasaden fem år senare.",
-    photoNote: "Nymonterade hängrännor med fotplåt och korrekt fall.",
-  },
-  takkupor: {
-    accentLine: "mer ljus på vinden.",
-    specs: [
-      { k: "Bygglov", v: "Vi hanterar ansökan" },
-      { k: "Fönster", v: "Velux eller motsvarande" },
-      { k: "Tätning", v: "Plåtbeslag runt kupa" },
-    ],
-    specHeading: "Konstruktion, tätning och invändig finish",
-    lead: "En kupa är lika mycket plåtarbete som snickeri — tätningen avgör resultatet.",
-    craftLine: "Runt kupor och genomföringar avgörs om taket håller tätt.",
-    photoNote: "Färdigt tak med två takkupor — tätt inklätt i plåt runt varje kupa.",
-  },
-  takinspektion: {
-    accentLine: "innan skadan kostar.",
-    specs: [
-      { k: "Pris", v: "Kostnadsfri" },
-      { k: "Tid på plats", v: "Ca 1–2 timmar" },
-      { k: "Omfattning", v: "Tak, plåt, avvattning" },
-    ],
-    specHeading: "Vad vi tittar på vid en takkontroll",
-    lead: "Vi går igenom taket på plats — inte bara hur det ser ut från marken.",
-    craftLine: "Det som avgör takets skick ligger under pannorna.",
-    photoNote: "Sprucken plåt och lossnande pannor — exempel på skador vi upptäcker vid en takkontroll.",
-  },
-  platarbeten: {
-    accentLine: "beslag och bandtäckning.",
-    specs: [
-      { k: "Material", v: "Stål, alu, koppar, zink" },
-      { k: "Teknik", v: "Falsning på plats" },
-      { k: "Detaljer", v: "Skorsten och genomföring" },
-    ],
-    specHeading: "Plåtdetaljer som håller mot kustklimat",
-    lead: "Plåtarbetet är takets tätning — beslagen tillverkas och falsas efter ditt hus.",
-    craftLine: "Plåtslageri är millimeterarbete. Salt och vind förlåter ingenting.",
-    photoNote: "Snörasskydd och plåtdetaljer monterade efter taktäckning.",
-  },
-  takvard: {
-    accentLine: "tvätt och målning.",
-    specs: [
-      { k: "Metod", v: "Skonsam rengöring" },
-      { k: "Färg", v: "Specialfärg för tak" },
-      { k: "Effekt", v: "Förlängd livslängd" },
-    ],
-    specHeading: "Rengöring, behandling och målning",
-    lead: "Mossa håller fukt mot ytskiktet — rätt metod tar bort den utan att skada materialet.",
-    craftLine: "Ett välskött tak håller år längre än ett tak som lämnas åt mossan.",
-    photoNote: "Rengjorda och behandlade betongpannor efter avslutat arbete.",
-  },
-  "eternit-asbest": {
-    accentLine: "säkert och enligt regelverk.",
-    specs: [
-      { k: "Regelverk", v: "Arbetsmiljöverkets föreskrifter" },
-      { k: "Tillstånd", v: "Krävs, söks av saneringsfirman" },
-      { k: "Deponi", v: "Godkänd transport" },
-    ],
-    specHeading: "Sanering enligt Arbetsmiljöverkets föreskrifter — steg för steg",
-    lead: "Asbest kräver skyddsutrustning, emballering och dokumenterad transport till deponi.",
-    craftLine: "Eternit ska inte kapas, brytas eller högtryckstvättas. Den ska saneras.",
-    photoNote: "Arbete på plats med full skyddsutrustning enligt regelverket.",
-  },
-  tegeltak: {
-    accentLine: "nytt tak med fast pris.",
-    specs: [
-      { k: "Material", v: "Lertegel" },
-      { k: "Livslängd", v: "Enligt tillverkaren" },
-      { k: "Pris", v: "Från 1 300 kr/m²" },
-    ],
-    specHeading: "Lertegel jämfört med andra taktyper",
-    lead: "Lertegel är det klassiska valet som passar både äldre och nyare hus — och håller mycket länge.",
-    craftLine: "Lertegel kräver en konstruktion som tål vikten. Vi kontrollerar bärigheten innan vi offererar.",
-    photoNote: "Lertegeltak — det klassiska materialvalet som passar både äldre och nyare hus.",
-  },
-};
-
-
-
-const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
-  takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Vi inspekterar alltid underlaget (råspont) och byter ut skadat virke innan det nya materialet läggs. Vi hjälper dig välja mellan plåttak, tegelpannor, betongpannor eller papptak beroende på ditt hus, din budget och dina önskemål. Allt arbete utförs enligt AMA av våra takläggare med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Exakt pris beror på takets storlek, material och underlag.",
-    benefits: [
-      "Rivning av befintligt yttertak",
-      "Ny råspont och ventilation vid behov",
-      "Nytt underlagspapp, fotplåtar och underbeslag runt genomföringar",
-      "Ny läkt, vindskivor, vindskiveplåtar och ny avvattning",
-      "Plåtdetaljer såsom stoss och skorstensinklädnad",
-      "Byggställning",
-      "Avfallshantering",
-    ],
-    process: [
-      "Kostnadsfri takkontroll och offert",
-      "Offert godkänns av kund",
-      "Logistikplanering påbörjas",
-      "Byggställning monteras",
-      "Rivning av befintligt yttertak",
-      "Montering av nytt takmaterial",
-      "Installation av ny taksäkerhet och avvattning",
-      "Slutsamråd med kund och ansvarig säljare för att säkerställa att allt är korrekt utfört enligt offert",
-      "Slutgenomgång och skriftlig garanti",
-      "Rivning av byggställning och avetablering från fastigheten",
-    ],
-  },
-  takrenovering: {
-    longDesc: "En takrenovering innebär att vi åtgärdar problem och förlänger livslängden på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller åtgärda röta i råsponten.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. ROT-avdrag tillkommer.",
-    benefits: [
-      "Lägre kostnad än komplett takomläggning",
-      "Fast pris efter kostnadsfri takkontroll",
-      "Förlänger befintligt taks livslängd",
-      "Åtgärdar läckor och fuktskador",
-      "Byte av enstaka pannor eller plåtsektioner",
-      "Reparation av rötskadat virke",
-    ],
-    process: [
-      "Takkontroll och skadebedömning",
-      "Offert med tydlig åtgärdslista",
-      "Reparation av skadat underlag",
-      "Byte av trasiga pannor/plåtsektioner",
-      "Tätning och lagning av läckor",
-      "Slutkontroll och dokumentation",
-    ],
-  },
-  takavvattning: {
-    longDesc: "Ett fungerande takavvattningssystem är avgörande för att skydda husets fasad, grund och konstruktion. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i aluminium, koppar eller lackerad plåt. Vi dimensionerar systemet efter takets storlek och lutning för optimal vattenavrinning.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör från ca 23 000 kr, beroende på husets storlek och våningar. Koppar ligger högre än aluminium.",
-    benefits: [
-      "Skyddar fasad och grund mot vattenskador",
-      "Hängrännor i aluminium, koppar eller lackerad plåt",
-      "Stuprör med korrekt dimensionering",
-      "Lövinsamlare och galler vid behov",
-      "Material i aluminium, koppar eller lackerad plåt",
-      "Prydligt och hållbart resultat",
-    ],
-    process: [
-      "Takkontroll av befintligt system",
-      "Dimensionering och materialval",
-      "Demontering av gammalt system",
-      "Montering av nya hängrännor",
-      "Installation av stuprör och anslutningar",
-      "Funktionskontroll",
-    ],
-  },
-  takkupor: {
-    longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux) med korrekt vattenavledning och isolering. Med en eller flera takkupor kan du skapa sovrum, kontor eller hobbyrum och öka boendeytan avsevärt.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, för både takkupa och takfönster (Velux) inkl. montering. ROT-avdrag tillkommer.",
-    benefits: [
-      "Mer dagsljus på vindsvåningen",
-      "Ökat boendeyta och husvärde",
-      "Bättre ventilation",
-      "Karaktär och charm till huset",
-      "Korrekt vattenavledning runt kupa/fönster",
-      "Energieffektiva takfönster",
-    ],
-    process: [
-      "Platsbesök och planering",
-      "Bygglovsansökan vid behov",
-      "Konstruktionsberäkning",
-      "Uppbyggnad av takkupa/fönsteröppning",
-      "Taktäckning och plåtarbete",
-      "Isolering och invändig finishing",
-    ],
-  },
-  takinspektion: {
-    longDesc: "En regelbunden takinspektion förebygger dyra skador. En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser.",
-    priceRange: "Helt kostnadsfritt — inga dolda avgifter.",
-    benefits: [
-      "Helt kostnadsfri och utan förbindelser",
-      "En av våra säljare tittar på taket på plats",
-      "Identifierar problem innan de blir dyra",
-      "Tittar på takmaterial, plåtdetaljer och avvattning",
-      "Rapport om takets skick",
-      "Fast pris i offerten om något behöver åtgärdas",
-    ],
-    process: [
-      "Boka takkontroll (telefon eller formulär)",
-      "Vi besöker din fastighet",
-      "Grundlig inspektion av tak, underlag och avvattning",
-      "Genomgång av resultat och rekommendationer på plats",
-      "Skriftligt fast pris i offerten",
-    ],
-  },
-  platarbeten: {
-    longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar, takfönster och ränndalar.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: taktäckning med plåt från 1 200 kr/m² (TP20) till ca 2 000 kr/m² (dubbelfalsat). Beslag och detaljer prissätts efter omfattning i offerten.",
-    benefits: [
-      "En kontaktperson hela vägen",
-      "Taktäckning med alla typer av plåt",
-      "Beslag runt skorstenar och genomföringar",
-      "Ränndalar och vindskivor i plåt",
-      "Material i stål, aluminium, koppar och zink",
-      "10 års utförandegaranti på utfört arbete, 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs",
-    ],
-    process: [
-      "Takkontroll och uppmätning",
-      "Materialval och färgval",
-      "Tillverkning av specialbeslag",
-      "Montering och falsning",
-      "Täthetskontroll",
-      "Slutgenomgång",
-    ],
-  },
-  takvard: {
-    longDesc: "Takvård handlar om att underhålla och skydda ditt tak för att förlänga dess livslängd och bevara husets utseende. Vi utför taktvätt där vi tar bort mossa, alger och smuts med skonsamma metoder som inte skadar takmaterialet. Vi utför även takmålning med specialfärger anpassade för tak — oavsett om det är betongpannor, tegelpannor eller plåttak. Ett välskött tak håller längre, ser bättre ut och skyddar bättre mot väder och vind.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning. ROT-avdrag tillkommer.",
-    benefits: [
-      "Professionell taktvätt med skonsam metod",
-      "Borttagning av mossa, alger och lavar",
-      "Takmålning med specialfärg för tak",
-      "Förlänger takets livslängd avsevärt",
-      "Fräschar upp husets utseende",
-      "Skyddar takmaterialet mot fukt och UV",
-    ],
-    process: [
-      "Kostnadsfri takkontroll av takets skick",
-      "Offert med tydlig beskrivning av åtgärder",
-      "Skonsam högtryckstvätt eller manuell rengöring",
-      "Behandling mot mossa och alger",
-      "Grundning och takmålning vid behov",
-      "Slutkontroll och dokumentation",
-    ],
-  },
-  "eternit-asbest": {
-    longDesc: "Många äldre hus i Roslagen och skärgården har tak av eternitplattor som innehåller asbest — ett hälsofarligt material som kräver specialhantering vid rivning. Vi samordnar saneringen med en behörig saneringsfirma, som utför rivningen enligt Arbetsmiljöverkets föreskrifter med skyddsutrustning, slussystem och godkänd emballering, och transporterar materialet till godkänd deponi. Vi utför inte asbestsanering själva. Därefter utför vi komplett takomläggning med modernt material så att du får ett säkert, hållbart och vackert tak.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll — sanering (via saneringsfirman) plus nytt tak. Exakt pris beror på takets storlek, åtkomlighet och asbesttyp. ROT-avdrag tillkommer på takarbetet.",
-    benefits: [
-      "Sanering av behörig saneringsfirma enligt Arbetsmiljöverkets föreskrifter",
-      "Vi samordnar hela processen åt dig",
-      "Tillstånd hos Arbetsmiljöverket söks och hanteras av saneringsfirman",
-      "Komplett takomläggning efter sanering",
-      "Fast pris efter kostnadsfri takkontroll",
-    ],
-    process: [
-      "Kostnadsfri takkontroll och materialprovtagning",
-      "Vi samordnar sanering med behörig saneringsfirma",
-      "Saneringsfirman söker tillstånd hos Arbetsmiljöverket före rivningen och river med skyddsåtgärder",
-      "Emballering och transport till godkänd deponi (saneringsfirman)",
-      "Inspektion av underlag och eventuell reparation",
-      "Montering av nytt takmaterial",
-      "Slutgenomgång",
-    ],
-  },
-  tegeltak: {
-    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga, så takstolarna måste vara dimensionerade för vikten, och taket måste ha minst den lutning som tillverkaren anger för pannmodellen. Bärigheten bedöms vid takkontrollen innan vi lämnar offert. Lertegel ska inte förväxlas med tegelplåt (profilerad plåt som imiterar tegel) — vi lägger båda, men de är olika material med olika pris, vikt och livslängd.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och tegelprofilerad plåt från 1 300 kr/m². Exakt pris beror på takets storlek, lutning och underlagets skick.",
-    benefits: [
-      "Klassiskt uttryck som håller husets karaktär",
-      "Åldras med patina och passar både äldre och nyare hus",
-      "Fast pris efter kostnadsfri takkontroll",
-      "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI",
-    ],
-    process: [
-      "Kostnadsfri takkontroll — vi bedömer konstruktion, bärighet och taklutning",
-      "Skriftlig offert med fast pris",
-      "Rivning av befintligt tak och kontroll av råspont",
-      "Ny underlagspapp, ströläkt och bärläkt dimensionerad för tegelvikten",
-      "Montering av lertegel samt plåtbeslag kring skorsten och genomföringar",
-      "Taksäkerhet och takavvattning",
-      "Slutgenomgång och skriftlig garanti",
-    ],
-  },
-};
-
-/* Flera källor (sisterServices, blocks.relatedLinks, hårdkodade länkar) kan råka peka på
-   samma "to" — dedupe så listan aldrig får dubbla React-keys eller dubblettlänkar. */
-const dedupeByTo = <T extends { to: string }>(links: T[]): T[] => {
-  const seen = new Set<string>();
-  return links.filter((l) => (seen.has(l.to) ? false : (seen.add(l.to), true)));
-};
-
-
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
-  /* Roterande "systertjänster": de 4 NÄSTA tjänsterna i listan (cirkulärt), inte alltid de
-     första 4 — annars fick tjänster längre ner (takvård, eternit-asbest, tegeltak) aldrig en
-     inkommande länk härifrån (Phase 2.16, link-audit-full-2026.md). */
-  const serviceIndex = services.findIndex((s) => s.slug === slug);
-  const sisterServices =
-    serviceIndex === -1
-      ? []
-      : Array.from({ length: 4 }, (_, i) => services[(serviceIndex + 1 + i) % services.length]);
   const details = slug ? serviceDetails[slug] : null;
-  const renovering = Boolean(slug && RENOVERING_SERVICE_SLUGS.includes(slug));
   const serviceImage = (slug && serviceImages[slug]) || imgDronePoster;
-  const detailImage = slug ? detailImages[slug] : undefined;
+  const detailImage = slug && SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) ? detailImages[slug] : undefined;
   const bandImage = imgBlidoLakeview;
   const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
   const blocks = (slug && serviceBlocks[slug]) || serviceBlocks.takomlaggning;
@@ -405,58 +89,7 @@ const ServiceDetail = () => {
     );
   }
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Startsidan", item: "https://roslagstak.se/" },
-      { "@type": "ListItem", position: 2, name: "Tjänster", item: "https://roslagstak.se/#tjanster" },
-      { "@type": "ListItem", position: 3, name: service.title, item: `https://roslagstak.se/tjanster/${slug}` },
-    ],
-  };
-
-  const serviceJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: service.title,
-    description: details.longDesc,
-    ...(details.priceRange ? { offers: { "@type": "Offer", priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "SEK", description: withRotForbehall(details.priceRange) } } } : {}),
-    provider: {
-      "@type": "RoofingContractor",
-      name: "RoslagsTak",
-      url: "https://roslagstak.se",
-      telephone: "+46701543639",
-    },
-    areaServed: { "@type": "Place", name: "Roslagen" },
-  };
-
-  const howToJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: `Så här går ${service.title.toLowerCase()} till — steg för steg`,
-    description: details.longDesc,
-    totalTime: "P14D",
-    ...(details.priceRange ? {
-      estimatedCost: {
-        "@type": "MonetaryAmount",
-        currency: "SEK",
-        value: withRotForbehall(details.priceRange),
-      },
-    } : {}),
-    supply: details.benefits.slice(0, 5).map((b) => ({ "@type": "HowToSupply", name: b })),
-    tool: [
-      { "@type": "HowToTool", name: "Byggställning" },
-      { "@type": "HowToTool", name: "Säkerhetsutrustning enligt AFS" },
-      { "@type": "HowToTool", name: "Plåtsax och falsverktyg" },
-    ],
-    step: details.process.map((step, i) => ({
-      "@type": "HowToStep",
-      position: i + 1,
-      name: step,
-      text: step,
-      url: `https://roslagstak.se/tjanster/${slug}#steg-${i + 1}`,
-    })),
-  };
+  const { breadcrumb: breadcrumbJsonLd, service: serviceJsonLd, howTo: howToJsonLd } = serviceSchemaNodes(service.slug, services);
 
   return (
     <>
@@ -487,7 +120,7 @@ const ServiceDetail = () => {
             <div className="flex flex-col gap-4 lg:gap-8">
               <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
                 <span aria-hidden="true" className="h-px w-10 bg-primary" />
-                Tjänstebeskrivning / Roslagen
+                {SERVICE_COPY.heroEyebrow}
               </p>
 
               <h1 className="font-display text-[clamp(2.6rem,6.4vw,5.6rem)] font-extrabold leading-[0.88] tracking-[-0.045em] text-foreground">
@@ -514,20 +147,20 @@ const ServiceDetail = () => {
                   to="/takkontroll"
                   className="text-[14px] font-semibold text-accent underline-offset-4 hover:underline"
                 >
-                  Boka kostnadsfri takkontroll
+                  {SERVICE_COPY.takkontrollLink}
                 </Link>
                 <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-muted-foreground" aria-label="Fakta om RoslagsTak">
                   <li className="inline-flex items-center gap-1.5">
-                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> 10 års utförandegaranti
+                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {SERVICE_COPY.chipUtforande}
                   </li>
                   <li className="inline-flex items-center gap-1.5">
-                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {renovering ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti via MATAKI"}
+                    <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {tatskiktChip(service.slug)}
                   </li>
                   <li className="inline-flex items-center gap-1.5">
-                    <Award className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> Fast pris
+                    <Award className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {SERVICE_COPY.chipFastPris}
                   </li>
                   <li className="inline-flex items-center gap-1.5">
-                    <Clock className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> Svar inom 24 h
+                    <Clock className="h-3.5 w-3.5 text-primary" aria-hidden="true" /> {SERVICE_COPY.chipSvar}
                   </li>
                 </ul>
               </div>
@@ -537,7 +170,7 @@ const ServiceDetail = () => {
                   to="/offert"
                   className="group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-full bg-primary px-9 py-5 text-[18px] font-bold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-accent animate-subtle-pulse"
                 >
-                  Begär kostnadsfri offert
+                  {SERVICE_COPY.offertButton}
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
                 <a
@@ -545,7 +178,7 @@ const ServiceDetail = () => {
                   className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-full border border-border px-9 py-5 text-[18px] font-bold text-foreground transition-colors hover:bg-secondary"
                 >
                   <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
-                  070-154 36 39
+                  {SERVICE_COPY.phone}
                 </a>
               </div>
 
@@ -554,7 +187,7 @@ const ServiceDetail = () => {
                 className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.26em] text-primary"
               >
                 <PlayCircle className="h-4 w-4" aria-hidden="true" />
-                Se hur ett takbyte går till
+                {SERVICE_COPY.howLink}
                 <span aria-hidden="true" className="h-px w-8 bg-primary transition-all group-hover:w-14" />
               </Link>
             </div>
@@ -631,7 +264,7 @@ const ServiceDetail = () => {
               <Reveal>
                 <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
                   <span aria-hidden="true" className="h-px w-12 bg-primary" />
-                  Teknisk specifikation
+                  {SERVICE_COPY.specEyebrow}
                 </p>
                 <h2 className="mt-6 max-w-[24ch] font-display text-[clamp(1.8rem,2.8vw,2.6rem)] font-extrabold leading-[1.06] tracking-[-0.035em] text-foreground">
                   {meta.specHeading}
@@ -641,17 +274,13 @@ const ServiceDetail = () => {
                 </p>
                 <div className="mt-8 gap-12 text-[15px] leading-[1.85] text-muted-foreground md:columns-2 [&>p]:mb-6">
                   <p>{details.longDesc}</p>
-                  <p>
-                    Vi arbetar med material som tål saltstänk, hård vind och tunga snölaster i
-                    Roslagen och skärgården.
-                  </p>
                 </div>
               </Reveal>
 
               <Reveal>
                 <div className="border-y border-border py-12">
                   <h3 className="font-display text-[1.35rem] font-extrabold uppercase tracking-[0.16em] text-foreground">
-                    Arbetsgång i {details.process.length} steg
+                    {SERVICE_COPY.processHeading(details.process.length)}
                   </h3>
                   <ol className="mt-8 grid gap-x-12 md:grid-cols-2">
                     {details.process.map((step, i) => (
@@ -674,15 +303,15 @@ const ServiceDetail = () => {
             {/* Offertkolumn */}
             <aside className="flex flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
               <div className="flex flex-col gap-6 rounded-2xl bg-primary p-9 text-primary-foreground">
-                <h3 className="font-display text-[1.55rem] font-extrabold tracking-[-0.03em]">Begär offert</h3>
+                <h3 className="font-display text-[1.55rem] font-extrabold tracking-[-0.03em]">{SERVICE_COPY.asideTitle}</h3>
                 <p className="text-[15px] font-light leading-relaxed text-primary-foreground/75">
-                  Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.
+                  {SERVICE_COPY.asideText}
                 </p>
                 <Link
                   to="/offert"
                   className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-cta px-6 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-cta-foreground transition-colors hover:bg-primary-foreground hover:text-primary animate-subtle-pulse"
                 >
-                  Starta förfrågan
+                  {SERVICE_COPY.asideCta}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
                 <a
@@ -690,7 +319,7 @@ const ServiceDetail = () => {
                   className="inline-flex items-center gap-2.5 text-[15px] font-semibold text-primary-foreground/90 transition-colors hover:text-primary-foreground"
                 >
                   <Phone className="h-4 w-4" aria-hidden="true" />
-                  070-154 36 39
+                  {SERVICE_COPY.phone}
                 </a>
               </div>
 
@@ -708,15 +337,14 @@ const ServiceDetail = () => {
                   />
                 </div>
                 <figcaption className="flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
-                  <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">Foto</span>
+                  <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">{SERVICE_COPY.photoLabel}</span>
                   {meta.photoNote}
                 </figcaption>
               </figure>
               )}
 
               <p className="border-l-2 border-accent pl-6 text-[15px] leading-relaxed text-muted-foreground">
-                Vi tar uppdrag i Roslagen, Storstockholm och skärgården, och har gjort kompletta
-                takbyten på Blidö och Singö.
+                {SERVICE_COPY.asideNote}
               </p>
             </aside>
           </div>
@@ -729,18 +357,13 @@ const ServiceDetail = () => {
             <div className="mx-auto max-w-3xl px-6">
               <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
                 <span aria-hidden="true" className="h-px w-12 bg-primary" />
-                Bandtäckning
+                {SERVICE_COPY.falsat.eyebrow}
               </p>
               <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
-                Dubbelfalsat plåttak – bandtäckning med fast pris
+                {SERVICE_COPY.falsat.heading}
               </h2>
               <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
-                Vi lägger dubbelfalsade plåttak (bandtäckning) vid takbyte, med fast pris efter kostnadsfri
-                takkontroll. Bandtäckning är plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga
-                skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Banorna
-                hålls på plats av dolda klammer som fästs i underlaget, så att plåten kan röra sig med
-                temperaturen utan att skarvarna tar skada. Tekniken passar både äldre hus och moderna villor,
-                och kan formas efter kupor, ränndalar och andra detaljer på taket.
+                {SERVICE_COPY.falsat.text}
               </p>
             </div>
           </section>
@@ -753,14 +376,14 @@ const ServiceDetail = () => {
               <div className="max-w-xl">
                 <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
                   <span aria-hidden="true" className="h-px w-12 bg-primary" />
-                  Omfattning
+                  {SERVICE_COPY.scopeEyebrow}
                 </p>
                 <h2 className="mt-5 font-display text-[clamp(1.6rem,2.3vw,2.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
-                  Det här ingår i arbetet
+                  {SERVICE_COPY.scopeHeading}
                 </h2>
               </div>
               <p className="max-w-md text-[15px] leading-relaxed text-muted-foreground">
-                Allt specificeras i offerten — inga tillägg i efterhand utan att du godkänt dem.
+                {SERVICE_COPY.scopeNote}
               </p>
             </div>
 
@@ -804,7 +427,7 @@ const ServiceDetail = () => {
             <div className="mx-auto w-full max-w-7xl px-6">
               <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-primary-foreground">
                 <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
-                Hantverket
+                {SERVICE_COPY.craftEyebrow}
               </p>
               <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
                 {meta.craftLine}
@@ -812,7 +435,7 @@ const ServiceDetail = () => {
             </div>
           </div>
           <div className="absolute inset-x-0 bottom-0 bg-primary/85 px-6 py-4 text-[11px] uppercase tracking-[0.2em] text-primary-foreground backdrop-blur-sm">
-            <span>{service.title} — utfört i Roslagen</span>
+            <span>{SERVICE_COPY.craftCaption(service.title)}</span>
           </div>
         </section>
 
@@ -822,23 +445,10 @@ const ServiceDetail = () => {
           <div className="mx-auto max-w-7xl px-6">
             <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
               <span aria-hidden="true" className="h-px w-12 bg-primary" />
-              Bra att veta
+              {SERVICE_COPY.goodToKnowEyebrow}
             </p>
             <div className="mt-12 grid gap-px border-y border-border bg-border md:grid-cols-3">
-              {[
-                {
-                  t: "Pris och ROT",
-                  d: `${details.priceRange ? withRotForbehall(details.priceRange) : "Fast pris efter kostnadsfri takkontroll."}${slug === "takinspektion" ? "" : " Tillägg bara efter ditt godkännande."}`,
-                },
-                {
-                  t: "Garanti",
-                  d: renovering ? GARANTI_RENOVERING : "10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
-                },
-                {
-                  t: "Skärgården",
-                  d: "Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.",
-                },
-              ].map((f, i) => (
+              {goodToKnowBoxes(service.slug).map((f, i) => (
                 <Reveal key={f.t} delay={i * 0.06}>
                   <div className="h-full bg-card p-8">
                     <h3 className="font-display text-[1.05rem] font-bold tracking-[-0.02em] text-foreground">{f.t}</h3>
@@ -873,14 +483,10 @@ const ServiceDetail = () => {
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
               <div className="max-w-2xl">
                 <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.3rem)] font-extrabold leading-[1.08] tracking-[-0.03em]">
-                  {slug === "eternit-asbest"
-                    ? "Har du eternittak med asbest?"
-                    : `Intresserad av ${service.title.toLowerCase()}?`}
+                  {SERVICE_COPY.ctaHeading(service.slug, service.title)}
                 </h2>
                 <p className="mt-4 text-[17px] leading-[1.7] text-primary-foreground/75">
-                  {slug === "eternit-asbest"
-                    ? "Kontakta oss för kostnadsfri rådgivning om ditt eternittak. Vi hjälper dig vidare."
-                    : "Kontakta oss för en kostnadsfri takkontroll och offert."}
+                  {SERVICE_COPY.ctaText(service.slug)}
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
@@ -889,7 +495,7 @@ const ServiceDetail = () => {
                     to="/offert"
                     className="group inline-flex items-center justify-center gap-3 rounded-full bg-card px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-colors hover:bg-secondary animate-subtle-pulse"
                   >
-                    Få offert
+                    {SERVICE_COPY.ctaOffert}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </Link>
                 )}
@@ -901,7 +507,7 @@ const ServiceDetail = () => {
                       : "rounded-full border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                   }`}
                 >
-                  Kostnadsfri rådgivning
+                  {SERVICE_COPY.ctaAdvice}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>
@@ -914,25 +520,13 @@ const ServiceDetail = () => {
           <div className="mx-auto max-w-7xl px-6">
             <p className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
               <span aria-hidden="true" className="h-px w-12 bg-primary" />
-              Läs vidare
+              {SERVICE_COPY.relatedEyebrow}
             </p>
             <h2 className="mt-5 max-w-xl font-display text-[clamp(1.5rem,2.1vw,2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-foreground">
-              Relaterat innehåll
+              {SERVICE_COPY.relatedHeading}
             </h2>
             <ul className="mt-10 grid border-t border-border sm:grid-cols-2 lg:grid-cols-3">
-              {dedupeByTo([
-                { to: "/priser", label: "Se prislista" },
-                { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
-                { to: "/blogg/rot-avdrag-takbyte", label: "ROT-avdrag vid takbyte" },
-                { to: "/taktyper", label: "Taktyper & material" },
-                { to: "/hur-det-gar-till", label: "Så går ett takbyte till" },
-                { to: "/offert#faq", label: "Vanliga frågor om takarbete" },
-                ...sisterServices.map((s) => ({ to: canonicalPath(`/tjanster/${s.slug}`), label: s.title })),
-                ...(blocks.relatedLinks ?? []),
-
-                ...(serviceAreaLinks[service.slug] ?? []),
-                { to: "/recensioner", label: "Omdömen på Google" },
-              ]).map((link) => (
+              {serviceRelatedLinks(service.slug, services).map((link) => (
                 <li key={link.to} className="border-b border-border sm:border-r sm:last:border-r-0">
                   <Link
                     to={link.to}
@@ -954,7 +548,7 @@ const ServiceDetail = () => {
                 className="group inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground transition-colors hover:text-primary"
               >
                 <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
-                Tillbaka till alla tjänster
+                {SERVICE_COPY.backToServices}
               </Link>
             </div>
           </div>

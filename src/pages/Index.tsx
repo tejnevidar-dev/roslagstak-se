@@ -34,6 +34,19 @@ const Index = () => {
 
   const handleSplashDone = useCallback(() => setShowSplash(false), []);
 
+  /* Guide-teasern drar in hela blog-posts-datan (≈ 60 KB överfört). Den ligger under vecket, så den
+     monteras först när webbläsaren är i vila (eller efter 3 s som tak), inte under första inläsningen. */
+  const [showTeaser, setShowTeaser] = useState(false);
+  useEffect(() => {
+    const ric = (window as unknown as { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback;
+    const timer = window.setTimeout(() => setShowTeaser(true), 3000);
+    const idle = ric ? ric(() => window.setTimeout(() => setShowTeaser(true), 1500), { timeout: 3000 }) : null;
+    return () => {
+      window.clearTimeout(timer);
+      if (idle !== null) (window as unknown as { cancelIdleCallback?: (h: number) => void }).cancelIdleCallback?.(idle);
+    };
+  }, []);
+
   useEffect(() => {
     if (!location.hash) return;
     const target = hashRoutes[location.hash];
@@ -76,7 +89,7 @@ const Index = () => {
         <Suspense fallback={null}>
           <About />
           <ServiceArea />
-          <GuidesTeaser />
+          {showTeaser ? <GuidesTeaser /> : <div aria-hidden="true" style={{ minHeight: 640 }} />}
           <FAQ />
         </Suspense>
       </main>

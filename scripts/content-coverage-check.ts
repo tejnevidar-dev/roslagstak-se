@@ -80,6 +80,17 @@ const acceptedGaps: Record<string, string[]> = {
   "skalby-jarfalla.md": ["Bor du i Skälby och funderar på taket?"],
 };
 
+/** Godkända områdesbriefar: filen står i _godkanda-versioner.json (Innehåll) eller har en Grind-rad. En brief som
+ *  varken är godkänd eller delvis byggd är "inte byggd" (informativt), inte ett fel: den väntar på Marknadschefens grind. */
+const approvedFiles = (() => {
+  try {
+    const j = JSON.parse(readFileSync(join(resolve(locDir), "_godkanda-versioner.json"), "utf8")) as { sidor: { fil: string }[] };
+    return new Set(j.sidor.map((x) => x.fil));
+  } catch {
+    return new Set<string>();
+  }
+})();
+
 for (const file of readdirSync(resolve(locDir)).filter((f) => f.endsWith(".md"))) {
   const raw = readFileSync(join(resolve(locDir), file), "utf8").replace(/\r/g, "");
 
@@ -109,7 +120,9 @@ for (const file of readdirSync(resolve(locDir)).filter((f) => f.endsWith(".md"))
   const accepted = acceptedGaps[file] ?? [];
   const missing = meningar.filter((s) => !liveText.includes(norm(s)) && !accepted.includes(s));
 
-  allResults.push({ page: `/taklaggare-${slug}`, file, status: missing.length ? "missing" : "ok", missing, total: meningar.length });
+  const approved = approvedFiles.has(file) || /\*\*Grind:\*\*\s*GODKÄND/.test(raw);
+  const status = !missing.length ? "ok" : !approved && missing.length === meningar.length ? "not-built" : "missing";
+  allResults.push({ page: `/taklaggare-${slug}`, file, status, missing: status === "missing" ? missing : [], total: meningar.length });
 }
 
 /* ---------- 2) Problem- och materialsidor ---------- */

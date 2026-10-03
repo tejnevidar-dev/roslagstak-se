@@ -34,7 +34,7 @@ import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
 import { villaAreasParagraph, villaAreasByPage } from "../src/data/villa-areas";
-import { serviceAreaLinks } from "../src/data/service-area-links";
+import { serviceStaticPage, serviceSchemaNodes } from "../src/data/service-page";
 
 const villaAreaLinks = (key: string) =>
   (villaAreasByPage[key]?.areas ?? [])
@@ -81,23 +81,6 @@ const services = [
     /slug:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)",[\s\S]*?description:\s*\n?\s*"([^"]+)"/g,
   ),
 ].map((m) => ({ slug: m[1], title: m[2], description: m[3] }));
-
-/* Tjänstesidornas längre brödtext (longDesc i ServiceDetail.tsx), läst med regex av samma skäl
-   som ovan, så att den förrenderade HTML:en visar samma text som React-sidan (#1v, 2026-09-30). */
-const serviceDetailSource = readFileSync(resolve("src/pages/ServiceDetail.tsx"), "utf8");
-const serviceLongDesc = new Map(
-  [...serviceDetailSource.matchAll(/^  "?([a-z-]+)"?: \{\r?\n\s*longDesc:\s*"([^"]+)"/gm)].map(
-    (m) => [m[1], m[2]] as [string, string],
-  ),
-);
-
-/* Extra stycken som React renderar som egen JSX-sektion (inte i serviceDetails). Håll i synk
-   manuellt med ServiceDetail.tsx. */
-const serviceExtraParagraphs: Record<string, string[]> = {
-  platarbeten: [
-    "Dubbelfalsat plåttak – bandtäckning med fast pris. Vi lägger dubbelfalsade plåttak (bandtäckning) vid takbyte, med fast pris efter kostnadsfri takkontroll. Bandtäckning är plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Banorna hålls på plats av dolda klammer som fästs i underlaget, så att plåten kan röra sig med temperaturen utan att skarvarna tar skada. Tekniken passar både äldre hus och moderna villor, och kan formas efter kupor, ränndalar och andra detaljer på taket.",
-  ],
-};
 
 /** Referensjobbens text kommer direkt ur src/data/project-texts.ts (ren data, ingen spegling). */
 const projectSummaries = projectTexts.map((t) => ({ ...t, ogImageAlt: t.heroAlt }));
@@ -481,22 +464,28 @@ const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const slug = clean.slice("/tjanster/".length);
     const service = services.find((s) => s.slug === slug);
     if (!service) return null;
-    const page = serviceIntro(service.title, service.description);
-    const extra = [serviceLongDesc.get(slug), ...(serviceExtraParagraphs[slug] ?? [])].filter(
-      (p): p is string => Boolean(p),
-    );
-    // Speglar ServiceDetail.tsx:s "Relaterat innehåll" (#1ag punkt 2) — annars syns de bara för
-    // besökare med JS, inte för crawlers som läser den här förrenderade HTML:en.
-    const areaLinks = (serviceAreaLinks[slug] ?? []).map((l) => ({ href: l.to, label: l.label }));
+    // Hela den synliga texten ur samma datamodul som ServiceDetail.tsx (fas 2.50 P0, paritetstestat).
+    const sp = serviceStaticPage(slug, services);
+    if (!sp) return null;
+    const schemas = serviceSchemaNodes(slug, services);
     return {
-      ...page,
-      paragraphs: [...extra, ...page.paragraphs],
-      links: [...page.links, ...areaLinks],
+      title: sp.title,
+      description: sp.description,
+      h1: sp.h1,
+      intro: sp.intro,
+      paragraphs: sp.paragraphs,
+      links: [
+        ...primaryLinks,
+        ...serviceLinks,
+        ...locationLinks.slice(0, 24),
+        ...sp.relatedLinks.map((l) => ({ href: l.to, label: l.label })),
+      ],
       breadcrumbs: [
         { name: "Startsidan", path: "/", visibleName: "Hem" },
         { name: "Tjänster", path: "/#tjanster" },
         { name: service.title, path: `/tjanster/${slug}` },
       ],
+      jsonLd: [schemas.service, schemas.howTo],
     };
   }
 

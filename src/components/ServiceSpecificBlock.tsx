@@ -1,5 +1,6 @@
 import Reveal from "@/components/Reveal";
 import type { SpecificBlock } from "@/data/service-blocks";
+import { SIGNALS_COLUMNS } from "@/data/service-page";
 
 /** Rubrikhuvud som delas av alla blocktyper. */
 const BlockHead = ({ eyebrow, heading, intro }: { eyebrow: string; heading: string; intro: string }) => (
@@ -81,9 +82,9 @@ const ServiceSpecificBlock = ({ block }: { block: SpecificBlock }) => {
 
           <ul className="mt-12 space-y-px bg-border">
             <li className="hidden bg-primary px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-primary-foreground lg:grid lg:grid-cols-[1fr_1fr_1fr] lg:gap-8">
-              <span>Signal på taket</span>
-              <span>Vad det betyder</span>
-              <span>Vår åtgärd</span>
+              {SIGNALS_COLUMNS.map((c) => (
+                <span key={c}>{c}</span>
+              ))}
             </li>
             {block.items.map((it) => (
               <li key={it.sign} className="bg-card">
