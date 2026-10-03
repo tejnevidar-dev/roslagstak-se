@@ -15,7 +15,7 @@ import {
   type InnehallFile,
 } from "@/data/overrides";
 import { applyOverrideBlocks } from "@/lib/innehall-apply";
-import { checkInnehallPost, type Regel } from "@/lib/overrides-validate";
+import { checkInnehallPost, ID_FORMAT, type Regel } from "@/lib/overrides-validate";
 
 const regler = monster.monster as Regel[];
 const bas = { andrad: "2026-10-12", orsak: "test" };
@@ -152,5 +152,14 @@ describe("bild-alt", () => {
     expect(f([{ bild: "logo", alt: "Bild på ett nylagt tak på en villa i Täby" }])).toMatch(/börja inte med/);
     expect(f([{ bild: "logo", alt: "Nylagt tak på en villa i Täby, bästa takläggaren i Roslagen" }, { bild: "logo", alt: "Nylagt tak på en villa i Täby, sett från sidan" }])).toMatch(/superlativ|flera gånger/);
     expect(checkInnehallPost("/taklaggare-taby", { alt: { ...altFalt, rubrik: "Rubrik här" } as never }, altCtx).join()).toMatch(/okänt fält "rubrik"/);
+  });
+});
+
+describe("id-serier", () => {
+  it("godtar seo-cc- (CRM) och manuell- (manuella ändringar), inget annat", () => {
+    expect(ID_FORMAT.test("seo-cc-2026-10-12-0001")).toBe(true);
+    expect(ID_FORMAT.test("manuell-2026-10-12-0001")).toBe(true);
+    expect(ID_FORMAT.test("manuell-2026-10-12-1")).toBe(false);
+    expect(ID_FORMAT.test("annat-2026-10-12-0001")).toBe(false);
   });
 });

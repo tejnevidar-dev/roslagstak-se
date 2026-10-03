@@ -41,7 +41,8 @@ export const checkText = (falt: "title" | "description", text: string, regler: R
     .filter((r) => r.falt.includes(falt) && regexOf(r).test(text) && !(r.utom_om_bas_har_ordet && bas !== undefined && regexOf(r).test(bas)))
     .map((r) => ({ regel: r.id, orsak: r.orsak }));
 
-export const ID_FORMAT = /^seo-cc-\d{4}-\d{2}-\d{2}-\d{4}$/;
+/** seo-cc-… är CRM:ets nummerserie. manuell-… är för manuella ändringar som görs här i sajten (Marknadschefen 2026-10-03). */
+export const ID_FORMAT = /^(?:seo-cc|manuell)-\d{4}-\d{2}-\d{2}-\d{4}$/;
 export const POST_FIELDS: string[] = [...FALT];
 export const FALT_FIELDS = ["id", "text", "andrad", "orsak"];
 
@@ -64,7 +65,7 @@ export const checkFalt = (path: string, namn: FaltNamn, falt: MetaFalt, regler: 
   const fel: string[] = [];
   const e = (m: string) => fel.push(`${path} ${namn}: ${m}`);
   for (const k of Object.keys(falt)) if (!FALT_FIELDS.includes(k)) e(`okänt fält "${k}"`);
-  if (typeof falt.id !== "string" || !ID_FORMAT.test(falt.id)) e(`id måste vara på formen seo-cc-ÅÅÅÅ-MM-DD-NNNN (fick ${JSON.stringify(falt.id)})`);
+  if (typeof falt.id !== "string" || !ID_FORMAT.test(falt.id)) e(`id måste vara på formen seo-cc-ÅÅÅÅ-MM-DD-NNNN eller manuell-ÅÅÅÅ-MM-DD-NNNN (fick ${JSON.stringify(falt.id)})`);
   if (typeof falt.andrad !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(falt.andrad)) e("andrad måste vara ett ISO-datum (ÅÅÅÅ-MM-DD)");
   if (typeof falt.orsak !== "string" || !falt.orsak.trim() || falt.orsak.length > 200) e("orsak krävs och får vara högst 200 tecken");
   const text = falt.text;
@@ -139,7 +140,7 @@ export const checkInnehallFalt = (path: string, namn: InnehallNamn, falt: Inneha
   const bas = ctx.basText?.(path);
   const tillatna = [...BAS_FIELDS.filter((k) => namn !== "alt" || k !== "rubrik"), INNEHALL_DATA[namn]];
   for (const k of Object.keys(falt)) if (!tillatna.includes(k)) e(`okänt fält "${k}"`);
-  if (typeof falt.id !== "string" || !ID_FORMAT.test(falt.id)) e(`id måste vara på formen seo-cc-ÅÅÅÅ-MM-DD-NNNN (fick ${JSON.stringify(falt.id)})`);
+  if (typeof falt.id !== "string" || !ID_FORMAT.test(falt.id)) e(`id måste vara på formen seo-cc-ÅÅÅÅ-MM-DD-NNNN eller manuell-ÅÅÅÅ-MM-DD-NNNN (fick ${JSON.stringify(falt.id)})`);
   if (typeof falt.andrad !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(falt.andrad)) e("andrad måste vara ett ISO-datum (ÅÅÅÅ-MM-DD)");
   if (typeof falt.orsak !== "string" || !falt.orsak.trim() || falt.orsak.length > 200) e("orsak krävs och får vara högst 200 tecken");
   if (falt.rubrik !== undefined) fel.push(...textFel(`${w} rubrik`, falt.rubrik, 5, 70, ctx.regler, bas));

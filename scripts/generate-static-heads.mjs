@@ -15,7 +15,7 @@
  * Route list comes from public/sitemap.xml (single source of truth) plus the
  * noindex routes that are deliberately kept out of the sitemap.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, readdirSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, readdirSync, copyFileSync } from "fs";
 import { resolve, dirname } from "path";
 import { tmpdir } from "os";
 import { build as esbuild } from "esbuild";
@@ -432,6 +432,11 @@ for (const [alias, target] of aliasEntries) {
   writeFileSync(out, html);
   aliases++;
 }
+
+/* Ändringsloggen för SEO Command Center publiceras som /seo-overrides-logg.json (samma innehåll som
+   src/data/overrides/_logg.json) så att CRM kan läsa manuella titel- och metaändringar själv. Filen är noindex
+   (public/_headers) och står inte i sitemapen. */
+copyFileSync(resolve("src/data/overrides/_logg.json"), resolve(dist, "seo-overrides-logg.json"));
 
 rmSync(bundlePath, { force: true });
 console.log(

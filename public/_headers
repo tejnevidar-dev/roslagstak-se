@@ -1,0 +1,4 @@
+/seo-overrides-logg.json
+  X-Robots-Tag: noindex
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache
