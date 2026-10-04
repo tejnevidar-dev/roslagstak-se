@@ -14,6 +14,17 @@ const fel: string[] = [];
 if (!/^Ca /.test(prisPost("Dubbelfalsat plåttak").priceRange)) fel.push('prices.ts: "Dubbelfalsat plåttak" ska börja med "Ca"');
 if (!/^Ca /.test(prisPost("Papptak").priceRange)) fel.push('prices.ts: "Papptak" ska börja med "Ca"');
 
+// 1b) Strukturerade data på tjänst × ort-sidor får inga belopp (regel 5, backlog 1ci): servicePriceDescriptionsRaw i
+// ServiceLocationPage.tsx. Ett belopp ("1 200 kr/m²", "från 8 000 kr") i tabellen fäller bygget.
+{
+  const src = readFileSync("src/pages/ServiceLocationPage.tsx", "utf8");
+  const block = src.match(/const servicePriceDescriptionsRaw[\s\S]*?\n};/)?.[0] ?? "";
+  if (!block) fel.push("ServiceLocationPage.tsx: servicePriceDescriptionsRaw hittas inte (mönstret i check-prisfrasing.ts måste följa med vid omdöpning)");
+  const belopp = block.match(/\d[\d ]*\s*kr(?:\/m²|\/löpmeter)?/g);
+  if (belopp) fel.push(`ServiceLocationPage.tsx: belopp i servicePriceDescriptionsRaw (${belopp.join(", ")}). Riktpriser hör hemma på /priser`);
+  if (/tegelprofilerad|ligger normalt lägre|ROT-avdrag tillkommer/.test(block)) fel.push("ServiceLocationPage.tsx: förbjuden formulering i servicePriceDescriptionsRaw");
+}
+
 // 2) Den byggda texten
 const walk = (d: string): string[] =>
   readdirSync(d).flatMap((f) => {

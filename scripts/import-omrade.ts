@@ -68,7 +68,7 @@ const parse = (file: string): Parsed => {
   const titleLine =
     raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?·\s*\*\*Meta \(≤ 160\):\*\*\s*(.+)/) ??
     // äldre format: titel och meta på varsin rad
-    raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?\n\*\*Meta \(≤ 160\):\*\*\s*(.+)/);
+    raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?\n(?:[^\n]*\n){0,3}?\*\*Meta \(≤ 160\):\*\*\s*(.+)/);
   // Titel och meta kan ligga utanför briefen ("Titel och meta: enligt Marknadschefens beslut, ändras inte här"): då rörs varken description eller seo-overrides.
   const titelUtanforBrief = /\*\*Titel och meta:\*\*\s*(?:enligt|rörs inte|ändras inte)/.test(raw);
   if (!slug || (!titleLine && !titelUtanforBrief)) {

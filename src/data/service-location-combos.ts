@@ -2,6 +2,7 @@ import { withRotForbehall } from "./prices";
 import { locations, type LocationData } from "./locations";
 import { allServiceSlugs, hasServiceCombos } from "./service-slugs";
 import { byDistance } from "./service-reach";
+import { OAR_UTAN_BILVAG } from "./location-mall";
 
 export interface ServiceLocationCombo {
   serviceSlug: string;
@@ -205,7 +206,7 @@ export const generateCombos = (): ServiceLocationCombo[] => {
         prep,
         url: `/${service.slug}-${loc.slug}`,
         title: `${service.name} ${prep} ${loc.name} — Takläggare RoslagsTak`,
-        description: `${service.name} ${prep} ${loc.name}. Professionell takläggare. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, utan förpliktelser.`,
+        description: comboDefaultMeta({ serviceName: service.name, prep, locationName: loc.name, locationSlug: loc.slug }),
         content: service.generateContent(loc, prep).map(withRotForbehall),
       });
     }
@@ -216,15 +217,34 @@ export const generateCombos = (): ServiceLocationCombo[] => {
 /** Tjänster som är ett material: titel, H1 och H2 får inte ha "pris" eller "kostnad" (prissökord per material ägs av /priser). */
 export const MATERIAL_COMBO_SLUGS: readonly string[] = ["tegeltak", "betongpannor", "platttak", "bandtackning"];
 
-/** Standardtitel och H1 för en tjänst × ort-sida utan egen text. */
-export const comboDefaultTitle = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) =>
-  MATERIAL_COMBO_SLUGS.includes(c.serviceSlug)
-    ? `${c.serviceName} ${c.prep} ${c.locationName} — 10 års utförandegaranti`
-    : `${c.serviceName} ${c.prep} ${c.locationName} — Fast pris & garanti`;
-export const comboDefaultH1 = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) =>
-  MATERIAL_COMBO_SLUGS.includes(c.serviceSlug)
-    ? `${c.serviceName} ${c.prep} ${c.locationName} — 10 års utförandegaranti`
-    : `${c.serviceName} ${c.prep} ${c.locationName} — fast pris & 10 års utförandegaranti`;
+/**
+ * Standardtitel och H1 för en tjänst × ort-sida utan egen text (Marknadschefen, backlog 1ci del 2): samma form för alla
+ * tjänster. Går titeln över 60 tecken står "10 års garanti" i stället för "10 års utförandegaranti".
+ */
+export const comboDefaultTitle = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) => {
+  const bas = `${c.serviceName} ${c.prep} ${c.locationName}`;
+  const lang = `${bas} — 10 års utförandegaranti`;
+  if (lang.length <= 60) return lang;
+  const kort = `${bas} — 10 års garanti`;
+  return kort.length <= 60 ? kort : bas;
+};
+export const comboDefaultH1 = comboDefaultTitle;
+
+/** Standardmeta för en tjänst × ort-sida utan egen text. Öar utan bilväg (OAR_UTAN_BILVAG, inte isIsland) lovar ingen kostnadsfri takkontroll (10o). */
+export const comboDefaultMeta = (c: { serviceName: string; prep: string; locationName: string; locationSlug: string }): string => {
+  const bas = `${c.serviceName} ${c.prep} ${c.locationName}. Takfirma med bas i Norrtälje.`;
+  const varianter = OAR_UTAN_BILVAG.includes(c.locationSlug)
+    ? [
+        `${bas} Fast pris i offerten och 10 års utförandegaranti. Berätta var huset ligger när du hör av dig.`,
+        `${bas} Fast pris i offerten och 10 års utförandegaranti.`,
+      ]
+    : [
+        `${bas} Kostnadsfri takkontroll utan förpliktelser, fast pris i offerten och 10 års utförandegaranti.`,
+        `${bas} Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti.`,
+        `${bas} Fast pris i offerten och 10 års utförandegaranti.`,
+      ];
+  return varianter.find((v) => v.length <= 160) ?? varianter[varianter.length - 1];
+};
 
 /**
  * Material × ort-sidorna är noindex, så sökord som "tegeltak täby" ägs av materialets egen sida (Marknadschefen, backlog 1cd).

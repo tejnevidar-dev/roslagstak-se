@@ -22,16 +22,19 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+/** Inga belopp i strukturerade data på tjänst × ort-sidor (regel 5, Marknadschefen 2026-10-04): riktpriser står på /priser. check-prisfrasing.ts fäller bygget om ett belopp hamnar här. */
+const PRIS_UTAN_BELOPP = "Fast pris i offerten efter kostnadsfri takkontroll. Riktpriser per material finns på roslagstak.se/priser.";
+
 const servicePriceDescriptionsRaw: Record<string, string> = {
-  takbyte: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
-  takomlaggning: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
+  takbyte: PRIS_UTAN_BELOPP,
+  takomlaggning: PRIS_UTAN_BELOPP,
   takrenovering: "Fast pris efter kostnadsfri takkontroll, beroende på åtgärdens omfattning. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
-  taktvatt: "Fast pris efter kostnadsfri takkontroll, inklusive biocidbehandling. ROT-avdrag tillkommer.",
-  takmalning: "Fast pris efter kostnadsfri takkontroll, inklusive tvätt, grundning och två strykningar. ROT-avdrag tillkommer.",
-  bandtackning: "Riktpris, efter ROT-avdrag och inkl. moms: ca 2 000 kr/m² i förzinkad eller färgbelagd plåt. Fast pris efter kostnadsfri takkontroll.",
-  platttak: "Riktpris, efter ROT-avdrag och inkl. moms: TP20 från 1 200 kr/m², tegelprofilerad plåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
-  betongpannor: "Riktpris, efter ROT-avdrag och inkl. moms: från 1 200 kr/m². Omläggning av befintliga pannor ligger normalt lägre än nyläggning. Fast pris efter kostnadsfri takkontroll.",
-  tegeltak: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och tegelprofilerad plåt från 1 300 kr/m². Fast pris efter kostnadsfri takkontroll.",
+  taktvatt: "Fast pris i offerten efter kostnadsfri takkontroll.",
+  takmalning: "Fast pris i offerten efter kostnadsfri takkontroll.",
+  bandtackning: PRIS_UTAN_BELOPP,
+  platttak: PRIS_UTAN_BELOPP,
+  betongpannor: PRIS_UTAN_BELOPP,
+  tegeltak: PRIS_UTAN_BELOPP,
 };
 const servicePriceDescriptions: Record<string, string> = Object.fromEntries(
   Object.entries(servicePriceDescriptionsRaw).map(([k, v]) => [k, withRotForbehall(v)]),
@@ -105,12 +108,15 @@ const ServiceLocationPage = () => {
         longitude: loc.lng,
       } : undefined,
     },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "SEK",
-      description: servicePriceDescriptions[combo.serviceSlug] ??
-        "Fast pris efter kostnadsfri takkontroll.",
-    },
+    ...(loc && isThinCombo(combo.serviceSlug, loc)
+      ? {}
+      : {
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "SEK",
+            description: servicePriceDescriptions[combo.serviceSlug] ?? "Fast pris i offerten efter kostnadsfri takkontroll.",
+          },
+        }),
   };
 
   const faqJsonLd = {
@@ -137,11 +143,7 @@ const ServiceLocationPage = () => {
   };
 
   // Richer meta description
-  const metaDescription =
-    override?.description ??
-    (loc?.isIsland
-      ? `${combo.serviceName} ${combo.prep} ${combo.locationName} — takläggare i skärgården. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti. Ring 070-154 36 39.`
-      : `${combo.serviceName} ${combo.prep} ${combo.locationName} — takläggare med fast pris. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`);
+  const metaDescription = override?.description ?? combo.description;
 
   // Title under 60 chars
   const seoTitle = override?.title ?? comboDefaultTitle(combo);
