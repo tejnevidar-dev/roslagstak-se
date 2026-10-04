@@ -98,9 +98,7 @@ const MaterialsPage = () => {
 
           <div className="mx-auto mt-8 max-w-3xl rounded-2xl bg-primary p-8 text-center text-primary-foreground">
             <p className="leading-relaxed">
-              Vilket material som passar ditt hus beror på taket, lutningen, huset och uttrycket du vill ha. Boka en
-              kostnadsfri takkontroll utan förpliktelser. Vi går upp på taket, och sedan får du ett fast pris för det
-              material du väljer.
+              Vilket material som passar ditt hus beror på taket, lutningen, huset och uttrycket du vill ha. Boka en kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, och behöver taket åtgärdas får du en offert med fast pris.
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <Link

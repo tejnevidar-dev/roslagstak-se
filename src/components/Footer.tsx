@@ -104,7 +104,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-3 pt-6 text-xs text-primary-foreground/45 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} RoslagsTak. Alla rättigheter förbehållna.</span>
-          <span>Arbete enligt AMA-standard · 10 års utförandegaranti</span>
+          <span>Arbete enligt AMA · 10 års utförandegaranti</span>
         </div>
       </div>
     </footer>

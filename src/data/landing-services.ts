@@ -39,7 +39,7 @@ export const landingServices: LandingService[] = [
     h1: "Takreparation vid läckage och skador.",
     h1Accent: "Fast pris efter kostnadsfri takkontroll.",
     intro:
-      "Läcker taket, är pannor trasiga eller sitter plåten löst? Vi gör en kostnadsfri takkontroll, lämnar ett skriftligt fast pris och utför reparationen. Är taket i så dåligt skick att en reparation inte räcker säger vi det.",
+      "Läcker taket, är pannor trasiga eller sitter plåten löst? Vi gör en kostnadsfri takkontroll, lämnar en offert med fast pris och utför reparationen. Är taket i så dåligt skick att en reparation inte räcker säger vi det.",
     listHeading: "Skador vi lagar",
     listIntro: "De vanligaste orsakerna till att tak läcker eller tar skada, och vad vi gör åt dem.",
     list: [
@@ -148,7 +148,7 @@ export const landingServices: LandingService[] = [
     intro:
       "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Kostnadsfritt och utan förpliktelser — du betalar inget och binder dig inte till något.",
     listHeading: "Vad vi tittar på",
-    listIntro: "Vi tittar bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt.",
+    listIntro: "En av våra säljare tittar på taket på plats.",
     list: [
       {
         title: "Takmaterialet",

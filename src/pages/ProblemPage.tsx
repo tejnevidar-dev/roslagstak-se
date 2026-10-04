@@ -109,8 +109,8 @@ const ProblemPage = () => {
 
           <div className="mt-8 rounded-2xl bg-primary p-8 text-center text-primary-foreground">
             <p className="leading-relaxed">
-              Osäker på hur allvarligt det är? Boka en kostnadsfri takkontroll utan förpliktelser: vi går
-              upp på taket, och behöver något göras får du ett fast pris. Vi svarar inom 24 timmar.
+              Osäker på hur allvarligt det är? Boka en kostnadsfri takkontroll utan förpliktelser. En av våra säljare
+              tittar på taket på plats, och behöver något göras får du en offert med fast pris. Vi svarar inom 24 timmar.
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <Link

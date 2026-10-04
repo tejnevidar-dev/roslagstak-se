@@ -389,7 +389,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Betongpannor, lertegel, plåt eller falsat — materialet avgör utseende, vikt och underhåll. Här går vi igenom vad som skiljer dem åt.",
     paragraphs: [
       ...materials.map((m) => `${m.title}: ${m.hubDescription}`),
-      "Vilket material som passar ditt hus beror på taket, lutningen, huset och uttrycket du vill ha. Boka en kostnadsfri takkontroll utan förpliktelser. Vi går upp på taket, och sedan får du ett fast pris för det material du väljer.",
+      "Vilket material som passar ditt hus beror på taket, lutningen, huset och uttrycket du vill ha. Boka en kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, och behöver taket åtgärdas får du en offert med fast pris.",
     ],
     links: [...primaryLinks, ...materials.map((m) => ({ href: m.href, label: m.title }))],
     breadcrumbs: [

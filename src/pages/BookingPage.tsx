@@ -9,7 +9,7 @@ import { BOOKING_ENABLED } from "@/lib/booking";
 
 const trust = [
   "10 års utförandegaranti",
-  "30 års tätskiktsgaranti (MATAKI)",
+  "30 års tätskiktsgaranti via MATAKI",
   "Fast pris, arbete enligt AMA",
   "Utan förpliktelser",
 ];
@@ -42,7 +42,7 @@ const BookingPage = () => (
             </h1>
             <p className="mt-6 max-w-[54ch] text-[18px] leading-relaxed text-muted-foreground">
               Vi går igenom taket, du får en bedömning av skicket och ett fast pris om något behöver åtgärdas.
-              Kostnadsfritt och utan förpliktelser.
+              Kostnadsfritt och utan förpliktelser. Vi svarar inom 24 timmar.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a

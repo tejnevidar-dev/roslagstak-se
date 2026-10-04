@@ -20,7 +20,7 @@ const trustFor = (slug: string) => [
   "10 års utförandegaranti",
   ...(NO_TATSKIKT_CHIP_LANDING.includes(slug)
     ? []
-    : [RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti (MATAKI)"]),
+    : [RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti via MATAKI"]),
   "Fast pris efter takkontroll",
   "Arbete enligt AMA",
   "Svar inom 24 timmar",

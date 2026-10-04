@@ -284,27 +284,6 @@ const Taktvatt = () => {
     description:
       "Professionell taktvätt med borttagning av mossa, lavar och alger. Skonsam tvätt, biocidbehandling och takmålning på betongpannor, tegelpannor och plåttak i hela Roslagen.",
     category: "Roof cleaning",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Taktvätt-tjänster",
-      itemListElement: [
-        { "@type": "Offer", name: "Taktvätt + biocidbehandling", priceSpecification: { "@type": "UnitPriceSpecification", price: "80-150", priceCurrency: "SEK", unitText: "per kvadratmeter" } },
-        { "@type": "Offer", name: "Taktvätt + takmålning", priceSpecification: { "@type": "UnitPriceSpecification", price: "200-320", priceCurrency: "SEK", unitText: "per kvadratmeter" } },
-        { "@type": "Offer", name: "Endast mossborttagning", priceSpecification: { "@type": "UnitPriceSpecification", price: "50-90", priceCurrency: "SEK", unitText: "per kvadratmeter" } },
-      ],
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "SEK",
-      availability: "https://schema.org/InStock",
-      url: pageUrl,
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "80-150",
-        priceCurrency: "SEK",
-        unitText: "per kvadratmeter",
-      },
-    },
   };
 
   const faqJsonLd = {
