@@ -724,4 +724,19 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Rotebro i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
   },
+  tumba: {
+    title: "Takbyte i Tumba – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Tumba i Botkyrka, med villor från 1900-talets början och framåt. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  gustavsberg: {
+    title: "Takbyte i Gustavsberg – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Gustavsberg på Värmdö, bruksorten där egnahem byggdes från 1950-talet. Kostnadsfri takkontroll och fast pris.",
+  },
+  trollbacken: {
+    title: "Takbyte i Trollbäcken – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Trollbäcken i Tyresö, villaområdet som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
 };
