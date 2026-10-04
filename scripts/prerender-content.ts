@@ -258,7 +258,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Steg 4 — rivning: gamla taket rivs. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare, och inget extraarbete görs utan ditt godkännande.",
       "Steg 5 — underlag: ny underlagspapp, ströläkt och bärläkt läggs.",
       "Steg 6 — tätskikt och beslag: det nya taket monteras tillsammans med plåtbeslag kring skorsten, ventiler och genomföringar, och taksäkerhet och hängrännor, om de ingår i offerten.",
-      "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
+      "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
     ],
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }],
