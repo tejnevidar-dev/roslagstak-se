@@ -1778,6 +1778,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://roslagstak.se/taklaggare-rindo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roslagstak.se/taklaggare-tynningo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://roslagstak.se/taklaggare-duvbo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
