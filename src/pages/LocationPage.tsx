@@ -444,8 +444,8 @@ const LocationPage = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Priset för ett takbyte {prep} {location.name} beror på takets storlek, lutning, materialval och underlagets skick, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak.
                   {location.isIsland
-                    ? ` Transportkostnad till ${location.name} ingår alltid i vår offert — inga dolda tillägg.`
-                    : ` Du får alltid fast pris efter kostnadsfri takkontroll — inga dolda tillägg.`}
+                    ? ` Transportkostnad till ${location.name} ingår alltid i vår offert.`
+                    : ` Du får alltid fast pris efter kostnadsfri takkontroll.`}
                   {" "}Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr per person och år).
                 </p>
 

@@ -1300,7 +1300,6 @@ export const blogPosts: BlogPost[] = [
       "När EPDM är rätt val: platta och låglutande tak (under 14°), tak med komplicerade geometrier, tak med många genomföringar, gröna tak (EPDM är vanlig som vattentät botten under planteringsbäddar), och tak där du vill ha så lite framtida underhåll som möjligt.",
       "När SBS-papp kan vara bättre: budget är avgörande, taket är extremt litet eller har många smala vinklar (kapsvinn på EPDM-duken blir då stor), eller du föredrar svetsad lösning för specifika tekniska skäl.",
       "Vanliga frågor om EPDM: Kan man lägga EPDM ovanpå gammal takpapp? I vissa fall ja, men vi rekommenderar nästan alltid att riva ner till bärigt underlag för att kunna kontrollera skicket under. Tål EPDM att gå på? Ja, vid behov — men använd mjuka skor och undvik vassa föremål. Kan man reparera en skada? Ja, skador lagas enkelt med EPDM-lagningssatser och specialtejp.",
-      "Miljöaspekten: EPDM har lång livslängd vilket ger låg materialförbrukning över tid, och duken kan återvinnas som brännbart material vid demontering. För dig som planerar gröna tak eller solceller är EPDM en stabil bas som inte behöver bytas förrän solcellerna gjort sitt.",
       "Vi lägger EPDM på tak i hela Roslagen — Norrtälje, Vaxholm, Blidö, Ljusterö och skärgården. Ring 070-154 36 39 eller boka kostnadsfri takkontroll så går vi igenom vilket tätskikt som passar ditt tak bäst.",
     ],
   },
