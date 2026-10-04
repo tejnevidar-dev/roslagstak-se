@@ -739,4 +739,29 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Trollbäcken i Tyresö, villaområdet som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
   },
+  bro: {
+    title: "Takbyte i Bro – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Bro i Upplands-Bro, stationssamhället som växte från 1950-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  marsta: {
+    title: "Takbyte i Märsta – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Märsta i Sigtuna kommun, orten som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  "saltsjo-boo": {
+    title: "Takbyte i Saltsjö-Boo – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Saltsjö-Boo i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  spanga: {
+    title: "Takbyte i Spånga – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Spånga i Västerort, med villasamhällena Solhem, Bromsten och Flysta. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  tullinge: {
+    title: "Takbyte i Tullinge – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Tullinge i Botkyrka, planerat som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
 };

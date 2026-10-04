@@ -1,3 +1,4 @@
+import { useScrollToHash } from "@/lib/use-scroll-to-hash";
 import { useParams, Link } from "react-router-dom";
 import { ArrowRight, Phone } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -7,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getMaterial, MATERIAL_PRIS_LANK, type MaterialDetail } from "@/data/materials";
+import { MATERIAL_PRISAVSNITT, PRIS_ANKARE, PRIS_STYCKEN } from "@/data/material-prices";
 import { guidesForTitle } from "@/data/related-posts";
 import { getProjectsByMaterial } from "@/data/projects";
 
@@ -32,6 +34,7 @@ const sections: { key: keyof MaterialDetail; heading: string }[] = [
 ];
 
 const MaterialPage = () => {
+  useScrollToHash();
   const { slug } = useParams<{ slug: string }>();
   const material = slug ? getMaterial(slug) : undefined;
 
@@ -126,7 +129,39 @@ const MaterialPage = () => {
             </div>
           )}
 
-          {MATERIAL_PRIS_LANK[material.slug] && (
+          {MATERIAL_PRISAVSNITT[material.slug] && (
+            <section id={PRIS_ANKARE} className="mt-10 scroll-mt-28">
+              <h2 className="font-display text-xl text-foreground">{MATERIAL_PRISAVSNITT[material.slug].rubrik}</h2>
+              <ul className="mt-3 divide-y divide-border rounded-2xl border border-border bg-card">
+                {MATERIAL_PRISAVSNITT[material.slug].rader.map((r) => (
+                  <li key={r.namn} className="flex flex-col gap-1 px-5 py-3 sm:flex-row sm:items-center sm:justify-between">
+                    {r.to ? (
+                      <Link to={r.to} className="text-sm font-semibold text-primary hover:underline">
+                        {r.namn}
+                      </Link>
+                    ) : (
+                      <span className="text-sm font-semibold text-card-foreground">{r.namn}</span>
+                    )}
+                    <span className="font-display text-lg text-primary">{r.belopp}</span>
+                  </li>
+                ))}
+              </ul>
+              {PRIS_STYCKEN.map((t) => (
+                <p key={t} className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+                  {t}
+                </p>
+              ))}
+              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+                Alla riktpriser finns på{" "}
+                <Link to="/priser" className="font-semibold text-primary underline underline-offset-4">
+                  prissidan
+                </Link>
+                .
+              </p>
+            </section>
+          )}
+
+          {!MATERIAL_PRISAVSNITT[material.slug] && MATERIAL_PRIS_LANK[material.slug] && (
             <p className="mt-8 text-[15px] leading-relaxed text-muted-foreground">
               Riktpris efter ROT-avdrag:{" "}
               <Link to={MATERIAL_PRIS_LANK[material.slug].to} className="font-semibold text-primary underline underline-offset-4">

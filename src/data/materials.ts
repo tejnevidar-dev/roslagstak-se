@@ -237,11 +237,12 @@ export const materials: Material[] = [
 
 /** Länk till prisankaret på /priser för ett material, med länktexten "<material> pris" (sökordsägare, Marknadschefen 2026-10-04). */
 export const MATERIAL_PRIS_LANK: Record<string, { label: string; to: string }> = {
-  betongpannor: { label: "Betongpannor pris", to: "/priser#betongpannor" },
-  lertegel: { label: "Tegeltak pris", to: "/priser#tegeltak" },
-  "tp20-plattak": { label: "Plåttak pris", to: "/priser#plattak" },
-  pannplat: { label: "Plåttak pris", to: "/priser#plattak" },
-  dubbelfalsat: { label: "Plåttak pris", to: "/priser#plattak" },
+  betongpannor: { label: "Betongpannor pris", to: "/material/betongpannor#pris" },
+  lertegel: { label: "Tegeltak pris", to: "/tjanster/tegeltak#pris" },
+  "tp20-plattak": { label: "Plåttak pris", to: "/material/tp20-plattak#pris" },
+  pannplat: { label: "Pannplåt pris", to: "/material/pannplat#pris" },
+  dubbelfalsat: { label: "Dubbelfalsat pris", to: "/tjanster/platarbeten#pris" },
+  papptak: { label: "Papptak pris", to: "/material/papptak#pris" },
 };
 
 export const getMaterial = (slug: string) => materials.find((m) => m.slug === slug && m.detail);

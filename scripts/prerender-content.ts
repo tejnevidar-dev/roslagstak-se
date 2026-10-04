@@ -14,6 +14,7 @@ import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
+import { MATERIAL_PRISAVSNITT, prisAvsnittForSpegel } from "../src/data/material-prices";
 import { projectTexts } from "../src/data/project-texts";
 import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
@@ -576,6 +577,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...materialSections.flatMap((s) => [{ h: s.heading, suffix: ":" }, d[s.key] as string]),
         { h: "Kostnadsdrivare", suffix: ":" },
         d.kostnadsdrivare,
+        ...(MATERIAL_PRISAVSNITT[material.slug]
+          ? [{ h: MATERIAL_PRISAVSNITT[material.slug].rubrik }, ...prisAvsnittForSpegel(MATERIAL_PRISAVSNITT[material.slug])]
+          : []),
         ...(d.hallIsar ? [`Håll isär: ${d.hallIsar}`] : []),
         ...(d.hosOss ? [`Hos oss: ${d.hosOss}`] : []),
       ]),
@@ -585,7 +589,10 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         { href: "/material", label: "Alla material" },
         { href: "/priser", label: "Priser för takarbeten" },
-        ...(MATERIAL_PRIS_LANK[material.slug] ? [{ href: MATERIAL_PRIS_LANK[material.slug].to, label: MATERIAL_PRIS_LANK[material.slug].label }] : []),
+        ...(!MATERIAL_PRISAVSNITT[material.slug] && MATERIAL_PRIS_LANK[material.slug]
+          ? [{ href: MATERIAL_PRIS_LANK[material.slug].to, label: MATERIAL_PRIS_LANK[material.slug].label }]
+          : []),
+        ...(MATERIAL_PRISAVSNITT[material.slug]?.rader.filter((r) => r.to).map((r) => ({ href: r.to!, label: r.namn })) ?? []),
         ...guidesForTitle(material.title, 2).map((g) => ({ href: `/blogg/${g.slug}`, label: g.title })),
         ...MONEY_LINKS,
       ],

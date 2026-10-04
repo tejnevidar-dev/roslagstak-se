@@ -64,8 +64,38 @@ export const priceFaqs = [
 export const PRICE_HERO_TEXT =
   "Riktpriserna nedan gäller efter ROT-avdrag och inkl. moms, med standardställning. Fast pris lämnas alltid efter en kostnadsfri takkontroll. Som privatperson kan du få ROT-avdrag (30 % på arbetskostnaden), som dras av direkt på fakturan.";
 
+/** Ställningsmeningen, ordagrant som på /priser. Används också på material- och tjänstesidornas prisavsnitt. */
+export const STALLNING_MENING = "Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.";
+
+/** Papptak finns inte i prislistan på /priser. Riktpriset är CRM:s standardpris (900 kr/m² efter ROT, inkl. moms) och visas bara på materialsidan. */
+export const PAPPTAK_RIKTPRIS = {
+  name: "Papptak",
+  priceRange: "Ca 900 kr/m² (efter ROT, inkl. moms)",
+  description: "Papptak med underlag och underlagspapp.",
+};
+
+const alla = [...priceData.flatMap((c) => c.items), PAPPTAK_RIKTPRIS];
+
+/** Prisposten med det namnet i prislistan. Kastar om den saknas, så att en omdöpt post aldrig tyst tappar sitt belopp. */
+export const prisPost = (name: string): { name: string; priceRange: string; description: string } => {
+  const post = alla.find((i) => i.name === name);
+  if (!post) throw new Error(`Prisposten "${name}" finns inte i prices.ts`);
+  return post;
+};
+
+/** Beloppet med inledande versal och utan märkningen, t.ex. "Från 1 200 kr/m²". */
+export const belopp = (name: string): string => prisPost(name).priceRange.replace(/\s*\(efter ROT, inkl\. moms\)/, "");
+
+/** Beloppet för löpande text, t.ex. "från 1 200 kr/m²" eller "ca 2 000 kr/m²". */
+export const beloppLopande = (name: string): string => {
+  const b = belopp(name);
+  return b.charAt(0).toLowerCase() + b.slice(1);
+};
+
 export const PRICE_NOTE =
-  "Riktpriser nedan är efter ROT-avdrag och inkl. moms, med standardställning. Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten. Priserna förutsätter fullt ROT-avdrag: 30 % av arbetskostnaden, högst 50 000 kr per person och år, och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre. Exakt pris för ditt tak får du alltid skriftligt efter en kostnadsfri takkontroll.";
+  "Riktpriser nedan är efter ROT-avdrag och inkl. moms, med standardställning. " +
+  STALLNING_MENING +
+  " Priserna förutsätter fullt ROT-avdrag: 30 % av arbetskostnaden, högst 50 000 kr per person och år, och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre. Exakt pris för ditt tak får du alltid skriftligt efter en kostnadsfri takkontroll.";
 
 export const PRICE_ROT_TITLE = "Så fungerar ROT-avdraget vid takarbeten";
 export const PRICE_ROT_TEXT =

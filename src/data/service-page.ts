@@ -4,7 +4,7 @@
  * speglingen ska vara lika fullständig som den synliga sidan. Bara relativa importer (esbuild-bundlad
  * utan "@"-alias). Parity mot den renderade sidan testas i src/test/service-page-parity.test.ts.
  */
-import { ROT_FORBEHALL, withRotForbehall } from "./prices";
+import { ROT_FORBEHALL, STALLNING_MENING, belopp, beloppLopande, withRotForbehall } from "./prices";
 import { GARANTI_ETERNIT, GARANTI_RENOVERING, GARANTI_RENOVERING_CHIP, GARANTI_UTFORANDE, NO_GARANTI_SERVICE_SLUGS, NO_TATSKIKT_CHIP_SERVICE_SLUGS, NO_TATSKIKT_SERVICE_SLUGS, RENOVERING_SERVICE_SLUGS } from "./guarantee";
 import { TAKSAKERHET_SLUG, taksakerhetDetails, taksakerhetMeta } from "./service-taksakerhet";
 import { serviceExtra } from "./service-extra-sections";
@@ -127,7 +127,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     specs: [
       { k: "Material", v: "Lertegel" },
       { k: "Livslängd", v: "Enligt tillverkaren" },
-      { k: "Pris", v: "Från 1 300 kr/m²" },
+      { k: "Pris", v: belopp("Lertegeltak") },
     ],
     specHeading: "Lertegel jämfört med andra taktyper",
     lead: "Lertegel är det klassiska valet som passar både äldre och nyare hus.",
@@ -141,7 +141,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
 export const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
     longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen. Allt arbete utförs enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Exakt pris beror på takets storlek, material och underlag.",
+    priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor ${beloppLopande("TP20 plåttak")}, lertegel och pannplåt ${beloppLopande("Lertegeltak")}, dubbelfalsat ${beloppLopande("Dubbelfalsat plåttak")}. Exakt pris beror på takets storlek, material och underlag.`,
     benefits: [
       "Rivning av befintligt yttertak",
       "Nytt underlagspapp, fotplåtar och underbeslag runt genomföringar",
@@ -180,7 +180,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
   },
   takavvattning: {
     longDesc: "Hängrännor och stuprör leder bort vattnet från taket. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i lackerad plåt. Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör från ca 23 000 kr, beroende på husets storlek och våningar. " + ROT_FORBEHALL,
+    priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör ${beloppLopande("Takavvattning (hängrännor)")}, beroende på husets storlek och våningar. ${ROT_FORBEHALL}`,
     benefits: [
       "Hängrännor och stuprör i lackerad plåt",
       "Ränndalar och fotplåt",
@@ -230,7 +230,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
   },
   platarbeten: {
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar och ränndalar.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: taktäckning med plåt från 1 200 kr/m² (TP20) till ca 2 000 kr/m² (dubbelfalsat). Beslag och detaljer prissätts efter omfattning i offerten.",
+    priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: taktäckning med plåt ${beloppLopande("TP20 plåttak")} (TP20) till ${beloppLopande("Dubbelfalsat plåttak")} (dubbelfalsat). Beslag och detaljer prissätts efter omfattning i offerten.`,
     benefits: [
       "En kontaktperson hela vägen",
       "Taktäckning med TP20, pannplåt eller dubbelfalsad plåt",
@@ -284,7 +284,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
   },
   tegeltak: {
     longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga. Takstolarna behöver klara vikten, och tillverkaren anger vilken lutning pannan kräver. Lertegel är något annat än pannplåt (plåt som är pressad för att likna pannor), som vi också lägger. De är olika material med olika pris och vikt.",
-    priceRange: "Riktpris, efter ROT-avdrag och inkl. moms: lertegel och pannplåt från 1 300 kr/m². Exakt pris beror på takets storlek, lutning och underlagets skick.",
+    priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: lertegel och pannplåt ${beloppLopande("Lertegeltak")}. Exakt pris beror på takets storlek, lutning och underlagets skick. ${STALLNING_MENING} Ditt pris står i offerten och är fast.`,
     benefits: [
       "Rivning av befintligt tak",
       "Nytt underlag och ny läkt",
@@ -387,7 +387,7 @@ export const goodToKnowBoxes = (slug: string): { t: string; d: string }[] => {
   const renovering = RENOVERING_SERVICE_SLUGS.includes(slug);
   return [
     {
-      t: SERVICE_COPY.priceTitle,
+      t: slug === "tegeltak" ? "Vad kostar tegeltak?" : SERVICE_COPY.priceTitle,
       d: `${details?.priceRange ? withRotForbehall(details.priceRange) : SERVICE_COPY.priceFallback}${slug === "takinspektion" ? "" : SERVICE_COPY.addonsNote}`,
     },
     ...(NO_GARANTI_SERVICE_SLUGS.includes(slug)

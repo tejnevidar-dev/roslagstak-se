@@ -1,4 +1,4 @@
-import { ROT_FORBEHALL } from "./prices";
+import { ROT_FORBEHALL, belopp, beloppLopande } from "./prices";
 import { GARANTI_RENOVERING, GARANTI_UTFORANDE } from "./guarantee";
 import { TAKSAKERHET_SLUG, taksakerhetBlocks } from "./service-taksakerhet";
 /**
@@ -96,7 +96,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Takbyte och takomläggning i Roslagen och Storstockholm. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Prisbild", value: "1 200–2 000 kr/m²", text: "TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m² — efter ROT-avdrag, inkl. moms." },
+      { tone: "primary", label: "Prisbild", value: `${belopp("TP20 plåttak").replace("Från ", "").replace(" kr/m²", "")}–${belopp("Dubbelfalsat plåttak").replace("Ca ", "")}`, text: `TP20-plåt ${beloppLopande("TP20 plåttak")}, dubbelfalsat ${beloppLopande("Dubbelfalsat plåttak")} — efter ROT-avdrag, inkl. moms.` },
       { tone: "outline", label: "Tidsåtgång", value: "Efter takets storlek", text: "Beror på takets storlek, underlagets skick och väder." },
       { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor." },
       { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Papp, läkt och plåtdetaljer byts." },
@@ -109,10 +109,10 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Valet av ytskikt styr både pris och utseende. Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Kännetecken", "Passar"],
       rows: [
-        ["Profilerad plåt (TP20)", "Från 1 200 kr/m²", "Lätt, skruvad profilplåt", "Enkla takformer"],
-        ["Betongpanna", "Från 1 200 kr/m²", "Tung, flera kulörer", "Kräver konstruktion som bär vikten"],
-        ["Tegelpanna", "Från 1 300 kr/m²", "Tung, åldras med patina", "Kräver konstruktion som bär vikten"],
-        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Lätt, inga synliga skruvar", "Tak med kupor och ränndalar"],
+        ["Profilerad plåt (TP20)", belopp("TP20 plåttak"), "Lätt, skruvad profilplåt", "Enkla takformer"],
+        ["Betongpanna", belopp("Betongpannetak"), "Tung, flera kulörer", "Kräver konstruktion som bär vikten"],
+        ["Tegelpanna", belopp("Lertegeltak"), "Tung, åldras med patina", "Kräver konstruktion som bär vikten"],
+        ["Dubbelfalsat plåttak", belopp("Dubbelfalsat plåttak"), "Lätt, inga synliga skruvar", "Tak med kupor och ränndalar"],
       ],
       footnote: `Riktpriser, efter ROT-avdrag och inkl. moms, med standardställning. Priset sätts efter kostnadsfri takkontroll. Komplex ställning kan tillkomma och framgår i så fall i offerten. ${ROT_FORBEHALL}`,
     },
@@ -150,7 +150,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i lackerad plåt. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "outline", label: "Prisbild", value: "Från ca 23 000 kr", text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. " + ROT_FORBEHALL },
+      { tone: "outline", label: "Prisbild", value: belopp("Takavvattning (hängrännor)").replace("Från ca ", "Från ca "), text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. " + ROT_FORBEHALL },
       { tone: "plain", label: "Takkontroll", value: "Kostnadsfri", text: "Vi tittar på rännor, stuprör och avvattning på plats, utan förpliktelser." },
       { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_UTFORANDE },
     ],
@@ -314,7 +314,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus." },
       { tone: "outline", label: "Uttryck", value: "Åldras med patina", text: "Enskilda pannor som spricker kan bytas utan att hela taket görs om." },
       { tone: "accent", label: "Tungt material", value: "Lertegel väger mer", text: "Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak." },
-      { tone: "plain", label: "Pris", value: "Från 1 300 kr/m²", text: "Efter ROT-avdrag, inkl. moms. Fast pris i offerten." },
+      { tone: "plain", label: "Pris", value: belopp("Lertegeltak"), text: "Efter ROT-avdrag, inkl. moms. Fast pris i offerten." },
     ],
     block: {
       kind: "matrix",
@@ -324,10 +324,10 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
         "Tegel eller betong? Eller pannplåt, som ser ut som pannor men är plåt? Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Kännetecken"],
       rows: [
-        ["Lertegel", "Från 1 300 kr/m²", "Bränd lera, åldras med patina"],
-        ["Betongpannor", "Från 1 200 kr/m²", "Gjuten betong, flera kulörer"],
-        ["Pannplåt", "Från 1 300 kr/m²", "Plåt pressad för att likna pannor"],
-        ["Dubbelfalsat plåttak", "Ca 2 000 kr/m²", "Plåtbanor utan synliga skruvar"],
+        ["Lertegel", belopp("Lertegeltak"), "Bränd lera, åldras med patina"],
+        ["Betongpannor", belopp("Betongpannetak"), "Gjuten betong, flera kulörer"],
+        ["Pannplåt", belopp("Pannplåttak"), "Plåt pressad för att likna pannor"],
+        ["Dubbelfalsat plåttak", belopp("Dubbelfalsat plåttak"), "Plåtbanor utan synliga skruvar"],
       ],
       footnote: `Riktpriser, efter ROT-avdrag och inkl. moms. Priset sätts efter kostnadsfri takkontroll. Exakt pris beror på takets storlek, lutning och underlag. ${ROT_FORBEHALL}`,
     },
@@ -341,9 +341,9 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
 /** Tjänstspecifika fördjupningslänkar som läggs till i "Läs vidare". */
 const extraRelated: Record<string, { to: string; label: string }[]> = {
   takomlaggning: [
-    { to: "/priser#tegeltak", label: "Tegeltak pris" },
-    { to: "/priser#betongpannor", label: "Betongpannor pris" },
-    { to: "/priser#plattak", label: "Plåttak pris" },
+    { to: "/tjanster/tegeltak#pris", label: "Tegeltak pris" },
+    { to: "/material/betongpannor#pris", label: "Betongpannor pris" },
+    { to: "/material/tp20-plattak#pris", label: "Plåttak pris" },
     { to: "/blogg/takpapp-byte-livslangd", label: "Takpapp: laga eller byta?" },
     { to: "/taktyper", label: "Jämför taktyper och material" },
     { to: "/hur-det-gar-till", label: "Se hur ett takbyte går till" },
@@ -369,7 +369,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   ],
   platarbeten: [
-    { to: "/priser#plattak", label: "Plåttak pris" },
+    { to: "/material/tp20-plattak#pris", label: "Plåttak pris" },
     { to: "/blogg/bandtackt-plat-vs-klicktak", label: "Bandtäckt plåt eller klicktak" },
     { to: "/blogg/bandtackning-tak-guide", label: "Bandtäckning: så går det till" },
     { to: "/platslagare", label: "Plåtslagare för ditt tak" },
@@ -382,7 +382,6 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
   tegeltak: [
     { to: "/tjanster/platarbeten#falsat", label: "Dubbelfalsat plåttak (bandtäckning)" },
     { to: "/material/pannplat", label: "Pannplåt" },
-    { to: "/priser#tegeltak", label: "Tegeltak pris" },
   ],
 };
 

@@ -1,3 +1,4 @@
+import { useScrollToHash } from "@/lib/use-scroll-to-hash";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, HelpCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -27,6 +28,7 @@ import {
 } from "@/data/prices";
 
 const Prices = () => {
+  useScrollToHash();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

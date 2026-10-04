@@ -1857,18 +1857,18 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Solna — takbyte, takomläggning och takrenovering med fast pris. Kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Solna har en snabbt växande bebyggelse — från äldre villor i Hagaparkens närhet till moderna bostadsområden i Arenastaden och stora kommersiella fastigheter. Taken varierar från tegeltak på äldre villor till plåttak och membrantak på nyare bostadshus. Vi utför takbyten, takomläggningar och plåtarbeten i Solna med fast pris, för både villatak och större fastigheter. Vår närhet till Stockholm gör att vi kan agera snabbt.",
+      "Solna ligger strax norr om Stockholms innerstad. I slutet av 1800-talet växte flera förortssamhällen fram här: Hagalund, Huvudsta, Råsunda och Lilla Alby, som blev municipalsamhällen åren kring sekelskiftet. Solna blev stad 1943. Den som söker takläggare i Solna och har en villa bor oftast i Råsunda, där småhusen ligger samlade i några villaområden. Här går vi igenom dem.",
     extraContent:
-      "För de äldre villaområdena rekommenderar vi oftast dubbelfalsat plåt eller tegelprofilerad plåt vid omläggning. Vi lämnar alltid fast pris efter kostnadsfri takkontroll.",
-    uniqueFAQ: {
-      question: "Utför ni takarbeten på kommersiella fastigheter i Solna?",
-      answer:
-        "Ja, vi utför takbyten och takrenoveringar på både bostadsfastigheter och kommersiella byggnader i Solna, inklusive större bostadshus och verksamhetslokaler. Vi utför plåttak, membrantak och bandtäckning på stora ytor. Kontakta oss för offert på ditt projekt.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Solna?","answer":"Byggperiod enligt källorna: södra villaområdet kring 1912, västra 1926–1932, norra från 1932. Hustyper: villor, egnahem, småstugor ombyggda till villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Solna",
     lat: 59.36,
     lng: 18.0009,
-    nearbyLocations: ["Stockholm", "Sundbyberg", "Danderyd"],
+    nearbyLocations: ["Stockholm","Sundbyberg","Danderyd"],
+    factBox: [{"label":"Kommun","value":"Solna"},{"label":"Delar som nämns","value":"Råsunda (södra, västra, norra och östra villaområdet, Vasalund), Hagalund, Huvudsta"},{"label":"Hustyper","value":"Villor, egnahem, småstugor ombyggda till villor"},{"label":"Byggperiod","value":"Södra villaområdet kring 1912, västra 1926–1932, norra från 1932"}],
+    sourceLink: {"label":"Wikipedia, Solna kommun","url":"https://sv.wikipedia.org/wiki/Solna_kommun"},
+    extraSections: [{"heading":"Råsundas villaområden","text":"Råsunda har enligt Wikipedia blandad bebyggelse från olika delar av 1900-talet: en stenstad, höghus som har kommit till i omgångar efter 1934 och flera villaområden. Stadsdelen växte fram längs spårvägen. Spårvagnarna nådde Haga 1904, och spårvägsbolagets dotterbolag uppförde bebyggelse längs linjen för att få fler resande. - **Södra villaområdet** ligger vid platsen för den gamla fotbollsstadion. Det bestod från början av villor som byggdes i samband med de olympiska sommarspelen 1912 och utökades sedan med fler egnahem och villor. - **Västra villaområdet** kom till genom flera avstyckningsplaner mellan 1926 och 1932, för småstugor och egnahem. Enligt Wikipedia har många av husen i modern tid byggts om till större villor, med terrasser och garage. - **Norra villaområdet** ligger vid Råstasjöns strand och skapades genom en avstyckningsplan 1932. Bebyggelsen är egnahem kring en äldre mangårdsbyggnad. - **Östra villaområdet**, som också kallas Vasalund, hörde från början till Hagalund och har blandad bebyggelse, med villor och större hyreshus."},{"heading":"Vad det betyder för taket","text":"Villorna i Råsunda är alltså omkring 90 till 115 år gamla, och många har byggts om sedan dess. Husens ålder säger inte hur gammalt taket är. På så gamla hus kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Två saker är värda att tänka på. - **Hus som har byggts om och till.** En småstuga som har blivit en större villa har ofta takdelar av olika ålder, och terrasser och tillbyggnader ger fler anslutningar att se över än två raka takfall. - **Äldre villor.** På en villa från 1900-talets början är takets form, material och detaljer en del av husets uttryck. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."},{"heading":"Det här gör vi i Solna","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag i Solna. Hur ett takbyte går till här beskriver vi på sidan takbyte i Solna, och vad en takomläggning omfattar står på sidan takomläggning. Fler orter i närheten finns på sidan Norra Stockholm."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Solna och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "sundbyberg",
@@ -2213,20 +2213,20 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Spånga — takbyte och takrenovering i västra Stockholm. Fast pris och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Spånga i Västerort, med villasamhällena Solhem, Bromsten och Flysta. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Spånga har en småortskaraktär med ursprunglig bebyggelse från tidigt 1900-tal, blandat med nyare villaområden och radhus. Taken varierar från äldre tegeltak på ursprungliga torp och villor till plåttak på 70-talsbebyggelse. Vi utför takbyten och takrenoveringar i Spånga med material som bevarar småortens karaktär.",
+      "Spånga är enligt Wikipedia ett informellt område i Västerort, som ungefär motsvarar stadsdelarna Bromsten, Flysta, Solhem, Lunda och Sundby. Namnet kommer från den gamla kyrkbyn och finns i skrift år 1300. Stationen och centrum ligger i Solhem, och Spånga torg ligger nära stationen, där både pendeltåg och bussar går. Spånga var länge en egen landskommun. Villasamhällena kom till genom att gårdarnas mark styckades till tomter åren kring sekelskiftet 1900, sedan järnvägen mellan Stockholm och Västerås hade invigts 1876. I Bromsten började gårdens ägor styckas i villatomter 1899, och 1904 blev Bromsten municipalsamhälle. Vid folkräkningen 1920 bodde 2 096 personer där. I Solhem började tomter säljas 1904. Bolaget bakom försäljningen tillhandahöll typritningar, och enligt Wikipedia har de flesta av de första husen träfasader, spröjsade fönster och ofta både förstukvist och veranda. År 1907 fanns 160 hus, och 1930 var 425 tomter bebyggda. På 1930-talet växte Spånga torg fram. I Flysta började marken styckas 1905, och under det följande årtiondet blev ett hundratal familjer bofasta. Flysta blev municipalsamhälle 1915 och är enligt Wikipedia i huvudsak bebyggt med villor. Den 1 januari 1949 införlivades Spånga landskommun med Stockholm.",
     extraContent:
-      "I Spånga bevarar vi gärna ursprungliga takdetaljer när de finns — tegelpannor och handfalsade plåtbeslag på de äldsta husen. Vid omläggning lägger vi ny underlagspapp, ny läkt och plåt eller pannor efter husets stil. Vi bedömer alltid behovet av snörasskydd över entréer. Kostnadsfri takkontroll och fast pris ingår.",
-    uniqueFAQ: {
-      question: "Kan ni bevara originalets tegeltak vid takbyte i Spånga?",
-      answer:
-        "Ja, på de äldre husen i Spånga kan vi lägga tegelpannor som matchar originalet, eller välja tegelprofilerad plåt för ett tegelliknande utseende till lägre kostnad. Vi bevarar detaljer som vindskivor och plåtbeslag när de går att renovera. Boka en kostnadsfri takkontroll så bedömer vi vad som passar ditt hus.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Spånga?","answer":"Byggperiod enligt källorna: villatomter från 1899 (Bromsten), 1904 (Solhem) och 1905 (Flysta), fortsatt byggande under 1920- och 1930-talen. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Spånga",
     lat: 59.3789,
     lng: 17.9181,
-    nearbyLocations: ["Hässelby", "Bromma", "Vällingby"],
+    nearbyLocations: ["Hässelby","Bromma","Vällingby"],
+    factBox: [{"label":"Kommun","value":"Stockholm"},{"label":"Delar","value":"Solhem, Bromsten, Flysta, Lunda, Sundby"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"Villatomter från 1899 (Bromsten), 1904 (Solhem) och 1905 (Flysta), fortsatt byggande under 1920- och 1930-talen"}],
+    sourceLink: {"label":"Wikipedia, Spånga","url":"https://sv.wikipedia.org/wiki/Spånga"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"De första villorna i Spånga är alltså omkring 120 år gamla, och många hus har kommit till senare. Husens ålder säger inte hur gammalt taket är. På så gamla hus kan taket ha lagts om en eller flera gånger, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. På en villa från 1900-talets början är takets form, material och detaljer en del av husets uttryck, och förstukvistar och verandor har egna små tak med egna anslutningar. Och i ett villasamhälle som har byggts ut och förtätats under mer än hundra år står hus av olika ålder nära varandra, så grannens tak säger inte mycket om ditt eget. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Spånga och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   // ---- Sydöstra Stockholm ----
   {
@@ -2916,20 +2916,20 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Bro — takbyte och takrenovering i Bro. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takbyte och takomläggning i Bro i Upplands-Bro, stationssamhället som växte från 1950-talet. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Bro — tätort i Upplands-Bro — har ett fastighetsbestånd med villor, radhus och lantbruksfastigheter. Takens ålder och skick varierar mycket mellan husen, och vid en takkontroll bedömer vi om en renovering räcker eller om det är dags för omläggning. RoslagsTak utför kompletta takprojekt i Bro: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi håller samma kontaktväg genom hela projektet, från takkontrollen till slutgenomgången på plats.",
+      "Bro är en tätort i Upplands-Bro kommun, intill E18 mellan Enköping och Stockholm. Bygdens centrum låg från början vid Bro kyrka. År 1876 byggdes en järnvägsstation i byn Härnevi, och enligt Wikipedia flyttade centrum sedan långsamt över till det stationssamhälle som växte fram där. Länge var samhället litet. Några villor uppfördes på 1920-talet, men i övrigt förblev Bro småskaligt, och först på 1950-talet började orten förändras. De första husen i det som i dag är Bro centrum kom på 1970-talet. Centrum förstördes helt av en brand 1992, och knappt två år senare invigdes ett nytt, med bostäder, butiker, bibliotek och kommunal service. Bro hörde till en egen landskommun tillsammans med grannsocknen fram till 1952 och blev 1971 en del av Upplands-Bro kommun, som samtidigt fördes över från Uppsala län till Stockholms län. Stationen lades ner 1972. Persontrafiken kom tillbaka 2001, när pendeltågsstationen öppnade på linjen mellan Bålsta och Stockholm. Enligt hitta.se är husen kring Härnevi skolväg, i södra Bro, från 1950- och 1970-talen, och i norra Bro från 1970- och 1980-talen.",
     extraContent:
-      "Vi går igenom förutsättningarna i Bro — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Du får ett fast pris som är räknat på ditt tak — inte ett uppskattat spann. Bor du granne med någon som också ska byta tak går det ofta att samordna arbetena och sänka etableringskostnaden. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Bro.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Bro?",
-      answer:
-        "Priset för ett takbyte i Bro beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Bro?","answer":"Byggperiod enligt källorna: några villor från 1920-talet, husen mest 1950- till 1980-tal. Hustyper: villor, i centrum flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Bro",
     lat: 59.5147,
     lng: 17.6389,
-    nearbyLocations: ["Kungsängen", "Upplands-Bro", "Kallhäll"],
+    nearbyLocations: ["Kungsängen","Upplands-Bro","Kallhäll"],
+    factBox: [{"label":"Kommun","value":"Upplands-Bro"},{"label":"Delar","value":"Härnevi (södra Bro), norra Bro, Bro centrum"},{"label":"Hustyper","value":"Villor, i centrum flerbostadshus"},{"label":"Byggperiod","value":"Några villor från 1920-talet, husen mest 1950- till 1980-tal"}],
+    sourceLink: {"label":"Wikipedia, Bro (Upplands-Bro kommun)","url":"https://sv.wikipedia.org/wiki/Bro,_Upplands-Bro_kommun"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Många av husen i Bro är alltså mellan 40 och 75 år gamla, och villorna från 1920-talet är omkring hundra år. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. På en ort som har vuxit i omgångar står hus från olika årtionden nära varandra, så grannens tak säger inte mycket om ditt eget. Och på de äldsta villorna kan det finnas kupor, verandatak och tillbyggnader, som ger fler anslutningar att se över än två raka takfall. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Bro och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "kungsangen",
@@ -2984,20 +2984,20 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Märsta — takbyte och takrenovering i Märsta. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takbyte och takomläggning i Märsta i Sigtuna kommun, orten som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Märsta är Sigtuna kommuns största tätort med radhus och flerbostadshus från 1970-talet. Vid en kostnadsfri takkontroll kontrollerar vi underlagspapp, läkt, råspont, plåtbeslag och ventilation under taket — det är där ett takbyte avgörs. Du får en skriftlig bedömning och ett fast pris innan något arbete påbörjas.",
+      "Märsta är centralort i Sigtuna kommun. Namnet kommer enligt Wikipedia av ett ord som betyder platsen för mjärdfisket, och trakten har många fornlämningar: runstenar, gravfält och fornborgar. Märsta gästgivaregård var en viktig anhalt för postdiligensen mellan Uppsala och Stockholm. Järnvägen kom 1866. Märsta fick aldrig någon egen ställning som municipalsamhälle eller köping, utan var en del av en landskommun fram till 1952, då orten fick ge namn åt en ny storkommun. Sedan 1971 är Märsta centralort i Sigtuna kommun. Det som fick orten att växa var flygplatsen. År 1960, när Arlanda just hade tagits i bruk, bodde omkring 3 000 personer i Märsta. År 1965 var de över 10 000 och 1990 var de 20 000. Därefter har utvecklingen enligt Wikipedia gått i lugnare takt. Märsta var tänkt att byggas på fyra kullar, men bara två av dem, Norrbacka och Valsta, fick bostäder. De andra två låg för nära inflygningen när flygplatsen byggdes ut från 1970-talet. Byggåren syns i husen. Enligt hitta.se är husen i Ekilla och Til mest från 1960- och 1970-talen, i Norrbacka främst från 1970-talet och i Steninge från 1970- och 1980-talen. I Sjudargården finns hus från 1960- och 2000-talen. Pendeltågen har sin ändstation i Märsta.",
     extraContent:
-      "Vi går igenom förutsättningarna i Märsta — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Märsta.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Märsta?",
-      answer:
-        "Priset för ett takbyte i Märsta beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en skriftlig offert med fast pris. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Märsta?","answer":"Byggperiod enligt källorna: mest 1960- till 1980-tal. Hustyper: villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Märsta",
     lat: 59.6206,
     lng: 17.8547,
-    nearbyLocations: ["Sigtuna", "Upplands Väsby", "Rotebro"],
+    nearbyLocations: ["Sigtuna","Upplands Väsby","Rotebro"],
+    factBox: [{"label":"Kommun","value":"Sigtuna"},{"label":"Delar","value":"Norrbacka, Valsta, Ekilla, Til, Steninge, Sjudargården"},{"label":"Hustyper","value":"Villor"},{"label":"Byggperiod","value":"Mest 1960- till 1980-tal"}],
+    sourceLink: {"label":"Wikipedia, Märsta","url":"https://sv.wikipedia.org/wiki/Märsta"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Många av husen i Märsta är alltså mellan 40 och 65 år gamla. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. I ett område där husen byggdes samtidigt ser taken lika ut från gatan, men de har skötts och lagts om var för sig. Och ett hus som har byggts om och till har ofta takdelar av olika ålder, där skarven mellan dem är värd en extra titt. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Märsta och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "blackeberg",
@@ -3219,20 +3219,20 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Saltsjö-Boo — takbyte och takrenovering i Saltsjö-Boo. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takbyte och takomläggning i Saltsjö-Boo i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Saltsjö-Boo — sjönära villaområde i norra Nacka — har ett fastighetsbestånd med villor från 1950-tal till nyproduktion. Betongpannor kan drabbas av frostsprängning och underlagspapp torkar ut och spricker med åren, vilket är exempel på skäl till att ett tak till slut kan behöva bytas eller läggas om. RoslagsTak utför kompletta takprojekt i Saltsjö-Boo: rivning av gammalt taktäckningsmaterial, kontroll av läkt och råspont, ny underlagsduk, nytt yttertak samt alla plåtdetaljer som hängrännor, stuprör, vindskivor och fotplåt. Vi arbetar med fast pris efter en kostnadsfri takkontroll.",
+      "Saltsjö-Boo, eller Boo, är den östra delen av Nacka kommun. Enligt Wikipedia är Boo en av kommunens fyra kommundelar, med omkring 36 000 invånare, och omfattar kommunens område öster om Skurusundet. Här ligger bland annat Björknäs, Orminge, Kummelnäs och Lännersta. Länge var Boo glest befolkat. Trakten bestod mest av gårdarna Boo, Kummelnäs och Velamsund och ett antal mindre torp och hemman. Namnet Hargsö, ett av de äldsta namnen på trakten, är känt från 1280-talet. Boo gård brändes ner 1719 och byggdes sedan upp igen, och herrgårdsbyggnaden finns kvar. Boo var en egen landskommun från 1863 och hör sedan 1971 till Nacka. Villaområdena började som sommarhus. I slutet av 1800-talet styckades stora markområden av från Kummelnäs gård, främst för sommarhus, och 1907 köpte en egnahemsförening ett stort markområde där och planlade det med vägar och tomter. De flesta husen var trähus som ägarna byggde själva. Kummelnäs består enligt Wikipedia i dag av villaområden som från början var sommarstugeområden. I Lännersta, i södra Boo, började gårdens mark styckas till villatomter i slutet av 1800-talet, och 1937 var egendomen styckad i 925 tomter. Enligt Wikipedia präglas bebyggelsen där huvudsakligen av villor från 1930-talet och framåt, och tidigare sommarstugeområden har omvandlats till permanenta villor.",
     extraContent:
-      "Vi går igenom förutsättningarna i Saltsjö-Boo — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Saltsjö-Boo.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Saltsjö-Boo?",
-      answer:
-        "Priset för ett takbyte i Saltsjö-Boo beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en skriftlig offert med fast pris. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Saltsjö-Boo?","answer":"Byggperiod enligt källorna: sommarhus från slutet av 1800-talet, egnahem från 1907 (Kummelnäs), villor från 1930-talet och framåt (Lännersta). Hustyper: villor, tidigare sommarhus ombyggda till villor. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Saltsjö-Boo",
     lat: 59.3319,
     lng: 18.2422,
-    nearbyLocations: ["Nacka", "Saltsjöbaden", "Gustavsberg"],
+    nearbyLocations: ["Nacka","Saltsjöbaden","Gustavsberg"],
+    factBox: [{"label":"Kommun","value":"Nacka"},{"label":"Delar","value":"Björknäs, Orminge, Kummelnäs, Lännersta"},{"label":"Hustyper","value":"Villor, tidigare sommarhus ombyggda till villor"},{"label":"Byggperiod","value":"Sommarhus från slutet av 1800-talet, egnahem från 1907 (Kummelnäs), villor från 1930-talet och framåt (Lännersta)"}],
+    sourceLink: {"label":"Wikipedia, Boo (kommundel)","url":"https://sv.wikipedia.org/wiki/Boo_(kommundel"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Husen i Boo är alltså ofta mellan 60 och 120 år gamla, och många har byggts om från sommarhus. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. Ett sommarhus som har blivit åretruntbostad har i regel byggts om och till, och då finns det ofta takdelar av olika ålder på samma hus. Skarven mellan dem är värd en extra titt. Ett fritidshus kan också vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Saltsjö-Boo och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "alta",
@@ -3761,20 +3761,20 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Tullinge — takbyte och takrenovering i Tullinge. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takbyte och takomläggning i Tullinge i Botkyrka, planerat som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Tullinge är ett villaområde i Botkyrka med villor från 1960–80-tal med betongpannor. Vid en kostnadsfri takkontroll kontrollerar vi underlagspapp, läkt, råspont, plåtbeslag och ventilation under taket — det är där ett takbyte avgörs. Du får en skriftlig bedömning och ett fast pris innan något arbete påbörjas.",
+      "Tullinge är en kommundel i Botkyrka, vid Tullingesjön. Platsen har gamla anor. På två klippor vid sjön, Skansberget och Örnberget, ligger fornborgar från vikingatiden, och Tullinge gård nämns i skrift redan 1353. Omkring 1630 byggdes gården till ett säteri. Huvudbyggnaden från 1760-talet brann ner 1943, men flyglarna finns kvar och används som församlingshem. Under slutet av 1800-talet började villastäder planeras utanför Stockholm, bland dem i Tullinge. En annons från omkring 1908 talade om villagårdar med plats för \"en häst eller två ponnies\". Stambanan hade gått genom Tullinge sedan 1859, men utan station. När banan byggdes ut till dubbelspår 1903 kom en hållplats, och 1917 blev den station. År 1926 fick järnvägen eldrift. Efter kriget växte Tullinge snabbare. Den första kommunala skolan byggdes 1946. På 1950-talet började Tullingeberg byggas, och mellan 1965 och 1975 kom de flesta av dagens lägenhetshus. Stationen flyttades 1969 till sin nuvarande plats, omkring en och en halv kilometer från den gamla. Flygflottiljen söder om Tullinge lades ner 1994, och sedan 2006 byggs bostäder på flygfältet. Villorna är av olika ålder. Enligt hitta.se är husen i Tullinge villastad i dag främst byggda på 1950- och 2000-talen, i Brantbrink på 1940- och 1950-talen, i Tullinge skog på 1950- och 1990-talen och i Tullinge parkhem på 1980- och 1990-talen.",
     extraContent:
-      "Vi går igenom förutsättningarna i Tullinge — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Tullinge.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Tullinge?",
-      answer:
-        "Priset för ett takbyte i Tullinge beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en skriftlig offert med fast pris. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Tullinge?","answer":"Byggperiod enligt källorna: villastad planerad kring sekelskiftet 1900, husen främst 1940- till 2000-tal. Hustyper: villor, i Tullingeberg och centrum flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Tullinge",
     lat: 59.2028,
     lng: 17.9047,
-    nearbyLocations: ["Tumba", "Botkyrka", "Huddinge"],
+    nearbyLocations: ["Tumba","Botkyrka","Huddinge"],
+    factBox: [{"label":"Kommun","value":"Botkyrka"},{"label":"Delar","value":"Tullinge villastad, Brantbrink, Tullinge skog, Tullinge parkhem, Tullingeberg"},{"label":"Hustyper","value":"Villor, i Tullingeberg och centrum flerbostadshus"},{"label":"Byggperiod","value":"Villastad planerad kring sekelskiftet 1900, husen främst 1940- till 2000-tal"}],
+    sourceLink: {"label":"Wikipedia, Tullinge","url":"https://sv.wikipedia.org/wiki/Tullinge"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Villorna i Tullinge är alltså allt från ett par årtionden till omkring 80 år gamla, och i villastaden kan det finnas äldre hus än så. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats. Två saker är värda att tänka på. I en villastad som har förtätats i omgångar står hus av olika ålder nära varandra, så grannens tak säger inte mycket om ditt eget. Och ett hus som har byggts om och till har ofta takdelar av olika ålder, där skarven mellan dem är värd en extra titt. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Tullinge och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "norsborg",

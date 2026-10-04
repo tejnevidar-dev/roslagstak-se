@@ -1,3 +1,4 @@
+import { useScrollToHash } from "@/lib/use-scroll-to-hash";
 import { withRotForbehall } from "@/data/prices";
 import {
   SERVICE_COPY,
@@ -63,6 +64,7 @@ const detailImages: Partial<Record<string, string>> = {
 };
 
 const ServiceDetail = () => {
+  useScrollToHash();
   const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
   const details = slug ? serviceDetails[slug] : null;
@@ -463,7 +465,7 @@ const ServiceDetail = () => {
             <div className="mt-12 grid gap-px border-y border-border bg-border md:grid-cols-3">
               {goodToKnowBoxes(service.slug).map((f, i) => (
                 <Reveal key={f.t} delay={i * 0.06}>
-                  <div className="h-full bg-card p-8">
+                  <div id={i === 0 ? "pris" : undefined} className="h-full scroll-mt-28 bg-card p-8">
                     <h3 className="font-display text-[1.05rem] font-bold tracking-[-0.02em] text-foreground">{f.t}</h3>
                     <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">{f.d}</p>
                   </div>
