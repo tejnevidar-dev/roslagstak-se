@@ -4,7 +4,7 @@ import { hubLinksFor } from "@/data/hub-links";
 import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
-import { generateCombos } from "@/data/service-location-combos";
+import { generateCombos, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
 import { isThinCombo } from "@/data/thin-combos";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
@@ -471,17 +471,17 @@ const LocationPage = () => {
                     <Link to={`/takomlaggning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Takomläggning {prep} {location.name}
                     </Link>
-                    <Link to={`/platttak-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Plåttak {prep} {location.name}
+                    <Link to={MATERIAL_OWN_PAGE.platttak.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.platttak.label}
                     </Link>
                     <Link to={`/bandtackning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Bandtäckning {prep} {location.name}
                     </Link>
-                    <Link to={`/betongpannor-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Betongpannor {prep} {location.name}
+                    <Link to={MATERIAL_OWN_PAGE.betongpannor.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.betongpannor.label}
                     </Link>
-                    <Link to={`/tegeltak-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Tegeltak {prep} {location.name}
+                    <Link to={MATERIAL_OWN_PAGE.tegeltak.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.tegeltak.label}
                     </Link>
                     <Link to={`/takmalning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Takmålning {prep} {location.name}

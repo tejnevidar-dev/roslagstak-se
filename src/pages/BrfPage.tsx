@@ -89,7 +89,7 @@ const brfFaqs = [
   {
     question: "Vilken garanti får föreningen?",
     answer:
-      "Vi lämnar 10 års garanti på utförandet. Garantihandlingar lämnas efter slutgenomgång, så att de går att spara i föreningens arkiv.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Garantihandlingar lämnas efter slutgenomgång, så att de går att spara i föreningens arkiv.",
   },
   {
     question: "Hur minimerar ni störningen för de boende?",

@@ -119,7 +119,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takrenovering: {
-    seoTitle: "Takrenovering – vad den omfattar och vad den kostar",
+    seoTitle: "Takrenovering i Roslagen – pris och vad som ingår",
     seoDescription:
       "Takrenovering: laga läckor, byta pannor, plåtdetaljer och skadad råspont. Vad som påverkar priset och hur du får fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "before-spec",

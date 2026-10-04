@@ -226,6 +226,22 @@ export const comboDefaultH1 = (c: { serviceSlug: string; serviceName: string; pr
     ? `${c.serviceName} ${c.prep} ${c.locationName} — 10 års utförandegaranti`
     : `${c.serviceName} ${c.prep} ${c.locationName} — fast pris & 10 års utförandegaranti`;
 
+/**
+ * Material × ort-sidorna är noindex, så sökord som "tegeltak täby" ägs av materialets egen sida (Marknadschefen, backlog 1cd).
+ * Ortssidor och syskonlänkar pekar därför på materialsidan i stället för på material × ort-sidan.
+ */
+export const MATERIAL_OWN_PAGE: Record<string, { to: string; label: string }> = {
+  tegeltak: { to: "/tjanster/tegeltak", label: "Tegeltak" },
+  betongpannor: { to: "/material/betongpannor", label: "Betongpannor" },
+  platttak: { to: "/material/tp20-plattak", label: "Plåttak (TP20)" },
+};
+
+/** Länkmålet för en tjänst × ort-sida i listor på andra sidor: materialets egen sida för material, annars sidan själv. */
+export const comboListLink = (c: { serviceSlug: string; url: string; serviceName: string; prep: string; locationName: string }): { href: string; label: string } =>
+  MATERIAL_OWN_PAGE[c.serviceSlug]
+    ? { href: MATERIAL_OWN_PAGE[c.serviceSlug].to, label: MATERIAL_OWN_PAGE[c.serviceSlug].label }
+    : { href: c.url, label: `${c.serviceName} ${c.prep} ${c.locationName}` };
+
 /** Tjänstesidan som en tjänst × ort-sida länkar upp till. "takbyte" ägs av /tjanster/takomlaggning. */
 export const COMBO_SERVICE_PAGE: Record<string, { to: string; label: string }> = {
   takbyte: { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },

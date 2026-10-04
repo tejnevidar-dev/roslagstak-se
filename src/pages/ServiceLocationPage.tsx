@@ -10,7 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
-import { getCombo, allServiceSlugs, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1 } from "@/data/service-location-combos";
+import { getCombo, allServiceSlugs, COMBO_SERVICE_PAGE, MATERIAL_OWN_PAGE, comboDefaultTitle, comboDefaultH1 } from "@/data/service-location-combos";
 import { comboOverrides } from "@/data/combo-overrides";
 import { locations } from "@/data/locations";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
@@ -266,10 +266,10 @@ const ServiceLocationPage = () => {
                   {otherServices.map((os) => (
                     <Link
                       key={os.slug}
-                      to={`/${os.slug}-${combo.locationSlug}`}
+                      to={MATERIAL_OWN_PAGE[os.slug]?.to ?? `/${os.slug}-${combo.locationSlug}`}
                       className="flex items-center gap-2 text-sm text-primary hover:underline"
                     >
-                      <ArrowRight className="w-3 h-3" /> {os.name} {combo.prep} {combo.locationName}
+                      <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE[os.slug]?.label ?? `${os.name} ${combo.prep} ${combo.locationName}`}
                     </Link>
                   ))}
                   <Link to="/tjanster/takavvattning" className="flex items-center gap-2 text-sm text-primary hover:underline">

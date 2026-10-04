@@ -203,7 +203,7 @@ export const materials: Material[] = [
       delAvTaksystemet:
         "Takstolar, råspont, underlagspapp eller underlagsduk, ströläkt, bärläkt och sedan ytmaterialet, med plåtdetaljer och avvattning. Vid en takomläggning eller ett takbyte byts underlagspapp och läkt, och råsponten ses över när det gamla taket är borta.",
       hosOss:
-        "Vid ett takbyte byts underlag och läkt, och råsponten bedöms när taket är öppet. På Blidö behölls den, och på Singö byttes delar av den. Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+        "Vid ett takbyte byts underlag och läkt, och råsponten bedöms när taket är öppet. På Blidö behölls den, och på Singö byttes delar av den. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
       hallIsar:
         "Underlagspapp ligger dold under pannor eller plåt och är takets andra skydd. Takpapp (ytpapp) på ett papptak är själva det synliga taket. Råspont är brädlagret under pappen, och läkt är reglarna ovanpå som pannorna vilar på.",
     },

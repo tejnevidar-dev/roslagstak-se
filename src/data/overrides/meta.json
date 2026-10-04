@@ -93,6 +93,20 @@
         "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
       }
     },
+    "/taklaggare-norrtalje": {
+      "title": {
+        "id": "manuell-2026-10-04-0029",
+        "text": "Takläggare i Norrtälje – takläggning till fast pris",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1cd), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0030",
+        "text": "Takfirma med bas i Norrtälje. Takläggning i staden, i Rimbo, Hallstavik och på öarna. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1cd), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
     "/taklaggare-taby": {
       "title": {
         "id": "manuell-2026-10-04-0003",

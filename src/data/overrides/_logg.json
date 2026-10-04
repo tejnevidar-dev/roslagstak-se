@@ -246,7 +246,7 @@
       "path": "/tjanster/takrenovering",
       "falt": "title",
       "fore": "Takrenovering Roslagen — Laga läckor & byta papp",
-      "efter": "Takrenovering – vad den omfattar och vad den kostar",
+      "efter": "Takrenovering i Roslagen – pris och vad som ingår",
       "tid": "2026-10-05T00:10:00+02:00"
     },
     {
@@ -272,6 +272,22 @@
       "fore": "Vi monterar takstege, gångbrygga och snörasskydd, för sig eller i samband med takbyte. Riktpriser efter ROT-avdrag, inkl. moms. Fast pris i offerten.",
       "efter": "Vi monterar takstege, gångbrygga och snörasskydd i Roslagen och Storstockholm, för sig eller vid takbyte. Riktpriser efter ROT-avdrag och fast pris i offerten.",
       "tid": "2026-10-05T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0029",
+      "path": "/taklaggare-norrtalje",
+      "falt": "title",
+      "fore": "Takläggare i Norrtälje: byta tak, fast pris",
+      "efter": "Takläggare i Norrtälje – takläggning till fast pris",
+      "tid": "2026-10-05T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0030",
+      "path": "/taklaggare-norrtalje",
+      "falt": "description",
+      "fore": "Takläggare i Norrtälje för dig som ska byta tak. Kostnadsfri takkontroll, skriftligt fast pris och 10 års utförandegaranti. Svar inom 24 timmar.",
+      "efter": "Takfirma med bas i Norrtälje. Takläggning i staden, i Rimbo, Hallstavik och på öarna. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "tid": "2026-10-05T01:00:00+02:00"
     }
   ]
 }

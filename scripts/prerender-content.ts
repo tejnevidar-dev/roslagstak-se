@@ -19,7 +19,7 @@ import { MATERIAL_EXTRAS } from "../src/data/page-extras";
 import { projectTexts } from "../src/data/project-texts";
 import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
-import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1 } from "../src/data/service-location-combos";
+import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1, comboListLink } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody } from "../src/lib/body-items";
@@ -803,7 +803,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...villaAreaLinks(loc.slug),
         ...combos
           .filter((c) => c.locationSlug === loc.slug)
-          .map((c) => ({ href: c.url, label: `${c.serviceName} ${c.prep} ${c.locationName}` })),
+          .map(comboListLink),
         ...hubLinksFor(loc.slug),
         ...loc.nearbyLocations
           .map((name) => locations.find((l) => l.name === name))
@@ -848,7 +848,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           .filter(
             (c) => c.locationSlug === combo.locationSlug && c.serviceSlug !== combo.serviceSlug,
           )
-          .map((c) => ({ href: c.url, label: `${c.serviceName} ${c.prep} ${c.locationName}` })),
+          .map(comboListLink),
       ],
       breadcrumbs: [
         { name: "Startsidan", path: "/", visibleName: "Hem" },
