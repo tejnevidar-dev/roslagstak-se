@@ -69,7 +69,7 @@ export const locations: LocationData[] = [
     lng: 18.8333,
     nearbyLocations: ["Yxlan", "Furusund", "Rådmansö"],
     extraSections: [{ heading: "Vad det betyder för taket", text: "Sommarhusen och villorna från 1900-talets början är i dag runt 120 år gamla, och en sportstuga på en tomt som såldes i början av 1950-talet är upp emot 75 år. På så gamla hus kan taken redan ha lagts om, kanske flera gånger, och husets ålder säger därför lite om takets skick. Det som spelar roll är hur underlagspapp, läkt, plåtdetaljer och hängrännor ser ut i dag. En enkel stuga som har byggts till i omgångar har tak från olika tider, och skarven mellan delarna är värd en extra titt. På en gård eller en större tomt finns ofta fler tak än bostadshusets, till exempel uthus och sjöbod, och varje tak bedöms för sig. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris." }],
-    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du på Yxlan eller Blidö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
+    process: { steps: ["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"], paragraphs: ["Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.","Bor du på Yxlan eller Blidö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."] },
   },
   {
     slug: "ljustero",
@@ -174,7 +174,7 @@ export const locations: LocationData[] = [
       question:
         "Går det att byta tak på Finnhamn trots att ön saknar vägförbindelse?",
       answer:
-        "Ja. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Samma villkor gäller som på fastlandet: fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+        "Ja. Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Samma villkor gäller som på fastlandet: fast pris och 10 års utförandegaranti på det arbete vi utför.",
     },
     primaryKeyword: "takläggare Finnhamn",
     lat: 59.5167,

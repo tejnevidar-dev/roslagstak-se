@@ -256,6 +256,22 @@
       "fore": "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter kostnadsfri takkontroll.",
       "efter": "Takrenovering: laga läckor, byta pannor, plåtdetaljer och skadad råspont. Vad som påverkar priset och hur du får fast pris efter kostnadsfri takkontroll.",
       "tid": "2026-10-05T00:10:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0027",
+      "path": "/tjanster/taksakerhet",
+      "falt": "title",
+      "fore": "Taksäkerhet: takstege, gångbrygga och snörasskydd",
+      "efter": "Takstege, gångbrygga och snörasskydd i Roslagen",
+      "tid": "2026-10-05T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0028",
+      "path": "/tjanster/taksakerhet",
+      "falt": "description",
+      "fore": "Vi monterar takstege, gångbrygga och snörasskydd, för sig eller i samband med takbyte. Riktpriser efter ROT-avdrag, inkl. moms. Fast pris i offerten.",
+      "efter": "Vi monterar takstege, gångbrygga och snörasskydd i Roslagen och Storstockholm, för sig eller vid takbyte. Riktpriser efter ROT-avdrag och fast pris i offerten.",
+      "tid": "2026-10-05T00:30:00+02:00"
     }
   ]
 }

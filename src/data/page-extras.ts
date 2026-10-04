@@ -38,6 +38,31 @@ const INGAR =
 const TILLAGG_MENING = "Priserna gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen.";
 
 export const SERVICE_EXTRAS: Record<string, PageExtras> = {
+  taksakerhet: {
+    blocks: [
+      {
+        heading: "När monteras taksäkerhet?",
+        items: [
+          "**När taket ändå görs om.** Det naturliga tillfället är ett takbyte. Fästena kan då sättas innan det nya takmaterialet läggs, och du får allt i en och samma offert.",
+          "**På taket som det är.** Det går också att komplettera ett tak som inte ska bytas. Var fästena kan sitta beror på hur taket är byggt, och det går vi igenom vid takkontrollen.",
+        ],
+      },
+      {
+        heading: "Titta på det du redan har, och var vi arbetar",
+        items: [
+          "Har huset redan takstege, gångbrygga eller snörasskydd är det värt att titta på dem från marken efter en vinter med mycket snö: sitter fästena kvar, har något böjts, syns det rost? Gå inte upp på taket för att känna efter.",
+          "Vi är en takfirma med bas i Norrtälje och monterar takstege, gångbrygga och snörasskydd i Roslagen och Storstockholm.",
+        ],
+      },
+    ],
+    faqHeading: "Vanliga frågor om takstege och snörasskydd",
+    faqs: [
+      { question: "Kan ni montera takstege utan att byta tak?", answer: "Ja, en takstege går att sätta upp på ett tak som ligger kvar." },
+      { question: "Måste jag ha snörasskydd?", answer: "Det svarar vi inte på här. Vad som gäller för ditt hus avgör kommunens byggnadsnämnd." },
+      { question: "Kan jag få ROT-avdrag?", answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan." },
+      { question: "Vilken garanti gäller?", answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför." },
+    ],
+  },
   takrenovering: {
     blocks: [
       {

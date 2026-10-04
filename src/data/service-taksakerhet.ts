@@ -7,6 +7,7 @@
  * Bara relativa importer.
  */
 import { GARANTI_UTFORANDE } from "./guarantee";
+import { beloppLopande } from "./prices";
 
 export const TAKSAKERHET_SLUG = "taksakerhet";
 
@@ -25,12 +26,11 @@ export const taksakerhetMeta = {
 
 export const taksakerhetDetails = {
   longDesc:
-    "Då sätts fästena medan taket ändå är öppet, och utrustningen står med i samma offert. Taksäkerhet kan också monteras på ett befintligt tak. Vad som passar ditt tak, och hur fästena kan sättas i just din takkonstruktion, ser vi på plats.",
-  priceRange:
-    "Takstege och gångbrygga från 8 000 kr, snörasskydd från 600 kr/löpmeter, efter ROT-avdrag, inkl. moms. Ditt pris står i offerten och är fast.",
+    "Vid ett takbyte sätts fästena medan taket ändå är öppet, och utrustningen står med i samma offert. Taksäkerhet kan också monteras på ett befintligt tak. Vad som passar ditt tak, och hur fästena kan sättas i just din takkonstruktion, ser vi på plats.",
+  priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: takstege och gångbrygga ${beloppLopande("Takstege + gångbrygga")}, snörasskydd ${beloppLopande("Snörasskydd")}. Ditt pris står i offerten och är fast.`,
   benefits: [
-    "Takstege: en fast stege på taket, från takfoten upp mot nocken eller skorstenen.",
-    "Gångbrygga: en fast gångväg på taket, till exempel fram till skorstenen.",
+    "Takstege: en fast stege på taket, från takfoten upp mot nocken eller skorstenen. Den används av den som ska till skorstenen eller upp på taket för att se över det.",
+    "Gångbrygga: en fast gångväg på taket, till exempel fram till skorstenen. Kallas också takbrygga.",
     "Snörasskydd: monteras vid takfoten mot entréer och gångvägar, för att minska risken för ras där människor rör sig.",
     "Monteras i samband med ett takbyte eller som ett eget arbete på ett befintligt tak.",
   ],
@@ -42,9 +42,9 @@ export const taksakerhetDetails = {
 };
 
 export const taksakerhetBlocks = {
-  seoTitle: "Taksäkerhet: takstege, gångbrygga och snörasskydd",
+  seoTitle: "Takstege, gångbrygga och snörasskydd i Roslagen",
   seoDescription:
-    "Vi monterar takstege, gångbrygga och snörasskydd, för sig eller i samband med takbyte. Riktpriser efter ROT-avdrag, inkl. moms. Fast pris i offerten.",
+    "Vi monterar takstege, gångbrygga och snörasskydd i Roslagen och Storstockholm, för sig eller vid takbyte. Riktpriser efter ROT-avdrag och fast pris i offerten.",
   blockPlacement: "after-scope" as const,
   factCards: [
     {
@@ -64,13 +64,13 @@ export const taksakerhetBlocks = {
   block: {
     kind: "checklist" as const,
     eyebrow: "Bra att veta",
-    heading: "Krav och vanliga frågor",
+    heading: "Regler och vanliga frågor",
     intro: "Vilka krav som gäller för ditt hus beror på huset, på när det byggdes och på vad som ska göras.",
     groups: [
       {
         title: "Vilka krav gäller för mitt hus?",
         items: [
-          "Den frågan svarar vi inte på här. Besked ger kommunens byggnadsnämnd.",
+          "Det finns regler om taksäkerhet i Boverkets byggregler. De gäller i första hand när ett hus byggs eller ändras. Vad som gäller för ditt hus avgör kommunens byggnadsnämnd.",
           "Har din sotare eller ditt försäkringsbolag ställt krav på utrustning är det deras besked som gäller. Berätta vad de har sagt när du hör av dig, så utgår vi från det.",
         ],
       },
@@ -88,5 +88,7 @@ export const taksakerhetBlocks = {
     { to: "/blogg/snorasskydd-tak-krav-placering-pris", label: "Snörasskydd: modeller, montering och pris" },
     { to: "/blogg/takstege-takbrygga-sakerhet", label: "Takstege och gångbrygga: vad de är och när de monteras" },
     { to: "/tjanster/takomlaggning", label: "Takomläggning" },
+    { to: "/priser", label: "Riktpriser" },
+    { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   ],
 };
