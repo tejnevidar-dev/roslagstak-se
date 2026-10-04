@@ -1,4 +1,6 @@
 import { useScrollToHash } from "@/lib/use-scroll-to-hash";
+import { ExtraBlocks, ExtraFaq } from "@/components/PageExtras";
+import { SERVICE_EXTRAS } from "@/data/page-extras";
 import { withRotForbehall } from "@/data/prices";
 import {
   SERVICE_COPY,
@@ -475,7 +477,11 @@ const ServiceDetail = () => {
           </div>
         </section>
 
+        {slug && SERVICE_EXTRAS[slug] && <ExtraBlocks blocks={SERVICE_EXTRAS[slug].blocks} wide />}
+
         {slug && serviceExtra[slug] && <ServiceExtraSections extra={serviceExtra[slug]} />}
+
+        {slug && SERVICE_EXTRAS[slug] && <ExtraFaq extras={SERVICE_EXTRAS[slug]} path={`/tjanster/${slug}`} />}
 
         {slug === "eternit-asbest" && (
           <section className="border-t border-border bg-secondary/40 py-20">

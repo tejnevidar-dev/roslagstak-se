@@ -71,6 +71,8 @@ describe("tjänstesidornas spegling mot synlig text", () => {
       const staticBlob = staticParts.join(" \n ");
       const visible = renderedTexts(slug);
       const visibleBlob = visible.join(" \n ");
+      // Stycken med fet text eller länkar delas i flera textnoder i DOM:en: jämför också mot texten sammanfogad med blanksteg
+      const visibleFlat = visible.join(" ").replace(/\s+([.,;:!?)])/g, "$1");
 
       // 1. synligt → spegling (varje textnod hittas i speglingen)
       // Rena löpnummer ("01.", "03") och ikonlösa räknare är layout, inte text.
@@ -81,7 +83,7 @@ describe("tjänstesidornas spegling mot synlig text", () => {
       const hidden = new Set(sp.hiddenAnswers.map(norm));
       const missingInVisible = [page!.intro, ...page!.paragraphs]
         .map(norm)
-        .filter((t) => t && !hidden.has(t) && !visibleBlob.includes(t) && !visible.some((v) => t.includes(v) && v.length > 0 && t === v));
+        .filter((t) => t && !hidden.has(t) && !visibleBlob.includes(t) && !visibleFlat.includes(t) && !visible.some((v) => t.includes(v) && v.length > 0 && t === v));
       // en spegelrad som "k: v" (spec) eller kombinerad rad räknas som funnen om alla delar syns
       const stillMissing = missingInVisible.filter((t) => {
         const parts = t.split(/: /);

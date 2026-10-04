@@ -11,6 +11,8 @@ import { serviceExtra } from "./service-extra-sections";
 import { serviceBlocks, type SpecificBlock } from "./service-blocks";
 import { serviceAreaLinks } from "./service-area-links";
 import { eternitFaqs, eternitLocal, eternitSections, ETERNIT_FAQ_HEADING } from "./eternit-content";
+import { SERVICE_EXTRAS, type ExtraItem } from "./page-extras";
+import { stripInlineMd } from "../lib/inline-md";
 import { canonicalPath } from "../lib/canonical";
 import { buildBody, type BodyItem } from "../lib/body-items";
 import { LOCAL_BUSINESS_ID, SITE_URL, buildBreadcrumbNode } from "../lib/schema-graph";
@@ -477,6 +479,7 @@ export const serviceRelatedLinks = (slug: string, services: ServiceListItem[]): 
     ...SERVICE_RELATED_FIXED,
     ...sisters.map((s) => ({ to: canonicalPath(`/tjanster/${s.slug}`), label: s.title })),
     ...(blocks.relatedLinks ?? []),
+    ...(SERVICE_EXTRAS[slug]?.links ?? []),
     ...(serviceAreaLinks[slug] ?? []),
     ...SERVICE_RELATED_TAIL,
   ]);
@@ -531,6 +534,12 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     SERVICE_COPY.craftCaption(service.title, slug),
     SERVICE_COPY.goodToKnowEyebrow,
     ...goodToKnowBoxes(slug).flatMap((b) => [{ h: b.t, level: 3 as const }, b.d]),
+    ...(SERVICE_EXTRAS[slug]
+      ? SERVICE_EXTRAS[slug].blocks.flatMap((b) => [
+          { h: b.heading },
+          ...b.items.flatMap((it: ExtraItem) => (typeof it === "string" ? [stripInlineMd(it)] : it.list.map(stripInlineMd))),
+        ])
+      : []),
     ...(serviceExtra[slug]
       ? [
           serviceExtra[slug].eyebrow,
@@ -547,6 +556,13 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
           { h: eternitLocal.heading },
           eternitLocal.text,
           ...eternitLocal.links.map((l) => l.label),
+        ]
+      : []),
+    ...(SERVICE_EXTRAS[slug]
+      ? [
+          "Vanliga frågor",
+          { h: SERVICE_EXTRAS[slug].faqHeading },
+          ...SERVICE_EXTRAS[slug].faqs.map((f) => ({ h: f.question, level: 3 as const })),
         ]
       : []),
     { h: SERVICE_COPY.ctaHeading(slug, service.title) },
@@ -567,7 +583,12 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     headingAt,
     relatedLinks: serviceRelatedLinks(slug, services),
     /** Svar som bara syns när besökaren öppnar en dragspelsfråga (finns även i FAQPage-schemat). */
-    hiddenAnswers: slug === "eternit-asbest" ? eternitFaqs.map((f) => f.answer) : [],
+    hiddenAnswers:
+      slug === "eternit-asbest"
+        ? eternitFaqs.map((f) => f.answer)
+        : SERVICE_EXTRAS[slug]
+          ? SERVICE_EXTRAS[slug].faqs.map((f) => f.answer)
+          : [],
   };
 };
 

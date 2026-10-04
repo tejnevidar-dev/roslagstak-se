@@ -9,6 +9,8 @@ import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getMaterial, MATERIAL_PRIS_LANK, type MaterialDetail } from "@/data/materials";
 import { MATERIAL_PRISAVSNITT, PRIS_ANKARE, PRIS_STYCKEN } from "@/data/material-prices";
+import { MATERIAL_EXTRAS } from "@/data/page-extras";
+import { ExtraBlocks, ExtraFaq } from "@/components/PageExtras";
 import { guidesForTitle } from "@/data/related-posts";
 import { getProjectsByMaterial } from "@/data/projects";
 
@@ -161,6 +163,27 @@ const MaterialPage = () => {
             </section>
           )}
 
+          {MATERIAL_EXTRAS[material.slug] && (
+            <>
+              <ExtraBlocks blocks={MATERIAL_EXTRAS[material.slug].blocks} />
+              <div className="mt-10">
+                <h2 className="font-display text-xl text-foreground">Läs vidare</h2>
+                <ul className="mt-3 flex flex-wrap gap-3">
+                  {(MATERIAL_EXTRAS[material.slug].links ?? []).map((l) => (
+                    <li key={l.to}>
+                      <Link
+                        to={l.to}
+                        className="inline-flex items-center gap-2 rounded-full border border-primary/25 px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
+
           {!MATERIAL_PRISAVSNITT[material.slug] && MATERIAL_PRIS_LANK[material.slug] && (
             <p className="mt-8 text-[15px] leading-relaxed text-muted-foreground">
               Riktpris efter ROT-avdrag:{" "}
@@ -192,6 +215,8 @@ const MaterialPage = () => {
             </div>
           </div>
         </div>
+
+        {MATERIAL_EXTRAS[material.slug] && <ExtraFaq extras={MATERIAL_EXTRAS[material.slug]} path={material.href} />}
 
         <RelatedLinks
           currentPath={material.href}
