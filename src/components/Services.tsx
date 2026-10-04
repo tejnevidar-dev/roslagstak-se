@@ -28,7 +28,7 @@ export const services: Service[] = [
   {
     icon: IconRoofNew,
     slug: "takomlaggning",
-    title: "Takomläggning",
+    title: "Takbyte och takomläggning",
     short: "Komplett takbyte",
     description:
       "Komplett takbyte där vi byter takmaterial, ser över råspont och underlagstäckning och utför allt enligt AMA.",

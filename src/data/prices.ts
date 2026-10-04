@@ -7,7 +7,7 @@ export const priceData = [
   {
     category: "Plåttak",
     items: [
-      { name: "TP20 plåttak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Lätt profilplåt som skruvas i läkten." },
+      { anchor: "plattak", name: "TP20 plåttak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Lätt profilplåt som skruvas i läkten." },
       { name: "Pannplåttak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Plåtprofil som imiterar pannor. Lägre vikt än betongpannor." },
       { name: "Dubbelfalsat plåttak", priceRange: "Ca 2 000 kr/m² (efter ROT, inkl. moms)", description: "Släta band utan synliga skruvar." },
     ],
@@ -15,8 +15,8 @@ export const priceData = [
   {
     category: "Panntak",
     items: [
-      { name: "Betongpannetak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Pannat tak, flera kulörer." },
-      { name: "Lertegeltak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Bränd lera som åldras med patina." },
+      { anchor: "betongpannor", name: "Betongpannetak", priceRange: "Från 1 200 kr/m² (efter ROT, inkl. moms)", description: "Pannat tak, flera kulörer." },
+      { anchor: "tegeltak", name: "Lertegeltak", priceRange: "Från 1 300 kr/m² (efter ROT, inkl. moms)", description: "Bränd lera som åldras med patina." },
     ],
   },
   {

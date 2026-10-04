@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
-import { getMaterial, type MaterialDetail } from "@/data/materials";
+import { getMaterial, MATERIAL_PRIS_LANK, type MaterialDetail } from "@/data/materials";
 import { guidesForTitle } from "@/data/related-posts";
 import { getProjectsByMaterial } from "@/data/projects";
 
@@ -124,6 +124,15 @@ const MaterialPage = () => {
                 </div>
               )}
             </div>
+          )}
+
+          {MATERIAL_PRIS_LANK[material.slug] && (
+            <p className="mt-8 text-[15px] leading-relaxed text-muted-foreground">
+              Riktpris efter ROT-avdrag:{" "}
+              <Link to={MATERIAL_PRIS_LANK[material.slug].to} className="font-semibold text-primary underline underline-offset-4">
+                {MATERIAL_PRIS_LANK[material.slug].label}
+              </Link>
+            </p>
           )}
 
           <div className="mt-8 rounded-2xl bg-primary p-8 text-center text-primary-foreground">

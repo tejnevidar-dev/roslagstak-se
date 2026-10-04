@@ -144,6 +144,30 @@
       "fore": "takläggare Upplands Väsby — takbyte & takrenovering i Upplands Väsby. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
       "efter": "Takbyte och takomläggning i Upplands Väsby. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
       "tid": "2026-10-04T02:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0013",
+      "path": "/tjanster/takomlaggning",
+      "falt": "title",
+      "fore": "Takomläggning Roslagen — Fast pris & 10 års utförandegaranti",
+      "efter": "Takbyte och takomläggning – fast pris efter takkontroll",
+      "tid": "2026-10-04T03:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0014",
+      "path": "/tjanster/takomlaggning",
+      "falt": "description",
+      "fore": "Komplett takomläggning i Roslagen och skärgården: rivning, ny råspont, papp, läkt och nytt ytskikt. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI.",
+      "efter": "Takbyte och takomläggning i Roslagen och Storstockholm. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
+      "tid": "2026-10-04T03:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0015",
+      "path": "/tjanster/takomlaggning",
+      "falt": "h1",
+      "fore": "Takomläggning i skärgårdsmiljö.",
+      "efter": "Takbyte och takomläggning",
+      "tid": "2026-10-04T03:00:00+02:00"
     }
   ]
 }

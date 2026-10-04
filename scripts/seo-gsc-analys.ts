@@ -327,5 +327,23 @@ if (gammalTitel.length)
   }
 }
 
+/* ---------- 8. Före-mätning: sökordsägare och prissökord (Marknadschefen 2026-10-04) ---------- */
+out.push(
+  "",
+  "## 8. Före-mätning: sökordsägare och prissökord",
+  "",
+  "Källa: konkurrentfliken (CRM) 2026-10-04, enligt Marknadschefens beslut i `marknad/sokordsagare-2026-10-04.md`. Mål: en egen sida per sökord, och position bättre än 14,7 på \"tegeltak pris\". Mäts på nytt 28 och 56 dagar efter live.",
+  "",
+  "| Sökord | Ägare enligt beslutet | Egna sidor som tar emot sökordet (före) | Position (före) | Visningar (före) | Klick (före) |",
+  "|---|---|---|---|---|---|",
+  "| tegeltak pris | /priser | 28 | 14,7 | 279 | 0 |",
+  "| betongpannor pris | /priser | 15 | – | – | – |",
+  "| kostnad tegeltak | /priser | 12 | – | – | – |",
+  "| plåttak pris | /priser | 10 | – | – | – |",
+  "| takbyte | /tjanster/takomlaggning | 0 (ingen ägarsida) | – | – | – |",
+  "",
+  "Orsaken till att så många sidor tar emot prissökorden (Hemsida 2026-10-04): tjänst × ort-sidorna för tegeltak, betongpannor och plåttak (206 sidor per material, alla noindex i dag) hade titeln \"<Material> i <ort> — Fast pris & garanti\" och H1 \"… fast pris & 10 års utförandegaranti\", så ordet \"pris\" stod tillsammans med materialet i titel och H1 på varje sida. Google har kvar en del av dem i indexet (sidorna är noindex i dag, så det är ett kvarstående index från tiden före noindex eller en kort fördröjning). Prisrader med \"kr/m²\" per material låg dessutom i brödtexten på alla. Åtgärd (commit-kedjan 2026-10-04): titel och H1 på materialsidorna utan \"pris\", prisraderna ersatta av en mening med länk till /priser, ett ankare per material på /priser och länkar dit med länktexten \"<material> pris\".",
+  "",
+);
 writeFileSync(resolve("../ledning/marknad/seo-gsc-analys.md"), out.join("\n") + "\n");
 console.log(`[seo-gsc-analys] ${rows.length} par, ${totImpr} visningar, ${totClicks} klick → ledning/marknad/seo-gsc-analys.md`);

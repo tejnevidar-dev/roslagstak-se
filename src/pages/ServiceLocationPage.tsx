@@ -10,7 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
-import { getCombo, allServiceSlugs } from "@/data/service-location-combos";
+import { getCombo, allServiceSlugs, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1 } from "@/data/service-location-combos";
 import { comboOverrides } from "@/data/combo-overrides";
 import { locations } from "@/data/locations";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
@@ -144,7 +144,7 @@ const ServiceLocationPage = () => {
       : `${combo.serviceName} ${combo.prep} ${combo.locationName} — takläggare med fast pris. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`);
 
   // Title under 60 chars
-  const seoTitle = override?.title ?? `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`;
+  const seoTitle = override?.title ?? comboDefaultTitle(combo);
 
   return (
     <>
@@ -181,7 +181,7 @@ const ServiceLocationPage = () => {
               {loc?.region || "Roslagen"}
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              {combo.serviceName} {combo.prep} {combo.locationName} — fast pris & 10 års utförandegaranti
+              {comboDefaultH1(combo)}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
               {override?.description ?? combo.description}
@@ -250,6 +250,14 @@ const ServiceLocationPage = () => {
                   >
                     <ArrowRight className="w-3 h-3" /> Takläggare {combo.prep} {combo.locationName}
                   </Link>
+                  {COMBO_SERVICE_PAGE[combo.serviceSlug] && (
+                    <Link
+                      to={COMBO_SERVICE_PAGE[combo.serviceSlug].to}
+                      className="flex items-center gap-2 text-sm text-primary hover:underline"
+                    >
+                      <ArrowRight className="w-3 h-3" /> {COMBO_SERVICE_PAGE[combo.serviceSlug].label}
+                    </Link>
+                  )}
                   {otherServices.map((os) => (
                     <Link
                       key={os.slug}

@@ -111,7 +111,7 @@ const specialistServices = [
             `Med vår bas i Norrtälje tar vi med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
             `Vi tar med plåtband och falsutrustning till ${loc.name} och planerar transport och etablering i förväg, så att kostnaden för din bandtäckning blir tydlig i offerten.`,
           ),
-      `Bandtäckning ${prep} ${loc.name} i förzinkad eller färgbelagd plåt, koppar eller zink. Som riktpris, efter ROT-avdrag och inkl. moms, ligger dubbelfalsat/bandtäckt plåt på ca 2 000 kr/m², beroende på materialval och takets komplexitet — antal vinklar, kupor och genomföringar. Vi lämnar alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
+      `Bandtäckning ${prep} ${loc.name} är dubbelfalsat plåttak. Riktpriser per material finns på [prissidan](/priser). Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
       `Vill du veta vad bandtäckning ${prep} ${loc.name} skulle kosta för just ditt tak? Ring 070-154 36 39 eller boka en kostnadsfri takkontroll — vi kommer ut, mäter och lämnar fast pris inom 24 timmar.`,
     ],
   },
@@ -129,7 +129,7 @@ const specialistServices = [
             `Med vår bas i Norrtälje lägger vi plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
             `Vi lägger plåttak ${prep} ${loc.name} och bokar in start efter takkontroll och överenskommelse.`,
           ),
-      `Ett plåttak ${prep} ${loc.name} — TP20, pannplåt eller dubbelfalsat. Som riktpris, efter ROT-avdrag och inkl. moms: TP20 från 1 200 kr/m², pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll, som inkluderar montage, beslag och bortforsling av gammalt material. ROT-avdrag tillkommer.`,
+      `Ett plåttak ${prep} ${loc.name} kan vara TP20, pannplåt eller dubbelfalsat. Riktpriser per material finns på [prissidan](/priser). Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
       `Boka kostnadsfri takkontroll för plåttak ${prep} ${loc.name} — vi hjälper dig välja profil, kulör och rätt korrosionsklass för läget. Ring 070-154 36 39.`,
     ],
   },
@@ -147,7 +147,7 @@ const specialistServices = [
             `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
             `Vi tar uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
           ),
-      `Ett tak med betongpannor ${prep} ${loc.name}, vid nyläggning eller omläggning av befintliga pannor med ny papp och läkt. Som riktpris ligger betongpannor från 1 200 kr/m², efter ROT-avdrag och inkl. moms. Vi lämnar fast pris efter kostnadsfri takkontroll. ROT-avdrag ger 30% på arbetskostnaden.`,
+      `Ett tak med betongpannor ${prep} ${loc.name}, vid nyläggning eller omläggning av befintliga pannor med ny papp och läkt. Riktpriser per material finns på [prissidan](/priser). Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
       `Osäker på om ditt betongpannetak ${prep} ${loc.name} ska renoveras eller bytas? Boka en kostnadsfri takkontroll — vi ger en ärlig rekommendation. Ring 070-154 36 39.`,
     ],
   },
@@ -161,7 +161,7 @@ const specialistServices = [
       loc.isIsland
         ? `På ${loc.name} lägger vi lertegel och pannplåt, och vilket som passar ditt tak går vi igenom vid takkontrollen.`
         : `Vi lägger tegeltak ${prep} ${loc.name}, både i lertegel och pannplåt.`,
-      `Tegeltak ${prep} ${loc.name} i lertegel eller pannplåt, inklusive montage och beslag. Som riktpris, efter ROT-avdrag och inkl. moms: lertegel från 1 300 kr/m², pannplåt från 1 300 kr/m². Fast pris efter kostnadsfri takkontroll. ROT-avdrag på 30 % av arbetskostnaden.`,
+      `Tegeltak ${prep} ${loc.name} i lertegel eller pannplåt, inklusive montage och beslag. Riktpriser per material finns på [prissidan](/priser). Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
       `Boka kostnadsfri takkontroll för tegeltak ${prep} ${loc.name} — vi mäter och lämnar fast pris inom 24 timmar. Ring 070-154 36 39.`,
     ],
   },
@@ -204,6 +204,27 @@ export const generateCombos = (): ServiceLocationCombo[] => {
     }
   }
   return combos;
+};
+
+/** Tjänster som är ett material: titel, H1 och H2 får inte ha "pris" eller "kostnad" (prissökord per material ägs av /priser). */
+export const MATERIAL_COMBO_SLUGS: readonly string[] = ["tegeltak", "betongpannor", "platttak", "bandtackning"];
+
+/** Standardtitel och H1 för en tjänst × ort-sida utan egen text. */
+export const comboDefaultTitle = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) =>
+  MATERIAL_COMBO_SLUGS.includes(c.serviceSlug)
+    ? `${c.serviceName} ${c.prep} ${c.locationName} — 10 års utförandegaranti`
+    : `${c.serviceName} ${c.prep} ${c.locationName} — Fast pris & garanti`;
+export const comboDefaultH1 = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) =>
+  MATERIAL_COMBO_SLUGS.includes(c.serviceSlug)
+    ? `${c.serviceName} ${c.prep} ${c.locationName} — 10 års utförandegaranti`
+    : `${c.serviceName} ${c.prep} ${c.locationName} — fast pris & 10 års utförandegaranti`;
+
+/** Tjänstesidan som en tjänst × ort-sida länkar upp till. "takbyte" ägs av /tjanster/takomlaggning. */
+export const COMBO_SERVICE_PAGE: Record<string, { to: string; label: string }> = {
+  takbyte: { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
+  takomlaggning: { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
+  takrenovering: { to: "/tjanster/takrenovering", label: "Takrenovering" },
+  tegeltak: { to: "/tjanster/tegeltak", label: "Tegeltak" },
 };
 
 export const getCombo = (serviceSlug: string, locationSlug: string) =>

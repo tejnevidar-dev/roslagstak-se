@@ -91,9 +91,9 @@ export type ServiceBlocks = {
 
 export const serviceBlocks: Record<string, ServiceBlocks> = {
   takomlaggning: {
-    seoTitle: "Takomläggning Roslagen — Fast pris & 10 års utförandegaranti",
+    seoTitle: "Takbyte och takomläggning – fast pris efter takkontroll",
     seoDescription:
-      "Komplett takomläggning i Roslagen och skärgården: rivning, ny råspont, papp, läkt och nytt ytskikt. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI.",
+      "Takbyte och takomläggning i Roslagen och Storstockholm. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Prisbild", value: "1 200–2 000 kr/m²", text: "TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m² — efter ROT-avdrag, inkl. moms." },
@@ -341,6 +341,9 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
 /** Tjänstspecifika fördjupningslänkar som läggs till i "Läs vidare". */
 const extraRelated: Record<string, { to: string; label: string }[]> = {
   takomlaggning: [
+    { to: "/priser#tegeltak", label: "Tegeltak pris" },
+    { to: "/priser#betongpannor", label: "Betongpannor pris" },
+    { to: "/priser#plattak", label: "Plåttak pris" },
     { to: "/blogg/takpapp-byte-livslangd", label: "Takpapp: laga eller byta?" },
     { to: "/taktyper", label: "Jämför taktyper och material" },
     { to: "/hur-det-gar-till", label: "Se hur ett takbyte går till" },
@@ -366,6 +369,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   ],
   platarbeten: [
+    { to: "/priser#plattak", label: "Plåttak pris" },
     { to: "/blogg/bandtackt-plat-vs-klicktak", label: "Bandtäckt plåt eller klicktak" },
     { to: "/blogg/bandtackning-tak-guide", label: "Bandtäckning: så går det till" },
     { to: "/platslagare", label: "Plåtslagare för ditt tak" },
@@ -378,6 +382,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
   tegeltak: [
     { to: "/tjanster/platarbeten#falsat", label: "Dubbelfalsat plåttak (bandtäckning)" },
     { to: "/material/pannplat", label: "Pannplåt" },
+    { to: "/priser#tegeltak", label: "Tegeltak pris" },
   ],
 };
 

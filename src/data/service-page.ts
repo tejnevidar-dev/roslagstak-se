@@ -28,7 +28,7 @@ export type ServiceMeta = {
 
 export const serviceMeta: Record<string, ServiceMeta> = {
   takomlaggning: {
-    accentLine: "i skärgårdsmiljö.",
+    accentLine: "",
     specs: [
       { k: "Tätskikt", v: "30 års garanti via MATAKI, på tillverkarens villkor" },
       { k: "Utförande", v: "AMA-standard" },
@@ -561,7 +561,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
   return {
     title: blocks.seoTitle,
     description: blocks.seoDescription,
-    h1: `${service.title}${meta.h1Sep ?? ""} ${meta.accentLine}`,
+    h1: `${service.title}${meta.h1Sep ?? ""} ${meta.accentLine}`.trim(),
     intro: service.description,
     paragraphs,
     headingAt,

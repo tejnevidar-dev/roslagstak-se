@@ -235,6 +235,15 @@ export const materials: Material[] = [
   },
 ];
 
+/** Länk till prisankaret på /priser för ett material, med länktexten "<material> pris" (sökordsägare, Marknadschefen 2026-10-04). */
+export const MATERIAL_PRIS_LANK: Record<string, { label: string; to: string }> = {
+  betongpannor: { label: "Betongpannor pris", to: "/priser#betongpannor" },
+  lertegel: { label: "Tegeltak pris", to: "/priser#tegeltak" },
+  "tp20-plattak": { label: "Plåttak pris", to: "/priser#plattak" },
+  pannplat: { label: "Plåttak pris", to: "/priser#plattak" },
+  dubbelfalsat: { label: "Plåttak pris", to: "/priser#plattak" },
+};
+
 export const getMaterial = (slug: string) => materials.find((m) => m.slug === slug && m.detail);
 
 /** Giltiga material-slugs, för att typa Project.materialSlugs i src/data/projects.ts. */

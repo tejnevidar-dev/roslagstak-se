@@ -73,7 +73,11 @@ const Prices = () => {
                 </div>
                 <div className="divide-y divide-border">
                   {category.items.map((item) => (
-                    <div key={item.name} className="px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div
+                      key={item.name}
+                      id={"anchor" in item ? (item as { anchor: string }).anchor : undefined}
+                      className="px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 scroll-mt-28"
+                    >
                       <div>
                         <h3 className="font-semibold text-sm text-card-foreground">{item.name}</h3>
                         <p className="text-xs text-muted-foreground">{item.description}</p>

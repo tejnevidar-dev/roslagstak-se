@@ -13,11 +13,11 @@ import { resolve } from "node:path";
 import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
-import { materials } from "../src/data/materials";
+import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
 import { projectTexts } from "../src/data/project-texts";
 import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
-import { allServiceSlugs, generateCombos } from "../src/data/service-location-combos";
+import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1 } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody } from "../src/lib/body-items";
@@ -585,6 +585,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         { href: "/material", label: "Alla material" },
         { href: "/priser", label: "Priser för takarbeten" },
+        ...(MATERIAL_PRIS_LANK[material.slug] ? [{ href: MATERIAL_PRIS_LANK[material.slug].to, label: MATERIAL_PRIS_LANK[material.slug].label }] : []),
         ...guidesForTitle(material.title, 2).map((g) => ({ href: `/blogg/${g.slug}`, label: g.title })),
         ...MONEY_LINKS,
       ],
@@ -809,9 +810,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
   if (combo) {
     const override = comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`];
     return {
-      title: override?.title ?? `${combo.serviceName} ${combo.prep} ${combo.locationName} — Fast pris & garanti`,
+      title: override?.title ?? comboDefaultTitle(combo),
       description: override?.description ?? combo.description,
-      h1: `${combo.serviceName} ${combo.prep} ${combo.locationName} — fast pris & 10 års utförandegaranti`,
+      h1: comboDefaultH1(combo),
       intro: override?.description ?? combo.description,
       paragraphs: (override?.content ?? combo.content).map(stripInlineMd),
       links: [
@@ -820,6 +821,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           href: `/taklaggare-${combo.locationSlug}`,
           label: `Takläggare ${combo.prep} ${combo.locationName}`,
         },
+        ...(COMBO_SERVICE_PAGE[combo.serviceSlug]
+          ? [{ href: COMBO_SERVICE_PAGE[combo.serviceSlug].to, label: COMBO_SERVICE_PAGE[combo.serviceSlug].label }]
+          : []),
         ...combos
           .filter(
             (c) => c.locationSlug === combo.locationSlug && c.serviceSlug !== combo.serviceSlug,
