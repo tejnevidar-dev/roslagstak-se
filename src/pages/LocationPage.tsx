@@ -4,7 +4,7 @@ import { hubLinksFor } from "@/data/hub-links";
 import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
-import { generateCombos, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
+import { generateCombos, COMBO_LINK_LABEL, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
 import { isThinCombo } from "@/data/thin-combos";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
@@ -461,7 +461,7 @@ const LocationPage = () => {
                     {hasServiceCombos(location.region) && (
                     <>
                     <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Takbyte {prep} {location.name}
+                      <ArrowRight className="w-3 h-3" /> {COMBO_LINK_LABEL[`/takbyte-${location.slug}`] ?? `Takbyte ${prep} ${location.name}`}
                     </Link>
                     <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}

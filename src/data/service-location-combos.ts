@@ -261,11 +261,19 @@ export const MATERIAL_OWN_PAGE: Record<string, { to: string; label: string }> = 
   bandtackning: { to: "/tjanster/platarbeten", label: "Bandtäckning och plåtarbeten" },
 };
 
+/**
+ * Länktext som avviker från "<tjänst> i <ort>" (backlog #1bz punkt 1): /takbyte-norrtalje ska ta emot
+ * "byta tak norrtälje", så Norrtälje-sidorna länkar dit med den lydelsen. EN regel för React och statisk HTML.
+ */
+export const COMBO_LINK_LABEL: Record<string, string> = {
+  "/takbyte-norrtalje": "Byta tak i Norrtälje",
+};
+
 /** Länkmålet för en tjänst × ort-sida i listor på andra sidor: materialets egen sida för material, annars sidan själv. */
 export const comboListLink = (c: { serviceSlug: string; url: string; serviceName: string; prep: string; locationName: string }): { href: string; label: string } =>
   MATERIAL_OWN_PAGE[c.serviceSlug]
     ? { href: MATERIAL_OWN_PAGE[c.serviceSlug].to, label: MATERIAL_OWN_PAGE[c.serviceSlug].label }
-    : { href: c.url, label: `${c.serviceName} ${c.prep} ${c.locationName}` };
+    : { href: c.url, label: COMBO_LINK_LABEL[c.url] ?? `${c.serviceName} ${c.prep} ${c.locationName}` };
 
 /** Tjänstesidan som en tjänst × ort-sida länkar upp till. "takbyte" ägs av /tjanster/takomlaggning. */
 export const COMBO_SERVICE_PAGE: Record<string, { to: string; label: string }> = {
