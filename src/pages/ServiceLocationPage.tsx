@@ -250,6 +250,11 @@ const ServiceLocationPage = () => {
                   >
                     <ArrowRight className="w-3 h-3" /> Takläggare {combo.prep} {combo.locationName}
                   </Link>
+                  {(override?.links ?? []).map((l) => (
+                    <Link key={l.to} to={l.to} className="flex items-center gap-2 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> {l.label}
+                    </Link>
+                  ))}
                   {COMBO_SERVICE_PAGE[combo.serviceSlug] && (
                     <Link
                       to={COMBO_SERVICE_PAGE[combo.serviceSlug].to}

@@ -197,7 +197,7 @@ const Services = () => {
       <figure className="relative m-0 mt-24 overflow-hidden">
         <img
           src={roofProject}
-          alt="Drönarfoto av nylagt tak på Blidö, Roslagens skärgård"
+          alt="Drönarfoto av tak med svarta betongpannor på ett hus på Blidö"
           width={1920}
           height={720}
           loading="lazy"

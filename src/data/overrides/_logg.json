@@ -168,6 +168,30 @@
       "fore": "Takomläggning i skärgårdsmiljö.",
       "efter": "Takbyte och takomläggning",
       "tid": "2026-10-04T03:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0016",
+      "path": "/takbyte-norrtalje",
+      "falt": "title",
+      "fore": "Takbyte i Norrtälje – fast pris och AMA",
+      "efter": "Takbyte i Norrtälje – byta tak till fast pris",
+      "tid": "2026-10-04T23:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0017",
+      "path": "/takbyte-norrtalje",
+      "falt": "description",
+      "fore": "Takbyte i Norrtälje och Roslagen: lertegel, betongpannor eller plåt till fast pris. Boka en kostnadsfri takkontroll utan förpliktelser.",
+      "efter": "Byta tak i Norrtälje? Vi har vår bas här. Takbyte med betongpannor, lertegel eller plåt, kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "tid": "2026-10-04T23:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0018",
+      "path": "/takbyte-taby",
+      "falt": "description",
+      "fore": "Takbyte i Täby med lertegel, betongpannor eller plåt. Kostnadsfri takkontroll utan förpliktelser, fast pris och utförande enligt AMA.",
+      "efter": "Byta tak i Täby? Takbyte med lertegel, betongpannor eller plåt. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "tid": "2026-10-04T23:00:00+02:00"
     }
   ]
 }

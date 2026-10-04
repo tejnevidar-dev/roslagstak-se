@@ -160,7 +160,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takbyte och takomläggning i Enebyberg: villor från 1900-talets första hälft och kedjehus från 1970-talet vid Eneby gård. Kostnadsfri takkontroll.",
   },
   ronninge: {
-    title: "Takläggare i Rönninge, Salem – takkontroll och fast pris",
+    title: "Takbyte i Rönninge, Salem – fast pris",
     description:
       "Takbyte och takomläggning i Rönninge i Salems kommun, ett villasamhälle från 1896 med blandad bebyggelse. Kostnadsfri takkontroll utan förpliktelser.",
   },
@@ -172,7 +172,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   stuvsta: {
     title: "Takbyte i Stuvsta, Huddinge – fast pris",
     description:
-      "Takbyte i Stuvsta i Huddinge, från 1920-talsvillor till rad- och kedjehus i Myrängen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
+      "Takbyte och takomläggning i Stuvsta i Huddinge, från 1920-talsvillor till rad- och kedjehus i Myrängen. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
   },
   taby: {
     title: "Takrenovering och takbyte i Täby — fast pris",
@@ -267,7 +267,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   osterskar: {
     title: "Takbyte i Österskär, Åkersberga – fast pris",
     description:
-      "Takbyte i Österskär i Österåker: trävillor från sekelskiftet, fritidshus från 1920–30-talen och villor från 1970–90-talen. Kostnadsfri takkontroll.",
+      "Takbyte och takomläggning i Österskär i Österåker, med trävillor från sekelskiftet, fritidshus från 1920–30-talen och villor från 1970–90-talen. Kostnadsfri takkontroll.",
   },
   "tegelhagen-silverdal": {
     title: "Takbyte i Tegelhagen och Silverdal, Sollentuna",
@@ -287,7 +287,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   segeltorp: {
     title: "Takbyte i Segeltorp, Huddinge – fast pris",
     description:
-      "Takbyte i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talet och radhus från 1950-talet. Kostnadsfri takkontroll.",
+      "Takbyte och takomläggning i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talet och radhus från 1950-talet. Kostnadsfri takkontroll.",
   },
   skogas: {
     title: "Takbyte i Skogås och Mörtvik, Huddinge – fast pris",
@@ -580,9 +580,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takbyte och takomläggning i Herräng: arbetarbostäder från 1905–1906, egnahem från 1920- och 1950-talen och senare villor. Kostnadsfri takkontroll.",
   },
   yxlan: {
-    title: "Takbyte på Yxlan, Norrtälje – fast pris",
+    title: "Takbyte på Yxlan och Blidö – fast pris",
     description:
-      "Takbyte och takomläggning på Yxlan: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
+      "Takbyte och takomläggning på Yxlan och Blidö: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
   },
   blido: {
     title: "Takbyte på Blidö, Norrtälje – fast pris",

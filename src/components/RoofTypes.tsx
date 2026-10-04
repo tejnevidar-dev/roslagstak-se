@@ -49,7 +49,7 @@ const roofTypes: RoofType[] = [
     priceRange: "Från 1 300 kr/m²",
     bestFor: "Villor, sommarstugor, radhus",
     image: imgTegelplat,
-    imageAlt: "Vått grått tak i tegelplåt med snörasskydd",
+    imageAlt: "Grått tak med pannplåt och snörasskydd",
   },
   {
     id: "pannplat",

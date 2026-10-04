@@ -841,6 +841,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           href: `/taklaggare-${combo.locationSlug}`,
           label: `Takläggare ${combo.prep} ${combo.locationName}`,
         },
+        ...(override?.links ?? []).map((l) => ({ href: l.to, label: l.label })),
         ...(COMBO_SERVICE_PAGE[combo.serviceSlug]
           ? [{ href: COMBO_SERVICE_PAGE[combo.serviceSlug].to, label: COMBO_SERVICE_PAGE[combo.serviceSlug].label }]
           : []),

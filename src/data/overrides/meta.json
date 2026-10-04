@@ -29,12 +29,32 @@
         "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
+    "/takbyte-norrtalje": {
+      "title": {
+        "id": "manuell-2026-10-04-0016",
+        "text": "Takbyte i Norrtälje – byta tak till fast pris",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bz), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0017",
+        "text": "Byta tak i Norrtälje? Vi har vår bas här. Takbyte med betongpannor, lertegel eller plåt, kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bz), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
     "/takbyte-taby": {
       "title": {
         "id": "seo-cc-2026-10-03-0002",
         "text": "Nytt tak i Täby – takbyte med fast pris",
         "andrad": "2026-10-03",
         "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0018",
+        "text": "Byta tak i Täby? Takbyte med lertegel, betongpannor eller plåt. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bz), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
     "/taklaggare-akersberga": {

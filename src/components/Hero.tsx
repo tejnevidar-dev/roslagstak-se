@@ -47,7 +47,7 @@ const Hero = () => {
           <source type="image/webp" srcSet={heroPosterSrcSet.webp} sizes={heroPosterSrcSet.sizes} />
           <img
             src={heroDronePoster}
-            alt="Drönarfoto av nylagt falsat plåttak på skärgårdsvilla, Blidö"
+            alt="Drönarfoto av tak med svarta betongpannor på ett hus på Blidö"
             width={1920}
             height={1080}
             fetchPriority="high"

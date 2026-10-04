@@ -31,7 +31,7 @@ const STEPS: Step[] = [
     body: "Vi river det gamla taket, kontrollerar takstolarna och lägger ny råspont där virket är skadat.",
     detail: "Kontroll av bärande konstruktion, ventilerad luftspalt och fukttäta anslutningar.",
     image: roofRaspont,
-    alt: "Fotorealistisk 3D-visualisering av ett skärgårdstak med nylagd råspont",
+    alt: "3D-visualisering av ett tak med råspont",
   },
   {
     id: "papp",
@@ -40,7 +40,7 @@ const STEPS: Step[] = [
     body: "Vi lägger Mataki Haloten PRO i förband över hela ytan — det är underlagstaket som håller vattnet ute.",
     detail: "Överlapp enligt Matakis anvisning, extra tätning vid genomföringar och skorsten.",
     image: roofPapp,
-    alt: "Fotorealistisk 3D-visualisering av ett tak täckt med Mataki Haloten PRO underlagspapp",
+    alt: "3D-visualisering av ett tak med underlagspapp",
   },
   {
     id: "rannor",
@@ -49,7 +49,7 @@ const STEPS: Step[] = [
     body: "Fotplåt, rännkrokar och hängrännor monteras så att vattnet leds bort från fasad och grund.",
     detail: "Rätt fall mot stuprör, dimensionerat för skärgårdens slagregn.",
     image: roofRannor,
-    alt: "Fotorealistisk 3D-visualisering av fotplåt och nya hängrännor",
+    alt: "3D-visualisering av fotplåt och hängrännor",
   },
   {
     id: "vindskivor",
@@ -58,7 +58,7 @@ const STEPS: Step[] = [
     body: "Nya vindskivor och gavelbeslag skyddar takets kanter mot vind, regn och röta.",
     detail: "Grundmålat virke eller underhållsfri plåt — du väljer.",
     image: roofVindskivor,
-    alt: "Fotorealistisk 3D-visualisering av monterade vindskivor och gavelbeslag",
+    alt: "3D-visualisering av vindskivor och gavelbeslag",
   },
   {
     id: "lakt",
@@ -67,7 +67,7 @@ const STEPS: Step[] = [
     body: "Ströläkt ger luftspalten, bärläkten sätts på exakt centrumavstånd för din pannmodell.",
     detail: "Millimeterinmätning så att sista raden hamnar rätt vid nock.",
     image: roofLakt,
-    alt: "Fotorealistisk 3D-visualisering av ströläkt och bärläkt på ett tak",
+    alt: "3D-visualisering av ströläkt och bärläkt på ett tak",
   },
   {
     id: "pannor",
@@ -76,7 +76,7 @@ const STEPS: Step[] = [
     body: "Betongpannor, tegel eller falsad plåt läggs rad för rad — första raden hänger ut till mitten av hängrännan.",
     detail: "Stormklammer i utsatta lägen — standard på öar och kustnära tak.",
     image: roofPannor,
-    alt: "Fotorealistisk 3D-visualisering av nylagda mörka takpannor",
+    alt: "3D-visualisering av mörka takpannor",
   },
   {
     id: "beslag",
@@ -85,7 +85,7 @@ const STEPS: Step[] = [
     body: "Nock, valmar, skorstensbeslag och genomföringar tätas. Gavelbeslagen läggs över pannorna.",
     detail: "Täta anslutningar hela vägen runt takets kanter och genomföringar.",
     image: roofBeslag,
-    alt: "Fotorealistisk 3D-visualisering av nockpannor och plåtbeslag på ett skärgårdstak",
+    alt: "3D-visualisering av nockpannor och plåtbeslag på ett tak",
   },
   {
     id: "snorasskydd",
@@ -94,7 +94,7 @@ const STEPS: Step[] = [
     body: "Sist monteras snörasskydden ovanför takfoten — sedan slutgenomgång.",
     detail: "Vi går igenom taket tillsammans med dig.",
     image: roofSnorasskydd,
-    alt: "Fotorealistisk 3D-visualisering av monterat snörasskydd på ett färdigt skärgårdstak",
+    alt: "3D-visualisering av snörasskydd på ett tak",
   },
 ];
 

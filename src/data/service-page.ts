@@ -182,7 +182,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
   },
   takavvattning: {
     longDesc: "Hängrännor och stuprör leder bort vattnet från taket. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i lackerad plåt. Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen.",
-    priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör ${beloppLopande("Takavvattning (hängrännor)")}, beroende på husets storlek och våningar. ${ROT_FORBEHALL}`,
+    priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör ${beloppLopande("Takavvattning (hängrännor)")}, beroende på husets storlek och våningar. Priset gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen. ${ROT_FORBEHALL}`,
     benefits: [
       "Hängrännor och stuprör i lackerad plåt",
       "Ränndalar och fotplåt",

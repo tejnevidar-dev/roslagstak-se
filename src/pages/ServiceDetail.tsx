@@ -214,7 +214,7 @@ const ServiceDetail = () => {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[var(--shadow-elevated)]">
                 <img
                   src={serviceImage}
-                  alt={slug === "eternit-asbest" ? "Drönarfoto av nylagt tak på Blidö, Roslagens skärgård" : `${service.title} i Roslagen`}
+                  alt={slug === "eternit-asbest" ? "Drönarfoto av tak med svarta betongpannor på ett hus på Blidö" : `${service.title} i Roslagen`}
                   width={1200}
                   height={1500}
                   fetchPriority="high"

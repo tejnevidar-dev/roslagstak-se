@@ -48,19 +48,32 @@ interface Parsed {
   sourceLink?: { label: string; url: string };
 }
 
+/** Godkända filer ur Innehålls förteckning (samma regel som täckningskontrollen): en fil som står där behöver ingen Grind-rad. */
+const godkandaFiler = (() => {
+  try {
+    const j = JSON.parse(readFileSync(resolve("../ledning/marknad/villaomraden/texter/_godkanda-versioner.json"), "utf8")) as { sidor: { fil: string }[] };
+    return new Set(j.sidor.map((x) => x.fil));
+  } catch {
+    return new Set<string>();
+  }
+})();
+
 const parse = (file: string): Parsed => {
   const raw = readFileSync(resolve(file), "utf8").replace(/\r/g, "");
-  if (!/\*\*Grind:\*\*\s*GODKÄND/.test(raw)) {
+  if (!/\*\*Grind:\*\*\s*GODKÄND/.test(raw) && !godkandaFiler.has(file.split(/[\\/]/).pop()!)) {
     console.error(`${file}: saknar raden "**Grind:** GODKÄND ...". En brief utan Grind-rad byggs aldrig.`);
-    process.exit(1);
+    throw new Error("ej godkänd");
   }
   const slug = raw.match(/\*\*Slug:\*\*\s*\/taklaggare-([a-z0-9-]+)/)?.[1];
-  const titleLine = raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?·\s*\*\*Meta \(≤ 160\):\*\*\s*(.+)/);
+  const titleLine =
+    raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?·\s*\*\*Meta \(≤ 160\):\*\*\s*(.+)/) ??
+    // äldre format: titel och meta på varsin rad
+    raw.match(/\*\*Titel \(≤ 60\):\*\*\s*(.+?)\s*(?:\(\d+\)\s*)?\n\*\*Meta \(≤ 160\):\*\*\s*(.+)/);
   // Titel och meta kan ligga utanför briefen ("Titel och meta: enligt Marknadschefens beslut, ändras inte här"): då rörs varken description eller seo-overrides.
   const titelUtanforBrief = /\*\*Titel och meta:\*\*\s*(?:enligt|rörs inte|ändras inte)/.test(raw);
   if (!slug || (!titleLine && !titelUtanforBrief)) {
     console.error(`${file}: saknar Slug eller Titel/Meta i huvudet.`);
-    process.exit(2);
+    throw new Error("header");
   }
   const h1 = raw.match(/\*\*H1:\*\*\s*([^·\n]+?)\s*(?:·|\n)/)?.[1]?.trim();
   const body = raw.split(/\n## Områdestext[^\n]*\n/)[1]?.split(/\n## /)[0] ?? "";
@@ -157,8 +170,31 @@ seoSrc = seoSrc.replace(/\r\n/g, "\n");
 const js = (v: unknown) => JSON.stringify(v);
 const quoteKey = (k: string) => (/^[A-Za-z_][A-Za-z0-9_]*$/.test(k) ? k : js(k));
 
+let skipped = 0;
+const sedda = new Map<string, Parsed>();
 for (const file of files) {
-  const p = parse(file);
+  let p: Parsed;
+  try {
+    p = parse(file);
+  } catch (e) {
+    console.error(`hoppade över ${file}: ${(e as Error).message}`);
+    skipped++;
+    continue;
+  }
+  // En sida kan ha två godkända filer: huvudtexten först, sedan förstärkningen (_godkanda-versioner.json). Skickas båda i samma körning
+  // läggs förstärkningen efter huvudtexten, och huvudtextens titel, meta och faktaruta står kvar.
+  const prev = sedda.get(p.slug);
+  if (prev) {
+    p.longDescription = `${prev.longDescription} ${p.longDescription}`;
+    p.extraSections = [...prev.extraSections, ...p.extraSections];
+    if (!p.factBox.length) p.factBox = prev.factBox;
+    p.sourceLink = prev.sourceLink ?? p.sourceLink;
+    p.h1 = prev.h1 ?? p.h1;
+    p.process = prev.process ?? p.process;
+    p.title = prev.title || p.title;
+    p.meta = prev.meta || p.meta;
+  }
+  sedda.set(p.slug, p);
   const cur = locations.find((l) => l.slug === p.slug) as unknown as Record<string, unknown> | undefined;
   if (!cur) {
     console.error(`${file}: /taklaggare-${p.slug} finns inte i locations.ts. Importskriptet uppdaterar bara befintliga orter.`);
@@ -227,5 +263,6 @@ for (const file of files) {
   console.log(`[import-omrade] /taklaggare-${p.slug}: ${p.longDescription.split(/\s+/).length} ord, ${p.extraSections.length} avsnitt, ${p.factBox.length} faktarader`);
 }
 
+console.log(`[import-omrade] hoppade över ${skipped} filer som inte gick att tolka`);
 writeFileSync(locFile, locCrlf ? locSrc.replace(/\n/g, "\r\n") : locSrc);
 writeFileSync(seoFile, seoCrlf ? seoSrc.replace(/\n/g, "\r\n") : seoSrc);

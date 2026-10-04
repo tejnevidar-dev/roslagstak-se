@@ -150,7 +150,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i lackerad plåt. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "outline", label: "Prisbild", value: belopp("Takavvattning (hängrännor)").replace("Från ca ", "Från ca "), text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. " + ROT_FORBEHALL },
+      { tone: "outline", label: "Prisbild", value: belopp("Takavvattning (hängrännor)").replace("Från ca ", "Från ca "), text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. Priset gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen. " + ROT_FORBEHALL },
       { tone: "plain", label: "Takkontroll", value: "Kostnadsfri", text: "Vi tittar på rännor, stuprör och avvattning på plats, utan förpliktelser." },
       { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_UTFORANDE },
     ],
