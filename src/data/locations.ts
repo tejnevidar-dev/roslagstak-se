@@ -3665,7 +3665,7 @@ export const locations: LocationData[] = [
     longDescription:
       "Västerås är Mälardalens största stad, belägen vid Mälaren och Svartån, med en blandning av äldre stadsbebyggelse, villaområden och stora bostadsrättsföreningar och flerbostadshus. Storleken ger en stor variation av taktyper, från tegeltak på äldre hus till plåt och papp på flacka tak. Vi tar uppdrag i Västerås med takbyte och takrenovering, både för villaägare och för föreningar.",
     extraContent:
-      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: takkontroll, fast offert och en fast kontaktperson under hela projektet. Vi lämnar skriftlig garanti när arbetet är klart. Kontakta oss för en kostnadsfri takkontroll i Västerås.",
+      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: takkontroll, fast offert och en fast kontaktperson under hela projektet. Kontakta oss för en kostnadsfri takkontroll i Västerås.",
     uniqueFAQ: {
       question: "Kan ni ta uppdrag åt större bostadsrättsföreningar i Västerås?",
       answer:
