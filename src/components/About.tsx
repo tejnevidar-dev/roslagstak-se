@@ -25,7 +25,7 @@ const coreValues = [
     icon: Award,
     title: "Tydliga villkor",
     description:
-      "Fast pris i offerten, där det framgår vad som ingår. 10 års utförandegaranti på det arbete vi utför, och 30 års tätskiktsgaranti via MATAKI när ett nytt tätskikt läggs. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
+      "Fast pris i offerten, där det framgår vad som ingår. 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
   },
   {
     icon: Zap,

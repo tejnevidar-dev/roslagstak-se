@@ -601,7 +601,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vilken garanti får jag?",
-        answer: "Vi lämnar 10 års utförandegaranti på utfört arbete och 30 års tätskiktsgaranti genom MATAKI.",
+        answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför.",
       },
       {
         question: "Kan jag få ROT-avdrag?",

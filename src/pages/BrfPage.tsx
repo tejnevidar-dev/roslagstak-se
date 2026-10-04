@@ -89,7 +89,7 @@ const brfFaqs = [
   {
     question: "Vilken garanti får föreningen?",
     answer:
-      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Garantihandlingar lämnas efter slutgenomgång, så att de går att spara i föreningens arkiv.",
+      "Vi lämnar 10 års garanti på utförandet. Garantihandlingar lämnas efter slutgenomgång, så att de går att spara i föreningens arkiv.",
   },
   {
     question: "Hur minimerar ni störningen för de boende?",
@@ -317,8 +317,8 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         title={place ? `Takbyte BRF${inPlace} — bostadsrättsföreningar` : "Takbyte för BRF — bostadsrättsföreningar"}
         description={
           place
-            ? `Takbyte och takkontroll för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.`
-            : "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI."
+            ? `Takbyte och takkontroll för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`
+            : "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris och 10 års utförandegaranti."
         }
         canonical={`https://roslagstak.se${pagePath}`}
       />

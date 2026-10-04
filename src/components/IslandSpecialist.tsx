@@ -17,7 +17,7 @@ const highlights = [
     icon: Anchor,
     title: "Fast pris",
     description:
-      "Offerten har fast pris där det framgår vad som ingår, även för ett tak på en ö. 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Offerten har fast pris där det framgår vad som ingår, även för ett tak på en ö. 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
   },
 ];
 
@@ -115,7 +115,7 @@ const IslandSpecialist = () => {
                   </span>
                 ))}
                 . Samma villkor gäller som på fastlandet: fast pris,{" "}
-                <strong>10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI</strong>.
+                <strong>10 års garanti på utförandet</strong>.
               </p>
               <p>
                 Behöver du en{" "}

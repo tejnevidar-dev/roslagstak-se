@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "Vilken garanti får jag?",
-    a: "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI. Garantin får du skriftligt i avtalet.",
+    a: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Garantin får du skriftligt i avtalet.",
   },
   {
     q: "Behöver jag bygglov?",
