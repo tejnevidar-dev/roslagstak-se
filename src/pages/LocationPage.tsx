@@ -16,7 +16,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
 import { locations } from "@/data/locations";
-import { getLocationWithMall, usesMall } from "@/data/location-mall";
+import { getLocationWithMall, OAR_UTAN_BILVAG, usesMall } from "@/data/location-mall";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { regionSlugs } from "@/data/regions";
@@ -109,8 +109,6 @@ const LocationPage = () => {
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
       "Dubbelfalsat plåttak", "Pannplåt", "Takavvattning",
       "Hängrännor", "Takkontroll", "Taksäkerhet",
-      "Byta eternittak", "Takkupor", "Takfönster",
-      "Taktvätt", "Takmålning",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -121,8 +119,6 @@ const LocationPage = () => {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takkontroll ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Plåtarbeten ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takavvattning ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Byta eternittak ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Taktvätt ${prep} ${location.name}` } },
       ],
     },
   };
@@ -166,7 +162,9 @@ const LocationPage = () => {
   const metaDescription = usesMall(locations.find((l) => l.slug === location.slug) ?? location)
     ? location.description
     : location.isIsland
-    ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
+    ? OAR_UTAN_BILVAG.includes(location.slug)
+      ? `Takläggare ${prep} ${location.name}. Takfirma med bas i Norrtälje. Fast pris i offerten och 10 års utförandegaranti. Berätta var huset ligger när du hör av dig.`
+      : `Takläggare ${prep} ${location.name}. Takfirma med bas i Norrtälje. Kostnadsfri takkontroll utan förpliktelser, fast pris i offerten och 10 års utförandegaranti.`
     : far
       ? `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
       : `${location.primaryKeyword} — takbyte & takrenovering ${prep} ${location.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`;
@@ -444,9 +442,9 @@ const LocationPage = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Priset för ett takbyte {prep} {location.name} beror på takets storlek, lutning, materialval och underlagets skick, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak.
                   {location.isIsland
-                    ? ` Transportkostnad till ${location.name} ingår alltid i vår offert.`
-                    : ` Du får alltid fast pris efter kostnadsfri takkontroll.`}
-                  {" "}Med ROT-avdrag på 30 % av arbetskostnaden (upp till 50 000 kr per person och år).
+                    ? " Vad som ingår står i offerten."
+                    : " Du får fast pris i offerten efter kostnadsfri takkontroll."}
+                  {" "}Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.
                 </p>
 
                 {/* Deep internal links */}
@@ -557,13 +555,13 @@ const LocationPage = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {far
                     ? `Vi tar uppdrag ${prep} ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri takkontroll och fast pris.`
-                    : `Vi tar uppdrag ${prep} ${location.name} och i hela Roslagen, med kostnadsfri takkontroll och fast pris.`}
+                    : `Vi tar uppdrag ${prep} ${location.name} och i Roslagen och Storstockholm, med kostnadsfri takkontroll och fast pris.`}
                   {far
                     ? ""
                     : location.isIsland
                     ? ` Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.`
                     : ""}
-                  {" "}Alla arbeten utförs enligt AMA Hus. {GARANTI_RENOVERING}
+                  {" "}Vi arbetar enligt AMA. {GARANTI_RENOVERING}
                 </p>
 
                 <h3 className="font-display text-xl text-foreground mb-3">
@@ -571,8 +569,8 @@ const LocationPage = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {location.region === "Mälardalen"
-                    ? `${location.name} ligger i Mälardalen. Vi rekommenderar material efter husets läge och skick.`
-                    : `${location.name} tillhör ${location.region} i Roslagen. Vi rekommenderar material efter husets läge och skick.`}{" "}
+                    ? `${location.name} ligger i Mälardalen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`
+                    : `${location.name} tillhör ${location.region} i Roslagen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`}{" "}
                   Kontakta oss för en kostnadsfri takkontroll {prep} {location.name}, utan förpliktelser.
                 </p>
               </div>
@@ -680,7 +678,7 @@ const LocationPage = () => {
           {/* Other locations */}
           <div className="border-t border-border pt-12">
             <h2 className="font-display text-2xl text-foreground mb-6 text-center">
-              Takläggare i hela Roslagen
+              Takläggare i Roslagen och Storstockholm
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
               {locations.map((loc) => (

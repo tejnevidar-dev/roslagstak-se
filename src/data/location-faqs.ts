@@ -1,5 +1,9 @@
 import { GARANTI_RENOVERING } from "./guarantee";
 import { withRotForbehall } from "./prices";
+import { locations } from "./locations";
+import { OAR_UTAN_BILVAG } from "./location-mall";
+
+const ARBETSOMRADE_O = "Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.";
 export interface LocationFAQ {
   question: string;
   answer: string;
@@ -64,7 +68,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Hur bokar jag en kostnadsfri takkontroll ${prep} ${name}?`,
-      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en rapport om takets skick. Takkontrollen är kostnadsfri och utan förpliktelser.${isIsland ? " Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö." : ""}`,
+      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en rapport om takets skick. Takkontrollen är kostnadsfri och utan förpliktelser.${isIsland ? (OAR_UTAN_BILVAG.includes(locations.find((l) => l.name === name)?.slug ?? "") ? ` ${ARBETSOMRADE_O}` : " Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.") : ""}`,
     },
     {
       question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,
@@ -95,27 +99,15 @@ export const generateServiceLocationFAQs = (
     return tidy([
       {
         question: `Vad kostar taktvätt ${prep} ${locationName}?`,
-        answer: `Priset för taktvätt ${prep} ${locationName} beror på takets storlek, lutning och hur mycket påväxt det finns. Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, som dras direkt på fakturan.`,
+        answer: `Priset beror på taket, och det går inte att säga innan någon har tittat på det. Efter den kostnadsfria takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.`,
       },
       {
-        question: `Hur ofta behöver jag tvätta taket ${prep} ${locationName}?`,
-        answer: `Det beror på hur utsatt taket är. Tak på norrsidor, under träd eller nära vatten får ofta mer mossa och alger. Vid den kostnadsfria takkontrollen bedömer vi takets skick.`,
+        question: `Måste jag bestämma mig vid takkontrollen ${prep} ${locationName}?`,
+        answer: `Nej. Takkontrollen är kostnadsfri och utan förpliktelser. Du betalar inget och binder dig inte.`,
       },
       {
-        question: `Vilken metod använder ni för taktvätt ${prep} ${locationName}?`,
-        answer: `Vi väljer metod efter takmaterialet. Högtryckstvätt från taket rekommenderas inte på betong- och tegelpannor, eftersom det kan skada ytskiktet. Vad som passar ditt tak går vi igenom vid takkontrollen.`,
-      },
-      {
-        question: `Kan ni utföra både taktvätt och takmålning ${prep} ${locationName}?`,
-        answer: `Ja, vi gör både taktvätt och takmålning ${prep} ${locationName}, med fast pris efter kostnadsfri takkontroll.`,
-      },
-      {
-        question: `Ingår ROT-avdrag vid taktvätt ${prep} ${locationName}?`,
-        answer: ROT("taktvätt", prep, locationName),
-      },
-      {
-        question: `När är bästa tiden för taktvätt ${prep} ${locationName}?`,
-        answer: `Taktvätt görs när det är torrt och plusgrader, vanligtvis från vår till höst. Vi planerar arbetet efter väderprognosen.`,
+        question: `Hur bokar jag taktvätt ${prep} ${locationName}?`,
+        answer: `Fyll i formuläret eller ring 070-154 36 39. Vi svarar inom 24 timmar. Takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19.`,
       },
     ]);
   }

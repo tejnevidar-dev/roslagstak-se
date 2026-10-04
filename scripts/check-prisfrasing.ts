@@ -25,6 +25,16 @@ if (!/^Ca /.test(prisPost("Papptak").priceRange)) fel.push('prices.ts: "Papptak"
   if (/tegelprofilerad|ligger normalt lägre|ROT-avdrag tillkommer/.test(block)) fel.push("ServiceLocationPage.tsx: förbjuden formulering i servicePriceDescriptionsRaw");
 }
 
+// 1c) Ortssidornas frågor (location-faqs.ts): inga belopp, ingen "skriftlig" (garantibeviset är pausat) och ingen "Mälardalen"
+// (hör bara hemma på regionsidan Mälardalen).
+{
+  const src = readFileSync("src/data/location-faqs.ts", "utf8").split("\n").filter((l) => !/^\s*(\/\/|\*|\/\*)/.test(l)).join("\n");
+  const belopp = src.match(/\d[\d ]*\s*kr\/m²/g);
+  if (belopp) fel.push(`location-faqs.ts: belopp (${belopp.join(", ")}). Riktpriser hör hemma på /priser`);
+  if (/skriftlig/i.test(src)) fel.push('location-faqs.ts: "skriftlig" (garantibeviset är pausat)');
+  if (/Mälardalen/.test(src)) fel.push('location-faqs.ts: "Mälardalen" hör bara hemma på regionsidan');
+}
+
 // 2) Den byggda texten
 const walk = (d: string): string[] =>
   readdirSync(d).flatMap((f) => {

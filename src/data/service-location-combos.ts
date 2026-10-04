@@ -26,6 +26,9 @@ export interface ServiceLocationCombo {
 const PRIS_RAD = (what: string) =>
   `Riktpriser per material finns på [prissidan](/priser). ${what} Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`;
 
+/** Öar utan bilväg (10o): ö-lydelsen i stället för texten om skärgården. */
+const oarText = (loc: { slug: string }, text: string) => (OAR_UTAN_BILVAG.includes(loc.slug) ? "Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas." : text);
+
 const serviceTypes = [
   {
     slug: "takbyte",
@@ -35,7 +38,7 @@ const serviceTypes = [
       `Planerar du ett takbyte ${prep} ${loc.name}? RoslagsTak är din takläggare för takbyte ${prep} ${loc.name}. Vi utför kompletta takbyten med TP20 plåttak, dubbelfalsat plåttak, pannplåt, betongpannor och lertegeltak.`,
       `Ett takbyte ${prep} ${loc.name} innebär att det gamla takmaterialet rivs och att nytt takmaterial monteras. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Taksäkerhet och hängrännor, om de ingår, står i offerten.`,
       loc.isIsland
-        ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
+        ? oarText(loc, `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`)
         : byDistance(
             loc,
             `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name}.`,
@@ -53,7 +56,7 @@ const serviceTypes = [
       `Behöver ditt tak ${prep} ${loc.name} renoveras? RoslagsTak utför takrenoveringar ${prep} ${loc.name}, från byte av enstaka pannor och lagning av läckor till byte av underlag och underlagspapp.`,
       `En takrenovering ${prep} ${loc.name} innebär att vi åtgärdar avgränsade skador utan att byta hela taket. Det kan handla om trasiga pannor, plåtbeslag runt skorstenar, skadad råspont eller sliten underlagspapp.`,
       loc.isIsland
-        ? `Vi tar uppdrag för takrenoveringar på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`
+        ? oarText(loc, `Vi tar uppdrag för takrenoveringar på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`)
         : byDistance(
             loc,
             `Med vår bas i Norrtälje tar vi uppdrag för takrenovering ${prep} ${loc.name}.`,
@@ -71,7 +74,7 @@ const serviceTypes = [
       `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak lägger om tak med TP20, dubbelfalsat plåttak, pannplåt och betongpannor. Du får fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`,
       `Takomläggning ${prep} ${loc.name} innebär att befintligt takmaterial byts ut mot nytt. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Taksäkerhet och hängrännor, om de ingår, står i offerten.`,
       loc.isIsland
-        ? `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`
+        ? oarText(loc, `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`)
         : byDistance(
             loc,
             `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name}.`,
@@ -91,7 +94,7 @@ const taktvattService = {
     `Behöver du taktvätt ${prep} ${loc.name}? RoslagsTak tar bort mossa, alger, lavar och smuts från taket. Vilken metod som passar taket går vi igenom vid takkontrollen.`,
     `Mossa och alger håller kvar fukt mot takmaterialet. Hur ditt tak mår går vi igenom vid den kostnadsfria takkontrollen.`,
     loc.isIsland
-      ? `Vi utför taktvätt på öar i skärgården, också ${prep} ${loc.name}. Takets skick går vi igenom vid den kostnadsfria takkontrollen.`
+      ? oarText(loc, `Vi utför taktvätt på öar i skärgården, också ${prep} ${loc.name}. Takets skick går vi igenom vid den kostnadsfria takkontrollen.`)
       : byDistance(
           loc,
           `Med vår bas i Norrtälje tar vi uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse.`,
@@ -181,7 +184,7 @@ const specialistServices = [
       `Takmålning ${prep} ${loc.name}: RoslagsTak målar plåttak och betongpannetak. Vilken behandling som passar taket går vi igenom vid takkontrollen.`,
       `Hur taket mår och vad som behöver göras först går vi igenom vid den kostnadsfria takkontrollen.`,
       loc.isIsland
-        ? `Vi tar uppdrag på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`
+        ? oarText(loc, `Vi tar uppdrag på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`)
         : `Vi tar uppdrag för takmålning ${prep} ${loc.name} och bokar in arbetet efter överenskommelse.`,
       `Takmålning ${prep} ${loc.name}: du får fast pris efter takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
       `Undrar du om ditt tak ${prep} ${loc.name} går att måla eller om det är dags för byte? Boka kostnadsfri takkontroll. Ring 070-154 36 39.`,

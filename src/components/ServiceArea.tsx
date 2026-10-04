@@ -50,8 +50,7 @@ const ServiceArea = () => {
                   </span>
                 </div>
                 <p className="mt-5 text-[15px] font-light leading-relaxed text-muted-foreground">
-                  Samma hantverk, garantier och fasta priser oavsett om taket sitter på en villa i
-                  Stockholm eller en stuga i skärgården.
+                  Samma arbetssätt: kostnadsfri takkontroll och fast pris i offerten.
                 </p>
                 <p className="mt-6 border-t border-border pt-5 text-[14px] leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-foreground">Hus på en ö?</span> Vi tar uppdrag i

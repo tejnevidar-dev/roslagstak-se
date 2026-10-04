@@ -7,6 +7,7 @@ import {
 import SectionHeading from "@/components/SectionHeading";
 import JsonLd from "@/components/JsonLd";
 import { buildFaqSchema, type FaqItem, SITE_URL } from "@/lib/schema";
+import { renderInline, stripInlineMd } from "@/lib/inline-md";
 
 interface FaqSectionProps {
   title: string;
@@ -19,7 +20,7 @@ interface FaqSectionProps {
 /** Synlig FAQ + matchande FAQPage-schema (schemat speglar alltid det som visas). */
 const FaqSection = ({ title, intro, faqs, path }: FaqSectionProps) => (
   <section id="faq" className="border-b border-border bg-background py-24 md:py-32" aria-labelledby="faq-section-heading">
-    <JsonLd data={buildFaqSchema(faqs, path ? `${SITE_URL}${path}` : undefined)} />
+    <JsonLd data={buildFaqSchema(faqs.map((f) => ({ ...f, answer: stripInlineMd(f.answer) })), path ? `${SITE_URL}${path}` : undefined)} />
     <div className="mx-auto max-w-7xl px-6">
       <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5 lg:sticky lg:top-28">
@@ -33,7 +34,7 @@ const FaqSection = ({ title, intro, faqs, path }: FaqSectionProps) => (
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 leading-relaxed text-muted-foreground">
-                  {faq.answer}
+                  {renderInline(faq.answer)}
                 </AccordionContent>
               </AccordionItem>
             ))}

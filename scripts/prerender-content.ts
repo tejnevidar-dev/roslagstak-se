@@ -35,7 +35,7 @@ const MONEY_LINKS = [
   { href: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
 ];
 import { brfLocationSlugs } from "../src/data/brf-locations";
-import { applyMall, usesMall } from "../src/data/location-mall";
+import { applyMall, OAR_UTAN_BILVAG, usesMall } from "../src/data/location-mall";
 import { isNearBase, distanceFromBaseKm, distanceKm } from "../src/data/service-reach";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
@@ -200,22 +200,20 @@ const staticPages: Record<string, PrerenderPage> = {
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }],
   },
   "/taktyper": {
-    title: "Taktyper — plåttak, tegel och betongpannor",
+    title: "Taktyper – jämför takmaterial för villa",
     description:
-      "Jämför TP20, pannplåt, tegelplåt, dubbelfalsat plåttak, lertegel, betongpannor och papptak — livslängd, kostnad och vad som passar ditt hus.",
-    h1: "Taktyper — plåttak, tegel och betongpannor",
+      "Jämför taktyper: betongpannor, lertegel, TP20-plåt, pannplåt, dubbelfalsad plåt och papptak. Riktpriser efter ROT och mer om varje material.",
+    h1: "Vilket tak passar ditt hus?",
     intro:
-      "Jämför taktyper inför ditt takbyte: TP20, pannplåt, tegelplåt, dubbelfalsat plåttak (bandtäckning), lertegel, betongpannor, glaserade pannor och papptak.",
+      "Vi lägger betongpannor, lertegel, TP20-plåt, pannplåt, dubbelfalsad plåt (bandtäckning) och papptak. Här ser du materialen sida vid sida, med riktpris och länk till mer om vart och ett.",
     paragraphs: [
-      "Plåttak är lätt, snabbt att montera och passar de flesta hus. Dubbelfalsad bandtäckning har normalt längst livslängd. Betongpannor och lertegel ger klassisk karaktär men kräver bärande konstruktion för högre vikt.",
-      "Vi hjälper dig välja material utifrån husets konstruktion, taklutning, väderutsatthet och budget.",
-      "TP20-plåttak: det populäraste valet för fritidshus och villor i Roslagen. Prisvärt, lätt (4–5 kg/m²) och håller länge med minimalt underhåll. Finns i många kulörer och monteras snabbt.",
-      "Dubbelfalsat plåttak (bandtäckning): premiumvalet med falsade fogar utan synliga skruvar, ett tätt och vattentätt tak. Materialet kan vara stål, aluminium eller koppar.",
-      "Tegelplåt och pannplåt: plåtprofiler som imiterar tegel och pannor. Traditionellt utseende med plåtens fördelar — lägre vikt, lägre pris och enklare transport till öar.",
-      "Betongpannor: beprövat och prisvärt, och passar de flesta hustyper på fastlandet. Kräver en konstruktion som tål vikten (ca 40–50 kg/m²).",
-      "Lertegel: det klassiska valet som passar både äldre och nyare hus. Håller mycket länge och ger husets karaktär ett oersättligt uttryck.",
-      "Papptak: för platta och låglutande tak på garage, tillbyggnader och funkishus. Modern SBS-papp håller länge när den läggs rätt.",
-      "Osäker på vad som passar ditt hus? Boka en kostnadsfri takkontroll — vi tittar på konstruktion, lutning och läge och ger dig en ärlig rekommendation med fast pris.",
+      "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder.",
+      "Pannplåt är takplåt av stål som har pressats så att den ser ut som ett tak av takpannor.",
+      "Dubbelfalsat plåttak, även kallat bandtäckning, är den klassiska formen av plåttak: långa plåtbanor som fogas ihop genom att kanterna viks samman, utan en enda synlig skruv genom taket.",
+      "Lertegel är det klassiska tegeltaket: pannor av bränd lera som har använts på svenska hus i generationer.",
+      "Betongpannor är gjutna pannor som ger ett klassiskt pannat tak.",
+      "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak.",
+      "Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",
     ],
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }],
@@ -223,13 +221,13 @@ const staticPages: Record<string, PrerenderPage> = {
   "/brf": {
     title: "Takbyte för BRF — bostadsrättsföreningar",
     description:
-      "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris och 10 års utförandegaranti.",
+      "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm och Roslagen. Fast pris och 10 års utförandegaranti.",
     h1: "Takbyte för bostadsrättsföreningar, med underlag styrelsen kan besluta på",
     intro:
-      "Från kostnadsfri takkontroll och fast offert till slutgenomgång och skriftlig garanti. Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
+      "Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar i Storstockholm och Roslagen.",
     paragraphs: [
       "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk. Vi bygger arbetet på tre underlag som går att spara och jämföra: en tydlig bedömning av takets skick, fast offert och garantihandlingar efter slutgenomgång.",
-      "Så går ett takbyte till i en förening: takkontroll, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande samt slutgenomgång och skriftlig garanti.",
+      "Så går ett takbyte till i en förening: takkontroll, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande samt slutgenomgång.",
       "Vi erbjuder takbyte och takrenovering. Allt börjar med en kostnadsfri takkontroll utan förpliktelser, och föreningen får en offert med fast pris, en kontaktperson hela vägen och svar inom 24 timmar. Arbetet utförs enligt AMA.",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
       "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
@@ -745,7 +743,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       title: `Takbyte BRF ${prep} ${loc.name} — bostadsrättsföreningar`,
       description: `Takbyte och takkontroll för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`,
       h1: `Takbyte för bostadsrättsföreningar ${prep} ${loc.name}, med underlag styrelsen kan besluta på`,
-      intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång och skriftlig garanti. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
+      intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
       paragraphs: [
         `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll, följd av en skriftlig offert med fast pris som styrelsen och stämman kan besluta på.`,
         "Vi erbjuder takbyte och takrenovering, med kostnadsfri takkontroll utan förpliktelser, fast pris och en kontaktperson hela vägen. Garantin står skriftligt i avtalet.",
@@ -774,7 +772,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     return {
       title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
       description: ortSeoOverrides[loc.slug]?.description ?? (mall ? loc.description : loc.isIsland
-        ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Skärgårdsspecialist, fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
+        ? OAR_UTAN_BILVAG.includes(loc.slug)
+          ? `Takläggare ${prep} ${loc.name}. Takfirma med bas i Norrtälje. Fast pris i offerten och 10 års utförandegaranti. Berätta var huset ligger när du hör av dig.`
+          : `Takläggare ${prep} ${loc.name}. Takfirma med bas i Norrtälje. Kostnadsfri takkontroll utan förpliktelser, fast pris i offerten och 10 års utförandegaranti.`
         : isNearBase(loc)
           ? `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`
           : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`),

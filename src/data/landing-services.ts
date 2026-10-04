@@ -229,7 +229,7 @@ export const landingServices: LandingService[] = [
     h1: "ROT-avdrag på takarbeten.",
     h1Accent: "30 % av arbetskostnaden.",
     intro:
-      "Som privatperson kan du få ROT-avdrag på arbetskostnaden när vi byter eller renoverar taket på din bostad. Avdraget ger 30 % skattereduktion, upp till 50 000 kr per person och år. Vi drar av det direkt på fakturan.",
+      "Som privatperson kan du få ROT-avdrag på arbetskostnaden när vi byter eller renoverar taket på din bostad. Du kan få 30 % av arbetskostnaden i skattereduktion, högst 50 000 kr per person och år. Vi drar av det direkt på fakturan.",
     listHeading: "Så fungerar ROT-avdraget på tak",
     listIntro: "Det här är det som gäller för dig som privatperson.",
     list: [
@@ -266,7 +266,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Offert med fast pris",
-        text: "Du får en skriftlig offert med fast pris.",
+        text: "Du får en offert med fast pris.",
       },
       {
         title: "Arbetet utförs",
@@ -476,7 +476,7 @@ export const landingServices: LandingService[] = [
     h1: "Plåt på ditt tak.",
     h1Accent: "Fast pris efter kostnadsfri takkontroll.",
     intro:
-      "Dubbelfalsat plåttak (bandtäckning) och nya plåtdetaljer kring skorstenar och genomföringar ingår när vi byter eller lägger om ett tak. Gäller det ett enskilt plåtjobb: kontakta oss, så tittar vi på taket och berättar vad vi kan hjälpa till med.",
+      "Dubbelfalsat plåttak (bandtäckning) och nya plåtdetaljer kring skorstenar och genomföringar görs normalt nya när vi byter eller lägger om ett tak. Gäller det ett enskilt plåtjobb: kontakta oss, så tittar vi på taket och berättar vad vi kan hjälpa till med.",
     listHeading: "Plåtdetaljer på ett tak",
     listIntro: "Det är ofta plåtdetaljerna som avgör om ett tak håller tätt.",
     list: [
@@ -536,7 +536,7 @@ export const landingServices: LandingService[] = [
     path: "/takbyte-var-2027",
     seoTitle: "Planera ditt takbyte till våren 2027",
     seoDescription:
-      "Planera takbytet i god tid: kostnadsfri takkontroll nu, skriftlig offert med fast pris och en tidplan tillsammans med dig. 10 års utförandegaranti.",
+      "Planera takbytet i god tid: kostnadsfri takkontroll nu, offert med fast pris och en tidplan tillsammans med dig. 10 års utförandegaranti.",
     breadcrumb: "Takbyte våren 2027",
     eyebrow: "Takbyte våren 2027",
     h1: "Planera ditt takbyte till våren 2027.",
@@ -547,7 +547,7 @@ export const landingServices: LandingService[] = [
     listIntro: "Ett takbyte är ett stort beslut. Ju tidigare du har underlaget, desto lugnare kan du välja.",
     list: [
       { title: "Du vet takets skick", text: "En av våra säljare tittar på taket på plats och du får en rapport om takets skick." },
-      { title: "Du får ett fast pris", text: "Offerten är skriftlig och specificerad. Vi arbetar endast till fast pris." },
+      { title: "Du får ett fast pris", text: "Du får en offert med fast pris. Vi arbetar endast till fast pris." },
       { title: "Tid att jämföra", text: "Du kan jämföra offerter och material i lugn och ro innan du bestämmer dig." },
       { title: "Tid att planera ekonomin", text: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år. Kom ihåg att avdraget gäller per år." },
       { title: "Du väljer tidpunkt", text: "Vi bestämmer tidpunkt för arbetet tillsammans med dig efter offerten." },
@@ -556,14 +556,14 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       { title: "Boka takkontroll", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
-      { title: "Takkontroll", text: "Vi går igenom tak, underlag och avvattning på plats, ca 1–2 timmar." },
-      { title: "Offert med fast pris", text: "Du får en skriftlig offert där arbete och material redovisas var för sig." },
+      { title: "Takkontroll", text: "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar." },
+      { title: "Offert med fast pris", text: "Du får en offert med fast pris." },
       { title: "Tidplan", text: "Om du vill gå vidare bestämmer vi tidpunkt för takbytet tillsammans." },
     ],
     extraHeading: "Är det dags att byta tak?",
     extraParagraphs: [
-      "Tecken på att taket närmar sig slutet är fuktfläckar i tak eller på vinden, trasiga eller förskjutna pannor, rost på plåt samt mossa och alger som håller kvar fukt. Är du osäker ger takkontrollen svar.",
-      "Ibland räcker en reparation. Vi ger en ärlig bedömning och föreslår aldrig ett takbyte om en renovering räcker.",
+      "Fuktfläckar i tak eller på vinden, trasiga eller förskjutna pannor och rost på plåt är skäl att låta någon titta på taket.",
+      "Ibland räcker en reparation. Det ser vi vid takkontrollen.",
     ],
     priceNote:
       "Priset beror på takets storlek, lutning, material och skick. Vi arbetar endast till fast pris och lämnar det efter takkontroll.",
@@ -575,7 +575,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Måste jag bestämma mig direkt?",
-        answer: "Nej. Du får en skriftlig offert och bestämmer själv om och när du vill gå vidare.",
+        answer: "Nej. Du får en offert och bestämmer själv om och när du vill gå vidare.",
       },
       {
         question: "Vad kostar ett takbyte?",

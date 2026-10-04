@@ -21,7 +21,7 @@ const facts = [
   { label: "Utförande", value: "10 års utförandegaranti" },
   { label: "Tätskikt", value: "30 års garanti via tillverkaren MATAKI" },
   { label: "Offert", value: "Fast pris efter kostnadsfri takkontroll" },
-  { label: "Standard", value: "Arbete enligt AMA Hus" },
+  { label: "Standard", value: "Arbete enligt AMA" },
 ];
 
 const steps = [
@@ -46,8 +46,8 @@ const steps = [
     text: "Rivning, underlag, nytt tak och plåtdetaljer. Arbetsplatsen städas löpande.",
   },
   {
-    title: "Slutgenomgång och skriftlig garanti",
-    text: "Vi går igenom arbetet tillsammans med er och lämnar skriftlig garanti som styrelsen kan spara till nästa mandatperiod.",
+    title: "Slutgenomgång",
+    text: "Vi går igenom arbetet tillsammans med er när taket är klart.",
   },
 ];
 
@@ -74,7 +74,7 @@ const brfFaqs = [
   {
     question: "Hur går ett takbyte till för en bostadsrättsförening?",
     answer:
-      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en skriftlig offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång och skriftlig garanti.",
+      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en skriftlig offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång.",
   },
   {
     question: "Behöver föreningen en takkontroll före ett takbyte?",
@@ -84,12 +84,12 @@ const brfFaqs = [
   {
     question: "Vad kostar ett takbyte för en BRF?",
     answer:
-      "Priset beror på takyta, taktyp, lutning, antal genomföringar och underlagets skick. Vi lämnar alltid fast pris efter kostnadsfri takkontroll, så att styrelsen har ett konkret underlag att besluta på. Riktpriser per material finns på sidan Priser.",
+      "Priset beror på takyta, taktyp, lutning, antal genomföringar och underlagets skick. Du får fast pris i offerten efter kostnadsfri takkontroll, så att styrelsen har ett konkret underlag att besluta på. Riktpriser per material finns på sidan Priser.",
   },
   {
     question: "Vilken garanti får föreningen?",
     answer:
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Garantihandlingar lämnas efter slutgenomgång, så att de går att spara i föreningens arkiv.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ert tak står i offerten.",
   },
   {
     question: "Hur minimerar ni störningen för de boende?",
@@ -99,7 +99,7 @@ const brfFaqs = [
   {
     question: "Vilka områden arbetar ni i?",
     answer:
-      "Vi arbetar i Storstockholm, Roslagen och Mälardalen. På sidan Områden ser du de orter vi arbetar i.",
+      "Vi arbetar i Storstockholm och Roslagen. På sidan Områden ser du de orter vi arbetar i.",
   },
 ];
 
@@ -318,7 +318,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         description={
           place
             ? `Takbyte och takkontroll för bostadsrättsföreningar${inPlace}. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`
-            : "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris och 10 års utförandegaranti."
+            : "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm och Roslagen. Fast pris och 10 års utförandegaranti."
         }
         canonical={`https://roslagstak.se${pagePath}`}
       />
@@ -357,8 +357,8 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 <span className="italic text-accent">med underlag styrelsen kan besluta på.</span>
               </h1>
               <p className="mt-7 max-w-[52ch] text-[18px] leading-relaxed text-muted-foreground md:text-[19px]">
-                Från kostnadsfri takkontroll och fast offert till slutgenomgång och skriftlig garanti. Vi arbetar i
-                {place ? `${place.name} och närområdet` : "Storstockholm, Roslagen och Mälardalen"}.
+                Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar i
+                {place ? `${place.name} och närområdet` : "Storstockholm och Roslagen"}.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -426,8 +426,8 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
               <ul className="mt-8 border-t border-border">
                 {[
                   ["Takkontroll", "Takets skick bedömt på plats, som grund för underhållsplan och beslut."],
-                  ["Fast offert", "Ett skriftligt pris som gäller, med tydligt vad som ingår."],
-                  ["Garantivillkor", "Skriftlig garanti efter slutgenomgång."],
+                  ["Fast offert", "Offert med fast pris."],
+                  ["Garantivillkor", "Vilka garantier som gäller för ert tak står i offerten."],
                 ].map(([title, text]) => (
                   <li key={title} className="grid gap-1 border-b border-border py-5 sm:grid-cols-[13rem_1fr] sm:gap-6">
                     <span className="font-display text-lg text-foreground">{title}</span>
@@ -487,7 +487,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 Så går ett takbyte till i en förening
               </h2>
               <p className="mt-6 max-w-[42ch] text-[17px] leading-relaxed text-muted-foreground">
-                Sex steg från första takkontrollen till skriftlig garanti. Beslutet ligger hos föreningen, och vi ser till
+                Sex steg från första takkontrollen till slutgenomgång. Beslutet ligger hos föreningen, och vi ser till
                 att underlaget finns när det behövs.
               </p>
             </div>
@@ -650,7 +650,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 </li>
               </ul>
               <p className="mt-8 text-[15px] leading-relaxed text-muted-foreground">
-                Vi arbetar i Storstockholm, Roslagen och Mälardalen.{" "}
+                Vi arbetar i Storstockholm och Roslagen.{" "}
                 <Link to="/omraden" className="font-semibold text-primary underline decoration-accent decoration-2 underline-offset-4">
                   Se alla områden
                 </Link>
@@ -666,7 +666,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
           <section className="border-t border-border bg-secondary py-16 md:py-20" aria-labelledby="brf-places-heading">
             <div className="mx-auto max-w-7xl px-6">
               <h2 id="brf-places-heading" className="font-display text-2xl text-foreground md:text-3xl">
-                Bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen
+                Bostadsrättsföreningar i Storstockholm och Roslagen
               </h2>
               <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-4">
                 {brfPlaces.map((l) => (

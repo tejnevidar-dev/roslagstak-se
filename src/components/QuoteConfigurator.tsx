@@ -115,7 +115,7 @@ const QuoteConfigurator = () => {
             ) : (
               <p className="text-muted-foreground">
                 Vi återkopplar till dig <strong>inom 24 timmar</strong> från och med nu. 
-                En av våra takexperter kommer kontakta dig för kostnadsfri rådgivning.
+                En av våra säljare kontaktar dig inom 24 timmar.
               </p>
             )}
           </div>
@@ -133,7 +133,7 @@ const QuoteConfigurator = () => {
             Hur vill du ha hjälp?
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Välj mellan att konfigurera ditt tak själv och få ett prisförslag direkt, eller boka en kostnadsfri rådgivning med en av våra takexperter.
+            Välj mellan att konfigurera ditt tak själv och få ett prisförslag direkt, eller boka en kostnadsfri takkontroll. En av våra säljare kontaktar dig inom 24 timmar.
           </p>
         </div>
 
@@ -194,9 +194,9 @@ const QuoteConfigurator = () => {
             <div className="flex items-start gap-3 bg-primary/5 border border-primary/20 rounded-xl p-4">
               <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Vi återkopplar alltid inom 24 timmar</p>
+                <p className="text-sm font-semibold text-foreground">Vi svarar inom 24 timmar</p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Beskriv ditt takprojekt eller ställ en fråga. En av våra takexperter kontaktar dig personligen inom 24 timmar från att formuläret skickas in. Helt kostnadsfritt.
+                  Beskriv ditt takprojekt eller ställ en fråga. En av våra säljare kontaktar dig inom 24 timmar från att formuläret skickas in. Helt kostnadsfritt.
                 </p>
               </div>
             </div>
@@ -434,7 +434,7 @@ const QuoteConfigurator = () => {
           <p className="text-xs text-muted-foreground text-center">
             {mode === "configure"
               ? "Helt kostnadsfritt. Du får ett kostnadsförslag på e-post inom 2 minuter."
-              : "Helt kostnadsfritt. Vi återkopplar alltid inom 24 timmar från att formuläret skickas in."}
+              : "Helt kostnadsfritt. Vi svarar inom 24 timmar från att formuläret skickas in."}
           </p>
           <p className="text-xs text-muted-foreground text-center">
             Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}

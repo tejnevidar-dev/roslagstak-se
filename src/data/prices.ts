@@ -22,7 +22,7 @@ export const priceData = [
   {
     category: "Övriga tjänster",
     items: [
-      { name: "Takrenovering", priceRange: "Fast pris efter kostnadsfri takkontroll", description: "Beroende på skadans omfattning. Alltid fast pris efter kostnadsfri takkontroll." },
+      { name: "Takrenovering", priceRange: "Fast pris efter kostnadsfri takkontroll", description: "Beroende på skadans omfattning. Fast pris i offerten efter kostnadsfri takkontroll." },
       { name: "Takavvattning (hängrännor)", priceRange: "Från ca 23 000 kr (efter ROT, inkl. moms)", description: "Komplett system med stuprör, beroende på husets storlek och våningar." },
       { name: "Takkontroll", priceRange: "Kostnadsfritt", description: "En av våra säljare tittar på taket på plats. Du får en rapport om takets skick." },
     ],
@@ -41,7 +41,7 @@ export const priceData = [
 export const priceFaqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: "Som riktpris, efter ROT-avdrag och inkl. moms: betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Exakt pris beror på takets storlek, lutning, material och skick, och vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan.",
+    answer: "Som riktpris, efter ROT-avdrag och inkl. moms: betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Exakt pris beror på takets storlek, lutning, material och skick. Du får ett fast pris i offerten efter en kostnadsfri takkontroll.",
   },
   {
     question: "Ingår material i priset?",
@@ -53,7 +53,7 @@ export const priceFaqs = [
   },
   {
     question: "Kostar det extra på öar i skärgården?",
-    answer: "Till en ö utan bilväg behöver material, ställning och bortforsling planeras efter båt och brygga, och det går vi igenom innan arbetet börjar. Ditt pris står i offerten och är fast.",
+    answer: "Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig. Ditt pris står i offerten och är fast.",
   },
   {
     question: "Hur lång tid tar ett takbyte?",
@@ -62,7 +62,7 @@ export const priceFaqs = [
 ];
 
 export const PRICE_HERO_TEXT =
-  "Riktpriserna nedan gäller efter ROT-avdrag och inkl. moms, med standardställning. Fast pris lämnas alltid efter en kostnadsfri takkontroll. Som privatperson kan du få ROT-avdrag (30 % på arbetskostnaden), som dras av direkt på fakturan.";
+  "Riktpriserna nedan gäller efter ROT-avdrag och inkl. moms, med standardställning. Fast pris i offerten efter en kostnadsfri takkontroll. Som privatperson kan du få ROT-avdrag (30 % på arbetskostnaden), som dras av direkt på fakturan.";
 
 /** Ställningsmeningen, ordagrant som på /priser. Används också på material- och tjänstesidornas prisavsnitt. */
 export const STALLNING_MENING = "Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.";

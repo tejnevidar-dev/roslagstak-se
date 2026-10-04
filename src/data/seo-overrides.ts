@@ -182,7 +182,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   norrtalje: {
     title: "Takläggare i Norrtälje: byta tak, fast pris",
     description:
-      "Takläggare i Norrtälje för dig som ska byta tak. Kostnadsfri takkontroll, skriftligt fast pris och 10 års utförandegaranti. Svar inom 24 timmar.",
+      "Takläggare i Norrtälje för dig som ska byta tak. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
   },
   nasbypark: {
     title: "Takläggare i Näsbypark – fast pris efter takkontroll",

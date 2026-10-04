@@ -57,7 +57,7 @@ const ContactLanding = () => {
     <>
       <SEOHead
         title="Kontakt & Kostnadsfri Takkontroll — RoslagsTak"
-        description="Boka kostnadsfri takkontroll med RoslagsTak. Ring 070-154 36 39 eller fyll i formuläret — vi återkopplar inom 24 timmar. Takläggare i Roslagen, Blidö, Norrtälje & skärgården."
+        description="Boka kostnadsfri takkontroll med RoslagsTak. Ring 070-154 36 39 eller fyll i formuläret — vi återkopplar inom 24 timmar. Takfirma med bas i Norrtälje."
         canonical="https://roslagstak.se/kontakt"
       />
 

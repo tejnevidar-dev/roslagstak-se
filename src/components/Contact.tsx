@@ -61,7 +61,7 @@ const Contact = () => {
               Boka en kostnadsfri takkontroll
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Fyll i formuläret eller ring oss direkt. Vi återkommer inom 24 timmar med en offert anpassad efter ditt projekt.
+              Fyll i formuläret eller ring oss direkt. Vi svarar inom 24 timmar.
             </p>
 
             <div className="space-y-5 mb-8">

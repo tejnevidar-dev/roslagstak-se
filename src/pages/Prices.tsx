@@ -43,7 +43,7 @@ const Prices = () => {
     <>
       <SEOHead
         title="Vad kostar takbyte? Priser 2026, efter ROT — Roslagen"
-        description="Vad kostar ett takbyte i Roslagen? Riktpriser efter ROT-avdrag, inkl. moms: TP20 och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m²."
+        description="Vad kostar ett takbyte? Riktpriser per material efter ROT-avdrag, inkl. moms, och vad som påverkar priset. Fast pris i offerten efter kostnadsfri takkontroll."
         canonical="https://roslagstak.se/priser"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

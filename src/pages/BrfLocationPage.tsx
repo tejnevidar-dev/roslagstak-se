@@ -2,7 +2,6 @@ import { useLocation } from "react-router-dom";
 import BrfPage, { type BrfPlace } from "@/pages/BrfPage";
 import NotFound from "@/pages/NotFound";
 import { locations } from "@/data/locations";
-import { buildLocalSections } from "@/data/local-sections";
 import { brfLocationSlugs } from "@/data/brf-locations";
 
 /** BRF-sida per ort (/brf/<ort>): samma innehåll som /brf med ortens eget avsnitt. */
@@ -13,15 +12,14 @@ const BrfLocationPage = () => {
   if (!loc) return <NotFound />;
 
   const prep = loc.isIsland ? "på" : "i";
-  const [climate, buildings, inspect] = buildLocalSections(loc).blocks[0].paragraphs;
   const place: BrfPlace = {
     slug: loc.slug,
     name: loc.name,
     prep,
     region: loc.region,
     paragraphs: [
-      `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll. ${climate} ${inspect}`,
-      `${buildings} Styrelsen får ett skriftligt underlag och ett fast pris att besluta på.`,
+      `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll.`,
+      "Styrelsen får ett underlag och ett fast pris att besluta på.",
     ],
     nearby: loc.nearbyLocations
       .map((name) => locations.find((l) => l.name === name))

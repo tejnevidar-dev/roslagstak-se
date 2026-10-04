@@ -144,15 +144,6 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
       ? `${neighbours.slice(0, -1).join(", ")} och ${neighbours[neighbours.length - 1]}`
       : neighbours[0] ?? loc.region;
 
-  const buildingIntro = [
-    `Husen vi arbetar med här är främst ${p.buildings}, och på dem möter vi oftast ${p.materials}.`,
-    `Bebyggelsen ${prep} ${loc.name} består till stor del av ${p.buildings}. Takmaterialen är därför ofta ${p.materials}.`,
-    `${p.buildings.charAt(0).toUpperCase() + p.buildings.slice(1)} dominerar ${prep} ${loc.name}, med ${p.materials} på taken.`,
-  ][v];
-
-  const inspectNote = loc.isIsland
-    ? `Vid takkontrollen ${prep} ${loc.name} lägger vi extra vikt på beslag, infästningar och takfot.`
-    : `Vid takkontrollen ${prep} ${loc.name} börjar vi i rännor, genomföringar och nordsidan — det är där skadorna brukar visa sig först.`;
 
   const accessPara = loc.isIsland
     ? `${p.access.charAt(0).toUpperCase() + p.access.slice(1)}. Vi bokar transport och lossningsplats innan arbetet startar, så att rivningsavfall och nytt material inte behöver ligga och vänta på tomten ${prep} ${loc.name}.`
@@ -161,17 +152,9 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
   const neighbourPara = `Vi tar uppdrag ${prep} ${loc.name} och i närområdet — ${neighbourText}. När flera tak ligger nära varandra kan vi samordna transporter och etablering, vilket kortar tiden på plats.`;
 
   return {
-    intro: inspectNote,
+    intro: "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar.",
     blocks: [
-      // Hustyper, byggår och material per ort visas bara där orten har en angiven källa (sourceLink), annars döljs blocket.
-      ...(loc.sourceLink
-        ? [
-            {
-              heading: `Takens förutsättningar ${prep} ${loc.name}`,
-              paragraphs: [buildingIntro, inspectNote],
-            },
-          ]
-        : []),
+      // Blocket om hustyper och takkontrollens början är borttaget (backlog 1cm del B): påståenden om egen erfarenhet på orten, utan belägg.
       // Blocket "Så planerar vi arbetet" (container, lift, rivningsavfall, samordning av transporter) är borttaget på alla
       // ortssidor: processlöften utan belägg, och bortforsling ligger hos Vidar (10v). Marknadschefen 2026-10-04.
     ],
@@ -181,7 +164,6 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
       { label: "Närmaste orter", value: neighbourText },
       { label: "Avstånd till vår bas i Norrtälje", value: `${Math.round(distanceFromBaseKm(loc))} km` },
       { label: "Koordinater", value: `${loc.lat.toFixed(3)}, ${loc.lng.toFixed(3)}` },
-      ...(loc.sourceLink ? [{ label: "Vanliga takmaterial", value: p.materials }] : []),
     ],
   };
 };

@@ -196,7 +196,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takinspektion: {
     seoTitle: "Kostnadsfri Takkontroll Roslagen — Fast pris",
     seoDescription:
-      "Kostnadsfri takkontroll i Roslagen och skärgården. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
+      "Kostnadsfri takkontroll i Roslagen och Storstockholm. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "accent", label: "Kostnad", value: "0 kr", text: "Kostnadsfri och utan förpliktelser." },
@@ -254,27 +254,28 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takvard: {
-    seoTitle: "Taktvätt & Takmålning Roslagen — Skonsam takvård",
+    seoTitle: "Taktvätt – kostnadsfri takkontroll och fast pris",
     seoDescription:
-      "Takvård i Roslagen: skonsam taktvätt, borttagning av mossa och alger samt takmålning med specialfärg. Fast pris efter kostnadsfri takkontroll.",
+      "Taktvätt: vi börjar med en kostnadsfri takkontroll utan förpliktelser. Du får en rapport om takets skick och fast pris i offerten. Svar inom 24 timmar.",
     blockPlacement: "after-scope",
     factCards: [
-      { tone: "outline", label: "Taktvätt", value: "Fast pris efter takkontroll", text: "Skonsam metod anpassad efter panna, plåt eller papp." },
-      { tone: "primary", label: "Takmålning", value: "Fast pris efter takkontroll", text: "Grundning och två skikt specialfärg för tak." },
-      { tone: "accent", label: "Intervall", value: "Var 5–8 år", text: "Beroende på trädskugga, väderstreck och takmaterial." },
-      { tone: "plain", label: "Effekt", value: "Friskare yta", text: "Rätt underhåll skyddar ytskiktet mot påväxt och fukt." },
+      { tone: "primary", label: "Takkontroll", value: "Kostnadsfri", text: "En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte." },
+      { tone: "outline", label: "Pris", value: "Fast i offerten", text: "Behöver taket åtgärdas får du en offert med fast pris. Tillägg görs bara efter ditt godkännande." },
     ],
     block: {
-      kind: "season",
-      eyebrow: "Årsschema",
-      heading: "Takvård över året i Roslagen",
-      intro:
-        "Takvård är säsongsarbete. Fukt, temperatur och löv styr när varje åtgärd ger bäst resultat — det här är vår arbetskalender.",
-      periods: [
-        { label: "Mars–april", title: "Vinterkontroll", text: "Genomgång efter snölast och frost: lösa pannor, skadade beslag och rensning av rännor." },
-        { label: "Maj–juni", title: "Tvätt och behandling", text: "Bästa tiden för taktvätt och mossbehandling — torrt underlag och stabila temperaturer." },
-        { label: "Juli–augusti", title: "Målning", text: "Takmålning kräver torrt tak och plusgrader dygnet runt. Här ligger måleriets huvudsäsong." },
-        { label: "September–november", title: "Lövrensning", text: "Rännor och ränndalar rensas innan hösten sätter igång för fullt." },
+      kind: "checklist",
+      eyebrow: "Bra att veta",
+      heading: "Så går det till",
+      intro: "Taktvätt är en av de tjänster vi erbjuder.",
+      groups: [
+        {
+          title: "Takkontrollen",
+          items: [
+            "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar.",
+            "Efter takkontrollen får du en rapport om takets skick.",
+            "Visar takkontrollen att taket behöver något annat än en tvätt står det i rapporten, och du bestämmer själv hur du vill gå vidare.",
+          ],
+        },
       ],
     },
   },
@@ -376,8 +377,9 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/tjanster/tegeltak", label: "Tegeltak i lertegel" },
   ],
   takvard: [
-    { to: "/blogg/mala-plattak-guide-pris", label: "Måla plåttak: guide och pris" },
-    { to: "/tjanster/takinspektion", label: "Kontroll före takvård" },
+    { to: "/tjanster/takrenovering", label: "Takrenovering" },
+    { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
+    { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
   ],
   tegeltak: [
     { to: "/tjanster/platarbeten#falsat", label: "Dubbelfalsat plåttak (bandtäckning)" },

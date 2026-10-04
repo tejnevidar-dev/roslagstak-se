@@ -3016,6 +3016,30 @@
       "fore": "Takbyte, takomläggning och takrenovering i Edsberg. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
       "efter": "Takläggare i Edsberg: villaområdet Landsnora vid Edsviken, Edsängen och stugområdena vid Väsjön i Sollentuna. Kostnadsfri takkontroll och fast pris i offerten.",
       "tid": "2026-10-05T03:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0372",
+      "path": "/tjanster/takinspektion",
+      "falt": "description",
+      "fore": "Kostnadsfri takkontroll i Roslagen och skärgården. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
+      "efter": "Kostnadsfri takkontroll i Roslagen och Storstockholm. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
+      "tid": "2026-10-05T04:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0373",
+      "path": "/tjanster/takvard",
+      "falt": "title",
+      "fore": "Taktvätt & Takmålning Roslagen — Skonsam takvård",
+      "efter": "Taktvätt – kostnadsfri takkontroll och fast pris",
+      "tid": "2026-10-05T04:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0374",
+      "path": "/tjanster/takvard",
+      "falt": "description",
+      "fore": "Takvård i Roslagen: skonsam taktvätt, borttagning av mossa och alger samt takmålning med specialfärg. Fast pris efter kostnadsfri takkontroll.",
+      "efter": "Taktvätt: vi börjar med en kostnadsfri takkontroll utan förpliktelser. Du får en rapport om takets skick och fast pris i offerten. Svar inom 24 timmar.",
+      "tid": "2026-10-05T04:00:00+02:00"
     }
   ]
 }
