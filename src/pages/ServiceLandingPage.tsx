@@ -114,6 +114,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
               </h2>
               <p className="mt-5 max-w-[36ch] text-[17px] leading-relaxed text-muted-foreground">{service.listIntro}</p>
             </Reveal>
+            {service.list.length > 0 && (
             <ul className="border-t border-border lg:col-span-8">
               {service.list.map((item) => (
                 <li key={item.title} className="grid gap-1 border-b border-border py-5 sm:grid-cols-[15rem_1fr] sm:gap-8">
@@ -122,6 +123,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
                 </li>
               ))}
             </ul>
+            )}
           </div>
         </section>
 

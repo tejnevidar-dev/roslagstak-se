@@ -228,7 +228,8 @@ export const comboDefaultTitle = (c: { serviceSlug: string; serviceName: string;
   const kort = `${bas} — 10 års garanti`;
   return kort.length <= 60 ? kort : bas;
 };
-export const comboDefaultH1 = comboDefaultTitle;
+export const comboDefaultH1 = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) =>
+  c.serviceSlug === "taktvatt" ? `${c.serviceName} ${c.prep} ${c.locationName}` : comboDefaultTitle(c);
 
 /** Standardmeta för en tjänst × ort-sida utan egen text. Öar utan bilväg (OAR_UTAN_BILVAG, inte isIsland) lovar ingen kostnadsfri takkontroll (10o). */
 export const comboDefaultMeta = (c: { serviceName: string; prep: string; locationName: string; locationSlug: string }): string => {

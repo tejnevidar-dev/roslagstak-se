@@ -207,7 +207,7 @@ const ServiceLocationPage = () => {
                 <Clock className="w-4 h-4 text-primary" /> Svar inom 24h
               </div>
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Award className="w-4 h-4 text-primary" /> AMA-standard
+                <Award className="w-4 h-4 text-primary" /> Arbete enligt AMA
               </div>
               <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                 <CheckCircle className="w-4 h-4 text-primary" /> En kontaktperson hela vägen
@@ -345,7 +345,7 @@ const ServiceLocationPage = () => {
                       ? "10 års utförandegaranti"
                       : GARANTI_RENOVERING_CHIP.replace("30 års tätskiktsgaranti", "10 års utförandegaranti, 30 års tätskiktsgaranti"),
                     "Fast pris i offerten",
-                    "Samma kontaktperson genom hela projektet",
+                    "En kontaktperson genom hela processen",
                     "Kostnadsfri takkontroll",
                   ].map((usp) => (
                     <li key={usp} className="flex items-start gap-2 text-sm text-muted-foreground">

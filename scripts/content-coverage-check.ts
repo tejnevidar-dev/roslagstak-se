@@ -169,6 +169,11 @@ const pmAcceptedGaps: Record<string, string[]> = {
   "papptak.md": pmRiktprisGap,
   "underlagstak.md": pmRiktprisGap,
   "pannplat.md": pmRiktprisGap,
+  // Marknadschefens beslut 2026-10-04 (backlog 1cm punkt 10): "kontakta en takfirma" (L4) i stället för "takläggare".
+  // Briefen stormskador.md ändras av Innehåll.
+  "stormskador.md": [
+    "Då gäller det att begränsa skadan: håll dig och andra borta från området under takkanten, samla upp vatten inomhus, flytta undan det som kan ta skada och kontakta en takläggare.",
+  ],
   // Marknadschefens beslut 2026-10-04 (backlog 1bx, underlag-forstark-tegeltak, fynd i avsnitt 2): bärighet enligt juristens B3,
   // klimatmeningen och "tegelplåt" ersatta, bygglovsmeningen flyttad till FAQ:n. Briefen lertegel.md ändras av Innehåll.
   // Marknadschefens beslut 2026-10-04 (backlog 1cf, underlag-forstark-platarbeten, fynd 3, 4 och 6): hustypsråd, ljudmeningen och

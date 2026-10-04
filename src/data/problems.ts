@@ -295,7 +295,7 @@ export const problems: Problem[] = [
     orsaker:
       "Kraftig vind skapar ett sug på taket, särskilt vid kanter, hörn och nock, som kan lyfta pannor och plåt som redan sitter löst. Pannor som är spruckna, dåligt fästa eller ligger på en åldrad läkt ger lättare vika. Lösa plåtdetaljer kan fånga vinden och vikas upp. Nedfallande grenar och föremål kan också slå sönder pannor eller skada plåtens ytbehandling.",
     akut:
-      "När vatten kommer in, när pannor eller plåt hänger löst och kan falla ner mot gång, uteplats eller bil, eller när taket har fått hål. Då gäller det att begränsa skadan: håll dig och andra borta från området under takkanten, samla upp vatten inomhus, flytta undan det som kan ta skada och kontakta en takläggare. En skada som ser liten ut ska ändå kontrolleras innan nästa regn.",
+      "När vatten kommer in, när pannor eller plåt hänger löst och kan falla ner mot gång, uteplats eller bil, eller när taket har fått hål. Då gäller det att begränsa skadan: håll dig och andra borta från området under takkanten, samla upp vatten inomhus, flytta undan det som kan ta skada och kontakta en takfirma. En skada som ser liten ut ska ändå kontrolleras innan nästa regn.",
     undersokning:
       "Vid takkontrollen tittar vi på taket på plats: vilka pannor och plåtdetaljer som har rört sig eller skadats, om nock, fotplåt och vindskivor sitter som de ska, och om vatten har kommit in till underlaget. Där vinden går att komma åt syns därifrån om råspont och isolering har blivit fuktiga. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
     atgarder:

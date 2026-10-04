@@ -15,21 +15,30 @@ export interface ComboOverride {
 }
 
 const PROCESS =
-  "Processen är densamma oavsett kommun: en kostnadsfri takkontroll där vi går igenom tak, underlag, plåtdetaljer och avvattning, en skriftlig offert med fast pris — aldrig löpande timpris — och utförande enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Du har en och samma kontaktperson genom hela processen, och du bestämmer alltid själv om och när du vill gå vidare efter takkontrollen — den är kostnadsfri och förpliktar inte till något.";
+  "Processen är densamma oavsett kommun: en kostnadsfri takkontroll, en offert med fast pris och utförande enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Du har en kontaktperson genom hela processen.";
 
 const ROT =
   "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.";
 
 const INCLUDES = (name: string, prep: string) =>
-  `Vad ingår i ett takbyte ${prep} ${name}? Rivning och bortforsling av det gamla takmaterialet, ny underlagspapp och ny läkt, nytt ytmaterial, nya plåtbeslag kring skorstenar och genomföringar, ny taksäkerhet (takstege och gångbrygga, samt snörasskydd där det behövs) och, om du vill, nya hängrännor och stuprör. Skadad råspont byts där den behöver bytas — det syns aldrig förrän det gamla taket är rivet, och då kontaktar vi dig och specificerar tillägget innan vi fortsätter. Allt specificeras i offerten, så du vet exakt vad som ingår innan arbetet börjar.`;
-
-const COMPARE = (name: string, prep: string) =>
-  `Jämför offerter på rätt sätt när du ska byta tak ${prep} ${name}: titta på mer än slutsumman. Är priset fast, eller kan det bli tillägg om något oväntat hittas under det gamla taket? Står det tydligt vad som ingår — underlag, läkt, plåtdetaljer, bortforsling och städning? Vilka garantier får du, och hur länge gäller de? Har du en tydlig kontaktväg genom hela processen, från takkontroll till slutgenomgång? Hos oss är svaret ja på alla fyra frågorna.`;
+  `Vad ingår i ett takbyte ${prep} ${name}? Rivning av det gamla takmaterialet, ny underlagspapp och ny läkt, nytt ytmaterial, nya plåtbeslag och, om du vill, nya hängrännor och stuprör. Vad som ingår i ditt takbyte står i offerten.`;
 
 const CTA = (name: string, prep: string) =>
   `Boka en kostnadsfri takkontroll för ditt takbyte ${prep} ${name}. Ring 070-154 36 39 eller boka online — vi återkommer inom 24 timmar.`;
 
+import { TAKTVATT_COMBO_CONTENT, TAKTVATT_META, taktvattComboTitle } from "./taktvatt-text";
+
+/** De tre indexerade taktvätt × ort-sidorna (thin-combos.ts) får samma korta text som /tjanster/taktvatt (backlog 1cl). */
+const taktvattOrt = (prep: string, name: string): ComboOverride => ({
+  title: taktvattComboTitle(prep, name),
+  description: TAKTVATT_META,
+  content: TAKTVATT_COMBO_CONTENT,
+});
+
 export const comboOverrides: Record<string, ComboOverride> = {
+  "taktvatt-ljustero": taktvattOrt("på", "Ljusterö"),
+  "taktvatt-norrtalje": taktvattOrt("i", "Norrtälje"),
+  "taktvatt-yxlan": taktvattOrt("på", "Yxlan"),
   "takbyte-solna": {
     title: "Takbyte i Solna — fast pris, 10 års utförandegaranti",
     description:
@@ -43,7 +52,6 @@ export const comboOverrides: Record<string, ComboOverride> = {
       PROCESS,
       ROT,
       "Vad kostar ett takbyte i Solna? Priset beror på takets storlek, lutning, material och underlagets skick. Riktpriserna på vår prislista är en bra utgångspunkt, men vi lämnar alltid ett fast pris efter kostnadsfri takkontroll.",
-      COMPARE("Solna", "i"),
       CTA("Solna", "i"),
     ],
   },
@@ -60,7 +68,6 @@ export const comboOverrides: Record<string, ComboOverride> = {
       INCLUDES("Huddinge", "i"),
       PROCESS,
       ROT,
-      COMPARE("Huddinge", "i"),
       CTA("Huddinge", "i"),
     ],
   },
@@ -78,7 +85,6 @@ export const comboOverrides: Record<string, ComboOverride> = {
       PROCESS,
       ROT,
       "Vad kostar ett takbyte i Stockholm? Priset beror på takets storlek, lutning, material, underlagets skick och fastighetens tillgänglighet. Riktpriserna på vår prislista är en bra utgångspunkt, men vi lämnar alltid ett fast pris efter kostnadsfri takkontroll.",
-      COMPARE("Stockholm", "i"),
       CTA("Stockholm", "i"),
     ],
   },

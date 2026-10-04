@@ -45,7 +45,7 @@ export const landingServices: LandingService[] = [
     list: [
       {
         title: "Trasiga eller förskjutna pannor",
-        text: "Vi byter enstaka pannor utan att byta hela taket.",
+        text: "Enstaka pannor kan bytas utan att hela taket byts.",
       },
       {
         title: "Läckage kring skorsten och genomföringar",
@@ -53,7 +53,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Sliten underlagspapp",
-        text: "Papp som har blivit spröd eller trasig byts.",
+        text: "Vad som behöver göras bedömer vi vid takkontrollen.",
       },
       {
         title: "Skadad råspont",
@@ -65,7 +65,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Rännor och stuprör",
-        text: "Hängrännor som läcker eller hänger snett åtgärdas, eller byts vid behov.",
+        text: "Vad som behöver göras bedömer vi vid takkontrollen.",
       },
     ],
     stepsHeading: "Så går en reparation till",
@@ -94,7 +94,7 @@ export const landingServices: LandingService[] = [
       "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
-      "Priset beror på skadans omfattning, takmaterial och hur åtkomligt taket är. Vi arbetar endast till fast pris och lämnar det efter takkontrollen. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Priset beror på skadans omfattning, takmaterial och hur åtkomligt taket är. Vi arbetar endast till fast pris och lämnar det efter takkontrollen. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
     faqTitle: "Frågor om takreparation",
     faqs: [
       {
@@ -119,11 +119,11 @@ export const landingServices: LandingService[] = [
       {
         question: "Kan jag få ROT-avdrag på en takreparation?",
         answer:
-          "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år. Avdraget dras av direkt på fakturan.",
+          "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Avdraget dras av direkt på fakturan.",
       },
       {
         question: "Vilka områden arbetar ni i?",
-        answer: "Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
+        answer: "Vi tar uppdrag i Roslagen och Storstockholm.",
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
@@ -149,24 +149,7 @@ export const landingServices: LandingService[] = [
       "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Kostnadsfritt och utan förpliktelser — du betalar inget och binder dig inte till något.",
     listHeading: "Vad vi tittar på",
     listIntro: "En av våra säljare tittar på taket på plats.",
-    list: [
-      {
-        title: "Takmaterialet",
-        text: "Vi tittar efter sprickor, förskjutningar, rost samt mossa och alger som håller kvar fukt.",
-      },
-      {
-        title: "Plåtdetaljer och genomföringar",
-        text: "Vi går igenom beslag runt skorstenar, ventiler och andra genomföringar.",
-      },
-      {
-        title: "Takavvattning",
-        text: "Vi tittar på hängrännor och stuprör.",
-      },
-      {
-        title: "Vinden",
-        text: "När vinden går att komma åt tittar vi på underlag och råspont därifrån.",
-      },
-    ],
+    list: [],
     stepsHeading: "Så går takkontrollen till",
     steps: [
       {
@@ -188,7 +171,7 @@ export const landingServices: LandingService[] = [
     ],
     extraHeading: "När är det läge för en takkontroll?",
     extraParagraphs: [
-      "Boka en kontroll om du ser fuktfläckar i tak eller på vinden, trasiga eller förskjutna pannor, rost på plåt eller mossa och alger som håller kvar fukt. Också när du inte vet när taket senast sågs över eller lades om.",
+      "Boka en kontroll om du ser fuktfläckar i tak eller på vinden, trasiga eller förskjutna pannor, rost på plåt. Också när du inte vet när taket senast sågs över eller lades om.",
       "En kontroll ger dig ett underlag för att planera underhåll eller ett eventuellt takbyte.",
     ],
     priceNote:
@@ -223,7 +206,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vilka områden arbetar ni i?",
-        answer: "Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
+        answer: "Vi tar uppdrag i Roslagen och Storstockholm.",
       },
     ],
     defaultTopic: "Takkontroll",
@@ -352,7 +335,7 @@ export const landingServices: LandingService[] = [
     h1: "Läcker taket?",
     h1Accent: "Så här gör du, och så hjälper vi dig.",
     intro:
-      "Ring 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka formuläret. Vi svarar inom 24 timmar och har ingen jour. Vi gör en kostnadsfri takkontroll, letar efter var vattnet kommer in och lämnar ett skriftligt fast pris för reparationen.",
+      "Ring 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka formuläret. Vi svarar inom 24 timmar och har ingen jour. Vi gör en kostnadsfri takkontroll, letar efter var vattnet kommer in och lämnar en offert med fast pris.",
     listHeading: "Gör så här medan du väntar",
     listIntro: "Några enkla åtgärder begränsar skadan tills vi har varit på plats.",
     list: [
@@ -372,12 +355,12 @@ export const landingServices: LandingService[] = [
     ],
     extraHeading: "Var kan ett tak läcka?",
     extraParagraphs: [
-      "Många läckage börjar kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken sitter inte alltid där fuktfläcken kommer fram inomhus, så vi följer vattnet uppåt.",
+      "Många läckage börjar kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken sitter inte alltid där fuktfläcken kommer fram inomhus. Därför behöver någon titta på taket på plats.",
       "Ibland räcker en reparation, ibland behöver taket läggas om. Det ser vi vid takkontrollen.",
       "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
     faqTitle: "Frågor om läckage i taket",
     faqs: [
       {
@@ -400,7 +383,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Kan jag få ROT-avdrag?",
-        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
@@ -430,7 +413,7 @@ export const landingServices: LandingService[] = [
     list: [
       { title: "Nya hängrännor", text: "Hängrännor och stuprör i lackerad plåt." },
       { title: "Stuprör", text: "Nya stuprör." },
-      { title: "Ränndalar och fotplåt", text: "Falsas i plåt och anpassas till takets lutning och material." },
+      { title: "Ränndalar och fotplåt", text: "Ränndalar och fotplåt görs i plåt." },
       { title: "Hur systemet läggs upp", text: "Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen." },
       { title: "Byte i samband med takbyte", text: "Byter du tak är det klokt att se över avvattningen samtidigt." },
     ],
@@ -462,7 +445,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Kan jag få ROT-avdrag på hängrännor?",
-        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
       },
       {
         question: "Får jag garanti?",
@@ -514,7 +497,7 @@ export const landingServices: LandingService[] = [
     extraHeading: "Plåt vid takbyte",
     extraParagraphs: ["Plåtdetaljerna görs om när vi byter eller lägger om ett tak. Läs mer på sidan om plåtarbeten."],
     priceNote:
-      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+      "Vi arbetar endast till fast pris och lämnar det efter takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
     faqTitle: "Frågor om plåtarbeten",
     faqs: [
       {
@@ -528,7 +511,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Kan jag få ROT-avdrag på plåtarbeten?",
-        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar.",
       },
       {
         question: "Får jag garanti?",
@@ -609,7 +592,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vilka områden arbetar ni i?",
-        answer: "Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
+        answer: "Vi tar uppdrag i Roslagen och Storstockholm.",
       },
     ],
     defaultTopic: "Takbyte",

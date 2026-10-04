@@ -25,6 +25,7 @@ import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody } from "../src/lib/body-items";
 import { problemsForLocation, regionLinksForProblems, takkontrollLink } from "../src/data/problem-links";
 import { hubLinksFor } from "../src/data/hub-links";
+import { TAKTVATT_FAQS, TAKTVATT_H1, TAKTVATT_INTRO, TAKTVATT_META, TAKTVATT_SECTIONS, TAKTVATT_TITLE } from "../src/data/taktvatt-text";
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
@@ -398,16 +399,11 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
   },
   "/tjanster/taktvatt": {
-    title: "Taktvätt och takmålning — bort med mossa och lav",
-    description:
-      "Professionell taktvätt och takmålning. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
-    h1: "Taktvätt i Roslagen — bort med mossa, lavar och alger",
-    intro:
-      "Professionell taktvätt och takmålning. Skonsamma metoder för betongpannor, tegel, eternit och plåttak.",
-    paragraphs: [
-      "Vi rengör taket med lågtryckstvätt eller manuell borstning och behandlar därefter med miljögodkänt biocidmedel som dödar mossa, alger och lavar i rotsystemet.",
-      "Vi lämnar alltid fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning med grundning och två strykningar. ROT-avdrag på 30 % av arbetskostnaden.",
-    ],
+    title: TAKTVATT_TITLE,
+    description: TAKTVATT_META,
+    h1: TAKTVATT_H1,
+    intro: TAKTVATT_INTRO,
+    paragraphs: [],
     links: [...primaryLinks, ...serviceLinks, { href: "/taklaggare-bollstanas", label: "Takläggare i Bollstanäs" }],
   },
 };
@@ -477,6 +473,17 @@ const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
 export const prerenderContentRaw = (path: string): PrerenderPage | null => {
   const clean = path === "/" ? "/" : path.replace(/\/+$/, "").toLowerCase();
 
+  if (clean === "/tjanster/taktvatt") {
+    // Kort text tills Vidar har svarat på 10i (backlog 1cl): rubriker, stycken och FAQ ur data/taktvatt-text.ts
+    return {
+      ...staticPages[clean],
+      ...buildBody([
+        ...TAKTVATT_SECTIONS.flatMap((s) => [{ h: s.heading }, ...s.paragraphs.map(stripInlineMd)]),
+        { h: "Vanliga frågor om taktvätt" },
+        ...TAKTVATT_FAQS.flatMap((f) => [{ h: f.question, level: 3 as const }, f.answer]),
+      ]),
+    };
+  }
   if (staticPages[clean]) return staticPages[clean];
 
   if (clean.startsWith("/tjanster/")) {
