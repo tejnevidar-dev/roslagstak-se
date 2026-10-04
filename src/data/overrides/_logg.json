@@ -240,6 +240,22 @@
       "fore": "TP20 är en trapetsprofilerad takplåt. Så fungerar den, var den passar och vad du ska tänka på jämfört med pannor och falsat.",
       "efter": "Plåttak: riktpriser efter ROT-avdrag för TP20, pannplåt och dubbelfalsad plåt, vad som påverkar priset och vad som ingår. Fast pris i offerten.",
       "tid": "2026-10-04T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0025",
+      "path": "/tjanster/takrenovering",
+      "falt": "title",
+      "fore": "Takrenovering Roslagen — Laga läckor & byta papp",
+      "efter": "Takrenovering – vad den omfattar och vad den kostar",
+      "tid": "2026-10-05T00:10:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0026",
+      "path": "/tjanster/takrenovering",
+      "falt": "description",
+      "fore": "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter kostnadsfri takkontroll.",
+      "efter": "Takrenovering: laga läckor, byta pannor, plåtdetaljer och skadad råspont. Vad som påverkar priset och hur du får fast pris efter kostnadsfri takkontroll.",
+      "tid": "2026-10-05T00:10:00+02:00"
     }
   ]
 }

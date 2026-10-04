@@ -163,16 +163,16 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takrenovering: {
-    longDesc: "En takrenovering innebär att vi åtgärdar problem på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp, reparera plåtbeslag eller byta skadad råspont.",
+    longDesc: "En takrenovering innebär att vi åtgärdar problem på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp på en del av taket, reparera plåtbeslag eller byta skadad råspont.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
     benefits: [
       "Fast pris efter kostnadsfri takkontroll",
-      "Åtgärdar läckor och fuktskador",
+      "Lagning av läckor",
       "Byte av enstaka pannor eller plåtsektioner",
       "Byte av skadad råspont",
     ],
     process: [
-      "Takkontroll och skadebedömning",
+      "Kostnadsfri takkontroll",
       "Offert med fast pris",
       "Byte av skadad råspont",
       "Byte av trasiga pannor/plåtsektioner",

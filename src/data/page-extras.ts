@@ -5,7 +5,7 @@
  * Belopp hämtas ur prices.ts (aldrig för hand). Tilläggens belopp visas inte på de här sidorna: de står på /priser.
  * Delas av React-sidorna och scripts/prerender-content.ts (statisk HTML) via de rena datastrukturerna.
  */
-import { beloppLopande, STALLNING_MENING } from "./prices";
+import { beloppLopande, prisPost, ROT_FORBEHALL, STALLNING_MENING } from "./prices";
 
 export type ExtraItem = string | { list: string[] };
 export interface ExtraBlock {
@@ -34,7 +34,72 @@ const BARIGHET = "Takstolarna behöver klara vikten, och har huset haft ett lät
 const INGAR =
   "Vad som ingår står alltid i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.";
 
+/** Juristens mening vid belopp som i prislistan är tillägg vid takbyte (backlog 1by, tills Vidar har svarat på 10y). */
+const TILLAGG_MENING = "Priserna gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen.";
+
 export const SERVICE_EXTRAS: Record<string, PageExtras> = {
+  takrenovering: {
+    blocks: [
+      {
+        heading: "Vad kostar en takrenovering?",
+        items: [
+          "En takrenovering har inget riktpris per kvadratmeter. Priset beror på vad som behöver åtgärdas, och det går inte att säga innan någon har tittat på taket. Därför börjar vi med en kostnadsfri takkontroll. Efter den får du en offert med fast pris, och tillägg görs bara efter ditt godkännande.",
+        ],
+      },
+      {
+        heading: "Delar som har ett riktpris",
+        items: [
+          "Några av de arbeten som kan ingå i en renovering har riktpriser i vår prislista, efter ROT-avdrag och inkl. moms:",
+          {
+            list: [
+              `Byte av råspont: ${prisPost("Råspontbyte").priceRange}`,
+              `Skorstensinklädnad: ${prisPost("Skorstensinklädnad").priceRange}`,
+              `Hängrännor med stuprör, komplett: ${prisPost("Takavvattning (hängrännor)").priceRange}`,
+            ],
+          },
+          TILLAGG_MENING,
+          ROT_FORBEHALL,
+          "Alla riktpriser finns på [prissidan](/priser). Ditt pris står i offerten och är fast.",
+        ],
+      },
+      {
+        heading: "Det här påverkar priset",
+        items: [
+          {
+            list: [
+              "**Hur mycket som är skadat.** Några pannor eller ett beslag är en liten åtgärd. Skador på flera ställen är en större.",
+              "**Underlagets skick.** Hur råsponten mår syns först när ytmaterialet lyfts. Då får du besked och pris innan vi går vidare.",
+              "**Detaljerna.** Skorstenar, takfönster och genomföringar tar både tid och material.",
+              "**Lutning och åtkomst.** Ett brant tak kräver mer säkerhetsarbete, och ett hus som är svårt att komma åt kräver mer planering.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Renovering, omläggning eller takbyte?",
+        items: [
+          "En reparation åtgärdar en avgränsad skada, till exempel några pannor eller plåten runt skorstenen. En takomläggning innebär att ytmaterialet lyfts av, underlaget byts och ny läkt läggs. Vid ett takbyte görs allt nytt, också ytmaterialet. När skadorna är avgränsade kan en renovering räcka. Är underlaget slitet över stora delar av taket, eller återkommer läckorna på flera ställen, kan en omläggning eller ett takbyte vara rätt åtgärd. Riktpriser för takbyte per material finns på [prissidan](/priser).",
+        ],
+      },
+    ],
+    faqHeading: "Vanliga frågor om takrenovering och pris",
+    faqs: [
+      { question: "Vad kostar en takrenovering?", answer: "Det beror på vad som behöver åtgärdas. Du får ett fast pris i offerten efter en kostnadsfri takkontroll." },
+      { question: "Kostar takkontrollen något?", answer: "Nej. Takkontrollen är kostnadsfri och utan förpliktelser." },
+      { question: "Kan ni laga bara läckan?", answer: "Ja, när skadan är avgränsad. Vad som behövs på ditt tak går vi igenom vid takkontrollen, och det står i offerten." },
+      { question: "Gäller ROT-avdraget?", answer: ROT },
+      { question: "Vad händer om ni hittar mer när ni börjar?", answer: "Då får du besked och pris innan vi går vidare. Inget extraarbete görs utan ditt godkännande." },
+      { question: "Vilken garanti gäller?", answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför." },
+    ],
+    links: [
+      { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
+      { to: "/blogg/tecken-byta-tak", label: "Tecken på att taket behöver bytas" },
+      { to: "/blogg/lagga-om-tak-vad-kostar-det", label: "Lägga om tak: vad kostar det?" },
+      { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
+      { to: "/blogg/rot-avdrag-takbyte", label: "ROT-avdrag vid takbyte" },
+      { to: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" },
+    ],
+  },
   tegeltak: {
     blocks: [
       { heading: 'Vad betyder "från"?', items: [FRAN] },

@@ -119,9 +119,9 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takrenovering: {
-    seoTitle: "Takrenovering Roslagen — Laga läckor & byta papp",
+    seoTitle: "Takrenovering – vad den omfattar och vad den kostar",
     seoDescription:
-      "Takrenovering i Roslagen och skärgården: byte av papp, rötskadad råspont, trasiga pannor och plåtbeslag. Fast pris efter kostnadsfri takkontroll.",
+      "Takrenovering: laga läckor, byta pannor, plåtdetaljer och skadad råspont. Vad som påverkar priset och hur du får fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "outline", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Du får det fasta priset i offerten." },
