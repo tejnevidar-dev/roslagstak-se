@@ -110,7 +110,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Åkersberga på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -146,7 +146,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Danderyd på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -186,7 +186,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll på Ekerö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -222,7 +222,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Hallstavik på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -261,7 +261,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Haninge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -299,7 +299,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Järfälla på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -335,7 +335,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll på Lidingö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -371,7 +371,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Nacka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -408,7 +408,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Norrtälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -447,7 +447,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Rimbo på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -485,7 +485,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Salem eller Rönninge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -524,7 +524,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Södertälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -563,7 +563,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sollentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -604,7 +604,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sundbyberg på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -643,7 +643,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Täby på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -684,7 +684,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Tyresö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -720,7 +720,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Upplands Väsby på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -756,7 +756,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Vallentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -794,7 +794,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Åkersberga på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -831,7 +831,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Danderyd på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -869,7 +869,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll på Ekerö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -906,7 +906,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Hallstavik på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -944,7 +944,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Haninge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -984,7 +984,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Norrtälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1024,7 +1024,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Rimbo på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1062,7 +1062,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Salem på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1100,7 +1100,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Södertälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1136,7 +1136,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sollentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1174,7 +1174,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sundbyberg på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1217,7 +1217,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Täby på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1258,7 +1258,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Tyresö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1295,7 +1295,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Vallentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [

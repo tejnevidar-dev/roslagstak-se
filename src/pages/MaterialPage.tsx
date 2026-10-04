@@ -10,6 +10,7 @@ import NotFound from "@/pages/NotFound";
 import { getMaterial, MATERIAL_PRIS_LANK, type MaterialDetail } from "@/data/materials";
 import { MATERIAL_PRISAVSNITT, PRIS_ANKARE, PRIS_STYCKEN } from "@/data/material-prices";
 import { MATERIAL_EXTRAS } from "@/data/page-extras";
+import { renderInline } from "@/lib/inline-md";
 import { ExtraBlocks, ExtraFaq } from "@/components/PageExtras";
 import { guidesForTitle } from "@/data/related-posts";
 import { getProjectsByMaterial } from "@/data/projects";
@@ -85,9 +86,10 @@ const MaterialPage = () => {
             {sections.map((s) => (
               <div key={s.heading}>
                 <h2 className="font-display text-xl text-foreground">{s.heading}</h2>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{detail[s.key] as string}</p>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{renderInline(detail[s.key] as string)}</p>
               </div>
             ))}
+            {!MATERIAL_EXTRAS[material.slug] && (
             <div>
               <h2 className="font-display text-xl text-foreground">Kostnadsdrivare</h2>
               <p className="mt-2 leading-relaxed text-muted-foreground">
@@ -102,6 +104,7 @@ const MaterialPage = () => {
                 .
               </p>
             </div>
+            )}
           </div>
 
           {detail.hallIsar && (
@@ -111,7 +114,7 @@ const MaterialPage = () => {
             </div>
           )}
 
-          {detail.hosOss && (
+          {detail.hosOss && !MATERIAL_EXTRAS[material.slug] && (
             <div className="mt-8 rounded-2xl border border-border bg-card p-6">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Hos oss</p>
               <p className="mt-2 leading-relaxed text-muted-foreground">{detail.hosOss}</p>

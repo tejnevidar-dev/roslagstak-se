@@ -575,9 +575,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: material.title,
       intro: d.intro,
       ...buildBody([
-        ...materialSections.flatMap((s) => [{ h: s.heading, suffix: ":" }, d[s.key] as string]),
-        { h: "Kostnadsdrivare", suffix: ":" },
-        d.kostnadsdrivare,
+        ...materialSections.flatMap((s) => [{ h: s.heading, suffix: ":" }, stripInlineMd(d[s.key] as string)]),
+        ...(MATERIAL_EXTRAS[material.slug] ? [] : [{ h: "Kostnadsdrivare", suffix: ":" }, d.kostnadsdrivare]),
         ...(MATERIAL_PRISAVSNITT[material.slug]
           ? [{ h: MATERIAL_PRISAVSNITT[material.slug].rubrik }, ...prisAvsnittForSpegel(MATERIAL_PRISAVSNITT[material.slug])]
           : []),
@@ -592,7 +591,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
             ]
           : []),
         ...(d.hallIsar ? [`Håll isär: ${d.hallIsar}`] : []),
-        ...(d.hosOss ? [`Hos oss: ${d.hosOss}`] : []),
+        ...(d.hosOss && !MATERIAL_EXTRAS[material.slug] ? [`Hos oss: ${d.hosOss}`] : []),
       ]),
       ogImage: og?.src,
       ogImageAlt: og?.alt,

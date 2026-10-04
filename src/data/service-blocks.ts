@@ -306,9 +306,9 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   tegeltak: {
-    seoTitle: "Tegeltak i lertegel – byte till fast pris",
+    seoTitle: "Tegeltak – pris, lertegel och fast pris i offerten",
     seoDescription:
-      "Byta till eller lägga om tegeltak? Kostnadsfri takkontroll utan förpliktelser, fast pris och 10 års utförandegaranti. Svar inom 24 h.",
+      "Tegeltak i lertegel: riktpris efter ROT-avdrag, vad som påverkar priset och vad som ingår. Kostnadsfri takkontroll och fast pris i offerten.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus." },
@@ -321,7 +321,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       eyebrow: "Materialval",
       heading: "Lertegel jämfört med betong och pannplåt",
       intro:
-        "Tegel eller betong? Eller pannplåt, som ser ut som pannor men är plåt? Vi går igenom alternativen på plats innan offerten skrivs.",
+        "Tegel eller betong? Eller pannplåt, som ser ut som pannor men är plåt? Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",
       columns: ["Material", "Pris", "Kännetecken"],
       rows: [
         ["Lertegel", belopp("Lertegeltak"), "Bränd lera, åldras med patina"],

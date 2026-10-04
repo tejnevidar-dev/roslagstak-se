@@ -169,6 +169,16 @@ const pmAcceptedGaps: Record<string, string[]> = {
   "papptak.md": pmRiktprisGap,
   "underlagstak.md": pmRiktprisGap,
   "pannplat.md": pmRiktprisGap,
+  // Marknadschefens beslut 2026-10-04 (backlog 1bx, underlag-forstark-tegeltak, fynd i avsnitt 2): bärighet enligt juristens B3,
+  // klimatmeningen och "tegelplåt" ersatta, bygglovsmeningen flyttad till FAQ:n. Briefen lertegel.md ändras av Innehåll.
+  "lertegel.md": [
+    "Tunga pannor, så takstolarna måste vara dimensionerade för vikten, vilket bedöms vid takkontrollen.",
+    "Byte från ett lättare material till tegel kräver därför extra kontroll.",
+    "Tegel av fel kvalitet för klimatet kan vara känsligt för frost.",
+    "För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör.",
+    "Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
+    "*Tegelplåt* är plåt som är pressad för att likna tegel, och *betongpannor* är gjutna av betong med ett liknande pannat utseende.",
+  ],
 };
 
 type PmDir = { dir: string; kind: "takproblem" | "material"; fields: string[] };

@@ -285,7 +285,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   tegeltak: {
-    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som plåt eller betong inte kan ersätta. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga. Takstolarna behöver klara vikten, och tillverkaren anger vilken lutning pannan kräver. Lertegel är något annat än pannplåt (plåt som är pressad för att likna pannor), som vi också lägger. De är olika material med olika pris och vikt.",
+    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som många vill behålla. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga. Takstolarna behöver klara vikten, och tillverkaren anger vilken lutning pannan kräver. Lertegel är något annat än pannplåt (plåt som är pressad för att likna pannor), som vi också lägger. De är olika material med olika pris och vikt.",
     priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: lertegel och pannplåt ${beloppLopande("Lertegeltak")}. Exakt pris beror på takets storlek, lutning och underlagets skick. ${STALLNING_MENING} Ditt pris står i offerten och är fast.`,
     benefits: [
       "Rivning av befintligt tak",

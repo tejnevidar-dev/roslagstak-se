@@ -43,7 +43,7 @@ export const materials: Material[] = [
     slug: "betongpannor",
     href: "/material/betongpannor",
     title: "Betongpannor",
-    hubDescription: "Klassiskt pannat tak, tåligt men tungt.",
+    hubDescription: "Klassiskt pannat tak, tungt.",
     weight: "Tungt",
     visibleScrews: "Nej",
     minLutning: "Enligt tillverkaren",
@@ -52,7 +52,7 @@ export const materials: Material[] = [
       metaDescription:
         "Betongpannor är ett vanligt val på svenska villatak. Så fungerar de, vad som talar för och emot och vad du ska tänka på vid ett takbyte.",
       intro:
-        "Betongpannor är ett av de vanligaste takmaterialen på svenska villor — tåliga och klassiska i uttrycket, men tunga nog att kräva en konstruktion som klarar vikten.",
+        "Betongpannor är gjutna pannor som ger ett klassiskt pannat tak. De är tunga, så konstruktionen behöver klara vikten.",
       funktion:
         "Pannor av betong som läggs på bärläkt över ströläkt och underlag. Pannorna leder bort vattnet, och underlaget är det andra skyddet.",
       anvandning:
@@ -60,11 +60,11 @@ export const materials: Material[] = [
       livslangd:
         "Lång vid rätt montage och skötsel. Ytskiktet kan åldras och bli poröst med tiden. Tillverkarens uppgifter och garantier gäller.",
       fordelar:
-        "Klassiskt pannat utseende, finns i flera kulörer (till exempel svart eller rött), tåligt material, enskilda pannor kan bytas.",
+        "Klassiskt pannat utseende, finns i flera kulörer (till exempel svart eller rött), enskilda pannor kan bytas.",
       nackdelar:
-        "Tunga, så takstolarna måste klara vikten. Ytan kan få påväxt av mossa och lav i skuggiga, fuktiga lägen.",
+        "Tunga, så takstolarna behöver klara vikten. Har huset haft ett lättare tak kan bärigheten behöva bedömas av en konstruktör. Ytan kan få påväxt av mossa och lav i skuggiga, fuktiga lägen.",
       passarNar:
-        "Du vill ha ett traditionellt pannat tak och huset tål vikten. Vanligt vid byte från äldre pannor.",
+        "Du vill ha ett traditionellt pannat tak och huset tål vikten.",
       underhall:
         "Håll hängrännor och ränndalar rena, ta hand om mossa skonsamt och byt enstaka trasiga pannor.",
       vanligaFel:
@@ -89,7 +89,7 @@ export const materials: Material[] = [
     slug: "tp20-plattak",
     href: "/material/tp20-plattak",
     title: "TP20-plåttak",
-    hubDescription: "Lätt profilplåt, snabb att lägga.",
+    hubDescription: "Lätt profilplåt som läggs i långa längder.",
     weight: "Lätt",
     visibleScrews: "Ja",
     minLutning: "Enligt tillverkaren",
@@ -98,17 +98,17 @@ export const materials: Material[] = [
       metaDescription:
         "TP20 är en trapetsprofilerad takplåt. Så fungerar den, var den passar och vad du ska tänka på jämfört med pannor och falsat.",
       intro:
-        "TP20 är en trapetsprofilerad takplåt — lätt, snabb att lägga och ett vanligt val på villor, fritidshus och lägre takdelar.",
+        "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder.",
       funktion:
         "Trapetsprofilerad plåt i långa längder som skruvas på läkt över underlag. Profilen ger styvhet och leder bort vattnet.",
       anvandning:
         "Villor, fritidshus, garage och uthus, samt lägre takdelar och tillbyggnader. Klarar lägre lutningar än pannor (tillverkarens anvisning gäller).",
       livslangd:
-        "Beror främst på ytbehandlingen och miljön (till exempel saltluft vid kusten). Tillverkarens uppgifter gäller.",
+        "Beror främst på ytbehandlingen. Tillverkarens uppgifter gäller.",
       fordelar:
-        "Lätt jämfört med pannor, snabb att lägga i långa längder, finns i flera kulörer, fungerar på lägre lutningar.",
+        "Lätt jämfört med pannor, läggs i långa längder, finns i flera kulörer, fungerar på lägre lutningar.",
       nackdelar:
-        "Skruvarna genom plåten måste sitta rätt och kontrolleras. Rostskydd och skarvar är avgörande. Kan upplevas som ljudligare vid regn om taket inte är rätt uppbyggt.",
+        "Skruvarna går igenom plåten och är synliga. Rostskydd och skarvar är avgörande. Hur mycket ett plåttak [hörs när det regnar](/blogg/platttak-ljud-regn-skargardshus) beror på vad som finns under plåten.",
       passarNar:
         "Du vill ha ett lätt tak, har låg lutning eller vill ha plåttakets uttryck, eller på lägre takdelar i kombination med pannor.",
       underhall: "Kontrollera skruvar, skarvar och ytbehandling, och åtgärda repor och rost tidigt.",
@@ -212,7 +212,7 @@ export const materials: Material[] = [
     slug: "pannplat",
     href: "/material/pannplat",
     title: "Pannplåt",
-    hubDescription: "Plåt med pannans form, lätt och snabb att lägga.",
+    hubDescription: "Plåt med pannans form, lätt.",
     weight: "Lätt",
     visibleScrews: "Ja",
     minLutning: "Enligt tillverkaren",

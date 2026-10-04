@@ -165,6 +165,7 @@ export const MATERIAL_EXTRAS: Record<string, PageExtras> = {
       { to: "/tjanster/tegeltak", label: "Tegeltak" },
       { to: "/material/tp20-plattak", label: "Plåttak" },
       { to: "/material/pannplat", label: "Pannplåt" },
+      { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
     ],
   },
   "tp20-plattak": {
@@ -235,6 +236,8 @@ export const MATERIAL_EXTRAS: Record<string, PageExtras> = {
       { to: "/tjanster/platarbeten", label: "Plåtarbeten" },
       { to: "/material/pannplat", label: "Pannplåt" },
       { to: "/projekt/takbyte-singo", label: "Takbyte på Singö" },
+      { to: "/blogg/platttak-ljud-regn-skargardshus", label: "Ljud från plåttak vid regn" },
+      { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
     ],
   },
 };

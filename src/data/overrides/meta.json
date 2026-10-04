@@ -29,6 +29,34 @@
         "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
+    "/material/betongpannor": {
+      "title": {
+        "id": "manuell-2026-10-04-0021",
+        "text": "Betongpannor – pris, egenskaper och val",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bx), ej mätförsök. Läspunkt 56 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0022",
+        "text": "Betongpannor: riktpris efter ROT-avdrag, vad som påverkar priset och vad som ingår. Kostnadsfri takkontroll och fast pris i offerten.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bx), ej mätförsök. Läspunkt 56 dagar efter live"
+      }
+    },
+    "/material/tp20-plattak": {
+      "title": {
+        "id": "manuell-2026-10-04-0023",
+        "text": "Plåttak – pris, TP20, pannplåt och dubbelfalsat",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bx), ej mätförsök. Läspunkt 56 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-04-0024",
+        "text": "Plåttak: riktpriser efter ROT-avdrag för TP20, pannplåt och dubbelfalsad plåt, vad som påverkar priset och vad som ingår. Fast pris i offerten.",
+        "andrad": "2026-10-04",
+        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bx), ej mätförsök. Läspunkt 56 dagar efter live"
+      }
+    },
     "/takbyte-norrtalje": {
       "title": {
         "id": "manuell-2026-10-04-0016",

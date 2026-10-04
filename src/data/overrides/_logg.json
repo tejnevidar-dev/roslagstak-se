@@ -192,6 +192,54 @@
       "fore": "Takbyte i Täby med lertegel, betongpannor eller plåt. Kostnadsfri takkontroll utan förpliktelser, fast pris och utförande enligt AMA.",
       "efter": "Byta tak i Täby? Takbyte med lertegel, betongpannor eller plåt. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
       "tid": "2026-10-04T23:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0019",
+      "path": "/tjanster/tegeltak",
+      "falt": "title",
+      "fore": "Tegeltak i lertegel – byte till fast pris",
+      "efter": "Tegeltak – pris, lertegel och fast pris i offerten",
+      "tid": "2026-10-04T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0020",
+      "path": "/tjanster/tegeltak",
+      "falt": "description",
+      "fore": "Byta till eller lägga om tegeltak? Kostnadsfri takkontroll utan förpliktelser, fast pris och 10 års utförandegaranti. Svar inom 24 h.",
+      "efter": "Tegeltak i lertegel: riktpris efter ROT-avdrag, vad som påverkar priset och vad som ingår. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-04T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0021",
+      "path": "/material/betongpannor",
+      "falt": "title",
+      "fore": "Betongpannor – egenskaper, för- och nackdelar",
+      "efter": "Betongpannor – pris, egenskaper och val",
+      "tid": "2026-10-04T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0022",
+      "path": "/material/betongpannor",
+      "falt": "description",
+      "fore": "Betongpannor är ett vanligt val på svenska villatak. Så fungerar de, vad som talar för och emot och vad du ska tänka på vid ett takbyte.",
+      "efter": "Betongpannor: riktpris efter ROT-avdrag, vad som påverkar priset och vad som ingår. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-04T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0023",
+      "path": "/material/tp20-plattak",
+      "falt": "title",
+      "fore": "TP20 plåttak – egenskaper, för- och nackdelar",
+      "efter": "Plåttak – pris, TP20, pannplåt och dubbelfalsat",
+      "tid": "2026-10-04T23:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0024",
+      "path": "/material/tp20-plattak",
+      "falt": "description",
+      "fore": "TP20 är en trapetsprofilerad takplåt. Så fungerar den, var den passar och vad du ska tänka på jämfört med pannor och falsat.",
+      "efter": "Plåttak: riktpriser efter ROT-avdrag för TP20, pannplåt och dubbelfalsad plåt, vad som påverkar priset och vad som ingår. Fast pris i offerten.",
+      "tid": "2026-10-04T23:30:00+02:00"
     }
   ]
 }
