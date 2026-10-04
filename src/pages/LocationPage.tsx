@@ -573,7 +573,7 @@ const LocationPage = () => {
                   {location.region === "Mälardalen"
                     ? `${location.name} ligger i Mälardalen. Vi rekommenderar material efter husets läge och skick.`
                     : `${location.name} tillhör ${location.region} i Roslagen. Vi rekommenderar material efter husets läge och skick.`}{" "}
-                  Kontakta oss för en kostnadsfri takkontroll {prep} {location.name} — vi ger dig en ärlig bedömning och fast pris utan förbindelser.
+                  Kontakta oss för en kostnadsfri takkontroll {prep} {location.name}, utan förpliktelser.
                 </p>
               </div>
 

@@ -25,7 +25,7 @@ import {
 const servicePriceDescriptionsRaw: Record<string, string> = {
   takbyte: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
   takomlaggning: "Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt från 1 200 kr/m², dubbelfalsat ca 2 000 kr/m². Fast pris efter kostnadsfri takkontroll.",
-  takrenovering: "Fast pris efter kostnadsfri takkontroll, beroende på åtgärdens omfattning. ROT-avdrag tillkommer.",
+  takrenovering: "Fast pris efter kostnadsfri takkontroll, beroende på åtgärdens omfattning. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
   taktvatt: "Fast pris efter kostnadsfri takkontroll, inklusive biocidbehandling. ROT-avdrag tillkommer.",
   takmalning: "Fast pris efter kostnadsfri takkontroll, inklusive tvätt, grundning och två strykningar. ROT-avdrag tillkommer.",
   bandtackning: "Riktpris, efter ROT-avdrag och inkl. moms: ca 2 000 kr/m² i förzinkad eller färgbelagd plåt. Fast pris efter kostnadsfri takkontroll.",
@@ -109,7 +109,7 @@ const ServiceLocationPage = () => {
       "@type": "Offer",
       priceCurrency: "SEK",
       description: servicePriceDescriptions[combo.serviceSlug] ??
-        "Fast pris efter kostnadsfri takkontroll — byggställning ingår, avfallshantering ingår.",
+        "Fast pris efter kostnadsfri takkontroll.",
     },
   };
 
@@ -327,7 +327,7 @@ const ServiceLocationPage = () => {
                 <ul className="space-y-2">
                   {[
                     combo.serviceSlug === "takrenovering" ? GARANTI_RENOVERING_CHIP.replace("30 års tätskiktsgaranti", "10 års utförandegaranti, 30 års tätskiktsgaranti") : "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
-                    "Fast pris utan dolda kostnader",
+                    "Fast pris i offerten",
                     "Samma kontaktperson genom hela projektet",
                     "Kostnadsfri takkontroll",
                   ].map((usp) => (

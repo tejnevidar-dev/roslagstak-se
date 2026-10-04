@@ -57,7 +57,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Ränndalar", v: "Falsade i plåt" },
       { k: "Takkontroll", v: "Kostnadsfri" },
     ],
-    specHeading: "Dimensionering och montage av avvattning",
+    specHeading: "Montage av avvattning",
     lead: "Hängrännor och stuprör leder bort vattnet från taket.",
     craftLine: "Hängrännor, stuprör och fotplåt hör ihop med taket.",
     photoNote: "Hängrännor och fotplåt.",
@@ -196,7 +196,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
   },
   takkupor: {
     longDesc: "Takkupor och takfönster är ett utmärkt sätt att utnyttja vindsutrymmet och släppa in mer ljus. Vi bygger nya takkupor och monterar takfönster (t.ex. Velux). Takkupor kan ge mer boyta på vinden.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, för både takkupa och takfönster (Velux) inkl. montering. ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, för både takkupa och takfönster (Velux) inkl. montering. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
     benefits: [
       "Mer dagsljus på vindsvåningen",
       "Kan ge mer boyta",
@@ -247,7 +247,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
   },
   takvard: {
     longDesc: "Takvård handlar om att underhålla ditt tak och bevara husets utseende. Vi utför taktvätt där vi tar bort mossa, alger och smuts med skonsamma metoder som inte skadar takmaterialet. Vi utför även takmålning med specialfärger anpassade för tak — oavsett om det är betongpannor, tegelpannor eller plåttak.",
-    priceRange: "Fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning. ROT-avdrag tillkommer.",
+    priceRange: "Fast pris efter kostnadsfri takkontroll, för både taktvätt och takmålning. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
     benefits: [
       "Professionell taktvätt med skonsam metod",
       "Borttagning av mossa, alger och lavar",

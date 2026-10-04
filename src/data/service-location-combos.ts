@@ -50,8 +50,8 @@ const serviceTypes = [
             `Med vår bas i Norrtälje tar vi uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
             `Vi tar uppdrag för takrenovering ${prep} ${loc.name} och bokar in takkontroll och start efter överenskommelse.`,
           ),
-      `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter kostnadsfri takkontroll. ROT-avdrag tillkommer.`,
-      `Boka en kostnadsfri takkontroll ${prep} ${loc.name}. Vi bedömer takets skick och ger dig en ärlig rekommendation — renovering eller takbyte. Kontakta oss så återkopplar vi inom 24 timmar.`,
+      `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Vi ger alltid fast pris efter kostnadsfri takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
+      `Boka en kostnadsfri takkontroll ${prep} ${loc.name}. Kontakta oss så återkopplar vi inom 24 timmar.`,
     ],
   },
   {

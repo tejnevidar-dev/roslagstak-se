@@ -27,7 +27,7 @@ export const services: { slug: string; name: string; description: string }[] = [
     slug: "takavvattning",
     name: "Takavvattning, hängrännor och stuprör",
     description:
-      "Dimensionering och montering av hängrännor, stuprör och snörasskydd anpassat efter takyta och lutning.",
+      "Montering av hängrännor, stuprör och snörasskydd.",
   },
   {
     slug: "takkupor",
