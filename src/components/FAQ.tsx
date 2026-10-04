@@ -1,4 +1,4 @@
-import { withRotForbehall } from "@/data/prices";
+import { beloppLopande, withRotForbehall } from "@/data/prices";
 import {
   Accordion,
   AccordionContent,
@@ -12,11 +12,13 @@ import { buildFaqSchema } from "@/lib/schema";
 const faqs = [
   {
     question: "Vad kostar ett takbyte i Roslagen?",
-    answer: withRotForbehall("Som riktpris, efter ROT-avdrag och inkl. moms: betongpannor och TP20-plåt från 1 200 kr/m², lertegel och pannplåt från 1 300 kr/m², dubbelfalsat plåttak ca 2 000 kr/m². Exakt pris beror på taktyp, storlek och materialval, och vi lämnar alltid ett fast pris efter en kostnadsfri takkontroll — aldrig innan. Offerten är alltid kostnadsfri — konfigurera din offert direkt på sidan eller kontakta oss för rådgivning."),
+    answer: withRotForbehall(
+      `Som riktpris, efter ROT-avdrag och inkl. moms: betongpannor och TP20-plåt ${beloppLopande("TP20 plåttak")}, lertegel och pannplåt ${beloppLopande("Lertegeltak")}, dubbelfalsat plåttak ${beloppLopande("Dubbelfalsat plåttak")}. Exakt pris beror på takets storlek, lutning och underlagets skick. Du får ett fast pris i offerten efter en kostnadsfri takkontroll.`,
+    ),
   },
   {
     question: "Lägger ni tak på öar i skärgården?",
-    answer: "Ja! Vi utför takprojekt på öar och kuststäder i Roslagen — från Blidö, Ljusterö och Yxlan till Husarö, Finnhamn, Ingmarsö, Svartlöga och Arholma. På Blidö och Singö har vi gjort kompletta takbyten, se Projekt.",
+    answer: "Ja. På Blidö och Singö har vi gjort kompletta takbyten, se Projekt. Till öar med vägfärja eller bro, som Blidö, Yxlan, Ljusterö och Singö, kör vi material och ställning som på fastlandet. Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.",
   },
   {
     question: "Vilka taktyper erbjuder ni?",
@@ -28,7 +30,7 @@ const faqs = [
   },
   {
     question: "Kan jag använda ROT-avdrag för takbyte?",
-    answer: "Ja, takbyte och takrenovering berättigar till ROT-avdrag. Du kan få 30% skattereduktion på arbetskostnaden (max 50 000 kr per person och år). Vi hanterar ansökan mot Skatteverket och drar av avdraget på fakturan.",
+    answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Vi drar av ROT på fakturan och begär utbetalningen från Skatteverket.",
   },
   {
     question: "Hur snabbt får jag svar på min förfrågan?",

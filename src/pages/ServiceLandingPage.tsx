@@ -13,9 +13,14 @@ import { getLandingService } from "@/data/landing-services";
 import { GARANTI_RENOVERING_CHIP, RENOVERING_LANDING_SLUGS } from "@/data/guarantee";
 import NotFound from "@/pages/NotFound";
 
+/** Korta jobb där inget nytt tätskikt läggs: tätskiktschipet visas inte (Marknadschefen och juristen, backlog 1ce). */
+const NO_TATSKIKT_CHIP_LANDING = ["takreparation", "hangrannor", "akut-lackage"];
+
 const trustFor = (slug: string) => [
   "10 års utförandegaranti",
-  RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti (MATAKI)",
+  ...(NO_TATSKIKT_CHIP_LANDING.includes(slug)
+    ? []
+    : [RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti (MATAKI)"]),
   "Fast pris efter takkontroll",
   "Arbete enligt AMA",
   "Svar inom 24 timmar",

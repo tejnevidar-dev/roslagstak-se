@@ -1,7 +1,7 @@
 import GoogleReviews from "@/components/GoogleReviews";
 
 const items = [
-  { value: "10 + 30 år", label: "Utförande- och tätskiktsgaranti (30 år när nytt tätskikt läggs)" },
+  { value: "10 år", label: "Utförandegaranti. 30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)" },
   { value: "Fast pris", label: "Inga dolda kostnader" },
   { value: "0 kr", label: "Hembesök & offert utan förpliktelser", accent: true },
 ];

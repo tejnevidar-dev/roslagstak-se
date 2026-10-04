@@ -17,45 +17,45 @@ const PHONE_HREF = "tel:0701543639";
 
 const trust = [
   "10 års utförandegaranti",
-  "30 års tätskiktsgaranti (MATAKI)",
+  "30 års tätskiktsgaranti via MATAKI",
   "Arbete enligt AMA",
 ];
 
 const steps = [
   {
     title: "Kostnadsfri takkontroll",
-    text: "Vi återkommer inom 24 timmar och bokar en tid. På plats går vi igenom taket och mäter.",
+    text: "Vi svarar inom 24 timmar och bokar en tid. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar.",
   },
   {
-    title: "Skriftlig offert med fast pris",
-    text: "Du får ett fast pris där rivning, material, arbete och bortforsling är specificerade. Tillägg bara efter ditt godkännande.",
+    title: "Offert med fast pris",
+    text: "Du får en offert med fast pris. Tillägg bara efter ditt godkännande.",
   },
   {
     title: "Vi utför jobbet",
-    text: "Vi utför arbetet och går igenom resultatet tillsammans med dig. Du får skriftlig garanti.",
+    text: "Vi utför arbetet enligt AMA. När taket är klart går vi igenom det tillsammans med dig.",
   },
 ];
 
 const faqs = [
   {
     q: "Vad kostar ett takbyte?",
-    a: "Priset beror på takets storlek, lutning, material och skick. Efter den kostnadsfria takkontrollen får du ett fast pris. Det priset gäller.",
+    a: "Priset beror på takets storlek, lutning, material och skick. Efter den kostnadsfria takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.",
   },
   {
     q: "Vad ingår i priset?",
-    a: "Rivning och bortforsling av gamla taket, underlagspapp och läkt vid behov, tätskikt, plåtbeslag och taksäkerhet. Hittar vi skadad råspont när gamla taket är rivet visar vi dig omfattningen och lämnar ett pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande, förutom om något akut måste skyddas mot skada och vi inte får tag på dig.",
+    a: "Vad som ingår står alltid i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår. Skadad råspont syns först när det gamla taket är rivet. Hittar vi något visar vi dig omfattningen och lämnar ett skriftligt pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande. Det enda undantaget är om något akut måste skyddas mot skada, till exempel ett öppet tak inför regn, och vi inte får tag på dig. Då gör vi bara det som är nödvändigt.",
   },
   {
     q: "Hur fungerar ROT-avdraget?",
-    a: "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Arbetskostnaden specificeras separat i offerten, och beloppet dras av direkt på fakturan.",
+    a: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. ROT-avdraget dras direkt på fakturan.",
   },
   {
     q: "Vilken garanti får jag?",
-    a: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Garantin får du skriftligt i avtalet.",
+    a: "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
   },
   {
     q: "Behöver jag bygglov?",
-    a: "Byter du till likvärdigt material och behåller takets utseende krävs normalt inget bygglov. Byter du kulör eller material, eller bygger takkupor, kan bygglov eller anmälan behövas. Det är kommunen som avgör vad som gäller.",
+    a: "För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
   },
 ];
 
@@ -101,7 +101,7 @@ const AdLandingPage = () => {
                 <span className="italic text-accent">Fast pris efter kostnadsfri takkontroll.</span>
               </h1>
               <p className="mt-5 max-w-[50ch] text-[18px] leading-relaxed text-muted-foreground">
-                Kostnadsfri takkontroll utan förpliktelser, en kontaktperson hela vägen och ett skriftligt fast pris.
+                Kostnadsfri takkontroll utan förpliktelser, en kontaktperson genom hela processen och fast pris i offerten. Takfirma med bas i Norrtälje.
                 Vi lägger betongpannor, lertegel, TP20 och dubbelfalsat plåttak (bandtäckning). Vi tar uppdrag i {landing.areas}.
               </p>
               <a
