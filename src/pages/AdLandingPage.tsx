@@ -168,9 +168,9 @@ const AdLandingPage = () => {
             </div>
             <div className="lg:col-span-8">
               <p className="max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground">
-                Fast pris efter kostnadsfri takkontroll — utan förpliktelser. ROT-avdraget ger 30 %
-                skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år, och dras av direkt på
-                fakturan.
+                Fast pris efter kostnadsfri takkontroll — utan förpliktelser. Som privatperson kan du få
+                ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har
+                utrymme kvar. ROT-avdraget dras direkt på fakturan.
               </p>
             </div>
           </div>

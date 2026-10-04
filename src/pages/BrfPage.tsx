@@ -19,7 +19,7 @@ import heroImg from "@/assets/roof-brf-hero.jpg";
 
 const facts = [
   { label: "Utförande", value: "10 års utförandegaranti" },
-  { label: "Tätskikt", value: "30 års garanti genom MATAKI" },
+  { label: "Tätskikt", value: "30 års garanti via tillverkaren MATAKI" },
   { label: "Offert", value: "Fast pris efter kostnadsfri takkontroll" },
   { label: "Standard", value: "Arbete enligt AMA Hus" },
 ];

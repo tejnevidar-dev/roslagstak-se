@@ -566,7 +566,7 @@ export const landingServices: LandingService[] = [
       { title: "Du vet takets skick", text: "En av våra säljare tittar på taket på plats och du får en rapport om takets skick." },
       { title: "Du får ett fast pris", text: "Offerten är skriftlig och specificerad. Vi arbetar endast till fast pris." },
       { title: "Tid att jämföra", text: "Du kan jämföra offerter och material i lugn och ro innan du bestämmer dig." },
-      { title: "Tid att planera ekonomin", text: "ROT-avdraget ger 30 % skattereduktion på arbetskostnaden, upp till 50 000 kr per person och år. Kom ihåg att avdraget gäller per år." },
+      { title: "Tid att planera ekonomin", text: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år. Kom ihåg att avdraget gäller per år." },
       { title: "Du väljer tidpunkt", text: "Vi bestämmer tidpunkt för arbetet tillsammans med dig efter offerten." },
       { title: "Inga förpliktelser", text: "Takkontrollen är kostnadsfri och förpliktar inte till något." },
     ],

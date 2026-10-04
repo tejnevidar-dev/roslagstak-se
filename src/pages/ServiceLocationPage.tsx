@@ -339,7 +339,9 @@ const ServiceLocationPage = () => {
                 <h3 className="font-display text-lg text-card-foreground mb-4">Varför RoslagsTak?</h3>
                 <ul className="space-y-2">
                   {[
-                    combo.serviceSlug === "takrenovering" ? GARANTI_RENOVERING_CHIP.replace("30 års tätskiktsgaranti", "10 års utförandegaranti, 30 års tätskiktsgaranti") : "10 års utförandegaranti, 30 års tätskiktsgaranti genom MATAKI",
+                    ["takmalning", "taktvatt"].includes(combo.serviceSlug)
+                      ? "10 års utförandegaranti"
+                      : GARANTI_RENOVERING_CHIP.replace("30 års tätskiktsgaranti", "10 års utförandegaranti, 30 års tätskiktsgaranti"),
                     "Fast pris i offerten",
                     "Samma kontaktperson genom hela projektet",
                     "Kostnadsfri takkontroll",

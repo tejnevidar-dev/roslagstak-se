@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Hur lång garanti ger ni på takarbeten?",
-    answer: "Vi ger 10 års utförandegaranti på det arbete vi utför. Vid takbyte och takomläggning, när ett nytt tätskikt läggs, gäller dessutom 30 års tätskiktsgaranti genom MATAKI. Vi arbetar enligt AMA.",
+    answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI. Vi arbetar enligt AMA.",
   },
   {
     question: "Kan jag använda ROT-avdrag för takbyte?",

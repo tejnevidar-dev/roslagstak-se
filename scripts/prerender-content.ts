@@ -185,7 +185,7 @@ const staticPages: Record<string, PrerenderPage> = {
     intro:
       "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och takkontroll på plats.",
     paragraphs: [
-      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — med 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — med 10 års utförandegaranti.",
       "I offerten ingår allt som behövs för ett komplett takbyte: rivning och bortforsling av gamla taket, kontroll och byte av råspont och underlagspapp, ny strö- och bärläkt, valt tätskikt, kompletta plåtbeslag kring skorsten, ventiler och genomföringar, samt taksäkerhet i form av takstege, gångbrygga och nockfästen.",
       "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri takkontroll. På plats mäter vi taket, kontrollerar underlaget och pratar igenom materialval. Därefter får du en skriftlig offert med fast pris — det priset gäller, utan tillägg.",
       "När du accepterat offerten planerar vi arbetet tillsammans med dig och beställer material. Du har en kontaktperson genom hela processen.",
@@ -222,7 +222,7 @@ const staticPages: Record<string, PrerenderPage> = {
   "/brf": {
     title: "Takbyte för BRF — bostadsrättsföreningar",
     description:
-      "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.",
+      "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm, Roslagen och Mälardalen. Fast pris och 10 års utförandegaranti.",
     h1: "Takbyte för bostadsrättsföreningar, med underlag styrelsen kan besluta på",
     intro:
       "Från kostnadsfri takkontroll och fast offert till slutgenomgång och skriftlig garanti. Vi arbetar i Storstockholm, Roslagen och Mälardalen.",
@@ -230,7 +230,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk. Vi bygger arbetet på tre underlag som går att spara och jämföra: en tydlig bedömning av takets skick, fast offert och garantihandlingar efter slutgenomgång.",
       "Så går ett takbyte till i en förening: takkontroll, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande samt slutgenomgång och skriftlig garanti.",
       "Vi erbjuder takbyte och takrenovering. Allt börjar med en kostnadsfri takkontroll utan förpliktelser, och föreningen får en offert med fast pris, en kontaktperson hela vägen och svar inom 24 timmar. Arbetet utförs enligt AMA.",
-      "Vi lämnar 10 års utförandegaranti och 30 års tätskiktsgaranti genom MATAKI.",
+      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
       "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
       `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
     ],
@@ -736,7 +736,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const prep = loc.isIsland ? "på" : "i";
     return {
       title: `Takbyte BRF ${prep} ${loc.name} — bostadsrättsföreningar`,
-      description: `Takbyte och takkontroll för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI.`,
+      description: `Takbyte och takkontroll för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`,
       h1: `Takbyte för bostadsrättsföreningar ${prep} ${loc.name}, med underlag styrelsen kan besluta på`,
       intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång och skriftlig garanti. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
       paragraphs: [
