@@ -234,6 +234,7 @@ export const MATERIAL_OWN_PAGE: Record<string, { to: string; label: string }> = 
   tegeltak: { to: "/tjanster/tegeltak", label: "Tegeltak" },
   betongpannor: { to: "/material/betongpannor", label: "Betongpannor" },
   platttak: { to: "/material/tp20-plattak", label: "Plåttak (TP20)" },
+  bandtackning: { to: "/tjanster/platarbeten", label: "Bandtäckning och plåtarbeten" },
 };
 
 /** Länkmålet för en tjänst × ort-sida i listor på andra sidor: materialets egen sida för material, annars sidan själv. */

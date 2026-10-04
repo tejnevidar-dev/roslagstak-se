@@ -98,7 +98,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     specHeading: "Plåtdetaljer: material och utförande",
     lead: "Plåtdetaljerna anpassas efter taket.",
     craftLine: "Det är i plåtdetaljerna ett tak hålls tätt.",
-    photoNote: "Snörasskydd och plåtdetaljer monterade efter taktäckning.",
+    photoNote: "Plåtdetaljer på ett tak.",
   },
   takvard: {
     accentLine: "tvätt och målning.",
@@ -234,11 +234,9 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     longDesc: "Plåtarbeten är en central del av alla takprojekt. Vi utför allt från taktäckning med profilerad plåt och bandtäckning till beslag runt skorstenar, ventilationsgenomföringar och ränndalar.",
     priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: taktäckning med plåt ${beloppLopande("TP20 plåttak")} (TP20) till ${beloppLopande("Dubbelfalsat plåttak")} (dubbelfalsat). Beslag och detaljer prissätts efter omfattning i offerten.`,
     benefits: [
-      "En kontaktperson hela vägen",
+      "En kontaktperson hela vägen, från takkontroll till färdigt tak",
       "Taktäckning med TP20, pannplåt eller dubbelfalsad plåt",
-      "Beslag runt skorstenar och genomföringar",
       "Ränndalar och vindskiveplåt",
-      "10 års utförandegaranti på utfört arbete, 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs",
     ],
     process: [
       "Takkontroll",
@@ -337,7 +335,7 @@ export const SERVICE_COPY = {
     eyebrow: "Bandtäckning",
     heading: "Dubbelfalsat plåttak – bandtäckning med fast pris",
     text:
-      "Vi lägger dubbelfalsade plåttak (bandtäckning) vid takbyte, med fast pris efter kostnadsfri takkontroll. Bandtäckning är plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Banorna hålls på plats av dolda klammer som fästs i underlaget, så att plåten kan röra sig med temperaturen utan att skarvarna tar skada. Tekniken passar både äldre hus och moderna villor, och kan formas efter kupor, ränndalar och andra detaljer på taket.",
+      "Vi lägger dubbelfalsade plåttak (bandtäckning) vid takbyte, med fast pris efter kostnadsfri takkontroll. Bandtäckning är plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga skruvhål — en tät skarv, men mer hantverk och arbetstid än skruvad profilplåt som TP20. Banorna hålls på plats av dolda klammer som fästs i underlaget, så att plåten kan röra sig med temperaturen utan att skarvarna tar skada. Tekniken kan formas efter kupor, ränndalar och andra detaljer på taket.",
   },
   scopeEyebrow: "Omfattning",
   scopeHeading: "Det här ingår i arbetet",

@@ -474,8 +474,8 @@ const LocationPage = () => {
                     <Link to={MATERIAL_OWN_PAGE.platttak.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.platttak.label}
                     </Link>
-                    <Link to={`/bandtackning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Bandtäckning {prep} {location.name}
+                    <Link to={MATERIAL_OWN_PAGE.bandtackning.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.bandtackning.label}
                     </Link>
                     <Link to={MATERIAL_OWN_PAGE.betongpannor.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.betongpannor.label}

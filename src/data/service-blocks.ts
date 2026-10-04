@@ -231,10 +231,10 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   platarbeten: {
     seoTitle: "Plåtarbeten på tak i Roslagen: skorstensbeslag, ränndalar",
     seoDescription:
-      "Plåtarbeten på taket i Roslagen och Storstockholm: skorstensbeslag, ränndalar, fotplåt och vindskivor. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Plåtarbeten på taket i Roslagen och Storstockholm: skorstensbeslag, ränndalar, fotplåt och vindskiveplåt. Kostnadsfri takkontroll och fast pris i offerten.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Teknik", value: "Falsat & profilerat", text: "Dubbelfalsad bandtäckning eller profilerad plåt beroende på lutning." },
+      { tone: "primary", label: "Teknik", value: "Falsat & profilerat", text: "Dubbelfalsad bandtäckning eller profilerad plåt. Vilken lutning plåten kräver anger tillverkaren." },
       { tone: "outline", label: "Takkontroll", value: "Kostnadsfri", text: "En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte." },
       { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_RENOVERING },
     ],

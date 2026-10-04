@@ -123,7 +123,7 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Furusund, den gamla badorten i Norrtälje skärgård med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Furusund: takbyte och takomläggning i den gamla badorten i Norrtälje skärgård, med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Furusund är en ö och småort i Norrtälje kommun, mellan Yxlan och Eknö i Blidö socken. Ön har gett namn åt Furusundsleden, farleden in mot Stockholm, och den präglas enligt Wikipedia i dag av många fritidsboende, särskilt på sommaren. Platsen har varit hamn länge. Viken där hamnen ligger användes som naturhamn i väntan på vind över Ålands hav, och i berget finns en inristad kompassros som troligen är från 1463. År 1811 inrättades en tullkammare här, och tullhuset från 1811–1812, byggt för 15 tullmän med familjer, är i dag värdshus. En karantänsstation fanns på ön från 1831 till 1856, och det gamla karantänssjukhuset blev senare sommarvilla. Badorten kom till vid mitten av 1800-talet. Ön köptes 1842 av en fabrikör som anlade hotell och kägelbana och 1855 lät bygga ett varmbadhus vid viken. Från 1882 byggdes badorten ut av nästa ägare, som gav hus, vägar och platser italienska namn som Isola Bella och Monte Bello. Från 1907 började tomter säljas av. Stora hotellet brann ner 1915, och efter första världskriget hade Furusund enligt Wikipedia förlorat sin popularitet som badort. Sommargästerna fortsatte ändå att komma. Sedan 1953 går det att köra bil hit. Då byggdes en vägbank från Eknö på Svartnö till Furusund, som en del av Sju strömmars väg från fastlandet.",
     extraContent:
@@ -144,7 +144,7 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takbyte och takomläggning på Husarö, lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "Takläggare på Husarö: lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Husarö är en ö i mellersta Stockholms skärgård och hör till Österåkers kommun. Den ligger ungefär en distansminut norr om Finnhamn. Ön nås med båt: Waxholmsbolagets fartyg lägger till vid ångbåtsbryggan. Enligt Wikipedia har Husarö bara ett fåtal åretruntboende men desto fler sommargäster, och på ön finns ett hundratal sommarstugor. Husarö är en gammal lotsplats. Ön nämns redan på 1200-talet, som Husarn, i en beskrivning av en segelled. Lotsar har funnits här sedan 1400-talet, och 1740 blev Husarö officiell lotsplats. På segelfartygens tid lotsade husarölotsarna norrut till Furusund och söderut till Sandhamn. På 1800-talet arbetade som mest femton lotsar här. De blev färre efter hand, och 1912 lades lotsplatsen ner. I dag finns ett lotsmuseum i en av de gamla lotsgårdarna. Sommargästerna kom när ångbåtarna började gå i reguljär trafik 1881, och på sommaren kommer ett ångfartyg fortfarande hit på söndagar. Öns gamla skola lades ner på 1950-talet och är i dag scoutgård.",
     extraContent:
@@ -187,7 +187,7 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takbyte och takomläggning på Ingmarsö i Österåkers skärgård, en ö utan vägförbindelse. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "Takläggare på Ingmarsö: en ö utan vägförbindelse i Österåkers skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Ingmarsö är en ö i Österåkers kommun i Stockholms skärgård. Enligt Wikipedia hade ön 163 bofasta invånare år 2020, på drygt sex kvadratkilometer. Ön saknar vägförbindelse med fastlandet och trafikeras av skärgårdsbåtar och båttaxi till två bryggor, Ingmarsö Södra och Ingmarsö Norra. Ön nämns första gången i jordeboken 1539, då fyra bönder bodde här och betalade skatt, bland annat i torsk. År 1694 stod öns båtsmanstorp färdigt, och det finns fortfarande kvar vid Norrgården. Befolkningen växte under 1800-talet, och 1910 var 223 personer skrivna på ön. Skolhuset invigdes 1901. Det har byggts om och till och rymmer i dag förskola och bibliotek. Affären öppnade 1887 och har varit i gång sedan dess. På 1930-talet började sommargästerna komma. Enligt Wikipedia hyrde de rum av de bofasta, bodde på pensionatet eller byggde egna hus. I dag finns ett trettiotal företag på ön, bland annat ett båtvarv, en krog och en livsmedelsbutik, och en stiftelse arbetar för att hålla jordbrukslandskapet öppet.",
     extraContent:
@@ -208,7 +208,7 @@ export const locations: LocationData[] = [
     region: "Mellersta skärgården",
     isIsland: true,
     description:
-      "Takbyte och takomläggning på Högmarsö, varvsön vid Furusundsleden i Norrtälje skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "Takläggare på Högmarsö: varvsön vid Furusundsleden i Norrtälje skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Högmarsö är en ö i Norrtälje kommun, längs Furusundsleden innanför Yxlan och sydväst om Furusund. Enligt Wikipedia är ön två kvadratkilometer stor och har en fast befolkning på 40 personer. På sommaren växer befolkningen till drygt 1 000. Ön har varit bebodd sedan 1500-talet, men det var varvet som formade samhället. År 1876 startades ett varv här, på initiativ av flera redare i trakten, och fartygen byggdes i en hållbarare teknik än de traditionella skroven. År 1918 började varvet bygga stålfartyg, och under 1930- och 1940-talen låg också ett mindre varv för fritidsbåtar bredvid skeppsvarvet. Enligt Wikipedia växte ett samhälle fram i anslutning till varvet, med skolbyggnad och en frikyrka som uppfördes 1913. I dag finns en restaurang i varvets lokaler, och ett mindre varv för traditionen vidare.",
     extraContent:
@@ -338,7 +338,7 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Spillersboda, skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Spillersboda: takbyte och takomläggning i skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Spillersboda ligger i Frötuna socken i Norrtälje kommun, vid kusten sydost om Norrtälje. Wikipedia beskriver det som ett skärgårdssamhälle som har gått från fiskar- och jordbrukartiden, via pensionatens och ångbåtarnas tid, till dagens samhälle. Orten nämns första gången 1535. På 1700-talet fanns tre gårdar här, två i Mutsunda och en i Spillersboda. I slutet av 1800-talet kom ångbåtarna: 1888 öppnades en affär vid ångbåtsbryggan, och 1894–1895 byggdes en ny affär i ett gult hus som fortfarande står kvar vid bryggan. Det kallas Tornvillan och blev senare ett av många pensionat i byn. Sågen startades 1903 och varvet 1919, och varvet hade enligt Wikipedia sin storhetstid på 1930-, 1940- och 1950-talen. Fram till slutet av 1940-talet gick Vaxholmsbolagets båtar hit i reguljär trafik, och från 1932 gick bussen från Norrtälje. I dag bor drygt 300 personer här året om, och därtill kommer omkring 1 500 fritidsboende. Andelen fritidshus är så hög att Spillersboda under en period inte räknades som tätort. Orten har en affär som är öppen året om, ett varv, en bygghandel och många bryggor, och den har enligt Wikipedia stor betydelse för öbor som handlar och reser härifrån.",
     extraContent:
@@ -405,7 +405,7 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: false,
     description:
-      "Takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare på Svartnö: takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Svartnö är en ö i Norrtälje skärgård, mellan Humlö och Furusund. Den östra halvan heter Eknö och var förr en egen ö, men landhöjningen har fått de två att växa ihop. På den sydvästra delen ligger Svartnö by, söder om vägen ut mot Furusund. I början av 1900-talet bestod byn enligt Wikipedia av sju bebyggda brukningsdelar med åker. Byn har, trots all fritidsbebyggelse, bevarat sin karaktär av bondeland, och det finns fortfarande djur i hagarna. Wikipedia beskriver bebyggelsen som en rad byggnader som tillsammans ger en enhetlig bild, trots att de enskilda husen har byggts om och förändrats. Byskolan från 1879 står kvar och är i stort sett orörd sedan den sista eleven gick ut 1939. På Eknösidan finns små jord- och skogsbruk, en fritidsbåtshamn och ett mindre varv. Där låg tidigare ett större jordbruk, Eknö gård, vars mark har styckats av och sålts efter hand. År 1945 invigdes vägen från fastlandet till Svartnö, som en del av Sju strömmars väg, med Svartnöbron. År 1953 förlängdes den med en vägbank från Eknö till Furusund, och en ny bro invigdes 1986.",
     extraContent:
@@ -603,7 +603,7 @@ export const locations: LocationData[] = [
     region: "Norra Roslagen",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Hallstavik, brukssamhället vid Edeboviken som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
+      "Takläggare i Hallstavik: takbyte och takomläggning i brukssamhället vid Edeboviken, som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
     longDescription:
       "Hallstavik är en tätort i norra delen av Norrtälje kommun, omkring fyra mil från Norrtälje, där Skeboån mynnar i Edeboviken. Orten är ung. Fram till början av 1900-talet var Hallsta en by som gränsade till grannbyarna Tulka, Skärsta och Gottsta. Sedan kom pappersbruket. Enligt Wikipedia byggdes det på Hallsta bys utmarker vid Edeboviken, och Hallsta pappersbruk grundades 1915. Bruket expanderade snabbt, och Hallstavik växte till ett brukssamhälle. Bruket finns kvar och har en egen hamn och en järnväg för gods. Det syns i hur husen har kommit till. Enligt hitta.se är husen i tätorten mest byggda på 1950- och 1960-talen, medan delar är från sekelskiftet 1900 till 1920-talet. Bebyggelsen består av både villor och flerbostadshus. Tidigare gick en smalspårig järnväg till Stockholm via Rimbo. Persontrafiken upphörde 1966, och i dag går riksväg 76 strax väster om samhället.",
     extraContent:
@@ -624,7 +624,7 @@ export const locations: LocationData[] = [
     region: "Norra Roslagen",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Älmsta, samhället vid Väddö kanal med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Älmsta: takbyte och takomläggning i samhället vid Väddö kanal, med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Älmsta är en tätort i Norrtälje kommun, där Väddö kanal mynnar i Väddöviken. Orten ligger på två sidor av vattnet. Den södra delen, Elmsta by, ligger på fastlandet, och den norra, med byarna Hammarby och Norrsundet, ligger på Väddö. Enligt Wikipedia hade tätorten 1 532 invånare 2022. Många i trakten skriver fortfarande namnet Elmsta. Platsen är gammal. När Elmsta nämns första gången, 1557, var det enligt Wikipedia redan en stor by med sju gårdar, och flera forngravar visar att bygden är äldre än så. Väddö kanal, som går rakt igenom orten, började anläggas 1819 och invigdes 1840. Över kanalen går Älmstabron, en klaffbro som öppnas för båtarna. Dagens samhälle är betydligt yngre än byn. Enligt hitta.se är husen kring Lärarvägen byggda på 1960- och 1980-talen och husen kring Norrtäljevägen på 1960- och 1990-talen. Bebyggelsen består av både villor och flerbostadshus. Norrtälje kommun beskriver i sin översiktsplan hur kanalen går genom orten som ett stråk av vatten och grönska, och hur Älmsta omges av naturområden som har betydelse för både friluftslivet och kulturmiljön. Delar av orten ligger enligt kommunen inom riksintresse för kulturmiljövården. Väddö folkhögskola och Roslagens Sjöfartsmuseum ligger här, och länsväg 283 går genom orten vidare mot Grisslehamn.",
     extraContent:
@@ -668,7 +668,7 @@ export const locations: LocationData[] = [
     region: "Roslagens inland",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Edsbro, den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "Takläggare i Edsbro: takbyte och takomläggning i den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
       "Edsbro är en tätort i Norrtälje kommun och kyrkby i Edsbro socken. Enligt Wikipedia är det en gammal bruksort: här fanns ett vallonbruk med masugn och klensmedja, och ruinerna efter dem är välbevarade. Bruket kom till efter en brand. När Skebo bruk brann 1686 fördes masugnsrättigheterna över till Edsbro, och en masugn uppfördes med vattenkraft som drivkälla. Här tillverkades råjärn från 1686 till 1919, och järnet fraktades i pråmar över sjön Närdingen till Skebo för att förädlas. Masugnen har byggts om och på flera gånger, senast 1905. Slaggen från ugnen användes enligt Wikipedia som byggnadsmaterial i byggnaderna runt omkring. Platsen är betydligt äldre än bruket. Vid Edsbro-Kyrksjön ligger fornborgen Lundboborg, 210 meter lång, som troligen uppfördes under folkvandringstiden. På andra sidan sjön finns enligt Wikipedia ytterligare två fornborgar, som inte är arkeologiskt undersökta. Kyrkan är från 1200-talet.",
     extraContent:
@@ -1641,7 +1641,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll.",
+      "Takläggare i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Bromma är en närförort i Västerort i Stockholm. Wikipedia beskriver den som utmärkt bland annat av sin trädgårdsstad, läget nära innerstaden och närheten till Mälaren. Bromma var en egen socken och kommun fram till 1916, då den uppgick i Stockholms stad. Villorna kom i flera omgångar. Enligt Wikipedia började ett villaområde byggas redan på 1880-talet, när mark styckades av från Mariehälls gård. Omkring 1905 bebyggdes delar av Ulvsunda och områden kring Bromma kyrka med villor på privat initiativ. I början av 1900-talet köpte Stockholms stad de stora godsen i Bromma och började bygga trädgårdsstäder, från Äppelviken 1913 och vidare ut mot Nockeby. Under 1910-, 1920- och 1930-talen växte det som kallas Gamla Bromma trädgårdsstad fram. Äppelviken är ett exempel på den tidiga trädgårdsstaden. Stadsplanen från 1910 har enligt Wikipedia mjukt svängda gator som följer terrängen, och tomterna började upplåtas och bebyggas 1913. Villorna är individuellt utformade, uppförda av en byggmästare eller en snickare, och när stadsdelen byggdes ut under 1910- och 1920-talen fick husen olika förebilder, som faluröda bergsmansgårdar, gulpanelade herrgårdar och bruntjärade dalastugor. Norra Ängby kom till på ett annat sätt. Där byggdes enligt Wikipedia 1 320 egna hem under åren 1930–1941, trähus i ett eller två plan, som självbyggeri under stadens ledning efter typritningar. Den blivande husägaren gjorde själv en del av byggarbetet i stället för att betala en kontantinsats. Stadsplanen från 1930 har slingrande bostadsgator, och hustyperna grupperades så att ett kvarter eller en gatusträckning fick ett enhetligt utseende. Södra Ängby är en tredje sorts område: omkring 500 villor uppförda 1933–1939 i funktionalistisk arkitektur. De byggdes enligt Wikipedia av enskilda byggmästare som sålde dem nyckelfärdiga. Bebyggelsen är sedan 1987 riksintresse för kulturmiljövården.",
     extraContent:
@@ -1727,7 +1727,7 @@ export const locations: LocationData[] = [
     region: "Södra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Farsta med omnejd: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll.",
+      "Takläggare i Farsta: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Farsta är en stadsdel i Söderort i Stockholm, omkring åtta kilometer söder om innerstaden. Marken hörde till Farsta gård, som staden köpte 1912. Enligt Wikipedia började det moderna Farsta planläggas på 1940-talet och byggdes under 1950-talets senare hälft, efter en generalplan från 1955, med flerfamiljshus kring ett centrum som invigdes 1960. Villorna och småstugorna ligger i stadsdelarna runt omkring, och de är äldre än centrumet. I Tallkrogen består den övervägande delen av bebyggelsen av småhus. Enligt Wikipedia restes omkring 950 stugor där med självbyggeri fram till 1945. Olympiaområdet byggdes 1933–1934, och de flesta stugorna där hade bara två rum. Det finns ungefär tio hustyper, alla ritade av arkitekten Edvin Engström, och husen uppfördes i regi av Stockholms stads småstugebyrå. Svedmyra var obebyggt fram till 1930, så när som på några gårdar och torp. På 1930-talet öppnades en spårvagnslinje, och runt hållplatsen började småstugor byggas med självbyggeri. Wikipedia skriver att ett stort antal småhus uppfördes under 1930- och 1940-talen efter typhusritningar, och att den östra delen av stadsdelen mest är bebyggd med villor. I Sköndal fastställdes den första stadsplanen 1947. Den omfattade ett småstugeområde med omkring 160 hus för självbyggeri i stadsdelens västra del, där staden genom småstugebyrån tillhandahöll typritningar för tre varianter av stugor.",
     extraContent:
@@ -2108,7 +2108,7 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Spånga i Västerort, med villasamhällena Solhem, Bromsten och Flysta. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Spånga: takbyte och takomläggning i villasamhällena Solhem, Bromsten och Flysta i Västerort. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Spånga är enligt Wikipedia ett informellt område i Västerort, som ungefär motsvarar stadsdelarna Bromsten, Flysta, Solhem, Lunda och Sundby. Namnet kommer från den gamla kyrkbyn och finns i skrift år 1300. Stationen och centrum ligger i Solhem, och Spånga torg ligger nära stationen, där både pendeltåg och bussar går. Spånga var länge en egen landskommun. Villasamhällena kom till genom att gårdarnas mark styckades till tomter åren kring sekelskiftet 1900, sedan järnvägen mellan Stockholm och Västerås hade invigts 1876. I Bromsten började gårdens ägor styckas i villatomter 1899, och 1904 blev Bromsten municipalsamhälle. Vid folkräkningen 1920 bodde 2 096 personer där. I Solhem började tomter säljas 1904. Bolaget bakom försäljningen tillhandahöll typritningar, och enligt Wikipedia har de flesta av de första husen träfasader, spröjsade fönster och ofta både förstukvist och veranda. År 1907 fanns 160 hus, och 1930 var 425 tomter bebyggda. På 1930-talet växte Spånga torg fram. I Flysta började marken styckas 1905, och under det följande årtiondet blev ett hundratal familjer bofasta. Flysta blev municipalsamhälle 1915 och är enligt Wikipedia i huvudsak bebyggt med villor. Den 1 januari 1949 införlivades Spånga landskommun med Stockholm.",
     extraContent:
@@ -2482,7 +2482,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Helenelund, Sollentunas sydligaste kommundel med villastäder från 1920- och 1930-talen. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Helenelund: Sollentunas sydligaste kommundel med villastäder från 1920- och 1930-talen. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Helenelund är den sydligaste kommundelen i Sollentuna. Den består enligt Wikipedia av Helenelunds centrum, Kummelby, Edsviken, Tegelhagen, Silverdal och Eriksberg. Namnet kommer från ett torp, och den lilla stugan som har gett kommundelen dess namn står kvar. Villorna kom med egnahemsrörelsen och järnvägen. År 1918 köpte ett egnahemsbolag ett gods ägor för att stycka dem och sälja egnahemstomter. År 1922 fick Helenelund sin första järnvägshållplats, och då tog villabyggandet fart. Marken vid Edsviken fick namnet Edsviken villastad, och området väster om järnvägen fick namnet Eriksbergs villastad. Området mellan de två villastäderna bebyggdes till stor del under 1920- och 1930-talen och var i stort sett färdigbyggt på 1940-talet. På 1960-talet tog byggandet fart igen, då med flerfamiljshus väster om stationen och ett centrum som började byggas 1967. Enligt hitta.se är husen i Kummelby byggda på 1930- och 1950-talen. Mer om de två yngre områdena i kommundelen finns på sidan Tegelhagen och Silverdal.",
     extraContent:
@@ -2524,7 +2524,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Rotebro i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Rotebro: takbyte och takomläggning i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Rotebro är en kommundel i norra Sollentuna. Den delas enligt Wikipedia in i Rotebro centrum, Rotsunda, Rotsunda gård, Gillbo, Gillberga och ett industriområde. Platsen är gammal. Namnet kommer av att här fanns en bro över ett sund, och Rotebro nämns första gången 1464. Vid bron, intill landsvägen mellan Stockholm och Uppsala, låg en gästgivargård som fick sitt tillstånd 1647. Ån som går här förbinder Edssjön med sjön Norrviken och är i dag en grävd kanal, sedan sjön sänktes i mitten av 1800-talet. På 1890-talet flyttade en jästfabrik hit, och fler industrier följde. På 1960-talet utvecklades Rotebro till ett av kommunens stora arbetsplatsområden, och centrum vid stationen byggdes på 1970-talet. I Gillbo finns en skola sedan början av 1900-talet. År 1960 räknades Rotebro som en egen tätort, och sedan 1970 räknas den som sammanvuxen med Sollentuna. Villorna ligger i Gillbo, Gillberga och Rotsunda. Enligt hitta.se är husen i Gillbo mest byggda på 1970- och 1980-talen.",
     extraContent:
@@ -2545,7 +2545,7 @@ export const locations: LocationData[] = [
     region: "Norra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Norrviken, Sollentunas villastad från 1906 med egnahem från 1930- och 1940-talen. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Norrviken: Sollentunas villastad från 1906 med egnahem från 1930- och 1940-talen. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Norrviken är en kommundel i Sollentuna, vid sjön med samma namn. Den gränsar till Rotebro, Vaxmora, Häggvik och Viby. Fram till slutet av 1800-talet bestod trakten enligt Wikipedia av kyrkan, ett säteri och ett antal gårdar och torp. Villasamhället började byggas 1906, när ett villastadsbolag köpte en gårds ägor och började stycka dem i egnahemstomter. Året därpå byggde bolaget på egen bekostnad den första stationsbyggnaden, och när Norrviken hade fått en egen station tog tomtförsäljningen fart på allvar. Stationen öppnade den 1 maj 1907. År 1929 blev Norrviken municipalsamhälle. Utbyggnaden fortsatte i omgångar. I de södra delarna byggdes egnahemsvillor framför allt under 1930- och 1940-talen. Många äldre villor byggdes med stora trädgårdar, som i många fall senare har styckats och bebyggts, främst under 1960- till 1980-talen. Wikipedia beskriver Norrviken som en till stor del sammanhållen sekelskiftesbebyggelse, med ett stort antal tidstypiska villor med arkitekturhistoriskt värde och inslag av nyare villor.",
     extraContent:
@@ -2771,7 +2771,7 @@ export const locations: LocationData[] = [
     region: "Nordvästra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Märsta i Sigtuna kommun, orten som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Märsta: takbyte och takomläggning i orten i Sigtuna kommun som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Märsta är centralort i Sigtuna kommun. Namnet kommer enligt Wikipedia av ett ord som betyder platsen för mjärdfisket, och trakten har många fornlämningar: runstenar, gravfält och fornborgar. Märsta gästgivaregård var en viktig anhalt för postdiligensen mellan Uppsala och Stockholm. Järnvägen kom 1866. Märsta fick aldrig någon egen ställning som municipalsamhälle eller köping, utan var en del av en landskommun fram till 1952, då orten fick ge namn åt en ny storkommun. Sedan 1971 är Märsta centralort i Sigtuna kommun. Det som fick orten att växa var flygplatsen. År 1960, när Arlanda just hade tagits i bruk, bodde omkring 3 000 personer i Märsta. År 1965 var de över 10 000 och 1990 var de 20 000. Därefter har utvecklingen enligt Wikipedia gått i lugnare takt. Märsta var tänkt att byggas på fyra kullar, men bara två av dem, Norrbacka och Valsta, fick bostäder. De andra två låg för nära inflygningen när flygplatsen byggdes ut från 1970-talet. Byggåren syns i husen. Enligt hitta.se är husen i Ekilla och Til mest från 1960- och 1970-talen, i Norrbacka främst från 1970-talet och i Steninge från 1970- och 1980-talen. I Sjudargården finns hus från 1960- och 2000-talen. Pendeltågen har sin ändstation i Märsta.",
     extraContent:
@@ -2987,7 +2987,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Saltsjö-Boo i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Saltsjö-Boo: takbyte och takomläggning i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Saltsjö-Boo, eller Boo, är den östra delen av Nacka kommun. Enligt Wikipedia är Boo en av kommunens fyra kommundelar, med omkring 36 000 invånare, och omfattar kommunens område öster om Skurusundet. Här ligger bland annat Björknäs, Orminge, Kummelnäs och Lännersta. Länge var Boo glest befolkat. Trakten bestod mest av gårdarna Boo, Kummelnäs och Velamsund och ett antal mindre torp och hemman. Namnet Hargsö, ett av de äldsta namnen på trakten, är känt från 1280-talet. Boo gård brändes ner 1719 och byggdes sedan upp igen, och herrgårdsbyggnaden finns kvar. Boo var en egen landskommun från 1863 och hör sedan 1971 till Nacka. Villaområdena började som sommarhus. I slutet av 1800-talet styckades stora markområden av från Kummelnäs gård, främst för sommarhus, och 1907 köpte en egnahemsförening ett stort markområde där och planlade det med vägar och tomter. De flesta husen var trähus som ägarna byggde själva. Kummelnäs består enligt Wikipedia i dag av villaområden som från början var sommarstugeområden. I Lännersta, i södra Boo, började gårdens mark styckas till villatomter i slutet av 1800-talet, och 1937 var egendomen styckad i 925 tomter. Enligt Wikipedia präglas bebyggelsen där huvudsakligen av villor från 1930-talet och framåt, och tidigare sommarstugeområden har omvandlats till permanenta villor.",
     extraContent:
@@ -3031,7 +3031,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Gustavsberg på Värmdö, bruksorten där egnahem byggdes från 1950-talet. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Gustavsberg: takbyte och takomläggning i bruksorten på Värmdö, där egnahem byggdes från 1950-talet. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Gustavsberg är centralort i Värmdö kommun och ligger 22 kilometer öster om centrala Stockholm. Enligt Wikipedia ligger tätorten i väster längs Farstaviken, och bebyggelsen har med åren utökats österut kring Torsbyfjärden. Orter som Mörtnäs, Hemmesta, Torsby och Grisslinge har vuxit ihop med Gustavsberg. Namnet kommer från ett tegelbruk, som fick namnet Gustafsberg 1661. När egendomen delades 1815 följde namnet med den östra delen, där bruket låg. Tegelbruket revs, och i december 1826 stod en porslinsfabrik färdig på platsen. Kring fabriken växte en bruksort fram, och 1902 blev Gustavsberg en egen kommun. Kyrkan byggdes 1904–1906. År 1937 såldes fabriken, med bostäder och lantbruk. Därefter rustades de gamla bostäderna upp, och nya byggdes som hyresbostäder. Tre sjöar i det som i dag är centrala Gustavsberg fylldes igen under 1940- och 1950-talen för att ge plats åt centrum. Efter andra världskriget växte fabriken, och orten fick många nya invånare. Enligt Wikipedia uppfördes egnahem och områden med bostadsrättslägenheter på 1950-talet och senare. Bruksorten finns inte längre på samma sätt. De sista delarna av fabriken lades ner under 2000-talet, och delar av fabriksområdet har byggts om till kontor och bostäder. Bland bostadsområdena i Gustavsberg nämner Wikipedia Höjdhagen, Hästhagen, Munkmora, Lugnet, Björnkärret, Holmviksskogen och Ösbydalen. Gustavsberg hör åter till Värmdö kommun sedan 1974.",
     extraContent:
@@ -3096,7 +3096,7 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Trollbäcken i Tyresö, villaområdet som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Trollbäcken: takbyte och takomläggning i villaområdet i Tyresö som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Trollbäcken ligger i västra delen av Tyresö kommun, vid länsväg 260, och hör i sin helhet till tätorten Stockholm. Enligt Wikipedia består området nästan bara av villor. Trollbäcken hette tidigare Kumla. Namnet byttes 1947, för att orten inte skulle förväxlas med Kumla i Närke. Det gamla namnet kommer från Kumla gård, som har rötter i medeltiden och är stamfastighet för stora delar av västra Tyresö. Gårdens huvudbyggnad från 1700-talet står kvar, och Kumla allé, med sin bevarade trädplantering, påminner om hur stor egendomen en gång var. Villaområdet kom till genom att gårdens mark styckades. År 1910 köptes ägorna av ett egnahemsbolag, som skulle göra om markerna till egnahemsbebyggelse och sommarstugor. Från Kumla styckades områdena Hanviken, Persudde, Fornudden, Sofieberg, Näset och Skälsätra av. Under 1900-talets första årtionden ökade byggtakten i Tyresö kraftigt, och från 1950-talet byggdes fritidshusen i kommunen om till åretruntbostäder i rask takt. I dag finns flerfamiljshus och butiker i områdets centrum, vid Alléplan. I övrigt är bebyggelsen mest småhus, och omkring hundra fritidshus finns kvar. År 2016 bodde 12 910 personer i Trollbäcken.",
     extraContent:
@@ -3404,7 +3404,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Tumba i Botkyrka, med villor från 1900-talets början och framåt. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Tumba: takbyte och takomläggning i Botkyrka, med villor från 1900-talets början och framåt. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Tumba är centralort i Botkyrka kommun. Namnet går tillbaka på en kvarn, som nämns 1488, och det moderna Tumbas historia började 1755, när pappersbruket grundades. Bruket var länge närmast ett eget litet samhälle, och trakten runt omkring var jordbruksbygd. Det ändrades med järnvägen. Stambanan byggdes på 1860-talet, och kring Tumba station växte ett samhälle fram, med handelsbodar, läkare och apotek. Enligt Wikipedia blev Tumba snart en knutpunkt i området. I början av 1900-talet avsöndrades mark från två gårdar söder om järnvägen till villatomter, och den 28 oktober 1904 blev Tumba municipalsamhälle. Sedan växte orten i omgångar. Ny bebyggelse kom på en tredje gårds mark, och på 1940-talet byggdes det i Tumba skog, längs nuvarande Kyrkvärdsvägen. Ett vattentorn restes där 1946. Från 1949 byggdes flerbostadshus i Segersjö, och i mitten av 1990-talet fick Tumba en ny pendeltågsstation och ett ombyggt centrum. Enligt hitta.se finns villor från senare årtionden i Kassmyra, med hus från 1970- och 1980-talen, och i Skäcklinge och Vretarna, med hus från 1980- och 1990-talen.",
     extraContent:
@@ -3425,7 +3425,7 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takbyte och takomläggning i Tullinge i Botkyrka, planerat som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Tullinge: takbyte och takomläggning i orten i Botkyrka som planerades som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris.",
     longDescription:
       "Tullinge är en kommundel i Botkyrka, vid Tullingesjön. Platsen har gamla anor. På två klippor vid sjön, Skansberget och Örnberget, ligger fornborgar från vikingatiden, och Tullinge gård nämns i skrift redan 1353. Omkring 1630 byggdes gården till ett säteri. Huvudbyggnaden från 1760-talet brann ner 1943, men flyglarna finns kvar och används som församlingshem. Under slutet av 1800-talet började villastäder planeras utanför Stockholm, bland dem i Tullinge. En annons från omkring 1908 talade om villagårdar med plats för \"en häst eller två ponnies\". Stambanan hade gått genom Tullinge sedan 1859, men utan station. När banan byggdes ut till dubbelspår 1903 kom en hållplats, och 1917 blev den station. År 1926 fick järnvägen eldrift. Efter kriget växte Tullinge snabbare. Den första kommunala skolan byggdes 1946. På 1950-talet började Tullingeberg byggas, och mellan 1965 och 1975 kom de flesta av dagens lägenhetshus. Stationen flyttades 1969 till sin nuvarande plats, omkring en och en halv kilometer från den gamla. Flygflottiljen söder om Tullinge lades ner 1994, och sedan 2006 byggs bostäder på flygfältet. Villorna är av olika ålder. Enligt hitta.se är husen i Tullinge villastad i dag främst byggda på 1950- och 2000-talen, i Brantbrink på 1940- och 1950-talen, i Tullinge skog på 1950- och 1990-talen och i Tullinge parkhem på 1980- och 1990-talen.",
     extraContent:
@@ -4289,7 +4289,7 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: true,
     description:
-      "Takbyte och takomläggning på Rindö och Skarpö i Vaxholm, öar med vägfärja och bro. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "Takläggare på Rindö: takbyte och takomläggning på Rindö och Skarpö i Vaxholm, öar med vägfärja och bro. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
       "Rindö är en ö i Vaxholms kommun, strax öster om Vaxholm. Enligt Wikipedia är den ungefär fem kilometer lång och drygt en kilometer bred, och 2020 bodde 1 522 personer här året om. Ön hör till Vaxholm sedan 1913. Det går att köra bil hit. Länsväg 274 går över ön, med vägfärja till Vaxholm i väster och till Värmdö i öster, och en buss går tvärs över ön mellan färjelägena. Från Rindö leder en bro vidare till Skarpö, som fördes till Vaxholm 1950. På ön finns en tätort, Rindö, och småorten Rindöby. Rindö har länge varit en försvarsö. Här har funnits befästningar sedan 1500-talet, med försvarsverk på både den östra och den västra sidan, anlagda för att bevaka farlederna in mot Stockholm. Ett regemente låg på ön fram till hösten 2005, och sedan dess har kommunen planlagt nya bostadsområden och ombyggnad av de gamla försvarsbyggnaderna på Rindö och Skarpö. Enligt hitta.se är villorna på Rindö mest byggda på 1940- och 1960-talen.",
     extraContent:
@@ -4311,7 +4311,7 @@ export const locations: LocationData[] = [
     region: "Kusten",
     isIsland: true,
     description:
-      "Takbyte och takomläggning på Tynningö i Vaxholm, sommarön med bilfärja. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "Takläggare på Tynningö: takbyte och takomläggning på sommarön med bilfärja i Vaxholm. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
       "Tynningö är en ö vid Södra Vaxholmsfjärden, strax söder om Vaxholm, och hör till Vaxholms kommun sedan 1950. Sedan 2015 räknas ön som tätort. Enligt Wikipedia går det reguljära båtar hit från Vaxholm och Stockholm, och en bilfärja mellan östra Tynningö och Norra Lagnö. Ön nämns första gången 1322. Under 1600- och 1700-talen bytte den ägare flera gånger, och en flygel av säterigården står kvar från tidigt 1700-tal. På 1800-talet styckades ön i mindre bondejordbruk. Jordbruket levde kvar länge: enligt Wikipedia pågick det fram till 1980-talet. Sommargästerna kom i början av 1900-talet. Då styckades delar av ön i mindre tomter, som såldes till sommargäster som tog sig hit med ångbåt. Vägarna var länge smala och backiga. Först på 1940-talet byggdes landsvägen över ön, och på 1950-talet blev det väg fram till Norra Tynningö brygga. År 1951 fick ön en av de tidiga självbetjäningsbutikerna. Enligt hitta.se är villorna på Tynningö byggda på 1920- och 1950-talen, och här finns också fritidshus.",
     extraContent:

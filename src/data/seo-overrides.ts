@@ -645,99 +645,99 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takbyte och takomläggning på Gräskö i Norrtälje skärgård: fritidshus från mellankrigstiden och 1960-talet. Kostnadsfri takkontroll, fast pris.",
   },
   bromma: {
-    title: "Takbyte i Bromma – fast pris efter takkontroll",
+    title: "Takläggare i Bromma – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll.",
+      "Takläggare i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   farsta: {
-    title: "Takbyte i Farsta – fast pris efter takkontroll",
+    title: "Takläggare i Farsta – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Farsta med omnejd: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll.",
+      "Takläggare i Farsta: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   hallstavik: {
-    title: "Takbyte i Hallstavik – fast pris efter takkontroll",
+    title: "Takläggare i Hallstavik – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Hallstavik, brukssamhället vid Edeboviken som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
+      "Takläggare i Hallstavik: takbyte och takomläggning i brukssamhället vid Edeboviken, som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
   },
   almsta: {
-    title: "Takbyte i Älmsta – fast pris efter takkontroll",
+    title: "Takläggare i Älmsta – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Älmsta, samhället vid Väddö kanal med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Älmsta: takbyte och takomläggning i samhället vid Väddö kanal, med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
   },
   edsbro: {
-    title: "Takbyte i Edsbro – fast pris efter takkontroll",
+    title: "Takläggare i Edsbro – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Edsbro, den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "Takläggare i Edsbro: takbyte och takomläggning i den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
   },
   spillersboda: {
-    title: "Takbyte i Spillersboda – fast pris efter takkontroll",
+    title: "Takläggare i Spillersboda – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Spillersboda, skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Spillersboda: takbyte och takomläggning i skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
   },
   furusund: {
-    title: "Takbyte i Furusund – fast pris efter takkontroll",
+    title: "Takläggare i Furusund – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Furusund, den gamla badorten i Norrtälje skärgård med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Furusund: takbyte och takomläggning i den gamla badorten i Norrtälje skärgård, med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
   },
   svartno: {
-    title: "Takbyte på Svartnö – fast pris efter takkontroll",
+    title: "Takläggare på Svartnö – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare på Svartnö: takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris.",
   },
   hogmarso: {
-    title: "Takbyte på Högmarsö – fast pris i offerten",
+    title: "Takläggare på Högmarsö – fast pris i offerten",
     description:
-      "Takbyte och takomläggning på Högmarsö, varvsön vid Furusundsleden i Norrtälje skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "Takläggare på Högmarsö: varvsön vid Furusundsleden i Norrtälje skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   ingmarso: {
-    title: "Takbyte på Ingmarsö – fast pris i offerten",
+    title: "Takläggare på Ingmarsö – fast pris i offerten",
     description:
-      "Takbyte och takomläggning på Ingmarsö i Österåkers skärgård, en ö utan vägförbindelse. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "Takläggare på Ingmarsö: en ö utan vägförbindelse i Österåkers skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   husaro: {
-    title: "Takbyte på Husarö – fast pris i offerten",
+    title: "Takläggare på Husarö – fast pris i offerten",
     description:
-      "Takbyte och takomläggning på Husarö, lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "Takläggare på Husarö: lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   rindo: {
-    title: "Takbyte på Rindö – fast pris efter takkontroll",
+    title: "Takläggare på Rindö – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning på Rindö och Skarpö i Vaxholm, öar med vägfärja och bro. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "Takläggare på Rindö: takbyte och takomläggning på Rindö och Skarpö i Vaxholm, öar med vägfärja och bro. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   tynningo: {
-    title: "Takbyte på Tynningö – fast pris efter takkontroll",
+    title: "Takläggare på Tynningö – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning på Tynningö i Vaxholm, sommarön med bilfärja. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "Takläggare på Tynningö: takbyte och takomläggning på sommarön med bilfärja i Vaxholm. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
   },
   norrviken: {
-    title: "Takbyte i Norrviken – fast pris efter takkontroll",
+    title: "Takläggare i Norrviken – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Norrviken, Sollentunas villastad från 1906 med egnahem från 1930- och 1940-talen. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Norrviken: Sollentunas villastad från 1906 med egnahem från 1930- och 1940-talen. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   helenelund: {
-    title: "Takbyte i Helenelund – fast pris efter takkontroll",
+    title: "Takläggare i Helenelund – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Helenelund, Sollentunas sydligaste kommundel med villastäder från 1920- och 1930-talen. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Helenelund: Sollentunas sydligaste kommundel med villastäder från 1920- och 1930-talen. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   rotebro: {
-    title: "Takbyte i Rotebro – fast pris efter takkontroll",
+    title: "Takläggare i Rotebro – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Rotebro i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Rotebro: takbyte och takomläggning i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   tumba: {
-    title: "Takbyte i Tumba – fast pris efter takkontroll",
+    title: "Takläggare i Tumba – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Tumba i Botkyrka, med villor från 1900-talets början och framåt. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Tumba: takbyte och takomläggning i Botkyrka, med villor från 1900-talets början och framåt. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   gustavsberg: {
-    title: "Takbyte i Gustavsberg – fast pris efter takkontroll",
+    title: "Takläggare i Gustavsberg – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Gustavsberg på Värmdö, bruksorten där egnahem byggdes från 1950-talet. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Gustavsberg: takbyte och takomläggning i bruksorten på Värmdö, där egnahem byggdes från 1950-talet. Kostnadsfri takkontroll och fast pris.",
   },
   trollbacken: {
-    title: "Takbyte i Trollbäcken – fast pris efter takkontroll",
+    title: "Takläggare i Trollbäcken – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Trollbäcken i Tyresö, villaområdet som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Trollbäcken: takbyte och takomläggning i villaområdet i Tyresö som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   bro: {
     title: "Takläggare i Bro – fast pris efter takkontroll",
@@ -745,23 +745,23 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Bro i Upplands-Bro: takbyte, takomläggning och takrenovering. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
   },
   marsta: {
-    title: "Takbyte i Märsta – fast pris efter takkontroll",
+    title: "Takläggare i Märsta – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Märsta i Sigtuna kommun, orten som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Märsta: takbyte och takomläggning i orten i Sigtuna kommun som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris.",
   },
   "saltsjo-boo": {
-    title: "Takbyte i Saltsjö-Boo – fast pris efter takkontroll",
+    title: "Takläggare i Saltsjö-Boo – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Saltsjö-Boo i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Saltsjö-Boo: takbyte och takomläggning i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   spanga: {
-    title: "Takbyte i Spånga – fast pris efter takkontroll",
+    title: "Takläggare i Spånga – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Spånga i Västerort, med villasamhällena Solhem, Bromsten och Flysta. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Spånga: takbyte och takomläggning i villasamhällena Solhem, Bromsten och Flysta i Västerort. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   tullinge: {
-    title: "Takbyte i Tullinge – fast pris efter takkontroll",
+    title: "Takläggare i Tullinge – fast pris efter takkontroll",
     description:
-      "Takbyte och takomläggning i Tullinge i Botkyrka, planerat som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Tullinge: takbyte och takomläggning i orten i Botkyrka som planerades som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris.",
   },
 };

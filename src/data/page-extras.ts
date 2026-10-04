@@ -37,7 +37,77 @@ const INGAR =
 /** Juristens mening vid belopp som i prislistan är tillägg vid takbyte (backlog 1by, tills Vidar har svarat på 10y). */
 const TILLAGG_MENING = "Priserna gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen.";
 
+/** Samma juristmening som TILLAGG_MENING, i singular (sidor med ett enda belopp). */
+const TILLAGG_MENING_SG = "Priset gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen.";
+
 export const SERVICE_EXTRAS: Record<string, PageExtras> = {
+  platarbeten: {
+    blocks: [
+      {
+        heading: "Plåtdetaljerna, en i taget",
+        items: [
+          "På nästan varje tak finns plåt, också på tak med pannor. Plåten sitter där två ytor möts och vattnet behöver ledas rätt.",
+          {
+            list: [
+              "**Fotplåt.** Sitter längst ner vid takfoten och leder vattnet ner i hängrännan.",
+              "**Ränndal.** Plåten i [vinkeln där två takfall möts](/takproblem/lackande-ranndal). Hit rinner vatten från två håll.",
+              "**Skorstensbeslag.** Plåten runt skorstenen, där den [går igenom taket](/takproblem/lackage-vid-skorsten).",
+              "**Genomföringar.** Plåt eller stosar runt rör och ventilation som går genom taket.",
+              "**Vindskiveplåt.** Plåten längs takets kant på gaveln.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Plåtarbeten runt skorstenen",
+        items: [
+          "Skorstensbeslaget är plåten runt skorstenen, där den går igenom taket. Många läckage börjar inte mitt på takytan, utan vid en anslutning: runt skorstenen, i ränndalen eller vid en genomföring. [Fuktfläckar i taket eller på väggen nära skorstenen](/takproblem/lackage-vid-skorsten) kan bero på att beslaget har släppt, rostat eller spruckit, eller på att fogen mellan beslag och murverk har släppt. När ett tak byts görs skorstensbeslaget om tillsammans med de andra plåtdetaljerna. Beslaget kan också göras om för sig, på ett tak som i övrigt ligger kvar.",
+        ],
+      },
+      {
+        heading: "Det här kan du se från marken",
+        items: [
+          {
+            list: [
+              "Plåt som har släppt, bucklat eller rostat.",
+              "Mörka ränder på skorstenen eller på fasaden under takfoten.",
+              "Hängrännor som svämmar över eller hänger snett.",
+            ],
+          },
+          "Gå inte upp på taket.",
+        ],
+      },
+      {
+        heading: "Det här har ett eget pris, och var vi arbetar",
+        items: [
+          `Plåtdetaljerna ingår normalt i ett takbyte. Skorstensinklädnad prissätts för sig: ${beloppLopande("Skorstensinklädnad")}, efter ROT-avdrag och inkl. moms.`,
+          TILLAGG_MENING_SG,
+          ROT_FORBEHALL,
+          "Hängrännor och stuprör beskriver vi på sidan om [takavvattning](/tjanster/takavvattning). Ditt pris står i offerten och är fast.",
+          "Vi är en takfirma med bas i Norrtälje och gör plåtarbeten på tak i Roslagen och Storstockholm.",
+        ],
+      },
+    ],
+    faqHeading: "Vanliga frågor om plåtarbeten",
+    faqs: [
+      { question: "Kan ni göra om plåten runt skorstenen utan att byta taket?", answer: "Ja. Beslag, fotplåt och ränndalar kan göras om för sig, men pannorna närmast behöver lyftas undan under arbetet." },
+      { question: "Ingår plåtdetaljerna i ett takbyte?", answer: "Plåtdetaljerna ingår normalt i ett takbyte. Vad som ingår för ditt tak står i offerten." },
+      { question: "Vad är skillnaden mellan dubbelfalsat och TP20?", answer: "Dubbelfalsat har dolda klammer och uppstående falsar. TP20 är en trapetsprofilerad plåt som skruvas genom plåten." },
+      { question: "Är priset fast?", answer: PRIS_FAST },
+      { question: "Gäller ROT-avdraget?", answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar." },
+      { question: "Vilken garanti gäller?", answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI." },
+    ],
+    links: [
+      { to: "/blogg/platslagare-norrtalje-guide", label: "Plåten på taket: detaljerna en i taget" },
+      { to: "/blogg/bandtackning-tak-guide", label: "Bandtäckning: så går det till" },
+      { to: "/blogg/tp20-eller-dubbelfalsat-platttak", label: "TP20 eller dubbelfalsat plåttak" },
+      { to: "/blogg/korrugerad-plat-falsad-plat", label: "Korrugerad eller falsad plåt" },
+      { to: "/blogg/platttak-ljud-regn-skargardshus", label: "Ljud från plåttak vid regn" },
+      { to: "/material/tp20-plattak", label: "Plåttak (TP20)" },
+      { to: "/material/pannplat", label: "Pannplåt" },
+      { to: "/tjanster/takavvattning", label: "Takavvattning" },
+    ],
+  },
   taksakerhet: {
     blocks: [
       {

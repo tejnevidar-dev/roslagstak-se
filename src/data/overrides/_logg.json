@@ -288,6 +288,398 @@
       "fore": "Takläggare i Norrtälje för dig som ska byta tak. Kostnadsfri takkontroll, skriftligt fast pris och 10 års utförandegaranti. Svar inom 24 timmar.",
       "efter": "Takfirma med bas i Norrtälje. Takläggning i staden, i Rimbo, Hallstavik och på öarna. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
       "tid": "2026-10-05T01:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0031",
+      "path": "/tjanster/platarbeten",
+      "falt": "description",
+      "fore": "Plåtarbeten på taket i Roslagen och Storstockholm: skorstensbeslag, ränndalar, fotplåt och vindskivor. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Plåtarbeten på taket i Roslagen och Storstockholm: skorstensbeslag, ränndalar, fotplåt och vindskiveplåt. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:00:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0032",
+      "path": "/taklaggare-bromma",
+      "falt": "title",
+      "fore": "Takbyte i Bromma – fast pris efter takkontroll",
+      "efter": "Takläggare i Bromma – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0033",
+      "path": "/taklaggare-bromma",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll.",
+      "efter": "Takläggare i Bromma: trädgårdsstaden från 1913, egnahemmen i Norra Ängby och funkisvillorna i Södra Ängby. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0034",
+      "path": "/taklaggare-farsta",
+      "falt": "title",
+      "fore": "Takbyte i Farsta – fast pris efter takkontroll",
+      "efter": "Takläggare i Farsta – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0035",
+      "path": "/taklaggare-farsta",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Farsta med omnejd: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll.",
+      "efter": "Takläggare i Farsta: småstugorna i Tallkrogen, Svedmyra och Sköndal, byggda från 1930-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0036",
+      "path": "/taklaggare-hallstavik",
+      "falt": "title",
+      "fore": "Takbyte i Hallstavik – fast pris efter takkontroll",
+      "efter": "Takläggare i Hallstavik – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0037",
+      "path": "/taklaggare-hallstavik",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Hallstavik, brukssamhället vid Edeboviken som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
+      "efter": "Takläggare i Hallstavik: takbyte och takomläggning i brukssamhället vid Edeboviken, som växte fram kring pappersbruket från 1915. Kostnadsfri takkontroll.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0038",
+      "path": "/taklaggare-almsta",
+      "falt": "title",
+      "fore": "Takbyte i Älmsta – fast pris efter takkontroll",
+      "efter": "Takläggare i Älmsta – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0039",
+      "path": "/taklaggare-almsta",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Älmsta, samhället vid Väddö kanal med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
+      "efter": "Takläggare i Älmsta: takbyte och takomläggning i samhället vid Väddö kanal, med hus på både fastlandet och Väddö. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0040",
+      "path": "/taklaggare-edsbro",
+      "falt": "title",
+      "fore": "Takbyte i Edsbro – fast pris efter takkontroll",
+      "efter": "Takläggare i Edsbro – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0041",
+      "path": "/taklaggare-edsbro",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Edsbro, den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "efter": "Takläggare i Edsbro: takbyte och takomläggning i den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0042",
+      "path": "/taklaggare-spillersboda",
+      "falt": "title",
+      "fore": "Takbyte i Spillersboda – fast pris efter takkontroll",
+      "efter": "Takläggare i Spillersboda – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0043",
+      "path": "/taklaggare-spillersboda",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Spillersboda, skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
+      "efter": "Takläggare i Spillersboda: takbyte och takomläggning i skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0044",
+      "path": "/taklaggare-furusund",
+      "falt": "title",
+      "fore": "Takbyte i Furusund – fast pris efter takkontroll",
+      "efter": "Takläggare i Furusund – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0045",
+      "path": "/taklaggare-furusund",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Furusund, den gamla badorten i Norrtälje skärgård med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
+      "efter": "Takläggare i Furusund: takbyte och takomläggning i den gamla badorten i Norrtälje skärgård, med bilväg sedan 1953. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0046",
+      "path": "/taklaggare-svartno",
+      "falt": "title",
+      "fore": "Takbyte på Svartnö – fast pris efter takkontroll",
+      "efter": "Takläggare på Svartnö – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0047",
+      "path": "/taklaggare-svartno",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare på Svartnö: takbyte och takomläggning på Svartnö och Eknö i Norrtälje skärgård, med bilväg sedan 1945. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0048",
+      "path": "/taklaggare-husaro",
+      "falt": "title",
+      "fore": "Takbyte på Husarö – fast pris i offerten",
+      "efter": "Takläggare på Husarö – fast pris i offerten",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0049",
+      "path": "/taklaggare-husaro",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning på Husarö, lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "efter": "Takläggare på Husarö: lotsön i Österåkers skärgård som nås med båt. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0050",
+      "path": "/taklaggare-ingmarso",
+      "falt": "title",
+      "fore": "Takbyte på Ingmarsö – fast pris i offerten",
+      "efter": "Takläggare på Ingmarsö – fast pris i offerten",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0051",
+      "path": "/taklaggare-ingmarso",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning på Ingmarsö i Österåkers skärgård, en ö utan vägförbindelse. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "efter": "Takläggare på Ingmarsö: en ö utan vägförbindelse i Österåkers skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0052",
+      "path": "/taklaggare-hogmarso",
+      "falt": "title",
+      "fore": "Takbyte på Högmarsö – fast pris i offerten",
+      "efter": "Takläggare på Högmarsö – fast pris i offerten",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0053",
+      "path": "/taklaggare-hogmarso",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning på Högmarsö, varvsön vid Furusundsleden i Norrtälje skärgård.",
+      "efter": "Takläggare på Högmarsö: varvsön vid Furusundsleden i Norrtälje skärgård. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0054",
+      "path": "/taklaggare-norrviken",
+      "falt": "title",
+      "fore": "Takbyte i Norrviken – fast pris efter takkontroll",
+      "efter": "Takläggare i Norrviken – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0055",
+      "path": "/taklaggare-norrviken",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Norrviken, Sollentunas villastad från 1906 med egnahem från 1930- och 1940-talen. Kostnadsfri takkontroll och fast pris.",
+      "efter": "Takläggare i Norrviken: Sollentunas villastad från 1906 med egnahem från 1930- och 1940-talen. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0056",
+      "path": "/taklaggare-helenelund",
+      "falt": "title",
+      "fore": "Takbyte i Helenelund – fast pris efter takkontroll",
+      "efter": "Takläggare i Helenelund – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0057",
+      "path": "/taklaggare-helenelund",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Helenelund, Sollentunas sydligaste kommundel med villastäder från 1920- och 1930-talen. Kostnadsfri takkontroll och fast pris.",
+      "efter": "Takläggare i Helenelund: Sollentunas sydligaste kommundel med villastäder från 1920- och 1930-talen. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0058",
+      "path": "/taklaggare-rotebro",
+      "falt": "title",
+      "fore": "Takbyte i Rotebro – fast pris efter takkontroll",
+      "efter": "Takläggare i Rotebro – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0059",
+      "path": "/taklaggare-rotebro",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Rotebro i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Rotebro: takbyte och takomläggning i norra Sollentuna, med villorna i Gillbo och Rotsunda. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0060",
+      "path": "/taklaggare-rindo",
+      "falt": "title",
+      "fore": "Takbyte på Rindö – fast pris efter takkontroll",
+      "efter": "Takläggare på Rindö – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0061",
+      "path": "/taklaggare-rindo",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning på Rindö och Skarpö i Vaxholm, öar med vägfärja och bro. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "efter": "Takläggare på Rindö: takbyte och takomläggning på Rindö och Skarpö i Vaxholm, öar med vägfärja och bro. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0062",
+      "path": "/taklaggare-tynningo",
+      "falt": "title",
+      "fore": "Takbyte på Tynningö – fast pris efter takkontroll",
+      "efter": "Takläggare på Tynningö – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0063",
+      "path": "/taklaggare-tynningo",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning på Tynningö i Vaxholm, sommarön med bilfärja. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "efter": "Takläggare på Tynningö: takbyte och takomläggning på sommarön med bilfärja i Vaxholm. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0064",
+      "path": "/taklaggare-tumba",
+      "falt": "title",
+      "fore": "Takbyte i Tumba – fast pris efter takkontroll",
+      "efter": "Takläggare i Tumba – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0065",
+      "path": "/taklaggare-tumba",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Tumba i Botkyrka, med villor från 1900-talets början och framåt. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Tumba: takbyte och takomläggning i Botkyrka, med villor från 1900-talets början och framåt. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0066",
+      "path": "/taklaggare-gustavsberg",
+      "falt": "title",
+      "fore": "Takbyte i Gustavsberg – fast pris efter takkontroll",
+      "efter": "Takläggare i Gustavsberg – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0067",
+      "path": "/taklaggare-gustavsberg",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Gustavsberg på Värmdö, bruksorten där egnahem byggdes från 1950-talet. Kostnadsfri takkontroll och fast pris.",
+      "efter": "Takläggare i Gustavsberg: takbyte och takomläggning i bruksorten på Värmdö, där egnahem byggdes från 1950-talet. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0068",
+      "path": "/taklaggare-trollbacken",
+      "falt": "title",
+      "fore": "Takbyte i Trollbäcken – fast pris efter takkontroll",
+      "efter": "Takläggare i Trollbäcken – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0069",
+      "path": "/taklaggare-trollbacken",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Trollbäcken i Tyresö, villaområdet som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Trollbäcken: takbyte och takomläggning i villaområdet i Tyresö som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0070",
+      "path": "/taklaggare-tullinge",
+      "falt": "title",
+      "fore": "Takbyte i Tullinge – fast pris efter takkontroll",
+      "efter": "Takläggare i Tullinge – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0071",
+      "path": "/taklaggare-tullinge",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Tullinge i Botkyrka, planerat som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Tullinge: takbyte och takomläggning i orten i Botkyrka som planerades som villastad kring sekelskiftet 1900. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0072",
+      "path": "/taklaggare-marsta",
+      "falt": "title",
+      "fore": "Takbyte i Märsta – fast pris efter takkontroll",
+      "efter": "Takläggare i Märsta – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0073",
+      "path": "/taklaggare-marsta",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Märsta i Sigtuna kommun, orten som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Märsta: takbyte och takomläggning i orten i Sigtuna kommun som växte med Arlanda från 1960-talet. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0074",
+      "path": "/taklaggare-saltsjo-boo",
+      "falt": "title",
+      "fore": "Takbyte i Saltsjö-Boo – fast pris efter takkontroll",
+      "efter": "Takläggare i Saltsjö-Boo – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0075",
+      "path": "/taklaggare-saltsjo-boo",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Saltsjö-Boo i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Saltsjö-Boo: takbyte och takomläggning i Nacka, där sommarstugeområden har blivit villaområden. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0076",
+      "path": "/taklaggare-spanga",
+      "falt": "title",
+      "fore": "Takbyte i Spånga – fast pris efter takkontroll",
+      "efter": "Takläggare i Spånga – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0077",
+      "path": "/taklaggare-spanga",
+      "falt": "description",
+      "fore": "Takbyte och takomläggning i Spånga i Västerort, med villasamhällena Solhem, Bromsten och Flysta. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Spånga: takbyte och takomläggning i villasamhällena Solhem, Bromsten och Flysta i Västerort. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0078",
+      "path": "/taklaggare-bro",
+      "falt": "title",
+      "fore": "Takläggare i Bro – fast pris efter takkontroll",
+      "efter": "Takläggare i Bro – fast pris efter takkontroll",
+      "tid": "2026-10-05T02:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-04-0079",
+      "path": "/taklaggare-bro",
+      "falt": "description",
+      "fore": "Takläggare i Bro i Upplands-Bro: takbyte, takomläggning och takrenovering. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "efter": "Takläggare i Bro i Upplands-Bro: takbyte, takomläggning och takrenovering. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "tid": "2026-10-05T02:30:00+02:00"
     }
   ]
 }

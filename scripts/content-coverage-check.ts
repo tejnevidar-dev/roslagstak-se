@@ -171,6 +171,13 @@ const pmAcceptedGaps: Record<string, string[]> = {
   "pannplat.md": pmRiktprisGap,
   // Marknadschefens beslut 2026-10-04 (backlog 1bx, underlag-forstark-tegeltak, fynd i avsnitt 2): bärighet enligt juristens B3,
   // klimatmeningen och "tegelplåt" ersatta, bygglovsmeningen flyttad till FAQ:n. Briefen lertegel.md ändras av Innehåll.
+  // Marknadschefens beslut 2026-10-04 (backlog 1cf, underlag-forstark-platarbeten, fynd 3, 4 och 6): hustypsråd, ljudmeningen och
+  // "tegelplåt" ersatta av godkända lydelser. Briefen dubbelfalsat.md ändras av Innehåll.
+  "dubbelfalsat.md": [
+    "Resultatet är ett stramt och rent tak som passar både äldre hus och moderna villor, men som kräver mer hantverk än skruvad profilplåt.",
+    "Plåttak kan upplevas som ljudligare vid regn om taket inte är rätt uppbyggt, precis som andra plåttak.",
+    "*Tegelplåt* och pannplåt är pressad plåt som ska likna pannor.",
+  ],
   "lertegel.md": [
     "Tunga pannor, så takstolarna måste vara dimensionerade för vikten, vilket bedöms vid takkontrollen.",
     "Byte från ett lättare material till tegel kräver därför extra kontroll.",
