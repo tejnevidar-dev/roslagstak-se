@@ -31,6 +31,11 @@ const HUBS: Hub[] = [
   { slug: "huddinge", href: "/takbyte-huddinge", label: "Takbyte i Huddinge", regioner: ["Södra Stockholm"] },
 ];
 
+/** Extra länkar på regionsidor (backlog 1cn): Kusten länkar till takomläggningssidan för Norrtälje. */
+export const REGION_EXTRA_LINKS: Record<string, HubLink[]> = {
+  Kusten: [{ href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }],
+};
+
 /** Hubblänkarna för en ort (tom lista för hubbens egen sida och för orter utanför hubbens regioner). */
 export const hubLinksFor = (slug: string): HubLink[] => {
   const loc = locationIndex.find((l) => l.slug === slug);

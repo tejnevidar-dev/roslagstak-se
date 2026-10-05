@@ -95,7 +95,7 @@ export const beloppLopande = (name: string): string => {
 export const PRICE_NOTE =
   "Riktpriser nedan är efter ROT-avdrag och inkl. moms, med standardställning. " +
   STALLNING_MENING +
-  " Priserna förutsätter fullt ROT-avdrag: 30 % av arbetskostnaden, högst 50 000 kr per person och år, och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre. Exakt pris för ditt tak får du alltid skriftligt efter en kostnadsfri takkontroll.";
+  " Priserna förutsätter fullt ROT-avdrag: 30 % av arbetskostnaden, högst 50 000 kr per person och år, och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre. Du får ett fast pris i offerten efter en kostnadsfri takkontroll.";
 
 export const PRICE_ROT_TITLE = "Så fungerar ROT-avdraget vid takarbeten";
 export const PRICE_ROT_TEXT =

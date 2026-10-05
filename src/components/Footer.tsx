@@ -27,6 +27,7 @@ const genvagar = [
   { to: "/taktyper", label: "Taktyper" },
   { to: "/brf", label: "BRF & fastigheter" },
   { to: "/takbyte-var-2027", label: "Planera takbyte våren 2027" },
+  { to: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" },
   { to: "/hur-det-gar-till", label: "Så går det till" },
   { to: "/priser", label: "Prislista" },
   { to: "/recensioner", label: "Omdömen" },

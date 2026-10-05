@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
+import { REGION_EXTRA_LINKS } from "@/data/hub-links";
 import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
@@ -161,11 +162,14 @@ const RegionPage = () => {
 
           <RelatedLinks
             currentPath="/omraden"
-            extraLinks={(regionNeighbors[region] ?? []).map((n) => ({
-              to: `/omraden/${regionSlugs[n]}`,
-              label: `Takläggare i ${n}`,
-              description: "Närliggande område.",
-            }))}
+            extraLinks={[
+              ...(regionNeighbors[region] ?? []).map((n) => ({
+                to: `/omraden/${regionSlugs[n]}`,
+                label: `Takläggare i ${n}`,
+                description: "Närliggande område.",
+              })),
+              ...(REGION_EXTRA_LINKS[region] ?? []).map((l) => ({ to: l.href, label: l.label, description: "Mer om takomläggning." })),
+            ]}
             title="Nästa steg"
             intro="Priser, taktyper och hur ett takprojekt går till — oavsett vilken ort du bor i."
           />

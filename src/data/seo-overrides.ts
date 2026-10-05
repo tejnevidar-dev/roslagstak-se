@@ -779,4 +779,19 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare i Edsberg: villaområdet Landsnora vid Edsviken, Edsängen och stugområdena vid Väsjön i Sollentuna. Kostnadsfri takkontroll och fast pris i offerten.",
   },
+  rosersberg: {
+    title: "Takläggare i Rosersberg – fast pris efter takkontroll",
+    description:
+      "Takläggare i Rosersberg: takbyte och takomläggning i villaområdena i orten mellan Märsta och Upplands Väsby. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  varberg: {
+    title: "Takläggare i Vårberg – fast pris efter takkontroll",
+    description:
+      "Takläggare i Vårberg: takbyte och takomläggning i Johannesdal, sommarstugeområdet vid Mälaren som blev villaområde. Kostnadsfri takkontroll och fast pris.",
+  },
+  musko: {
+    title: "Takläggare på Muskö – fast pris efter takkontroll",
+    description:
+      "Takläggare på Muskö: takbyte och takomläggning på ön i Haninge skärgård som nås med bil genom Muskötunneln. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
 };

@@ -48,6 +48,7 @@ await esbuild({
 });
 const {
   prerenderContent,
+  noindexPageMeta,
   thinComboPaths,
   buildOrganizationNode,
   buildWebSiteNode,
@@ -287,17 +288,19 @@ for (const { path, robots } of routes) {
      do not execute JS would otherwise see 1 300+ identical titles. Mirrors
      SEOHead's rule of appending " | RoslagsTak" to short titles. */
   const page = robots === NOINDEX_ROBOTS ? null : prerenderContent(path);
+  /* Noindex-sidor utan prerenderad text (annonssidorna) får ändå egen titel och beskrivning i den statiska HTML:en. */
+  const headMeta = page ?? (robots === NOINDEX_ROBOTS ? noindexPageMeta(path) : null);
   /* SEO Command Center (S0): överstyrning av titel/beskrivning via SAMMA funktion som SEOHead (resolveMeta, samma
      beskärning och suffix). Utan överstyrning gäller exakt koden nedan som förut. */
   const ov = page ? resolveMeta(path, { title: page.title ?? "", description: page.description ?? "" }) : null;
   const overriddenTitle = ov?.titleOverridden ? withSuffix(fitTitle(ov.title)) : null;
   const overriddenDescription = ov?.descriptionOverridden ? fitDescription(ov.description) : null;
-  if (overriddenTitle || page?.title) {
+  if (overriddenTitle || headMeta?.title) {
     const fullTitle =
       overriddenTitle ??
-      (page.title.length > 47 || page.title.includes("RoslagsTak")
-        ? page.title
-        : `${page.title} | RoslagsTak`);
+      (headMeta.title.length > 47 || headMeta.title.includes("RoslagsTak")
+        ? headMeta.title
+        : `${headMeta.title} | RoslagsTak`);
     html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(fullTitle)}</title>`);
     html = html.replace(
       /<meta property="og:title" content="[^"]*" \/>/,
@@ -308,7 +311,7 @@ for (const { path, robots } of routes) {
       `<meta name="twitter:title" content="${esc(fullTitle)}" />`,
     );
   }
-  const finalDescription = overriddenDescription ?? page?.description;
+  const finalDescription = overriddenDescription ?? headMeta?.description;
   if (finalDescription) {
     html = html.replace(
       /<meta name="description" content="[^"]*" \/>/,

@@ -37,7 +37,7 @@ export const services: { slug: string; name: string; description: string }[] = [
   {
     slug: "takinspektion",
     name: "Takkontroll",
-    description: "Kostnadsfri takkontroll av tak, underlagspapp, råspont, avvattning och taksäkerhet på plats.",
+    description: "Kostnadsfri takkontroll: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar.",
   },
   {
     slug: "taksakerhet",
@@ -47,12 +47,12 @@ export const services: { slug: string; name: string; description: string }[] = [
   {
     slug: "platarbeten",
     name: "Plåtarbeten och bandtäckning",
-    description: "Fotplåt, vindskivor, skorstensbeslag och dubbelfalsad bandtäckning utförd enligt AMA Hus.",
+    description: "Fotplåt, vindskiveplåt, skorstensbeslag och dubbelfalsad bandtäckning. Arbete enligt AMA.",
   },
   {
     slug: "takvard",
-    name: "Takvård, taktvätt och takmålning",
-    description: "Skonsam taktvätt, biocidbehandling och takmålning på betongpannor, tegel och plåttak.",
+    name: "Taktvätt",
+    description: "Taktvätt: vi börjar med en kostnadsfri takkontroll utan förpliktelser och lämnar en offert med fast pris.",
   },
   {
     slug: "eternit-asbest",
@@ -78,7 +78,7 @@ export const OPENING_HOURS = [
 ];
 
 /** Unika regioner i ortsdatan — används som areaServed på områdesnivå. */
-export const serviceRegions = Array.from(new Set(locations.map((l) => l.region)));
+export const serviceRegions = Array.from(new Set(locations.map((l) => l.region))).filter((r) => r !== "Mälardalen");
 
 /**
  * LocalBusiness (RoofingContractor) för hela sajten — tjänstekatalog,
@@ -99,7 +99,7 @@ export const buildLocalBusinessSchema = () => ({
   paymentAccepted: "Faktura",
   parentOrganization: { "@id": ORG_ID },
   description:
-    "Takläggare i Roslagen och Storstockholm. Takbyte, takomläggning, takrenovering, plåtarbeten, takvård och byte av eternittak med fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+    "Takfirma med bas i Norrtälje. Takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen och Storstockholm. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti.",
   address: {
     "@type": "PostalAddress",
     addressLocality: NAP.addressLocality,
@@ -109,7 +109,7 @@ export const buildLocalBusinessSchema = () => ({
   geo: { "@type": "GeoCoordinates", latitude: NAP.lat, longitude: NAP.lng },
   areaServed: [
     ...serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
-    ...locations.map((loc) => ({ "@type": "Place", name: loc.name })),
+    ...locations.filter((loc) => loc.region !== "Mälardalen").map((loc) => ({ "@type": "Place", name: loc.name })),
   ],
   openingHoursSpecification: OPENING_HOURS,
   knowsAbout: [
@@ -119,16 +119,11 @@ export const buildLocalBusinessSchema = () => ({
     "Plåttak",
     "TP20",
     "Dubbelfalsat plåttak",
-    "Tegelplåt",
+    "Pannplåt",
     "Betongpannor",
     "Takavvattning",
     "Takkontroll",
     "Taksäkerhet",
-    "Byta eternittak",
-    "Takkupor",
-    "Takfönster",
-    "Taktvätt",
-    "Takmålning",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",

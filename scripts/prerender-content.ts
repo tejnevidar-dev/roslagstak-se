@@ -11,6 +11,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { ortSeoOverrides } from "../src/data/seo-overrides";
+import { getAdLanding } from "../src/data/ad-landings";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
@@ -24,7 +25,7 @@ import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody } from "../src/lib/body-items";
 import { problemsForLocation, regionLinksForProblems, takkontrollLink } from "../src/data/problem-links";
-import { hubLinksFor } from "../src/data/hub-links";
+import { hubLinksFor, REGION_EXTRA_LINKS } from "../src/data/hub-links";
 import { TAKTVATT_FAQS, TAKTVATT_H1, TAKTVATT_INTRO, TAKTVATT_META, TAKTVATT_SECTIONS, TAKTVATT_TITLE } from "../src/data/taktvatt-text";
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
@@ -146,7 +147,7 @@ const home: PrerenderPage = {
       "Så jobbar vi. Tillgänglighet: du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19. En kontaktperson: samma person tar hand om dig från första kontakten till färdigt tak. Tydliga villkor: fast pris i offerten, 10 års utförandegaranti på det arbete vi utför och 30 års tätskiktsgaranti via MATAKI när ett nytt tätskikt läggs, ROT-avdraget dras direkt på fakturan. Hantverk enligt AMA.",
       `Boka en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
-  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/recensioner", label: "Recensioner" }, ...serviceLinks, ...locationLinks],
+  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
 };
 
 const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
@@ -184,15 +185,15 @@ const staticPages: Record<string, PrerenderPage> = {
       "Räkna fram ett prisförslag på takbyte direkt, eller boka kostnadsfri takkontroll. Fast pris, 10 års utförandegaranti och återkoppling inom 24 timmar.",
     h1: "Få offert på takbyte i Roslagen",
     intro:
-      "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri rådgivning och takkontroll på plats.",
+      "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri takkontroll.",
     paragraphs: [
-      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Vi lämnar alltid fast pris efter kostnadsfri takkontroll — med 10 års utförandegaranti.",
-      "I offerten ingår allt som behövs för ett komplett takbyte: rivning och bortforsling av gamla taket, kontroll och byte av råspont och underlagspapp, ny strö- och bärläkt, valt tätskikt, kompletta plåtbeslag kring skorsten, ventiler och genomföringar, samt taksäkerhet i form av takstege, gångbrygga och nockfästen.",
-      "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri takkontroll. På plats mäter vi taket, kontrollerar underlaget och pratar igenom materialval. Därefter får du en skriftlig offert med fast pris — det priset gäller, utan tillägg.",
+      "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Du får ett fast pris i offerten efter kostnadsfri takkontroll, och vi lämnar 10 års utförandegaranti på det arbete vi utför.",
+      "Vad som ingår står alltid i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår.",
+      "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.",
       "När du accepterat offerten planerar vi arbetet tillsammans med dig och beställer material. Du har en kontaktperson genom hela processen.",
       "Vanliga frågor om offerten: Är takkontrollen verkligen gratis? Ja, takkontrollen är kostnadsfri och du förbinder dig inte till något.",
-      "Vi tar uppdrag i hela Roslagen och Storstockholm — från Norrtälje, Vaxholm och Österåker till Täby, Sollentuna, Nacka och öarna i skärgården.",
-      "Offerten specificerar arbetskostnaden separat så att ROT-avdraget är tydligt, och vi drar av beloppet direkt på fakturan.",
+      "Vi tar uppdrag i Roslagen och Storstockholm.",
+      "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Vad händer om vi hittar skador under arbetet? Skadad råspont syns först när det gamla taket är rivet. Hittar vi något visar vi dig omfattningen och lämnar ett skriftligt pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande. Det enda undantaget är om något akut måste skyddas mot skada, till exempel ett öppet tak inför regn, och vi inte får tag på dig. Då gör vi bara det som är nödvändigt.",
       `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi återkopplar inom 24 timmar.`,
     ],
@@ -719,6 +720,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...villaAreaLinks(regionSlugs[region]),
         ...(rt ? rt.body.flatMap(inlineMdLinks) : []),
         ...(regionNeighbors[region] ?? []).map((n) => ({ href: `/omraden/${regionSlugs[n]}`, label: `Takläggare i ${n}` })),
+        ...(REGION_EXTRA_LINKS[region] ?? []),
         ...places.map((l) => ({
           href: `/taklaggare-${l.slug}`,
           label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
@@ -872,6 +874,28 @@ const aliasToCanonical = (href: string): string => {
   const target = CANONICAL_ALIASES[pathPart.replace(/\/$/, "")];
   return target ? [target, ...rest].join("#") : href;
 };
+/**
+ * Titel och beskrivning för noindex-sidor utan prerenderad brödtext: annonssidorna /offert/<ort> och /boka-takkontroll.
+ * Samma lydelser som SEOHead på sidorna, så att fliktiteln i den statiska HTML:en inte är startsidans (Innehålls fynd L2).
+ */
+export const noindexPageMeta = (path: string): { title: string; description: string } | null => {
+  const clean = path.replace(/\/$/, "");
+  if (clean === "/boka-takkontroll") {
+    return {
+      title: "Boka kostnadsfri takkontroll",
+      description: "Boka en kostnadsfri takkontroll: välj dag och tid. Vi ringer upp så snart vi kan. Fast pris, utan förpliktelser.",
+    };
+  }
+  const m = clean.match(/^\/offert\/([a-z0-9-]+)$/);
+  const landing = m ? getAdLanding(m[1]) : undefined;
+  if (!landing) return null;
+  const inPlace = `${landing.prep} ${landing.name}`;
+  return {
+    title: `Takbyte ${inPlace} — fast pris efter takkontroll`,
+    description: `Nytt tak ${inPlace}? Kostnadsfri takkontroll och fast pris. 10 års utförandegaranti. Svar inom 24 timmar.`,
+  };
+};
+
 export const prerenderContent = (path: string): PrerenderPage | null => {
   const raw = prerenderContentRaw(path);
   if (!raw) return raw;

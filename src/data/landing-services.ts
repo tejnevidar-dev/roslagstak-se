@@ -239,7 +239,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Högst 50 000 kr per person och år",
-        text: "Är ni två ägare kan var och en använda sitt avdrag, om ni båda uppfyller villkoren.",
+        text: "Är ni två ägare kan var och en använda sitt avdrag, om ni båda uppfyller villkoren. Rot- och rutavdrag får tillsammans vara högst 75 000 kr per person och år.",
       },
       {
         title: "Bara arbetet ger avdrag",
@@ -256,6 +256,14 @@ export const landingServices: LandingService[] = [
       {
         title: "Skatt att göra avdrag mot",
         text: "ROT-avdraget är en skattereduktion. Du behöver ha betalat tillräckligt med skatt under året för att kunna använda hela avdraget.",
+      },
+      {
+        title: "Elektronisk betalning",
+        text: "Betalningen ska vara elektronisk, till exempel via internetbanken, Swish eller kort.",
+      },
+      {
+        title: "Försäkringsersättning och bidrag",
+        text: "Får du försäkringsersättning eller bidrag för samma arbete kan du inte få rotavdrag för det.",
       },
     ],
     stepsHeading: "Så går det till",
@@ -288,7 +296,7 @@ export const landingServices: LandingService[] = [
     faqs: [
       {
         question: "Hur mycket är ROT-avdraget?",
-        answer: "30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Resten av reglerna finns i guiden [ROT-avdrag vid takbyte](/blogg/rot-avdrag-takbyte).",
       },
       {
         question: "Gäller ROT-avdraget materialet?",
@@ -298,7 +306,7 @@ export const landingServices: LandingService[] = [
       {
         question: "Hur får jag ROT-avdraget?",
         answer:
-          "Avdraget görs direkt på fakturan, så du betalar bara det som återstår.",
+          "Avdraget görs direkt på fakturan, så du betalar bara det som återstår. Godkänner Skatteverket inte hela avdraget betalar du mellanskillnaden, om det inte beror på ett fel från vår sida.",
       },
       {
         question: "Kan bostadsrättsföreningar få ROT-avdrag?",
