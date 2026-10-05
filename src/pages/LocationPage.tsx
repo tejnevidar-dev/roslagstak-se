@@ -24,6 +24,7 @@ import { projects, getNearbyProject } from "@/data/projects";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
 import { NAP, OPENING_HOURS, ORG_ID } from "@/lib/schema";
+import { linkPhone } from "@/lib/inline-md";
 import {
   Accordion,
   AccordionContent,
@@ -319,14 +320,14 @@ const LocationPage = () => {
                       return (
                         <p key={para} className="text-muted-foreground leading-relaxed mb-6">
                           {after === undefined ? (
-                            para
+                            linkPhone(para)
                           ) : (
                             <>
-                              {before}
+                              {linkPhone(before)}
                               <Link to="/takkontroll" className="text-primary underline underline-offset-4 hover:no-underline">
                                 roslagstak.se/takkontroll
                               </Link>
-                              {after}
+                              {linkPhone(after)}
                             </>
                           )}
                         </p>

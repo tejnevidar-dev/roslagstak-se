@@ -12,6 +12,7 @@ import { buildBreadcrumbSchema } from "@/lib/schema";
 import { getLandingService } from "@/data/landing-services";
 import { GARANTI_RENOVERING_CHIP, RENOVERING_LANDING_SLUGS } from "@/data/guarantee";
 import NotFound from "@/pages/NotFound";
+import { linkPhone } from "@/lib/inline-md";
 
 /** Korta jobb där inget nytt tätskikt läggs: tätskiktschipet visas inte (Marknadschefen och juristen, backlog 1ce). */
 const NO_TATSKIKT_CHIP_LANDING = ["takreparation", "hangrannor", "akut-lackage"];
@@ -63,7 +64,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
               >
                 {service.h1} <span className="italic text-accent">{service.h1Accent}</span>
               </h1>
-              <p className="mt-6 max-w-[54ch] text-[18px] leading-relaxed text-muted-foreground">{service.intro}</p>
+              <p className="mt-6 max-w-[54ch] text-[18px] leading-relaxed text-muted-foreground">{linkPhone(service.intro)}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="tel:0701543639"
@@ -119,7 +120,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
               {service.list.map((item) => (
                 <li key={item.title} className="grid gap-1 border-b border-border py-5 sm:grid-cols-[15rem_1fr] sm:gap-8">
                   <h3 className="font-display text-lg text-foreground">{item.title}</h3>
-                  <p className="leading-relaxed text-muted-foreground">{item.text}</p>
+                  <p className="leading-relaxed text-muted-foreground">{linkPhone(item.text)}</p>
                 </li>
               ))}
             </ul>
@@ -142,7 +143,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
                     <span className="font-display text-3xl leading-none text-accent tabular-nums">{i + 1}</span>
                     <div>
                       <h3 className="font-display text-[1.3rem] leading-snug text-foreground">{step.title}</h3>
-                      <p className="mt-2 max-w-[56ch] leading-relaxed text-muted-foreground">{step.text}</p>
+                      <p className="mt-2 max-w-[56ch] leading-relaxed text-muted-foreground">{linkPhone(step.text)}</p>
                     </div>
                   </div>
                 </li>
