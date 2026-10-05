@@ -68,7 +68,7 @@ export const applyMall = (loc: LocationData): LocationData => {
   const p2 = pick<string>(
     [
       "Två hus på samma gata kan ha tak i helt olika skick. Vad ditt tak behöver går inte att säga utan att se det. Därför börjar varje jobb med att en av våra säljare tittar på taket på plats.",
-      "Hur ett tak mår går inte att avgöra på adressen eller på husets ålder. Ett tak kan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi alltid med att titta på taket på plats.",
+      "Hur ett tak mår går inte att avgöra på adressen eller på husets ålder. Ett tak kan ha lagts om, och ett tak kan se helt ut från gatan och ändå ha ett slitet underlag. Därför börjar vi med att titta på taket på plats.",
       `Varje hus får en egen takkontroll och ett eget pris. Vi utgår inte från hur husen ${prep} ${ort} brukar se ut, utan från ditt tak. En av våra säljare tittar på det på plats.`,
     ],
     n,

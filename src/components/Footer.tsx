@@ -17,8 +17,7 @@ const tjanster = [
   { to: "/akut-lackage", label: "Läckage i taket" },
   { to: "/hangrannor", label: "Hängrännor och stuprör" },
   { to: "/platslagare", label: "Plåtslagare för tak" },
-  { to: "/tjanster/taktvatt", label: "Takvård & taktvätt" },
-  { to: "/taktvatt", label: "Taktvätt & mossborttagning" },
+  { to: "/tjanster/taktvatt", label: "Taktvätt" },
   { to: "/tjanster/eternit-asbest", label: "Byta eternittak" },
 ];
 
