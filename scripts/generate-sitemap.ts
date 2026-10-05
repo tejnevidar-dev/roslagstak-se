@@ -5,10 +5,19 @@
  * already present, and rebuilds the location + service-location combo entries
  * from src/data/locations.ts so the sitemap always matches the routes.
  *
+ * lastmod: dagens datum sätts BARA på en sida vars text faktiskt har ändrats. Varje sida får en
+ * fingeravtryck av sin förrenderade text (rubrik, ingress, stycken, titel, beskrivning, brödsmulor,
+ * JSON-LD) i src/data/sitemap-lastmod.json. Samma fingeravtryck som sist = samma datum som sist,
+ * oavsett hur många gånger generatorn körs. Första körningen (ingen state-fil) tar datum ur den
+ * befintliga sitemapen och lämnar sidor utan känt datum utan lastmod. Sidor utan förrenderad text
+ * behåller sitt befintliga datum.
+ *
  * Run:  bun scripts/generate-sitemap.ts
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { prerenderContent } from "./prerender-content";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
@@ -106,6 +115,31 @@ for (const entry of rawEntries) {
   seen.add(canonical);
   entries.push({ ...entry, path: canonical });
 }
+
+// ---------- 5. lastmod ur sidans faktiska innehåll ----------
+const STATE_FILE = resolve("src/data/sitemap-lastmod.json");
+const baseline = !existsSync(STATE_FILE);
+const prevState: Record<string, { h: string; d?: string }> = baseline ? {} : JSON.parse(readFileSync(STATE_FILE, "utf8"));
+const nextState: Record<string, { h: string; d?: string }> = {};
+const today = new Date().toLocaleDateString("sv-SE");
+let andrade = 0;
+for (const e of entries) {
+  const page = prerenderContent(e.path);
+  if (!page) continue; // ingen förrenderad text att jämföra: behåll befintligt lastmod
+  const h = createHash("sha1")
+    .update(JSON.stringify([page.h1, page.intro, page.paragraphs, page.title, page.description, page.breadcrumbs, page.jsonLd]))
+    .digest("hex")
+    .slice(0, 16);
+  const prev = prevState[e.path];
+  let d: string | undefined;
+  if (prev) d = prev.h === h ? prev.d : today;
+  else d = baseline ? e.lastmod : today; // ny sida efter baslinjen = ändrad i dag
+  if (prev && prev.h !== h) andrade++;
+  e.lastmod = d;
+  nextState[e.path] = d ? { h, d } : { h };
+}
+writeFileSync(STATE_FILE, JSON.stringify(nextState, null, 1) + "\n");
+console.log(`lastmod: ${baseline ? "baslinje skapad" : `${andrade} sidor med ändrad text fick ${today}`}, ${Object.keys(nextState).length} sidor följs`);
 
 function generateSitemap(list: Entry[]): string {
   const urls = list.map((e) => {

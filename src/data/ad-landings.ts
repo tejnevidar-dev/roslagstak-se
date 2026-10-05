@@ -23,3 +23,22 @@ export const adLandings: AdLanding[] = [
 export const adLandingSlugs = adLandings.map((l) => l.slug);
 
 export const getAdLanding = (slug: string) => adLandings.find((l) => l.slug === slug);
+
+/** Rubrik och ingress på /offert/<ort>. Delas av sidan och den statiska HTML:en (generate-static-heads), så att texten
+ *  före och efter att React tar över är ordagrant densamma. */
+export const adLandingCopy = (l: AdLanding) => {
+  const inPlace = `${l.prep} ${l.name}`;
+  return {
+    h1Lead: `Nytt tak ${inPlace}?`,
+    h1Accent: "Fast pris efter kostnadsfri takkontroll.",
+    intro: `Kostnadsfri takkontroll utan förpliktelser, en kontaktperson genom hela processen och fast pris i offerten. Takfirma med bas i Norrtälje. Vi lägger betongpannor, lertegel, TP20 och dubbelfalsat plåttak (bandtäckning). Vi tar uppdrag i ${l.areas}.`,
+  };
+};
+
+/** Rubrik och ingress på /boka-takkontroll (delas av sidan och den statiska HTML:en). */
+export const bookingCopy = {
+  h1Lead: "Boka kostnadsfri takkontroll.",
+  h1Accent: "Välj dag, eller be oss ringa.",
+  intro:
+    "En av våra säljare tittar på taket på plats. Du får en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris. Kostnadsfritt och utan förpliktelser. Vi svarar inom 24 timmar.",
+};

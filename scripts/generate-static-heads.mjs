@@ -49,6 +49,8 @@ await esbuild({
 const {
   prerenderContent,
   noindexPageMeta,
+  noindexPageBody,
+  HERO_STYLES,
   thinComboPaths,
   buildOrganizationNode,
   buildWebSiteNode,
@@ -206,13 +208,14 @@ const bodyFor = (path) => {
         })
         .join("")}</nav>`
     : "";
-  return `<div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
+  const hero = page.hero ? HERO_STYLES[page.hero] : null;
+  return `<div id="prerendered-content" style="${hero ? "max-width:1280px;padding:96px 24px 48px" : "max-width:820px;padding:48px 20px"};margin:0 auto;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
       ${breadcrumbSchema}
       ${extraJsonLd}
       ${breadcrumbNav}
       <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
-      <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">${esc(page.h1)}</h1>
-      <p style="font-size:1.05rem">${esc(page.intro)}</p>
+      <h1 style="${hero ? hero.h1 : "font-size:2rem;color:#1a365d;line-height:1.25"}">${esc(page.h1)}</h1>
+      <p style="${hero ? hero.intro : "font-size:1.05rem"}">${esc(page.intro)}</p>
       ${page.paragraphs
         .map((p, i) => {
           const level = page.headingAt?.[i];
@@ -223,6 +226,17 @@ const bodyFor = (path) => {
       <nav aria-label="Sidlänkar"><ul>${links
         .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)}</a></li>`)
         .join("")}</ul></nav>
+    </div>`;
+};
+
+/** Annonssidorna (noindex): bara rubrik och ingress, samma text som React visar (se noindexPageBody). */
+const noindexBodyFor = (path) => {
+  const page = noindexPageBody(path);
+  if (!page) return "";
+  const hero = HERO_STYLES[page.hero];
+  return `<div id="prerendered-content" style="max-width:1280px;margin:0 auto;padding:96px 24px 48px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
+      <h1 style="${hero.h1}">${esc(page.h1)}</h1>
+      <p style="${hero.intro}">${esc(page.intro)}</p>
     </div>`;
 };
 
@@ -360,7 +374,7 @@ for (const { path, robots } of routes) {
   }
   html = html.replace("</head>", `  ${graphNodes.map(ldScript).join("\n    ")}\n  </head>`);
 
-  const body = robots === NOINDEX_ROBOTS ? "" : bodyFor(path);
+  const body = robots === NOINDEX_ROBOTS ? noindexBodyFor(path) : bodyFor(path);
   if (body) prerendered++;
   // Cookie-bannern (#1ag) hamnar på ALLA sidor, inklusive noindex — React ersätter hela #root
   // vid montering, så den statiska kopian stannar aldrig kvar bredvid den riktiga.

@@ -11,7 +11,8 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { ortSeoOverrides } from "../src/data/seo-overrides";
-import { getAdLanding } from "../src/data/ad-landings";
+import { adLandingCopy, getAdLanding } from "../src/data/ad-landings";
+import { bookingCopy } from "../src/data/ad-landings";
 import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
@@ -59,6 +60,20 @@ import { regionBySlug, regionIntros, regionNeighbors, regionSlugs } from "../src
 export { buildOrganizationNode, buildWebSiteNode, buildWebPageNode, buildBreadcrumbNode } from "../src/lib/schema-graph";
 export { buildLocalBusinessSchema, buildLocalBusinessLeanSchema } from "../src/lib/schema";
 
+/** Inline-CSS för rubrik och ingress i den statiska HTML:en, spegling av Reacts hero (ServiceLandingPage, AdLandingPage, BookingPage).
+ *  Karla/Fraunces är samma webbtypsnitt som sajten. Radavståndet på ingressen är en aning större än Reacts (1.7 mot 1.625),
+ *  så att den statiska textrutan aldrig är mindre än Reacts. */
+export const HERO_STYLES = {
+  service: {
+    h1: "font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.07;letter-spacing:-0.025em;max-width:20ch;text-wrap:balance;color:#1a365d;margin:0",
+    intro: "font-family:Karla,sans-serif;font-size:18px;line-height:1.7;max-width:54ch;margin:24px 0 0;color:#4b5563",
+  },
+  ad: {
+    h1: "font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.07;letter-spacing:-0.025em;max-width:20ch;text-wrap:balance;color:#1a365d;margin:0",
+    intro: "font-family:Karla,sans-serif;font-size:18px;line-height:1.7;max-width:50ch;margin:20px 0 0;color:#4b5563",
+  },
+} as const;
+
 export interface PrerenderPage {
   h1: string;
   intro: string;
@@ -82,6 +97,10 @@ export interface PrerenderPage {
   /** Extra JSON-LD-objekt som skrivs som <script type="application/ld+json"> i den statiska HTML:en (t.ex. BlogPosting). */
   jsonLd?: Record<string, unknown>[];
   ogImageAlt?: string;
+  /** Sidor vars React-hero har egen typografi: den statiska rubriken och ingressen skrivs då med samma storlek, radavstånd och
+   *  bredd som Reacts, så att den statiska texten är LCP-elementet och Reacts text inte blir en större kandidat vid hydrering
+   *  (LCP-utredning /akut-lackage, /hangrannor 2026-10-05). Se HERO_STYLES. */
+  hero?: keyof typeof HERO_STYLES;
   /** Rubriknivå per styckeindex (2 eller 3). Stycken som står här skrivs som <h2>/<h3> i den statiska HTML:en
    *  (G1 i konkurrentanalysen: crawlers utan JS ska se samma rubrikstruktur som besökaren). Texten i
    *  paragraphs är oförändrad, så ordräkning och meningsgrind påverkas inte. */
@@ -179,6 +198,7 @@ const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
         { name: s.breadcrumb, path: s.path },
       ],
       jsonLd: [faqLd(s.faqs, s.path)],
+      hero: "service",
     } satisfies PrerenderPage,
   ]),
 );
@@ -907,6 +927,21 @@ export const noindexPageMeta = (path: string): { title: string; description: str
     title: `Takbyte ${inPlace} — fast pris efter takkontroll`,
     description: `Nytt tak ${inPlace}? Kostnadsfri takkontroll och fast pris. 10 års utförandegaranti. Svar inom 24 timmar.`,
   };
+};
+
+/**
+ * Rubrik och ingress för noindex-annonssidorna (/offert/<ort>, /boka-takkontroll) i den statiska HTML:en. Samma strängar som
+ * React-sidorna visar (delas via src/data/ad-landings.ts), så att första målningen och LCP-elementet är ordagrant detsamma
+ * före och efter hydrering. Sidorna är noindex och ingår inte i prerenderContent (inga schemanoder, ingen sitemap, inga textkontroller).
+ */
+export const noindexPageBody = (path: string): { h1: string; intro: string; hero: keyof typeof HERO_STYLES } | null => {
+  const clean = path.replace(/\/$/, "");
+  if (clean === "/boka-takkontroll") return { h1: `${bookingCopy.h1Lead} ${bookingCopy.h1Accent}`, intro: bookingCopy.intro, hero: "service" };
+  const m = clean.match(/^\/offert\/([a-z0-9-]+)$/);
+  const landing = m ? getAdLanding(m[1]) : undefined;
+  if (!landing) return null;
+  const c = adLandingCopy(landing);
+  return { h1: `${c.h1Lead} ${c.h1Accent}`, intro: c.intro, hero: "ad" };
 };
 
 export const prerenderContent = (path: string): PrerenderPage | null => {

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import LeadForm from "@/components/LeadForm";
 import BookingWidget from "@/components/BookingWidget";
 import { BOOKING_ENABLED } from "@/lib/booking";
+import { bookingCopy } from "@/data/ad-landings";
 
 const trust = [
   "10 års utförandegaranti",
@@ -40,11 +41,10 @@ const BookingPage = () => (
               id="booking-heading"
               className="max-w-[20ch] font-display text-[clamp(2.1rem,4.6vw,3.5rem)] font-semibold leading-[1.07] tracking-[-0.025em] text-balance text-foreground"
             >
-              Boka kostnadsfri takkontroll. <span className="italic text-accent">Välj dag, eller be oss ringa.</span>
+              {bookingCopy.h1Lead} <span className="italic text-accent">{bookingCopy.h1Accent}</span>
             </h1>
             <p className="mt-6 max-w-[54ch] text-[18px] leading-relaxed text-muted-foreground">
-              En av våra säljare tittar på taket på plats. Du får en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris.
-              Kostnadsfritt och utan förpliktelser. Vi svarar inom 24 timmar.
+              {bookingCopy.intro}
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a

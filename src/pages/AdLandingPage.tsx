@@ -9,7 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import LeadForm from "@/components/LeadForm";
-import { getAdLanding, type AdLanding } from "@/data/ad-landings";
+import { adLandingCopy, getAdLanding, type AdLanding } from "@/data/ad-landings";
 import logo from "@/assets/roslagstak-logo.png";
 
 const PHONE_DISPLAY = "070-154 36 39";
@@ -65,6 +65,7 @@ const AdLandingPage = () => {
   if (!landing) return <NotFound />;
 
   const inPlace = `${landing.prep} ${landing.name}`;
+  const copy = adLandingCopy(landing);
 
   return (
     <>
@@ -97,12 +98,10 @@ const AdLandingPage = () => {
                 Takläggare {inPlace}
               </p>
               <h1 className="max-w-[20ch] font-display text-[clamp(2.1rem,6vw,3.4rem)] font-semibold leading-[1.07] tracking-[-0.025em] text-balance text-foreground">
-                Nytt tak {inPlace}?{" "}
-                <span className="italic text-accent">Fast pris efter kostnadsfri takkontroll.</span>
+                {copy.h1Lead} <span className="italic text-accent">{copy.h1Accent}</span>
               </h1>
               <p className="mt-5 max-w-[50ch] text-[18px] leading-relaxed text-muted-foreground">
-                Kostnadsfri takkontroll utan förpliktelser, en kontaktperson genom hela processen och fast pris i offerten. Takfirma med bas i Norrtälje.
-                Vi lägger betongpannor, lertegel, TP20 och dubbelfalsat plåttak (bandtäckning). Vi tar uppdrag i {landing.areas}.
+                {copy.intro}
               </p>
               <a
                 href={PHONE_HREF}
