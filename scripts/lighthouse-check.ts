@@ -88,7 +88,10 @@ const runOne = (path: string): Omit<Row, "label" | "path"> => {
   }
 };
 
-const rows: Row[] = PAGES.map(({ label, path }) => {
+/* LH_PAGES="/offert/taby,/boka-takkontroll" mäter bara de sidorna (etiketten blir adressen). */
+const valda = process.env.LH_PAGES?.split(",").map((s) => s.trim()).filter(Boolean);
+const PAGES_RUN = valda ? valda.map((path) => PAGES.find((p) => p.path === path) ?? { label: path, path }) : PAGES;
+const rows: Row[] = PAGES_RUN.map(({ label, path }) => {
   process.stderr.write(`[lighthouse-check] ${label} (${path})...\n`);
   return { label, path, ...runOne(path) };
 });
@@ -125,6 +128,5 @@ if (process.argv.includes("--budget")) {
     for (const r of over) console.error(`  - ${r.label} (${r.path}): LCP ${r.lcp}, CLS ${r.cls}`);
     process.exit(1);
   }
-  console.error("
-[lighthouse-check] ✓ Alla sidor inom CWV-budget (LCP ≤ 4,0 s, CLS ≤ 0,1).");
+  console.error("\n[lighthouse-check] ✓ Alla sidor inom CWV-budget (LCP ≤ 4,0 s, CLS ≤ 0,1).");
 }

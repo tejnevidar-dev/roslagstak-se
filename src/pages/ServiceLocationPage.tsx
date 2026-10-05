@@ -113,7 +113,6 @@ const ServiceLocationPage = () => {
       : {
           offers: {
             "@type": "Offer",
-            priceCurrency: "SEK",
             description: servicePriceDescriptions[combo.serviceSlug] ?? "Fast pris i offerten efter kostnadsfri takkontroll.",
           },
         }),

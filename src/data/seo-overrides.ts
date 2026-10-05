@@ -312,7 +312,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   storangen: {
     title: "Takläggare i Storängen och Saltsjö-Duvnäs – fast pris",
     description:
-      "Takläggare i Storängen, Lillängen och Saltsjö-Duvnäs i Nacka, med trävillor från 1904 och radhus från 1960-talet. Kostnadsfri takkontroll.",
+      "Takläggare i Storängen, Lillängen och Saltsjö-Duvnäs i Nacka, med trävillor från 1904 och funkisvillor från 1930- och 1940-talen. Kostnadsfri takkontroll.",
   },
   lannersta: {
     title: "Takläggare i Lännersta – fast pris efter takkontroll",
