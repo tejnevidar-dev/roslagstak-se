@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface SectionHeadingProps {
@@ -40,7 +40,7 @@ const SectionHeading = ({
         >
           {meta}
         </span>
-        <motion.span
+        <m.span
           aria-hidden="true"
           className={`h-1.5 rounded-full flex-1 max-w-[2.5rem] origin-left ${dark ? "bg-primary-foreground/30" : "bg-accent"}`}
           initial={reduce ? undefined : { scaleX: 0 }}
@@ -59,7 +59,7 @@ const SectionHeading = ({
         )}
       </div>
 
-      <motion.h2
+      <m.h2
         id={id}
         className={`font-display font-extrabold tracking-[-0.035em] leading-[1.02] text-balance text-[clamp(2rem,3.6vw,3rem)] ${
           dark ? "text-primary-foreground" : "text-foreground"
@@ -70,10 +70,10 @@ const SectionHeading = ({
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
         {title}
-      </motion.h2>
+      </m.h2>
 
       {intro && (
-        <motion.p
+        <m.p
           className={`mt-6 text-[19px] leading-relaxed ${
             dark ? "text-primary-foreground/70" : "text-muted-foreground"
           } ${align === "center" ? "mx-auto" : ""} max-w-2xl`}
@@ -83,7 +83,7 @@ const SectionHeading = ({
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         >
           {intro}
-        </motion.p>
+        </m.p>
       )}
     </div>
   );

@@ -28,7 +28,6 @@ export default defineConfig(() => ({
       output: {
         manualChunks: {
           "react-vendor": ["react", "react-dom", "react-router-dom", "react-helmet-async"],
-          motion: ["framer-motion"],
           charts: ["recharts"],
         },
       },

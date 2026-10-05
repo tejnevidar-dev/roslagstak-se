@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Pause, Phone, Play, RotateCcw } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import RoofBuildVideo from "@/components/RoofBuildVideo";
@@ -192,7 +192,7 @@ const RoofBuildAnimation = () => {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 {STEPS.map((item, index) => (
-                  <motion.img
+                  <m.img
                     key={item.id}
                     src={item.image}
                     alt={item.alt}
@@ -211,7 +211,7 @@ const RoofBuildAnimation = () => {
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 p-6 sm:p-9">
                   <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-ink-foreground/55">Steg {String(step + 1).padStart(2, "0")}</p>
                   <AnimatePresence mode="wait" initial={false}>
-                    <motion.h3
+                    <m.h3
                       key={current.title}
                       initial={reduce ? undefined : { opacity: 0, y: 14 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -219,14 +219,14 @@ const RoofBuildAnimation = () => {
                       className="max-w-2xl font-display text-3xl font-medium sm:text-5xl"
                     >
                       {current.title}
-                    </motion.h3>
+                    </m.h3>
                   </AnimatePresence>
                 </div>
               </div>
 
               <div className="border-t border-ink-foreground/12 px-5 py-7 sm:px-8">
                 <div className="h-px overflow-hidden bg-ink-foreground/15">
-                  <motion.div className="h-full bg-ink-foreground" animate={{ width: `${progress}%` }} transition={{ duration: 0.6 }} />
+                  <m.div className="h-full bg-ink-foreground" animate={{ width: `${progress}%` }} transition={{ duration: 0.6 }} />
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <button type="button" aria-label="Föregående steg" onClick={() => goTo(step - 1)} disabled={step === 0} className="inline-flex min-h-12 items-center gap-3 rounded-full border border-ink-foreground/20 px-6 text-sm font-medium transition-colors hover:bg-ink-foreground hover:text-ink disabled:pointer-events-none disabled:opacity-30">
@@ -251,17 +251,17 @@ const RoofBuildAnimation = () => {
                 return (
                   <li key={item.id} className="border-b border-ink-foreground/15">
                     <button type="button" onClick={() => goTo(index)} aria-current={selected ? "step" : undefined} className="group relative w-full py-5 text-left">
-                      {selected && <motion.span layoutId="step-line" className="absolute inset-y-0 left-0 w-0.5 bg-ink-foreground" />}
+                      {selected && <m.span layoutId="step-line" className="absolute inset-y-0 left-0 w-0.5 bg-ink-foreground" />}
                       <div className="flex items-baseline gap-4 pl-5">
                         <span className={`text-[10px] font-bold tabular-nums tracking-[0.3em] ${selected ? "text-ink-foreground" : "text-ink-foreground/35"}`}>{String(index + 1).padStart(2, "0")}</span>
                         <span className={`font-display text-lg font-medium sm:text-xl ${selected ? "text-ink-foreground" : "text-ink-foreground/55 group-hover:text-ink-foreground"}`}>{item.title}</span>
                       </div>
                       <AnimatePresence initial={false}>
                         {selected && (
-                          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
+                          <m.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
                             <p className="pl-14 pr-3 pt-4 text-base font-light leading-relaxed text-ink-foreground/70">{item.body}</p>
                             <p className="pl-14 pr-3 pt-3 text-sm leading-relaxed text-ink-foreground/45">{item.detail}</p>
-                          </motion.div>
+                          </m.div>
                         )}
                       </AnimatePresence>
                     </button>

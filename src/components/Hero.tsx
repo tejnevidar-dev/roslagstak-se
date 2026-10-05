@@ -1,7 +1,7 @@
 import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import heroDroneVideo from "@/assets/hero-drone.mp4";
 import heroDronePoster from "@/assets/hero-drone-poster.jpg";
 import heroDronePosterAvif480 from "@/assets/hero-drone-poster-480.avif";
@@ -76,7 +76,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-10 pt-24 lg:pb-14 lg:pt-48">
-        <motion.div className="max-w-[38rem]" {...fade(0)}>
+        <m.div className="max-w-[38rem]" {...fade(0)}>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
             Takläggare i Roslagen &amp; Stockholm
           </p>
@@ -124,10 +124,10 @@ const Hero = () => {
               Ring 070-154 36 39
             </a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
-      <motion.div
+      <m.div
         className="relative z-10 w-full border-t border-primary-foreground/15 bg-primary/70 backdrop-blur-sm"
         {...fade(0.15)}
       >
@@ -140,7 +140,7 @@ const Hero = () => {
             </Link>
           </span>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 };

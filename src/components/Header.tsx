@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Phone, Menu, X, MapPin, ArrowRight, ChevronDown } from "lucide-react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 import logo from "@/assets/roslagstak-logo.png";
 import logoWhite from "@/assets/roslagstak-logo-white.png";
 
@@ -241,7 +241,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                   } ${isActive ? (light ? "text-primary-foreground" : "text-primary") : ""}`}
                 >
                   {isActive && (
-                    <motion.span
+                    <m.span
                       layoutId="nav-active"
                       aria-hidden="true"
                       transition={{ type: "spring", stiffness: 420, damping: 34 }}
@@ -267,7 +267,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
                 <AnimatePresence>
                   {hasMenu && isOpen && (
-                    <motion.div
+                    <m.div
                       initial={reduce ? undefined : { opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={reduce ? undefined : { opacity: 0, y: 8 }}
@@ -328,7 +328,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
                         </ul>
                       </div>
-                    </motion.div>
+                    </m.div>
                   )}
                 </AnimatePresence>
               </div>
@@ -404,7 +404,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
 
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             key="mobile-menu"
             initial={reduce ? undefined : { opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -420,7 +420,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                   : activeRoute === link.label;
               return (
               <div key={link.label}>
-                <motion.a
+                <m.a
                   href={link.to ?? link.href}
                   data-nav-link
                   aria-current={isActive ? "true" : undefined}
@@ -448,7 +448,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
                     {link.label}
                   </span>
                   <ArrowRight className="h-4 w-4 text-accent" aria-hidden="true" />
-                </motion.a>
+                </m.a>
                 {link.items && (
                   <ul className="mb-2 mt-2 grid gap-1 pl-9">
                     {link.items.map((item) => {
@@ -503,7 +503,7 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
             <p className="mt-5 flex items-center gap-2 text-[13px] text-primary-foreground/60">
               <MapPin className="h-3.5 w-3.5" aria-hidden="true" /> Norrtälje · Blidö · Ljusterö · Vaxholm
             </p>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

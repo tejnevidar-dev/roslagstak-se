@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 
 const layers = [
@@ -52,7 +52,7 @@ const LayerIntro = () => {
           {layers.map((layer, i) => {
             const isLast = i === layers.length - 1;
             return (
-              <motion.li
+              <m.li
                 key={layer.name}
                 initial={reduce ? undefined : { opacity: 0, y: 16 }}
                 whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
@@ -76,12 +76,12 @@ const LayerIntro = () => {
                     {layer.detail}
                   </p>
                 </div>
-              </motion.li>
+              </m.li>
             );
           })}
         </ol>
 
-        <motion.a
+        <m.a
           href="#hur-det-gar-till"
           initial={reduce ? undefined : { opacity: 0, y: 16 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ const LayerIntro = () => {
         >
           Se hela arbetsgången i bild
           <ArrowDown className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true" />
-        </motion.a>
+        </m.a>
       </div>
     </section>
   );

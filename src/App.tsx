@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { LazyMotion } from "framer-motion";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -50,11 +51,15 @@ const MaterialPage = lazy(() => import("./pages/MaterialPage.tsx"));
 
 const queryClient = new QueryClient();
 
+/** Animationsfunktionerna (layout, gester) hämtas i en egen chunk efter första målningen i stället för att ligga i huvudbunten. */
+const loadMotionFeatures = () => import("./lib/motion-features").then((mod) => mod.default);
+
 /** Neutral platshållare medan en sidchunk hämtas — ingen layoutförskjutning. */
 const RouteFallback = () => <div className="min-h-screen bg-background" aria-busy="true" />;
 
 const App = () => (
   <HelmetProvider>
+    <LazyMotion features={loadMotionFeatures} strict>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
@@ -128,6 +133,7 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
+    </LazyMotion>
   </HelmetProvider>
 );
 

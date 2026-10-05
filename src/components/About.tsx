@@ -1,6 +1,6 @@
 import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "@/components/Reveal";
@@ -67,7 +67,7 @@ const About = () => {
                 <picture className="contents">
                 <source type="image/avif" srcSet={aboutImgAvif} />
                 <source type="image/webp" srcSet={aboutImgWebp} />
-                <motion.img
+                <m.img
                   src={aboutImg}
                   alt="Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring."
                   width={800}
