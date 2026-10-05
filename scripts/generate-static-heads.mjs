@@ -213,7 +213,7 @@ const bodyFor = (path) => {
       ${breadcrumbSchema}
       ${extraJsonLd}
       ${breadcrumbNav}
-      <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
+      <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · <a href="tel:+46701543639" style="color:inherit">070-154 36 39</a></p>
       <h1 style="${hero ? hero.h1 : "font-size:2rem;color:#1a365d;line-height:1.25"}">${esc(page.h1)}</h1>
       <p style="${hero ? hero.intro : "font-size:1.05rem"}">${esc(page.intro)}</p>
       ${page.paragraphs
@@ -417,7 +417,7 @@ const aliasEntries = [
   html = html.replace(
     '<div id="root"></div>',
     `<div id="root">${staticCookieBannerHtml}<div id="prerendered-content" style="max-width:820px;margin:0 auto;padding:48px 20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
-      <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · 070-154 36 39</p>
+      <p style="font-weight:600;color:#1a365d">RoslagsTak — takläggare i Roslagen · <a href="tel:+46701543639" style="color:inherit">070-154 36 39</a></p>
       <h1 style="font-size:2rem;color:#1a365d;line-height:1.25">Sidan finns inte</h1>
       <p>Adressen du följde finns inte på roslagstak.se.</p>
       <nav aria-label="Sidlänkar"><ul><li><a href="/">Till startsidan</a></li><li><a href="/takkontroll">Kostnadsfri takkontroll</a></li><li><a href="/omraden">Områden</a></li><li><a href="/kontakt">Kontakt</a></li></ul></nav>
