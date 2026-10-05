@@ -16,7 +16,7 @@ import { locations } from "../src/data/locations";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
 import { MATERIAL_PRISAVSNITT, prisAvsnittForSpegel } from "../src/data/material-prices";
-import { MATERIAL_EXTRAS } from "../src/data/page-extras";
+import { MATERIAL_EXTRAS, SERVICE_EXTRAS } from "../src/data/page-extras";
 import { projectTexts } from "../src/data/project-texts";
 import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
@@ -30,6 +30,8 @@ import { TAKTVATT_FAQS, TAKTVATT_H1, TAKTVATT_INTRO, TAKTVATT_META, TAKTVATT_SEC
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
+import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
+import { roofTypeFaqs } from "../src/data/roof-type-faqs";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -150,6 +152,10 @@ const home: PrerenderPage = {
   links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
 };
 
+/** FAQPage-nod för den statiska HTML:en (samma frågor och svar som sidan visar). */
+const faqLd = (faqs: { question: string; answer: string }[], path: string): Record<string, unknown> =>
+  buildFaqSchema(faqs.map((f) => ({ question: f.question, answer: stripInlineMd(f.answer) })), `${SCHEMA_SITE_URL}${path}`) as Record<string, unknown>;
+
 const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
   landingServices.map((s) => [
     s.path,
@@ -172,6 +178,7 @@ const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
         { name: "Hem", path: "/" },
         { name: s.breadcrumb, path: s.path },
       ],
+      jsonLd: [faqLd(s.faqs, s.path)],
     } satisfies PrerenderPage,
   ]),
 );
@@ -218,6 +225,7 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }],
+    jsonLd: [faqLd(roofTypeFaqs, "/taktyper")],
   },
   "/brf": {
     title: "Takbyte för BRF — bostadsrättsföreningar",
@@ -280,6 +288,7 @@ const staticPages: Record<string, PrerenderPage> = {
       `${PRICE_FACTORS_TITLE} ${PRICE_FACTORS_TEXT}`,
       ...priceFaqs.map((faq) => `${faq.question} ${faq.answer}`),
     ],
+    jsonLd: [faqLd(priceFaqs, "/priser")],
     links: [
       { href: "/blogg/kostnad-takbyte-2026", label: "Vad kostar ett takbyte? Hela guiden" },
       ...primaryLinks,
@@ -481,6 +490,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { h: "Vanliga frågor om taktvätt" },
         ...TAKTVATT_FAQS.flatMap((f) => [{ h: f.question, level: 3 as const }, f.answer]),
       ]),
+      jsonLd: [faqLd(TAKTVATT_FAQS, "/tjanster/taktvatt")],
     };
   }
   if (staticPages[clean]) return staticPages[clean];
@@ -511,7 +521,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { name: "Tjänster", path: "/#tjanster" },
         { name: service.title, path: `/tjanster/${slug}` },
       ],
-      jsonLd: [schemas.service, schemas.howTo],
+      jsonLd: [schemas.service, schemas.howTo, ...(SERVICE_EXTRAS[slug] ? [faqLd(SERVICE_EXTRAS[slug].faqs, clean)] : [])],
     };
   }
 
@@ -601,6 +611,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ]),
       ogImage: og?.src,
       ogImageAlt: og?.alt,
+      jsonLd: MATERIAL_EXTRAS[material.slug] ? [faqLd(MATERIAL_EXTRAS[material.slug].faqs, clean)] : undefined,
       links: [
         ...primaryLinks,
         { href: "/material", label: "Alla material" },

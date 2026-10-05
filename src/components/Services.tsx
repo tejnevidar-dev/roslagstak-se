@@ -76,7 +76,7 @@ export const services: Service[] = [
   {
     icon: IconRoofCare,
     slug: "takvard",
-    title: "Takvård",
+    title: "Taktvätt",
     short: "Tvätt & målning",
     description:
       "Taktvätt, behandling mot mossa och takmålning som fräschar upp taket och skjuter fram ett takbyte flera år.",

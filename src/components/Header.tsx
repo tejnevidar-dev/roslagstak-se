@@ -15,7 +15,7 @@ const serviceItems: MenuItem[] = [
   { label: "Takkontroll", to: "/tjanster/takinspektion" },
   { label: "Taksäkerhet", to: "/tjanster/taksakerhet" },
   { label: "Plåtarbeten", to: "/tjanster/platarbeten" },
-  { label: "Takvård & taktvätt", to: "/tjanster/taktvatt" },
+  { label: "Taktvätt", to: "/tjanster/taktvatt" },
   { label: "Byta eternittak", to: "/tjanster/eternit-asbest" },
 ];
 

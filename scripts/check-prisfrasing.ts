@@ -37,9 +37,9 @@ if (!/^Ca /.test(prisPost("Papptak").priceRange)) fel.push('prices.ts: "Papptak"
 
 // 1d) Ortstexterna: ordet "container" och "bortforsling" (bortforsling ligger hos Vidar, 10v) och meningen som bedömer taket efter
 // husets ålder ("i den ålder där det är dags") får inte finnas i datafilerna för orts-, kommun- och tjänst × ort-texter.
-// region-texts.ts ingår inte förrän regionbriefarna för skärgårdsregionerna är rättade (de har fortfarande "bortforsling").
+// region-texts.ts ingår sedan del 9 (regionbriefarna för skärgårdsregionerna är rättade).
 {
-  const filer = ["src/data/locations.ts", "src/data/combo-overrides.ts", "src/data/location-mall.ts", "src/data/service-location-combos.ts", "src/data/location-faqs.ts"];
+  const filer = ["src/data/locations.ts", "src/data/region-texts.ts", "src/data/combo-overrides.ts", "src/data/location-mall.ts", "src/data/service-location-combos.ts", "src/data/location-faqs.ts"];
   for (const f of filer) {
     const src = readFileSync(f, "utf8");
     for (const [namn, re] of [["container", /container/i], ["bortforsling", /bortforsling/i], ["i den ålder där det är dags", /i den ålder där det är dags/]] as const) {

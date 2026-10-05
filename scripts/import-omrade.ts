@@ -209,7 +209,7 @@ for (const file of files) {
     bygg && hus
       ? {
           question: `När byggdes husen ${cur.isIsland ? "på" : "i"} ${name}?`,
-          answer: `Byggperiod enligt källorna: ${lowerFirst(bygg)}. Hustyper: ${lowerFirst(hus)}. Taken kan redan ha lagts om, så skicket bedöms alltid vid en kostnadsfri takkontroll. ${BYGGLOV_NY}`,
+          answer: `Byggperiod enligt källorna: ${lowerFirst(bygg)}. Hustyper: ${lowerFirst(hus)}. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. ${BYGGLOV_NY}`,
         }
       : cur.uniqueFAQ;
   void kommun;
