@@ -32,7 +32,7 @@ const BYGGLOV =
 const FOUND = "Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare, och inget extraarbete görs utan ditt godkännande.";
 const BARIGHET = "Takstolarna behöver klara vikten, och har huset haft ett lättare tak kan bärigheten behöva bedömas av en konstruktör.";
 const INGAR =
-  "Vad som ingår står alltid i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.";
+  "Vad som ingår står i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår i offerten.";
 
 /** Juristens mening vid belopp som i prislistan är tillägg vid takbyte (backlog 1by, tills Vidar har svarat på 10y). */
 const TILLAGG_MENING = "Priserna gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen.";

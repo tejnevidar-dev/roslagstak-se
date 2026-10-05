@@ -194,7 +194,7 @@
     "villkor": [
       "efter ROT-avdrag, inkl. moms i samma text som beloppet",
       "ROT_FORBEHALL (prices.ts) på samma sida",
-      "Ställning: bara 'Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.'",
+      "Ställning: bara 'Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår i offerten.'",
       "Pris i titlar och metabeskrivningar: inte tillåtet i version 1 (beslut 10l hos Vidar)"
     ],
     "poster": [

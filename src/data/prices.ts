@@ -45,7 +45,7 @@ export const priceFaqs = [
   },
   {
     question: "Ingår material i priset?",
-    answer: "Riktpriserna gäller material och arbete. Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten. Vad som ingår i ditt pris står i offerten. Vi arbetar endast till fast pris.",
+    answer: "Riktpriserna gäller material och arbete. Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår i offerten. Vad som ingår i ditt pris står i offerten. Vi arbetar endast till fast pris.",
   },
   {
     question: "Kan jag använda ROT-avdrag?",
@@ -65,7 +65,7 @@ export const PRICE_HERO_TEXT =
   "Riktpriserna nedan gäller efter ROT-avdrag och inkl. moms, med standardställning. Fast pris i offerten efter en kostnadsfri takkontroll. Som privatperson kan du få ROT-avdrag (30 % på arbetskostnaden), som dras av direkt på fakturan.";
 
 /** Ställningsmeningen, ordagrant som på /priser. Används också på material- och tjänstesidornas prisavsnitt. */
-export const STALLNING_MENING = "Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.";
+export const STALLNING_MENING = "Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår i offerten.";
 
 /** Papptak finns inte i prislistan på /priser. Riktpriset är CRM:s standardpris (900 kr/m² efter ROT, inkl. moms) och visas bara på materialsidan. */
 export const PAPPTAK_RIKTPRIS = {

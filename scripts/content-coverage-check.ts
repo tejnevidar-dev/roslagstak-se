@@ -262,6 +262,16 @@ for (const { dir, kind, fields } of pmDirs) {
 
 /* ---------- 3) Guidetexter (/blogg/<slug>) ---------- */
 
+/** Marknadschefens beslut 2026-10-06 (backlog 101, F1–F4): lydelserna i guiderna ändrades i koden; briefarna i guidetexter/ har
+ *  fortfarande den gamla lydelsen och ändras av Innehåll. Då kan raden tas bort härifrån. */
+const guideAcceptedGaps = [
+  "Tillägg kan tillkomma vid komplex ställning, och det framgår alltid i offerten.",
+  "Vad som ingår står alltid i offerten.",
+  "Hängrännor och stuprör ses över eller byts.",
+  "Berätta gärna redan när du bokar att taket är av eternit.",
+  "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+];
+
 const guideDir = "../ledning/marknad/innehall/guidetexter";
 for (const file of readdirSync(resolve(guideDir)).filter((f) => f.endsWith(".md"))) {
   const raw = readFileSync(join(resolve(guideDir), file), "utf8").replace(/\r/g, "");
@@ -282,7 +292,7 @@ for (const file of readdirSync(resolve(guideDir)).filter((f) => f.endsWith(".md"
     .join("\n");
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
-  const missing = meningar.filter((s) => !liveText.includes(norm(s)));
+  const missing = meningar.filter((s) => !liveText.includes(norm(s)) && !guideAcceptedGaps.includes(s));
   allResults.push({ page: `/blogg/${slug}`, file, status: statusOf(raw, meningar.length, missing.length, true), missing, total: meningar.length });
 }
 
