@@ -61,15 +61,16 @@ export { buildOrganizationNode, buildWebSiteNode, buildWebPageNode, buildBreadcr
 export { buildLocalBusinessSchema, buildLocalBusinessLeanSchema } from "../src/lib/schema";
 
 /** Inline-CSS för rubrik och ingress i den statiska HTML:en, spegling av Reacts hero (ServiceLandingPage, AdLandingPage, BookingPage).
- *  Karla/Fraunces är samma webbtypsnitt som sajten. Radavståndet på ingressen är en aning större än Reacts (1.7 mot 1.625),
- *  så att den statiska textrutan aldrig är mindre än Reacts. */
+ *  Karla/Fraunces är samma webbtypsnitt som sajten. Den statiska textrutan ska aldrig vara mindre än Reacts, annars blir Reacts
+ *  text en större LCP-kandidat vid hydrering: ingressen har därför lite större radavstånd (1.7 mot 1.625) och rubriken samma
+ *  teckenstorlek men full bredd och radavstånd 1.25 (Reacts rubrik är balanserad till 20ch och 1.07; mätt på /takreparation). */
 export const HERO_STYLES = {
   service: {
-    h1: "font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.07;letter-spacing:-0.025em;max-width:20ch;text-wrap:balance;color:#1a365d;margin:0",
+    h1: "font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.25;color:#1a365d;margin:0",
     intro: "font-family:Karla,sans-serif;font-size:18px;line-height:1.7;max-width:54ch;margin:24px 0 0;color:#4b5563",
   },
   ad: {
-    h1: "font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.07;letter-spacing:-0.025em;max-width:20ch;text-wrap:balance;color:#1a365d;margin:0",
+    h1: "font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.25;color:#1a365d;margin:0",
     intro: "font-family:Karla,sans-serif;font-size:18px;line-height:1.7;max-width:50ch;margin:20px 0 0;color:#4b5563",
   },
 } as const;
