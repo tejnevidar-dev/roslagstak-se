@@ -31,7 +31,7 @@ const steps = [
   },
   {
     title: "Åtgärdsförslag och fast offert",
-    text: "Ni får en skriftlig offert med fast pris. Vill styrelsen jämföra material tar vi fram alternativ, så att beslutet vilar på jämförbara underlag.",
+    text: "Ni får en offert med fast pris. Vill styrelsen jämföra material tar vi fram alternativ, så att beslutet vilar på jämförbara underlag.",
   },
   {
     title: "Beslut i föreningen",
@@ -74,7 +74,7 @@ const brfFaqs = [
   {
     question: "Hur går ett takbyte till för en bostadsrättsförening?",
     answer:
-      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en skriftlig offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång.",
+      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång.",
   },
   {
     question: "Behöver föreningen en takkontroll före ett takbyte?",
@@ -294,7 +294,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
     ? [
         {
           question: `Tar ni uppdrag från bostadsrättsföreningar${inPlace}?`,
-          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takkontroll och lämnar ett skriftligt underlag med fast pris som styrelsen kan besluta på. Efter slutgenomgång får föreningen skriftlig garanti.`,
+          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takkontroll och lämnar ett underlag med fast pris som styrelsen kan besluta på. Efter slutgenomgång får föreningen skriftlig garanti.`,
         },
         ...brfFaqs,
       ]
@@ -587,7 +587,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
               </p>
               <p>
                 Takbyten finansieras ofta via föreningens underhållsfond, lån eller en justering av avgiften. Vi
-                lämnar ett fast, skriftligt prisunderlag som styrelsen kan ta med i ekonomin och till förvaltare eller
+                lämnar ett fast prisunderlag som styrelsen kan ta med i ekonomin och till förvaltare eller
                 bank.
               </p>
               <p>

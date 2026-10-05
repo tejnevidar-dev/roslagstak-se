@@ -45,6 +45,12 @@ import imgSingoHeroWebp1080 from "@/assets/project-singo-hero-1080.webp";
 import imgSingoHeroWebp1440 from "@/assets/project-singo-hero-1440.webp";
 import imgSingoDetail1 from "@/assets/project-singo-detail-1.jpg";
 import imgSingoDetail1Webp from "@/assets/project-singo-detail-1-1080.webp";
+import imgGrisslehamnHero from "@/assets/project-grisslehamn-hero.jpg";
+import imgGrisslehamnHeroAvif480 from "@/assets/project-grisslehamn-hero-480.avif";
+import imgGrisslehamnHeroAvif768 from "@/assets/project-grisslehamn-hero-768.avif";
+import imgGrisslehamnHeroWebp480 from "@/assets/project-grisslehamn-hero-480.webp";
+import imgGrisslehamnHeroWebp768 from "@/assets/project-grisslehamn-hero-768.webp";
+import imgGrisslehamnDetail1 from "@/assets/project-grisslehamn-detail-1.jpg";
 import type { MaterialSlug } from "@/data/materials";
 import { projectTexts } from "@/data/project-texts";
 import { locations, type LocationData } from "@/data/locations";
@@ -123,6 +129,24 @@ const projectImages: Record<string, ProjectImages> = {
         width: 1280,
         height: 720,
         alt: "Taket på huset på Singö sett rakt ovanifrån, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre takdelarna.",
+      },
+    ],
+  },
+  // Stillbilder ur Vidars film (832×464, ingen metadata, ingen person i bild). Bara små bilder tills originalfilerna kommer.
+  "takbyte-grisslehamn": {
+    heroImage: imgGrisslehamnHero,
+    heroResponsive: {
+      avifSrcSet: `${imgGrisslehamnHeroAvif480} 480w, ${imgGrisslehamnHeroAvif768} 768w`,
+      webpSrcSet: `${imgGrisslehamnHeroWebp480} 480w, ${imgGrisslehamnHeroWebp768} 768w`,
+      width: 832,
+      height: 464,
+    },
+    gallery: [
+      {
+        src: imgGrisslehamnDetail1,
+        width: 832,
+        height: 464,
+        alt: "Taket i Grisslehamn efter takbytet.",
       },
     ],
   },

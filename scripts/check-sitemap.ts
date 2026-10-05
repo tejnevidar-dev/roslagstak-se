@@ -85,6 +85,7 @@ const staticRoutes = [
   "/projekt",
   "/projekt/takrenovering-blido",
   "/projekt/takbyte-singo",
+  "/projekt/takbyte-grisslehamn",
   "/takproblem",
   "/material",
   "/blogg",

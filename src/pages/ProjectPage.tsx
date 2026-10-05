@@ -17,6 +17,7 @@ import { materials } from "@/data/materials";
 const OG_IMAGES: Record<string, string> = {
   "takrenovering-blido": "/og/project-blido-hero.jpg",
   "takbyte-singo": "/og/project-singo-hero.jpg",
+  "takbyte-grisslehamn": "/og/project-grisslehamn-hero.jpg",
 };
 
 const ProjectPage = () => {
@@ -114,12 +115,14 @@ const ProjectPage = () => {
                 })}
               </div>
             </div>
+            {project.period && (
             <div className="rounded-2xl border border-border bg-card p-5">
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
                 <CalendarDays className="h-4 w-4" aria-hidden="true" /> Utfört
               </p>
               <p className="mt-2 text-sm text-foreground">{project.period}</p>
             </div>
+            )}
             <Link
               to={`/tjanster/${project.serviceSlug}`}
               className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-5 transition-colors hover:bg-muted/40"

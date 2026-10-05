@@ -349,6 +349,7 @@ const extraRelated: Record<string, { to: string; label: string }[]> = {
     { to: "/taktyper", label: "Jämför taktyper och material" },
     { to: "/hur-det-gar-till", label: "Se hur ett takbyte går till" },
     { to: "/projekt/takbyte-singo", label: "Referensjobb: takbyte på Singö" },
+    { to: "/projekt/takbyte-grisslehamn", label: "Referensjobb: nytt tak i Grisslehamn" },
     { to: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" },
   ],
   takrenovering: [

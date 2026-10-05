@@ -17,7 +17,7 @@
  * Efter importen: lägg bilderna i src/data/projects.ts (projectImages) under samma slug. Utan bilder
  * kastar projects.ts ett fel vid bygget, så ett jobb kan aldrig publiceras utan foton av misstag.
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
 import { materials } from "../src/data/materials";
@@ -34,7 +34,11 @@ if (!/\*\*Grind:\*\*\s*GODKÄND/.test(raw)) {
 }
 
 const slug = raw.match(/\*\*Slug:\*\*\s*\/projekt\/([a-z0-9-]+)/)?.[1];
-const field = (name: string) => raw.match(new RegExp(`^- \\*\\*${name}:\\*\\*\\s*(.+)$`, "m"))?.[1]?.trim();
+/** Ett fält som bara innehåller en anteckning i kursiv parentes, t.ex. "*(tomt: …)*", räknas som tomt. */
+const field = (name: string) => {
+  const v = raw.match(new RegExp(`^- \\*\\*${name}:\\*\\*\\s*(.+)$`, "m"))?.[1]?.trim();
+  return v && !v.startsWith("*(") ? v : undefined;
+};
 const title = field("title");
 const locationName = field("locationName");
 const locationSlug = field("locationSlug");
@@ -45,13 +49,16 @@ const materialSlugs = (field("materialSlugs") ?? "").split(",").map((s) => s.tri
 const period = field("period");
 const summary = field("summary");
 const heroAlt = field("heroAlt");
-const ogImage = field("ogImage");
+const ogImageField = field("ogImage");
+// Utan egen og-bild i briefen: public/og/project-<slug>-hero.jpg om den finns
+const ogImage = ogImageField ?? (slug && existsSync(resolve(`public/og/project-${slug}-hero.jpg`)) ? `/og/project-${slug}-hero.jpg` : undefined);
 const description = (raw.split(/\n## Beskrivning[^\n]*\n/)[1]?.split(/\n## /)[0] ?? "")
   .split("\n")
   .map((l) => l.trim())
   .filter(Boolean);
 
-const missing = Object.entries({ slug, title, locationName, locationSlug, serviceName, serviceSlug, material, period, summary, heroAlt })
+// period får vara tomt (Vidar har inte uppgett när jobbet gjordes): sidan döljer då rutan "Utfört"
+const missing = Object.entries({ slug, title, locationName, locationSlug, serviceName, serviceSlug, material, summary, heroAlt })
   .filter(([, v]) => !v)
   .map(([k]) => k);
 if (missing.length || description.length < 3) {
@@ -86,7 +93,7 @@ const obj = {
   serviceSlug,
   material,
   materialSlugs,
-  period,
+  period: period ?? "",
   summary,
   description,
   heroAlt,

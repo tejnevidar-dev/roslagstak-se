@@ -363,7 +363,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Nytt tak på Blidö: nya betongpannor från Benders i svart, sommaren 2026.",
       "Nytt tak på Singö i Norrtälje kommun: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
     ],
-    links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Nytt tak på Blidö" }, { href: "/projekt/takbyte-singo", label: "Nytt tak på Singö" }],
+    links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Nytt tak på Blidö" }, { href: "/projekt/takbyte-singo", label: "Nytt tak på Singö" }, { href: "/projekt/takbyte-grisslehamn", label: "Nytt tak i Grisslehamn" }],
     breadcrumbs: [{ name: "Startsidan", path: "/", visibleName: "Hem" }, { name: "Referensjobb", path: "/projekt" }],
   },
   "/takproblem": {
@@ -611,6 +611,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(MATERIAL_PRISAVSNITT[material.slug]?.rader.filter((r) => r.to).map((r) => ({ href: r.to!, label: r.namn })) ?? []),
         ...(MATERIAL_EXTRAS[material.slug]?.blocks.flatMap((b) => b.items.flatMap((it) => (typeof it === "string" ? [it] : it.list)).flatMap(inlineMdLinks)) ?? []),
         ...(MATERIAL_EXTRAS[material.slug]?.links?.map((l) => ({ href: l.to, label: l.label })) ?? []),
+        ...projectSummaries.filter((p) => (p.materialSlugs as string[]).includes(material.slug)).map((p) => ({ href: `/projekt/${p.slug}`, label: p.title })),
         ...guidesForTitle(material.title, 2).map((g) => ({ href: `/blogg/${g.slug}`, label: g.title })),
         ...MONEY_LINKS,
       ],
@@ -631,7 +632,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: project.summary,
       h1: project.title,
       intro: project.summary,
-      paragraphs: [...project.description.map(stripInlineMd), `Material: ${project.material}. Utfört: ${project.period}.`],
+      paragraphs: [...project.description.map(stripInlineMd), `Material: ${project.material}.${project.period ? ` Utfört: ${project.period}.` : ""}`],
       links: [
         ...primaryLinks,
         { href: "/projekt", label: "Alla referensjobb" },
@@ -747,7 +748,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: `Takbyte för bostadsrättsföreningar ${prep} ${loc.name}, med underlag styrelsen kan besluta på`,
       intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
       paragraphs: [
-        `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll, följd av en skriftlig offert med fast pris som styrelsen och stämman kan besluta på.`,
+        `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll, följd av en offert med fast pris som styrelsen och stämman kan besluta på.`,
         "Vi erbjuder takbyte och takrenovering, med kostnadsfri takkontroll utan förpliktelser, fast pris och en kontaktperson hela vägen. Garantin står skriftligt i avtalet.",
         `Ring ${PHONE} eller boka takkontroll på /brf/${loc.slug}. Vi återkommer inom 24 timmar.`,
       ],
@@ -810,6 +811,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
         ...problemsForLocation(loc.slug).map((p) => ({ href: p.to, label: p.label })),
         ...villaAreaLinks(loc.slug),
+        ...projectSummaries.filter((p) => p.locationSlug === loc.slug).map((p) => ({ href: `/projekt/${p.slug}`, label: `Referensjobb: ${p.title}` })),
         ...combos
           .filter((c) => c.locationSlug === loc.slug)
           .map(comboListLink),
