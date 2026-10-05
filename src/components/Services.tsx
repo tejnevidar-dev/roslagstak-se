@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Phone } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { canonicalPath } from "@/lib/canonical";
-import roofProject from "@/assets/hero-drone-poster.jpg";
 import {
   IconRoofNew,
   IconRoofRepair,
@@ -192,31 +191,6 @@ const Services = () => {
           ))}
         </ul>
       </div>
-
-      {/* Full-bredds referensbild som sektionsavskiljare mot nästa mörka paus */}
-      <figure className="relative m-0 mt-24 overflow-hidden">
-        <img
-          src={roofProject}
-          alt="Drönarfoto av tak med svarta betongpannor på ett hus på Blidö"
-          width={1920}
-          height={720}
-          loading="lazy"
-          decoding="async"
-          className="aspect-[16/7] w-full object-cover md:aspect-[16/5]"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent"
-        />
-        <figcaption className="absolute bottom-0 left-0 right-0 mx-auto flex max-w-7xl flex-wrap items-baseline gap-x-6 gap-y-1 px-6 pb-7 text-primary-foreground">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">
-            Referens
-          </span>
-          <span className="font-display text-[15px] italic">
-            Nylagt tak, Blidö
-          </span>
-        </figcaption>
-      </figure>
     </section>
   );
 };

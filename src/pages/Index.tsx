@@ -8,6 +8,7 @@ import Hero, { heroPosterSrcSet } from "@/components/Hero";
 import Services from "@/components/Services";
 import QuickAccess from "@/components/QuickAccess";
 import TrustBar from "@/components/TrustBar";
+import ReferenceCases from "@/components/ReferenceCases";
 
 const About = lazy(() => import("@/components/About"));
 const ServiceArea = lazy(() => import("@/components/ServiceArea"));
@@ -83,6 +84,7 @@ const Index = () => {
       <main>
         <Hero />
         <TrustBar />
+        <ReferenceCases />
         <QuickAccess />
         <Services />
 
