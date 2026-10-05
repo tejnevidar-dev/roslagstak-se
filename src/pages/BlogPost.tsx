@@ -8,6 +8,7 @@ import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";
 import QuickContactFacts from "@/components/QuickContactFacts";
 import NotFound from "./NotFound";
 import { isHeading, stripInlineMd, renderInline } from "@/lib/inline-md";
+import { guideContent } from "@/data/blog-cta";
 import { relatedForPost } from "@/data/blog-related";
 import { relatedPosts } from "@/data/related-posts";
 import { buildBlogPostingSchema } from "@/lib/blog-schema";
@@ -120,11 +121,11 @@ const BlogPost = () => {
             </header>
 
             <div className="space-y-5">
-              {post.content.map((paragraph, i) => {
+              {guideContent(post).map((paragraph, i, all) => {
                 const lead = paragraph.match(/^(Steg \d+ — [^:]{2,70}|Vanliga misstag|Så kan RoslagsTak hjälpa): /);
                 return (
                   <Fragment key={i}>
-                  {i === 3 && post.content.length > 6 && (
+                  {i === 3 + (all.length - post.content.length) && post.content.length > 6 && (
                     <aside className="rounded-2xl border border-border bg-card p-5" aria-label="Kostnadsfri takkontroll">
                       <p className="text-sm text-card-foreground">
                         <strong className="font-semibold">Osäker på hur ditt tak mår?</strong> Vi gör en kostnadsfri takkontroll på plats, utan förpliktelser.

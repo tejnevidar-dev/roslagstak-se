@@ -31,6 +31,7 @@ import { TAKTVATT_FAQS, TAKTVATT_H1, TAKTVATT_INTRO, TAKTVATT_META, TAKTVATT_SEC
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
+import { guideContent } from "../src/data/blog-cta";
 import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
 import { roofTypeFaqs } from "../src/data/roof-type-faqs";
 
@@ -690,10 +691,10 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: post.excerpt,
       h1: post.title,
       intro: post.excerpt,
-      ...buildBody(post.content.map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p)))),
+      ...buildBody(guideContent(post).map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p)))),
       links: [
         ...primaryLinks,
-        ...post.content.flatMap(inlineMdLinks),
+        ...guideContent(post).flatMap(inlineMdLinks),
         ...relatedForPost(post).map((r) => ({ href: r.to, label: r.label })),
         ...MONEY_LINKS,
         ...relatedPosts(post, 4).map((p) => ({ href: `/blogg/${p.slug}`, label: p.title })),
