@@ -91,7 +91,7 @@ export const projectTexts: ProjectText[] = [
     "materialSlugs": [
       "betongpannor"
     ],
-    "period": "",
+    "period": "september 2026",
     "summary": "Komplett takbyte på ett hus i Grisslehamn i Norrtälje kommun, med svarta betongpannor från Benders. Taket är 120 kvadratmeter.",
     "description": [
       "Huset ligger i Grisslehamn i Norrtälje kommun. Uppdraget var ett komplett takbyte.",
