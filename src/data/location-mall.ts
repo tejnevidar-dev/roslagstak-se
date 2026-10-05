@@ -106,7 +106,7 @@ export const applyMall = (loc: LocationData): LocationData => {
         n,
         4,
       )
-    : "Vi har gjort kompletta takbyten på Blidö och Singö. Bilder och uppgifter finns under våra projekt.";
+    : "Vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn. Bilder och uppgifter finns under våra projekt.";
   const p6 = pick<string>(
     [
       "Riktpriser per takmaterial finns på prissidan. Ditt pris står i offerten och är fast, och tillägg görs bara efter ditt godkännande. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden. Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.",

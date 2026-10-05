@@ -47,7 +47,8 @@ export const projectTexts: ProjectText[] = [
       "**Nya plåtdetaljer och skorstensbeslag.** Plåtdetaljerna byttes, och skorstenarna fick nya beslag. Det är vid skorstenar, kanter och andra anslutningar som ett tak prövas hårdast, och därför görs de om när taket byts.",
       "**Nya hängrännor.** Avvattningen ingick också: huset fick nya hängrännor.",
       "**Så jobbar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där vi tittar på taket på plats. Därefter får kunden ett fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning)."
+      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning).",
+      "Fler jobb: [Singö](/projekt/takbyte-singo) och [Grisslehamn](/projekt/takbyte-grisslehamn).",
     ],
     "heroAlt": "Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring.",
     "ogImage": "/og/project-blido-hero.jpg"
@@ -55,7 +56,7 @@ export const projectTexts: ProjectText[] = [
   {
     "slug": "takbyte-singo",
     "title": "Nytt tak på Singö",
-    "locationName": "Singö, Grisslehamn",
+    "locationName": "Singö",
     "locationSlug": "singo",
     "serviceName": "Takbyte",
     "serviceSlug": "takomlaggning",
@@ -72,7 +73,7 @@ export const projectTexts: ProjectText[] = [
       "**Två material, en kulör.** Huset har ett huvudtak och lägre takdelar, och de fick olika material i samma röda kulör.",
       "**Betongpannor på huvudtaket.** Huvudtaket fick röda [betongpannor](/material/betongpannor), ett tungt material som ger ett klassiskt pannat tak.",
       "**TP20-plåt på de lägre delarna.** De lägre takdelarna fick röd [TP20](/material/tp20-plattak), en trapetsprofilerad plåt som är lätt jämfört med pannor. På bilden rakt ovanifrån syns hur de två materialen möts.",
-      "**Två jobb att jämföra.** På [Blidö](/projekt/takrenovering-blido) behölls hela råsponten, och huset fick svarta betongpannor. På Singö byttes delar av råsponten, och taket fick pannor och plåt i rött. Vad som behöver göras avgörs av skicket på just det taket.",
+      "**Tre jobb att jämföra.** På [Blidö](/projekt/takrenovering-blido) behölls hela råsponten, och huset fick svarta betongpannor. På Singö byttes delar av råsponten, och taket fick pannor och plåt i rött. I [Grisslehamn](/projekt/takbyte-grisslehamn) fick ett tak på 120 kvadratmeter svarta betongpannor från Benders. Vad som behöver göras avgörs av skicket på just det taket.",
       "**Så jobbar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där vi tittar på taket på plats. Därefter får kunden ett fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
       "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke, även på startsidan. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning)."
     ],

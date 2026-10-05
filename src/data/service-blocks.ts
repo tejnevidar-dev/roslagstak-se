@@ -96,10 +96,10 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Takbyte och takomläggning i Roslagen och Storstockholm. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Svar inom 24 timmar.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Prisbild", value: `${belopp("TP20 plåttak").replace("Från ", "").replace(" kr/m²", "")}–${belopp("Dubbelfalsat plåttak").replace("Ca ", "")}`, text: `TP20-plåt ${beloppLopande("TP20 plåttak")}, dubbelfalsat ${beloppLopande("Dubbelfalsat plåttak")} — efter ROT-avdrag, inkl. moms.` },
+      { tone: "primary", label: "Prisbild", value: belopp("TP20 plåttak"), text: `TP20-plåt ${beloppLopande("TP20 plåttak")}, dubbelfalsat ${beloppLopande("Dubbelfalsat plåttak")} — efter ROT-avdrag, inkl. moms.` },
       { tone: "outline", label: "Tidsåtgång", value: "Efter takets storlek", text: "Beror på takets storlek, underlagets skick och väder." },
       { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor." },
-      { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Papp, läkt och plåtdetaljer byts." },
+      { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Papp, läkt och plåtdetaljer byts normalt." },
     ],
     block: {
       kind: "matrix",
@@ -145,7 +145,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takavvattning: {
-    seoTitle: "Hängrännor & Stuprör Roslagen — Takavvattning",
+    seoTitle: "Hängrännor och takavvattning – fast pris i offerten",
     seoDescription:
       "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i lackerad plåt. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-spec",
@@ -169,32 +169,31 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   takkupor: {
-    seoTitle: "Takkupor & Takfönster Roslagen — Fast pris",
+    seoTitle: "Takkupor och takfönster – takkontroll och fast pris",
     seoDescription:
-      "Takkupor och takfönster i Roslagen med fast pris efter kostnadsfri takkontroll. En av våra säljare tittar på taket på plats och du får en rapport om takets skick.",
+      "Takkupor och takfönster: vi börjar med en kostnadsfri takkontroll utan förpliktelser. Du får en rapport om takets skick och fast pris i offerten.",
     blockPlacement: "after-scope",
     factCards: [
-      { tone: "primary", label: "Prisbild", value: "Fast pris efter takkontroll", text: "Gäller både takkupa och takfönster (Velux), inklusive montering." },
       { tone: "outline", label: "Takkontroll", value: "Kostnadsfri", text: "En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte." },
-      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_RENOVERING },
+      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: GARANTI_UTFORANDE },
     ],
     block: {
       kind: "checklist",
       eyebrow: "Takkontroll",
-      heading: "Det här tittar vi på vid takkontrollen",
+      heading: "En kostnadsfri takkontroll först",
       intro:
         "Takkontrollen är kostnadsfri och utan förpliktelser. Efteråt får du en rapport om takets skick, och behöver taket åtgärdas får du också en offert med fast pris.",
       groups: [
         {
           title: "Vid takkontrollen",
-          items: ["Takmaterial", "Plåtdetaljer", "Avvattning", "Vinden, när den går att komma åt"],
+          items: ["En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar."],
         },
       ],
     },
   },
 
   takinspektion: {
-    seoTitle: "Kostnadsfri Takkontroll Roslagen — Fast pris",
+    seoTitle: "Så går en takkontroll till – en av våra säljare på plats",
     seoDescription:
       "Kostnadsfri takkontroll i Roslagen och Storstockholm. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
     blockPlacement: "before-spec",
@@ -206,22 +205,16 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     ],
     block: {
       kind: "checklist",
-      eyebrow: "Vad vi tittar på",
-      heading: "Det här tittar vi på",
-      intro:
-        "En av våra säljare tittar på taket på plats, med blotta ögat och utan ingrepp i taket.",
+      eyebrow: "Takkontroll",
+      heading: "Så går takkontrollen till",
+      intro: "En av våra säljare tittar på taket på plats.",
       groups: [
         {
           title: "Vid takkontrollen",
           items: [
-            "Ytmaterial",
-            "Nock",
-            "Plåtdetaljer och beslag",
-            "Genomföringar",
-            "Hängrännor och stuprör",
-            "Vindskivor och takfot",
-            "Underlaget där det går att se",
-            "Vinden, om den går att komma åt",
+            "Det tar ungefär 1–2 timmar.",
+            "Efter takkontrollen får du en rapport om takets skick.",
+            "Behöver taket åtgärdas får du också en offert med fast pris.",
           ],
         },
       ],

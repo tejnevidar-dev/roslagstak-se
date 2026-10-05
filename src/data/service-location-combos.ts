@@ -35,7 +35,7 @@ const serviceTypes = [
     name: "Takbyte",
     verb: "byta tak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Planerar du ett takbyte ${prep} ${loc.name}? RoslagsTak är din takläggare för takbyte ${prep} ${loc.name}. Vi utför kompletta takbyten med TP20 plåttak, dubbelfalsat plåttak, pannplåt, betongpannor och lertegeltak.`,
+      `Planerar du ett takbyte ${prep} ${loc.name}? RoslagsTak är en takfirma med bas i Norrtälje och tar uppdrag ${prep} ${loc.name}. Vi utför kompletta takbyten med TP20 plåttak, dubbelfalsat plåttak, pannplåt, betongpannor och lertegeltak.`,
       `Ett takbyte ${prep} ${loc.name} innebär att det gamla takmaterialet rivs och att nytt takmaterial monteras. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Taksäkerhet och hängrännor, om de ingår, står i offerten.`,
       loc.isIsland
         ? oarText(loc, `Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Förutsättningarna för ${loc.name} går vi igenom vid takkontrollen.`)
@@ -91,17 +91,13 @@ const taktvattService = {
   name: "Taktvätt",
   verb: "tvätta tak",
   generateContent: (loc: LocationData, prep: string) => [
-    `Behöver du taktvätt ${prep} ${loc.name}? RoslagsTak tar bort mossa, alger, lavar och smuts från taket. Vilken metod som passar taket går vi igenom vid takkontrollen.`,
-    `Mossa och alger håller kvar fukt mot takmaterialet. Hur ditt tak mår går vi igenom vid den kostnadsfria takkontrollen.`,
+    `Taktvätt är en av de tjänster vi erbjuder. Vad som behöver göras på just ditt tak ${prep} ${loc.name} går inte att säga på avstånd. Därför börjar vi med en kostnadsfri takkontroll utan förpliktelser.`,
+    `En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.`,
     loc.isIsland
-      ? oarText(loc, `Vi utför taktvätt på öar i skärgården, också ${prep} ${loc.name}. Takets skick går vi igenom vid den kostnadsfria takkontrollen.`)
-      : byDistance(
-          loc,
-          `Med vår bas i Norrtälje tar vi uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse.`,
-          `Vi tar uppdrag för taktvätt ${prep} ${loc.name} och bokar in arbetet efter överenskommelse.`,
-        ),
-    `Priset för taktvätt ${prep} ${loc.name} beror på takets storlek, lutning, material och hur mycket påväxt det finns. Du får fast pris efter kostnadsfri takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
-    `Boka en kostnadsfri takkontroll ${prep} ${loc.name}. Ring 070-154 36 39 eller fyll i formuläret, så återkommer vi inom 24 timmar.`,
+      ? oarText(loc, `Vi tar uppdrag i Roslagen och Storstockholm, också ${prep} ${loc.name}.`)
+      : byDistance(loc, `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name}.`, `Vi tar uppdrag ${prep} ${loc.name}.`),
+    `Du får ett fast pris i offerten. Tillägg görs bara efter ditt godkännande.`,
+    `Boka en kostnadsfri takkontroll ${prep} ${loc.name} på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.`,
   ],
 };
 
@@ -116,7 +112,7 @@ const specialistServices = [
       `Söker du bandtäckning ${prep} ${loc.name}? RoslagsTak lägger dubbelfalsat plåttak, bandtäckning. Taket täcks med plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga skruvhål.`,
       `Bandtäckning ${prep} ${loc.name} är ett av de material vi lägger vid takbyte. Plåtdetaljerna runt skorsten och genomföringar anpassas efter taket.`,
       loc.isIsland
-        ? `Att bandtäcka ett tak ${prep} ${loc.name} kräver planering, eftersom plåtbanden är långa. Förutsättningarna går vi igenom vid takkontrollen.`
+        ? oarText(loc, `Att bandtäcka ett tak ${prep} ${loc.name} kräver planering, eftersom plåtbanden är långa. Förutsättningarna går vi igenom vid takkontrollen.`)
         : byDistance(
             loc,
             `Med vår bas i Norrtälje tar vi uppdrag för bandtäckning ${prep} ${loc.name}.`,
@@ -134,7 +130,7 @@ const specialistServices = [
       `Plåttak ${prep} ${loc.name}: RoslagsTak lägger TP20 trapetsprofil, pannplåt och dubbelfalsat plåttak på villor och fritidshus.`,
       `Vid ett takbyte med plåttak ${prep} ${loc.name} görs nockbeslag, vindskiveplåt och fotplåt om. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare.`,
       loc.isIsland
-        ? `Plåttak är ett lätt material. Vilket material som passar ${prep} ${loc.name} går vi igenom vid takkontrollen.`
+        ? oarText(loc, `Plåttak är ett lätt material. Vilket material som passar ${prep} ${loc.name} går vi igenom vid takkontrollen.`)
         : byDistance(
             loc,
             `Med vår bas i Norrtälje tar vi uppdrag för plåttak ${prep} ${loc.name}.`,
@@ -149,10 +145,10 @@ const specialistServices = [
     name: "Betongpannor",
     verb: "lägga betongpannor",
     generateContent: (loc: LocationData, prep: string) => [
-      `Ska du byta till eller lägga om betongpannor ${prep} ${loc.name}? RoslagsTak lägger betongpannetak ${prep} ${loc.name}, både vid komplett takbyte och vid omläggning där befintliga pannor läggs tillbaka på ny underlagspapp och ny läkt.`,
-      `Betongpannor ${prep} ${loc.name} är tunga. Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak. Trasiga pannor och nockpannor byts vid behov.`,
+      `Ska du byta till eller lägga om betongpannor ${prep} ${loc.name}? RoslagsTak lägger betongpannetak ${prep} ${loc.name}, vid komplett takbyte. Om de gamla pannorna kan läggas tillbaka beror på hur de mår och bedöms vid takkontrollen.`,
+      `Betongpannor ${prep} ${loc.name} är tunga. Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak.`,
       loc.isIsland
-        ? `Betongpannor är tunga, och på en ö påverkar det planeringen av arbetet ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`
+        ? oarText(loc, `Betongpannor är tunga, och på en ö påverkar det planeringen av arbetet ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`)
         : byDistance(
             loc,
             `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name} och lägger om eller lagar tak med betongpannor.`,
@@ -170,9 +166,9 @@ const specialistServices = [
       `Tegeltak ${prep} ${loc.name}: RoslagsTak lägger både lertegel och pannplåt ${prep} ${loc.name}. Vilket som passar ditt tak går vi igenom vid takkontrollen.`,
       `Vid ett tegeltak ${prep} ${loc.name} rivs det gamla taket, underlag och läkt görs om och nytt tegel läggs. Lertegel är tungt. Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak.`,
       loc.isIsland
-        ? `På ${loc.name} lägger vi lertegel och pannplåt, och vilket som passar ditt tak går vi igenom vid takkontrollen.`
+        ? oarText(loc, `På ${loc.name} lägger vi lertegel och pannplåt, och vilket som passar ditt tak går vi igenom vid takkontrollen.`)
         : `Vi lägger tegeltak ${prep} ${loc.name}, både i lertegel och pannplåt.`,
-      `Tegeltak ${prep} ${loc.name} i lertegel eller pannplåt, inklusive montage och beslag. ${PRIS_RAD("")}`.replace("  ", " "),
+      `Tegeltak ${prep} ${loc.name} i lertegel eller pannplåt. ${PRIS_RAD("")}`.replace("  ", " "),
       `Boka kostnadsfri takkontroll för tegeltak ${prep} ${loc.name}. Ring 070-154 36 39.`,
     ],
   },
@@ -181,13 +177,13 @@ const specialistServices = [
     name: "Takmålning",
     verb: "måla tak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Takmålning ${prep} ${loc.name}: RoslagsTak målar plåttak och betongpannetak. Vilken behandling som passar taket går vi igenom vid takkontrollen.`,
-      `Hur taket mår och vad som behöver göras först går vi igenom vid den kostnadsfria takkontrollen.`,
+      `Takmålning är en av de tjänster vi erbjuder. Vad som behöver göras på just ditt tak ${prep} ${loc.name} går inte att säga på avstånd. Därför börjar vi med en kostnadsfri takkontroll utan förpliktelser.`,
+      `En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.`,
       loc.isIsland
-        ? oarText(loc, `Vi tar uppdrag på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`)
-        : `Vi tar uppdrag för takmålning ${prep} ${loc.name} och bokar in arbetet efter överenskommelse.`,
-      `Takmålning ${prep} ${loc.name}: du får fast pris efter takkontroll, och som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
-      `Undrar du om ditt tak ${prep} ${loc.name} går att måla eller om det är dags för byte? Boka kostnadsfri takkontroll. Ring 070-154 36 39.`,
+        ? oarText(loc, `Vi tar uppdrag i Roslagen och Storstockholm, också ${prep} ${loc.name}.`)
+        : byDistance(loc, `Med vår bas i Norrtälje tar vi uppdrag ${prep} ${loc.name}.`, `Vi tar uppdrag ${prep} ${loc.name}.`),
+      `Du får ett fast pris i offerten. Tillägg görs bara efter ditt godkännande.`,
+      `Boka en kostnadsfri takkontroll ${prep} ${loc.name} på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.`,
     ],
   },
 ];
@@ -209,7 +205,7 @@ export const generateCombos = (): ServiceLocationCombo[] => {
         prep,
         url: `/${service.slug}-${loc.slug}`,
         title: `${service.name} ${prep} ${loc.name} — Takläggare RoslagsTak`,
-        description: comboDefaultMeta({ serviceName: service.name, prep, locationName: loc.name, locationSlug: loc.slug }),
+        description: comboDefaultMeta({ serviceName: service.name, prep, locationName: loc.name, locationSlug: loc.slug, serviceSlug: service.slug }),
         content: service.generateContent(loc, prep).map(withRotForbehall),
       });
     }
@@ -226,16 +222,29 @@ export const MATERIAL_COMBO_SLUGS: readonly string[] = ["tegeltak", "betongpanno
  */
 export const comboDefaultTitle = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) => {
   const bas = `${c.serviceName} ${c.prep} ${c.locationName}`;
+  // Taktvätt och takmålning: ingen garanti i titeln (Marknadschefen, backlog 1ct)
+  if (c.serviceSlug === "taktvatt" || c.serviceSlug === "takmalning") {
+    const lang = `${bas} – kostnadsfri takkontroll`;
+    if (lang.length <= 60) return lang;
+    const kort = `${bas} – takkontroll`;
+    return kort.length <= 60 ? kort : bas;
+  }
   const lang = `${bas} — 10 års utförandegaranti`;
   if (lang.length <= 60) return lang;
   const kort = `${bas} — 10 års garanti`;
   return kort.length <= 60 ? kort : bas;
 };
 export const comboDefaultH1 = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }) =>
-  c.serviceSlug === "taktvatt" ? `${c.serviceName} ${c.prep} ${c.locationName}` : comboDefaultTitle(c);
+  c.serviceSlug === "taktvatt" || c.serviceSlug === "takmalning" ? `${c.serviceName} ${c.prep} ${c.locationName}` : comboDefaultTitle(c);
 
 /** Standardmeta för en tjänst × ort-sida utan egen text. Öar utan bilväg (OAR_UTAN_BILVAG, inte isIsland) lovar ingen kostnadsfri takkontroll (10o). */
-export const comboDefaultMeta = (c: { serviceName: string; prep: string; locationName: string; locationSlug: string }): string => {
+export const comboDefaultMeta = (c: { serviceName: string; prep: string; locationName: string; locationSlug: string; serviceSlug?: string }): string => {
+  if (c.serviceSlug === "taktvatt" || c.serviceSlug === "takmalning") {
+    const oar = OAR_UTAN_BILVAG.includes(c.locationSlug);
+    return oar
+      ? `${c.serviceName} ${c.prep} ${c.locationName}. Takfirma med bas i Norrtälje. Fast pris i offerten. Berätta var huset ligger när du hör av dig.`
+      : `${c.serviceName} ${c.prep} ${c.locationName}: vi börjar med en kostnadsfri takkontroll utan förpliktelser. Fast pris i offerten. Takfirma med bas i Norrtälje.`;
+  }
   const bas = `${c.serviceName} ${c.prep} ${c.locationName}. Takfirma med bas i Norrtälje.`;
   const varianter = OAR_UTAN_BILVAG.includes(c.locationSlug)
     ? [

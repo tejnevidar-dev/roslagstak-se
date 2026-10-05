@@ -93,7 +93,25 @@ export const generateServiceLocationFAQs = (
 ): LocationFAQ[] => {
   const isTakbyte = serviceName.toLowerCase() === "takbyte";
   const isTaktvatt = serviceName.toLowerCase() === "taktvätt";
+  const isTakmalning = serviceName.toLowerCase() === "takmålning";
   const service = serviceName.toLowerCase();
+
+  if (isTakmalning) {
+    return tidy([
+      {
+        question: `Vad kostar takmålning ${prep} ${locationName}?`,
+        answer: `Priset beror på taket, och det går inte att säga innan någon har tittat på det. Efter den kostnadsfria takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.`,
+      },
+      {
+        question: `Måste jag bestämma mig vid takkontrollen ${prep} ${locationName}?`,
+        answer: `Nej. Takkontrollen är kostnadsfri och utan förpliktelser. Du betalar inget och binder dig inte.`,
+      },
+      {
+        question: `Hur bokar jag takmålning ${prep} ${locationName}?`,
+        answer: `Fyll i formuläret eller ring 070-154 36 39. Vi svarar inom 24 timmar. Takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19.`,
+      },
+    ]);
+  }
 
   if (isTaktvatt) {
     return tidy([
@@ -128,7 +146,7 @@ export const generateServiceLocationFAQs = (
       answer: MATERIALS(isIsland),
     },
     {
-      question: `Ingår ROT-avdrag vid ${service} ${prep} ${locationName}?`,
+      question: `Kan jag få ROT-avdrag för ${service} ${prep} ${locationName}?`,
       answer: ROT(service, prep, locationName),
     },
     {

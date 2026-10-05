@@ -43,7 +43,10 @@ import imgDronePoster from "@/assets/hero-drone-poster.jpg";
 import imgBlidoLakeview from "@/assets/project-blido-lakeview.webp";
 import imgLertegel from "@/assets/roof-type-lertegel.jpg";
 
-/** Hero-foto per tjänst — dokumentära bilder från eget arbete. */
+/**
+ * Hero-foto per tjänst. Ursprunget för roof-build-serien och roof-type-lertegel är obekräftat (väntar på Vidar, 10t):
+ * bilderna får inte kallas eget arbete i text, alt-text eller JSON-LD. Alt-texterna beskriver bara vad bilden visar.
+ */
 const serviceImages: Record<string, string> = {
   takomlaggning: imgPannor,
   takrenovering: imgPapp,
@@ -54,6 +57,26 @@ const serviceImages: Record<string, string> = {
   platarbeten: imgBeslag,
   takvard: imgDronePoster,
   tegeltak: imgLertegel,
+};
+
+/** Alt-text per tjänst: bara vad bilden visar. */
+const HERO_ALT: Record<string, string> = {
+  takomlaggning: "Tak med mörka pannor.",
+  takrenovering: "Tak med underlagspapp.",
+  takavvattning: "Tak med underlagspapp.",
+  takkupor: "Tak med underlagspapp.",
+  takinspektion: "Tak med nylagd råspont.",
+  taksakerhet: "Tak med mörka pannor.",
+  platarbeten: "Tak med mörka pannor.",
+  takvard: "Drönarfoto av ett hus med rött tak.",
+  tegeltak: "Lertegel.",
+};
+const DETAIL_ALT: Record<string, string> = {
+  takomlaggning: "Tak med läkt över underlagspapp.",
+  takavvattning: "Tak med mörka pannor.",
+  platarbeten: "Tak med mörka pannor.",
+  takvard: "Tak med mörka pannor.",
+  "eternit-asbest": "Tak med nylagd råspont.",
 };
 
 /** Närbild i specifikationskolumnen — alltid en annan bild än heron. Tjänster utan riktig bild visar ingen närbild. */
@@ -214,7 +237,7 @@ const ServiceDetail = () => {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[var(--shadow-elevated)]">
                 <img
                   src={serviceImage}
-                  alt={slug === "eternit-asbest" ? "Drönarfoto av tak med svarta betongpannor på ett hus på Blidö" : `${service.title} i Roslagen`}
+                  alt={(slug && HERO_ALT[slug]) || "Drönarfoto av ett hus med rött tak."}
                   width={1200}
                   height={1500}
                   fetchPriority="high"
@@ -345,7 +368,7 @@ const ServiceDetail = () => {
                 <div className="overflow-hidden rounded-2xl bg-secondary">
                   <img
                     src={detailImage}
-                    alt={`Detalj: ${service.title.toLowerCase()}`}
+                    alt={(slug && DETAIL_ALT[slug]) || "Tak."}
                     width={1200}
                     height={900}
                     loading="lazy"

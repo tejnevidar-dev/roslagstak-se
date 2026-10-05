@@ -41,6 +41,37 @@ const TILLAGG_MENING = "Priserna gäller när arbetet görs i samband med ett ta
 const TILLAGG_MENING_SG = "Priset gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen.";
 
 export const SERVICE_EXTRAS: Record<string, PageExtras> = {
+  takkupor: {
+    blocks: [
+      {
+        heading: "Så går det till",
+        items: [
+          "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris, kostnadsfritt och utan förpliktelser. Tillägg görs bara efter ditt godkännande.",
+          "Runt en kupa eller ett takfönster möter taket en ny del, och anslutningen görs i plåt. Mer om plåten på taket finns på sidan om [plåtarbeten](/tjanster/platarbeten).",
+        ],
+      },
+      {
+        heading: "Vilka vi är",
+        items: ["Vi är en takfirma med bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm. Du har en kontaktperson genom hela processen."],
+      },
+      {
+        heading: "Boka",
+        items: [
+          "Takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19. Boka på [roslagstak.se/takkontroll](/takkontroll) eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+        ],
+      },
+    ],
+    faqHeading: "Vanliga frågor om takkupor och takfönster",
+    faqs: [
+      { question: "Vad kostar en takkupa eller ett takfönster?", answer: "Priset beror på taket, och det går inte att säga innan någon har tittat på det. Efter den kostnadsfria takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande." },
+      { question: "Måste jag bestämma mig vid takkontrollen?", answer: "Nej. Takkontrollen är kostnadsfri och utan förpliktelser. Du betalar inget och binder dig inte." },
+      { question: "Hur bokar jag?", answer: "Fyll i formuläret eller ring 070-154 36 39. Vi svarar inom 24 timmar. Takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19." },
+    ],
+    links: [
+      { to: "/tjanster/platarbeten", label: "Plåtarbeten" },
+      { to: "/takkontroll", label: "Kostnadsfri takkontroll" },
+    ],
+  },
   platarbeten: {
     blocks: [
       {
