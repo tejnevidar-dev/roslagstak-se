@@ -306,7 +306,24 @@ for (const file of readdirSync(resolve(comboDir)).filter((f) => f.endsWith(".md"
   const meningar = toSentences(body);
   const liveText = norm([page.intro, ...page.paragraphs].join(" "));
   const missing = meningar.filter((s) => !liveText.includes(norm(s)));
-  allResults.push({ page: path, file, status: !meningar.length ? "ok" : missing.length === meningar.length ? "not-built" : missing.length ? "missing" : "ok", missing, total: meningar.length });
+  // En brief utan Grind-rad blockerar aldrig (samma regel som områdestexterna): den räknas som "inte byggd" tills den godkänns
+  // och en kodskriven text finns kvar (backlog 1cm: /takbyte-huddinge och -stockholm väntar på Marknadschefens grind).
+  const coveredShare = meningar.length ? 1 - missing.length / meningar.length : 1;
+  allResults.push({
+    page: path,
+    file,
+    status: !meningar.length
+      ? "ok"
+      : !hasGrind(raw) && coveredShare < 0.5 && missing.length
+        ? "not-built"
+        : missing.length === meningar.length
+          ? "not-built"
+          : missing.length
+            ? "missing"
+            : "ok",
+    missing,
+    total: meningar.length,
+  });
 }
 
 /* ---------- 5) Regiontexter (/omraden/<region>) ---------- */

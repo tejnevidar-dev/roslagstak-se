@@ -25,7 +25,7 @@ export const regionTexts: Record<string, RegionText> = {
       "## Vad det betyder för taket",
       "Längs kusten står äldre gårdar och stadshus, sommarhus från pensionatstiden och fritidshus som i dag används året om. Husets ålder säger därför lite om takets skick. På ett äldre hus kan taket redan ha lagts om, och det som avgör är hur underlagspapp, läkt, plåtdetaljer och hängrännor ser ut i dag.",
       "När ett fritidshus blir permanentbostad byggs det ofta till, och där tak från olika tider möts är skarven värd en extra titt. Till alla orter här går det att köra, och det gör det enkelt att få fram material, ställning och container. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris.",
-      "Gräddö och Kapellskär finns under [Rådmansöhalvön](/omraden/radmansohalvon).",
+      "Gräddö och Kapellskär finns under [Rådmansöhalvön](/omraden/radmansohalvon). Mer om att byta tak i Norrtälje finns på sidan om [takbyte i Norrtälje](/takbyte-norrtalje).",
       "## Så går det till",
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
