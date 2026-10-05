@@ -144,7 +144,7 @@ export const SERVICE_EXTRAS: Record<string, PageExtras> = {
       {
         heading: "När monteras taksäkerhet?",
         items: [
-          "**När taket ändå görs om.** Det naturliga tillfället är ett takbyte. Fästena kan då sättas innan det nya takmaterialet läggs, och du får allt i en och samma offert.",
+          "**När taket ändå görs om.** Det naturliga tillfället är ett takbyte. Fästena kan då sättas innan det nya takmaterialet läggs, och det står i samma offert.",
           "**På taket som det är.** Det går också att komplettera ett tak som inte ska bytas. Var fästena kan sitta beror på hur taket är byggt, och det går vi igenom vid takkontrollen.",
         ],
       },

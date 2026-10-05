@@ -6,7 +6,7 @@
  */
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, sep } from "node:path";
-import { prisPost } from "../src/data/prices";
+import { prisPost, priceData, PAPPTAK_RIKTPRIS } from "../src/data/prices";
 
 const fel: string[] = [];
 
@@ -42,6 +42,10 @@ const walk = (d: string): string[] =>
     return statSync(p).isDirectory() ? (f === "assets" || f === "admin" ? [] : walk(p)) : p.endsWith(".html") ? [p] : [];
   });
 let sidor = 0;
+// Tillåtna belopp per kvadratmeter: alla "<n> kr/m²" i prislistan och papptakets riktpris
+const tillatnaBelopp = new Set<string>();
+for (const c of priceData) for (const i of c.items) for (const x of i.priceRange.match(/\d[\d ]*\s*kr\/m²/g) ?? []) tillatnaBelopp.add(x.replace(/\D/g, ""));
+for (const x of PAPPTAK_RIKTPRIS.priceRange.match(/\d[\d ]*\s*kr\/m²/g) ?? []) tillatnaBelopp.add(x.replace(/\D/g, ""));
 for (const f of walk("dist")) {
   // Textnoder (en cell, ett stycke) var för sig, så att intilliggande tabellceller inte blandas ihop
   const noder = readFileSync(f, "utf8")
@@ -51,6 +55,17 @@ for (const f of walk("dist")) {
     .map((n) => n.replace(/&amp;/g, "&").replace(/\s+/g, " ").trim())
     .filter(Boolean);
   const path = "/" + f.split(sep).slice(1).join("/").replace(/\.html$/, "");
+  // Belopp per kvadratmeter i texten (guider, sidor) måste vara ett av beloppen i prices.ts: handskrivna belopp i guiderna
+  // får inte avvika från prislistan (backlog 1cv).
+  for (const nod of noder) {
+    for (const m of nod.matchAll(/(\d[\d ]*\d|\d)(?:\s*[–-]\s*(\d[\d ]*\d|\d))?\s*kr\/m²/g)) {
+      for (const n of [m[1], m[2]].filter(Boolean).map((x) => x.replace(/\D/g, ""))) {
+        if (!tillatnaBelopp.has(n)) {
+          fel.push(`${path}: belopp "${m[0]}" finns inte i prices.ts`);
+        }
+      }
+    }
+  }
   // Meningsvis, så att "från" i en annan mening inte räknas
   for (const nod of noder) for (const m of nod.matchAll(/[^.!?]+[.!?]?/g)) {
     const s = m[0];
