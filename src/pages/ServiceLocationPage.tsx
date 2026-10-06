@@ -15,7 +15,6 @@ import { comboOverrides } from "@/data/combo-overrides";
 import { locations } from "@/data/locations";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
 import NotFound from "./NotFound";
-import DeferMount from "@/components/DeferMount";
 import {
   Accordion,
   AccordionContent,
@@ -297,8 +296,6 @@ const ServiceLocationPage = () => {
 
               {/* FAQ Section */}
               <div className="mt-8">
-                {/* Monteras när webbläsaren är ledig (som startsidans sektioner). Frågorna och svaren finns kvar i den statiska HTML:en och i FAQPage-schemat. */}
-                <DeferMount minHeight={560}>
                 <h2 className="font-display text-2xl text-foreground mb-6">
                   Vanliga frågor om {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}
                 </h2>
@@ -314,7 +311,6 @@ const ServiceLocationPage = () => {
                     </AccordionItem>
                   ))}
                 </Accordion>
-                </DeferMount>
               </div>
             </div>
 

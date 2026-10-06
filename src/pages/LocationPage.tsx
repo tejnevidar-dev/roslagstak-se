@@ -26,7 +26,6 @@ import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
 import { NAP, OPENING_HOURS, ORG_ID } from "@/lib/schema";
 import { linkPhone } from "@/lib/inline-md";
-import DeferMount from "@/components/DeferMount";
 import {
   Accordion,
   AccordionContent,
@@ -580,8 +579,6 @@ const LocationPage = () => {
 
               {/* FAQ Section */}
               <div className="mt-8">
-                {/* Monteras när webbläsaren är ledig (som startsidans sektioner). Frågorna och svaren finns kvar i den statiska HTML:en och i FAQPage-schemat. */}
-                <DeferMount minHeight={560}>
                 <h2 className="font-display text-2xl text-foreground mb-6">
                   Vanliga frågor om takbyte {prep} {location.name}
                 </h2>
@@ -597,7 +594,6 @@ const LocationPage = () => {
                     </AccordionItem>
                   ))}
                 </Accordion>
-                </DeferMount>
               </div>
             </div>
 
