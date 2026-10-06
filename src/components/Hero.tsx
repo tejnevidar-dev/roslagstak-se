@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
+import { HOME_HERO } from "@/data/home-sections";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { m, useReducedMotion } from "framer-motion";
@@ -96,16 +96,14 @@ const Hero = () => {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-10 pt-24 lg:pb-14 lg:pt-48">
         <m.div className="max-w-[38rem]" {...fade(0)}>
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-            Takläggare i Roslagen &amp; Stockholm
+            {HOME_HERO.eyebrow}
           </p>
           <h1 className="mt-3 max-w-[20ch] font-display text-[clamp(2rem,4.4vw,3.4rem)] font-semibold leading-[1.1] tracking-[-0.015em] text-primary-foreground">
             Ett tak du kan lita på —{" "}
             <span className="italic text-accent">i decennier framöver.</span>
           </h1>
           <p className="mt-3 max-w-[46ch] text-[17px] leading-[1.65] text-primary-foreground/80 lg:mt-6">
-            Vi tar hand om hela processen — från första takkontrollen till sista plåtdetaljen.
-            Takbyte, takrenovering och takreparation för villor, BRF:er och företag i hela
-            Roslagen och Storstockholm.
+            {HOME_HERO.text}
           </p>
 
           <p className="mt-3 text-[14px] text-primary-foreground/80 lg:mt-4">
@@ -118,7 +116,7 @@ const Hero = () => {
             </Link>
           </p>
           <ul className="mt-3 flex max-w-[46ch] flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-primary-foreground/75 lg:mt-6" aria-label="Fakta om RoslagsTak">
-            {["10 års utförandegaranti", GARANTI_RENOVERING_CHIP, "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"].map((t) => (
+            {HOME_HERO.chips.map((t) => (
               <li key={t}>{t}</li>
             ))}
           </ul>

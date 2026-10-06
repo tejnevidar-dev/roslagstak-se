@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Phone } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { canonicalPath } from "@/lib/canonical";
+import { HOME_SERVICES_INTRO } from "@/data/home-sections";
 import {
   IconRoofNew,
   IconRoofRepair,
@@ -115,19 +116,18 @@ const Services = () => {
         {/* Förskjuten rubrikkomposition */}
         <div className="mb-14 grid grid-cols-12 items-end gap-x-8 gap-y-10 lg:mb-18">
           <div className="col-span-12 lg:col-span-6">
-            <p className="mb-6 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent"><span aria-hidden="true" className="h-px w-12 bg-accent/50" />Våra tjänster</p>
+            <p className="mb-6 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent"><span aria-hidden="true" className="h-px w-12 bg-accent/50" />{HOME_SERVICES_INTRO.eyebrow}</p>
             <h2
               id="services-heading"
               className="max-w-[24ch] font-display text-[clamp(1.95rem,3.4vw,2.9rem)] font-bold leading-[1.14] tracking-[-0.02em] text-foreground"
             >
-              Allt inom tak och plåt —{" "}
-              <span className="text-accent">under ett och samma tak.</span>
+              {HOME_SERVICES_INTRO.headingA}{" "}
+              <span className="text-accent">{HOME_SERVICES_INTRO.headingB}</span>
             </h2>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <p className="max-w-[46ch] text-[17px] font-light leading-[1.68] text-muted-foreground">
-              Villa, radhus, fritidshus eller bostadsrättsförening — du har en kontaktperson genom
-              hela processen, från takkontroll till färdigt tak, med material valt för svenskt klimat.
+              {HOME_SERVICES_INTRO.text}
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">

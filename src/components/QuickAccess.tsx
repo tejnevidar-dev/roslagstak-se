@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, ArrowRight } from "lucide-react";
+import { HOME_QUICK } from "@/data/home-sections";
 
 /* Snabbval i nautisk asymmetri: bred ljus panel + smal accentpanel som skjuter upp */
 const QuickAccess = () => (
@@ -7,12 +8,12 @@ const QuickAccess = () => (
     <div className="mx-auto max-w-7xl px-6">
       <div className="grid grid-cols-12 items-end gap-y-8 lg:gap-8">
         <div className="col-span-12 lg:col-span-7">
-          <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent"><span aria-hidden="true" className="h-px w-12 bg-accent/50" />Snabbval</p>
+          <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent"><span aria-hidden="true" className="h-px w-12 bg-accent/50" />{HOME_QUICK.eyebrow}</p>
           <h2
             id="snabbval"
             className="mt-6 max-w-[26ch] font-display text-[clamp(1.85rem,3vw,2.6rem)] font-bold leading-[1.14] tracking-[-0.02em] text-foreground"
           >
-            Vad behöver du hjälp med?
+            {HOME_QUICK.heading}
           </h2>
         </div>
         <div className="col-span-12 lg:col-span-5 lg:text-right">
@@ -21,7 +22,7 @@ const QuickAccess = () => (
             className="inline-flex items-center gap-3 text-[17px] font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[6px] hover:text-accent"
           >
             <Phone className="h-5 w-5 text-accent" aria-hidden="true" />
-            Hellre prata? 070-154 36 39
+            {HOME_QUICK.phone}
           </a>
         </div>
       </div>
@@ -33,18 +34,17 @@ const QuickAccess = () => (
         >
           <div>
             <span className="font-display text-[11px] uppercase tracking-[0.3em] text-accent">
-              01 — Nytt tak
+              {HOME_QUICK.cards[0].label}
             </span>
             <h3 className="mt-7 font-display text-[clamp(1.5rem,2.2vw,2rem)] font-bold leading-[1.2] tracking-[-0.018em] text-foreground">
-              Byta eller renovera taket
+              {HOME_QUICK.cards[0].title}
             </h3>
             <p className="mt-5 max-w-[46ch] text-[17px] font-light leading-[1.68] text-muted-foreground">
-              Komplett takbyte från råspont till färdig plåt — eller en riktad åtgärd där taket
-              läcker. Vi bedömer skicket på plats och lämnar ett fast pris innan vi börjar.
+              {HOME_QUICK.cards[0].text}
             </p>
           </div>
           <span className="mt-10 inline-flex items-center gap-3 font-display text-[16px] italic text-accent">
-            Se tjänster för villa &amp; fritidshus
+            {HOME_QUICK.cards[0].cta}
             <ArrowRight
               className="h-4 w-4 transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1.5"
               aria-hidden="true"
@@ -58,17 +58,17 @@ const QuickAccess = () => (
         >
           <div>
             <span className="font-display text-[11px] uppercase tracking-[0.3em] text-primary">
-              02 — Underhåll &amp; pris
+              {HOME_QUICK.cards[1].label}
             </span>
             <h3 className="mt-7 font-display text-[clamp(1.5rem,2.2vw,2rem)] font-bold leading-[1.2] tracking-[-0.018em]">
-              Takvård &amp; vad det kostar
+              {HOME_QUICK.cards[1].title}
             </h3>
             <p className="mt-5 max-w-[44ch] text-[17px] font-light leading-[1.68] opacity-90">
-              Taktvätt, behandling och takmålning.
+              {HOME_QUICK.cards[1].text}
             </p>
           </div>
           <span className="mt-10 inline-flex items-center gap-3 font-display text-[16px] italic">
-            Räkna på ditt tak
+            {HOME_QUICK.cards[1].cta}
             <ArrowRight
               className="h-4 w-4 transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1.5"
               aria-hidden="true"

@@ -1,10 +1,7 @@
 import GoogleReviews from "@/components/GoogleReviews";
+import { HOME_TRUST_ITEMS } from "@/data/home-sections";
 
-const items = [
-  { value: "10 år", label: "Utförandegaranti. 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs" },
-  { value: "Fast pris", label: "Tillägg bara efter ditt godkännande" },
-  { value: "0 kr", label: "Takkontroll utan förpliktelser", accent: true },
-];
+const items = HOME_TRUST_ITEMS;
 
 
 /* Mörk marin faktamatris — vertikala accentlinjer istället för kort */

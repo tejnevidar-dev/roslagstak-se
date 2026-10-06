@@ -38,6 +38,7 @@ import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
 import { roofTypeFaqs } from "../src/data/roof-type-faqs";
 import { eternitFaqs } from "../src/data/eternit-content";
 import { homeFaqs } from "../src/data/home-faqs";
+import { HOME_HERO, HOME_TRUST_ITEMS, HOME_QUICK, HOME_SERVICES_INTRO } from "../src/data/home-sections";
 import { processFaqs } from "../src/data/process-faqs";
 import { brfFaqs, brfFaqsFor } from "../src/data/brf-faqs";
 
@@ -208,6 +209,51 @@ const home: PrerenderPage = {
 
 /** Interna länkar som står som [text](/länk) i FAQ-svar: i den statiska HTML:en blir de riktiga länkar i länklistan, texten och schemat är rena. */
 const faqLinks = (faqs: { answer: string }[]) => faqs.flatMap((f) => inlineMdLinks(f.answer));
+/**
+ * Startsidans förtroende- och tjänstesektioner i den statiska HTML:en (R4): hero-texten och faktarutan, förtroenderaden
+ * (TrustBar), snabbvalen (QuickAccess) och tjänstekorten (Services). Texterna kommer ur src/data/home-sections.ts och
+ * services-arrayen i Services.tsx, samma strängar som React visar; src/test/home-static-parity.test.ts kontrollerar det.
+ * Ordning som på sidan: hero, förtroende, snabbval, referensjobb, tjänster, resten.
+ */
+const homeServiceCards = [
+  ...servicesSource.matchAll(
+    /slug:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)",\s*\n\s*short:\s*"([^"]+)",\s*\n\s*description:\s*\n?\s*"([^"]+)",(\s*\n\s*hideOnHome:\s*true,)?/g,
+  ),
+]
+  .map((m) => ({ slug: m[1], title: m[2], short: m[3], description: m[4], hide: !!m[5] }))
+  .filter((c) => !c.hide);
+{
+  const R = referensParagraphs.length;
+  const pre = buildBody([
+    HOME_HERO.eyebrow,
+    HOME_HERO.text,
+    ...HOME_HERO.chips,
+    ...HOME_TRUST_ITEMS.flatMap((i) => [i.value, i.label]),
+    HOME_QUICK.eyebrow,
+    { h: HOME_QUICK.heading },
+    HOME_QUICK.phone,
+    ...HOME_QUICK.cards.flatMap((c) => [c.label, { h: c.title, level: 3 as const }, c.text, c.cta]),
+  ]);
+  const svc = buildBody([
+    HOME_SERVICES_INTRO.eyebrow,
+    { h: `${HOME_SERVICES_INTRO.headingA} ${HOME_SERVICES_INTRO.headingB}` },
+    HOME_SERVICES_INTRO.text,
+    ...homeServiceCards.flatMap((c, i) => [`${String(i + 1).padStart(2, "0")} — ${c.short}`, { h: c.title, level: 3 as const }, c.description]),
+  ]);
+  const old = home.paragraphs;
+  const oldHeadings = home.headingAt ?? {};
+  const oldImages = home.images ?? {};
+  const toRest = old.slice(1 + R);
+  home.paragraphs = [old[0], ...pre.paragraphs, ...old.slice(1, 1 + R), ...svc.paragraphs, ...toRest];
+  const headingAt: Record<number, 2 | 3> = {};
+  for (const [k, v] of Object.entries(pre.headingAt)) headingAt[Number(k) + 1] = v;
+  for (const [k, v] of Object.entries(oldHeadings)) headingAt[Number(k) + pre.paragraphs.length] = v as 2 | 3;
+  for (const [k, v] of Object.entries(svc.headingAt)) headingAt[Number(k) + 1 + pre.paragraphs.length + R] = v;
+  home.headingAt = headingAt;
+  const images: NonNullable<PrerenderPage["images"]> = {};
+  for (const [k, v] of Object.entries(oldImages)) images[Number(k) + pre.paragraphs.length] = v;
+  home.images = images;
+}
 
 /** FAQPage-nod för den statiska HTML:en (samma frågor och svar som sidan visar). */
 const faqLd = (faqs: { question: string; answer: string }[], path: string): Record<string, unknown> =>
