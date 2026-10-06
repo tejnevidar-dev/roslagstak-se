@@ -10,6 +10,7 @@ import Index from "./pages/Index.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import CookieBanner from "./components/CookieBanner";
 import DeferMount from "./components/DeferMount";
+import TakkontrollAnkare from "./components/TakkontrollAnkare";
 import PixelPageViewTracker from "./components/PixelPageViewTracker";
 import { locationIndex } from "./data/location-index";
 import { brfLocationSlugs } from "./data/brf-locations";
@@ -78,6 +79,7 @@ const App = () => (
         </DeferMount>
         {/* Fas 2.19: LocalBusiness, Organization, WebSite och WebPage skrivs i den statiska <head> av generate-static-heads.mjs (en källa, lib/schema-graph.ts + lib/schema.ts). */}
         <BrowserRouter>
+          <TakkontrollAnkare />
           <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/" element={<Index />} />
