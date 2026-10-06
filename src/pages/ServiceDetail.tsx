@@ -68,15 +68,17 @@ const HERO_ALT: Record<string, string> = {
   takavvattning: "",
   takkupor: "",
   takinspektion: "Tak med nylagd råspont.",
-  taksakerhet: "Tak med mörka pannor.",
-  platarbeten: "Tak med mörka pannor.",
+  // Bilden visar snörasskydd resp. nockpannor och beslag, inte "mörka pannor": ingen bildtext tills en riktig finns (T1).
+  taksakerhet: "",
+  platarbeten: "",
   takvard: "Drönarfoto av ett hus med rött tak.",
   tegeltak: "Lertegel.",
 };
 const DETAIL_ALT: Record<string, string> = {
   takomlaggning: "Tak med läkt över underlagspapp.",
-  takavvattning: "Tak med mörka pannor.",
-  platarbeten: "Tak med mörka pannor.",
+  // Närbilderna visar nockpannor och plåtbeslag (takavvattning) resp. snörasskydd (plåtarbeten): ingen bildtext (T1).
+  takavvattning: "",
+  platarbeten: "",
   takvard: "Tak med mörka pannor.",
   "eternit-asbest": "Tak med nylagd råspont.",
 };
@@ -372,7 +374,7 @@ const ServiceDetail = () => {
                 <div className="overflow-hidden rounded-2xl bg-secondary">
                   <img
                     src={detailImage}
-                    alt={(slug && DETAIL_ALT[slug]) || "Tak."}
+                    alt={(slug && DETAIL_ALT[slug]) ?? "Tak."}
                     width={1200}
                     height={900}
                     loading="lazy"
@@ -380,10 +382,12 @@ const ServiceDetail = () => {
                     className="aspect-[4/3] w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
                   />
                 </div>
-                <figcaption className="flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
-                  <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">{SERVICE_COPY.photoLabel}</span>
-                  {meta.photoNote}
-                </figcaption>
+                {meta.photoNote && (
+                  <figcaption className="flex items-start gap-3 border-t border-border pt-4 text-[13px] leading-relaxed text-muted-foreground">
+                    <span className="mt-px text-[10px] font-bold uppercase tracking-[0.24em] text-primary">{SERVICE_COPY.photoLabel}</span>
+                    {meta.photoNote}
+                  </figcaption>
+                )}
               </figure>
               )}
 

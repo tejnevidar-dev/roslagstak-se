@@ -62,7 +62,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     specHeading: "Montage av avvattning",
     lead: "Hängrännor och stuprör leder bort vattnet från taket.",
     craftLine: "Hängrännor, stuprör och fotplåt hör ihop med taket.",
-    photoNote: "Tak med mörka pannor.",
+    photoNote: "",
   },
   takkupor: {
     accentLine: "med kostnadsfri takkontroll.",
@@ -93,7 +93,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     specHeading: "Plåtdetaljer: material och utförande",
     lead: "Plåtdetaljerna anpassas efter taket.",
     craftLine: "Det är i plåtdetaljerna ett tak hålls tätt.",
-    photoNote: "Tak med mörka pannor.",
+    photoNote: "",
   },
   takvard: {
     accentLine: "med kostnadsfri takkontroll.",
@@ -503,7 +503,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     { h: SERVICE_COPY.asideTitle, level: 3 },
     SERVICE_COPY.asideText,
     SERVICE_COPY.asideCta,
-    ...(SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) ? [SERVICE_COPY.photoLabel, meta.photoNote] : []),
+    ...(SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) && meta.photoNote ? [SERVICE_COPY.photoLabel, meta.photoNote] : []),
     SERVICE_COPY.asideNote,
     ...specific("after-spec"),
     ...(slug === "platarbeten" ? [SERVICE_COPY.falsat.eyebrow, { h: SERVICE_COPY.falsat.heading }, SERVICE_COPY.falsat.text] : []),
