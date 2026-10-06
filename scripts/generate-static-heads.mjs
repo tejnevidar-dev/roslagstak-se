@@ -120,6 +120,14 @@ const chunkPrefixFor = (path) => {
   if (path.startsWith("/blogg/")) return "BlogPost-";
   if (path.startsWith("/taklaggare-")) return "LocationPage-";
   if (COMBO_RE.test(path)) return "ServiceLocationPage-";
+  if (/^\/projekt\/[a-z0-9-]+$/.test(path)) return "ProjectPage-";
+  if (path === "/projekt") return "ProjectsPage-";
+  if (/^\/material\/[a-z0-9-]+$/.test(path)) return "MaterialPage-";
+  if (path === "/tjanster/taktvatt") return "Taktvatt-";
+  if (/^\/tjanster\/[a-z0-9-]+$/.test(path)) return "ServiceDetail-";
+  if (/^\/takproblem\/[a-z0-9-]+$/.test(path)) return "ProblemPage-";
+  if (/^\/omraden\/[a-z0-9-]+$/.test(path)) return "RegionPage-";
+  if (path === "/priser") return "Prices-";
   return null;
 };
 // Hero-bildens 480w AVIF (den som faktiskt visas på mobil, där LCP mäts) som statisk preload på
