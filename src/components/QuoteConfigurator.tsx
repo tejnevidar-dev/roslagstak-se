@@ -344,10 +344,11 @@ const QuoteConfigurator = () => {
 
           {mode === "consultation" && (
             <div>
-              <label className="block text-sm font-semibold text-foreground mb-3">
+              <label htmlFor="quote-message" className="block text-sm font-semibold text-foreground mb-3">
                 Beskriv ditt takprojekt eller ställ en fråga
               </label>
               <textarea
+                id="quote-message"
                 placeholder="T.ex. Vi har en sommarstuga på Ljusterö med ett gammalt papptak som behöver bytas. Vad rekommenderar ni?"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -364,6 +365,10 @@ const QuoteConfigurator = () => {
               <input
                 type="text"
                 placeholder="Namn"
+                aria-label="Namn"
+                autoComplete="name"
+                autoCapitalize="words"
+                enterKeyHint="next"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -372,6 +377,10 @@ const QuoteConfigurator = () => {
               <input
                 type="tel"
                 placeholder="Telefon"
+                aria-label="Telefon"
+                autoComplete="tel"
+                inputMode="tel"
+                enterKeyHint="next"
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -380,6 +389,9 @@ const QuoteConfigurator = () => {
               <input
                 type="email"
                 placeholder="E-post"
+                aria-label="E-post"
+                autoComplete="email"
+                enterKeyHint="next"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -388,6 +400,9 @@ const QuoteConfigurator = () => {
               <input
                 type="text"
                 placeholder="Adress / Ö (t.ex. Ljusterö)"
+                aria-label="Adress eller ö"
+                autoComplete="street-address"
+                enterKeyHint="done"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
