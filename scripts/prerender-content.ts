@@ -138,7 +138,8 @@ const primaryLinks = [
   { href: "/priser", label: "Priser för takarbeten" },
   { href: "/blogg", label: "Guider om tak" },
   { href: "/recensioner", label: "Recensioner" },
-  { href: "/kontakt", label: "Boka kostnadsfri takkontroll" },
+  { href: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 const serviceLinks = services.map((s) => ({
