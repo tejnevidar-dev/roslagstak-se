@@ -62,8 +62,6 @@ import imgGrisslehamnDetail3 from "@/assets/project-grisslehamn-detail-3.jpg";
 import imgGrisslehamnDetail3Webp from "@/assets/project-grisslehamn-detail-3-1080.webp";
 import type { MaterialSlug } from "@/data/materials";
 import { projectTexts } from "@/data/project-texts";
-import { locations, type LocationData } from "@/data/locations";
-import { distanceKm } from "@/data/service-reach";
 
 /* Responsiva hero-varianter (AVIF/WebP, genererade av scripts/gen-responsive-hero.mjs från
    källbilderna i src/assets/), SEO-fynd #1h/#1k: /projekt/takbyte-singo hade LCP 8,9 s på en
@@ -190,22 +188,3 @@ export const projects: Project[] = projectTexts.map((t) => {
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 export const getProjectsByMaterial = (materialSlug: MaterialSlug) =>
   projects.filter((p) => p.materialSlugs.includes(materialSlug));
-
-const NEARBY_PROJECT_MAX_KM = 30;
-
-/**
- * Ett referensjobb att visa på en ortssida som saknar ett eget projekt — men bara om det verkligen
- * ligger nära (Marknadschefen 2026-09-29, regel 5: aldrig ett vilseledande "i närområdet"). Kräver
- * ≤30 km fågelvägen. Bara avstånd, inte "samma region" — några av de namngivna regionerna
- * (t.ex. Norra skärgården, 57 km mellan ytterpunkterna) är för stora för att räknas som närområde
- * på egen hand. Länktexten på anropsstället ska alltid skriva ut projektets egen ort (locationName),
- * aldrig bara "i närområdet" utan angiven plats.
- */
-export const getNearbyProject = (location: LocationData) => {
-  if (projects.some((p) => p.locationSlug === location.slug)) return undefined;
-  return projects.find((p) => {
-    const projectLocation = locations.find((l) => l.slug === p.locationSlug);
-    if (!projectLocation) return false;
-    return distanceKm(location, projectLocation) <= NEARBY_PROJECT_MAX_KM;
-  });
-};

@@ -127,9 +127,12 @@ const ReferenceCases = () => {
           })}
         </ul>
 
-        <p className="mt-10">
+        <p className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
           <Link to="/projekt" className="text-[15px] font-semibold text-primary underline underline-offset-4 hover:no-underline">
             Se alla referensjobb
+          </Link>
+          <Link to="/takbyte-norrtalje" className="text-[15px] font-semibold text-primary underline underline-offset-4 hover:no-underline">
+            Byta tak i Norrtälje
           </Link>
         </p>
       </div>

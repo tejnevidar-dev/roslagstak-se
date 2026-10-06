@@ -274,6 +274,12 @@ const ProjectPage = () => {
               >
                 Takläggare i {placeShort}
               </Link>
+              <Link
+                to="/takbyte-norrtalje"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              >
+                Byta tak i Norrtälje
+              </Link>
             </div>
           </section>
         </div>

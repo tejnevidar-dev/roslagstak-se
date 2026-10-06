@@ -64,8 +64,14 @@ const FALLBACK: RelatedLink[] = [
 
 const hasPrices = (content: string[]) => content.some((p) => /\d[\d\s]*(kr\b|kronor|kr\/m)/i.test(p));
 
+/** Länkar som läggs först i länkraden oavsett om artikeln har priser (åtgärdslistan 2026-10-06, rad 7: "dubbelfalsat plåttak pris"). */
+const EXTRA: Record<string, RelatedLink[]> = {
+  "bandtackt-plat-vs-klicktak": [{ to: "/tjanster/platarbeten#falsat", label: "pris för dubbelfalsat plåttak" }],
+};
+
 export const relatedForPost = (post: { slug: string; content: string[] }): RelatedLink[] => {
-  if (hasPrices(post.content)) return [];
+  const extra = EXTRA[post.slug] ?? [];
+  if (hasPrices(post.content)) return extra;
   const inBody = new Set(post.content.flatMap((p) => [...p.matchAll(/\]\((\/[^)\s]*)\)/g)].map((m) => m[1])));
   const picked: RelatedLink[] = [];
   for (const [re, links] of RULES) {
@@ -73,5 +79,5 @@ export const relatedForPost = (post: { slug: string; content: string[] }): Relat
     for (const l of links) if (!inBody.has(l.to) && !picked.some((p) => p.to === l.to)) picked.push(l);
   }
   for (const l of FALLBACK) if (picked.length < 2 && !picked.some((p) => p.to === l.to)) picked.push(l);
-  return picked.slice(0, 3);
+  return [...extra, ...picked].slice(0, 3);
 };

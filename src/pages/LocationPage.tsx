@@ -20,7 +20,8 @@ import { getLocationWithMall, OAR_UTAN_BILVAG, usesMall } from "@/data/location-
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { regionSlugs } from "@/data/regions";
-import { projects, getNearbyProject } from "@/data/projects";
+import { projects } from "@/data/projects";
+import { getNearbyProject } from "@/data/project-nearby";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
 import { NAP, OPENING_HOURS, ORG_ID } from "@/lib/schema";

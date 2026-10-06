@@ -49,7 +49,7 @@ export const priceFaqs = [
   },
   {
     question: "Kan jag använda ROT-avdrag?",
-    answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Vi drar av ROT på fakturan och begär utbetalningen från Skatteverket. Priserna på den här sidan förutsätter fullt ROT-avdrag och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre.",
+    answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Har du rätt till ROT-avdrag drar vi av det på fakturan och begär utbetalningen från Skatteverket. Priserna på den här sidan förutsätter fullt ROT-avdrag och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre.",
   },
   {
     question: "Kostar det extra på öar i skärgården?",
@@ -99,7 +99,7 @@ export const PRICE_NOTE =
 
 export const PRICE_ROT_TITLE = "Så fungerar ROT-avdraget vid takarbeten";
 export const PRICE_ROT_TEXT =
-  "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Vi drar av ROT på fakturan och begär utbetalningen från Skatteverket. Priserna på den här sidan förutsätter fullt ROT-avdrag och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre.";
+  "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Har du rätt till ROT-avdrag drar vi av det på fakturan och begär utbetalningen från Skatteverket. Priserna på den här sidan förutsätter fullt ROT-avdrag och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre.";
 
 export const PRICE_FACTORS_TITLE = "Vad avgör priset på just ditt tak?";
 export const PRICE_FACTORS_TEXT =

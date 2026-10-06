@@ -1719,7 +1719,7 @@ export const locations: LocationData[] = [
     primaryKeyword: "takläggare Skärholmen",
     lat: 59.2756,
     lng: 17.9097,
-    nearbyLocations: ["Bromma", "Stockholm", "Botkyrka"],
+    nearbyLocations: ["Bromma", "Stockholm", "Botkyrka", "Vårberg"],
   },
   {
     slug: "farsta",

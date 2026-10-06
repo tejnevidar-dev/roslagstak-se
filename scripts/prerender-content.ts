@@ -195,7 +195,7 @@ const home: PrerenderPage = {
     ],
   headingAt: referensHeadingAt,
   images: referensImages,
-  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
+  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
 };
 
 /** FAQPage-nod för den statiska HTML:en (samma frågor och svar som sidan visar). */
@@ -764,6 +764,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { href: "/projekt", label: "Alla referensjobb" },
         { href: `/tjanster/${project.serviceSlug}`, label: project.serviceName },
         { href: `/taklaggare-${project.locationSlug}`, label: `Takläggare i ${project.locationName}` },
+        { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" },
         ...project.description.flatMap(inlineMdLinks),
       ],
       ogImage: project.ogImage,

@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "Kan jag använda ROT-avdrag för takbyte?",
-    answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Vi drar av ROT på fakturan och begär utbetalningen från Skatteverket.",
+    answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Har du rätt till ROT-avdrag drar vi av det på fakturan och begär utbetalningen från Skatteverket.",
   },
   {
     question: "Hur snabbt får jag svar på min förfrågan?",
