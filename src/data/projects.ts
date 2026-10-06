@@ -48,9 +48,18 @@ import imgSingoDetail1Webp from "@/assets/project-singo-detail-1-1080.webp";
 import imgGrisslehamnHero from "@/assets/project-grisslehamn-hero.jpg";
 import imgGrisslehamnHeroAvif480 from "@/assets/project-grisslehamn-hero-480.avif";
 import imgGrisslehamnHeroAvif768 from "@/assets/project-grisslehamn-hero-768.avif";
+import imgGrisslehamnHeroAvif1080 from "@/assets/project-grisslehamn-hero-1080.avif";
+import imgGrisslehamnHeroAvif1440 from "@/assets/project-grisslehamn-hero-1440.avif";
 import imgGrisslehamnHeroWebp480 from "@/assets/project-grisslehamn-hero-480.webp";
 import imgGrisslehamnHeroWebp768 from "@/assets/project-grisslehamn-hero-768.webp";
+import imgGrisslehamnHeroWebp1080 from "@/assets/project-grisslehamn-hero-1080.webp";
+import imgGrisslehamnHeroWebp1440 from "@/assets/project-grisslehamn-hero-1440.webp";
 import imgGrisslehamnDetail1 from "@/assets/project-grisslehamn-detail-1.jpg";
+import imgGrisslehamnDetail1Webp from "@/assets/project-grisslehamn-detail-1-1080.webp";
+import imgGrisslehamnDetail2 from "@/assets/project-grisslehamn-detail-2.jpg";
+import imgGrisslehamnDetail2Webp from "@/assets/project-grisslehamn-detail-2-1080.webp";
+import imgGrisslehamnDetail3 from "@/assets/project-grisslehamn-detail-3.jpg";
+import imgGrisslehamnDetail3Webp from "@/assets/project-grisslehamn-detail-3-1080.webp";
 import type { MaterialSlug } from "@/data/materials";
 import { projectTexts } from "@/data/project-texts";
 import { locations, type LocationData } from "@/data/locations";
@@ -132,21 +141,36 @@ const projectImages: Record<string, ProjectImages> = {
       },
     ],
   },
-  // Stillbilder ur Vidars film (832×464, ingen metadata, ingen person i bild). Bara små bilder tills originalfilerna kommer.
+  // Vidars originalbilder (Dropbox 2026-10-06, 1440×1080, ingen metadata): scripts/gen-grisslehamn-images.mjs.
   "takbyte-grisslehamn": {
     heroImage: imgGrisslehamnHero,
     heroResponsive: {
-      avifSrcSet: `${imgGrisslehamnHeroAvif480} 480w, ${imgGrisslehamnHeroAvif768} 768w`,
-      webpSrcSet: `${imgGrisslehamnHeroWebp480} 480w, ${imgGrisslehamnHeroWebp768} 768w`,
-      width: 832,
-      height: 464,
+      avifSrcSet: `${imgGrisslehamnHeroAvif480} 480w, ${imgGrisslehamnHeroAvif768} 768w, ${imgGrisslehamnHeroAvif1080} 1080w, ${imgGrisslehamnHeroAvif1440} 1440w`,
+      webpSrcSet: `${imgGrisslehamnHeroWebp480} 480w, ${imgGrisslehamnHeroWebp768} 768w, ${imgGrisslehamnHeroWebp1080} 1080w, ${imgGrisslehamnHeroWebp1440} 1440w`,
+      width: 1440,
+      height: 1080,
     },
     gallery: [
       {
         src: imgGrisslehamnDetail1,
-        width: 832,
-        height: 464,
-        alt: "Taket i Grisslehamn efter takbytet.",
+        webp: imgGrisslehamnDetail1Webp,
+        width: 1440,
+        height: 1080,
+        alt: "Taket i Grisslehamn sett rakt ovanifrån: svarta betongpannor, skorsten och altan, med en liten person i varselväst vid altanen.",
+      },
+      {
+        src: imgGrisslehamnDetail2,
+        webp: imgGrisslehamnDetail2Webp,
+        width: 1440,
+        height: 1080,
+        alt: "Huset i Grisslehamn sett snett ovanifrån med nytt tak av svarta betongpannor, altan och skog runt tomten.",
+      },
+      {
+        src: imgGrisslehamnDetail3,
+        webp: imgGrisslehamnDetail3Webp,
+        width: 1440,
+        height: 1080,
+        alt: "Huset i Grisslehamn med svarta betongpannor sett snett ovanifrån, med skogen och intilliggande uthus.",
       },
     ],
   },

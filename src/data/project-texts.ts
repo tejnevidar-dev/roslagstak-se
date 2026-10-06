@@ -100,7 +100,7 @@ export const projectTexts: ProjectText[] = [
       "**Så jobbar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där en av våra säljare tittar på taket på plats. Därefter får kunden en offert med fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
       "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning). Fler jobb finns under [Projekt](/projekt)."
     ],
-    "heroAlt": "Nytt tak i Grisslehamn med svarta betongpannor, sett rakt uppifrån.",
+    "heroAlt": "Nytt tak i Grisslehamn med svarta betongpannor, sett snett uppifrån med skorsten, altan och skog runt huset.",
     "ogImage": "/og/project-grisslehamn-hero.jpg"
   },
 ];
