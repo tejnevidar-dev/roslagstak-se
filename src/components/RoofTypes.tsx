@@ -100,7 +100,7 @@ const RoofTypes = () => {
           intro={
             <>
               Öppna en taktyp för att läsa mer om materialet.{" "}
-              <a href="/offert#radgivning" className="text-primary underline decoration-primary/40 hover:no-underline">
+              <a href="/takkontroll" className="text-primary underline decoration-primary/40 hover:no-underline">
                 Boka kostnadsfri takkontroll
               </a>
               . Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.

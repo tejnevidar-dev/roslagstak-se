@@ -84,7 +84,7 @@ const Reviews = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/offert"
+                  to="/takkontroll"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
                 >
                   Boka kostnadsfri takkontroll <ArrowRight className="w-4 h-4" />
