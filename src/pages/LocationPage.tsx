@@ -25,7 +25,7 @@ import { getNearbyProject } from "@/data/project-nearby";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
 import { NAP, OPENING_HOURS, ORG_ID } from "@/lib/schema";
-import { linkPhone } from "@/lib/inline-md";
+import { linkPhone, renderInline } from "@/lib/inline-md";
 import {
   Accordion,
   AccordionContent,
@@ -293,7 +293,7 @@ const LocationPage = () => {
                 {location.extraSections?.map((section) => (
                   <div key={section.heading}>
                     <h3 className="font-display text-xl text-foreground mb-3">{section.heading}</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-6">{section.text}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-6">{renderInline(section.text)}</p>
                   </div>
                 ))}
 
