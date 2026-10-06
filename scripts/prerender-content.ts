@@ -35,6 +35,7 @@ import { guideContent } from "../src/data/blog-cta";
 import { generateLocationFAQs } from "../src/data/location-faqs";
 import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
 import { roofTypeFaqs } from "../src/data/roof-type-faqs";
+import { eternitFaqs } from "../src/data/eternit-content";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -217,7 +218,7 @@ const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
         ...s.steps.map((st, n) => `Steg ${n + 1}, ${st.title}: ${st.text}`),
         ...s.extraParagraphs,
         s.priceNote,
-        ...s.faqs.map((f) => `${f.question} ${f.answer}`),
+        ...s.faqs.map((f) => `${f.question} ${stripInlineMd(f.answer)}`),
         `Ring ${PHONE} eller skicka en förfrågan på ${s.path}. Vi återkommer inom 24 timmar.`,
       ],
       links: [...primaryLinks, ...s.related.map((r) => ({ href: r.to, label: r.label }))],
@@ -262,7 +263,7 @@ const staticPages: Record<string, PrerenderPage> = {
     h1: "Vilket tak passar ditt hus?",
     intro:
       "Vi lägger betongpannor, lertegel, TP20-plåt, pannplåt, dubbelfalsad plåt (bandtäckning) och papptak. Här ser du materialen sida vid sida, med riktpris och länk till mer om vart och ett.",
-    paragraphs: [
+    ...buildBody([
       "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder.",
       "Pannplåt är takplåt av stål som har pressats så att den ser ut som ett tak av takpannor.",
       "Dubbelfalsat plåttak, även kallat bandtäckning, är den klassiska formen av plåttak: långa plåtbanor som fogas ihop genom att kanterna viks samman, utan en enda synlig skruv genom taket.",
@@ -270,7 +271,11 @@ const staticPages: Record<string, PrerenderPage> = {
       "Betongpannor är gjutna pannor som ger ett klassiskt pannat tak.",
       "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak.",
       "Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",
-    ],
+      // Frågorna och svaren som FaqSection visar på sidan (samma data som FAQPage-schemat nedan)
+      { h: "Frågor om taktyper och material" },
+      "Pris, taklutning och vad som avgör valet av material.",
+      ...roofTypeFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+    ]),
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }],
     jsonLd: [faqLd(roofTypeFaqs, "/taktyper")],
@@ -569,7 +574,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { name: "Tjänster", path: "/#tjanster" },
         { name: service.title, path: `/tjanster/${slug}` },
       ],
-      jsonLd: [schemas.service, schemas.howTo, ...(SERVICE_EXTRAS[slug] ? [faqLd(SERVICE_EXTRAS[slug].faqs, clean)] : [])],
+      jsonLd: [schemas.service, schemas.howTo, ...(SERVICE_EXTRAS[slug] ? [faqLd(SERVICE_EXTRAS[slug].faqs, clean)] : slug === "eternit-asbest" ? [faqLd(eternitFaqs, clean)] : [])],
     };
   }
 
