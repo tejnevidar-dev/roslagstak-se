@@ -17,10 +17,7 @@ const Testimonials = () => {
         />
 
         <Reveal>
-          <GoogleReviews
-            title="Riktiga omdömen, i original"
-            intro="Omdömena är hämtade från Google. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Namn och datum visas i original, så att du kan bedöma dem själv."
-          />
+          <GoogleReviews />
         </Reveal>
 
         <div className="mt-10">
