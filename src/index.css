@@ -214,3 +214,11 @@
   content-visibility: auto;
   contain-intrinsic-size: auto 400px;
 }
+
+/* Den fasta knappraden längst ner på mobil (StickyMobileCTA, 81 px, och egna raden på /offert/<ort>) får inte täcka
+   formulärets skicka-knapp när webbläsaren rullar fram den (fokus, ankare, scrollIntoView). */
+@media (max-width: 767px) {
+  form button[type="submit"] {
+    scroll-margin-bottom: 6rem;
+  }
+}
