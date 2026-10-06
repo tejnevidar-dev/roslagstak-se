@@ -9,6 +9,7 @@ import Services from "@/components/Services";
 import QuickAccess from "@/components/QuickAccess";
 import TrustBar from "@/components/TrustBar";
 import ReferenceCases from "@/components/ReferenceCases";
+import DeferMount from "@/components/DeferMount";
 
 const About = lazy(() => import("@/components/About"));
 const ServiceArea = lazy(() => import("@/components/ServiceArea"));
@@ -84,18 +85,57 @@ const Index = () => {
       <main>
         <Hero />
         <TrustBar />
-        <ReferenceCases />
-        <QuickAccess />
-        <Services />
+        {/* Sektionerna under första skärmen får content-visibility:auto: webbläsaren hoppar över layout och målning av dem tills de
+            närmar sig skärmen (blockeringstid på mobil). Utseendet är oförändrat, höjden reserveras med contain-intrinsic-size. */}
+        {/* Varje sektion monteras i en egen ledig stund (DeferMount), så att startsidan inte renderas i en enda lång uppgift. */}
+        <div className="cv-auto">
+          <DeferMount minHeight={900}>
+            <ReferenceCases />
+          </DeferMount>
+        </div>
+        <div className="cv-auto">
+          <DeferMount minHeight={700}>
+            <QuickAccess />
+          </DeferMount>
+        </div>
+        <div className="cv-auto">
+          <DeferMount minHeight={1200}>
+            <Services />
+          </DeferMount>
+        </div>
 
         <Suspense fallback={null}>
-          <About />
-          <ServiceArea />
-          {showTeaser ? <GuidesTeaser /> : <div aria-hidden="true" style={{ minHeight: 640 }} />}
-          <FAQ />
+          <div className="cv-auto">
+            <DeferMount minHeight={900}>
+              <About />
+            </DeferMount>
+          </div>
+          <div className="cv-auto">
+            <DeferMount minHeight={700}>
+              <ServiceArea />
+            </DeferMount>
+          </div>
+          {showTeaser ? (
+            <div className="cv-auto">
+              <DeferMount minHeight={640}>
+                <GuidesTeaser />
+              </DeferMount>
+            </div>
+          ) : (
+            <div aria-hidden="true" style={{ minHeight: 640 }} />
+          )}
+          <div className="cv-auto">
+            <DeferMount minHeight={900}>
+              <FAQ />
+            </DeferMount>
+          </div>
         </Suspense>
       </main>
-      <Footer />
+      <div className="cv-auto">
+        <DeferMount minHeight={600}>
+          <Footer />
+        </DeferMount>
+      </div>
     </>
   );
 };

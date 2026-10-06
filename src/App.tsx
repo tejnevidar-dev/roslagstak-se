@@ -9,6 +9,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import CookieBanner from "./components/CookieBanner";
+import DeferMount from "./components/DeferMount";
 import PixelPageViewTracker from "./components/PixelPageViewTracker";
 import { locationIndex } from "./data/location-index";
 import { brfLocationSlugs } from "./data/brf-locations";
@@ -70,8 +71,11 @@ const App = () => (
     <LazyMotion features={loadMotionFeatures} strict>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
+        {/* Toasts syns först efter en användaråtgärd: de monteras när webbläsaren är ledig, inte i första renderingen. */}
+        <DeferMount minHeight={0}>
+          <Toaster />
+          <Sonner />
+        </DeferMount>
         {/* Fas 2.19: LocalBusiness, Organization, WebSite och WebPage skrivs i den statiska <head> av generate-static-heads.mjs (en källa, lib/schema-graph.ts + lib/schema.ts). */}
         <BrowserRouter>
           <Suspense fallback={<RouteFallback />}>
@@ -135,7 +139,9 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-          <StickyMobileCTA />
+          <DeferMount minHeight={0}>
+            <StickyMobileCTA />
+          </DeferMount>
           <CookieBanner />
           <PixelPageViewTracker />
         </BrowserRouter>

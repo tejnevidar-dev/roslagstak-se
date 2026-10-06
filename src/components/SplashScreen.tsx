@@ -17,9 +17,12 @@ function markSplashShown() {
 
 /** Cinematic black preloader with a counting percentage and a thin progress rule. */
 const SplashScreen = ({ onDone }: { onDone: () => void }) => {
-  const [pct, setPct] = useState(0);
   const [fadingOut, setFadingOut] = useState(false);
   const doneRef = useRef(false);
+  /* Procenttalet och streckets bredd skrivs direkt i DOM:en. Förut gjorde varje bildruta en setState, alltså 1,6 s med en
+     React-rendering per bildruta medan resten av startsidan monterades (blockeringstid på mobil). Utseendet är oförändrat. */
+  const pctRef = useRef<HTMLSpanElement>(null);
+  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const start = performance.now();
@@ -28,7 +31,9 @@ const SplashScreen = ({ onDone }: { onDone: () => void }) => {
     const tick = (now: number) => {
       const t = Math.min((now - start) / COUNT_DURATION, 1);
       const eased = 1 - Math.pow(1 - t, 3);
-      setPct(Math.round(eased * 100));
+      const pct = Math.round(eased * 100);
+      if (pctRef.current) pctRef.current.textContent = String(pct);
+      if (barRef.current) barRef.current.style.width = `${pct}%`;
       if (t < 1) {
         frame = requestAnimationFrame(tick);
       } else if (!doneRef.current) {
@@ -60,14 +65,15 @@ const SplashScreen = ({ onDone }: { onDone: () => void }) => {
       />
 
       <div className="font-display text-6xl md:text-8xl font-light tracking-tighter text-primary-foreground tabular-nums">
-        {pct}
+        <span ref={pctRef}>0</span>
         <span className="text-2xl md:text-4xl align-top">%</span>
       </div>
 
       <div className="mt-6 w-56 md:w-72 h-px bg-primary-foreground/20 overflow-hidden">
         <div
+          ref={barRef}
           className="h-full bg-primary-foreground transition-[width] duration-100 ease-linear"
-          style={{ width: `${pct}%` }}
+          style={{ width: "0%" }}
         />
       </div>
     </div>

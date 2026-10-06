@@ -11,8 +11,12 @@ const StickyMobileCTA = () => {
       setVisible(window.scrollY > window.innerHeight * 0.8);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    /* Första avläsningen efter målning: window.innerHeight tvingar annars fram en full layout direkt efter att React har byggt sidan. */
+    const raf = requestAnimationFrame(handleScroll);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   /* Annonssidorna har egen fast knapprad. */

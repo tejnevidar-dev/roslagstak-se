@@ -1,7 +1,7 @@
 import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
-import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useReducedMotion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "@/components/Reveal";
 import aboutImg from "@/assets/project-blido-hero.jpg";
@@ -51,8 +51,51 @@ const benefits = [
 const About = () => {
   const reduce = useReducedMotion();
   const imgWrap = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: imgWrap, offset: ["start end", "end start"] });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
+  const imgEl = useRef<HTMLImageElement>(null);
+
+  /* Parallaxen på bilden (−6 % → +6 % av bildens höjd medan fotot rullar förbi). Samma rörelse som framer-motions useScroll gav
+     (progress 0 när fotots överkant når skärmens nederkant, 1 när dess underkant når skärmens överkant), men utan att mäta
+     elementet när sektionen monteras: det tvingade fram en layout på 100–200 ms på mobil. Nu läses läget först när fotot är nära skärmen. */
+  useEffect(() => {
+    const wrap = imgWrap.current;
+    const img = imgEl.current;
+    if (!wrap || !img || reduce) return;
+    img.style.transform = "translateY(-6%)";
+    let raf = 0;
+    let active = false;
+    const update = () => {
+      raf = 0;
+      const r = wrap.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+      img.style.transform = `translateY(${(-6 + 12 * p).toFixed(2)}%)`;
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !active) {
+          active = true;
+          window.addEventListener("scroll", onScroll, { passive: true });
+          window.addEventListener("resize", onScroll);
+          update();
+        } else if (!entry.isIntersecting && active) {
+          active = false;
+          window.removeEventListener("scroll", onScroll);
+          window.removeEventListener("resize", onScroll);
+        }
+      },
+      { rootMargin: "100px 0px" },
+    );
+    io.observe(wrap);
+    return () => {
+      io.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [reduce]);
 
   return (
     <section id="om-oss" className="bg-background py-24 lg:py-32" aria-labelledby="about-heading">
@@ -67,14 +110,14 @@ const About = () => {
                 <picture className="contents">
                 <source type="image/avif" srcSet={aboutImgAvif} />
                 <source type="image/webp" srcSet={aboutImgWebp} />
-                <m.img
+                <img
+                  ref={imgEl}
                   src={aboutImg}
                   alt="Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring."
                   width={800}
                   height={1000}
                   loading="lazy"
                   className="h-[112%] w-full object-cover"
-                  style={reduce ? undefined : { y: imgY }}
                 />
                 </picture>
               </figure>

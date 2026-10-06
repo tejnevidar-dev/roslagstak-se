@@ -205,3 +205,12 @@
     }
   }
 }
+/* Hoppa över layout och målning av sektioner utanför skärmen tills de närmar sig (content-visibility). Höjden reserveras. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+.cv-auto-sm {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}

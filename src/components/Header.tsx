@@ -105,9 +105,14 @@ const Header = ({ breadcrumb }: { breadcrumb?: Crumb[] }) => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       setProgress(max > 0 ? Math.min(1, y / max) : 0);
     };
-    onScroll();
+    /* Första avläsningen efter målning (rAF), inte direkt i effekten: scrollHeight tvingar annars fram en fullständig layout av en
+       sida som React just har byggt (ca 160 ms på mobil i Lighthouse). Resultatet är detsamma. */
+    const raf = requestAnimationFrame(onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   /* Markera aktuell sektion i navigationen */
