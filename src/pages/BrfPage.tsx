@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import FaqSection from "@/components/FaqSection";
+import { brfFaqsFor } from "@/data/brf-faqs";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
@@ -70,38 +71,6 @@ const boende = [
   },
 ];
 
-const brfFaqs = [
-  {
-    question: "Hur går ett takbyte till för en bostadsrättsförening?",
-    answer:
-      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång.",
-  },
-  {
-    question: "Behöver föreningen en takkontroll före ett takbyte?",
-    answer:
-      "Vi rekommenderar det. En takkontroll visar takets skick, om det räcker med reparation eller om taket behöver bytas, och ger styrelsen ett underlag för underhållsplan och budget. Vår takkontroll är kostnadsfri och förpliktar inte till något.",
-  },
-  {
-    question: "Vad kostar ett takbyte för en BRF?",
-    answer:
-      "Priset beror på takyta, taktyp, lutning, antal genomföringar och underlagets skick. Du får fast pris i offerten efter kostnadsfri takkontroll, så att styrelsen har ett konkret underlag att besluta på. Riktpriser per material finns på sidan Priser.",
-  },
-  {
-    question: "Vilken garanti får föreningen?",
-    answer:
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ert tak står i offerten.",
-  },
-  {
-    question: "Hur minimerar ni störningen för de boende?",
-    answer:
-      "Vi planerar ställning och tidplan tillsammans med styrelsen, skyddar fasad och mark, städar löpande och ger föreningen en fast kontaktperson under hela projektet.",
-  },
-  {
-    question: "Vilka områden arbetar ni i?",
-    answer:
-      "Vi arbetar i Storstockholm och Roslagen. På sidan Områden ser du de orter vi arbetar i.",
-  },
-];
 
 export interface BrfPlace {
   slug: string;
@@ -290,15 +259,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
   const location = useLocation();
   const inPlace = place ? ` ${place.prep} ${place.name}` : "";
   const pagePath = place ? `/brf/${place.slug}` : "/brf";
-  const faqs = place
-    ? [
-        {
-          question: `Tar ni uppdrag från bostadsrättsföreningar${inPlace}?`,
-          answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takkontroll och lämnar ett underlag med fast pris som styrelsen kan besluta på. Efter slutgenomgång får föreningen skriftlig garanti.`,
-        },
-        ...brfFaqs,
-      ]
-    : brfFaqs;
+  const faqs = brfFaqsFor(place);
   const brfPlaces = brfLocationSlugs
     .map((slug) => locationIndex.find((l) => l.slug === slug))
     .filter((l): l is (typeof locationIndex)[number] => Boolean(l));
