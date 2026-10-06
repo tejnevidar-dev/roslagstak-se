@@ -32,6 +32,7 @@ import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
 import { guideContent } from "../src/data/blog-cta";
+import { generateLocationFAQs } from "../src/data/location-faqs";
 import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
 import { roofTypeFaqs } from "../src/data/roof-type-faqs";
 
@@ -897,6 +898,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const mall = usesMall(rawLoc);
     const loc = applyMall(rawLoc);
     const prep = loc.isIsland ? "på" : "i";
+    const locationFaqs = generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ);
     const regionHref = regionSlugs[loc.region] ? `/omraden/${regionSlugs[loc.region]}` : "/omraden";
     return {
       title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
@@ -927,9 +929,12 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
         ...(villaAreasParagraph(loc.slug) ? [villaAreasParagraph(loc.slug)!] : []),
         ...(mall ? [] : [geoFactsParagraph(loc)]),
-        `${loc.uniqueFAQ.question} ${withRotForbehall(loc.uniqueFAQ.answer)}`,
+        // Hela FAQ:n som sidan visar (samma funktion som LocationPage.tsx), med rubriker, och FAQPage-schema nedan.
+        { h: `Vanliga frågor om takbyte ${prep} ${loc.name}`, level: 2 as const },
+        ...locationFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, f.answer]),
         `Ring ${PHONE} för en kostnadsfri takkontroll ${prep} ${loc.name}.`,
       ]),
+      jsonLd: [faqLd(locationFaqs, `/taklaggare-${loc.slug}`)],
       links: [
         ...primaryLinks,
         ...MONEY_LINKS,
