@@ -315,7 +315,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 className="max-w-[21ch] font-display text-[clamp(2.2rem,4.4vw,3.5rem)] font-semibold leading-[1.06] tracking-[-0.025em] text-balance text-foreground"
               >
                 Takbyte för bostadsrättsföreningar{inPlace},{" "}
-                <span className="italic text-accent">med underlag styrelsen kan besluta på.</span>
+                <span className="italic text-accent">med underlag styrelsen kan besluta på</span>
               </h1>
               <p className="mt-7 max-w-[52ch] text-[18px] leading-relaxed text-muted-foreground md:text-[19px]">
                 Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar i
