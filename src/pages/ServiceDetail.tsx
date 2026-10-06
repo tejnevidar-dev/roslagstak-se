@@ -40,7 +40,7 @@ import imgSnoras from "@/assets/roof-build-08-snorasskydd.jpg";
 import imgLakt from "@/assets/roof-build-05-lakt.jpg";
 import imgPannor from "@/assets/roof-build-06-pannor.jpg";
 import imgDronePoster from "@/assets/hero-drone-poster.jpg";
-import imgBlidoLakeview from "@/assets/project-blido-lakeview.webp";
+import imgSingoLakeview from "@/assets/project-singo-lakeview.webp";
 import imgLertegel from "@/assets/roof-type-lertegel.jpg";
 
 /**
@@ -95,7 +95,7 @@ const ServiceDetail = () => {
   const details = slug ? serviceDetails[slug] : null;
   const serviceImage = (slug && serviceImages[slug]) || imgDronePoster;
   const detailImage = slug && SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) ? detailImages[slug] : undefined;
-  const bandImage = imgBlidoLakeview;
+  const bandImage = imgSingoLakeview;
   const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
   const blocks = (slug && serviceBlocks[slug]) || serviceBlocks.takomlaggning;
   const specificBlock = <ServiceSpecificBlock block={blocks.block} />;

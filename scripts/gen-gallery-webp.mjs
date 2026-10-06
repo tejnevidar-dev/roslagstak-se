@@ -3,7 +3,7 @@
 // kan servera WebP (Lighthouse image-delivery, 2026-10-01). Kör: bun scripts/gen-gallery-webp.mjs
 import sharp from "sharp";
 import { readFileSync } from "fs";
-const FILES = ["project-blido-detail-1", "project-blido-detail-2", "project-blido-lakeview", "project-singo-detail-1"];
+const FILES = ["project-blido-detail-1", "project-blido-detail-2", "project-singo-lakeview", "project-singo-detail-1"];
 for (const name of FILES) {
   const buf = readFileSync(`src/assets/${name}.jpg`);
   const meta = await sharp(buf).metadata();

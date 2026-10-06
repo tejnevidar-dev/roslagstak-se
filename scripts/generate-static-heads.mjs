@@ -220,7 +220,9 @@ const bodyFor = (path) => {
         .map((p, i) => {
           const level = page.headingAt?.[i];
           // Rubriker (G1): samma h2/h3 som React-sidan. Avslutande kolon/punkt hör till meningsgrinden, inte rubriken.
-          return level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${esc(p)}</p>`;
+          const img = page.images?.[i];
+          const figure = img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" loading="lazy" decoding="async" style="max-width:100%;height:auto" />` : "";
+          return `${figure}${level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${esc(p)}</p>`}`;
         })
         .join("\n      ")}
       <nav aria-label="Sidlänkar"><ul>${links

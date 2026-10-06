@@ -20,7 +20,7 @@ export const heroPosterSrcSet = {
   sizes: "100vw",
 };
 
-/* Äkta drönarfoto/video från ett genomfört RoslagsTak-jobb (falsat plåttak, Blidö) —
+/* Äkta drönarfoto/video från ett genomfört RoslagsTak-jobb (Singö: betongpannor och TP20-plåt) —
    inte längre en platshållare. Videon (tyst, loopad, 10s) visas på md+ skärmar;
    mobil och "minska rörelse" faller tillbaka på stillbilden för att spara data. */
 
@@ -47,7 +47,7 @@ const Hero = () => {
           <source type="image/webp" srcSet={heroPosterSrcSet.webp} sizes={heroPosterSrcSet.sizes} />
           <img
             src={heroDronePoster}
-            alt="Drönarfoto av tak med svarta betongpannor på ett hus på Blidö"
+            alt="Drönarfoto rakt uppifrån av ett hus på Singö med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre takdelarna"
             width={1920}
             height={1080}
             fetchPriority="high"

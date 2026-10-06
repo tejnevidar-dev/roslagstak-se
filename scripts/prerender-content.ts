@@ -103,6 +103,8 @@ export interface PrerenderPage {
    *  bredd som Reacts, så att den statiska texten är LCP-elementet och Reacts text inte blir en större kandidat vid hydrering
    *  (LCP-utredning /akut-lackage, /hangrannor 2026-10-05). Se HERO_STYLES. */
   hero?: keyof typeof HERO_STYLES;
+  /** Bilder i den statiska HTML:en, per styckeindex: bilden skrivs rakt före stycket. Bara stabila sökvägar under public/ (aldrig Vite-importer). */
+  images?: Record<number, { src: string; alt: string; width: number; height: number }>;
   /** Rubriknivå per styckeindex (2 eller 3). Stycken som står här skrivs som <h2>/<h3> i den statiska HTML:en
    *  (G1 i konkurrentanalysen: crawlers utan JS ska se samma rubrikstruktur som besökaren). Texten i
    *  paragraphs är oförändrad, så ordräkning och meningsgrind påverkas inte. */
@@ -152,12 +154,33 @@ const locationLinks = locations.map((l) => ({
 const combos = generateCombos();
 const comboByUrl = new Map(combos.map((c) => [c.url, c]));
 
+/** Startsidans sektion "Referensjobb" (components/ReferenceCases.tsx): samma rubrik, kort, bild, text och länk i den statiska HTML:en. */
+const REFERENS_ORDER = ["takbyte-grisslehamn", "takbyte-singo", "takrenovering-blido"];
+const referensCases = REFERENS_ORDER.map((slug) => projectTexts.find((p) => p.slug === slug)).filter((p): p is NonNullable<typeof p> => !!p);
+const REFERENS_START = 1; // efter första stycket
+const referensParagraphs = [
+  "Referensjobb",
+  "Tre tak vi har lagt, med bilder från jobben",
+  "Alla tre är utförda av RoslagsTak och visas med kundens samtycke. Varje jobb har en egen sida med fler bilder.",
+  ...referensCases.flatMap((c) => [
+    c.title,
+    `${c.locationName}. Jobb: ${c.serviceName}. Material: ${c.material}.${c.period ? ` Utfört: ${c.period}.` : ""} ${c.summary} Läs hela caset.`,
+  ]),
+];
+const referensHeadingAt: Record<number, 2 | 3> = { [REFERENS_START + 1]: 2 };
+const referensImages: NonNullable<PrerenderPage["images"]> = {};
+referensCases.forEach((c, k) => {
+  referensHeadingAt[REFERENS_START + 3 + 2 * k] = 3;
+  referensImages[REFERENS_START + 4 + 2 * k] = { src: `/og/project-${c.slug.replace(/^takbyte-|^takrenovering-/, "")}-hero.jpg`, alt: c.heroAlt, width: 1200, height: 630 };
+});
+
 const home: PrerenderPage = {
   h1: "Takläggare i Roslagen — takbyte & takrenovering",
   intro:
     "RoslagsTak är takläggare i Roslagen med bas i Norrtälje. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
     paragraphs: [
       "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA.",
+      ...referensParagraphs,
       "Vi tar också uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Båda finns med bilder under Projekt.",
       "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
       "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet. Du får en kontaktperson som följer projektet från takkontroll till slutgenomgång.",
@@ -166,11 +189,13 @@ const home: PrerenderPage = {
       "Om RoslagsTak. Ett tak som håller, och en kontaktperson som svarar.",
       "RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.",
       "Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du bestämmer själv om och när.",
-      "Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Norrtälje kommun blev ett takbyte klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre delarna och delvis ny råspont. Båda jobben finns med bilder under Projekt, och våra omdömen från Google finns under Recensioner.",
+      "Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Norrtälje kommun blev ett takbyte klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre delarna och delvis ny råspont. I Grisslehamn fick ett hus i september 2026 ett komplett takbyte med svarta betongpannor från Benders. Alla tre jobben finns med bilder under Projekt, och våra omdömen från Google finns under Recensioner.",
       "Så jobbar vi. Tillgänglighet: du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19. En kontaktperson: samma person tar hand om dig från första kontakten till färdigt tak. Tydliga villkor: fast pris i offerten, 10 års utförandegaranti på det arbete vi utför och 30 års tätskiktsgaranti via MATAKI när ett nytt tätskikt läggs, ROT-avdraget dras direkt på fakturan. Hantverk enligt AMA.",
       `Boka en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
-  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
+  headingAt: referensHeadingAt,
+  images: referensImages,
+  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
 };
 
 /** FAQPage-nod för den statiska HTML:en (samma frågor och svar som sidan visar). */
@@ -660,12 +685,80 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const projectSlug = clean.slice("/projekt/".length);
     const project = projectSummaries.find((p) => p.slug === projectSlug);
     if (!project) return null;
+    // Samma sektionsindelning som src/pages/ProjectPage.tsx: beskrivningen delas efter fetstilta ledord.
+    const parts = project.description.map((p) => {
+      const m = p.match(/^\*\*(.+?)\.\*\*\s*([\s\S]*)$/);
+      return m ? { lead: m[1] as string | null, body: m[2] } : { lead: null as string | null, body: p };
+    });
+    const intro = parts[0] && parts[0].lead === null ? parts[0] : null;
+    const rest = parts.slice(intro ? 1 : 0);
+    const SPECIAL = new Set(["Så jobbar vi", "Så arbetar vi", "Tre jobb att jämföra", "Fler jobb", "Vad som ingick"]);
+    const included = rest.filter((p) => p.lead && !SPECIAL.has(p.lead));
+    const includedNote = rest.find((p) => p.lead === "Vad som ingick");
+    const compare = rest.find((p) => p.lead === "Tre jobb att jämföra");
+    const process = rest.find((p) => p.lead === "Så jobbar vi" || p.lead === "Så arbetar vi");
+    const moreJobs = rest.find((p) => p.lead === "Fler jobb");
+    const closing = rest.filter((p) => !p.lead);
+    const paragraphs: string[] = [];
+    const headingAt: Record<number, 2 | 3> = {};
+    const h = (text: string, level: 2 | 3) => {
+      headingAt[paragraphs.length] = level;
+      paragraphs.push(text);
+    };
+    const heroCaption = (project as { heroCaption?: string }).heroCaption ?? project.heroAlt;
+    const facts = (project as { facts?: { label: string; value: string }[] }).facts ?? [];
+    const area = (project as { area?: string }).area;
+    const images: NonNullable<PrerenderPage["images"]> = {
+      0: { src: project.ogImage ?? "", alt: project.heroAlt, width: 1200, height: 630 },
+    };
+    paragraphs.push(heroCaption);
+    paragraphs.push(
+      [
+        `Ort: ${project.locationName}, Norrtälje kommun.`,
+        `Jobb: ${project.serviceName}.`,
+        area ? `Yta: ${area}.` : "",
+        `Material: ${project.material}.`,
+        ...facts.map((x) => `${x.label}: ${x.value}.`),
+        project.period ? `Utfört: ${project.period}.` : "",
+      ]
+        .filter(Boolean)
+        .join(" "),
+    );
+    if (intro) {
+      h("Om jobbet", 2);
+      paragraphs.push(stripInlineMd(intro.body));
+    }
+    if (included.length > 0 || includedNote) {
+      h("Vad som ingick", 2);
+      if (includedNote) paragraphs.push(stripInlineMd(includedNote.body));
+      for (const p of included) {
+        h(p.lead as string, 3);
+        paragraphs.push(stripInlineMd(p.body));
+      }
+    }
+    if (compare) {
+      h(compare.lead as string, 2);
+      paragraphs.push(stripInlineMd(compare.body));
+    }
+    if (process) {
+      h(process.lead as string, 2);
+      for (const para of process.body.split("\n\n")) paragraphs.push(stripInlineMd(para));
+    }
+    if (moreJobs) {
+      h(moreJobs.lead as string, 2);
+      paragraphs.push(stripInlineMd(moreJobs.body));
+    }
+    for (const p of closing) paragraphs.push(stripInlineMd(p.body));
+    h("Boka en kostnadsfri takkontroll utan förpliktelser", 2);
+    paragraphs.push("Svar inom 24 timmar.");
     return {
       title: `${project.title} — referensjobb`,
-      description: project.summary,
+      description: (project as { metaDescription?: string }).metaDescription ?? project.summary,
       h1: project.title,
       intro: project.summary,
-      paragraphs: [...project.description.map(stripInlineMd), `Material: ${project.material}.${project.period ? ` Utfört: ${project.period}.` : ""}`],
+      paragraphs,
+      headingAt,
+      images: project.ogImage ? images : undefined,
       links: [
         ...primaryLinks,
         { href: "/projekt", label: "Alla referensjobb" },

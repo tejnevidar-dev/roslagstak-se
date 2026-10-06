@@ -85,7 +85,12 @@ export interface Project {
   material: string;
   materialSlugs: MaterialSlug[];
   period: string;
+  /** Takets yta när den är uppgiven, se project-texts.ts. */
+  area?: string;
+  facts?: { label: string; value: string }[];
   summary: string;
+  metaDescription?: string;
+  heroCaption?: string;
   description: string[];
   heroImage: string;
   heroAlt: string;
@@ -112,14 +117,14 @@ const projectImages: Record<string, ProjectImages> = {
         webp: imgBlidoDetail1Webp,
         width: 1440,
         height: 1080,
-        alt: "Närbild snett ovanifrån av nocken och de svarta betongpannorna på huset på Blidö, med skorstenar och nya plåtbeslag.",
+        alt: "Taknocken, skorstenarna och gaveln på nära håll.",
       },
       {
         src: imgBlidoDetail2,
         webp: imgBlidoDetail2Webp,
         width: 1440,
         height: 1080,
-        alt: "Taket med svarta betongpannor på huset på Blidö sett från baksidan, med skorsten, altan och skog runt tomten.",
+        alt: "Huset från baksidan, med altanen.",
       },
     ],
   },
@@ -137,7 +142,7 @@ const projectImages: Record<string, ProjectImages> = {
         webp: imgSingoDetail1Webp,
         width: 1280,
         height: 720,
-        alt: "Taket på huset på Singö sett rakt ovanifrån, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre takdelarna.",
+        alt: "Taket rakt ovanifrån. Här syns hur pannorna på huvudtaket möter plåten på de lägre delarna.",
       },
     ],
   },
@@ -152,25 +157,25 @@ const projectImages: Record<string, ProjectImages> = {
     },
     gallery: [
       {
-        src: imgGrisslehamnDetail1,
-        webp: imgGrisslehamnDetail1Webp,
-        width: 1440,
-        height: 1080,
-        alt: "Taket i Grisslehamn sett rakt ovanifrån: svarta betongpannor, skorsten och altan, med en liten person i varselväst vid altanen.",
-      },
-      {
         src: imgGrisslehamnDetail2,
         webp: imgGrisslehamnDetail2Webp,
         width: 1440,
         height: 1080,
-        alt: "Huset i Grisslehamn sett snett ovanifrån med nytt tak av svarta betongpannor, altan och skog runt tomten.",
+        alt: "Huset med det nya taket, altanen och en mindre byggnad intill.",
+      },
+      {
+        src: imgGrisslehamnDetail1,
+        webp: imgGrisslehamnDetail1Webp,
+        width: 1440,
+        height: 1080,
+        alt: "Taket rakt uppifrån. Nocken går längs med huset, och skorstenen sitter vid ena gaveln.",
       },
       {
         src: imgGrisslehamnDetail3,
         webp: imgGrisslehamnDetail3Webp,
         width: 1440,
         height: 1080,
-        alt: "Huset i Grisslehamn med svarta betongpannor sett snett ovanifrån, med skogen och intilliggande uthus.",
+        alt: "Huset och tomten sedda på avstånd, med skog runt om.",
       },
     ],
   },

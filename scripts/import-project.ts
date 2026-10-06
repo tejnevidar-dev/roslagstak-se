@@ -47,6 +47,7 @@ const serviceSlug = field("serviceSlug");
 const material = field("material");
 const materialSlugs = (field("materialSlugs") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
 const period = field("period");
+const area = field("yta"); // valfri, t.ex. "120 kvadratmeter" (bara om kunden/Vidar uppgett ytan)
 const summary = field("summary");
 const heroAlt = field("heroAlt");
 const ogImageField = field("ogImage");
@@ -94,6 +95,7 @@ const obj = {
   material,
   materialSlugs,
   period: period ?? "",
+  ...(area ? { area } : {}),
   summary,
   description,
   heroAlt,

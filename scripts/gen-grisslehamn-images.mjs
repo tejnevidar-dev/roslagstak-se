@@ -2,10 +2,10 @@
  * Bildfilerna till /projekt/takbyte-grisslehamn och startsidans referenskort, version 2 (2026-10-06): Vidars originalbilder
  * (Dropbox, 1440×1080 PNG utan metadata) i stället för stillbilder ur WhatsApp-filmen (832×464).
  * Källor: ledning/marknad/innehall/material/2026-10-grisslehamn/original/
- *   hero    = "Foto 2026-10-05 21 48 42 (1).png" (snett uppifrån, ingen person)
- *   detail1 = "Foto 2026-10-05 21 48 43 (1).png" (rakt uppifrån, en person i varselväst syns liten vid altanen)
- *   detail2 = "Foto 2026-10-05 21 48 42.png" (snett uppifrån)
- *   detail3 = "Foto 2026-10-05 21 48 43.png" (snett uppifrån, längre bort)
+ *   hero    = "grisslehamn-snett-1.png" (snett uppifrån, ingen person)
+ *   detail1 = "grisslehamn-uppifran.png" (rakt uppifrån, en person i varselväst syns liten vid altanen)
+ *   detail2 = "grisslehamn-snett-2.png" (snett uppifrån)
+ *   detail3 = "grisslehamn-snett-3.png" (snett uppifrån, längre bort)
  * Metadata: källorna har ingen, och sharp skriver inga EXIF-taggar (withMetadata anropas inte). Ingen uppskalning.
  * Kör: bun scripts/gen-grisslehamn-images.mjs
  */
@@ -14,8 +14,8 @@ import { copyFileSync, mkdirSync, rmSync } from "node:fs";
 
 const SRC = "../ledning/marknad/innehall/material/2026-10-grisslehamn/original";
 const f = (name) => `${SRC}/${name}`;
-const hero = f("Foto 2026-10-05 21 48 42 (1).png");
-const details = [f("Foto 2026-10-05 21 48 43 (1).png"), f("Foto 2026-10-05 21 48 42.png"), f("Foto 2026-10-05 21 48 43.png")];
+const hero = f("grisslehamn-snett-1.png");
+const details = [f("grisslehamn-uppifran.png"), f("grisslehamn-snett-2.png"), f("grisslehamn-snett-3.png")];
 
 // Gamla stillbildsvarianter bort
 for (const w of [480, 768]) {
@@ -35,6 +35,6 @@ for (const [i, src] of details.entries()) {
 }
 // Delningsbild (1200×630, utsnitt)
 mkdirSync("public/og", { recursive: true });
-await sharp(hero).resize(1200, 630, { fit: "cover", position: "attention" }).jpeg({ quality: 82, mozjpeg: true }).toFile("public/og/project-grisslehamn-hero.jpg");
+await sharp(hero).extract({ left: 0, top: 260, width: 1440, height: 756 }).resize(1200, 630).jpeg({ quality: 82, mozjpeg: true }).toFile("public/og/project-grisslehamn-hero.jpg");
 const m = await sharp("src/assets/project-grisslehamn-hero.jpg").metadata();
 console.log("hero", m.width, m.height, "exif:", Boolean(m.exif));

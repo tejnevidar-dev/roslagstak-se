@@ -1150,8 +1150,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "takkupa-vindskupa-guide",
-    title: "Takkupa: bygglov, pris 2026 och planering — guide",
-    excerpt: "Vad kostar en takkupa? Fast pris efter kostnadsfri bedömning. Bygglov eller attefall, takvinkel, isolering och hur du får mer ljus på vinden.",
+    title: "Takkupa: vad den gör med taket och vad du bör veta",
+    excerpt: "Vad är en takkupa, vad betyder den för taket och var brukar det läcka? En genomgång, och vad du kan se själv. Kostnadsfri takkontroll och fast pris.",
     date: "2026-04-12",
     readTime: "6 min",
     keywords: ["takkupa", "vindskupa", "bygga takkupa", "takkupa pris", "takkupa bygglov", "vindskupa pris", "vindskupa attefall"],

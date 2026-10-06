@@ -115,7 +115,7 @@ const ReferenceCases = () => {
                         </>
                       )}
                     </dl>
-                    <p className="mt-5 flex-1 text-[16px] leading-relaxed text-muted-foreground">{p.summary}</p>
+                    <p className="mt-5 flex-1 text-[16px] leading-relaxed text-muted-foreground">{p.metaDescription ?? p.summary}</p>
                     <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-primary">
                       Läs hela caset
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
