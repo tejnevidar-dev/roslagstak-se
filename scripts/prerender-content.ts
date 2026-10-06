@@ -104,7 +104,7 @@ export interface PrerenderPage {
    *  (LCP-utredning /akut-lackage, /hangrannor 2026-10-05). Se HERO_STYLES. */
   hero?: keyof typeof HERO_STYLES;
   /** Bilder i den statiska HTML:en, per styckeindex: bilden skrivs rakt före stycket. Bara stabila sökvägar under public/ (aldrig Vite-importer). */
-  images?: Record<number, { src: string; alt: string; width: number; height: number }>;
+  images?: Record<number, { src: string; alt: string; width: number; height: number; eager?: boolean }>;
   /** Rubriknivå per styckeindex (2 eller 3). Stycken som står här skrivs som <h2>/<h3> i den statiska HTML:en
    *  (G1 i konkurrentanalysen: crawlers utan JS ska se samma rubrikstruktur som besökaren). Texten i
    *  paragraphs är oförändrad, så ordräkning och meningsgrind påverkas inte. */
@@ -709,7 +709,6 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const facts = (project as { facts?: { label: string; value: string }[] }).facts ?? [];
     const area = (project as { area?: string }).area;
     const images: NonNullable<PrerenderPage["images"]> = {
-      0: { src: `/cases/${project.slug.replace(/^takbyte-|^takrenovering-/, "")}-768.webp`, alt: project.heroAlt, width: 768, height: 576 },
     };
     paragraphs.push(heroCaption);
     paragraphs.push(

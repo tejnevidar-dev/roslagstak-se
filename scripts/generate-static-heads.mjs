@@ -147,6 +147,21 @@ const preloadFor = (path) => {
   const hints = file
     ? [file, ...depsOf(file)].map((f) => `<link rel="modulepreload" crossorigin href="/assets/${f}" />`)
     : [];
+  /* Projektsidornas hero-bild (LCP): Reacts <picture> hinner inte börja hämta bilden förrän sidchunken har laddats och renderats
+     (3+ s på mobil). Förladdningen i den statiska <head> startar hämtningen samtidigt som huvudscriptet. Samma srcset och sizes
+     som ProjectPage.tsx, så att webbläsaren väljer samma fil. */
+  const projMatch = path.match(/^\/projekt\/(?:takbyte-|takrenovering-)([a-z]+)$/);
+  if (projMatch) {
+    const variants = assetFiles
+      .filter((f) => f.startsWith(`project-${projMatch[1]}-hero-`) && f.endsWith(".avif"))
+      .map((f) => ({ f, w: Number(f.match(/hero-(\d+)-/)?.[1]) }))
+      .filter((v) => v.w)
+      .sort((a, b) => a.w - b.w);
+    if (variants.length) {
+      const srcset = variants.map((v) => `/assets/${v.f} ${v.w}w`).join(", ");
+      hints.push(`<link rel="preload" as="image" type="image/avif" imagesrcset="${srcset}" imagesizes="(min-width: 1024px) 896px, 100vw" fetchpriority="high" />`);
+    }
+  }
   if (path === "/" && heroPoster480) {
     hints.push(`<link rel="preload" as="image" type="image/avif" href="/assets/${heroPoster480}" />`);
   }
@@ -237,7 +252,7 @@ const bodyFor = (path) => {
           const level = page.headingAt?.[i];
           // Rubriker (G1): samma h2/h3 som React-sidan. Avslutande kolon/punkt hör till meningsgrinden, inte rubriken.
           const img = page.images?.[i];
-          const figure = img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" loading="lazy" fetchpriority="low" decoding="async" style="max-width:100%;height:auto" />` : "";
+          const figure = img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" ${img.eager ? 'fetchpriority="high"' : 'loading="lazy" fetchpriority="low"'} decoding="async" style="max-width:100%;height:auto" />` : "";
           return `${figure}${level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${esc(p)}</p>`}`;
         })
         .join("\n      ")}
