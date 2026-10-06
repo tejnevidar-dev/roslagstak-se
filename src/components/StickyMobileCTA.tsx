@@ -36,7 +36,7 @@ const StickyMobileCTA = () => {
         Ring oss
       </a>
       <a
-        href="/offert"
+        href={pathname === "/takkontroll" ? "#forfragan" : "/takkontroll"}
         className="flex-1 flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-full text-sm font-semibold animate-subtle-pulse"
       >
         Boka takkontroll
