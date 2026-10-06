@@ -34,6 +34,8 @@ import { buildBlogPostingSchema } from "../src/lib/blog-schema";
 import { guideContent } from "../src/data/blog-cta";
 import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
 import { roofTypeFaqs } from "../src/data/roof-type-faqs";
+import { homeFaqs } from "../src/data/home-faqs";
+import { processFaqs } from "../src/data/process-faqs";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -462,6 +464,31 @@ const staticPages: Record<string, PrerenderPage> = {
     links: [...primaryLinks, ...serviceLinks, { href: "/taklaggare-bollstanas", label: "Takläggare i Bollstanäs" }],
   },
 };
+
+/** Lägger sidans FAQ-avsnitt (rubrik, ingress, frågor som H3 och svar) sist i den statiska texten, plus FAQPage-schema. */
+const withFaqSection = (page: PrerenderPage, path: string, heading: string, intro: string, faqs: { question: string; answer: string }[]): PrerenderPage => {
+  const start = page.paragraphs.length;
+  const headingAt: Record<number, 2 | 3> = { ...(page.headingAt ?? {}), [start]: 2 };
+  faqs.forEach((_, k) => { headingAt[start + 2 + 2 * k] = 3; });
+  return {
+    ...page,
+    paragraphs: [...page.paragraphs, heading, intro, ...faqs.flatMap((f) => [f.question, stripInlineMd(f.answer)])],
+    headingAt,
+    jsonLd: [...(page.jsonLd ?? []), faqLd(faqs, path)],
+  };
+};
+const HOME_FAQ_HEADING = "Frågor om takbyte i Roslagen";
+const HOME_FAQ_INTRO = "Svar på de vanligaste frågorna om takbyte, takrenovering och takläggning i skärgården.";
+// Samma FAQ som components/FAQ.tsx visar på startsidan och på /offert, och som ProcessPage.tsx visar på /hur-det-gar-till.
+staticPages["/"] = withFaqSection(staticPages["/"], "/", HOME_FAQ_HEADING, HOME_FAQ_INTRO, homeFaqs);
+staticPages["/offert"] = withFaqSection(staticPages["/offert"], "/offert", HOME_FAQ_HEADING, HOME_FAQ_INTRO, homeFaqs);
+staticPages["/hur-det-gar-till"] = withFaqSection(
+  staticPages["/hur-det-gar-till"],
+  "/hur-det-gar-till",
+  "Frågor om hur ett takbyte går till",
+  "Tid, bygglov, boende under arbetet och vad som händer när vi hittar skador under det gamla taket.",
+  processFaqs,
+);
 
 const truncateAtWord = (text: string, maxLen: number): string =>
   text.length <= maxLen ? text : `${text.slice(0, maxLen).replace(/\s+\S*$/, "")}…`;
