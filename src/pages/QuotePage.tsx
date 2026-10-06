@@ -26,7 +26,7 @@ const QuotePage = () => {
   return (
     <>
       <SEOHead
-        title="Få offert på takbyte — RoslagsTak"
+        title="Offert på takbyte — fast pris efter kostnadsfri takkontroll"
         description="Beskriv ditt tak i några steg, så svarar vi inom 24 timmar, eller boka kostnadsfri takkontroll i Roslagen och Storstockholm. 10 års utförandegaranti."
         canonical="https://roslagstak.se/offert"
       />
