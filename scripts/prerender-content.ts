@@ -171,7 +171,7 @@ const referensHeadingAt: Record<number, 2 | 3> = { [REFERENS_START + 1]: 2 };
 const referensImages: NonNullable<PrerenderPage["images"]> = {};
 referensCases.forEach((c, k) => {
   referensHeadingAt[REFERENS_START + 3 + 2 * k] = 3;
-  referensImages[REFERENS_START + 4 + 2 * k] = { src: `/og/project-${c.slug.replace(/^takbyte-|^takrenovering-/, "")}-hero.jpg`, alt: c.heroAlt, width: 1200, height: 630 };
+  referensImages[REFERENS_START + 4 + 2 * k] = { src: `/cases/${c.slug.replace(/^takbyte-|^takrenovering-/, "")}-480.webp`, alt: c.heroAlt, width: 480, height: 360 };
 });
 
 const home: PrerenderPage = {
@@ -709,7 +709,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const facts = (project as { facts?: { label: string; value: string }[] }).facts ?? [];
     const area = (project as { area?: string }).area;
     const images: NonNullable<PrerenderPage["images"]> = {
-      0: { src: project.ogImage ?? "", alt: project.heroAlt, width: 1200, height: 630 },
+      0: { src: `/cases/${project.slug.replace(/^takbyte-|^takrenovering-/, "")}-768.webp`, alt: project.heroAlt, width: 768, height: 576 },
     };
     paragraphs.push(heroCaption);
     paragraphs.push(
@@ -758,7 +758,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: project.summary,
       paragraphs,
       headingAt,
-      images: project.ogImage ? images : undefined,
+      images,
       links: [
         ...primaryLinks,
         { href: "/projekt", label: "Alla referensjobb" },

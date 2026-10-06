@@ -127,10 +127,26 @@ const chunkPrefixFor = (path) => {
 // redan passerat <head> (#1ag punkt 1-uppföljning, Marknadschefen 2026-10-01).
 const heroPoster480 = assetFiles.find((f) => f.startsWith("hero-drone-poster-480") && f.endsWith(".avif"));
 
+/* Sidchunkens statiska beroenden (t.ex. blog-posts-*.js på /blogg/*, locations-*.js på ortssidorna) hämtas annars först
+   när sidchunken har laddats och tolkats: en vattenfall som på mobil lägger flera sekunder före sidans första rendering.
+   Vi läser sidchunkens import-rader och förladdar de som inte redan är med i huvudbunten. */
+const MAIN_CHUNKS = /^(index|react-vendor|charts|motion-features)-/;
+const depsOf = (file) => {
+  try {
+    const src = readFileSync(resolve(dist, "assets", file), "utf8");
+    const found = new Set();
+    for (const m of src.matchAll(/(?:from|import)\s*"\.\/([^"]+\.js)"/g)) if (!MAIN_CHUNKS.test(m[1])) found.add(m[1]);
+    return [...found];
+  } catch {
+    return [];
+  }
+};
 const preloadFor = (path) => {
   const prefix = chunkPrefixFor(path);
   const file = prefix && assetFiles.find((f) => f.startsWith(prefix) && f.endsWith(".js"));
-  const hints = file ? [`<link rel="modulepreload" crossorigin href="/assets/${file}" />`] : [];
+  const hints = file
+    ? [file, ...depsOf(file)].map((f) => `<link rel="modulepreload" crossorigin href="/assets/${f}" />`)
+    : [];
   if (path === "/" && heroPoster480) {
     hints.push(`<link rel="preload" as="image" type="image/avif" href="/assets/${heroPoster480}" />`);
   }
@@ -221,7 +237,7 @@ const bodyFor = (path) => {
           const level = page.headingAt?.[i];
           // Rubriker (G1): samma h2/h3 som React-sidan. Avslutande kolon/punkt hör till meningsgrinden, inte rubriken.
           const img = page.images?.[i];
-          const figure = img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" loading="lazy" decoding="async" style="max-width:100%;height:auto" />` : "";
+          const figure = img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" loading="lazy" fetchpriority="low" decoding="async" style="max-width:100%;height:auto" />` : "";
           return `${figure}${level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${esc(p)}</p>`}`;
         })
         .join("\n      ")}

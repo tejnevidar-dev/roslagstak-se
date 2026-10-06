@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -30,6 +31,25 @@ const areaTeaser = ["Norrtälje", "Vaxholm", "Ljusterö", "Blidö", "Väddö"];
    liten ortlista som länkar vidare till hela områdeshubben. */
 const Hero = () => {
   const reduce = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  /* Filmen (4–5 MB) hämtas bara på skärmar där den visas (md och uppåt). Förut låg <source> i markupen och
+     webbläsaren hämtade filmen också på mobil, där elementet är dolt. Stillbilden (poster) syns oförändrat tills filmen startar. */
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v || reduce) return;
+    const mq = window.matchMedia("(min-width: 768px)");
+    const start = () => {
+      if (mq.matches && !v.src) {
+        v.src = heroDroneVideo;
+        v.load();
+        v.play().catch(() => undefined);
+      }
+    };
+    start();
+    mq.addEventListener("change", start);
+    return () => mq.removeEventListener("change", start);
+  }, [reduce]);
   const fade = (delay: number) => ({
     initial: reduce ? undefined : { opacity: 0, y: 18 },
     animate: { opacity: 1, y: 0 },
@@ -57,7 +77,7 @@ const Hero = () => {
         </picture>
         {!reduce && (
           <video
-            autoPlay
+            ref={videoRef}
             muted
             loop
             playsInline
@@ -65,9 +85,7 @@ const Hero = () => {
             preload="none"
             aria-hidden="true"
             className="hidden h-full w-full object-cover md:block"
-          >
-            <source src={heroDroneVideo} type="video/mp4" />
-          </video>
+          />
         )}
         <div
           className="absolute inset-0 bg-gradient-to-t from-primary via-primary/75 to-primary/15"

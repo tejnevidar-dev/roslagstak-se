@@ -59,6 +59,11 @@ for (const line of lines) {
     flush();
     continue;
   }
+  if (/^-{3,}$/.test(t)) {
+    // Markdowns avskiljare (---) är inte text: den skulle annars bli ett eget stycke med tre streck på sidan.
+    flush();
+    continue;
+  }
   if (t.startsWith("## ")) {
     flush();
     if (!skippedTitle) {

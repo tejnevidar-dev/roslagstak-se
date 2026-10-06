@@ -52,7 +52,15 @@ const MaterialPage = lazy(() => import("./pages/MaterialPage.tsx"));
 const queryClient = new QueryClient();
 
 /** Animationsfunktionerna (layout, gester) hämtas i en egen chunk efter första målningen i stället för att ligga i huvudbunten. */
-const loadMotionFeatures = () => import("./lib/motion-features").then((mod) => mod.default);
+/* Hämtas när webbläsaren är ledig, så att de ~83 kB inte konkurrerar med sidans första rendering (TBT). */
+const whenIdle = (fn: () => void) =>
+  typeof window !== "undefined" && "requestIdleCallback" in window
+    ? (window as Window & { requestIdleCallback: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback(fn, { timeout: 2500 })
+    : setTimeout(fn, 800);
+const loadMotionFeatures = () =>
+  new Promise<typeof import("./lib/motion-features").default>((resolve) =>
+    whenIdle(() => import("./lib/motion-features").then((mod) => resolve(mod.default))),
+  );
 
 /** Neutral platshållare medan en sidchunk hämtas — ingen layoutförskjutning. */
 const RouteFallback = () => <div className="min-h-screen bg-background" aria-busy="true" />;

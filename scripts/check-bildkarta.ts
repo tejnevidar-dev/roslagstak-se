@@ -36,6 +36,7 @@ for (const f of readdirSync("src/assets")) {
 for (const f of readdirSync("public/og")) {
   if (/^project-/.test(f)) bilder.add(`public/og/${grundnamn(f)}`);
 }
+for (const f of readdirSync("public/cases")) bilder.add(`public/cases/${grundnamn(f)}`);
 for (const namn of bilder) {
   if (!rader.has(namn)) fel.push(`${namn}: saknar rad i kundcase-bildkarta.md (ingen känd källfil, bilden ska bort eller läggas in i kartan)`);
 }
