@@ -39,7 +39,7 @@ export const brfFaqsFor = (place?: { name: string; prep: string }) => {
   return [
     {
       question: `Tar ni uppdrag från bostadsrättsföreningar${inPlace}?`,
-      answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takkontroll och lämnar ett underlag med fast pris som styrelsen kan besluta på. Efter slutgenomgång får föreningen skriftlig garanti.`,
+      answer: `Ja. Vi tar uppdrag från bostadsrättsföreningar${inPlace} och närområdet. Vi börjar med en kostnadsfri takkontroll och lämnar ett underlag med fast pris som styrelsen kan besluta på. Vilka garantier som gäller för ert tak står i offerten.`,
     },
     ...brfFaqs,
   ];

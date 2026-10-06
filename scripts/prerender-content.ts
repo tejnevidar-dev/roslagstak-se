@@ -881,7 +881,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
       ...buildBody([
         `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll, följd av en offert med fast pris som styrelsen och stämman kan besluta på.`,
-        "Vi erbjuder takbyte och takrenovering, med kostnadsfri takkontroll utan förpliktelser, fast pris och en kontaktperson hela vägen. Garantin står skriftligt i avtalet.",
+        "Vi erbjuder takbyte och takrenovering, med kostnadsfri takkontroll utan förpliktelser, fast pris och en kontaktperson hela vägen. Vilka garantier som gäller för ert tak står i offerten.",
         `Ring ${PHONE} eller boka takkontroll på /brf/${loc.slug}. Vi återkommer inom 24 timmar.`,
         { h: "Frågor från styrelser om takbyte" },
         "Process, pris, garanti och vad som händer under arbetet.",
