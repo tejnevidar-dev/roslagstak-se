@@ -31,6 +31,7 @@ import ServiceSpecificBlock from "@/components/ServiceSpecificBlock";
 import ServiceExtraSections from "@/components/ServiceExtraSections";
 import { serviceExtra } from "@/data/service-extra-sections";
 import { serviceBlocks } from "@/data/service-blocks";
+import { projectTexts } from "@/data/project-texts";
 import imgRaspont from "@/assets/roof-build-01-raspont.jpg";
 import imgPapp from "@/assets/roof-build-02-papp.jpg";
 import imgRannor from "@/assets/roof-build-03-rannor.jpg";
@@ -63,8 +64,9 @@ const serviceImages: Record<string, string> = {
 const HERO_ALT: Record<string, string> = {
   takomlaggning: "Tak med mörka pannor.",
   takrenovering: "Tak med underlagspapp.",
-  takavvattning: "Tak med underlagspapp.",
-  takkupor: "Tak med underlagspapp.",
+  // Bilderna (fotplåt och hängrännor, vindskivor) visar inte underlagspapp: ingen bildtext tills en riktig finns (S3).
+  takavvattning: "",
+  takkupor: "",
   takinspektion: "Tak med nylagd råspont.",
   taksakerhet: "Tak med mörka pannor.",
   platarbeten: "Tak med mörka pannor.",
@@ -96,6 +98,8 @@ const ServiceDetail = () => {
   const serviceImage = (slug && serviceImages[slug]) || imgDronePoster;
   const detailImage = slug && SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) ? detailImages[slug] : undefined;
   const bandImage = imgSingoLakeview;
+  /* Bandbilden har samma källfil som Singö-sidans hero (bildkartan, project-singo-lakeview): samma bildtext. */
+  const bandAlt = projectTexts.find((p) => p.slug === "takbyte-singo")?.heroAlt ?? "";
   const meta: ServiceMeta = (slug && serviceMeta[slug]) || serviceMeta.takomlaggning;
   const blocks = (slug && serviceBlocks[slug]) || serviceBlocks.takomlaggning;
   const specificBlock = <ServiceSpecificBlock block={blocks.block} />;
@@ -237,7 +241,7 @@ const ServiceDetail = () => {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary shadow-[var(--shadow-elevated)]">
                 <img
                   src={serviceImage}
-                  alt={(slug && HERO_ALT[slug]) || "Drönarfoto av ett hus med rött tak."}
+                  alt={(slug && HERO_ALT[slug]) ?? "Drönarfoto av ett hus med rött tak."}
                   width={1200}
                   height={1500}
                   fetchPriority="high"
@@ -452,7 +456,7 @@ const ServiceDetail = () => {
         <section aria-label="Hantverket" className="relative h-[38vh] min-h-[280px] overflow-hidden lg:h-[46vh]">
           <img
             src={bandImage}
-            alt=""
+            alt={bandAlt}
             width={2000}
             height={1000}
             loading="lazy"

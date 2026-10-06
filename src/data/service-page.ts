@@ -70,7 +70,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     specHeading: "Takkupor och takfönster",
     lead: "Takkupor och takfönster hör till de tjänster vi erbjuder.",
     craftLine: "Runt kupor och genomföringar avgörs om taket håller tätt.",
-    photoNote: "Tak med underlagspapp.",
+    photoNote: "",
   },
   takinspektion: {
     accentLine: "utan förpliktelser.",
