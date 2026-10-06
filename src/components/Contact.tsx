@@ -118,16 +118,16 @@ const Contact = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Namn</label>
-                <input id="name" type="text" required value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Ditt namn" />
+                <input id="name" type="text" required autoComplete="name" autoCapitalize="words" enterKeyHint="next" value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Ditt namn" />
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Telefon</label>
-                <input id="phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="070-000 00 00" />
+                <input id="phone" type="tel" required autoComplete="tel" inputMode="tel" enterKeyHint="next" value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="070-000 00 00" />
               </div>
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">E-post</label>
-              <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="din@epost.se" />
+              <input id="email" type="email" required autoComplete="email" enterKeyHint="next" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-xl border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="din@epost.se" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Meddelande</label>
