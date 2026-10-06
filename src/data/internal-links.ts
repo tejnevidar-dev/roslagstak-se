@@ -17,7 +17,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/offert",
     label: "Räkna ut din offert",
-    description: "Konfigurera taket och få ett prisförslag direkt — eller boka takkontroll.",
+    description: "Beskriv ditt tak i några steg, så svarar vi inom 24 timmar — eller boka takkontroll.",
   },
   {
     to: "/taktyper",

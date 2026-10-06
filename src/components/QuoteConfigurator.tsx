@@ -95,7 +95,7 @@ const QuoteConfigurator = () => {
       title: "Tack för din förfrågan!",
       description:
         mode === "configure"
-          ? "Du får ett kostnadsförslag på e-post inom 2 minuter."
+          ? "Vi svarar inom 24 timmar."
           : "Vi återkopplar till dig inom 24 timmar.",
     });
   };
@@ -109,8 +109,7 @@ const QuoteConfigurator = () => {
             <h2 className="font-display text-3xl text-foreground">Tack för din förfrågan!</h2>
             {mode === "configure" ? (
               <p className="text-muted-foreground">
-                Du kommer att få ett kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. 
-                Kolla gärna din skräppost om du inte ser det direkt.
+                Vi svarar inom <strong>24 timmar</strong>.
               </p>
             ) : (
               <p className="text-muted-foreground">
@@ -133,7 +132,7 @@ const QuoteConfigurator = () => {
             Hur vill du ha hjälp?
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Välj mellan att konfigurera ditt tak själv och få ett prisförslag direkt, eller boka en kostnadsfri takkontroll. En av våra säljare kontaktar dig inom 24 timmar.
+            Välj mellan att beskriva ditt tak själv eller bli kontaktad av en av våra säljare. Vi svarar inom 24 timmar.
           </p>
         </div>
 
@@ -153,7 +152,7 @@ const QuoteConfigurator = () => {
               <div className="text-left">
                 <div>Konfigurera själv</div>
                 <div className={`text-xs font-normal ${mode === "configure" ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                  Kostnadsförslag på mail inom 2 min
+                  Vi svarar inom 24 timmar
                 </div>
               </div>
             </button>
@@ -184,9 +183,9 @@ const QuoteConfigurator = () => {
             <div className="flex items-start gap-3 bg-primary/5 border border-primary/20 rounded-xl p-4">
               <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Kostnadsförslag direkt på mail</p>
+                <p className="text-sm font-semibold text-foreground">Beskriv ditt tak</p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Fyll i dina takval nedan och ange din e-post. Du får ett kostnadsförslag skickat till din e-post <strong>inom 2 minuter</strong>. Helt kostnadsfritt och utan förbindelser.
+                  Fyll i dina takval nedan och lämna dina uppgifter. Vi svarar inom 24 timmar, kostnadsfritt och utan förpliktelser.
                 </p>
               </div>
             </div>
@@ -409,7 +408,7 @@ const QuoteConfigurator = () => {
               </>
             ) : mode === "configure" ? (
               <>
-                Få kostnadsförslag på mail
+                Skicka förfrågan
                 <ArrowRight className="w-4 h-4" />
               </>
             ) : (
@@ -433,7 +432,7 @@ const QuoteConfigurator = () => {
 
           <p className="text-xs text-muted-foreground text-center">
             {mode === "configure"
-              ? "Helt kostnadsfritt. Du får ett kostnadsförslag på e-post inom 2 minuter."
+              ? "Helt kostnadsfritt. Vi svarar inom 24 timmar."
               : "Helt kostnadsfritt. Vi svarar inom 24 timmar från att formuläret skickas in."}
           </p>
           <p className="text-xs text-muted-foreground text-center">

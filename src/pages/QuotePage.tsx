@@ -27,7 +27,7 @@ const QuotePage = () => {
     <>
       <SEOHead
         title="Få offert på takbyte — RoslagsTak"
-        description="Räkna fram ett prisförslag på ditt takbyte direkt, eller boka kostnadsfri takkontroll i Roslagen och Storstockholm. 10 års utförandegaranti."
+        description="Beskriv ditt tak i några steg, så svarar vi inom 24 timmar, eller boka kostnadsfri takkontroll i Roslagen och Storstockholm. 10 års utförandegaranti."
         canonical="https://roslagstak.se/offert"
       />
       <Header />
@@ -38,7 +38,7 @@ const QuotePage = () => {
         <PageHero
           eyebrow="Offert & rådgivning"
           title="Få pris på ditt takprojekt"
-          text="Konfigurera ditt tak själv och få ett prisförslag direkt — eller låt oss ringa upp och boka en kostnadsfri takkontroll."
+          text="Beskriv ditt tak i några steg, så svarar vi inom 24 timmar — eller låt oss ringa upp och boka en kostnadsfri takkontroll."
         />
         <Suspense fallback={null}>
           <QuoteConfigurator />
