@@ -289,6 +289,8 @@ export const COMBO_SERVICE_PAGE: Record<string, { to: string; label: string }> =
   takbyte: { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
   takomlaggning: { to: "/tjanster/takomlaggning", label: "Takbyte och takomläggning" },
   takrenovering: { to: "/tjanster/takrenovering", label: "Takrenovering" },
+  betongpannor: { to: "/material/betongpannor", label: "Betongpannor" },
+  platttak: { to: "/material/tp20-plattak", label: "Plåttak (TP20)" },
   tegeltak: { to: "/tjanster/tegeltak", label: "Tegeltak" },
 };
 
