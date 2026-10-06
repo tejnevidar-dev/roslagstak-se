@@ -14,6 +14,7 @@ import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { adLandingCopy, getAdLanding } from "../src/data/ad-landings";
 import { bookingCopy } from "../src/data/ad-landings";
 import { locations } from "../src/data/locations";
+import { generateServiceLocationFAQs } from "../src/data/location-faqs";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
 import { MATERIAL_PRISAVSNITT, prisAvsnittForSpegel } from "../src/data/material-prices";
@@ -965,12 +966,24 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
   const combo = comboByUrl.get(clean);
   if (combo) {
     const override = comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`];
+    // Frågorna och svaren som ServiceLocationPage visar (samma funktion), med rubriker, och FAQPage-schema.
+    const comboFaqs = generateServiceLocationFAQs(
+      combo.serviceName,
+      combo.locationName,
+      combo.prep,
+      locations.find((l) => l.slug === combo.locationSlug)?.isIsland || false,
+    );
     return {
       title: override?.title ?? comboDefaultTitle(combo),
       description: override?.description ?? combo.description,
       h1: comboDefaultH1(combo),
       intro: override?.description ?? combo.description,
-      paragraphs: (override?.content ?? combo.content).map(stripInlineMd),
+      ...buildBody([
+        ...(override?.content ?? combo.content).map(stripInlineMd),
+        { h: `Vanliga frågor om ${combo.serviceName.toLowerCase()} ${combo.prep} ${combo.locationName}` },
+        ...comboFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+      ]),
+      jsonLd: [faqLd(comboFaqs, clean)],
       links: [
         ...primaryLinks,
         {
