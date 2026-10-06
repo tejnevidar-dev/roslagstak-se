@@ -35,12 +35,10 @@ describe("LocalBusiness-schema", () => {
     expect(typeof schema.geo.longitude).toBe("number");
   });
 
-  it("har giltiga öppettider", () => {
-    for (const spec of schema.openingHoursSpecification) {
-      expect(spec["@type"]).toBe("OpeningHoursSpecification");
-      expect(spec.opens).toMatch(/^\d{2}:\d{2}$/);
-      expect(spec.closes).toMatch(/^\d{2}:\d{2}$/);
-    }
+  it("anger varken öppettider, prisklass eller sameAs (sajten anger tider för bokning, och inga profiler är verifierade)", () => {
+    expect(schema.openingHoursSpecification).toBeUndefined();
+    expect(schema.priceRange).toBeUndefined();
+    expect(schema.sameAs).toBeUndefined();
   });
 
   it("listar alla tjänster med absoluta @id:n och beskrivning", () => {

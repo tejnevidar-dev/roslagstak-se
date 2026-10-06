@@ -24,7 +24,7 @@ import { projects } from "@/data/projects";
 import { getNearbyProject } from "@/data/project-nearby";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
-import { NAP, OPENING_HOURS, ORG_ID } from "@/lib/schema";
+import { NAP, ORG_ID } from "@/lib/schema";
 import { linkPhone, renderInline } from "@/lib/inline-md";
 import {
   Accordion,
@@ -81,9 +81,6 @@ const LocationPage = () => {
     parentOrganization: { "@id": ORG_ID },
     image: "https://roslagstak.se/og-image.jpg",
     logo: "https://roslagstak.se/og-image.jpg",
-    sameAs: [
-      "https://www.google.com/search?q=RoslagsTak+recensioner",
-    ],
     areaServed: {
       "@type": "Place",
       name: location.name,
@@ -103,10 +100,8 @@ const LocationPage = () => {
       addressRegion: NAP.addressRegion,
       addressCountry: NAP.addressCountry,
     },
-    priceRange: "$$",
     currenciesAccepted: "SEK",
     paymentAccepted: "Faktura",
-    openingHoursSpecification: OPENING_HOURS,
     knowsAbout: [
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
       "Dubbelfalsat plåttak", "Pannplåt", "Takavvattning",

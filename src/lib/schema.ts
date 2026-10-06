@@ -1,5 +1,5 @@
 import { locationIndex as locations } from "@/data/location-index";
-import { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP, SAME_AS, buildBreadcrumbNode } from "./schema-graph";
+import { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP, buildBreadcrumbNode } from "./schema-graph";
 
 export { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP };
 
@@ -61,21 +61,6 @@ export const services: { slug: string; name: string; description: string }[] = [
   },
 ];
 
-/** Telefontider (beslut 2026-09-28): mån–fre 07–20, lör–sön 09–19. Samma som kontaktsidan och bokningen (lib/booking.ts). Delas av alla LocalBusiness-noder. */
-export const OPENING_HOURS = [
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "07:00",
-    closes: "20:00",
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Saturday", "Sunday"],
-    opens: "09:00",
-    closes: "19:00",
-  },
-];
 
 /** Unika regioner i ortsdatan — används som areaServed på områdesnivå. */
 export const serviceRegions = Array.from(new Set(locations.map((l) => l.region))).filter((r) => r !== "Mälardalen");
@@ -94,7 +79,6 @@ export const buildLocalBusinessSchema = () => ({
   image: `${SITE_URL}/og-image.jpg`,
   telephone: NAP.telephone,
   email: NAP.email,
-  priceRange: "$$",
   currenciesAccepted: "SEK",
   paymentAccepted: "Faktura",
   parentOrganization: { "@id": ORG_ID },
@@ -111,7 +95,6 @@ export const buildLocalBusinessSchema = () => ({
     ...serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
     ...locations.filter((loc) => loc.region !== "Mälardalen").map((loc) => ({ "@type": "Place", name: loc.name })),
   ],
-  openingHoursSpecification: OPENING_HOURS,
   knowsAbout: [
     "Takbyte",
     "Takomläggning",
@@ -141,7 +124,6 @@ export const buildLocalBusinessSchema = () => ({
       },
     })),
   },
-  sameAs: SAME_AS,
 });
 
 export interface FaqItem {

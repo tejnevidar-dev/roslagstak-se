@@ -98,11 +98,6 @@ export const NAP = {
   lng: 18.705,
 };
 
-export const SAME_AS = [
-  "https://www.google.com/search?q=RoslagsTak+recensioner",
-  "https://www.hitta.se/s%C3%B6k?vad=roslagstak&var=norrt%C3%A4lje",
-  "https://www.eniro.se/q/roslagstak",
-];
 
 /**
  * Organization-noden, byggd från NAP. Beslut 2026-10-04 (Marknadschefen): inget alternateName
@@ -125,7 +120,6 @@ export const buildOrganizationNode = () => ({
     addressRegion: NAP.addressRegion,
     addressCountry: NAP.addressCountry,
   },
-  sameAs: SAME_AS,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: NAP.telephone,
