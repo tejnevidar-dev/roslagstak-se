@@ -137,6 +137,18 @@ for (const path of ["/taklaggare-taby", "/projekt/takbyte-singo", "/blogg/mala-p
   await p.close();
 }
 
+// 7. Den statiska länklistan (utan JavaScript): "Boka kostnadsfri takkontroll" leder till /takkontroll, inte /kontakt
+for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/tjanster/tegeltak", "/blogg/mala-plattak-guide-pris", "/brf"]) {
+  const { html } = await hamta(path);
+  const mal = [...html.replace(/<script[\s\S]*?<\/script>/g, "").matchAll(/<a [^>]*href="([^"]+)"[^>]*>\s*Boka kostnadsfri takkontroll\s*<\/a>/g)].map((m) => m[1]);
+  const fel = mal.filter((h) => h !== "/takkontroll");
+  punkt(`Statiska länklistan: 'Boka kostnadsfri takkontroll' leder till /takkontroll: ${path}`, mal.length > 0 && fel.length === 0, `${mal.length} länkar${fel.length ? ", fel mål: " + [...new Set(fel)].join(", ") : ""}`);
+}
+{
+  const { html } = await hamta("/taklaggare-taby");
+  punkt("Statiska länklistan har länken 'Kontakt' till /kontakt", /<a href="\/kontakt">Kontakt<\/a>/.test(html));
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
