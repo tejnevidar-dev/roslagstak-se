@@ -22,6 +22,20 @@ const NotFound = () => {
         <a href="/" className="text-primary underline hover:text-primary/90">
           Till startsidan
         </a>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="/takkontroll"
+            className="inline-flex items-center gap-2 rounded-full bg-cta px-6 py-3 text-sm font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
+          >
+            Kostnadsfri takkontroll
+          </a>
+          <a
+            href="tel:+46701543639"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            070-154 36 39
+          </a>
+        </div>
       </div>
     </div>
     </>
