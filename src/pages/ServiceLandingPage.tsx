@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Phone, ShieldCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -29,6 +30,20 @@ const trustFor = (slug: string) => [
 
 /** Indexerbar landningssida för en tjänst med formulär: /takreparation och /takkontroll. */
 const ServiceLandingPage = ({ slug }: { slug: string }) => {
+  const { hash } = useLocation();
+  /* Länk med ankare (t.ex. /takkontroll#forfragan från en annan sida): rulla till målet när sidan har hunnit byggas. */
+  useEffect(() => {
+    if (!hash) return;
+    let forsok = 0;
+    const id = window.setInterval(() => {
+      const mal = document.querySelector(hash);
+      if (mal || ++forsok > 20) {
+        window.clearInterval(id);
+        mal?.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+    return () => window.clearInterval(id);
+  }, [hash]);
   const service = getLandingService(slug);
   if (!service) return <NotFound />;
 
