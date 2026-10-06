@@ -535,7 +535,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
       ? [
           ...eternitSections.flatMap((sec) => [{ h: sec.heading, level: sec.level }, ...sec.paragraphs]),
           { h: ETERNIT_FAQ_HEADING },
-          ...eternitFaqs.map((f) => ({ h: f.question, level: 3 as const })),
+          ...eternitFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
           { h: eternitLocal.heading },
           eternitLocal.text,
           ...eternitLocal.links.map((l) => l.label),
@@ -545,7 +545,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
       ? [
           "Vanliga frågor",
           { h: SERVICE_EXTRAS[slug].faqHeading },
-          ...SERVICE_EXTRAS[slug].faqs.map((f) => ({ h: f.question, level: 3 as const })),
+          ...SERVICE_EXTRAS[slug].faqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
         ]
       : []),
     { h: SERVICE_COPY.ctaHeading(slug, service.title) },
@@ -568,9 +568,9 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     /** Svar som bara syns när besökaren öppnar en dragspelsfråga (finns även i FAQPage-schemat). */
     hiddenAnswers:
       slug === "eternit-asbest"
-        ? eternitFaqs.map((f) => f.answer)
+        ? eternitFaqs.map((f) => stripInlineMd(f.answer))
         : SERVICE_EXTRAS[slug]
-          ? SERVICE_EXTRAS[slug].faqs.map((f) => f.answer)
+          ? SERVICE_EXTRAS[slug].faqs.map((f) => stripInlineMd(f.answer))
           : [],
   };
 };

@@ -21,7 +21,7 @@
     "validate:schema": "node scripts/validate-structured-data.mjs",
     "predev": "bun scripts/generate-location-index.ts && bun scripts/generate-sitemap.ts",
     "prebuild": "bun scripts/generate-location-index.ts && bun scripts/generate-sitemap.ts",
-    "postbuild": "bun scripts/validate-structured-data.mjs && bun scripts/check-overrides.ts && bun scripts/check-sitemap.ts && bun scripts/check-bildkarta.ts && bun scripts/check-prisfrasing.ts && bun scripts/link-audit.ts && bun scripts/geo-graph-audit.ts && bun scripts/thin-content-check.ts && bun scripts/content-depth-check.ts && node scripts/check-cookie-banner-sync.mjs",
+    "postbuild": "bun scripts/validate-structured-data.mjs && bun scripts/check-overrides.ts && bun scripts/check-sitemap.ts && bun scripts/check-bildkarta.ts && bun scripts/check-prisfrasing.ts && bun scripts/link-audit.ts && bun scripts/geo-graph-audit.ts && bun scripts/thin-content-check.ts && bun scripts/content-depth-check.ts && node scripts/check-cookie-banner-sync.mjs && bun scripts/faq-synlighet.ts --fel",
     "check:content-coverage": "bun scripts/content-coverage-check.ts",
     "verify": "bun run build:local",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
