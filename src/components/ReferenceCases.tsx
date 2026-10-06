@@ -106,6 +106,12 @@ const ReferenceCases = () => {
                     <dl className="mt-5 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 border-y border-border py-4 text-[15px]">
                       <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Jobb</dt>
                       <dd className="text-foreground">{p.serviceName}</dd>
+                      {p.area && (
+                        <>
+                          <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Yta</dt>
+                          <dd className="text-foreground">{p.area}</dd>
+                        </>
+                      )}
                       <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Material</dt>
                       <dd className="text-foreground">{p.material}</dd>
                       {p.period && (

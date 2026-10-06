@@ -164,7 +164,7 @@ const referensParagraphs = [
   "Alla tre är utförda av RoslagsTak och visas med kundens samtycke. Varje jobb har en egen sida med fler bilder.",
   ...referensCases.flatMap((c) => [
     c.title,
-    `${c.locationName}. Jobb: ${c.serviceName}. Material: ${c.material}.${c.period ? ` Utfört: ${c.period}.` : ""} ${c.summary} Läs hela caset.`,
+    `${c.locationName}. Jobb: ${c.serviceName}.${c.area ? ` Yta: ${c.area}.` : ""} Material: ${c.material}.${c.period ? ` Utfört: ${c.period}.` : ""} ${c.summary} Läs hela caset.`,
   ]),
 ];
 const referensHeadingAt: Record<number, 2 | 3> = { [REFERENS_START + 1]: 2 };
