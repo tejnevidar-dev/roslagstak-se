@@ -11,6 +11,12 @@ const KARTA = "../ledning/marknad/kundcase-bildkarta.md";
 const MATERIAL = "../ledning/marknad/innehall/material";
 const fel: string[] = [];
 
+// ledning/ ligger utanför sajtens repo: i CI och på Cloudflare finns kartan inte. Kontrollen gäller då lokalt (pre-push, verify:local).
+if (!existsSync(KARTA)) {
+  console.log("[check-bildkarta] hoppar över: ledning/ finns inte här (körs lokalt i pre-push)");
+  process.exit(0);
+}
+
 // 1) Raderna i kartan: `grundnamn` | jobb | `källfil` | ...
 const rader = new Map<string, string>();
 for (const rad of readFileSync(KARTA, "utf8").split(/\r?\n/)) {
