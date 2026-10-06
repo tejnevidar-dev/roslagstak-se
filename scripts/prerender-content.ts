@@ -34,6 +34,7 @@ import { buildBlogPostingSchema } from "../src/lib/blog-schema";
 import { guideContent } from "../src/data/blog-cta";
 import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
 import { roofTypeFaqs } from "../src/data/roof-type-faqs";
+import { brfFaqs, brfFaqsFor } from "../src/data/brf-faqs";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -281,14 +282,18 @@ const staticPages: Record<string, PrerenderPage> = {
     h1: "Takbyte för bostadsrättsföreningar, med underlag styrelsen kan besluta på",
     intro:
       "Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar i Storstockholm och Roslagen.",
-    paragraphs: [
+    ...buildBody([
       "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk. Vi bygger arbetet på tre underlag som går att spara och jämföra: en tydlig bedömning av takets skick, fast offert och garantihandlingar efter slutgenomgång.",
       "Så går ett takbyte till i en förening: takkontroll, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande samt slutgenomgång.",
       "Vi erbjuder takbyte och takrenovering. Allt börjar med en kostnadsfri takkontroll utan förpliktelser, och föreningen får en offert med fast pris, en kontaktperson hela vägen och svar inom 24 timmar. Arbetet utförs enligt AMA.",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
       "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
       `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
-    ],
+      { h: "Frågor från styrelser om takbyte" },
+      "Process, pris, garanti och vad som händer under arbetet.",
+      ...brfFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+    ]),
+    jsonLd: [faqLd(brfFaqs, "/brf")],
     links: [
       ...primaryLinks,
       ...serviceLinks,
@@ -868,16 +873,21 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       : undefined;
     if (!loc) return null;
     const prep = loc.isIsland ? "på" : "i";
+    const brfPlaceFaqs = brfFaqsFor({ name: loc.name, prep });
     return {
       title: `Takbyte BRF ${prep} ${loc.name} — bostadsrättsföreningar`,
       description: `Takbyte och takkontroll för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`,
       h1: `Takbyte för bostadsrättsföreningar ${prep} ${loc.name}, med underlag styrelsen kan besluta på`,
       intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
-      paragraphs: [
+      ...buildBody([
         `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll, följd av en offert med fast pris som styrelsen och stämman kan besluta på.`,
         "Vi erbjuder takbyte och takrenovering, med kostnadsfri takkontroll utan förpliktelser, fast pris och en kontaktperson hela vägen. Garantin står skriftligt i avtalet.",
         `Ring ${PHONE} eller boka takkontroll på /brf/${loc.slug}. Vi återkommer inom 24 timmar.`,
-      ],
+        { h: "Frågor från styrelser om takbyte" },
+        "Process, pris, garanti och vad som händer under arbetet.",
+        ...brfPlaceFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+      ]),
+      jsonLd: [faqLd(brfPlaceFaqs, clean)],
       links: [
         ...primaryLinks,
         { href: "/brf", label: "BRF & fastigheter" },
