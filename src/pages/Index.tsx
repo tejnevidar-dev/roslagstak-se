@@ -89,13 +89,13 @@ const Index = () => {
             närmar sig skärmen (blockeringstid på mobil). Utseendet är oförändrat, höjden reserveras med contain-intrinsic-size. */}
         {/* Varje sektion monteras i en egen ledig stund (DeferMount), så att startsidan inte renderas i en enda lång uppgift. */}
         <div className="cv-auto">
-          <DeferMount minHeight={900}>
-            <ReferenceCases />
+          <DeferMount minHeight={700}>
+            <QuickAccess />
           </DeferMount>
         </div>
         <div className="cv-auto">
-          <DeferMount minHeight={700}>
-            <QuickAccess />
+          <DeferMount minHeight={900}>
+            <ReferenceCases />
           </DeferMount>
         </div>
         <div className="cv-auto">
