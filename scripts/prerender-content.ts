@@ -915,7 +915,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ...buildBody([
         loc.longDescription,
         ...(loc.extraContent ? [loc.extraContent] : []),
-        ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, sec.text]),
+        ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, stripInlineMd(sec.text)]),
         ...(loc.process
           ? [
               { h: "Så går det till", level: 3 as const, suffix: "." },
