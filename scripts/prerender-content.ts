@@ -236,10 +236,10 @@ const staticPages: Record<string, PrerenderPage> = {
   "/offert": {
     title: "Offert på takbyte — fast pris efter kostnadsfri takkontroll",
     description:
-      "Räkna fram ett prisförslag på takbyte direkt, eller boka kostnadsfri takkontroll. Fast pris, 10 års utförandegaranti och återkoppling inom 24 timmar.",
+      "Beskriv ditt tak i några steg, så svarar vi inom 24 timmar, eller boka kostnadsfri takkontroll. Fast pris och 10 års utförandegaranti.",
     h1: "Få offert på takbyte i Roslagen",
     intro:
-      "Räkna fram ett prisförslag på ditt takbyte direkt i konfiguratorn, eller boka kostnadsfri takkontroll.",
+      "Beskriv ditt tak i några steg, så svarar vi inom 24 timmar, eller boka kostnadsfri takkontroll.",
     paragraphs: [
       "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Du får ett fast pris i offerten efter kostnadsfri takkontroll, och vi lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Vad som ingår står i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår.",
