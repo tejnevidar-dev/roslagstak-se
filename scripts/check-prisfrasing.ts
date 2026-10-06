@@ -48,6 +48,21 @@ if (!/^Ca /.test(prisPost("Papptak").priceRange)) fel.push('prices.ts: "Papptak"
   }
 }
 
+// 1e) Varumärket "Velux" får inte stå i någon sidmall, komponent eller datafil (Marknadschefen 2026-10-06): en rad i ortssidornas
+// tjänstelista (bara i React, därför osedd i statisk HTML) hade det. Regelfilerna i src/data/seo-regler och testerna får nämna ordet
+// (de är förbuden och fixturerna), liksom loggfilerna. Den byggda HTML:en kontrolleras också längre ner.
+{
+  const skip = (p: string) => p.includes(`${sep}seo-regler${sep}`) || p.includes(`${sep}test${sep}`) || p.includes(`${sep}overrides${sep}`);
+  const kall = (d: string): string[] =>
+    readdirSync(d).flatMap((f) => {
+      const p = join(d, f);
+      return statSync(p).isDirectory() ? (skip(p + sep) ? [] : kall(p)) : /.(tsx?|json)$/.test(f) && !skip(p) ? [p] : [];
+    });
+  for (const f of kall("src")) {
+    if (/velux/i.test(readFileSync(f, "utf8"))) fel.push(`${f}: ordet "Velux" ska inte förekomma (varumärke, Marknadschefen 2026-10-06)`);
+  }
+}
+
 // 2) Den byggda texten
 const walk = (d: string): string[] =>
   readdirSync(d).flatMap((f) => {
@@ -68,6 +83,7 @@ for (const f of walk("dist")) {
     .map((n) => n.replace(/&amp;/g, "&").replace(/\s+/g, " ").trim())
     .filter(Boolean);
   const path = "/" + f.split(sep).slice(1).join("/").replace(/\.html$/, "");
+  if (noder.some((n) => /velux/i.test(n))) fel.push(`${path}: ordet "Velux" ska inte stå i den byggda texten`);
   // Belopp per kvadratmeter i texten (guider, sidor) måste vara ett av beloppen i prices.ts: handskrivna belopp i guiderna
   // får inte avvika från prislistan (backlog 1cv).
   for (const nod of noder) {

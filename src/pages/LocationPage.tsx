@@ -423,13 +423,12 @@ const LocationPage = () => {
                 <ul className="space-y-2 mb-6">
                   {[
                     `Takomläggning och takbyte ${prep} ${location.name}`,
-                    `Takrenovering och underhåll ${prep} ${location.name}`,
+                    `Takrenovering ${prep} ${location.name}`,
                     `Plåtarbeten, takavvattning och hängrännor`,
-                    `TP20, dubbelfalsat, pannplåt och lertegeltak`,
-                    `Byta eternittak, med sanering via en saneringsfirma`,
-                    `Takkupor och takfönster (Velux)`,
+                    `Betongpannor, lertegel, TP20, pannplåt och dubbelfalsat plåttak`,
+                    `Takkupor och takfönster`,
                     `Taktvätt och takmålning`,
-                    `Kostnadsfri takinspektion`,
+                    `Kostnadsfri takkontroll`,
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />

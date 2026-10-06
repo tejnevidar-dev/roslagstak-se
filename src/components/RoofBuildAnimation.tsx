@@ -56,7 +56,7 @@ const STEPS: Step[] = [
     label: "Vindskivor",
     title: "Vindskivor & gavelbeslag",
     body: "Nya vindskivor och gavelbeslag skyddar takets kanter mot vind, regn och röta.",
-    detail: "Grundmålat virke eller underhållsfri plåt — du väljer.",
+    detail: "Grundmålat virke eller plåt.",
     image: roofVindskivor,
     alt: "3D-visualisering av vindskivor och gavelbeslag",
   },
