@@ -18,7 +18,7 @@ const varna = args.includes("--varna");
 const mdFil = arg("md");
 let base = arg("base");
 
-export const SIDOR = [
+const ALLA_SIDOR = [
   ["startsida", "/"],
   ["ortssida (ö)", "/taklaggare-grisslehamn"],
   ["ortssida (tätort)", "/taklaggare-taby"],
@@ -39,6 +39,8 @@ export const SIDOR = [
   ["region", "/omraden/kusten"],
   ["taktyper", "/taktyper"],
 ];
+
+const SIDOR = arg("sidor") ? arg("sidor").split(",").map((p) => ["vald", p]) : ALLA_SIDOR;
 
 const hittaChrome = () => {
   if (process.env.CHROME_PATH && existsSync(process.env.CHROME_PATH)) return process.env.CHROME_PATH;
