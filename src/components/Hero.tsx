@@ -125,7 +125,7 @@ const Hero = () => {
 
           <div className="mt-4 flex flex-wrap gap-4 lg:mt-8">
             <a
-              href="/offert"
+              href="/takkontroll"
               className="hero-offer-pulse group inline-flex items-center gap-3 bg-cta px-8 py-4 text-[17px] font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
             >
               Boka kostnadsfri takkontroll

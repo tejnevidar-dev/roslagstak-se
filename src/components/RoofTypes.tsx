@@ -161,7 +161,7 @@ const RoofTypes = () => {
 
                     <div className="flex flex-wrap gap-3">
                       <a
-                        href="/offert"
+                        href="/takkontroll"
                         className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors animate-subtle-pulse"
                       >
                         Boka takkontroll för {roof.name.toLowerCase()}
