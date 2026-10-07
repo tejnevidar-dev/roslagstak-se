@@ -172,6 +172,18 @@ for (const path of ["/taklaggare-taby", "/taklaggare-norrtalje", "/taklaggare-up
   const r = await p.evaluate(() => ({ titel: document.title, beskr: document.querySelector('meta[name="description"]')?.getAttribute("content") ?? "" }));
   punkt("Startsidan: titeln efter att React har kört är den nya", r.titel === TITEL, r.titel);
   punkt("Startsidan: beskrivningen efter att React har kört är den nya", r.beskr === BESKR, r.beskr.slice(0, 80));
+  /* og- och twitter-taggarna: ALLA taggar med samma namn ska ha den godkända lydelsen, i statisk HTML och efter att React har kört (även efter 6 sekunder) */
+  const sociala = [["property", "og:title", TITEL], ["property", "og:description", BESKR], ["name", "twitter:title", TITEL], ["name", "twitter:description", BESKR]];
+  const statiska = (h, attr, namn) => [...h.matchAll(new RegExp(`<meta ${attr}="${namn}" content="([^"]*)"`, "g"))].map((m) => m[1]);
+  for (const [attr, namn, vantat] of sociala) {
+    const s = statiska(html, attr, namn);
+    punkt(`Startsidan: ${namn} i statisk HTML är den godkända lydelsen`, s.length > 0 && s.every((v) => v === vantat), `${s.length} tagg(ar)`);
+  }
+  await p.waitForTimeout(6000);
+  for (const [attr, namn, vantat] of sociala) {
+    const v = await p.evaluate(([a, n]) => [...document.querySelectorAll(`meta[${a}="${n}"]`)].map((m) => m.getAttribute("content")), [attr, namn]);
+    punkt(`Startsidan: ${namn} efter React och 6 sekunder är den godkända lydelsen i alla taggar`, v.length > 0 && v.every((x) => x === vantat), `${v.length} tagg(ar)${v.some((x) => x !== vantat) ? ", avviker: " + v.filter((x) => x !== vantat)[0]?.slice(0, 60) : ""}`);
+  }
   await p.close();
   for (const path of ["/taklaggare-taby", "/priser", "/offert", "/takkontroll", "/hur-det-gar-till", "/omraden/nordvastra-stockholm"]) {
     const { html: h } = await hamta(path);
