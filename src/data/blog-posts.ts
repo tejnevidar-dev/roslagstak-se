@@ -55,6 +55,7 @@ export const blogPosts: BlogPost[] = [
       "Vi gör en kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
       "Vi lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Vill du veta hur ditt tak mår? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
     ],
   },
   {
@@ -244,6 +245,7 @@ export const blogPosts: BlogPost[] = [
       "Vi lägger både betongpannor och lertegel, och gör [takomläggningar](/tjanster/takomlaggning) och kompletta takbyten med fast pris. Vi arbetar enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
       "## Osäker på vad ditt tak klarar?",
       "Boka en [kostnadsfri takkontroll](/takkontroll) utan förpliktelser. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar, och du får hjälp att välja material. Du har en kontaktperson genom hela processen, och ROT-avdraget dras direkt på fakturan.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris).",
     ],
   },
   {
@@ -279,6 +281,7 @@ export const blogPosts: BlogPost[] = [
       "Vi lägger både TP20 och dubbelfalsat plåttak, med fast pris. Vi arbetar enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
       "## Boka en kostnadsfri takkontroll",
       "Vill du veta vilket plåttak som passar ditt hus? Boka en [kostnadsfri takkontroll](/takkontroll) utan förpliktelser. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar, och sedan får du en offert med fast pris. Du har en kontaktperson genom hela processen, och ROT-avdraget dras direkt på fakturan.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [plåttak pris](/material/tp20-plattak#pris).",
     ],
   },
   {
@@ -365,6 +368,7 @@ export const blogPosts: BlogPost[] = [
       "## Garanti, pris och ROT",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Priset i offerten är fast. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Har du hus på en ö eller ett fritidshus och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [betongpannor pris](/material/betongpannor#pris).",
     ],
   },
   {
@@ -484,6 +488,7 @@ export const blogPosts: BlogPost[] = [
       "## Så får du besked",
       "En kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Har du hus på en ö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
     ],
   },
   {
@@ -551,6 +556,7 @@ export const blogPosts: BlogPost[] = [
       "Tecknen syns inte alltid utifrån. Fukt på vinden, mörka fläckar på undersidan av taket eller mögellukt ska undersökas direkt, även om takytan ser hel ut. Hur du känner igen tecknen går vi igenom i [När är det dags att byta tak?](/blogg/tecken-byta-tak). Om det är läge att laga, lägga om eller byta beskriver vi i [Lägga om, byta eller laga taket?](/blogg/lagga-om-tak-vad-kostar-det).",
       "## Vill du veta hur ditt tak mår?",
       "Boka en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar, och om något behöver göras får du ett fast pris i offerten. Du betalar inget och binder dig inte. Läs mer om [takkontrollen](/takkontroll) eller [takbyte och takomläggning](/tjanster/takomlaggning).",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris).",
     ],
   },
   {
@@ -644,6 +650,7 @@ export const blogPosts: BlogPost[] = [
       "**Ingår byggställning?** Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår i offerten.",
       "**Vilka garantier ingår?** Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
       "Vill du veta vad ditt tak kostar? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
     ],
   },
   {
@@ -690,7 +697,7 @@ export const blogPosts: BlogPost[] = [
       "**Kan jag byta från pannor till plåt?** Ja, plåt är lättare. Tänk på att huset får ett annat utseende.",
       "## Så får du besked om ditt tak",
       "En kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.",
-      "Riktpriser efter ROT-avdrag finns på prissidan: [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
       "Osäker på vilket tak som passar? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
   },
@@ -806,6 +813,7 @@ export const blogPosts: BlogPost[] = [
       "**Vi har hus på en av öarna utanför Ljusterö. Går det?** Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.",
       "Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Har du hus på Ljusterö och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
     ],
   },
   {
@@ -970,6 +978,7 @@ export const blogPosts: BlogPost[] = [
       "## Så får du ett besked",
       "En kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Har du en sommarstuga med ett tak du undrar över? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris).",
     ],
   },
   {
@@ -1255,6 +1264,7 @@ export const blogPosts: BlogPost[] = [
       "Taktvätt är en av de tjänster vi erbjuder. Vad som behöver göras på just ditt tak går inte att säga på avstånd. Därför börjar vi med en kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Mer om tjänsten finns på sidan om [taktvätt](/tjanster/taktvatt).",
       "Har du mossa på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       "*Uppgifterna om mossa är återgivna från Villaägarnas Riksförbunds sida [Hur får du bort mossan på taket?](https://www.villaagarna.se/radgivning-och-tips/utomhus/tak/mossa-pa-tak/), publicerad 2025-06-24 och läst 2026-10-06.*",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris).",
     ],
   },
   {
@@ -1445,7 +1455,7 @@ export const blogPosts: BlogPost[] = [
       "**Är plåt bättre än pannor?** Det går inte att säga generellt. Skillnaderna går vi igenom i [plåttak eller betongpannor?](/blogg/plattak-vs-betongpannor)",
       "## Så får du besked",
       "En kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.",
-      "Riktpriser efter ROT-avdrag finns på prissidan: [plåttak pris](/material/tp20-plattak#pris).",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
       "Funderar du på att byta till plåttak? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
   },
@@ -1505,6 +1515,7 @@ export const blogPosts: BlogPost[] = [
       "## Så får du besked",
       "En kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Vi lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Funderar du på plåttak? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [tegeltak pris](/tjanster/tegeltak#pris), [betongpannor pris](/material/betongpannor#pris), [plåttak pris](/material/tp20-plattak#pris).",
     ],
   },
   {
@@ -1796,6 +1807,7 @@ export const blogPosts: BlogPost[] = [
       "Takmålning är en av de tjänster vi erbjuder. Om taket går att måla, och vad som behöver göras först, går inte att säga på avstånd. Därför börjar vi med en kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
       "Funderar du på att måla plåttaket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       "*Uppgifterna om plåttak och målning är återgivna från Stockholms läns museums sida [Plåttak](https://stockholmslansmuseum.se/byggnadswebben/byggnadsvard/exterior/plattak-gor-sahar/), läst 2026-10-06.*",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [plåttak pris](/material/tp20-plattak#pris).",
     ],
   },
   {
@@ -1830,6 +1842,7 @@ export const blogPosts: BlogPost[] = [
       "Priset beror på vilken åtgärd som behövs, takets storlek och form, antalet genomföringar och detaljer, underlagets skick, ställning och åtkomst. Se våra riktpriser på [/priser](/priser). Som privatperson kan du få [ROT-avdrag](/rot-avdrag) på 30 % av arbetskostnaden, och vi drar det direkt på fakturan.",
       "## Låt takkontrollen avgöra",
       "Det säkraste sättet att veta om taket behöver lagas, läggas om eller bytas är att någon tittar på det. Boka en [kostnadsfri takkontroll](/takkontroll) utan förpliktelser. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Behöver något göras får du en offert med fast pris, där det framgår vad som ingår, och du bestämmer själv om och när. Vi arbetar enligt AMA, och du har en kontaktperson genom hela processen. Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI.",
+      "Riktpriser efter ROT-avdrag finns på prissidan: [betongpannor pris](/material/betongpannor#pris).",
     ],
   },
   {
