@@ -548,7 +548,7 @@ const LocationPage = () => {
                 </div>
 
                 <h3 className="font-display text-xl text-foreground mb-3">
-                  Varför välja RoslagsTak som {location.primaryKeyword.toLowerCase()}?
+                  Varför välja RoslagsTak som {location.primaryKeyword}?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {far
