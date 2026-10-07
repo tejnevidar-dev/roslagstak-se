@@ -216,6 +216,17 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
   punkt("404-sidan: ingen og:url som pekar på startsidan", !/property="og:url" content="https:\/\/roslagstak\.se\/"/.test(html));
 }
 
+// 12. Y3: meningen om riktpriser med länkar till ägarsidornas prisavsnitt finns i statisk HTML i de 15 guiderna
+{
+  const GUIDER = ["basta-takmaterial-skargarden", "betongpannor-eller-lertegel", "byta-till-plattak-forandra-look", "hur-lange-haller-tak", "kostnad-takbyte-2026", "lagga-om-tak-vad-kostar-det", "mala-plattak-guide-pris", "plattak-vs-betongpannor", "platttak-ljud-regn-skargardshus", "skota-taket-betongpannor-tegel-plat", "ta-bort-mossa-fran-tak", "takbyte-ljustero-guide-pris", "takbyte-skargarden-logistik", "takrenovering-sommarstuga-roslagen", "tp20-eller-dubbelfalsat-platttak"];
+  const saknas = [];
+  for (const g of GUIDER) {
+    const { html } = await hamta(`/blogg/${g}`);
+    if (!/Riktpriser efter ROT-avdrag finns på prissidan:/.test(html.replace(/<[^>]+>/g, " ")) || !/href="\/(?:tjanster\/tegeltak|material\/betongpannor|material\/tp20-plattak)#pris"/.test(html)) saknas.push(g);
+  }
+  punkt("Prisordsmeningen med länkar till prisavsnitten finns i alla 15 guider (statisk HTML)", saknas.length === 0, saknas.length ? "saknas: " + saknas.join(", ") : "15 av 15");
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
