@@ -45,7 +45,7 @@ const QuotePage = () => {
           <FreeConsultation />
           <FAQ />
         </Suspense>
-        <GoogleReviews variant="band" title="Vad kunderna säger om jobbet" />
+        <GoogleReviews variant="band" />
         <RelatedLinks currentPath="/offert" title="Läs vidare innan du bestämmer dig" />
       </main>
       <Footer />

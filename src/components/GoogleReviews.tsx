@@ -1,4 +1,4 @@
-import { Star, ExternalLink, ShieldCheck, MapPin } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { googleReviews } from "@/data/google-reviews";
 
 const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=RoslagsTak+recensioner";
@@ -38,11 +38,9 @@ interface GoogleReviewsProps {
   className?: string;
 }
 
-const badges = [
-  { icon: ShieldCheck, text: "Kan inte redigeras av oss" },
-  { icon: MapPin, text: "Kunder i Roslagen & Storstockholm" },
-  { icon: Star, text: "Namn och datum syns i original" },
-];
+/** Samma lydelse som på /recensioner. Inga fasta stjärnor och inga påståenden om vad Googles sida visar (regel 5, U1). */
+const RECENSIONER_INGRESS =
+  "Läs omdömen om RoslagsTak direkt på vår Google-företagsprofil. Vi publicerar inga egenskrivna recensioner och kan inte kontrollera vem som skriver på Google.";
 
 /**
  * Hänvisar till företagets riktiga omdömen på Google.
@@ -55,9 +53,7 @@ const GoogleReviews = ({
   place,
   className = "",
 }: GoogleReviewsProps) => {
-  const text =
-    intro ??
-    `Omdömena är hämtade från Google${place ? `, även från jobb ${place}` : ""}. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Läs dem i original på vår företagsprofil, och lämna gärna ett eget om vi har jobbat hos dig.`;
+  const text = intro ?? RECENSIONER_INGRESS;
 
   if (variant === "inline") {
     return (
@@ -67,11 +63,6 @@ const GoogleReviews = ({
         rel="noopener noreferrer"
         className={`inline-flex items-center gap-2.5 text-[15px] font-semibold transition-colors hover:text-accent ${className}`}
       >
-        <span className="flex gap-0.5" aria-hidden="true">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="h-4 w-4 fill-current" />
-          ))}
-        </span>
         Läs våra omdömen på Google
         <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
       </a>
@@ -96,14 +87,6 @@ const GoogleReviews = ({
             <p className="mt-5 max-w-[58ch] text-[17px] font-light leading-[1.7] text-primary-foreground/80">
               {text}
             </p>
-            <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
-              {badges.map((b) => (
-                <li key={b.text} className="flex items-center gap-2 text-[13px] text-accent/90">
-                  <b.icon className="h-4 w-4" aria-hidden="true" />
-                  {b.text}
-                </li>
-              ))}
-            </ul>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:text-right">
             <a
@@ -112,7 +95,6 @@ const GoogleReviews = ({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-accent px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary transition-transform duration-500 hover:-translate-y-0.5 hover:animate-subtle-pulse"
             >
-              <Star className="h-4 w-4 fill-current" aria-hidden="true" />
               Läs omdömena på Google
               <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
             </a>
@@ -124,26 +106,11 @@ const GoogleReviews = ({
 
   return (
     <div className={`border border-border bg-card p-8 md:p-10 ${className}`}>
-      <div className="flex items-center gap-3">
-        <div className="flex gap-0.5" aria-hidden="true">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-          ))}
-        </div>
-        <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
-          Omdömen hämtade från Google
-        </span>
-      </div>
+      <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
+        Läs våra omdömen på Google
+      </span>
       <h2 className="mt-5 font-display text-2xl text-foreground">{title}</h2>
       <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">{text}</p>
-      <ul className="mt-6 flex flex-wrap gap-x-7 gap-y-2">
-        {badges.map((b) => (
-          <li key={b.text} className="flex items-center gap-2 text-[13px] text-muted-foreground">
-            <b.icon className="h-4 w-4 text-primary" aria-hidden="true" />
-            {b.text}
-          </li>
-        ))}
-      </ul>
       <ReviewCards />
       <a
         href={GOOGLE_REVIEWS_URL}
