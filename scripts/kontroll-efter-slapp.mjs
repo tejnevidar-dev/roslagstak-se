@@ -201,6 +201,21 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
   await p.close();
 }
 
+// 11. 404-sidan har egna og- och twitter-taggar och ärver inte startsidans (Z1)
+{
+  const { html } = await hamta("/404.html");
+  const tagg = (attr, namn) => [...html.matchAll(new RegExp(`<meta ${attr}="${namn}" content="([^"]*)"`, "g"))].map((m) => m[1]);
+  for (const [attr, namn, vantat] of [["property", "og:title", "Sidan finns inte | RoslagsTak"], ["name", "twitter:title", "Sidan finns inte | RoslagsTak"]]) {
+    const v = tagg(attr, namn);
+    punkt(`404-sidan: ${namn} är egen`, v.length === 1 && v[0] === vantat, v.join(" / ").slice(0, 70));
+  }
+  for (const [attr, namn] of [["property", "og:description"], ["name", "twitter:description"]]) {
+    const v = tagg(attr, namn);
+    punkt(`404-sidan: ${namn} ärver inte startsidans`, v.length === 1 && !/takbyte och takomläggning i roslagen/i.test(v[0]), v.join(" / ").slice(0, 70));
+  }
+  punkt("404-sidan: ingen og:url som pekar på startsidan", !/property="og:url" content="https:\/\/roslagstak\.se\/"/.test(html));
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);

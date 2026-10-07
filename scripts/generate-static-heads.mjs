@@ -451,7 +451,19 @@ const aliasEntries = [
     .replace(
       /<meta name="description" content="[^"]*" \/>/,
       '<meta name="description" content="Sidan du letar efter finns inte. Gå till startsidan eller boka en kostnadsfri takkontroll." />',
-    );
+    )
+    /* Egna sociala taggar: 404-sidan ska inte ärva startsidans og-/twitter-titel och beskrivning från index.html (Z1), och inte peka ut startsidan som sin adress. */
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, '<meta property="og:title" content="Sidan finns inte | RoslagsTak" />')
+    .replace(
+      /<meta property="og:description" content="[^"]*" \/>/,
+      '<meta property="og:description" content="Sidan du letar efter finns inte. Gå till startsidan eller boka en kostnadsfri takkontroll." />',
+    )
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, '<meta name="twitter:title" content="Sidan finns inte | RoslagsTak" />')
+    .replace(
+      /<meta name="twitter:description" content="[^"]*" \/>/,
+      '<meta name="twitter:description" content="Sidan du letar efter finns inte. Gå till startsidan eller boka en kostnadsfri takkontroll." />',
+    )
+    .replace(/\s*<meta property="og:url" content="[^"]*" \/>/, "");
   if (!/name="robots" content="noindex, follow"/.test(html)) {
     html = html.replace("</head>", '  <meta name="robots" content="noindex, follow" />\n  </head>');
   }
