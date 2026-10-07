@@ -599,8 +599,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "kostnad-takbyte-2026",
-    title: "Vad kostar ett takbyte? Riktpriser per material",
-    excerpt: "Riktpriser för takbyte per material, efter ROT-avdrag och inkl. moms. Vad som påverkar priset, vad som ingår och hur du får ett fast pris i offerten.",
+    title: "Kostnad för takbyte: vad kostar ett takbyte per material?",
+    excerpt: "Kostnad för takbyte per material: riktpriser efter ROT-avdrag, inkl. moms. Vad som påverkar priset, vad som ingår och hur du får ett fast pris i offerten.",
     date: "2026-04-01",
     updated: "2026-10-05",
     readTime: "4 min",
@@ -648,8 +648,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "plattak-vs-betongpannor",
-    title: "Plåttak eller betongpannor? Så väljer du tak",
-    excerpt: "Plåttak eller betongpannor: vikt, utseende, taklutning, skötsel och pris. Riktpriser efter ROT-avdrag, inkl. moms, och hur du får besked om ditt tak.",
+    title: "Vilket tak ska du välja: plåttak eller betongpannor?",
+    excerpt: "Plåttak eller betongpannor: vikt, utseende, taklutning, skötsel och pris. Så väljer du tak till ditt hus, med riktpriser efter ROT-avdrag, inkl. moms.",
     date: "2026-03-25",
     updated: "2026-10-03",
     readTime: "4 min",
@@ -1002,8 +1002,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "bandtackt-plat-vs-klicktak",
-    title: "Bandtäckt plåt eller klicktak? Skillnad och pris",
-    excerpt: "Bandtäckt (dubbelfalsad) plåt eller klicktak: hur de skiljer sig, vad som passar olika tak och vad falsad plåt kostar. Riktpris efter ROT, inkl. moms.",
+    title: "Bandtäckning av plåt eller klicktak? Skillnad och pris",
+    excerpt: "Bandtäckning (dubbelfalsad plåt) eller klicktak: hur de skiljer sig, vad som passar olika tak och vad falsad plåt kostar. Riktpris efter ROT, inkl. moms.",
     date: "2026-05-12",
     updated: "2026-10-03",
     readTime: "4 min",
