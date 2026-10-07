@@ -137,6 +137,18 @@ for (const path of ["/taklaggare-taby", "/projekt/takbyte-singo", "/blogg/mala-p
   await p.close();
 }
 
+// 7. Ingen rå markdown ([text](länk) eller **fet**) i statisk HTML eller FAQPage-schema (W1: "[prissidan](/priser)" på ortssidorna)
+for (const path of ["/taklaggare-taby", "/taklaggare-norrtalje", "/taklaggare-upplands-bro", "/taklaggare-grisslehamn", "/", "/priser", "/tjanster/taktvatt", "/material/betongpannor", "/taktyper"]) {
+  const { html } = await hamta(path);
+  const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]).join(" ");
+  const rå = [synligStatisk(html), ld].some((x) => /\[[^\]\n]{1,200}\]\((?:\/|https?:|#)[^)\s]*\)|\*\*[^*\n]{1,200}\*\*/.test(x));
+  punkt(`Ingen rå markdown i statisk HTML eller schema: ${path}`, !rå);
+}
+for (const path of ["/taklaggare-taby", "/taklaggare-norrtalje", "/taklaggare-upplands-bro"]) {
+  const { html } = await hamta(path);
+  punkt(`FAQ-svaret om riktpriser är ren text med länk till /priser: ${path}`, /riktpriser per material finns på prissidan\./.test(synligStatisk(html)) && /<a href="\/priser"/.test(html));
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);

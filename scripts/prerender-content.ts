@@ -204,6 +204,9 @@ const home: PrerenderPage = {
   links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
 };
 
+/** Interna länkar som står som [text](/länk) i FAQ-svar: i den statiska HTML:en blir de riktiga länkar i länklistan, texten och schemat är rena. */
+const faqLinks = (faqs: { answer: string }[]) => faqs.flatMap((f) => inlineMdLinks(f.answer));
+
 /** FAQPage-nod för den statiska HTML:en (samma frågor och svar som sidan visar). */
 const faqLd = (faqs: { question: string; answer: string }[], path: string): Record<string, unknown> =>
   buildFaqSchema(faqs.map((f) => ({ question: f.question, answer: stripInlineMd(f.answer) })), `${SCHEMA_SITE_URL}${path}`) as Record<string, unknown>;
@@ -347,13 +350,14 @@ const staticPages: Record<string, PrerenderPage> = {
       ]),
       `${PRICE_ROT_TITLE}. ${PRICE_ROT_TEXT}`,
       `${PRICE_FACTORS_TITLE} ${PRICE_FACTORS_TEXT}`,
-      ...priceFaqs.map((faq) => `${faq.question} ${faq.answer}`),
+      ...priceFaqs.map((faq) => `${faq.question} ${stripInlineMd(faq.answer)}`),
     ],
     jsonLd: [faqLd(priceFaqs, "/priser")],
     links: [
       { href: "/blogg/kostnad-takbyte-2026", label: "Vad kostar ett takbyte? Hela guiden" },
       ...primaryLinks,
       ...serviceLinks,
+      ...faqLinks(priceFaqs),
     ],
   },
   "/recensioner": {
@@ -574,8 +578,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ...buildBody([
         ...TAKTVATT_SECTIONS.flatMap((s) => [{ h: s.heading }, ...s.paragraphs.map(stripInlineMd)]),
         { h: "Vanliga frågor om taktvätt" },
-        ...TAKTVATT_FAQS.flatMap((f) => [{ h: f.question, level: 3 as const }, f.answer]),
+        ...TAKTVATT_FAQS.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
       ]),
+      links: [...staticPages[clean].links, ...faqLinks(TAKTVATT_FAQS)],
       jsonLd: [faqLd(TAKTVATT_FAQS, "/tjanster/taktvatt")],
     };
   }
@@ -689,7 +694,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
                 ...b.items.flatMap((it) => (typeof it === "string" ? [stripInlineMd(it)] : it.list.map(stripInlineMd))),
               ]),
               { h: MATERIAL_EXTRAS[material.slug].faqHeading },
-              ...MATERIAL_EXTRAS[material.slug].faqs.flatMap((f) => [{ h: f.question, level: 3 as const }, f.answer]),
+              ...MATERIAL_EXTRAS[material.slug].faqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
             ]
           : []),
         ...(d.hallIsar ? [`Håll isär: ${d.hallIsar}`] : []),
@@ -708,6 +713,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(MATERIAL_PRISAVSNITT[material.slug]?.rader.filter((r) => r.to).map((r) => ({ href: r.to!, label: r.namn })) ?? []),
         ...(MATERIAL_EXTRAS[material.slug]?.blocks.flatMap((b) => b.items.flatMap((it) => (typeof it === "string" ? [it] : it.list)).flatMap(inlineMdLinks)) ?? []),
         ...(MATERIAL_EXTRAS[material.slug]?.links?.map((l) => ({ href: l.to, label: l.label })) ?? []),
+        ...faqLinks(MATERIAL_EXTRAS[material.slug]?.faqs ?? []),
         ...projectSummaries.filter((p) => (p.materialSlugs as string[]).includes(material.slug)).map((p) => ({ href: `/projekt/${p.slug}`, label: p.title })),
         ...guidesForTitle(material.title, 2).map((g) => ({ href: `/blogg/${g.slug}`, label: g.title })),
         ...MONEY_LINKS,
@@ -974,13 +980,14 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(mall ? [] : [geoFactsParagraph(loc)]),
         // Hela FAQ:n som sidan visar (samma funktion som LocationPage.tsx), med rubriker, och FAQPage-schema nedan.
         { h: `Vanliga frågor om takbyte ${prep} ${loc.name}`, level: 2 as const },
-        ...locationFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, f.answer]),
+        ...locationFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
         `Ring ${PHONE} för en kostnadsfri takkontroll ${prep} ${loc.name}.`,
       ]),
       jsonLd: [faqLd(locationFaqs, `/taklaggare-${loc.slug}`)],
       links: [
         ...primaryLinks,
         ...MONEY_LINKS,
+        ...faqLinks(locationFaqs),
         { href: regionHref, label: `Takläggare i ${loc.region}` },
         ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
         ...problemsForLocation(loc.slug).map((p) => ({ href: p.to, label: p.label })),
