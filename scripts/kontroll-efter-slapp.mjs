@@ -161,6 +161,34 @@ for (const path of ["/taklaggare-taby", "/taklaggare-norrtalje", "/taklaggare-up
   punkt(`FAQ-svaret om riktpriser är ren text med länk till /priser: ${path}`, /riktpriser per material finns på prissidan\./.test(synligStatisk(html)) && /<a href="\/priser"/.test(html));
 }
 
+// 9. Startsidans titel och beskrivning (förslag B): statisk HTML och efter att React har kört, och ingen annan sida ärver den
+{
+  const TITEL = "Takläggare Roslagen – takbyte i Norrtälje, fast pris";
+  const BESKR = "Takfirma med bas i Norrtälje. Takbyte och takomläggning i Roslagen och Storstockholm. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.";
+  const { html } = await hamta("/");
+  punkt("Startsidan: titeln i statisk HTML är den nya", html.includes(`<title>${TITEL}</title>`));
+  punkt("Startsidan: beskrivningen i statisk HTML är den nya", html.includes(`<meta name="description" content="${BESKR}"`));
+  const p = await renderad(ctx, "/");
+  const r = await p.evaluate(() => ({ titel: document.title, beskr: document.querySelector('meta[name="description"]')?.getAttribute("content") ?? "" }));
+  punkt("Startsidan: titeln efter att React har kört är den nya", r.titel === TITEL, r.titel);
+  punkt("Startsidan: beskrivningen efter att React har kört är den nya", r.beskr === BESKR, r.beskr.slice(0, 80));
+  await p.close();
+  for (const path of ["/taklaggare-taby", "/priser", "/offert", "/takkontroll", "/hur-det-gar-till", "/omraden/nordvastra-stockholm"]) {
+    const { html: h } = await hamta(path);
+    punkt(`Annan sida ärver inte startsidans titel: ${path}`, !h.includes(`<title>${TITEL}</title>`));
+  }
+}
+
+// 10. Inga fyllda stjärnikoner (lucide-star med fill-) i den renderade sidan
+for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "/hur-det-gar-till", "/recensioner"]) {
+  const p = await renderad(ctx, path);
+  await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 50)); } });
+  await p.waitForTimeout(500);
+  const n = await p.evaluate(() => [...document.querySelectorAll("svg.lucide-star")].filter((s) => /fill-/.test(s.getAttribute("class") || "")).length);
+  punkt(`0 fyllda stjärnor (lucide-star med fill-): ${path}`, n === 0, `${n} st`);
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
