@@ -39,7 +39,7 @@ const LeadForm = ({
   ort,
   defaultTopic = "Takbyte",
   addressPlaceholder = "Gatuadress och ort",
-  title = "Begär kostnadsfri offert",
+  title = "Boka kostnadsfri takkontroll",
 }: LeadFormProps) => {
   const initialForm = { name: "", phone: "", email: "", address: "", topic: defaultTopic as string, message: "" };
   const [form, setForm] = useState(initialForm);
@@ -106,7 +106,7 @@ const LeadForm = ({
     >
       <div>
         <h2 className="font-display text-2xl text-foreground">{title}</h2>
-        <p className="mt-1 text-sm text-muted-foreground">Svar inom 24 timmar. Ingen förbindelse.</p>
+        <p className="mt-1 text-sm text-muted-foreground">Svar inom 24 timmar. Utan förpliktelser.</p>
       </div>
       <div>
         <label htmlFor="lead-name" className={labelClass}>Namn</label>
