@@ -48,6 +48,7 @@ const MONEY_LINKS = [
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { applyMall, OAR_UTAN_BILVAG, usesMall } from "../src/data/location-mall";
 import { isNearBase, distanceFromBaseKm, distanceKm } from "../src/data/service-reach";
+import { locationWhySections } from "../src/data/location-sections";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
@@ -979,6 +980,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
         ...(villaAreasParagraph(loc.slug) ? [villaAreasParagraph(loc.slug)!] : []),
         ...(mall ? [] : [geoFactsParagraph(loc)]),
+        // Avsnitten "Varför välja RoslagsTak …" och "Om <ort> och takläggning i <region>" (samma funktion som LocationPage.tsx, AA3).
+        ...locationWhySections(loc, prep, !loc.isIsland && !isNearBase(loc)).flatMap((s) => [{ h: s.heading, level: 3 as const }, s.paragraph]),
         // Hela FAQ:n som sidan visar (samma funktion som LocationPage.tsx), med rubriker, och FAQPage-schema nedan.
         { h: `Vanliga frågor om takbyte ${prep} ${loc.name}`, level: 2 as const },
         ...locationFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),

@@ -216,6 +216,17 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
   punkt("404-sidan: ingen og:url som pekar på startsidan", !/property="og:url" content="https:\/\/roslagstak\.se\/"/.test(html));
 }
 
+// 13. AA3: ortssidornas avsnitt "Varför välja RoslagsTak …" och "Om <ort> …" finns i statisk HTML och är lika efter React
+for (const [path, rubrik] of [["/taklaggare-taby", "Varför välja RoslagsTak som takläggare Täby?"], ["/taklaggare-grisslehamn", "Varför välja RoslagsTak som takläggare Grisslehamn?"], ["/taklaggare-norrtalje", "Varför välja RoslagsTak som takläggare Norrtälje?"]]) {
+  const { html } = await hamta(path);
+  const stat = synligStatisk(html);
+  punkt(`Statisk HTML har avsnittet "${rubrik}": ${path}`, stat.includes(rubrik.toLowerCase()) && stat.includes("vi arbetar enligt ama."));
+  const p = await renderad(ctx, path);
+  const r = await p.evaluate(() => [...document.querySelectorAll("h3")].map((h) => h.textContent.trim()).filter((t) => /^Varför välja RoslagsTak som|^Om .+ och takläggning i /.test(t)));
+  punkt(`Renderad sida har samma två rubriker som den statiska: ${path}`, r.length === 2 && r.every((t) => stat.includes(t.toLowerCase())), r.join(" | ").slice(0, 100));
+  await p.close();
+}
+
 // 12. Y3: meningen om riktpriser med länkar till ägarsidornas prisavsnitt finns i statisk HTML i de 15 guiderna
 {
   const GUIDER = ["basta-takmaterial-skargarden", "betongpannor-eller-lertegel", "byta-till-plattak-forandra-look", "hur-lange-haller-tak", "kostnad-takbyte-2026", "lagga-om-tak-vad-kostar-det", "mala-plattak-guide-pris", "plattak-vs-betongpannor", "platttak-ljud-regn-skargardshus", "skota-taket-betongpannor-tegel-plat", "ta-bort-mossa-fran-tak", "takbyte-ljustero-guide-pris", "takbyte-skargarden-logistik", "takrenovering-sommarstuga-roslagen", "tp20-eller-dubbelfalsat-platttak"];

@@ -1,4 +1,4 @@
-import { GARANTI_RENOVERING } from "@/data/guarantee";
+import { locationWhySections } from "@/data/location-sections";
 import { problemsForLocation } from "@/data/problem-links";
 import { hubLinksFor } from "@/data/hub-links";
 import { ortSeoOverrides } from "@/data/seo-overrides";
@@ -8,7 +8,7 @@ import { generateCombos, COMBO_LINK_LABEL, MATERIAL_OWN_PAGE } from "@/data/serv
 import { isThinCombo } from "@/data/thin-combos";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Shield, Clock } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -547,30 +547,12 @@ const LocationPage = () => {
                   </div>
                 </div>
 
-                <h3 className="font-display text-xl text-foreground mb-3">
-                  Varför välja RoslagsTak som {location.primaryKeyword}?
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {far
-                    ? `Vi tar uppdrag ${prep} ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri takkontroll och fast pris.`
-                    : `Vi tar uppdrag ${prep} ${location.name} och i Roslagen och Storstockholm, med kostnadsfri takkontroll och fast pris.`}
-                  {far
-                    ? ""
-                    : location.isIsland
-                    ? ` Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.`
-                    : ""}
-                  {" "}Vi arbetar enligt AMA. {GARANTI_RENOVERING}
-                </p>
-
-                <h3 className="font-display text-xl text-foreground mb-3">
-                  Om {location.name} och takläggning i {location.region.toLowerCase()}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {location.region === "Mälardalen"
-                    ? `${location.name} ligger i Mälardalen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`
-                    : `${location.name} tillhör ${location.region} i Roslagen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`}{" "}
-                  Kontakta oss för en kostnadsfri takkontroll {prep} {location.name}, utan förpliktelser.
-                </p>
+                {locationWhySections(location, prep, far).map((sec) => (
+                  <Fragment key={sec.heading}>
+                    <h3 className="font-display text-xl text-foreground mb-3">{sec.heading}</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{sec.paragraph}</p>
+                  </Fragment>
+                ))}
               </div>
 
               {/* FAQ Section */}
