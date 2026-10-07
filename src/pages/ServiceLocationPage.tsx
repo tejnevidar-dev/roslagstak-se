@@ -4,7 +4,7 @@ import { isHeading, renderInline } from "@/lib/inline-md";
 import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, ArrowRight, CheckCircle, Phone, Star, Shield, Clock, Award } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle, Phone, Shield, Clock, Award } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -194,7 +194,6 @@ const ServiceLocationPage = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary"
               >
-                <Star className="w-4 h-4 fill-primary text-primary" />
                 Läs våra omdömen på Google
               </a>
             </div>

@@ -118,7 +118,6 @@ const GoogleReviews = ({
         rel="noopener noreferrer"
         className="mt-7 inline-flex items-center gap-2 bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
       >
-        <Star className="h-4 w-4 fill-current" aria-hidden="true" />
         Läs våra omdömen på Google
         <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
       </a>
