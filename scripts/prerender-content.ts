@@ -1078,6 +1078,10 @@ const aliasToCanonical = (href: string): string => {
  */
 export const noindexPageMeta = (path: string): { title: string; description: string } | null => {
   const clean = path.replace(/\/$/, "");
+  /* Interna sidor: egen titel, så att de inte ärver startsidans titel och beskrivning från index.html (noindex). */
+  if (clean === "/admin" || clean === "/admin/login" || clean === "/admin/seo") {
+    return { title: "Administration", description: "Intern sida för RoslagsTak. Inte avsedd för allmänheten." };
+  }
   if (clean === "/boka-takkontroll") {
     return {
       title: "Boka kostnadsfri takkontroll",
