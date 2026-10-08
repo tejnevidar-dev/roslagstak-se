@@ -433,6 +433,26 @@ for (const path of ["/takproblem/fukt-pa-vinden", "/priser"]) {
   await p.close();
 }
 
+// 28. AG4/paket 27: de 19 ortssidornas metabeskrivning står både i statisk HTML och efter att React har kört (ordagrant ur seo-overrides.ts)
+{
+  const { ortSeoOverrides } = await import("../src/data/seo-overrides.ts");
+  const SLUGS = ["akersberga", "danderyd", "vaxholm", "stockholm", "solna", "sundbyberg", "sollentuna", "nacka", "varmdo", "tyreso", "haninge", "jarfalla", "huddinge", "sigtuna", "nynashamn", "botkyrka", "salem", "sodertalje", "upplands-bro"];
+  const metaBeskr = (h) => (h.match(/<meta name="description" content="([^"]*)"/) ?? [])[1]?.replace(/&amp;/g, "&").replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"');
+  const statNej = [], reactNej = [];
+  for (const slug of SLUGS) {
+    const vantat = ortSeoOverrides[slug]?.description;
+    const { html } = await hamta("/taklaggare-" + slug);
+    if (metaBeskr(html) !== vantat) statNej.push(slug);
+    const p = await renderad(ctx, "/taklaggare-" + slug);
+    await p.waitForTimeout(400);
+    const rendered = await p.evaluate(() => document.querySelector('meta[name="description"]')?.getAttribute("content") ?? "");
+    if (rendered !== vantat) reactNej.push(slug);
+    await p.close();
+  }
+  punkt("De 19 ortsbeskrivningarna står ordagrant i statisk HTML", statNej.length === 0, statNej.length ? "avviker: " + statNej.join(", ") : "19 av 19");
+  punkt("De 19 ortsbeskrivningarna står ordagrant efter att React har kört", reactNej.length === 0, reactNej.length ? "avviker: " + reactNej.join(", ") : "19 av 19");
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);

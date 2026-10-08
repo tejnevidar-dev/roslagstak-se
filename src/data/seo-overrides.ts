@@ -794,4 +794,99 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare på Muskö: takbyte och takomläggning på ön i Haninge skärgård som nås med bil genom Muskötunneln. Kostnadsfri takkontroll och fast pris i offerten.",
   },
+  akersberga: {
+    title: "Takläggare i Åkersberga — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Åkersberga: takbyte och takomläggning i centralorten i Österåker, mellan Täby och Norrtälje. Kostnadsfri takkontroll och fast pris.",
+  },
+  danderyd: {
+    title: "Takläggare i Danderyd — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Danderyd: takbyte och takomläggning i villastäderna Djursholm, Stocksund, Enebyberg och Danderyd. Kostnadsfri takkontroll och fast pris.",
+  },
+  vaxholm: {
+    title: "Takläggare i Vaxholm — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Vaxholm: takbyte och takomläggning i skärgårdskommunen, med hus i staden och på öarna. Kostnadsfri takkontroll och fast pris.",
+  },
+  stockholm: {
+    title: "Takläggare i Stockholm — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Stockholm: takbyte och takomläggning i ytterstadens villor, från Bromma och Hässelby till Enskede. Kostnadsfri takkontroll och fast pris.",
+  },
+  solna: {
+    title: "Takläggare i Solna — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Solna: takbyte och takomläggning för villor, främst i Råsunda. Kostnadsfri takkontroll och fast pris.",
+  },
+  sundbyberg: {
+    title: "Takläggare i Sundbyberg — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Sundbyberg: takbyte och takomläggning, särskilt i villasamhällena Duvbo och Lilla Ursvik. Kostnadsfri takkontroll och fast pris.",
+  },
+  sollentuna: {
+    title: "Takläggare i Sollentuna — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Sollentuna: takbyte och takomläggning i kommundelarna längs järnvägen och vid Edsviken. Kostnadsfri takkontroll och fast pris.",
+  },
+  nacka: {
+    title: "Takläggare i Nacka — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Nacka: takbyte och takomläggning i villor, egnahem och hus som började som sommarstugor. Kostnadsfri takkontroll och fast pris.",
+  },
+  varmdo: {
+    title: "Takläggare i Värmdö — Takbyte & Takrenovering",
+    description:
+      "Takläggare på Värmdö: takbyte och takomläggning i Gustavsberg, på Ingarö och mot Stavsnäs. Kostnadsfri takkontroll och fast pris.",
+  },
+  tyreso: {
+    title: "Takläggare i Tyresö — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Tyresö: takbyte och takomläggning i Trollbäcken och de gamla fritidshusområdena österut. Kostnadsfri takkontroll och fast pris.",
+  },
+  haninge: {
+    title: "Takläggare i Haninge — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Haninge: takbyte och takomläggning i villaområdena längs Nynäsbanan och vid Drevviken. Kostnadsfri takkontroll och fast pris.",
+  },
+  jarfalla: {
+    title: "Takläggare i Järfälla — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Järfälla: takbyte och takomläggning i villaområden, från egnahemsområden till småhusstäder. Kostnadsfri takkontroll och fast pris.",
+  },
+  huddinge: {
+    title: "Takläggare i Huddinge — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Huddinge: takbyte och takomläggning i villastäder, småhusområden och gamla sommarstugeområden. Kostnadsfri takkontroll och fast pris.",
+  },
+  sigtuna: {
+    title: "Takläggare i Sigtuna — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Sigtuna: takbyte och takomläggning i Märsta, staden Sigtuna och Rosersberg. Kostnadsfri takkontroll och fast pris.",
+  },
+  nynashamn: {
+    title: "Takläggare i Nynäshamn — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Nynäshamn: takbyte och takomläggning i staden och i Ösmo vid Nynäsbanan. Kostnadsfri takkontroll och fast pris.",
+  },
+  botkyrka: {
+    title: "Takläggare i Botkyrka — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Botkyrka: takbyte och takomläggning i villaområdena längs stambanan, i Tumba, Tullinge och Uttran. Kostnadsfri takkontroll och fast pris.",
+  },
+  salem: {
+    title: "Takläggare i Salem — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Salem: takbyte och takomläggning, främst i Rönninge, kommunens centralort. Kostnadsfri takkontroll och fast pris.",
+  },
+  sodertalje: {
+    title: "Takläggare i Södertälje — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Södertälje: takbyte och takomläggning i villastäder vid järnvägen och gamla fritidshusområden. Kostnadsfri takkontroll och fast pris.",
+  },
+  "upplands-bro": {
+    title: "Takläggare i Upplands-Bro — Takbyte & Takrenovering",
+    description:
+      "Takläggare i Upplands-Bro: takbyte och takomläggning i Kungsängen och Bro, två stationssamhällen vid Mälaren. Kostnadsfri takkontroll och fast pris.",
+  },
 };

@@ -3152,6 +3152,158 @@
       "fore": "Bandtäckt (dubbelfalsad) plåt eller klicktak: hur de skiljer sig, vad som passar olika tak och vad falsad plåt kostar. Riktpris efter ROT, inkl. moms.",
       "efter": "Bandtäckning (dubbelfalsad plåt) eller klicktak: hur de skiljer sig, vad som passar olika tak och vad falsad plåt kostar. Riktpris efter ROT, inkl. moms.",
       "tid": "2026-10-08T00:20:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0389",
+      "path": "/taklaggare-akersberga",
+      "falt": "description",
+      "fore": "takläggare Åkersberga — takbyte & takrenovering i Åkersberga. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Åkersberga: takbyte och takomläggning i centralorten i Österåker, mellan Täby och Norrtälje. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0390",
+      "path": "/taklaggare-danderyd",
+      "falt": "description",
+      "fore": "takläggare Danderyd — takbyte & takrenovering i Danderyd. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Danderyd: takbyte och takomläggning i villastäderna Djursholm, Stocksund, Enebyberg och Danderyd. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0391",
+      "path": "/taklaggare-vaxholm",
+      "falt": "description",
+      "fore": "takläggare Vaxholm — takbyte & takrenovering i Vaxholm. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Vaxholm: takbyte och takomläggning i skärgårdskommunen, med hus i staden och på öarna. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0392",
+      "path": "/taklaggare-stockholm",
+      "falt": "description",
+      "fore": "takläggare Stockholm — takbyte & takrenovering i Stockholm. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Stockholm: takbyte och takomläggning i ytterstadens villor, från Bromma och Hässelby till Enskede. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0393",
+      "path": "/taklaggare-solna",
+      "falt": "description",
+      "fore": "takläggare Solna — takbyte & takrenovering i Solna. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Solna: takbyte och takomläggning för villor, främst i Råsunda. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0394",
+      "path": "/taklaggare-sundbyberg",
+      "falt": "description",
+      "fore": "takläggare Sundbyberg — takbyte & takrenovering i Sundbyberg. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Sundbyberg: takbyte och takomläggning, särskilt i villasamhällena Duvbo och Lilla Ursvik. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0395",
+      "path": "/taklaggare-sollentuna",
+      "falt": "description",
+      "fore": "takläggare Sollentuna — takbyte & takrenovering i Sollentuna. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Sollentuna: takbyte och takomläggning i kommundelarna längs järnvägen och vid Edsviken. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0396",
+      "path": "/taklaggare-nacka",
+      "falt": "description",
+      "fore": "takläggare Nacka — takbyte & takrenovering i Nacka. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Nacka: takbyte och takomläggning i villor, egnahem och hus som började som sommarstugor. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0397",
+      "path": "/taklaggare-varmdo",
+      "falt": "description",
+      "fore": "takläggare Värmdö — takbyte & takrenovering i Värmdö. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare på Värmdö: takbyte och takomläggning i Gustavsberg, på Ingarö och mot Stavsnäs. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0398",
+      "path": "/taklaggare-tyreso",
+      "falt": "description",
+      "fore": "takläggare Tyresö — takbyte & takrenovering i Tyresö. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Tyresö: takbyte och takomläggning i Trollbäcken och de gamla fritidshusområdena österut. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0399",
+      "path": "/taklaggare-haninge",
+      "falt": "description",
+      "fore": "takläggare Haninge — takbyte & takrenovering i Haninge. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Haninge: takbyte och takomläggning i villaområdena längs Nynäsbanan och vid Drevviken. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0400",
+      "path": "/taklaggare-jarfalla",
+      "falt": "description",
+      "fore": "takläggare Järfälla — takbyte & takrenovering i Järfälla. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Järfälla: takbyte och takomläggning i villaområden, från egnahemsområden till småhusstäder. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0401",
+      "path": "/taklaggare-huddinge",
+      "falt": "description",
+      "fore": "takläggare Huddinge — takbyte & takrenovering i Huddinge. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Huddinge: takbyte och takomläggning i villastäder, småhusområden och gamla sommarstugeområden. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0402",
+      "path": "/taklaggare-sigtuna",
+      "falt": "description",
+      "fore": "takläggare Sigtuna — takbyte & takrenovering i Sigtuna. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Sigtuna: takbyte och takomläggning i Märsta, staden Sigtuna och Rosersberg. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0403",
+      "path": "/taklaggare-nynashamn",
+      "falt": "description",
+      "fore": "takläggare Nynäshamn — takbyte & takrenovering i Nynäshamn. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Nynäshamn: takbyte och takomläggning i staden och i Ösmo vid Nynäsbanan. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0404",
+      "path": "/taklaggare-botkyrka",
+      "falt": "description",
+      "fore": "takläggare Botkyrka — takbyte & takrenovering i Botkyrka. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Botkyrka: takbyte och takomläggning i villaområdena längs stambanan, i Tumba, Tullinge och Uttran. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0405",
+      "path": "/taklaggare-salem",
+      "falt": "description",
+      "fore": "takläggare Salem — takbyte & takrenovering i Salem. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Salem: takbyte och takomläggning, främst i Rönninge, kommunens centralort. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0406",
+      "path": "/taklaggare-sodertalje",
+      "falt": "description",
+      "fore": "takläggare Södertälje — takbyte & takrenovering i Södertälje. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Södertälje: takbyte och takomläggning i villastäder vid järnvägen och gamla fritidshusområden. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-08-0407",
+      "path": "/taklaggare-upplands-bro",
+      "falt": "description",
+      "fore": "takläggare Upplands-Bro — takbyte & takrenovering i Upplands-Bro. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
+      "efter": "Takläggare i Upplands-Bro: takbyte och takomläggning i Kungsängen och Bro, två stationssamhällen vid Mälaren. Kostnadsfri takkontroll och fast pris.",
+      "tid": "2026-10-08T17:30:00+02:00"
     }
   ]
 }
