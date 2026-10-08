@@ -4,7 +4,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { locations } from "@/data/locations";
-import { ROSLAGEN_REGIONER, locationWhySections, regionIMening } from "@/data/location-sections";
+import { iRoslagen, locationWhySections, regionIMening } from "@/data/location-sections";
 import { isNearBase } from "@/data/service-reach";
 import { prerenderContent } from "../../scripts/prerender-content";
 
@@ -32,7 +32,7 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     };
     // En ort i Roslagen, en i Stockholm, en ö och en i Västerort (regionen som tidigare blev "Västerort i Roslagen")
     const r = text("Hallstavik");
-    expect(r.mening).toBe(`Hallstavik tillhör ${r.region} i Roslagen.`);
+    expect(r.mening).toBe("Hallstavik tillhör Norra Roslagen.");
     const s = text("Södermalm");
     expect(s.mening).toBe(`Södermalm tillhör ${s.region}.`);
     expect(s.rubrik).toBe(`Om Södermalm och takläggning i ${s.region}`);
@@ -40,13 +40,15 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     expect(v.mening).toBe("Bromma tillhör Västerort.");
     expect(v.rubrik).toBe("Om Bromma och takläggning i Västerort");
     const ö = text("Blidö");
-    expect(ö.mening).toBe("Blidö tillhör Mellersta skärgården i Roslagen.");
+    expect(ö.mening).toBe("Blidö tillhör mellersta skärgården i Roslagen.");
+    const k = text("Rådmansö");
+    expect(k.mening).toBe("Rådmansö tillhör kusten i Roslagen.");
     expect(ö.rubrik).toBe("Om Blidö och takläggning i mellersta skärgården");
     // Ingen mening med "i Roslagen" för en region som inte står i listan
     for (const l of locations) {
       if (l.region === "Mälardalen") continue;
       const m = locationWhySections(l, "i", false)[1].paragraph.split(" Vilka alternativ")[0];
-      expect(m.endsWith(" i Roslagen."), `${l.slug} (${l.region})`).toBe(ROSLAGEN_REGIONER.has(l.region));
+      expect(m.endsWith(" i Roslagen."), `${l.slug} (${l.region})`).toBe(iRoslagen(l.region));
     }
   });
 

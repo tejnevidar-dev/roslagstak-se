@@ -17,6 +17,8 @@ export interface LocationSection {
 export const ROSLAGEN_REGIONER = new Set(["Roslagens inland", "Norra Roslagen", "Kusten", "Mellersta skärgården", "Norra skärgården", "Rådmansöhalvön"]);
 /** Regioner vars namn är vanliga ord och därför skrivs med liten bokstav mitt i en mening; övriga behåller sin stavning. */
 const REGION_SOM_VANLIGT_ORD = new Set(["Kusten", "Mellersta skärgården", "Norra skärgården"]);
+/** "i Roslagen" läggs till bara för regioner i Roslagen vars namn inte redan innehåller "Roslag" ("Hallstavik tillhör Norra Roslagen."). */
+export const iRoslagen = (region: string): boolean => ROSLAGEN_REGIONER.has(region) && !region.includes("Roslag");
 export const regionIMening = (region: string): string => (REGION_SOM_VANLIGT_ORD.has(region) ? region.toLowerCase() : region);
 
 /** `far` = långt från basen (samma värde som LocationPage.tsx räknar), `prep` = "i" eller "på". */
@@ -28,7 +30,7 @@ export const locationWhySections = (location: LocationData, prep: string, far: b
   const region =
     location.region === "Mälardalen"
       ? `${location.name} ligger i Mälardalen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`
-      : `${location.name} tillhör ${location.region}${ROSLAGEN_REGIONER.has(location.region) ? " i Roslagen" : ""}. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`;
+      : `${location.name} tillhör ${regionIMening(location.region)}${iRoslagen(location.region) ? " i Roslagen" : ""}. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`;
   return [
     {
       heading: `Varför välja RoslagsTak som ${location.primaryKeyword}?`,

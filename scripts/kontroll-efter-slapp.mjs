@@ -274,6 +274,7 @@ for (const [path, mening, rubrik, inte] of [
   ["/taklaggare-bromma", "bromma tillhör västerort.", "om bromma och takläggning i västerort", "tillhör västerort i roslagen"],
   ["/taklaggare-solna", "solna tillhör norra stockholm.", "om solna och takläggning i norra stockholm", "tillhör norra stockholm i roslagen"],
   ["/taklaggare-blido", "blidö tillhör mellersta skärgården i roslagen.", "om blidö och takläggning i mellersta skärgården", "tillhör mellersta skärgården i roslagen i roslagen"],
+  ["/taklaggare-hallstavik", "hallstavik tillhör norra roslagen.", "om hallstavik och takläggning i norra roslagen", "norra roslagen i roslagen"],
 ]) {
   const { html } = await hamta(path);
   const stat = synligStatisk(html);
