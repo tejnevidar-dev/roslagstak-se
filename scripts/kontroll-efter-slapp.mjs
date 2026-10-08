@@ -201,6 +201,17 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
   await p.close();
 }
 
+// 14. AB5: "i generationer" är borta på /taktyper (statisk HTML och efter React), lertegelraden har den nya lydelsen
+{
+  const { html } = await hamta("/taktyper");
+  const stat = synligStatisk(html);
+  punkt("/taktyper: statisk HTML utan 'i generationer' och med den nya lertegelraden", !stat.includes("i generationer") && stat.includes("lertegel är det klassiska tegeltaket: pannor av bränd lera."));
+  const p = await renderad(ctx, "/taktyper");
+  const text = (await p.evaluate(() => document.body.innerText)).toLowerCase();
+  punkt("/taktyper: renderad sida utan 'i generationer' och med den nya lertegelraden", !text.includes("i generationer") && text.includes("lertegel är det klassiska tegeltaket: pannor av bränd lera."));
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
