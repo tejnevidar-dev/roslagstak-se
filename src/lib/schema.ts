@@ -63,7 +63,7 @@ export const services: { slug: string; name: string; description: string }[] = [
 
 
 /** Unika regioner i ortsdatan — används som areaServed på områdesnivå. */
-export const serviceRegions = Array.from(new Set(locations.map((l) => l.region))).filter((r) => r !== "Mälardalen");
+export const serviceRegions = Array.from(new Set(locations.map((l) => l.region)));
 
 /**
  * LocalBusiness (RoofingContractor) för hela sajten — tjänstekatalog,
@@ -83,7 +83,7 @@ export const buildLocalBusinessSchema = () => ({
   paymentAccepted: "Faktura",
   parentOrganization: { "@id": ORG_ID },
   description:
-    "Takfirma med bas i Norrtälje. Takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen och Storstockholm. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti.",
+    "Takfirma med bas i Norrtälje. Takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen, Storstockholm och Mälardalen. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti.",
   address: {
     "@type": "PostalAddress",
     addressLocality: NAP.addressLocality,
@@ -93,7 +93,7 @@ export const buildLocalBusinessSchema = () => ({
   geo: { "@type": "GeoCoordinates", latitude: NAP.lat, longitude: NAP.lng },
   areaServed: [
     ...serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
-    ...locations.filter((loc) => loc.region !== "Mälardalen").map((loc) => ({ "@type": "Place", name: loc.name })),
+    ...locations.map((loc) => ({ "@type": "Place", name: loc.name })),
   ],
   knowsAbout: [
     "Takbyte",
@@ -110,7 +110,7 @@ export const buildLocalBusinessSchema = () => ({
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Takarbeten i Roslagen och Storstockholm",
+    name: "Takarbeten i Roslagen, Storstockholm och Mälardalen",
     itemListElement: services.map((service) => ({
       "@type": "Offer",
       itemOffered: {
