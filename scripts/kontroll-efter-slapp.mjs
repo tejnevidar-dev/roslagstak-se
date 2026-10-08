@@ -225,6 +225,7 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
     if (!/Riktpriser efter ROT-avdrag finns på prissidan:/.test(html.replace(/<[^>]+>/g, " ")) || !/href="\/(?:tjanster\/tegeltak|material\/betongpannor|material\/tp20-plattak)#pris"/.test(html)) saknas.push(g);
   }
   punkt("Prisordsmeningen med länkar till prisavsnitten finns i alla 15 guider (statisk HTML)", saknas.length === 0, saknas.length ? "saknas: " + saknas.join(", ") : "15 av 15");
+}
 
 // 14. AB5: "i generationer" är borta på /taktyper (statisk HTML och efter React), lertegelraden har den nya lydelsen
 {
