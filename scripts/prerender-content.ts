@@ -106,6 +106,10 @@ import { LANDING_TEXT, LEAD_FORM_SUBTITLE, landingTrust } from "../src/data/land
 import { AD_FAQS, AD_STEPS, AD_TEXT, AD_TRUST } from "../src/data/ad-landing-text";
 import { QUOTE_CONFIG, QUOTE_PAGE, FREE_CONSULT } from "../src/data/offert-text";
 import { GOOGLE_REVIEWS_TEXT } from "../src/data/google-reviews-text";
+import { BLOG_TEMPLATE, blogHasAside } from "../src/data/blog-template-text";
+import { ISLAND_TEXT, ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_PAGE, ROOF_TYPE_ORDER, ROOF_TYPE_TEXTS, roofPriceText, roofTypesIntroText } from "../src/data/taktyper-text";
+import { ROT_FORBEHALL as TAKTYP_ROT_FORBEHALL, STALLNING_MENING as TAKTYP_STALLNING } from "../src/data/prices";
+import { RELATED_LINKS_INTRO as TAKTYP_RELATED_INTRO } from "../src/data/related-links-text";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -461,13 +465,20 @@ const staticPages: Record<string, PrerenderPage> = {
     intro:
       "Vi lägger betongpannor, lertegel, TP20-plåt, pannplåt, dubbelfalsad plåt (bandtäckning) och papptak. Här ser du materialen sida vid sida, med riktpris och länk till mer om vart och ett.",
     ...buildBody([
-      "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder.",
-      "Pannplåt är takplåt av stål som har pressats så att den ser ut som ett tak av takpannor.",
-      "Dubbelfalsat plåttak, även kallat bandtäckning, är den klassiska formen av plåttak: långa plåtbanor som fogas ihop genom att kanterna viks samman, utan en enda synlig skruv genom taket.",
-      "Lertegel är det klassiska tegeltaket: pannor av bränd lera.",
-      "Betongpannor är gjutna pannor som ger ett klassiskt pannat tak.",
-      "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak.",
-      "Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",
+      // Sidans block i samma ordning och med samma ord som RoofTypes, IslandSpecialist och RoofTypesPage (AD4; H1 och hero-text orörda)
+      ROOF_TYPES_PAGE.eyebrow,
+      ROOF_TYPES_HEADING.meta,
+      { h: `${ROOF_TYPES_HEADING.titleA} ${ROOF_TYPES_HEADING.titleB}` },
+      roofTypesIntroText(),
+      ...ROOF_TYPE_ORDER.flatMap((id) => [{ h: ROOF_TYPE_TEXTS[id].name, level: 3 as const }, ROOF_TYPE_TEXTS[id].sentence]),
+      { h: ROOF_PRICE_HEADING, level: 3 as const },
+      roofPriceText(TAKTYP_STALLNING, TAKTYP_ROT_FORBEHALL),
+      ISLAND_TEXT.eyebrow,
+      { h: ISLAND_TEXT.heading },
+      ...ISLAND_TEXT.highlights.flatMap((h) => [{ h: h.title, level: 3 as const }, h.description]),
+      ISLAND_TEXT.note,
+      { h: ROOF_TYPES_PAGE.relatedTitle },
+      TAKTYP_RELATED_INTRO,
       // Frågorna och svaren som FaqSection visar på sidan (samma data som FAQPage-schemat nedan)
       { h: "Frågor om taktyper och material" },
       "Pris, taklutning och vad som avgör valet av material.",
@@ -1015,7 +1026,16 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: post.excerpt,
       h1: post.title,
       intro: post.excerpt,
-      ...buildBody(guideContent(post).map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p)))),
+      // Guidens text, därefter mallens fasta block i BlogPost.tsx ordning (AD4): rutan, länkrubriken, uppmaningen och relaterade guider
+      ...buildBody([
+        ...guideContent(post).map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p))),
+        ...(blogHasAside(post.content.length) ? [`${BLOG_TEMPLATE.asideLead} ${BLOG_TEMPLATE.asideRest}`] : []),
+        { h: BLOG_TEMPLATE.linksHeading },
+        { h: BLOG_TEMPLATE.ctaHeading },
+        BLOG_TEMPLATE.ctaText,
+        ...(relatedPosts(post, 4).length ? [{ h: BLOG_TEMPLATE.relatedHeading }] : []),
+        ...relatedPosts(post, 4).flatMap((p) => [{ h: p.title, level: 3 as const }, p.excerpt]),
+      ]),
       links: [
         ...primaryLinks,
         ...guideContent(post).flatMap(inlineMdLinks),

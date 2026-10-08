@@ -1,4 +1,5 @@
 import { roofTypeFaqs } from "@/data/roof-type-faqs";
+import { ROOF_TYPES_PAGE } from "@/data/taktyper-text";
 import { lazy, Suspense, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -46,7 +47,7 @@ const RoofTypesPage = () => {
           <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Taktyper", path: "/taktyper" }]} withSchema={false} />
         </div>
         <PageHero
-          eyebrow="Taktyper"
+          eyebrow={ROOF_TYPES_PAGE.eyebrow}
           title="Vilket tak passar ditt hus?"
           text="Vi lägger betongpannor, lertegel, TP20-plåt, pannplåt, dubbelfalsad plåt (bandtäckning) och papptak. Här ser du materialen sida vid sida, med riktpris och länk till mer om vart och ett."
         />
@@ -60,7 +61,7 @@ const RoofTypesPage = () => {
           faqs={roofTypeFaqs}
           path="/taktyper"
         />
-        <RelatedLinks currentPath="/taktyper" title="Mer om tak och pris" />
+        <RelatedLinks currentPath="/taktyper" title={ROOF_TYPES_PAGE.relatedTitle} />
       </main>
       <Footer />
     </>

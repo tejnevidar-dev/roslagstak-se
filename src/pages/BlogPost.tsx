@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { BLOG_TEMPLATE, blogHasAside } from "@/data/blog-template-text";
 import { Fragment, useEffect } from "react";
 import { Calendar, Clock, ArrowRight, Phone } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -125,10 +126,10 @@ const BlogPost = () => {
                 const lead = paragraph.match(/^(Steg \d+ — [^:]{2,70}|Vanliga misstag|Så kan RoslagsTak hjälpa): /);
                 return (
                   <Fragment key={i}>
-                  {i === 3 + (all.length - post.content.length) && post.content.length > 6 && (
+                  {i === 3 + (all.length - post.content.length) && blogHasAside(post.content.length) && (
                     <aside className="rounded-2xl border border-border bg-card p-5" aria-label="Kostnadsfri takkontroll">
                       <p className="text-sm text-card-foreground">
-                        <strong className="font-semibold">Osäker på hur ditt tak mår?</strong> Vi gör en kostnadsfri takkontroll på plats, utan förpliktelser.
+                        <strong className="font-semibold">{BLOG_TEMPLATE.asideLead}</strong> {BLOG_TEMPLATE.asideRest}
                       </p>
                       <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
                         <Link to="/takkontroll" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
@@ -161,7 +162,7 @@ const BlogPost = () => {
 
             {/* Internal links */}
             <div className="bg-card border border-border rounded-2xl p-6 mt-10">
-              <h2 className="font-display text-lg text-card-foreground mb-3">Läs mer om tak i Roslagen</h2>
+              <h2 className="font-display text-lg text-card-foreground mb-3">{BLOG_TEMPLATE.linksHeading}</h2>
               <div className="grid sm:grid-cols-2 gap-2">
                 {serviceForSlug(post.slug) && (
                   <Link to={serviceForSlug(post.slug)!.to} className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline sm:col-span-2">
@@ -213,8 +214,8 @@ const BlogPost = () => {
 
             {/* CTA */}
             <div className="bg-primary/10 rounded-2xl p-8 mt-8 text-center">
-              <h2 className="font-display text-xl text-foreground mb-2">Behöver du hjälp med ditt tak?</h2>
-              <p className="text-muted-foreground text-sm mb-4">Kostnadsfri takkontroll utan förpliktelser. Vi återkopplar inom 24 timmar.</p>
+              <h2 className="font-display text-xl text-foreground mb-2">{BLOG_TEMPLATE.ctaHeading}</h2>
+              <p className="text-muted-foreground text-sm mb-4">{BLOG_TEMPLATE.ctaText}</p>
               <Link
                 to="/takkontroll"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors hover:animate-subtle-pulse"
@@ -235,7 +236,7 @@ const BlogPost = () => {
           {/* Related posts */}
           {otherPosts.length > 0 && (
             <div className="max-w-3xl mx-auto mt-16 pt-12 border-t border-border">
-              <h2 className="font-display text-xl text-foreground mb-6">Relaterade artiklar om tak</h2>
+              <h2 className="font-display text-xl text-foreground mb-6">{BLOG_TEMPLATE.relatedHeading}</h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {otherPosts.map((p) => (
                   <Link

@@ -1,28 +1,12 @@
 import { Anchor, Ship, Wrench, ArrowRight } from "lucide-react";
+import { ISLAND_TEXT } from "@/data/taktyper-text";
 
 /**
  * Skärgårdsblocket på /taktyper (Marknadschefen, backlog 1cl, underlag-taktyper-2026-10-05.md avsnitt 5): tre kort och ett
  * stycke. Ingen ö-lista (öarna utan bilväg, 10o), ingen "samma villkor som på fastlandet", ingen tätskiktsgaranti och
  * Blidö och Singö nämns högst en gång. Ö-lydelsen är den ur location-mall.ts.
  */
-const highlights = [
-  {
-    icon: Ship,
-    title: "Uppdrag i skärgården",
-    description: "Vi tar uppdrag i Roslagen och Storstockholm.",
-  },
-  {
-    icon: Wrench,
-    title: "Riktiga jobb",
-    description:
-      "Vi har gjort kompletta takbyten på Blidö och Singö i Norrtälje kommun. Båda finns med bilder under Projekt.",
-  },
-  {
-    icon: Anchor,
-    title: "Fast pris",
-    description: "Du får ett fast pris i offerten. Vi lämnar 10 års utförandegaranti på det arbete vi utför.",
-  },
-];
+const highlights = [Ship, Wrench, Anchor].map((icon, i) => ({ icon, ...ISLAND_TEXT.highlights[i] }));
 
 const IslandSpecialist = () => {
   return (
@@ -33,9 +17,9 @@ const IslandSpecialist = () => {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Skärgården</p>
+          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">{ISLAND_TEXT.eyebrow}</p>
           <h2 id="island-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Tak i skärgården
+            {ISLAND_TEXT.heading}
           </h2>
         </div>
 
@@ -57,9 +41,7 @@ const IslandSpecialist = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-card border border-border rounded-2xl p-8 md:p-10">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan
-              ordnas. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert
-              med fast pris.
+              {ISLAND_TEXT.note}
             </p>
             <div className="mt-8">
               <a

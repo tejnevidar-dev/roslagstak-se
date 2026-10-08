@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp, Coins } from "lucide-react";
 import { ROT_FORBEHALL, STALLNING_MENING, belopp } from "@/data/prices";
 import SectionHeading from "@/components/SectionHeading";
+import { ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_INTRO, ROOF_TYPE_TEXTS, roofPriceText } from "@/data/taktyper-text";
 import imgTp20 from "@/assets/roof-type-tp20.jpg";
 import imgDubbelfalsat from "@/assets/roof-type-dubbelfalsat.jpg";
 import imgLertegel from "@/assets/roof-type-lertegel.jpg";
@@ -28,8 +29,7 @@ type RoofType = {
 const roofTypes: RoofType[] = [
   {
     id: "tp20",
-    name: "TP20-plåttak",
-    sentence: "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder.",
+    ...ROOF_TYPE_TEXTS.tp20,
     post: "TP20 plåttak",
     to: "/material/tp20-plattak",
     linkLabel: "Läs mer om TP20-plåttak",
@@ -38,8 +38,7 @@ const roofTypes: RoofType[] = [
   },
   {
     id: "pannplat",
-    name: "Pannplåt",
-    sentence: "Pannplåt är takplåt av stål som har pressats så att den ser ut som ett tak av takpannor.",
+    ...ROOF_TYPE_TEXTS.pannplat,
     post: "Pannplåttak",
     to: "/material/pannplat",
     linkLabel: "Läs mer om pannplåt",
@@ -48,9 +47,7 @@ const roofTypes: RoofType[] = [
   },
   {
     id: "dubbelfalsat",
-    name: "Dubbelfalsat plåttak (bandtäckning)",
-    sentence:
-      "Dubbelfalsat plåttak, även kallat bandtäckning, är den klassiska formen av plåttak: långa plåtbanor som fogas ihop genom att kanterna viks samman, utan en enda synlig skruv genom taket.",
+    ...ROOF_TYPE_TEXTS.dubbelfalsat,
     post: "Dubbelfalsat plåttak",
     to: "/tjanster/platarbeten#falsat",
     linkLabel: "Läs mer om dubbelfalsat plåttak",
@@ -59,8 +56,7 @@ const roofTypes: RoofType[] = [
   },
   {
     id: "lertegel",
-    name: "Lertegel",
-    sentence: "Lertegel är det klassiska tegeltaket: pannor av bränd lera.",
+    ...ROOF_TYPE_TEXTS.lertegel,
     post: "Lertegeltak",
     to: "/tjanster/tegeltak",
     linkLabel: "Läs mer om tegeltak i lertegel",
@@ -69,8 +65,7 @@ const roofTypes: RoofType[] = [
   },
   {
     id: "betongpanne",
-    name: "Betongpannor",
-    sentence: "Betongpannor är gjutna pannor som ger ett klassiskt pannat tak.",
+    ...ROOF_TYPE_TEXTS.betongpanne,
     post: "Betongpannetak",
     to: "/material/betongpannor",
     linkLabel: "Läs mer om betongpannor",
@@ -79,8 +74,7 @@ const roofTypes: RoofType[] = [
   },
   {
     id: "papptak",
-    name: "Papptak",
-    sentence: "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak.",
+    ...ROOF_TYPE_TEXTS.papptak,
     post: "Papptak",
     to: "/material/papptak",
     linkLabel: "Läs mer om papptak",
@@ -94,16 +88,16 @@ const RoofTypes = () => {
     <section id="taktyper" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="rooftypes-heading">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
-          meta="Materialbibliotek"
+          meta={ROOF_TYPES_HEADING.meta}
           id="rooftypes-heading"
-          title={<>Taktyper — <em className="font-normal italic text-primary">material och pris</em></>}
+          title={<>{ROOF_TYPES_HEADING.titleA} <em className="font-normal italic text-primary">{ROOF_TYPES_HEADING.titleB}</em></>}
           intro={
             <>
-              Öppna en taktyp för att läsa mer om materialet.{" "}
+              {ROOF_TYPES_INTRO.before}
               <a href="/takkontroll" className="text-primary underline decoration-primary/40 hover:no-underline">
-                Boka kostnadsfri takkontroll
+                {ROOF_TYPES_INTRO.link}
               </a>
-              . Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.
+              {ROOF_TYPES_INTRO.after}
             </>
           }
           className="mb-14 lg:mb-20"
@@ -182,11 +176,9 @@ const RoofTypes = () => {
 
         {/* Vad kostar takbyte? */}
         <div className="max-w-2xl mx-auto mt-16 text-center">
-          <h3 className="font-display text-2xl text-foreground mb-4">Vad kostar takbyte?</h3>
+          <h3 className="font-display text-2xl text-foreground mb-4">{ROOF_PRICE_HEADING}</h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Riktpriserna är efter ROT-avdrag och inkl. moms och gäller material och arbete. {STALLNING_MENING} Exakt pris
-            beror på takets storlek, lutning och underlagets skick. Du får ett fast pris i offerten efter en kostnadsfri
-            takkontroll. {ROT_FORBEHALL}
+            {roofPriceText(STALLNING_MENING, ROT_FORBEHALL)}
           </p>
         </div>
       </div>
