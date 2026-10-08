@@ -249,8 +249,8 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
     punkt(`Rättade lydelser borta i statisk HTML: ${path}`, kvar.length === 0, kvar.join(" | "));
   }
   const p = await renderad(ctx, "/");
-  await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } });
-  await p.waitForTimeout(600);
+  // Långsamt, så att de uppskjutna sektionerna (DeferMount) hinner monteras
+  for (let y = 0; y < 9000; y += 400) { await p.evaluate((yy) => window.scrollTo(0, yy), y); await p.waitForTimeout(250); }
   const text = (await p.evaluate(() => document.body.innerText)).toLowerCase();
   const kvarR = GAMLA.filter((g) => text.includes(g));
   punkt("Rättade lydelser borta på startsidan efter React", kvarR.length === 0, kvarR.join(" | "));
