@@ -971,17 +971,14 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const images: NonNullable<PrerenderPage["images"]> = {
     };
     paragraphs.push(heroCaption);
+    // Faktarutan som etikett och värde i egna stycken (dt/dd i ProjectPage.tsx), i samma ordning som på sidan (AG1, paket 24)
     paragraphs.push(
-      [
-        `Ort: ${project.locationName}, Norrtälje kommun.`,
-        `Jobb: ${project.serviceName}.`,
-        area ? `Yta: ${area}.` : "",
-        `Material: ${project.material}.`,
-        ...facts.map((x) => `${x.label}: ${x.value}.`),
-        project.period ? `Utfört: ${project.period}.` : "",
-      ]
-        .filter(Boolean)
-        .join(" "),
+      "Ort", `${project.locationName.split(",")[0]}, Norrtälje kommun`,
+      "Jobb", project.serviceName,
+      ...(area ? ["Yta", area] : []),
+      "Material", project.material,
+      ...facts.flatMap((x) => [x.label, x.value]),
+      ...(project.period ? ["Utfört", project.period] : []),
     );
     if (intro) {
       h("Om jobbet", 2);
@@ -999,6 +996,12 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h(compare.lead as string, 2);
       paragraphs.push(stripInlineMd(compare.body));
     }
+    // Bildgalleriet: rubrik och bildtexter (img.alt), som i ProjectPage.tsx
+    const galleryAlts = (project as { galleryAlts?: string[] }).galleryAlts ?? [];
+    if (galleryAlts.length > 0) {
+      h("Bilder från jobbet", 2);
+      paragraphs.push(...galleryAlts);
+    }
     if (process) {
       h(process.lead as string, 2);
       for (const para of process.body.split("\n\n")) paragraphs.push(stripInlineMd(para));
@@ -1010,6 +1013,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     for (const p of closing) paragraphs.push(stripInlineMd(p.body));
     h("Boka en kostnadsfri takkontroll utan förpliktelser", 2);
     paragraphs.push("Svar inom 24 timmar.");
+    h("Fler projekt och tjänster", 2);
+    paragraphs.push(RELATED_LINKS_INTRO);
     return {
       title: `${project.title} — referensjobb`,
       description: (project as { metaDescription?: string }).metaDescription ?? project.summary,

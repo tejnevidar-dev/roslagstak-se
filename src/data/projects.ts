@@ -97,7 +97,8 @@ export interface Project {
   gallery: { src: string; alt: string; webp?: string; width?: number; height?: number }[];
 }
 
-type ProjectImages = Pick<Project, "heroImage" | "heroResponsive" | "gallery">;
+/** Bildtexterna (alt) står i project-texts.ts (galleryAlts), så att den statiska HTML:en kan läsa dem utan bildimporter (AG1, paket 24). */
+type ProjectImages = Pick<Project, "heroImage" | "heroResponsive"> & { gallery: Omit<Project["gallery"][number], "alt">[] };
 
 /** Bilder per projekt-slug. Texten kommer från src/data/project-texts.ts. */
 const projectImages: Record<string, ProjectImages> = {
@@ -115,14 +116,12 @@ const projectImages: Record<string, ProjectImages> = {
         webp: imgBlidoDetail1Webp,
         width: 1440,
         height: 1080,
-        alt: "Taknocken, skorstenarna och gaveln på nära håll.",
       },
       {
         src: imgBlidoDetail2,
         webp: imgBlidoDetail2Webp,
         width: 1440,
         height: 1080,
-        alt: "Huset från baksidan, med altanen.",
       },
     ],
   },
@@ -140,7 +139,6 @@ const projectImages: Record<string, ProjectImages> = {
         webp: imgSingoDetail1Webp,
         width: 1280,
         height: 720,
-        alt: "Taket rakt ovanifrån. Här syns hur pannorna på huvudtaket möter plåten på de lägre delarna.",
       },
     ],
   },
@@ -159,21 +157,18 @@ const projectImages: Record<string, ProjectImages> = {
         webp: imgGrisslehamnDetail2Webp,
         width: 1440,
         height: 1080,
-        alt: "Huset med det nya taket, altanen och en mindre byggnad intill.",
       },
       {
         src: imgGrisslehamnDetail1,
         webp: imgGrisslehamnDetail1Webp,
         width: 1440,
         height: 1080,
-        alt: "Taket rakt uppifrån. Nocken går längs med huset, och skorstenen sitter vid ena gaveln.",
       },
       {
         src: imgGrisslehamnDetail3,
         webp: imgGrisslehamnDetail3Webp,
         width: 1440,
         height: 1080,
-        alt: "Huset och tomten sedda på avstånd, med skog runt om.",
       },
     ],
   },
@@ -182,7 +177,7 @@ const projectImages: Record<string, ProjectImages> = {
 export const projects: Project[] = projectTexts.map((t) => {
   const images = projectImages[t.slug];
   if (!images) throw new Error(`Projektet ${t.slug} saknar bilder i projects.ts (projectImages)`);
-  return { ...t, ...images };
+  return { ...t, ...images, gallery: images.gallery.map((g, i) => ({ ...g, alt: t.galleryAlts[i] ?? "" })) };
 });
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

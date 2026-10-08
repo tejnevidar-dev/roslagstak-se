@@ -28,6 +28,8 @@ export interface ProjectText {
   heroCaption?: string;
   description: string[];
   heroAlt: string;
+  /** Bildtexterna under galleribilderna, i samma ordning som bilderna i projects.ts. */
+  galleryAlts: string[];
   /** Stabil sökväg under public/og/ för delningsbilden i statisk HTML. */
   ogImage?: string;
 }
@@ -35,6 +37,7 @@ export interface ProjectText {
 export const projectTexts: ProjectText[] = [
   {
     "slug": "takrenovering-blido",
+    "galleryAlts": ["Taknocken, skorstenarna och gaveln på nära håll.","Huset från baksidan, med altanen."],
     "title": "Nytt tak på Blidö",
     "locationName": "Blidö, Norrtälje",
     "locationSlug": "blido",
@@ -84,6 +87,7 @@ export const projectTexts: ProjectText[] = [
   },
   {
     "slug": "takbyte-singo",
+    "galleryAlts": ["Taket rakt ovanifrån. Här syns hur pannorna på huvudtaket möter plåten på de lägre delarna."],
     "title": "Nytt tak på Singö",
     "locationName": "Singö",
     "locationSlug": "singo",
@@ -124,6 +128,7 @@ export const projectTexts: ProjectText[] = [
   },
   {
     "slug": "takbyte-grisslehamn",
+    "galleryAlts": ["Huset med det nya taket, altanen och en mindre byggnad intill.","Taket rakt uppifrån. Nocken går längs med huset, och skorstenen sitter vid ena gaveln.","Huset och tomten sedda på avstånd, med skog runt om."],
     "title": "Nytt tak i Grisslehamn",
     "locationName": "Grisslehamn",
     "locationSlug": "grisslehamn",

@@ -409,6 +409,18 @@ for (const path of ["/omraden/kusten", "/omraden/vasterort"]) {
   await p.close();
 }
 
+// 26. AG1 projektsidor: rubriker (h2/h3) efter React finns alla i den statiska HTML:en (H1 undantagen)
+for (const path of ["/projekt/takbyte-singo", "/projekt/takbyte-grisslehamn"]) {
+  const { html } = await hamta(path);
+  const stat = synligStatisk(html);
+  const p = await renderad(ctx, path);
+  for (let y = 0; y < 12000; y += 400) { await p.evaluate((yy) => window.scrollTo(0, yy), y); await p.waitForTimeout(250); } // långsamt, så att uppskjutna sektioner monteras
+  const rubriker = await p.evaluate(() => [...document.querySelectorAll("main h2, main h3")].map((h) => (h.textContent || "").replace(/[\s\u00A0]+/g, " ").trim().replace(/[.:]$/, "")).filter((t) => t.length >= 3));
+  const saknas = [...new Set(rubriker)].filter((t) => !stat.includes(t.toLowerCase()));
+  punkt(`${path}: alla h2/h3 efter React finns i den statiska HTML:en`, saknas.length === 0, saknas.length ? `saknas: ${saknas.slice(0, 4).join(" | ").slice(0, 120)}` : `${new Set(rubriker).size} rubriker`);
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
