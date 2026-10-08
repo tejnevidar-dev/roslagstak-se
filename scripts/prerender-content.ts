@@ -102,6 +102,7 @@ const brfBody = (opts: { place?: { prep: string; name: string }; nearby?: string
   ]);
 };
 
+import { LANDING_TEXT, LEAD_FORM_SUBTITLE, landingTrust } from "../src/data/landing-text";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -374,15 +375,26 @@ const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
       description: s.seoDescription,
       h1: `${s.h1} ${s.h1Accent}`,
       intro: s.intro,
-      paragraphs: [
+      ...buildBody([
+        s.eyebrow,
+        ...landingTrust(s.slug),
+        s.formTitle,
+        LEAD_FORM_SUBTITLE,
+        ...(s.slug === "takkontroll" ? [LANDING_TEXT.takkontrollNote] : []),
+        { h: s.listHeading },
         s.listIntro,
-        ...s.list.map((i) => `${i.title}: ${i.text}`),
-        ...s.steps.map((st, n) => `Steg ${n + 1}, ${st.title}: ${st.text}`),
+        ...s.list.flatMap((i) => [{ h: i.title, level: 3 as const }, i.text]),
+        { h: s.stepsHeading },
+        ...s.steps.flatMap((st) => [{ h: st.title, level: 3 as const }, st.text]),
+        { h: s.extraHeading },
         ...s.extraParagraphs,
         s.priceNote,
-        ...s.faqs.map((f) => `${f.question} ${stripInlineMd(f.answer)}`),
+        { h: s.faqTitle },
+        LANDING_TEXT.faqIntro,
+        ...s.faqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+        { h: LANDING_TEXT.relatedHeading },
         `Ring ${PHONE} eller skicka en förfrågan på ${s.path}. Vi återkommer inom 24 timmar.`,
-      ],
+      ]),
       links: [...primaryLinks, ...s.related.map((r) => ({ href: r.to, label: r.label }))],
       breadcrumbs: [
         { name: "Hem", path: "/" },

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LEAD_FORM_SUBTITLE } from "@/data/landing-text";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { utmLine } from "@/lib/utm";
 /* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
@@ -106,7 +107,7 @@ const LeadForm = ({
     >
       <div>
         <h2 className="font-display text-2xl text-foreground">{title}</h2>
-        <p className="mt-1 text-sm text-muted-foreground">Svar inom 24 timmar. Utan förpliktelser.</p>
+        <p className="mt-1 text-sm text-muted-foreground">{LEAD_FORM_SUBTITLE}</p>
       </div>
       <div>
         <label htmlFor="lead-name" className={labelClass}>Namn</label>

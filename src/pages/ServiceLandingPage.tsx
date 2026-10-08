@@ -11,22 +11,11 @@ import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 import { getLandingService } from "@/data/landing-services";
-import { GARANTI_RENOVERING_CHIP, RENOVERING_LANDING_SLUGS } from "@/data/guarantee";
+import { LANDING_TEXT, landingTrust } from "@/data/landing-text";
 import NotFound from "@/pages/NotFound";
 import { linkPhone } from "@/lib/inline-md";
 
-/** Korta jobb där inget nytt tätskikt läggs: tätskiktschipet visas inte (Marknadschefen och juristen, backlog 1ce). */
-const NO_TATSKIKT_CHIP_LANDING = ["takreparation", "hangrannor", "akut-lackage"];
-
-const trustFor = (slug: string) => [
-  "10 års utförandegaranti",
-  ...(NO_TATSKIKT_CHIP_LANDING.includes(slug)
-    ? []
-    : [RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti via MATAKI"]),
-  "Fast pris efter takkontroll",
-  "Arbete enligt AMA",
-  "Svar inom 24 timmar",
-];
+const trustFor = landingTrust;
 
 /** Indexerbar landningssida för en tjänst med formulär: /takreparation och /takkontroll. */
 const ServiceLandingPage = ({ slug }: { slug: string }) => {
@@ -112,7 +101,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
               />
               {service.slug === "takkontroll" && (
                 <p className="mt-4 text-center text-[13px] font-medium text-muted-foreground">
-                  En kontaktperson · Fast pris · Utan förpliktelser
+                  {LANDING_TEXT.takkontrollNote}
                 </p>
               )}
             </div>
@@ -186,14 +175,14 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
 
         <FaqSection
           title={service.faqTitle}
-          intro="Pris, garanti, ROT och hur det går till."
+          intro={LANDING_TEXT.faqIntro}
           faqs={service.faqs}
           path={service.path}
         />
 
         <section className="border-b border-border bg-muted/30 py-16 md:py-20" aria-label="Relaterade sidor">
           <div className="mx-auto max-w-7xl px-6">
-            <h2 className="font-display text-2xl text-foreground md:text-3xl">Läs vidare</h2>
+            <h2 className="font-display text-2xl text-foreground md:text-3xl">{LANDING_TEXT.relatedHeading}</h2>
             <ul className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
               {service.related.map((link) => (
                 <li key={link.to} className="bg-background">
