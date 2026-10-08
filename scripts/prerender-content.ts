@@ -742,6 +742,8 @@ const serviceIntro = (title: string, description: string): PrerenderPage => ({
 });
 
 const NEARBY_PROJECT_MAX_KM = 30;
+/** Orter närmare basen än så här (km) får ingen avståndsmening i geoFactsParagraph. */
+const NARA_BASEN_KM = 5;
 
 /**
  * Datadriven stycke för LOCATION-sidor (Marknadschefens beslut 2026-09-29, efter fyndet att 25
@@ -753,7 +755,8 @@ const NEARBY_PROJECT_MAX_KM = 30;
 const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
   const prep = loc.isIsland ? "på" : "i";
   const parts: string[] = [
-    `${loc.name} tillhör ${loc.region} och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
+    // Orter nära basen (under 5 km) får inte avståndsledet: "Norrtälje ligger cirka 1 km från vår bas i Norrtälje" är meningslöst (AG3)
+    `${loc.name} tillhör ${loc.region}${distanceFromBaseKm(loc) < NARA_BASEN_KM ? "" : ` och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje`}. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
   ];
 
   const exactProject = projectSummaries.find((p) => p.locationSlug === loc.slug);
