@@ -105,7 +105,7 @@ const extrahera = ({ BLOCK, BLOCK_UTAN_A }) => {
     /* Delar: elementets egna textstycken (en listpunkt eller ett kort byggs av flera spann; textContent klistrar ihop dem utan mellanrum) */
     const delar = [];
     const gang = document.createTreeWalker(e, NodeFilter.SHOW_TEXT);
-    for (let n = gang.nextNode(); n; n = gang.nextNode()) { const d = (n.textContent || "").replace(/[\s\u00a0]+/g, " ").trim(); if (d.length >= 3) delar.push(d); }
+    for (let n = gang.nextNode(); n; n = gang.nextNode()) { const d = (n.textContent || "").replace(/[\s\u00a0]+/g, " ").trim(); if (d.length >= 3 && !/^\d{1,2}\.?$/.test(d)) delar.push(d); } /* listräknare ("01.", "02") är inte text */
     // Länk, knapp eller listpunkt som bara är en länk räknas som navigering, resten som text
     const norm1 = (x) => (x || "").replace(/[\s ]+/g, " ").trim();
     const bara = e.tagName === "LI" && e.children.length === 1 && e.children[0].tagName === "A" && norm1(e.children[0].textContent) === t;

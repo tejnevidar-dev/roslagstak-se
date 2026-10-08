@@ -799,8 +799,15 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: sp.description,
       h1: sp.h1,
       intro: sp.intro,
-      paragraphs: sp.paragraphs,
-      headingAt: sp.headingAt,
+      // Omdömesbandet sist (GoogleReviews i ServiceDetail.tsx), utanför serviceStaticPage eftersom paritetstestet renderar sidan utan omdömesbandet (AG1, paket 21)
+      ...(() => {
+        const rev = buildBody([GOOGLE_REVIEWS_TEXT.bandEyebrow, { h: GOOGLE_REVIEWS_TEXT.title }, GOOGLE_REVIEWS_TEXT.ingress]);
+        const n = sp.paragraphs.length;
+        return {
+          paragraphs: [...sp.paragraphs, ...rev.paragraphs],
+          headingAt: { ...sp.headingAt, ...Object.fromEntries(Object.entries(rev.headingAt).map(([k, v]) => [Number(k) + n, v])) },
+        };
+      })(),
       links: [
         ...primaryLinks,
         ...serviceLinks,

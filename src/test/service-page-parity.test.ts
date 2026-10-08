@@ -20,6 +20,7 @@ import ServiceDetail from "@/pages/ServiceDetail";
 import { services } from "@/components/Services";
 import { prerenderContent } from "../../scripts/prerender-content";
 import { serviceStaticPage } from "@/data/service-page";
+import { GOOGLE_REVIEWS_TEXT } from "@/data/google-reviews-text";
 
 const norm = (t: string) => t.replace(/\s+/g, " ").trim();
 
@@ -61,6 +62,9 @@ const renderedHeadingList = (slug: string): string[] => {
   );
 };
 
+// Omdömesbandet (GoogleReviews) är mockat till null här men står i den statiska HTML:en (AG1, paket 21): tas bort ur jämförelsen, och testet tjanstesidor-static-parity kontrollerar det.
+const OMDOMESBAND = new Set([GOOGLE_REVIEWS_TEXT.bandEyebrow, GOOGLE_REVIEWS_TEXT.title, GOOGLE_REVIEWS_TEXT.ingress].map(norm));
+
 describe("tjänstesidornas spegling mot synlig text", () => {
   for (const { slug } of services) {
     it(`/tjanster/${slug}: statisk HTML = synlig text`, () => {
@@ -83,7 +87,7 @@ describe("tjänstesidornas spegling mot synlig text", () => {
       const hidden = new Set(sp.hiddenAnswers.map(norm));
       const missingInVisible = [page!.intro, ...page!.paragraphs]
         .map(norm)
-        .filter((t) => t && !hidden.has(t) && !visibleBlob.includes(t) && !visibleFlat.includes(t) && !visible.some((v) => t.includes(v) && v.length > 0 && t === v));
+        .filter((t) => t && !OMDOMESBAND.has(t) && !hidden.has(t) && !visibleBlob.includes(t) && !visibleFlat.includes(t) && !visible.some((v) => t.includes(v) && v.length > 0 && t === v));
       // en spegelrad som "k: v" (spec) eller kombinerad rad räknas som funnen om alla delar syns
       const stillMissing = missingInVisible.filter((t) => {
         const parts = t.split(/: /);
@@ -93,6 +97,7 @@ describe("tjänstesidornas spegling mot synlig text", () => {
 
       // 3. rubriker: samma h2/h3 i speglingen som på den renderade sidan (G1)
       const staticHeadings = Object.entries(page!.headingAt ?? {})
+        .filter(([i]) => !OMDOMESBAND.has(norm(page!.paragraphs[Number(i)])))
         .map(([i, level]) => `h${level}:${norm(page!.paragraphs[Number(i)].replace(/[.:]$/, ""))}`)
         .sort();
       const renderedHeadings = renderedHeadingList(slug).sort();
