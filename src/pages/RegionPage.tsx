@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
+import { REGION_PAGE_TEXT } from "@/data/region-page-text";
 import { REGION_EXTRA_LINKS } from "@/data/hub-links";
 import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
@@ -170,13 +171,13 @@ const RegionPage = () => {
               })),
               ...(REGION_EXTRA_LINKS[region] ?? []).map((l) => ({ to: l.href, label: l.label, description: "Mer om takomläggning." })),
             ]}
-            title="Nästa steg"
-            intro="Priser, taktyper och hur ett takprojekt går till — oavsett vilken ort du bor i."
+            title={REGION_PAGE_TEXT.nextTitle}
+            intro={REGION_PAGE_TEXT.nextIntro}
           />
 
           <p className="mt-10 text-sm text-muted-foreground">
             <Link to="/omraden" className="text-primary hover:underline">
-              Se alla områden i Roslagen och Storstockholm
+              {REGION_PAGE_TEXT.allRegionsLink}
             </Link>
           </p>
         </div>

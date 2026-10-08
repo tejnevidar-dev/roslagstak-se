@@ -108,6 +108,7 @@ import { QUOTE_CONFIG, QUOTE_PAGE, FREE_CONSULT } from "../src/data/offert-text"
 import { GOOGLE_REVIEWS_TEXT } from "../src/data/google-reviews-text";
 import { SERVICE_LOCATION_TEXT } from "../src/data/service-location-text";
 import { MATERIAL_PAGE_TEXT, materialPricesSentence } from "../src/data/material-page-text";
+import { REGION_PAGE_TEXT } from "../src/data/region-page-text";
 import { BLOG_TEMPLATE, blogHasAside } from "../src/data/blog-template-text";
 import { ISLAND_TEXT, ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_PAGE, ROOF_TYPE_ORDER, ROOF_TYPE_TEXTS, roofPriceText, roofTypesIntroText } from "../src/data/taktyper-text";
 import { ROT_FORBEHALL as TAKTYP_ROT_FORBEHALL, STALLNING_MENING as TAKTYP_STALLNING } from "../src/data/prices";
@@ -1108,6 +1109,13 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(rt ? rt.body.map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p))) : []),
         ...(villaAreasParagraph(regionSlugs[region]) ? [villaAreasParagraph(regionSlugs[region])!] : []),
         `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
+        // Omdömesbandet, "Nästa steg" och länktexten sist, som i RegionPage.tsx (AG1, paket 23)
+        GOOGLE_REVIEWS_TEXT.bandEyebrow,
+        { h: GOOGLE_REVIEWS_TEXT.title },
+        GOOGLE_REVIEWS_TEXT.ingress,
+        { h: REGION_PAGE_TEXT.nextTitle },
+        REGION_PAGE_TEXT.nextIntro,
+        REGION_PAGE_TEXT.allRegionsLink,
       ]),
       links: [
         ...primaryLinks,

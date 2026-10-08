@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
+import { REGION_PAGE_TEXT } from "@/data/region-page-text";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
 import { regionOrder, regionIntros, regionSlugs } from "@/data/regions";
@@ -114,7 +115,7 @@ const AreasPage = () => {
           <RelatedLinks
             currentPath="/omraden"
             title="Nästa steg"
-            intro="Priser, taktyper och hur ett takprojekt går till — oavsett vilken ort du bor i."
+            intro={REGION_PAGE_TEXT.nextIntro}
           />
 
         </div>
