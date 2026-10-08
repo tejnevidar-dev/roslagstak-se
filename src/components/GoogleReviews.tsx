@@ -1,5 +1,6 @@
 import { Star, ExternalLink } from "lucide-react";
 import { googleReviews } from "@/data/google-reviews";
+import { GOOGLE_REVIEWS_TEXT } from "@/data/google-reviews-text";
 
 const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=RoslagsTak+recensioner";
 
@@ -38,16 +39,14 @@ interface GoogleReviewsProps {
   className?: string;
 }
 
-/** Samma lydelse som på /recensioner. Inga fasta stjärnor och inga påståenden om vad Googles sida visar (regel 5, U1). */
-const RECENSIONER_INGRESS =
-  "Läs omdömen om RoslagsTak direkt på vår Google-företagsprofil. Vi publicerar inga egenskrivna recensioner och kan inte kontrollera vem som skriver på Google.";
+const RECENSIONER_INGRESS = GOOGLE_REVIEWS_TEXT.ingress;
 
 /**
  * Hänvisar till företagets riktiga omdömen på Google.
  * Vi publicerar inga egenskrivna omdömen på sajten.
  */
 const GoogleReviews = ({
-  title = "Omdömen från våra kunder",
+  title = GOOGLE_REVIEWS_TEXT.title,
   intro,
   variant = "panel",
   place,
@@ -79,7 +78,7 @@ const GoogleReviews = ({
           <div className="col-span-12 lg:col-span-7">
             <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
               <span aria-hidden="true" className="h-px w-10 bg-accent/50" />
-              Omdömen
+              {GOOGLE_REVIEWS_TEXT.bandEyebrow}
             </p>
             <h2 className="mt-5 max-w-[28ch] font-display text-[clamp(1.6rem,2.6vw,2.25rem)] font-bold leading-[1.16] tracking-[-0.02em]">
               {title}

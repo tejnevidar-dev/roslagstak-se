@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { QUOTE_CONFIG } from "@/data/offert-text";
 import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle, Loader2 } from "lucide-react";
 import { withUtm } from "@/lib/utm";
 import { supabase } from "@/integrations/supabase/client";
@@ -127,12 +128,12 @@ const QuoteConfigurator = () => {
     <section ref={sectionRef} id="offert" className="border-b border-border bg-warm py-24 md:py-36" aria-labelledby="quote-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Offert & Rådgivning</p>
+          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">{QUOTE_CONFIG.eyebrow}</p>
           <h2 id="quote-heading" className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Hur vill du ha hjälp?
+            {QUOTE_CONFIG.heading}
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Välj mellan att beskriva ditt tak själv eller bli kontaktad av en av våra säljare. Vi svarar inom 24 timmar.
+            {QUOTE_CONFIG.intro}
           </p>
         </div>
 
@@ -183,9 +184,9 @@ const QuoteConfigurator = () => {
             <div className="flex items-start gap-3 bg-primary/5 border border-primary/20 rounded-xl p-4">
               <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Beskriv ditt tak</p>
+                <p className="text-sm font-semibold text-foreground">{QUOTE_CONFIG.bannerTitle}</p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Fyll i dina takval nedan och lämna dina uppgifter. Vi svarar inom 24 timmar, kostnadsfritt och utan förpliktelser.
+                  {QUOTE_CONFIG.bannerText}
                 </p>
               </div>
             </div>
@@ -447,12 +448,12 @@ const QuoteConfigurator = () => {
 
           <p className="text-xs text-muted-foreground text-center">
             {mode === "configure"
-              ? "Helt kostnadsfritt. Vi svarar inom 24 timmar."
-              : "Helt kostnadsfritt. Vi svarar inom 24 timmar från att formuläret skickas in."}
+              ? QUOTE_CONFIG.finePrintConfigure
+              : QUOTE_CONFIG.finePrintConsultation}
           </p>
           <p className="text-xs text-muted-foreground text-center">
-            Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
-            <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
+            {QUOTE_CONFIG.privacy}{" "}
+            <a href="/cookies" className="underline hover:text-foreground">{QUOTE_CONFIG.privacyLink}</a>.
           </p>
         </form>
       </div>

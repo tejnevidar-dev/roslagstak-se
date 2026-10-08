@@ -1,4 +1,5 @@
 import { ArrowRight, Phone } from "lucide-react";
+import { FREE_CONSULT } from "@/data/offert-text";
 
 const FreeConsultation = () => {
   return (
@@ -7,17 +8,16 @@ const FreeConsultation = () => {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent-foreground/55">
-              Kostnadsfri takkontroll
+              {FREE_CONSULT.eyebrow}
             </p>
             <h2
               id="consultation-heading"
               className="font-display text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-[1.04] tracking-[-0.03em] text-accent-foreground"
             >
-              Osäker på taktyp? Vi hjälper dig att välja rätt.
+              {FREE_CONSULT.heading}
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-accent-foreground/70">
-              Du behöver inte vara expert på tak. Ring oss eller skicka en förfrågan — vi går igenom
-              vilken taktyp som passar just ditt hus, oavsett om det ligger på en ö eller längs kusten.
+              {FREE_CONSULT.text}
             </p>
             <a
               href="tel:+46701543639"
@@ -29,11 +29,8 @@ const FreeConsultation = () => {
 
           <div className="lg:col-span-7">
             <div className="border-t border-accent-foreground/20">
-              {[
-                { no: "01", title: "Ring direkt", text: "Prata med en takläggare, inte en säljare.", href: "tel:+46701543639", cta: "Ring" },
-                { no: "02", title: "Svar inom 24 timmar", text: "Skicka ett meddelande och få besked snabbt.", href: "#kontakt", cta: "Skicka meddelande" },
-                { no: "03", title: "Inga förpliktelser", text: "Kostnadsfri takkontroll — inga krav.", href: "#offert", cta: "Räkna på ditt tak" },
-              ].map((item) => (
+              {FREE_CONSULT.items
+                .map((item) => (
                 <div
                   key={item.no}
                   className="flex flex-col gap-4 border-b border-accent-foreground/20 py-7 sm:flex-row sm:items-center sm:justify-between"

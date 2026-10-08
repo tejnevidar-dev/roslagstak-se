@@ -103,6 +103,9 @@ const brfBody = (opts: { place?: { prep: string; name: string }; nearby?: string
 };
 
 import { LANDING_TEXT, LEAD_FORM_SUBTITLE, landingTrust } from "../src/data/landing-text";
+import { AD_FAQS, AD_STEPS, AD_TEXT, AD_TRUST } from "../src/data/ad-landing-text";
+import { QUOTE_CONFIG, QUOTE_PAGE, FREE_CONSULT } from "../src/data/offert-text";
+import { GOOGLE_REVIEWS_TEXT } from "../src/data/google-reviews-text";
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -416,7 +419,27 @@ const staticPages: Record<string, PrerenderPage> = {
     h1: "Få offert på takbyte i Roslagen",
     intro:
       "Beskriv ditt tak i några steg, så svarar vi inom 24 timmar, eller boka kostnadsfri takkontroll.",
-    paragraphs: [
+    ...buildBody([
+      // Sidans block i samma ordning och med samma ord som QuotePage, QuoteConfigurator och FreeConsultation (AD3; H1 orörd)
+      QUOTE_PAGE.eyebrow,
+      QUOTE_PAGE.text,
+      QUOTE_CONFIG.eyebrow,
+      { h: QUOTE_CONFIG.heading },
+      QUOTE_CONFIG.intro,
+      QUOTE_CONFIG.bannerTitle,
+      QUOTE_CONFIG.bannerText,
+      QUOTE_CONFIG.finePrintConfigure,
+      `${QUOTE_CONFIG.privacy} ${QUOTE_CONFIG.privacyLink}.`,
+      FREE_CONSULT.eyebrow,
+      { h: FREE_CONSULT.heading },
+      FREE_CONSULT.text,
+      ...FREE_CONSULT.items.flatMap((i) => [{ h: i.title, level: 3 as const }, i.text]),
+      GOOGLE_REVIEWS_TEXT.bandEyebrow,
+      { h: GOOGLE_REVIEWS_TEXT.title },
+      GOOGLE_REVIEWS_TEXT.ingress,
+      { h: QUOTE_PAGE.relatedTitle },
+      RELATED_LINKS_INTRO,
+      // Text som bara finns i den statiska HTML:en (ingen motsvarighet som eget block i React)
       "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Du får ett fast pris i offerten efter kostnadsfri takkontroll, och vi lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Vad som ingår står i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår.",
       "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.",
@@ -426,7 +449,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Vad händer om vi hittar skador under arbetet? Skadad råspont syns först när det gamla taket är rivet. Hittar vi något visar vi dig omfattningen och lämnar ett skriftligt pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande. Det enda undantaget är om något akut måste skyddas mot skada, till exempel ett öppet tak inför regn, och vi inte får tag på dig. Då gör vi bara det som är nödvändigt.",
       `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi återkopplar inom 24 timmar.`,
-    ],
+    ]),
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }],
   },
@@ -1269,14 +1292,28 @@ export const noindexPageMeta = (path: string): { title: string; description: str
  * React-sidorna visar (delas via src/data/ad-landings.ts), så att första målningen och LCP-elementet är ordagrant detsamma
  * före och efter hydrering. Sidorna är noindex och ingår inte i prerenderContent (inga schemanoder, ingen sitemap, inga textkontroller).
  */
-export const noindexPageBody = (path: string): { h1: string; intro: string; hero: keyof typeof HERO_STYLES } | null => {
+export const noindexPageBody = (path: string): { h1: string; intro: string; hero: keyof typeof HERO_STYLES; paragraphs?: string[]; headingAt?: Record<number, 2 | 3> } | null => {
   const clean = path.replace(/\/$/, "");
   if (clean === "/boka-takkontroll") return { h1: `${bookingCopy.h1Lead} ${bookingCopy.h1Accent}`, intro: bookingCopy.intro, hero: "service" };
   const m = clean.match(/^\/offert\/([a-z0-9-]+)$/);
   const landing = m ? getAdLanding(m[1]) : undefined;
   if (!landing) return null;
   const c = adLandingCopy(landing);
-  return { h1: `${c.h1Lead} ${c.h1Accent}`, intro: c.intro, hero: "ad" };
+  // Resten av annonssidan (AD3): trygghetsraderna, formulärets rubrik, stegen, prisnoten, frågorna och slutrubriken, ordagrant som AdLandingPage.tsx
+  const body = buildBody([
+    `Takläggare ${landing.prep} ${landing.name}`,
+    ...AD_TRUST,
+    "Boka kostnadsfri takkontroll",
+    LEAD_FORM_SUBTITLE,
+    { h: AD_TEXT.stepsHeading },
+    ...AD_STEPS.flatMap((s) => [{ h: s.title, level: 3 as const }, s.text]),
+    { h: AD_TEXT.priceHeading },
+    AD_TEXT.priceText,
+    { h: AD_TEXT.faqHeading },
+    ...AD_FAQS.flatMap((f) => [{ h: f.q, level: 3 as const }, f.a]),
+    { h: AD_TEXT.finalHeading },
+  ]);
+  return { h1: `${c.h1Lead} ${c.h1Accent}`, intro: c.intro, hero: "ad", paragraphs: body.paragraphs, headingAt: body.headingAt };
 };
 
 export const prerenderContent = (path: string): PrerenderPage | null => {

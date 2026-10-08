@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
+import { QUOTE_PAGE } from "@/data/offert-text";
 import { useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -36,9 +37,9 @@ const QuotePage = () => {
           <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }]} withSchema={true} />
         </div>
         <PageHero
-          eyebrow="Offert & rådgivning"
+          eyebrow={QUOTE_PAGE.eyebrow}
           title="Få pris på ditt takprojekt"
-          text="Beskriv ditt tak i några steg, så svarar vi inom 24 timmar — eller låt oss ringa upp och boka en kostnadsfri takkontroll."
+          text={QUOTE_PAGE.text}
         />
         <Suspense fallback={null}>
           <QuoteConfigurator />
@@ -46,7 +47,7 @@ const QuotePage = () => {
           <FAQ />
         </Suspense>
         <GoogleReviews variant="band" />
-        <RelatedLinks currentPath="/offert" title="Läs vidare innan du bestämmer dig" />
+        <RelatedLinks currentPath="/offert" title={QUOTE_PAGE.relatedTitle} />
       </main>
       <Footer />
     </>

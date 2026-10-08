@@ -10,54 +10,11 @@ import {
 } from "@/components/ui/accordion";
 import LeadForm from "@/components/LeadForm";
 import { adLandingCopy, getAdLanding, type AdLanding } from "@/data/ad-landings";
+import { AD_FAQS as faqs, AD_STEPS as steps, AD_TEXT, AD_TRUST as trust } from "@/data/ad-landing-text";
 import logo from "@/assets/roslagstak-logo.png";
 
 const PHONE_DISPLAY = "070-154 36 39";
 const PHONE_HREF = "tel:0701543639";
-
-const trust = [
-  "10 års utförandegaranti",
-  "30 års tätskiktsgaranti via MATAKI",
-  "Arbete enligt AMA",
-];
-
-const steps = [
-  {
-    title: "Kostnadsfri takkontroll",
-    text: "Vi svarar inom 24 timmar och bokar en tid. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar.",
-  },
-  {
-    title: "Offert med fast pris",
-    text: "Du får en offert med fast pris. Tillägg bara efter ditt godkännande.",
-  },
-  {
-    title: "Vi utför jobbet",
-    text: "Vi utför arbetet enligt AMA. När taket är klart går vi igenom det tillsammans med dig.",
-  },
-];
-
-const faqs = [
-  {
-    q: "Vad kostar ett takbyte?",
-    a: "Priset beror på takets storlek, lutning, material och skick. Efter den kostnadsfria takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.",
-  },
-  {
-    q: "Vad ingår i priset?",
-    a: "Vad som ingår står i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår. Skadad råspont syns först när det gamla taket är rivet. Hittar vi något visar vi dig omfattningen och lämnar ett skriftligt pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande. Det enda undantaget är om något akut måste skyddas mot skada, till exempel ett öppet tak inför regn, och vi inte får tag på dig. Då gör vi bara det som är nödvändigt.",
-  },
-  {
-    q: "Hur fungerar ROT-avdraget?",
-    a: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. ROT-avdraget dras direkt på fakturan.",
-  },
-  {
-    q: "Vilken garanti får jag?",
-    a: "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
-  },
-  {
-    q: "Behöver jag bygglov?",
-    a: "För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
-  },
-];
 
 const AdLandingPage = () => {
   const { pathname } = useLocation();
@@ -135,7 +92,7 @@ const AdLandingPage = () => {
               id="ad-steps-heading"
               className="font-display text-[clamp(1.7rem,3.4vw,2.4rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-balance text-foreground lg:col-span-4"
             >
-              Så går det till
+              {AD_TEXT.stepsHeading}
             </h2>
             <ol className="lg:col-span-8">
               {steps.map((s, i) => (
@@ -162,14 +119,12 @@ const AdLandingPage = () => {
                 id="ad-price-heading"
                 className="font-display text-[clamp(1.7rem,3.4vw,2.4rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-balance text-foreground"
               >
-                Vad kostar ett takbyte?
+                {AD_TEXT.priceHeading}
               </h2>
             </div>
             <div className="lg:col-span-8">
               <p className="max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground">
-                Fast pris efter kostnadsfri takkontroll — utan förpliktelser. Som privatperson kan du få
-                ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har
-                utrymme kvar. ROT-avdraget dras direkt på fakturan.
+                {AD_TEXT.priceText}
               </p>
             </div>
           </div>
@@ -181,7 +136,7 @@ const AdLandingPage = () => {
               id="ad-faq-heading"
               className="font-display text-[clamp(1.7rem,3.4vw,2.4rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-balance text-foreground lg:col-span-4"
             >
-              Vanliga frågor
+              {AD_TEXT.faqHeading}
             </h2>
             <Accordion type="single" collapsible className="border-t border-border lg:col-span-8">
               {faqs.map((f, i) => (
@@ -199,7 +154,7 @@ const AdLandingPage = () => {
         <section className="bg-primary py-14 text-primary-foreground md:py-16">
           <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 md:flex-row md:items-center">
             <h2 className="max-w-[24ch] font-display text-[clamp(1.6rem,3vw,2.2rem)] font-semibold leading-tight text-balance">
-              Redo att få ett fast pris på ditt tak?
+              {AD_TEXT.finalHeading}
             </h2>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a

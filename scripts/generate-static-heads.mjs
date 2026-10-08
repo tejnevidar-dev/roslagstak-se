@@ -278,6 +278,12 @@ const noindexBodyFor = (path) => {
   return `<div id="prerendered-content" style="max-width:1280px;margin:0 auto;padding:96px 24px 48px;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
       <h1 style="${hero.h1}">${esc(page.h1)}</h1>
       <p style="${hero.intro}">${esc(page.intro)}</p>
+      ${(page.paragraphs ?? [])
+        .map((p, i) => {
+          const level = page.headingAt?.[i];
+          return level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${esc(p)}</p>`;
+        })
+        .join("\n      ")}
     </div>`;
 };
 
