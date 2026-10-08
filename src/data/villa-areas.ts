@@ -265,6 +265,20 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
   },
 };
 
+/**
+ * Villaområdesavsnittet som separata block (rubrik, områdesnamn, anteckning, källa) i samma ordning som React-sektionen i LocationPage.tsx,
+ * så att varje dt/dd finns som eget stycke i den statiska HTML:en (AD5).
+ */
+export const villaAreasBlocks = (key: string): (string | { h: string; level: 3 })[] => {
+  const data = villaAreasByPage[key];
+  if (!data) return [];
+  return [
+    { h: `Villaområden i ${data.municipality}`, level: 3 as const },
+    ...data.areas.flatMap((a) => [a.name, a.note ?? `${a.types}. ${a.period}.`]),
+    VILLA_AREAS_SOURCE,
+  ];
+};
+
 /** Platt text för förrenderingen (samma innehåll som React-sektionen). */
 export const villaAreasParagraph = (key: string): string | null => {
   const data = villaAreasByPage[key];

@@ -122,7 +122,9 @@ import { locationWhySections } from "../src/data/location-sections";
 import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { comboOverrides } from "../src/data/combo-overrides";
-import { villaAreasParagraph, villaAreasByPage } from "../src/data/villa-areas";
+import { villaAreasParagraph, villaAreasByPage, villaAreasBlocks } from "../src/data/villa-areas";
+import { LOCATION_PAGE_TEXT } from "../src/data/location-page-text";
+import { buildLocalSections } from "../src/data/local-sections";
 import { serviceStaticPage, serviceSchemaNodes } from "../src/data/service-page";
 
 const villaAreaLinks = (key: string) =>
@@ -1178,20 +1180,39 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(loc.process
           ? [
               { h: "Så går det till", level: 3 as const, suffix: "." },
-              loc.process.steps.map((st, n) => `${n + 1}. ${st.replace(/\*\*/g, "")}`).join(" "),
+              // En rad per steg (som listpunkterna i LocationPage.tsx), utan siffra: ordningen är textens ordning
+              ...loc.process.steps.map((st) => st.replace(/\*\*/g, "")),
               ...loc.process.paragraphs,
             ]
           : []),
-        ...(loc.factBox ? [loc.factBox.map((f) => `${f.label}: ${f.value}.`).join(" ")] : []),
+        // Faktarutan: etikett och värde som egna stycken (dt/dd i LocationPage.tsx)
+        ...(loc.factBox ? loc.factBox.flatMap((f) => [f.label, f.value]) : []),
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
-        ...(villaAreasParagraph(loc.slug) ? [villaAreasParagraph(loc.slug)!] : []),
+        ...villaAreasBlocks(loc.slug),
         ...(mall ? [] : [geoFactsParagraph(loc)]),
+        // Lokala fakta (dt/dd), taktjänster, pris och länkrubrik i samma ordning som LocationPage.tsx (AD5)
+        ...buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value]),
+        { h: LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), level: 3 as const },
+        ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name),
+        { h: LOCATION_PAGE_TEXT.priceHeading(prep, loc.name), level: 3 as const },
+        LOCATION_PAGE_TEXT.priceText(prep, loc.name, loc.isIsland),
+        { h: LOCATION_PAGE_TEXT.linksHeading(prep, loc.name), level: 3 as const },
         // Avsnitten "Varför välja RoslagsTak …" och "Om <ort> och takläggning i <region>" (samma funktion som LocationPage.tsx, AA3).
         ...locationWhySections(loc, prep, !loc.isIsland && !isNearBase(loc)).flatMap((s) => [{ h: s.heading, level: 3 as const }, s.paragraph]),
         // Hela FAQ:n som sidan visar (samma funktion som LocationPage.tsx), med rubriker, och FAQPage-schema nedan.
         { h: `Vanliga frågor om takbyte ${prep} ${loc.name}`, level: 2 as const },
         ...locationFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
         `Ring ${PHONE} för en kostnadsfri takkontroll ${prep} ${loc.name}.`,
+        // Sidokolumnen och sidans fot i LocationPage.tsx (AD5)
+        { h: LOCATION_PAGE_TEXT.asideHeading, level: 3 as const },
+        LOCATION_PAGE_TEXT.asideText(prep, loc.name),
+        ...(locations.some((l) => loc.nearbyLocations.includes(l.name)) ? [{ h: LOCATION_PAGE_TEXT.nearbyHeading, level: 3 as const }] : []),
+        { h: LOCATION_PAGE_TEXT.problemsHeading, level: 3 as const },
+        { h: LOCATION_PAGE_TEXT.sidebarServicesHeading, level: 3 as const },
+        { h: LOCATION_PAGE_TEXT.allLocationsHeading },
+        GOOGLE_REVIEWS_TEXT.bandEyebrow,
+        { h: GOOGLE_REVIEWS_TEXT.title },
+        GOOGLE_REVIEWS_TEXT.ingress,
       ]),
       jsonLd: [faqLd(locationFaqs, `/taklaggare-${loc.slug}`)],
       links: [

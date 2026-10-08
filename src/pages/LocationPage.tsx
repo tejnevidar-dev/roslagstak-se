@@ -19,6 +19,7 @@ import { locations } from "@/data/locations";
 import { getLocationWithMall, OAR_UTAN_BILVAG, usesMall } from "@/data/location-mall";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
+import { LOCATION_PAGE_TEXT } from "@/data/location-page-text";
 import { regionSlugs } from "@/data/regions";
 import { projects } from "@/data/projects";
 import { getNearbyProject } from "@/data/project-nearby";
@@ -412,18 +413,10 @@ const LocationPage = () => {
 
 
                 <h3 className="font-display text-xl text-foreground mb-3">
-                  Våra taktjänster {prep} {location.name}
+                  {LOCATION_PAGE_TEXT.servicesHeading(prep, location.name)}
                 </h3>
                 <ul className="space-y-2 mb-6">
-                  {[
-                    `Takomläggning och takbyte ${prep} ${location.name}`,
-                    `Takrenovering ${prep} ${location.name}`,
-                    `Plåtarbeten, takavvattning och hängrännor`,
-                    `Betongpannor, lertegel, TP20, pannplåt och dubbelfalsat plåttak`,
-                    `Takkupor och takfönster`,
-                    `Taktvätt och takmålning`,
-                    `Kostnadsfri takkontroll`,
-                  ].map((item) => (
+                  {LOCATION_PAGE_TEXT.serviceItems(prep, location.name).map((item) => (
                     <li key={item} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
@@ -432,20 +425,16 @@ const LocationPage = () => {
                 </ul>
 
                 <h3 className="font-display text-xl text-foreground mb-3">
-                  Vad kostar takbyte {prep} {location.name}?
+                  {LOCATION_PAGE_TEXT.priceHeading(prep, location.name)}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Priset för ett takbyte {prep} {location.name} beror på takets storlek, lutning, materialval och underlagets skick, oavsett om du väljer TP20-plåttak eller dubbelfalsat plåttak.
-                  {location.isIsland
-                    ? " Vad som ingår står i offerten."
-                    : " Du får fast pris i offerten efter kostnadsfri takkontroll."}
-                  {" "}Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.
+                  {LOCATION_PAGE_TEXT.priceText(prep, location.name, location.isIsland)}
                 </p>
 
                 {/* Deep internal links */}
                 <div className="bg-card border border-border rounded-2xl p-5 mb-6">
                   <h3 className="font-display text-lg text-card-foreground mb-3">
-                    Tjänster, priser och guider {prep} {location.name}
+                    {LOCATION_PAGE_TEXT.linksHeading(prep, location.name)}
                   </h3>
                   {indexedServiceNames.length > 0 && (
                     <p className="mb-3 text-sm text-muted-foreground">
@@ -578,10 +567,8 @@ const LocationPage = () => {
             {/* Sidebar */}
             <aside className="space-y-6">
               <div className="bg-primary text-primary-foreground rounded-2xl p-6">
-                <h3 className="font-display text-lg mb-2">Kostnadsfri takkontroll</h3>
-                <p className="text-sm opacity-90 mb-4">
-                  Boka en kostnadsfri takkontroll för ditt takprojekt {prep} {location.name}. Vi återkopplar inom 24 timmar.
-                </p>
+                <h3 className="font-display text-lg mb-2">{LOCATION_PAGE_TEXT.asideHeading}</h3>
+                <p className="text-sm opacity-90 mb-4">{LOCATION_PAGE_TEXT.asideText(prep, location.name)}</p>
                 <Link
                   to="/takkontroll"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary w-full px-6 py-3 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors hover:animate-subtle-pulse"
@@ -598,7 +585,7 @@ const LocationPage = () => {
 
               {nearby.length > 0 && (
                 <div className="bg-card border border-border rounded-2xl p-6">
-                  <h3 className="font-display text-lg text-card-foreground mb-4">Takläggare i närområdet</h3>
+                  <h3 className="font-display text-lg text-card-foreground mb-4">{LOCATION_PAGE_TEXT.nearbyHeading}</h3>
                   <div className="space-y-2">
                     {nearby.map((loc) => (
                       <Link
@@ -615,7 +602,7 @@ const LocationPage = () => {
               )}
 
               <div className="bg-card border border-border rounded-2xl p-6">
-                <h3 className="font-display text-lg text-card-foreground mb-3">Vanliga takproblem</h3>
+                <h3 className="font-display text-lg text-card-foreground mb-3">{LOCATION_PAGE_TEXT.problemsHeading}</h3>
                 <div className="space-y-2">
                   {problemsForLocation(location.slug).map((p) => (
                     <Link
@@ -630,7 +617,7 @@ const LocationPage = () => {
               </div>
 
               <div className="bg-card border border-border rounded-2xl p-6">
-                <h3 className="font-display text-lg text-card-foreground mb-3">Våra taktjänster</h3>
+                <h3 className="font-display text-lg text-card-foreground mb-3">{LOCATION_PAGE_TEXT.sidebarServicesHeading}</h3>
                 <div className="space-y-2">
                   {[
                     { name: "Takomläggning", slug: "takomlaggning" },
@@ -658,7 +645,7 @@ const LocationPage = () => {
           {/* Other locations */}
           <div className="border-t border-border pt-12">
             <h2 className="font-display text-2xl text-foreground mb-6 text-center">
-              Takläggare i Roslagen och Storstockholm
+              {LOCATION_PAGE_TEXT.allLocationsHeading}
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
               {locations.map((loc) => (
