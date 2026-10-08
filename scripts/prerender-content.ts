@@ -275,7 +275,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder.",
       "Pannplåt är takplåt av stål som har pressats så att den ser ut som ett tak av takpannor.",
       "Dubbelfalsat plåttak, även kallat bandtäckning, är den klassiska formen av plåttak: långa plåtbanor som fogas ihop genom att kanterna viks samman, utan en enda synlig skruv genom taket.",
-      "Lertegel är det klassiska tegeltaket: pannor av bränd lera som har använts på svenska hus i generationer.",
+      "Lertegel är det klassiska tegeltaket: pannor av bränd lera.",
       "Betongpannor är gjutna pannor som ger ett klassiskt pannat tak.",
       "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak.",
       "Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.",

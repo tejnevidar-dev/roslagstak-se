@@ -60,7 +60,7 @@ const roofTypes: RoofType[] = [
   {
     id: "lertegel",
     name: "Lertegel",
-    sentence: "Lertegel är det klassiska tegeltaket: pannor av bränd lera som har använts på svenska hus i generationer.",
+    sentence: "Lertegel är det klassiska tegeltaket: pannor av bränd lera.",
     post: "Lertegeltak",
     to: "/tjanster/tegeltak",
     linkLabel: "Läs mer om tegeltak i lertegel",
