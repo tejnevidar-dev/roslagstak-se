@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
+import { PROBLEM_PAGE_TEXT } from "@/data/problem-page-text";
 import NotFound from "@/pages/NotFound";
 import { getProblem, SAKERHETSRUTA, type Problem } from "@/data/problems";
 import { guidesForTitle } from "@/data/related-posts";
@@ -92,11 +93,10 @@ const ProblemPage = () => {
           {project && (
             <div className="mt-8 rounded-2xl border border-border bg-card p-6">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
-                Exempel på ett komplett takbyte
+                {PROBLEM_PAGE_TEXT.exampleHeading}
               </p>
               <p className="mt-2 leading-relaxed text-muted-foreground">
-                Vi påstår inte att det här projektet hade just det här problemet — men det visar hur ett
-                komplett takbyte kan se ut: {project.material}.
+                {PROBLEM_PAGE_TEXT.exampleText(project.material)}
               </p>
               <Link
                 to={`/projekt/${project.slug}`}
@@ -109,8 +109,7 @@ const ProblemPage = () => {
 
           <div className="mt-8 rounded-2xl bg-primary p-8 text-center text-primary-foreground">
             <p className="leading-relaxed">
-              Osäker på hur allvarligt det är? Boka en kostnadsfri takkontroll utan förpliktelser. En av våra säljare
-              tittar på taket på plats, och behöver något göras får du en offert med fast pris. Vi svarar inom 24 timmar.
+              {PROBLEM_PAGE_TEXT.ctaText}
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <Link
@@ -148,7 +147,7 @@ const ProblemPage = () => {
         </div>
 
         <div className="mx-auto max-w-7xl px-6 pb-12">
-          <p className="mb-3 text-sm font-semibold text-foreground">Vi tar uppdrag i dessa områden</p>
+          <p className="mb-3 text-sm font-semibold text-foreground">{PROBLEM_PAGE_TEXT.areasHeading}</p>
           <div className="flex flex-wrap gap-2">
             {regionLinksForProblems().map((r) => (
               <Link
@@ -164,7 +163,7 @@ const ProblemPage = () => {
 
         <RelatedLinks
           currentPath={`/takproblem/${problem.slug}`}
-          title="Fler takproblem"
+          title={PROBLEM_PAGE_TEXT.relatedTitle}
           extraLinks={[
             { to: "/takproblem", label: "Alla takproblem", description: "Fler vanliga tecken och åtgärder." },
             ...guidesForTitle(problem.title, 2).map((g) => ({ to: `/blogg/${g.slug}`, label: g.title, description: "Guide." })),

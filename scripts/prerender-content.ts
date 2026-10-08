@@ -109,6 +109,8 @@ import { GOOGLE_REVIEWS_TEXT } from "../src/data/google-reviews-text";
 import { SERVICE_LOCATION_TEXT } from "../src/data/service-location-text";
 import { MATERIAL_PAGE_TEXT, materialPricesSentence } from "../src/data/material-page-text";
 import { REGION_PAGE_TEXT } from "../src/data/region-page-text";
+import { PROBLEM_PAGE_TEXT } from "../src/data/problem-page-text";
+import { PRICES_PAGE_TEXT } from "../src/data/prices-page-text";
 import { BLOG_TEMPLATE, blogHasAside } from "../src/data/blog-template-text";
 import { ISLAND_TEXT, ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_PAGE, ROOF_TYPE_ORDER, ROOF_TYPE_TEXTS, roofPriceText, roofTypesIntroText } from "../src/data/taktyper-text";
 import { ROT_FORBEHALL as TAKTYP_ROT_FORBEHALL, STALLNING_MENING as TAKTYP_STALLNING } from "../src/data/prices";
@@ -544,16 +546,28 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vad kostar ett takbyte? Riktpriser per material efter ROT-avdrag, inkl. moms, och vad som påverkar priset. Fast pris i offerten efter kostnadsfri takkontroll.",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro: PRICE_HERO_TEXT,
-    paragraphs: [
+    // Samma block och ordning som Prices.tsx: kategori, post (namn, beskrivning, prisintervall), ROT, påverkar priset, frågor, uppmaning, omdömen, relaterat (AG1, paket 25)
+    ...buildBody([
+      PRICES_PAGE_TEXT.eyebrow,
       PRICE_NOTE,
       ...priceData.flatMap((cat) => [
-        `${cat.category}.`,
-        ...cat.items.map((it) => `${it.name}: ${it.priceRange}. ${it.description.trim()}`),
+        { h: cat.category },
+        ...cat.items.flatMap((it) => [{ h: it.name, level: 3 as const }, it.description.trim(), it.priceRange]),
       ]),
-      `${PRICE_ROT_TITLE}. ${PRICE_ROT_TEXT}`,
-      `${PRICE_FACTORS_TITLE} ${PRICE_FACTORS_TEXT}`,
-      ...priceFaqs.map((faq) => `${faq.question} ${stripInlineMd(faq.answer)}`),
-    ],
+      { h: PRICE_ROT_TITLE },
+      PRICE_ROT_TEXT,
+      { h: PRICE_FACTORS_TITLE },
+      PRICE_FACTORS_TEXT,
+      { h: PRICES_PAGE_TEXT.faqHeading },
+      ...priceFaqs.flatMap((faq) => [{ h: faq.question, level: 3 as const }, stripInlineMd(faq.answer)]),
+      { h: PRICES_PAGE_TEXT.ctaHeading },
+      PRICES_PAGE_TEXT.ctaText,
+      GOOGLE_REVIEWS_TEXT.bandEyebrow,
+      { h: GOOGLE_REVIEWS_TEXT.title },
+      GOOGLE_REVIEWS_TEXT.ingress,
+      { h: PRICES_PAGE_TEXT.relatedTitle },
+      RELATED_LINKS_INTRO,
+    ]),
     jsonLd: [faqLd(priceFaqs, "/priser")],
     links: [
       { href: "/blogg/kostnad-takbyte-2026", label: "Vad kostar ett takbyte? Hela guiden" },
@@ -847,6 +861,14 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           problem[s.key] as string,
         ]),
         SAKERHETSRUTA,
+        // Exempelrutan, uppmaningen, områdesrubriken och "Fler takproblem" som i ProblemPage.tsx (AG1, paket 25)
+        ...(problem.relatedProject && projectSummaries.find((p) => p.slug === problem.relatedProject)
+          ? [PROBLEM_PAGE_TEXT.exampleHeading, PROBLEM_PAGE_TEXT.exampleText(projectSummaries.find((p) => p.slug === problem.relatedProject)!.material), projectSummaries.find((p) => p.slug === problem.relatedProject)!.title]
+          : []),
+        PROBLEM_PAGE_TEXT.ctaText,
+        PROBLEM_PAGE_TEXT.areasHeading,
+        { h: PROBLEM_PAGE_TEXT.relatedTitle },
+        RELATED_LINKS_INTRO,
       ]),
       links: [
         ...primaryLinks,

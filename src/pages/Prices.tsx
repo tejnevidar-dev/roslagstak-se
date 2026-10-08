@@ -9,6 +9,7 @@ import PageHero from "@/components/PageHero";
 import RelatedLinks from "@/components/RelatedLinks";
 import GoogleReviews from "@/components/GoogleReviews";
 import QuickContactFacts from "@/components/QuickContactFacts";
+import { PRICES_PAGE_TEXT } from "@/data/prices-page-text";
 import {
   Accordion,
   AccordionContent,
@@ -54,7 +55,7 @@ const Prices = () => {
         </div>
         <PageHero
           compact
-          eyebrow="Priser 2026"
+          eyebrow={PRICES_PAGE_TEXT.eyebrow}
           title="Vad kostar takbyte och takrenovering i Roslagen?"
           text={PRICE_HERO_TEXT}
         />
@@ -127,7 +128,7 @@ const Prices = () => {
           {/* FAQ */}
           <div className="max-w-3xl mx-auto mb-16">
             <h2 className="font-display text-2xl text-foreground mb-6 text-center flex items-center justify-center gap-2">
-              <HelpCircle className="w-5 h-5 text-primary" /> Vanliga frågor om priser
+              <HelpCircle className="w-5 h-5 text-primary" /> {PRICES_PAGE_TEXT.faqHeading}
             </h2>
             <Accordion type="single" collapsible className="space-y-3">
               {priceFaqs.map((faq, i) => (
@@ -147,10 +148,10 @@ const Prices = () => {
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-accent rounded-2xl p-8">
               <h2 className="font-display text-2xl text-accent-foreground mb-2">
-                Vill du veta exakt vad ditt tak kostar?
+                {PRICES_PAGE_TEXT.ctaHeading}
               </h2>
               <p className="text-accent-foreground/70 text-sm mb-6">
-                Konfigurera din offert eller kontakta oss för kostnadsfri takkontroll.
+                {PRICES_PAGE_TEXT.ctaText}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -170,7 +171,7 @@ const Prices = () => {
           </div>
         </div>
         <GoogleReviews variant="band" />
-        <RelatedLinks currentPath="/priser" title="Relaterat till pris" />
+        <RelatedLinks currentPath="/priser" title={PRICES_PAGE_TEXT.relatedTitle} />
       </main>
       <Footer />
     </>
