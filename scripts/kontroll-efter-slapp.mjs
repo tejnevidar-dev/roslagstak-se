@@ -238,6 +238,26 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
   await p.close();
 }
 
+// 21. AF1/paket 12: de rättade lydelserna är borta (statisk HTML och startsidan efter React)
+{
+  const GAMLA = ["skjuter fram ett takbyte", "räkna fram ett prisspann", "tätt inklätt i plåt", "takvård och plåtarbeten", "sanering via behörig firma", "behörig saneringsfirma", "material ej angivet", "upp till 50 000 kr"];
+  const SIDOR = ["/", "/tjanster/eternit-asbest", "/taklaggare-karlslund", "/taklaggare-arholma", "/takbyte-var-2027", "/blogg/eternittak-asbest-sanering"];
+  for (const path of SIDOR) {
+    const { html } = await hamta(path);
+    const stat = synligStatisk(html);
+    const kvar = GAMLA.filter((g) => stat.includes(g));
+    punkt(`Rättade lydelser borta i statisk HTML: ${path}`, kvar.length === 0, kvar.join(" | "));
+  }
+  const p = await renderad(ctx, "/");
+  await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } });
+  await p.waitForTimeout(600);
+  const text = (await p.evaluate(() => document.body.innerText)).toLowerCase();
+  const kvarR = GAMLA.filter((g) => text.includes(g));
+  punkt("Rättade lydelser borta på startsidan efter React", kvarR.length === 0, kvarR.join(" | "));
+  punkt("Startsidans nya kort: taktvätt och takkupor har sidornas egna beskrivningar", text.includes("taktvätt: vi börjar med en kostnadsfri takkontroll") && text.includes("takkupor och takfönster: vi börjar med en kostnadsfri takkontroll"));
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);

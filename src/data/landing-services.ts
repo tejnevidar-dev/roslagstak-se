@@ -596,7 +596,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Kan jag få ROT-avdrag?",
-        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, upp till 50 000 kr per person och år.",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år.",
       },
       {
         question: "Vilka områden arbetar ni i?",

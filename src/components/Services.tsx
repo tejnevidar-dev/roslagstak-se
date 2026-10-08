@@ -54,7 +54,7 @@ export const services: Service[] = [
     title: "Takkupor & fönster",
     short: "Ljus på vinden",
     description:
-      "Takkupor och takfönster som ger mer dagsljus och gör vindsvåningen användbar — tätt inklätt i plåt.",
+      "Takkupor och takfönster: vi börjar med en kostnadsfri takkontroll utan förpliktelser. Du får en rapport om takets skick och fast pris i offerten.",
   },
   {
     icon: IconInspection,
@@ -78,13 +78,13 @@ export const services: Service[] = [
     title: "Taktvätt",
     short: "Tvätt & målning",
     description:
-      "Taktvätt, behandling mot mossa och takmålning som fräschar upp taket och skjuter fram ett takbyte flera år.",
+      "Taktvätt: vi börjar med en kostnadsfri takkontroll utan förpliktelser. Du får en rapport om takets skick och fast pris i offerten. Svar inom 24 timmar.",
   },
   {
     icon: IconAsbestos,
     slug: "eternit-asbest",
     title: "Byta eternittak",
-    short: "Sanering via behörig firma",
+    short: "Sanering via firma med tillstånd",
     description:
       "Eternit är skivor av asbestcement. Ska ett sådant tak bytas är arbetet delat mellan två företag: en saneringsfirma river det gamla taket, och vi lägger det nya.",
   },

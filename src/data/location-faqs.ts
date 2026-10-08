@@ -76,7 +76,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Kan ni byta ett eternittak ${prep} ${name}?`,
-      answer: `Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma, som river det gamla taket, och därefter lägger vi det nya taket. Misstänker du att taket innehåller asbest kan du boka en kostnadsfri takkontroll.`,
+      answer: `Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en saneringsfirma med tillstånd, som river det gamla taket, och därefter lägger vi det nya taket. Misstänker du att taket innehåller asbest kan du boka en kostnadsfri takkontroll.`,
     },
   );
 

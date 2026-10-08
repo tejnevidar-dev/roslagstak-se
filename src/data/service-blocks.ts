@@ -274,7 +274,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   },
 
   "eternit-asbest": {
-    seoTitle: "Byta eternittak – sanering via behörig firma",
+    seoTitle: "Byta eternittak – sanering via firma med tillstånd",
     seoDescription:
       "Har du eternittak? En firma med tillstånd river det gamla taket, vi lägger det nya. Fast pris på det nya taket i offerten. Kostnadsfri takkontroll.",
     blockPlacement: "before-spec",
@@ -286,7 +286,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       kind: "regulatory",
       eyebrow: "Vem gör vad",
       heading: "Saneringen görs av en annan firma, det nya taket gör vi",
-      intro: "Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma.",
+      intro: "Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en saneringsfirma med tillstånd.",
       steps: [
         { code: "01", title: "Vi", text: "Vi gör takkontrollen och lägger det nya taket: nytt underlag, ny läkt och nytt takmaterial." },
         { code: "02", title: "Saneringsfirman", text: "Saneringsfirman river det gamla taket och tar hand om materialet." },

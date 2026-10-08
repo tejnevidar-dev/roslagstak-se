@@ -31,7 +31,7 @@ const ServiceArea = () => {
                 <span className="italic text-accent">ytterskärgårdens öar.</span>
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
-                Vi utför takbyte, takrenovering, takvård och plåtarbeten i {areas.length} områden i
+                Vi utför takbyte, takrenovering och plåtarbeten i {areas.length} områden i
                 Roslagen och hela Storstockholm. Vi tar också uppdrag i skärgården och har gjort
                 kompletta takbyten på Blidö och Singö.
               </p>

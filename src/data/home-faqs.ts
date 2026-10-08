@@ -38,6 +38,6 @@ export const homeFaqs = [
   },
   {
     question: "Kan ni riva eternittak med asbest?",
-    answer: "Nej. Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma, som river det gamla taket. Vi lägger det nya. Boka en kostnadsfri takkontroll så går vi igenom ditt tak.",
+    answer: "Nej. Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en saneringsfirma med tillstånd, som river det gamla taket. Vi lägger det nya. Boka en kostnadsfri takkontroll så går vi igenom ditt tak.",
   },
 ];
