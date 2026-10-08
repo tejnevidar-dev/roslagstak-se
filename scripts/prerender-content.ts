@@ -106,6 +106,7 @@ import { LANDING_TEXT, LEAD_FORM_SUBTITLE, landingTrust } from "../src/data/land
 import { AD_FAQS, AD_STEPS, AD_TEXT, AD_TRUST } from "../src/data/ad-landing-text";
 import { QUOTE_CONFIG, QUOTE_PAGE, FREE_CONSULT } from "../src/data/offert-text";
 import { GOOGLE_REVIEWS_TEXT } from "../src/data/google-reviews-text";
+import { SERVICE_LOCATION_TEXT } from "../src/data/service-location-text";
 import { BLOG_TEMPLATE, blogHasAside } from "../src/data/blog-template-text";
 import { ISLAND_TEXT, ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_PAGE, ROOF_TYPE_ORDER, ROOF_TYPE_TEXTS, roofPriceText, roofTypesIntroText } from "../src/data/taktyper-text";
 import { ROT_FORBEHALL as TAKTYP_ROT_FORBEHALL, STALLNING_MENING as TAKTYP_STALLNING } from "../src/data/prices";
@@ -1267,8 +1268,22 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: override?.description ?? combo.description,
       ...buildBody([
         ...(override?.content ?? combo.content).map(stripInlineMd),
+        // Relaterade tjänster-rubriken ligger före frågorna, precis som i ServiceLocationPage.tsx (AG1)
+        { h: SERVICE_LOCATION_TEXT.relatedHeading(combo.prep, combo.locationName) },
         { h: `Vanliga frågor om ${combo.serviceName.toLowerCase()} ${combo.prep} ${combo.locationName}` },
         ...comboFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+        // Sidokolumnen, ortlistans rubrik och omdömesbandet i samma ordning som på sidan
+        { h: SERVICE_LOCATION_TEXT.asideHeading, level: 3 as const },
+        SERVICE_LOCATION_TEXT.asideText(combo.serviceName, combo.prep, combo.locationName),
+        { h: SERVICE_LOCATION_TEXT.uspHeading, level: 3 as const },
+        ...SERVICE_LOCATION_TEXT.usps(combo.serviceSlug),
+        ...(locations.find((l) => l.slug === combo.locationSlug)?.nearbyLocations.some((n) => locations.some((l) => l.name === n))
+          ? [{ h: SERVICE_LOCATION_TEXT.nearbyHeading(combo.serviceName), level: 3 as const }]
+          : []),
+        { h: SERVICE_LOCATION_TEXT.allLocationsHeading(combo.serviceName) },
+        GOOGLE_REVIEWS_TEXT.bandEyebrow,
+        { h: GOOGLE_REVIEWS_TEXT.title },
+        GOOGLE_REVIEWS_TEXT.ingress,
       ]),
       jsonLd: [faqLd(comboFaqs, clean)],
       links: [

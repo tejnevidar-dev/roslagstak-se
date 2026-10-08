@@ -1,5 +1,5 @@
 import { withRotForbehall } from "@/data/prices";
-import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
+import { SERVICE_LOCATION_TEXT } from "@/data/service-location-text";
 import { isHeading, renderInline } from "@/lib/inline-md";
 import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
@@ -241,7 +241,7 @@ const ServiceLocationPage = () => {
               {/* Internal links to related services */}
               <div className="bg-card border border-border rounded-2xl p-6 mt-8">
                 <h2 className="font-display text-lg text-card-foreground mb-4">
-                  Relaterade tjänster {combo.prep} {combo.locationName}
+                  {SERVICE_LOCATION_TEXT.relatedHeading(combo.prep, combo.locationName)}
                 </h2>
                 <div className="grid sm:grid-cols-2 gap-3">
                   <Link
@@ -316,9 +316,9 @@ const ServiceLocationPage = () => {
             {/* Sidebar */}
             <aside className="space-y-6">
               <div className="bg-primary text-primary-foreground rounded-2xl p-6">
-                <h3 className="font-display text-lg mb-2">Kostnadsfri takkontroll</h3>
+                <h3 className="font-display text-lg mb-2">{SERVICE_LOCATION_TEXT.asideHeading}</h3>
                 <p className="text-sm opacity-90 mb-4">
-                  Boka en kostnadsfri takkontroll för {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}. Vi återkopplar inom 24 timmar.
+                  {SERVICE_LOCATION_TEXT.asideText(combo.serviceName, combo.prep, combo.locationName)}
                 </p>
                 <Link
                   to="/takkontroll"
@@ -336,16 +336,9 @@ const ServiceLocationPage = () => {
 
               {/* USPs */}
               <div className="bg-card border border-border rounded-2xl p-6">
-                <h3 className="font-display text-lg text-card-foreground mb-4">Varför RoslagsTak?</h3>
+                <h3 className="font-display text-lg text-card-foreground mb-4">{SERVICE_LOCATION_TEXT.uspHeading}</h3>
                 <ul className="space-y-2">
-                  {[
-                    ["takmalning", "taktvatt"].includes(combo.serviceSlug)
-                      ? "10 års utförandegaranti"
-                      : GARANTI_RENOVERING_CHIP.replace("30 års tätskiktsgaranti", "10 års utförandegaranti, 30 års tätskiktsgaranti"),
-                    "Fast pris i offerten",
-                    "En kontaktperson genom hela processen",
-                    "Kostnadsfri takkontroll",
-                  ].map((usp) => (
+                  {SERVICE_LOCATION_TEXT.usps(combo.serviceSlug).map((usp) => (
                     <li key={usp} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                       {usp}
@@ -358,7 +351,7 @@ const ServiceLocationPage = () => {
               {nearbyInService.length > 0 && (
                 <div className="bg-card border border-border rounded-2xl p-6">
                   <h3 className="font-display text-lg text-card-foreground mb-4">
-                    {combo.serviceName} i närheten
+                    {SERVICE_LOCATION_TEXT.nearbyHeading(combo.serviceName)}
                   </h3>
                   <div className="space-y-2">
                     {nearbyInService.map((n: any) => (
@@ -380,7 +373,7 @@ const ServiceLocationPage = () => {
           {/* All locations for this service */}
           <div className="border-t border-border pt-12">
             <h2 className="font-display text-2xl text-foreground mb-6 text-center">
-              {combo.serviceName} på fler orter
+              {SERVICE_LOCATION_TEXT.allLocationsHeading(combo.serviceName)}
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
               {locations.map((l) => (
