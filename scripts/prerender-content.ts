@@ -107,6 +107,7 @@ import { AD_FAQS, AD_STEPS, AD_TEXT, AD_TRUST } from "../src/data/ad-landing-tex
 import { QUOTE_CONFIG, QUOTE_PAGE, FREE_CONSULT } from "../src/data/offert-text";
 import { GOOGLE_REVIEWS_TEXT } from "../src/data/google-reviews-text";
 import { SERVICE_LOCATION_TEXT } from "../src/data/service-location-text";
+import { MATERIAL_PAGE_TEXT, materialPricesSentence } from "../src/data/material-page-text";
 import { BLOG_TEMPLATE, blogHasAside } from "../src/data/blog-template-text";
 import { ISLAND_TEXT, ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_PAGE, ROOF_TYPE_ORDER, ROOF_TYPE_TEXTS, roofPriceText, roofTypesIntroText } from "../src/data/taktyper-text";
 import { ROT_FORBEHALL as TAKTYP_ROT_FORBEHALL, STALLNING_MENING as TAKTYP_STALLNING } from "../src/data/prices";
@@ -892,7 +893,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...materialSections.flatMap((s) => [{ h: s.heading, suffix: ":" }, stripInlineMd(d[s.key] as string)]),
         ...(MATERIAL_EXTRAS[material.slug] ? [] : [{ h: "Kostnadsdrivare", suffix: ":" }, d.kostnadsdrivare]),
         ...(MATERIAL_PRISAVSNITT[material.slug]
-          ? [{ h: MATERIAL_PRISAVSNITT[material.slug].rubrik }, ...prisAvsnittForSpegel(MATERIAL_PRISAVSNITT[material.slug])]
+          ? [{ h: MATERIAL_PRISAVSNITT[material.slug].rubrik }, ...prisAvsnittForSpegel(MATERIAL_PRISAVSNITT[material.slug]), materialPricesSentence()]
           : []),
         ...(MATERIAL_EXTRAS[material.slug]
           ? [
@@ -900,12 +901,18 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
                 { h: b.heading },
                 ...b.items.flatMap((it) => (typeof it === "string" ? [stripInlineMd(it)] : it.list.map(stripInlineMd))),
               ]),
+              { h: MATERIAL_PAGE_TEXT.readMoreHeading },
+              MATERIAL_PAGE_TEXT.ctaText,
               { h: MATERIAL_EXTRAS[material.slug].faqHeading },
               ...MATERIAL_EXTRAS[material.slug].faqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
             ]
           : []),
         ...(d.hallIsar ? [`Håll isär: ${d.hallIsar}`] : []),
         ...(d.hosOss && !MATERIAL_EXTRAS[material.slug] ? [`Hos oss: ${d.hosOss}`] : []),
+        // Uppmaningen och "Fler material" i samma ordning som MaterialPage.tsx (AG1, paket 22)
+        ...(MATERIAL_EXTRAS[material.slug] ? [] : [MATERIAL_PAGE_TEXT.ctaText]),
+        { h: MATERIAL_PAGE_TEXT.relatedTitle },
+        RELATED_LINKS_INTRO,
       ]),
       ogImage: og?.src,
       ogImageAlt: og?.alt,

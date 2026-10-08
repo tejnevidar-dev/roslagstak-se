@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
+import { MATERIAL_PAGE_TEXT } from "@/data/material-page-text";
 import NotFound from "@/pages/NotFound";
 import { getMaterial, MATERIAL_PRIS_LANK, type MaterialDetail } from "@/data/materials";
 import { MATERIAL_PRISAVSNITT, PRIS_ANKARE, PRIS_STYCKEN } from "@/data/material-prices";
@@ -157,9 +158,9 @@ const MaterialPage = () => {
                 </p>
               ))}
               <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-                Alla riktpriser finns på{" "}
+                {MATERIAL_PAGE_TEXT.pricesLead}{" "}
                 <Link to="/priser" className="font-semibold text-primary underline underline-offset-4">
-                  prissidan
+                  {MATERIAL_PAGE_TEXT.pricesLink}
                 </Link>
                 .
               </p>
@@ -170,7 +171,7 @@ const MaterialPage = () => {
             <>
               <ExtraBlocks blocks={MATERIAL_EXTRAS[material.slug].blocks} />
               <div className="mt-10">
-                <h2 className="font-display text-xl text-foreground">Läs vidare</h2>
+                <h2 className="font-display text-xl text-foreground">{MATERIAL_PAGE_TEXT.readMoreHeading}</h2>
                 <ul className="mt-3 flex flex-wrap gap-3">
                   {(MATERIAL_EXTRAS[material.slug].links ?? []).map((l) => (
                     <li key={l.to}>
@@ -198,7 +199,7 @@ const MaterialPage = () => {
 
           <div className="mt-8 rounded-2xl bg-primary p-8 text-center text-primary-foreground">
             <p className="leading-relaxed">
-              Vilket material som passar ditt hus beror på taket, lutningen, huset och uttrycket du vill ha. Boka en kostnadsfri takkontroll utan förpliktelser. En av våra säljare tittar på taket på plats, och behöver taket åtgärdas får du en offert med fast pris.
+              {MATERIAL_PAGE_TEXT.ctaText}
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <Link
@@ -221,7 +222,7 @@ const MaterialPage = () => {
 
         <RelatedLinks
           currentPath={material.href}
-          title="Fler material"
+          title={MATERIAL_PAGE_TEXT.relatedTitle}
           extraLinks={[
             { to: "/material", label: "Alla material", description: "Jämför betongpannor, lertegel, plåt och falsat." },
             ...guidesForTitle(material.title, 2).map((g) => ({ to: `/blogg/${g.slug}`, label: g.title, description: "Guide." })),
