@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 
 import { locationIndex as locations } from "@/data/location-index";
 import { regionIntros, regionOrder } from "@/data/regions";
+import {
+  HOME_AREA_INTRO,
+  HOME_AREA_PANEL,
+  HOME_AREA_SEO_HEADING,
+  HOME_AREA_SEO_PARAGRAPHS,
+  homeAreaIntroText,
+} from "@/data/home-area";
+import type { ReactNode } from "react";
+
+/** Fetstil i texterna är markerad med ** (se home-area.ts): jämna delar är vanlig text, udda delar är fetstil. */
+const withBold = (s: string): ReactNode[] =>
+  s.split("**").map((part, i) => (i % 2 === 1 ? <strong key={i} className="font-semibold">{part}</strong> : part));
 
 const areas = regionOrder
   .filter((region) => locations.some((l) => l.region === region))
@@ -21,40 +33,37 @@ const ServiceArea = () => {
           <div className="col-span-12 lg:col-span-4">
             <div className="lg:sticky lg:top-28">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-                Vart finns vi
+                {HOME_AREA_INTRO.eyebrow}
               </p>
               <h2
                 id="area-heading"
                 className="mt-6 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.14]"
               >
-                Från Stockholms innerstad till{" "}
-                <span className="italic text-accent">ytterskärgårdens öar.</span>
+                {HOME_AREA_INTRO.headingA}{" "}
+                <span className="italic text-accent">{HOME_AREA_INTRO.headingB}</span>
               </h2>
               <p className="mt-6 text-[17px] font-light leading-relaxed text-marine-foreground/80">
-                Vi utför takbyte, takrenovering och plåtarbeten i {areas.length} områden i
-                Roslagen och hela Storstockholm. Vi tar också uppdrag i skärgården och har gjort
-                kompletta takbyten på Blidö och Singö.
+                {homeAreaIntroText(areas.length)}
               </p>
 
 
               <div className="mt-10 bg-card p-8 text-foreground shadow-[0_30px_70px_-50px_rgba(12,35,64,0.7)]">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                  Verksamhetsområde
+                  {HOME_AREA_PANEL.label}
                 </p>
                 <div className="mt-6 flex items-baseline gap-3">
                   <span className="font-display text-6xl font-bold tabular-nums leading-none text-accent">
                     {areas.length}
                   </span>
                   <span className="font-display text-xl font-semibold text-foreground">
-                    områden
+                    {HOME_AREA_PANEL.unit}
                   </span>
                 </div>
                 <p className="mt-5 text-[15px] font-light leading-relaxed text-muted-foreground">
-                  Samma arbetssätt: kostnadsfri takkontroll och fast pris i offerten.
+                  {HOME_AREA_PANEL.workflow}
                 </p>
                 <p className="mt-6 border-t border-border pt-5 text-[14px] leading-relaxed text-muted-foreground">
-                  <span className="font-semibold text-foreground">Hus på en ö?</span> Vi tar uppdrag i
-                  skärgården. Förutsättningarna går vi igenom vid den kostnadsfria takkontrollen.
+                  <span className="font-semibold text-foreground">{HOME_AREA_PANEL.islandLead}</span> {HOME_AREA_PANEL.islandText}
                 </p>
 
               </div>
@@ -99,7 +108,7 @@ const ServiceArea = () => {
               to="/omraden"
               className="mt-9 inline-flex items-center gap-2 text-[15px] font-semibold text-accent transition-colors hover:text-marine-foreground"
             >
-              Se alla orter vi arbetar i
+              {HOME_AREA_PANEL.allLink}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
@@ -114,37 +123,13 @@ const ServiceArea = () => {
                 className="mb-6 block h-1 w-12 bg-accent"
               />
               <h3 className="font-display text-[clamp(1.4rem,2vw,1.9rem)] font-bold leading-snug text-foreground">
-                Din lokala takläggare i Roslagen
+                {HOME_AREA_SEO_HEADING}
               </h3>
             </div>
             <div className="col-span-12 space-y-5 text-[16px] font-light leading-relaxed text-marine lg:col-span-8 lg:columns-2 lg:gap-10 lg:space-y-0 [&>p]:mb-5">
-              <p>
-                Behöver du en <strong className="font-semibold">takläggare i Roslagen</strong> eller <strong className="font-semibold">takläggare i Stockholm</strong>? RoslagsTak utför alla typer av takarbeten — från
-                <strong className="font-semibold"> takbyte på Blidö</strong> och <strong className="font-semibold">takrenovering på Ljusterö</strong> till
-                <strong className="font-semibold"> takomläggning i Norrtälje</strong> och <strong className="font-semibold">plåttak på Yxlan</strong>. Vi tar också uppdrag
-                på <strong className="font-semibold">öar i norra skärgården</strong>.
-              </p>
-              <p>
-                Vi tar uppdrag för <strong className="font-semibold">takbyte på öar i skärgården</strong>,
-                till exempel på Husarö, Finnhamn och Ingmarsö, liksom Svartlöga, Söderöra, Norröra,
-                Humlö och Gräskö.
-                Högmarsö och Arholma tillhör också vårt verksamhetsområde, liksom Furusund, Rådmansö och Vätö.
-              </p>
-              <p>
-                Längs kusten arbetar vi i Spillersboda, Bergshamra och Svartnö. På Väddö och upp mot
-                Singö, Grisslehamn och Arholma tar vi också uppdrag. I Vaxholm och Norrtälje tar
-                vi uppdrag på villor, fritidshus och radhus.
-              </p>
-              <p>
-                I <strong className="font-semibold">hela Storstockholm</strong> — från <strong className="font-semibold">takbyte i Solna</strong> och <strong className="font-semibold">bandtäckning i Danderyd</strong> till
-                <strong className="font-semibold"> takrenovering i Nacka</strong> och <strong className="font-semibold">plåttak i Bromma</strong> — är vi din takläggare. Vi arbetar i Stockholm stad och Södermalm, Östermalm,
-                Kungsholmen och Vasastan; norrort i Solna, Sundbyberg, Danderyd, Sollentuna och Upplands Väsby; nordväst i Järfälla, Upplands-Bro och Sigtuna; västerort i Bromma, Hässelby, Vällingby och Spånga;
-                österut på Lidingö, i Nacka och Värmdö; sydöst i Tyresö, Haninge, Vendelsö, Vega och Nynäshamn; söderut i Huddinge, Älvsjö, Enskede, Farsta, Skarpnäck och Skärholmen; samt sydväst på Ekerö och i Botkyrka, Salem och Södertälje.
-              </p>
-              <p>
-                Oavsett om du söker <strong className="font-semibold">takbyte i Stockholm</strong>, <strong className="font-semibold">takbyte i Roslagen</strong>, behöver en <strong className="font-semibold">takläggare på en ö utan bro</strong> eller
-                vill ha en <strong className="font-semibold">takrenovering på Väddö</strong> — kontakta oss för en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar.
-              </p>
+              {HOME_AREA_SEO_PARAGRAPHS.map((stycke) => (
+                <p key={stycke.slice(0, 40)}>{withBold(stycke)}</p>
+              ))}
             </div>
           </div>
         </div>

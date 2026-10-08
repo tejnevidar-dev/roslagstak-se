@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import { projectTexts } from "@/data/project-texts";
+import { HOME_REFERENS, HOME_REFERENS_ORDER } from "@/data/home-referens";
 import imgGrisslehamn from "@/assets/project-grisslehamn-hero.jpg";
 import imgGrisslehamnAvif480 from "@/assets/project-grisslehamn-hero-480.avif";
 import imgGrisslehamnAvif768 from "@/assets/project-grisslehamn-hero-768.avif";
@@ -41,12 +42,10 @@ const images: Record<string, { jpg: string; avif: string; webp: string }> = {
   },
 };
 
-/** Nyaste jobbet först. */
-const ORDER = ["takbyte-grisslehamn", "takbyte-singo", "takrenovering-blido"];
 const SIZES = "(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw";
 
 const ReferenceCases = () => {
-  const cases = ORDER.map((slug) => projectTexts.find((p) => p.slug === slug)).filter(
+  const cases = HOME_REFERENS_ORDER.map((slug) => projectTexts.find((p) => p.slug === slug)).filter(
     (p): p is NonNullable<typeof p> => !!p,
   );
 
@@ -57,17 +56,17 @@ const ReferenceCases = () => {
           <div className="col-span-12 lg:col-span-7">
             <p className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
               <span aria-hidden="true" className="h-px w-12 bg-accent/50" />
-              Referensjobb
+              {HOME_REFERENS.eyebrow}
             </p>
             <h2
               id="referensjobb"
               className="mt-6 max-w-[22ch] font-display text-[clamp(1.85rem,3vw,2.6rem)] font-bold leading-[1.14] tracking-[-0.02em] text-foreground text-balance"
             >
-              Tre tak vi har lagt, med bilder från jobben
+              {HOME_REFERENS.heading}
             </h2>
           </div>
           <p className="col-span-12 max-w-[46ch] text-[17px] leading-relaxed text-muted-foreground lg:col-span-5 lg:justify-self-end">
-            Alla tre är utförda av RoslagsTak och visas med kundens samtycke. Varje jobb har en egen sida med fler bilder.
+            {HOME_REFERENS.intro}
           </p>
         </div>
 
@@ -104,26 +103,26 @@ const ReferenceCases = () => {
                       {p.title}
                     </h3>
                     <dl className="mt-5 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 border-y border-border py-4 text-[15px]">
-                      <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Jobb</dt>
+                      <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{HOME_REFERENS.labels.job}</dt>
                       <dd className="text-foreground">{p.serviceName}</dd>
                       {p.area && (
                         <>
-                          <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Yta</dt>
+                          <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{HOME_REFERENS.labels.area}</dt>
                           <dd className="text-foreground">{p.area}</dd>
                         </>
                       )}
-                      <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Material</dt>
+                      <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{HOME_REFERENS.labels.material}</dt>
                       <dd className="text-foreground">{p.material}</dd>
                       {p.period && (
                         <>
-                          <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Utfört</dt>
+                          <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{HOME_REFERENS.labels.period}</dt>
                           <dd className="text-foreground">{p.period}</dd>
                         </>
                       )}
                     </dl>
                     <p className="mt-5 flex-1 text-[16px] leading-relaxed text-muted-foreground">{p.metaDescription ?? p.summary}</p>
                     <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-primary">
-                      Läs hela caset
+                      {HOME_REFERENS.readMore}
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                     </span>
                   </div>
@@ -135,10 +134,10 @@ const ReferenceCases = () => {
 
         <p className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
           <Link to="/projekt" className="text-[15px] font-semibold text-primary underline underline-offset-4 hover:no-underline">
-            Se alla referensjobb
+            {HOME_REFERENS.allLink}
           </Link>
           <Link to="/takbyte-norrtalje" className="text-[15px] font-semibold text-primary underline underline-offset-4 hover:no-underline">
-            Byta tak i Norrtälje
+            {HOME_REFERENS.nearLink}
           </Link>
         </p>
       </div>

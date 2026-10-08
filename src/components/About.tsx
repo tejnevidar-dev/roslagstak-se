@@ -1,4 +1,13 @@
-import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
+import {
+  HOME_ABOUT_BENEFITS,
+  HOME_ABOUT_CAPTION,
+  HOME_ABOUT_INTRO,
+  HOME_ABOUT_P1,
+  HOME_ABOUT_P2,
+  HOME_ABOUT_P3,
+  HOME_CORE_VALUES,
+  HOME_WORKFLOW,
+} from "@/data/home-about";
 import { CheckCircle, Heart, ShieldCheck, Award, Zap } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -8,43 +17,8 @@ import aboutImg from "@/assets/project-blido-hero.jpg";
 import aboutImgAvif from "@/assets/project-blido-hero-1080.avif";
 import aboutImgWebp from "@/assets/project-blido-hero-1080.webp";
 
-const coreValues = [
-  {
-    icon: Heart,
-    title: "Tillgänglighet",
-    description:
-      "Du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "En kontaktperson",
-    description:
-      "Samma person tar hand om dig från första kontakten till färdigt tak. Du behöver inte förklara ditt tak för någon ny på vägen.",
-  },
-  {
-    icon: Award,
-    title: "Tydliga villkor",
-    description:
-      "Fast pris i offerten, där det framgår vad som ingår. 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
-  },
-  {
-    icon: Zap,
-    title: "Hantverk enligt AMA",
-    description:
-      "Vi arbetar enligt AMA, branschens gemensamma beskrivning av hur material och utförande ska vara. Det är i underlaget, infästningen och plåtdetaljerna som ett tak avgörs.",
-  },
-];
-
-
-const benefits = [
-  "En kontaktperson genom hela processen",
-  "Fast pris efter kostnadsfri takkontroll",
-  "10 års utförandegaranti",
-  GARANTI_RENOVERING_CHIP,
-  "ROT-avdraget dras direkt på fakturan",
-  "Roslagen, Storstockholm och Mälardalen",
-];
-
+/* Texterna ligger i src/data/home-about.ts (delas med den statiska HTML:en). Ikonerna följer ordningen i HOME_CORE_VALUES. */
+const coreIcons = [Heart, ShieldCheck, Award, Zap];
 
 /* Nautisk asymmetri: roterat foto som bryter ut i vänsterkant, texten i en
    förskjuten spalt, ledorden som mörk marinlista. */
@@ -123,9 +97,9 @@ const About = () => {
               </figure>
               <figcaption className="absolute -bottom-5 left-6 z-10 rounded-2xl bg-primary px-6 py-4 text-primary-foreground shadow-xl">
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.26em] text-accent">
-                  Bas i Norrtälje
+                  {HOME_ABOUT_CAPTION.eyebrow}
                 </span>
-                <span className="mt-1 block font-display text-xl">Riktiga tak, riktiga bilder</span>
+                <span className="mt-1 block font-display text-xl">{HOME_ABOUT_CAPTION.text}</span>
 
               </figcaption>
             </div>
@@ -134,51 +108,34 @@ const About = () => {
           {/* Text i förskjuten spalt */}
           <div className="col-span-12 lg:col-span-6 lg:col-start-7 lg:pt-6">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-              Om RoslagsTak
+              {HOME_ABOUT_INTRO.eyebrow}
             </p>
             <h2
               id="about-heading"
               className="mt-6 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.14] text-foreground"
             >
-              Ett tak som håller,{" "}
-              <span className="italic text-accent">och en kontaktperson som svarar.</span>
+              {HOME_ABOUT_INTRO.headingA}{" "}
+              <span className="italic text-accent">{HOME_ABOUT_INTRO.headingB}</span>
             </h2>
             <div className="mt-8 space-y-6 text-[18px] font-light leading-relaxed text-marine">
+              <p>{HOME_ABOUT_P1}</p>
+              <p>{HOME_ABOUT_P2}</p>
               <p>
-                RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus
-                i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt,
-                dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och
-                plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.
-              </p>
-              <p>
-                Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom
-                hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och
-                utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2
-                timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas
-                får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du
-                bestämmer själv om och när.
-              </p>
-              <p>
-                Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett
-                komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya
-                plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Norrtälje kommun blev ett takbyte
-                klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre
-                delarna och delvis ny råspont. I Grisslehamn fick ett hus i september 2026 ett komplett
-                takbyte med svarta betongpannor från Benders. Alla tre jobben finns med bilder under{" "}
+                {HOME_ABOUT_P3.before}
                 <Link to="/projekt" className="text-accent underline underline-offset-4 hover:no-underline">
-                  Projekt
+                  {HOME_ABOUT_P3.linkProjects}
                 </Link>
-                , och våra omdömen från Google finns under{" "}
+                {HOME_ABOUT_P3.middle}
                 <Link to="/recensioner" className="text-accent underline underline-offset-4 hover:no-underline">
-                  Recensioner
+                  {HOME_ABOUT_P3.linkReviews}
                 </Link>
-                .
+                {HOME_ABOUT_P3.after}
               </p>
             </div>
 
 
             <ul className="mt-10 grid gap-x-8 sm:grid-cols-2">
-              {benefits.map((benefit) => (
+              {HOME_ABOUT_BENEFITS.map((benefit) => (
                 <li
                   key={benefit}
                   className="flex items-start gap-3 border-t border-border py-4 text-[16px] text-foreground"
@@ -196,19 +153,21 @@ const About = () => {
           <div className="grid grid-cols-12 gap-y-10 lg:gap-16">
             <div className="col-span-12 lg:col-span-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-                Så jobbar vi
+                {HOME_WORKFLOW.eyebrow}
               </p>
               <h3 className="mt-6 font-display text-[clamp(1.6rem,2.5vw,2.2rem)] font-bold leading-[1.16]">
-                Så jobbar vi
+                {HOME_WORKFLOW.heading}
               </h3>
               <p className="mt-5 text-[17px] font-light leading-relaxed text-primary-foreground/75">
-                Fyra saker som styr hur vi tar hand om dig och ditt tak.
+                {HOME_WORKFLOW.intro}
               </p>
 
             </div>
 
             <ul className="col-span-12 lg:col-span-7 lg:col-start-6">
-              {coreValues.map((value, i) => (
+              {HOME_CORE_VALUES.map((value, i) => {
+                const Icon = coreIcons[i];
+                return (
                 <li
                   key={value.title}
                   className="border-t border-primary-foreground/20 first:border-t-0"
@@ -219,7 +178,7 @@ const About = () => {
                         <span className="font-display text-[12px] tabular-nums tracking-[0.24em] text-accent">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <value.icon
+                        <Icon
                           className="h-5 w-5 text-accent transition-transform duration-500 group-hover:-translate-y-0.5"
                           aria-hidden="true"
                         />
@@ -231,7 +190,8 @@ const About = () => {
                     </div>
                   </Reveal>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           </div>
         </div>

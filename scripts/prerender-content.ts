@@ -39,6 +39,12 @@ import { roofTypeFaqs } from "../src/data/roof-type-faqs";
 import { eternitFaqs } from "../src/data/eternit-content";
 import { homeFaqs } from "../src/data/home-faqs";
 import { HOME_HERO, HOME_TRUST_ITEMS, HOME_QUICK, HOME_SERVICES_INTRO } from "../src/data/home-sections";
+import { HOME_REFERENS, HOME_REFERENS_ORDER } from "../src/data/home-referens";
+import { HOME_ABOUT_BENEFITS, HOME_ABOUT_CAPTION, HOME_ABOUT_INTRO, HOME_ABOUT_P1, HOME_ABOUT_P2, homeAboutP3Text, HOME_CORE_VALUES, HOME_WORKFLOW } from "../src/data/home-about";
+import { HOME_AREA_INTRO, HOME_AREA_PANEL, HOME_AREA_SEO_HEADING, HOME_AREA_SEO_PARAGRAPHS, homeAreaIntroText, stripBold } from "../src/data/home-area";
+import { HOME_GUIDES, HOME_GUIDES_COUNT, homeGuideLeadCaption, homeGuideReadTime } from "../src/data/home-guides";
+import { locationIndex as homeLocationIndex } from "../src/data/location-index";
+import type { BodyItem } from "../src/lib/body-items";
 import { processFaqs } from "../src/data/process-faqs";
 import { brfFaqs, brfFaqsFor } from "../src/data/brf-faqs";
 
@@ -63,7 +69,7 @@ const villaAreaLinks = (key: string) =>
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { CANONICAL_ALIASES } from "../src/lib/canonical";
-import { regionBySlug, regionIntros, regionNeighbors, regionSlugs } from "../src/data/regions";
+import { regionBySlug, regionIntros, regionNeighbors, regionOrder, regionSlugs } from "../src/data/regions";
 
 // Fas 2.19: samma schemanoder som React-sidorna, exponerade för generate-static-heads.mjs.
 export { buildOrganizationNode, buildWebSiteNode, buildWebPageNode, buildBreadcrumbNode } from "../src/lib/schema-graph";
@@ -164,24 +170,7 @@ const combos = generateCombos();
 const comboByUrl = new Map(combos.map((c) => [c.url, c]));
 
 /** Startsidans sektion "Referensjobb" (components/ReferenceCases.tsx): samma rubrik, kort, bild, text och länk i den statiska HTML:en. */
-const REFERENS_ORDER = ["takbyte-grisslehamn", "takbyte-singo", "takrenovering-blido"];
-const referensCases = REFERENS_ORDER.map((slug) => projectTexts.find((p) => p.slug === slug)).filter((p): p is NonNullable<typeof p> => !!p);
-const REFERENS_START = 1; // efter första stycket
-const referensParagraphs = [
-  "Referensjobb",
-  "Tre tak vi har lagt, med bilder från jobben",
-  "Alla tre är utförda av RoslagsTak och visas med kundens samtycke. Varje jobb har en egen sida med fler bilder.",
-  ...referensCases.flatMap((c) => [
-    c.title,
-    `${c.locationName}. Jobb: ${c.serviceName}.${c.area ? ` Yta: ${c.area}.` : ""} Material: ${c.material}.${c.period ? ` Utfört: ${c.period}.` : ""} ${c.summary} Läs hela caset.`,
-  ]),
-];
-const referensHeadingAt: Record<number, 2 | 3> = { [REFERENS_START + 1]: 2 };
-const referensImages: NonNullable<PrerenderPage["images"]> = {};
-referensCases.forEach((c, k) => {
-  referensHeadingAt[REFERENS_START + 3 + 2 * k] = 3;
-  referensImages[REFERENS_START + 4 + 2 * k] = { src: `/cases/${c.slug.replace(/^takbyte-|^takrenovering-/, "")}-480.webp`, alt: c.heroAlt, width: 480, height: 360 };
-});
+const referensCases = HOME_REFERENS_ORDER.map((slug) => projectTexts.find((p) => p.slug === slug)).filter((p): p is NonNullable<typeof p> => !!p);
 
 const home: PrerenderPage = {
   h1: "Takläggare i Roslagen — takbyte & takrenovering",
@@ -189,21 +178,12 @@ const home: PrerenderPage = {
     "RoslagsTak är takläggare i Roslagen med bas i Norrtälje. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
     paragraphs: [
       "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA.",
-      ...referensParagraphs,
       "Vi tar också uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Båda finns med bilder under Projekt.",
       "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
       "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet. Du får en kontaktperson som följer projektet från takkontroll till slutgenomgång.",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
-      // Om oss-sektionen (components/About.tsx, #1z) — samma text som React
-      "Om RoslagsTak. Ett tak som håller, och en kontaktperson som svarar.",
-      "RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.",
-      "Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du bestämmer själv om och när.",
-      "Vi visar bara riktiga jobb. På Blidö i Norrtälje fick ett hus sommaren 2026 ett komplett takbyte med nytt underlag, ny läkt, svarta betongpannor från Benders, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö i Norrtälje kommun blev ett takbyte klart i september 2026, med röda betongpannor på huvudtaket, röd TP20-plåt på de lägre delarna och delvis ny råspont. I Grisslehamn fick ett hus i september 2026 ett komplett takbyte med svarta betongpannor från Benders. Alla tre jobben finns med bilder under Projekt, och våra omdömen från Google finns under Recensioner.",
-      "Så jobbar vi. Tillgänglighet: du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19. En kontaktperson: samma person tar hand om dig från första kontakten till färdigt tak. Tydliga villkor: fast pris i offerten, 10 års utförandegaranti på det arbete vi utför och 30 års tätskiktsgaranti via MATAKI när ett nytt tätskikt läggs, ROT-avdraget dras direkt på fakturan. Hantverk enligt AMA.",
       `Boka en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
-  headingAt: referensHeadingAt,
-  images: referensImages,
   links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
 };
 
@@ -223,7 +203,11 @@ const homeServiceCards = [
   .map((m) => ({ slug: m[1], title: m[2], short: m[3], description: m[4], hide: !!m[5] }))
   .filter((c) => !c.hide);
 {
-  const R = referensParagraphs.length;
+  type Delar = { paragraphs: string[]; headingAt: Record<number, 2 | 3> };
+  const old = home.paragraphs;
+  const para0 = old[0];
+  const extras = old.slice(1, -1); // text som bara finns i den statiska HTML:en (ingen motsvarighet i React)
+  const slut = old[old.length - 1];
   const pre = buildBody([
     HOME_HERO.eyebrow,
     HOME_HERO.text,
@@ -234,24 +218,92 @@ const homeServiceCards = [
     HOME_QUICK.phone,
     ...HOME_QUICK.cards.flatMap((c) => [c.label, { h: c.title, level: 3 as const }, c.text, c.cta]),
   ]);
+  // Referensjobb (ReferenceCases.tsx): blocken i samma ordning som sidan; bilden hör till platsetiketten överst i varje kort
+  const refItems: BodyItem[] = [HOME_REFERENS.eyebrow, { h: HOME_REFERENS.heading }, HOME_REFERENS.intro];
+  const refImagePos: number[] = [];
+  for (const c of referensCases) {
+    refImagePos.push(refItems.length);
+    refItems.push(
+      c.locationName,
+      { h: c.title, level: 3 as const },
+      HOME_REFERENS.labels.job,
+      c.serviceName,
+      ...(c.area ? [HOME_REFERENS.labels.area, c.area] : []),
+      HOME_REFERENS.labels.material,
+      c.material,
+      ...(c.period ? [HOME_REFERENS.labels.period, c.period] : []),
+      c.metaDescription ?? c.summary,
+      HOME_REFERENS.readMore,
+    );
+  }
+  refItems.push(HOME_REFERENS.allLink, HOME_REFERENS.nearLink);
+  const ref = buildBody(refItems);
   const svc = buildBody([
     HOME_SERVICES_INTRO.eyebrow,
     { h: `${HOME_SERVICES_INTRO.headingA} ${HOME_SERVICES_INTRO.headingB}` },
     HOME_SERVICES_INTRO.text,
-    ...homeServiceCards.flatMap((c, i) => [`${String(i + 1).padStart(2, "0")} — ${c.short}`, { h: c.title, level: 3 as const }, c.description]),
+    ...homeServiceCards.flatMap((c, i) => [`${String(i + 1).padStart(2, "0")} — ${c.short}`, { h: c.title, level: 3 as const }, c.description, "Läs mer"]),
   ]);
-  const old = home.paragraphs;
-  const oldHeadings = home.headingAt ?? {};
-  const oldImages = home.images ?? {};
-  const toRest = old.slice(1 + R);
-  home.paragraphs = [old[0], ...pre.paragraphs, ...old.slice(1, 1 + R), ...svc.paragraphs, ...toRest];
+  // Om RoslagsTak och Så jobbar vi (About.tsx)
+  const about = buildBody([
+    HOME_ABOUT_CAPTION.eyebrow,
+    HOME_ABOUT_CAPTION.text,
+    HOME_ABOUT_INTRO.eyebrow,
+    { h: `${HOME_ABOUT_INTRO.headingA} ${HOME_ABOUT_INTRO.headingB}` },
+    HOME_ABOUT_P1,
+    HOME_ABOUT_P2,
+    homeAboutP3Text(),
+    ...HOME_ABOUT_BENEFITS,
+    HOME_WORKFLOW.eyebrow,
+    { h: HOME_WORKFLOW.heading, level: 3 as const },
+    HOME_WORKFLOW.intro,
+    ...HOME_CORE_VALUES.flatMap((v, i) => [String(i + 1).padStart(2, "0"), v.title, v.description]),
+  ]);
+  // Vart finns vi (ServiceArea.tsx): regionerna med orter, samma ordning och samma beskrivningar som React
+  const areas = regionOrder
+    .filter((region) => homeLocationIndex.some((l) => l.region === region))
+    .map((region) => ({ region, description: regionIntros[region] ?? "" }));
+  const area = buildBody([
+    HOME_AREA_INTRO.eyebrow,
+    { h: `${HOME_AREA_INTRO.headingA} ${HOME_AREA_INTRO.headingB}` },
+    homeAreaIntroText(areas.length),
+    HOME_AREA_PANEL.label,
+    String(areas.length),
+    HOME_AREA_PANEL.unit,
+    HOME_AREA_PANEL.workflow,
+    `${HOME_AREA_PANEL.islandLead} ${HOME_AREA_PANEL.islandText}`,
+    ...areas.flatMap((a, i) => [String(i + 1).padStart(2, "0"), { h: a.region, level: 3 as const }, a.description]),
+    HOME_AREA_PANEL.allLink,
+    { h: HOME_AREA_SEO_HEADING, level: 3 as const },
+    ...HOME_AREA_SEO_PARAGRAPHS.map(stripBold),
+  ]);
+  // Guider & råd (GuidesTeaser.tsx): de första sex inläggen i blog-posts.ts
+  const featured = blogPosts.slice(0, HOME_GUIDES_COUNT);
+  const guides = buildBody([
+    HOME_GUIDES.eyebrow,
+    { h: `${HOME_GUIDES.headingA} ${HOME_GUIDES.headingB}` },
+    HOME_GUIDES.allLink,
+    ...featured.flatMap((post, i) =>
+      i === 0
+        ? [homeGuideLeadCaption(post), { h: post.title, level: 3 as const }, post.excerpt, HOME_GUIDES.leadReadMore]
+        : [String(i + 1).padStart(2, "0"), { h: post.title, level: 3 as const }, post.excerpt, homeGuideReadTime(post)],
+    ),
+  ]);
+  const delar: Delar[] = [{ paragraphs: [para0], headingAt: {} }, pre, ref, svc, { paragraphs: extras, headingAt: {} }, about, area, guides, { paragraphs: [slut], headingAt: {} }];
+  const paragraphs: string[] = [];
   const headingAt: Record<number, 2 | 3> = {};
-  for (const [k, v] of Object.entries(pre.headingAt)) headingAt[Number(k) + 1] = v;
-  for (const [k, v] of Object.entries(oldHeadings)) headingAt[Number(k) + pre.paragraphs.length] = v as 2 | 3;
-  for (const [k, v] of Object.entries(svc.headingAt)) headingAt[Number(k) + 1 + pre.paragraphs.length + R] = v;
-  home.headingAt = headingAt;
   const images: NonNullable<PrerenderPage["images"]> = {};
-  for (const [k, v] of Object.entries(oldImages)) images[Number(k) + pre.paragraphs.length] = v;
+  let refStart = -1;
+  for (const d of delar) {
+    if (d === ref) refStart = paragraphs.length;
+    for (const [k, v] of Object.entries(d.headingAt)) headingAt[Number(k) + paragraphs.length] = v;
+    paragraphs.push(...d.paragraphs);
+  }
+  referensCases.forEach((c, k) => {
+    images[refStart + refImagePos[k]] = { src: `/cases/${c.slug.replace(/^takbyte-|^takrenovering-/, "")}-480.webp`, alt: c.heroAlt, width: 480, height: 360 };
+  });
+  home.paragraphs = paragraphs;
+  home.headingAt = headingAt;
   home.images = images;
 }
 

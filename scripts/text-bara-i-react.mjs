@@ -98,13 +98,24 @@ const extrahera = ({ BLOCK, BLOCK_UTAN_A }) => {
   for (const e of document.querySelectorAll(BLOCK)) {
     if (e.closest("header,nav,footer,#static-cookie-banner,[role=dialog],[data-radix-toast-viewport],noscript,script,style,[aria-hidden='true'] svg")) continue;
     if (e.tagName === "A" && e.parentElement?.closest(BLOCK_UTAN_A)) continue;
-    const t = (e.textContent || "").replace(/[\s\u00a0]+/g, " ").trim();
+    let t = (e.textContent || "").replace(/[\s\u00a0]+/g, " ").trim();
+    /* Rubriker: avslutande punkt eller kolon h\u00f6r till meningen, inte rubriken (samma regel som den statiska HTML:en, G1) */
+    if (/^H[1-6]$/.test(e.tagName)) t = t.replace(/[.:]$/, "");
     if (t.length < 3) continue;
+    /* Delar: elementets egna textstycken (en listpunkt eller ett kort byggs av flera spann; textContent klistrar ihop dem utan mellanrum) */
+    const delar = [];
+    const gang = document.createTreeWalker(e, NodeFilter.SHOW_TEXT);
+    for (let n = gang.nextNode(); n; n = gang.nextNode()) { const d = (n.textContent || "").replace(/[\s\u00a0]+/g, " ").trim(); if (d.length >= 3) delar.push(d); }
     // Länk, knapp eller listpunkt som bara är en länk räknas som navigering, resten som text
     const norm1 = (x) => (x || "").replace(/[\s ]+/g, " ").trim();
     const bara = e.tagName === "LI" && e.children.length === 1 && e.children[0].tagName === "A" && norm1(e.children[0].textContent) === t;
-    const nav = ["A", "BUTTON", "LABEL", "SUMMARY"].includes(e.tagName) || bara;
-    ut.push({ t, nav });
+    /* Ett stycke eller en listpunkt som bara består av länkar (med skiljetecken emellan) är navigering, inte text */
+    const lankar = [...e.querySelectorAll("a")];
+    let ovrigt = t;
+    for (const a of lankar) ovrigt = ovrigt.replace(norm1(a.textContent), "");
+    const barLankar = lankar.length >= 2 && ovrigt.replace(/[\s·|—–-]+/g, "") === "";
+    const nav = ["A", "BUTTON", "LABEL", "SUMMARY"].includes(e.tagName) || bara || barLankar;
+    ut.push({ t, nav, delar });
   }
   return ut;
 };
@@ -167,11 +178,13 @@ const rapport = resultat.map((r) => {
   const sett = new Set();
   const bara = [];
   let navBara = 0;
-  for (const { t, nav } of r.renderad) {
+  for (const { t, nav, delar } of r.renderad) {
     const n = norm(t);
     if (sett.has(n)) continue;
     sett.add(n);
     if (set.has(n) || (n.length >= 25 && joined.includes(n))) continue;
+    /* Sammansatt block: matchad om varje del finns som egen text i den statiska sidan (delarna är de textstycken som klistras ihop i textContent) */
+    if (delar && delar.length >= 2 && delar.every((d) => joined.includes(norm(d.replace(/[.:]$/, ""))) || joined.includes(norm(d)))) continue;
     if (nav) { navBara++; continue; }
     bara.push({ text: t, kalla: hittaKalla(t) });
   }

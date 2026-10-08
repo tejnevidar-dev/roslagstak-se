@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { blogPosts } from "@/data/blog-posts";
+import { HOME_GUIDES, HOME_GUIDES_COUNT, homeGuideLeadCaption, homeGuideReadTime } from "@/data/home-guides";
 import Reveal from "@/components/Reveal";
 import roofMacro from "@/assets/roof-build-01-raspont.jpg";
 
 /* Guider i nautisk asymmetri: roterat uppslag till vänster, hairline-lista till höger */
 const GuidesTeaser = () => {
-  const featured = blogPosts.slice(0, 6);
+  const featured = blogPosts.slice(0, HOME_GUIDES_COUNT);
   const [lead, ...rest] = featured;
 
   const jsonLd = {
@@ -28,14 +29,14 @@ const GuidesTeaser = () => {
         <div className="grid grid-cols-12 items-end gap-y-8 lg:gap-8">
           <div className="col-span-12 lg:col-span-7">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-              Guider &amp; råd
+              {HOME_GUIDES.eyebrow}
             </p>
             <h2
               id="guides-heading"
               className="mt-5 font-display text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold leading-[1.15] text-foreground"
             >
-              Kunskap om tak —{" "}
-              <span className="italic text-accent">skrivet av takläggare.</span>
+              {HOME_GUIDES.headingA}{" "}
+              <span className="italic text-accent">{HOME_GUIDES.headingB}</span>
             </h2>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:text-right">
@@ -43,7 +44,7 @@ const GuidesTeaser = () => {
               to="/blogg"
               className="inline-flex items-center gap-3 text-[17px] font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-[6px] hover:text-accent"
             >
-              Se alla guider <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              {HOME_GUIDES.allLink} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -62,7 +63,7 @@ const GuidesTeaser = () => {
                     className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   />
                   <figcaption className="absolute bottom-0 left-0 bg-primary px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-accent">
-                    Mest läst · {lead.readTime} läsning
+                    {homeGuideLeadCaption(lead)}
                   </figcaption>
                 </figure>
                 <h3 className="mt-8 font-display text-[clamp(1.4rem,2.1vw,1.9rem)] font-bold leading-snug text-foreground transition-colors group-hover:text-accent">
@@ -72,7 +73,7 @@ const GuidesTeaser = () => {
                   {lead.excerpt}
                 </p>
                 <span className="mt-6 inline-flex items-center gap-2 font-display text-[16px] italic text-accent">
-                  Läs guiden
+                  {HOME_GUIDES.leadReadMore}
                   <ArrowUpRight
                     className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
                     aria-hidden="true"
@@ -105,7 +106,7 @@ const GuidesTeaser = () => {
                         {post.excerpt}
                       </span>
                       <span className="mt-3 block text-[10px] font-semibold uppercase tracking-[0.24em] text-marine">
-                        {post.readTime} läsning
+                        {homeGuideReadTime(post)}
                       </span>
                     </span>
                     <ArrowUpRight

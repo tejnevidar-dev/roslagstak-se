@@ -285,6 +285,20 @@ for (const [path, mening, rubrik, inte] of [
   await p.close();
 }
 
+// 15. AC4: startsidans rubriker (h2/h3) efter React finns alla i den statiska HTML:en (H1 undantagen, den är orörd)
+{
+  const { html } = await hamta("/");
+  const stat = synligStatisk(html);
+  const p = await renderad(ctx, "/");
+  await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } });
+  await p.waitForTimeout(600);
+  const rubriker = await p.evaluate(() => [...document.querySelectorAll("main h2, main h3")].map((h) => (h.textContent || "").replace(/[\s ]+/g, " ").trim().replace(/[.:]$/, "")).filter((t) => t.length >= 3));
+  const saknas = [...new Set(rubriker)].filter((t) => !stat.includes(t.toLowerCase()));
+  punkt("Startsidan: alla h2/h3 efter React finns i den statiska HTML:en", saknas.length === 0, saknas.length ? `saknas: ${saknas.slice(0, 4).join(" | ").slice(0, 120)}` : `${new Set(rubriker).size} rubriker`);
+  for (const text of ["Tre tak vi har lagt, med bilder från jobben", "Ett tak som håller, och en kontaktperson som svarar", "Från Stockholms innerstad till ytterskärgårdens öar", "Kunskap om tak — skrivet av takläggare", "Din lokala takläggare i Roslagen"]) punkt(`Startsidan, statisk HTML: "${text}"`, stat.includes(text.toLowerCase()));
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
