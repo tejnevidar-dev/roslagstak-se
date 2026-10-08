@@ -132,7 +132,8 @@ for (const e of entries) {
     .slice(0, 16);
   const prev = prevState[e.path];
   let d: string | undefined;
-  if (prev) d = prev.h === h ? prev.d : today;
+  // Oförändrad text men inget sparat datum (t.ex. /omraden, som aldrig fått något): datumet sätts en gång och sparas, och ligger sedan fast
+  if (prev) d = prev.h === h ? (prev.d ?? today) : today;
   else d = baseline ? e.lastmod : today; // ny sida efter baslinjen = ändrad i dag
   if (prev && prev.h !== h) andrade++;
   e.lastmod = d;
