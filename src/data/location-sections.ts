@@ -10,6 +10,15 @@ export interface LocationSection {
   paragraph: string;
 }
 
+/**
+ * Regioner (värden av `location.region`) som med säkerhet ligger i Roslagen. Bara för dem står "i Roslagen" i meningen om regionen;
+ * för alla andra, och för regioner där vi är osäkra (t.ex. Österåker), står meningen utan "i Roslagen" (Marknadschefen 2026-10-08).
+ */
+export const ROSLAGEN_REGIONER = new Set(["Roslagens inland", "Norra Roslagen", "Kusten", "Mellersta skärgården", "Norra skärgården", "Rådmansöhalvön"]);
+/** Regioner vars namn är vanliga ord och därför skrivs med liten bokstav mitt i en mening; övriga behåller sin stavning. */
+const REGION_SOM_VANLIGT_ORD = new Set(["Kusten", "Mellersta skärgården", "Norra skärgården"]);
+export const regionIMening = (region: string): string => (REGION_SOM_VANLIGT_ORD.has(region) ? region.toLowerCase() : region);
+
 /** `far` = långt från basen (samma värde som LocationPage.tsx räknar), `prep` = "i" eller "på". */
 export const locationWhySections = (location: LocationData, prep: string, far: boolean): LocationSection[] => {
   const uppdrag = far
@@ -19,14 +28,14 @@ export const locationWhySections = (location: LocationData, prep: string, far: b
   const region =
     location.region === "Mälardalen"
       ? `${location.name} ligger i Mälardalen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`
-      : `${location.name} tillhör ${location.region} i Roslagen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`;
+      : `${location.name} tillhör ${location.region}${ROSLAGEN_REGIONER.has(location.region) ? " i Roslagen" : ""}. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`;
   return [
     {
       heading: `Varför välja RoslagsTak som ${location.primaryKeyword}?`,
       paragraph: `${uppdrag}${skargard} Vi arbetar enligt AMA. ${GARANTI_RENOVERING}`,
     },
     {
-      heading: `Om ${location.name} och takläggning i ${location.region.toLowerCase()}`,
+      heading: `Om ${location.name} och takläggning i ${regionIMening(location.region)}`,
       paragraph: `${region} Kontakta oss för en kostnadsfri takkontroll ${prep} ${location.name}, utan förpliktelser.`,
     },
   ];

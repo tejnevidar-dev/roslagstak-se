@@ -269,6 +269,21 @@ for (const [path, rubrik] of [["/taklaggare-taby", "Varför välja RoslagsTak so
   await p.close();
 }
 
+// 13b. Regionsmeningen på ortssidorna: "i Roslagen" bara för regioner i Roslagen, regionens egen stavning i rubriken (statisk HTML och efter React)
+for (const [path, mening, rubrik, inte] of [
+  ["/taklaggare-bromma", "bromma tillhör västerort.", "om bromma och takläggning i västerort", "tillhör västerort i roslagen"],
+  ["/taklaggare-solna", "solna tillhör norra stockholm.", "om solna och takläggning i norra stockholm", "tillhör norra stockholm i roslagen"],
+  ["/taklaggare-blido", "blidö tillhör mellersta skärgården i roslagen.", "om blidö och takläggning i mellersta skärgården", "tillhör mellersta skärgården i roslagen i roslagen"],
+]) {
+  const { html } = await hamta(path);
+  const stat = synligStatisk(html);
+  punkt(`Regionsmeningen i statisk HTML: ${path}`, stat.includes(mening) && stat.includes(rubrik) && !stat.includes(inte));
+  const p = await renderad(ctx, path);
+  const text = (await p.evaluate(() => document.body.innerText)).toLowerCase();
+  punkt(`Regionsmeningen efter React: ${path}`, text.includes(mening) && text.includes(rubrik) && !text.includes(inte));
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);

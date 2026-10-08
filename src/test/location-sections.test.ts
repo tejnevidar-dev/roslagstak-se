@@ -4,7 +4,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { locations } from "@/data/locations";
-import { locationWhySections } from "@/data/location-sections";
+import { ROSLAGEN_REGIONER, locationWhySections, regionIMening } from "@/data/location-sections";
 import { isNearBase } from "@/data/service-reach";
 import { prerenderContent } from "../../scripts/prerender-content";
 
@@ -16,12 +16,38 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     expect(a.paragraph).toContain(`Vi tar uppdrag på ${ö.name} och i Roslagen och Storstockholm`);
     expect(a.paragraph).toContain("Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.");
     expect(a.paragraph).toContain("Vi arbetar enligt AMA.");
-    expect(b.heading).toBe(`Om ${ö.name} och takläggning i ${ö.region.toLowerCase()}`);
+    expect(b.heading).toBe(`Om ${ö.name} och takläggning i ${regionIMening(ö.region)}`);
     expect(b.paragraph).toContain(`Kontakta oss för en kostnadsfri takkontroll på ${ö.name}, utan förpliktelser.`);
     const långt = locationWhySections(locations.find((l) => !l.isIsland && !isNearBase(l))!, "i", true)[0];
     expect(långt.paragraph).toContain("och närområdet, för både villaägare och bostadsrättsföreningar");
     const mälar = locations.find((l) => l.region === "Mälardalen");
     if (mälar) expect(locationWhySections(mälar, "i", true)[1].paragraph).toContain(`${mälar.name} ligger i Mälardalen.`);
+  });
+
+  it("meningen om regionen säger bara 'i Roslagen' för regioner i Roslagen, och rubriken behåller regionens stavning", () => {
+    const text = (ort: string) => {
+      const l = locations.find((x) => x.name === ort)!;
+      const [, b] = locationWhySections(l, l.isIsland ? "på" : "i", false);
+      return { rubrik: b.heading, mening: b.paragraph.split(" Vilka alternativ")[0], region: l.region };
+    };
+    // En ort i Roslagen, en i Stockholm, en ö och en i Västerort (regionen som tidigare blev "Västerort i Roslagen")
+    const r = text("Hallstavik");
+    expect(r.mening).toBe(`Hallstavik tillhör ${r.region} i Roslagen.`);
+    const s = text("Södermalm");
+    expect(s.mening).toBe(`Södermalm tillhör ${s.region}.`);
+    expect(s.rubrik).toBe(`Om Södermalm och takläggning i ${s.region}`);
+    const v = text("Bromma");
+    expect(v.mening).toBe("Bromma tillhör Västerort.");
+    expect(v.rubrik).toBe("Om Bromma och takläggning i Västerort");
+    const ö = text("Blidö");
+    expect(ö.mening).toBe("Blidö tillhör Mellersta skärgården i Roslagen.");
+    expect(ö.rubrik).toBe("Om Blidö och takläggning i mellersta skärgården");
+    // Ingen mening med "i Roslagen" för en region som inte står i listan
+    for (const l of locations) {
+      if (l.region === "Mälardalen") continue;
+      const m = locationWhySections(l, "i", false)[1].paragraph.split(" Vilka alternativ")[0];
+      expect(m.endsWith(" i Roslagen."), `${l.slug} (${l.region})`).toBe(ROSLAGEN_REGIONER.has(l.region));
+    }
   });
 
   it("alla ortssidor har båda avsnitten, rubrik och stycke, i den statiska texten", () => {
