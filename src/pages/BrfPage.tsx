@@ -17,60 +17,22 @@ import { brfLocationSlugs } from "@/data/brf-locations";
 import { toast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
 import heroImg from "@/assets/roof-brf-hero.jpg";
-
-const facts = [
-  { label: "Utförande", value: "10 års utförandegaranti" },
-  { label: "Tätskikt", value: "30 års garanti via tillverkaren MATAKI" },
-  { label: "Offert", value: "Fast pris efter kostnadsfri takkontroll" },
-  { label: "Standard", value: "Arbete enligt AMA" },
-];
-
-const steps = [
-  {
-    title: "Takkontroll",
-    text: "Vi går igenom taket på plats och bedömer skick, underlag och vilka åtgärder som behövs. Takkontrollen är kostnadsfri.",
-  },
-  {
-    title: "Åtgärdsförslag och fast offert",
-    text: "Ni får en offert med fast pris. Vill styrelsen jämföra material tar vi fram alternativ, så att beslutet vilar på jämförbara underlag.",
-  },
-  {
-    title: "Beslut i föreningen",
-    text: "Styrelsen och stämman fattar beslutet. Vi svarar på frågor om underlag, material och tidplan innan ni bestämmer er.",
-  },
-  {
-    title: "Planering",
-    text: "Startdatum, ställning, etablering och tidplan stäms av med styrelsen. Föreningen får en fast kontaktperson hos oss under hela projektet.",
-  },
-  {
-    title: "Genomförande",
-    text: "Rivning, underlag, nytt tak och plåtdetaljer. Arbetsplatsen städas löpande.",
-  },
-  {
-    title: "Slutgenomgång",
-    text: "Vi går igenom arbetet tillsammans med er när taket är klart.",
-  },
-];
-
-const boende = [
-  {
-    title: "Tidplan som stäms av",
-    text: "Ställning, etablering och de moment som märks mest planeras tillsammans med styrelsen, så att informationen till de boende kan komma i god tid.",
-  },
-  {
-    title: "Skydd av fasad och mark",
-    text: "Vi reser ställning och skyddar fasad, planteringar och uteplatser innan arbetet börjar.",
-  },
-  {
-    title: "Ordning på arbetsplatsen",
-    text: "Arbetsplatsen städas löpande och lämnas ren efter slutgenomgången, med bortforsling av det gamla taket.",
-  },
-  {
-    title: "En fast kontaktperson",
-    text: "Styrelsen har en person att ringa under hela projektet, från takkontroll till slutgenomgång.",
-  },
-];
-
+import {
+  BRF_BOENDE,
+  BRF_ECONOMY,
+  BRF_FACTS,
+  BRF_FORM,
+  BRF_HERO_CAPTION,
+  BRF_INTRO,
+  BRF_OFFER,
+  BRF_PLACES_HEADING,
+  BRF_PROCESS,
+  BRF_RESIDENTS,
+  BRF_STEPS,
+  brfEyebrow,
+  brfHeroIntro,
+  brfPlaceHeading,
+} from "@/data/brf-sections";
 
 export interface BrfPlace {
   slug: string;
@@ -245,11 +207,11 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
         )}
       </button>
       <p className="text-center text-[13px] text-muted-foreground">
-        Vi svarar inom 24 timmar. Takkontroll och offert är kostnadsfria och förpliktar inte till något.
+        {BRF_FORM.finePrint1}
       </p>
       <p className="text-center text-xs text-muted-foreground">
-        Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
-        <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
+        {BRF_FORM.finePrint2}{" "}
+        <a href="/cookies" className="underline hover:text-foreground">{BRF_FORM.finePrint2Link}</a>.
       </p>
     </form>
   );
@@ -308,7 +270,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
               <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">
-                {place ? `BRF${inPlace}` : "BRF & fastigheter"}
+                {brfEyebrow(place)}
               </p>
               <h1
                 id="brf-heading"
@@ -318,8 +280,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 <span className="italic text-accent">med underlag styrelsen kan besluta på</span>
               </h1>
               <p className="mt-7 max-w-[52ch] text-[18px] leading-relaxed text-muted-foreground md:text-[19px]">
-                Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar i
-                {place ? `${place.name} och närområdet` : "Storstockholm och Roslagen"}.
+                {brfHeroIntro(place)}
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -347,7 +308,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 className="aspect-[4/3] w-full rounded-2xl object-cover lg:aspect-[4/5]"
               />
               <figcaption className="mt-3 text-[13px] text-muted-foreground">
-                Snörasskydd på nylagt tak, Roslagens skärgård.
+                {BRF_HERO_CAPTION}
               </figcaption>
             </figure>
           </div>
@@ -356,7 +317,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         {/* Fakta */}
         <section className="border-b border-border bg-background" aria-label="Trygghet och villkor">
           <dl className="mx-auto grid max-w-7xl grid-cols-2 lg:grid-cols-4">
-            {facts.map((f, i) => (
+            {BRF_FACTS.map((f, i) => (
               <div
                 key={f.label}
                 className={`px-6 py-8 ${i % 2 === 1 ? "border-l" : ""} ${i >= 2 ? "border-t lg:border-t-0" : ""} ${i > 0 ? "lg:border-l" : ""} border-border`}
@@ -376,20 +337,16 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 id="brf-intro-heading"
                 className="font-display text-[clamp(1.9rem,3.6vw,2.9rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-balance text-foreground"
               >
-                Ett takbyte är ett föreningsbeslut, inte bara ett hantverk.
+                {BRF_INTRO.heading}
               </h2>
             </Reveal>
             <Reveal className="lg:col-span-6" delay={0.1}>
               <p className="text-[18px] leading-relaxed text-muted-foreground">
-                Taket är en stor post i underhållsplanen och ett beslut som ska hålla inför både medlemmar och nästa
-                styrelse. Därför bygger vi vårt arbete på tre underlag som går att spara och jämföra.
+                {BRF_INTRO.text}
               </p>
               <ul className="mt-8 border-t border-border">
-                {[
-                  ["Takkontroll", "Takets skick bedömt på plats, som grund för underhållsplan och beslut."],
-                  ["Fast offert", "Offert med fast pris."],
-                  ["Garantivillkor", "Vilka garantier som gäller för ert tak står i offerten."],
-                ].map(([title, text]) => (
+                {BRF_INTRO.items
+                .map(([title, text]) => (
                   <li key={title} className="grid gap-1 border-b border-border py-5 sm:grid-cols-[13rem_1fr] sm:gap-6">
                     <span className="font-display text-lg text-foreground">{title}</span>
                     <span className="text-muted-foreground">{text}</span>
@@ -407,7 +364,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 id="brf-place-heading"
                 className="font-display text-[clamp(1.6rem,2.8vw,2.2rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-balance text-foreground lg:col-span-5"
               >
-                Takbyte för bostadsrättsföreningar{inPlace}
+                {place ? brfPlaceHeading(place) : null}
               </h2>
               <div className="space-y-5 text-[18px] leading-relaxed text-muted-foreground lg:col-span-7">
                 {place.paragraphs.map((text) => (
@@ -440,20 +397,19 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         <section className="border-y border-border bg-secondary py-24 md:py-32" aria-labelledby="brf-process-heading">
           <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
-              <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">Processen</p>
+              <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">{BRF_PROCESS.eyebrow}</p>
               <h2
                 id="brf-process-heading"
                 className="font-display text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-balance text-foreground"
               >
-                Så går ett takbyte till i en förening
+                {BRF_PROCESS.heading}
               </h2>
               <p className="mt-6 max-w-[42ch] text-[17px] leading-relaxed text-muted-foreground">
-                Sex steg från första takkontrollen till slutgenomgång. Beslutet ligger hos föreningen, och vi ser till
-                att underlaget finns när det behövs.
+                {BRF_PROCESS.intro}
               </p>
             </div>
             <ol className="lg:col-span-7">
-              {steps.map((step, i) => (
+              {BRF_STEPS.map((step, i) => (
                 <li key={step.title} className="border-t border-foreground/15 last:border-b">
                   <Reveal className="grid gap-x-8 gap-y-2 py-8 sm:grid-cols-[3.5rem_1fr]" delay={Math.min(i, 3) * 0.05}>
                     <span className="font-display text-3xl leading-none text-accent tabular-nums">{i + 1}</span>
@@ -472,29 +428,24 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         <section className="bg-primary py-24 text-primary-foreground md:py-32" aria-labelledby="brf-offer-heading">
           <div className="mx-auto max-w-7xl px-6">
             <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary-foreground/60">
-              Tjänster för föreningen
+              {BRF_OFFER.eyebrow}
             </p>
             <h2
               id="brf-offer-heading"
               className="max-w-[22ch] font-display text-[clamp(1.9rem,3.6vw,2.9rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-balance"
             >
-              Två sätt att arbeta med föreningens tak
+              {BRF_OFFER.heading}
             </h2>
 
             <div className="mt-14 grid gap-14 border-t border-primary-foreground/20 pt-14 md:grid-cols-2 md:gap-0 md:divide-x md:divide-primary-foreground/20">
               <div className="md:pr-14">
-                <h3 className="font-display text-[1.9rem] leading-tight">Takbyte och takrenovering</h3>
+                <h3 className="font-display text-[1.9rem] leading-tight">{BRF_OFFER.replace.title}</h3>
                 <p className="mt-4 max-w-[46ch] leading-relaxed text-primary-foreground/75">
-                  Komplett takbyte eller renovering, från takkontroll till slutgenomgång. Vi lämnar fast pris efter
-                  kostnadsfri takkontroll.
+                  {BRF_OFFER.replace.text}
                 </p>
                 <ul className="mt-8 border-t border-primary-foreground/20 text-primary-foreground/90">
-                  {[
-                    "Takomläggning i plåt, betongpannor och tegel",
-                    "Takrenovering och reparation",
-                    "Takavvattning och plåtarbeten",
-                    "Taksäkerhet på det nya taket",
-                  ].map((item) => (
+                  {BRF_OFFER.replace.items
+                  .map((item) => (
                     <li key={item} className="border-b border-primary-foreground/20 py-3.5">{item}</li>
                   ))}
                 </ul>
@@ -502,18 +453,17 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                   to="/tjanster/takomlaggning"
                   className="mt-8 inline-flex items-center gap-2 font-semibold text-accent underline decoration-2 underline-offset-[6px] hover:text-primary-foreground"
                 >
-                  Läs om takomläggning <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  {BRF_OFFER.replace.link} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>
 
               <div className="md:pl-14">
-                <h3 className="font-display text-[1.9rem] leading-tight">Takkontroll</h3>
+                <h3 className="font-display text-[1.9rem] leading-tight">{BRF_OFFER.check.title}</h3>
                 <p className="mt-4 max-w-[46ch] leading-relaxed text-primary-foreground/75">
-                  Allt börjar med en kostnadsfri takkontroll, utan förpliktelser. Därefter får föreningen en
-                  offert med fast pris att ta ställning till.
+                  {BRF_OFFER.check.text}
                 </p>
                 <ul className="mt-8 border-t border-primary-foreground/20 text-primary-foreground/90">
-                  {["Kostnadsfri takkontroll utan förpliktelser", "Fast pris efter takkontrollen", "En kontaktperson hela vägen", "Svar inom 24 timmar"].map((item) => (
+                  {BRF_OFFER.check.items.map((item) => (
                     <li key={item} className="border-b border-primary-foreground/20 py-3.5">{item}</li>
                   ))}
                 </ul>
@@ -521,7 +471,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                   href="#forfragan"
                   className="mt-6 inline-flex items-center gap-2 font-semibold text-accent underline decoration-2 underline-offset-[6px] hover:text-primary-foreground"
                 >
-                  Boka kostnadsfri takkontroll <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  {BRF_OFFER.check.link} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -532,29 +482,18 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         <section className="bg-background py-24 md:py-32" aria-labelledby="brf-economy-heading">
           <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
-              <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">Planering och ekonomi</p>
+              <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">{BRF_ECONOMY.eyebrow}</p>
               <h2
                 id="brf-economy-heading"
                 className="font-display text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-balance text-foreground"
               >
-                Planera taket i underhållsplanen, inte först när det läcker
+                {BRF_ECONOMY.heading}
               </h2>
             </div>
             <div className="space-y-6 text-[18px] leading-relaxed text-muted-foreground lg:col-span-7">
-              <p>
-                Ett tak som byts i tid går att planera in i budget och underhållsplan. Ett akut takbyte blir en
-                oplanerad kostnad som styrelsen måste lösa snabbt. Med en takkontroll i god tid vet ni vad taket
-                kräver och när.
-              </p>
-              <p>
-                Takbyten finansieras ofta via föreningens underhållsfond, lån eller en justering av avgiften. Vi
-                lämnar ett fast prisunderlag som styrelsen kan ta med i ekonomin och till förvaltare eller
-                bank.
-              </p>
-              <p>
-                Osäker på när det är dags? Boka en kostnadsfri takkontroll så får ni ett besked om takets skick, utan
-                förpliktelser.
-              </p>
+              {BRF_ECONOMY.paragraphs.map((text) => (
+                <p key={text}>{text}</p>
+              ))}
             </div>
           </div>
         </section>
@@ -562,15 +501,15 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         {/* Boende */}
         <section className="border-y border-border bg-secondary py-24 md:py-32" aria-labelledby="brf-residents-heading">
           <div className="mx-auto max-w-7xl px-6">
-            <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">För de boende</p>
+            <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">{BRF_RESIDENTS.eyebrow}</p>
             <h2
               id="brf-residents-heading"
               className="max-w-[24ch] font-display text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-balance text-foreground"
             >
-              Så begränsar vi störningen under arbetet
+              {BRF_RESIDENTS.heading}
             </h2>
             <div className="mt-14 grid border-t border-foreground/15 md:grid-cols-2">
-              {boende.map((item, i) => (
+              {BRF_BOENDE.map((item, i) => (
                 <div
                   key={item.title}
                   className={`border-b border-foreground/15 py-8 ${i % 2 === 0 ? "md:pr-12" : "md:border-l md:pl-12"}`}
@@ -587,16 +526,15 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
         <section id="forfragan" className="scroll-mt-24 bg-background py-24 md:py-32" aria-labelledby="brf-form-heading">
           <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
-              <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">Kom igång</p>
+              <p className="mb-6 text-[13px] font-bold uppercase tracking-[0.16em] text-primary">{BRF_FORM.eyebrow}</p>
               <h2
                 id="brf-form-heading"
                 className="font-display text-[clamp(1.9rem,3.4vw,2.7rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-balance text-foreground"
               >
-                Boka kostnadsfri takkontroll
+                {BRF_FORM.heading}
               </h2>
               <p className="mt-6 max-w-[42ch] text-[17px] leading-relaxed text-muted-foreground">
-                Berätta kort om föreningen och taket. Vi återkommer inom 24 timmar och bokar en tid som passar
-                styrelsen.
+                {BRF_FORM.text}
               </p>
               <ul className="mt-10 space-y-4 border-t border-border pt-8 text-[17px]">
                 <li>
@@ -611,9 +549,9 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 </li>
               </ul>
               <p className="mt-8 text-[15px] leading-relaxed text-muted-foreground">
-                Vi arbetar i Storstockholm och Roslagen.{" "}
+                {BRF_FORM.areaText}{" "}
                 <Link to="/omraden" className="font-semibold text-primary underline decoration-accent decoration-2 underline-offset-4">
-                  Se alla områden
+                  {BRF_FORM.areaLink}
                 </Link>
               </p>
             </div>
@@ -627,7 +565,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
           <section className="border-t border-border bg-secondary py-16 md:py-20" aria-labelledby="brf-places-heading">
             <div className="mx-auto max-w-7xl px-6">
               <h2 id="brf-places-heading" className="font-display text-2xl text-foreground md:text-3xl">
-                Bostadsrättsföreningar i Storstockholm och Roslagen
+                {BRF_PLACES_HEADING}
               </h2>
               <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-4">
                 {brfPlaces.map((l) => (

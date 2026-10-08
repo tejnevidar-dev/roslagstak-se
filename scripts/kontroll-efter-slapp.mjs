@@ -299,6 +299,20 @@ for (const [path, mening, rubrik, inte] of [
   await p.close();
 }
 
+// 16. AC5 BRF: rubriker (h2/h3) efter React finns alla i den statiska HTML:en (H1 undantagen)
+for (const path of ["/brf", "/brf/norrtalje"]) {
+  const { html } = await hamta(path);
+  const stat = synligStatisk(html);
+  const p = await renderad(ctx, path);
+  for (let y = 0; y < 12000; y += 400) { await p.evaluate((yy) => window.scrollTo(0, yy), y); await p.waitForTimeout(250); } // långsamt, så att uppskjutna sektioner monteras
+  const rubriker = await p.evaluate(() => [...document.querySelectorAll("main h2, main h3")].map((h) => (h.textContent || "").replace(/[\s\u00A0]+/g, " ").trim().replace(/[.:]$/, "")).filter((t) => t.length >= 3));
+  const saknas = [...new Set(rubriker)].filter((t) => !stat.includes(t.toLowerCase()));
+  punkt(`${path}: alla h2/h3 efter React finns i den statiska HTML:en`, saknas.length === 0, saknas.length ? `saknas: ${saknas.slice(0, 4).join(" | ").slice(0, 120)}` : `${new Set(rubriker).size} rubriker`);
+  const intro = await p.evaluate(() => [...document.querySelectorAll("main p")].map((e) => e.textContent || "").find((t) => t.startsWith("Fr\u00E5n kostnadsfri takkontroll och fast offert")) ?? "");
+  punkt(`${path}: introtexten har mellanslag efter "Vi arbetar i" (React) och samma text i statisk HTML`, / Vi arbetar i [A-Z\u00C5\u00C4\u00D6]/.test(intro) && stat.includes(intro.toLowerCase().replace(/\s+/g, " ").trim()), intro.slice(-50));
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);

@@ -25,7 +25,7 @@ import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PR
 import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1, comboListLink } from "../src/data/service-location-combos";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
-import { buildBody } from "../src/lib/body-items";
+import { buildBody, type BodyItem } from "../src/lib/body-items";
 import { problemsForLocation, regionLinksForProblems, takkontrollLink } from "../src/data/problem-links";
 import { hubLinksFor, REGION_EXTRA_LINKS } from "../src/data/hub-links";
 import { TAKTVATT_FAQS, TAKTVATT_H1, TAKTVATT_INTRO, TAKTVATT_META, TAKTVATT_SECTIONS, TAKTVATT_TITLE } from "../src/data/taktvatt-text";
@@ -44,9 +44,64 @@ import { HOME_ABOUT_BENEFITS, HOME_ABOUT_CAPTION, HOME_ABOUT_INTRO, HOME_ABOUT_P
 import { HOME_AREA_INTRO, HOME_AREA_PANEL, HOME_AREA_SEO_HEADING, HOME_AREA_SEO_PARAGRAPHS, homeAreaIntroText, stripBold } from "../src/data/home-area";
 import { HOME_GUIDES, HOME_GUIDES_COUNT, homeGuideLeadCaption, homeGuideReadTime } from "../src/data/home-guides";
 import { locationIndex as homeLocationIndex } from "../src/data/location-index";
-import type { BodyItem } from "../src/lib/body-items";
 import { processFaqs } from "../src/data/process-faqs";
 import { brfFaqs, brfFaqsFor } from "../src/data/brf-faqs";
+import {
+  BRF_BOENDE, BRF_ECONOMY, BRF_FACTS, BRF_FORM, BRF_HERO_CAPTION, BRF_INTRO, BRF_OFFER, BRF_PLACES_HEADING, BRF_PROCESS, BRF_RESIDENTS, BRF_STEPS,
+  brfEyebrow, brfHeroIntro, brfPlaceHeading, brfPlaceLine, brfPlaceParagraphs,
+} from "../src/data/brf-sections";
+import { RELATED_LINKS_INTRO, RELATED_LINKS_TITLE } from "../src/data/related-links-text";
+
+/**
+ * BRF-sidornas text i den statiska HTML:en (AC5): samma block, i samma ordning och med samma ord som BrfPage.tsx, ur src/data/brf-sections.ts.
+ * `place` är orten på /brf/<ort> (utelämnad på /brf); `nearby` är närliggande orter som har egen BRF-sida.
+ */
+const brfBody = (opts: { place?: { prep: string; name: string }; nearby?: string[]; extra: BodyItem[]; faqs: { question: string; answer: string }[] }) => {
+  const { place, nearby = [], extra, faqs } = opts;
+  return buildBody([
+    brfEyebrow(place),
+    BRF_HERO_CAPTION,
+    ...BRF_FACTS.flatMap((f) => [f.label, f.value]),
+    { h: BRF_INTRO.heading },
+    BRF_INTRO.text,
+    ...BRF_INTRO.items.flatMap(([title, text]) => [title, text]),
+    ...(place ? [{ h: brfPlaceHeading(place) }, ...brfPlaceParagraphs(place), brfPlaceLine(place, nearby)] : []),
+    BRF_PROCESS.eyebrow,
+    { h: BRF_PROCESS.heading },
+    BRF_PROCESS.intro,
+    ...BRF_STEPS.flatMap((s) => [{ h: s.title, level: 3 as const }, s.text]),
+    BRF_OFFER.eyebrow,
+    { h: BRF_OFFER.heading },
+    { h: BRF_OFFER.replace.title, level: 3 as const },
+    BRF_OFFER.replace.text,
+    ...BRF_OFFER.replace.items,
+    BRF_OFFER.replace.link,
+    { h: BRF_OFFER.check.title, level: 3 as const },
+    BRF_OFFER.check.text,
+    ...BRF_OFFER.check.items,
+    BRF_OFFER.check.link,
+    BRF_ECONOMY.eyebrow,
+    { h: BRF_ECONOMY.heading },
+    ...BRF_ECONOMY.paragraphs,
+    BRF_RESIDENTS.eyebrow,
+    { h: BRF_RESIDENTS.heading },
+    ...BRF_BOENDE.flatMap((b) => [{ h: b.title, level: 3 as const }, b.text]),
+    BRF_FORM.eyebrow,
+    { h: BRF_FORM.heading },
+    BRF_FORM.text,
+    `${BRF_FORM.areaText} ${BRF_FORM.areaLink}`,
+    BRF_FORM.finePrint1,
+    `${BRF_FORM.finePrint2} ${BRF_FORM.finePrint2Link}.`,
+    ...(place ? [] : [{ h: BRF_PLACES_HEADING }]),
+    ...extra,
+    { h: "Frågor från styrelser om takbyte" },
+    "Process, pris, garanti och vad som händer under arbetet.",
+    ...faqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+    { h: RELATED_LINKS_TITLE },
+    RELATED_LINKS_INTRO,
+  ]);
+};
+
 
 const MONEY_LINKS = [
   { href: "/takkontroll", label: "Kostnadsfri takkontroll" },
@@ -392,19 +447,15 @@ const staticPages: Record<string, PrerenderPage> = {
     description:
       "Takbyte och takkontroll för bostadsrättsföreningar i Storstockholm och Roslagen. Fast pris och 10 års utförandegaranti.",
     h1: "Takbyte för bostadsrättsföreningar, med underlag styrelsen kan besluta på",
-    intro:
-      "Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar i Storstockholm och Roslagen.",
-    ...buildBody([
-      "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk. Vi bygger arbetet på tre underlag som går att spara och jämföra: en tydlig bedömning av takets skick, fast offert och garantihandlingar efter slutgenomgång.",
-      "Så går ett takbyte till i en förening: takkontroll, åtgärdsförslag och fast offert, beslut i föreningen, planering tillsammans med styrelsen, genomförande samt slutgenomgång.",
-      "Vi erbjuder takbyte och takrenovering. Allt börjar med en kostnadsfri takkontroll utan förpliktelser, och föreningen får en offert med fast pris, en kontaktperson hela vägen och svar inom 24 timmar. Arbetet utförs enligt AMA.",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
-      "För de boende begränsar vi störningen genom att stämma av tidplan och ställning med styrelsen, skydda fasad och mark, städa löpande och ge föreningen en fast kontaktperson.",
-      `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
-      { h: "Frågor från styrelser om takbyte" },
-      "Process, pris, garanti och vad som händer under arbetet.",
-      ...brfFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
-    ]),
+    intro: brfHeroIntro(),
+    ...brfBody({
+      extra: [
+        // Text som bara finns i den statiska HTML:en: garantiformuleringen och uppmaningen (ingen motsvarighet som eget block i React)
+        "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
+        `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
+      ],
+      faqs: brfFaqs,
+    }),
     jsonLd: [faqLd(brfFaqs, "/brf")],
     links: [
       ...primaryLinks,
@@ -1018,15 +1069,17 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       title: `Takbyte BRF ${prep} ${loc.name} — bostadsrättsföreningar`,
       description: `Takbyte och takkontroll för bostadsrättsföreningar ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`,
       h1: `Takbyte för bostadsrättsföreningar ${prep} ${loc.name}, med underlag styrelsen kan besluta på`,
-      intro: `Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi tar uppdrag ${prep} ${loc.name} och närområdet.`,
-      ...buildBody([
-        `För en bostadsrättsförening ${prep} ${loc.name} börjar ett takbyte med en kostnadsfri takkontroll, följd av en offert med fast pris som styrelsen och stämman kan besluta på.`,
-        "Vi erbjuder takbyte och takrenovering, med kostnadsfri takkontroll utan förpliktelser, fast pris och en kontaktperson hela vägen. Vilka garantier som gäller för ert tak står i offerten.",
-        `Ring ${PHONE} eller boka takkontroll på /brf/${loc.slug}. Vi återkommer inom 24 timmar.`,
-        { h: "Frågor från styrelser om takbyte" },
-        "Process, pris, garanti och vad som händer under arbetet.",
-        ...brfPlaceFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
-      ]),
+      intro: brfHeroIntro({ name: loc.name }),
+      ...brfBody({
+        place: { prep, name: loc.name },
+        nearby: loc.nearbyLocations
+          .map((name) => locations.find((l) => l.name === name))
+          .filter((l): l is NonNullable<typeof l> => !!l)
+          .filter((l) => (brfLocationSlugs as readonly string[]).includes(l.slug))
+          .map((l) => l.name),
+        extra: [`Ring ${PHONE} eller boka takkontroll på /brf/${loc.slug}. Vi återkommer inom 24 timmar.`],
+        faqs: brfPlaceFaqs,
+      }),
       jsonLd: [faqLd(brfPlaceFaqs, clean)],
       links: [
         ...primaryLinks,

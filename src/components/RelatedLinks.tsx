@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { getRelatedLinks, type InternalLink } from "@/data/internal-links";
+import { RELATED_LINKS_INTRO, RELATED_LINKS_TITLE } from "@/data/related-links-text";
 
 interface RelatedLinksProps {
   /** Sökvägen för sidan som visar blocket — utesluts alltid ur länkarna. */
@@ -17,8 +18,8 @@ interface RelatedLinksProps {
 /** Internlänknav: knyter ihop tjänstesidor, prissidor och FAQ. */
 const RelatedLinks = ({
   currentPath,
-  title = "Läs vidare",
-  intro = "Fortsätt till tjänsten, priserna eller frågorna som är mest relevanta för ditt takprojekt.",
+  title = RELATED_LINKS_TITLE,
+  intro = RELATED_LINKS_INTRO,
   extraLinks = [],
   serviceCount,
   hubCount,
