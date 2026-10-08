@@ -111,6 +111,7 @@ import { MATERIAL_PAGE_TEXT, materialPricesSentence } from "../src/data/material
 import { REGION_PAGE_TEXT } from "../src/data/region-page-text";
 import { PROBLEM_PAGE_TEXT } from "../src/data/problem-page-text";
 import { PRICES_PAGE_TEXT } from "../src/data/prices-page-text";
+import { briefFaqs } from "../src/data/brief-faq";
 import { BLOG_TEMPLATE, blogHasAside } from "../src/data/blog-template-text";
 import { ISLAND_TEXT, ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_PAGE, ROOF_TYPE_ORDER, ROOF_TYPE_TEXTS, roofPriceText, roofTypesIntroText } from "../src/data/taktyper-text";
 import { ROT_FORBEHALL as TAKTYP_ROT_FORBEHALL, STALLNING_MENING as TAKTYP_STALLNING } from "../src/data/prices";
@@ -1304,12 +1305,16 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
   if (combo) {
     const override = comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`];
     // Frågorna och svaren som ServiceLocationPage visar (samma funktion), med rubriker, och FAQPage-schema.
-    const comboFaqs = generateServiceLocationFAQs(
-      combo.serviceName,
-      combo.locationName,
-      combo.prep,
-      locations.find((l) => l.slug === combo.locationSlug)?.isIsland || false,
-    );
+    // Har briefen en egen frågedel visas inte den genererade FAQ-sektionen, och schemat bygger på briefens frågor (AG2)
+    const briefFaq = briefFaqs(override?.content ?? combo.content);
+    const comboFaqs = briefFaq
+      ? briefFaq.map((f) => ({ question: f.question, answer: stripInlineMd(f.answer) }))
+      : generateServiceLocationFAQs(
+          combo.serviceName,
+          combo.locationName,
+          combo.prep,
+          locations.find((l) => l.slug === combo.locationSlug)?.isIsland || false,
+        );
     return {
       title: override?.title ?? comboDefaultTitle(combo),
       description: override?.description ?? combo.description,
@@ -1319,8 +1324,12 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(override?.content ?? combo.content).map(stripInlineMd),
         // Relaterade tjänster-rubriken ligger före frågorna, precis som i ServiceLocationPage.tsx (AG1)
         { h: SERVICE_LOCATION_TEXT.relatedHeading(combo.prep, combo.locationName) },
-        { h: `Vanliga frågor om ${combo.serviceName.toLowerCase()} ${combo.prep} ${combo.locationName}` },
-        ...comboFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+        ...(briefFaq
+          ? []
+          : [
+              { h: `Vanliga frågor om ${combo.serviceName.toLowerCase()} ${combo.prep} ${combo.locationName}` },
+              ...comboFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
+            ]),
         // Sidokolumnen, ortlistans rubrik och omdömesbandet i samma ordning som på sidan
         { h: SERVICE_LOCATION_TEXT.asideHeading, level: 3 as const },
         SERVICE_LOCATION_TEXT.asideText(combo.serviceName, combo.prep, combo.locationName),

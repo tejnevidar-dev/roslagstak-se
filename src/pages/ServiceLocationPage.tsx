@@ -1,6 +1,7 @@
 import { withRotForbehall } from "@/data/prices";
 import { SERVICE_LOCATION_TEXT } from "@/data/service-location-text";
-import { isHeading, renderInline } from "@/lib/inline-md";
+import { isHeading, renderInline, stripInlineMd } from "@/lib/inline-md";
+import { briefFaqs } from "@/data/brief-faq";
 import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -79,12 +80,16 @@ const ServiceLocationPage = () => {
     { slug: "taktvatt", name: "Taktvätt" },
   ].filter((s) => s.slug !== combo.serviceSlug);
 
-  const faqs = generateServiceLocationFAQs(
-    combo.serviceName,
-    combo.locationName,
-    combo.prep,
-    loc?.isIsland || false,
-  );
+  // Har briefen en egen frågedel visas inte sidans genererade FAQ-sektion, och FAQPage-schemat bygger på briefens frågor (AG2)
+  const briefFaq = briefFaqs(override?.content ?? combo.content);
+  const faqs = briefFaq
+    ? briefFaq.map((f) => ({ question: f.question, answer: stripInlineMd(f.answer) }))
+    : generateServiceLocationFAQs(
+        combo.serviceName,
+        combo.locationName,
+        combo.prep,
+        loc?.isIsland || false,
+      );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -293,7 +298,8 @@ const ServiceLocationPage = () => {
                 </div>
               </div>
 
-              {/* FAQ Section */}
+              {/* FAQ Section: bara när briefen inte har en egen frågedel (AG2) */}
+              {!briefFaq && (
               <div className="mt-8">
                 <h2 className="font-display text-2xl text-foreground mb-6">
                   Vanliga frågor om {combo.serviceName.toLowerCase()} {combo.prep} {combo.locationName}
@@ -311,6 +317,7 @@ const ServiceLocationPage = () => {
                   ))}
                 </Accordion>
               </div>
+              )}
             </div>
 
             {/* Sidebar */}
