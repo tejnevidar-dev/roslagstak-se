@@ -84,7 +84,7 @@ export const services: Service[] = [
     icon: IconAsbestos,
     slug: "eternit-asbest",
     title: "Byta eternittak",
-    short: "Sanering via firma med tillstånd",
+    short: "Sanering via behörig firma",
     description:
       "Eternit är skivor av asbestcement. Ska ett sådant tak bytas är arbetet delat mellan två företag: en saneringsfirma river det gamla taket, och vi lägger det nya.",
   },

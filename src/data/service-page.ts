@@ -115,7 +115,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Takkontroll", v: "Kostnadsfri" },
     ],
     specHeading: "Vem gör vad?",
-    lead: "Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en saneringsfirma med tillstånd, som river det gamla taket. Vi lägger det nya.",
+    lead: "Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma, som river det gamla taket. Vi lägger det nya.",
     craftLine: "Borra, såga, slipa eller bryt inte i skivorna själv, och gå inte upp på taket.",
     photoNote: "",
   },

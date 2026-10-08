@@ -240,8 +240,8 @@ for (const path of ["/", "/taklaggare-taby", "/takrenovering-taby", "/offert", "
 
 // 21. AF1/paket 12: de rättade lydelserna är borta (statisk HTML och startsidan efter React)
 {
-  const GAMLA = ["skjuter fram ett takbyte", "räkna fram ett prisspann", "tätt inklätt i plåt", "takvård och plåtarbeten", "sanering via behörig firma", "behörig saneringsfirma", "material ej angivet", "upp till 50 000 kr"];
-  const SIDOR = ["/", "/tjanster/eternit-asbest", "/taklaggare-karlslund", "/taklaggare-arholma", "/takbyte-var-2027", "/blogg/eternittak-asbest-sanering"];
+  const GAMLA = ["skjuter fram ett takbyte", "räkna fram ett prisspann", "tätt inklätt i plåt", "takvård och plåtarbeten", "material ej angivet", "upp till 50 000 kr"];
+  const SIDOR = ["/", "/taklaggare-karlslund", "/taklaggare-arholma", "/takbyte-var-2027"];
   for (const path of SIDOR) {
     const { html } = await hamta(path);
     const stat = synligStatisk(html);

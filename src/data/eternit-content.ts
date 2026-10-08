@@ -24,7 +24,7 @@ export const eternitFaqs: EternitFaq[] = [
   },
   {
     question: "Kan ni riva eternittaket?",
-    answer: "Nej. Vi samordnar med en saneringsfirma med tillstånd som river det. Vi lägger det nya taket.",
+    answer: "Nej. Vi samordnar med en behörig saneringsfirma som river det. Vi lägger det nya taket.",
   },
   {
     question: "Vad kostar det att byta ett eternittak?",
