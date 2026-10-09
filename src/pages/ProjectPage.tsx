@@ -169,6 +169,22 @@ const ProjectPage = () => {
             )}
           </dl>
 
+          {/* Knapprad direkt efter faktarutan: första vägen till en förfrågan ligger annars flera skärmar ner (förslag till Vidar) */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/takkontroll"
+              className="inline-flex items-center gap-2 rounded-full bg-cta px-6 py-3 text-sm font-semibold text-cta-foreground transition-colors hover:bg-cta/90"
+            >
+              Boka kostnadsfri takkontroll <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <a
+              href="tel:+46701543639"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" /> Ring 070-154 36 39
+            </a>
+          </div>
+
           {intro && (
             <section className="mt-12" aria-labelledby="om-jobbet">
               <h2 id="om-jobbet" className="font-display text-2xl text-foreground">Om jobbet</h2>

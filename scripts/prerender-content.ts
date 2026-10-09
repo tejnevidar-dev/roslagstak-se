@@ -1055,6 +1055,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { href: `/tjanster/${project.serviceSlug}`, label: project.serviceName },
         { href: `/taklaggare-${project.locationSlug}`, label: `Takläggare i ${project.locationName}` },
         { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" },
+        // Knapprad efter faktarutan i ProjectPage.tsx (förslag till Vidar)
+        { href: "/takkontroll", label: "Boka kostnadsfri takkontroll" },
+        { href: "tel:+46701543639", label: "Ring 070-154 36 39" },
         ...project.description.flatMap(inlineMdLinks),
       ],
       ogImage: project.ogImage,
