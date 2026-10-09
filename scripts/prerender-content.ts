@@ -41,7 +41,7 @@ import { homeFaqs } from "../src/data/home-faqs";
 import { HOME_HERO, HOME_TRUST_ITEMS, HOME_QUICK, HOME_SERVICES_INTRO } from "../src/data/home-sections";
 import { HOME_REFERENS, HOME_REFERENS_ORDER } from "../src/data/home-referens";
 import { HOME_ABOUT_BENEFITS, HOME_ABOUT_CAPTION, HOME_ABOUT_INTRO, HOME_ABOUT_P1, HOME_ABOUT_P2, homeAboutP3Text, HOME_CORE_VALUES, HOME_WORKFLOW } from "../src/data/home-about";
-import { HOME_AREA_INTRO, HOME_AREA_PANEL, HOME_AREA_SEO_HEADING, HOME_AREA_SEO_PARAGRAPHS, homeAreaIntroText, stripBold } from "../src/data/home-area";
+import { HOME_AREA_INTRO, HOME_AREA_PANEL, HOME_AREA_SEO_HEADING, HOME_AREA_SEO_PARAGRAPHS, homeAreaIntroText, homeAreaLinks, stripBold } from "../src/data/home-area";
 import { HOME_GUIDES, HOME_GUIDES_COUNT, homeGuideLeadCaption, homeGuideReadTime } from "../src/data/home-guides";
 import { locationIndex as homeLocationIndex } from "../src/data/location-index";
 import { processFaqs } from "../src/data/process-faqs";
@@ -255,7 +255,7 @@ const home: PrerenderPage = {
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
       `Boka en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
-  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks],
+  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks, ...homeAreaLinks().filter((l) => l.href !== "/takomlaggning-norrtalje")],
 };
 
 /** Interna länkar som står som [text](/länk) i FAQ-svar: i den statiska HTML:en blir de riktiga länkar i länklistan, texten och schemat är rena. */

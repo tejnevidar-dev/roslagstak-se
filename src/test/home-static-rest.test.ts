@@ -51,3 +51,14 @@ describe("startsidans statiska text: övriga sektioner", () => {
     expect([...ordning].sort((a, b) => a - b)).toEqual(ordning);
   });
 });
+
+describe("startsidans områdestext: länkar (design/startsida-lankar)", () => {
+  it("de fyra länkarna står som text utan länksyntax i den statiska texten och som länkar i länklistan", () => {
+    const sida = prerenderContent("/")!;
+    const text = sida.paragraphs.join("\n");
+    expect(text).not.toContain("](/");
+    for (const t of ["takläggare i Stockholm", "takomläggning i Norrtälje", "takbyte i Solna", "takbyte i Stockholm"]) expect(text).toContain(t);
+    const href = sida.links.map((l) => l.href);
+    for (const h of ["/taklaggare-stockholm", "/takomlaggning-norrtalje", "/takbyte-solna", "/takbyte-stockholm"]) expect(href).toContain(h);
+  });
+});

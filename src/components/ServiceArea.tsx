@@ -12,9 +12,19 @@ import {
 } from "@/data/home-area";
 import type { ReactNode } from "react";
 
-/** Fetstil i texterna är markerad med ** (se home-area.ts): jämna delar är vanlig text, udda delar är fetstil. */
+/** Fetstil i texterna är markerad med ** och interna länkar med [text](/länk) (se home-area.ts). */
 const withBold = (s: string): ReactNode[] =>
-  s.split("**").map((part, i) => (i % 2 === 1 ? <strong key={i} className="font-semibold">{part}</strong> : part));
+  s.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\(\/[^)\s]*\))/).map((part, i) => {
+    const länk = part.match(/^\[([^\]]+)\]\((\/[^)\s]*)\)$/);
+    if (länk)
+      return (
+        <Link key={i} to={länk[2]} className="font-semibold underline decoration-marine/30 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent">
+          {länk[1]}
+        </Link>
+      );
+    const fet = part.match(/^\*\*([^*]+)\*\*$/);
+    return fet ? <strong key={i} className="font-semibold">{fet[1]}</strong> : part;
+  });
 
 const areas = regionOrder
   .filter((region) => locations.some((l) => l.region === region))

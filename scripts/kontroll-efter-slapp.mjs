@@ -465,6 +465,19 @@ for (const path of ["/takproblem/fukt-pa-vinden", "/priser"]) {
   await p.close();
 }
 
+// 30. design/startsida-lankar: fyra länkar i områdestexten på startsidan (statisk HTML och efter React)
+{
+  const MAL = ["/taklaggare-stockholm", "/takomlaggning-norrtalje", "/takbyte-solna", "/takbyte-stockholm"];
+  const { html } = await hamta("/");
+  const statLankar = MAL.filter((m) => html.includes(`href="${m}"`));
+  punkt("Startsidan, statisk HTML: de fyra områdeslänkarna finns", statLankar.length === MAL.length, `${statLankar.length} av ${MAL.length}`);
+  const p = await renderad(ctx, "/");
+  for (let y = 0; y < 9000; y += 400) { await p.evaluate((yy) => window.scrollTo(0, yy), y); await p.waitForTimeout(250); }
+  const r = await p.evaluate((mal) => mal.map((m) => !!document.querySelector(`#omraden a[href="${m}"]`) || !![...document.querySelectorAll("section a")].find((a) => a.getAttribute("href") === m && a.closest("section")?.id === "omraden")), MAL);
+  punkt("Startsidan efter React: de fyra områdeslänkarna finns i områdessektionen", r.every(Boolean), r.map((x, i2) => (x ? "" : MAL[i2])).filter(Boolean).join(", ") || `${MAL.length} av ${MAL.length}`);
+  await p.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
