@@ -55,6 +55,8 @@ export const applyMall = (loc: LocationData): LocationData => {
   const region = loc.region;
   const km = Math.round(distanceFromBaseKm(loc));
   const grannar = loc.nearbyLocations.join(", ");
+  /* Beslutet 2026-09-26: området är hela Roslagen, Storstockholm och Mälardalen. Mälardalssidorna säger det (AJ4, gren A). */
+  const omrade = loc.region === "Mälardalen" ? "Roslagen, Storstockholm och Mälardalen" : "Roslagen och Storstockholm";
 
   const p1 = pick<string>(
     [
@@ -88,9 +90,9 @@ export const applyMall = (loc: LocationData): LocationData => {
   );
   const p4 = pick<string>(
     [
-      `Vi har vår bas i Norrtälje, ungefär ${km} km från ${ort}, och tar uppdrag i Roslagen och Storstockholm. Närmaste orter i vårt område: ${grannar}.`,
-      `${ort} ligger ungefär ${km} km från Norrtälje, där vi har vår bas. Vi tar uppdrag i Roslagen och Storstockholm. I närheten finns också ${grannar}.`,
-      `Från vår bas i Norrtälje är det ungefär ${km} km till ${ort}. Vi tar uppdrag i Roslagen och Storstockholm, bland annat i ${grannar}.`,
+      `Vi har vår bas i Norrtälje, ungefär ${km} km från ${ort}, och tar uppdrag i ${omrade}. Närmaste orter i vårt område: ${grannar}.`,
+      `${ort} ligger ungefär ${km} km från Norrtälje, där vi har vår bas. Vi tar uppdrag i ${omrade}. I närheten finns också ${grannar}.`,
+      `Från vår bas i Norrtälje är det ungefär ${km} km till ${ort}. Vi tar uppdrag i ${omrade}, bland annat i ${grannar}.`,
     ],
     n,
     3,
