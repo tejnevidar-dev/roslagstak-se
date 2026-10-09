@@ -1,0 +1,6 @@
+# Ompekning (10å, steg 1): noindex-kombinationerna material × ort pekas om till materialets egen sida.
+# Regler enligt ledning/marknad/ompekning-utkast-2026-10-06.md, alternativ A. Cloudflare Pages: översta träffen gäller, en splat per regel.
+# Bara adresser som börjar på "/<tjänst>-" och som alla är noindex träffas (kontrolleras av src/test/ompekning.test.ts).
+/tegeltak-* /tjanster/tegeltak 301
+/betongpannor-* /material/betongpannor 301
+/platttak-* /material/tp20-plattak 301
