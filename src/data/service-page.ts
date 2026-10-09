@@ -366,6 +366,9 @@ export const SERVICE_RELATED_FIXED: { to: string; label: string }[] = [
 ];
 export const SERVICE_RELATED_TAIL: { to: string; label: string }[] = [{ to: "/recensioner", label: "Omdömen på Google" }];
 
+/** Tjänster där prisrutan (första "Bra att veta"-rutan) står som ett eget H2-avsnitt över de övriga rutorna, som på materialsidorna. */
+export const PRIS_SOM_AVSNITT: string[] = ["tegeltak"];
+
 /** "Bra att veta"-rutorna för en tjänst. */
 export const goodToKnowBoxes = (slug: string): { t: string; d: string }[] => {
   const details = serviceDetails[slug];
@@ -516,7 +519,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     meta.craftLine,
     SERVICE_COPY.craftCaption(service.title, slug),
     SERVICE_COPY.goodToKnowEyebrow,
-    ...goodToKnowBoxes(slug).flatMap((b) => [{ h: b.t, level: 3 as const }, b.d]),
+    ...goodToKnowBoxes(slug).flatMap((b, i) => [{ h: b.t, level: (i === 0 && PRIS_SOM_AVSNITT.includes(slug) ? 2 : 3) as 2 | 3 }, b.d]),
     ...(SERVICE_EXTRAS[slug]
       ? SERVICE_EXTRAS[slug].blocks.flatMap((b) => [
           { h: b.heading },

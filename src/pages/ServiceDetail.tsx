@@ -8,6 +8,7 @@ import {
   serviceRelatedLinks,
   serviceSchemaNodes,
   goodToKnowBoxes,
+  PRIS_SOM_AVSNITT,
   serviceDetails,
   serviceMeta,
   tatskiktChip,
@@ -495,10 +496,16 @@ const ServiceDetail = () => {
               <span aria-hidden="true" className="h-px w-12 bg-primary" />
               {SERVICE_COPY.goodToKnowEyebrow}
             </p>
-            <div className="mt-12 grid gap-px border-y border-border bg-border md:grid-cols-3">
-              {goodToKnowBoxes(service.slug).map((f, i) => (
+            {PRIS_SOM_AVSNITT.includes(service.slug) && (
+              <div id="pris" className="mt-12 max-w-3xl scroll-mt-28">
+                <h2 className="font-display text-2xl text-foreground">{goodToKnowBoxes(service.slug)[0].t}</h2>
+                <p className="mt-3 text-[15px] leading-[1.7] text-muted-foreground">{goodToKnowBoxes(service.slug)[0].d}</p>
+              </div>
+            )}
+            <div className={`mt-12 grid gap-px border-y border-border bg-border ${PRIS_SOM_AVSNITT.includes(service.slug) ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
+              {goodToKnowBoxes(service.slug).slice(PRIS_SOM_AVSNITT.includes(service.slug) ? 1 : 0).map((f, i) => (
                 <Reveal key={f.t} delay={i * 0.06}>
-                  <div id={i === 0 ? "pris" : undefined} className="h-full scroll-mt-28 bg-card p-8">
+                  <div id={i === 0 && !PRIS_SOM_AVSNITT.includes(service.slug) ? "pris" : undefined} className="h-full scroll-mt-28 bg-card p-8">
                     <h3 className="font-display text-[1.05rem] font-bold tracking-[-0.02em] text-foreground">{f.t}</h3>
                     <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">{f.d}</p>
                   </div>
