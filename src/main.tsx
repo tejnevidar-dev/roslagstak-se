@@ -3,11 +3,9 @@ import App from "./App.tsx";
 import "./index.css";
 import { initClickTracking, initFormFunnelTracking } from "./lib/analytics";
 import { initConsent } from "./lib/consent";
-import { captureUtm } from "./lib/utm";
-import { captureAttribution } from "./lib/attribution";
+import { initConsentStorage } from "./lib/lagring-samtycke";
 
-captureUtm();
-captureAttribution();
+initConsentStorage();
 initConsent();
 initClickTracking();
 initFormFunnelTracking();
