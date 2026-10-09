@@ -48,7 +48,7 @@ export const HOME_CORE_VALUES = [
   {
     title: "Tillgänglighet",
     description:
-      "Du ska aldrig behöva jaga din takfirma. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19.",
+      "En kontaktperson hela vägen, från takkontroll till färdigt tak. Vi svarar inom 24 timmar, och takkontrollen kan bokas måndag–fredag 07–20 och lördag–söndag 09–19.",
   },
   {
     title: "En kontaktperson",

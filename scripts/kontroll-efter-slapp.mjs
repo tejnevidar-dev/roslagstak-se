@@ -295,7 +295,7 @@ for (const [path, mening, rubrik, inte] of [
   const rubriker = await p.evaluate(() => [...document.querySelectorAll("main h2, main h3")].map((h) => (h.textContent || "").replace(/[\s ]+/g, " ").trim().replace(/[.:]$/, "")).filter((t) => t.length >= 3));
   const saknas = [...new Set(rubriker)].filter((t) => !stat.includes(t.toLowerCase()));
   punkt("Startsidan: alla h2/h3 efter React finns i den statiska HTML:en", saknas.length === 0, saknas.length ? `saknas: ${saknas.slice(0, 4).join(" | ").slice(0, 120)}` : `${new Set(rubriker).size} rubriker`);
-  for (const text of ["Tre tak vi har lagt, med bilder från jobben", "Ett tak som håller, och en kontaktperson som svarar", "Från Stockholms innerstad till ytterskärgårdens öar", "Kunskap om tak — skrivet av takläggare", "Din lokala takläggare i Roslagen"]) punkt(`Startsidan, statisk HTML: "${text}"`, stat.includes(text.toLowerCase()));
+  for (const text of ["Tre tak vi har lagt, med bilder från jobben", "Ett tak som håller, och en kontaktperson som svarar", "Från Stockholms innerstad till ytterskärgårdens öar", "Kunskap om tak — skrivet av takläggare", "Takläggare i Roslagen"]) punkt(`Startsidan, statisk HTML: "${text}"`, stat.includes(text.toLowerCase()));
   await p.close();
 }
 
@@ -451,6 +451,18 @@ for (const path of ["/takproblem/fukt-pa-vinden", "/priser"]) {
   }
   punkt("De 19 ortsbeskrivningarna står ordagrant i statisk HTML", statNej.length === 0, statNej.length ? "avviker: " + statNej.join(", ") : "19 av 19");
   punkt("De 19 ortsbeskrivningarna står ordagrant efter att React har kört", reactNej.length === 0, reactNej.length ? "avviker: " + reactNej.join(", ") : "19 av 19");
+}
+
+// 29. Regel 5 rad 4–5 (Vidars ja): "aldrig behöva jaga" och "Din lokala takläggare" är borta, de nya lydelserna finns (statisk HTML och efter React)
+{
+  const { html } = await hamta("/");
+  const stat = synligStatisk(html);
+  punkt("Startsidan, statisk HTML: gamla rad 4 och 5 borta och nya lydelserna finns", !stat.includes("aldrig behöva jaga") && !stat.includes("din lokala takläggare") && stat.includes("en kontaktperson hela vägen, från takkontroll till färdigt tak"));
+  const p = await renderad(ctx, "/");
+  for (let y = 0; y < 9000; y += 400) { await p.evaluate((yy) => window.scrollTo(0, yy), y); await p.waitForTimeout(250); }
+  const text = (await p.evaluate(() => document.body.innerText)).toLowerCase();
+  punkt("Startsidan efter React: rad 4 och rad 5 har de nya lydelserna", !text.includes("aldrig behöva jaga") && text.includes("en kontaktperson hela vägen, från takkontroll till färdigt tak") && !text.includes("din lokala takläggare") && text.includes("takläggare i roslagen"));
+  await p.close();
 }
 
 await ctx.close();

@@ -22,7 +22,7 @@ export const HOME_AREA_PANEL = {
   allLink: "Se alla orter vi arbetar i",
 };
 
-export const HOME_AREA_SEO_HEADING = "Din lokala takläggare i Roslagen";
+export const HOME_AREA_SEO_HEADING = "Takläggare i Roslagen";
 
 export const HOME_AREA_SEO_PARAGRAPHS: string[] = [
   "Behöver du en **takläggare i Roslagen** eller **takläggare i Stockholm**? RoslagsTak utför alla typer av takarbeten — från** takbyte på Blidö** och **takrenovering på Ljusterö** till** takomläggning i Norrtälje** och **plåttak på Yxlan**. Vi tar också uppdrag på **öar i norra skärgården**.",
