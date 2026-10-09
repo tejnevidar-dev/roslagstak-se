@@ -32,7 +32,7 @@ const roofTypeItems: MenuItem[] = [
 
 const quoteItems: MenuItem[] = [
   {
-    label: "Kostnadsfri konsultation",
+    label: "Boka kostnadsfri takkontroll",
     to: "/offert#radgivning",
     note: "Vi ringer upp och bokar takkontroll",
   },
