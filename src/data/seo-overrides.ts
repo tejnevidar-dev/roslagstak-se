@@ -889,4 +889,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare i Upplands-Bro: takbyte och takomläggning i Kungsängen och Bro, två stationssamhällen vid Mälaren. Kostnadsfri takkontroll och fast pris.",
   },
+  knivsta: {
+    title: "Takläggare i Knivsta – fast pris efter takkontroll",
+    description:
+      "Takläggare i Knivsta: egnahem från sågverkets tid, egnahemsområden från 1947 och småhus från 1970-talet och framåt. Kostnadsfri takkontroll och fast pris.",
+  },
 };

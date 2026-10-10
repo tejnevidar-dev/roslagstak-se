@@ -286,7 +286,7 @@ for (const file of readdirSync(resolve(guideDir)).filter((f) => f.endsWith(".md"
     allResults.push({ page: `/blogg/${slug}`, file, status: "not-built", missing: [], total: 0 });
     continue;
   }
-  const body = (raw.split(/\n---\n/).slice(1).join("\n---\n").split(/\n## Källor/)[0].split(/\n- \*\*Ändrat \d{4}-\d{2}-\d{2}/)[0] ?? "")
+  const body = (raw.split(/\n---\n/).slice(1).join("\n---\n").split(/\n## Källor|\n## Ändringar mot /)[0].split(/\n- \*\*Ändrat \d{4}-\d{2}-\d{2}/)[0] ?? "")
     .split("\n")
     .map((l) => l.replace(/^\s*- /, ""))
     .join("\n");
