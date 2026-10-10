@@ -222,7 +222,9 @@ for (const [path, rubrik] of [["/taklaggare-taby", "Varför välja RoslagsTak so
   const stat = synligStatisk(html);
   punkt(`Statisk HTML har avsnittet "${rubrik}": ${path}`, stat.includes(rubrik.toLowerCase()) && stat.includes("vi arbetar enligt ama."));
   const p = await renderad(ctx, path);
-  const r = await p.evaluate(() => [...document.querySelectorAll("h3")].map((h) => h.textContent.trim()).filter((t) => /^Varför välja RoslagsTak som|^Om .+ och takläggning i /.test(t)));
+  // Paket 37 (7a): sidorna i Roslagens regioner har rubriken "Om <ort>" (tidigare "Om <ort> och takläggning i <region>")
+  const ort = rubrik.replace("?", "").split(" ").pop();
+  const r = await p.evaluate((o) => [...document.querySelectorAll("h3")].map((h) => h.textContent.trim()).filter((t) => t.startsWith("Varför välja RoslagsTak som") || t === `Om ${o}`), ort);
   punkt(`Renderad sida har samma två rubriker som den statiska: ${path}`, r.length === 2 && r.every((t) => stat.includes(t.toLowerCase())), r.join(" | ").slice(0, 100));
   await p.close();
 }
@@ -273,8 +275,9 @@ for (const [path, rubrik] of [["/taklaggare-taby", "Varför välja RoslagsTak so
 for (const [path, mening, rubrik, inte] of [
   ["/taklaggare-bromma", "bromma tillhör västerort.", "om bromma och takläggning i västerort", "tillhör västerort i roslagen"],
   ["/taklaggare-solna", "solna tillhör norra stockholm.", "om solna och takläggning i norra stockholm", "tillhör norra stockholm i roslagen"],
-  ["/taklaggare-blido", "blidö tillhör mellersta skärgården i roslagen.", "om blidö och takläggning i mellersta skärgården", "tillhör mellersta skärgården i roslagen i roslagen"],
-  ["/taklaggare-hallstavik", "hallstavik tillhör norra roslagen.", "om hallstavik och takläggning i norra roslagen", "norra roslagen i roslagen"],
+  // Paket 37 (7a): Blidö och Hallstavik ligger i regioner med rubriken "Om <ort>"
+  ["/taklaggare-blido", "blidö tillhör mellersta skärgården i roslagen.", "om blidö", "tillhör mellersta skärgården i roslagen i roslagen"],
+  ["/taklaggare-hallstavik", "hallstavik tillhör norra roslagen.", "om hallstavik", "norra roslagen i roslagen"],
 ]) {
   const { html } = await hamta(path);
   const stat = synligStatisk(html);
