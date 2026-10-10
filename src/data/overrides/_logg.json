@@ -3304,6 +3304,54 @@
       "fore": "takläggare Upplands-Bro — takbyte & takrenovering i Upplands-Bro. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.",
       "efter": "Takläggare i Upplands-Bro: takbyte och takomläggning i Kungsängen och Bro, två stationssamhällen vid Mälaren. Kostnadsfri takkontroll och fast pris.",
       "tid": "2026-10-08T17:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-11-0001",
+      "path": "/blogg/takbyte-husaro-finnhamn-oar",
+      "falt": "title",
+      "fore": "Takbyte på Husarö och Finnhamn: går det utan bilväg?",
+      "efter": "Takbyte på Husarö: går det utan bilväg?",
+      "tid": "2026-10-11T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-11-0002",
+      "path": "/blogg/takbyte-husaro-finnhamn-oar",
+      "falt": "description",
+      "fore": "Husarö och Finnhamn nås med båt. Så planeras ett takbyte på en ö utan bilväg, och så får du besked om ditt tak. Fast pris i offerten.",
+      "efter": "Husarö nås med båt. Så planeras ett takbyte på en ö utan bilväg, och så får du besked om ditt tak. Fast pris i offerten.",
+      "tid": "2026-10-11T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-11-0003",
+      "path": "/blogg/byta-tak-brf-guide-styrelse",
+      "falt": "title",
+      "fore": "Så byter ni tak i en BRF — guide för styrelsen",
+      "efter": "Så byter ni tak i en BRF: guide för styrelsen",
+      "tid": "2026-10-11T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-11-0004",
+      "path": "/blogg/byta-tak-brf-guide-styrelse",
+      "falt": "description",
+      "fore": "Guide för BRF-styrelser: besiktning, underhållsplan, finansiering, stämmobeslut, upphandling och garanti. Så förbereder ni ett takbyte steg för steg.",
+      "efter": "Guide för BRF-styrelser: takkontroll, underhållsplan, finansiering, stämmobeslut, upphandling och avtal. Så förbereder ni ett takbyte steg för steg.",
+      "tid": "2026-10-11T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-11-0005",
+      "path": "/taklaggare-uppsala",
+      "falt": "title",
+      "fore": "Takläggare i Uppsala — Takbyte & Takrenovering",
+      "efter": "Takläggare i Uppsala – fast pris efter takkontroll",
+      "tid": "2026-10-11T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-11-0006",
+      "path": "/taklaggare-uppsala",
+      "falt": "description",
+      "fore": "Takbyte, takomläggning och takrenovering i Uppsala. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "efter": "Takläggare i Uppsala: villastaden i Kåbo, egnahemmen i Ekeby, Sunnersta och de yngre villaområdena. Kostnadsfri takkontroll och fast pris i offerten.",
+      "tid": "2026-10-11T00:30:00+02:00"
     }
   ]
 }
