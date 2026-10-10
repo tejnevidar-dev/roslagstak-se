@@ -140,7 +140,7 @@ export const landingServices: LandingService[] = [
     path: "/takkontroll",
     seoTitle: "Kostnadsfri takkontroll av ditt tak — fast pris",
     seoDescription:
-      "Kostnadsfri takkontroll: en av våra säljare tittar på taket på plats, ca 1–2 timmar. Utan förpliktelser. Fast pris i offerten om något behöver åtgärdas. Svar inom 24 timmar.",
+      "Kostnadsfri takkontroll: en av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Utan förpliktelser. Fast pris i offerten om något behöver åtgärdas. Svar inom 24 timmar.",
     breadcrumb: "Kostnadsfri takkontroll",
     eyebrow: "Takkontroll",
     h1: "Kostnadsfri takkontroll.",

@@ -2,7 +2,7 @@
  * AG2: har briefen en egen frågedel visas inte sidans genererade FAQ-sektion, och FAQPage-schemat bygger på briefens frågor.
  */
 import { describe, expect, it } from "vitest";
-import { briefFaqs } from "@/data/brief-faq";
+import { briefFaqs, medTidOchMaterial } from "@/data/brief-faq";
 import { comboOverrides } from "@/data/combo-overrides";
 import { generateCombos } from "@/data/service-location-combos";
 import { prerenderContent } from "../../scripts/prerender-content";
@@ -26,7 +26,7 @@ describe("briefens frågedel", () => {
       const o = comboOverrides[`${c.serviceSlug}-${c.locationSlug}`];
       const page = prerenderContent(c.url);
       if (!page) continue;
-      const bf = briefFaqs(o?.content ?? c.content);
+      const bf = briefFaqs(medTidOchMaterial(o?.content ?? c.content, c)); // briefens frågor + de två frågorna om tid och material (paket 37)
       const genereradRubrik = `Vanliga frågor om ${c.serviceName.toLowerCase()} ${c.prep} ${c.locationName}`;
       const rubriker = page.paragraphs.filter((p) => /^(Vanliga )?frågor om /i.test(p));
       if (bf) {

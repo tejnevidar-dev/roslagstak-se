@@ -195,11 +195,11 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takinspektion: {
     seoTitle: "Så går en takkontroll till – en av våra säljare på plats",
     seoDescription:
-      "Kostnadsfri takkontroll i Roslagen och Storstockholm. En av våra säljare tittar på taket på plats, ca 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
+      "Kostnadsfri takkontroll i Roslagen och Storstockholm. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar, och du får ett fast pris om något behöver åtgärdas.",
     blockPlacement: "before-spec",
     factCards: [
       { tone: "accent", label: "Kostnad", value: "0 kr", text: "Kostnadsfri och utan förpliktelser." },
-      { tone: "primary", label: "Tid på plats", value: "Ca 1–2 timmar", text: "Beroende på takets storlek, lutning och åtkomst." },
+      { tone: "primary", label: "Tid på plats", value: "Ungefär 1–2 timmar", text: "Beroende på takets storlek, lutning och åtkomst." },
       { tone: "outline", label: "Rapport", value: "Om takets skick", text: "Du får en rapport om takets skick efter besöket." },
       { tone: "plain", label: "Efteråt", value: "Fast pris", text: "Behöver taket åtgärdas får du ett fast pris i offerten." },
     ],

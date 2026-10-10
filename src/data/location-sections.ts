@@ -21,6 +21,14 @@ const REGION_SOM_VANLIGT_ORD = new Set(["Kusten", "Mellersta skärgården", "Nor
 export const iRoslagen = (region: string): boolean => ROSLAGEN_REGIONER.has(region) && !region.includes("Roslag");
 export const regionIMening = (region: string): string => (REGION_SOM_VANLIGT_ORD.has(region) ? region.toLowerCase() : region);
 
+/**
+ * De fem regionerna vars sidor (51 st) har rubriken "Om <ort>" (Innehåll 7a, Marknadschefen 2026-10-10): regionnamnet är ett eget namn i vår indelning, inte en plats man lägger tak "i",
+ * och regionen står redan i brödsmulan och i meningen under. Övriga regioner (och Rådmansöhalvön) behåller rubriken "Om <ort> och takläggning i <region>".
+ */
+export const REGIONER_MED_ENKEL_RUBRIK = new Set(["Kusten", "Mellersta skärgården", "Norra skärgården", "Roslagens inland", "Norra Roslagen"]);
+export const omOrtRubrik = (location: LocationData): string =>
+  REGIONER_MED_ENKEL_RUBRIK.has(location.region) ? `Om ${location.name}` : `Om ${location.name} och takläggning i ${regionIMening(location.region)}`;
+
 /** `far` = långt från basen (samma värde som LocationPage.tsx räknar), `prep` = "i" eller "på". */
 export const locationWhySections = (location: LocationData, prep: string, far: boolean): LocationSection[] => {
   const uppdrag = far
@@ -37,7 +45,7 @@ export const locationWhySections = (location: LocationData, prep: string, far: b
       paragraph: `${uppdrag}${skargard} Vi arbetar enligt AMA. ${GARANTI_RENOVERING}`,
     },
     {
-      heading: `Om ${location.name} och takläggning i ${regionIMening(location.region)}`,
+      heading: omOrtRubrik(location),
       paragraph: `${region} Kontakta oss för en kostnadsfri takkontroll ${prep} ${location.name}, utan förpliktelser.`,
     },
   ];

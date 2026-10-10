@@ -111,7 +111,7 @@ import { MATERIAL_PAGE_TEXT, materialPricesSentence } from "../src/data/material
 import { REGION_PAGE_TEXT } from "../src/data/region-page-text";
 import { PROBLEM_PAGE_TEXT } from "../src/data/problem-page-text";
 import { PRICES_PAGE_TEXT } from "../src/data/prices-page-text";
-import { briefFaqs } from "../src/data/brief-faq";
+import { briefFaqs, medTidOchMaterial } from "../src/data/brief-faq";
 import { BLOG_TEMPLATE, blogHasAside } from "../src/data/blog-template-text";
 import { ISLAND_TEXT, ROOF_PRICE_HEADING, ROOF_TYPES_HEADING, ROOF_TYPES_PAGE, ROOF_TYPE_ORDER, ROOF_TYPE_TEXTS, roofPriceText, roofTypesIntroText } from "../src/data/taktyper-text";
 import { ROT_FORBEHALL as TAKTYP_ROT_FORBEHALL, STALLNING_MENING as TAKTYP_STALLNING } from "../src/data/prices";
@@ -756,8 +756,9 @@ const NARA_BASEN_KM = 5;
 const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
   const prep = loc.isIsland ? "på" : "i";
   const parts: string[] = [
-    // Orter nära basen (under 5 km) får inte avståndsledet: "Norrtälje ligger cirka 1 km från vår bas i Norrtälje" är meningslöst (AG3)
-    `${loc.name} tillhör ${loc.region}${distanceFromBaseKm(loc) < NARA_BASEN_KM ? "" : ` och ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje`}. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
+    // Orter nära basen (under 5 km) får inte avståndsledet: "Norrtälje ligger cirka 1 km från vår bas i Norrtälje" är meningslöst (AG3).
+    // Övriga: "<Ort> ligger cirka <X> km från vår bas i Norrtälje." (Innehåll 7b: "tillhör <region>" säger att orten hör till ett område som bara finns i vår indelning)
+    `${distanceFromBaseKm(loc) < NARA_BASEN_KM ? `${loc.name} tillhör ${loc.region}` : `${loc.name} ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje`}. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
   ];
 
   const exactProject = projectSummaries.find((p) => p.locationSlug === loc.slug);
@@ -1312,7 +1313,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const override = comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`];
     // Frågorna och svaren som ServiceLocationPage visar (samma funktion), med rubriker, och FAQPage-schema.
     // Har briefen en egen frågedel visas inte den genererade FAQ-sektionen, och schemat bygger på briefens frågor (AG2)
-    const briefFaq = briefFaqs(override?.content ?? combo.content);
+    const innehall = medTidOchMaterial(override?.content ?? combo.content, combo);
+    const briefFaq = briefFaqs(innehall);
     const comboFaqs = briefFaq
       ? briefFaq.map((f) => ({ question: f.question, answer: stripInlineMd(f.answer) }))
       : generateServiceLocationFAQs(
@@ -1327,7 +1329,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       h1: comboDefaultH1(combo),
       intro: override?.description ?? combo.description,
       ...buildBody([
-        ...(override?.content ?? combo.content).map(stripInlineMd),
+        ...innehall.map(stripInlineMd),
         // Relaterade tjänster-rubriken ligger före frågorna, precis som i ServiceLocationPage.tsx (AG1)
         { h: SERVICE_LOCATION_TEXT.relatedHeading(combo.prep, combo.locationName) },
         ...(briefFaq

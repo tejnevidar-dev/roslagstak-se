@@ -4,7 +4,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { locations } from "@/data/locations";
-import { iRoslagen, locationWhySections, regionIMening } from "@/data/location-sections";
+import { iRoslagen, locationWhySections, omOrtRubrik, regionIMening } from "@/data/location-sections";
 import { isNearBase } from "@/data/service-reach";
 import { prerenderContent } from "../../scripts/prerender-content";
 
@@ -16,7 +16,7 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     expect(a.paragraph).toContain(`Vi tar uppdrag på ${ö.name} och i Roslagen och Storstockholm`);
     expect(a.paragraph).toContain("Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.");
     expect(a.paragraph).toContain("Vi arbetar enligt AMA.");
-    expect(b.heading).toBe(`Om ${ö.name} och takläggning i ${regionIMening(ö.region)}`);
+    expect(b.heading).toBe(omOrtRubrik(ö));
     expect(b.paragraph).toContain(`Kontakta oss för en kostnadsfri takkontroll på ${ö.name}, utan förpliktelser.`);
     const långt = locationWhySections(locations.find((l) => !l.isIsland && !isNearBase(l))!, "i", true)[0];
     expect(långt.paragraph).toContain("och närområdet, för både villaägare och bostadsrättsföreningar");
@@ -43,7 +43,11 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     expect(ö.mening).toBe("Blidö tillhör mellersta skärgården i Roslagen.");
     const k = text("Rådmansö");
     expect(k.mening).toBe("Rådmansö tillhör kusten i Roslagen.");
-    expect(ö.rubrik).toBe("Om Blidö och takläggning i mellersta skärgården");
+    expect(ö.rubrik).toBe("Om Blidö");
+    expect(text("Hallstavik").rubrik).toBe("Om Hallstavik");
+    expect(text("Täby").rubrik).toBe("Om Täby");
+    expect(text("Rådmansö").rubrik).toBe("Om Rådmansö");
+    expect(text("Gräddö").rubrik).toBe("Om Gräddö och takläggning i Rådmansöhalvön"); // Rådmansöhalvön ingår inte i de 51 sidorna
     // Ingen mening med "i Roslagen" för en region som inte står i listan
     for (const l of locations) {
       if (l.region === "Mälardalen") continue;

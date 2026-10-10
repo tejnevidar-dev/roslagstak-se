@@ -30,7 +30,7 @@ export const homeFaqs = [
   },
   {
     question: "Utför ni takkontroll?",
-    answer: "Ja, vi erbjuder en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, ca 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efteråt får du en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris.",
+    answer: "Ja, vi erbjuder en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, ungefär 1–2 timmar, bland annat på takmaterial, plåtdetaljer och avvattning, och på vinden när den går att komma åt. Efteråt får du en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris.",
   },
   {
     question: "Vilka områden i Roslagen täcker ni?",

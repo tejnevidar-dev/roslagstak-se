@@ -1,7 +1,7 @@
 import { withRotForbehall } from "@/data/prices";
 import { SERVICE_LOCATION_TEXT } from "@/data/service-location-text";
 import { isHeading, renderInline, stripInlineMd } from "@/lib/inline-md";
-import { briefFaqs } from "@/data/brief-faq";
+import { briefFaqs, medTidOchMaterial } from "@/data/brief-faq";
 import { isThinCombo } from "@/data/thin-combos";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -81,7 +81,9 @@ const ServiceLocationPage = () => {
   ].filter((s) => s.slug !== combo.serviceSlug);
 
   // Har briefen en egen frågedel visas inte sidans genererade FAQ-sektion, och FAQPage-schemat bygger på briefens frågor (AG2)
-  const briefFaq = briefFaqs(override?.content ?? combo.content);
+  // Frågorna om tid och material läggs efter briefens frågedel (Innehålls lydelser, ett ställe: location-faqs.ts)
+  const innehall = medTidOchMaterial(override?.content ?? combo.content, combo);
+  const briefFaq = briefFaqs(innehall);
   const faqs = briefFaq
     ? briefFaq.map((f) => ({ question: f.question, answer: stripInlineMd(f.answer) }))
     : generateServiceLocationFAQs(
@@ -235,7 +237,7 @@ const ServiceLocationPage = () => {
           {/* Content */}
           <div className="grid lg:grid-cols-3 gap-12 mb-20">
             <div className="lg:col-span-2 space-y-6">
-              {(override?.content ?? combo.content).map((paragraph, i) =>
+              {innehall.map((paragraph, i) =>
                 isHeading(paragraph) ? (
                   <h2 key={i} className="font-display text-xl text-foreground pt-2">{paragraph.slice(3)}</h2>
                 ) : (

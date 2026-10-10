@@ -25,10 +25,23 @@ const tidy = (faqs: LocationFAQ[]): LocationFAQ[] =>
  */
 const PRICE = (prep: string, name: string) =>
   `Priset för ett takbyte ${prep} ${name} beror på takets storlek, lutning, materialval och underlagets skick. Riktpriser per material finns på [prissidan](/priser). Du får ett fast pris i offerten efter en kostnadsfri takkontroll.`;
-const TIME = (what: string) =>
-  `Hur lång tid ${what} tar beror på takets storlek, underlagets skick och vädret. Vid takkontrollen går vi igenom förutsättningarna för ditt tak, och i offerten framgår vad som ingår.`;
-const MATERIALS = (isIsland: boolean) =>
-  `Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak. Vilket som passar beror på huset, takets lutning, konstruktionen och vilket uttryck du vill ha, och det går vi igenom vid takkontrollen.`;
+// Innehålls lydelser 2026-10-09 (punkt 6), grindade av Marknadschefen: inget antal dagar, inget löfte om vad takkontrollen innehåller.
+// Delas av ortssidornas och tjänst × ort-sidornas genererade frågor och av frågorna som läggs efter en briefs frågedel (tidOchMaterialFragor).
+const TIME = (_what: string) =>
+  `Det beror på takets storlek, underlagets skick och vädret, och det går inte att säga innan någon har tittat på taket. Vi anger därför inget antal dagar här. Hur arbetet läggs upp går vi igenom innan start.`;
+const MATERIALS = (_isIsland: boolean) =>
+  `Vi lägger betongpannor, lertegel, TP20-plåt, pannplåt, dubbelfalsad plåt och papptak. Vilket som passar beror på huset, takets lutning och konstruktionen, och på vilket uttryck du vill ha. Vi går igenom alternativen vid takkontrollen.`;
+
+/**
+ * De två frågorna om tid och material som läggs efter frågedelen i en brief (briefen har dem inte, så att lydelsen grindas på ett ställe).
+ * Materialfrågan bara på takbyte och takomläggning: vid takrenovering och övriga tjänster väljs sällan nytt material.
+ */
+export const tidOchMaterialFragor = (c: { serviceSlug: string; serviceName: string; prep: string; locationName: string }): LocationFAQ[] => {
+  const service = c.serviceName.toLowerCase();
+  const fragor: LocationFAQ[] = [{ question: `Hur lång tid tar ${service} ${c.prep} ${c.locationName}?`, answer: TIME("") }];
+  if (c.serviceSlug === "takbyte" || c.serviceSlug === "takomlaggning") fragor.push({ question: "Vilka takmaterial lägger ni?", answer: MATERIALS(false) });
+  return fragor;
+};
 const GUARANTEE = "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Arbetet utförs enligt AMA.";
 const ROT = (what: string, prep: string, name: string) =>
   `Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden för ${what} ${prep} ${name}, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar. Avdraget görs direkt på fakturan.`;
@@ -141,10 +154,10 @@ export const generateServiceLocationFAQs = (
       question: `Hur lång tid tar ${service} ${prep} ${locationName}?`,
       answer: TIME(isTakbyte ? "ett takbyte" : "en takrenovering"),
     },
-    {
-      question: `Vilka material används vid ${service} ${prep} ${locationName}?`,
-      answer: MATERIALS(isIsland),
-    },
+    // Materialfrågan bara på takbyte och takomläggning (Marknadschefen 2026-10-10)
+    ...(isTakbyte || service === "takomläggning"
+      ? [{ question: "Vilka takmaterial lägger ni?", answer: MATERIALS(isIsland) }]
+      : []),
     {
       question: `Kan jag få ROT-avdrag för ${service} ${prep} ${locationName}?`,
       answer: ROT(service, prep, locationName),

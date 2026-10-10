@@ -76,7 +76,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "utan förpliktelser.",
     specs: [
       { k: "Pris", v: "Kostnadsfri" },
-      { k: "Tid på plats", v: "Ca 1–2 timmar" },
+      { k: "Tid på plats", v: "Ungefär 1–2 timmar" },
     ],
     specHeading: "Så går en takkontroll till",
     lead: "En av våra säljare tittar på taket på plats.",
