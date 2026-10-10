@@ -57,7 +57,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/recensioner",
     label: "Omdömen på Google",
-    description: "Omdömen hämtade från Google — läs dem i original."
+    description: "Läs omdömen om RoslagsTak på vår Google-profil."
   },
 ];
 

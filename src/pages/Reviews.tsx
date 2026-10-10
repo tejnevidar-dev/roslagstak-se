@@ -12,13 +12,13 @@ import QuickContactFacts from "@/components/QuickContactFacts";
 const points = [
   {
     icon: ShieldCheck,
-    title: "Hämtade från Google, inte skrivna av oss",
-    text: "Vi publicerar inga omdömen som vi själva har skrivit och ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Namn och datum visas i original, och vi kan inte redigera det.",
+    title: "På Google, inte skrivna av oss",
+    text: "Vi publicerar inga omdömen som vi själva har skrivit, och vi kan inte kontrollera vem som skriver på Google. Namn och datum visas hos Google, och vi kan inte redigera dem.",
   },
   {
     icon: MessageSquare,
-    title: "Läs dem i original",
-    text: "Google visar hela recensionen, när den skrevs och vilket svar vi har lämnat. Det är enklare att bedöma än citat plockade ur sitt sammanhang.",
+    title: "Läs dem hos Google",
+    text: "Google visar hela omdömet och när det skrevs. Det är enklare att bedöma än citat plockade ur sitt sammanhang.",
   },
   {
     icon: Star,
@@ -54,7 +54,7 @@ const Reviews = () => {
           compact
           eyebrow="Omdömen"
           title="Omdömen om RoslagsTak"
-          text="Omdömena är hämtade från Google. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google. Vi har medvetet tagit bort egenskrivna kundcitat från sajten."
+          text="Våra omdömen finns på Google. Följ länken till vår Google-profil för att läsa dem. Vi publicerar inga egenskrivna recensioner och kan inte kontrollera vem som skriver på Google."
         />
         <div className="container mx-auto px-4 pt-2 pb-20">
           <div className="max-w-4xl">

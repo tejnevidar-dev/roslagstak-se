@@ -585,9 +585,9 @@ const staticPages: Record<string, PrerenderPage> = {
     intro:
       "Våra omdömen finns på Google, där du kan läsa dem i original.",
     paragraphs: [
-      "Vi samlar våra omdömen på Google istället för att publicera egenskrivna recensioner här på sajten. Omdömena är hämtade från Google i original. Vi ber alla kunder med avslutat jobb om ett omdöme, men vi kan inte kontrollera vem som skriver på Google.",
-      "Följ länken till Google för att se aktuella omdömen och stjärnbetyg. Har du själv anlitat oss får du gärna lämna ett omdöme — det hjälper andra husägare i Roslagen att välja takläggare.",
-      "Vi utför takbyte, takrenovering, plåtarbeten och takvård i hela Roslagen och Storstockholm. Takkontroll och offert är alltid kostnadsfria, och du får 10 års utförandegaranti på allt arbete.",
+      "Vi samlar våra omdömen på Google i stället för att publicera egenskrivna recensioner här på sajten. Vi kan inte kontrollera vem som skriver på Google.",
+      "Följ länken till Google för att läsa omdömena. Har du själv anlitat oss får du gärna lämna ett omdöme.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm. Vi börjar med en kostnadsfri takkontroll utan förpliktelser, och du får ett fast pris i offerten.",
       "Så kan du själv bedöma en takfirma: be om referenser från projekt i din närhet och be att få garantierna skriftligt i offerten. Ett seriöst företag lämnar alltid fast pris efter kostnadsfri takkontroll — aldrig ett pris per telefon.",
       "Vill du veta mer om hur vi arbetar innan du bestämmer dig? Läs om vår process steg för steg, våra riktpriser eller boka en kostnadsfri rådgivning där vi går igenom ditt tak tillsammans.",
       "Därför väljer vi att länka till Google istället för att skriva egna omdömen: omdömen på Google kan inte redigeras eller plockas bort av oss, vilket gör dem mer trovärdiga än citat på en egen hemsida. Där ser du hela bilden — både betyg, texter och hur vi svarar.",

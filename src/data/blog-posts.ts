@@ -1564,7 +1564,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "solceller-platttak-roslagen",
-    title: "Solceller på plåttak — vad du ska tänka på med taket",
+    title: "Solceller på plåttak: vad du ska tänka på med taket",
     excerpt: "Plåttak kan vara ett bra underlag för solceller. Det här bör du tänka på med taket innan panelerna monteras. Vi säljer och installerar inte solceller.",
     date: "2026-04-12",
     readTime: "3 min",
@@ -1574,7 +1574,7 @@ export const blogPosts: BlogPost[] = [
       "Varför plåttak ofta används som underlag: plåt är ett lätt material med jämn yta, och på bandtäckta och falsade tak kan fästena ofta klämmas runt falsen utan att det görs hål i plåten. Vilket montagesystem som passar avgör solcellsinstallatören och plåtens tillverkare.",
       "Olika plåtprofiler, olika montering: på dubbelfalsat plåttak används i regel falsklämmor runt falsen. På TP20 och pannplåt skruvas fästena genom plåten. Fråga alltid tillverkaren och installatören hur monteringen påverkar takets garanti.",
       "Ta taket först: är taket gammalt är det klokt att se över det innan panelerna monteras. Paneler på ett tak som snart behöver bytas måste tas ner igen när taket ska göras om. Planerar du både takbyte och solceller, säg det vid takkontrollen.",
-      "Garantier och försäkring: fråga både takläggaren och solcellsinstallatören hur monteringen påverkar garantierna, och anmäl anläggningen till ditt försäkringsbolag.",
+      "Garantier: fråga både takläggaren och solcellsinstallatören hur monteringen påverkar garantierna.",
       "Bidrag, avdrag och ekonomi för solceller: reglerna ändras, och kalkylen beror på anläggningen. Fråga din solcellsinstallatör och läs hos Skatteverket vad som gäller.",
       "Funderar du på solceller och vill veta hur taket mår? Boka en kostnadsfri takkontroll, så tittar vi på taket på plats. Ring 070-154 36 39.",
     ],
