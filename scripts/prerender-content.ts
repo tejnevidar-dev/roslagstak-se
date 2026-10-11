@@ -623,7 +623,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Vi erbjuder kostnadsfri takkontroll i hela Roslagen och Storstockholm. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
       "När du hör av dig får du svar inom 24 timmar. Vi bokar en tid för takkontroll som passar dig, tittar på taket tillsammans med dig om du vill, och lämnar därefter en offert med fast pris.",
       "Vi tar uppdrag i Roslagen och Storstockholm, från Norrtälje, Österåker och Vaxholm till Täby, Sollentuna, Nacka och Södertälje.",
-      "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser) och hur lång tid tar det (det beror på takets storlek, underlagets skick och väder).",
+      "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser), hur lång tid tar det (det beror på takets storlek, underlagets skick och väder) och kan man bo kvar under arbetet (hur arbetet läggs upp går vi igenom innan start).",
       `Telefon: ${PHONE}. Du kan också mejla via formuläret på sidan — ange adress så återkommer vi med förslag på tid för takkontroll.`,
       "Inför takkontrollen behöver du inte förbereda något särskilt, men det underlättar om du vet ungefär hur stort taket är, vilket material det har idag och om du märkt några specifika problem som fläckar eller läckage.",
       "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Du bestämmer i din egen takt.",

@@ -40,10 +40,10 @@ describe("paket 48: /kontakt", () => {
     expect(p.description).toBe("Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i Roslagen och Storstockholm. Återkoppling inom 24 timmar.");
   });
 
-  it("e) frågelistan har inte 'kan man bo kvar under arbetet'", () => {
+  it("e) frågan om att bo kvar står kvar i frågelistan, men svaret lovar inte 'i de flesta fall'", () => {
     const { text } = kontakt();
-    expect(text).not.toContain("bo kvar");
-    expect(text).toContain("Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser) och hur lång tid tar det (det beror på takets storlek, underlagets skick och väder).");
+    expect(text).not.toContain("ja, i de flesta fall");
+    expect(text).toContain("Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser), hur lång tid tar det (det beror på takets storlek, underlagets skick och väder) och kan man bo kvar under arbetet (hur arbetet läggs upp går vi igenom innan start).");
   });
 
   it("S1: kartnålen på kontaktsidan säger Norrtälje", () => {
