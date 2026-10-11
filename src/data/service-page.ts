@@ -313,7 +313,7 @@ export const SERVICE_COPY = {
   asideTitle: "Boka takkontroll",
   asideText: "Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.",
   asideCta: "Boka takkontroll",
-  photoLabel: "Foto",
+  photoLabel: "Bild",
   asideNote:
     "Vi tar uppdrag i Roslagen och Storstockholm och har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn.",
   falsat: {
@@ -327,7 +327,7 @@ export const SERVICE_COPY = {
   scopeNote: "Tillägg bara efter ditt godkännande.",
   craftEyebrow: "Hantverket",
   // "utfört i Roslagen" bara där vi har belagda egna jobb (takbyte på Blidö och Singö). Övriga tjänster: bara tjänstens namn (juristen A1, regel 5).
-  craftCaption: (title: string, slug?: string) => (slug && CAPTION_OWN_JOB_SLUGS.includes(slug) ? "Takbyte på Blidö" : title),
+  craftCaption: (title: string, slug?: string) => (slug && CAPTION_OWN_JOB_SLUGS.includes(slug) ? "Takbyte på Singö" : title),
   goodToKnowEyebrow: "Bra att veta",
   skargardenTitle: "Uppdragsområde",
   skargardenText: "Vi tar uppdrag i Roslagen och Storstockholm och har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn.",

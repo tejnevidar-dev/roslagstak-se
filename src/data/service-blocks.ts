@@ -266,7 +266,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
           items: [
             "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar.",
             "Efter takkontrollen får du en rapport om takets skick.",
-            "Visar takkontrollen att taket behöver något annat än en tvätt står det i rapporten, och du bestämmer själv hur du vill gå vidare.",
+            "Behöver taket något annat än en tvätt går vi igenom det vid takkontrollen, och du bestämmer själv hur du vill gå vidare.",
           ],
         },
       ],

@@ -25,7 +25,7 @@ export const TAKTVATT_SECTIONS: TaktvattSection[] = [
     paragraphs: [
       "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris, kostnadsfritt och utan förpliktelser. Tillägg görs bara efter ditt godkännande.",
-      "Visar takkontrollen att taket behöver något annat än en tvätt står det i rapporten, och du bestämmer själv hur du vill gå vidare. Mer om de större åtgärderna finns på sidorna om [takrenovering](/tjanster/takrenovering) och [takomläggning](/tjanster/takomlaggning).",
+      "Behöver taket något annat än en tvätt går vi igenom det vid takkontrollen, och du bestämmer själv hur du vill gå vidare. Mer om de större åtgärderna finns på sidorna om [takrenovering](/tjanster/takrenovering) och [takomläggning](/tjanster/takomlaggning).",
     ],
   },
   {

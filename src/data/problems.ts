@@ -114,7 +114,7 @@ export const problems: Problem[] = [
     symptom:
       "Rostfläckar eller flagnande färg på plåttak, fotplåt, vindskiveplåt, ränndalar eller skorstensbeslag. Rostränder på fasaden under plåten.",
     orsaker:
-      "Skadad eller sliten ytbehandling, repor, stående vatten, saltluft i kustnära lägen, felaktiga material i kontakt med varandra.",
+      "Skadad eller sliten ytbehandling, repor, stående vatten, felaktiga material i kontakt med varandra.",
     akut: "När rosten har gått igenom (hål) eller när plåten släpper i skarvar och vatten kan tränga in.",
     undersokning:
       "En takläggare eller plåtslagare kontrollerar hur djup rosten är, skarvarna och fästena, och om underlaget har tagit fukt.",
@@ -297,7 +297,7 @@ export const problems: Problem[] = [
     akut:
       "När vatten kommer in, när pannor eller plåt hänger löst och kan falla ner mot gång, uteplats eller bil, eller när taket har fått hål. Då gäller det att begränsa skadan: håll dig och andra borta från området under takkanten, samla upp vatten inomhus, flytta undan det som kan ta skada och kontakta en takfirma. En skada som ser liten ut ska ändå kontrolleras innan nästa regn.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: vilka pannor och plåtdetaljer som har rört sig eller skadats, om nock, fotplåt och vindskivor sitter som de ska, och om vatten har kommit in till underlaget. Där vinden går att komma åt syns därifrån om råspont och isolering har blivit fuktiga. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: vilka pannor och plåtdetaljer som har rört sig eller skadats, om nock, fotplåt och vindskivor sitter som de ska, och om vatten har kommit in till underlaget. Där vinden går att komma åt syns därifrån om råspont och isolering har blivit fuktiga. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Byte eller omläggning av lösa och trasiga pannor, nya eller omfästa nockpannor, nya plåtdetaljer där plåten har skadats och omfästning eller byte av hängrännor. Har vatten kommit in kan skadade delar av underlaget behöva bytas. Är taket i övrigt uttjänt, med åldrad läkt och slitet underlag, kan ett takbyte vara en bättre lösning än att laga det som blåste loss.",
     gorInteSjalv:
@@ -382,7 +382,7 @@ export const problems: Problem[] = [
     akut:
       "När vatten droppar in, när fukten når isolering eller elinstallationer, eller när fläckarna växer för varje regn. Samla då upp vattnet, flytta undan det som kan ta skada, fota och kontakta en takläggare. Ett läckage i ränndalen fortsätter ofta att växa, eftersom så mycket vatten passerar just där, så även en liten fläck ska kontrolleras.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: ränndalsplåtens skick och skarvar, hur pannorna närmast ränndalen ligger och om skräp eller is hindrar vattnet. Där vinden går att komma åt följs fuktspåren längs ränndalen därifrån, eftersom vattnet kan rinna en bit innan det syns. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: ränndalsplåtens skick och skarvar, hur pannorna närmast ränndalen ligger och om skräp eller is hindrar vattnet. Där vinden går att komma åt följs fuktspåren längs ränndalen därifrån, eftersom vattnet kan rinna en bit innan det syns. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Rensning av ränndalen när det bara är skräp som dämmer. Justering eller omläggning av pannorna närmast ränndalen. Ny ränndalsplåt när den gamla har rostat eller spruckit, och då ofta även nytt underlag i ränndalen, eftersom pannorna ändå måste lyftas. Är taket i övrigt uttjänt, med slitet underlag och flera svaga punkter, kan ett takbyte vara bättre än att göra om ränndalen för sig. Vid ett takbyte görs alla ränndalar om.",
     gorInteSjalv:
@@ -438,7 +438,7 @@ export const problems: Problem[] = [
     akut:
       "När vatten droppar in, när fukten når isolering eller el, eller när en plåt har lossnat och kan blåsa av. Samla då upp vattnet, flytta undan det som kan ta skada, fota och kontakta en takläggare. En plåt som fladdrar i blåsten ska åtgärdas snabbt, eftersom den både kan släppa in vatten och falla ner.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: skruvar och brickor, skarvar och falsar, nock, fotplåt och alla anslutningar, och om plåtens ytbehandling är hel. Där undersidan går att komma åt följs fuktspåren därifrån, och det brukar också visa om det handlar om läckage eller kondens. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: skruvar och brickor, skarvar och falsar, nock, fotplåt och alla anslutningar, och om plåtens ytbehandling är hel. Där undersidan går att komma åt följs fuktspåren därifrån, och det brukar också visa om det handlar om läckage eller kondens. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Byte av skruvar och brickor där de har släppt. Nya eller omlagda plåtdetaljer vid nock, fot och anslutningar. Byte av enstaka plåtar som har fått hål eller bucklats. Omfalsning eller lagning av en öppen fals på falsat tak. Är plåten genomrostad på flera ställen, eller är underlaget skadat, kan ett nytt plåttak vara en bättre lösning än att laga ett läckage i taget.",
     gorInteSjalv:
@@ -466,7 +466,7 @@ export const problems: Problem[] = [
     akut:
       "När vatten kommer in, när en skarv har öppnat sig helt eller när pappen har lossnat i en kant så att vinden kan ta tag i den. Samla då upp vattnet inomhus, flytta undan det som kan ta skada, fota och kontakta en takläggare. Stående vatten på ett tak som inte läcker är inte akut, men det ska ses över.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: pappens yta och skarvar, kanter och uppvik, plåtdetaljer, brunnar och utlopp och hur vattnet rinner av. Där undersidan går att komma åt syns det om underlaget har blivit fuktigt. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: pappens yta och skarvar, kanter och uppvik, plåtdetaljer, brunnar och utlopp och hur vattnet rinner av. Där undersidan går att komma åt syns det om underlaget har blivit fuktigt. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Lagning av enstaka skador och skarvar när pappen i övrigt är i gott skick. Rensning av brunnar och utlopp. Nya plåtdetaljer vid kanter och anslutningar. Är pappen sliten över stora ytor, eller har underlaget tagit skada, läggs ett nytt papptak, och då byts också skadade delar av underlaget. Om taket har för lite fall kan det behöva rättas till samtidigt.",
     gorInteSjalv:
@@ -494,7 +494,7 @@ export const problems: Problem[] = [
     akut:
       "När nockpannor har ramlat ner eller ligger så löst att de kan falla mot gång, uteplats eller bil, och när vatten kommer in på vinden. Håll dig då borta från området under takkanten, samla upp vatten inomhus och kontakta en takläggare. En nockpanna som ligger lite snett är inte akut, men den ska åtgärdas före nästa storm.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: hur nockpannorna ligger och är fästa, i vilket skick nocktätningen och nockbrädan är och om pannorna närmast nocken har rört sig. Där vinden går att komma åt syns det därifrån om fukt har kommit in längs nocken. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: hur nockpannorna ligger och är fästa, i vilket skick nocktätningen och nockbrädan är och om pannorna närmast nocken har rört sig. Där vinden går att komma åt syns det därifrån om fukt har kommit in längs nocken. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Omläggning av nocken med nya fästen och ny nocktätning, och byte av spruckna nockpannor. Byte av nockbrädan där den har tagit skada. Är pannorna och underlaget i övrigt uttjänta kan ett takbyte vara en bättre lösning, och då görs nocken om som en del av arbetet.",
     gorInteSjalv:
@@ -522,7 +522,7 @@ export const problems: Problem[] = [
     akut:
       "Sällan. Porösa pannor är ett långsamt förlopp, och det som skyddar huset om en panna släpper igenom lite fukt är underlaget under pannorna. Det blir bråttom först när pannor spricker och faller sönder, eller när underlaget samtidigt är slitet så att vatten kommer in. Då ska taket kontrolleras snarast.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: pannornas yta och kanter, hur mycket påväxt det finns, om pannor har spruckit och hur nock, plåtdetaljer och hängrännor ser ut. Där vinden går att komma åt ser vi därifrån hur underlaget mår, eftersom det avgör hur bråttom det är. Efter bedömningen får du veta vad som behöver göras och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: pannornas yta och kanter, hur mycket påväxt det finns, om pannor har spruckit och hur nock, plåtdetaljer och hängrännor ser ut. Där vinden går att komma åt ser vi därifrån hur underlaget mår, eftersom det avgör hur bråttom det är. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Byte av enstaka spruckna pannor och skonsam borttagning av mossa när pannorna i övrigt håller. Är pannorna slitna över hela taket, och underlaget har åldrats, är en takomläggning med nytt underlag, ny läkt och nya pannor det som håller i längden. Vilket som är rätt beror på underlagets skick, inte bara på hur pannorna ser ut.",
     gorInteSjalv:
@@ -551,7 +551,7 @@ export const problems: Problem[] = [
     akut:
       "När vatten droppar in, när fukten når isolering eller el, eller när fläckarna växer för varje regn. Samla då upp vattnet, flytta undan det som kan ta skada, fota och kontakta en takläggare. Fukt som pågår länge vid en kupa kan skada både råsponten och kupans egen stomme.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: plåten i kupans vinklar, anslutningarna mot kupans väggar, kupans eget tak och fönsterbleck och hur pannorna närmast ligger. Där vinden går att komma åt följs fuktspåren därifrån, eftersom vattnet kan rinna en bit innan det syns. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: plåten i kupans vinklar, anslutningarna mot kupans väggar, kupans eget tak och fönsterbleck och hur pannorna närmast ligger. Där vinden går att komma åt följs fuktspåren därifrån, eftersom vattnet kan rinna en bit innan det syns. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Ny plåt i vinklarna och nya anslutningar mot kupans väggar, omläggning av pannorna närmast och nytt underlag runt kupan där det är skadat. Rensning när det bara är skräp som dämmer. Skadat trä i kupan kan behöva bytas. Vid ett takbyte görs alla anslutningar runt kupan om.",
     gorInteSjalv:
@@ -579,7 +579,7 @@ export const problems: Problem[] = [
     akut:
       "När rännan hänger så löst att den kan falla ner, eller när vatten rinner in i takfoten eller väggen. Håll då undan under rännan och kontakta en takläggare. En skarv som droppar är inte akut, men vatten som rinner på samma ställe på fasaden år efter år ger till slut skador.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: rännornas lutning och infästning, skarvar och gavlar, stuprören och deras fästen, fotplåten och takfotens trä. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: rännornas lutning och infästning, skarvar och gavlar, stuprören och deras fästen, fotplåten och takfotens trä. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Justering av lutningen och nya eller kompletterade krokar. Tätning eller byte av skarvar och gavlar. Byte av de delar som har rostat eller bucklats. Ny fotplåt där den saknas eller sitter fel, och byte av takfotsbräda där träet har tagit skada. Är rännorna slitna längs hela huset byts de i sin helhet, och det görs ofta i samband med ett takbyte.",
     gorInteSjalv:
@@ -607,7 +607,7 @@ export const problems: Problem[] = [
     akut:
       "När vatten droppar in, når isolering eller el, eller när fläckarna växer för varje regn. Samla då upp vattnet, flytta undan det som kan ta skada, fota och kontakta en takläggare. Fukt som pågår länge i den här vinkeln kan skada både takets underlag och väggens stomme.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: plåten i vinkeln och hur högt den går, fogen mot väggen, hur fasaden ansluter och hur takets ytmaterial ligger närmast väggen. Där undersidan går att komma åt följs fuktspåren därifrån. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: plåten i vinkeln och hur högt den går, fogen mot väggen, hur fasaden ansluter och hur takets ytmaterial ligger närmast väggen. Där undersidan går att komma åt följs fuktspåren därifrån. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Ny plåt i vinkeln, uppdragen tillräckligt högt på väggen och rätt ansluten mot fasaden. Omläggning av pannorna eller pappen närmast väggen. Byte av skadat underlag. Ibland behöver också fasadens nedersta del ses över, så att vattnet leds ut över plåten och inte bakom den. Vid ett takbyte görs anslutningen mot väggen om.",
     gorInteSjalv:
@@ -635,7 +635,7 @@ export const problems: Problem[] = [
     akut:
       "När pannor har glidit så att underlaget ligger öppet, eller när pannor ligger löst och kan falla ner mot gång, uteplats eller bil. Håll då undan under takkanten och kontakta en takläggare. Enstaka pannor som har flyttat sig lite är inte akut, men det ska undersökas varför.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: hur pannraderna ligger, om pannor är lösa, och hur läkten och underlaget ser ut där det går att se in under pannorna. Rutten läkt på ett ställe betyder ofta att läkten är i samma skick på fler ställen, eftersom den är lika gammal över hela taket. Efter bedömningen får du veta vad som behöver åtgärdas och ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: hur pannraderna ligger, om pannor är lösa, och hur läkten och underlaget ser ut där det går att se in under pannorna. Rutten läkt på ett ställe betyder ofta att läkten är i samma skick på fler ställen, eftersom den är lika gammal över hela taket. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Är skadan avgränsad kan pannorna lyftas, läkten bytas på den delen och pannorna läggas tillbaka. Är läkten dålig över större delar av taket är en takomläggning den lösning som håller: det gamla ytmaterialet tas av, underlag och läkt byts, och taket läggs på nytt. Hela och friska pannor kan ibland återanvändas, annars läggs nya.",
     gorInteSjalv:
@@ -664,7 +664,7 @@ export const problems: Problem[] = [
     akut:
       "Nej, inte i sig. Det som kan vara bråttom är det som påväxten döljer eller pekar på: en plåt som rostar, pannor som har blivit porösa eller ett ställe där vatten blir stående. Rostfärgade ränder från ett beslag ska ses över tidigare än en grön hinna.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: vad missfärgningen består av, hur pannornas eller plåtens yta ser ut under den, om plåtdetaljer rostar och hur hängrännor och ränndalar fungerar. Efter bedömningen får du veta om något behöver göras och i så fall ett fast pris.",
+      "Vid takkontrollen tittar vi på taket på plats: vad missfärgningen består av, hur pannornas eller plåtens yta ser ut under den, om plåtdetaljer rostar och hur hängrännor och ränndalar fungerar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
       "Ofta behövs ingenting annat än att taket hålls rent från löv och att rännorna fungerar. Är det rost åtgärdas eller byts den plåtdetalj som rostar. Är pannorna porösa och underlaget slitet kan en takomläggning vara det som löser grundproblemet. Vi erbjuder också taktvätt, och vid takkontrollen går vi igenom om det är rätt åtgärd för ditt tak.",
     gorInteSjalv:

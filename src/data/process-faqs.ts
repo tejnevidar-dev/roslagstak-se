@@ -18,7 +18,7 @@ export const processFaqs = [
   {
     question: "Kan jag bo kvar under takbytet?",
     answer:
-      "Ja, i de allra flesta fall bor du kvar. Hur arbetet läggs upp går vi igenom innan start, och du har en kontaktperson genom hela processen.",
+      "Hur arbetet läggs upp går vi igenom innan start, och du har en kontaktperson genom hela processen.",
   },
   {
     question: "Vad händer om ni hittar röta i råsponten?",

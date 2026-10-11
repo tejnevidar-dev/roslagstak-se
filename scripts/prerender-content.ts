@@ -740,7 +740,7 @@ const serviceIntro = (title: string, description: string): PrerenderPage => ({
   h1: `${title} i Roslagen`,
   intro: description,
   paragraphs: [
-    `RoslagsTak utför ${title.toLowerCase()} i hela Roslagen och Stockholms norra skärgård. Allt arbete utförs enligt AMA, med 10 års utförandegaranti.`,
+    `RoslagsTak utför ${title.toLowerCase()} och tar uppdrag i Roslagen och Storstockholm. Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.`,
     "Vi lämnar fast pris efter kostnadsfri takkontroll. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
     `Ring ${PHONE} eller begär kostnadsfri offert — vi återkopplar inom 24 timmar.`,
   ],

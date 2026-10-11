@@ -43,11 +43,11 @@ describe("paket 36", () => {
     expect(locations.find((l) => l.slug === "knivsta")!.extraContent).toBe("");
   });
 
-  it("solceller på plåttak (5.7): titeln utan tankstreck och garantimeningen utan försäkringsrådet", () => {
+  it("solceller på plåttak (5.7): titeln utan tankstreck; garantimeningen är struken i paket 51b (So2)", () => {
     const g = guide("solceller-platttak-roslagen");
     expect(g.title).toBe("Solceller på plåttak: vad du ska tänka på med taket");
     const t = g.content.join("\n");
-    expect(t).toContain("Garantier: fråga både takläggaren och solcellsinstallatören hur monteringen påverkar garantierna.");
+    expect(t).not.toContain("Garantier: fråga både takläggaren och solcellsinstallatören hur monteringen påverkar garantierna.");
     expect(t).not.toContain("försäkringsbolag");
   });
 });
