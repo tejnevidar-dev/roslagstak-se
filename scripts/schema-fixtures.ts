@@ -41,7 +41,7 @@ export const collectSchemas = (): SchemaSample[] => {
   // Pris-, offert- och innehållssidor.
   for (const [name, path] of [
     ["Priser", "/priser"],
-    ["Offert & rådgivning", "/offert"],
+    ["Offert", "/offert"],
     ["Taktyper", "/taktyper"],
     ["Så går det till", "/hur-det-gar-till"],
     ["Recensioner", "/recensioner"],

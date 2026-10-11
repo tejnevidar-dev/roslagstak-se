@@ -93,7 +93,7 @@ const Reviews = () => {
                   to="/offert#radgivning"
                   className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-colors hover:animate-subtle-pulse"
                 >
-                  Kostnadsfri rådgivning
+                  Kostnadsfri takkontroll
                 </Link>
               </div>
             </div>

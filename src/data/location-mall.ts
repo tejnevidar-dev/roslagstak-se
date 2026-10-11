@@ -33,6 +33,14 @@ export const OAR_UTAN_BILVAG: readonly string[] = [
 /** Orten har ingen riktig områdestext (import-omrade sätter alltid factBox) och är inte undantagen. */
 export const usesMall = (loc: LocationData): boolean => !loc.factBox && !MALL_UNDANTAG.includes(loc.slug);
 
+/** "på A, B och C" när alla är öar, "i A, B och C" när ingen är det, annars bara namnen (P2). */
+const orterMedPrep = (namn: string[]): string => {
+  if (namn.length === 0) return "";
+  const lista = namn.length > 1 ? `${namn.slice(0, -1).join(", ")} och ${namn[namn.length - 1]}` : namn[0];
+  const oar = namn.map((n) => locations.find((l) => l.name === n)?.isIsland === true);
+  return oar.every(Boolean) ? `på ${lista}` : oar.some(Boolean) ? lista : `i ${lista}`;
+};
+
 const pick = <T,>(variants: [T, T, T], index: number, offset: number): T => variants[(index + offset) % 3];
 
 const refProject = (loc: LocationData) => {
@@ -92,7 +100,7 @@ export const applyMall = (loc: LocationData): LocationData => {
     [
       `Vi har vår bas i Norrtälje, ungefär ${km} km från ${ort}, och tar uppdrag i ${omrade}. Närmaste orter i vårt område: ${grannar}.`,
       `${ort} ligger ungefär ${km} km från Norrtälje, där vi har vår bas. Vi tar uppdrag i ${omrade}. I närheten finns också ${grannar}.`,
-      `Från vår bas i Norrtälje är det ungefär ${km} km till ${ort}. Vi tar uppdrag i ${omrade}, bland annat i ${grannar}.`,
+      `Från vår bas i Norrtälje är det ungefär ${km} km till ${ort}. Vi tar uppdrag i ${omrade}, bland annat ${orterMedPrep(loc.nearbyLocations)}.`,
     ],
     n,
     3,

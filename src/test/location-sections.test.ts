@@ -12,7 +12,7 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
   it("ger rätt lydelse för ö, tätort nära basen, långt från basen och Mälardalen", () => {
     const ö = locations.find((l) => l.isIsland)!;
     const [a, b] = locationWhySections(ö, "på", false);
-    expect(a.heading).toBe(`Varför välja RoslagsTak som ${ö.primaryKeyword}?`);
+    expect(a.heading).toBe(`Takläggare på ${ö.name}: så arbetar vi`);
     expect(a.paragraph).toContain(`Vi tar uppdrag på ${ö.name} och i Roslagen och Storstockholm`);
     expect(a.paragraph).toContain("Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.");
     expect(a.paragraph).toContain("Vi arbetar enligt AMA.");
@@ -24,7 +24,7 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     if (mälar) expect(locationWhySections(mälar, "i", true)[1].paragraph).toContain(`${mälar.name} ligger i Mälardalen.`);
   });
 
-  it("meningen om regionen säger bara 'i Roslagen' för regioner i Roslagen, och rubriken behåller regionens stavning", () => {
+  it("meningen om regionen säger 'hör till <region> i vår områdesindelning' (4.2), och rubriken behåller regionens stavning", () => {
     const text = (ort: string) => {
       const l = locations.find((x) => x.name === ort)!;
       const [, b] = locationWhySections(l, l.isIsland ? "på" : "i", false);
@@ -32,27 +32,27 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     };
     // En ort i Roslagen, en i Stockholm, en ö och en i Västerort (regionen som tidigare blev "Västerort i Roslagen")
     const r = text("Hallstavik");
-    expect(r.mening).toBe("Hallstavik tillhör Norra Roslagen.");
+    expect(r.mening).toBe("Hallstavik hör till Norra Roslagen i vår områdesindelning.");
     const s = text("Södermalm");
-    expect(s.mening).toBe(`Södermalm tillhör ${s.region}.`);
+    expect(s.mening).toBe(`Södermalm hör till ${s.region} i vår områdesindelning.`);
     expect(s.rubrik).toBe(`Om Södermalm och takläggning i ${s.region}`);
     const v = text("Bromma");
-    expect(v.mening).toBe("Bromma tillhör Västerort.");
+    expect(v.mening).toBe("Bromma hör till Västerort i vår områdesindelning.");
     expect(v.rubrik).toBe("Om Bromma och takläggning i Västerort");
     const ö = text("Blidö");
-    expect(ö.mening).toBe("Blidö tillhör mellersta skärgården i Roslagen.");
+    expect(ö.mening).toBe("Blidö hör till mellersta skärgården i vår områdesindelning.");
     const k = text("Rådmansö");
-    expect(k.mening).toBe("Rådmansö tillhör kusten i Roslagen.");
+    expect(k.mening).toBe("Rådmansö hör till kusten i vår områdesindelning.");
     expect(ö.rubrik).toBe("Om Blidö");
     expect(text("Hallstavik").rubrik).toBe("Om Hallstavik");
     expect(text("Täby").rubrik).toBe("Om Täby");
     expect(text("Rådmansö").rubrik).toBe("Om Rådmansö");
     expect(text("Gräddö").rubrik).toBe("Om Gräddö och takläggning i Rådmansöhalvön"); // Rådmansöhalvön ingår inte i de 51 sidorna
-    // Ingen mening med "i Roslagen" för en region som inte står i listan
+    // Varje ort utom Mälardalen: "… i vår områdesindelning." (4.2), aldrig "i Roslagen" efter regionen
     for (const l of locations) {
       if (l.region === "Mälardalen") continue;
       const m = locationWhySections(l, "i", false)[1].paragraph.split(" Vilka alternativ")[0];
-      expect(m.endsWith(" i Roslagen."), `${l.slug} (${l.region})`).toBe(iRoslagen(l.region));
+      expect(m.endsWith(" i vår områdesindelning."), `${l.slug} (${l.region})`).toBe(true);
     }
   });
 

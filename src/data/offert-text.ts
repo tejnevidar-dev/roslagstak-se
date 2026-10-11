@@ -4,7 +4,7 @@
  * Sidans H1 ("Få pris på ditt takprojekt") ligger kvar i QuotePage.tsx och rörs inte.
  */
 export const QUOTE_PAGE = {
-  eyebrow: "Offert & rådgivning",
+  eyebrow: "Offert",
   text: "Beskriv ditt tak i några steg, så svarar vi inom 24 timmar — eller låt oss ringa upp och boka en kostnadsfri takkontroll.",
   relatedTitle: "Läs vidare innan du bestämmer dig",
 };

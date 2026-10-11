@@ -1111,7 +1111,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min",
     keywords: ["platta tak", "läckande plåttak", "läckage tak", "takpapp läckage", "dålig avrinning tak", "vattenpöl tak", "platt tak felsökning"],
     content: [
-      "Platta och låglutande tak är vanliga på garage, uthus, tillbyggnader och funkisvillor i hela Roslagen. När de börjar läcka är det sällan självklart var källan finns — vatten kan röra sig flera meter mellan ingång och droppställe. Här går vi igenom hur vi felsöker.",
+      "Platta och låglutande tak är vanliga på garage, uthus, tillbyggnader och funkisvillor i Roslagen. När de börjar läcka är det sällan självklart var källan finns — vatten kan röra sig flera meter mellan ingång och droppställe. Här går vi igenom hur vi felsöker.",
       "1. Inspektion av tätskiktet. Vi börjar med att kartlägga hela takytan. Bubblor, sprickor, lossnande skarvar och utdragna fästen är klassiska indikationer. På takpapp letar vi efter alligatorsprickor (krackelering) och blottad armering — ofta tecken på att taket nått slutet av sin livslängd.",
       "2. Genomföringar. Skorstenar, ventilationsrör, takfönster och antennfästen är de vanligaste läckagepunkterna. Plåtbeslag rör sig med temperatur och årstid, och tätningarna åldras. Vi kontrollerar varje genomföring noga och tätar om vid behov.",
       "3. Brunnar och bräddavlopp. Igenslammade brunnar med löv och mossa är en mycket vanlig orsak till läckage på platta tak. När vattnet inte kommer ner stiger nivån och pressar in vatten genom överlapp och skarvar. Rensa brunnar minst en gång per år, helst två.",
@@ -1354,7 +1354,7 @@ export const blogPosts: BlogPost[] = [
       "När EPDM är rätt val: platta och låglutande tak (under 14°), tak med komplicerade geometrier, tak med många genomföringar, gröna tak (EPDM är vanlig som vattentät botten under planteringsbäddar), och tak där du vill ha så lite framtida underhåll som möjligt.",
       "När SBS-papp kan vara bättre: budget är avgörande, taket är extremt litet eller har många smala vinklar (kapsvinn på EPDM-duken blir då stor), eller du föredrar svetsad lösning för specifika tekniska skäl.",
       "Vanliga frågor om EPDM: Kan man lägga EPDM ovanpå gammal takpapp? I vissa fall ja, men vi rekommenderar nästan alltid att riva ner till bärigt underlag för att kunna kontrollera skicket under. Tål EPDM att gå på? Ja, vid behov — men använd mjuka skor och undvik vassa föremål. Kan man reparera en skada? Ja, skador lagas enkelt med EPDM-lagningssatser och specialtejp.",
-      "Vi lägger EPDM på tak i hela Roslagen — Norrtälje, Vaxholm, Blidö, Ljusterö och skärgården. Ring 070-154 36 39 eller boka kostnadsfri takkontroll så går vi igenom vilket tätskikt som passar ditt tak bäst.",
+      "Vi lägger EPDM på tak i Roslagen — Norrtälje, Vaxholm, Blidö, Ljusterö och skärgården. Ring 070-154 36 39 eller boka kostnadsfri takkontroll så går vi igenom vilket tätskikt som passar ditt tak bäst.",
     ],
   },
   {

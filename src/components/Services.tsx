@@ -69,7 +69,7 @@ export const services: Service[] = [
     icon: IconSheetMetal,
     slug: "platarbeten",
     title: "Plåtarbeten",
-    short: "Plåtslagare",
+    short: "Plåt på taket",
     description:
       "Bandtäckning, skorstensinklädnad, fotplåt och beslag — där många läckage börjar.",
   },

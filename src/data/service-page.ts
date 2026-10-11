@@ -53,7 +53,8 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "Tak med underlagspapp.",
   },
   takavvattning: {
-    accentLine: "rännor och stuprör.",
+    h1Sep: ":",
+    accentLine: "rännor och stuprör",
     specs: [
       { k: "Material", v: "Lackerad plåt" },
       { k: "Ränndalar", v: "I plåt" },
@@ -84,7 +85,8 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "Tak med nylagd råspont.",
   },
   platarbeten: {
-    accentLine: "beslag och bandtäckning.",
+    h1Sep: ":",
+    accentLine: "beslag och bandtäckning",
     specs: [
       { k: "Material", v: "Lackerad stålplåt" },
       { k: "Teknik", v: "Falsat och profilerat" },
@@ -609,7 +611,10 @@ export const serviceSchemaNodes = (slug: string, services: ServiceListItem[]) =>
           }
         : {}),
       provider: { "@id": LOCAL_BUSINESS_ID },
-      areaServed: { "@type": "Place", name: "Roslagen" },
+      areaServed: [
+        { "@type": "Place", name: "Roslagen" },
+        { "@type": "Place", name: "Storstockholm" },
+      ],
     },
     howTo: {
       "@context": "https://schema.org",

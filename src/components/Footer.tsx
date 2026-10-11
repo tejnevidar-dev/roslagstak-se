@@ -16,7 +16,7 @@ const tjanster = [
   { to: "/rot-avdrag", label: "ROT-avdrag på tak" },
   { to: "/akut-lackage", label: "Läckage i taket" },
   { to: "/hangrannor", label: "Hängrännor och stuprör" },
-  { to: "/platslagare", label: "Plåtslagare för tak" },
+  { to: "/platslagare", label: "Plåt på taket" },
   { to: "/tjanster/taktvatt", label: "Taktvätt" },
   { to: "/tjanster/eternit-asbest", label: "Byta eternittak" },
 ];
@@ -54,8 +54,7 @@ const Footer = () => {
               className="mb-6 h-10 w-auto"
             />
             <p className="max-w-sm text-[17px] leading-relaxed text-primary-foreground/70">
-              Takläggare i Roslagen. Takbyte, takrenovering och plåtarbeten på Blidö, Ljusterö, Yxlan,
-              Furusund, Husarö, Ingmarsö, Vaxholm, Norrtälje och övriga skärgården.
+              Takfirma med bas i Norrtälje. Vi tar uppdrag i Roslagen och Storstockholm med takbyte, takomläggning och takrenovering.
             </p>
           </div>
 

@@ -39,7 +39,7 @@ const quoteItems: MenuItem[] = [
   {
     label: "Konfigurera själv",
     to: "/offert",
-    note: "Räkna fram din offert direkt",
+    note: "Räkna fram ett riktpris direkt",
   },
 ];
 

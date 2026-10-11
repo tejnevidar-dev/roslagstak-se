@@ -34,7 +34,7 @@ const QuotePage = () => {
       <Header />
       <main>
         <div className="pt-24">
-          <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }]} withSchema={true} />
+          <Breadcrumbs items={[{ name: "Hem", path: "/" }, { name: "Offert", path: "/offert" }]} withSchema={true} />
         </div>
         <PageHero
           eyebrow={QUOTE_PAGE.eyebrow}

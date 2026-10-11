@@ -15,7 +15,7 @@ export const services: { slug: string; name: string; description: string }[] = [
     slug: "takomlaggning",
     name: "Takomläggning",
     description:
-      "Komplett omläggning av taket med ny underlagspapp, ny läkt och nytt takmaterial. Fast pris efter kostnadsfri takkontroll.",
+      "Omläggning av taket med ny underlagspapp, ny läkt och nytt takmaterial. Fast pris i offerten efter kostnadsfri takkontroll.",
   },
   {
     slug: "takrenovering",
@@ -27,12 +27,12 @@ export const services: { slug: string; name: string; description: string }[] = [
     slug: "takavvattning",
     name: "Takavvattning, hängrännor och stuprör",
     description:
-      "Montering av hängrännor, stuprör och snörasskydd.",
+      "Montering av hängrännor och stuprör.",
   },
   {
     slug: "takkupor",
     name: "Takkupor och takfönster",
-    description: "Nya takkupor och takfönster med tät anslutning mot underlagspapp och plåt.",
+    description: "Takkupor och takfönster: vi börjar med en kostnadsfri takkontroll.",
   },
   {
     slug: "takinspektion",

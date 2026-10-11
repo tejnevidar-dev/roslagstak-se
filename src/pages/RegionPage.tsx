@@ -39,7 +39,7 @@ const RegionPage = () => {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `Orter i ${region} där RoslagsTak utför takarbeten`,
+    name: `Orter i ${region} där RoslagsTak tar uppdrag`,
     numberOfItems: synliga.length,
     itemListElement: synliga.map((l, i) => ({
       "@type": "ListItem",
@@ -53,7 +53,7 @@ const RegionPage = () => {
     <>
       <SEOHead
         title={text?.title ?? `Takläggare i ${region} — takbyte & takrenovering`}
-        description={text?.description ?? `Takläggare i ${region}: takbyte, takomläggning, plåtarbeten och takvård i ${places.length} orter. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.`}
+        description={text?.description ?? `Takläggare i ${region}: takbyte, takomläggning och takrenovering i ${places.length} orter. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.`}
         canonical={`https://roslagstak.se${path}`}
       />
       <JsonLd data={itemListSchema} />

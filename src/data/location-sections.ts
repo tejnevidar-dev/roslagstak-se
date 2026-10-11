@@ -38,10 +38,10 @@ export const locationWhySections = (location: LocationData, prep: string, far: b
   const region =
     location.region === "Mälardalen"
       ? `${location.name} ligger i Mälardalen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`
-      : `${location.name} tillhör ${regionIMening(location.region)}${iRoslagen(location.region) ? " i Roslagen" : ""}. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`;
+      : `${location.name} hör till ${regionIMening(location.region)} i vår områdesindelning. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`;
   return [
     {
-      heading: `Varför välja RoslagsTak som ${location.primaryKeyword}?`,
+      heading: `Takläggare ${prep} ${location.name}: så arbetar vi`,
       paragraph: `${uppdrag}${skargard} Vi arbetar enligt AMA. ${GARANTI_RENOVERING}`,
     },
     {

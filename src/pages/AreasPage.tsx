@@ -28,7 +28,7 @@ const AreasPage = () => {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Orter där RoslagsTak utför takarbeten",
+    name: "Orter där RoslagsTak tar uppdrag",
     numberOfItems: synligaOrter(locationIndex).length,
     itemListElement: synligaOrter(locationIndex).map((l, i) => ({
       "@type": "ListItem",
@@ -42,7 +42,7 @@ const AreasPage = () => {
     <>
       <SEOHead
         title="Områden — takläggare i Roslagen & Storstockholm"
-        description="Takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen och Storstockholm. Välj din ort och boka kostnadsfri takkontroll."
+        description="Takbyte, takomläggning och takrenovering i Roslagen och Storstockholm. Välj din ort och boka kostnadsfri takkontroll."
         canonical="https://roslagstak.se/omraden"
       />
       <JsonLd data={itemListSchema} />
@@ -56,10 +56,10 @@ const AreasPage = () => {
               <MapPin className="h-3 w-3" aria-hidden="true" /> Verksamhetsområde
             </span>
             <h1 className="mt-5 font-display text-[clamp(2rem,4vw,3.2rem)] font-bold leading-[1.1] text-foreground">
-              Takläggare i Roslagen och hela Storstockholm
+              Takläggare i Roslagen och Storstockholm
             </h1>
             <p className="mt-6 text-lg font-light leading-relaxed text-muted-foreground">
-              RoslagsTak tar uppdrag med takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen,
+              RoslagsTak tar uppdrag med takbyte, takomläggning och takrenovering i Roslagen,
               Storstockholm. Välj ditt område nedan för att läsa om husen där och hur du
               bokar en takkontroll.
             </p>

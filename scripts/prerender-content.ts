@@ -465,7 +465,7 @@ const staticPages: Record<string, PrerenderPage> = {
       `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi svarar inom 24 timmar.`,
     ]),
     links: [...primaryLinks, ...serviceLinks],
-    breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }],
+    breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Offert", path: "/offert" }],
   },
   "/taktyper": {
     title: "Taktyper – jämför takmaterial för villa",
@@ -622,7 +622,7 @@ const staticPages: Record<string, PrerenderPage> = {
     h1: "Boka kostnadsfri takkontroll",
     intro: `Ring ${PHONE} eller fyll i formuläret. Vi svarar inom 24 timmar — kostnadsfritt och utan förpliktelser.`,
     paragraphs: [
-      "Vi erbjuder kostnadsfri takkontroll i hela Roslagen och Storstockholm. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
+      "Vi erbjuder kostnadsfri takkontroll i Roslagen och Storstockholm. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
       "När du hör av dig får du svar inom 24 timmar. Vi bokar en tid för takkontroll som passar dig, tittar på taket tillsammans med dig om du vill, och lämnar därefter en offert med fast pris.",
       "Vi tar uppdrag i Roslagen och Storstockholm, från Norrtälje, Österåker och Vaxholm till Täby, Sollentuna, Nacka och Södertälje.",
       "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser), hur lång tid tar det (det beror på takets storlek, underlagets skick och väder) och kan man bo kvar under arbetet (hur arbetet läggs upp går vi igenom innan start).",
@@ -777,7 +777,7 @@ const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
     if (nearbyProject) {
       const projectLoc = locations.find((l) => l.slug === nearbyProject.locationSlug)!;
       parts.push(
-        `Vi påstår inte att det jobbet gjordes här, men ett referensjobb i närområdet — ${nearbyProject.title} (cirka ${Math.round(distanceKm(loc, projectLoc))} km bort) — visar hur ett komplett takbyte kan se ut.`,
+        `Ett referensjobb i närområdet: ${nearbyProject.title}, ungefär ${Math.round(distanceKm(loc, projectLoc))} km härifrån. Det jobbet gjordes inte ${prep} ${loc.name}, men det visar hur ett komplett takbyte kan se ut.`,
       );
     }
   }
@@ -1112,10 +1112,10 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
 
   if (clean === "/omraden") {
     return {
-      title: "Våra områden — Roslagen och hela Storstockholm",
-      description: "Takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen, Storstockholm och Mälardalen. Välj din ort och boka kostnadsfri takkontroll.",
-      h1: "Takläggare i Roslagen och hela Storstockholm",
-      intro: "RoslagsTak tar uppdrag med takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen, Storstockholm och Mälardalen.",
+      title: "Våra områden — Roslagen och Storstockholm",
+      description: "Takbyte, takomläggning och takrenovering i Roslagen, Storstockholm och Mälardalen. Välj din ort och boka kostnadsfri takkontroll.",
+      h1: "Takläggare i Roslagen och Storstockholm",
+      intro: "RoslagsTak tar uppdrag med takbyte, takomläggning och takrenovering i Roslagen, Storstockholm och Mälardalen.",
       paragraphs: [
         "Välj ditt område nedan för att läsa om husen där och hur du bokar en takkontroll.",
         `Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,

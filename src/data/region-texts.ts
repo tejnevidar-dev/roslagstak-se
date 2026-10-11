@@ -75,7 +75,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Nordvästra Stockholm",
     title: "Takläggare i Nordvästra Stockholm – Järfälla och Sigtuna",
     description: "Takläggare i Järfälla, Upplands-Bro och Sigtuna: Jakobsberg, Viksjö, Kungsängen, Bro och Märsta. Kostnadsfri takkontroll.",
-    intro: "Nordvästra Stockholm är på den här sidan Järfälla, Upplands-Bro och Sigtuna kommuner. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Nordvästra Stockholm är på den här sidan Järfälla, Upplands-Bro och Sigtuna kommuner. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "Järfälla hade enligt Wikipedia länge en lantlig karaktär. Runt 1920-talet började större egendomar styckas av för småhusbebyggelse, och befolkningsökningen tog fart i början av 1950-talet: mellan 1950 och 1977 växte kommunen från omkring 7 000 till 51 500 invånare. Viksjö började byggas i slutet av 1960-talet som småhusområde. Centralorten Jakobsberg har byggts upp på mark som styckats av från Jakobsbergs gård.",
       "I Upplands-Bro är Kungsängen centralort, omkring 30 kilometer nordväst om Stockholm. Det som i dag är centrum började bebyggas under 1920-talet, och 1952 bodde 270 personer i Kungsängen. Därefter ökade befolkningen kraftigt fram till slutet av 1960-talet, och Wikipedia skriver att en stor del av villabebyggelsen i tätorten uppfördes under 1950- och 1960-talen. Kommunen har ett mälarlandskap med skogklädda moränhöjder och stora lerslätter.",
@@ -95,7 +95,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Norra Roslagen",
     title: "Takläggare i Norra Roslagen – Hallstavik och Älmsta",
     description: "Takläggare i Hallstavik, Älmsta och Herräng i norra Norrtälje kommun. Kostnadsfri takkontroll och fast pris i offerten.",
-    intro: "Norra Roslagen är den norra delen av Norrtälje kommun, med Hallstavik, Älmsta och Herräng. Vi har vår bas i Norrtälje och tar uppdrag i hela kommunen.",
+    intro: "Norra Roslagen är den norra delen av Norrtälje kommun, med Hallstavik, Älmsta och Herräng. Vi har vår bas i Norrtälje och tar uppdrag i kommunen.",
     body: [
       "Hallstavik ligger enligt Wikipedia omkring 41 kilometer nordnordväst om Norrtälje, där Skeboån mynnar i Edeboviken. Hallsta var fram till början av 1900-talet en by. Pappersbruket byggdes på byns utmarker vid viken, bruket expanderade snabbt och Hallstavik växte till ett brukssamhälle. Bruket finns kvar och har egen hamn och godsjärnväg.",
       "Herräng ligger omkring 52 kilometer norr om Norrtälje, vid Singöfjärden. Det är ett gammalt brukssamhälle där järnmalm bröts från 1500-talet till 1961. De första byggnaderna i järnverket uppfördes 1902–1903, och då byggdes också ett flertal arbetarbostäder. Marken vid gruvfälten är enligt Wikipedia numera till största delen avstyckad till sommarstugetomter.",
@@ -136,7 +136,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Norra Stockholm",
     title: "Takläggare i Norra Stockholm – Danderyd och Sollentuna",
     description: "Takläggare i Danderyd, Sollentuna, Upplands Väsby, Solna och Sundbyberg. Kostnadsfri takkontroll och fast pris i offerten.",
-    intro: "Norra Stockholm är på den här sidan de fem kommunerna närmast norr om staden: Danderyd, Sollentuna, Upplands Väsby, Solna och Sundbyberg. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Norra Stockholm är på den här sidan de fem kommunerna närmast norr om staden: Danderyd, Sollentuna, Upplands Väsby, Solna och Sundbyberg. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "Danderyd växte fram som villasamhällen kring sekelskiftet 1900. Djursholm grundades 1889 och har enligt Wikipedia ända sedan dess till stor del präglats av villabebyggelse på stora tomter, där de äldre husen genom åren har kompletterats med modernare villor. Stocksund fick eget municipalsamhälle 1902, och Enebybergs villastad 1914. Wikipedia nämner att flera områden i Djursholm har bebyggelse som är typisk för sin tid, med stilar som nationalromantik, nyklassicism och funktionalism.",
       "Sollentuna ligger enligt Wikipedia i ett sprickdalslandskap med barrskogsklädda höjder och lerslätter eller sjöar i sänkorna. Knappt 40 procent av landytan var bebyggd 2020, och befolkningen har vuxit kraftigt sedan kommunen bildades 1971. Norrviken fick eget municipalsamhälle 1929. Upplands Väsby beskrivs som ett småkuperat landskap med lerslätter och sjöar, och befolkningen växte mycket starkt när kommunen bildades 1971.",
@@ -156,7 +156,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Österåker",
     title: "Takläggare i Österåker – Åkersberga och Österskär",
     description: "Takläggare i Åkersberga, Österskär och Brevik i Österåkers kommun. Kostnadsfri takkontroll och fast pris i offerten.",
-    intro: "Österåker är kommunen mellan Täby och Norrtälje, med Åkersberga som centralort. Vi har vår bas i Norrtälje och tar uppdrag i hela Österåker.",
+    intro: "Österåker är kommunen mellan Täby och Norrtälje, med Åkersberga som centralort. Vi har vår bas i Norrtälje och tar uppdrag i Österåker.",
     body: [
       "Åkersberga började som en järnvägsstation. Enligt Wikipedia byggdes stationen 1901 vid Södra Roslags Kustbana, på ett gärde som hörde till gården Berga, och den skyltades \"Åkers Berga\" för att inte förväxlas med andra stationer. Banan förlängdes sedan med två stationer, Tunagård och Österskär, och de områdena bebyggdes med villor. Vid stationen i Åkersberga kom butiker, postkontor, skola och kommunhus.",
       "På 1930-talet räknades både Åkersberga och Österskär som tätorter, med 286 respektive 277 invånare år 1935. Sedan 1950 anses de vara sammanvuxna, och 2016 hade tätorten drygt 33 000 invånare. Kommunen i sin nuvarande form bildades 1983.",
@@ -177,7 +177,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Östra Stockholm",
     title: "Takläggare i Östra Stockholm – Lidingö, Nacka, Värmdö",
     description: "Takläggare på Lidingö, i Nacka och på Värmdö. Kostnadsfri takkontroll, fast pris i offerten och svar inom 24 timmar.",
-    intro: "Östra Stockholm är på den här sidan Lidingö, Nacka och Värmdö, de tre kommunerna öster om staden. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Östra Stockholm är på den här sidan Lidingö, Nacka och Värmdö, de tre kommunerna öster om staden. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "Lidingö är en ö i Stockholms inre skärgård och en egen kommun. Nacka kommun bildades 1971 och präglas enligt Wikipedia av en mycket uppsprucken berggrund, med branta stränder mot Skurusundet, Lännerstasundet och Baggensfjärden. Saltsjöbaden kom till på 1890-talet som villa- och badort, och hotellet stod färdigt 1893. I Älta började gårdens ägare i slutet av 1800-talet stycka marken för fritidshus och villor. Boo ligger på västra delen av Värmdön, öster om Skurusundet.",
       "Värmdö kommun omfattar stora delar av Stockholms södra skärgård, och centralorten Gustavsberg ligger 22 kilometer öster om centrala Stockholm. Gustavsberg har enligt Wikipedia vuxit i flera år, och tidigare separata orter som Mörtnäs, Hemmesta, Torsby och Grisslinge har vuxit ihop med tätorten. Ingarö har haft många fritidsboende under de senaste hundra åren. Wikipedia beskriver ett trendbrott där allt fler fritidshus har byggts om till villor: 1995 bodde omkring 3 500 personer fast på ön, 2012 över 9 000.",
@@ -234,7 +234,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Södra Stockholm",
     title: "Takläggare i Södra Stockholm – Huddinge och Söderort",
     description: "Takläggare i Huddinge, Stuvsta, Segeltorp, Älvsjö, Enskede och övriga Söderort. Kostnadsfri takkontroll och fast pris.",
-    intro: "Södra Stockholm är på den här sidan Söderort, alltså den del av Stockholms kommun som ligger söder om innerstaden, och Huddinge kommun. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Södra Stockholm är på den här sidan Söderort, alltså den del av Stockholms kommun som ligger söder om innerstaden, och Huddinge kommun. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "Villaområdena på båda sidor om kommungränsen kom till ungefär samtidigt. I Älvsjö köpte ett bolag stora delar av gårdens mark 1908 och 1911 och styckade den till villatomter. I Stuvsta bildades ett fastighetsbolag 1910 för att stycka tomter för egnahem, och tomterna låg enligt Wikipedia inom gångavstånd från stationen, vilket passade pendlare. Huddinge fick sedan en rad municipalsamhällen: Hörningsnäs villastad 1915, Segeltorp, Stuvsta och Fullersta 1924 och Snättringe 1928.",
       "Wikipedia skriver att det kring Huddinge centrum ligger villaområden i de flesta väderstreck, och att villasamhällena övergår i liknande orter på Stockholmssidan, till exempel Älvsjö. Kommunen har en karaktär av sprickdalslandskap, och de östra delarna är bevuxna med skog. Söderort omfattar enligt Wikipedia 52 stadsdelar.",
@@ -254,7 +254,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Stockholms stad",
     title: "Takläggare i Stockholms stad – villor och småhus",
     description: "Takläggare på villor och småhus i Stockholms stad: Bromma trädgårdsstad, Mälarhöjden, Stureby, Enskededalen och Tallkrogen.",
-    intro: "Stockholms stad har villor och småhus i både väster och söder, och det är dem den här sidan handlar om. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Stockholms stad har villor och småhus i både väster och söder, och det är dem den här sidan handlar om. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "I Bromma ligger trädgårdsstaden. Enligt Wikipedia byggdes Gamla Bromma trädgårdsstad på 1910-, 1920- och 1930-talen, och villabebyggelsen på 1920- och 1930-talen var den mest omfattande bebyggelsen av Bromma. Smedslätten och Äppelviken hör till trädgårdsstaden. När Äppelviken planerades fanns redan en hel del hus på platsen, och i den södra delen finns sommarbebyggelse vid Mälarstranden kvar.",
       "Söder om staden blev det från 1890-talet vanligt att bygga sommarhus i det som i dag är Mälarhöjden, och samhället som växte upp kallades först Fridhems villastad. Stureby började bebyggas 1921 och var enligt Wikipedia ett väl utbyggt villasamhälle i slutet av 1930-talet. Enskededalen består huvudsakligen av småhus som byggdes som trädgårdsstad på 1920-talet, med den svenska trästaden som förebild. I Tallkrogen köpte staden marken 1905 men började bygga först på 1930-talet, och husen uppfördes genom stadens småstugebyrå.",
@@ -274,7 +274,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Sydöstra Stockholm",
     title: "Takläggare i Sydöstra Stockholm – Tyresö och Haninge",
     description: "Takläggare i Tyresö, Haninge och Nynäshamn: Trollbäcken, Vendelsö, Västerhaninge, Tungelsta och Dalarö. Kostnadsfri takkontroll.",
-    intro: "Sydöstra Stockholm är på den här sidan Tyresö, Haninge och Nynäshamns kommuner, på halvön Södertörn. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Sydöstra Stockholm är på den här sidan Tyresö, Haninge och Nynäshamns kommuner, på halvön Södertörn. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "I Tyresö började godsets stora marker enligt Wikipedia styckas upp i början av 1900-talet, och man började bygga sommarstugor. År 1910 köptes en gårds ägor av ett egnahemsbolag för egnahem och sommarstugor. Från 1950-talet och framåt byggdes fritidshusen om till åretruntbostäder i rask takt. Trollbäcken i västra Tyresö hette tidigare Kumla, och från Kumla gård styckades områden som Hanviken, Persudde, Fornudden och Näset av.",
       "Haninge är en skärgårdskommun och förort med Handen som centralort. Västerhaninge ligger omkring 25 kilometer från Stockholms innerstad. I Tungelsta, som har traditioner inom trädgårdsnäring, är bebyggelsen i utkanterna enligt Wikipedia gles med äldre villor på stora tomter, och där finns också villaområden och områden med enbart fritidshus. Dalarö växte upp kring tullhuset på 1630-talet och blev badort efter att garnisonen lades ned 1854.",
@@ -295,7 +295,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Sydvästra Stockholm",
     title: "Takläggare i Sydvästra Stockholm – Södertälje och Ekerö",
     description: "Takläggare i Botkyrka, Salem, Södertälje och Ekerö: Tullinge, Tumba, Rönninge, Järna och Stenhamra. Kostnadsfri takkontroll.",
-    intro: "Sydvästra Stockholm är på den här sidan fyra kommuner: Botkyrka, Salem, Södertälje och Ekerö. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Sydvästra Stockholm är på den här sidan fyra kommuner: Botkyrka, Salem, Södertälje och Ekerö. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "Botkyrka har Tumba som centralort, och folkmängden ökade enligt Wikipedia med omkring 65 procent mellan 1975 och 2020. Tullinge ligger mellan Tumba och Flemingsberg. Wikipedia berättar hur Tullinge gjordes till en villastad, med tomter som kallades villagårdar. Salem ligger i nordvästra delen av Södertörn, i det sprickdalslandskap som präglar halvön.",
       "Södertälje kommun sträcker sig från Mälaren i norr till Östersjön i sydost. Kanalen öppnade 1819, sedan kom järnvägen, och industrierna sökte sig till staden. Järna växte upp vid stationen på Västra stambanan, som öppnade 1861, och fick eget municipalsamhälle 1911. Orten fungerar enligt Wikipedia i dag i hög grad som förort till Södertälje och Stockholm.",
@@ -316,7 +316,7 @@ export const regionTexts: Record<string, RegionText> = {
     h1: "Takläggare i Västerort",
     title: "Takläggare i Västerort – Bromma, Spånga och Hässelby",
     description: "Takläggare i Västerort: Bromma, Spånga, Hässelby, Vällingby och Ängby. Kostnadsfri takkontroll och fast pris i offerten.",
-    intro: "Västerort är den del av Stockholms kommun som ligger väster och nordväst om innerstaden. Vi har vår bas i Norrtälje och tar uppdrag i hela Storstockholm.",
+    intro: "Västerort är den del av Stockholms kommun som ligger väster och nordväst om innerstaden. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     body: [
       "Enligt Wikipedia består Västerort av de områden som fördes till Stockholm 1916, då Bromma, och 1949, då Spånga och Hässelby villastad, samt mark som senare har tillkommit från Järfälla och Sollentuna. Bromma utmärks enligt Wikipedia bland annat av sin trädgårdsstad. Gamla Bromma trädgårdsstad byggdes på 1910-, 1920- och 1930-talen, och en del av den har sedan 1920-talet haft Nockebybanan.",
       "Hässelby villastad var i stort sett obebyggt fram till slutet av 1800-talet. Ägaren till Hässelby slott arrenderade ut tomter till arbetarna vid Lövsta och började 1900 sälja tomter genom ett eget bolag, också till trädgårdsmästare. Wikipedia skriver att trädgårdsodlingarna med drivbänkar och växthus kom att prägla villastaden under lång tid.",

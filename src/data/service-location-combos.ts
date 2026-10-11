@@ -53,7 +53,7 @@ const serviceTypes = [
     name: "Takrenovering",
     verb: "renovera tak",
     generateContent: (loc: LocationData, prep: string) => [
-      `Behöver ditt tak ${prep} ${loc.name} renoveras? RoslagsTak utför takrenoveringar ${prep} ${loc.name}, från byte av enstaka pannor och lagning av läckor till byte av underlag och underlagspapp.`,
+      `Behöver ditt tak ${prep} ${loc.name} renoveras? Vi tar uppdrag med takrenovering ${prep} ${loc.name}, från byte av enstaka pannor och lagning av läckor till byte av underlag och underlagspapp.`,
       `En takrenovering ${prep} ${loc.name} innebär att vi åtgärdar avgränsade skador utan att byta hela taket. Det kan handla om trasiga pannor, plåtbeslag runt skorstenar, skadad råspont eller sliten underlagspapp.`,
       loc.isIsland
         ? oarText(loc, `Vi tar uppdrag för takrenoveringar på öar i skärgården, också ${prep} ${loc.name}. Förutsättningarna går vi igenom vid takkontrollen.`)

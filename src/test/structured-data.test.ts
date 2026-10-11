@@ -110,7 +110,7 @@ describe("BreadcrumbList-schema", () => {
     ],
     [
       { name: "Hem", path: "/" },
-      { name: "Offert & rådgivning", path: "/offert" },
+      { name: "Offert", path: "/offert" },
     ],
     [
       { name: "Hem", path: "/" },
