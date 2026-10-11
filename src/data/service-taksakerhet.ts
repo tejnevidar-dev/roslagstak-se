@@ -85,7 +85,6 @@ export const taksakerhetBlocks = {
     ],
   },
   relatedLinks: [
-    { to: "/blogg/snorasskydd-tak-krav-placering-pris", label: "Snörasskydd: modeller, montering och pris" },
     { to: "/blogg/takstege-takbrygga-sakerhet", label: "Takstege och gångbrygga: vad de är och när de monteras" },
     { to: "/tjanster/takomlaggning", label: "Takomläggning" },
     { to: "/priser", label: "Riktpriser" },

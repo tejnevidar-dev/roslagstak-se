@@ -29,6 +29,8 @@ import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { regionSlugs } from "../src/data/regions";
+import { avindexeradeGuidevagar } from "../src/data/avindexerade-guider";
+import { avindexeradeOrtsvagar } from "../src/data/avindexerade-orter";
 import {
   CANONICAL_ALIASES,
   SITE_URL,
@@ -133,6 +135,7 @@ for (const url of locs) {
 
   if (!knownRoutes.has(path)) fail(url, "no matching route in App.tsx → renders 404 page");
   if (isNoindexPath(path)) fail(url, "noindex path must not be in the sitemap");
+  if (avindexeradeGuidevagar().includes(path) || avindexeradeOrtsvagar().includes(path)) fail(url, "avindexerad sida (paket 42) får inte stå i sajtkartan");
   const canonical = canonicalPath(path);
   if (canonical !== path)
     fail(url, `alias of ${SITE_URL}${canonical} — duplicate, remove from sitemap`);

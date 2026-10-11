@@ -9,6 +9,7 @@ import { blogPosts } from "@/data/blog-posts";
 import { HOME_ABOUT_BENEFITS, HOME_ABOUT_CAPTION, HOME_ABOUT_INTRO, HOME_ABOUT_P1, HOME_ABOUT_P2, HOME_CORE_VALUES, HOME_WORKFLOW, homeAboutP3Text } from "@/data/home-about";
 import { HOME_AREA_INTRO, HOME_AREA_PANEL, HOME_AREA_SEO_HEADING, HOME_AREA_SEO_PARAGRAPHS, homeAreaIntroText, stripBold } from "@/data/home-area";
 import { HOME_GUIDES, HOME_GUIDES_COUNT, homeGuideLeadCaption, homeGuideReadTime } from "@/data/home-guides";
+import { synligaGuider } from "@/data/avindexerade-guider";
 import { HOME_REFERENS, HOME_REFERENS_ORDER } from "@/data/home-referens";
 import { projectTexts } from "@/data/project-texts";
 import { regionIntros, regionOrder } from "@/data/regions";
@@ -41,7 +42,7 @@ describe("startsidans statiska text: övriga sektioner", () => {
   });
 
   it("Guider & råd: de sex första inläggen med titel, ingress och lästid", () => {
-    const f = blogPosts.slice(0, HOME_GUIDES_COUNT);
+    const f = synligaGuider(blogPosts).slice(0, HOME_GUIDES_COUNT);
     for (const t of [HOME_GUIDES.eyebrow, `${HOME_GUIDES.headingA} ${HOME_GUIDES.headingB}`, HOME_GUIDES.allLink, HOME_GUIDES.leadReadMore, homeGuideLeadCaption(f[0]), ...f.flatMap((p) => [p.title, p.excerpt]), ...f.slice(1).map(homeGuideReadTime)]) expect(lista, t.slice(0, 50)).toContain(t);
   });
 

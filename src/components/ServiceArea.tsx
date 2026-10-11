@@ -2,6 +2,7 @@ import { Anchor, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { locationIndex as locations } from "@/data/location-index";
+import { synligaOrter } from "@/data/avindexerade-orter";
 import { regionIntros, regionOrder } from "@/data/regions";
 import {
   HOME_AREA_INTRO,
@@ -27,10 +28,10 @@ const withBold = (s: string): ReactNode[] =>
   });
 
 const areas = regionOrder
-  .filter((region) => locations.some((l) => l.region === region))
+  .filter((region) => synligaOrter(locations).some((l) => l.region === region))
   .map((region) => ({
     region,
-    locations: locations.filter((l) => l.region === region),
+    locations: synligaOrter(locations.filter((l) => l.region === region)),
     description: regionIntros[region] ?? "",
   }));
 

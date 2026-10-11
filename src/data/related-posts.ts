@@ -4,6 +4,10 @@
  * internlänkar som besökaren (tidigare länkade den statiska HTML:en till de 8 första artiklarna oavsett ämne).
  */
 import { blogPosts, type BlogPost } from "./blog-posts";
+import { synligaGuider } from "./avindexerade-guider";
+
+/** Avindexerade guider (paket 42) länkas inte från andra sidor. */
+const synliga = synligaGuider(blogPosts);
 
 const scoreAgainst = (kw: Set<string>, candidate: BlogPost) =>
   candidate.keywords.reduce((s, k) => s + (kw.has(k.toLowerCase()) ? 2 : 0), 0) +
@@ -23,7 +27,7 @@ const relatedPlan: Map<string, BlogPost[]> = (() => {
   const plan = new Map<string, BlogPost[]>();
   for (const post of blogPosts) {
     const kw = new Set(post.keywords.map((k) => k.toLowerCase()));
-    const pool = blogPosts.filter((p) => p.slug !== post.slug).map((p) => ({ post: p, score: scoreAgainst(kw, p) }));
+    const pool = synliga.filter((p) => p.slug !== post.slug).map((p) => ({ post: p, score: scoreAgainst(kw, p) }));
     const picked: BlogPost[] = [];
     for (let i = 0; i < RELATED_COUNT && pool.length; i++) {
       pool.sort(
@@ -46,7 +50,7 @@ export const relatedPosts = (post: Pick<BlogPost, "slug" | "keywords">, n = RELA
 /** Guider vars nyckelord matchar en sidas ämnesord (t.ex. för problem- och materialsidor); bara träffar med poäng. */
 export const guidesForKeywords = (keywords: string[], n = 2): BlogPost[] => {
   const kw = new Set(keywords.map((k) => k.toLowerCase()));
-  return blogPosts
+  return synliga
     .map((p) => ({ post: p, score: scoreAgainst(kw, p) }))
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score)

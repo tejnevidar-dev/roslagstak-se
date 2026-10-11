@@ -24,6 +24,8 @@ import { hasServiceCombos } from "../src/data/service-slugs";
 import { isThinCombo } from "../src/data/thin-combos";
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { canonicalPath, isNoindexPath, normalizePath } from "../src/lib/canonical";
+import { synligaOrter } from "../src/data/avindexerade-orter";
+import { avindexeradeGuidevagar } from "../src/data/avindexerade-guider";
 import { regionSlugs } from "../src/data/regions";
 
 const SITE_URL = "https://roslagstak.se";
@@ -57,7 +59,7 @@ for (const m of current.matchAll(
 }
 
 // ---------- 2. Build location pages ----------
-const locationEntries: Entry[] = locations.map((l) => ({
+const locationEntries: Entry[] = synligaOrter(locations).map((l) => ({
   path: `/taklaggare-${l.slug}`,
   changefreq: "monthly",
   priority: "0.8",
@@ -104,7 +106,7 @@ for (const entry of rawEntries) {
     continue;
   }
   // Noindex-sidor (admin m.m.) och 404 ska aldrig med.
-  if (isNoindexPath(path) || path === "/404" || path === "/not-found") {
+  if (isNoindexPath(path) || path === "/404" || path === "/not-found" || avindexeradeGuidevagar().includes(path)) {
     skipped.push(`${path} -> noindex`);
     continue;
   }

@@ -349,7 +349,6 @@ export const MATERIAL_EXTRAS: Record<string, PageExtras> = {
       { to: "/blogg/betongpannor-eller-lertegel", label: "Betongpannor eller lertegel?" },
       { to: "/blogg/plattak-vs-betongpannor", label: "Plåttak eller betongpannor?" },
       { to: "/blogg/kostnad-takbyte-2026", label: "Vad kostar takbyte 2026?" },
-      { to: "/blogg/takmalning-betongpannor", label: "Takmålning på betongpannor" },
       { to: "/blogg/skota-taket-betongpannor-tegel-plat", label: "Sköta taket: betongpannor, tegel och plåt" },
       { to: "/projekt/takbyte-singo", label: "Takbyte på Singö" },
       { to: "/projekt/takrenovering-blido", label: "Takbyte på Blidö" },

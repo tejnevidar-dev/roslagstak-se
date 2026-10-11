@@ -52,6 +52,7 @@ const {
   noindexPageBody,
   HERO_STYLES,
   thinComboPaths,
+  avindexeradePaths,
   buildOrganizationNode,
   buildWebSiteNode,
   buildWebPageNode,
@@ -107,6 +108,7 @@ const routes = [
     .map((path) => ({ path, robots: INDEX_ROBOTS })),
   ...noindexRoutes.map((path) => ({ path, robots: NOINDEX_ROBOTS })),
   ...thinComboPaths.map((path) => ({ path, robots: "noindex, follow" })),
+  ...avindexeradePaths.map((path) => ({ path, robots: "noindex, follow" })),
 ];
 
 /* Sidkomponenterna laddas lazy. Utan hint hämtas deras chunk först när huvudscriptet körts

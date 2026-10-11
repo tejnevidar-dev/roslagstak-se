@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import { REGION_PAGE_TEXT } from "@/data/region-page-text";
+import { lankbarHref, synligaOrter } from "@/data/avindexerade-orter";
 import { REGION_EXTRA_LINKS } from "@/data/hub-links";
 import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
@@ -30,6 +31,8 @@ const RegionPage = () => {
 
   const path = `/omraden/${regionSlugs[region]}`;
   const places = locationIndex.filter((l) => l.region === region);
+  /* Avindexerade ortssidor (AJ5) räknas med i texten men länkas inte. */
+  const synliga = synligaOrter(places);
   const text = regionTexts[region];
   const intro = text?.intro ?? regionIntros[region] ?? "";
 
@@ -37,8 +40,8 @@ const RegionPage = () => {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: `Orter i ${region} där RoslagsTak utför takarbeten`,
-    numberOfItems: places.length,
-    itemListElement: places.map((l, i) => ({
+    numberOfItems: synliga.length,
+    itemListElement: synliga.map((l, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
@@ -110,8 +113,8 @@ const RegionPage = () => {
                       {villaAreasByPage[regionSlugs[region]].areas.map((area) => (
                         <div key={area.name}>
                           <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
-                            {area.href ? (
-                              <Link to={area.href} className="underline underline-offset-4 hover:no-underline">
+                            {lankbarHref(area.href) ? (
+                              <Link to={lankbarHref(area.href)!} className="underline underline-offset-4 hover:no-underline">
                                 {area.name}
                               </Link>
                             ) : (
@@ -138,7 +141,7 @@ const RegionPage = () => {
               Orter i {region}
             </h2>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {places.map((place) => (
+              {synliga.map((place) => (
                 <li key={place.slug}>
                   <Link
                     to={`/taklaggare-${place.slug}`}

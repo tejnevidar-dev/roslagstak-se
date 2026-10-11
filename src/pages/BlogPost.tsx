@@ -6,6 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getBlogPostBySlug, blogPosts } from "@/data/blog-posts";
+import { guideAvindexerad } from "@/data/avindexerade-guider";
 import QuickContactFacts from "@/components/QuickContactFacts";
 import NotFound from "./NotFound";
 import { isHeading, stripInlineMd, renderInline } from "@/lib/inline-md";
@@ -80,6 +81,7 @@ const BlogPost = () => {
         description={post.excerpt}
         canonical={`https://roslagstak.se/blogg/${post.slug}`}
         type="article"
+        noindex={guideAvindexerad(post.slug) ? "follow" : undefined}
       />
       <Header />
       <main className="pt-24 pb-20">

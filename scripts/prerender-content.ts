@@ -14,6 +14,8 @@ import { ortSeoOverrides } from "../src/data/seo-overrides";
 import { adLandingCopy, getAdLanding } from "../src/data/ad-landings";
 import { bookingCopy } from "../src/data/ad-landings";
 import { locations } from "../src/data/locations";
+import { avindexeradeOrtsvagar, lankbarHref, ortAvindexerad, synligaOrter } from "../src/data/avindexerade-orter";
+import { avindexeradeGuidevagar, synligaGuider } from "../src/data/avindexerade-guider";
 import { generateServiceLocationFAQs } from "../src/data/location-faqs";
 import { problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
@@ -135,7 +137,7 @@ import { serviceStaticPage, serviceSchemaNodes } from "../src/data/service-page"
 
 const villaAreaLinks = (key: string) =>
   (villaAreasByPage[key]?.areas ?? [])
-    .filter((a) => a.href)
+    .filter((a) => lankbarHref(a.href))
     .map((a) => ({ href: a.href!, label: `Takläggare i ${a.name}` }));
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
@@ -232,7 +234,7 @@ const serviceLinks = services.map((s) => ({
   label: s.title,
 }));
 
-const locationLinks = locations.map((l) => ({
+const locationLinks = synligaOrter(locations).map((l) => ({
   href: `/taklaggare-${l.slug}`,
   label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
 }));
@@ -349,7 +351,7 @@ const homeServiceCards = [
     ...HOME_AREA_SEO_PARAGRAPHS.map(stripBold),
   ]);
   // Guider & råd (GuidesTeaser.tsx): de första sex inläggen i blog-posts.ts
-  const featured = blogPosts.slice(0, HOME_GUIDES_COUNT);
+  const featured = synligaGuider(blogPosts).slice(0, HOME_GUIDES_COUNT);
   const guides = buildBody([
     HOME_GUIDES.eyebrow,
     { h: `${HOME_GUIDES.headingA} ${HOME_GUIDES.headingB}` },
@@ -608,7 +610,7 @@ const staticPages: Record<string, PrerenderPage> = {
     ],
     links: [
       ...primaryLinks,
-      ...blogPosts.map((p) => ({ href: `/blogg/${p.slug}`, label: p.title })),
+      ...synligaGuider(blogPosts).map((p) => ({ href: `/blogg/${p.slug}`, label: p.title })),
     ],
   },
   "/kontakt": {
@@ -1159,7 +1161,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(rt ? rt.body.flatMap(inlineMdLinks) : []),
         ...(regionNeighbors[region] ?? []).map((n) => ({ href: `/omraden/${regionSlugs[n]}`, label: `Takläggare i ${n}` })),
         ...(REGION_EXTRA_LINKS[region] ?? []),
-        ...places.map((l) => ({
+        ...synligaOrter(places).map((l) => ({
           href: `/taklaggare-${l.slug}`,
           label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
         })),
@@ -1264,7 +1266,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         // Sidokolumnen och sidans fot i LocationPage.tsx (AD5)
         { h: LOCATION_PAGE_TEXT.asideHeading, level: 3 as const },
         LOCATION_PAGE_TEXT.asideText(prep, loc.name),
-        ...(locations.some((l) => loc.nearbyLocations.includes(l.name)) ? [{ h: LOCATION_PAGE_TEXT.nearbyHeading, level: 3 as const }] : []),
+        ...(synligaOrter(locations).some((l) => loc.nearbyLocations.includes(l.name)) ? [{ h: LOCATION_PAGE_TEXT.nearbyHeading, level: 3 as const }] : []),
         { h: LOCATION_PAGE_TEXT.problemsHeading, level: 3 as const },
         { h: LOCATION_PAGE_TEXT.sidebarServicesHeading, level: 3 as const },
         { h: LOCATION_PAGE_TEXT.allLocationsHeading },
@@ -1290,7 +1292,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...hubLinksFor(loc.slug),
         ...loc.nearbyLocations
           .map((name) => locations.find((l) => l.name === name))
-          .filter((l): l is (typeof locations)[number] => Boolean(l))
+          .filter((l): l is (typeof locations)[number] => Boolean(l) && !ortAvindexerad(l.slug))
           .map((l) => ({
             href: `/taklaggare-${l.slug}`,
             label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
@@ -1343,7 +1345,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         SERVICE_LOCATION_TEXT.asideText(combo.serviceName, combo.prep, combo.locationName),
         { h: SERVICE_LOCATION_TEXT.uspHeading, level: 3 as const },
         ...SERVICE_LOCATION_TEXT.usps(combo.serviceSlug),
-        ...(locations.find((l) => l.slug === combo.locationSlug)?.nearbyLocations.some((n) => locations.some((l) => l.name === n))
+        ...(locations.find((l) => l.slug === combo.locationSlug)?.nearbyLocations.some((n) => locations.some((l) => l.name === n && !ortAvindexerad(l.slug)))
           ? [{ h: SERVICE_LOCATION_TEXT.nearbyHeading(combo.serviceName), level: 3 as const }]
           : []),
         { h: SERVICE_LOCATION_TEXT.allLocationsHeading(combo.serviceName) },
@@ -1453,6 +1455,9 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
 };
 
 /** Tjänst+ort-URL:er som ska noindexeras (se src/data/thin-combos.ts). */
+/** Avindexerade ortssidor (AJ5): noindex, follow och utanför sajtkartan. */
+export const avindexeradePaths: string[] = [...avindexeradeOrtsvagar(), ...avindexeradeGuidevagar()];
+
 export const thinComboPaths: string[] = locations
   .filter((l) => hasServiceCombos(l.region))
   .flatMap((l) => allServiceSlugs.filter((s) => isThinCombo(s, l)).map((s) => `/${s}-${l.slug}`));

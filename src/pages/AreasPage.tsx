@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import { REGION_PAGE_TEXT } from "@/data/region-page-text";
+import { synligaOrter } from "@/data/avindexerade-orter";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
 import { regionOrder, regionIntros, regionSlugs } from "@/data/regions";
@@ -20,7 +21,7 @@ const AreasPage = () => {
     .map((region) => ({
       region,
       intro: regionIntros[region] ?? "",
-      places: locationIndex.filter((l) => l.region === region),
+      places: synligaOrter(locationIndex.filter((l) => l.region === region)),
     }))
     .filter((g) => g.places.length > 0);
 
@@ -28,8 +29,8 @@ const AreasPage = () => {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Orter där RoslagsTak utför takarbeten",
-    numberOfItems: locationIndex.length,
-    itemListElement: locationIndex.map((l, i) => ({
+    numberOfItems: synligaOrter(locationIndex).length,
+    itemListElement: synligaOrter(locationIndex).map((l, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,

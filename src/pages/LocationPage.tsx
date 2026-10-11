@@ -4,6 +4,7 @@ import { hubLinksFor } from "@/data/hub-links";
 import { ortSeoOverrides } from "@/data/seo-overrides";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
+import { lankbarHref, ortAvindexerad, synligaOrter } from "@/data/avindexerade-orter";
 import { generateCombos, COMBO_LINK_LABEL, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
 import { isThinCombo } from "@/data/thin-combos";
 import { isBrfLocation } from "@/data/brf-locations";
@@ -48,7 +49,7 @@ const LocationPage = () => {
 
   if (!location) return <NotFound />;
 
-  const nearby = locations.filter((l) => location.nearbyLocations.includes(l.name));
+  const nearby = synligaOrter(locations.filter((l) => location.nearbyLocations.includes(l.name)));
   /* Geografisk graf (SEO Phase 2.7): bara 2 av 139 orter har ett exakt projekt. Genom att visa ett
      referensjobb från en grannort (≤30 km, se getNearbyProject) får många fler ortssidor en riktig
      location↔project-länk — alltid med orten utskriven, aldrig bara "i närområdet" utan angiven
@@ -179,6 +180,7 @@ const LocationPage = () => {
         canonical={`https://roslagstak.se/taklaggare-${location.slug}`}
         geoPosition={`${location.lat};${location.lng}`}
         geoPlacename={location.name}
+        noindex={ortAvindexerad(location.slug) ? "follow" : undefined}
       />
       <Header />
       <main>
@@ -370,8 +372,8 @@ const LocationPage = () => {
                       {villaAreasByPage[location.slug].areas.map((area) => (
                         <div key={area.name}>
                           <dt className="text-xs font-semibold uppercase tracking-wider text-primary">
-                            {area.href ? (
-                              <Link to={area.href} className="underline underline-offset-4 hover:no-underline">
+                            {lankbarHref(area.href) ? (
+                              <Link to={lankbarHref(area.href)!} className="underline underline-offset-4 hover:no-underline">
                                 {area.name}
                               </Link>
                             ) : (
@@ -648,7 +650,7 @@ const LocationPage = () => {
               {LOCATION_PAGE_TEXT.allLocationsHeading}
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
-              {locations.map((loc) => (
+              {synligaOrter(locations).map((loc) => (
                 <Link
                   key={loc.slug}
                   to={`/taklaggare-${loc.slug}`}

@@ -3,6 +3,7 @@ import { SERVICE_LOCATION_TEXT } from "@/data/service-location-text";
 import { isHeading, renderInline, stripInlineMd } from "@/lib/inline-md";
 import { briefFaqs, medTidOchMaterial } from "@/data/brief-faq";
 import { isThinCombo } from "@/data/thin-combos";
+import { ortAvindexerad } from "@/data/avindexerade-orter";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Shield, Clock, Award } from "lucide-react";
@@ -64,7 +65,7 @@ const ServiceLocationPage = () => {
   const nearbyInService = loc?.nearbyLocations
     .map((name) => {
       const nearby = locations.find((l) => l.name === name);
-      return nearby ? { ...nearby, comboUrl: `/${combo.serviceSlug}-${nearby.slug}` } : null;
+      return nearby && !ortAvindexerad(nearby.slug) ? { ...nearby, comboUrl: `/${combo.serviceSlug}-${nearby.slug}` } : null;
     })
     .filter(Boolean) || [];
 

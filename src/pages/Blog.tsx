@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import { blogPosts } from "@/data/blog-posts";
+import { synligaGuider } from "@/data/avindexerade-guider";
 
 const Blog = () => {
   return (
@@ -28,7 +29,7 @@ const Blog = () => {
 
         <div className="container mx-auto px-4 pt-16 pb-20">
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {blogPosts.map((post) => (
+            {synligaGuider(blogPosts).map((post) => (
               <Link
                 key={post.slug}
                 to={`/blogg/${post.slug}`}
