@@ -423,7 +423,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takbyte i Rimbo med TP20-plåt, betongpannor eller lertegel. Kostnadsfri takkontroll utan förpliktelser, fast pris och utförande enligt AMA.",
     content: [
-      "Två mil väster om Norrtälje, längs riksväg 77, ligger Rimbo. Orten har en lång historia som mötesplats och är i dag en tätort i Norrtälje kommun. Ska taket bytas vill du veta vad arbetet omfattar, vilka material som finns och vad det kostar. Hos oss får du svar på det efter en kostnadsfri takkontroll, med ett fast pris i offerten.",
+      "Två mil väster om Norrtälje, längs riksväg 77, ligger Rimbo. Orten är en tätort i Norrtälje kommun. Ska taket bytas vill du veta vad arbetet omfattar, vilka material som finns och vad det kostar. Hos oss får du svar på det efter en kostnadsfri takkontroll, med ett fast pris i offerten.",
       "## Från marknadsplats till järnvägsknut",
       "Rimbo blev tidigt en marknadsplats, där vattenled och landsväg möttes, och Rimbo marknad hålls fortfarande den första torsdagen i oktober. Samhället växte fram kring Rimbo station när järnvägen Länna–Norrtälje öppnade via Rimbo 1884, och året efter kom banan från Stockholm. Järnvägsepoken varade i cirka 80 år, och 1981 lades den sista linjen ned. Bebyggelsen har vuxit fram runt den gamla järnvägsknuten, en bit från kyrkan från 1400-talet. Den första stadsplanen antogs på 1920-talet, och enligt Norrtälje kommun var den påverkad av trädgårdsstadens ideal, med villor i lummiga kvarter med stora trädgårdar.",
       "## TP20 eller pannor?",
@@ -461,7 +461,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     content: [
       "Villaägare i Salem bor antingen i ett äldre villasamhälle eller i ett småhusområde som har kommit till långt senare. Rönninge styckades i tomter redan på 1890-talet, medan andra delar av kommunen har vuxit fram i etapper. När taket ska bytas är det husets ålder och konstruktion som styr valen, inte adressen. Här går vi igenom vad du behöver veta.",
       "## Villasamhället vid stationen",
-      "Rönninge fick sin järnvägsstation vid stambanan 1888, och 1896 styckades egendomen upp i 151 tomter av ett villatomtbolag. Byggandet tog fart efter sekelskiftet 1900, och enligt beskrivningar av ortens historia blev resultatet en blandad villabebyggelse. Sedan dess har Rönninge vuxit i etapper, med områden som Mölleskogen, Garnudden, Skogsängen och Säbyholm. Enligt Wikipedia utgörs kommunens huvudbebyggelse av bostadsområdena Rönninge, Salem och Söderby. Äldre villor och nyare småhus har ofta olika takkonstruktion, och det är en av de första sakerna som behöver klarläggas inför ett takbyte.",
+      "Rönninge fick sin järnvägsstation vid stambanan 1888, och 1896 styckades egendomen upp i 151 tomter av ett villatomtbolag. Byggandet tog fart efter sekelskiftet 1900, och enligt Wikipedia blev resultatet en blandad villabebyggelse. Sedan dess har Rönninge vuxit i etapper, med områden som Mölleskogen, Garnudden, Skogsängen och Säbyholm. Enligt Wikipedia utgörs kommunens huvudbebyggelse av bostadsområdena Rönninge, Salem och Söderby. Äldre villor och nyare småhus har ofta olika takkonstruktion, och det är en av de första sakerna som behöver klarläggas inför ett takbyte.",
       "## Vid Mälarens södra strand",
       "Salems kommun ligger på Södertörn, vid Mälarens södra strand. Bornsjön, kommunens största sjö efter Mälaren, är naturskyddad och reservvattentäkt för Stockholm.",
       "## Vägar och grannar",
