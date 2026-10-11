@@ -39,15 +39,15 @@ export const BRF_STEPS = [
 
 export const BRF_BOENDE = [
   {
-    title: "Tidplan som stäms av",
+    title: "Planering tillsammans",
     text: "Ställning, etablering och de moment som märks mest planeras tillsammans med styrelsen, så att informationen till de boende kan komma i god tid.",
   },
   {
-    title: "Skydd av fasad och mark",
+    title: "Ställning",
     text: "Ställningen reses innan arbetet börjar.",
   },
   {
-    title: "En fast kontaktperson",
+    title: "En kontaktperson",
     text: "Styrelsen har en person att ringa under hela projektet, från takkontroll till slutgenomgång.",
   },
 ];

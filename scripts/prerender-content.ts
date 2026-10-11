@@ -653,7 +653,7 @@ const staticPages: Record<string, PrerenderPage> = {
     description:
       "Se riktiga takprojekt vi har utfört i Roslagen, med bilder och fakta om material, omfattning och plats.",
     h1: "Riktiga takprojekt i Roslagen",
-    intro: "Här visar vi jobb vi har utfört. Riktiga bilder, riktiga material.",
+    intro: "Här visar vi jobb vi har utfört, med kundens samtycke. Riktiga bilder, riktiga material.",
     paragraphs: [
       "Nytt tak på Blidö: nya betongpannor från Benders i svart, sommaren 2026.",
       "Nytt tak på Singö i Norrtälje kommun: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",

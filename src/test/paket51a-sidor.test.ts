@@ -60,16 +60,15 @@ describe("paket 51a: /projekt och 'med kundens samtycke'", () => {
     expect(readFileSync("src/pages/ProjectsPage.tsx", "utf8")).toContain("Se riktiga takprojekt vi har utfört i Roslagen, med bilder");
   });
 
-  it("1.10: /projekt ingress utan 'med kundens samtycke', i serverns HTML och i React", () => {
-    expect(prerenderContent("/projekt")!.intro).toBe("Här visar vi jobb vi har utfört. Riktiga bilder, riktiga material.");
-    expect(readFileSync("src/pages/ProjectsPage.tsx", "utf8")).toContain('text="Här visar vi jobb vi har utfört. Riktiga bilder, riktiga material."');
+  it("1.10 (återställd 2026-10-11 22:56): /projekt ingress har kvar 'med kundens samtycke', i serverns HTML och i React", () => {
+    expect(prerenderContent("/projekt")!.intro).toBe("Här visar vi jobb vi har utfört, med kundens samtycke. Riktiga bilder, riktiga material.");
+    expect(readFileSync("src/pages/ProjectsPage.tsx", "utf8")).toContain('text="Här visar vi jobb vi har utfört, med kundens samtycke. Riktiga bilder, riktiga material."');
   });
 
-  it("'med kundens samtycke' finns inte på något av de fem ställena", () => {
-    expect(kallor().filter((f) => /publiceras med kundens samtycke|visas med kundens samtycke|med kundens samtycke\. Riktiga/.test(readFileSync(f, "utf8")))).toEqual([]);
-    expect(JSON.stringify(HOME_REFERENS)).not.toMatch(/samtycke/);
-    expect(JSON.stringify(projectTexts)).not.toMatch(/samtycke/);
-    expect(JSON.stringify(projectTexts)).toContain("Jobbet är utfört av RoslagsTak. Funderar du på ditt eget tak?");
+  it("samtycket står kvar ordagrant på de fem ställena (belagt i jobbens faktafiler, Vidar som källa)", () => {
+    expect(JSON.stringify(HOME_REFERENS)).toContain("Alla tre är utförda av RoslagsTak och visas med kundens samtycke.");
+    expect(JSON.stringify(projectTexts).split("och bilderna publiceras med kundens samtycke").length - 1).toBe(3);
+    expect(JSON.stringify(projectTexts)).toContain("publiceras med kundens samtycke, även på startsidan.");
   });
 });
 
@@ -79,6 +78,8 @@ describe("paket 51a: /brf", () => {
     const t = brfText();
     for (const borta of ["städas", "städar", "bortforsling", "skyddar fasad", "planteringar", "uteplatser", "startdatum", "Startdatum", "tidplan och", "och tidplan", "får en fast kontaktperson", "under hela projektet, städ"]) expect(t, borta).not.toContain(borta);
     expect(BRF_BOENDE.map((b) => b.title)).not.toContain("Ordning på arbetsplatsen");
+    // Rubrikerna följer de nya texterna (Marknadschefen 2026-10-11 22:56)
+    expect(BRF_BOENDE.map((b) => b.title)).toEqual(["Planering tillsammans", "Ställning", "En kontaktperson"]);
   });
 
   it("2.5: de nya lydelserna står", () => {
