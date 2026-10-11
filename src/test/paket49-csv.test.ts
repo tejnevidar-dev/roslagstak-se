@@ -17,7 +17,7 @@ describe("paket 49: inget .csv-namn på sajten", () => {
     expect(text("storangen")).toContain("Enligt Wikipedia finns i området även funkisvillor");
     expect(text("saltsjobaden")).toContain("Enligt Wikipedia växte villastaden fram mellan 1891 och 1912");
     expect(text("midgard-byle")).toContain("Enligt kommunen är villorna i Byle villastad från 1907 och 1910-talet");
-    expect(text("kallhall")).toContain("SCB: ca 210 ägda småhus i RegSO");
+    expect(text("kallhall")).toContain("Ca 210 (Wikipedia och SCB)"); // paket 49b-1: SCB-uppgiften har fått sin slutliga lydelse
     expect(text("vato")).toContain("Hitta.se anger");
   });
 

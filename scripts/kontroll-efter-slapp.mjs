@@ -490,7 +490,7 @@ for (const path of ["/takproblem/fukt-pa-vinden", "/priser"]) {
   await p.waitForTimeout(1500);
   await p.locator("header").getByText("Få offert", { exact: true }).first().hover().catch(() => {});
   await p.waitForTimeout(600);
-  const mal = await p.evaluate(() => [...document.querySelectorAll("header a")].filter((a) => /^s*Boka kostnadsfri takkontroll/.test(a.textContent || "")).map((a) => a.getAttribute("href")));
+  const mal = await p.evaluate(() => [...document.querySelectorAll("header a")].filter((a) => /^\s*Boka kostnadsfri takkontroll/.test(a.textContent || "")).map((a) => a.getAttribute("href")));
   punkt("Menyn (dator): 'Boka kostnadsfri takkontroll' under 'Få offert' leder till /takkontroll", mal.length === 1 && mal[0] === "/takkontroll", mal.length ? mal.join(", ") : "länken hittades inte");
   await dctx.close();
 }
