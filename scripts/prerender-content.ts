@@ -532,7 +532,7 @@ const staticPages: Record<string, PrerenderPage> = {
     paragraphs: [
       "Ordningen är underlag, läkt, takmaterial och plåtdetaljer.",
       "Du har en kontaktperson genom hela processen, och arbetet avslutas med en slutgenomgång.",
-      "Steg 1 — takkontroll, rapport och offert: vi går igenom taket på plats, och du får en rapport om takets skick. Behöver taket åtgärdas lämnar vi också en skriftlig offert med fast pris. Kostnadsfritt och utan förpliktelser.",
+      "Steg 1 — takkontroll, rapport och offert: vi går igenom taket på plats, och du får en rapport om takets skick. Behöver taket åtgärdas lämnar vi också en offert med fast pris. Kostnadsfritt och utan förpliktelser.",
       "Steg 2 — planering: när du har accepterat offerten går vi igenom hur arbetet läggs upp innan vi börjar.",
       "Steg 3 — ställning: ställningen reses innan arbetet börjar.",
       "Steg 4 — rivning: gamla taket rivs. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare, och inget extraarbete görs utan ditt godkännande.",
@@ -616,17 +616,17 @@ const staticPages: Record<string, PrerenderPage> = {
   "/kontakt": {
     title: "Kontakt och kostnadsfri takkontroll",
     description:
-      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i hela Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
+      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
     h1: "Boka kostnadsfri takkontroll",
     intro: `Ring ${PHONE} eller fyll i formuläret. Vi återkopplar inom 24 timmar — kostnadsfritt och utan förpliktelser.`,
     paragraphs: [
       "Vi erbjuder kostnadsfri takkontroll i hela Roslagen och Storstockholm. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
-      "När du hör av dig får du svar inom 24 timmar. Vi bokar en tid för takkontroll som passar dig, tittar på taket tillsammans med dig om du vill, och lämnar därefter en skriftlig offert med fast pris.",
-      "Vi tar uppdrag i hela Roslagen — Norrtälje, Österåker, Vaxholm, Östhammar och alla öar — samt i hela Storstockholm från Täby och Sollentuna till Nacka och Södertälje.",
-      "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser), hur lång tid tar det (det beror på takets storlek, underlagets skick och väder) och kan man bo kvar under arbetet (ja, i de flesta fall).",
+      "När du hör av dig får du svar inom 24 timmar. Vi bokar en tid för takkontroll som passar dig, tittar på taket tillsammans med dig om du vill, och lämnar därefter en offert med fast pris.",
+      "Vi tar uppdrag i Roslagen och Storstockholm, från Norrtälje, Österåker och Vaxholm till Täby, Sollentuna, Nacka och Södertälje.",
+      "Vanliga frågor vid första kontakten: vad kostar ett takbyte (se vår prissida för riktpriser) och hur lång tid tar det (det beror på takets storlek, underlagets skick och väder).",
       `Telefon: ${PHONE}. Du kan också mejla via formuläret på sidan — ange adress så återkommer vi med förslag på tid för takkontroll.`,
-      "Inför takkontrollen behöver du inte förbereda något särskilt, men det underlättar om du vet ungefär hur stort taket är, vilket material det har idag och om du märkt några specifika problem som fläckar eller läckage. Vi tar med all mätutrustning.",
-      "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en skriftlig offert med fast pris och tydlig specifikation av vad som ingår — rivning, underlag, tätskikt, beslag, taksäkerhet och städning. Du bestämmer i din egen takt, utan påtryckningar.",
+      "Inför takkontrollen behöver du inte förbereda något särskilt, men det underlättar om du vet ungefär hur stort taket är, vilket material det har idag och om du märkt några specifika problem som fläckar eller läckage.",
+      "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Du bestämmer i din egen takt.",
       "Välkommen att höra av dig oavsett om du planerar ett takbyte i år, funderar på taktvätt eller bara vill ha en bedömning av takets skick.",
       "För dig på en ö: vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Berätta var fastigheten ligger och hur den nås, så planerar vi takkontrollen därefter.",
       "Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar och har ingen jour.",
