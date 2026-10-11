@@ -277,7 +277,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   snattringe: {
     title: "Takläggare i Snättringe – fast pris efter takkontroll",
     description:
-      "Takläggare i Snättringe i Huddinge, med villor från 1920- och 30-talen och radhus från 1960-talet. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Snättringe i Huddinge, med villor från 1900-talets början och radhus från 1960-talet. Kostnadsfri takkontroll och fast pris.",
   },
   "solgard-sorskogen": {
     title: "Takläggare i Solgård och Sörskogen – fast pris",
@@ -287,7 +287,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   segeltorp: {
     title: "Takläggare i Segeltorp – fast pris efter takkontroll",
     description:
-      "Takläggare i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talet och radhus från 1950-talet. Kostnadsfri takkontroll.",
+      "Takläggare i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talets början och radhus. Kostnadsfri takkontroll.",
   },
   skogas: {
     title: "Takläggare i Skogås – fast pris efter takkontroll",
@@ -332,7 +332,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   hasselby: {
     title: "Takläggare i Hässelby – fast pris efter takkontroll",
     description:
-      "Takläggare i Hässelby villastad, Backlura och Johannelund, med villor från 1900-talet och radhus från 1970-talet. Kostnadsfri takkontroll.",
+      "Takläggare i Hässelby villastad och Backlura, med villor från 1900-talets början och radhus från 1970-talet. Kostnadsfri takkontroll.",
   },
   langbro: {
     title: "Takläggare i Långbro – fast pris efter takkontroll",
