@@ -73,7 +73,7 @@ export const materials: Material[] = [
         "Takets storlek och form, antal genomföringar och detaljer, underlagets skick, ställning och åtkomst.",
       delAvTaksystemet:
         "Underlag, ströläkt, bärläkt, pannor, nockpannor, plåtdetaljer (fotplåt, vindskivor, skorstensbeslag) och avvattning.",
-      hosOss: "Svarta betongpannor från Benders på Blidö, Norrtälje, och röda betongpannor på Singö, Grisslehamn.",
+      hosOss: "Svarta betongpannor från Benders på Blidö, Norrtälje, och röda betongpannor på Singö.",
     },
   },
   {
@@ -116,7 +116,7 @@ export const materials: Material[] = [
       kostnadsdrivare: "Takyta, detaljer och genomföringar, plåtdetaljer, underlag och åtkomst.",
       delAvTaksystemet: "Underlag, läkt, TP20-plåt, nockplåt, fotplåt, vindskiveplåt och avvattning.",
       hosOss:
-        "Röd TP20-plåt på de lägre delarna av huset på Singö, Grisslehamn, i kombination med röda betongpannor på huvudtaket.",
+        "Röd TP20-plåt på de lägre delarna av huset på Singö, i kombination med röda betongpannor på huvudtaket.",
       hallIsar:
         "TP20 (trapetsprofilerad plåt) är inte samma sak som dubbelfalsat plåttak (bandtäckning) — falsat har dolda fästen i stället för synliga skruvar.",
     },
@@ -193,7 +193,7 @@ export const materials: Material[] = [
       nackdelar:
         "Underlaget går inte att se eller bedöma från marken, och skador upptäcks ofta sent, först när fukt syns på vinden eller i innertaket. Det går inte att byta underlagspappen utan att lyfta bort ytmaterialet och läkten. Därför görs det normalt i samband med en omläggning eller ett takbyte, inte som en egen åtgärd.",
       passarNar:
-        "Frågan är sällan om taket ska ha ett underlag, utan om det befintliga håller. Underlagspapp och läkt byts när taket läggs om. Råsponten bedöms när taket är öppet: är den torr och frisk kan den ligga kvar, är den fuktskadad byts de delar som har tagit skada. På Blidö i Norrtälje behölls den befintliga råsponten när huset fick nytt underlag, ny läkt och nya betongpannor. På Singö i Grisslehamn byttes delar av råsponten.",
+        "Frågan är sällan om taket ska ha ett underlag, utan om det befintliga håller. Underlagspapp och läkt byts när taket läggs om. Råsponten bedöms när taket är öppet: är den torr och frisk kan den ligga kvar, är den fuktskadad byts de delar som har tagit skada. På Blidö i Norrtälje behölls den befintliga råsponten när huset fick nytt underlag, ny läkt och nya betongpannor. På Singö byttes delar av råsponten.",
       underhall:
         "Underlaget sköts genom att resten av taket sköts. Byt trasiga pannor innan vatten hinner rinna in under lång tid, håll hängrännor och ränndalar rena och se till att vinden är ventilerad så att fukt kan vädras ut. Titta på vinden någon gång om året, gärna efter regn: mörka fläckar, droppmärken eller mjukt trä på råspontens undersida är tecken som ska tas på allvar.",
       vanligaFel:
