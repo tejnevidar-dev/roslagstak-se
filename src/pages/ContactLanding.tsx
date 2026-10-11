@@ -52,7 +52,7 @@ const ContactLanding = () => {
     setMessage("");
     toast({
       title: "Tack för din förfrågan!",
-      description: "Vi återkopplar inom 24 timmar för att boka in din kostnadsfria takkontroll.",
+      description: "Vi svarar inom 24 timmar och bokar in din kostnadsfria takkontroll.",
     });
   };
 
@@ -60,7 +60,7 @@ const ContactLanding = () => {
     <>
       <SEOHead
         title="Kontakt & Kostnadsfri Takkontroll — RoslagsTak"
-        description="Boka kostnadsfri takkontroll med RoslagsTak. Ring 070-154 36 39 eller fyll i formuläret — vi återkopplar inom 24 timmar. Takfirma med bas i Norrtälje."
+        description="Boka kostnadsfri takkontroll med RoslagsTak. Ring 070-154 36 39 eller fyll i formuläret — vi svarar inom 24 timmar. Takfirma med bas i Norrtälje."
         canonical="https://roslagstak.se/kontakt"
       />
 
@@ -95,7 +95,7 @@ const ContactLanding = () => {
               Boka kostnadsfri takkontroll
             </h1>
             <p className="text-accent-foreground/70 text-base md:text-lg leading-relaxed">
-              Ring oss direkt eller fyll i formuläret nedan. Vi återkopplar inom 24 timmar — kostnadsfritt och utan förpliktelser.
+              Ring oss direkt eller fyll i formuläret nedan. Vi svarar inom 24 timmar — kostnadsfritt och utan förpliktelser.
             </p>
             <a
               href="tel:+46701543639"
@@ -118,7 +118,7 @@ const ContactLanding = () => {
                 <ul className="space-y-4 mb-8">
                   {[
                     { icon: MessageCircle, title: "1. Du hör av dig", text: "Ring eller fyll i formuläret — beskriv kort ditt projekt." },
-                    { icon: Clock, title: "2. Vi återkopplar inom 24h", text: "En av våra säljare kontaktar dig för att boka takkontrollen." },
+                    { icon: Clock, title: "2. Vi svarar inom 24 timmar", text: "En av våra säljare kontaktar dig för att boka takkontrollen." },
                     { icon: Shield, title: "3. Kostnadsfri takkontroll", text: "En av våra säljare tittar på taket på plats. Behöver taket åtgärdas får du en offert med fast pris." },
                   ].map((step) => (
                     <li key={step.title} className="flex gap-3">
@@ -168,7 +168,7 @@ const ContactLanding = () => {
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold text-foreground">Tack för din förfrågan!</p>
-                      <p className="text-xs text-muted-foreground mt-1">Vi återkopplar inom 24 timmar.</p>
+                      <p className="text-xs text-muted-foreground mt-1">Vi svarar inom 24 timmar.</p>
                     </div>
                   </div>
                 )}
@@ -212,7 +212,7 @@ const ContactLanding = () => {
                   )}
                 </button>
                 <p className="text-xs text-muted-foreground text-center">
-                  Vi återkommer inom 24 timmar. Kostnadsfritt och utan förpliktelser.
+                  Vi svarar inom 24 timmar. Kostnadsfritt och utan förpliktelser.
                 </p>
                 <p className="text-xs text-muted-foreground text-center">
                   Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}

@@ -121,7 +121,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
         <CheckCircle className="h-8 w-8 text-accent" aria-hidden="true" />
         <h3 className="font-display text-2xl text-foreground">Tack, vi har tagit emot förfrågan.</h3>
         <p className="max-w-md leading-relaxed text-muted-foreground">
-          Vi återkommer inom 24 timmar för att stämma av tid för takkontroll. Vill ni prata direkt går det bra att
+          Vi svarar inom 24 timmar för att stämma av tid för takkontroll. Vill ni prata direkt går det bra att
           ringa 070-154 36 39.
         </p>
         <button

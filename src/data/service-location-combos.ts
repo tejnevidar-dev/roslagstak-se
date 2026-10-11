@@ -45,7 +45,7 @@ const serviceTypes = [
             `Vi tar uppdrag ${prep} ${loc.name}.`,
           ),
       `Priset för ett takbyte ${prep} ${loc.name} beror på takets storlek, material och underlagets skick. ${PRIS_RAD("")}`.replace("  ", " "),
-      `Kontakta oss för en kostnadsfri takkontroll för takbyte ${prep} ${loc.name}. Vi återkopplar inom 24 timmar.`,
+      `Kontakta oss för en kostnadsfri takkontroll för takbyte ${prep} ${loc.name}. Vi svarar inom 24 timmar.`,
     ],
   },
   {
@@ -63,7 +63,7 @@ const serviceTypes = [
             `Vi tar uppdrag för takrenovering ${prep} ${loc.name}.`,
           ),
       `Priset för en takrenovering ${prep} ${loc.name} varierar beroende på skadans omfattning. Du får fast pris efter kostnadsfri takkontroll. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.`,
-      `Boka en kostnadsfri takkontroll ${prep} ${loc.name}. Kontakta oss så återkopplar vi inom 24 timmar.`,
+      `Boka en kostnadsfri takkontroll ${prep} ${loc.name}. Kontakta oss så svarar vi inom 24 timmar.`,
     ],
   },
   {
@@ -81,7 +81,7 @@ const serviceTypes = [
             `Vi tar uppdrag ${prep} ${loc.name}.`,
           ),
       `Kostnaden för takomläggning ${prep} ${loc.name} varierar beroende på takets storlek, lutning och materialval. ${PRIS_RAD("")}`.replace("  ", " "),
-      `Boka en kostnadsfri takkontroll för takomläggning ${prep} ${loc.name}. Ring 070-154 36 39. Vi återkopplar inom 24 timmar.`,
+      `Boka en kostnadsfri takkontroll för takomläggning ${prep} ${loc.name}. Ring 070-154 36 39. Vi svarar inom 24 timmar.`,
     ],
   },
 ];
@@ -119,7 +119,7 @@ const specialistServices = [
             `Vi tar uppdrag för bandtäckning ${prep} ${loc.name}.`,
           ),
       `Bandtäckning ${prep} ${loc.name} är dubbelfalsat plåttak. ${PRIS_RAD("")}`.replace("  ", " "),
-      `Vill du veta vad bandtäckning ${prep} ${loc.name} kostar för just ditt tak? Ring 070-154 36 39 eller boka en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar.`,
+      `Vill du veta vad bandtäckning ${prep} ${loc.name} kostar för just ditt tak? Ring 070-154 36 39 eller boka en kostnadsfri takkontroll. Vi svarar inom 24 timmar.`,
     ],
   },
   {

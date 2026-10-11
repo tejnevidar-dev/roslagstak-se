@@ -24,7 +24,7 @@ const INCLUDES = (name: string, prep: string) =>
   `Vad ingår i ett takbyte ${prep} ${name}? Rivning av det gamla takmaterialet, ny underlagspapp och ny läkt, nytt ytmaterial, nya plåtbeslag och, om du vill, nya hängrännor och stuprör. Vad som ingår i ditt takbyte står i offerten.`;
 
 const CTA = (name: string, prep: string) =>
-  `Boka en kostnadsfri takkontroll för ditt takbyte ${prep} ${name}. Ring 070-154 36 39 eller boka online — vi återkommer inom 24 timmar.`;
+  `Boka en kostnadsfri takkontroll för ditt takbyte ${prep} ${name}. Ring 070-154 36 39 eller boka online — vi svarar inom 24 timmar.`;
 
 import { TAKTVATT_COMBO_CONTENT, TAKTVATT_META, taktvattComboTitle } from "./taktvatt-text";
 

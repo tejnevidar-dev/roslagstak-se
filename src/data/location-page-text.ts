@@ -21,7 +21,7 @@ export const LOCATION_PAGE_TEXT = {
   linksHeading: (prep: string, name: string) => `Tjänster, priser och guider ${prep} ${name}`,
   asideHeading: "Kostnadsfri takkontroll",
   asideText: (prep: string, name: string) =>
-    `Boka en kostnadsfri takkontroll för ditt takprojekt ${prep} ${name}. Vi återkopplar inom 24 timmar.`,
+    `Boka en kostnadsfri takkontroll för ditt takprojekt ${prep} ${name}. Vi svarar inom 24 timmar.`,
   nearbyHeading: "Takläggare i närområdet",
   problemsHeading: "Vanliga takproblem",
   sidebarServicesHeading: "Våra taktjänster",

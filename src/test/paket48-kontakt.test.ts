@@ -37,7 +37,7 @@ describe("paket 48: /kontakt", () => {
     expect(text).not.toContain("alla öar");
     expect(text).not.toContain("Östhammar");
     expect(text).toContain("För dig på en ö: vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Berätta var fastigheten ligger och hur den nås, så planerar vi takkontrollen därefter.");
-    expect(p.description).toBe("Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i Roslagen och Storstockholm. Återkoppling inom 24 timmar.");
+    expect(p.description).toBe("Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i Roslagen och Storstockholm. Svar inom 24 timmar.");
   });
 
   it("e) frågan om att bo kvar står kvar i frågelistan, men svaret lovar inte 'i de flesta fall'", () => {

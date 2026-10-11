@@ -115,7 +115,7 @@ export const BRF_RESIDENTS = { eyebrow: "För de boende", heading: "Så begräns
 export const BRF_FORM = {
   eyebrow: "Kom igång",
   heading: "Boka kostnadsfri takkontroll",
-  text: "Berätta kort om föreningen och taket. Vi återkommer inom 24 timmar och bokar en tid som passar styrelsen.",
+  text: "Berätta kort om föreningen och taket. Vi svarar inom 24 timmar och bokar en tid som passar styrelsen.",
   areaText: "Vi arbetar i Storstockholm och Roslagen.",
   areaLink: "Se alla områden",
   finePrint1: "Vi svarar inom 24 timmar. Takkontroll och offert är kostnadsfria och förpliktar inte till något.",

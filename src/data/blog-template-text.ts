@@ -7,7 +7,7 @@ export const BLOG_TEMPLATE = {
   asideRest: "Vi gör en kostnadsfri takkontroll på plats, utan förpliktelser.",
   linksHeading: "Läs mer om tak i Roslagen",
   ctaHeading: "Behöver du hjälp med ditt tak?",
-  ctaText: "Kostnadsfri takkontroll utan förpliktelser. Vi återkopplar inom 24 timmar.",
+  ctaText: "Kostnadsfri takkontroll utan förpliktelser. Vi svarar inom 24 timmar.",
   relatedHeading: "Relaterade artiklar om tak",
 };
 /** Guider med fler än sex stycken får en ruta efter tredje stycket (BlogPost.tsx). */

@@ -8,7 +8,7 @@ export const SERVICE_LOCATION_TEXT = {
   relatedHeading: (prep: string, locationName: string) => `Relaterade tjänster ${prep} ${locationName}`,
   asideHeading: "Kostnadsfri takkontroll",
   asideText: (serviceName: string, prep: string, locationName: string) =>
-    `Boka en kostnadsfri takkontroll för ${serviceName.toLowerCase()} ${prep} ${locationName}. Vi återkopplar inom 24 timmar.`,
+    `Boka en kostnadsfri takkontroll för ${serviceName.toLowerCase()} ${prep} ${locationName}. Vi svarar inom 24 timmar.`,
   uspHeading: "Varför RoslagsTak?",
   usps: (serviceSlug: string): string[] => [
     ["takmalning", "taktvatt"].includes(serviceSlug)

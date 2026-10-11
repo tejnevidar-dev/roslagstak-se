@@ -6,9 +6,9 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 describe("paket 41: menyposten leder till /takkontroll", () => {
-  it("målet är /takkontroll, texten och underraden är oförändrade", () => {
+  it("målet är /takkontroll, texten är oförändrad och underraden är paket 53a:s lydelse", () => {
     const t = readFileSync("src/components/Header.tsx", "utf8").replace(/\r/g, "");
-    expect(t).toContain('label: "Boka kostnadsfri takkontroll",\n    to: "/takkontroll",\n    note: "Vi ringer upp och bokar takkontroll",');
+    expect(t).toContain('label: "Boka kostnadsfri takkontroll",\n    to: "/takkontroll",\n    note: "Vi svarar inom 24 timmar och bokar en tid",');
     expect(t).not.toContain('"/offert#radgivning"');
   });
 });

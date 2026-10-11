@@ -410,7 +410,7 @@ const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
         LANDING_TEXT.faqIntro,
         ...s.faqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
         { h: LANDING_TEXT.relatedHeading },
-        `Ring ${PHONE} eller skicka en förfrågan på ${s.path}. Vi återkommer inom 24 timmar.`,
+        `Ring ${PHONE} eller skicka en förfrågan på ${s.path}. Vi svarar inom 24 timmar.`,
       ]),
       links: [...primaryLinks, ...s.related.map((r) => ({ href: r.to, label: r.label }))],
       breadcrumbs: [
@@ -456,13 +456,13 @@ const staticPages: Record<string, PrerenderPage> = {
       // Text som bara finns i den statiska HTML:en (ingen motsvarighet som eget block i React)
       "Välj taktyp, ange takets yta och lutning och få ett riktpris direkt. Du får ett fast pris i offerten efter kostnadsfri takkontroll, och vi lämnar 10 års utförandegaranti på det arbete vi utför.",
       "Vad som ingår står i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår.",
-      "Så går det till: du skickar in förfrågan, vi återkopplar inom 24 timmar och bokar en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.",
+      "Så går det till: du skickar in förfrågan, vi svarar inom 24 timmar och bokar en kostnadsfri takkontroll. En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en offert med fast pris. Tillägg görs bara efter ditt godkännande.",
       "När du accepterat offerten planerar vi arbetet tillsammans med dig och beställer material. Du har en kontaktperson genom hela processen.",
       "Vanliga frågor om offerten: Är takkontrollen verkligen gratis? Ja, takkontrollen är kostnadsfri och du förbinder dig inte till något.",
       "Vi tar uppdrag i Roslagen och Storstockholm.",
       "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Vad händer om vi hittar skador under arbetet? Skadad råspont syns först när det gamla taket är rivet. Hittar vi något visar vi dig omfattningen och lämnar ett skriftligt pris på tillägget innan vi fortsätter. Inget extraarbete görs utan ditt godkännande. Det enda undantaget är om något akut måste skyddas mot skada, till exempel ett öppet tak inför regn, och vi inte får tag på dig. Då gör vi bara det som är nödvändigt.",
-      `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi återkopplar inom 24 timmar.`,
+      `Föredrar du att prata? Ring ${PHONE} och beskriv ditt takprojekt, vi svarar inom 24 timmar.`,
     ]),
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Offert & rådgivning", path: "/offert" }],
@@ -508,7 +508,7 @@ const staticPages: Record<string, PrerenderPage> = {
       extra: [
         // Text som bara finns i den statiska HTML:en: garantiformuleringen och uppmaningen (ingen motsvarighet som eget block i React)
         "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
-        `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi återkommer inom 24 timmar.`,
+        `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi svarar inom 24 timmar.`,
       ],
       faqs: brfFaqs,
     }),
@@ -618,9 +618,9 @@ const staticPages: Record<string, PrerenderPage> = {
   "/kontakt": {
     title: "Kontakt och kostnadsfri takkontroll",
     description:
-      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i Roslagen och Storstockholm. Återkoppling inom 24 timmar.",
+      "Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i Roslagen och Storstockholm. Svar inom 24 timmar.",
     h1: "Boka kostnadsfri takkontroll",
-    intro: `Ring ${PHONE} eller fyll i formuläret. Vi återkopplar inom 24 timmar — kostnadsfritt och utan förpliktelser.`,
+    intro: `Ring ${PHONE} eller fyll i formuläret. Vi svarar inom 24 timmar — kostnadsfritt och utan förpliktelser.`,
     paragraphs: [
       "Vi erbjuder kostnadsfri takkontroll i hela Roslagen och Storstockholm. Du når oss enklast på telefon eller via formuläret — beskriv gärna takets storlek, material och vad du vill ha hjälp med.",
       "När du hör av dig får du svar inom 24 timmar. Vi bokar en tid för takkontroll som passar dig, tittar på taket tillsammans med dig om du vill, och lämnar därefter en offert med fast pris.",
@@ -742,7 +742,7 @@ const serviceIntro = (title: string, description: string): PrerenderPage => ({
   paragraphs: [
     `RoslagsTak utför ${title.toLowerCase()} och tar uppdrag i Roslagen och Storstockholm. Vi arbetar enligt AMA och lämnar 10 års utförandegaranti på det arbete vi utför.`,
     "Vi lämnar fast pris efter kostnadsfri takkontroll. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
-    `Ring ${PHONE} eller begär kostnadsfri offert — vi återkopplar inom 24 timmar.`,
+    `Ring ${PHONE} eller begär kostnadsfri offert — vi svarar inom 24 timmar.`,
   ],
   links: [...primaryLinks, ...serviceLinks, ...locationLinks.slice(0, 24)],
 });
@@ -1197,7 +1197,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           .filter((l): l is NonNullable<typeof l> => !!l)
           .filter((l) => (brfLocationSlugs as readonly string[]).includes(l.slug))
           .map((l) => l.name),
-        extra: [`Ring ${PHONE} eller boka takkontroll på /brf/${loc.slug}. Vi återkommer inom 24 timmar.`],
+        extra: [`Ring ${PHONE} eller boka takkontroll på /brf/${loc.slug}. Vi svarar inom 24 timmar.`],
         faqs: brfPlaceFaqs,
       }),
       jsonLd: [faqLd(brfPlaceFaqs, clean)],

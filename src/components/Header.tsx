@@ -34,7 +34,7 @@ const quoteItems: MenuItem[] = [
   {
     label: "Boka kostnadsfri takkontroll",
     to: "/takkontroll",
-    note: "Vi ringer upp och bokar takkontroll",
+    note: "Vi svarar inom 24 timmar och bokar en tid",
   },
   {
     label: "Konfigurera själv",

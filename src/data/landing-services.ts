@@ -72,7 +72,7 @@ export const landingServices: LandingService[] = [
     steps: [
       {
         title: "Kontakta oss",
-        text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar. Läcker det: ring 070-154 36 39.",
+        text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar. Läcker det: ring 070-154 36 39.",
       },
       {
         title: "Kostnadsfri takkontroll",
@@ -154,7 +154,7 @@ export const landingServices: LandingService[] = [
     steps: [
       {
         title: "Boka",
-        text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar och bokar en tid.",
+        text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar och bokar en tid.",
       },
       {
         title: "Vi tittar på taket på plats",
@@ -356,7 +356,7 @@ export const landingServices: LandingService[] = [
     ],
     stepsHeading: "Så går det till",
     steps: [
-      { title: "Du kontaktar oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Du kontaktar oss", text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar." },
       { title: "Takkontroll", text: "Vi tittar på taket på plats och letar efter var vattnet kommer in." },
       { title: "Fast pris", text: "Du får en offert med fast pris." },
       { title: "Reparation", text: "Vi utför det som står i offerten." },
@@ -427,7 +427,7 @@ export const landingServices: LandingService[] = [
     ],
     stepsHeading: "Så går det till",
     steps: [
-      { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar." },
       { title: "Kostnadsfri takkontroll", text: "Vi tittar på befintliga rännor, takyta och fasad." },
       { title: "Fast pris", text: "Du får en offert med fast pris." },
       { title: "Montering", text: "Vi monterar hängrännor och stuprör." },
@@ -461,7 +461,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Hur snabbt får jag svar?",
-        answer: "Vi återkommer inom 24 timmar.",
+        answer: "Vi svarar inom 24 timmar.",
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
@@ -497,7 +497,7 @@ export const landingServices: LandingService[] = [
     ],
     stepsHeading: "Så går det till",
     steps: [
-      { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar." },
       { title: "Kostnadsfri takkontroll", text: "Vi tittar på taket och plåtdetaljerna på plats, utan förpliktelser." },
       { title: "Besked och fast pris", text: "Du får veta vad vi kan hjälpa till med. Ingår plåten i ett takbyte får du en offert med fast pris." },
       { title: "Takbyte enligt AMA", text: "Vid ett takbyte görs plåtdetaljerna om, med 10 års utförandegaranti." },
@@ -527,7 +527,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Hur snabbt får jag svar?",
-        answer: "Vi återkommer inom 24 timmar.",
+        answer: "Vi svarar inom 24 timmar.",
       },
     ],
     defaultTopic: "Takrenovering eller reparation",
@@ -563,7 +563,7 @@ export const landingServices: LandingService[] = [
     ],
     stepsHeading: "Så går det till",
     steps: [
-      { title: "Boka takkontroll", text: "Ring eller skicka formuläret. Vi återkommer inom 24 timmar." },
+      { title: "Boka takkontroll", text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar." },
       { title: "Takkontroll", text: "En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar." },
       { title: "Offert med fast pris", text: "Du får en offert med fast pris." },
       { title: "Tidplan", text: "Om du vill gå vidare bestämmer vi tidpunkt för takbytet tillsammans." },

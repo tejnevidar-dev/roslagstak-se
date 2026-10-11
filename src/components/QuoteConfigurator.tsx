@@ -100,7 +100,7 @@ const QuoteConfigurator = () => {
       description:
         mode === "configure"
           ? "Vi svarar inom 24 timmar."
-          : "Vi återkopplar till dig inom 24 timmar.",
+          : "Vi svarar inom 24 timmar.",
     });
   };
 
@@ -117,7 +117,7 @@ const QuoteConfigurator = () => {
               </p>
             ) : (
               <p className="text-muted-foreground">
-                Vi återkopplar till dig <strong>inom 24 timmar</strong> från och med nu. 
+                Vi svarar <strong>inom 24 timmar</strong> från och med nu. 
                 En av våra säljare kontaktar dig inom 24 timmar.
               </p>
             )}
@@ -173,7 +173,7 @@ const QuoteConfigurator = () => {
               <div className="text-left">
                 <div>Kostnadsfri rådgivning</div>
                 <div className={`text-xs font-normal ${mode === "consultation" ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                  Vi återkopplar inom 24 timmar
+                  Vi svarar inom 24 timmar
                 </div>
               </div>
             </button>
