@@ -39,10 +39,10 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
     blocks: [],
     facts: [
       { label: "Område", value: loc.region },
-      { label: "Läge", value: loc.isIsland ? "Ö i skärgården" : "Fastland" },
+      // Raden "Läge: Fastland" säger inget för en besökare (paket 49b-2, Li2): den står bara kvar för öar. Koordinaterna finns kvar i den strukturerade datan.
+      ...(loc.isIsland ? [{ label: "Läge", value: "Ö i skärgården" }] : []),
       { label: "Närmaste orter", value: neighbourText },
       { label: "Avstånd till vår bas i Norrtälje", value: `${Math.round(distanceFromBaseKm(loc))} km` },
-      { label: "Koordinater", value: `${loc.lat.toFixed(3)}, ${loc.lng.toFixed(3)}` },
     ],
   };
 };
