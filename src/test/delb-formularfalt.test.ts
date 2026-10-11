@@ -115,3 +115,14 @@ describe("de tre juridiska texterna, ordagrant (juristens lydelse, Vidars ja 202
     expect(t).toContain("Utan ditt godkännande laddas Google Analytics inte alls och inga statistikcookies sätts.");
   });
 });
+
+describe("paket 44b: juristens tillägg 1 på /cookies och tankstrecket", () => {
+  it("punkten 'Hur du hittade oss' står ordagrant efter 'Förfrågan och takkontroll', och Google-meningen har ingen tankstreck", () => {
+    const t = readFileSync("src/pages/CookiesPage.tsx", "utf8").replace(/\r/g, "").replace(/\s+/g, " ");
+    expect(t).toContain("Hur du hittade oss:</strong> har du godkänt statistik sparas också vilken sida på webbplatsen du kom in på och vilken källa eller kampanj du kom från, tillsammans med din förfrågan. Vi använder det för att se vilka sidor som leder till förfrågningar. Grunden är vårt berättigade intresse av att följa upp vår marknadsföring (artikel 6.1 f).");
+    expect(t.indexOf("Förfrågan och takkontroll:")).toBeLessThan(t.indexOf("Hur du hittade oss:"));
+    expect(t.indexOf("Hur du hittade oss:")).toBeLessThan(t.indexOf("Avtal och utförande:"));
+    expect(t).toContain("kopplat till annonsens klick-id. Aldrig med ditt namn, din telefon, din e-post eller din adress.");
+    expect(t).not.toContain("klick-id — aldrig");
+  });
+});

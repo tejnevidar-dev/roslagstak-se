@@ -82,6 +82,12 @@ const CookiesPage = () => (
                   sida på webbplatsen du kom in på och vilken källa eller kampanj du kom från, tillsammans med din förfrågan.
                 </li>
                 <li>
+                  <strong className="text-foreground">Hur du hittade oss:</strong> har du godkänt statistik sparas också
+                  vilken sida på webbplatsen du kom in på och vilken källa eller kampanj du kom från, tillsammans med din
+                  förfrågan. Vi använder det för att se vilka sidor som leder till förfrågningar. Grunden är vårt berättigade
+                  intresse av att följa upp vår marknadsföring (artikel 6.1 f).
+                </li>
+                <li>
                   <strong className="text-foreground">Avtal och utförande:</strong> samma uppgifter plus foton av
                   taket. Grunden är att fullgöra avtalet (artikel 6.1 b).
                 </li>
@@ -100,7 +106,7 @@ const CookiesPage = () => (
                 <li>
                   <strong className="text-foreground">Google-annonsering:</strong> har du kommit till oss via en
                   Google-annons och godkänt marknadsföring, meddelar vi Google när en takkontroll har genomförts
-                  eller ett avtal har signerats, och avtalets värde, kopplat till annonsens klick-id — aldrig med
+                  eller ett avtal har signerats, och avtalets värde, kopplat till annonsens klick-id. Aldrig med
                   ditt namn, din telefon, din e-post eller din adress. Grunden är ditt samtycke (artikel 6.1 a), och
                   du kan när som helst ta tillbaka det.
                 </li>
