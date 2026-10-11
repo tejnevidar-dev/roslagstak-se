@@ -481,6 +481,20 @@ for (const path of ["/takproblem/fukt-pa-vinden", "/priser"]) {
   await p.close();
 }
 
+// 31. Paket 41 (Vidars ja 2026-10-11): menyposten "Boka kostnadsfri takkontroll" under "Få offert" leder till /takkontroll (inte /offert#radgivning); texten är oförändrad
+{
+  const dctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: "sv-SE" });
+  await dctx.addInitScript(() => { try { localStorage.setItem("rt_consent_v1", JSON.stringify({ analytics: false, marketing: false })); } catch {} });
+  const p = await dctx.newPage();
+  await p.goto(base + "/", { waitUntil: "networkidle" }).catch(() => {});
+  await p.waitForTimeout(1500);
+  await p.locator("header").getByText("Få offert", { exact: true }).first().hover().catch(() => {});
+  await p.waitForTimeout(600);
+  const mal = await p.evaluate(() => [...document.querySelectorAll("header a")].filter((a) => /^s*Boka kostnadsfri takkontroll/.test(a.textContent || "")).map((a) => a.getAttribute("href")));
+  punkt("Menyn (dator): 'Boka kostnadsfri takkontroll' under 'Få offert' leder till /takkontroll", mal.length === 1 && mal[0] === "/takkontroll", mal.length ? mal.join(", ") : "länken hittades inte");
+  await dctx.close();
+}
+
 await ctx.close();
 await browser.close();
 const nej = resultat.filter((r) => !r.ok);
