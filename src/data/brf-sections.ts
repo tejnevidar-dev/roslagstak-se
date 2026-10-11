@@ -21,15 +21,15 @@ export const BRF_STEPS = [
   },
   {
     title: "Beslut i föreningen",
-    text: "Styrelsen och stämman fattar beslutet. Vi svarar på frågor om underlag, material och tidplan innan ni bestämmer er.",
+    text: "Styrelsen och stämman fattar beslutet. Vi svarar på frågor om underlag och material innan ni bestämmer er.",
   },
   {
     title: "Planering",
-    text: "Startdatum, ställning, etablering och tidplan stäms av med styrelsen. Föreningen får en fast kontaktperson hos oss under hela projektet.",
+    text: "Ställning och etablering stäms av med styrelsen, och när arbetet görs bestämmer vi tillsammans. Föreningen har en kontaktperson genom hela processen.",
   },
   {
     title: "Genomförande",
-    text: "Rivning, underlag, nytt tak och plåtdetaljer. Arbetsplatsen städas löpande.",
+    text: "Rivning, underlag, nytt tak och plåtdetaljer.",
   },
   {
     title: "Slutgenomgång",
@@ -44,11 +44,7 @@ export const BRF_BOENDE = [
   },
   {
     title: "Skydd av fasad och mark",
-    text: "Vi reser ställning och skyddar fasad, planteringar och uteplatser innan arbetet börjar.",
-  },
-  {
-    title: "Ordning på arbetsplatsen",
-    text: "Arbetsplatsen städas löpande och lämnas ren efter slutgenomgången, med bortforsling av det gamla taket.",
+    text: "Ställningen reses innan arbetet börjar.",
   },
   {
     title: "En fast kontaktperson",
@@ -56,7 +52,7 @@ export const BRF_BOENDE = [
   },
 ];
 
-export const BRF_HERO_CAPTION = "Snörasskydd på nylagt tak, Roslagens skärgård.";
+export const BRF_HERO_CAPTION = "3D-visualisering av ett tak med snörasskydd.";
 /** Ögonbrynstexten över H1: orten, eller "BRF & fastigheter" på /brf. */
 export const brfEyebrow = (place?: { prep: string; name: string }) => (place ? `BRF ${place.prep} ${place.name}` : "BRF & fastigheter");
 export const brfHeroIntro = (place?: { name: string }) =>

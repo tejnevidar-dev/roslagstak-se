@@ -52,7 +52,7 @@ export const hubLinks: InternalLink[] = [
   {
     to: "/offert#faq",
     label: "Vanliga frågor",
-    description: "Garantier, ROT, tidplan och vad som ingår i ett fast pris.",
+    description: "Garantier, ROT och vad som ingår i ett fast pris.",
   },
   {
     to: "/recensioner",

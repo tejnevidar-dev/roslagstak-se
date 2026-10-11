@@ -304,7 +304,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
             <figure className="m-0 lg:col-span-5">
               <img
                 src={heroImg}
-                alt="Tak med tegelpanneliknande ytskikt och snörasskydd"
+                alt="3D-visualisering av ett tak med mörka pannor och snörasskydd"
                 width={1400}
                 height={940}
                 fetchPriority="high"

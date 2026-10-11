@@ -50,7 +50,7 @@ const MaterialsPage = () => {
           compact
           eyebrow="Material"
           title="Takmaterial – vad passar ditt hus?"
-          text="Betongpannor, lertegel, plåt eller falsat — materialet avgör utseende, vikt och underhåll. Här går vi igenom vad som skiljer dem åt, utan påhittade livslängder eller priser."
+          text="Betongpannor, lertegel, plåt eller falsat — materialet avgör utseende, vikt och underhåll. Här går vi igenom vad som skiljer dem åt."
         />
         <div className="container mx-auto px-4 py-14">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">

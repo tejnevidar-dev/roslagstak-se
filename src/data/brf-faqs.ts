@@ -3,7 +3,7 @@ export const brfFaqs = [
   {
     question: "Hur går ett takbyte till för en bostadsrättsförening?",
     answer:
-      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi start, ställning och tidplan tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång.",
+      "Det börjar med en kostnadsfri takkontroll, därefter får föreningen en offert med fast pris som styrelsen och stämman kan besluta på. När beslutet är taget planerar vi ställning och arbetets gång tillsammans med styrelsen. Arbetet avslutas med en slutgenomgång.",
   },
   {
     question: "Behöver föreningen en takkontroll före ett takbyte?",
@@ -23,7 +23,7 @@ export const brfFaqs = [
   {
     question: "Hur minimerar ni störningen för de boende?",
     answer:
-      "Vi planerar ställning och tidplan tillsammans med styrelsen, skyddar fasad och mark, städar löpande och ger föreningen en fast kontaktperson under hela projektet.",
+      "Vi planerar ställningen och arbetets gång tillsammans med styrelsen, och föreningen har en kontaktperson genom hela processen.",
   },
   {
     question: "Vilka områden arbetar ni i?",

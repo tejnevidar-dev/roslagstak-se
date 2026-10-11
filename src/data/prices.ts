@@ -103,7 +103,7 @@ export const PRICE_ROT_TEXT =
 
 export const PRICE_FACTORS_TITLE = "Vad avgör priset på just ditt tak?";
 export const PRICE_FACTORS_TEXT =
-  "Priset styrs av materialval, takets storlek och form, underlagets skick, taklutning och tillgänglighet, samt detaljer som skorstenar, plåtbeslag och hängrännor. Därför lämnar vi aldrig ett pris utan att först ha sett taket.";
+  "Priset styrs av materialval, takets storlek och form, underlagets skick, taklutning och tillgänglighet, samt detaljer som skorstenar, plåtbeslag och hängrännor. Därför lämnar vi det fasta priset först efter takkontrollen.";
 
 /** ROT-förbehållet (juristens text, godkänd 2026-10-04). Står bara här; withRotForbehall() lägger det intill varje pristext med kr/m². */
 export const ROT_FORBEHALL =

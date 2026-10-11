@@ -583,17 +583,19 @@ const staticPages: Record<string, PrerenderPage> = {
     title: "Recensioner — läs kundernas omdömen på Google",
     description:
       "Läs RoslagsTaks omdömen direkt på Google, hämtade i original. Vi kan inte kontrollera vem som skriver dem på Google.",
-    h1: "Recensioner från takprojekt i Roslagen",
+    h1: "Omdömen om RoslagsTak",
     intro:
-      "Våra omdömen finns på Google, där du kan läsa dem i original.",
+      "Våra omdömen finns på Google. Följ länken till vår Google-profil för att läsa dem. Vi publicerar inga egenskrivna recensioner och kan inte kontrollera vem som skriver på Google.",
     paragraphs: [
       "Vi samlar våra omdömen på Google i stället för att publicera egenskrivna recensioner här på sajten. Vi kan inte kontrollera vem som skriver på Google.",
       "Följ länken till Google för att läsa omdömena. Har du själv anlitat oss får du gärna lämna ett omdöme.",
+      "Vi länkar till Google i stället för att publicera omdömen här. Omdömen på Google kan vi inte ändra eller ta bort.",
+      "På Google, inte skrivna av oss: Vi publicerar inga omdömen som vi själva har skrivit, och vi kan inte kontrollera vem som skriver på Google. Namn och datum visas hos Google, och vi kan inte redigera dem.",
+      "Läs dem hos Google: Google visar hela omdömet och när det skrevs. Det är enklare att bedöma än citat plockade ur sitt sammanhang.",
+      "Har vi jobbat hos dig? Ett omdöme på Google hjälper nästa husägare att välja rätt takläggare. Skriv gärna vilken ort jobbet utfördes på och vilken typ av tak du fick.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm. Vi börjar med en kostnadsfri takkontroll utan förpliktelser, och du får ett fast pris i offerten.",
-      "Så kan du själv bedöma en takfirma: be om referenser från projekt i din närhet och be att få garantierna skriftligt i offerten. Ett seriöst företag lämnar alltid fast pris efter kostnadsfri takkontroll — aldrig ett pris per telefon.",
-      "Vill du veta mer om hur vi arbetar innan du bestämmer dig? Läs om vår process steg för steg, våra riktpriser eller boka en kostnadsfri rådgivning där vi går igenom ditt tak tillsammans.",
-      "Därför väljer vi att länka till Google istället för att skriva egna omdömen: omdömen på Google kan inte redigeras eller plockas bort av oss, vilket gör dem mer trovärdiga än citat på en egen hemsida. Där ser du hela bilden — både betyg, texter och hur vi svarar.",
-      "Vi bygger kontinuerligt upp våra omdömen i takt med att projekt slutförs. Att lämna ett omdöme är helt frivilligt och sker utan någon form av ersättning.",
+      "Vill du veta mer om hur vi arbetar innan du bestämmer dig? Läs om vår process steg för steg, våra riktpriser eller boka en kostnadsfri takkontroll.",
+      "Boka en kostnadsfri takkontroll. Behöver taket åtgärdas får du en offert med fast pris.",
     ],
     links: [...primaryLinks, ...locationLinks.slice(0, 24)],
     breadcrumbs: [{ name: "Startsidan", path: "/", visibleName: "Hem" }, { name: "Omdömen", path: "/recensioner" }],
@@ -649,12 +651,13 @@ const staticPages: Record<string, PrerenderPage> = {
   "/projekt": {
     title: "Referensjobb — riktiga takprojekt i Roslagen",
     description:
-      "Se riktiga takprojekt vi utfört i Roslagen och Storstockholm, med bilder och fakta om material, omfattning och plats.",
+      "Se riktiga takprojekt vi har utfört i Roslagen, med bilder och fakta om material, omfattning och plats.",
     h1: "Riktiga takprojekt i Roslagen",
-    intro: "Här visar vi jobb vi har utfört, med kundens samtycke. Riktiga bilder, riktiga material.",
+    intro: "Här visar vi jobb vi har utfört. Riktiga bilder, riktiga material.",
     paragraphs: [
       "Nytt tak på Blidö: nya betongpannor från Benders i svart, sommaren 2026.",
       "Nytt tak på Singö i Norrtälje kommun: betongpannor på huvudtaket och TP20-plåt på de lägre takdelarna, september 2026.",
+      "Nytt tak i Grisslehamn: komplett takbyte på ett hus i Grisslehamn i Norrtälje kommun, med svarta betongpannor från Benders. Taket är 120 kvadratmeter.",
     ],
     links: [...primaryLinks, { href: "/projekt/takrenovering-blido", label: "Nytt tak på Blidö" }, { href: "/projekt/takbyte-singo", label: "Nytt tak på Singö" }, { href: "/projekt/takbyte-grisslehamn", label: "Nytt tak i Grisslehamn" }],
     breadcrumbs: [{ name: "Startsidan", path: "/", visibleName: "Hem" }, { name: "Referensjobb", path: "/projekt" }],

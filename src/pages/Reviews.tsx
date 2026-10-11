@@ -80,7 +80,7 @@ const Reviews = () => {
                 Vill du ha ett pris på ditt tak?
               </h2>
               <p className="text-accent-foreground/70 text-sm mb-6">
-                Vi kommer ut, tittar på taket och lämnar ett fast pris. Kostnadsfritt.
+                Boka en kostnadsfri takkontroll. Behöver taket åtgärdas får du en offert med fast pris.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link

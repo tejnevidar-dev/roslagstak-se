@@ -79,7 +79,7 @@ export const projectTexts: ProjectText[] = [
       "**Nya hängrännor.** Avvattningen ingick också: huset fick nya hängrännor. Mer om [takavvattning](/tjanster/takavvattning).",
       "**Tre jobb att jämföra.** På Blidö behölls hela råsponten, och huset fick svarta betongpannor. På [Singö](/projekt/takbyte-singo) byttes delar av råsponten, och taket fick pannor och plåt i rött. I [Grisslehamn](/projekt/takbyte-grisslehamn) fick ett tak på 120 kvadratmeter svarta betongpannor från Benders. Vad som behöver göras avgörs av skicket på just det taket.",
       "**Så arbetar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där en av våra säljare tittar på taket på plats. Därefter får kunden en offert med fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen.\n\nVi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning). Alla jobb finns under [Projekt](/projekt)."
+      "Jobbet är utfört av RoslagsTak. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning). Alla jobb finns under [Projekt](/projekt)."
     ],
     "heroAlt": "Nylagt tak med svarta betongpannor från Benders på ett mörkbrunt trähus på Blidö, sett snett ovanifrån från altansidan med lövskog runt omkring.",
     "heroCaption": "Huset med det nya svarta taket, sett snett ovanifrån från altansidan.",
@@ -120,7 +120,7 @@ export const projectTexts: ProjectText[] = [
       "**Två material, en kulör.** Huset har ett huvudtak och lägre takdelar, och de fick olika material i samma röda kulör.",
       "**Tre jobb att jämföra.** På [Blidö](/projekt/takrenovering-blido) behölls hela råsponten, och huset fick svarta betongpannor. På Singö byttes delar av råsponten, och taket fick pannor och plåt i rött. I [Grisslehamn](/projekt/takbyte-grisslehamn) fick ett tak på 120 kvadratmeter svarta betongpannor från Benders. Vad som behöver göras avgörs av skicket på just det taket.",
       "**Så arbetar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där en av våra säljare tittar på taket på plats. Därefter får kunden en offert med fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen.\n\nVi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke, även på startsidan. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning). Alla jobb finns under [Projekt](/projekt)."
+      "Jobbet är utfört av RoslagsTak. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning). Alla jobb finns under [Projekt](/projekt)."
     ],
     "heroAlt": "Nytt tak på Singö i Norrtälje kommun med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna, med utsikt över fjärden.",
     "heroCaption": "Huset med det nya röda taket, sett snett ovanifrån med fjärden i bakgrunden.",
@@ -177,7 +177,7 @@ export const projectTexts: ProjectText[] = [
       "**Taksteg.** Taksteg monterades. Mer om [taksäkerhet](/tjanster/taksakerhet).",
       "**Så arbetar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där en av våra säljare tittar på taket på plats. Därefter får kunden en offert med fast pris, arbetet utförs enligt AMA och kunden har en kontaktperson genom hela processen.\n\nVi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
       "**Fler jobb.** Två andra kompletta takbyten finns att se: [Nytt tak på Singö](/projekt/takbyte-singo) och [Nytt tak på Blidö](/projekt/takrenovering-blido). Alla jobb finns under [Projekt](/projekt).",
-      "Jobbet är utfört av RoslagsTak, och bilderna publiceras med kundens samtycke. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning)."
+      "Jobbet är utfört av RoslagsTak. Funderar du på ditt eget tak? [Boka en kostnadsfri takkontroll](/takkontroll) eller läs mer om [takomläggning](/tjanster/takomlaggning)."
     ],
     "heroAlt": "Nytt tak i Grisslehamn med svarta betongpannor, sett snett uppifrån med skorsten, altan och skog runt huset.",
     "heroCaption": "Taket sett snett uppifrån: svarta betongpannor, skorsten i rött tegel och taksteg.",

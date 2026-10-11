@@ -22,7 +22,7 @@ const ProjectsPage = () => {
     <>
       <SEOHead
         title="Referensjobb — riktiga takprojekt i Roslagen"
-        description="Se riktiga takprojekt vi utfört i Roslagen och Storstockholm, med bilder och fakta om material, omfattning och plats."
+        description="Se riktiga takprojekt vi har utfört i Roslagen, med bilder och fakta om material, omfattning och plats."
         canonical="https://roslagstak.se/projekt"
       />
       <Header />
@@ -34,7 +34,7 @@ const ProjectsPage = () => {
         <PageHero
           eyebrow="Referensjobb"
           title="Riktiga takprojekt i Roslagen"
-          text="Här visar vi jobb vi har utfört, med kundens samtycke. Riktiga bilder, riktiga material."
+          text="Här visar vi jobb vi har utfört. Riktiga bilder, riktiga material."
         />
         <div className="container mx-auto px-4 pb-20 pt-4">
           <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">

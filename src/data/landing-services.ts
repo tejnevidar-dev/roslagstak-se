@@ -544,7 +544,7 @@ export const landingServices: LandingService[] = [
     path: "/takbyte-var-2027",
     seoTitle: "Planera ditt takbyte till våren 2027",
     seoDescription:
-      "Planera takbytet i god tid: kostnadsfri takkontroll nu, offert med fast pris och en tidplan tillsammans med dig. 10 års utförandegaranti.",
+      "Planera takbytet i god tid: kostnadsfri takkontroll nu, offert med fast pris, och vi bestämmer tidpunkt tillsammans med dig. 10 års utförandegaranti.",
     breadcrumb: "Takbyte våren 2027",
     eyebrow: "Takbyte våren 2027",
     h1: "Planera ditt takbyte till våren 2027.",
