@@ -9,7 +9,8 @@ export interface LocationData {
   /** Extra unique paragraph for SEO depth — rendered below longDescription */
   extraContent: string;
   /** Location-specific unique FAQ (on top of generic ones) */
-  uniqueFAQ: { question: string; answer: string };
+  /** Sidans egen fråga och svar. Valfri: Edsbro och Kapellskär har ingen (paket 49b-3, texterna byts i paket 47). */
+  uniqueFAQ?: { question: string; answer: string };
   /** Primary keyword phrase for this page, used in H-tags */
   primaryKeyword: string;
   /** Geo coordinates for local SEO */
