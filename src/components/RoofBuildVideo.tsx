@@ -74,7 +74,7 @@ const RoofBuildVideo = () => {
             playsInline
             preload="auto"
             onError={() => setFailed(true)}
-            aria-label="Film: så går ett takbyte till, från råspont till snörasskydd"
+            aria-label="Film: så går ett takbyte till, från råspont till färdigt tak"
           >
             <source src="/takbyte-animation-h264.mp4" type="video/mp4; codecs=avc1.4d4028" />
             <source src="/takbyte-animation-1080p.mp4" type="video/mp4" />
@@ -91,7 +91,7 @@ const RoofBuildVideo = () => {
           >
             <img
               src={roofPoster}
-              alt="Så går ett takbyte till — från råspont till färdigt tak med snörasskydd"
+              alt="Animation: så går ett takbyte till, från råspont till färdigt tak"
               width={1920}
               height={1280}
               loading="lazy"
@@ -123,9 +123,9 @@ const RoofBuildVideo = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "VideoObject",
-            name: "Så går ett takbyte till – från råspont till snörasskydd",
+            name: "Så går ett takbyte till – från råspont till färdigt tak",
             description:
-              "RoslagsTak visar hela arbetsgången vid takbyte i Roslagen: råspont, Mataki Haloten PRO underlagspapp, fotplåt och hängrännor, vindskivor och gavelbeslag, läkt, takpannor, plåtbeslag och snörasskydd.",
+              "RoslagsTak visar arbetsgången vid ett takbyte som animation: råspont, underlagspapp, fotplåt och hängrännor, vindskivor, läkt, takmaterial och plåtbeslag.",
             thumbnailUrl: ["https://roslagstak.se/takbyte-animation-thumbnail.jpg"],
             uploadDate: "2026-08-18",
             duration: "PT20S",

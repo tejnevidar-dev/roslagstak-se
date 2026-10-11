@@ -4,32 +4,32 @@ import SectionHeading from "@/components/SectionHeading";
 
 const layers = [
   {
-    name: "Råspont & underlagstak",
-    detail: "Vi river det gamla, kontrollerar takstolarna och lägger ny råspont där virket är skadat.",
+    name: "Råspont",
+    detail: "Brädlagret som resten av taket vilar på. Skadad råspont syns först när det gamla taket är rivet.",
   },
   {
-    name: "Underlagspapp — Mataki Haloten PRO",
-    detail: "Vattentätt underlagstak lagt i förband över hela ytan — det som håller vattnet ute.",
+    name: "Underlagspapp",
+    detail: "Takets andra skydd, som tar hand om det vatten som kan ta sig förbi ytmaterialet.",
   },
   {
-    name: "Fotplåt & hängrännor",
-    detail: "Fotplåt, rännkrokar och hängrännor som leder vattnet bort från fasad och grund.",
+    name: "Fotplåt och hängrännor",
+    detail: "Fotplåten leder vattnet ner i hängrännan. Hängrännor byts om de ingår i offerten.",
   },
   {
-    name: "Vindskivor & gavelbeslag",
-    detail: "Takets kanter skyddas mot vind, regn och röta med nya vindskivor och gavelbeslag.",
+    name: "Vindskivor",
+    detail: "Vindskivorna och plåten på gavlarna är takets kanter.",
   },
   {
-    name: "Ströläkt & bärläkt",
-    detail: "Ströläkt ger luftspalten, bärläkten sätts på exakt centrumavstånd för din pannmodell.",
+    name: "Läkt",
+    detail: "Ströläkt och bärläkt läggs ovanpå underlaget. Läkten bär takmaterialet.",
   },
   {
-    name: "Takpannor eller falsad plåt",
-    detail: "Betongpannor, tegel eller falsad plåt läggs rad för rad med stormklammer i utsatta lägen.",
+    name: "Takmaterial",
+    detail: "Pannor eller plåt: det material som står i offerten.",
   },
   {
-    name: "Nock, beslag & snörasskydd",
-    detail: "Nock, valmar, skorstensbeslag tätas — sist monteras snörasskydden ovanför takfoten.",
+    name: "Plåtdetaljer",
+    detail: "Plåtbeslag kring skorsten, ventiler och genomföringar. Taksäkerhet monteras om den ingår i offerten.",
   },
 ];
 
@@ -43,8 +43,8 @@ const LayerIntro = () => {
         <SectionHeading
           meta="Konstruktion"
           index="01 / 04"
-          title="Sju lager mellan dig och skärgårdens väder"
-          intro="Ett tak är inte ett skikt utan en konstruktion. Så här bygger vi upp den — i den ordning momenten faktiskt utförs på taket."
+          title="Ett tak byggs upp i sju lager"
+          intro="Ett tak är inte ett skikt utan flera. Ordningen är underlag, läkt, takmaterial och plåtdetaljer."
           id="layers-heading"
         />
 

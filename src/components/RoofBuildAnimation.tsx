@@ -18,7 +18,7 @@ interface Step {
   label: string;
   title: string;
   body: string;
-  detail: string;
+  detail?: string;
   image: string;
   alt: string;
 }
@@ -27,45 +27,44 @@ const STEPS: Step[] = [
   {
     id: "raspont",
     label: "Råspont",
-    title: "Råspont & underlagstak",
-    body: "Vi river det gamla taket, kontrollerar takstolarna och lägger ny råspont där virket är skadat.",
-    detail: "Kontroll av bärande konstruktion, ventilerad luftspalt och fukttäta anslutningar.",
+    title: "Råspont",
+    body: "Det gamla taket rivs. Råsponten är brädlagret som resten av taket vilar på.",
+    detail: "Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare.",
     image: roofRaspont,
     alt: "3D-visualisering av ett tak med råspont",
   },
   {
     id: "papp",
     label: "Underlagspapp",
-    title: "Underlagspapp — Mataki Haloten PRO",
-    body: "Vi lägger Mataki Haloten PRO i förband över hela ytan — det är underlagstaket som håller vattnet ute.",
-    detail: "Överlapp enligt Matakis anvisning, extra tätning vid genomföringar och skorsten.",
+    title: "Underlagspapp",
+    body: "Ny underlagspapp läggs på råsponten.",
+    detail: "Det är takets andra skydd, under ytmaterialet.",
     image: roofPapp,
     alt: "3D-visualisering av ett tak med underlagspapp",
   },
   {
     id: "rannor",
     label: "Hängrännor",
-    title: "Fotplåt & hängrännor",
-    body: "Fotplåt, rännkrokar och hängrännor monteras så att vattnet leds bort från fasad och grund.",
-    detail: "Rätt fall mot stuprör, dimensionerat för skärgårdens slagregn.",
+    title: "Fotplåt och hängrännor",
+    body: "Fotplåten leder vattnet ner i hängrännan.",
+    detail: "Hängrännor och stuprör byts om de ingår i offerten.",
     image: roofRannor,
     alt: "3D-visualisering av fotplåt och hängrännor",
   },
   {
     id: "vindskivor",
     label: "Vindskivor",
-    title: "Vindskivor & gavelbeslag",
-    body: "Nya vindskivor och gavelbeslag skyddar takets kanter mot vind, regn och röta.",
-    detail: "Grundmålat virke eller plåt.",
+    title: "Vindskivor",
+    body: "Vindskivorna och plåten på gavlarna är takets kanter.",
     image: roofVindskivor,
     alt: "3D-visualisering av vindskivor och gavelbeslag",
   },
   {
     id: "lakt",
     label: "Läkt",
-    title: "Ströläkt & bärläkt",
-    body: "Ströläkt ger luftspalten, bärläkten sätts på exakt centrumavstånd för din pannmodell.",
-    detail: "Millimeterinmätning så att sista raden hamnar rätt vid nock.",
+    title: "Läkt",
+    body: "Ströläkt och bärläkt läggs ovanpå underlaget.",
+    detail: "Läkten bär takmaterialet.",
     image: roofLakt,
     alt: "3D-visualisering av ströläkt och bärläkt på ett tak",
   },
@@ -73,26 +72,25 @@ const STEPS: Step[] = [
     id: "pannor",
     label: "Takpannor",
     title: "Takpannor eller plåt",
-    body: "Betongpannor, tegel eller falsad plåt läggs rad för rad — första raden hänger ut till mitten av hängrännan.",
-    detail: "Stormklammer i utsatta lägen — standard på öar och kustnära tak.",
+    body: "Det nya takmaterialet läggs: pannor eller plåt.",
+    detail: "Vilket material det blir står i offerten.",
     image: roofPannor,
     alt: "3D-visualisering av mörka takpannor",
   },
   {
     id: "beslag",
     label: "Plåtbeslag",
-    title: "Nockpannor & plåtbeslag",
-    body: "Nock, valmar, skorstensbeslag och genomföringar tätas. Gavelbeslagen läggs över pannorna.",
-    detail: "Täta anslutningar hela vägen runt takets kanter och genomföringar.",
+    title: "Nock och plåtbeslag",
+    body: "Plåtbeslag monteras kring skorsten, ventiler och genomföringar.",
     image: roofBeslag,
     alt: "3D-visualisering av nockpannor och plåtbeslag på ett tak",
   },
   {
     id: "snorasskydd",
     label: "Snörasskydd",
-    title: "Snörasskydd & slutgenomgång",
-    body: "Sist monteras snörasskydden ovanför takfoten — sedan slutgenomgång.",
-    detail: "Vi går igenom taket tillsammans med dig.",
+    title: "Taksäkerhet och slutgenomgång",
+    body: "Taksäkerhet, som snörasskydd, monteras om den ingår i offerten.",
+    detail: "Arbetet avslutas med en slutgenomgång tillsammans med dig.",
     image: roofSnorasskydd,
     alt: "3D-visualisering av snörasskydd på ett tak",
   },
@@ -161,8 +159,8 @@ const RoofBuildAnimation = () => {
               meta="Metodik"
               index="02 / 04"
               tone="dark"
-              title={<>Sju lager mellan dig och <em className="font-normal italic text-ink-foreground/55">skärgårdens väder</em></>}
-              intro="Följ ett komplett takbyte lager för lager — visualiserat i samma filmiska miljö som resten av RoslagsTak."
+              title="Så byggs taket upp, lager för lager"
+              intro="Följ ett komplett takbyte lager för lager."
             />
           </div>
           <div className="lg:col-span-4 lg:text-right">
@@ -260,7 +258,7 @@ const RoofBuildAnimation = () => {
                         {selected && (
                           <m.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
                             <p className="pl-14 pr-3 pt-4 text-base font-light leading-relaxed text-ink-foreground/70">{item.body}</p>
-                            <p className="pl-14 pr-3 pt-3 text-sm leading-relaxed text-ink-foreground/45">{item.detail}</p>
+                            {item.detail && <p className="pl-14 pr-3 pt-3 text-sm leading-relaxed text-ink-foreground/45">{item.detail}</p>}
                           </m.div>
                         )}
                       </AnimatePresence>
@@ -278,7 +276,7 @@ const RoofBuildAnimation = () => {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: "Så går ett takbyte till – steg för steg", description: "RoslagsTaks arbetsgång vid takbyte: råspont, underlagspapp, hängrännor, vindskivor, läkt, takpannor och plåtbeslag.", image: "https://roslagstak.se/takbyte-animation-thumbnail.jpg", thumbnailUrl: "https://roslagstak.se/takbyte-animation-preview.jpg", step: STEPS.map((item, index) => ({ "@type": "HowToStep", position: index + 1, name: item.title, text: `${item.body} ${item.detail}` })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HowTo", name: "Så går ett takbyte till – steg för steg", description: "RoslagsTaks arbetsgång vid takbyte: råspont, underlagspapp, hängrännor, vindskivor, läkt, takpannor och plåtbeslag.", image: "https://roslagstak.se/takbyte-animation-thumbnail.jpg", thumbnailUrl: "https://roslagstak.se/takbyte-animation-preview.jpg", step: STEPS.map((item, index) => ({ "@type": "HowToStep", position: index + 1, name: item.title, text: item.detail ? `${item.body} ${item.detail}` : item.body })) }) }} />
     </section>
   );
 };
