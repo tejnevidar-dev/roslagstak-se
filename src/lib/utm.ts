@@ -83,12 +83,13 @@ export const withUtm = (message: string | null | undefined): string | null => {
 };
 
 /**
- * Strukturerade utm-fält för quote_requests-kolumner (#1d, VAL B) — null-värden om ingen
- * kampanj är känd. Använd i stället för withUtm()/utmLine() när attributionskolumnerna finns
- * (se supabase/migrations/*_attribution_columns_prepared.sql).
+ * Strukturerade utm-fält för quote_requests-kolumner (#1d, VAL B), skickade med varje förfrågan: bara efter godkänd statistik
+ * (juristens besked 2026-10-09: "Har du godkänt statistik sparas också … vilken källa eller kampanj du kom från, tillsammans med din förfrågan").
+ * Utan godkänd statistik är alla fyra null, också när adressen har utm-värden; då följer kampanjen bara med i kampanjraden i message (utmLine).
+ * Kolumnerna finns i produktion sedan migrationen 20261009110000_attribution_columns_v2_ready.sql.
  */
 export const utmFields = () => {
-  const u = aktuell();
+  const u: Utm = hasAnalyticsConsent() ? aktuell() : {};
   return {
     utm_source: u.utm_source ?? null,
     utm_medium: u.utm_medium ?? null,

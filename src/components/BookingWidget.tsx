@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { utmFields } from "@/lib/utm";
+import { attributionFields } from "@/lib/attribution";
 import { ArrowRight, CheckCircle, Loader2, Phone } from "lucide-react";
 import { utmLine } from "@/lib/utm";
 import { confirmationText, isWithinOpeningHours, nextOpeningLabel } from "@/lib/booking";
@@ -71,6 +73,8 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       email: "",
       address: form.municipality.trim() || null,
       message,
+      ...attributionFields(),
+      ...utmFields(),
     });
 
     setSubmitting(false);

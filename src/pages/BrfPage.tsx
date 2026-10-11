@@ -12,6 +12,8 @@ import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 import { supabase } from "@/integrations/supabase/client";
+import { attributionFields } from "@/lib/attribution";
+import { utmFields } from "@/lib/utm";
 import { locationIndex } from "@/data/location-index";
 import { brfLocationSlugs } from "@/data/brf-locations";
 import { toast } from "@/hooks/use-toast";
@@ -92,6 +94,8 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
       email: form.email.trim(),
       address: form.address.trim() || null,
       message,
+      ...attributionFields(),
+      ...utmFields(),
     });
 
     setSubmitting(false);

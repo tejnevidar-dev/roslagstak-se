@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import { openConsentSettings } from "@/lib/consent";
 
-const sections = [
+const sections: { title: string; text: string; rader?: { intro: string; poster: string[] } }[] = [
   {
     title: "Nödvändig lagring",
     text: "För att sajten ska fungera och komma ihåg ditt cookieval sparar vi en post i webbläsarens lokala lagring (rt_consent_v1). Den innehåller bara ditt val, ingen persondata, och behövs inte något samtycke för.",
@@ -13,6 +13,14 @@ const sections = [
   {
     title: "Statistik (Google Analytics)",
     text: "Om du godkänner statistik laddar vi Google Analytics 4. Det sätter cookies med namn som _ga och _ga_ följt av ett id, och används för att räkna besök, se vilka sidor som används och mäta hur många som ringer eller skickar en förfrågan. Uppgifterna behandlas av Google. Utan ditt godkännande laddas Google Analytics inte alls och inga statistikcookies sätts.",
+    // Juristens ja 2026-10-10: två rader direkt under stycket, om det som sparas i webbläsaren under besöket när statistik är godkänd
+    rader: {
+      intro: "Om du godkänner statistik sparar vi också två poster i webbläsaren under besöket:",
+      poster: [
+        "rt_attribution_v1: vilken sida du kom in på och varifrån, så att vi ser vilka sidor som leder till förfrågningar. Sparas under besöket.",
+        "rt_utm_v1: vilken källa eller kampanj du kom från, om det står i adressen. Sparas under besöket.",
+      ],
+    },
   },
   {
     title: "Marknadsföring (Google Ads och Meta)",
@@ -44,6 +52,16 @@ const CookiesPage = () => (
               <div key={s.title}>
                 <h2 className="font-display text-2xl text-foreground">{s.title}</h2>
                 <p className="mt-3 text-[17px] leading-relaxed text-muted-foreground">{s.text}</p>
+                {s.rader && (
+                  <>
+                    <p className="mt-3 text-[17px] leading-relaxed text-muted-foreground">{s.rader.intro}</p>
+                    <ul className="mt-2 list-disc space-y-2 pl-6 text-[17px] leading-relaxed text-muted-foreground">
+                      {s.rader.poster.map((r) => (
+                        <li key={r}>{r}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
             ))}
             <div>
@@ -60,7 +78,8 @@ const CookiesPage = () => (
                 <li>
                   <strong className="text-foreground">Förfrågan och takkontroll:</strong> namn, telefon, e-post,
                   adress och det du berättar om taket. Vi använder dem för att svara dig, boka takkontroll och ta
-                  fram en offert. Du har själv bett om detta, så grunden är åtgärder innan ett avtal (artikel 6.1 b).
+                  fram en offert. Du har själv bett om detta, så grunden är åtgärder innan ett avtal (artikel 6.1 b). Har du godkänt statistik sparas också vilken
+                  sida på webbplatsen du kom in på och vilken källa eller kampanj du kom från, tillsammans med din förfrågan.
                 </li>
                 <li>
                   <strong className="text-foreground">Avtal och utförande:</strong> samma uppgifter plus foton av

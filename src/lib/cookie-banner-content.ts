@@ -9,7 +9,7 @@
 export const cookieBannerContent = {
   title: "Cookies på roslagstak.se",
   text:
-    "Vi använder nödvändig lagring för att sajten ska fungera. Om du godkänner använder vi också statistik från Google Analytics, och om du även godkänner marknadsföring visar vi relevant annonsering via Google Ads och Meta. Du kan ändra ditt val när som helst.",
+    "Vi använder nödvändig lagring för att sajten ska fungera. Om du godkänner statistik använder vi Google Analytics och sparar under besöket vilken sida du kom in på och varifrån, så att vi ser vilka sidor som leder till förfrågningar. Om du även godkänner marknadsföring visar vi relevant annonsering via Google Ads och Meta. Du kan ändra ditt val när som helst.",
   linkLabel: "Läs mer om cookies",
   linkHref: "/cookies",
   acceptAll: "Godkänn statistik och marknadsföring",

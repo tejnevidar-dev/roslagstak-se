@@ -8,9 +8,8 @@
  * statistik, och nyckeln tas bort när valet nekas eller tas tillbaka (lagring-samtycke.ts). Godkänner besökaren mitt i besöket blir den
  * första sidan sidan där valet gjordes.
  *
- * VIKTIGT: attributionFields() ska INTE skickas till quote_requests.insert() förrän
- * migrationen i supabase/migrations/*_attribution_columns_prepared.sql är körd i produktion
- * (kolumnerna finns inte än) — se ledning/marknad/attribution-spec-2026-09-29.md.
+ * attributionFields() skickas med varje förfrågan som kolumner i quote_requests (migrationen 20261009110000_attribution_columns_v2_ready.sql är
+ * körd i produktion). Utan godkänd statistik är inget sparat, och båda fälten är null.
  */
 import { hasAnalyticsConsent } from "./consent";
 

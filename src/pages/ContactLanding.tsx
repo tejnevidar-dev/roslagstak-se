@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2, Shield, MessageCircle, Home } from "lucide-react";
-import { withUtm } from "@/lib/utm";
+import { withUtm, utmFields } from "@/lib/utm";
+import { attributionFields } from "@/lib/attribution";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
@@ -27,6 +28,8 @@ const ContactLanding = () => {
       phone: phone.trim(),
       email: email.trim(),
       message: withUtm(message.trim() || "Önskar kostnadsfri takkontroll (via kontaktsida)"),
+      ...attributionFields(),
+      ...utmFields(),
     });
 
     if (error) {

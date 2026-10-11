@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { LEAD_FORM_SUBTITLE } from "@/data/landing-text";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
-import { utmLine } from "@/lib/utm";
+import { utmLine, utmFields } from "@/lib/utm";
+import { attributionFields } from "@/lib/attribution";
 /* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
 const loadSupabase = () => import("@/integrations/supabase/client").then((m) => m.supabase);
 import { toast } from "@/hooks/use-toast";
@@ -68,6 +69,8 @@ const LeadForm = ({
       email: form.email.trim(),
       address: form.address.trim() || null,
       message,
+      ...attributionFields(),
+      ...utmFields(),
     });
 
     setSubmitting(false);

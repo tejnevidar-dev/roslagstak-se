@@ -36,6 +36,12 @@ export type Database = {
           status: Database["public"]["Enums"]["quote_status"]
           takstege: boolean | null
           updated_at: string
+          landing_path: string | null
+          referrer_category: string | null
+          utm_source: string | null
+          utm_medium: string | null
+          utm_campaign: string | null
+          utm_content: string | null
         }
         Insert: {
           address?: string | null
@@ -58,6 +64,12 @@ export type Database = {
           status?: Database["public"]["Enums"]["quote_status"]
           takstege?: boolean | null
           updated_at?: string
+          landing_path?: string | null
+          referrer_category?: string | null
+          utm_source?: string | null
+          utm_medium?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
         }
         Update: {
           address?: string | null
@@ -80,6 +92,12 @@ export type Database = {
           status?: Database["public"]["Enums"]["quote_status"]
           takstege?: boolean | null
           updated_at?: string
+          landing_path?: string | null
+          referrer_category?: string | null
+          utm_source?: string | null
+          utm_medium?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
         }
         Relationships: []
       }
