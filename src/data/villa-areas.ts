@@ -121,7 +121,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Gribby-Myräng", types: "Villor och radhus", period: "Löttingelund 1970–80-tal (kommunen)", href: "/taklaggare-gribbylund" },
       { name: "Karlslund", types: "Parhus och kedjehus i ett och ett halvt plan", period: "1975–1976", href: "/taklaggare-karlslund" },
       { name: "Midgård och Byle", types: "Radhus (Midgård, 231 bostäder), villor, kedjehus, radhus (Byle)", period: "Midgård 1972–73, Byle villor 1907–1910-tal och radhus 1974", href: "/taklaggare-midgard-byle" },
-      { name: "Roslags-Näsby", types: "Villor, radhus (samt flerbostadshus)", period: "Villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal", href: "/taklaggare-roslags-nasby" },
+      { name: "Roslags-Näsby", types: "Villor, radhus (samt flerbostadshus)", period: "Villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal", note: "Villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal.", href: "/taklaggare-roslags-nasby" },
       { name: "Viggbyholm", types: "Villor", period: "Villastad främst 1918–1935, en del 1960-tal", href: "/taklaggare-viggbyholm" },
       { name: "Vallatorp och Visinge", types: "Radhus, parhus, kedjehus, villor", period: "Vallatorp slutet av 1970-talet, Visinge grupphus 1980-tal, Lövbrunna 2007–2008", href: "/taklaggare-vallatorp-visinge" },
     ],

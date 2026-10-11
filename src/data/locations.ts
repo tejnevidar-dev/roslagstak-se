@@ -1402,7 +1402,7 @@ export const locations: LocationData[] = [
     sourceLink: {"label":"Täby kommun, Roslags-Näsby – Lahäll (kulturmiljö)","url":"https://www.taby.se/huvudsajter/kulturmiljoer/nyfiken-pa-den-plats-du-bor/roslags-nasby---lahall"},
     parentLocation: {"name":"Täby","slug":"taby"},
     h1Override: "Takläggare i Roslags-Näsby, Täby",
-    uniqueFAQ: {"question":"När byggdes husen i Roslags-Näsby?","answer":"Byggperiod enligt källorna: villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal. Hustyper: villor, radhus (samt flerbostadshus). Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
+    uniqueFAQ: {"question":"När byggdes husen i Roslags-Näsby?","answer":"Byggperiod enligt källorna: villor från tidigt 1900-tal och 1930-tal, hitta.se 1960- och 1970-tal. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Roslags-Näsby",
     lat: 59.439,
     lng: 18.059,
