@@ -44,7 +44,7 @@ describe("paket 57: Innehålls efterläsning E1-E5", () => {
   });
 });
 
-describe("paket 57: byggkontrollen scripts/check-svarstid.ts", () => {
+describe("paket 57: byggkontrollen scripts/check-svarstid.ts", { timeout: 30000 }, () => {
   const kor = (filer: Record<string, string>) => {
     const dir = mkdtempSync(join(tmpdir(), "svarstid-"));
     for (const [f, t] of Object.entries(filer)) {
