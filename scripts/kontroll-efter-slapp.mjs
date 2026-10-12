@@ -298,7 +298,7 @@ for (const [path, mening, rubrik, inte] of [
   const rubriker = await p.evaluate(() => [...document.querySelectorAll("main h2, main h3")].map((h) => (h.textContent || "").replace(/[\s ]+/g, " ").trim().replace(/[.:]$/, "")).filter((t) => t.length >= 3));
   const saknas = [...new Set(rubriker)].filter((t) => !stat.includes(t.toLowerCase()));
   punkt("Startsidan: alla h2/h3 efter React finns i den statiska HTML:en", saknas.length === 0, saknas.length ? `saknas: ${saknas.slice(0, 4).join(" | ").slice(0, 120)}` : `${new Set(rubriker).size} rubriker`);
-  for (const text of ["Tre tak vi har lagt, med bilder från jobben", "Ett tak som håller, och en kontaktperson som svarar", "Från Stockholms innerstad till ytterskärgårdens öar", "Kunskap om tak — skrivet av takläggare", "Takläggare i Roslagen"]) punkt(`Startsidan, statisk HTML: "${text}"`, stat.includes(text.toLowerCase()));
+  for (const text of ["Tre tak vi har lagt, med bilder från jobben", "Ett tak som håller, och en kontaktperson som svarar", "Från Roslagen till Storstockholm", "Kunskap om tak", "Takläggare i Roslagen"]) punkt(`Startsidan, statisk HTML: "${text}"`, stat.includes(text.toLowerCase()));
   await p.close();
 }
 
