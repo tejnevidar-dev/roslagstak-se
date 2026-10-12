@@ -5,14 +5,23 @@ const COUNT_DURATION = 1600;
 const FADE_DURATION = 900;
 const COOLDOWN_MS = 10 * 60 * 1000; // 10 minutes
 
+/* Lagringen får aldrig fälla startsidan (paket 58): kastar åtkomsten eller skrivningen (blockerad lagring, full kvot) räknas det som "inget sparat". */
 function shouldShowSplash(): boolean {
-  const last = localStorage.getItem("roslagstak_splash_ts");
-  if (!last) return true;
-  return Date.now() - Number(last) > COOLDOWN_MS;
+  try {
+    const last = localStorage.getItem("roslagstak_splash_ts");
+    if (!last) return true;
+    return Date.now() - Number(last) > COOLDOWN_MS;
+  } catch {
+    return true;
+  }
 }
 
 function markSplashShown() {
-  localStorage.setItem("roslagstak_splash_ts", String(Date.now()));
+  try {
+    localStorage.setItem("roslagstak_splash_ts", String(Date.now()));
+  } catch {
+    /* kan inte sparas: splashen visas igen vid nästa sidvisning */
+  }
 }
 
 /** Cinematic black preloader with a counting percentage and a thin progress rule. */
