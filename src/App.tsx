@@ -1,11 +1,9 @@
 import { lazy, Suspense } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LazyMotion } from "framer-motion";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import CookieBanner from "./components/CookieBanner";
@@ -51,8 +49,6 @@ const ProblemPage = lazy(() => import("./pages/ProblemPage.tsx"));
 const MaterialsPage = lazy(() => import("./pages/MaterialsPage.tsx"));
 const MaterialPage = lazy(() => import("./pages/MaterialPage.tsx"));
 
-const queryClient = new QueryClient();
-
 /** Animationsfunktionerna (layout, gester) hämtas i en egen chunk efter första målningen i stället för att ligga i huvudbunten. */
 /* Hämtas när webbläsaren är ledig, så att de ~83 kB inte konkurrerar med sidans första rendering (TBT). */
 const whenIdle = (fn: () => void) =>
@@ -70,8 +66,6 @@ const RouteFallback = () => <div className="min-h-screen bg-background" aria-bus
 const App = () => (
   <HelmetProvider>
     <LazyMotion features={loadMotionFeatures} strict>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
         {/* Toasts syns först efter en användaråtgärd: de monteras när webbläsaren är ledig, inte i första renderingen. */}
         <DeferMount minHeight={0}>
           <Toaster />
@@ -147,8 +141,6 @@ const App = () => (
           <CookieBanner />
           <PixelPageViewTracker />
         </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
     </LazyMotion>
   </HelmetProvider>
 );
