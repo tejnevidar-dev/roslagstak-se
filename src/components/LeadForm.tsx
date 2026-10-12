@@ -158,6 +158,10 @@ const LeadForm = ({
           </>
         )}
       </button>
+      <p className="text-xs text-muted-foreground">
+        Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
+        <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
+      </p>
     </form>
   );
 };
