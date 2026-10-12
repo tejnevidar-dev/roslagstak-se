@@ -119,7 +119,8 @@ describe("de tre juridiska texterna, ordagrant (juristens lydelse, Vidars ja 202
 describe("paket 44b: juristens tillägg 1 på /cookies och tankstrecket", () => {
   it("punkten 'Hur du hittade oss' står ordagrant efter 'Förfrågan och takkontroll', och Google-meningen har ingen tankstreck", () => {
     const t = readFileSync("src/pages/CookiesPage.tsx", "utf8").replace(/\r/g, "").replace(/\s+/g, " ");
-    expect(t).toContain("Hur du hittade oss:</strong> har du godkänt statistik sparas också vilken sida på webbplatsen du kom in på och vilken källa eller kampanj du kom från, tillsammans med din förfrågan. Vi använder det för att se vilka sidor som leder till förfrågningar. Grunden är vårt berättigade intresse av att följa upp vår marknadsföring (artikel 6.1 f).");
+    // Paket 65a: juristens nya lydelse 2026-10-12 ersätter lydelsen från 44b (se paket65a-kampanjtext.test.ts)
+    expect(t).toContain("Hur du hittade oss:</strong> kommer du till oss via en annons eller en länk med ett kampanjnamn sparas kampanjens namn tillsammans med din förfrågan. Har du godkänt statistik sparas också vilken sida på webbplatsen du kom in på och vilken källa du kom från. Vi använder det för att se vilka annonser och sidor som leder till förfrågningar. Grunden är vårt berättigade intresse av att följa upp vår marknadsföring (artikel 6.1 f).");
     expect(t.indexOf("Förfrågan och takkontroll:")).toBeLessThan(t.indexOf("Hur du hittade oss:"));
     expect(t.indexOf("Hur du hittade oss:")).toBeLessThan(t.indexOf("Avtal och utförande:"));
     expect(t).toContain("kopplat till annonsens klick-id. Aldrig med ditt namn, din telefon, din e-post eller din adress.");

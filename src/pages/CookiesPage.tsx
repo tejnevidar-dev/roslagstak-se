@@ -82,10 +82,11 @@ const CookiesPage = () => (
                   sida på webbplatsen du kom in på och vilken källa eller kampanj du kom från, tillsammans med din förfrågan.
                 </li>
                 <li>
-                  <strong className="text-foreground">Hur du hittade oss:</strong> har du godkänt statistik sparas också
-                  vilken sida på webbplatsen du kom in på och vilken källa eller kampanj du kom från, tillsammans med din
-                  förfrågan. Vi använder det för att se vilka sidor som leder till förfrågningar. Grunden är vårt berättigade
-                  intresse av att följa upp vår marknadsföring (artikel 6.1 f).
+                  <strong className="text-foreground">Hur du hittade oss:</strong> kommer du till oss via en annons eller en
+                  länk med ett kampanjnamn sparas kampanjens namn tillsammans med din förfrågan. Har du godkänt statistik
+                  sparas också vilken sida på webbplatsen du kom in på och vilken källa du kom från. Vi använder det för att
+                  se vilka annonser och sidor som leder till förfrågningar. Grunden är vårt berättigade intresse av att följa
+                  upp vår marknadsföring (artikel 6.1 f).
                 </li>
                 <li>
                   <strong className="text-foreground">Avtal och utförande:</strong> samma uppgifter plus foton av
