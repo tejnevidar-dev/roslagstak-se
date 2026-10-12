@@ -246,16 +246,16 @@ const comboByUrl = new Map(combos.map((c) => [c.url, c]));
 const referensCases = HOME_REFERENS_ORDER.map((slug) => projectTexts.find((p) => p.slug === slug)).filter((p): p is NonNullable<typeof p> => !!p);
 
 const home: PrerenderPage = {
-  h1: "Takläggare i Roslagen — takbyte & takrenovering",
+  h1: "Ett tak du kan lita på.",
   intro:
-    "RoslagsTak är takläggare i Roslagen med bas i Norrtälje. Vi utför takbyte, takrenovering, takomläggning, plåtarbeten och taktvätt i hela Roslagen och Stockholms norra skärgård — 10 års utförandegaranti och ROT-avdrag.",
+    "RoslagsTak är en takfirma med bas i Norrtälje och takläggare i Roslagen och Storstockholm. Vi utför takbyte, takomläggning, takrenovering, takreparation och hängrännor. Vi lämnar 10 års utförandegaranti på det arbete vi utför.",
     paragraphs: [
       "Vi arbetar med TP20 plåttak, dubbelfalsat plåttak (bandtäckning), pannplåt, betongpannor, lertegel och papptak. Allt arbete utförs enligt AMA.",
       "Vi tar också uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Båda finns med bilder under Projekt.",
-      "Sedan 2026 arbetar vi även i hela Storstockholm — från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Samma fasta priser, samma garanti och samma kontaktperson genom hela projektet.",
-      "Ett komplett takbyte hos oss innehåller allt: rivning av gamla taket, byte av råspont och underlagspapp vid behov, ny läkt, tätskikt, plåtbeslag kring skorsten och genomföringar, taksäkerhet. Du får en kontaktperson som följer projektet från takkontroll till slutgenomgång.",
+      "Vi tar uppdrag i Roslagen och Storstockholm, från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Du får ett fast pris i offerten och en kontaktperson genom hela processen.",
+      "Vad som ingår står i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår. Du får en kontaktperson hela vägen, från takkontroll till färdigt tak.",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
-      `Boka en kostnadsfri takkontroll. Vi återkopplar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
+      `Boka en kostnadsfri takkontroll. Vi svarar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
   links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks, ...homeAreaLinks().filter((l) => l.href !== "/takomlaggning-norrtalje")],
 };

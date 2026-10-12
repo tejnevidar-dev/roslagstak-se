@@ -7,7 +7,7 @@ import { GARANTI_RENOVERING_CHIP } from "./guarantee";
 
 export const HOME_HERO = {
   eyebrow: "Takläggare i Roslagen & Stockholm",
-  text: "Vi tar hand om hela processen — från första takkontrollen till sista plåtdetaljen. Takbyte, takrenovering och takreparation för villor, BRF:er och företag i hela Roslagen och Storstockholm.",
+  text: "Vi tar hand om hela processen — från första takkontrollen till sista plåtdetaljen. Takbyte, takrenovering och takreparation för villor och bostadsrättsföreningar i Roslagen och Storstockholm.",
   chips: ["10 års utförandegaranti", GARANTI_RENOVERING_CHIP, "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"],
 };
 
@@ -41,5 +41,5 @@ export const HOME_SERVICES_INTRO = {
   eyebrow: "Våra tjänster",
   headingA: "Allt inom tak och plåt —",
   headingB: "under ett och samma tak.",
-  text: "Villa, radhus, fritidshus eller bostadsrättsförening — du har en kontaktperson genom hela processen, från takkontroll till färdigt tak, med material valt för svenskt klimat.",
+  text: "Villa, radhus, fritidshus eller bostadsrättsförening — du har en kontaktperson genom hela processen, från takkontroll till färdigt tak.",
 };

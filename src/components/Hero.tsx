@@ -99,8 +99,7 @@ const Hero = () => {
             {HOME_HERO.eyebrow}
           </p>
           <h1 className="mt-3 max-w-[20ch] font-display text-[clamp(2rem,4.4vw,3.4rem)] font-semibold leading-[1.1] tracking-[-0.015em] text-primary-foreground">
-            Ett tak du kan lita på —{" "}
-            <span className="italic text-accent">i decennier framöver.</span>
+            Ett tak du kan lita på.
           </h1>
           <p className="mt-3 max-w-[46ch] text-[17px] leading-[1.65] text-primary-foreground/80 lg:mt-6">
             {HOME_HERO.text}
@@ -150,7 +149,7 @@ const Hero = () => {
         <div className="mx-auto flex max-w-7xl flex-wrap items-baseline gap-x-3 gap-y-2 px-6 py-4">
           <span className="text-[13px] font-semibold text-primary-foreground">Vi finns här</span>
           <span className="text-[13px] leading-relaxed text-primary-foreground/70">
-            {areaTeaser.join(" · ")} · och hela Storstockholm —{" "}
+            {areaTeaser.join(" · ")} · och Storstockholm —{" "}
             <Link to="/omraden" className="font-semibold text-accent underline-offset-4 hover:underline">
               se alla områden
             </Link>

@@ -58,7 +58,8 @@ describe("startsidans områdestext: länkar (design/startsida-lankar)", () => {
     const sida = prerenderContent("/")!;
     const text = sida.paragraphs.join("\n");
     expect(text).not.toContain("](/");
-    for (const t of ["takläggare i Stockholm", "takomläggning i Norrtälje", "takbyte i Solna", "takbyte i Stockholm"]) expect(text).toContain(t);
+    // Paket 52: länktexterna "takomläggning i Norrtälje" och "takbyte i Solna" är bytta mot "Solna" (1.1 och 2.1); länken till takomläggning i Norrtälje ligger kvar i länklistan
+    for (const t of ["takläggare i Stockholm", "Solna", "takbyte i Stockholm"]) expect(text).toContain(t);
     const href = sida.links.map((l) => l.href);
     for (const h of ["/taklaggare-stockholm", "/takomlaggning-norrtalje", "/takbyte-solna", "/takbyte-stockholm"]) expect(href).toContain(h);
   });

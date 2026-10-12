@@ -6,8 +6,8 @@ import type { BlogPost } from "@/data/blog-posts";
 
 export const HOME_GUIDES = {
   eyebrow: "Guider & råd",
-  headingA: "Kunskap om tak —",
-  headingB: "skrivet av takläggare.",
+  headingA: "Kunskap om tak",
+  headingB: "",
   allLink: "Se alla guider",
   leadReadMore: "Läs guiden",
 };

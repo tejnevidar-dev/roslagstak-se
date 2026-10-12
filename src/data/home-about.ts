@@ -4,7 +4,7 @@
  */
 import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 
-export const HOME_ABOUT_CAPTION = { eyebrow: "Bas i Norrtälje", text: "Riktiga tak, riktiga bilder" };
+export const HOME_ABOUT_CAPTION = { eyebrow: "Bas i Norrtälje", text: "Takbyte på Blidö" };
 
 export const HOME_ABOUT_INTRO = {
   eyebrow: "Om RoslagsTak",
@@ -13,7 +13,7 @@ export const HOME_ABOUT_INTRO = {
 };
 
 export const HOME_ABOUT_P1 =
-  "RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar, takreparationer och plåtarbeten. Allt arbete utförs enligt AMA, och du får alltid ett fast pris.";
+  "RoslagsTak har sin bas i Norrtälje och byter och lägger om tak på villor och fritidshus i Roslagen, Storstockholm och Mälardalen. Vi lägger betongpannor, lertegel, TP20-plåt, dubbelfalsat plåttak och papptak, och gör takomläggningar och takreparationer. Vi arbetar enligt AMA, och du får ett fast pris i offerten.";
 export const HOME_ABOUT_P2 =
   "Det som gör skillnad för dig som kund är att du har en och samma kontaktperson genom hela processen, från takkontrollen till färdigt tak. Takkontrollen är kostnadsfri och utan förpliktelser: en av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris – kostnadsfritt och utan förpliktelser. Du bestämmer själv om och när.";
 /** Tredje stycket har två länkar i React ("Projekt" och "Recensioner"); delarna ligger var för sig så att länkarna kan ritas. */
