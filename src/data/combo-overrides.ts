@@ -1324,7 +1324,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "## Vad kostar det?",
       "Priset beror på takets storlek och form, underlagets skick, detaljerna och åtkomsten. Riktpriser per material finns på roslagstak.se/priser. Ditt pris står i offerten och är fast.",
       "## Frågor om takomläggning i Tyresö",
-      "**Räcker det att tvätta taket och byta trasiga pannor?** Ibland. Är underlaget helt kan enstaka pannor bytas. Har underlaget åldrats hjälper det inte att pannorna är hela, och då kan en omläggning vara rätt åtgärd. Vilket som gäller står i rapporten efter takkontrollen.",
+      "**Räcker det att tvätta taket och byta trasiga pannor?** Ibland. Är underlaget helt kan enstaka pannor bytas. Har underlaget åldrats hjälper det inte att pannorna är hela, och då kan en omläggning vara rätt åtgärd. Det går vi igenom vid takkontrollen.",
       "**Kan de gamla betongpannorna återanvändas?** Det bedöms vid takkontrollen och framgår av offerten.",
       "**Är priset fast?** Ja. Priset i offerten är fast, och tillägg görs bara efter ditt godkännande.",
       "**Vad händer om ni hittar något när taket är rivet?** Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Inget extraarbete görs utan ditt godkännande.",

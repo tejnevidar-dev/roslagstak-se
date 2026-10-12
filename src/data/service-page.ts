@@ -306,7 +306,7 @@ export const SERVICE_COPY = {
   chipUtforande: "10 års utförandegaranti",
   chipTatskikt: "30 års tätskiktsgaranti via MATAKI",
   chipFastPris: "Fast pris",
-  chipSvar: "Svar inom 24 h",
+  chipSvar: "Svar inom 24 timmar",
   offertButton: "Boka kostnadsfri takkontroll",
   phone: "070-154 36 39",
   howLink: "Se hur ett takbyte går till",

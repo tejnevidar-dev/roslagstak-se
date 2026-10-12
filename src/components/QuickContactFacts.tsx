@@ -35,7 +35,7 @@ const QuickContactFacts = () => (
         <Award className="w-4 h-4 text-primary" /> Fast pris, arbete enligt AMA
       </div>
       <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-        <Clock className="w-4 h-4 text-primary" /> Svar inom 24 h
+        <Clock className="w-4 h-4 text-primary" /> Svar inom 24 timmar
       </div>
     </div>
   </div>

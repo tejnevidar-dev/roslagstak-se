@@ -11,7 +11,7 @@ export const QUOTE_PAGE = {
 
 /** Konfiguratorns rubrikdel och förvalda läge ("Konfigurera själv"); rådgivningsflikens texter visas först efter ett klick. */
 export const QUOTE_CONFIG = {
-  eyebrow: "Offert & Rådgivning",
+  eyebrow: "Offert",
   heading: "Hur vill du ha hjälp?",
   intro: "Välj mellan att beskriva ditt tak själv eller bli kontaktad av en av våra säljare. Vi svarar inom 24 timmar.",
   bannerTitle: "Beskriv ditt tak",

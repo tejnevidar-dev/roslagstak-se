@@ -689,7 +689,7 @@ export const blogPosts: BlogPost[] = [
       "Plåt: repor och skador i ytbehandlingen ska åtgärdas tidigt, innan rost får fäste, se [rostig plåt](/takproblem/rostig-plat).",
       "Båda behöver rena hängrännor och ränndalar. Mer om skötsel per material finns i [sköta taket](/blogg/skota-taket-betongpannor-tegel-plat).",
       "## Ljud",
-      "Plåttak kan upplevas som ljudligare vid regn om taket inte är rätt uppbyggt. Med rätt uppbyggnad under plåten dämpas ljudet. Pannor är tyngre och dämpar mer i sig.",
+      "Plåttak kan upplevas som ljudligare vid regn om taket inte är rätt uppbyggt. Hur mycket som hörs beror på vad som finns under plåten. Pannor är tyngre och dämpar mer i sig.",
       "## Vad kostar det?",
       "Riktpriserna nedan är efter ROT-avdrag och inkl. moms, med standardställning. Byggställning ingår. Tillägg kan tillkomma vid komplex ställning, och det framgår i offerten. Priserna förutsätter fullt ROT-avdrag: 30 % av arbetskostnaden, högst 50 000 kr per person och år, och att du har betalat tillräckligt med skatt. Utan ROT, eller med mindre ROT kvar, blir priset högre.",
       "**Betongpannor:** från 1 200 kr/m², efter ROT-avdrag, inkl. moms.",
