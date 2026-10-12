@@ -26,7 +26,7 @@ export const homeFaqs = [
   },
   {
     question: "Hur snabbt får jag svar på min förfrågan?",
-    answer: "Vi återkopplar inom 24 timmar efter att du skickat in din förfrågan. Därefter kommer vi överens om en kostnadsfri takkontroll, och startdatum för arbetet bestäms tillsammans med dig i offerten.",
+    answer: "Vi svarar inom 24 timmar. Därefter bokar vi en kostnadsfri takkontroll. När arbetet görs bestämmer vi tillsammans med dig.",
   },
   {
     question: "Utför ni takkontroll?",
@@ -34,7 +34,7 @@ export const homeFaqs = [
   },
   {
     question: "Vilka områden i Roslagen täcker ni?",
-    answer: "Vi verkar i hela Roslagen — från Vaxholm i söder till Arholma i norr. Det inkluderar Norrtälje, Blidö, Ljusterö, Yxlan, Furusund, Husarö, Finnhamn, Ingmarsö, Högmarsö, Svartlöga, Söderöra, Norröra, Humlö, Gräskö, Spillersboda, Rådmansö, Bergshamra, Svartnö, Väddö, Vätö, Singö och Grisslehamn.",
+    answer: "Vi tar uppdrag i Roslagen och Storstockholm. Alla orter finns på sidan Områden.",
   },
   {
     question: "Kan ni riva eternittak med asbest?",

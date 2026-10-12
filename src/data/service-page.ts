@@ -621,10 +621,6 @@ export const serviceSchemaNodes = (slug: string, services: ServiceListItem[]) =>
       "@type": "HowTo",
       name: `Så här går ${service.title.toLowerCase()} till — steg för steg`,
       description: details.longDesc,
-      ...(details.priceRange
-        ? { estimatedCost: { "@type": "MonetaryAmount", currency: "SEK", value: withRotForbehall(details.priceRange) } }
-        : {}),
-      supply: details.benefits.slice(0, 5).map((b) => ({ "@type": "HowToSupply", name: b })),
       step: details.process.map((step, i) => ({
         "@type": "HowToStep",
         position: i + 1,

@@ -93,7 +93,7 @@ for (const path of TJANSTELISTA_SIDOR) {
 {
   const p = await renderad(ctx, "/offert");
   let text = await p.evaluate(() => document.body.innerText);
-  await p.getByRole("button", { name: /Kostnadsfri (rådgivning|takkontroll)/ }).click();
+  await p.getByRole("button", { name: /Kostnadsfri takkontroll/ }).click();
   await p.waitForTimeout(500);
   text += "\n" + (await p.evaluate(() => document.body.innerText));
   const { html } = await hamta("/offert");

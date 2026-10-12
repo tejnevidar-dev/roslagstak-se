@@ -137,9 +137,4 @@ export const buildWebSiteNode = () => ({
   name: NAP.name,
   inLanguage: "sv-SE",
   publisher: { "@id": ORG_ID },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${SITE_URL}/blogg?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
 });

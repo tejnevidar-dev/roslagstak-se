@@ -1578,7 +1578,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Plåttak kan vara ett bra underlag för solceller. Det här bör du tänka på med taket innan panelerna monteras. Vi säljer och installerar inte solceller.",
     date: "2026-04-12",
     readTime: "3 min",
-    keywords: ["solceller plåttak", "solceller roslagen", "solpaneler takbyte", "bandtäckt plåttak solceller"],
+    keywords: ["solceller plåttak", "solpaneler takbyte", "bandtäckt plåttak solceller"],
     content: [
       "Solceller och [plåttak](/material/tp20-plattak) kan vara en bra kombination, om taket är i gott skick och panelerna monteras rätt. Vi på RoslagsTak säljer och installerar inte solceller. Den här guiden handlar om taket som underlag, och för själva solcellsanläggningen vänder du dig till en solcellsinstallatör.",
       "Varför plåttak ofta används som underlag: plåt är ett lätt material med jämn yta, och på bandtäckta och falsade tak kan fästena ofta klämmas runt falsen utan att det görs hål i plåten. Vilket montagesystem som passar avgör solcellsinstallatören och plåtens tillverkare.",

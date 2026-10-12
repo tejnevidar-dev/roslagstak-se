@@ -11,8 +11,8 @@ const FRASER: [string, RegExp][] = [
   ["hela Storstockholm", /\bhela\s+Storstockholm\b/i],
   ["hela Österåker", /\bhela\s+Österåker\b/i],
 ];
-/** Sidor som får ha frasen tills deras paket är släppt. Startsidan (index.html) och /offert (som visar startsidans frågor) byts i paket 52. */
-const UNDANTAG = new Set<string>(["index.html", "offert.html"]); // /offert visar startsidans frågor och svar (home-faqs.ts, "Vilka områden täcker ni?"), som byts i paket 52
+/** Sidor som får ha frasen tills deras paket är släppt. Startsidan (index.html) byts i paket 52. */
+const UNDANTAG = new Set<string>(["index.html"]);
 
 const walk = (d: string): string[] =>
   readdirSync(d).flatMap((f) => {
