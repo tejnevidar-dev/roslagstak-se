@@ -3657,20 +3657,20 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Västerås — takbyte och takrenovering för villor och bostadsrättsföreningar. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Västerås: äldre villor i Haga, 1940- och 50-talens Gideonsberg, villorna på Önsta-Gryta och orterna runt staden. Kostnadsfri takkontroll.",
     longDescription:
-      "Västerås är Mälardalens största stad, belägen vid Mälaren och Svartån, med en blandning av äldre stadsbebyggelse, villaområden och stora bostadsrättsföreningar och flerbostadshus. Storleken ger en stor variation av taktyper, från tegeltak på äldre hus till plåt och papp på flacka tak. Vi tar uppdrag i Västerås med takbyte och takrenovering, både för villaägare och för föreningar.",
+      "Den som söker takläggare i Västerås kan ha ett hus i en äldre villastadsdel, i ett område från årtiondena efter kriget eller i en av de stadsdelar där nästan alla hus är villor. Västerås är centralort i Västerås kommun och residensstad i Västmanlands län. Här går vi igenom några av stadsdelarna med småhus.",
     extraContent:
-      "För större fastigheter och bostadsrättsföreningar planerar vi arbetet tillsammans med styrelsen: takkontroll, fast offert och en fast kontaktperson under hela projektet. Kontakta oss för en kostnadsfri takkontroll i Västerås.",
-    uniqueFAQ: {
-      question: "Kan ni ta uppdrag åt större bostadsrättsföreningar i Västerås?",
-      answer:
-        "Ja, vi tar uppdrag från bostadsrättsföreningar i Västerås. Vi börjar med en kostnadsfri takkontroll och lämnar ett fast pris som styrelsen kan besluta på. Hör av dig så går vi igenom fastigheten och vilken omfattning som passar.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Västerås?","answer":"Byggperiod enligt källorna: äldre villor (Haga), 1940- och 50-talen (Gideonsberg), 1950- och 60-talen (Viksäng), efter 1964 (Bjurhovda). Hustyper: villor, radhus, kedjehus. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Västerås",
     lat: 59.6099,
     lng: 16.5448,
-    nearbyLocations: ["Enköping", "Eskilstuna", "Strängnäs"],
+    nearbyLocations: ["Enköping","Eskilstuna","Strängnäs"],
+    factBox: [{"label":"Kommun","value":"Västerås (Västmanlands län)"},{"label":"Delar","value":"Haga, Gideonsberg, Viksäng, Skiljebo, Hamre, Bjurhovda, Önsta-Gryta, Vallby, Irsta, Tillberga"},{"label":"Hustyper","value":"Villor, radhus, kedjehus"},{"label":"Byggperiod","value":"Äldre villor (Haga), 1940- och 50-talen (Gideonsberg), 1950- och 60-talen (Viksäng), efter 1964 (Bjurhovda)"}],
+    sourceLink: {"label":"Wikipedia, Västerås","url":"https://sv.wikipedia.org/wiki/Västerås"},
+    extraSections: [{"heading":"Haga och Gideonsberg","text":"Haga ligger i nordöstra Västerås. Enligt Wikipedia har den södra delen äldre villabebyggelse, medan den norra är bebyggd med flerbostadshus från 1940-talet och senare. Gideonsberg, i norra Västerås, är huvudsakligen bebyggt under 1940- och 1950-talen. Där finns enligt Wikipedia också radhus och villor, och Nordanby gärde är till stor del bebyggt med kedjehus."},{"heading":"Öster om centrum","text":"- **Viksäng** har blandad bebyggelse, från villor och radhus till flerfamiljshus, många byggda på 1950- och 1960-talen. - **Skiljebo** har enligt Wikipedia blandad bebyggelse med hyreshus och villor. - **Hamre** är ett bostadsområde där bebyggelsen till övervägande del är radhus och villor. - **Bjurhovda** kom till sedan staden köpte marken 1964. Bebyggelsen är mest bostadsrättshus, med en del radhus och friliggande villor."},{"heading":"Önsta-Gryta och Vallby","text":"Önsta-Gryta, i norra Västerås, består av Södra Gryta, Norra Gryta och Önsta. Enligt Wikipedia är de flesta av husen i stadsdelen villor. Vallby, i nordväst, byggdes ut med flerfamiljshus under slutet av 1960-talet. Norr om dem tillkom senare ett område med småhus."},{"heading":"Orterna runt staden","text":"Irsta ligger omkring tio kilometer öster om Västerås centrum. Wikipedia beskriver orten som en förort, där det finns allt från hyreshus till stora villor. Tillberga fungerar enligt Wikipedia numera som en förort med bostadsområden till Västerås."},{"heading":"Vad det betyder för taket","text":"I Västerås står alltså äldre villor, hus från 1940-, 50- och 60-talen och yngre villaområden i olika delar av staden. Husens ålder säger inte hur gammalt taket är. På de äldre villorna kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med att titta på taket på plats. Två saker är värda att tänka på. I en stadsdel där husen byggdes under samma årtionden ser taken lika ut från gatan, men de har skötts och lagts om var för sig, så grannens tak säger inte mycket om ditt eget. Och ett hus som har byggts om och till har ofta takdelar av olika ålder, där skarven mellan dem är värd en extra titt. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Västerås. Fler orter finns på sidan Mälardalen. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Västerås och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "eskilstuna",
@@ -3783,20 +3783,20 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Nyköping — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Nyköping: Östra villastaden från 1920, villorna i Harg och Stenbro från 1930-talet och de yngre villaområdena. Kostnadsfri takkontroll.",
     longDescription:
-      "Nyköping ligger vid Nyköpingsån nära Östersjön, med äldre stadskvarter, villaområden och flerbostadshus. Kustnära läge ger fukt, vind och saltpåverkan som slitar på beslag och plåtdetaljer, och mossa etablerar sig lätt på skuggiga takytor. Vi tar uppdrag i Nyköping med takbyte, takrenovering, plåtarbeten och takavvattning.",
+      "Den som söker takläggare i Nyköping kan ha ett hus i en villastad från tiden runt 1920, i ett villaområde som har vuxit fram sedan 1930-talet eller i ett av stadens yngre områden. Nyköping är centralort i Nyköpings kommun och residensstad i Södermanlands län. Staden ligger enligt Wikipedia vid den sörmländska kusten, där Nyköpingsån rinner ut i Stadsfjärden. Här går vi igenom några av stadsdelarna med småhus.",
     extraContent:
-      "Nära kusten rekommenderar vi ofta plåt med hög korrosionsklass och rostfria infästningar. Vi går igenom material och detaljer vid en kostnadsfri takkontroll och lämnar ett fast pris. Bostadsrättsföreningar får ett underlag som styrelsen kan besluta på.",
-    uniqueFAQ: {
-      question: "Vilket takmaterial passar nära kusten i Nyköping?",
-      answer:
-        "Viktigast är rätt infästningar och beslag. Vi rekommenderar material vid en kostnadsfri takkontroll.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Nyköping?","answer":"Byggperiod enligt källorna: runt 1920 (Östra villastaden), från 1930-talet (Harg, Stenbro, Fågelbo), 1940-talet (Högbrunn), tidigt 1960-tal (Stenkulla). Hustyper: villor, egnahem, radhus. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Nyköping",
     lat: 58.7531,
     lng: 17.0079,
-    nearbyLocations: ["Trosa", "Gnesta", "Strängnäs"],
+    nearbyLocations: ["Trosa","Gnesta","Strängnäs"],
+    factBox: [{"label":"Kommun","value":"Nyköping (Södermanlands län)"},{"label":"Delar","value":"Öster med Östra villastaden, Harg, Stenbro med Oxbacken, Fågelbo, Högbrunn, Oppeby, Stenkulla, Bryngelstorp, Ekensberg, Isaksdal, Malmbryggshagen"},{"label":"Hustyper","value":"Villor, egnahem, radhus"},{"label":"Byggperiod","value":"Runt 1920 (Östra villastaden), från 1930-talet (Harg, Stenbro, Fågelbo), 1940-talet (Högbrunn), tidigt 1960-tal (Stenkulla)"}],
+    sourceLink: {"label":"Wikipedia, Nyköping","url":"https://sv.wikipedia.org/wiki/Nyköping"},
+    extraSections: [{"heading":"Östra villastaden","text":"Vid 1900-talets början anlades enligt Wikipedia stadens första egnahemsområde. I stadsdelen Öster, som annars domineras av flerfamiljshus från sekelskiftet 1900 och framåt, ligger Östra villastaden. Wikipedia beskriver den som en villastad med likartade hus byggda runt 1920, där variationen främst består i skillnader i färg och mindre skillnader i utformning."},{"heading":"Villaområdena från 1930-talet","text":"- **Harg** är ett villaområde nära Nyköpingsån, ungefär tre kilometer nordväst om centrum. Det är bebyggt från 1930-talet. - **Stenbro**, med Oxbacken, har villaområden tre kilometer nordväst om centrum, byggda från 1930-talet och framåt. - **Fågelbo** har en blandning av villor, radhus och lägenheter, från 1930-talet till nyproduktion."},{"heading":"1940-talet och 1960-talet","text":"Högbrunn domineras av 1940-talshus i tre våningar, men där finns enligt Wikipedia också radhus och villor från 1940-talet. Oppeby är bebyggt med radhus och flerfamiljshus från 1940-talet och framåt. Stenkulla, ungefär två kilometer öster om centrum, har flerbostadshus och enfamiljshus, med radhus och friliggande villor från tidigt 1960-tal."},{"heading":"Fler villaområden","text":"- **Bryngelstorp** beskrivs av Wikipedia som ett villaområde. Det gränsar mot naturreservatet Labro ängar. - **Ekensberg** är ett villaområde och friluftsområde drygt två kilometer nordost om centrum. - **Isaksdal** har blandad bebyggelse med villor och hyresrätter. - **Malmbryggshagen**, ungefär tre kilometer öster om centrum, är ett av stadens senaste villaområden."},{"heading":"Vad det betyder för taket","text":"I Nyköping står alltså villor från tiden runt 1920, hus från 1930-, 40- och 60-talen och yngre villaområden i olika delar av staden. Husens ålder säger inte hur gammalt taket är. På de äldre villorna kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med att titta på taket på plats. Två saker är värda att tänka på. I ett område som Östra villastaden, där husen byggdes lika och ungefär samtidigt, ser taken lika ut från gatan. Men de har skötts och lagts om var för sig, så grannens tak säger inte mycket om ditt eget. Och ett hus som har byggts om och till har ofta takdelar av olika ålder, där skarven mellan dem är värd en extra titt. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nyköping. Fler orter finns på sidan Mälardalen. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Nyköping och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "trosa",
@@ -3804,20 +3804,20 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Trosa — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Trosa: den låga trähusbebyggelsen vid ån, villaområdet Östermalm från sekelskiftet 1900 och utbyggnaden på 1960- och 70-talen.",
     longDescription:
-      "Trosa är en kuststad vid Trosaån med välbevarad småstadsmiljö, sommarhus och villor i kustnära lägen. Vi tar uppdrag i Trosa med takbyte, takrenovering, bandtäckning och plåtarbeten.",
+      "Den som söker takläggare i Trosa kan ha ett hus i den gamla staden vid ån, i ett villaområde från tiden runt 1900 eller i ett av de områden som byggdes ut på 1960- och 1970-talen. Trosa är centralort i Trosa kommun i Södermanlands län. Enligt Wikipedia ligger orten mellan Södertälje och Nyköping, där Trosaån mynnar ut i Östersjön.",
     extraContent:
-      "Vi går igenom takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris. Kontakta oss så bokar vi en tid.",
-    uniqueFAQ: {
-      question: "Tar ni uppdrag på fritidshus i Trosa?",
-      answer:
-        "Ja, vi tar uppdrag på både permanentbostäder och fritidshus i Trosa. Vi bedömer takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Trosa?","answer":"Byggperiod enligt källorna: sekelskiftet 1900 (Östermalm, Ekensberg kort därefter), 1960- och 1970-talen (utbyggnaden). Hustyper: låg trähusbebyggelse (gamla staden), villaområde (Östermalm). Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Trosa",
     lat: 58.8973,
     lng: 17.5525,
-    nearbyLocations: ["Nyköping", "Gnesta", "Nynäshamn"],
+    nearbyLocations: ["Nyköping","Gnesta","Nynäshamn"],
+    factBox: [{"label":"Kommun","value":"Trosa (Södermanlands län)"},{"label":"Läge","value":"Mellan Södertälje och Nyköping, där Trosaån mynnar i Östersjön"},{"label":"Delar","value":"Långgatorna, Östermalm, Ekensberg, Trosalund, Eriksberg, Karlsborg, Nyängen, Tomtaklint"},{"label":"Hustyper","value":"Låg trähusbebyggelse (gamla staden), villaområde (Östermalm)"},{"label":"Byggperiod","value":"Sekelskiftet 1900 (Östermalm, Ekensberg kort därefter), 1960- och 1970-talen (utbyggnaden)"}],
+    sourceLink: {"label":"Wikipedia, Trosa","url":"https://sv.wikipedia.org/wiki/Trosa"},
+    extraSections: [{"heading":"Den gamla staden vid ån","text":"Den äldre delen av bebyggelsen ligger enligt Wikipedia vid tomterna kring de båda Långgatorna, som löper parallellt med Trosaån. Staden brändes ner i grunden 1719, och kyrkan var det som skonades. Wikipedia nämner också den låga trähusbebyggelsen vid ån. Under århundraden var fisket invånarnas huvudnäring. Under andra hälften av 1800-talet gav ångbåtstrafiken staden ett uppsving, och i slutet av århundradet började Trosa bli en sommarstad och badort."},{"heading":"Östermalm och Ekensberg","text":"Efterhand växte bebyggelsen utanför det gamla stadsområdet. Villaområdet Östermalm tillkom enligt Wikipedia redan vid sekelskiftet 1900, och Ekensberg kort därefter."},{"heading":"Utbyggnaden på 1960- och 1970-talen","text":"Det var först under 1960- och 1970-talen som en mer omfattande utbyggnad började. Wikipedia nämner områdena Trosalund, Eriksberg, Karlsborg, Nyängen och Tomtaklint. Från 1930-talet hade en del mindre industrier vuxit fram, och numera pendlar många till arbetsplatser i Södertälje och Stockholm."},{"heading":"Vad det betyder för taket","text":"I Trosa står alltså låga trähus i den gamla staden, villor från tiden runt 1900 och områden som byggdes ut på 1960- och 1970-talen. Husens ålder säger inte hur gammalt taket är. På de äldre husen kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med att titta på taket på plats. Två saker är värda att tänka på. I ett område där husen byggdes under samma årtionden ser taken lika ut från gatan, men de har skötts och lagts om var för sig, så grannens tak säger inte mycket om ditt eget. Och ett hus som har byggts om och till har ofta takdelar av olika ålder, där skarven mellan dem är värd en extra titt. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Trosa. Fler orter finns på sidan Mälardalen. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Trosa och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "svalnas-osby",

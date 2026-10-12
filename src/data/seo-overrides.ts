@@ -899,4 +899,19 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare i Uppsala: villastaden i Kåbo, egnahemmen i Ekeby, Sunnersta och de yngre villaområdena. Kostnadsfri takkontroll och fast pris i offerten.",
   },
+  vasteras: {
+    title: "Takläggare i Västerås – fast pris efter takkontroll",
+    description:
+      "Takläggare i Västerås: äldre villor i Haga, 1940- och 50-talens Gideonsberg, villorna på Önsta-Gryta och orterna runt staden. Kostnadsfri takkontroll.",
+  },
+  nykoping: {
+    title: "Takläggare i Nyköping – fast pris efter takkontroll",
+    description:
+      "Takläggare i Nyköping: Östra villastaden från 1920, villorna i Harg och Stenbro från 1930-talet och de yngre villaområdena. Kostnadsfri takkontroll.",
+  },
+  trosa: {
+    title: "Takläggare i Trosa – fast pris efter takkontroll",
+    description:
+      "Takläggare i Trosa: den låga trähusbebyggelsen vid ån, villaområdet Östermalm från sekelskiftet 1900 och utbyggnaden på 1960- och 70-talen.",
+  },
 };
