@@ -36,8 +36,8 @@ const Index = () => {
 
   const handleSplashDone = useCallback(() => setShowSplash(false), []);
 
-  /* Guide-teasern drar in hela blog-posts-datan (≈ 60 KB överfört). Den ligger under vecket, så den
-     monteras först när webbläsaren är i vila (eller efter 3 s som tak), inte under första inläsningen. */
+  /* Guide-teasern ligger under vecket, så den monteras först när webbläsaren är i vila (eller efter 3 s som tak),
+     inte under första inläsningen. Den läser sex kort ur home-guide-cards.ts, inte hela guidetexten (paket 74a). */
   const [showTeaser, setShowTeaser] = useState(false);
   useEffect(() => {
     const ric = (window as unknown as { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback;

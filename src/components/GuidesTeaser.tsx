@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import { blogPosts } from "@/data/blog-posts";
-import { synligaGuider } from "@/data/avindexerade-guider";
-import { HOME_GUIDES, HOME_GUIDES_COUNT, homeGuideLeadCaption, homeGuideReadTime } from "@/data/home-guides";
+import { homeGuideCards } from "@/data/home-guide-cards";
+import { HOME_GUIDES, homeGuideLeadCaption, homeGuideReadTime } from "@/data/home-guides";
 import Reveal from "@/components/Reveal";
 import roofMacro from "@/assets/roof-build-01-raspont.jpg";
 
 /* Guider i nautisk asymmetri: roterat uppslag till vänster, hairline-lista till höger */
 const GuidesTeaser = () => {
-  const featured = synligaGuider(blogPosts).slice(0, HOME_GUIDES_COUNT);
+  // Korten hämtas ur en liten genererad lista (scripts/generate-home-guide-cards.ts), inte ur hela guidetexten i blog-posts.ts (paket 74a).
+  const featured = homeGuideCards;
   const [lead, ...rest] = featured;
 
   const jsonLd = {
