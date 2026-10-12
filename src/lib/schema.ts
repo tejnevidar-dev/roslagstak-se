@@ -1,4 +1,5 @@
-import { locationIndex as locations } from "@/data/location-index";
+import { locationIndex } from "@/data/location-index";
+import { synligaOrter } from "@/data/avindexerade-orter";
 import { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP, buildBreadcrumbNode } from "./schema-graph";
 
 export { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP };
@@ -61,6 +62,9 @@ export const services: { slug: string; name: string; description: string }[] = [
   },
 ];
 
+
+/** Orterna som får anges som plats vi tar uppdrag på: de avindexerade orterna (src/data/avindexerade-orter.ts) ingår inte. */
+const locations = synligaOrter(locationIndex);
 
 /** Unika regioner i ortsdatan — används som areaServed på områdesnivå. */
 export const serviceRegions = Array.from(new Set(locations.map((l) => l.region)));

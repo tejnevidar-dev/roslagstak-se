@@ -1,6 +1,7 @@
 /**
  * Ortssidor som är avindexerade (AJ5): sidan finns kvar på sin adress men är `noindex, follow`, står inte i sajtkartan och länkas inte
  * från sidor som listar orter (områdessidor, startsidans områdessektion, närliggande orter, ortslänkarna i den statiska HTML:en).
+ * De anges inte heller som plats vi tar uppdrag på i JSON-LD på indexerbara sidor (paket 71: företagsnodens areaServed; scripts/check-avindexerade.ts fäller bygget annars).
  * Reversibelt: töm listan. Adressen raderas aldrig. EN lista för React, statisk HTML, sajtkarta och kontrollerna.
  * Bara relativa importer.
  */
