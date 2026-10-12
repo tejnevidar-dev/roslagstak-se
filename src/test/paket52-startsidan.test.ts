@@ -45,10 +45,20 @@ describe("paket 52: startsidan", () => {
     expect(HOME_HERO.chips).toContain("Svar inom 24 timmar");
     expect(HOME_HERO.chips.join("|")).not.toMatch(/24 ?h\b/);
   });
+  it("St1, St3, St5: alt-texten i guideblocket, \"tar uppdrag i\" och \"Taktvätt och takmålning.\"", () => {
+    expect(kalla("src/components/GuidesTeaser.tsx")).toContain('alt="3D-visualisering av ett tak med råspont"');
+    const t = HOME_AREA_SEO_PARAGRAPHS.join("\n");
+    expect(t).toContain("Längs kusten tar vi uppdrag i Spillersboda, Bergshamra och Svartnö.");
+    expect(t).toContain("Vi tar uppdrag i Stockholm stad och");
+    expect(t).not.toMatch(/arbetar vi i/);
+    expect(kalla("src/data/home-sections.ts")).toContain('text: "Taktvätt och takmålning.",');
+    expect(kalla("src/data/home-sections.ts")).not.toContain("Taktvätt, behandling");
+  });
   it("Li3, Li4, Bi5: 'Var finns vi', 'Kunskap om tak' och bildtexten 'Takbyte på Blidö'", () => {
     expect(HOME_AREA_INTRO.eyebrow).toBe("Var finns vi");
     expect(HOME_GUIDES.headingA).toBe("Kunskap om tak");
     expect(HOME_GUIDES.headingB).toBe("");
     expect(HOME_ABOUT_CAPTION.text).toBe("Takbyte på Blidö");
+    expect(`${HOME_AREA_INTRO.headingA} ${HOME_AREA_INTRO.headingB}`).toBe("Från Roslagen till Storstockholm.");
   });
 });

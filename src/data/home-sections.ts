@@ -31,7 +31,7 @@ export const HOME_QUICK = {
     {
       label: "02 — Underhåll & pris",
       title: "Takvård & vad det kostar",
-      text: "Taktvätt, behandling och takmålning.",
+      text: "Taktvätt och takmålning.",
       cta: "Räkna på ditt tak",
     },
   ],
