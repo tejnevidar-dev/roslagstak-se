@@ -123,7 +123,7 @@ describe("paket 44b: juristens tillägg 1 på /cookies och tankstrecket", () => 
     expect(t).toContain("Hur du hittade oss:</strong> kommer du till oss via en annons eller en länk med ett kampanjnamn sparas kampanjens namn tillsammans med din förfrågan. Har du godkänt statistik sparas också vilken sida på webbplatsen du kom in på och vilken källa du kom från. Vi använder det för att se vilka annonser och sidor som leder till förfrågningar. Grunden är vårt berättigade intresse av att följa upp vår marknadsföring (artikel 6.1 f).");
     expect(t.indexOf("Förfrågan och takkontroll:")).toBeLessThan(t.indexOf("Hur du hittade oss:"));
     expect(t.indexOf("Hur du hittade oss:")).toBeLessThan(t.indexOf("Avtal och utförande:"));
-    expect(t).toContain("kopplat till annonsens klick-id. Aldrig med ditt namn, din telefon, din e-post eller din adress.");
+    // Paket 68: punkten "Google-annonsering" är struken (se paket68-cookies-google.test.ts)
     expect(t).not.toContain("klick-id — aldrig");
   });
 });

@@ -24,7 +24,7 @@ const sections: { title: string; text: string; rader?: { intro: string; poster: 
   },
   {
     title: "Marknadsföring (Google Ads och Meta)",
-    text: "I dag sätter vi inga kakor för marknadsföring. Om vi börjar mäta annonser via Google Ads eller Meta sätts de kakorna bara om du har godkänt marknadsföring. Om du även godkänner marknadsföring kan Google Ads och Meta (Facebook/Instagram) se att du besökt sajten, så att vi kan visa relevant annonsering och mäta vilka annonser som ger förfrågningar. Google Ads sätter cookies som _gcl_au (lagras ca 90 dagar). Metas pixel sätter _fbp och, om du kommer via en annons, _fbc (lagras ca 90 dagar). Vi skickar aldrig namn, telefonnummer, e-post eller annat du skrivit i ett formulär till Google eller Meta – ingen \"advanced matching\" eller \"enhanced conversions\", bara att ett besök eller en förfrågan skett. Google och Meta kan föra över uppgifter till länder utanför EU, till exempel USA, med stöd av EU:s beslut om tillräcklig skyddsnivå eller standardavtalsklausuler. Har du kommit till oss via en Google-annons och godkänt marknadsföring, meddelar vi också Google när en takkontroll har genomförts eller ett avtal har signerats, och avtalets värde. Det sker med annonsens klick-id, aldrig med ditt namn, din telefon, din e-post eller din adress. Utan ditt godkännande laddas ingen av dessa och inga marknadsföringscookies sätts.",
+    text: "I dag sätter vi inga kakor för marknadsföring, och Google Ads och Metas pixel är inte påslagna på webbplatsen. Om vi börjar mäta annonser på det sättet sker det bara om du har godkänt marknadsföring, och den här sidan uppdateras innan det börjar. Vi skickar aldrig namn, telefonnummer, e-post eller annat du har skrivit i ett formulär till Google eller Meta.",
   },
 ];
 
@@ -103,13 +103,6 @@ const CookiesPage = () => (
                 <li>
                   <strong className="text-foreground">Marknadsföring via sms eller mejl:</strong> bara om du har sagt
                   ja. Du kan när som helst ta tillbaka ditt samtycke.
-                </li>
-                <li>
-                  <strong className="text-foreground">Google-annonsering:</strong> har du kommit till oss via en
-                  Google-annons och godkänt marknadsföring, meddelar vi Google när en takkontroll har genomförts
-                  eller ett avtal har signerats, och avtalets värde, kopplat till annonsens klick-id. Aldrig med
-                  ditt namn, din telefon, din e-post eller din adress. Grunden är ditt samtycke (artikel 6.1 a), och
-                  du kan när som helst ta tillbaka det.
                 </li>
               </ul>
 
