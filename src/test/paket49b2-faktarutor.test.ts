@@ -51,6 +51,6 @@ describe("paket 49b-2: inga arbetsanteckningar i faktarutorna", () => {
     expect(f2).not.toContain("Koordinater");
     expect(f2).toContain("Läge");
     expect(buildLocalSections(o).facts.find((x) => x.label === "Läge")?.value).toBe("Ö i skärgården");
-    expect(f1).toEqual(["Område", "Närmaste orter", "Avstånd till vår bas i Norrtälje"]);
+    expect(f1).toEqual(["Område", "Närmaste orter", "Avstånd till vår bas i Norrtälje (fågelvägen)"]);
   });
 });

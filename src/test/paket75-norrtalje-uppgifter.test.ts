@@ -58,11 +58,12 @@ describe("paket 75: tre jobb på de två Norrtälje-sidorna", () => {
   });
 });
 
-describe("paket 75: avståndet till Hallstavik följer koordinaterna", () => {
-  it("rutans värde är 33 km fågelvägen, och ortstexten säger drygt tre mil (inte fyra)", () => {
+describe("paket 75: avståndet till Hallstavik: texten är vägen, rutan är fågelvägen", () => {
+  it("rutans värde är 33 km fågelvägen och etiketten säger det; ortstexten (källan anger cirka 41 km, vägen) säger omkring fyra mil", () => {
     const h = locations.find((l) => l.slug === "hallstavik")!;
     expect(Math.round(distanceFromBaseKm(h))).toBe(33);
-    expect(text("/taklaggare-hallstavik")).toContain("drygt tre mil från Norrtälje");
-    expect(text("/taklaggare-hallstavik")).not.toContain("omkring fyra mil från Norrtälje");
+    expect(text("/taklaggare-hallstavik")).toContain("omkring fyra mil från Norrtälje");
+    expect(text("/taklaggare-hallstavik")).toContain("Avstånd till vår bas i Norrtälje (fågelvägen)");
+    expect(text("/taklaggare-hallstavik")).not.toContain("drygt tre mil");
   });
 });
