@@ -19,6 +19,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, readdirSync
 import { resolve, dirname } from "path";
 import { tmpdir } from "os";
 import { build as esbuild } from "esbuild";
+import postcss from "postcss";
 import { pathToFileURL } from "url";
 
 const SITE_URL = "https://roslagstak.se";
@@ -330,6 +331,39 @@ if (earlyHints) {
     `<meta charset="UTF-8" />\n    ${earlyHints}`,
   );
 }
+/* Kritisk CSS (paket 62): det fulla stilbladet (ca 100 kB) blockerar första målningen. Per sida läggs i stället de regler som sidans statiska HTML behöver inline
+   (bas, variabler, typsnitt och de klasser kakrutan och texten använder), och hela stilbladet laddas utan att blockera (media=print, byts till all vid load).
+   Reglerna väljs ur det byggda stilbladet: en regel tas med om någon av dess selektorer saknar klasser eller bara använder klasser som står i sidans HTML.
+   React väntar på det fulla stilbladet innan första ritningen (src/main.tsx), så besökaren ser aldrig ostylad React-text. */
+const cssFil = mainCss ? resolve(dist, "." + mainCss) : null;
+const cssRot = cssFil && existsSync(cssFil) ? postcss.parse(readFileSync(cssFil, "utf8")) : null;
+const klassIselektor = (sel) => [...sel.matchAll(/\.((?:\\.|[A-Za-z0-9_-])+)/g)].map((m) => m[1].replace(/\\(.)/g, "$1"));
+const valjRegler = (noder, klasser) => {
+  const ut = [];
+  for (const n of noder) {
+    if (n.type === "rule") {
+      const behovs = n.selectors.some((s) => klassIselektor(s).every((k) => klasser.has(k)));
+      if (behovs) ut.push(n.toString());
+    } else if (n.type === "atrule" && n.name === "font-face") ut.push(n.toString());
+    else if (n.type === "atrule" && (n.name === "media" || n.name === "supports") && n.nodes) {
+      const inre = valjRegler(n.nodes, klasser);
+      if (inre.length) ut.push(`@${n.name} ${n.params}{${inre.join("")}}`);
+    }
+  }
+  return ut;
+};
+const kritiskCss = (html) => {
+  if (!cssRot || !mainCss) return html;
+  const kropp = html.slice(html.indexOf('<div id="root">'));
+  const klasser = new Set([...kropp.matchAll(/class="([^"]*)"/g)].flatMap((m) => m[1].split(/\s+/).filter(Boolean)));
+  const regler = valjRegler(cssRot.nodes, klasser).join("");
+  const lank = html.match(/<link rel="stylesheet"([^>]*?)href="([^"]+)"([^>]*)\/?>/);
+  if (!lank || lank[2] !== mainCss) return html;
+  const lat = `<style data-kritisk-css>${regler}</style>
+    <link rel="stylesheet"${lank[1]}href="${mainCss}"${lank[3]} media="print" onload="this.media='all'" data-css-lazy />
+    <noscript><link rel="stylesheet"${lank[1]}href="${mainCss}"${lank[3]} /></noscript>`;
+  return html.replace(lank[0], () => lat);
+};
 // Samtyckeskontrollen för cookie-bannern (#1ag) måste köras på VARJE sida, så den läggs i den
 // delade mallen innan loopen, inte per route.
 stripped = stripped.replace("<meta charset=\"UTF-8\" />", `<meta charset="UTF-8" />\n    ${STATIC_COOKIE_HEAD}`);
@@ -428,6 +462,7 @@ for (const { path, robots } of routes) {
   // Cookie-bannern (#1ag) hamnar på ALLA sidor, inklusive noindex — React ersätter hela #root
   // vid montering, så den statiska kopian stannar aldrig kvar bredvid den riktiga.
   html = html.replace('<div id="root"></div>', `<div id="root">${staticCookieBannerHtml}${body}</div>`);
+  html = kritiskCss(html);
   const out = path === "/" ? templatePath : resolve(dist, `.${path}.html`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, html);
@@ -484,7 +519,7 @@ const aliasEntries = [
       <nav aria-label="Sidlänkar"><ul><li><a href="/">Till startsidan</a></li><li><a href="/takkontroll">Kostnadsfri takkontroll</a></li><li><a href="/omraden">Områden</a></li><li><a href="/kontakt">Kontakt</a></li></ul></nav>
     </div></div>`,
   );
-  writeFileSync(resolve(dist, "404.html"), html);
+  writeFileSync(resolve(dist, "404.html"), kritiskCss(html));
 }
 
 let aliases = 0;
