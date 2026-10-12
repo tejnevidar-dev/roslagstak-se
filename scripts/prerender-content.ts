@@ -246,7 +246,7 @@ const comboByUrl = new Map(combos.map((c) => [c.url, c]));
 const referensCases = HOME_REFERENS_ORDER.map((slug) => projectTexts.find((p) => p.slug === slug)).filter((p): p is NonNullable<typeof p> => !!p);
 
 const home: PrerenderPage = {
-  h1: "Ett tak du kan lita på.",
+  h1: "Takläggare i Roslagen — takbyte & takrenovering",
   intro:
     "RoslagsTak är en takfirma med bas i Norrtälje och takläggare i Roslagen och Storstockholm. Vi utför takbyte, takomläggning, takrenovering, takreparation och hängrännor. Vi lämnar 10 års utförandegaranti på det arbete vi utför.",
     paragraphs: [

@@ -12,10 +12,10 @@ import { HOME_HERO } from "@/data/home-sections";
 const kalla = (f: string) => readFileSync(f, "utf8");
 
 describe("paket 52: startsidan", () => {
-  it("S3: serverns H1 och React-H1 är samma, 'Ett tak du kan lita på.'", () => {
-    expect(prerenderContent("/")!.h1).toBe("Ett tak du kan lita på.");
+  it("S3 (alternativ B): serverns H1 och React-H1 är samma, 'Takläggare i Roslagen — takbyte & takrenovering'", () => {
+    expect(prerenderContent("/")!.h1).toBe("Takläggare i Roslagen — takbyte & takrenovering");
     const h = kalla("src/components/Hero.tsx");
-    expect(h).toMatch(/Ett tak du kan lita på\.\r?\n/);
+    expect(h).toContain("Takläggare i Roslagen — takbyte & takrenovering");
     expect(h).not.toContain("i decennier framöver");
   });
   it("1.1: ingressen har Marknadschefens lydelse (takfirma med bas, Roslagen och Storstockholm, utan plåtarbeten, taktvätt och hela)", () => {

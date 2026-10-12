@@ -99,7 +99,7 @@ const Hero = () => {
             {HOME_HERO.eyebrow}
           </p>
           <h1 className="mt-3 max-w-[20ch] font-display text-[clamp(2rem,4.4vw,3.4rem)] font-semibold leading-[1.1] tracking-[-0.015em] text-primary-foreground">
-            Ett tak du kan lita på.
+            Takläggare i Roslagen — takbyte & takrenovering
           </h1>
           <p className="mt-3 max-w-[46ch] text-[17px] leading-[1.65] text-primary-foreground/80 lg:mt-6">
             {HOME_HERO.text}
