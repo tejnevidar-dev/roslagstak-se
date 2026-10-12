@@ -8,7 +8,7 @@ import { GARANTI_RENOVERING_CHIP } from "./guarantee";
 export const HOME_HERO = {
   eyebrow: "Takläggare i Roslagen & Stockholm",
   text: "Vi tar hand om hela processen — från första takkontrollen till sista plåtdetaljen. Takbyte, takrenovering och takreparation för villor och bostadsrättsföreningar i Roslagen och Storstockholm.",
-  chips: ["10 års utförandegaranti", GARANTI_RENOVERING_CHIP, "Fast pris", "Arbete enligt AMA", "Svar inom 24 h"],
+  chips: ["10 års utförandegaranti", GARANTI_RENOVERING_CHIP, "Fast pris", "Arbete enligt AMA", "Svar inom 24 timmar"],
 };
 
 export const HOME_TRUST_ITEMS: { value: string; label: string; accent?: boolean }[] = [

@@ -42,6 +42,8 @@ describe("paket 52: startsidan", () => {
     expect(HOME_ABOUT_P1).not.toMatch(/alltid|plåtarbeten/);
     expect(kalla("src/data/home-sections.ts")).not.toContain("svenskt klimat");
     expect(kalla("src/components/Hero.tsx")).toContain("och Storstockholm —");
+    expect(HOME_HERO.chips).toContain("Svar inom 24 timmar");
+    expect(HOME_HERO.chips.join("|")).not.toMatch(/24 ?h\b/);
   });
   it("Li3, Li4, Bi5: 'Var finns vi', 'Kunskap om tak' och bildtexten 'Takbyte på Blidö'", () => {
     expect(HOME_AREA_INTRO.eyebrow).toBe("Var finns vi");
