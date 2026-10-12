@@ -33,6 +33,7 @@ describe("paket 52: startsidan", () => {
     const t = HOME_AREA_SEO_PARAGRAPHS.join("\n") + homeAreaIntroText(7);
     for (const borta of ["takbyte på Blidö", "takrenovering på Ljusterö", "plåttak på Yxlan", "bandtäckning i Danderyd", "plåttak i Bromma", "alla typer av takarbeten", "Finnhamn", "hela Storstockholm", "plåtarbeten", "ö utan bro", "återkopplar"]) expect(t, borta).not.toContain(borta);
     expect(HOME_AREA_SEO_PARAGRAPHS[0]).toBe("Behöver du en **takläggare i Roslagen** eller [takläggare i Stockholm](/taklaggare-stockholm)? Vi är en takfirma med bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm. Vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn.");
+    expect(HOME_AREA_SEO_PARAGRAPHS[HOME_AREA_SEO_PARAGRAPHS.length - 1]).toContain("Oavsett om du söker [takbyte i Stockholm](/takbyte-stockholm), [takomläggning i Norrtälje](/takomlaggning-norrtalje), **takbyte i Roslagen** eller **takrenovering på Väddö**, kontakta oss för en kostnadsfri takkontroll.");
     expect(homeAreaIntroText(7)).toBe("Vi utför takbyte, takomläggning och takrenovering och tar uppdrag i 7 områden i Roslagen och Storstockholm. Vi tar också uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.");
   });
   it("2.3: hero-texten, om-oss-texten och sektionstexten", () => {
