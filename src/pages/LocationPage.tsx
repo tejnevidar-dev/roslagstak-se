@@ -431,6 +431,7 @@ const LocationPage = () => {
                   </div>
                 ))}
 
+                {!slim.utanOmrade && (
                 <dl className="mb-6 grid gap-x-6 gap-y-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2">
                   {localSections.facts.map((fact) => (
                     <div key={fact.label}>
@@ -441,7 +442,7 @@ const LocationPage = () => {
                     </div>
                   ))}
                 </dl>
-
+                )}
 
                 {!slim.utanTaktjanster && (
                   <>
@@ -575,7 +576,7 @@ const LocationPage = () => {
                   </div>
                 </div>
 
-                {locationWhySections(location, prep, far).filter((_, i) => !(slim.utanOmOrt && i === 1)).map((sec) => (
+                {locationWhySections(location, prep, far).filter((sec) => !(slim.utanOmOrt && sec.id === "om-ort")).map((sec) => (
                   <Fragment key={sec.heading}>
                     <h3 className="font-display text-xl text-foreground mb-3">{sec.heading}</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">{sec.paragraph}</p>

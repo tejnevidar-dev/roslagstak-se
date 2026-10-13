@@ -7,6 +7,8 @@ import type { LocationData } from "@/data/locations";
 import { projectTexts } from "@/data/project-texts";
 
 export interface LocationSection {
+  /** Fast nyckel (paket 72): location-slim.ts stänger av ett avsnitt med nyckeln, inte med dess plats i listan. */
+  id: "sa-arbetar-vi" | "om-ort";
   heading: string;
   paragraph: string;
 }
@@ -44,10 +46,12 @@ export const locationWhySections = (location: LocationData, prep: string, far: b
       : `${location.name} hör till ${regionIMening(location.region)} i vår områdesindelning. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`;
   return [
     {
+      id: "sa-arbetar-vi",
       heading: `Takläggare ${prep} ${location.name}: så arbetar vi`,
       paragraph: `${uppdrag}${skargard} Vi arbetar enligt AMA. ${GARANTI_RENOVERING}`,
     },
     {
+      id: "om-ort",
       heading: omOrtRubrik(location),
       paragraph: `${region} Kontakta oss för en kostnadsfri takkontroll ${prep} ${location.name}, utan förpliktelser.`,
     },

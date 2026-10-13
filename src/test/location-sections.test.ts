@@ -68,7 +68,7 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
       const prep = ortPrep(l);
       const text = page.paragraphs.map((p) => (typeof p === "string" ? p : (p as { h: string }).h ?? "")).join("\n");
       // Paket 72: sidor med egen text kan ha avsnittet "Om <ort>" avstängt (location-slim.ts)
-      for (const s of locationWhySections(l, prep, !l.isIsland && !isNearBase(l)).filter((_, i) => !(slimFor(l.slug).utanOmOrt && i === 1))) {
+      for (const s of locationWhySections(l, prep, !l.isIsland && !isNearBase(l)).filter((s) => !(slimFor(l.slug).utanOmOrt && s.id === "om-ort"))) {
         if (!text.includes(s.heading) || !text.includes(s.paragraph)) saknas.push(`${l.slug}: ${s.heading}`);
       }
     }

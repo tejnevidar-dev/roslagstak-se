@@ -8,6 +8,7 @@ import { locations } from "@/data/locations";
 import { LOCATION_SLIM, slimFor, slimFragor } from "@/data/location-slim";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { sektionsBitar, sektionsStycken } from "@/lib/sektionstext";
+import { locationWhySections } from "@/data/location-sections";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 const sida = (slug: string) => prerenderContent("/taklaggare-" + slug)!;
@@ -56,6 +57,22 @@ describe("paket 72: Norrtälje-sidan", () => {
     expect(t.split("MATAKI").length - 1).toBeLessThanOrEqual(1);
     const nyaDelar = [norr().longDescription, ...(norr().extraSections ?? []).map((s) => s.text)].join("\n");
     expect(nyaDelar).not.toMatch(/MATAKI|tätskikt|30 års/i);
+  });
+  it("Om <ort> stängs av med nyckel: varje sida som stänger av det har exakt ett avsnitt med id \"om-ort\", och \"så arbetar vi\" står kvar (testet fäller om nyckeln inte hittas)", () => {
+    for (const [slug, slim] of Object.entries(LOCATION_SLIM)) {
+      if (!slim.utanOmOrt) continue;
+      const l = locations.find((x) => x.slug === slug)!;
+      const avsnitt = locationWhySections(l, l.isIsland ? "på" : "i", false);
+      expect(avsnitt.filter((a) => a.id === "om-ort").length, slug).toBe(1);
+      expect(avsnitt.filter((a) => a.id === "sa-arbetar-vi").length, slug).toBe(1);
+      expect(text(slug)).toContain(avsnitt.find((a) => a.id === "sa-arbetar-vi")!.heading);
+      expect(text(slug)).not.toContain(avsnitt.find((a) => a.id === "om-ort")!.heading);
+    }
+  });
+  it("rutan Område (läge och närmaste orter) är borta på Norrtälje men står kvar på de andra sidorna", () => {
+    expect(LOCATION_SLIM.norrtalje.utanOmrade).toBe(true);
+    expect(text("norrtalje")).not.toMatch(/Närmaste orter/);
+    for (const slug of ["rimbo", "hallstavik", "taby", "grisslehamn"]) expect(text(slug), slug).toContain("Närmaste orter");
   });
   it("andra ortssidor har sina mallavsnitt kvar", () => {
     for (const slug of ["rimbo", "hallstavik", "taby", "grisslehamn"]) {

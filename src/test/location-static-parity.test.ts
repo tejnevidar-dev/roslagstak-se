@@ -19,7 +19,7 @@ describe("/taklaggare-<ort>: statisk text", () => {
       const lista = prerenderContent(`/taklaggare-${loc.slug}`)?.paragraphs ?? [];
       const prep = ortPrep(loc);
       const förväntat = [
-        ...buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value]),
+        ...(slimFor(loc.slug).utanOmrade ? [] : buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value])),
         // Paket 72: sidor med egen text kan ha mallavsnitt avstängda (location-slim.ts); resten av listan gäller alla sidor
         ...(slimFor(loc.slug).utanTaktjanster ? [] : [LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name)]),
         ...(slimFor(loc.slug).utanPris ? [] : [LOCATION_PAGE_TEXT.priceHeading(prep, loc.name), LOCATION_PAGE_TEXT.priceText(prep, loc.name, loc.isIsland)]),

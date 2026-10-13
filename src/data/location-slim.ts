@@ -10,8 +10,10 @@ export interface LocationSlim {
   utanTaktjanster?: boolean;
   /** Stycket "Vad kostar takbyte i <ort>?". */
   utanPris?: boolean;
-  /** Avsnittet "Om <ort>" (det andra av de två avsnitten ur location-sections.ts). */
+  /** Avsnittet "Om <ort>" (id "om-ort" i location-sections.ts; stängs av med nyckeln, inte med plats i listan). */
   utanOmOrt?: boolean;
+  /** Rutan "Område" (läge och närmaste orter, local-sections.ts): säger inget på basens egen sida. */
+  utanOmrade?: boolean;
   /** Stycket "<Ort> tillhör <region>. Närmaste orter … Vi har egna sidor för …" (bara i serverns HTML). */
   utanGeoFakta?: boolean;
   /** Frågor som texten redan besvarar, som början av frågan. Tas bort ur den synliga listan och ur FAQPage (samma lista driver båda). */
@@ -24,6 +26,7 @@ export const LOCATION_SLIM: Record<string, LocationSlim> = {
     utanTaktjanster: true,
     utanPris: true,
     utanOmOrt: true,
+    utanOmrade: true,
     utanGeoFakta: true,
     utelamnaFragor: [
       "Vad kostar ett takbyte",

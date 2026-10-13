@@ -1272,12 +1272,12 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...villaAreasBlocks(loc.slug),
         ...(mall || slim.utanGeoFakta ? [] : [geoFactsParagraph(loc)]),
         // Lokala fakta (dt/dd), taktjänster, pris och länkrubrik i samma ordning som LocationPage.tsx (AD5)
-        ...buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value]),
+        ...(slim.utanOmrade ? [] : buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value])),
         ...(slim.utanTaktjanster ? [] : [{ h: LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), level: 3 as const }, ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name)]),
         ...(slim.utanPris ? [] : [{ h: LOCATION_PAGE_TEXT.priceHeading(prep, loc.name), level: 3 as const }, LOCATION_PAGE_TEXT.priceText(prep, loc.name, loc.isIsland)]),
         { h: LOCATION_PAGE_TEXT.linksHeading(prep, loc.name), level: 3 as const },
         // Avsnitten "Varför välja RoslagsTak …" och "Om <ort> och takläggning i <region>" (samma funktion som LocationPage.tsx, AA3).
-        ...locationWhySections(loc, prep, !loc.isIsland && !isNearBase(loc)).filter((_, i) => !(slim.utanOmOrt && i === 1)).flatMap((s) => [{ h: s.heading, level: 3 as const }, s.paragraph]),
+        ...locationWhySections(loc, prep, !loc.isIsland && !isNearBase(loc)).filter((s) => !(slim.utanOmOrt && s.id === "om-ort")).flatMap((s) => [{ h: s.heading, level: 3 as const }, s.paragraph]),
         // Hela FAQ:n som sidan visar (samma funktion som LocationPage.tsx), med rubriker, och FAQPage-schema nedan.
         { h: `Vanliga frågor om takbyte ${prep} ${loc.name}`, level: 2 as const },
         ...locationFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),
