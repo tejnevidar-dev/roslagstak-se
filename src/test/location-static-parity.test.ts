@@ -7,6 +7,7 @@ import { GOOGLE_REVIEWS_TEXT } from "@/data/google-reviews-text";
 import { buildLocalSections } from "@/data/local-sections";
 import { LOCATION_PAGE_TEXT } from "@/data/location-page-text";
 import { locations } from "@/data/locations";
+import { slimFor } from "@/data/location-slim";
 import { villaAreasBlocks } from "@/data/villa-areas";
 import { prerenderContent } from "../../scripts/prerender-content";
 import { ortPrep } from "@/data/ort-prep";
@@ -19,8 +20,9 @@ describe("/taklaggare-<ort>: statisk text", () => {
       const prep = ortPrep(loc);
       const förväntat = [
         ...buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value]),
-        LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name),
-        LOCATION_PAGE_TEXT.priceHeading(prep, loc.name), LOCATION_PAGE_TEXT.priceText(prep, loc.name, loc.isIsland),
+        // Paket 72: sidor med egen text kan ha mallavsnitt avstängda (location-slim.ts); resten av listan gäller alla sidor
+        ...(slimFor(loc.slug).utanTaktjanster ? [] : [LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name)]),
+        ...(slimFor(loc.slug).utanPris ? [] : [LOCATION_PAGE_TEXT.priceHeading(prep, loc.name), LOCATION_PAGE_TEXT.priceText(prep, loc.name, loc.isIsland)]),
         LOCATION_PAGE_TEXT.linksHeading(prep, loc.name), LOCATION_PAGE_TEXT.asideHeading, LOCATION_PAGE_TEXT.asideText(prep, loc.name),
         LOCATION_PAGE_TEXT.problemsHeading, LOCATION_PAGE_TEXT.sidebarServicesHeading, LOCATION_PAGE_TEXT.allLocationsHeading,
         GOOGLE_REVIEWS_TEXT.bandEyebrow, GOOGLE_REVIEWS_TEXT.title, GOOGLE_REVIEWS_TEXT.ingress,

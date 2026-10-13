@@ -127,6 +127,9 @@ const MONEY_LINKS = [
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { applyMall, OAR_UTAN_BILVAG, usesMall } from "../src/data/location-mall";
 import { referensMening } from "../src/data/location-referens";
+import { radUnderRubrik } from "../src/data/location-rad";
+import { slimFor, slimFragor } from "../src/data/location-slim";
+import { sektionsStycken } from "../src/lib/sektionstext";
 import { isNearBase, distanceFromBaseKm, distanceKm } from "../src/data/service-reach";
 import { locationWhySections } from "../src/data/location-sections";
 import { hasServiceCombos } from "../src/data/service-slugs";
@@ -1230,8 +1233,10 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const mall = usesMall(rawLoc);
     const loc = applyMall(rawLoc);
     const prep = ortPrep(loc);
-    const locationFaqs = generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ);
-    const referensMd = mall ? null : referensMening(loc, prep);
+    // Paket 72: mallavsnitt som sidans egen text redan ersätter (location-slim.ts), samma lista som LocationPage.tsx läser.
+    const slim = slimFor(loc.slug);
+    const locationFaqs = slimFragor(loc.slug, generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ));
+    const referensMd = mall || slim.utanReferensmening ? null : referensMening(loc, prep);
     const regionHref = regionSlugs[loc.region] ? `/omraden/${regionSlugs[loc.region]}` : "/omraden";
     return {
       title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
@@ -1252,7 +1257,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         loc.longDescription,
         ...(referensMd ? [stripInlineMd(referensMd)] : []),
         ...(loc.extraContent ? [loc.extraContent] : []),
-        ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, stripInlineMd(sec.text)]),
+        ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, ...sektionsStycken(sec.text).map(stripInlineMd)]),
         ...(loc.process
           ? [
               { h: "Så går det till", level: 3 as const, suffix: "." },
@@ -1265,16 +1270,14 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(loc.factBox ? loc.factBox.flatMap((f) => [f.label, f.value]) : []),
         ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label}`] : []),
         ...villaAreasBlocks(loc.slug),
-        ...(mall ? [] : [geoFactsParagraph(loc)]),
+        ...(mall || slim.utanGeoFakta ? [] : [geoFactsParagraph(loc)]),
         // Lokala fakta (dt/dd), taktjänster, pris och länkrubrik i samma ordning som LocationPage.tsx (AD5)
         ...buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value]),
-        { h: LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), level: 3 as const },
-        ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name),
-        { h: LOCATION_PAGE_TEXT.priceHeading(prep, loc.name), level: 3 as const },
-        LOCATION_PAGE_TEXT.priceText(prep, loc.name, loc.isIsland),
+        ...(slim.utanTaktjanster ? [] : [{ h: LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), level: 3 as const }, ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name)]),
+        ...(slim.utanPris ? [] : [{ h: LOCATION_PAGE_TEXT.priceHeading(prep, loc.name), level: 3 as const }, LOCATION_PAGE_TEXT.priceText(prep, loc.name, loc.isIsland)]),
         { h: LOCATION_PAGE_TEXT.linksHeading(prep, loc.name), level: 3 as const },
         // Avsnitten "Varför välja RoslagsTak …" och "Om <ort> och takläggning i <region>" (samma funktion som LocationPage.tsx, AA3).
-        ...locationWhySections(loc, prep, !loc.isIsland && !isNearBase(loc)).flatMap((s) => [{ h: s.heading, level: 3 as const }, s.paragraph]),
+        ...locationWhySections(loc, prep, !loc.isIsland && !isNearBase(loc)).filter((_, i) => !(slim.utanOmOrt && i === 1)).flatMap((s) => [{ h: s.heading, level: 3 as const }, s.paragraph]),
         // Hela FAQ:n som sidan visar (samma funktion som LocationPage.tsx), med rubriker, och FAQPage-schema nedan.
         { h: `Vanliga frågor om takbyte ${prep} ${loc.name}`, level: 2 as const },
         ...locationFaqs.flatMap((f) => [{ h: f.question, level: 3 as const }, stripInlineMd(f.answer)]),

@@ -19,6 +19,9 @@ import GoogleReviews from "@/components/GoogleReviews";
 import { locations } from "@/data/locations";
 import { getLocationWithMall, OAR_UTAN_BILVAG, usesMall } from "@/data/location-mall";
 import { referensMening } from "@/data/location-referens";
+import { radUnderRubrik } from "@/data/location-rad";
+import { slimFor, slimFragor } from "@/data/location-slim";
+import { sektionsBitar } from "@/lib/sektionstext";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { LOCATION_PAGE_TEXT } from "@/data/location-page-text";
@@ -71,10 +74,12 @@ const LocationPage = () => {
     : [];
   const prep = ortPrep(location);
   // Referensmeningen använder sidans egen prep, så att React och serverns HTML inte kan skilja sig (paket 79).
-  const referens = referensMening(location, prep);
+  // Paket 72: mallavsnitt som en sidas egen text redan ersätter (location-slim.ts), samma lista som serverns HTML läser.
+  const slim = slimFor(location.slug);
+  const referens = slim.utanReferensmening ? null : referensMening(location, prep);
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
-  const faqs = generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ);
+  const faqs = slimFragor(location.slug, generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -113,7 +118,7 @@ const LocationPage = () => {
       "Dubbelfalsat plåttak", "Pannplåt", "Takavvattning",
       "Hängrännor", "Takkontroll", "Taksäkerhet",
     ],
-    hasOfferCatalog: {
+    ...(slim.utanTaktjanster ? {} : { hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `Taktjänster ${prep} ${location.name}`,
       itemListElement: [
@@ -123,7 +128,7 @@ const LocationPage = () => {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Plåtarbeten ${prep} ${location.name}` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takavvattning ${prep} ${location.name}` } },
       ],
-    },
+    } }),
   };
 
   const faqJsonLd = {
@@ -298,7 +303,23 @@ const LocationPage = () => {
                 {location.extraSections?.map((section) => (
                   <div key={section.heading}>
                     <h3 className="font-display text-xl text-foreground mb-3">{section.heading}</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-6">{renderInline(section.text)}</p>
+                    {sektionsBitar(section.text).map((bit, i) =>
+                      bit.typ === "p" ? (
+                        <p key={i} className="text-muted-foreground leading-relaxed mb-6">{renderInline(bit.text)}</p>
+                      ) : bit.typ === "ol" ? (
+                        <ol key={i} className="mb-6 list-decimal space-y-2 pl-5 text-muted-foreground leading-relaxed">
+                          {bit.rader.map((rad) => (
+                            <li key={rad}>{renderInline(rad)}</li>
+                          ))}
+                        </ol>
+                      ) : (
+                        <ul key={i} className="mb-6 list-disc space-y-2 pl-5 text-muted-foreground leading-relaxed">
+                          {bit.rader.map((rad) => (
+                            <li key={rad}>{renderInline(rad)}</li>
+                          ))}
+                        </ul>
+                      ),
+                    )}
                   </div>
                 ))}
 
@@ -422,6 +443,8 @@ const LocationPage = () => {
                 </dl>
 
 
+                {!slim.utanTaktjanster && (
+                  <>
                 <h3 className="font-display text-xl text-foreground mb-3">
                   {LOCATION_PAGE_TEXT.servicesHeading(prep, location.name)}
                 </h3>
@@ -433,13 +456,19 @@ const LocationPage = () => {
                     </li>
                   ))}
                 </ul>
+                  </>
+                )}
 
+                {!slim.utanPris && (
+                  <>
                 <h3 className="font-display text-xl text-foreground mb-3">
                   {LOCATION_PAGE_TEXT.priceHeading(prep, location.name)}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {LOCATION_PAGE_TEXT.priceText(prep, location.name, location.isIsland)}
                 </p>
+                  </>
+                )}
 
                 {/* Deep internal links */}
                 <div className="bg-card border border-border rounded-2xl p-5 mb-6">
@@ -546,7 +575,7 @@ const LocationPage = () => {
                   </div>
                 </div>
 
-                {locationWhySections(location, prep, far).map((sec) => (
+                {locationWhySections(location, prep, far).filter((_, i) => !(slim.utanOmOrt && i === 1)).map((sec) => (
                   <Fragment key={sec.heading}>
                     <h3 className="font-display text-xl text-foreground mb-3">{sec.heading}</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">{sec.paragraph}</p>

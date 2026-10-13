@@ -12,7 +12,9 @@ import { prerenderContent, styckenMedLankar } from "../../scripts/prerender-cont
 import { ortPrep } from "@/data/ort-prep";
 
 const kalla = (f: string) => readFileSync(f, "utf8");
-const ownText = locations.filter((l) => !usesMall(l));
+// Paket 72: sidor vars egen text ersätter referensmeningen (location-slim.ts) räknas inte här
+import { slimFor } from "@/data/location-slim";
+const ownText = locations.filter((l) => !usesMall(l) && !slimFor(l.slug).utanReferensmening);
 
 describe("paket 79: referensmeningen efter områdestextens första stycke", () => {
   it("lydelsen är densamma som förut: 'Ett referensjobb i närområdet: …' och 'Vi har utfört ett dokumenterat referensjobb här: …'", () => {
