@@ -16,7 +16,8 @@ describe("paket 78: J1 högst en gång per ö-sida", () => {
     const l = locations.find((x) => x.slug === slug)!;
     const sida = prerenderContent("/taklaggare-" + slug)!;
     const text = [sida.intro ?? "", ...sida.paragraphs].join("\n");
-    expect(text.split(J1_GAMMAL).length - 1, slug).toBe(1);
+    // Paket 79: på Blidö, där jobbet gjordes, står referensmeningen och J1 är avstängd; på de övriga står J1 en gång.
+    expect(text.split(J1_GAMMAL).length - 1, slug).toBe(slug === "blido" ? 0 : 1);
     const svar = generateLocationFAQs(l.name, "på", l.isIsland, l.uniqueFAQ).find((f) => f.question.startsWith("Hur bokar jag"))!.answer;
     expect(svar).not.toContain("Blidö och Singö");
     expect(svar).toContain("Takkontrollen är kostnadsfri och utan förpliktelser.");

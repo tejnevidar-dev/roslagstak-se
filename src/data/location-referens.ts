@@ -2,7 +2,7 @@
  * Meningen om referensjobbet på ortssidor med egen text (paket 79, Marknadschefen 2026-10-13, förslag B): den står direkt efter områdestextens första stycke, lika i React och i serverns HTML.
  * Förut stod den bara i serverns HTML (geoFactsParagraph i prerender-content.ts), mitt på sidan; React visade bara en länk i länkrutan. Lydelsen och urvalet är oförändrade:
  * ett eget jobb på orten, annars det första jobbet inom 30 km (fågelvägen), och aldrig ett "i närområdet" utan att jobbets ort står utskriven.
- * Sidor som använder mallen har sin egen mening (location-mall.ts) och berörs inte. Bara relativa importer.
+ * Öar utan eget jobb får ingen referensmening (de har J1 i "så arbetar vi"); öar med eget jobb (Blidö) får den och har då ingen J1. Mallsidor har sin egen mening (location-mall.ts), som är avstängd på öar. Bara relativa importer.
  */
 import { locations } from "./locations";
 import { projectTexts } from "./project-texts";
@@ -10,9 +10,11 @@ import { distanceKm } from "./service-reach";
 
 const NEARBY_PROJECT_MAX_KM = 30;
 
-export const referensMening = (loc: { slug: string; name: string; lat: number; lng: number }, prep: string): string | null => {
+export const referensMening = (loc: { slug: string; name: string; lat: number; lng: number; isIsland?: boolean }, prep: string): string | null => {
   const exact = projectTexts.find((p) => p.locationSlug === loc.slug);
   if (exact) return `Vi har utfört ett dokumenterat referensjobb här: ${exact.title}.`;
+  // En ö-sida har redan J1 i "så arbetar vi" (en mening om egna jobb per sida), och avståndet till ett jobb över vatten säger inte mycket om en ö (Marknadschefens val 2026-10-13).
+  if (loc.isIsland) return null;
   const near = projectTexts.find((p) => {
     const projectLoc = locations.find((l) => l.slug === p.locationSlug);
     return !!projectLoc && distanceKm(loc, projectLoc) <= NEARBY_PROJECT_MAX_KM;

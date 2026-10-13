@@ -4,6 +4,7 @@
  */
 import { GARANTI_RENOVERING } from "@/data/guarantee";
 import type { LocationData } from "@/data/locations";
+import { projectTexts } from "@/data/project-texts";
 
 export interface LocationSection {
   heading: string;
@@ -34,7 +35,9 @@ export const locationWhySections = (location: LocationData, prep: string, far: b
   const uppdrag = far
     ? `Vi tar uppdrag ${prep} ${location.name} och närområdet, för både villaägare och bostadsrättsföreningar, med kostnadsfri takkontroll och fast pris.`
     : `Vi tar uppdrag ${prep} ${location.name} och i Roslagen och Storstockholm, med kostnadsfri takkontroll och fast pris.`;
-  const skargard = far ? "" : location.isIsland ? ` Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.` : "";
+  // Paket 79 (Marknadschefens val 2026-10-13): en mening om egna jobb per sida. Gjordes jobbet på orten säger referensmeningen det (location-referens.ts), och J1 stängs av här.
+  const harEgetJobb = projectTexts.some((p) => p.locationSlug === location.slug);
+  const skargard = far || harEgetJobb ? "" : location.isIsland ? ` Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.` : "";
   const region =
     location.region === "Mälardalen"
       ? `${location.name} ligger i Mälardalen. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen.`

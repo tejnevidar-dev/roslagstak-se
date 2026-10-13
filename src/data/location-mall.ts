@@ -106,7 +106,10 @@ export const applyMall = (loc: LocationData): LocationData => {
     3,
   );
   const ref = refProject(loc);
-  const p5 = ref
+  // Paket 79: öar har J1 i "så arbetar vi", så mallens mening om referensjobbet står inte där (en mening om egna jobb per sida).
+  const p5 = loc.isIsland
+    ? ""
+    : ref
     ? pick<string>(
         [
           `Ett referensjobb i närområdet: ${ref.title}, ungefär ${ref.km} km härifrån. Det jobbet gjordes inte ${prep} ${ort}, men det visar hur ett komplett takbyte kan se ut.`,
@@ -158,7 +161,7 @@ export const applyMall = (loc: LocationData): LocationData => {
     extraSections: [
       { heading: "Därför börjar vi med att titta på taket", text: p2 },
       { heading: "Takkontrollen", text: p3 },
-      { heading: "Var vi finns", text: `${p4} ${p5}` },
+      { heading: "Var vi finns", text: p5 ? `${p4} ${p5}` : p4 },
       { heading: "Pris, ROT och villkor", text: p6 },
       { heading: "Boka takkontroll", text: `Boka en ${utanBilvag ? "" : "kostnadsfri "}takkontroll ${prep} ${ort} på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.` },
     ],

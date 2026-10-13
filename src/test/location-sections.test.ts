@@ -10,7 +10,9 @@ import { prerenderContent } from "../../scripts/prerender-content";
 
 describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
   it("ger rätt lydelse för ö, tätort nära basen, långt från basen och Mälardalen", () => {
-    const ö = locations.find((l) => l.isIsland)!;
+    // Ljusterö: en ö utan eget jobb, så J1 står här. På Blidö, där jobbet gjordes, är J1 avstängd (paket 79).
+    const ö = locations.find((l) => l.slug === "ljustero")!;
+    expect(locationWhySections(locations.find((l) => l.slug === "blido")!, "på", false)[0].paragraph).not.toContain("kompletta takbyten");
     const [a, b] = locationWhySections(ö, "på", false);
     expect(a.heading).toBe(`Takläggare på ${ö.name}: så arbetar vi`);
     expect(a.paragraph).toContain(`Vi tar uppdrag på ${ö.name} och i Roslagen och Storstockholm`);

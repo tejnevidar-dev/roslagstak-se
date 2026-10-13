@@ -34,7 +34,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       expect(ps[i - 1], l.slug).toBe(l.longDescription);
       expect(ps.filter((p) => p.includes(m)).length, l.slug).toBe(1);
     }
-    expect(antal).toBeGreaterThan(20);
+    expect(antal).toBeGreaterThan(15);
   });
   it("ingen sida har meningen kvar i geo-stycket mitt på sidan, och mallsidorna är orörda", () => {
     for (const l of ownText) {
@@ -42,8 +42,12 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       const geo = ps.find((p) => p.includes("Närmaste orter i vårt område"));
       if (geo) expect(geo, l.slug).not.toMatch(/referensjobb/);
     }
-    const finnhamn = prerenderContent("/taklaggare-finnhamn")!.paragraphs.join("\n");
-    expect(finnhamn).toContain("Ett referensjobb i närområdet");
+    // Mallsidorna på öar (Finnhamn, Humlö) har J1 i "så arbetar vi", så mallens referensmening är avstängd där (en mening om egna jobb per sida)
+    for (const slug of ["finnhamn", "humlo"]) {
+      const t = prerenderContent("/taklaggare-" + slug)!.paragraphs.join("\n");
+      expect(t, slug).not.toMatch(/Ett referensjobb i närområdet|Vi har inget referensjobb|Vill du se ett tak vi har bytt/);
+      expect(t, slug).toContain("kompletta takbyten på Blidö och Singö");
+    }
   });
   it("React: LocationPage ritar samma mening direkt efter longDescription, bara på sidor med egen text", () => {
     const k = kalla("src/pages/LocationPage.tsx");
@@ -51,5 +55,35 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
     expect(k.indexOf("const prep = ")).toBeLessThan(k.indexOf("referensMening(location, prep)"));
     expect(k.indexOf("{location.longDescription}")).toBeLessThan(k.indexOf("{referens}"));
     expect(k).toMatch(/!usesMall\([^)]*\)[^{]*&& referens &&/);
+  });
+});
+
+/** Meningar om egna jobb: J1 (gammal och ny lydelse), referensmeningarna och mallens varianter. */
+const MENING_OM_EGNA_JOBB = /kompletta takbyten på Blidö|referensjobb|tak vi har bytt|Tre tak vi har/;
+const meningar = (t: string) => t.split(/(?<=[.!?])\s+/).filter((m) => MENING_OM_EGNA_JOBB.test(m));
+
+describe("paket 79: högst en mening om egna jobb per ortssida (Marknadschefens regel 2026-10-13)", () => {
+  it("ingen av ortssidorna har mer än en mening om egna jobb (referensmeningen och J1 räknas båda)", () => {
+    const fel: string[] = [];
+    let med = 0;
+    for (const l of locations) {
+      const sida = prerenderContent("/taklaggare-" + l.slug);
+      if (!sida) continue;
+      const t = [sida.intro ?? "", ...sida.paragraphs.map((p) => (typeof p === "string" ? p : ""))].join("\n");
+      const m = meningar(t);
+      if (m.length > 0) med++;
+      // Norrtälje undantas först när gren 72 byggs (utkastet tar bort mallens mening på den sidan)
+      if (m.length > 1 && l.slug !== "norrtalje") fel.push(`${l.slug}: ${m.length} meningar: ${m.map((x) => x.slice(0, 60)).join(" | ")}`);
+    }
+    expect(fel).toEqual([]);
+    expect(med).toBeGreaterThan(50);
+  });
+  it("Blidö, där jobbet gjordes, har referensmeningen och ingen J1; Ljusterö har J1 och ingen referensmening", () => {
+    const blido = prerenderContent("/taklaggare-blido")!.paragraphs.join("\n");
+    expect(blido).toContain("Vi har utfört ett dokumenterat referensjobb här: Nytt tak på Blidö.");
+    expect(blido).not.toContain("kompletta takbyten på Blidö och Singö");
+    const ljustero = prerenderContent("/taklaggare-ljustero")!.paragraphs.join("\n");
+    expect(ljustero).toContain("kompletta takbyten på Blidö och Singö");
+    expect(ljustero).not.toMatch(/Ett referensjobb i närområdet/);
   });
 });
