@@ -284,7 +284,7 @@ const LocationPage = () => {
                 </p>
 
                 {!usesMall(locations.find((l) => l.slug === location.slug) ?? location) && referens && (
-                  <p className="text-muted-foreground leading-relaxed mb-6">{referens}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{renderInline(referens)}</p>
                 )}
 
                 {location.extraContent && (

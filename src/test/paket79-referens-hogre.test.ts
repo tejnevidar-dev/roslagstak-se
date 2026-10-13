@@ -7,6 +7,7 @@ import { describe, expect, it } from "vitest";
 import { locations } from "@/data/locations";
 import { usesMall } from "@/data/location-mall";
 import { referensMening } from "@/data/location-referens";
+import { stripInlineMd, inlineMdLinks } from "@/lib/inline-md";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 const kalla = (f: string) => readFileSync(f, "utf8");
@@ -15,10 +16,10 @@ const ownText = locations.filter((l) => !usesMall(l));
 describe("paket 79: referensmeningen efter områdestextens första stycke", () => {
   it("lydelsen är densamma som förut: 'Ett referensjobb i närområdet: …' och 'Vi har utfört ett dokumenterat referensjobb här: …'", () => {
     expect(referensMening({ slug: "hallstavik", name: "Hallstavik", lat: 60.0522, lng: 18.5975 }, "i")).toMatch(
-      /^Ett referensjobb i närområdet: Nytt tak på [A-ZÅÄÖa-zåäö]+, ungefär \d+ km härifrån\. Det jobbet gjordes inte i Hallstavik, men det visar hur ett komplett takbyte kan se ut\.$/,
+      /^Ett referensjobb i närområdet: \[Nytt tak på [^\]]+\]\(\/projekt\/[a-z0-9-]+\), ungefär \d+ km härifrån\. Det jobbet gjordes inte i Hallstavik, men det visar hur ett komplett takbyte kan se ut\.$/,
     );
     const blido = locations.find((l) => l.slug === "blido")!;
-    expect(referensMening(blido, "på")).toBe("Vi har utfört ett dokumenterat referensjobb här: Nytt tak på Blidö.");
+    expect(referensMening(blido, "på")).toMatch(/^Vi har utfört ett dokumenterat referensjobb här: \[Nytt tak på Blidö\]\(\/projekt\/[a-z0-9-]+\)\.$/);
   });
   it("serverns HTML: meningen är stycke två, direkt efter första stycket, på varje egen-text-sida som har den", () => {
     let antal = 0;
@@ -29,10 +30,14 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       const ps = sida.paragraphs.map((p) => (typeof p === "string" ? p : ""));
       if (!m) { expect(ps.join("\n"), l.slug).not.toContain("Ett referensjobb i närområdet"); continue; }
       antal++;
-      const i = ps.findIndex((p) => p === m);
+      const ren = stripInlineMd(m);
+      const i = ps.findIndex((p) => p === ren);
       expect(i, l.slug).toBeGreaterThanOrEqual(0);
       expect(ps[i - 1], l.slug).toBe(l.longDescription);
-      expect(ps.filter((p) => p.includes(m)).length, l.slug).toBe(1);
+      expect(ps.filter((p) => p.includes(ren)).length, l.slug).toBe(1);
+      // jobbets namn är en länk till projektsidan i serverns HTML (länklistan), och texten har ingen markdown-syntax
+      expect(ren, l.slug).not.toMatch(/\]\(|\[/);
+      for (const lank of inlineMdLinks(m)) expect(sida.links.some((x) => x.href === lank.href && x.label === lank.label), l.slug + " " + lank.href).toBe(true);
     }
     expect(antal).toBeGreaterThan(15);
   });
@@ -53,8 +58,10 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
     const k = kalla("src/pages/LocationPage.tsx");
     expect(k).toContain("referensMening(location, prep)");
     expect(k.indexOf("const prep = ")).toBeLessThan(k.indexOf("referensMening(location, prep)"));
-    expect(k.indexOf("{location.longDescription}")).toBeLessThan(k.indexOf("{referens}"));
+    // jobbets namn är en länk: meningen ritas med renderInline (markdown [namn](/projekt/<slug>))
+    expect(k.indexOf("{location.longDescription}")).toBeLessThan(k.indexOf("{renderInline(referens)}"));
     expect(k).toMatch(/!usesMall\([^)]*\)[^{]*&& referens &&/);
+    expect(k).not.toContain("{referens}</p>");
   });
 });
 
@@ -81,6 +88,7 @@ describe("paket 79: högst en mening om egna jobb per ortssida (Marknadschefens 
   it("Blidö, där jobbet gjordes, har referensmeningen och ingen J1; Ljusterö har J1 och ingen referensmening", () => {
     const blido = prerenderContent("/taklaggare-blido")!.paragraphs.join("\n");
     expect(blido).toContain("Vi har utfört ett dokumenterat referensjobb här: Nytt tak på Blidö.");
+    expect(prerenderContent("/taklaggare-blido")!.links.some((x) => /^\/projekt\/[a-z0-9-]+$/.test(x.href) && x.label === "Nytt tak på Blidö")).toBe(true);
     expect(blido).not.toContain("kompletta takbyten på Blidö och Singö");
     const ljustero = prerenderContent("/taklaggare-ljustero")!.paragraphs.join("\n");
     expect(ljustero).toContain("kompletta takbyten på Blidö och Singö");

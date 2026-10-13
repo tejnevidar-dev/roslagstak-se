@@ -1208,6 +1208,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const loc = applyMall(rawLoc);
     const prep = loc.isIsland ? "på" : "i";
     const locationFaqs = generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ);
+    const referensMd = mall ? null : referensMening(loc, prep);
     const regionHref = regionSlugs[loc.region] ? `/omraden/${regionSlugs[loc.region]}` : "/omraden";
     return {
       title: ortSeoOverrides[loc.slug]?.title ?? `Takläggare ${prep} ${loc.name} — Takbyte & Takrenovering`,
@@ -1225,7 +1226,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: loc.description,
       ...buildBody([
         loc.longDescription,
-        ...(mall ? [] : [referensMening(loc, prep)].filter((m): m is string => !!m)),
+        ...(referensMd ? [stripInlineMd(referensMd)] : []),
         ...(loc.extraContent ? [loc.extraContent] : []),
         ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, stripInlineMd(sec.text)]),
         ...(loc.process
@@ -1281,6 +1282,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           .filter((c) => c.locationSlug === loc.slug)
           .map(comboListLink),
         ...hubLinksFor(loc.slug),
+        ...(referensMd ? inlineMdLinks(referensMd) : []),
         ...loc.nearbyLocations
           .map((name) => locations.find((l) => l.name === name))
           .filter((l): l is (typeof locations)[number] => Boolean(l) && !ortAvindexerad(l.slug))
