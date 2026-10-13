@@ -164,6 +164,9 @@ const MaterialPage = () => {
                 </Link>
                 .
               </p>
+              {MATERIAL_PRISAVSNITT[material.slug].nastaSteg && (
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{renderInline(MATERIAL_PRISAVSNITT[material.slug].nastaSteg!)}</p>
+              )}
             </section>
           )}
 

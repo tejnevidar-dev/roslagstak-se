@@ -17,6 +17,8 @@ export interface PrisRad {
 export interface PrisAvsnitt {
   rubrik: string;
   rader: PrisRad[];
+  /** Nästa-steg-rad sist i avsnittet (markdown, kan innehålla en länk). Bara på materialsidor där den är beställd (paket 83). */
+  nastaSteg?: string;
 }
 
 const rad = (post: string, to?: string): PrisRad => ({ namn: post, belopp: prisPost(post).priceRange, to });
@@ -26,6 +28,7 @@ export const MATERIAL_PRISAVSNITT: Record<string, PrisAvsnitt> = {
   "tp20-plattak": {
     rubrik: "Vad kostar plåttak?",
     rader: [rad("TP20 plåttak"), rad("Pannplåttak", "/material/pannplat"), rad("Dubbelfalsat plåttak", "/tjanster/platarbeten#pris")],
+    nastaSteg: "Gäller det ditt eget tak? [Boka en kostnadsfri takkontroll utan förpliktelser.](/takkontroll)",
   },
   pannplat: { rubrik: "Vad kostar pannplåt?", rader: [rad("Pannplåttak")] },
   papptak: { rubrik: "Vad kostar papptak?", rader: [rad("Papptak")] },

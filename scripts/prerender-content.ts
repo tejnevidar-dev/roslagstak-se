@@ -927,11 +927,12 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: d.metaDescription,
       h1: material.title,
       intro: d.intro,
+      inlineLinks: MATERIAL_PRISAVSNITT[material.slug]?.nastaSteg ? inlineMdLinks(MATERIAL_PRISAVSNITT[material.slug].nastaSteg!) : undefined,
       ...buildBody([
         ...materialSections.flatMap((s) => [{ h: s.heading, suffix: ":" }, stripInlineMd(d[s.key] as string)]),
         ...(MATERIAL_EXTRAS[material.slug] ? [] : [{ h: "Kostnadsdrivare", suffix: ":" }, d.kostnadsdrivare]),
         ...(MATERIAL_PRISAVSNITT[material.slug]
-          ? [{ h: MATERIAL_PRISAVSNITT[material.slug].rubrik }, ...prisAvsnittForSpegel(MATERIAL_PRISAVSNITT[material.slug]), materialPricesSentence()]
+          ? [{ h: MATERIAL_PRISAVSNITT[material.slug].rubrik }, ...prisAvsnittForSpegel(MATERIAL_PRISAVSNITT[material.slug]), materialPricesSentence(), ...(MATERIAL_PRISAVSNITT[material.slug].nastaSteg ? [stripInlineMd(MATERIAL_PRISAVSNITT[material.slug].nastaSteg!)] : [])]
           : []),
         ...(MATERIAL_EXTRAS[material.slug]
           ? [
@@ -963,6 +964,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           ? [{ href: MATERIAL_PRIS_LANK[material.slug].to, label: MATERIAL_PRIS_LANK[material.slug].label }]
           : []),
         ...(MATERIAL_PRISAVSNITT[material.slug]?.rader.filter((r) => r.to).map((r) => ({ href: r.to!, label: r.namn })) ?? []),
+        ...(MATERIAL_PRISAVSNITT[material.slug]?.nastaSteg ? inlineMdLinks(MATERIAL_PRISAVSNITT[material.slug].nastaSteg!) : []),
         ...(MATERIAL_EXTRAS[material.slug]?.blocks.flatMap((b) => b.items.flatMap((it) => (typeof it === "string" ? [it] : it.list)).flatMap(inlineMdLinks)) ?? []),
         ...(MATERIAL_EXTRAS[material.slug]?.links?.map((l) => ({ href: l.to, label: l.label })) ?? []),
         ...faqLinks(MATERIAL_EXTRAS[material.slug]?.faqs ?? []),

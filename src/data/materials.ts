@@ -98,7 +98,7 @@ export const materials: Material[] = [
       metaDescription:
         "TP20 är en trapetsprofilerad takplåt. Så fungerar den, var den passar och vad du ska tänka på jämfört med pannor och falsat.",
       intro:
-        "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder.",
+        "TP20 är en trapetsprofilerad takplåt. Den är lätt och läggs i långa längder. Riktpriser för TP20, pannplåt och dubbelfalsad plåt står längre ned på sidan.",
       funktion:
         "Trapetsprofilerad plåt i långa längder som skruvas på läkt över underlag. Profilen ger styvhet och leder bort vattnet.",
       anvandning:
