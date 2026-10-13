@@ -7,6 +7,8 @@ import { adLandings, adLandingCopy, getAdLanding } from "@/data/ad-landings";
 import { noindexPageBody } from "../../scripts/prerender-content";
 
 const NY = "Vi tar uppdrag i Norrtälje, Rimbo, Hallstavik och Grisslehamn, på Vätö, Blidö och Singö och i närområdet.";
+const NY_HALLSTAVIK = "Vi tar uppdrag i Hallstavik, Norrtälje och Rimbo, på Väddö och i närområdet.";
+const GAMMAL_HALLSTAVIK = "Vi tar uppdrag i Hallstavik, Norrtälje, Rimbo, Väddö och närområdet.";
 const GAMMAL = "Vi tar uppdrag i Norrtälje, Rimbo, Hallstavik, Vätö, Blidö, Singö, Grisslehamn och närområdet.";
 
 describe("paket 87: An2, prepositionerna för öarna på /offert/norrtalje", () => {
@@ -17,12 +19,17 @@ describe("paket 87: An2, prepositionerna för öarna på /offert/norrtalje", () 
     const sida = noindexPageBody("/offert/norrtalje")!;
     expect(sida.intro).toContain(NY);
   });
-  it("de andra annonssidorna är oförändrade (bara norrtalje har öar med ny lydelse)", () => {
+  it("An3: ingressen på /offert/hallstavik skriver Väddö med rätt preposition, i datan och i serverns HTML", () => {
+    const c = adLandingCopy(getAdLanding("hallstavik")!);
+    expect(c.intro).toContain(NY_HALLSTAVIK);
+    expect(c.intro).not.toContain(GAMMAL_HALLSTAVIK);
+    expect(noindexPageBody("/offert/hallstavik")!.intro).toContain(NY_HALLSTAVIK);
+  });
+  it("de andra annonssidorna är oförändrade (bara norrtalje och hallstavik har öar med ny lydelse)", () => {
     for (const l of adLandings) {
-      if (l.slug === "norrtalje") continue;
+      if (l.slug === "norrtalje" || l.slug === "hallstavik") continue;
       expect(l.areas, l.slug).not.toContain(" på ");
     }
-    expect(getAdLanding("hallstavik")!.areas).toBe("Hallstavik, Norrtälje, Rimbo, Väddö och närområdet");
     expect(getAdLanding("taby")!.areas).toBe("Täby, Vallentuna, Danderyd, Åkersberga och närområdet");
   });
 });

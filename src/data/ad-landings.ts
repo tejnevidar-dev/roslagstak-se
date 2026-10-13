@@ -15,7 +15,7 @@ export const adLandings: AdLanding[] = [
   { slug: "danderyd", name: "Danderyd", prep: "i", areas: "Danderyd, Djursholm, Stocksund, Täby, Sollentuna, Lidingö och närområdet" },
   { slug: "sollentuna", name: "Sollentuna", prep: "i", areas: "Sollentuna, Danderyd, Täby, Vallentuna och närområdet" },
   { slug: "rimbo", name: "Rimbo", prep: "i", areas: "Rimbo, Norrtälje, Edsbro, Vallentuna och närområdet" },
-  { slug: "hallstavik", name: "Hallstavik", prep: "i", areas: "Hallstavik, Norrtälje, Rimbo, Väddö och närområdet" },
+  { slug: "hallstavik", name: "Hallstavik", prep: "i", areas: "Hallstavik, Norrtälje och Rimbo, på Väddö och i närområdet" },
   { slug: "tyreso", name: "Tyresö", prep: "i", areas: "Tyresö, Trollbäcken, Haninge, Nacka och närområdet" },
   { slug: "salem", name: "Salem", prep: "i", areas: "Salem, Rönninge, Botkyrka, Södertälje och närområdet" },
 ];
