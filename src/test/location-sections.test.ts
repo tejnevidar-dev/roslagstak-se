@@ -4,6 +4,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { locations } from "@/data/locations";
+import { slimFor } from "@/data/location-slim";
 import { iRoslagen, locationWhySections, omOrtRubrik, regionIMening } from "@/data/location-sections";
 import { isNearBase } from "@/data/service-reach";
 import { prerenderContent } from "../../scripts/prerender-content";
@@ -66,7 +67,8 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
       if (!page) { saknas.push(`${l.slug}: ingen statisk sida`); continue; }
       const prep = ortPrep(l);
       const text = page.paragraphs.map((p) => (typeof p === "string" ? p : (p as { h: string }).h ?? "")).join("\n");
-      for (const s of locationWhySections(l, prep, !l.isIsland && !isNearBase(l))) {
+      // Paket 72: sidor med egen text kan ha avsnittet "Om <ort>" avstängt (location-slim.ts)
+      for (const s of locationWhySections(l, prep, !l.isIsland && !isNearBase(l)).filter((_, i) => !(slimFor(l.slug).utanOmOrt && i === 1))) {
         if (!text.includes(s.heading) || !text.includes(s.paragraph)) saknas.push(`${l.slug}: ${s.heading}`);
       }
     }
