@@ -55,7 +55,6 @@ const LocationPage = () => {
      referensjobb från en grannort (≤30 km, se getNearbyProject) får många fler ortssidor en riktig
      location↔project-länk — alltid med orten utskriven, aldrig bara "i närområdet" utan angiven
      plats (Marknadschefen 2026-09-29, regel 5). */
-  const referens = referensMening(location, location.isIsland ? "på" : "i");
   const nearbyProject = getNearbyProject(location);
   const nearbyProjectKommun = nearbyProject?.locationName.split(",")[1]?.trim();
   /* Vilka tjänst+ort-sidor som faktiskt är indexerade här (inte alla 9 — se thin-combos.ts).
@@ -70,6 +69,8 @@ const LocationPage = () => {
       ]
     : [];
   const prep = location.isIsland ? "på" : "i";
+  // Referensmeningen använder sidans egen prep, så att React och serverns HTML inte kan skilja sig (paket 79).
+  const referens = referensMening(location, prep);
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
   const faqs = generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ);

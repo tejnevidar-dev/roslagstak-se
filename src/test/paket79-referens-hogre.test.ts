@@ -47,7 +47,8 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
   });
   it("React: LocationPage ritar samma mening direkt efter longDescription, bara på sidor med egen text", () => {
     const k = kalla("src/pages/LocationPage.tsx");
-    expect(k).toContain('referensMening(location, location.isIsland ? "på" : "i")');
+    expect(k).toContain("referensMening(location, prep)");
+    expect(k.indexOf("const prep = ")).toBeLessThan(k.indexOf("referensMening(location, prep)"));
     expect(k.indexOf("{location.longDescription}")).toBeLessThan(k.indexOf("{referens}"));
     expect(k).toMatch(/!usesMall\([^)]*\)[^{]*&& referens &&/);
   });
