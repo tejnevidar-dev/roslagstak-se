@@ -80,8 +80,9 @@ export const generateLocationFAQs = (
       answer: ROT("takbyte och takrenovering", prep, name),
     },
     {
+      // Paket 78 (J1, högst en gång per sida): öar med väg har meningen om jobben redan i "Takläggare i <ort>: så arbetar vi" (location-sections.ts), så den står inte här också.
       question: `Hur bokar jag en kostnadsfri takkontroll ${prep} ${name}?`,
-      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en rapport om takets skick. Takkontrollen är kostnadsfri och utan förpliktelser.${isIsland ? (OAR_UTAN_BILVAG.includes(locations.find((l) => l.name === name)?.slug ?? "") ? ` ${ARBETSOMRADE_O}` : " Vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö.") : ""}`,
+      answer: `Ring oss på 070-154 36 39 eller fyll i formuläret. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en rapport om takets skick. Takkontrollen är kostnadsfri och utan förpliktelser.${isIsland ? (OAR_UTAN_BILVAG.includes(locations.find((l) => l.name === name)?.slug ?? "") ? ` ${ARBETSOMRADE_O}` : "") : ""}`,
     },
     {
       question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,
