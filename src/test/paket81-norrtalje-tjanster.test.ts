@@ -56,9 +56,9 @@ describe("paket 81: första stycket på de tre Norrtälje-tjänstesidorna", () =
       expect(p[0], url).toContain("070-154 36 39");
     }
   });
-  it("ingen annan tjänst×ort-sida har fått ändrad text: första stycket börjar inte med 'Vi är en takfirma' på andra sidor än de två", () => {
+  it("ingen annan tjänst×ort-sida har fått ändrad text: första stycket börjar inte med 'Vi är en takfirma' på andra sidor än de två (gren 82 lägger till takomlaggning-taby)", () => {
     const fel = Object.entries(comboOverrides)
-      .filter(([k, v]) => v.content[0]?.startsWith("Vi är en takfirma med bas i Norrtälje") && !["takomlaggning-norrtalje", "takrenovering-norrtalje"].includes(k))
+      .filter(([k, v]) => v.content[0]?.startsWith("Vi är en takfirma med bas i Norrtälje") && !["takomlaggning-norrtalje", "takrenovering-norrtalje", "takomlaggning-taby"].includes(k))
       .map(([k]) => k);
     expect(fel).toEqual([]);
   });
