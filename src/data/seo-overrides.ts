@@ -602,7 +602,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   arholma: {
     title: "Takläggare på Arholma – fast pris i offerten",
     description:
-      "Takläggare på Arholma: redargårdar från 1800-talet, pensionat och fritidshus. Kostnadsfri takkontroll utan förpliktelser, fast pris.",
+      "Takläggare på Arholma: redargårdar från 1800-talet, pensionat och fritidshus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   singo: {
     title: "Takläggare på Singö – fast pris i offerten",
@@ -612,7 +612,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   svartloga: {
     title: "Takläggare på Svartlöga – fast pris i offerten",
     description:
-      "Takläggare på Svartlöga i Norrtälje ytterskärgård: en gammal by, sjöbodar och sommarhus. Kostnadsfri takkontroll, fast pris.",
+      "Takläggare på Svartlöga i Norrtälje ytterskärgård: by, sjöbodar och sommarhus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   graddo: {
     title: "Takläggare i Gräddö – fast pris i offerten",
@@ -632,17 +632,17 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   norrora: {
     title: "Takläggare på Norröra – fast pris i offerten",
     description:
-      "Takläggare på Norröra i Norrtälje skärgård: en by återuppbyggd efter 1719, med hus flyttade från Svartlöga. Kostnadsfri takkontroll.",
+      "Takläggare på Norröra i Norrtälje skärgård: en by återuppbyggd efter 1719. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   sodorora: {
     title: "Takläggare på Söderöra – fast pris i offerten",
     description:
-      "Takläggare på Söderöra i Norrtälje skärgård, en ö med omkring 180 fritidshus. Kostnadsfri takkontroll utan förpliktelser, fast pris.",
+      "Takläggare på Söderöra i Norrtälje skärgård, en ö med omkring 180 fritidshus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   grasko: {
     title: "Takläggare på Gräskö – fast pris i offerten",
     description:
-      "Takläggare på Gräskö i Norrtälje skärgård: fritidshus från mellankrigstiden och 1960-talet. Kostnadsfri takkontroll, fast pris.",
+      "Takläggare på Gräskö i Norrtälje skärgård, en ö med fritidshus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
   },
   bromma: {
     title: "Takläggare i Bromma – fast pris efter takkontroll",

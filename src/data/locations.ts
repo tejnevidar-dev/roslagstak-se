@@ -230,7 +230,7 @@ export const locations: LocationData[] = [
     region: "Norra skärgården",
     isIsland: true,
     description:
-      "Takläggare på Svartlöga i Norrtälje ytterskärgård: en gammal by, sjöbodar och sommarhus. Kostnadsfri takkontroll, fast pris.",
+      "Takläggare på Svartlöga i Norrtälje ytterskärgård: by, sjöbodar och sommarhus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Svartlöga är en ö i Blidö socken, i Stockholms ytterskärgård. Ön är enligt Wikipedia låglänt och når som högst 12 meter över havet, och huvudön med omgivande skärgård omfattar 385 hektar. Svartlöga är riksintresse för naturvård, kulturmiljö och friluftsliv, och byn och sjövistet med sina timrade bodar pekas ut som välbevarade. Den första fasta bosättningen kom i slutet av 1400-talet, och under 1600-talet fanns fyra små gårdar. Svartlöga hörde enligt Wikipedia till de få öar i Roslagen som klarade sig undan rysshärjningarna 1719, så här kan det finnas bebyggelse som är äldre än på grannöarna. Fisket var huvudnäringen, öborna byggde båtar, och som mest fanns åtta skutor som fraktade mursand och sandsten till Stockholm. Kapellet är från 1916. År 1929 öppnade ett pensionat, och gästerna bodde i flera av husen i byn. En byggnad från sekelskiftet 1900 blev huvudbyggnad 1942, och pensionatet hade som mest omkring hundra gäster innan det lades ned 1956. De sista fastboende lämnade ön i mitten av 1960-talet. I början av 2000-talet kom fastboende tillbaka, och 2018 fanns sju bofasta. Husen används alltså mest som sommarhus. Ön har aldrig anslutits till elnätet från fastlandet. Waxholmsbolaget går hit dagligen på sommaren, och ångbåtsbryggan ligger på öns norra sida, ungefär en kilometer från byn. Under vinterhalvåret går båt från Furusund en gång i veckan så länge isen tillåter.",
     extraContent:
@@ -252,7 +252,7 @@ export const locations: LocationData[] = [
     region: "Norra skärgården",
     isIsland: true,
     description:
-      "Takläggare på Söderöra i Norrtälje skärgård, en ö med omkring 180 fritidshus. Kostnadsfri takkontroll utan förpliktelser, fast pris.",
+      "Takläggare på Söderöra i Norrtälje skärgård, en ö med omkring 180 fritidshus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Söderöra är grannö till Norröra i Norrtälje skärgård. Ön fick enligt Wikipedia sin första bofasta befolkning på 1500-talet, och 1639 fanns två gårdar. Som mest bodde 50 till 60 personer här, vid sekelskiftet 1900. I dag bor ett tjugotal på ön året runt. Söderöra var känt för sina båtbyggare och fraktseglare. Nordiska museet dokumenterade båtbyggeriet 1948. Då fanns en yrkesverksam båtbyggare kvar, som ska ha byggt över 400 båtar, men det sades att alla på ön åtminstone kunde bygga mindre båtar. Bönhuset uppfördes 1908–1909. Många av vinterscenerna i Saltkråkan spelades in på Söderöra, och två av skådespelarna hade själva sommarhus här. Det som präglar ön i dag är fritidshusen. Enligt Wikipedia finns omkring 180 fritidshus på Söderöra, alltså många gånger fler än hushållen som bor här året om. Waxholmsbolaget trafikerar ön dagligen från Furusund, Östernäs och Bromskär, och på sommaren går det också båt direkt från Stockholm.",
     extraContent:
@@ -294,7 +294,7 @@ export const locations: LocationData[] = [
     region: "Norra skärgården",
     isIsland: true,
     description:
-      "Takläggare på Norröra i Norrtälje skärgård: en by återuppbyggd efter 1719, med hus flyttade från Svartlöga. Kostnadsfri takkontroll.",
+      "Takläggare på Norröra i Norrtälje skärgård: en by återuppbyggd efter 1719. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Norröra är en ö i Norrtälje kommun som blev känd under 1960-talet genom filmerna om Saltkråkan. Ön är enligt Wikipedia befolkad året runt, och i dag bor ett par familjer där. Vid 1900-talets början bodde 16 familjer på ön, omkring 50 personer. På 1300-talet hörde Norröra, liksom flera andra öar i Roslagen, till godset Penningby. Den gamla byn låg norr om dagens bebyggelse, vid den uppgrundade Norrviken. Den brändes 1719, och efter det byggdes byn upp i sitt nuvarande läge. Öns äldsta stuga uppfördes enligt Wikipedia kort efter återuppbyggnaden. Flera av de äldsta husen är flyttade hit från Svartlöga, bland dem \"Snickargården\" från filmerna, som kom till ön i början av 1800-talet. I byn finns också ett båtsmanstorp från 1800-talet och ett missionshus som uppfördes 1906–1908. Waxholmsbolaget trafikerar ön dagligen året runt sedan april 2006, och på sommaren går också Blidösundsbolaget hit. Någon bro finns inte.",
     extraContent:
@@ -316,7 +316,7 @@ export const locations: LocationData[] = [
     region: "Norra skärgården",
     isIsland: true,
     description:
-      "Takläggare på Gräskö i Norrtälje skärgård: fritidshus från mellankrigstiden och 1960-talet. Kostnadsfri takkontroll, fast pris.",
+      "Takläggare på Gräskö i Norrtälje skärgård, en ö med fritidshus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Gräskö är en ö i norra Stockholms skärgård, i Norrtälje kommun. På ön finns enligt Wikipedia mest sommarhus, men också en fast befolkning på 28 personer. Byn kallas Gräsken, och till den räknas några öar runt omkring, bland annat Rågören, Lilla Gåsö, Gåsö och Mäskören. Gräskö nämns första gången i skrift 1405. Under 1500-talet låg ön under Penningby och användes som betesholme. På 1600-talet kom en torpare hit, och under 1700-talet bosatte sig flera lotsar på ön. År 1838 köpte två torpare loss ön och delade den mellan sig. Det äldsta torpet låg troligen där Englundska gården ligger i Byviken, en timrad parstuga som 1867 byggdes på med en våning. Sommargästerna började komma redan i slutet av 1800-talet. Till en början hyrde de in sig hos de fastboende. Under mellankrigstiden byggdes de första fritidshusen, och under 1960-talet skedde enligt Wikipedia en storskalig exploatering av öns norra delar. I början av 2000-talet fanns 140 fastigheter på ön. Det går båt hit året runt, med daglig trafik på sommaren, och närmaste butiker finns i Furusund och i Gräddö på Rådmansö.",
     extraContent:
@@ -556,7 +556,7 @@ export const locations: LocationData[] = [
     region: "Norra skärgården",
     isIsland: true,
     description:
-      "Takläggare på Arholma: redargårdar från 1800-talet, pensionat och fritidshus. Kostnadsfri takkontroll utan förpliktelser, fast pris.",
+      "Takläggare på Arholma: redargårdar från 1800-talet, pensionat och fritidshus. Berätta var huset ligger, så går vi igenom hur en takkontroll kan ordnas.",
     longDescription:
       "Arholma var enligt Norrtälje kommun en av de nordligaste utposterna i Stockholms skärgård längs farleden norrut. Ön är riksintresse för kulturmiljövården, och kommunen har beskrivit den i en kulturmiljöutredning. Byn ligger centralt på öns östra sida, och husen ligger tätt längs bygatan, som kantas av hamlade askar. Omkring en fjärdedel av marken och byggnaderna tillhör Skärgårdsstiftelsen. Byn brändes under rysshärjningarna 1719 och byggdes upp igen. När marken storskiftades 1768 fanns tio brukare. Enligt kommunen präglas dagens bykärna av redarböndernas satsningar under 1800-talet, när fraktseglingen växte. De flesta gårdarna fick sina parstugor påbyggda med en våning, och uthusen förstorades till långa längor. Kommunen beskriver redargårdarna som huvudbyggnader i två våningar under sadeltak, med timmerstomme klädd med panel och en veranda eller farstukvist vid entrén. Från slutet av 1800-talet minskade den bofasta befolkningen, och sommargästerna kom. De hyrde in sig på öns sex pensionat, flyttade in i övergivna bostadshus eller byggde nya fritidshus. Pensionatet Ahlmans vid Norra hamnen byggdes 1905. Många gårdar byggdes om igen under 1910- och 1920-talen, med farstukvistar, glasade verandor och frontespiser. I dag har ön enligt Wikipedia omkring 50 bofasta, och på sommaren omkring 500. Hit kommer man med passagerarbåt från Simpnäs på Björkö.",
     extraContent:
