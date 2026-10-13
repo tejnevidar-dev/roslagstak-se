@@ -42,7 +42,8 @@ export const buildLocalSections = (loc: LocationData): LocalSections => {
       // Raden "Läge: Fastland" säger inget för en besökare (paket 49b-2, Li2): den står bara kvar för öar. Koordinaterna finns kvar i den strukturerade datan.
       ...(loc.isIsland ? [{ label: "Läge", value: "Ö i skärgården" }] : []),
       { label: "Närmaste orter", value: neighbourText },
-      { label: "Avstånd till vår bas i Norrtälje (fågelvägen)", value: `${Math.round(distanceFromBaseKm(loc))} km` },
+      // Paket 80: på Norrtälje-sidan säger avståndet till den egna basen ingenting ("1 km"), så raden visas inte där (React och serverns HTML läser samma lista).
+      ...(loc.slug === "norrtalje" ? [] : [{ label: "Avstånd till vår bas i Norrtälje (fågelvägen)", value: `${Math.round(distanceFromBaseKm(loc))} km` }]),
     ],
   };
 };
