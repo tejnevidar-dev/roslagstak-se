@@ -49,9 +49,14 @@ export const REGION_EXTRA_LINKS: Record<string, HubLink[]> = {
   "Sydöstra Stockholm": [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
 };
 
-/** Hubblänkarna för en ort (tom lista för hubbens egen sida och för orter utanför hubbens regioner). */
+/** Länkar som bara gäller en enda ortssida (paket 73): Norrtälje-sidan länkar till guiden "Välja takfirma i Norrtälje" i länkrutan, med guidens egen titel. */
+const ENSKILDA_LANKAR: Record<string, HubLink[]> = {
+  norrtalje: [{ href: "/blogg/taklaggare-norrtalje-guide", label: "Välja takfirma i Norrtälje: sex frågor att ställa" }],
+};
+
+/** Hubblänkarna för en ort (tom lista för hubbens egen sida och för orter utanför hubbens regioner), plus länkar som bara gäller den orten. */
 export const hubLinksFor = (slug: string): HubLink[] => {
   const loc = locationIndex.find((l) => l.slug === slug);
   if (!loc) return [];
-  return HUBS.filter((h) => h.slug !== slug && h.regioner.includes(loc.region)).map(({ href, label }) => ({ href, label }));
+  return [...HUBS.filter((h) => h.slug !== slug && h.regioner.includes(loc.region)).map(({ href, label }) => ({ href, label })), ...(ENSKILDA_LANKAR[slug] ?? [])];
 };

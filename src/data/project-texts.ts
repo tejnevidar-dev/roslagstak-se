@@ -69,7 +69,7 @@ export const projectTexts: ProjectText[] = [
     ],
     "summary": "Komplett takbyte på ett hus på Blidö i Norrtälje kommun, med svarta betongpannor från Benders, nytt underlag, ny läkt, nya plåtdetaljer och nya hängrännor. Befintlig råspont behölls.",
     "description": [
-      "Huset ligger i skogen på Blidö i Norrtälje kommun. Uppdraget var ett komplett takbyte, från underlag till avvattning, och arbetet gjordes sommaren 2026. Den befintliga råsponten behölls. Det gamla taket hade betongpannor. Underlaget, läkten, pannorna, plåtdetaljerna, skorstensbeslagen och hängrännorna är nya.",
+      "Huset ligger i skogen på Blidö i [Norrtälje kommun](/taklaggare-norrtalje). Uppdraget var ett komplett takbyte, från underlag till avvattning, och arbetet gjordes sommaren 2026. Den befintliga råsponten behölls. Det gamla taket hade betongpannor. Underlaget, läkten, pannorna, plåtdetaljerna, skorstensbeslagen och hängrännorna är nya.",
       "**Vad som ingick.** Ett komplett takbyte utom råsponten: nytt underlag, ny läkt, nya pannor, nya plåtdetaljer och skorstensbeslag och nya hängrännor.",
       "**Råsponten.** Råsponten är brädlagret som resten av taket vilar på. På Blidö behölls den befintliga råsponten. Läs mer om [takets underlag](/material/underlagstak).",
       "**Nytt underlag.** Ovanpå råsponten lades ett nytt underlag. Det är takets andra skydd, som tar hand om det vatten som kan ta sig förbi pannorna.",
@@ -112,7 +112,7 @@ export const projectTexts: ProjectText[] = [
     ],
     "summary": "Komplett takbyte på ett hus på Singö i Norrtälje kommun, med röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Delar av råsponten byttes.",
     "description": [
-      "Huset ligger på Singö i Norrtälje kommun, med utsikt över fjärden. Uppdraget var ett komplett takbyte, som blev färdigt i september 2026. Huvudtaket fick röda betongpannor och de lägre takdelarna röd plåt, och delar av råsponten byttes. Det gamla taket hade lertegel.",
+      "Huset ligger på Singö i [Norrtälje kommun](/taklaggare-norrtalje), med utsikt över fjärden. Uppdraget var ett komplett takbyte, som blev färdigt i september 2026. Huvudtaket fick röda betongpannor och de lägre takdelarna röd plåt, och delar av råsponten byttes. Det gamla taket hade lertegel.",
       "**Vad som ingick.** Ett komplett takbyte, där också delar av råsponten byttes.",
       "**Råsponten.** Råsponten är brädlagret som resten av taket vilar på. På Singö byttes råsponten delvis, där den var rutten, och resten behölls. Läs mer om [takets underlag](/material/underlagstak).",
       "**Betongpannor på huvudtaket.** Huvudtaket fick röda [betongpannor](/material/betongpannor), ett tungt material som ger ett klassiskt pannat tak.",
@@ -165,7 +165,7 @@ export const projectTexts: ProjectText[] = [
     "summary": "Komplett takbyte på ett hus i Grisslehamn i Norrtälje kommun, gjort i september 2026. Taket är 120 kvadratmeter och fick ny papp, ny läkt och svarta betongpannor från Benders, och huset fick ny avvattning, nya plåtdetaljer, nya vindskivor och fotbrädor och taksteg.",
     "metaDescription": "Komplett takbyte på ett hus i Grisslehamn i Norrtälje kommun, med svarta betongpannor från Benders. Taket är 120 kvadratmeter.",
     "description": [
-      "Huset ligger i Grisslehamn i Norrtälje kommun. Uppdraget var ett komplett takbyte, och det gjordes i september 2026. Pappen, läkten, pannorna, plåtdetaljerna och avvattningen är nya. Det gamla taket hade betongpannor vars livslängd var passerad. Bilderna och filmen är tagna efter att arbetet var klart.",
+      "Huset ligger i Grisslehamn i [Norrtälje kommun](/taklaggare-norrtalje). Uppdraget var ett komplett takbyte, och det gjordes i september 2026. Pappen, läkten, pannorna, plåtdetaljerna och avvattningen är nya. Det gamla taket hade betongpannor vars livslängd var passerad. Bilderna och filmen är tagna efter att arbetet var klart.",
       "**Vad som ingick.** Vi monterade ny papp (Mataki Haloten Pro), ny läkt, ny avvattning från Lindab, nya vindskivor och fotbrädor som vi målade efter kundens önskemål, nya plåtdetaljer, taksteg och nya betongpannor från Benders.",
       "**Ny papp.** Pappen ligger under pannorna och är takets andra skydd. Den tar hand om vatten som tar sig förbi pannorna. Här lades Mataki Haloten Pro.",
       "**Råsponten.** En del av råsponten var skadad av läckage och byttes ut. Resten behölls. Läs mer om [takets underlag](/material/underlagstak).",
