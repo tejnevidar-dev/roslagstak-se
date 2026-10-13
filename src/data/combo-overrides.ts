@@ -383,7 +383,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takbyte i Norrtälje och Roslagen: lertegel, betongpannor eller plåt till fast pris. Boka en kostnadsfri takkontroll utan förpliktelser.",
     content: [
-      "Ska du byta tak i Norrtälje? Vi har vår bas här. Ett takbyte börjar med en kostnadsfri takkontroll, och efter den får du en offert med fast pris. Här går vi igenom vad ett takbyte omfattar, vilka material som finns och tre tak vi har bytt i kommunen.",
+      "Ska du byta tak i Norrtälje? Vi har vår bas här. Ett takbyte börjar med en kostnadsfri takkontroll, och efter den får du en offert med fast pris. Här går vi igenom vad ett takbyte omfattar, vilka material som finns och tre tak vi har bytt i kommunen. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       "## Tre tak vi har bytt i Norrtälje kommun",
       "Vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn. På Blidö fick huset svarta betongpannor från Benders, nytt underlag och ny läkt. På Singö fick huset röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna, och delar av råsponten byttes. I Grisslehamn fick ett tak på 120 kvadratmeter svarta betongpannor från Benders i september 2026.",
       "## Hus och tak i Norrtälje kommun",
@@ -1030,19 +1030,19 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   "takomlaggning-norrtalje": {
-    title: "Takomläggning i Norrtälje – kostnadsfri takkontroll",
+    title: "Takomläggning i Norrtälje – takfirma med bas här",
     description:
-      "Takomläggning i Norrtälje med betongpannor, lertegel eller plåt. Fast pris efter en kostnadsfri takkontroll utan förpliktelser. Utförande enligt AMA.",
+      "Takomläggning i Norrtälje: vi är en takfirma med bas här. Kostnadsfri takkontroll utan förpliktelser, fast pris i offerten och svar inom 24 timmar.",
     content: [
-      "Ett tak som läcker vid skorstenen, har pannor som har börjat spricka eller ett underlag som har blivit mjukt kan vara svårt att laga bit för bit. Då kan en takomläggning vara rätt åtgärd. Här beskriver vi vad en omläggning i Norrtälje innebär och hur du får ett fast pris.",
+      "Vi är en takfirma med bas i Norrtälje och lägger om tak i staden och kommunen. Ett tak som läcker vid skorstenen, har pannor som har börjat spricka eller ett underlag som har blivit mjukt kan vara svårt att laga bit för bit. Då kan en takomläggning vara rätt åtgärd. Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
       "## Omläggning steg för steg",
       "Vid en takomläggning tas det gamla ytmaterialet ner. Underlaget och läkten byts, och sedan läggs taket på nytt, ofta med samma sorts material som tidigare. Plåtdetaljerna, alltså fotplåt, nockplåt och beslag kring skorsten och genomföringar, görs om, och hängrännorna ses över. Omfattningen är densamma som vid ett takbyte, och båda orden används om samma arbete.",
       "## Hus och tak i Norrtälje",
       "Norrtälje grundades 1622, men villaområdena runt den gamla staden är betydligt yngre. Enligt hitta.se är husen i Kvisthamra och Gransäter för det mesta byggda på 1940- och 1960-talen, och kring Görlaslingan i söder är villorna och radhusen mest från 1990- och 2000-talen. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Mer om orterna i kommunen finns på sidan om Norrtälje.",
       "## Betongpannor vid omläggning",
       "Betongpannor ger ett pannat tak. De finns i flera kulörer och enskilda pannor kan bytas om någon skadas. Vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn. På Blidö lades svarta betongpannor från Benders, med nytt underlag, ny läkt, nya plåtdetaljer, skorstensbeslag och hängrännor. På Singö lades röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Pannorna är tunga, så takstolarna behöver klara vikten. Har huset haft ett lättare tak kan bärigheten behöva bedömas av en konstruktör. Lertegel och plåt är alternativ om du vill ha ett annat uttryck.",
-      "## Vi har vår bas i Norrtälje",
-      "Vi har vår bas i Norrtälje. Staden ligger längst in i Norrtäljeviken, cirka sju mil nordost om Stockholm. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
+      "## Boka takkontroll",
+      "Norrtälje ligger längst in i Norrtäljeviken, cirka sju mil nordost om Stockholm. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
       "## Laga eller lägga om?",
       "En reparation räcker när skadan är avgränsad, till exempel ett skadat skorstensbeslag eller några trasiga pannor. Återkommer läckorna, eller är underlaget slitet på flera ställen, är en omläggning oftast bättre. Vad som gäller för ditt tak går vi igenom vid takkontrollen, och det står i offerten.",
       "## Vad kostar en takomläggning i Norrtälje?",
@@ -1565,15 +1565,15 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   "takrenovering-norrtalje": {
-    title: "Takrenovering i Norrtälje – fast pris och AMA",
+    title: "Takrenovering i Norrtälje – takfirma med bas här",
     description:
       "Takrenovering i Norrtälje: vi åtgärdar plåt, pannor och avvattning när hela taket inte behöver bytas. Kostnadsfri takkontroll och fast pris.",
     content: [
-      "Plåt, pannor eller en kombination? Ett hus kan ha olika material på olika delar av taket, och ibland är det bara en del som behöver åtgärdas. För dig i Norrtälje förklarar vi här vad en takrenovering innebär, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll.",
-      "## Hus på halvöarna och öarna",
-      "I Norrtälje kommun finns enligt Wikipedia ett stort antal fritidshus. Rådmansö har en blandning av villor, lantbruk och fritidshus, byggda under en lång period från 1920-talet till 1980-talet. Vätö har torp och gårdar från 1800-talets andra hälft och fritidshus från 1960- och 1970-talen, och sedan 1993 går en bro dit. Singö har bro sedan 1955, och Yxlan och Blidö nås med vägfärja. Husens ålder säger inte hur gammalt taket är. Mer om orterna finns på sidan om Norrtälje.",
+      "Vi är en takfirma med bas i Norrtälje. Ibland är det bara en del av taket som behöver åtgärdas: trasiga pannor, lösa eller rostiga plåtdetaljer, beslag kring skorsten och genomföringar, fotplåt eller hängrännor. Här förklarar vi vad en takrenovering innebär, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
       "## Takrenovering i korthet",
       "En takrenovering riktar in sig på de delar som behöver åtgärdas: trasiga pannor, lösa eller rostiga plåtdetaljer, beslag kring skorsten och genomföringar, fotplåt eller hängrännor. Underlaget ska i stort sett hålla. Om det är slitet över stora delar av taket, eller om läckorna återkommer, kan ett takbyte eller en omläggning vara rätt åtgärd. Vad som gäller för ditt tak går vi igenom vid takkontrollen, och allt som ingår står i offerten.",
+      "## Hus på halvöarna och öarna",
+      "I Norrtälje kommun finns enligt Wikipedia ett stort antal fritidshus. Rådmansö har en blandning av villor, lantbruk och fritidshus, byggda under en lång period från 1920-talet till 1980-talet. Vätö har torp och gårdar från 1800-talets andra hälft och fritidshus från 1960- och 1970-talen, och sedan 1993 går en bro dit. Singö har bro sedan 1955, och Yxlan och Blidö nås med vägfärja. Husens ålder säger inte hur gammalt taket är. Mer om orterna finns på sidan om Norrtälje.",
       "## Plåttak av TP20",
       "TP20 är en trapetsprofilerad plåt som skruvas i långa längder på läkt. Den är lätt och används på lägre takdelar tillsammans med pannor. Vilken lutning plåten kräver anger tillverkaren. Ett exempel från närområdet är ett takbyte på Singö, med röd TP20 på de lägre delarna och röda betongpannor på huvudtaket. På ett TP20-tak är det skruvar, skarvar, kanter och ytbehandling som kan behöva åtgärdas, och rost i skarvar bör tas om hand tidigt. Enstaka betongpannor på huvudtaket kan bytas i samma arbete om några har spruckit.",
       "## Norrtälje och kusten",
