@@ -1569,7 +1569,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takrenovering i Norrtälje: vi åtgärdar plåt, pannor och avvattning när hela taket inte behöver bytas. Kostnadsfri takkontroll och fast pris.",
     content: [
-      "Vi är en takfirma med bas i Norrtälje. Ibland är det bara en del av taket som behöver åtgärdas: trasiga pannor, lösa eller rostiga plåtdetaljer, beslag kring skorsten och genomföringar, fotplåt eller hängrännor. Här förklarar vi vad en takrenovering innebär, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
+      "Vi är en takfirma med bas i Norrtälje. Ibland är det bara en del av taket som behöver åtgärdas. Här förklarar vi vad en takrenovering innebär, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
       "## Takrenovering i korthet",
       "En takrenovering riktar in sig på de delar som behöver åtgärdas: trasiga pannor, lösa eller rostiga plåtdetaljer, beslag kring skorsten och genomföringar, fotplåt eller hängrännor. Underlaget ska i stort sett hålla. Om det är slitet över stora delar av taket, eller om läckorna återkommer, kan ett takbyte eller en omläggning vara rätt åtgärd. Vad som gäller för ditt tak går vi igenom vid takkontrollen, och allt som ingår står i offerten.",
       "## Hus på halvöarna och öarna",

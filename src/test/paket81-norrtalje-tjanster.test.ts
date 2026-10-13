@@ -30,15 +30,17 @@ describe("paket 81: första stycket på de tre Norrtälje-tjänstesidorna", () =
     const i = innehall("takomlaggning-norrtalje").indexOf("## Boka takkontroll");
     expect(innehall("takomlaggning-norrtalje")[i + 1]).toBe("Norrtälje ligger längst in i Norrtäljeviken, cirka sju mil nordost om Stockholm. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.");
   });
-  it("/takrenovering-norrtalje: vilka vi är, sidans egen uppräkning och bokningen i första stycket; 'Takrenovering i korthet' kommer före 'Hus på halvöarna och öarna'", () => {
+  it("/takrenovering-norrtalje: vilka vi är och bokningen i första stycket, utan uppräkningen (den står direkt under i 'Takrenovering i korthet'); 'Takrenovering i korthet' kommer före 'Hus på halvöarna och öarna'", () => {
     const f = innehall("takrenovering-norrtalje")[0];
     expect(f).toBe(
-      "Vi är en takfirma med bas i Norrtälje. Ibland är det bara en del av taket som behöver åtgärdas: trasiga pannor, lösa eller rostiga plåtdetaljer, beslag kring skorsten och genomföringar, fotplåt eller hängrännor. Här förklarar vi vad en takrenovering innebär, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll. " + BOKA,
+      "Vi är en takfirma med bas i Norrtälje. Ibland är det bara en del av taket som behöver åtgärdas. Här förklarar vi vad en takrenovering innebär, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll. " + BOKA,
     );
-    // uppräkningen är ordagrant den som redan står i sidans avsnitt "Takrenovering i korthet"
+    // uppräkningen står bara i avsnittet "Takrenovering i korthet" (Marknadschefens ändring 2026-10-13 16:35), inte i första stycket
     const uppr = "trasiga pannor, lösa eller rostiga plåtdetaljer, beslag kring skorsten och genomföringar, fotplåt eller hängrännor";
     const korthet = innehall("takrenovering-norrtalje")[innehall("takrenovering-norrtalje").indexOf("## Takrenovering i korthet") + 1];
     expect(korthet).toContain(uppr);
+    expect(f).not.toContain("trasiga pannor");
+    expect(innehall("takrenovering-norrtalje").join(" ").split(uppr).length - 1).toBe(1);
     const r = rubriker("takrenovering-norrtalje");
     expect(r.indexOf("Takrenovering i korthet")).toBeGreaterThanOrEqual(0);
     expect(r.indexOf("Takrenovering i korthet")).toBeLessThan(r.indexOf("Hus på halvöarna och öarna"));
