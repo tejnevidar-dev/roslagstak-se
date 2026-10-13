@@ -37,6 +37,8 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       expect(ps.filter((p) => p.includes(ren)).length, l.slug).toBe(1);
       // jobbets namn är en länk till projektsidan i serverns HTML (länklistan), och texten har ingen markdown-syntax
       expect(ren, l.slug).not.toMatch(/\]\(|\[/);
+      // länken skrivs i stycket av generate-static-heads.mjs (page.inlineLinks), inte bara i länklistan
+      expect(sida.inlineLinks, l.slug).toEqual(inlineMdLinks(m));
       for (const lank of inlineMdLinks(m)) expect(sida.links.some((x) => x.href === lank.href && x.label === lank.label), l.slug + " " + lank.href).toBe(true);
     }
     expect(antal).toBeGreaterThan(15);

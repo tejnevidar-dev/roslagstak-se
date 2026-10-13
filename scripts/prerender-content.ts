@@ -197,6 +197,8 @@ export interface PrerenderPage {
    *  (G1 i konkurrentanalysen: crawlers utan JS ska se samma rubrikstruktur som besökaren). Texten i
    *  paragraphs är oförändrad, så ordräkning och meningsgrind påverkas inte. */
   headingAt?: Record<number, 2 | 3>;
+  /** Länkar i löpande text: i det första stycket som innehåller länktexten skrivs den som <a> i den statiska HTML:en (texten är oförändrad; paket 79: jobbets namn i referensmeningen). */
+  inlineLinks?: { href: string; label: string }[];
 }
 
 export { buildBody, type BodyItem } from "../src/lib/body-items";
@@ -1224,6 +1226,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
           : `Takläggare ${prep} ${loc.name} — takbyte & takrenovering`),
       intro: loc.description,
+      inlineLinks: referensMd ? inlineMdLinks(referensMd) : undefined,
       ...buildBody([
         loc.longDescription,
         ...(referensMd ? [stripInlineMd(referensMd)] : []),
