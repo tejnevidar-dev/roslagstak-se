@@ -13,10 +13,10 @@ describe("paket 77: tre jobb i guiderna", () => {
     expect(t).toContain("vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn, alla tre i Norrtälje kommun. Bilder och uppgifter finns under [våra projekt](/projekt).");
     expect(t).not.toContain("Blidö och Singö, båda i Norrtälje kommun");
   });
-  it.each(["basta-takmaterial-skargarden", "basta-takmaterialet-blido"])("%s: J1:s mening, med detaljerna om Blidö och Singö kvar", (slug) => {
+  it.each(["basta-takmaterial-skargarden", "basta-takmaterialet-blido"])("%s: sidor om öar och skärgård nämner bara Blidö och Singö (J1), Grisslehamn ligger på fastlandet", (slug) => {
     const t = text(slug);
-    expect(t).toContain("Vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn. På Blidö lades svarta betongpannor från Benders");
-    expect(t).not.toContain("kompletta takbyten på Blidö och Singö");
+    expect(t).toContain("Vi har gjort kompletta takbyten på Blidö och Singö. På Blidö lades svarta betongpannor från Benders");
+    expect(t).not.toContain("Grisslehamn");
   });
   it("guider som handlar om just de två öarna är orörda (ö-guiden, Husarö–Finnhamn-guiden)", () => {
     expect(text("takbyte-skargarden-logistik") + text("takbyte-husaro-finnhamn-oar")).toContain("kompletta takbyten på Blidö och Singö");
