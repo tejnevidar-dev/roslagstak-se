@@ -47,9 +47,9 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takbyte i Åkersberga och Österåker: plåt, betongpannor eller lertegel till fast pris. Boka en kostnadsfri takkontroll utan förpliktelser.",
     content: [
-      "Mellan Stockholm och skärgården ligger Åkersberga, centralorten i Österåkers kommun. Här finns allt från äldre villor nära stationerna till senare villaområden. Står du inför ett takbyte vill du veta vad som ingår, vilka material som finns och vad det kostar. Därför börjar vi med en kostnadsfri takkontroll och lämnar sedan ett fast pris.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Åkersberga. Mellan Stockholm och skärgården ligger Åkersberga, centralorten i Österåkers kommun. Här finns allt från äldre villor nära stationerna till senare villaområden. Står du inför ett takbyte vill du veta vad som ingår, vilka material som finns och vad det kostar. Därför börjar vi med en kostnadsfri takkontroll och lämnar sedan ett fast pris. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       "## Närområdet",
-      "Åkersberga ligger ungefär fyra mil sydväst om Norrtälje och genomkorsas av Roslagsbanan, med fyra stationer inom tätorten. Grannorter är bland annat Täby och Vallentuna. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Åkersberga. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
+      "Åkersberga ligger ungefär fyra mil sydväst om Norrtälje och genomkorsas av Roslagsbanan, med fyra stationer inom tätorten. Grannorter är bland annat Täby och Vallentuna. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
       "## Från station till villasamhälle",
       "Åkersberga fick sitt namn av en järnvägsstation. Stationen byggdes 1901 vid Södra Roslags Kustbana, på ett gärde som hörde till gården Berga, och skyltades först \"Åkers Berga\". Banan förlängdes sedan till Tunagård och Österskär, och enligt Wikipedia bebyggdes de områdena med villor. På 1930-talet räknades både Åkersberga och Österskär som tätorter, och sedan 1950 anses de vara sammanvuxna. Resultatet är en ort där villor från olika decennier ligger sida vid sida.",
       "## Takbytet steg för steg",
@@ -810,11 +810,11 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Byta tak i Vallentuna? Vi byter till betongpannor, lertegel eller plåt till fast pris efter en kostnadsfri takkontroll. Utförande enligt AMA.",
     content: [
-      "Funderar du på att byta tak i Vallentuna? Här går vi igenom vad ett takbyte innebär, vilka material som finns och hur du får ett fast pris.",
+      "Funderar du på att byta tak i Vallentuna? Vi är en takfirma med bas i Norrtälje och tar uppdrag i Vallentuna. Här går vi igenom vad ett takbyte innebär, vilka material som finns och hur du får ett fast pris. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       "## Bebyggelsen i Vallentuna",
       "Vallentuna tätort har vuxit fram längs Roslagsbanan, där mindre samhällen gradvis har vuxit ihop. På 1930- och 1940-talen fanns två tegelbruk i centralorten, och sedan gick det fort: 1944 hade tätorten omkring 2 300 invånare och 1952 nästan 5 900. Utbyggnaden skedde i etapper. Enligt hitta.se är husen i Ormsta främst från 1950- och 1970-talen, i Bällsta från 1960- och 2000-talen och i Västra Bällsta från 1970- och 1980-talen. Husens ålder säger inte hur gammalt taket är. Mer om orterna finns på sidan om Vallentuna.",
       "## Nära Vallentuna",
-      "Vallentuna ligger ungefär fyra och en halv mil sydväst om Norrtälje, med Täby i söder och Åkersberga och Rimbo som grannorter. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Vallentuna. Du bokar takkontrollen vardagar 07–20 eller helger 09–19.",
+      "Vallentuna ligger ungefär fyra och en halv mil sydväst om Norrtälje, med Täby i söder och Åkersberga och Rimbo som grannorter. Du bokar takkontrollen vardagar 07–20 eller helger 09–19.",
       "## Betongpannor vid takbytet",
       "Har huset betongpannor i dag kan samma material läggas igen. Betongpannor ger ett traditionellt pannat tak, finns i flera kulörer, till exempel svart och rött, och enskilda pannor går att byta om någon skadas. Pannorna är tunga, så takstolarna behöver klara vikten. Vad takstolarna klarar kan behöva bedömas av en konstruktör. Vill du ha ett lättare tak är TP20-plåt ett alternativ. Vilken lutning plåten kräver anger tillverkaren.",
       "## Vad som ingår i ett takbyte",
@@ -846,7 +846,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takomläggning i Åkersberga och Österåker med plåt, betongpannor eller lertegel. Kostnadsfri takkontroll utan förpliktelser och fast pris.",
     content: [
-      "Plåt, betong eller tegel? Frågan kommer ofta upp när ett tak i Åkersberga ska läggas om. Vid en takomläggning byggs taket upp på nytt, och det är ett bra tillfälle att fundera på om samma material ska läggas igen eller om huset ska få ett annat tak. Här går vi igenom vad omläggningen innebär och hur du får ett fast pris.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Åkersberga. Vid en takomläggning byggs taket upp på nytt, och det är ett bra tillfälle att fundera på om samma material ska läggas igen eller om huset ska få ett annat tak. Här går vi igenom vad omläggningen innebär och hur du får ett fast pris. Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
       "## Vad en omläggning innebär",
       "Vid en takomläggning tas det gamla ytmaterialet bort, och därefter byts underlaget och läkten. Sedan läggs det nya materialet, och plåtdetaljer som fotplåt och nockplåt görs om. Arbetet är i stort sett detsamma som vid ett takbyte, och ordet omläggning används ofta när taket får samma typ av material som förut.",
       "## Hus runt Åkersberga",
@@ -854,7 +854,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "## TP20 vid omläggningen",
       "TP20 är en trapetsprofilerad plåt som skruvas på läkt i långa längder. Den är lätt jämfört med pannor och finns i flera kulörer. Vilken lutning plåten kräver anger tillverkaren. TP20 används på villor, fritidshus och garage, och på lägre takdelar i kombination med pannor. Ett byte från pannor till plåt gör taket lättare, men ger också ett annat uttryck. Betongpannor och lertegel är alternativen för den som vill behålla det pannade taket, och dubbelfalsad plåt ger ett stramare plåttak utan synliga skruvar.",
       "## Resor och närhet",
-      "Åkersberga ligger ungefär fyra mil sydväst om Norrtälje. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Åkersberga. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
+      "Åkersberga ligger ungefär fyra mil sydväst om Norrtälje. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
       "## När omläggning är rätt val",
       "Ett tak behöver inte alltid läggas om. Är skadorna begränsade kan en reparation räcka. När underlaget är slitet på stora delar av taket, när läckorna återkommer eller när ytmaterialet har åldrats över hela taket, kan en omläggning vara rätt åtgärd. Vad som gäller för ditt tak går vi igenom vid takkontrollen, och det står i offerten.",
       "## Vad kostar det?",
@@ -1347,7 +1347,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takomläggning i Vallentuna med lertegel, betongpannor eller plåt. Fast pris efter en kostnadsfri takkontroll utan förpliktelser. Utförande enligt AMA.",
     content: [
-      "Har taket på ditt hus i Vallentuna börjat visa sin ålder är en omläggning ett av alternativen att överväga. En takomläggning är ett stort men avgränsat projekt: taket byggs upp på nytt, ofta med samma sorts material som förut. Här går vi igenom vad omläggningen innebär och hur du kommer igång.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Vallentuna. Har taket på ditt hus i Vallentuna börjat visa sin ålder är en omläggning ett av alternativen att överväga. En takomläggning är ett stort men avgränsat projekt: taket byggs upp på nytt, ofta med samma sorts material som förut. Här går vi igenom vad omläggningen innebär. Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
       "## Takomläggning, förklarat",
       "När ett tak läggs om rivs det gamla ytmaterialet, och underlaget och läkten byts innan nytt material läggs på. Arbetet omfattar alltså lika mycket som ett takbyte, och orden används ofta om varandra. Omläggning säger man gärna när taket får samma typ av material igen, till exempel tegel mot tegel. Nockplåt, fotplåt och beslag ingår i samma arbete.",
       "## Hus i Vallentuna",
@@ -1357,7 +1357,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "## Lertegel vid omläggningen",
       "Har huset tegeltak i dag är lertegel det naturliga valet vid en omläggning. Lertegel är bränd lera, ger det klassiska tegeluttrycket och åldras med patina. Precis som betongpannor är tegel tungt, så takstolarna behöver klara vikten. Vad takstolarna klarar kan behöva bedömas av en konstruktör. Vill du byta uttryck kan betongpannor eller plåt vara alternativ. Tänk på att pannplåt inte är samma sak som lertegel.",
       "## Mellan Norrtälje och Stockholm",
-      "Vallentuna ligger ungefär fyra och en halv mil sydväst om Norrtälje, med Täby, Åkersberga och Rimbo runt om. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Vallentuna. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
+      "Vallentuna ligger ungefär fyra och en halv mil sydväst om Norrtälje, med Täby, Åkersberga och Rimbo runt om. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
       "## Vad kostar det?",
       "Priset beror på takets storlek och form, underlagets skick, detaljerna och åtkomsten. Riktpriser per material finns på roslagstak.se/priser. Ditt pris står i offerten och är fast.",
       "## Frågor om takomläggning i Vallentuna",
@@ -1800,7 +1800,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     description:
       "Takrenovering i Täby: vi bedömer om taket kan renoveras eller behöver bytas och lämnar fast pris efter en kostnadsfri takkontroll.",
     content: [
-      "Ett tak som har börjat läcka vid en genomföring, har några trasiga pannor eller en plåtdetalj som har släppt behöver inte alltid bytas helt. Ofta räcker det att åtgärda det som är skadat. För dig som bor i Täby förklarar vi här vad en takrenovering kan omfatta, var gränsen mot ett takbyte går och hur du får ett fast pris.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Täby. Ett tak som har börjat läcka vid en genomföring, har några trasiga pannor eller en plåtdetalj som har släppt behöver inte alltid bytas helt. Ofta räcker det att åtgärda det som är skadat. Här förklarar vi vad en takrenovering kan omfatta, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
       "## Hus och tak i Täby",
       "Täby blev villaort med järnvägen. Roslagsbanan drogs fram på 1880-talet, och enligt Täby kommun växte villaområdena fram kring stationerna. I Näsbypark var över 200 tomter bebyggda redan 1933, och i Ensta var villabyggandet särskilt intensivt under 1940- till 1960-talen. Gribbylund och Skarpäng präglas enligt kommunen av typhus från 1970- och 1980-talen. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Mer om områdena finns på sidan om Täby.",
       "## Vad en takrenovering kan omfatta",
@@ -1812,7 +1812,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "## Var går gränsen mot takbyte?",
       "När skadorna är avgränsade kan en renovering räcka. Om underlaget är slitet över stora delar av taket, eller om läckorna återkommer på flera ställen, kan ett takbyte eller en omläggning vara rätt åtgärd. Vi bedömer det vid takkontrollen och säger vad vi ser.",
       "## Täby och omnejd",
-      "Alla tre grenarna av Roslagsbanan går genom Täby. Kommunen ligger ungefär fem mil sydväst om Norrtälje. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Täby. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
+      "Alla tre grenarna av Roslagsbanan går genom Täby. Kommunen ligger ungefär fem mil sydväst om Norrtälje. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.",
       "## Vad kostar en takrenovering i Täby?",
       "En takrenovering har inget riktpris per kvadratmeter, eftersom priset beror på vad som behöver åtgärdas. Du får ett fast pris i offerten efter en kostnadsfri takkontroll.",
       "## Frågor om takrenovering i Täby",

@@ -206,7 +206,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vilka områden arbetar ni i?",
-        answer: "Vi tar uppdrag i Roslagen och Storstockholm.",
+        answer: "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
       },
     ],
     defaultTopic: "Takkontroll",
