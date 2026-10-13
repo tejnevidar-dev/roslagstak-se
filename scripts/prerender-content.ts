@@ -125,6 +125,7 @@ const MONEY_LINKS = [
 ];
 import { brfLocationSlugs } from "../src/data/brf-locations";
 import { applyMall, OAR_UTAN_BILVAG, usesMall } from "../src/data/location-mall";
+import { referensMening } from "../src/data/location-referens";
 import { isNearBase, distanceFromBaseKm, distanceKm } from "../src/data/service-reach";
 import { locationWhySections } from "../src/data/location-sections";
 import { hasServiceCombos } from "../src/data/service-slugs";
@@ -766,21 +767,7 @@ const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
     `${distanceFromBaseKm(loc) < NARA_BASEN_KM ? `${loc.name} tillhör ${loc.region}` : `${loc.name} ligger cirka ${Math.round(distanceFromBaseKm(loc))} km från vår bas i Norrtälje`}. Närmaste orter i vårt område: ${loc.nearbyLocations.join(", ")}.`,
   ];
 
-  const exactProject = projectSummaries.find((p) => p.locationSlug === loc.slug);
-  if (exactProject) {
-    parts.push(`Vi har utfört ett dokumenterat referensjobb här: ${exactProject.title}.`);
-  } else {
-    const nearbyProject = projectSummaries.find((p) => {
-      const projectLoc = locations.find((l) => l.slug === p.locationSlug);
-      return projectLoc && distanceKm(loc, projectLoc) <= NEARBY_PROJECT_MAX_KM;
-    });
-    if (nearbyProject) {
-      const projectLoc = locations.find((l) => l.slug === nearbyProject.locationSlug)!;
-      parts.push(
-        `Ett referensjobb i närområdet: ${nearbyProject.title}, ungefär ${Math.round(distanceKm(loc, projectLoc))} km härifrån. Det jobbet gjordes inte ${prep} ${loc.name}, men det visar hur ett komplett takbyte kan se ut.`,
-      );
-    }
-  }
+  // Referensjobbet har flyttats till referensMening (location-referens.ts), efter områdestextens första stycke (paket 79).
 
   const indexedServiceNames = hasServiceCombos(loc.region)
     ? [...new Set(combos.filter((c) => c.locationSlug === loc.slug && !isThinCombo(c.serviceSlug, loc)).map((c) => c.serviceName))]
@@ -1238,6 +1225,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: loc.description,
       ...buildBody([
         loc.longDescription,
+        ...(mall ? [] : [referensMening(loc, prep)].filter((m): m is string => !!m)),
         ...(loc.extraContent ? [loc.extraContent] : []),
         ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, stripInlineMd(sec.text)]),
         ...(loc.process

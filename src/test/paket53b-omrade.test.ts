@@ -90,8 +90,10 @@ describe("paket 53b: mallar och länktexter", () => {
     expect(c).not.toContain('label: "Takläggare i Singö"');
   });
   it("Li6/P3: sidor med egen text använder mallens lydelse om referensjobbet", () => {
+    // Paket 79: meningen har flyttats ur prerender-content.ts till den delade funktionen i location-referens.ts (samma lydelse, React och serverns HTML)
     expect(kalla("scripts/prerender-content.ts")).not.toContain("Vi påstår inte att det jobbet gjordes här");
-    expect(kalla("scripts/prerender-content.ts")).toContain("Ett referensjobb i närområdet: ${nearbyProject.title}, ungefär");
+    expect(kalla("src/data/location-referens.ts")).not.toContain("Vi påstår inte att det jobbet gjordes här");
+    expect(kalla("src/data/location-referens.ts")).toContain("Ett referensjobb i närområdet: ${near.title}, ungefär");
   });
   it("Li7: huvudrubrikerna på /tjanster/platarbeten och /tjanster/takavvattning har kolon", () => {
     expect(prerenderContent("/tjanster/platarbeten")!.h1).toBe("Plåtarbeten: beslag och bandtäckning");

@@ -18,6 +18,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
 import { locations } from "@/data/locations";
 import { getLocationWithMall, OAR_UTAN_BILVAG, usesMall } from "@/data/location-mall";
+import { referensMening } from "@/data/location-referens";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { LOCATION_PAGE_TEXT } from "@/data/location-page-text";
@@ -54,6 +55,7 @@ const LocationPage = () => {
      referensjobb från en grannort (≤30 km, se getNearbyProject) får många fler ortssidor en riktig
      location↔project-länk — alltid med orten utskriven, aldrig bara "i närområdet" utan angiven
      plats (Marknadschefen 2026-09-29, regel 5). */
+  const referens = referensMening(location, location.isIsland ? "på" : "i");
   const nearbyProject = getNearbyProject(location);
   const nearbyProjectKommun = nearbyProject?.locationName.split(",")[1]?.trim();
   /* Vilka tjänst+ort-sidor som faktiskt är indexerade här (inte alla 9 — se thin-combos.ts).
@@ -279,6 +281,10 @@ const LocationPage = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {location.longDescription}
                 </p>
+
+                {!usesMall(locations.find((l) => l.slug === location.slug) ?? location) && referens && (
+                  <p className="text-muted-foreground leading-relaxed mb-6">{referens}</p>
+                )}
 
                 {location.extraContent && (
                   <p className="text-muted-foreground leading-relaxed mb-6">
