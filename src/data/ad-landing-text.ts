@@ -17,7 +17,7 @@ export const AD_STEPS = [
   },
   {
     title: "Offert med fast pris",
-    text: "Du får en offert med fast pris. Tillägg bara efter ditt godkännande.",
+    text: "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Tillägg bara efter ditt godkännande.",
   },
   {
     title: "Vi utför jobbet",
