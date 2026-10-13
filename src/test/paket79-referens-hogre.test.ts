@@ -8,7 +8,7 @@ import { locations } from "@/data/locations";
 import { usesMall } from "@/data/location-mall";
 import { referensMening } from "@/data/location-referens";
 import { stripInlineMd, inlineMdLinks } from "@/lib/inline-md";
-import { prerenderContent } from "../../scripts/prerender-content";
+import { prerenderContent, styckenMedLankar } from "../../scripts/prerender-content";
 
 const kalla = (f: string) => readFileSync(f, "utf8");
 const ownText = locations.filter((l) => !usesMall(l));
@@ -41,6 +41,29 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       expect(sida.inlineLinks, l.slug).toEqual(inlineMdLinks(m));
       for (const lank of inlineMdLinks(m)) expect(sida.links.some((x) => x.href === lank.href && x.label === lank.label), l.slug + " " + lank.href).toBe(true);
     }
+    expect(antal).toBeGreaterThan(15);
+  });
+  it("länken i serverns HTML sätts i referensmeningens eget stycke på varje sida som har den, aldrig i ett tidigare stycke med samma ord", () => {
+    const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    let antal = 0;
+    for (const l of ownText) {
+      const m = referensMening(l, l.isIsland ? "på" : "i");
+      if (!m) continue;
+      antal++;
+      const sida = prerenderContent("/taklaggare-" + l.slug)!;
+      const ps = sida.paragraphs.map((p) => (typeof p === "string" ? p : ""));
+      const html = styckenMedLankar(ps, sida.inlineLinks, esc);
+      const lank = inlineMdLinks(m)[0];
+      const refIndex = ps.findIndex((p) => p === stripInlineMd(m));
+      const medLank = html.map((h, i) => (h.includes('<a href="' + lank.href + '">') ? i : -1)).filter((i) => i >= 0);
+      expect(medLank, l.slug).toEqual([refIndex]);
+      expect(html[refIndex], l.slug).toContain('<a href="' + lank.href + '">' + esc(lank.label) + "</a>");
+      // inget tidigare stycke innehåller länktexten, så första träffen är referensmeningen även utan index
+      expect(ps.findIndex((p) => p.includes(lank.label)), l.slug).toBe(refIndex);
+      // texten är oförändrad: utan taggar är stycket lika med texten
+      expect(html[refIndex].replace(/<[^>]+>/g, ""), l.slug).toBe(esc(ps[refIndex]));
+    }
+    expect(antal).toBe(ownText.filter((l) => referensMening(l, l.isIsland ? "på" : "i")).length);
     expect(antal).toBeGreaterThan(15);
   });
   it("ingen sida har meningen kvar i geo-stycket mitt på sidan, och mallsidorna är orörda", () => {

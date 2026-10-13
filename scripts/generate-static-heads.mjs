@@ -49,6 +49,7 @@ await esbuild({
 });
 const {
   prerenderContent,
+  styckenMedLankar,
   noindexPageMeta,
   noindexPageBody,
   HERO_STYLES,
@@ -251,19 +252,8 @@ const bodyFor = (path) => {
         .join("")}</nav>`
     : "";
   const hero = page.hero ? HERO_STYLES[page.hero] : null;
-  // Länkar i löpande text (page.inlineLinks): första stycket som innehåller länktexten får <a>, texten är oförändrad.
-  const lankade = new Set();
-  const medLankar = (p) => {
-    let h = esc(p);
-    for (const l of page.inlineLinks ?? []) {
-      const t = esc(l.label);
-      if (!lankade.has(l.href) && h.includes(t)) {
-        h = h.replace(t, () => `<a href="${esc(l.href)}">${t}</a>`);
-        lankade.add(l.href);
-      }
-    }
-    return h;
-  };
+  // Länkar i löpande text (page.inlineLinks): första stycket som innehåller länktexten får <a>, texten är oförändrad (styckenMedLankar, provad i paket79-testet).
+  const styckeHtml = styckenMedLankar(page.paragraphs, page.inlineLinks, esc);
   return `<div id="prerendered-content" style="${hero ? "max-width:1280px;padding:96px 24px 48px" : "max-width:820px;padding:48px 20px"};margin:0 auto;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;line-height:1.65">
       ${breadcrumbSchema}
       ${extraJsonLd}
@@ -277,7 +267,7 @@ const bodyFor = (path) => {
           // Rubriker (G1): samma h2/h3 som React-sidan. Avslutande kolon/punkt hör till meningsgrinden, inte rubriken.
           const img = page.images?.[i];
           const figure = img ? `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}" ${img.eager ? 'fetchpriority="high"' : 'loading="lazy" fetchpriority="low"'} decoding="async" style="max-width:100%;height:auto" />` : "";
-          return `${figure}${level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${medLankar(p)}</p>`}`;
+          return `${figure}${level ? `<h${level} style="color:#1a365d;line-height:1.3">${esc(p.replace(/[.:]$/, ""))}</h${level}>` : `<p>${styckeHtml[i]}</p>`}`;
         })
         .join("\n      ")}
       <nav aria-label="Sidlänkar"><ul>${links

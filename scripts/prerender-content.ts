@@ -202,6 +202,22 @@ export interface PrerenderPage {
 }
 
 export { buildBody, type BodyItem } from "../src/lib/body-items";
+
+/** Stycken som HTML med länkar i löpande text (page.inlineLinks). Varje länk sätts i det FÖRSTA stycket som innehåller länktexten, en gång.
+ *  Används av generate-static-heads.mjs och provas direkt i src/test/paket79-referens-hogre.test.ts. `esc` är HTML-escapen. */
+export const styckenMedLankar = (
+  stycken: string[],
+  lankar: { href: string; label: string }[] | undefined,
+  esc: (s: string) => string,
+): string[] => {
+  const html = stycken.map((p) => esc(p));
+  for (const l of lankar ?? []) {
+    const t = esc(l.label);
+    const i = html.findIndex((h) => h.includes(t));
+    if (i >= 0) html[i] = html[i].replace(t, () => `<a href="${esc(l.href)}">${t}</a>`);
+  }
+  return html;
+};
 // SEO Command Center (S0): samma meta-funktion och beskärning som SEOHead, för generate-static-heads.mjs.
 export { resolveMeta } from "../src/data/overrides";
 import { buildOverrideBlocks } from "../src/data/overrides";
