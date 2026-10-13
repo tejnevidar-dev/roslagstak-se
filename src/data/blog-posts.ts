@@ -478,7 +478,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       "Det finns inget takmaterial som är \"bäst för skärgården\". Det som avgör är detsamma som överallt annars: vad huset är byggt för, hur taket ser ut och vilket uttryck du vill ha. Två saker är ändå vanligare att behöva tänka på när huset ligger på en ö eller är ett fritidshus: vikten och vägen dit. Här går vi igenom materialen utifrån det.",
       "## Två jobb, två val",
-      "Vi har gjort kompletta takbyten på Blidö och Singö. På Blidö lades svarta betongpannor från Benders. På Singö lades röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Samma skärgård, olika val. Bilder finns under [våra projekt](/projekt).",
+      "Vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn. På Blidö lades svarta betongpannor från Benders. På Singö lades röda betongpannor på huvudtaket och röd TP20-plåt på de lägre delarna. Samma skärgård, olika val. Bilder finns under [våra projekt](/projekt).",
       "## Börja med vad huset bär",
       "Ett hus som har pannor i dag bär redan den vikten. Ett fritidshus med plåt eller papp kan vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs. Det är oftast den frågan som avgör, inte läget.",
       "## Materialen",
@@ -839,7 +839,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       "Det finns inget takmaterial som är bäst på Blidö. Det som avgör är huset: vad det har i dag, hur taket ser ut och vad takstolarna klarar. Här utgår vi från ett tak vi har bytt på ön. Mer om Blidö finns på sidan [takläggare på Blidö](/taklaggare-blido).",
       "## Ett tak vi har bytt",
-      "Vi har gjort kompletta takbyten på Blidö och Singö. På Blidö lades svarta betongpannor från Benders, med nytt underlag, ny läkt, nya plåtdetaljer, skorstensbeslag och hängrännor. Den befintliga råsponten behölls. Bilder finns under [våra projekt](/projekt).",
+      "Vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn. På Blidö lades svarta betongpannor från Benders, med nytt underlag, ny läkt, nya plåtdetaljer, skorstensbeslag och hängrännor. Den befintliga råsponten behölls. Bilder finns under [våra projekt](/projekt).",
       "Ett annat hus på samma ö kan få ett annat svar.",
       "## Tre frågor som avgör",
       "**Vad har huset i dag?** Ett hus som har pannor bär redan den vikten. Har det plåt eller papp är ett lätt material det naturliga valet, och ska det få ett tyngre material kan bärigheten behöva bedömas av en konstruktör.",
@@ -880,7 +880,7 @@ export const blogPosts: BlogPost[] = [
       "## 5. Hur utförs arbetet?",
       "Fråga vilken standard firman arbetar efter. **Vårt svar:** vi utför arbetet enligt AMA, branschens allmänna material- och arbetsbeskrivning.",
       "## 6. Kan jag se något ni har gjort?",
-      "Be om bilder och uppgifter från riktiga jobb. **Vårt svar:** vi har gjort kompletta takbyten på Blidö och Singö, båda i Norrtälje kommun. Bilder och uppgifter finns under [våra projekt](/projekt).",
+      "Be om bilder och uppgifter från riktiga jobb. **Vårt svar:** vi har gjort kompletta takbyten på Blidö, på Singö och i Grisslehamn, alla tre i Norrtälje kommun. Bilder och uppgifter finns under [våra projekt](/projekt).",
       "## Två saker till",
       "**ROT-avdraget.** Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden. Läs mer i [ROT-avdrag vid takbyte](/blogg/rot-avdrag-takbyte).",
       "**Jämför samma sak.** Har du flera offerter, jämför vad som ingår och inte bara slutsumman. Hur man gör står i [jämföra offerter på takbyte](/blogg/jamfora-offerter-takbyte).",
