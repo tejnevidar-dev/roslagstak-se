@@ -1704,14 +1704,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Skärholmen — takbyte och takrenovering i sydvästra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Skärholmen och omgivande stadsdelar har en stor andel miljonprogrambebyggelse med stora bostadshus, radhus och centrumanläggningar. Taken är ofta plåttak och papptak från 1960- och 70-talet. Vi utför takbyten och takrenoveringar i Skärholmen med material som passar både bostadshus och kommersiella fastigheter — TP20-plåt, bandtäckning och membrantak för flacka ytor. Vi hanterar stora takytor effektivt och kostnadseffektivt.",
+      "Skärholmen och omgivande stadsdelar har en stor andel miljonprogrambebyggelse med stora bostadshus, radhus och centrumanläggningar.",
     extraContent:
-      "Stora takytor i Skärholmen, som bostadshus och centrumanläggningar, kräver noggrann planering av ställning, materialleverans och avfall. Vi tar uppdrag på både stora bostadsrättsfastigheter och kommersiella byggnader i området. För stora ytor är TP20-plåt ofta det mest kostnadseffektiva valet — snabbt att montera och lång livslängd. Kontakta oss för offert på större takprojekt i Skärholmen.",
-    uniqueFAQ: {
-      question: "Kan ni byta tak på stora bostadshus i Skärholmen?",
-      answer:
-        "Ja, vi utför takbyten på stora bostadshus och radhus i Skärholmen. Stora takytor monteras effektivt med TP20-plåt eller bandtäckning. Vi planerar ställning, material och avfall för att minimera störningar för boende. Kontakta oss för offert anpassad för er fastighet.",
-    },
+      "Stora takytor i Skärholmen, som bostadshus och centrumanläggningar, kräver noggrann planering av ställning, materialleverans och avfall.",
     primaryKeyword: "takläggare Skärholmen",
     lat: 59.2756,
     lng: 17.9097,
@@ -2085,14 +2080,10 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Vällingby — takbyte och takrenovering i västra Stockholm. Fast pris och 10 års utförandegaranti.",
     longDescription:
-      "Vällingby växte fram som en av Europas mest uppmärksammade ABC-städer på 1950-talet, med en blandning av centrumanläggning, bostadshus och villabebyggelse. Taken i Vällingby speglar denna period — plåttak och tegeltak från 50- och 60-talet. Vi utför takbyten, takomläggningar och plåtarbeten i Vällingby med material valt för den äldre bebyggelsens karaktär. Betongpannor kan drabbas av frostsprängning och underlagspapp kan torka och spricka med åren.",
+      "Vällingby växte fram som en av Europas mest uppmärksammade ABC-städer på 1950-talet, med en blandning av centrumanläggning, bostadshus och villabebyggelse. Vi tar uppdrag i Vällingby med takbyte och takomläggning.",
     extraContent:
-      "I Vällingby finns det ofta tak från 50- och 60-talet där omläggning med ny papp, ny läkt och plåt är ofta det rimliga valet. För bostadsrättsfastigheterna runt centrum planerar vi ställning och avfall så att boende störas minimalt. Vi hjälper dig jämföra totalkostnad, inte bara pris per kvadratmeter idag.",
-    uniqueFAQ: {
-      question: "Vad kostar takbyte på en villa i Vällingby?",
-      answer:
-        "Priset för en villa i Vällingby beror på takets storlek, material och underlagets skick, oavsett om du väljer TP20-plåt eller dubbelfalsat. Med ROT-avdrag på 30 % av arbetskostnaden. Kontakta oss för kostnadsfri takkontroll och fast pris.",
-    },
+      "",
+    uniqueFAQ: {"question":"Vad kostar takbyte på en villa i Vällingby?","answer":"Priset för en villa i Vällingby beror på takets storlek, material och underlagets skick. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden. Du får ett fast pris i offerten efter en kostnadsfri takkontroll."},
     primaryKeyword: "takläggare Vällingby",
     lat: 59.3819,
     lng: 17.8747,
@@ -3701,14 +3692,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Strängnäs — takbyte och takrenovering vid Mälaren. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Strängnäs är en gammal domkyrkostad på en halvö i Mälaren, med välbevarade kvarter, sjönära villor och nyare områden längre från centrum. Läget vid vattnet ger fuktig luft och vind som slits på beslag, vindskivor och underlagspapp. Vi tar uppdrag i Strängnäs med takbyte, takrenovering, bandtäckning och plåtarbeten.",
+      "Strängnäs är en gammal domkyrkostad på en halvö i Mälaren, med välbevarade kvarter, sjönära villor och nyare områden längre från centrum. Vi tar uppdrag i Strängnäs med takbyte, takomläggning och takrenovering.",
     extraContent:
-      "På äldre byggnader i stadskärnan är rätt beslag och detaljer avgörande, medan nyare hus främst behöver kontroll av läkt, papp och avvattning. Vi går igenom takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris. Bostadsrättsföreningar och privatpersoner är lika välkomna.",
-    uniqueFAQ: {
-      question: "Passar plåttak vid Mälaren i Strängnäs?",
-      answer:
-        "Ja, plåttak är ett vanligt och hållbart val nära vatten. Välj färgbelagd plåt med hög korrosionsklass och korrekt monterade beslag. Vi går igenom material, profil och kulör vid takkontrollen och lämnar ett fast pris.",
-    },
+      "Vi går igenom takets skick vid en kostnadsfri takkontroll och lämnar ett fast pris.",
     primaryKeyword: "takläggare Strängnäs",
     lat: 59.3777,
     lng: 17.0313,
@@ -3764,14 +3750,9 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Gnesta — takbyte och takrenovering. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     longDescription:
-      "Gnesta är en mindre ort i Södermanland med villor, radhus och äldre gårdar, omgiven av skog och öppna landskap. Snölast, lövfall och fukt i skogsnära lägen påverkar taken, särskilt rännor, takfot och nordsidor. Vi tar uppdrag i Gnesta med takbyte, takrenovering, takavvattning och plåtarbeten.",
+      "Gnesta är en mindre ort i Södermanland med villor, radhus och äldre gårdar, omgiven av skog och öppna landskap. Vi tar uppdrag i Gnesta med takbyte, takomläggning, takrenovering och hängrännor.",
     extraContent:
-      "Vid takkontrollen kontrollerar vi underlag, läkt, beslag och avvattning och ger en ärlig rekommendation mellan renovering och byte. Vi lämnar ett fast pris med tydligt vad som ingår, och kan även erbjuda taktvätt när taket i övrigt är i gott skick.",
-    uniqueFAQ: {
-      question: "Vilket takmaterial passar skogsnära hus i Gnesta?",
-      answer:
-        "I skogsnära lägen samlas löv och barr i rännor och på takytan, och mossa trivs på skuggiga sidor. Plåt med släta ytor och god avvattning är ofta lättskött, medan betongpannor och tegel kräver regelbunden rengöring. Vi går igenom alternativen vid en kostnadsfri takkontroll och lämnar ett fast pris.",
-    },
+      "Vid takkontrollen kontrollerar vi underlag, läkt, beslag och avvattning och går igenom om renovering eller byte är rätt för taket. Vi lämnar ett fast pris med tydligt vad som ingår.",
     primaryKeyword: "takläggare Gnesta",
     lat: 59.0486,
     lng: 17.3133,
