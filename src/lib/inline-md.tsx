@@ -34,7 +34,8 @@ export const renderInline = (text: string) =>
         link[1]
       );
     const bold = part.match(/^\*\*([^*]+)\*\*$/);
-    if (bold) return <strong key={i} className="font-semibold text-foreground">{bold[1]}</strong>;
+    /* Fet text kan innehålla en länk: **[text](/länk):** (paket 96). Innehållet renderas därför med samma regler, annars syns markdown-syntaxen för besökaren. */
+    if (bold) return <strong key={i} className="font-semibold text-foreground">{renderInline(bold[1])}</strong>;
     return linkPhone(part);
   });
 
