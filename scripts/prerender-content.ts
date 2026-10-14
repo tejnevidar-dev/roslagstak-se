@@ -545,7 +545,7 @@ const staticPages: Record<string, PrerenderPage> = {
     title: "Så går ett takbyte till — steg för steg",
     description:
       "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager.",
-    h1: "Så går ett takbyte till — steg för steg",
+    h1: "Ett takbyte, steg för steg",
     intro:
       "Från råspont till färdigt plåtbeslag: se hur ett komplett takbyte byggs upp lager för lager.",
     paragraphs: [
