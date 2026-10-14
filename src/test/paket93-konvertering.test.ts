@@ -71,13 +71,14 @@ describe("paket 93: /tjanster/takomlaggning (T2, T3, T4, T5), T1 orörd", () => 
     // de andra tjänstesidorna har kvar den gamla meningen tills någon beslutar annat
     expect(text("/tjanster/takrenovering")).toContain("Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.");
   });
-  it("T5: meningen 'Rätt underlag, rätt beslag, rätt ventilation' är struken här och står kvar på de andra tjänstesidornas data", () => {
-    expect(serviceMeta.takomlaggning.craftLine).toBe("");
+  it("T5: den allmänna meningen är ersatt av Innehålls alternativ, så banderollen 'Hantverket' har kvar sin rubrikrad; de andra tjänstesidornas data är orörda", () => {
+    expect(serviceMeta.takomlaggning.craftLine).toBe("Underlaget, beslagen och ventilationen går vi igenom vid takkontrollen.");
+    expect(t).toContain("Underlaget, beslagen och ventilationen går vi igenom vid takkontrollen.");
     expect(t).not.toContain("Rätt underlag, rätt beslag");
     expect(t).not.toContain("det är där ett tak avgörs");
     expect(serviceMeta.takrenovering.craftLine.length).toBeGreaterThan(10);
   });
-  it("T5 i React: raden ritas bara när den har text (inget tomt stycke)", () => {
+  it("T5 i React och serverns HTML: raden ritas bara när den har text (inget tomt stycke), och den finns i banderollen", () => {
     expect(kalla("src/pages/ServiceDetail.tsx")).toMatch(/\{meta\.craftLine && \(\s*<p className="mt-5 max-w-2xl/);
     expect(kalla("src/data/service-page.ts")).toContain("...(meta.craftLine ? [meta.craftLine] : []),");
     expect(prerenderContent("/tjanster/takomlaggning")!.paragraphs.every((p) => typeof p !== "string" || p.trim() !== "")).toBe(true);

@@ -24,7 +24,7 @@ export type ServiceMeta = {
   specs: { k: string; v: string }[];
   specHeading: string;
   lead: string;
-  /** Raden över bilden i avsnittet "Hantverket". Tom sträng = ingen rad (paket 93, T5). */
+  /** Raden över bilden i avsnittet "Hantverket". Tom sträng = ingen rad. */
   craftLine: string;
   photoNote: string;
   /** Text i rutan "Boka takkontroll". Utan värde används SERVICE_COPY.asideText (paket 93, T4: egen lydelse för takomläggning). */
@@ -40,7 +40,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     ],
     specHeading: "Teknisk specifikation och utförande",
     lead: "Varje omläggning börjar med en kostnadsfri takkontroll.",
-    craftLine: "",
+    craftLine: "Underlaget, beslagen och ventilationen går vi igenom vid takkontrollen.",
     photoNote: "Ny läkt.",
     asideText: "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
   },
