@@ -16,7 +16,7 @@ export const taksakerhetMeta = {
   specs: [
     { k: "Takkontroll", v: "Kostnadsfri" },
     { k: "Pris", v: "Fast i offerten" },
-    { k: "Utförande", v: "AMA-standard" },
+    { k: "Utförande", v: "enligt AMA" },
   ],
   specHeading: "I samband med takbyte eller för sig",
   lead: "Byter du tak är det enklast att montera taksäkerheten samtidigt.",
