@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LazyMotion } from "framer-motion";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -10,10 +10,7 @@ import CookieBanner from "./components/CookieBanner";
 import DeferMount from "./components/DeferMount";
 import TakkontrollAnkare from "./components/TakkontrollAnkare";
 import PixelPageViewTracker from "./components/PixelPageViewTracker";
-import { locationIndex } from "./data/location-index";
-import { brfLocationSlugs } from "./data/brf-locations";
-import { adLandingSlugs } from "./data/ad-landings";
-import { allServiceSlugs, hasServiceCombos } from "./data/service-slugs";
+import { resolveTopLevelSlug, resolveOffertSlug, resolveBrfSlug } from "./lib/route-resolve";
 import { CANONICAL_ALIASES } from "./lib/canonical";
 
 /* Alla sidor utom startsidan laddas som egna chunkar — startsidans JS blir mindre
@@ -60,6 +57,16 @@ const loadMotionFeatures = () =>
     whenIdle(() => import("./lib/motion-features").then((mod) => resolve(mod.default))),
   );
 
+/* Ruttabellen (paket 89): i stället för drygt 2 100 egna rutter (en per ort, en per tjänst × ort, en per annonssida och BRF-ort) finns tre parameterrutter.
+   Vilken sida en adress ger avgörs av lib/route-resolve.ts med samma listor som förut, och en okänd adress ger samma NotFound som "*" gav. */
+const TopLevelRoute = () => {
+  const { slug = "" } = useParams();
+  const sida = resolveTopLevelSlug(slug);
+  return sida === "ort" ? <LocationPage /> : sida === "tjanst-ort" ? <ServiceLocationPage /> : <NotFound />;
+};
+const OffertRoute = () => (resolveOffertSlug(useParams().slug ?? "") ? <AdLandingPage /> : <NotFound />);
+const BrfRoute = () => (resolveBrfSlug(useParams().slug ?? "") ? <BrfLocationPage /> : <NotFound />);
+
 /** Neutral platshållare medan en sidchunk hämtas — ingen layoutförskjutning. */
 const RouteFallback = () => <div className="min-h-screen bg-background" aria-busy="true" />;
 
@@ -96,12 +103,8 @@ const App = () => (
               <Route path="/material" element={<MaterialsPage />} />
               <Route path="/material/:slug" element={<MaterialPage />} />
               <Route path="/brf" element={<BrfPage />} />
-              {adLandingSlugs.map((slug) => (
-                <Route key={slug} path={`/offert/${slug}`} element={<AdLandingPage />} />
-              ))}
-              {brfLocationSlugs.map((slug) => (
-                <Route key={slug} path={`/brf/${slug}`} element={<BrfLocationPage />} />
-              ))}
+              <Route path="/offert/:slug" element={<OffertRoute />} />
+              <Route path="/brf/:slug" element={<BrfRoute />} />
               <Route path="/hur-det-gar-till" element={<ProcessPage />} />
               <Route path="/omraden" element={<AreasPage />} />
               <Route path="/omraden/:region" element={<RegionPage />} />
@@ -109,18 +112,7 @@ const App = () => (
 
               <Route path="/recensioner" element={<Reviews />} />
               <Route path="/priser" element={<Prices />} />
-              {locationIndex.map((loc) => (
-                <Route key={loc.slug} path={`/taklaggare-${loc.slug}`} element={<LocationPage />} />
-              ))}
-              {allServiceSlugs.flatMap((service) =>
-                locationIndex.filter((loc) => hasServiceCombos(loc.region)).map((loc) => (
-                  <Route
-                    key={`${service}-${loc.slug}`}
-                    path={`/${service}-${loc.slug}`}
-                    element={<ServiceLocationPage />}
-                  />
-                )),
-              )}
+              <Route path="/:slug" element={<TopLevelRoute />} />
               <Route path="/blogg" element={<Blog />} />
               <Route path="/blogg/:slug" element={<BlogPost />} />
               <Route path="/admin/login" element={<AdminLogin />} />

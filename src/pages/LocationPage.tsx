@@ -2,7 +2,7 @@ import { locationWhySections } from "@/data/location-sections";
 import { problemsForLocation } from "@/data/problem-links";
 import { hubLinksFor } from "@/data/hub-links";
 import { ortSeoOverrides } from "@/data/seo-overrides";
-import { useParams, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
 import { lankbarHref, ortAvindexerad, synligaOrter } from "@/data/avindexerade-orter";
 import { generateCombos, COMBO_LINK_LABEL, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
@@ -37,10 +37,10 @@ import {
 } from "@/components/ui/accordion";
 
 const LocationPage = () => {
-  const { slug } = useParams<{ slug: string }>();
   const pathname = useLocation().pathname;
-  
-  const resolvedSlug = slug || (pathname.startsWith("/taklaggare-") ? pathname.replace("/taklaggare-", "") : undefined);
+
+  /* Adressen avgör orten (rutten `/:slug` bär hela "taklaggare-<ort>", så parametern används inte). */
+  const resolvedSlug = pathname.startsWith("/taklaggare-") ? pathname.replace("/taklaggare-", "") : undefined;
   const location = resolvedSlug ? getLocationWithMall(resolvedSlug) : undefined;
   const locationProject = resolvedSlug ? projects.find((p) => p.locationSlug === resolvedSlug) : undefined;
 
