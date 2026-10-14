@@ -27,8 +27,6 @@ export type ServiceMeta = {
   /** Raden över bilden i avsnittet "Hantverket". Tom sträng = ingen rad. */
   craftLine: string;
   photoNote: string;
-  /** Text i rutan "Boka takkontroll". Utan värde används SERVICE_COPY.asideText (paket 93, T4: egen lydelse för takomläggning). */
-  asideText?: string;
 };
 
 export const serviceMeta: Record<string, ServiceMeta> = {
@@ -42,7 +40,6 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     lead: "Varje omläggning börjar med en kostnadsfri takkontroll.",
     craftLine: "Underlaget, beslagen och ventilationen går vi igenom vid takkontrollen.",
     photoNote: "Ny läkt.",
-    asideText: "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
   },
   takrenovering: {
     accentLine: "utan helt takbyte.",
@@ -317,7 +314,7 @@ export const SERVICE_COPY = {
   specEyebrow: "Teknisk specifikation",
   processHeading: (n: number) => `Arbetsgång i ${n} steg`,
   asideTitle: "Boka takkontroll",
-  asideText: "Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.",
+  asideText: "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
   asideCta: "Boka takkontroll",
   photoLabel: "Bild",
   asideNote:
@@ -510,7 +507,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     { h: SERVICE_COPY.processHeading(details.process.length), level: 3 },
     ...details.process,
     { h: SERVICE_COPY.asideTitle, level: 3 },
-    meta.asideText ?? SERVICE_COPY.asideText,
+    SERVICE_COPY.asideText,
     SERVICE_COPY.asideCta,
     ...(SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) && meta.photoNote ? [SERVICE_COPY.photoLabel, meta.photoNote] : []),
     SERVICE_COPY.asideNote,

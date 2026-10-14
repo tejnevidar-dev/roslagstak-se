@@ -68,8 +68,7 @@ describe("paket 93: /tjanster/takomlaggning (T2, T3, T4, T5), T1 orörd", () => 
   it("T4: rutan 'Boka takkontroll' har K3-lydelsen ordagrant, bara på takomläggning", () => {
     expect(t).toContain("Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.");
     expect(t).not.toContain("Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.");
-    // de andra tjänstesidorna har kvar den gamla meningen tills någon beslutar annat
-    expect(text("/tjanster/takrenovering")).toContain("Vi återkommer med ett fast pris för ditt projekt efter kostnadsfri takkontroll.");
+    // sedan paket 94 har alla tjänstesidor samma lydelse (se paket94-aside.test.ts)
   });
   it("T5: den allmänna meningen är ersatt av Innehålls alternativ, så banderollen 'Hantverket' har kvar sin rubrikrad; de andra tjänstesidornas data är orörda", () => {
     expect(serviceMeta.takomlaggning.craftLine).toBe("Underlaget, beslagen och ventilationen går vi igenom vid takkontrollen.");
@@ -83,8 +82,8 @@ describe("paket 93: /tjanster/takomlaggning (T2, T3, T4, T5), T1 orörd", () => 
     expect(kalla("src/data/service-page.ts")).toContain("...(meta.craftLine ? [meta.craftLine] : []),");
     expect(prerenderContent("/tjanster/takomlaggning")!.paragraphs.every((p) => typeof p !== "string" || p.trim() !== "")).toBe(true);
   });
-  it("T4 i React: rutan tar meta.asideText före den gemensamma texten", () => {
-    expect(kalla("src/pages/ServiceDetail.tsx")).toContain("{meta.asideText ?? SERVICE_COPY.asideText}");
+  it("T4 i React: rutan tar den gemensamma texten (paket 94)", () => {
+    expect(kalla("src/pages/ServiceDetail.tsx")).toContain("{SERVICE_COPY.asideText}");
   });
   it("T1 (raden under rubriken) är orörd: Vidars beslut väntar", () => {
     const s = prerenderContent("/tjanster/takomlaggning")!;

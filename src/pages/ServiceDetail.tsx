@@ -352,7 +352,7 @@ const ServiceDetail = () => {
               <div className="flex flex-col gap-6 rounded-2xl bg-primary p-9 text-primary-foreground">
                 <h3 className="font-display text-[1.55rem] font-extrabold tracking-[-0.03em]">{SERVICE_COPY.asideTitle}</h3>
                 <p className="text-[15px] font-light leading-relaxed text-primary-foreground/75">
-                  {meta.asideText ?? SERVICE_COPY.asideText}
+                  {SERVICE_COPY.asideText}
                 </p>
                 <Link
                   to="/takkontroll"
