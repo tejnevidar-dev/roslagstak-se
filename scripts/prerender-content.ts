@@ -22,6 +22,7 @@ import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
 import { MATERIAL_PRISAVSNITT, prisAvsnittForSpegel } from "../src/data/material-prices";
 import { MATERIAL_EXTRAS, SERVICE_EXTRAS } from "../src/data/page-extras";
 import { projectTexts } from "../src/data/project-texts";
+import { projektOrtLank } from "../src/data/project-lank";
 import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
 import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1, comboListLink } from "../src/data/service-location-combos";
@@ -1066,7 +1067,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         { href: "/projekt", label: "Alla referensjobb" },
         { href: `/tjanster/${project.serviceSlug}`, label: project.serviceName },
-        { href: `/taklaggare-${project.locationSlug}`, label: `Takläggare i ${project.locationName}` },
+        { href: `/taklaggare-${project.locationSlug}`, label: projektOrtLank(project) },
         { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" },
         // Knapprad efter faktarutan i ProjectPage.tsx (förslag till Vidar)
         { href: "/takkontroll", label: "Boka kostnadsfri takkontroll" },

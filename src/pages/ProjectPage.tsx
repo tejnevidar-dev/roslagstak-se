@@ -9,6 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import NotFound from "@/pages/NotFound";
 import { getProject } from "@/data/projects";
+import { projektOrtLank } from "@/data/project-lank";
 import { materials } from "@/data/materials";
 
 /* Stabila sökvägar under public/og/ (kopior av samma foton som heroImage) för og:image/
@@ -288,7 +289,7 @@ const ProjectPage = () => {
                 to={`/taklaggare-${project.locationSlug}`}
                 className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
-                Takläggare i {placeShort}
+                {projektOrtLank(project)}
               </Link>
               <Link
                 to="/takbyte-norrtalje"
