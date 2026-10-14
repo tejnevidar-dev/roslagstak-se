@@ -449,7 +449,7 @@ const staticPages: Record<string, PrerenderPage> = {
     title: "Offert på takbyte — fast pris efter kostnadsfri takkontroll",
     description:
       "Beskriv ditt tak i några steg, så svarar vi inom 24 timmar, eller boka kostnadsfri takkontroll. Fast pris och 10 års utförandegaranti.",
-    h1: "Få offert på takbyte i Roslagen",
+    h1: "Få pris på ditt takprojekt",
     intro:
       "Beskriv ditt tak i några steg, så svarar vi inom 24 timmar, eller boka kostnadsfri takkontroll.",
     ...buildBody([
