@@ -104,7 +104,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     block: {
       kind: "matrix",
       eyebrow: "Materialval",
-      heading: "Fyra ytskikt vi lägger — och vad som skiljer dem",
+      heading: "Fyra vanliga ytskikt — och vad som skiljer dem",
       intro:
         "Valet av ytskikt styr både pris och utseende. Vi går igenom alternativen på plats innan offerten skrivs.",
       columns: ["Material", "Pris", "Kännetecken", "Passar"],

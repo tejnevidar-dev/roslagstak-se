@@ -6,6 +6,6 @@ export const PRICES_PAGE_TEXT = {
   eyebrow: "Priser 2026",
   faqHeading: "Vanliga frågor om priser",
   ctaHeading: "Vill du veta exakt vad ditt tak kostar?",
-  ctaText: "Konfigurera din offert eller kontakta oss för kostnadsfri takkontroll.",
+  ctaText: "Boka en kostnadsfri takkontroll, så får du ett fast pris i offerten.",
   relatedTitle: "Relaterat till pris",
 };

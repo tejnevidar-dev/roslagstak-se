@@ -24,8 +24,11 @@ export type ServiceMeta = {
   specs: { k: string; v: string }[];
   specHeading: string;
   lead: string;
+  /** Raden över bilden i avsnittet "Hantverket". Tom sträng = ingen rad (paket 93, T5). */
   craftLine: string;
   photoNote: string;
+  /** Text i rutan "Boka takkontroll". Utan värde används SERVICE_COPY.asideText (paket 93, T4: egen lydelse för takomläggning). */
+  asideText?: string;
 };
 
 export const serviceMeta: Record<string, ServiceMeta> = {
@@ -33,12 +36,13 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "",
     specs: [
       { k: "Tätskikt", v: "30 års garanti via MATAKI, på tillverkarens villkor" },
-      { k: "Utförande", v: "AMA-standard" },
+      { k: "Utförande", v: "enligt AMA" },
     ],
     specHeading: "Teknisk specifikation och utförande",
     lead: "Varje omläggning börjar med en kostnadsfri takkontroll.",
-    craftLine: "Rätt underlag, rätt beslag, rätt ventilation — det är där ett tak avgörs.",
+    craftLine: "",
     photoNote: "Ny läkt.",
+    asideText: "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
   },
   takrenovering: {
     accentLine: "utan helt takbyte.",
@@ -506,7 +510,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     { h: SERVICE_COPY.processHeading(details.process.length), level: 3 },
     ...details.process,
     { h: SERVICE_COPY.asideTitle, level: 3 },
-    SERVICE_COPY.asideText,
+    meta.asideText ?? SERVICE_COPY.asideText,
     SERVICE_COPY.asideCta,
     ...(SERVICE_DETAIL_PHOTO_SLUGS.includes(slug) && meta.photoNote ? [SERVICE_COPY.photoLabel, meta.photoNote] : []),
     SERVICE_COPY.asideNote,
@@ -518,7 +522,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
     ...details.benefits,
     ...specific("after-scope"),
     SERVICE_COPY.craftEyebrow,
-    meta.craftLine,
+    ...(meta.craftLine ? [meta.craftLine] : []),
     SERVICE_COPY.craftCaption(service.title, slug),
     SERVICE_COPY.goodToKnowEyebrow,
     ...goodToKnowBoxes(slug).flatMap((b, i) => [{ h: b.t, level: (i === 0 && PRIS_SOM_AVSNITT.includes(slug) ? 2 : 3) as 2 | 3 }, b.d]),

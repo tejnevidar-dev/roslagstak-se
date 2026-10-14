@@ -352,7 +352,7 @@ const ServiceDetail = () => {
               <div className="flex flex-col gap-6 rounded-2xl bg-primary p-9 text-primary-foreground">
                 <h3 className="font-display text-[1.55rem] font-extrabold tracking-[-0.03em]">{SERVICE_COPY.asideTitle}</h3>
                 <p className="text-[15px] font-light leading-relaxed text-primary-foreground/75">
-                  {SERVICE_COPY.asideText}
+                  {meta.asideText ?? SERVICE_COPY.asideText}
                 </p>
                 <Link
                   to="/takkontroll"
@@ -478,9 +478,11 @@ const ServiceDetail = () => {
                 <span aria-hidden="true" className="h-px w-12 bg-primary-foreground/60" />
                 {SERVICE_COPY.craftEyebrow}
               </p>
-              <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
-                {meta.craftLine}
-              </p>
+              {meta.craftLine && (
+                <p className="mt-5 max-w-2xl font-display text-[clamp(1.3rem,2.4vw,2.1rem)] font-extrabold leading-[1.08] tracking-[-0.035em] text-primary-foreground">
+                  {meta.craftLine}
+                </p>
+              )}
             </div>
           </div>
           <div className="absolute inset-x-0 bottom-0 bg-primary/85 px-6 py-4 text-[11px] uppercase tracking-[0.2em] text-primary-foreground backdrop-blur-sm">

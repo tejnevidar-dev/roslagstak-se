@@ -53,7 +53,7 @@ export const priceFaqs = [
   },
   {
     question: "Kostar det extra på öar i skärgården?",
-    answer: "Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig. Ditt pris står i offerten och är fast.",
+    answer: "Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas. Ditt pris står i offerten och är fast.",
   },
   {
     question: "Hur lång tid tar ett takbyte?",

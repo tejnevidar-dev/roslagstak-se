@@ -31,12 +31,12 @@ describe("paket 48: /kontakt", () => {
     expect(kontakt().text).not.toContain("mätutrustning");
   });
 
-  it("d) och 1.8: uppräkningen har varken 'alla öar', Östhammar eller 'hela', och ö-stycket står kvar oförändrat", () => {
+  it("d) och 1.8: uppräkningen har varken 'alla öar', Östhammar eller 'hela', och ö-stycket har den godkända ö-lydelsen (paket 93, K1: förut med 'Blidö och Singö')", () => {
     const { text, p } = kontakt();
     expect(text).toContain("Vi tar uppdrag i Roslagen och Storstockholm, från Norrtälje, Österåker och Vaxholm till Täby, Sollentuna, Nacka och Södertälje.");
     expect(text).not.toContain("alla öar");
     expect(text).not.toContain("Östhammar");
-    expect(text).toContain("För dig på en ö: vi tar uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Berätta var fastigheten ligger och hur den nås, så planerar vi takkontrollen därefter.");
+    expect(text).toContain("För dig på en ö: vi tar uppdrag i skärgården. Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.");
     expect(p.description).toBe("Ring 070-154 36 39 eller fyll i formuläret — kostnadsfri takkontroll i Roslagen och Storstockholm. Svar inom 24 timmar.");
   });
 
