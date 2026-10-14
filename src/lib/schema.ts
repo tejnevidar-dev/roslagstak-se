@@ -1,8 +1,8 @@
 import { locationIndex } from "@/data/location-index";
 import { synligaOrter } from "@/data/avindexerade-orter";
-import { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP, buildBreadcrumbNode } from "./schema-graph";
+import { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP, LOGO_URL, OPENING_HOURS, buildBreadcrumbNode } from "./schema-graph";
 
-export { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP };
+export { SITE_URL, ORG_ID, LOCAL_BUSINESS_ID, WEBSITE_ID, NAP, LOGO_URL, OPENING_HOURS };
 
 /**
  * Central JSON-LD-byggare. Alla noder delar samma @id:n så att Google slår ihop
@@ -79,12 +79,11 @@ export const buildLocalBusinessSchema = () => ({
   "@id": LOCAL_BUSINESS_ID,
   name: NAP.name,
   url: `${SITE_URL}/`,
-  logo: `${SITE_URL}/og-image.jpg`,
+  logo: LOGO_URL,
   image: `${SITE_URL}/og-image.jpg`,
   telephone: NAP.telephone,
   email: NAP.email,
   currenciesAccepted: "SEK",
-  paymentAccepted: "Faktura",
   parentOrganization: { "@id": ORG_ID },
   description:
     "Takfirma med bas i Norrtälje. Takbyte, takomläggning, takrenovering och plåtarbeten i Roslagen, Storstockholm och Mälardalen. Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti.",
@@ -95,6 +94,7 @@ export const buildLocalBusinessSchema = () => ({
     addressCountry: NAP.addressCountry,
   },
   geo: { "@type": "GeoCoordinates", latitude: NAP.lat, longitude: NAP.lng },
+  openingHoursSpecification: OPENING_HOURS,
   areaServed: [
     ...serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
     ...locations.map((loc) => ({ "@type": "Place", name: loc.name })),

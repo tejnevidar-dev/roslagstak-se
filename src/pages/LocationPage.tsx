@@ -27,7 +27,7 @@ import { projects } from "@/data/projects";
 import { getNearbyProject } from "@/data/project-nearby";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
-import { NAP, ORG_ID } from "@/lib/schema";
+import { NAP, ORG_ID, LOGO_URL, OPENING_HOURS } from "@/lib/schema";
 import { linkPhone, renderInline } from "@/lib/inline-md";
 import {
   Accordion,
@@ -85,7 +85,7 @@ const LocationPage = () => {
     email: NAP.email,
     parentOrganization: { "@id": ORG_ID },
     image: "https://roslagstak.se/og-image.jpg",
-    logo: "https://roslagstak.se/og-image.jpg",
+    logo: LOGO_URL,
     areaServed: {
       "@type": "Place",
       name: location.name,
@@ -106,7 +106,7 @@ const LocationPage = () => {
       addressCountry: NAP.addressCountry,
     },
     currenciesAccepted: "SEK",
-    paymentAccepted: "Faktura",
+    openingHoursSpecification: OPENING_HOURS,
     knowsAbout: [
       "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
       "Dubbelfalsat plåttak", "Pannplåt", "Takavvattning",

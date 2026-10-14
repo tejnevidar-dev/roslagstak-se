@@ -6,6 +6,18 @@
  * utan "@"-alias.
  */
 export const SITE_URL = "https://roslagstak.se";
+
+/** Logotypen i schemat (Googles krav: bild på varumärkets logotyp, minst 112 × 112 px, fast adress). Varumärkets märke i 512 × 512 (public/icon-512.png), inte delningsbilden. */
+export const LOGO_URL = `${SITE_URL}/icon-512.png`;
+
+/**
+ * Bokningstider ordagrant som på sajten ("måndag–fredag 07–20 och lördag–söndag 09–19", T1). Delas av alla RoofingContractor-noder så att React och serverns HTML ger samma data.
+ * Det är tider då takkontrollen kan bokas, så de anges som öppettider bara för att sajten själv kallar dem så i kontaktuppgifterna.
+ */
+export const OPENING_HOURS = [
+  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:00", closes: "20:00" },
+  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday", "Sunday"], opens: "09:00", closes: "19:00" },
+] as const;
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -110,7 +122,7 @@ export const buildOrganizationNode = () => ({
   "@id": ORG_ID,
   name: NAP.name,
   url: `${SITE_URL}/`,
-  logo: `${SITE_URL}/og-image.jpg`,
+  logo: LOGO_URL,
   image: `${SITE_URL}/og-image.jpg`,
   telephone: NAP.telephone,
   email: NAP.email,

@@ -5,7 +5,7 @@
  */
 import type { BlogPost } from "../data/blog-posts";
 import { stripInlineMd } from "./inline-md";
-import { SITE_URL, articleId, organizationRef, webPageId } from "./schema-graph";
+import { SITE_URL, LOGO_URL, articleId, organizationRef, webPageId } from "./schema-graph";
 
 export const buildBlogPostingSchema = (post: BlogPost) => {
   const url = `${SITE_URL}/blogg/${post.slug}`;
@@ -27,7 +27,7 @@ export const buildBlogPostingSchema = (post: BlogPost) => {
     articleBody,
     keywords: post.keywords.join(", "),
     author: organizationRef(),
-    publisher: { ...organizationRef(), url: `${SITE_URL}/`, logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` } },
+    publisher: { ...organizationRef(), url: `${SITE_URL}/`, logo: { "@type": "ImageObject", url: LOGO_URL } },
     about: { "@type": "Place", name: "Roslagen, Stockholm, Sverige" },
   };
 };
