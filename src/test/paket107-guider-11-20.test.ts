@@ -65,7 +65,5 @@ describe("paket 107: guiderna 11–20", () => {
   it("BRF-guidens målgrupp är orörd (Vidar)", () => {
     expect(guide("byta-tak-brf-guide-styrelse")).toContain("bostadsrättsföreningar");
   });
-  it("guider utanför ordern är orörda: Vaxholm, Husarö och Rådmansö har kvar sin tilläggsmening (inte i Innehålls lista)", () => {
-    for (const slug of ["takbyte-vaxholm-skargarden", "takbyte-husaro-finnhamn-oar", "taklaggare-radmanso-vato"]) expect(guide(slug), slug).toContain("också om du inte är på plats");
-  });
+  // Vaxholm (gren 109), Husarö (gren 108) och Rådmansö (gren 110) har samma tilläggsmening och rättas där; de är därför inte "orörda" i stapeln som helhet.
 });

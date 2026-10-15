@@ -63,7 +63,5 @@ describe("paket 108: guiderna 21–30", () => {
   it("de gamla formuleringarna är borta", () => {
     for (const [slug, t] of BORTA) expect(guide(slug), `${slug}: ${t.slice(0, 50)}`).not.toContain(t);
   });
-  it("guider utanför ordern är orörda: Vaxholm och Rådmansö har kvar sin tilläggsmening", () => {
-    for (const slug of ["takbyte-vaxholm-skargarden", "taklaggare-radmanso-vato"]) expect(guide(slug), slug).toContain("också om du inte är på plats");
-  });
+  // Vaxholm (gren 109) och Rådmansö (gren 110) har samma tilläggsmening och rättas där.
 });
