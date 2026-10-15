@@ -1,5 +1,5 @@
 /**
- * Paket 117: ortstexterna utan Grind-rad enligt Innehålls omgång 1–2–3 (innehall/utan-grind-omgang*-briefrader-2026-10-15.md). Per rad: det nya står på ortens sida (React-data och serverns HTML), det gamla är borta.
+ * Paket 117: ortstexterna utan Grind-rad enligt Innehålls omgång 1–2–3–4 (innehall/utan-grind-omgang*-briefrader-2026-10-15.md). Per rad: det nya står på ortens sida (React-data och serverns HTML), det gamla är borta.
  * Genererat av _verktyg/gen-test-117.mjs. Ändrad del med lite sammanhang; ändringarna skrevs in i src/data/locations.ts av _verktyg/rader-per-slug.mjs.
  */
 import { describe, expect, it } from "vitest";
@@ -301,6 +301,103 @@ const omgang3: Rad[] = [
 
 describe("paket 117: omgång 3 (10 rader)", () => {
   for (const r of omgang3) {
+    it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
+      expect(ort(r.slug)).toContain(js(r.ny));
+      expect(sida(r.slug)).toContain(js(r.ny));
+      if (r.gammal.length > 12) expect(ort(r.slug)).not.toContain(js(r.gammal));
+    });
+  }
+});
+
+const omgang4: Rad[] = [
+  {
+    "slug": "stenhamra",
+    "kod": "O8",
+    "ny": "tdetaljer och hängrännor det som kan behöva",
+    "gammal": "ofta det som behöver"
+  },
+  {
+    "slug": "stocksund",
+    "kod": "O8",
+    "ny": "tdetaljer och hängrännor det som kan behöva",
+    "gammal": "ofta det som behöver"
+  },
+  {
+    "slug": "stocksund",
+    "kod": "R1",
+    "ny": "ett enkelt sadeltak, och varje anslutning ska vara tät",
+    "gammal": "det är i ränndalar, kring skorstenar och vid plåtdetaljer som ett tak oftast prövas"
+  },
+  {
+    "slug": "stora-mossen",
+    "kod": "U",
+    "ny": "både en och två gånger, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats",
+    "gammal": "så det är dagens skick som räknas, inte byggåret: hur underlaget ser ut, om plåten runt skorsten och kupor är tät och om rännorna för bort vattnet"
+  },
+  {
+    "slug": "stureby",
+    "kod": "O8",
+    "ny": "inte har bytts på länge kan underlagspapp, läkt, plåtdetaljer och hängränno",
+    "gammal": "är det underlagspapp, läkt, plåtdetaljer och hängrännor som bruka"
+  },
+  {
+    "slug": "svedmyra",
+    "kod": "U",
+    "ny": "n redan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats",
+    "gammal": "det som avgör skicket är vad som gjordes vid det tillfället, inte husets byggår"
+  },
+  {
+    "slug": "svedmyra",
+    "kod": "T",
+    "ny": "ya anslutningar i taket. Anslutningarna vid kupornas sidor, runt takfönster och där tillbyggnaden möter det ursprungliga huset är värda en extra titt",
+    "gammal": "Det är vid kupornas sidor, runt takfönster och där tillbyggnaden möter det ursprungliga huset som en takkontroll behöver vara noggrann"
+  },
+  {
+    "slug": "tallkrogen",
+    "kod": "U",
+    "ny": "r lite om hur taket mår. Hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats",
+    "gammal": "Det går bara att avgöra på plats, genom att se på underlag, läkt, plåtdetaljer, skorstensanslutning och hängrännor"
+  },
+  {
+    "slug": "ulvsunda",
+    "kod": "T",
+    "ny": "som möts i vinklar, och anslutningarna i vinklarna, vid ränndalar och plåt är värda en extra titt",
+    "gammal": "det är i vinklarna, vid ränndalar och plåtanslutningar, som en kontroll behöver vara noggrann"
+  },
+  {
+    "slug": "ursvik",
+    "kod": "T",
+    "ny": "ika tider, och skarvarna är värda en extra tit",
+    "gammal": "hör till det som ses över förs"
+  },
+  {
+    "slug": "uttran",
+    "kod": "O8",
+    "ny": "tdetaljer och hängrännor det som kan behöva",
+    "gammal": "ofta det som behöver"
+  },
+  {
+    "slug": "vidja",
+    "kod": "O8",
+    "ny": "länge. Där det är fallet kan underlagspapp, läkt, plåtdetaljer och hängrännor behöva",
+    "gammal": "är underlagspapp, läkt, plåtdetaljer och hängrännor det som oftast behöver"
+  },
+  {
+    "slug": "viksberg",
+    "kod": "U",
+    "ny": "taken redan ha lagts om, och hur underlaget ser ut i dag går inte att se från vägen. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats",
+    "gammal": "så det är dagens skick som räknas och inte byggåret"
+  },
+  {
+    "slug": "viksberg",
+    "kod": "T",
+    "ny": "ra ihop, och det stället är värt en extra titt",
+    "gammal": "bör ses över noga"
+  }
+];
+
+describe("paket 117: omgång 4 (14 rader)", () => {
+  for (const r of omgang4) {
     it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
       expect(ort(r.slug)).toContain(js(r.ny));
       expect(sida(r.slug)).toContain(js(r.ny));
