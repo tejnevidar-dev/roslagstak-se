@@ -582,7 +582,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
   yxlan: {
     title: "Takläggare på Yxlan – fast pris efter takkontroll",
     description:
-      "Takläggare på Yxlan och Blidö: byar från 1700- och 1800-talen, sommarhus från 1900-talets början och sportstugor. Kostnadsfri takkontroll.",
+      "Takläggare på Yxlan i Blidö socken: Yxlö, Alsvik, Vagnsunda, Kolsvik och Köpmanholm. Vägfärja från Furusund. Kostnadsfri takkontroll.",
   },
   blido: {
     title: "Takbyte på Blidö, Norrtälje – fast pris",
