@@ -32,7 +32,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Fuktfläck i taket nära skorstenen? Så hittar du orsaken, när det är akut och när du behöver en takläggare. Kostnadsfri takkontroll.",
     intro:
-      "Fuktfläckar nära skorstenen är ett av de vanligaste takproblemen — oftast handlar det om beslaget runt skorstenen, inte om själva murverket.",
+      "Fuktfläckar eller droppmärken nära skorstenen kan komma från beslaget runt skorstenen, fogen mellan beslag och murverk, murverket eller pannorna närmast skorstenen.",
     symptom:
       "Fuktfläckar eller droppmärken i taket eller på väggen nära skorstenen, fukt eller mörka ränder på råsponten runt skorstenen på vinden, flagnande färg eller fuktskador på skorstenens murverk inomhus.",
     orsaker:
@@ -58,7 +58,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Spruckna, lösa eller förskjutna takpannor släpper in vatten i underlaget. Så ser du det från marken och så åtgärdas det.",
     intro:
-      "Pannor som glidit eller spruckit — ofta efter storm — släpper snabbt in vatten i underlaget om de inte åtgärdas.",
+      "Pannor som ligger snett, har glidit ner, har spruckit eller saknas kan släppa in vatten. Senare kan fukt synas på vinden.",
     symptom:
       "Pannor som ligger snett, har glidit ner, har spruckit eller saknas, ofta efter storm. Mörka partier eller glipor i takytan. Senare kan fukt synas på vinden.",
     orsaker:
@@ -84,7 +84,7 @@ export const problems: Problem[] = [
     metaDescription:
       "När mossa och påväxt blir ett problem för taket, vad du kan göra själv och när det är dags att kontakta en takläggare.",
     intro:
-      "Lite mossa är oftast bara estetiskt. Tjocka mattor håller däremot kvar fukt och kan skada taket över tid.",
+      "Mossa, lav och alger växer där taket ligger i skugga och torkar långsamt, till exempel på norrsidan och under träd.",
     symptom:
       "Gröna eller mörka mattor av mossa, lav och alger, oftast på norrsidan och under träd. Mossrester i hängrännorna.",
     orsaker:
@@ -110,7 +110,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Rostig takplåt, fotplåt eller skorstensbeslag? Så bedömer du läget, vad som händer om du väntar och vilka åtgärder som finns.",
     intro:
-      "Rost börjar oftast ytligt och går att åtgärda enkelt — men obehandlad kan den till slut gå igenom plåten.",
+      "Rostfläckar eller flagnande färg på plåttak, fotplåt, vindskiveplåt, ränndalar eller skorstensbeslag kan komma av en skadad eller sliten ytbehandling, repor eller stående vatten.",
     symptom:
       "Rostfläckar eller flagnande färg på plåttak, fotplåt, vindskiveplåt, ränndalar eller skorstensbeslag. Rostränder på fasaden under plåten.",
     orsaker:
@@ -134,7 +134,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Mörka fläckar, droppar eller mögellukt på vinden? Så skiljer du läckage från kondens och vad som behöver göras.",
     intro:
-      "Fukt på vinden beror antingen på ett läckage genom yttertaket eller på kondens från inomhusluft — åtgärden skiljer sig helt åt.",
+      "Fukt eller mögel på vinden kan komma från ett läckage genom yttertaket eller från kondens, när varm fuktig inomhusluft når den kalla vinden.",
     symptom:
       "Mörka fläckar eller ränder på råsponten, droppar eller frost på undersidan av taket en kall morgon, fuktig isolering, mögellukt.",
     orsaker:
@@ -161,7 +161,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Löv och barr i hängrännan fryser och får vatten att rinna över. Så ser du problemet och när rännorna behöver lagas eller bytas.",
     intro:
-      "Igensatta hängrännor är ett litet problem som blir stort på vintern, när vattnet som rinner över fryser vid takfoten.",
+      "När hängrännorna är igensatta rinner vattnet över kanten när det regnar, och på vintern kan det bli istappar längs takfoten.",
     symptom:
       "Vatten som rinner över kanten när det regnar, växter eller löv i rännan, fuktfläckar eller påväxt på fasaden, istappar längs takfoten på vintern.",
     orsaker:
@@ -186,7 +186,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Mjuk, mörk eller rutten råspont syns ofta först på vinden. Så känner du igen den, varför den uppstår och vad som görs åt det.",
     intro:
-      "Råsponten är takets bärande underlag. När den ruttnar syns det oftast först som mjuka, mörka brädor på vinden.",
+      "Rutten råspont syns som mörka, mjuka eller svampangripna brädor på vinden. Den kommer av fukt över lång tid.",
     symptom:
       "Mörka, mjuka eller svampangripna brädor på vinden, sviktande takyta, gamla fuktränder som återkommer, mögellukt.",
     orsaker:
@@ -214,7 +214,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Droppar eller frost på undersidan av taket en kall morgon är ofta kondens, inte läckage. Så skiljer du dem åt och vad som hjälper.",
     intro:
-      "Kondens sprids ofta över stora ytor på vinden, till skillnad från ett läckage som brukar ha en tydlig punkt.",
+      "Kondens på vinden syns som droppar, rimfrost eller fukt på undersidan av yttertaket, spridd över stora ytor och utan en tydlig läckpunkt.",
     symptom:
       "Droppar, rimfrost eller fukt på undersidan av yttertaket, särskilt kalla, klara morgnar, med fukt spridd över stora ytor och inte en tydlig läckpunkt.",
     orsaker:
@@ -238,7 +238,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Underlagspappen är takets andra skydd mot vatten. Så märker du när den har slutat fungera och vad som krävs för att byta den.",
     intro:
-      "Underlagspappen är takets reservskydd. När den slutar fungera märks det ofta som läckage på flera ställen samtidigt.",
+      "En underlagspapp som har slutat skydda kan ge läckage som inte går att härleda till en enskild trasig panna, och fuktfläckar på flera ställen på vinden.",
     symptom:
       "Läckage som inte går att härleda till en enskild trasig panna, fuktfläckar på flera ställen på vinden, synligt spröd, sprucken eller trasig papp där den syns från vinden.",
     orsaker: "Åldrad papp som har blivit spröd, skador vid tidigare arbeten på taket, fukt som har stått kvar.",
@@ -263,7 +263,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Stora istappar och isvallar vid takfoten kan tyda på värmeläckage eller igensatta hängrännor. Så minskar du risken och när du ska kontakta en takläggare.",
     intro:
-      "Stora istappar är ofta ett tecken på att värme läcker upp genom taket och smälter snön ojämnt.",
+      "Stora istappar och isvallar vid takfoten kan bero på värme från bostaden som smälter snön, igensatta hängrännor eller otillräcklig ventilation.",
     symptom:
       "Stora istappar längs takfoten, isvallar i hängrännorna, vatten som tränger in vid takfoten under töväder.",
     orsaker:
