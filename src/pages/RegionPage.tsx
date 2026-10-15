@@ -12,7 +12,7 @@ import { REGION_EXTRA_LINKS } from "@/data/hub-links";
 import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
-import { regionBySlug, regionIntros, regionNeighbors, regionSlugs } from "@/data/regions";
+import { regionBySlug, regionIntros, regionLinkLabel, regionNeighbors, regionSlugs } from "@/data/regions";
 import { regionTexts } from "@/data/region-texts";
 import { isHeading, renderInline } from "@/lib/inline-md";
 import NotFound from "./NotFound";
@@ -169,7 +169,7 @@ const RegionPage = () => {
             extraLinks={[
               ...(regionNeighbors[region] ?? []).map((n) => ({
                 to: `/omraden/${regionSlugs[n]}`,
-                label: `Takläggare i ${n}`,
+                label: regionLinkLabel(n),
                 description: "Närliggande område.",
               })),
               ...(REGION_EXTRA_LINKS[region] ?? []).map((l) => ({ to: l.href, label: l.label, description: "Mer om takomläggning." })),

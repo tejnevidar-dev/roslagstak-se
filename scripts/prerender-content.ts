@@ -144,7 +144,7 @@ const villaAreaLinks = (key: string) =>
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { CANONICAL_ALIASES } from "../src/lib/canonical";
-import { regionBySlug, regionIntros, regionNeighbors, regionOrder, regionSlugs } from "../src/data/regions";
+import { regionBySlug, regionIntros, regionLinkLabel, regionNeighbors, regionOrder, regionSlugs } from "../src/data/regions";
 
 // Fas 2.19: samma schemanoder som React-sidorna, exponerade för generate-static-heads.mjs.
 export { buildOrganizationNode, buildWebSiteNode, buildWebPageNode, buildBreadcrumbNode } from "../src/lib/schema-graph";
@@ -1120,9 +1120,9 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
 
   if (clean === "/omraden") {
     return {
-      title: "Våra områden — Roslagen och Storstockholm",
+      title: "Våra områden — Roslagen, Storstockholm och Mälardalen",
       description: "Takbyte, takomläggning och takrenovering i Roslagen, Storstockholm och Mälardalen. Välj din ort och boka kostnadsfri takkontroll.",
-      h1: "Takläggare i Roslagen och Storstockholm",
+      h1: "Takläggare i Roslagen, Storstockholm och Mälardalen",
       intro: "RoslagsTak tar uppdrag med takbyte, takomläggning och takrenovering i Roslagen, Storstockholm och Mälardalen.",
       paragraphs: [
         "Välj ditt område nedan för att läsa om husen där och hur du bokar en takkontroll.",
@@ -1132,7 +1132,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...primaryLinks,
         ...Object.entries(regionSlugs).map(([region, slug]) => ({
           href: `/omraden/${slug}`,
-          label: `Takläggare i ${region}`,
+          label: regionLinkLabel(region),
         })),
         ...locationLinks,
       ],
@@ -1156,7 +1156,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ...buildBody([
         ...(rt ? rt.body.map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p))) : []),
         ...(villaAreasParagraph(regionSlugs[region]) ? [villaAreasParagraph(regionSlugs[region])!] : []),
-        `Vi arbetar i ${places.length} orter i ${region}. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
+        `Vi tar uppdrag i ${places.length} orter i området. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
         // Omdömesbandet, "Nästa steg" och länktexten sist, som i RegionPage.tsx (AG1, paket 23)
         GOOGLE_REVIEWS_TEXT.bandEyebrow,
         { h: GOOGLE_REVIEWS_TEXT.title },
@@ -1170,7 +1170,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { href: "/omraden", label: "Alla områden i Roslagen och Storstockholm" },
         ...villaAreaLinks(regionSlugs[region]),
         ...(rt ? rt.body.flatMap(inlineMdLinks) : []),
-        ...(regionNeighbors[region] ?? []).map((n) => ({ href: `/omraden/${regionSlugs[n]}`, label: `Takläggare i ${n}` })),
+        ...(regionNeighbors[region] ?? []).map((n) => ({ href: `/omraden/${regionSlugs[n]}`, label: regionLinkLabel(n) })),
         ...(REGION_EXTRA_LINKS[region] ?? []),
         ...synligaOrter(places).map((l) => ({
           href: `/taklaggare-${l.slug}`,

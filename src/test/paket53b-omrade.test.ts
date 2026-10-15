@@ -15,7 +15,8 @@ const txt = (p: ReturnType<typeof prerenderContent>) => [p!.h1, p!.intro, ...p!.
 describe("paket 53b: arbetsområdet", () => {
   it("Rg1 och de egna tjänst × ort-texterna: 'tar uppdrag i Roslagen och Storstockholm', aldrig 'hela'", () => {
     expect(kalla("src/data/region-texts.ts")).not.toMatch(/tar uppdrag i hela/);
-    expect(kalla("src/data/region-texts.ts").split("tar uppdrag i Roslagen och Storstockholm.").length - 1).toBe(8);
+    expect(kalla("src/data/region-texts.ts").split("tar uppdrag i Roslagen, Storstockholm och Mälardalen.").length - 1).toBe(9); // åtta Stockholmsregioner (paket 102, R6) och Mälardalen
+    expect(kalla("src/data/region-texts.ts")).not.toContain("tar uppdrag i Roslagen och Storstockholm.");
     expect(kalla("src/data/region-texts.ts")).toContain("tar uppdrag i kommunen.");
     expect(kalla("src/data/region-texts.ts")).toContain("tar uppdrag i Österåker.");
     expect(kalla("src/data/combo-overrides.ts")).not.toContain("tar uppdrag i hela Storstockholm");
@@ -26,7 +27,7 @@ describe("paket 53b: arbetsområdet", () => {
     const p = prerenderContent("/omraden")!;
     const t = txt(p) + p.title + p.description;
     expect(t).not.toMatch(/hela Storstockholm|plåtarbeten/);
-    expect(p.h1).toBe("Takläggare i Roslagen och Storstockholm");
+    expect(p.h1).toBe("Takläggare i Roslagen, Storstockholm och Mälardalen"); // paket 102, K3
     const a = kalla("src/pages/AreasPage.tsx");
     expect(a).not.toMatch(/hela Storstockholm|plåtarbeten|utför takarbeten/);
     expect(a).toContain("Orter där RoslagsTak tar uppdrag");

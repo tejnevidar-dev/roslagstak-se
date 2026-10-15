@@ -41,8 +41,8 @@ const AreasPage = () => {
   return (
     <>
       <SEOHead
-        title="Områden — takläggare i Roslagen & Storstockholm"
-        description="Takbyte, takomläggning och takrenovering i Roslagen och Storstockholm. Välj din ort och boka kostnadsfri takkontroll."
+        title="Våra områden — Roslagen, Storstockholm och Mälardalen"
+        description="Takbyte, takomläggning och takrenovering i Roslagen, Storstockholm och Mälardalen. Välj din ort och boka kostnadsfri takkontroll."
         canonical="https://roslagstak.se/omraden"
       />
       <JsonLd data={itemListSchema} />
@@ -56,11 +56,11 @@ const AreasPage = () => {
               <MapPin className="h-3 w-3" aria-hidden="true" /> Verksamhetsområde
             </span>
             <h1 className="mt-5 font-display text-[clamp(2rem,4vw,3.2rem)] font-bold leading-[1.1] text-foreground">
-              Takläggare i Roslagen och Storstockholm
+              Takläggare i Roslagen, Storstockholm och Mälardalen
             </h1>
             <p className="mt-6 text-lg font-light leading-relaxed text-muted-foreground">
               RoslagsTak tar uppdrag med takbyte, takomläggning och takrenovering i Roslagen,
-              Storstockholm. Välj ditt område nedan för att läsa om husen där och hur du
+              Storstockholm och Mälardalen. Välj ditt område nedan för att läsa om husen där och hur du
               bokar en takkontroll.
             </p>
           </div>

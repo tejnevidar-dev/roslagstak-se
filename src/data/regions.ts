@@ -75,3 +75,12 @@ export const regionNeighbors: Record<string, string[]> = {
   "Sydvästra Stockholm": ["Södra Stockholm", "Västerort", "Mälardalen"],
   Mälardalen: ["Nordvästra Stockholm", "Sydvästra Stockholm", "Roslagens inland"],
 };
+
+/** Länktexter där "i <region>" låter fel: kusten och halvön (paket 101, G4, och paket 102, K4). Övriga regioner är "i <region>". */
+const REGION_PREPOSITION: Record<string, string> = {
+  Kusten: "vid kusten",
+  Rådmansöhalvön: "på Rådmansöhalvön",
+};
+
+/** Länktexten till en regionsida: "Takläggare i Norra skärgården", "Takläggare vid kusten", "Takläggare på Rådmansöhalvön". */
+export const regionLinkLabel = (region: string): string => `Takläggare ${REGION_PREPOSITION[region] ?? `i ${region}`}`;
