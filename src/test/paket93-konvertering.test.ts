@@ -48,7 +48,7 @@ describe("paket 93: /kontakt (K1, K2, K3) i serverns HTML", () => {
     expect(t).not.toContain("mejla via formuläret");
   });
   it("övriga stycken och formuläret är orörda (LeadForm.tsx rörs inte)", () => {
-    expect(t).toContain("Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar och har ingen jour.");
+    expect(t).toContain("Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar.");
     expect(t).toContain("Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Du bestämmer i din egen takt.");
     expect(kalla("src/components/LeadForm.tsx")).not.toContain("paket 93");
   });

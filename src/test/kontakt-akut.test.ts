@@ -9,6 +9,6 @@ describe("/kontakt: ingen akut- eller jourlöfte i den statiska texten", () => {
   it("den gamla meningen är borta och den godkända lydelsen står där", () => {
     const text = (prerenderContent("/kontakt")?.paragraphs ?? []).map((p) => (typeof p === "string" ? p : "")).join("\n");
     for (const borta of ["Akta läckage", "prioriterar akuta", "provisorisk tätning", "inom kort"]) expect(text, borta).not.toContain(borta);
-    expect(text).toContain("Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar och har ingen jour.");
+    expect(text).toContain("Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar.");
   });
 });

@@ -136,7 +136,7 @@ const ContactLanding = () => {
 
                 <div className="space-y-3 mb-8 text-sm text-muted-foreground">
                   <p>För dig på en ö: vi tar uppdrag i skärgården. Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.</p>
-                  <p>{linkPhone("Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar och har ingen jour.")}</p>
+                  <p>{linkPhone("Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar.")}</p>
                 </div>
 
                 <div className="space-y-4 border-t border-border pt-6">

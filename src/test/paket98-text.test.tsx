@@ -1,6 +1,6 @@
 /**
  * Paket 98 (Innehålls ordning i text-server-react-lasning-2026-10-15.md): /offert utan priskalkylatorn i serverns HTML och med K3 i "Så går det till";
- * /kontakt i React har samma godkända lydelser som serverns HTML (K3, öarna, jouren). "Räkna ut din offert" (knapptext) och formuläret är orörda.
+ * /kontakt i React har samma godkända lydelser som serverns HTML (K3, öarna, telefonraden). "Räkna ut din offert" (knapptext) och formuläret är orörda.
  */
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
@@ -36,9 +36,9 @@ describe("paket 98: /kontakt i React har serverns godkända lydelser", () => {
     expect(k).toContain('text: "En av våra säljare tittar på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris."');
     expect(k).not.toContain("En av våra säljare kontaktar dig för att boka takkontrollen.");
   });
-  it("ö-lydelsen och jour-raden står i React, ordagrant som i serverns HTML", () => {
+  it("ö-lydelsen och telefonraden står i React, ordagrant som i serverns HTML", () => {
     const o = "För dig på en ö: vi tar uppdrag i skärgården. Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.";
-    const j = "Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar och har ingen jour.";
+    const j = "Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar.";
     expect(k).toContain(o);
     expect(k).toContain(j);
     expect(server).toContain(o);
@@ -47,5 +47,21 @@ describe("paket 98: /kontakt i React har serverns godkända lydelser", () => {
   it("formuläret är orört: inga ändringar i fälten, knappen eller LeadForm.tsx", () => {
     expect(kalla("src/components/LeadForm.tsx")).not.toContain("paket 98");
     expect(k).toContain('<form');
+  });
+});
+
+describe("paket 98: källraden på ortssidor har samma text i serverns HTML och React", () => {
+  const kallrader = (p: string) => text(p).split("\n").filter((r) => r.startsWith("Källa: "));
+  it("serverns källrad är 'Källa: <etikett>' utan webbadress, som React visar den (etiketten är länktexten)", () => {
+    const r = kallrader("/taklaggare-blido");
+    expect(r).toEqual(["Källa: Wikipedia: Blidö"]);
+  });
+  it("ingen ortssida har en webbadress i serverns källrad", () => {
+    for (const p of ["/taklaggare-taby", "/taklaggare-arholma", "/taklaggare-ljustero", "/taklaggare-furusund"]) {
+      for (const r of kallrader(p)) expect(r).not.toMatch(/https?:\/\//);
+    }
+  });
+  it("React visar fortfarande etiketten som länk (oförändrat)", () => {
+    expect(kalla("src/pages/LocationPage.tsx")).toContain("{location.sourceLink.label}");
   });
 });

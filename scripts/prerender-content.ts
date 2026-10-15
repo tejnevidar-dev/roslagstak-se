@@ -651,7 +651,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris. Du bestämmer i din egen takt.",
       "Välkommen att höra av dig oavsett om du planerar ett takbyte i år, funderar på taktvätt eller bara vill ha en bedömning av takets skick.",
       "För dig på en ö: vi tar uppdrag i skärgården. Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.",
-      "Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar och har ingen jour.",
+      "Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: primaryLinks,
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Kontakt", path: "/kontakt" }],
@@ -1261,7 +1261,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           : []),
         // Faktarutan: etikett och värde som egna stycken (dt/dd i LocationPage.tsx)
         ...(loc.factBox ? loc.factBox.flatMap((f) => [f.label, f.value]) : []),
-        ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label} — ${loc.sourceLink.url}`] : []),
+        ...(loc.sourceLink ? [`Källa: ${loc.sourceLink.label}`] : []),
         ...villaAreasBlocks(loc.slug),
         ...(mall ? [] : [geoFactsParagraph(loc)]),
         // Lokala fakta (dt/dd), taktjänster, pris och länkrubrik i samma ordning som LocationPage.tsx (AD5)
