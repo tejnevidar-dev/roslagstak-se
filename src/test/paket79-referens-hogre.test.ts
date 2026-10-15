@@ -41,7 +41,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       expect(sida.inlineLinks, l.slug).toEqual(inlineMdLinks(m));
       for (const lank of inlineMdLinks(m)) expect(sida.links.some((x) => x.href === lank.href && x.label === lank.label), l.slug + " " + lank.href).toBe(true);
     }
-    expect(antal).toBeGreaterThan(15);
+    expect(antal).toBeGreaterThan(12); // paket 112 (M7) och 114 (M9) stängde av meningen på Norrtälje, Singö och Grisslehamn: 18 → 15 sidor
   });
   it("länken i serverns HTML sätts i referensmeningens eget stycke på varje sida som har den, aldrig i ett tidigare stycke med samma ord", () => {
     const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -64,7 +64,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       expect(html[refIndex].replace(/<[^>]+>/g, ""), l.slug).toBe(esc(ps[refIndex]));
     }
     expect(antal).toBe(ownText.filter((l) => referensMening(l, l.isIsland ? "på" : "i")).length);
-    expect(antal).toBeGreaterThan(15);
+    expect(antal).toBeGreaterThan(12); // se ovan (paket 112 och 114)
   });
   it("ingen sida har meningen kvar i geo-stycket mitt på sidan, och mallsidorna är orörda", () => {
     for (const l of ownText) {

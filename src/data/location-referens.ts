@@ -17,6 +17,8 @@ const PA_ORTER = new Set(["radmanso", "svartno", "vaddo"]);
 export const referensMening = (loc: { slug: string; name: string; lat: number; lng: number; isIsland?: boolean }, prep: string): string | null => {
   // Paket 112 (M7): kommunsidan /taklaggare-norrtalje nämner alla tre jobben i sin egen text och har ingen referensmening (Blidö ligger i kommunen).
   if (loc.slug === "norrtalje") return null;
+  // Paket 114 (M9): på Singö och i Grisslehamn, där jobben gjordes, beskriver briefen själv jobbet med projektfakta; mallens "dokumenterade referensjobb" stängs av så att jobbet nämns en gång (J1).
+  if (loc.slug === "singo" || loc.slug === "grisslehamn") return null;
   const exact = projectTexts.find((p) => p.locationSlug === loc.slug);
   if (exact) return `Vi har utfört ett dokumenterat referensjobb här: [${exact.title}](/projekt/${exact.slug}).`;
   // En ö-sida har redan J1 i "så arbetar vi" (en mening om egna jobb per sida), och avståndet till ett jobb över vatten säger inte mycket om en ö (Marknadschefens val 2026-10-13).
