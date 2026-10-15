@@ -21,7 +21,7 @@ export const NO_TATSKIKT_SERVICE_SLUGS: readonly string[] = ["taksakerhet", "tak
 export const NO_GARANTI_SERVICE_SLUGS: readonly string[] = ["takinspektion"];
 
 /** Tjänster där chipet om tätskiktsgaranti utelämnas (bara chipet "10 års utförandegaranti" visas). */
-export const NO_TATSKIKT_CHIP_SERVICE_SLUGS: readonly string[] = ["takrenovering"];
+export const NO_TATSKIKT_CHIP_SERVICE_SLUGS: readonly string[] = ["takrenovering", "takkupor"];
 
 /** Kort variant för trygghetsrader (chips). */
 export const GARANTI_RENOVERING_CHIP = "30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)";

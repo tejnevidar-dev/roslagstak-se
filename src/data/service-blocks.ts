@@ -147,7 +147,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
   takavvattning: {
     seoTitle: "Hängrännor och takavvattning – fast pris i offerten",
     seoDescription:
-      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt i lackerad plåt. Fast pris efter kostnadsfri takkontroll.",
+      "Takavvattning i Roslagen: hängrännor, stuprör, ränndalar och fotplåt. Fast pris efter kostnadsfri takkontroll.",
     blockPlacement: "after-spec",
     factCards: [
       { tone: "outline", label: "Prisbild", value: belopp("Takavvattning (hängrännor)").replace("Från ca ", "Från ca "), text: "Komplett system med stuprör, efter ROT-avdrag och inkl. moms. Priset gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen. " + ROT_FORBEHALL },
@@ -305,7 +305,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
       "Tegeltak i lertegel: riktpris efter ROT-avdrag, vad som påverkar priset och vad som ingår. Kostnadsfri takkontroll och fast pris i offerten.",
     blockPlacement: "after-spec",
     factCards: [
-      { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska valet som passar både äldre och nyare hus." },
+      { tone: "primary", label: "Material", value: "Lertegel", text: "Det klassiska tegeltaket." },
       { tone: "outline", label: "Uttryck", value: "Åldras med patina", text: "Enskilda pannor som spricker kan bytas utan att hela taket görs om." },
       { tone: "accent", label: "Tungt material", value: "Lertegel väger mer", text: "Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak." },
       { tone: "plain", label: "Pris", value: belopp("Lertegeltak"), text: "Efter ROT-avdrag, inkl. moms. Fast pris i offerten." },

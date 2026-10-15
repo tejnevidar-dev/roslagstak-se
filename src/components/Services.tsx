@@ -71,7 +71,7 @@ export const services: Service[] = [
     title: "Plåtarbeten",
     short: "Plåt på taket",
     description:
-      "Bandtäckning, skorstensinklädnad, fotplåt och beslag — där många läckage börjar.",
+      "Bandtäckning, skorstensinklädnad, fotplåt och beslag.",
   },
   {
     icon: IconRoofCare,
@@ -95,7 +95,7 @@ export const services: Service[] = [
     title: "Tegeltak i lertegel",
     short: "Klassiskt tegel",
     description:
-      "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med fast pris efter kostnadsfri takkontroll.",
+      "Vi lägger tegeltak i lertegel — det klassiska tegeltaket, med fast pris efter kostnadsfri takkontroll.",
   },
   {
     icon: IconSheetMetal,

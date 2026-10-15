@@ -45,11 +45,10 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     accentLine: "utan helt takbyte.",
     specs: [
       { k: "Åtgärd", v: "Punktinsats" },
-      { k: "Underlag", v: "Papp och råspont" },
       { k: "Pris", v: "Fast efter takkontroll" },
     ],
     specHeading: "Vad vi åtgärdar — och vad vi låter vara",
-    lead: "Renovering handlar om att byta det som är skadat: underlagspapp, skadad råspont och trasiga pannor.",
+    lead: "Renovering handlar om att åtgärda det som är skadat, till exempel trasiga pannor, plåtdetaljer eller en läcka.",
     craftLine: "Vi byter det som behöver bytas.",
     photoNote: "Tak med underlagspapp.",
   },
@@ -57,7 +56,6 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     h1Sep: ":",
     accentLine: "rännor och stuprör",
     specs: [
-      { k: "Material", v: "Lackerad plåt" },
       { k: "Ränndalar", v: "I plåt" },
       { k: "Takkontroll", v: "Kostnadsfri" },
     ],
@@ -89,7 +87,6 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     h1Sep: ":",
     accentLine: "beslag och bandtäckning",
     specs: [
-      { k: "Material", v: "Lackerad stålplåt" },
       { k: "Teknik", v: "Falsat och profilerat" },
       { k: "Detaljer", v: "Skorsten och genomföring" },
     ],
@@ -130,7 +127,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
       { k: "Pris", v: belopp("Lertegeltak") },
     ],
     specHeading: "Lertegel jämfört med andra taktyper",
-    lead: "Lertegel är det klassiska valet som passar både äldre och nyare hus.",
+    lead: "Lertegel är det klassiska tegeltaket.",
     craftLine: "Lertegel åldras med patina i stället för att se slitet ut.",
     photoNote: "Lertegel.",
   },
@@ -160,7 +157,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   takrenovering: {
-    longDesc: "En takrenovering innebär att vi åtgärdar problem på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, byta underlagspapp på en del av taket, reparera plåtbeslag eller byta skadad råspont.",
+    longDesc: "En takrenovering innebär att vi åtgärdar problem på ditt befintliga tak utan att byta hela takmaterialet. Det kan handla om att byta enstaka trasiga pannor, laga läckor, reparera plåtbeslag eller byta skadad råspont där det behövs.",
     priceRange: "Fast pris efter kostnadsfri takkontroll, beroende på skadans omfattning. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
     benefits: [
       "Fast pris efter kostnadsfri takkontroll",
@@ -171,17 +168,17 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     process: [
       "Kostnadsfri takkontroll",
       "Offert med fast pris",
-      "Byte av skadad råspont",
+      "Byte av skadad råspont, om det behövs",
       "Byte av trasiga pannor/plåtsektioner",
       "Lagning av det som står i offerten",
       "Slutgenomgång",
     ],
   },
   takavvattning: {
-    longDesc: "Hängrännor och stuprör leder bort vattnet från taket. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag i lackerad plåt. Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen.",
+    longDesc: "Hängrännor och stuprör leder bort vattnet från taket. Vi installerar och byter hängrännor, stuprör, ränndalar och plåtbeslag. Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen.",
     priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: komplett system med stuprör ${beloppLopande("Takavvattning (hängrännor)")}, beroende på husets storlek och våningar. Priset gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen. ${ROT_FORBEHALL}`,
     benefits: [
-      "Hängrännor och stuprör i lackerad plåt",
+      "Hängrännor och stuprör",
       "Ränndalar och fotplåt",
       "Byte av befintligt system",
     ],
@@ -271,7 +268,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
     ],
   },
   tegeltak: {
-    longDesc: "Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med ett uttryck som många vill behålla. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga. Takstolarna behöver klara vikten, och tillverkaren anger vilken lutning pannan kräver. Lertegel är något annat än pannplåt (plåt som är pressad för att likna pannor), som vi också lägger. De är olika material med olika pris och vikt.",
+    longDesc: "Vi lägger tegeltak i lertegel — det klassiska tegeltaket. Materialet åldras med patina i stället för att se slitet ut, och enskilda pannor som spricker kan bytas utan att hela taket behöver göras om. Pannorna är tunga. Takstolarna behöver klara vikten, och tillverkaren anger vilken lutning pannan kräver. Lertegel är något annat än pannplåt (plåt som är pressad för att likna pannor), som vi också lägger. De är olika material med olika pris och vikt.",
     priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: lertegel och pannplåt ${beloppLopande("Lertegeltak")}. Exakt pris beror på takets storlek, lutning och underlagets skick. ${STALLNING_MENING} Ditt pris står i offerten och är fast.`,
     benefits: [
       "Rivning av befintligt tak",
