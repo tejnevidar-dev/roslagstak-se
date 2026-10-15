@@ -343,7 +343,7 @@ export const landingServices: LandingService[] = [
     h1: "Läcker taket?",
     h1Accent: "Så här gör du, och så hjälper vi dig.",
     intro:
-      "Ring 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka formuläret. Vi svarar inom 24 timmar och har ingen jour. Vi gör en kostnadsfri takkontroll, letar efter var vattnet kommer in och lämnar en offert med fast pris.",
+      "Ring 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka formuläret. Vi svarar inom 24 timmar. Vi gör en kostnadsfri takkontroll, letar efter var vattnet kommer in och lämnar en offert med fast pris.",
     listHeading: "Gör så här medan du väntar",
     listIntro: "Några enkla åtgärder begränsar skadan tills vi har varit på plats.",
     list: [
@@ -378,7 +378,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Hur snabbt får jag svar?",
-        answer: "Vi svarar inom 24 timmar och har ingen jour.",
+        answer: "Vi svarar inom 24 timmar.",
       },
       {
         question: "Vad kostar det att laga ett läckage?",

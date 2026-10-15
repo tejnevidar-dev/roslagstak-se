@@ -69,3 +69,13 @@ describe("paket 99: de tio gamla problemsidorna", () => {
     }
   });
 });
+
+describe("paket 99b: /akut-lackage säger inte 'ingen jour'", () => {
+  it("varken källan eller serverns text har ordet jour, och svarstiden står kvar", () => {
+    expect(readFileSync("src/data/landing-services.ts", "utf8")).not.toMatch(/\bjour\b/i);
+    const s = prerenderContent("/akut-lackage")!;
+    const t = [s.intro ?? "", ...s.paragraphs.map((x) => (typeof x === "string" ? x : ""))].join("\n");
+    expect(t).not.toMatch(/\bjour\b/i);
+    expect(t).toContain("Vi svarar inom 24 timmar.");
+  });
+});
