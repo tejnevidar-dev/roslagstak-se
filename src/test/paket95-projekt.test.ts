@@ -44,7 +44,11 @@ describe("paket 95: projektsidorna", () => {
   });
   it("Grisslehamn: 'Ny avvattning från Lindab' i stället för 'Hängrännor och stuprör, från Lindab'", () => {
     const t = text("/projekt/takbyte-grisslehamn");
-    expect(t).toContain("Ny avvattning från Lindab. Mer om takavvattning");
+    // rättning 2026-10-15: ledordet "Ny avvattning" står en gång (rubrik), texten är "Från Lindab. Mer om takavvattning."
+    expect(t).toMatch(/Ny avvattning\nFrån Lindab\. Mer om takavvattning/);
+    expect(t).not.toMatch(/Ny avvattning\.? Ny avvattning/);
+    expect(t.match(/Ny avvattning/g)?.length).toBe(1);
+    expect(projectTexts.find((x) => x.slug === "takbyte-grisslehamn")!.description).toContain("**Ny avvattning.** Från Lindab. Mer om [takavvattning](/tjanster/takavvattning).");
     expect(t).not.toContain("Hängrännor och stuprör, från Lindab");
   });
   it("Blidös och Singös avvattningstext är orörd", () => {

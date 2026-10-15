@@ -172,7 +172,7 @@ export const projectTexts: ProjectText[] = [
       "**Ny läkt.** Läkten är de reglar som pannorna vilar på.",
       "**Nya betongpannor.** Svarta [betongpannor](/material/betongpannor) från Benders. Betongpannor är gjutna pannor som ger ett klassiskt pannat tak.",
       "**Nya plåtdetaljer.** Plåtdetaljer sitter där taket möter något annat.",
-      "**Ny avvattning.** Ny avvattning från Lindab. Mer om [takavvattning](/tjanster/takavvattning).",
+      "**Ny avvattning.** Från Lindab. Mer om [takavvattning](/tjanster/takavvattning).",
       "**Nya vindskivor och fotbrädor.** De målades efter kundens önskemål.",
       "**Taksteg.** Taksteg monterades. Mer om [taksäkerhet](/tjanster/taksakerhet).",
       "**Så arbetar vi.** Varje jobb börjar med en kostnadsfri takkontroll utan förpliktelser, där en av våra säljare tittar på taket på plats. Efter takkontrollen får kunden en rapport om takets skick, och behöver taket åtgärdas en offert med fast pris. Arbetet utförs enligt AMA, och kunden har en kontaktperson genom hela processen.\n\nVi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
