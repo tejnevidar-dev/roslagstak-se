@@ -16,7 +16,7 @@ describe("takproblem och priser: statisk text", () => {
     const saknas: string[] = [];
     for (const p of problems) {
       const lista = prerenderContent(`/takproblem/${p.slug}`)?.paragraphs ?? [];
-      for (const t of [PROBLEM_PAGE_TEXT.ctaText, PROBLEM_PAGE_TEXT.areasHeading, PROBLEM_PAGE_TEXT.relatedTitle, RELATED_LINKS_INTRO]) if (!lista.includes(t)) saknas.push(`${p.slug}: ${t.slice(0, 40)}`);
+      for (const t of [PROBLEM_PAGE_TEXT.ctaText, PROBLEM_PAGE_TEXT.areasHeading, PROBLEM_PAGE_TEXT.relatedTitle, PROBLEM_PAGE_TEXT.relatedIntro]) if (!lista.includes(t)) saknas.push(`${p.slug}: ${t.slice(0, 40)}`);
       if (p.relatedProject && !lista.includes(PROBLEM_PAGE_TEXT.exampleHeading)) saknas.push(`${p.slug}: exempelrubriken`);
     }
     expect(saknas.slice(0, 10)).toEqual([]);

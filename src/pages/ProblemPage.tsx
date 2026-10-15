@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import { PROBLEM_PAGE_TEXT } from "@/data/problem-page-text";
 import NotFound from "@/pages/NotFound";
-import { getProblem, SAKERHETSRUTA, type Problem } from "@/data/problems";
+import { ATGARDER_RAD, ATGARDER_RUBRIK, getProblem, SAKERHETSRUTA, type Problem } from "@/data/problems";
 import { guidesForTitle } from "@/data/related-posts";
 import { regionLinksForProblems, takkontrollLink } from "@/data/problem-links";
 import { getProject } from "@/data/projects";
@@ -17,7 +17,7 @@ const sections: { key: keyof Problem; heading: string }[] = [
   { key: "orsaker", heading: "Vanliga orsaker" },
   { key: "akut", heading: "När är det akut?" },
   { key: "undersokning", heading: "Så undersöks det" },
-  { key: "atgarder", heading: "Åtgärder som används" },
+  { key: "atgarder", heading: ATGARDER_RUBRIK },
   { key: "gorInteSjalv", heading: "Gör inte själv" },
 ];
 
@@ -80,8 +80,8 @@ const ProblemPage = () => {
           <div className="mt-10 space-y-8">
             {sections.map((s) => (
               <div key={s.heading}>
-                <h2 className="font-display text-xl text-foreground">{s.key === "atgarder" && problem.atgarderRubrik ? problem.atgarderRubrik : s.heading}</h2>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{problem[s.key] as string}</p>
+                <h2 className="font-display text-xl text-foreground">{s.heading}</h2>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{s.key === "atgarder" ? `${problem.atgarder} ${ATGARDER_RAD}` : (problem[s.key] as string)}</p>
               </div>
             ))}
           </div>
@@ -164,6 +164,7 @@ const ProblemPage = () => {
         <RelatedLinks
           currentPath={`/takproblem/${problem.slug}`}
           title={PROBLEM_PAGE_TEXT.relatedTitle}
+          intro={PROBLEM_PAGE_TEXT.relatedIntro}
           extraLinks={[
             { to: "/takproblem", label: "Alla takproblem", description: "Fler vanliga tecken och åtgärder." },
             ...guidesForTitle(problem.title, 2).map((g) => ({ to: `/blogg/${g.slug}`, label: g.title, description: "Guide." })),

@@ -45,4 +45,10 @@ export const problemsForLocation = (slug: string): ProblemLink[] => plan.get(slu
 /** Länkar som varje problemsida har till takkontroll och till alla regionsidor. */
 export const takkontrollLink: ProblemLink = { to: "/takkontroll", label: "Boka kostnadsfri takkontroll" };
 export const regionLinksForProblems = (): ProblemLink[] =>
-  regionOrder.filter((r) => regionSlugs[r]).map((r) => ({ to: `/omraden/${regionSlugs[r]}`, label: `Takläggare i ${r}` }));
+  regionOrder.filter((r) => regionSlugs[r]).map((r) => ({ to: `/omraden/${regionSlugs[r]}`, label: `Takläggare ${REGION_PREPOSITION[r] ?? `i ${r}`}` }));
+
+/** Länktexter där "i <region>" låter fel (paket 101, G4): kusten och halvön. Övriga regioner är "i <region>". */
+const REGION_PREPOSITION: Record<string, string> = {
+  Kusten: "vid kusten",
+  Rådmansöhalvön: "på Rådmansöhalvön",
+};

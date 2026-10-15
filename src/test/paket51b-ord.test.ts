@@ -69,7 +69,7 @@ describe("paket 51b: takproblemsidorna", () => {
   it("Pr3: alla fjorton sidor som har en avslutning använder K3:s lydelse, ingen 'Efter bedömningen'", () => {
     expect(alla).not.toContain("Efter bedömningen");
     const k3 = "Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.";
-    expect(alla.split(k3).length - 1).toBe(24); // 14 från 51b (Pr3) och 10 från paket 54 (Pr2)
+    expect(alla.split(k3).length - 1).toBe(27); // 14 från 51b (Pr3), 10 från paket 54 (Pr2) och 3 från paket 101 (takfönster, svackor och vindskivor fick K3 i "Så undersöks det")
   });
 });
 

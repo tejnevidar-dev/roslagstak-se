@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHero from "@/components/PageHero";
 import { problems, SAKERHETSRUTA } from "@/data/problems";
+import { PROBLEM_PAGE_TEXT } from "@/data/problem-page-text";
 
 /* Marknadschefens instruktion 2026-09-29: hubb + 3 sidor publicerades först och verifierades live
    (build/validate/sitemap/link-audit gröna, 0 dubbletter/0 trasiga länkar). Nu publiceras resten. */
@@ -40,7 +41,7 @@ const ProblemsPage = () => {
     <>
       <SEOHead
         title="Takproblem – tecken, orsaker och vad du gör"
-        description="Läcker taket, mossa, fukt på vinden eller istappar? Här är de vanligaste takproblemen, hur du känner igen dem och när det är dags att ringa en takläggare."
+        description={PROBLEM_PAGE_TEXT.hubMeta}
         canonical="https://roslagstak.se/takproblem"
       />
       <Header />
@@ -54,7 +55,7 @@ const ProblemsPage = () => {
           compact
           eyebrow="Takproblem"
           title="Vanliga takproblem – så känner du igen dem"
-          text="Ett tak säger sällan ifrån förrän skadan har pågått ett tag. Här har vi samlat de vanligaste takproblemen villaägare upptäcker: hur de visar sig, vad de brukar bero på, vad du kan göra själv och när det är dags att låta en takläggare titta. Gå aldrig upp på taket själv — titta från marken och från vinden."
+          text={PROBLEM_PAGE_TEXT.hubIntro}
         />
         <div className="container mx-auto px-4 py-14">
           <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">

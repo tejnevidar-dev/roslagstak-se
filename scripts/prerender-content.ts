@@ -17,7 +17,7 @@ import { locations } from "../src/data/locations";
 import { avindexeradeOrtsvagar, lankbarHref, ortAvindexerad, synligaOrter } from "../src/data/avindexerade-orter";
 import { avindexeradeGuidevagar, synligaGuider } from "../src/data/avindexerade-guider";
 import { generateServiceLocationFAQs } from "../src/data/location-faqs";
-import { problems, SAKERHETSRUTA } from "../src/data/problems";
+import { ATGARDER_RAD, ATGARDER_RUBRIK, problems, SAKERHETSRUTA } from "../src/data/problems";
 import { materials, MATERIAL_PRIS_LANK } from "../src/data/materials";
 import { MATERIAL_PRISAVSNITT, prisAvsnittForSpegel } from "../src/data/material-prices";
 import { MATERIAL_EXTRAS, SERVICE_EXTRAS } from "../src/data/page-extras";
@@ -685,10 +685,10 @@ const staticPages: Record<string, PrerenderPage> = {
   "/takproblem": {
     title: "Takproblem – tecken, orsaker och vad du gör",
     description:
-      "Läcker taket, mossa, fukt på vinden eller istappar? Här är de vanligaste takproblemen, hur du känner igen dem och när det är dags att ringa en takläggare.",
+      PROBLEM_PAGE_TEXT.hubMeta,
     h1: "Vanliga takproblem – så känner du igen dem",
     intro:
-      "Ett tak säger sällan ifrån förrän skadan har pågått ett tag. Här har vi samlat de vanligaste takproblemen villaägare upptäcker.",
+      PROBLEM_PAGE_TEXT.hubIntro,
     paragraphs: problems.map((p) => `${p.title}: ${p.intro}`),
     links: [...primaryLinks, ...problems.map((p) => ({ href: `/takproblem/${p.slug}`, label: p.title }))],
     breadcrumbs: [
@@ -863,7 +863,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       { key: "orsaker", heading: "Vanliga orsaker" },
       { key: "akut", heading: "När är det akut?" },
       { key: "undersokning", heading: "Så undersöks det" },
-      { key: "atgarder", heading: "Åtgärder som används" },
+      { key: "atgarder", heading: ATGARDER_RUBRIK },
       { key: "gorInteSjalv", heading: "Gör inte själv" },
     ];
     return {
@@ -873,8 +873,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: problem.intro,
       ...buildBody([
         ...problemSections.flatMap((s) => [
-          { h: s.key === "atgarder" && problem.atgarderRubrik ? problem.atgarderRubrik : s.heading, suffix: s.heading.endsWith("?") ? "" : ":" },
-          problem[s.key] as string,
+          { h: s.heading, suffix: s.heading.endsWith("?") ? "" : ":" },
+          s.key === "atgarder" ? `${problem.atgarder} ${ATGARDER_RAD}` : (problem[s.key] as string),
         ]),
         SAKERHETSRUTA,
         // Exempelrutan, uppmaningen, områdesrubriken och "Fler takproblem" som i ProblemPage.tsx (AG1, paket 25)
@@ -884,7 +884,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         PROBLEM_PAGE_TEXT.ctaText,
         PROBLEM_PAGE_TEXT.areasHeading,
         { h: PROBLEM_PAGE_TEXT.relatedTitle },
-        RELATED_LINKS_INTRO,
+        PROBLEM_PAGE_TEXT.relatedIntro,
       ]),
       links: [
         ...primaryLinks,

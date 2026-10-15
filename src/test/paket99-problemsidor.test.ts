@@ -5,7 +5,7 @@
  */
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { problems } from "../data/problems";
+import { ATGARDER_RAD, ATGARDER_RUBRIK, problems } from "../data/problems";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 const TIO = ["lackage-vid-skorsten", "trasiga-takpannor", "mossa-pa-taket", "rostig-plat", "fukt-pa-vinden", "igensatta-hangrannor", "rutten-raspont", "kondens-pa-vinden", "dalig-underlagspapp", "istappar-pa-taket"];
@@ -21,16 +21,15 @@ describe("paket 99: de tio gamla problemsidorna", () => {
   it("'Så undersöks det' är samma mening utan uppräkning på alla tio", () => {
     for (const s of TIO) expect(p(s).undersokning, s).toBe(UNDERSOK);
   });
-  it("åtgärdsavsnittet heter 'Vanliga åtgärder' och slutar med raden om takkontrollen på alla tio", () => {
-    for (const s of TIO) {
-      expect(p(s).atgarderRubrik, s).toBe("Vanliga åtgärder");
-      expect(p(s).atgarder.endsWith(RAD), s).toBe(true);
-    }
+  it("åtgärdsavsnittet heter 'Vanliga åtgärder' och slutar med raden om takkontrollen, från sidmallen (paket 101): datan upprepar varken rubrik eller rad", () => {
+    expect(ATGARDER_RUBRIK).toBe("Vanliga åtgärder");
+    expect(ATGARDER_RAD).toBe(RAD);
+    for (const s of TIO) expect(p(s).atgarder.includes(RAD), s).toBe(false);
   });
   it("mossa, rost och kondens har Innehålls särskilda åtgärdstexter", () => {
-    expect(p("mossa-pa-taket").atgarder).toBe(`Taktvätt och rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas. ${RAD}`);
-    expect(p("rostig-plat").atgarder).toBe(`Beroende på hur långt rosten har gått: ny ytbehandling, byte av plåtdetaljer eller nytt plåttak. ${RAD}`);
-    expect(p("kondens-pa-vinden").atgarder).toBe(`Tätning mot bostaden och bättre ventilation i takfot och nock. Vid omfattande fuktskador även åtgärder på underlaget. ${RAD}`);
+    expect(p("mossa-pa-taket").atgarder).toBe("Taktvätt och rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas.");
+    expect(p("rostig-plat").atgarder).toBe("Beroende på hur långt rosten har gått: ny ytbehandling, byte av plåtdetaljer eller nytt plåttak.");
+    expect(p("kondens-pa-vinden").atgarder).toBe("Tätning mot bostaden och bättre ventilation i takfot och nock. Vid omfattande fuktskador även åtgärder på underlaget.");
     for (const s of ["mossa-pa-taket", "rostig-plat", "kondens-pa-vinden", "fukt-pa-vinden", "istappar-pa-taket"]) {
       expect(p(s).atgarder, s).not.toMatch(/behandling av taket|Rengöring och ny ytbehandling|vindslucka, genomföringar/);
     }
@@ -44,7 +43,8 @@ describe("paket 99: de tio gamla problemsidorna", () => {
   });
   it("serverns HTML och React har samma rubrik och texter", () => {
     const react = readFileSync("src/pages/ProblemPage.tsx", "utf8");
-    expect(react).toContain("problem.atgarderRubrik");
+    expect(react).toContain("ATGARDER_RAD");
+    expect(react).toContain("heading: ATGARDER_RUBRIK");
     for (const s of TIO) {
       const t = serverText(s);
       expect(t, s).toContain("Vanliga åtgärder");
@@ -53,13 +53,13 @@ describe("paket 99: de tio gamla problemsidorna", () => {
       expect(t, s).toContain(RAD);
     }
   });
-  it("de nyare problemsidorna är orörda: rubriken 'Åtgärder som används' och deras egna undersökningstexter står kvar", () => {
-    const ovriga = problems.filter((x) => !TIO.includes(x.slug));
-    expect(ovriga.length).toBeGreaterThanOrEqual(17);
-    for (const x of ovriga) {
-      expect(x.atgarderRubrik, x.slug).toBeUndefined();
-      expect(x.undersokning, x.slug).not.toBe(UNDERSOK);
-      expect(serverText(x.slug), x.slug).toContain("Åtgärder som används");
+  it("rubriken och raden gäller alla 27 problemsidor (paket 101), också de 17 nyare", () => {
+    expect(problems.length).toBe(27);
+    for (const x of problems) {
+      const t = serverText(x.slug);
+      expect(t, x.slug).toContain("Vanliga åtgärder");
+      expect(t, x.slug).not.toContain("Åtgärder som används");
+      expect(t, x.slug).toContain(RAD);
     }
   });
   it("inget förbjudet eller obelagt ord i de ändrade fälten", () => {
