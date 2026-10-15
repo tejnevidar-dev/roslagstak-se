@@ -419,7 +419,7 @@ const landingPages: Record<string, PrerenderPage> = Object.fromEntries(
         LEAD_FORM_SUBTITLE,
         ...(s.slug === "takkontroll" ? [LANDING_TEXT.takkontrollNote] : []),
         { h: s.listHeading },
-        s.listIntro,
+        ...(s.listIntro ? [s.listIntro] : []),
         ...s.list.flatMap((i) => [{ h: i.title, level: 3 as const }, i.text]),
         { h: s.stepsHeading },
         ...s.steps.flatMap((st) => [{ h: st.title, level: 3 as const }, st.text]),
@@ -1413,7 +1413,7 @@ export const noindexPageMeta = (path: string): { title: string; description: str
   if (clean === "/boka-takkontroll") {
     return {
       title: "Boka kostnadsfri takkontroll",
-      description: "Boka en kostnadsfri takkontroll: välj dag och tid. Vi ringer upp så snart vi kan. Fast pris, utan förpliktelser.",
+      description: bookingCopy.metaDescription,
     };
   }
   const m = clean.match(/^\/offert\/([a-z0-9-]+)$/);

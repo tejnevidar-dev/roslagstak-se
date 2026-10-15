@@ -7,10 +7,11 @@ import LeadForm from "@/components/LeadForm";
 import BookingWidget from "@/components/BookingWidget";
 import { BOOKING_ENABLED } from "@/lib/booking";
 import { bookingCopy } from "@/data/ad-landings";
+import { GARANTI_RENOVERING_CHIP } from "@/data/guarantee";
 
 const trust = [
   "10 års utförandegaranti",
-  "30 års tätskiktsgaranti via MATAKI",
+  GARANTI_RENOVERING_CHIP,
   "Fast pris, arbete enligt AMA",
   "Utan förpliktelser",
   "Svar inom 24 timmar",
@@ -27,7 +28,7 @@ const BookingPage = () => (
   <>
     <SEOHead
       title="Boka kostnadsfri takkontroll"
-      description="Boka en kostnadsfri takkontroll: välj dag och tid. Vi ringer upp så snart vi kan. Fast pris, utan förpliktelser."
+      description={bookingCopy.metaDescription}
       canonical="https://roslagstak.se/boka-takkontroll"
       noindex
     />

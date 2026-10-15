@@ -117,7 +117,7 @@ const ServiceLandingPage = ({ slug }: { slug: string }) => {
               >
                 {service.listHeading}
               </h2>
-              <p className="mt-5 max-w-[36ch] text-[17px] leading-relaxed text-muted-foreground">{service.listIntro}</p>
+              {service.listIntro && <p className="mt-5 max-w-[36ch] text-[17px] leading-relaxed text-muted-foreground">{service.listIntro}</p>}
             </Reveal>
             {service.list.length > 0 && (
             <ul className="border-t border-border lg:col-span-8">

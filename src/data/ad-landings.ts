@@ -1,3 +1,5 @@
+import { BOOKING_ENABLED } from "../lib/booking";
+
 /** Annonssidor för privatkund (/offert/<ort>). Endast geografi, inga påståenden om tidigare arbeten. */
 export interface AdLanding {
   slug: string;
@@ -38,7 +40,10 @@ export const adLandingCopy = (l: AdLanding) => {
 /** Rubrik och ingress på /boka-takkontroll (delas av sidan och den statiska HTML:en). */
 export const bookingCopy = {
   h1Lead: "Boka kostnadsfri takkontroll.",
-  h1Accent: "Välj dag, eller be oss ringa.",
+  h1Accent: BOOKING_ENABLED ? "Välj dag, eller be oss ringa." : "Vi svarar inom 24 timmar.",
   intro:
-    "En av våra säljare tittar på taket på plats. Du får en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris. Kostnadsfritt och utan förpliktelser. Vi svarar inom 24 timmar.",
+    "En av våra säljare tittar på taket på plats. Du får en rapport om takets skick, och behöver taket åtgärdas får du en offert med fast pris. Kostnadsfritt och utan förpliktelser." + (BOOKING_ENABLED ? " Vi svarar inom 24 timmar." : ""),
+  metaDescription: BOOKING_ENABLED
+    ? "Boka en kostnadsfri takkontroll: välj dag och tid. Vi ringer upp så snart vi kan. Fast pris, utan förpliktelser."
+    : "Boka en kostnadsfri takkontroll. Vi svarar inom 24 timmar. Fast pris, utan förpliktelser.",
 };

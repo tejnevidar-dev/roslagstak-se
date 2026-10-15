@@ -21,7 +21,7 @@ describe("landningssidornas statiska text", () => {
         LEAD_FORM_SUBTITLE,
         ...(s.slug === "takkontroll" ? [LANDING_TEXT.takkontrollNote] : []),
         s.listHeading,
-        s.listIntro,
+        ...(s.listIntro ? [s.listIntro] : []), // listIntro är valfri sedan paket 105 (L12)
         ...s.list.flatMap((i) => [i.title, i.text]),
         s.stepsHeading,
         ...s.steps.flatMap((st) => [st.title, st.text]),

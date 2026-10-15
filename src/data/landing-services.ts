@@ -13,7 +13,7 @@ export interface LandingService {
   h1Accent: string;
   intro: string;
   listHeading: string;
-  listIntro: string;
+  listIntro?: string;
   list: { title: string; text: string }[];
   stepsHeading: string;
   steps: { title: string; text: string }[];
@@ -41,7 +41,7 @@ export const landingServices: LandingService[] = [
     intro:
       "Läcker taket, är pannor trasiga eller sitter plåten löst? Vi gör en kostnadsfri takkontroll, lämnar en offert med fast pris och utför reparationen. Är taket i så dåligt skick att en reparation inte räcker säger vi det.",
     listHeading: "Skador vi lagar",
-    listIntro: "De vanligaste orsakerna till att tak läcker eller tar skada, och vad vi gör åt dem.",
+    listIntro: "Orsaker till att tak läcker eller tar skada, och vad vi gör åt dem.",
     list: [
       {
         title: "Trasiga eller förskjutna pannor",
@@ -49,7 +49,7 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Läckage kring skorsten och genomföringar",
-        text: "Plåtbeslag runt skorstenar, ventiler och genomföringar är där många läckage börjar. Vad som behöver göras bedömer vi vid takkontrollen.",
+        text: "Plåtbeslag runt skorstenar, ventiler och genomföringar är ställen där ett läckage kan börja. Vad som behöver göras bedömer vi vid takkontrollen.",
       },
       {
         title: "Sliten underlagspapp",
@@ -76,14 +76,14 @@ export const landingServices: LandingService[] = [
       },
       {
         title: "Kostnadsfri takkontroll",
-        text: "Vi tittar på taket och orsaken till skadan och bedömer om en reparation räcker.",
+        text: "En av våra säljare tittar på taket på plats och bedömer om en reparation räcker.",
       },
       {
         title: "Fast pris",
         text: "Du får en offert med fast pris.",
       },
       {
-        title: "Reparation och slutgenomgång",
+        title: "Reparation",
         text: "Vi utför det som står i offerten och går igenom resultatet tillsammans med dig.",
       },
     ],
@@ -343,7 +343,7 @@ export const landingServices: LandingService[] = [
     h1: "Läcker taket?",
     h1Accent: "Så här gör du, och så hjälper vi dig.",
     intro:
-      "Ring 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka formuläret. Vi svarar inom 24 timmar. Vi gör en kostnadsfri takkontroll, letar efter var vattnet kommer in och lämnar en offert med fast pris.",
+      "Ring 070-154 36 39 (måndag–fredag 07–20, lördag–söndag 09–19) eller skicka formuläret. Vi svarar inom 24 timmar. Vi gör en kostnadsfri takkontroll och lämnar en offert med fast pris.",
     listHeading: "Gör så här medan du väntar",
     listIntro: "Några enkla åtgärder begränsar skadan tills vi har varit på plats.",
     list: [
@@ -357,13 +357,13 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       { title: "Du kontaktar oss", text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar." },
-      { title: "Takkontroll", text: "Vi tittar på taket på plats och letar efter var vattnet kommer in." },
+      { title: "Takkontroll", text: "En av våra säljare tittar på taket på plats." },
       { title: "Fast pris", text: "Du får en offert med fast pris." },
       { title: "Reparation", text: "Vi utför det som står i offerten." },
     ],
     extraHeading: "Var kan ett tak läcka?",
     extraParagraphs: [
-      "Många läckage börjar kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken sitter inte alltid där fuktfläcken kommer fram inomhus. Därför behöver någon titta på taket på plats.",
+      "Ett läckage kan börja kring skorstenar, ventiler och andra genomföringar, vid ränndalar och beslag, och där pannor är trasiga eller underlagspappen är sliten. Orsaken sitter inte alltid där fuktfläcken kommer fram inomhus. Därför behöver någon titta på taket på plats.",
       "Ibland räcker en reparation, ibland behöver taket läggas om. Det ser vi vid takkontrollen.",
       "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
@@ -428,7 +428,7 @@ export const landingServices: LandingService[] = [
     stepsHeading: "Så går det till",
     steps: [
       { title: "Kontakta oss", text: "Ring eller skicka formuläret. Vi svarar inom 24 timmar." },
-      { title: "Kostnadsfri takkontroll", text: "Vi tittar på befintliga rännor, takyta och fasad." },
+      { title: "Kostnadsfri takkontroll", text: "En av våra säljare tittar på taket och avvattningen på plats." },
       { title: "Fast pris", text: "Du får en offert med fast pris." },
       { title: "Montering", text: "Vi monterar hängrännor och stuprör." },
     ],
@@ -486,11 +486,10 @@ export const landingServices: LandingService[] = [
     intro:
       "Dubbelfalsat plåttak (bandtäckning) och nya plåtdetaljer kring skorstenar och genomföringar görs normalt nya när vi byter eller lägger om ett tak. Gäller det ett enskilt plåtjobb: kontakta oss, så tittar vi på taket och berättar vad vi kan hjälpa till med.",
     listHeading: "Plåtdetaljer på ett tak",
-    listIntro: "Det är ofta plåtdetaljerna som avgör om ett tak håller tätt.",
-    list: [
+        list: [
       { title: "Bandtäckning", text: "Plåtbanor som fogas ihop med dubbelfals och fästs med dolda klammer, utan synliga skruvar." },
       { title: "Falsat plåttak", text: "Klammerna gör att plåten kan röra sig med temperaturen utan att skarvarna tar skada." },
-      { title: "Skorstensbeslag", text: "Beslaget runt skorstenen är en plats där många läckage börjar." },
+      { title: "Skorstensbeslag", text: "Beslaget runt skorstenen är en plats där ett läckage kan börja." },
       { title: "Ränndalar", text: "Den inåtvända vinkeln där två takfall möts, dit vatten rinner från två håll." },
       { title: "Vindskiveplåt", text: "Plåt som skyddar vindskivornas och takfotens kanter." },
       { title: "Fotplåt", text: "Plåten längst ner på taket, som leder vattnet ut i hängrännan." },
