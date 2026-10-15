@@ -26,8 +26,8 @@ describe("paket 86: An1, rapporten om takets skick i steg 2 på annonssidorna", 
       expect(t.split(NY).length - 1, l.slug).toBe(1);
     }
   });
-  it("de ordinarie sidorna berörs inte (/takkontroll har redan en egen mening om rapporten och är oförändrad)", () => {
-    for (const url of ["/offert", "/takbyte-norrtalje", "/tjanster/takbyte"]) {
+  it("de ordinarie sidorna berörs inte (/takkontroll har redan en egen mening om rapporten och är oförändrad; /offert fick K3 i paket 98 och är därför inte med här)", () => {
+    for (const url of ["/takbyte-norrtalje", "/tjanster/takbyte"]) {
       const p = prerenderContent(url);
       if (p) expect(p.paragraphs.join("\n"), url).not.toContain("rapport om takets skick. Behöver taket åtgärdas får du också en offert");
     }

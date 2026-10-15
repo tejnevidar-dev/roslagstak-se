@@ -6,6 +6,7 @@ import { attributionFields } from "@/lib/attribution";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
+import { linkPhone } from "@/lib/inline-md";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -118,8 +119,8 @@ const ContactLanding = () => {
                 <ul className="space-y-4 mb-8">
                   {[
                     { icon: MessageCircle, title: "1. Du hör av dig", text: "Ring eller fyll i formuläret — beskriv kort ditt projekt." },
-                    { icon: Clock, title: "2. Vi svarar inom 24 timmar", text: "En av våra säljare kontaktar dig för att boka takkontrollen." },
-                    { icon: Shield, title: "3. Kostnadsfri takkontroll", text: "En av våra säljare tittar på taket på plats. Behöver taket åtgärdas får du en offert med fast pris." },
+                    { icon: Clock, title: "2. Vi svarar inom 24 timmar", text: "Vi svarar inom 24 timmar och bokar en tid för takkontroll som passar dig." },
+                    { icon: Shield, title: "3. Kostnadsfri takkontroll", text: "En av våra säljare tittar på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris." },
                   ].map((step) => (
                     <li key={step.title} className="flex gap-3">
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -132,6 +133,11 @@ const ContactLanding = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="space-y-3 mb-8 text-sm text-muted-foreground">
+                  <p>För dig på en ö: vi tar uppdrag i skärgården. Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.</p>
+                  <p>{linkPhone("Läcker det: ring 070-154 36 39. Vi svarar inom 24 timmar och har ingen jour.")}</p>
+                </div>
 
                 <div className="space-y-4 border-t border-border pt-6">
                   {[
