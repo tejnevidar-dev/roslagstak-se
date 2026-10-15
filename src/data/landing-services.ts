@@ -409,7 +409,7 @@ export const landingServices: LandingService[] = [
     path: "/hangrannor",
     seoTitle: "Hängrännor och stuprör — byte och nyinstallation",
     seoDescription:
-      "Nya hängrännor och stuprör i lackerad plåt. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Nya hängrännor och stuprör. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
     breadcrumb: "Hängrännor och stuprör",
     eyebrow: "Takavvattning",
     h1: "Nya hängrännor och stuprör.",
@@ -419,7 +419,7 @@ export const landingServices: LandingService[] = [
     listHeading: "Det här kan vi göra",
     listIntro: "Takavvattningen leder bort vattnet från tak, fasad och grund.",
     list: [
-      { title: "Nya hängrännor", text: "Hängrännor och stuprör i lackerad plåt." },
+      { title: "Nya hängrännor", text: "Hängrännor och stuprör." },
       { title: "Stuprör", text: "Nya stuprör." },
       { title: "Ränndalar och fotplåt", text: "Ränndalar och fotplåt görs i plåt." },
       { title: "Hur systemet läggs upp", text: "Hur hängrännor och stuprör läggs upp på ditt hus går vi igenom vid takkontrollen." },
@@ -434,7 +434,7 @@ export const landingServices: LandingService[] = [
     ],
     extraHeading: "Vilket material?",
     extraParagraphs: [
-      "Hängrännor och stuprör i lackerad plåt. Vid takkontrollen går vi igenom vad som gäller för ditt hus.",
+      "Hängrännor och stuprör. Vid takkontrollen går vi igenom vad som gäller för ditt hus.",
       "Under tiden går det bra att läsa mer om hur takavvattning fungerar på sidan om takavvattning.",
       "Kostnadsfri takkontroll utan förpliktelser. En kontaktperson genom hela processen.",
     ],
@@ -449,7 +449,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vilka material finns?",
-        answer: "Hängrännor och stuprör i lackerad plåt.",
+        answer: "Hängrännor och stuprör.",
       },
       {
         question: "Kan jag få ROT-avdrag på hängrännor?",

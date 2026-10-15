@@ -234,7 +234,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     block: {
       kind: "lookup",
       eyebrow: "Plåtdetaljer",
-      heading: "Där många läckage börjar",
+      heading: "Det du kan titta efter",
       intro: "Bandtäckning, skorstensinklädnad, fotplåt och beslag. Det här kan du titta efter.",
       columns: ["Det du ser", "Läs mer"],
       items: [

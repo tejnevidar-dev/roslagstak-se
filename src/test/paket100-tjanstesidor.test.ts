@@ -3,6 +3,7 @@
  * /takkupor utan märket om tätskiktsgarantin, /takrenovering i linje med problemsidan om underlagspapp, det obelagda borta på /platarbeten, /takavvattning och /tegeltak.
  * Plåtarbeten som eget jobb och adressen /tjanster/takinspektion är orörda.
  */
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { prerenderContent } from "../../scripts/prerender-content";
 import { serviceDetails, serviceMeta, tatskiktChip } from "../data/service-page";
@@ -56,8 +57,16 @@ describe("paket 100: /tjanster/takavvattning och /tjanster/platarbeten", () => {
     expect(t).not.toContain("inga hål som kan bli otäta");
     expect(t).toContain("Eftersom ingen skruv går igenom plåten finns det inga skruvhål i takytan.");
   });
-  it("kortet på startsidan säger inte 'där många läckage börjar'", () => {
-    expect(sida("/")).not.toContain("fotplåt och beslag — där många läckage börjar");
+  it("blockrubriken på platarbeten är 'Det du kan titta efter' (ingressens mening står kvar)", () => {
+    const t = sida("/tjanster/platarbeten");
+    expect(t).toContain("Det du kan titta efter");
+    expect(t).not.toContain("Där många läckage börjar");
+    expect(t).toContain("Bandtäckning, skorstensinklädnad, fotplåt och beslag. Det här kan du titta efter.");
+  });
+  it("startsidans tjänstekort är orörda (startsidan är spärrad): Services.tsx är som i paket 99", () => {
+    const kort = readFileSync("src/components/Services.tsx", "utf8");
+    expect(kort).toContain("fotplåt och beslag — där många läckage börjar.");
+    expect(kort).toContain("det klassiska materialvalet som passar både äldre och nyare hus, med fast pris");
   });
   it("plåtarbeten som eget jobb är orört: sidan och dess svar om skorstensplåten står kvar", () => {
     const t = sida("/tjanster/platarbeten");
@@ -69,9 +78,14 @@ describe("paket 100: /tjanster/takavvattning och /tjanster/platarbeten", () => {
 describe("paket 100: /tjanster/tegeltak", () => {
   const t = sida("/tjanster/tegeltak");
   it("generaliseringarna är borta", () => {
-    for (const borta of ["passar både äldre och nyare hus", "med ett uttryck som många vill behålla", "Det som oftast avgör hur länge", "är det ofta underlaget som har gjort sitt", "Varje panna ligger löst i förhållande till grannarna"]) {
+    for (const borta of ["med ett uttryck som många vill behålla", "Det som oftast avgör hur länge", "är det ofta underlaget som har gjort sitt", "Varje panna ligger löst i förhållande till grannarna"]) {
       expect(t, borta).not.toContain(borta);
     }
+  });
+  it("ingressen kommer från startsidans kort (Services.tsx, spärrad): den står kvar tills Vidar svarat, och faktakortet och lead är ändrade", () => {
+    expect(t).toContain("Vi lägger tegeltak i lertegel — det klassiska materialvalet som passar både äldre och nyare hus, med fast pris efter kostnadsfri takkontroll.");
+    expect(t).not.toContain("Det klassiska valet som passar både äldre och nyare hus.");
+    expect(t).not.toContain("Lertegel är det klassiska valet som passar");
   });
   it("Innehålls lydelser står där", () => {
     expect(t).toContain("Lertegel är det klassiska tegeltaket.");
@@ -79,8 +93,14 @@ describe("paket 100: /tjanster/tegeltak", () => {
     expect(t).toContain("Hur länge taket fungerar beror också på underlaget, läkten och detaljerna runt skorsten och genomföringar, inte bara på pannorna.");
     expect(t).toContain("På ett äldre tegeltak kan underlaget ha gjort sitt, även när pannorna ser hela ut, se dålig underlagspapp.");
   });
-  it("kortet på startsidan har samma ändring", () => {
-    expect(sida("/")).not.toContain("det klassiska materialvalet som passar både äldre och nyare hus");
+});
+
+describe("paket 100: /hangrannor (landningssidan)", () => {
+  it("'i lackerad plåt' är struket på alla fyra ställen", () => {
+    const t = sida("/hangrannor");
+    expect(t.toLowerCase()).not.toContain("lackerad");
+    expect(readFileSync("src/data/landing-services.ts", "utf8").toLowerCase()).not.toContain("lackerad");
+    expect(t).toContain("Nya hängrännor och stuprör. Fast pris efter kostnadsfri takkontroll");
   });
 });
 
