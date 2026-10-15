@@ -70,7 +70,7 @@ describe("paket 101: generaliseringarna", () => {
     expect(p("lackande-ranndal").akut).toContain("Eftersom mycket vatten passerar just där bör även en liten fläck kontrolleras.");
     expect(p("lackage-vid-takkupa").intro).toContain("och det är där ett läckage kan börja.");
     expect(p("lackage-mellan-tak-och-vagg").intro).toContain("Anslutningen är utsatt, eftersom");
-    expect(p("lackande-plattak").intro).toContain("När det börjar läcka sitter orsaken ofta där plåtarna möts, där de är fästa");
+    expect(p("lackande-plattak").intro).toContain("När det börjar läcka kan orsaken sitta där plåtarna möts, där de är fästa");
     expect(p("lackande-hangrannor").intro).toContain("och därför kan felet pågå länge.");
     expect(p("fuktflack-i-innertaket").orsaker).toContain("Källan kan vara en otät anslutning i taket snarare än själva takytan.");
     expect(p("porosa-betongpannor").atgarder).toContain("kan en takomläggning med nytt underlag, ny läkt och nya pannor vara rätt åtgärd.");

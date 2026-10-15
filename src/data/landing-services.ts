@@ -449,7 +449,7 @@ export const landingServices: LandingService[] = [
       },
       {
         question: "Vilka material finns?",
-        answer: "Hängrännor och stuprör.",
+        answer: "Vilket material som passar ditt hus går vi igenom vid takkontrollen.",
       },
       {
         question: "Kan jag få ROT-avdrag på hängrännor?",

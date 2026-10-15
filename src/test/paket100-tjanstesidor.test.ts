@@ -101,6 +101,7 @@ describe("paket 100: /hangrannor (landningssidan)", () => {
     expect(t.toLowerCase()).not.toContain("lackerad");
     expect(readFileSync("src/data/landing-services.ts", "utf8").toLowerCase()).not.toContain("lackerad");
     expect(t).toContain("Nya hängrännor och stuprör. Fast pris efter kostnadsfri takkontroll");
+    expect(t).toContain("Vilket material som passar ditt hus går vi igenom vid takkontrollen.");
   });
 });
 

@@ -434,7 +434,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Läcker plåttaket? Så känner du igen läckage vid skruvar, skarvar och falsar, vad du kan göra själv och när taket behöver kontrolleras.",
     intro:
-      "Ett plåttak är tätt så länge plåten, skarvarna och infästningarna är hela. När det börjar läcka sitter orsaken ofta där plåtarna möts, där de är fästa eller där något går igenom taket. Här går vi igenom hur läckaget brukar visa sig på skruvad profilplåt och på falsat plåttak, och vad du kan göra innan taket kontrolleras.",
+      "Ett plåttak är tätt så länge plåten, skarvarna och infästningarna är hela. När det börjar läcka kan orsaken sitta där plåtarna möts, där de är fästa eller där något går igenom taket. Här går vi igenom hur läckaget brukar visa sig på skruvad profilplåt och på falsat plåttak, och vad du kan göra innan taket kontrolleras.",
     symptom:
       "Fuktfläckar i innertaket som ofta följer en rak linje, längs en skarv eller en rad av skruvar. Droppar eller fuktränder på undersidan av taket på vinden, i ett garage eller ett uthus där plåten syns inifrån. Utifrån kan du se skruvar som står upp, saknas eller har rostiga brickor, plåtar som har glidit isär i en skarv, en fals som har öppnat sig, rost i kanter och skarvar eller plåt som har bucklats av en gren eller av snö och is.",
     orsaker:
