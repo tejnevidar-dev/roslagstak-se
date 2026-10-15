@@ -5,7 +5,7 @@ export const roofTypeFaqs = [
   {
     question: "Vad avgör hur länge ett tak fungerar?",
     answer:
-      "Det som oftast avgör är underlaget, läkten och detaljerna runt skorsten och genomföringar, inte bara ytmaterialet. Tillverkarens uppgifter gäller för själva materialet.",
+      "Hur länge taket fungerar beror också på underlaget, läkten och detaljerna runt skorsten och genomföringar, inte bara på ytmaterialet. Tillverkarens uppgifter gäller för själva materialet.",
   },
   {
     question: "Vad kostar de olika taktyperna per kvadratmeter?",
