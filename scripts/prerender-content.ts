@@ -873,7 +873,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: problem.intro,
       ...buildBody([
         ...problemSections.flatMap((s) => [
-          { h: s.heading, suffix: s.heading.endsWith("?") ? "" : ":" },
+          { h: s.key === "atgarder" && problem.atgarderRubrik ? problem.atgarderRubrik : s.heading, suffix: s.heading.endsWith("?") ? "" : ":" },
           problem[s.key] as string,
         ]),
         SAKERHETSRUTA,

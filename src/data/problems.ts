@@ -16,6 +16,8 @@ export interface Problem {
   akut: string;
   undersokning: string;
   atgarder: string;
+  /** Rubrik över åtgärdsavsnittet när den inte är mallens "Åtgärder som används" (gren 99: de tio gamla sidorna). */
+  atgarderRubrik?: string;
   gorInteSjalv: string;
   related: { to: string; label: string }[];
   relatedProject?: "takrenovering-blido" | "takbyte-singo";
@@ -40,9 +42,10 @@ export const problems: Problem[] = [
     akut:
       "När vatten droppar in, eller om fukten når isolering eller elinstallationer. Då ska det åtgärdas snarast: samla upp vattnet, fota och kontakta en takläggare.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: beslag, fogar och pannor runt skorstenen. Där vinden går att komma åt följs fuktspåren därifrån. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Nytt eller omlagt skorstensbeslag, ny fog, byte av pannor runt skorstenen. Är taket i övrigt uttjänt kan ett takbyte vara bättre än att laga en detalj.",
+      "Nytt eller omlagt skorstensbeslag, ny fog, byte av pannor runt skorstenen. Är taket i övrigt uttjänt kan ett takbyte vara bättre än att laga en detalj. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Arbete på taket och vid skorstenen. Du kan fota fläckarna, lägga något under som samlar upp vattnet och notera när det läcker (vid regn, snösmältning eller blåst).",
     related: [
@@ -60,15 +63,16 @@ export const problems: Problem[] = [
     intro:
       "Pannor som ligger snett, har glidit ner, har spruckit eller saknas kan släppa in vatten. Senare kan fukt synas på vinden.",
     symptom:
-      "Pannor som ligger snett, har glidit ner, har spruckit eller saknas, ofta efter storm. Mörka partier eller glipor i takytan. Senare kan fukt synas på vinden.",
+      "Pannor som ligger snett, har glidit ner, har spruckit eller saknas, till exempel efter en storm. Mörka partier eller glipor i takytan. Senare kan fukt synas på vinden.",
     orsaker:
       "Storm och kraftig vind, frostsprängning, att någon har gått på taket, lösa eller rostade fästen, eller att läkten under har gett efter.",
     akut:
       "När en panna saknas eller glipan är stor, särskilt inför regn eller vinter, eftersom vatten då når underlaget direkt.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: pannorna, fästena och underlaget runt skadan, och om fler pannor sitter löst. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Byte av enstaka pannor och omfästning. Vid många skador, eller om underlaget är skadat, kan omläggning eller takbyte vara rätt.",
+      "Byte av enstaka pannor och omfästning. Vid många skador, eller om underlaget är skadat, kan omläggning eller takbyte vara rätt. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Gå inte upp för att lägga tillbaka pannor. Du kan fota från marken och notera var skadan sitter.",
     related: [
@@ -86,15 +90,16 @@ export const problems: Problem[] = [
     intro:
       "Mossa, lav och alger växer där taket ligger i skugga och torkar långsamt, till exempel på norrsidan och under träd.",
     symptom:
-      "Gröna eller mörka mattor av mossa, lav och alger, oftast på norrsidan och under träd. Mossrester i hängrännorna.",
+      "Gröna eller mörka mattor av mossa, lav och alger, till exempel på norrsidan och under träd. Mossrester i hängrännorna.",
     orsaker:
       "Skugga och fukt, träd nära huset, ett tak som torkar långsamt. Porösa ytor binder mer påväxt.",
     akut:
-      "Lite lav är främst estetiskt. Tjocka mattor håller kvar fukt, kan lyfta pannor och täppa till hängrännor, och bör åtgärdas.",
+      "Tjocka mattor av mossa kan hålla kvar fukt och täppa till hängrännor.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: hur påväxten påverkar pannor, underlag och avvattning, och om ytan är skadad under. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Skonsam rengöring och behandling av taket, rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas.",
+      "Taktvätt och rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Högtryckstvätt från taket, som både är farlig och kan skada pannorna. Du kan hålla hängrännorna rena från marken med rätt verktyg, och beskära träd.",
     related: [
@@ -117,9 +122,10 @@ export const problems: Problem[] = [
       "Skadad eller sliten ytbehandling, repor, stående vatten, felaktiga material i kontakt med varandra.",
     akut: "När rosten har gått igenom (hål) eller när plåten släpper i skarvar och vatten kan tränga in.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: hur djupt rosten har gått, skarvarna och fästena, och om underlaget har tagit fukt. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Rengöring och ny ytbehandling när rosten är ytlig, byte av enskilda plåtdetaljer, eller nytt plåttak när plåten är uttjänt.",
+      "Beroende på hur långt rosten har gått: ny ytbehandling, byte av plåtdetaljer eller nytt plåttak. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv: "Arbete uppe på plåttaket. Du kan fota rostpartierna från marken.",
     related: [
       { to: "/platslagare", label: "Plåtslagare för ditt tak" },
@@ -140,11 +146,12 @@ export const problems: Problem[] = [
     orsaker:
       "Läckage genom yttertaket (pannor, beslag, genomföringar) eller kondens, när varm fuktig inomhusluft når den kalla vinden och ventilationen i takfot och nock inte räcker.",
     akut:
-      "Vid aktivt läckage, blöt isolering eller mögel som sprider sig. Mögel på vinden ska utredas, eftersom det kan påverka virket och inomhusmiljön.",
+      "Vid aktivt läckage, blöt isolering eller mögel som sprider sig. Mögel på vinden ska utredas, eftersom det kan påverka virket.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: yttertaket och vindens ventilation vid takfot, nock och genomföringar. Syftet är att skilja läckage från kondens. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Åtgärd av läckan, förbättrad ventilation, tätning mot varm inomhusluft (till exempel vindsluckan), och byte av skadat underlag eller råspont när det krävs.",
+      "Åtgärd av läckan, förbättrad ventilation, tätning mot varm inomhusluft (till exempel vindsluckan), och byte av skadat underlag eller råspont när det krävs. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Sanering av mögel och ingrepp i takkonstruktionen. Du kan fota fläckarna, notera när fukten syns och kontrollera att vindsluckan är tät.",
     related: [
@@ -168,9 +175,10 @@ export const problems: Problem[] = [
       "Löv, barr och mossa, fel lutning mot stupröret, hängrännor som har släppt eller läcker i skarvarna.",
     akut:
       "Inför vintern, eftersom vatten som fryser i rännan kan rinna in under takfoten och skada fasad och grund.",
-    undersokning: "Vid takkontrollen tittar vi på taket på plats: rännans lutning, fästen och skarvar, stupröret och takfoten bakom rännan. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+    undersokning: "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Rensning, justering av lutning och fästen, tätning av skarvar, eller nya hängrännor och stuprör när de är uttjänta.",
+      "Rensning, justering av lutning och fästen, tätning av skarvar, eller nya hängrännor och stuprör när de är uttjänta. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Arbete på hög stege utan säkerhet. Från marken kan du rensa med förlängningsverktyg och spola stupröret.",
     related: [
@@ -194,9 +202,10 @@ export const problems: Problem[] = [
     akut:
       "När virket är mjukt eller taket sviktar, eller när fukten fortfarande tillförs. Då behöver orsaken och det skadade virket åtgärdas.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats. Där vinden går att komma åt syns därifrån hur stor del av råsponten som är påverkad. Utifrån tittar vi efter var fukten kommer in. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Byte av skadade delar av råsponten (ofta i samband med takbyte, när underlaget ändå är öppet) och åtgärd av fuktkällan.",
+      "Byte av skadade delar av råsponten (ofta i samband med takbyte, när underlaget ändå är öppet) och åtgärd av fuktkällan. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Ingrepp i takkonstruktionen eller att gå på en sviktande takyta. Du kan fota och markera fläckarna på vinden.",
     related: [
@@ -221,9 +230,10 @@ export const problems: Problem[] = [
       "Varm, fuktig inomhusluft som läcker upp till den kalla vinden (otät vindslucka, genomföringar), för lite ventilation genom takfot och nock, eller igensatta ventilationsspalter.",
     akut: "När fukten återkommer ofta, när isoleringen blir blöt eller när mögel börjar växa.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats: ventilationen vid takfot och nock, tätheten mot bostaden, och om det i stället finns en läcka i yttertaket. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Tätning mot bostaden (vindslucka, genomföringar), förbättrad ventilation i takfot och nock. Vid omfattande fuktskador även åtgärder på underlaget.",
+      "Tätning mot bostaden och bättre ventilation i takfot och nock. Vid omfattande fuktskador även åtgärder på underlaget. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Ändringar i takets ventilation och konstruktion. Du kan kontrollera att vindsluckan sluter tätt och att takfotens ventilation inte är igensatt.",
     related: [
@@ -245,9 +255,10 @@ export const problems: Problem[] = [
     akut:
       "När vatten tar sig igenom på flera ställen, eftersom underlaget då inte längre fungerar som reserv när yttertaket släpper igenom vatten.",
     undersokning:
-      "Vid takkontrollen tittar vi på taket på plats. Underlaget ligger dolt under pannor eller plåt. Där vinden går att komma åt syns därifrån om råsponten har fuktspår. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+      "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Nytt underlag kräver normalt att yttertaket tas bort, och görs därför vanligen som en omläggning eller ett takbyte med nytt underlag och ny läkt.",
+      "Nytt underlag kräver normalt att yttertaket tas bort, och görs därför vanligen som en omläggning eller ett takbyte med nytt underlag och ny läkt. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv: "Allt arbete med underlaget. Du kan fota fuktfläckarna på vinden.",
     related: [
       { to: "/tjanster/takomlaggning", label: "Takomläggning" },
@@ -270,9 +281,10 @@ export const problems: Problem[] = [
       "Värme från bostaden som smälter snön på taket, så att vattnet fryser vid den kalla takfoten. Igensatta hängrännor. Otillräcklig ventilation.",
     akut:
       "När istappar hänger över gångvägar eller entréer (fallrisk för människor), eller när smältvatten tränger in under takfoten.",
-    undersokning: "Vid takkontrollen tittar vi på taket på plats: hängrännornas skick och lutning, takfotens ventilation och tätheten mot vinden. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
+    undersokning: "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Rensning eller byte av hängrännor, förbättrad ventilation och tätning mot vinden så att mindre värme når yttertaket.",
+      "Rensning eller byte av hängrännor, förbättrad ventilation och tätning mot vinden så att mindre värme når yttertaket. Vilka av dem som behövs, och vilka vi gör, går vi igenom vid takkontrollen.",
+    atgarderRubrik: "Vanliga åtgärder",
     gorInteSjalv:
       "Att slå ner istappar från stege eller gå upp på ett istäckt tak. Spärra av ytan under och kontakta hjälp om istapparna är stora.",
     related: [

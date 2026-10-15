@@ -80,7 +80,7 @@ const ProblemPage = () => {
           <div className="mt-10 space-y-8">
             {sections.map((s) => (
               <div key={s.heading}>
-                <h2 className="font-display text-xl text-foreground">{s.heading}</h2>
+                <h2 className="font-display text-xl text-foreground">{s.key === "atgarder" && problem.atgarderRubrik ? problem.atgarderRubrik : s.heading}</h2>
                 <p className="mt-2 leading-relaxed text-muted-foreground">{problem[s.key] as string}</p>
               </div>
             ))}

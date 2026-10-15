@@ -11,11 +11,11 @@ const K3 = "Efter takkontrollen får du en rapport om takets skick. Behöver tak
 
 describe("paket 54: de tio äldre takproblemsidorna (Pr2)", () => {
   const slugs = ["lackage-vid-skorsten", "trasiga-takpannor", "mossa-pa-taket", "rostig-plat", "fukt-pa-vinden", "igensatta-hangrannor", "rutten-raspont", "kondens-pa-vinden", "dalig-underlagspapp", "istappar-pa-taket"];
-  it("alla tio börjar 'Vid takkontrollen tittar vi på taket på plats' och slutar med K3:s lydelse", () => {
+  it("alla tio börjar 'Vid takkontrollen tittar' (sedan paket 99 utan uppräkning) och slutar med K3:s lydelse", () => {
     for (const s of slugs) {
       const p = problems.find((x) => x.slug === s);
       expect(p, s).toBeTruthy();
-      expect(p!.undersokning.startsWith("Vid takkontrollen tittar vi på taket på plats"), s).toBe(true);
+      expect(p!.undersokning.startsWith("Vid takkontrollen tittar"), s).toBe(true);
       expect(p!.undersokning.endsWith(K3), s).toBe(true);
     }
   });
@@ -23,9 +23,8 @@ describe("paket 54: de tio äldre takproblemsidorna (Pr2)", () => {
     const alla = problems.map((p) => p.undersokning).join("\n");
     for (const borta of ["uppe på taket", "uppifrån taket", "när pannor eller plåt lyfts", "En takläggare eller plåtslagare kontrollerar", "En takläggare tittar", "En takläggare kontrollerar", "En takläggare bedömer"]) expect(alla, borta).not.toContain(borta);
   });
-  it("sidorna med två-alternativsraderna har de nya lydelserna (rutten råspont, dålig underlagspapp)", () => {
-    expect(problems.find((p) => p.slug === "rutten-raspont")!.undersokning).toContain("Där vinden går att komma åt syns därifrån hur stor del av råsponten som är påverkad. Utifrån tittar vi efter var fukten kommer in.");
-    expect(problems.find((p) => p.slug === "dalig-underlagspapp")!.undersokning).toContain("Där vinden går att komma åt syns därifrån om råsponten har fuktspår.");
+  it("uppräkningen av vad som tittas på är borta på alla tio (paket 99), så 'Där vinden går att komma åt' står inte längre kvar", () => {
+    for (const s of slugs) expect(problems.find((p) => p.slug === s)!.undersokning, s).not.toContain("Där vinden går att komma åt");
   });
 });
 
