@@ -1,5 +1,5 @@
 /**
- * Paket 117: ortstexterna utan Grind-rad enligt Innehålls omgång 1–2 (innehall/utan-grind-omgang*-briefrader-2026-10-15.md). Per rad: det nya står på ortens sida (React-data och serverns HTML), det gamla är borta.
+ * Paket 117: ortstexterna utan Grind-rad enligt Innehålls omgång 1–2–3 (innehall/utan-grind-omgang*-briefrader-2026-10-15.md). Per rad: det nya står på ortens sida (React-data och serverns HTML), det gamla är borta.
  * Genererat av _verktyg/gen-test-117.mjs. Ändrad del med lite sammanhang; ändringarna skrevs in i src/data/locations.ts av _verktyg/rader-per-slug.mjs.
  */
 import { describe, expect, it } from "vitest";
@@ -228,6 +228,79 @@ const omgang2: Rad[] = [
 
 describe("paket 117: omgång 2 (15 rader)", () => {
   for (const r of omgang2) {
+    it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
+      expect(ort(r.slug)).toContain(js(r.ny));
+      expect(sida(r.slug)).toContain(js(r.ny));
+      if (r.gammal.length > 12) expect(ort(r.slug)).not.toContain(js(r.gammal));
+    });
+  }
+});
+
+const omgang3: Rad[] = [
+  {
+    "slug": "angby",
+    "kod": "O8",
+    "ny": "g, läkt och plåtdetaljer det som kan behöva",
+    "gammal": "ofta det som behöver"
+  },
+  {
+    "slug": "pershagen",
+    "kod": "U",
+    "ny": "nte hur taket mår i dag. Hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats",
+    "gammal": "Det gör underlaget, plåten kring skorsten och genomföringar och hängrännornas skick"
+  },
+  {
+    "slug": "resaro",
+    "kod": "T",
+    "ny": "ill i flera steg. Där är övergångarna värda en extra titt",
+    "gammal": "det övergångarna som ska granskas"
+  },
+  {
+    "slug": "segeltorp",
+    "kod": "O8",
+    "ny": "tdetaljer och hängrännor det som kan behöva",
+    "gammal": "ofta det som behöver"
+  },
+  {
+    "slug": "sjoberg",
+    "kod": "O8",
+    "ny": "tdetaljer och hängrännor det som kan behöva",
+    "gammal": "ofta det som behöver"
+  },
+  {
+    "slug": "barkarby",
+    "kod": "T",
+    "ny": "anslutning i taket, och anslutningarna är värda en extra titt",
+    "gammal": "det är i ränndalar, vid anslutningar mot vägg och kring skorstenar som underlagspapp och plåt bör kontrolleras först. Hängrännor och stuprör hör till samma genomgång"
+  },
+  {
+    "slug": "smedslatten",
+    "kod": "?",
+    "ny": "n redan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats. På hus från 1960-talet kan underlagspapp, läkt, plåtdetaljer och hängränno",
+    "gammal": "då är det den senaste omläggningen som avgör skicket, inte byggåret. På hus från 1960-talet är det underlagspapp, läkt, plåtdetaljer och hängrännor som bruka"
+  },
+  {
+    "slug": "sodra-angby",
+    "kod": "U",
+    "ny": "r lite om hur taket mår. Hur taket mår i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats",
+    "gammal": "Det avgörande är när den senaste omläggningen gjordes, hur den utfördes och hur avvattning, plåtdetaljer och anslutningar mot skorsten och vägg ser ut i dag"
+  },
+  {
+    "slug": "vasterhaninge",
+    "kod": "O8",
+    "ny": "tdetaljer och hängrännor det som kan behöva",
+    "gammal": "ofta det som behöver"
+  },
+  {
+    "slug": "vendelso",
+    "kod": "T",
+    "ny": "nslutningar mot vägg, är värda en extra tit",
+    "gammal": "de ställen som behöver ses över förs"
+  }
+];
+
+describe("paket 117: omgång 3 (10 rader)", () => {
+  for (const r of omgang3) {
     it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
       expect(ort(r.slug)).toContain(js(r.ny));
       expect(sida(r.slug)).toContain(js(r.ny));
