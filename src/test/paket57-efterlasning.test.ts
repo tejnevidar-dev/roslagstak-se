@@ -36,7 +36,8 @@ describe("paket 57: Innehålls efterläsning E1-E5", () => {
   });
   it("E4: ljudmeningen i guiden om plåttak mot betongpannor", () => {
     const g = JSON.stringify(blogPosts.find((p) => p.slug === "plattak-vs-betongpannor"));
-    expect(g).toContain("Hur mycket som hörs beror på vad som finns under plåten. Pannor är tyngre och dämpar mer i sig.");
+    expect(g).toContain("Hur mycket ett plåttak hörs när det regnar beror på vad som finns under plåten."); // paket 107 (P4): samma lydelse som på TP20-sidan
+    expect(g).not.toContain("Pannor är tyngre och dämpar mer i sig");
     expect(g).not.toContain("Med rätt uppbyggnad under plåten dämpas ljudet");
   });
   it("E5: takproblemsidornas exempeltext utan brasklappen 'Vi påstår inte'", () => {
