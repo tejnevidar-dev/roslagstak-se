@@ -22,7 +22,7 @@ import { referensMening } from "@/data/location-referens";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { buildLocalSections } from "@/data/local-sections";
 import { LOCATION_PAGE_TEXT } from "@/data/location-page-text";
-import { regionSlugs } from "@/data/regions";
+import { regionLinkLabel, regionSlugs } from "@/data/regions";
 import { projects } from "@/data/projects";
 import { getNearbyProject } from "@/data/project-nearby";
 import NotFound from "./NotFound";
@@ -223,7 +223,7 @@ const LocationPage = () => {
               className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-4 transition-colors hover:bg-primary/20"
             >
               <MapPin className="w-3 h-3" />
-              {location.parentLocation ? `Takläggare i ${location.parentLocation.name}` : `Takläggare i ${location.region}`}
+              {location.parentLocation ? `Takläggare i ${location.parentLocation.name}` : regionLinkLabel(location.region)}
             </Link>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
               {location.h1Override ??

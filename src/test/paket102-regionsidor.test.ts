@@ -7,6 +7,7 @@ import { describe, expect, it } from "vitest";
 import { regionTexts } from "../data/region-texts";
 import { regionBySlug, regionLinkLabel, regionOrder, regionSlugs } from "../data/regions";
 import { prerenderContent } from "../../scripts/prerender-content";
+import { locations } from "../data/locations";
 
 const kalla = (f: string) => readFileSync(f, "utf8");
 const text = (slug: string) => regionTexts[regionBySlug(slug)!];
@@ -93,5 +94,32 @@ describe("paket 102: hubben och mallen (K1–K4)", () => {
     }
     expect(kalla("src/pages/RegionPage.tsx")).toContain("regionLinkLabel(n)");
     expect(regionOrder.length).toBe(16);
+  });
+});
+
+describe("paket 102b: ortssidornas länk till sin region (samma gemensamma länktext)", () => {
+  const kust = locations.filter((l) => l.region === "Kusten");
+  const halvo = locations.filter((l) => l.region === "Rådmansöhalvön");
+  const skarg = locations.filter((l) => l.region === "Norra skärgården");
+  it("ortssidor i Kusten och på Rådmansöhalvön länkar till 'Takläggare vid kusten' och 'Takläggare på Rådmansöhalvön'", () => {
+    expect(kust.length).toBeGreaterThan(3);
+    expect(halvo.length).toBeGreaterThan(0);
+    for (const l of kust) {
+      const t = sida(`/taklaggare-${l.slug}`);
+      expect(t, l.slug).toContain("Takläggare vid kusten");
+      expect(t, l.slug).not.toContain("Takläggare i Kusten");
+    }
+    for (const l of halvo) {
+      const t = sida(`/taklaggare-${l.slug}`);
+      expect(t, l.slug).toContain("Takläggare på Rådmansöhalvön");
+      expect(t, l.slug).not.toContain("Takläggare i Rådmansöhalvön");
+    }
+  });
+  it("övriga regioner är 'Takläggare i <region>', och React och servern använder samma funktion", () => {
+    expect(skarg.length).toBeGreaterThan(0);
+    const t = sida(`/taklaggare-${skarg[0].slug}`);
+    expect(t).toContain("Takläggare i Norra skärgården");
+    expect(kalla("src/pages/LocationPage.tsx")).toContain("regionLinkLabel(location.region)");
+    expect(kalla("scripts/prerender-content.ts")).toContain("regionLinkLabel(loc.region)");
   });
 });

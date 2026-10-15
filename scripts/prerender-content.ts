@@ -1295,7 +1295,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         // Samma länk som länkraden "Tjänster, priser och guider" i LocationPage.tsx: ägarsidan för "takrenovering pris"
         { href: "/tjanster/takrenovering", label: "Takrenovering" },
         ...faqLinks(locationFaqs),
-        { href: regionHref, label: `Takläggare i ${loc.region}` },
+        { href: regionHref, label: regionLinkLabel(loc.region) },
         ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
         ...problemsForLocation(loc.slug).map((p) => ({ href: p.to, label: p.label })),
         ...villaAreaLinks(loc.slug),
