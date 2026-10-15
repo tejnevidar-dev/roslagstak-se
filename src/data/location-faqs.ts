@@ -86,7 +86,7 @@ export const generateLocationFAQs = (
     },
     {
       question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,
-      answer: `Det beror på takets skick, framför allt underlaget. Vid den kostnadsfria takkontrollen ${prep} ${name} bedömer vi om en reparation räcker eller om taket behöver läggas om. Du bestämmer själv om och när du vill gå vidare.`,
+      answer: `Det beror på takets skick. Vid den kostnadsfria takkontrollen ${prep} ${name} går vi igenom om en reparation räcker eller om taket behöver läggas om. Du bestämmer själv om och när du vill gå vidare.`,
     },
     {
       question: `Kan ni byta ett eternittak ${prep} ${name}?`,
