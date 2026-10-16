@@ -1156,6 +1156,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ...buildBody([
         ...(rt ? rt.body.map((p) => (isHeading(p) ? { h: stripInlineMd(p) } : stripInlineMd(p))) : []),
         ...(villaAreasParagraph(regionSlugs[region]) ? [villaAreasParagraph(regionSlugs[region])!] : []),
+        { h: `Orter i ${region}` }, // samma rubrik som RegionPage.tsx har över ortslistan (länkarna kommer i links)
         `Vi tar uppdrag i ${places.length} orter i området. Ring ${PHONE} för kostnadsfri takkontroll och fast pris.`,
         // Omdömesbandet, "Nästa steg" och länktexten sist, som i RegionPage.tsx (AG1, paket 23)
         GOOGLE_REVIEWS_TEXT.bandEyebrow,
