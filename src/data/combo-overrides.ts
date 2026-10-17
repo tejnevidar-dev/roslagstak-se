@@ -1030,9 +1030,9 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   "takomlaggning-norrtalje": {
-    title: "Takomläggning i Norrtälje – takfirma med bas här",
+    title: "Takomläggning i Norrtälje – 10 års utförandegaranti",
     description:
-      "Takomläggning i Norrtälje: vi är en takfirma med bas här. Kostnadsfri takkontroll utan förpliktelser, fast pris i offerten och svar inom 24 timmar.",
+      "Takomläggning i Norrtälje: kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Vi har vår bas här och svarar inom 24 timmar.",
     content: [
       "Vi är en takfirma med bas i Norrtälje och lägger om tak i staden och kommunen. Ett tak som läcker vid skorstenen, har pannor som har börjat spricka eller ett underlag som har blivit mjukt kan vara svårt att laga bit för bit. Då kan en takomläggning vara rätt åtgärd. Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.",
       "## Omläggning steg för steg",

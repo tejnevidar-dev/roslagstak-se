@@ -895,7 +895,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Knivsta: egnahem från sågverkets tid, egnahemsområden från 1947 och småhus från 1970-talet och framåt. Kostnadsfri takkontroll och fast pris.",
   },
   uppsala: {
-    title: "Takläggare i Uppsala – fast pris efter takkontroll",
+    title: "Takläggare i Uppsala – takbyte, fast pris | RoslagsTak",
     description:
       "Takläggare i Uppsala: villastaden i Kåbo, egnahemmen i Ekeby, Sunnersta och de yngre villaområdena. Kostnadsfri takkontroll och fast pris i offerten.",
   },

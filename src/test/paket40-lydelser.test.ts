@@ -15,7 +15,7 @@ describe("paket 40", () => {
     const u = locations.find((l) => l.slug === "uppsala")!;
     expect(usesMall(u)).toBe(false);
     expect(u.longDescription.startsWith("Den som söker takläggare i Uppsala")).toBe(true);
-    expect(ortSeoOverrides.uppsala.title).toBe("Takläggare i Uppsala – fast pris efter takkontroll");
+    expect(ortSeoOverrides.uppsala.title).toBe("Takläggare i Uppsala – takbyte, fast pris | RoslagsTak"); // gren 120 (U3), tidigare "– fast pris efter takkontroll"
     expect(ortSeoOverrides.uppsala.description).toBe("Takläggare i Uppsala: villastaden i Kåbo, egnahemmen i Ekeby, Sunnersta och de yngre villaområdena. Kostnadsfri takkontroll och fast pris i offerten.");
   });
 

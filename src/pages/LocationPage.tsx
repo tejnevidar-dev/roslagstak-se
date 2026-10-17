@@ -5,7 +5,7 @@ import { ortSeoOverrides } from "@/data/seo-overrides";
 import { Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
 import { lankbarHref, ortAvindexerad, synligaOrter } from "@/data/avindexerade-orter";
-import { generateCombos, COMBO_LINK_LABEL, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
+import { generateCombos, COMBO_LINK_LABEL, COMBO_LINK_TILL_TJANST, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
 import { isThinCombo } from "@/data/thin-combos";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
@@ -477,8 +477,8 @@ const LocationPage = () => {
                     <Link to={`/takmalning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> Takmålning {prep} {location.name}
                     </Link>
-                    <Link to={`/taktvatt-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Taktvätt {prep} {location.name}
+                    <Link to={COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.href ?? `/taktvatt-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> {COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.label ?? `Taktvätt ${prep} ${location.name}`}
                     </Link>
                     </>
                     )}

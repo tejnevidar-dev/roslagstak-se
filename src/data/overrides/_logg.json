@@ -3352,6 +3352,22 @@
       "fore": "Takbyte, takomläggning och takrenovering i Uppsala. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
       "efter": "Takläggare i Uppsala: villastaden i Kåbo, egnahemmen i Ekeby, Sunnersta och de yngre villaområdena. Kostnadsfri takkontroll och fast pris i offerten.",
       "tid": "2026-10-11T00:30:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0001",
+      "path": "/takbyte-norrtalje",
+      "falt": "description",
+      "fore": "Byta tak i Norrtälje? Vi har vår bas här. Takbyte med betongpannor, lertegel eller plåt, kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+      "efter": "Byta tak i Norrtälje? Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Vi har vår bas här och svarar inom 24 timmar.",
+      "tid": "2026-10-18T00:25:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0002",
+      "path": "/taklaggare-taby",
+      "falt": "title",
+      "fore": "Takläggare i Täby – byta tak, fast pris",
+      "efter": "Takläggare i Täby – takläggning, fast pris",
+      "tid": "2026-10-18T00:25:00+02:00"
     }
   ]
 }

@@ -278,11 +278,21 @@ export const COMBO_LINK_LABEL: Record<string, string> = {
   "/takbyte-norrtalje": "Byta tak i Norrtälje",
 };
 
+/**
+ * Taktvätt × ort-sidorna för Täby, Vallentuna och Vaxholm är noindex (thin-combos.ts), så ortssidornas taktvättslänk pekar på den indexerade
+ * /tjanster/taktvatt med det befintliga ordet "Taktvätt" (SEO-genomgången 2026-10-18, L1). EN regel för React och statisk HTML.
+ */
+export const COMBO_LINK_TILL_TJANST: Record<string, { href: string; label: string }> = {
+  "/taktvatt-taby": { href: "/tjanster/taktvatt", label: "Taktvätt" },
+  "/taktvatt-vallentuna": { href: "/tjanster/taktvatt", label: "Taktvätt" },
+  "/taktvatt-vaxholm": { href: "/tjanster/taktvatt", label: "Taktvätt" },
+};
+
 /** Länkmålet för en tjänst × ort-sida i listor på andra sidor: materialets egen sida för material, annars sidan själv. */
 export const comboListLink = (c: { serviceSlug: string; url: string; serviceName: string; prep: string; locationName: string }): { href: string; label: string } =>
   MATERIAL_OWN_PAGE[c.serviceSlug]
     ? { href: MATERIAL_OWN_PAGE[c.serviceSlug].to, label: MATERIAL_OWN_PAGE[c.serviceSlug].label }
-    : { href: c.url, label: COMBO_LINK_LABEL[c.url] ?? `${c.serviceName} ${c.prep} ${c.locationName}` };
+    : COMBO_LINK_TILL_TJANST[c.url] ?? { href: c.url, label: COMBO_LINK_LABEL[c.url] ?? `${c.serviceName} ${c.prep} ${c.locationName}` };
 
 /** Tjänstesidan som en tjänst × ort-sida länkar upp till. "takbyte" ägs av /tjanster/takomlaggning. */
 export const COMBO_SERVICE_PAGE: Record<string, { to: string; label: string }> = {

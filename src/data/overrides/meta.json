@@ -65,10 +65,10 @@
         "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bz), ej mätförsök. Läspunkt 28 dagar efter live"
       },
       "description": {
-        "id": "manuell-2026-10-04-0017",
-        "text": "Byta tak i Norrtälje? Vi har vår bas här. Takbyte med betongpannor, lertegel eller plåt, kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
-        "andrad": "2026-10-04",
-        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bz), ej mätförsök. Läspunkt 28 dagar efter live"
+        "id": "manuell-2026-10-18-0001",
+        "text": "Byta tak i Norrtälje? Kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Vi har vår bas här och svarar inom 24 timmar.",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
     "/takbyte-taby": {
@@ -109,10 +109,10 @@
     },
     "/taklaggare-taby": {
       "title": {
-        "id": "manuell-2026-10-04-0003",
-        "text": "Takläggare i Täby – byta tak, fast pris",
-        "andrad": "2026-10-04",
-        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+        "id": "manuell-2026-10-18-0002",
+        "text": "Takläggare i Täby – takläggning, fast pris",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången), ej mätförsök. Läspunkt 28 dagar efter live"
       },
       "description": {
         "id": "manuell-2026-10-04-0004",

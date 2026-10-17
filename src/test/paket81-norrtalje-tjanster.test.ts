@@ -66,9 +66,9 @@ describe("paket 81: första stycket på de tre Norrtälje-tjänstesidorna", () =
 
 describe("paket 81: titel och meta (Marknadschefens val 2026-10-13: förslag B)", () => {
   it("takomläggning och takrenovering har titel B; takomläggning har den nya metan; takrenovering behåller sin; takbyte rörs inte", () => {
-    expect(comboOverrides["takomlaggning-norrtalje"].title).toBe("Takomläggning i Norrtälje – takfirma med bas här");
+    expect(comboOverrides["takomlaggning-norrtalje"].title).toBe("Takomläggning i Norrtälje – 10 års utförandegaranti"); // gren 120 (F2), tidigare "– takfirma med bas här"
     expect(comboOverrides["takrenovering-norrtalje"].title).toBe("Takrenovering i Norrtälje – takfirma med bas här");
-    expect(comboOverrides["takomlaggning-norrtalje"].description).toBe("Takomläggning i Norrtälje: vi är en takfirma med bas här. Kostnadsfri takkontroll utan förpliktelser, fast pris i offerten och svar inom 24 timmar.");
+    expect(comboOverrides["takomlaggning-norrtalje"].description).toBe("Takomläggning i Norrtälje: kostnadsfri takkontroll, fast pris i offerten och 10 års utförandegaranti. Vi har vår bas här och svarar inom 24 timmar."); // gren 120 (F2)
     expect(comboOverrides["takrenovering-norrtalje"].description).toBe("Takrenovering i Norrtälje: vi åtgärdar plåt, pannor och avvattning när hela taket inte behöver bytas. Kostnadsfri takkontroll och fast pris.");
     expect(comboOverrides["takbyte-norrtalje"].title).toBe("Takbyte i Norrtälje – fast pris och AMA");
     // titel + suffix " | RoslagsTak" ryms på 60 tecken

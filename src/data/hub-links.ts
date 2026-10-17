@@ -26,6 +26,8 @@ const HUBS: Hub[] = [
   { slug: "taby", href: "/takrenovering-taby", label: "Takrenovering i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
   // Takbyte-sidor med visningar men bara en inlänk (GSC 2026-10-03): /takbyte-stockholm (66), /takbyte-jarfalla (18), /takbyte-huddinge (15), /takbyte-taby (26)
   { slug: "taby", href: "/takbyte-taby", label: "Takbyte i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
+  // SEO-genomgången 2026-10-18 (T2): /takomlaggning-taby hade 9 inlänkar mot 33 för /takbyte-taby och /takrenovering-taby
+  { slug: "taby", href: "/takomlaggning-taby", label: "Takomläggning i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
   { slug: "stockholm", href: "/takbyte-stockholm", label: "Takbyte i Stockholm", regioner: ["Stockholms stad"] },
   { slug: "jarfalla", href: "/takbyte-jarfalla", label: "Takbyte i Järfälla", regioner: ["Nordvästra Stockholm"] },
   { slug: "huddinge", href: "/takbyte-huddinge", label: "Takbyte i Huddinge", regioner: ["Södra Stockholm"] },
@@ -52,6 +54,10 @@ export const REGION_EXTRA_LINKS: Record<string, HubLink[]> = {
 /** Länkar som bara gäller en enda ortssida (paket 73): Norrtälje-sidan länkar till guiden "Välja takfirma i Norrtälje" i länkrutan, med guidens egen titel. */
 const ENSKILDA_LANKAR: Record<string, HubLink[]> = {
   norrtalje: [{ href: "/blogg/taklaggare-norrtalje-guide", label: "Välja takfirma i Norrtälje: sex frågor att ställa" }],
+  // SEO-genomgången 2026-10-18 (U1): /taklaggare-uppsala hade 6 inlänkar. Uppsala länkar till Märsta och Sigtuna men de länkade inte tillbaka, och Enköping länkar hit men Uppsala inte dit.
+  marsta: [{ href: "/taklaggare-uppsala", label: "Takläggare i Uppsala" }],
+  sigtuna: [{ href: "/taklaggare-uppsala", label: "Takläggare i Uppsala" }],
+  uppsala: [{ href: "/taklaggare-enkoping", label: "Takläggare i Enköping" }],
 };
 
 /** Hubblänkarna för en ort (tom lista för hubbens egen sida och för orter utanför hubbens regioner), plus länkar som bara gäller den orten. */
