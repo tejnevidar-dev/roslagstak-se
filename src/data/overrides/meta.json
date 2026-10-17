@@ -15,6 +15,20 @@
         "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
+    "/blogg/mala-plattak-guide-pris": {
+      "title": {
+        "id": "manuell-2026-10-18-0003",
+        "text": "Måla plåttak: när målning håller och när plåten bör bytas",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången), ej mätförsök. Läspunkt 28 dagar efter live"
+      },
+      "description": {
+        "id": "manuell-2026-10-18-0004",
+        "text": "Målning av plåttak: det här avgör om färgen håller, skillnaden mellan platsmålad och fabrikslackerad plåt och vad du kan se själv från marken.",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
     "/blogg/takpapp-byte-livslangd": {
       "title": {
         "id": "manuell-2026-10-04-0001",
@@ -45,10 +59,10 @@
     },
     "/material/tp20-plattak": {
       "title": {
-        "id": "manuell-2026-10-04-0023",
-        "text": "Plåttak – pris, TP20, pannplåt och dubbelfalsat",
-        "andrad": "2026-10-04",
-        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bx), ej mätförsök. Läspunkt 56 dagar efter live"
+        "id": "manuell-2026-10-18-0005",
+        "text": "Plåttak pris: TP20, pannplåt och dubbelfalsat",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången), ej mätförsök. Läspunkt 28 dagar efter live"
       },
       "description": {
         "id": "manuell-2026-10-04-0024",

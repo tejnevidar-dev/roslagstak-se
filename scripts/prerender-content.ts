@@ -1306,6 +1306,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           .map(comboListLink),
         ...hubLinksFor(loc.slug),
         ...(referensMd ? inlineMdLinks(referensMd) : []),
+        // Länkar i områdessidans egna avsnitt (LocationPage.tsx renderar section.text med renderInline), t.ex. "Hallstavik" på Norrtälje-sidan (gren 120b, H1)
+        ...(loc.extraSections ?? []).flatMap((sec) => inlineMdLinks(sec.text)),
         ...loc.nearbyLocations
           .map((name) => locations.find((l) => l.name === name))
           .filter((l): l is (typeof locations)[number] => Boolean(l) && !ortAvindexerad(l.slug))

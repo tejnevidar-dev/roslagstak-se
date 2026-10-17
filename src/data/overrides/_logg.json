@@ -3368,6 +3368,30 @@
       "fore": "Takläggare i Täby – byta tak, fast pris",
       "efter": "Takläggare i Täby – takläggning, fast pris",
       "tid": "2026-10-18T00:25:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0003",
+      "path": "/blogg/mala-plattak-guide-pris",
+      "falt": "title",
+      "fore": "Måla plåttak: när det går och när plåten bör bytas",
+      "efter": "Måla plåttak: när målning håller och när plåten bör bytas",
+      "tid": "2026-10-18T00:41:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0004",
+      "path": "/blogg/mala-plattak-guide-pris",
+      "falt": "description",
+      "fore": "Går plåttaket att måla om, eller är det dags att byta plåten? Det här avgör, vad du kan se själv från marken och hur du får ett fast pris.",
+      "efter": "Målning av plåttak: det här avgör om färgen håller, skillnaden mellan platsmålad och fabrikslackerad plåt och vad du kan se själv från marken.",
+      "tid": "2026-10-18T00:41:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0005",
+      "path": "/material/tp20-plattak",
+      "falt": "title",
+      "fore": "Plåttak – pris, TP20, pannplåt och dubbelfalsat",
+      "efter": "Plåttak pris: TP20, pannplåt och dubbelfalsat",
+      "tid": "2026-10-18T00:41:00+02:00"
     }
   ]
 }
