@@ -9,6 +9,7 @@ import { usesMall } from "@/data/location-mall";
 import { referensMening } from "@/data/location-referens";
 import { stripInlineMd, inlineMdLinks } from "@/lib/inline-md";
 import { prerenderContent, styckenMedLankar } from "../../scripts/prerender-content";
+import { ortPrep } from "@/data/ort-prep";
 
 const kalla = (f: string) => readFileSync(f, "utf8");
 const ownText = locations.filter((l) => !usesMall(l));
@@ -24,7 +25,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
   it("serverns HTML: meningen är stycke två, direkt efter första stycket, på varje egen-text-sida som har den", () => {
     let antal = 0;
     for (const l of ownText) {
-      const prep = l.isIsland ? "på" : "i";
+      const prep = ortPrep(l);
       const m = referensMening(l, prep);
       const sida = prerenderContent("/taklaggare-" + l.slug)!;
       const ps = sida.paragraphs.map((p) => (typeof p === "string" ? p : ""));
@@ -47,7 +48,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
     const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     let antal = 0;
     for (const l of ownText) {
-      const m = referensMening(l, l.isIsland ? "på" : "i");
+      const m = referensMening(l, ortPrep(l));
       if (!m) continue;
       antal++;
       const sida = prerenderContent("/taklaggare-" + l.slug)!;
@@ -63,7 +64,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       // texten är oförändrad: utan taggar är stycket lika med texten
       expect(html[refIndex].replace(/<[^>]+>/g, ""), l.slug).toBe(esc(ps[refIndex]));
     }
-    expect(antal).toBe(ownText.filter((l) => referensMening(l, l.isIsland ? "på" : "i")).length);
+    expect(antal).toBe(ownText.filter((l) => referensMening(l, ortPrep(l))).length);
     expect(antal).toBeGreaterThan(12); // se ovan (paket 112 och 114)
   });
   it("ingen sida har meningen kvar i geo-stycket mitt på sidan, och mallsidorna är orörda", () => {

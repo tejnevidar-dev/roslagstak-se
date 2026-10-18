@@ -9,6 +9,7 @@ import { applyMall } from "../src/data/location-mall";
 import { generateLocationFAQs, generateServiceLocationFAQs } from "../src/data/location-faqs";
 import { allServiceSlugs } from "../src/data/service-slugs";
 import { getCombo, serviceSlugsFromTypes } from "../src/data/service-location-combos";
+import { ortPrep } from "../src/data/ort-prep";
 
 export interface SchemaSample {
   /** Sidan schemat hör till (för felmeddelanden). */
@@ -53,7 +54,7 @@ export const collectSchemas = (): SchemaSample[] => {
 
   // Ortshubbar + service+ort: FAQ och brödsmulor.
   for (const loc of locations) {
-    const prep = loc.isIsland ? "på" : "i";
+    const prep = ortPrep(loc);
     const hub = `/taklaggare-${loc.slug}`;
     samples.push({
       page: hub,

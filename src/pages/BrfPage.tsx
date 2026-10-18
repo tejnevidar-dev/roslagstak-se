@@ -35,6 +35,7 @@ import {
   brfHeroIntro,
   brfPlaceHeading,
 } from "@/data/brf-sections";
+import { ortPrep } from "@/data/ort-prep";
 
 export interface BrfPlace {
   slug: string;
@@ -575,7 +576,7 @@ const BrfPage = ({ place }: { place?: BrfPlace }) => {
                 {brfPlaces.map((l) => (
                   <li key={l.slug}>
                     <Link to={`/brf/${l.slug}`} className="text-[16px] text-foreground underline decoration-accent/50 decoration-2 underline-offset-4 hover:text-primary hover:decoration-accent">
-                      BRF {l.isIsland ? "på" : "i"} {l.name}
+                      BRF {ortPrep(l)} {l.name}
                     </Link>
                   </li>
                 ))}

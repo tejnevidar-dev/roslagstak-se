@@ -11,6 +11,7 @@ import {
 } from "@/data/brf-sections";
 import { locations } from "@/data/locations";
 import { prerenderContent } from "../../scripts/prerender-content";
+import { ortPrep } from "@/data/ort-prep";
 
 const gemensamma = [
   BRF_HERO_CAPTION,
@@ -62,7 +63,7 @@ describe("BRF-sidornas statiska text", () => {
     const saknas: string[] = [];
     for (const slug of brfLocationSlugs as readonly string[]) {
       const loc = locations.find((l) => l.slug === slug)!;
-      const place = { prep: loc.isIsland ? "på" : "i", name: loc.name };
+      const place = { prep: ortPrep(loc), name: loc.name };
       const page = prerenderContent(`/brf/${slug}`);
       if (!page) { saknas.push(`${slug}: ingen sida`); continue; }
       if (page.intro !== brfHeroIntro({ name: loc.name })) saknas.push(`${slug}: intro`);

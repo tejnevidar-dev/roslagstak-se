@@ -4,6 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { locations } from "@/data/locations";
 import { brfLocationSlugs } from "@/data/brf-locations";
 import { brfPlaceParagraphs } from "@/data/brf-sections";
+import { ortPrep } from "@/data/ort-prep";
 
 /** BRF-sida per ort (/brf/<ort>): samma innehåll som /brf med ortens eget avsnitt. */
 const BrfLocationPage = () => {
@@ -12,7 +13,7 @@ const BrfLocationPage = () => {
   const loc = locations.find((l) => l.slug === slug);
   if (!loc) return <NotFound />;
 
-  const prep = loc.isIsland ? "på" : "i";
+  const prep = ortPrep(loc);
   const place: BrfPlace = {
     slug: loc.slug,
     name: loc.name,

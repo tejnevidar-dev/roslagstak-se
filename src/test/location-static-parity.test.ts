@@ -9,13 +9,14 @@ import { LOCATION_PAGE_TEXT } from "@/data/location-page-text";
 import { locations } from "@/data/locations";
 import { villaAreasBlocks } from "@/data/villa-areas";
 import { prerenderContent } from "../../scripts/prerender-content";
+import { ortPrep } from "@/data/ort-prep";
 
 describe("/taklaggare-<ort>: statisk text", () => {
   it("varje ortssida har fakta, taktjänster, pris, sidokolumn och omdömesband som egna block", () => {
     const saknas: string[] = [];
     for (const loc of locations) {
       const lista = prerenderContent(`/taklaggare-${loc.slug}`)?.paragraphs ?? [];
-      const prep = loc.isIsland ? "på" : "i";
+      const prep = ortPrep(loc);
       const förväntat = [
         ...buildLocalSections(loc).facts.flatMap((f) => [f.label, f.value]),
         LOCATION_PAGE_TEXT.servicesHeading(prep, loc.name), ...LOCATION_PAGE_TEXT.serviceItems(prep, loc.name),

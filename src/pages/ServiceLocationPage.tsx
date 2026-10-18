@@ -23,6 +23,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ortPrep } from "@/data/ort-prep";
 
 /** Inga belopp i strukturerade data på tjänst × ort-sidor (regel 5, Marknadschefen 2026-10-04): riktpriser står på /priser. check-prisfrasing.ts fäller bygget om ett belopp hamnar här. */
 const PRIS_UTAN_BELOPP = "Fast pris i offerten efter kostnadsfri takkontroll. Riktpriser per material finns på roslagstak.se/priser.";
@@ -371,7 +372,7 @@ const ServiceLocationPage = () => {
                         className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1"
                       >
                         <MapPin className="w-3.5 h-3.5" />
-                        {combo.serviceName} {n.isIsland ? "på" : "i"} {n.name}
+                        {combo.serviceName} {ortPrep(n)} {n.name}
                       </Link>
                     ))}
                   </div>

@@ -11,6 +11,7 @@ import { synligaOrter } from "@/data/avindexerade-orter";
 import JsonLd from "@/components/JsonLd";
 import { locationIndex } from "@/data/location-index";
 import { regionOrder, regionIntros, regionSlugs } from "@/data/regions";
+import { ortPrep } from "@/data/ort-prep";
 
 const AreasPage = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const AreasPage = () => {
     itemListElement: synligaOrter(locationIndex).map((l, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      name: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
+      name: `Takläggare ${ortPrep(l)} ${l.name}`,
       url: `https://roslagstak.se/taklaggare-${l.slug}`,
     })),
   };
@@ -90,7 +91,7 @@ const AreasPage = () => {
                         className="group flex items-center justify-between gap-3 border border-border bg-card px-4 py-3 text-[15px] font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
                       >
                         <span>
-                          Takläggare {place.isIsland ? "på" : "i"} {place.name}
+                          Takläggare {ortPrep(place)} {place.name}
                         </span>
                         <ArrowRight
                           className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-accent"

@@ -17,6 +17,7 @@ import { locations } from "../src/data/locations";
 import { materials } from "../src/data/materials";
 import { problems } from "../src/data/problems";
 import { generateCombos } from "../src/data/service-location-combos";
+import { ortPrep } from "../src/data/ort-prep";
 
 const comboByUrl = new Map(generateCombos().map((c) => [c.url, c]));
 const SERVICE_LABEL: Record<string, string> = {
@@ -39,7 +40,7 @@ const linkLabel = (href: string): string => {
   let m = href.match(/^\/taklaggare-([a-z0-9-]+)$/);
   if (m) {
     const l = locations.find((x) => x.slug === m![1]);
-    if (l) return `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`;
+    if (l) return `Takläggare ${ortPrep(l)} ${l.name}`;
   }
   m = href.match(/^\/tjanster\/([a-z0-9-]+)$/);
   if (m && SERVICE_LABEL[m[1]]) return SERVICE_LABEL[m[1]];

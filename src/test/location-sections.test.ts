@@ -7,6 +7,7 @@ import { locations } from "@/data/locations";
 import { iRoslagen, locationWhySections, omOrtRubrik, regionIMening } from "@/data/location-sections";
 import { isNearBase } from "@/data/service-reach";
 import { prerenderContent } from "../../scripts/prerender-content";
+import { ortPrep } from "@/data/ort-prep";
 
 describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
   it("ger rätt lydelse för ö, tätort nära basen, långt från basen och Mälardalen", () => {
@@ -29,7 +30,7 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
   it("meningen om regionen säger 'hör till <region> i vår områdesindelning' (4.2), och rubriken behåller regionens stavning", () => {
     const text = (ort: string) => {
       const l = locations.find((x) => x.name === ort)!;
-      const [, b] = locationWhySections(l, l.isIsland ? "på" : "i", false);
+      const [, b] = locationWhySections(l, ortPrep(l), false);
       return { rubrik: b.heading, mening: b.paragraph.split(" Vilka alternativ")[0], region: l.region };
     };
     // En ort i Roslagen, en i Stockholm, en ö och en i Västerort (regionen som tidigare blev "Västerort i Roslagen")
@@ -63,7 +64,7 @@ describe("ortssidornas avsnitt Varför välja RoslagsTak och Om <ort>", () => {
     for (const l of locations) {
       const page = prerenderContent(`/taklaggare-${l.slug}`);
       if (!page) { saknas.push(`${l.slug}: ingen statisk sida`); continue; }
-      const prep = l.isIsland ? "på" : "i";
+      const prep = ortPrep(l);
       const text = page.paragraphs.map((p) => (typeof p === "string" ? p : (p as { h: string }).h ?? "")).join("\n");
       for (const s of locationWhySections(l, prep, !l.isIsland && !isNearBase(l))) {
         if (!text.includes(s.heading) || !text.includes(s.paragraph)) saknas.push(`${l.slug}: ${s.heading}`);

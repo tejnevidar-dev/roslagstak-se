@@ -12,6 +12,7 @@
 import { locations, type LocationData } from "./locations";
 import { projectTexts as projects } from "./project-texts";
 import { distanceFromBaseKm, distanceKm } from "./service-reach";
+import { ortPrep } from "./ort-prep";
 
 const NEARBY_PROJECT_MAX_KM = 30;
 
@@ -59,7 +60,7 @@ export const applyMall = (loc: LocationData): LocationData => {
   const index = locations.findIndex((l) => l.slug === loc.slug);
   const n = index < 0 ? 0 : index;
   const ort = loc.name;
-  const prep = loc.isIsland ? "på" : "i";
+  const prep = ortPrep(loc);
   const region = loc.region;
   const km = Math.round(distanceFromBaseKm(loc));
   const grannar = loc.nearbyLocations.join(", ");

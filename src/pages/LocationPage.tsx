@@ -35,6 +35,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ortPrep } from "@/data/ort-prep";
 
 const LocationPage = () => {
   const pathname = useLocation().pathname;
@@ -68,7 +69,7 @@ const LocationPage = () => {
         ),
       ]
     : [];
-  const prep = location.isIsland ? "på" : "i";
+  const prep = ortPrep(location);
   // Referensmeningen använder sidans egen prep, så att React och serverns HTML inte kan skilja sig (paket 79).
   const referens = referensMening(location, prep);
   const localSections = buildLocalSections(location);
@@ -603,7 +604,7 @@ const LocationPage = () => {
                         className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1"
                       >
                         <MapPin className="w-3.5 h-3.5" />
-                        Takläggare {loc.isIsland ? "på" : "i"} {loc.name}
+                        Takläggare {ortPrep(loc)} {loc.name}
                       </Link>
                     ))}
                   </div>

@@ -21,6 +21,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { locations } from "../src/data/locations";
+import { ortPrep } from "../src/data/ort-prep";
 
 /** Juristens lydelse om bygglov (ledning/jurist/seo-cc-lista-bygglov-regel5-granskning.md, avsnitt B). */
 const BYGGLOV_NY =
@@ -210,7 +211,7 @@ for (const file of files) {
   const uniqueFAQ =
     bygg && hus
       ? {
-          question: `När byggdes husen ${cur.isIsland ? "på" : "i"} ${name}?`,
+          question: `När byggdes husen ${ortPrep({ slug: p.slug, isIsland: cur.isIsland === true })} ${name}?`,
           answer: `Byggperiod enligt källorna: ${lowerFirst(bygg)}. Hustyper: ${lowerFirst(hus)}. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. ${BYGGLOV_NY}`,
         }
       : cur.uniqueFAQ;

@@ -3,6 +3,7 @@ import { locations, type LocationData } from "./locations";
 import { allServiceSlugs, hasServiceCombos } from "./service-slugs";
 import { byDistance } from "./service-reach";
 import { OAR_UTAN_BILVAG } from "./location-mall";
+import { ortPrep } from "./ort-prep";
 
 export interface ServiceLocationCombo {
   serviceSlug: string;
@@ -194,7 +195,7 @@ export const generateCombos = (): ServiceLocationCombo[] => {
   const combos: ServiceLocationCombo[] = [];
   for (const service of serviceTypes) {
     for (const loc of locations.filter((l) => hasServiceCombos(l.region))) {
-      const prep = loc.isIsland ? "på" : "i";
+      const prep = ortPrep(loc);
       combos.push({
         serviceSlug: service.slug,
         serviceName: service.name,

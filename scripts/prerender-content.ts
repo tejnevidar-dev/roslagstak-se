@@ -223,6 +223,7 @@ export const styckenMedLankar = (
 export { resolveMeta } from "../src/data/overrides";
 import { buildOverrideBlocks } from "../src/data/overrides";
 import { applyOverrideBlocks } from "../src/lib/innehall-apply";
+import { ortPrep } from "../src/data/ort-prep";
 export { fitTitle, fitDescription, withSuffix } from "../src/lib/seo-fit";
 
 /* Services live in a React component; read the data with a regex so the
@@ -256,7 +257,7 @@ const serviceLinks = services.map((s) => ({
 
 const locationLinks = synligaOrter(locations).map((l) => ({
   href: `/taklaggare-${l.slug}`,
-  label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
+  label: `Takläggare ${ortPrep(l)} ${l.name}`,
 }));
 
 const combos = generateCombos();
@@ -539,7 +540,7 @@ const staticPages: Record<string, PrerenderPage> = {
       ...(brfLocationSlugs as readonly string[])
         .map((slug) => locations.find((l) => l.slug === slug))
         .filter((l): l is NonNullable<typeof l> => !!l)
-        .map((l) => ({ href: `/brf/${l.slug}`, label: `BRF ${l.isIsland ? "på" : "i"} ${l.name}` })),
+        .map((l) => ({ href: `/brf/${l.slug}`, label: `BRF ${ortPrep(l)} ${l.name}` })),
     ],
   },
   "/hur-det-gar-till": {
@@ -779,7 +780,7 @@ const NARA_BASEN_KM = 5;
  * ortnamnet bytt, vilket var precis vad som orsakade dubbletterna.
  */
 const geoFactsParagraph = (loc: (typeof locations)[number]): string => {
-  const prep = loc.isIsland ? "på" : "i";
+  const prep = ortPrep(loc);
   const parts: string[] = [
     // Orter nära basen (under 5 km) får inte avståndsledet: "Norrtälje ligger cirka 1 km från vår bas i Norrtälje" är meningslöst (AG3).
     // Övriga: "<Ort> ligger cirka <X> km från vår bas i Norrtälje." (Innehåll 7b: "tillhör <region>" säger att orten hör till ett område som bara finns i vår indelning)
@@ -1175,7 +1176,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...(REGION_EXTRA_LINKS[region] ?? []),
         ...synligaOrter(places).map((l) => ({
           href: `/taklaggare-${l.slug}`,
-          label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
+          label: `Takläggare ${ortPrep(l)} ${l.name}`,
         })),
       ],
       breadcrumbs: [
@@ -1192,7 +1193,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       ? locations.find((l) => l.slug === slug)
       : undefined;
     if (!loc) return null;
-    const prep = loc.isIsland ? "på" : "i";
+    const prep = ortPrep(loc);
     const brfPlaceFaqs = brfFaqsFor({ name: loc.name, prep });
     return {
       title: `Takbyte BRF ${prep} ${loc.name} — bostadsrättsföreningar`,
@@ -1228,7 +1229,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     if (!rawLoc) return null;
     const mall = usesMall(rawLoc);
     const loc = applyMall(rawLoc);
-    const prep = loc.isIsland ? "på" : "i";
+    const prep = ortPrep(loc);
     const locationFaqs = generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ);
     const referensMd = mall ? null : referensMening(loc, prep);
     const regionHref = regionSlugs[loc.region] ? `/omraden/${regionSlugs[loc.region]}` : "/omraden";
@@ -1313,7 +1314,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           .filter((l): l is (typeof locations)[number] => Boolean(l) && !ortAvindexerad(l.slug))
           .map((l) => ({
             href: `/taklaggare-${l.slug}`,
-            label: `Takläggare ${l.isIsland ? "på" : "i"} ${l.name}`,
+            label: `Takläggare ${ortPrep(l)} ${l.name}`,
           })),
       ],
       breadcrumbs: [

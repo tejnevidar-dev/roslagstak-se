@@ -914,4 +914,19 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare i Trosa: den låga trähusbebyggelsen vid ån, villaområdet Östermalm från sekelskiftet 1900 och utbyggnaden på 1960- och 70-talen.",
   },
+  alvnas: {
+    title: "Takbyte i Älvnäs, Ekerö – fast pris",
+    description:
+      "Takbyte och takomläggning i Älvnäs, Brunna och Närlunda på Ekerön, med kedjehus och villor främst från 1960- och 1970-talen. Kostnadsfri takkontroll.",
+  },
+  brevikshalvon: {
+    title: "Takbyte på Brevikshalvön, Tyresö – fast pris",
+    description:
+      "Takbyte och takomläggning på Brevikshalvön i Tyresö, med Raksta, Bergholm, Solberga, Dyvik och Ällmora. Kostnadsfri takkontroll och fast pris.",
+  },
+  "bo-rudboda": {
+    title: "Takbyte i Bo och Rudboda, Lidingö – fast pris",
+    description:
+      "Takbyte och takomläggning i Bo och västra Rudboda på norra Lidingö, med villor från 1920-talet och rad- och kedjehus från 1960-talet. Kostnadsfri takkontroll.",
+  },
 };
