@@ -45,7 +45,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
   "takbyte-akersberga": {
     title: "Takbyte i Åkersberga – fast pris och AMA",
     description:
-      "Takbyte i Åkersberga och Österåker: plåt, betongpannor eller lertegel till fast pris. Boka en kostnadsfri takkontroll utan förpliktelser.",
+      "Byta tak i Åkersberga? Takbyte med plåt, betongpannor eller lertegel till fast pris. Boka en kostnadsfri takkontroll utan förpliktelser.",
     content: [
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Åkersberga. Mellan Stockholm och skärgården ligger Åkersberga, centralorten i Österåkers kommun. Här finns allt från äldre villor nära stationerna till senare villaområden. Står du inför ett takbyte vill du veta vad som ingår, vilka material som finns och vad det kostar. Därför börjar vi med en kostnadsfri takkontroll och lämnar sedan ett fast pris. Boka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
       "## Närområdet",

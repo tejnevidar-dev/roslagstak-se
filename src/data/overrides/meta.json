@@ -71,6 +71,14 @@
         "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04, backlog 1bx), ej mätförsök. Läspunkt 56 dagar efter live"
       }
     },
+    "/omraden/osteraker": {
+      "description": {
+        "id": "manuell-2026-10-18-0008",
+        "text": "Takläggare i Åkersberga, Österskär och Brevik i Österåkers kommun. Kostnadsfri takkontroll och fast pris i offerten. Svar inom 24 timmar.",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången Roslagen), ej mätförsök. Läspunkt 28 dagar efter live"
+      }
+    },
     "/takbyte-norrtalje": {
       "title": {
         "id": "manuell-2026-10-04-0016",
@@ -101,10 +109,10 @@
     },
     "/taklaggare-akersberga": {
       "title": {
-        "id": "seo-cc-2026-10-03-0001",
-        "text": "Takläggare i Åkersberga – byta tak, fast pris",
-        "andrad": "2026-10-03",
-        "orsak": "Manuell titeländring (Marknadschefen 2026-10-05), ej mätförsök: sökorden byta tak, nytt tak, renovera taket"
+        "id": "manuell-2026-10-18-0007",
+        "text": "Takläggare i Åkersberga – takläggning, fast pris",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången Roslagen), ej mätförsök. Läspunkt 28 dagar efter live"
       }
     },
     "/taklaggare-norrtalje": {
@@ -151,10 +159,10 @@
     },
     "/taklaggare-vallentuna": {
       "title": {
-        "id": "manuell-2026-10-04-0005",
-        "text": "Takläggare i Vallentuna – byta tak, fast pris",
-        "andrad": "2026-10-04",
-        "orsak": "Manuell ändring (Marknadschefens beslut 2026-10-04), ej mätförsök. Läspunkt 28 dagar efter live"
+        "id": "manuell-2026-10-18-0006",
+        "text": "Takläggare i Vallentuna – takläggning, fast pris",
+        "andrad": "2026-10-18",
+        "orsak": "Manuell ändring (Marknadschefens grind 2026-10-18, SEO-genomgången Roslagen), ej mätförsök. Läspunkt 28 dagar efter live"
       },
       "description": {
         "id": "manuell-2026-10-04-0006",

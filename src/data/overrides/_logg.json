@@ -3392,6 +3392,30 @@
       "fore": "Plåttak – pris, TP20, pannplåt och dubbelfalsat",
       "efter": "Plåttak pris: TP20, pannplåt och dubbelfalsat",
       "tid": "2026-10-18T00:41:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0006",
+      "path": "/taklaggare-vallentuna",
+      "falt": "title",
+      "fore": "Takläggare i Vallentuna – byta tak, fast pris",
+      "efter": "Takläggare i Vallentuna – takläggning, fast pris",
+      "tid": "2026-10-18T21:36:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0007",
+      "path": "/taklaggare-akersberga",
+      "falt": "title",
+      "fore": "Takläggare i Åkersberga – byta tak, fast pris",
+      "efter": "Takläggare i Åkersberga – takläggning, fast pris",
+      "tid": "2026-10-18T21:36:00+02:00"
+    },
+    {
+      "id": "manuell-2026-10-18-0008",
+      "path": "/omraden/osteraker",
+      "falt": "description",
+      "fore": "Takläggare i Åkersberga, Österskär och Brevik i Österåkers kommun. Kostnadsfri takkontroll och fast pris i offerten.",
+      "efter": "Takläggare i Åkersberga, Österskär och Brevik i Österåkers kommun. Kostnadsfri takkontroll och fast pris i offerten. Svar inom 24 timmar.",
+      "tid": "2026-10-18T21:36:00+02:00"
     }
   ]
 }

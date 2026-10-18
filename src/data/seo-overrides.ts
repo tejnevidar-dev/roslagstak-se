@@ -30,7 +30,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Dalarö, skärgårdsorten i Haninge med hus från badortstiden på 1800-talet och fritidshus från 1950-talet. Kostnadsfri takkontroll.",
   },
   enskede: {
-    title: "Takläggare i Enskede – fast pris efter takkontroll",
+    title: "Takläggare i Enskede – takläggning, fast pris",
     description:
       "Takläggare i Gamla Enskede, trädgårdsstaden i Söderort som i huvudsak stod färdig 1913. Kostnadsfri takkontroll.",
   },
@@ -55,7 +55,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Järna, med villastaden vid stationen, egnahem från 1930- och 1940-talen och villor från 1950–1970-talen. Kostnadsfri takkontroll.",
   },
   kungsangen: {
-    title: "Takläggare i Kungsängen – fast pris efter takkontroll",
+    title: "Takläggare i Kungsängen – takläggning, fast pris",
     description:
       "Takläggare i Kungsängen, med villor från 1910-talet och framåt och enplansvillor och kedjehus från 1950- och 1960-talen. Kostnadsfri takkontroll.",
   },
@@ -545,7 +545,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Kallhälls villastad (Björkliden) i Järfälla, där egnahemstomter började styckas av 1912. Kostnadsfri takkontroll.",
   },
   alvsjo: {
-    title: "Takläggare i Älvsjö – fast pris efter takkontroll",
+    title: "Takläggare i Älvsjö – takläggning, fast pris",
     description:
       "Takläggare i Älvsjö i Söderort, där villatomterna styckades 1908 och 1911 och stadsplanen kom 1921. Kostnadsfri takkontroll.",
   },
@@ -740,7 +740,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Trollbäcken: takbyte och takomläggning i villaområdet i Tyresö som styckades från Kumla gård. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   bro: {
-    title: "Takläggare i Bro – fast pris efter takkontroll",
+    title: "Takläggare i Bro – takläggning, fast pris",
     description:
       "Takläggare i Bro i Upplands-Bro: takbyte, takomläggning och takrenovering. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
   },

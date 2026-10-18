@@ -16,7 +16,10 @@ export interface HubLink {
 interface Hub extends HubLink {
   /** Ortens slug: själva hubben får ingen länk till sig själv. */
   slug: string;
+  /** Regioner vars ortssidor länkar till hubben. */
   regioner: string[];
+  /** Enskilda ortssidor som länkar till hubben (grannarna, ur nearbyLocations), utöver regionerna. */
+  orter?: string[];
 }
 
 const HUBS: Hub[] = [
@@ -28,6 +31,11 @@ const HUBS: Hub[] = [
   { slug: "taby", href: "/takbyte-taby", label: "Takbyte i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
   // SEO-genomgången 2026-10-18 (T2): /takomlaggning-taby hade 9 inlänkar mot 33 för /takbyte-taby och /takrenovering-taby
   { slug: "taby", href: "/takomlaggning-taby", label: "Takomläggning i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
+  // SEO-genomgången Roslagen 2026-10-18 (RL1, RL2): tjänstesidorna för Vallentuna och Åkersberga hade 9 inlänkar vardera. Ortssidor som har orten som granne (nearbyLocations) länkar dit.
+  { slug: "vallentuna", href: "/takbyte-vallentuna", label: "Takbyte i Vallentuna", regioner: [], orter: ["taby", "ella-gard", "skarpang", "ormsta", "lindholmen"] },
+  { slug: "vallentuna", href: "/takrenovering-vallentuna", label: "Takrenovering i Vallentuna", regioner: [], orter: ["taby", "ella-gard", "skarpang", "ormsta", "lindholmen"] },
+  { slug: "akersberga", href: "/takbyte-akersberga", label: "Takbyte i Åkersberga", regioner: [], orter: ["riala", "osterskar", "vallentuna", "taby", "ella-gard", "brevik", "ormsta"] },
+  { slug: "akersberga", href: "/takrenovering-akersberga", label: "Takrenovering i Åkersberga", regioner: [], orter: ["riala", "osterskar", "vallentuna", "taby", "ella-gard", "brevik", "ormsta"] },
   { slug: "stockholm", href: "/takbyte-stockholm", label: "Takbyte i Stockholm", regioner: ["Stockholms stad"] },
   { slug: "jarfalla", href: "/takbyte-jarfalla", label: "Takbyte i Järfälla", regioner: ["Nordvästra Stockholm"] },
   { slug: "huddinge", href: "/takbyte-huddinge", label: "Takbyte i Huddinge", regioner: ["Södra Stockholm"] },
@@ -64,5 +72,5 @@ const ENSKILDA_LANKAR: Record<string, HubLink[]> = {
 export const hubLinksFor = (slug: string): HubLink[] => {
   const loc = locationIndex.find((l) => l.slug === slug);
   if (!loc) return [];
-  return [...HUBS.filter((h) => h.slug !== slug && h.regioner.includes(loc.region)).map(({ href, label }) => ({ href, label })), ...(ENSKILDA_LANKAR[slug] ?? [])];
+  return [...HUBS.filter((h) => h.slug !== slug && (h.regioner.includes(loc.region) || (h.orter ?? []).includes(slug))).map(({ href, label }) => ({ href, label })), ...(ENSKILDA_LANKAR[slug] ?? [])];
 };
