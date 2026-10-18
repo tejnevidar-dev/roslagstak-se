@@ -28,7 +28,7 @@ describe("paket 49b-4", () => {
       const bygg = l.factBox.find((f) => f.label === "Byggperiod")?.value;
       const hus = l.factBox.find((f) => f.label === "Hustyper")?.value;
       if (!bygg || !hus) continue;
-      const lf = (s: string) => (/^(Roslagsbrovägen|Palmeska)/.test(s) ? s : lower(s));
+      const lf = (s: string) => (/^(Roslagsbrovägen|Palmeska|Vaxmora)/.test(s) ? s : lower(s));
       if (!q.answer.startsWith(`Byggperiod enligt källorna: ${lf(bygg)}. Hustyper: ${lf(hus)}. `)) avvikare.push(l.slug);
     }
     expect(avvikare).toEqual(["blido"]);
@@ -42,7 +42,8 @@ describe("paket 49b-4", () => {
   it("A3: egennamn behåller stor bokstav (Väddö, Enskede gård) och importskriptet har samma regel", () => {
     expect(ort("vaddo").uniqueFAQ!.answer).toContain("Byggperiod enligt källorna: Roslagsbrovägen mest 1940- och 1960-tal");
     expect(ort("enskede-gard").uniqueFAQ!.answer).toContain("Byggperiod enligt källorna: Palmeska villastaden från 1907");
+    expect(ort("vaxmora").uniqueFAQ!.answer).toContain("Byggperiod enligt källorna: Vaxmora främst 1960- och 1970-tal"); // gren 128
     const s = readFileSync("scripts/import-omrade.ts", "utf8");
-    expect(s).toContain('const EGENNAMN_I_BORJAN = ["Roslagsbrovägen", "Palmeska"];');
+    expect(s).toContain('const EGENNAMN_I_BORJAN = ["Roslagsbrovägen", "Palmeska", "Vaxmora"];');
   });
 });

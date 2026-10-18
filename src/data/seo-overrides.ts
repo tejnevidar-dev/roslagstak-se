@@ -929,4 +929,14 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Bo och västra Rudboda på norra Lidingö, med villor från 1920-talet och rad- och kedjehus från 1960-talet. Kostnadsfri takkontroll.",
   },
+  trakvista: {
+    title: "Takbyte i Träkvista och Ekebyhov, Ekerö – fast pris",
+    description:
+      "Takbyte och takomläggning i Träkvista, Ekebyhov och Väsby på Ekerön, med villor, kedjehus och radhus från 1960-talet och framåt. Kostnadsfri takkontroll.",
+  },
+  vaxmora: {
+    title: "Takbyte i Vaxmora och Väsjön, Sollentuna – fast pris",
+    description:
+      "Takbyte och takomläggning i Vaxmora, Törnskogen och vid Väsjön i nordöstra Sollentuna, med villor från 1960- och 1970-talen. Kostnadsfri takkontroll.",
+  },
 };
