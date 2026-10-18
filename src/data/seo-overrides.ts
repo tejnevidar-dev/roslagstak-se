@@ -939,4 +939,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Vaxmora, Törnskogen och vid Väsjön i nordöstra Sollentuna, med villor från 1960- och 1970-talen. Kostnadsfri takkontroll.",
   },
+  kungsberga: {
+    title: "Takbyte i Kungsberga och Färentuna, Ekerö – fast pris",
+    description:
+      "Takbyte och takomläggning i Kungsberga, Färentuna och Hilleshög på Färingsö i Ekerö, med villor från 1950- och 1960-talen. Kostnadsfri takkontroll.",
+  },
 };
