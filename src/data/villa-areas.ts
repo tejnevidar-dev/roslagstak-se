@@ -161,7 +161,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Sticklinge", types: "Villor", period: "Norra Sticklinge efter stadsplanen 1978, Södra Sticklinge tidigt 1990-tal (Wikipedia)", href: "/taklaggare-sticklinge" },
       { name: "Mölna", types: "Villor, radhus och kedjehus", period: "Främst 1950- och 1960-tal (Wikipedia)", href: "/taklaggare-molna" },
       { name: "Östra Rudboda, Yttringe och Elfvik", types: "Radhus, kedjehus och villor", period: "Östra Rudboda mitten av 1970-talet (Wikipedia)" },
-      { name: "Mosstorp", types: "Villor och radhus", period: "Villasamhälle, stadsplan 1913 och 1940-talet (Wikipedia)", note: "Mosstorp är enligt Wikipedia ett utpräglat villasamhälle som började stadsplaneras redan 1907, på uppdrag av Lidingö villastad. Stadsplanen för den norra delen fastställdes 1913, och på 1940-talet tillkom planer för de södra delarna." },
+      { name: "Mosstorp", types: "Villor och radhus", period: "Villasamhälle, stadsplan 1913 och 1940-talet (Wikipedia)", note: "Mosstorp är enligt Wikipedia ett utpräglat villasamhälle som började stadsplaneras redan 1907, på uppdrag av Lidingö villastad. Stadsplanen för den norra delen fastställdes 1913, och på 1940-talet tillkom planer för de södra delarna.", href: "/taklaggare-mosstorp" },
       { name: "Bo och Rudboda", types: "Villor, radhus och kedjehus", period: "Rudboda från 1960-talet, Toftvägens radhus 1962–64 (Wikipedia)", href: "/taklaggare-bo-rudboda" },
     ],
   },

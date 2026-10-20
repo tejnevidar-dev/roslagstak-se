@@ -974,4 +974,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Frötuna sydost om Norrtälje, med hus från sekelskiftet 1900 till 2000-talet. Kostnadsfri takkontroll och fast pris.",
   },
+  mosstorp: {
+    title: "Takbyte i Mosstorp och Stockby, Lidingö – fast pris",
+    description:
+      "Takbyte och takomläggning i villastaden Mosstorp och vid Trasthagen i Stockby, med sommarstugor från 1880-talet. Kostnadsfri takkontroll.",
+  },
 };
