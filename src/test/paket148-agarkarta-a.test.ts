@@ -16,7 +16,7 @@ const ortAv = (k: string) => {
 
 describe("paket 148: länkarna 'takläggare i <ort>' från tjänstesidorna", () => {
   it("55 sidor har meningen, och den länkar till en ortssida som finns", () => {
-    expect(SIDOR.length).toBe(55);
+    expect(SIDOR.length).toBeGreaterThanOrEqual(55); // 55 i gren 148, plus 12 i gren 150
     for (const k of SIDOR) expect(locations.some((l) => l.slug === ortAv(k)), k).toBe(true);
   });
   it("meningen står en gång per sida och sidorna länkar med sökordet i serverns HTML", () => {

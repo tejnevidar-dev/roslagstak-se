@@ -2177,7 +2177,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Stockholm. Boka en kostnadsfri takkontroll i Stockholm på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Stockholm. Mer om orten finns på sidan om [takläggare i Stockholm](/taklaggare-stockholm). Boka en kostnadsfri takkontroll i Stockholm på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-stockholm", label: "Takläggare i Stockholm" },
@@ -2221,7 +2221,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Botkyrka. Boka en kostnadsfri takkontroll i Botkyrka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Botkyrka. Mer om orten finns på sidan om [takläggare i Botkyrka](/taklaggare-botkyrka). Boka en kostnadsfri takkontroll i Botkyrka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-botkyrka", label: "Takläggare i Botkyrka" },
@@ -2265,7 +2265,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Bromma. Boka en kostnadsfri takkontroll i Bromma på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Bromma. Mer om orten finns på sidan om [takläggare i Bromma](/taklaggare-bromma). Boka en kostnadsfri takkontroll i Bromma på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-bromma", label: "Takläggare i Bromma" },
@@ -2307,7 +2307,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Enskede. Boka en kostnadsfri takkontroll i Enskede på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Enskede. Mer om orten finns på sidan om [takläggare i Enskede](/taklaggare-enskede). Boka en kostnadsfri takkontroll i Enskede på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-enskede", label: "Takläggare i Enskede" },
@@ -2348,7 +2348,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nacka. Boka en kostnadsfri takkontroll i Nacka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nacka. Mer om orten finns på sidan om [takläggare i Nacka](/taklaggare-nacka). Boka en kostnadsfri takkontroll i Nacka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-nacka", label: "Takläggare i Nacka" },
@@ -2391,7 +2391,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nynäshamn. Boka en kostnadsfri takkontroll i Nynäshamn på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nynäshamn. Mer om orten finns på sidan om [takläggare i Nynäshamn](/taklaggare-nynashamn). Boka en kostnadsfri takkontroll i Nynäshamn på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-nynashamn", label: "Takläggare i Nynäshamn" },
@@ -2431,7 +2431,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Sigtuna. Boka en kostnadsfri takkontroll i Sigtuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Sigtuna. Mer om orten finns på sidan om [takläggare i Sigtuna](/taklaggare-sigtuna). Boka en kostnadsfri takkontroll i Sigtuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-sigtuna", label: "Takläggare i Sigtuna" },
@@ -2472,7 +2472,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Stockholm. Boka en kostnadsfri takkontroll i Stockholm på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Stockholm. Mer om orten finns på sidan om [takläggare i Stockholm](/taklaggare-stockholm). Boka en kostnadsfri takkontroll i Stockholm på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-stockholm", label: "Takläggare i Stockholm" },
@@ -2516,7 +2516,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Bromma. Boka en kostnadsfri takkontroll i Bromma på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Bromma. Mer om orten finns på sidan om [takläggare i Bromma](/taklaggare-bromma). Boka en kostnadsfri takkontroll i Bromma på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-bromma", label: "Takläggare i Bromma" },
@@ -2559,7 +2559,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Värmdö. Boka en kostnadsfri takkontroll på Värmdö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Värmdö. Mer om orten finns på sidan om [takläggare på Värmdö](/taklaggare-varmdo). Boka en kostnadsfri takkontroll på Värmdö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-varmdo", label: "Takläggare i Värmdö" },
@@ -2599,7 +2599,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Tullinge. Boka en kostnadsfri takkontroll i Tullinge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Tullinge. Mer om orten finns på sidan om [takläggare i Tullinge](/taklaggare-tullinge). Boka en kostnadsfri takkontroll i Tullinge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-tullinge", label: "Takläggare i Tullinge" },
@@ -2637,7 +2637,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Lidingö. Boka en kostnadsfri takkontroll på Lidingö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Lidingö. Mer om orten finns på sidan om [takläggare på Lidingö](/taklaggare-lidingo). Boka en kostnadsfri takkontroll på Lidingö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
       { to: "/taklaggare-lidingo", label: "Takläggare på Lidingö" },
