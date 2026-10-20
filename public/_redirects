@@ -71,14 +71,6 @@
 /takrenovering-sodorora /tjanster/takrenovering 301
 /takrenovering-spillersboda /tjanster/takrenovering 301
 /takrenovering-yxlan /tjanster/takrenovering 301
-# -> / (7)
-/takbyte-hammarby-sjostad / 301
-/takbyte-handen / 301
-/takbyte-rotebro / 301
-/takbyte-sodermalm / 301
-/takomlaggning-furusund / 301
-/takomlaggning-sodermalm / 301
-/takrenovering-arholma / 301
 # -> /priser (6)
 /takomlaggning-arsta /priser 301
 /takomlaggning-bandhagen /priser 301
@@ -145,9 +137,10 @@
 # -> /taklaggare-farsta (2)
 /takbyte-farsta /taklaggare-farsta 301
 /takomlaggning-farsta /taklaggare-farsta 301
-# -> /taklaggare-furusund (2)
+# -> /taklaggare-furusund (3)
 /bandtackning-furusund /taklaggare-furusund 301
 /takrenovering-furusund /taklaggare-furusund 301
+/takomlaggning-furusund /taklaggare-furusund 301
 # -> /taklaggare-haggvik (2)
 /takbyte-haggvik /taklaggare-haggvik 301
 /takomlaggning-haggvik /taklaggare-haggvik 301
@@ -169,9 +162,12 @@
 # -> /taklaggare-spanga (2)
 /bandtackning-spanga /taklaggare-spanga 301
 /takomlaggning-spanga /taklaggare-spanga 301
-# -> /taklaggare-stockholm (2)
+# -> /taklaggare-stockholm (5)
 /bandtackning-stockholm /taklaggare-stockholm 301
 /takomlaggning-ostermalm /taklaggare-stockholm 301
+/takbyte-hammarby-sjostad /taklaggare-stockholm 301
+/takbyte-sodermalm /taklaggare-stockholm 301
+/takomlaggning-sodermalm /taklaggare-stockholm 301
 # -> /taklaggare-stocksund (2)
 /takbyte-stocksund /taklaggare-stocksund 301
 /takomlaggning-stocksund /taklaggare-stocksund 301
@@ -311,3 +307,9 @@
 /bandtackning-sodertalje /takrenovering-sodertalje 301
 # -> /takrenovering-sollentuna (1)
 /bandtackning-sollentuna /takrenovering-sollentuna 301
+# -> /taklaggare-handen (1)
+/takbyte-handen /taklaggare-handen 301
+# -> /taklaggare-rotebro (1)
+/takbyte-rotebro /taklaggare-rotebro 301
+# -> /taklaggare-arholma (1)
+/takrenovering-arholma /taklaggare-arholma 301
