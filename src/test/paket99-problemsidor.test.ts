@@ -27,9 +27,9 @@ describe("paket 99: de tio gamla problemsidorna", () => {
     for (const s of TIO) expect(p(s).atgarder.includes(RAD), s).toBe(false);
   });
   it("mossa, rost och kondens har Innehålls särskilda åtgärdstexter", () => {
-    expect(p("mossa-pa-taket").atgarder).toBe("Taktvätt och rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas.");
-    expect(p("rostig-plat").atgarder).toBe("Beroende på hur långt rosten har gått: ny ytbehandling, byte av plåtdetaljer eller nytt plåttak.");
-    expect(p("kondens-pa-vinden").atgarder).toBe("Tätning mot bostaden och bättre ventilation i takfot och nock. Vid omfattande fuktskador även åtgärder på underlaget.");
+    expect(p("mossa-pa-taket").atgarder.startsWith("Taktvätt och rensning av hängrännor. Är ytan skadad kan fler åtgärder behövas.")).toBe(true); // gren 133 lägger till text efter
+    expect(p("rostig-plat").atgarder.startsWith("Beroende på hur långt rosten har gått: ny ytbehandling, byte av plåtdetaljer eller nytt plåttak.")).toBe(true);
+    expect(p("kondens-pa-vinden").atgarder.startsWith("Tätning mot bostaden och bättre ventilation i takfot och nock. Vid omfattande fuktskador även åtgärder på underlaget.")).toBe(true);
     for (const s of ["mossa-pa-taket", "rostig-plat", "kondens-pa-vinden", "fukt-pa-vinden", "istappar-pa-taket"]) {
       expect(p(s).atgarder, s).not.toMatch(/behandling av taket|Rengöring och ny ytbehandling|vindslucka, genomföringar/);
     }
