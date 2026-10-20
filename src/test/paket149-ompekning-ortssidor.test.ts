@@ -33,6 +33,16 @@ describe("paket 149: ompekning utan startsidan som mål", () => {
       expect(sitemap, mal).toContain(`<loc>https://roslagstak.se${mal}</loc>`);
     }
   });
+  it("ingen exakt regel står efter en dynamisk (gren 149b): Cloudflare räknar den som dynamisk, och högst 100 dynamiska gäller", () => {
+    const dyn = (k: string) => /[*:]/.test(k);
+    const forsta = rader.findIndex(([k]) => dyn(k));
+    expect(forsta).toBeGreaterThan(-1);
+    expect(rader.slice(forsta).filter(([k]) => !dyn(k)).map((r) => r[0]), "exakta rader efter första dynamiska").toEqual([]);
+    expect(rader.filter(([k]) => dyn(k)).length).toBeLessThanOrEqual(100);
+    expect(rader.filter(([k]) => !dyn(k)).length).toBeLessThanOrEqual(2000);
+    // och de dynamiska reglerna är högst så många att allt före dem (statiska) aldrig delar taket med dem
+    expect(rader.length - forsta).toBeLessThanOrEqual(100);
+  });
   it("rubrikernas antal stämmer med raderna under dem", () => {
     const rl = text.split(/\r?\n/);
     rl.forEach((l, i) => {

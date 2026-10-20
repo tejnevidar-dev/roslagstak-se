@@ -1,10 +1,3 @@
-# Ompekning (10å, steg 1): noindex-kombinationerna material × ort pekas om till materialets egen sida.
-# Regler enligt ledning/marknad/ompekning-utkast-2026-10-06.md, alternativ A. Cloudflare Pages: översta träffen gäller, en splat per regel.
-# Bara adresser som börjar på "/<tjänst>-" och som alla är noindex träffas (kontrolleras av src/test/ompekning.test.ts).
-/tegeltak-* /tjanster/tegeltak 301
-/betongpannor-* /material/betongpannor 301
-/platttak-* /material/tp20-plattak 301
-
 # Ompekning (gren 129, rad 21): noindex-sidor (tjänst × ort) med visningar i Google pekas om, en rad per adress, till ägarsidan enligt
 # ledning/marknad/seo-data/noindex-sidor-2026-09-18-till-2026-10-15.md. Undantag: sidor med egen text och adresser som redan täcks av splat-reglerna ovan.
 # Varje källa är en tunn tjänst × ort-sida utanför sajtkartan och varje mål en indexerbar sida (kontrolleras av src/test/ompekning.test.ts).
@@ -313,3 +306,12 @@
 /takbyte-rotebro /taklaggare-rotebro 301
 # -> /taklaggare-arholma (1)
 /takrenovering-arholma /taklaggare-arholma 301
+
+# Reglerna med * kommer SIST (gren 149b): Cloudflare Pages räknar en regel som står efter en dynamisk regel som dynamisk, och högst 100 dynamiska regler gäller.
+# Stod splat-raderna först föll alla exakta rader efter nr 97 bort (livekontroll 2026-10-21: 97 av 208). Ett prov (src/test/ompekning.test.ts) kräver att ingen exakt rad står efter en dynamisk.
+# Ompekning (10å, steg 1): noindex-kombinationerna material × ort pekas om till materialets egen sida.
+# Regler enligt ledning/marknad/ompekning-utkast-2026-10-06.md, alternativ A. Cloudflare Pages: översta träffen gäller, en splat per regel.
+# Bara adresser som börjar på "/<tjänst>-" och som alla är noindex träffas (kontrolleras av src/test/ompekning.test.ts).
+/tegeltak-* /tjanster/tegeltak 301
+/betongpannor-* /material/betongpannor 301
+/platttak-* /material/tp20-plattak 301
