@@ -989,4 +989,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Grödinge i södra Botkyrka, från fritidshusen i Kagghamra till gårdarna vid fjärdarna. Kostnadsfri takkontroll.",
   },
+  alvsala: {
+    title: "Takbyte i Älvsala och Bullandö, Värmdö – fast pris",
+    description:
+      "Takbyte och takomläggning i Älvsala, Bullandö och Fagerdala på sydöstra Värmdölandet, där fritidshus blir åretruntbostäder. Kostnadsfri takkontroll.",
+  },
 };
