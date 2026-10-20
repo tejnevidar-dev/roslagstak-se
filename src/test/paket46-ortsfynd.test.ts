@@ -39,7 +39,7 @@ describe("paket 46", () => {
   });
   it("Rimbo R1: reparation eller omläggning beror på underlaget, utan husets ålder", () => {
     expect(text("rimbo")).not.toContain("På hus från 1970- och 1980-talen som inte har fått nytt tak");
-    expect(text("rimbo")).toContain("Om det räcker med en reparation eller om hela taket bör läggas om beror bland annat på underlaget under ytskiktet. Det syns sällan från marken."); // paket 111 (O5): "bland annat"
+    expect(text("rimbo")).toContain("Om det räcker med en reparation eller om hela taket bör läggas om beror bland annat på underlaget under ytskiktet, och hur det ser ut i dag går inte att se från marken."); // gren 156 (Innehålls kommuner3/norrtalje3-rader): tidigare "… ytskiktet. Det syns sällan från marken." // paket 111 (O5): "bland annat"
   });
   it("meningen om konstruktör på Åkersberga och Vaxholm ändras inte", () => {
     expect(text("akersberga") + text("vaxholm")).toContain("bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs");

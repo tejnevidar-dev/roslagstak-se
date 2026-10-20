@@ -185,7 +185,7 @@ const omgang2: Rad[] = [
   {
     "slug": "kungsangen",
     "kod": "O8",
-    "ny": "inte har bytts på länge kan underlagspapp, läkt, plåtdetaljer och hängrännor behöva ses över",
+    "ny": "Ett tak kan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan.", // gren 155: Kungsängens O8-mening ersatt av den godkända K2-lydelsen
     "gammal": "är det underlagspapp, läkt, plåtdetaljer och hängrännor som behöver ses över först"
   },
   {

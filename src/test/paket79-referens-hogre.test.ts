@@ -36,12 +36,12 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       const ren = stripInlineMd(m);
       const i = ps.findIndex((p) => p === ren);
       expect(i, l.slug).toBeGreaterThanOrEqual(0);
-      expect(ps[i - 1], l.slug).toBe(l.longDescription);
+      expect(ps[i - 1], l.slug).toBe(stripInlineMd(l.longDescription)); // gren 152: longDescription kan ha [text](/länk), serverns text är utan markdown
       expect(ps.filter((p) => p.includes(ren)).length, l.slug).toBe(1);
       // jobbets namn är en länk till projektsidan i serverns HTML (länklistan), och texten har ingen markdown-syntax
       expect(ren, l.slug).not.toMatch(/\]\(|\[/);
       // länken skrivs i stycket av generate-static-heads.mjs (page.inlineLinks), inte bara i länklistan
-      expect(sida.inlineLinks, l.slug).toEqual(inlineMdLinks(m));
+      expect(sida.inlineLinks, l.slug).toEqual([...inlineMdLinks(m), ...inlineMdLinks(l.longDescription)]); // gren 152: länkar i longDescription sätts också i löpande text
       for (const lank of inlineMdLinks(m)) expect(sida.links.some((x) => x.href === lank.href && x.label === lank.label), l.slug + " " + lank.href).toBe(true);
     }
     expect(antal).toBeGreaterThan(12); // paket 112 (M7) och 114 (M9) stängde av meningen på Norrtälje, Singö och Grisslehamn: 18 → 15 sidor
@@ -87,7 +87,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
     expect(k).toContain("referensMening(location, prep)");
     expect(k.indexOf("const prep = ")).toBeLessThan(k.indexOf("referensMening(location, prep)"));
     // jobbets namn är en länk: meningen ritas med renderInline (markdown [namn](/projekt/<slug>))
-    expect(k.indexOf("{location.longDescription}")).toBeLessThan(k.indexOf("{renderInline(referens)}"));
+    expect(k.indexOf("{renderInline(location.longDescription)}")).toBeLessThan(k.indexOf("{renderInline(referens)}"));
     expect(k).toMatch(/!usesMall\([^)]*\)[^{]*&& referens &&/);
     expect(k).not.toContain("{referens}</p>");
   });

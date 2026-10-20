@@ -22,7 +22,7 @@ describe("paket 111: den ortsegna texten (O1–O5)", () => {
     expect(ort("danderyd")).not.toContain("har därför nästan alltid en villa");
     expect(ort("sodorora")).toContain("Ett fritidshus kan ha byggts till i efterhand,");
     expect(ort("sodorora")).not.toContain("Många fritidshus har byggts till i efterhand");
-    expect(ort("rimbo")).toContain("beror bland annat på underlaget under ytskiktet.");
+    expect(ort("rimbo")).toContain("beror bland annat på underlaget under ytskiktet"); // gren 156: meningen fortsätter nu med ", och hur det ser ut i dag går inte att se från marken"
     expect(ort("rimbo")).not.toContain("beror på underlaget under ytskiktet.");
   });
   it("O3 Uppsala, Västerås och Tullinge: K2-lydelsen, och bara där", () => {
