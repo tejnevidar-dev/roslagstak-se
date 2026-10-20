@@ -26,6 +26,10 @@ const HUBS: Hub[] = [
   { slug: "norrtalje", href: "/takbyte-norrtalje", label: "Takbyte i Norrtälje", regioner: ["Norra Roslagen", "Roslagens inland", "Kusten", "Norra skärgården"] },
   // GSC 2026-10-03: "takomläggning norrtälje" 99 visningar på position 10,1 med bara 4 inlänkar till sidan
   { slug: "norrtalje", href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje", regioner: ["Norra Roslagen", "Roslagens inland", "Kusten", "Norra skärgården"] },
+  // Gren 134 (Norrtälje först, seo-forslag-norrtalje-lankar-2026-10-20.md): /takrenovering-norrtalje hade 9 inlänkar och ingen från Norrtälje-områdets ortssidor; takbyte och takomläggning saknades på några av dem.
+  { slug: "norrtalje", href: "/takrenovering-norrtalje", label: "Takrenovering i Norrtälje", regioner: [], orter: ["blido", "yxlan", "spillersboda", "radmanso", "bergshamra", "vaddo", "vato", "vaxholm", "rimbo", "herrang", "edsbro", "riala", "graddo", "kapellskar", "vallentuna", "loharad"] },
+  { slug: "norrtalje", href: "/takbyte-norrtalje", label: "Takbyte i Norrtälje", regioner: [], orter: ["blido", "yxlan", "graddo", "kapellskar"] },
+  { slug: "norrtalje", href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje", regioner: [], orter: ["blido", "yxlan", "graddo", "kapellskar"] },
   { slug: "taby", href: "/takrenovering-taby", label: "Takrenovering i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
   // Takbyte-sidor med visningar men bara en inlänk (GSC 2026-10-03): /takbyte-stockholm (66), /takbyte-jarfalla (18), /takbyte-huddinge (15), /takbyte-taby (26)
   { slug: "taby", href: "/takbyte-taby", label: "Takbyte i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },

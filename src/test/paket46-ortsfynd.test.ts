@@ -33,7 +33,9 @@ describe("paket 46", () => {
   });
   it("Vallentuna V1: 'vid samma tillfälle' är borta på Vallentuna", () => {
     expect(text("vallentuna")).not.toContain("kan löna sig att titta på vid samma tillfälle");
-    expect(text("vallentuna")).toContain("som också behöver ses över ibland");
+    // gren 134 (Marknadschefens regler 2026-10-20): "ofta … behöver ses över ibland" ersatt med "kan det finnas fler tak än bostadshusets"
+    expect(text("vallentuna")).not.toContain("behöver ses över ibland");
+    expect(text("vallentuna")).toContain("På en gård kan det finnas fler tak än bostadshusets, till exempel uthus och bodar.");
   });
   it("Rimbo R1: reparation eller omläggning beror på underlaget, utan husets ålder", () => {
     expect(text("rimbo")).not.toContain("På hus från 1970- och 1980-talen som inte har fått nytt tak");
