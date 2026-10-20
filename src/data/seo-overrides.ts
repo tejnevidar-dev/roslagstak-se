@@ -944,4 +944,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Kungsberga, Färentuna och Hilleshög på Färingsö i Ekerö, med villor från 1950- och 1960-talen. Kostnadsfri takkontroll.",
   },
+  svartsjo: {
+    title: "Takbyte i Svartsjö och Skå på Färingsö – fast pris",
+    description:
+      "Takbyte och takomläggning i Svartsjö, Skå, Hilleshögby och Färjstaden på Färingsö, med hus från sekelskiftet till 2000-talet. Kostnadsfri takkontroll.",
+  },
 };
