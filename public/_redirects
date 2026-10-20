@@ -4,3 +4,313 @@
 /tegeltak-* /tjanster/tegeltak 301
 /betongpannor-* /material/betongpannor 301
 /platttak-* /material/tp20-plattak 301
+
+# Ompekning (gren 129, rad 21): noindex-sidor (tjänst × ort) med visningar i Google pekas om, en rad per adress, till ägarsidan enligt
+# ledning/marknad/seo-data/noindex-sidor-2026-09-18-till-2026-10-15.md. Undantag: sidor med egen text och adresser som redan täcks av splat-reglerna ovan.
+# Varje källa är en tunn tjänst × ort-sida utanför sajtkartan och varje mål en indexerbar sida (kontrolleras av src/test/ompekning.test.ts).
+# -> /tjanster/takomlaggning (34)
+/takbyte-arsta /tjanster/takomlaggning 301
+/takbyte-fisksatra /tjanster/takomlaggning 301
+/takbyte-fittja /tjanster/takomlaggning 301
+/takbyte-grisslehamn /tjanster/takomlaggning 301
+/takbyte-jakobsberg /tjanster/takomlaggning 301
+/takbyte-riala /tjanster/takomlaggning 301
+/takbyte-sodorora /tjanster/takomlaggning 301
+/takbyte-svartloga /tjanster/takomlaggning 301
+/takbyte-yxlan /tjanster/takomlaggning 301
+/takomlaggning-almsta /tjanster/takomlaggning 301
+/takomlaggning-alta /tjanster/takomlaggning 301
+/takomlaggning-aspudden /tjanster/takomlaggning 301
+/takomlaggning-bergshamra /tjanster/takomlaggning 301
+/takomlaggning-blido /tjanster/takomlaggning 301
+/takomlaggning-bro /tjanster/takomlaggning 301
+/takomlaggning-fisksatra /tjanster/takomlaggning 301
+/takomlaggning-graddo /tjanster/takomlaggning 301
+/takomlaggning-grisslehamn /tjanster/takomlaggning 301
+/takomlaggning-herrang /tjanster/takomlaggning 301
+/takomlaggning-humlo /tjanster/takomlaggning 301
+/takomlaggning-jarfalla /tjanster/takomlaggning 301
+/takomlaggning-kapellskar /tjanster/takomlaggning 301
+/takomlaggning-marsta /tjanster/takomlaggning 301
+/takomlaggning-norrora /tjanster/takomlaggning 301
+/takomlaggning-radmanso /tjanster/takomlaggning 301
+/takomlaggning-riala /tjanster/takomlaggning 301
+/takomlaggning-singo /tjanster/takomlaggning 301
+/takomlaggning-sodorora /tjanster/takomlaggning 301
+/takomlaggning-spillersboda /tjanster/takomlaggning 301
+/takomlaggning-svartloga /tjanster/takomlaggning 301
+/takomlaggning-tumba /tjanster/takomlaggning 301
+/takomlaggning-vato /tjanster/takomlaggning 301
+/takomlaggning-vaxholm /tjanster/takomlaggning 301
+/takomlaggning-yxlan /tjanster/takomlaggning 301
+# -> /tjanster/platarbeten (17)
+/bandtackning-abrahamsberg /tjanster/platarbeten 301
+/bandtackning-alta /tjanster/platarbeten 301
+/bandtackning-arholma /tjanster/platarbeten 301
+/bandtackning-bergshamra /tjanster/platarbeten 301
+/bandtackning-finnhamn /tjanster/platarbeten 301
+/bandtackning-fisksatra /tjanster/platarbeten 301
+/bandtackning-haggvik /tjanster/platarbeten 301
+/bandtackning-husaro /tjanster/platarbeten 301
+/bandtackning-ingmarso /tjanster/platarbeten 301
+/bandtackning-liljeholmen /tjanster/platarbeten 301
+/bandtackning-ljustero /tjanster/platarbeten 301
+/bandtackning-rimbo /tjanster/platarbeten 301
+/bandtackning-skarpnack /tjanster/platarbeten 301
+/bandtackning-spillersboda /tjanster/platarbeten 301
+/bandtackning-vasastan /tjanster/platarbeten 301
+/bandtackning-viksjo /tjanster/platarbeten 301
+/bandtackning-yxlan /tjanster/platarbeten 301
+# -> /tjanster/takrenovering (9)
+/takrenovering-finnhamn /tjanster/takrenovering 301
+/takrenovering-grisslehamn /tjanster/takrenovering 301
+/takrenovering-humlo /tjanster/takrenovering 301
+/takrenovering-ingmarso /tjanster/takrenovering 301
+/takrenovering-norrora /tjanster/takrenovering 301
+/takrenovering-osterskar /tjanster/takrenovering 301
+/takrenovering-sodorora /tjanster/takrenovering 301
+/takrenovering-spillersboda /tjanster/takrenovering 301
+/takrenovering-yxlan /tjanster/takrenovering 301
+# -> / (7)
+/takbyte-hammarby-sjostad / 301
+/takbyte-handen / 301
+/takbyte-rotebro / 301
+/takbyte-sodermalm / 301
+/takomlaggning-furusund / 301
+/takomlaggning-sodermalm / 301
+/takrenovering-arholma / 301
+# -> /priser (6)
+/takomlaggning-arsta /priser 301
+/takomlaggning-bandhagen /priser 301
+/takomlaggning-edsbro /priser 301
+/takomlaggning-grasko /priser 301
+/takomlaggning-husaro /priser 301
+/takomlaggning-norrviken /priser 301
+# -> /tjanster/tegeltak (6)
+/takbyte-abrahamsberg /tjanster/tegeltak 301
+/takbyte-blackeberg /tjanster/tegeltak 301
+/takbyte-enebyberg /tjanster/tegeltak 301
+/takbyte-humlo /tjanster/tegeltak 301
+/takbyte-saltsjo-boo /tjanster/tegeltak 301
+/takbyte-spillersboda /tjanster/tegeltak 301
+# -> /taklaggare-vaddo (4)
+/bandtackning-vaddo /taklaggare-vaddo 301
+/takbyte-vaddo /taklaggare-vaddo 301
+/takomlaggning-vaddo /taklaggare-vaddo 301
+/takrenovering-vaddo /taklaggare-vaddo 301
+# -> /material/tp20-plattak (3)
+/takbyte-kista /material/tp20-plattak 301
+/takbyte-norrora /material/tp20-plattak 301
+/takbyte-saltsjobaden /material/tp20-plattak 301
+# -> /taklaggare-akalla (3)
+/bandtackning-akalla /taklaggare-akalla 301
+/takbyte-akalla /taklaggare-akalla 301
+/takomlaggning-akalla /taklaggare-akalla 301
+# -> /taklaggare-bro (3)
+/bandtackning-bro /taklaggare-bro 301
+/takbyte-upplands-bro /taklaggare-bro 301
+/takomlaggning-upplands-bro /taklaggare-bro 301
+# -> /taklaggare-graddo (3)
+/bandtackning-graddo /taklaggare-graddo 301
+/takbyte-graddo /taklaggare-graddo 301
+/takrenovering-graddo /taklaggare-graddo 301
+# -> /taklaggare-gustavsberg (3)
+/bandtackning-gustavsberg /taklaggare-gustavsberg 301
+/takbyte-gustavsberg /taklaggare-gustavsberg 301
+/takomlaggning-gustavsberg /taklaggare-gustavsberg 301
+# -> /taklaggare-ljustero (3)
+/takbyte-ljustero /taklaggare-ljustero 301
+/takomlaggning-ljustero /taklaggare-ljustero 301
+/takrenovering-ljustero /taklaggare-ljustero 301
+# -> /taklaggare-vallingby (3)
+/bandtackning-vallingby /taklaggare-vallingby 301
+/takbyte-vallingby /taklaggare-vallingby 301
+/takomlaggning-vallingby /taklaggare-vallingby 301
+# -> /tjanster/taksakerhet (3)
+/takbyte-bandhagen /tjanster/taksakerhet 301
+/takbyte-hemmesta /tjanster/taksakerhet 301
+/takbyte-norrviken /tjanster/taksakerhet 301
+# -> /taklaggare-aspudden (2)
+/bandtackning-aspudden /taklaggare-aspudden 301
+/bandtackning-hagersten /taklaggare-aspudden 301
+# -> /taklaggare-blido (2)
+/bandtackning-blido /taklaggare-blido 301
+/takrenovering-blido /taklaggare-blido 301
+# -> /taklaggare-bromma (2)
+/bandtackning-bromma /taklaggare-bromma 301
+/takomlaggning-bromma /taklaggare-bromma 301
+# -> /taklaggare-edsbro (2)
+/bandtackning-edsbro /taklaggare-edsbro 301
+/takrenovering-edsbro /taklaggare-edsbro 301
+# -> /taklaggare-farsta (2)
+/takbyte-farsta /taklaggare-farsta 301
+/takomlaggning-farsta /taklaggare-farsta 301
+# -> /taklaggare-furusund (2)
+/bandtackning-furusund /taklaggare-furusund 301
+/takrenovering-furusund /taklaggare-furusund 301
+# -> /taklaggare-haggvik (2)
+/takbyte-haggvik /taklaggare-haggvik 301
+/takomlaggning-haggvik /taklaggare-haggvik 301
+# -> /taklaggare-jordbro (2)
+/bandtackning-jordbro /taklaggare-jordbro 301
+/takomlaggning-jordbro /taklaggare-jordbro 301
+# -> /taklaggare-marsta (2)
+/bandtackning-marsta /taklaggare-marsta 301
+/takbyte-marsta /taklaggare-marsta 301
+# -> /taklaggare-norrtalje (2)
+/bandtackning-norrtalje /taklaggare-norrtalje 301
+/takrenovering-vato /taklaggare-norrtalje 301
+# -> /taklaggare-nynashamn (2)
+/takbyte-nynashamn /taklaggare-nynashamn 301
+/takomlaggning-nynashamn /taklaggare-nynashamn 301
+# -> /taklaggare-radmanso (2)
+/bandtackning-radmanso /taklaggare-radmanso 301
+/takbyte-radmanso /taklaggare-radmanso 301
+# -> /taklaggare-skogas (2)
+/bandtackning-skogas /taklaggare-skogas 301
+/takomlaggning-skogas /taklaggare-skogas 301
+# -> /taklaggare-spanga (2)
+/bandtackning-spanga /taklaggare-spanga 301
+/takomlaggning-spanga /taklaggare-spanga 301
+# -> /taklaggare-stockholm (2)
+/bandtackning-stockholm /taklaggare-stockholm 301
+/takomlaggning-ostermalm /taklaggare-stockholm 301
+# -> /taklaggare-stocksund (2)
+/takbyte-stocksund /taklaggare-stocksund 301
+/takomlaggning-stocksund /taklaggare-stocksund 301
+# -> /taklaggare-svartno (2)
+/takomlaggning-svartno /taklaggare-svartno 301
+/takrenovering-svartno /taklaggare-svartno 301
+# -> /taklaggare-tullinge (2)
+/bandtackning-tullinge /taklaggare-tullinge 301
+/takomlaggning-tullinge /taklaggare-tullinge 301
+# -> /taklaggare-tumba (2)
+/bandtackning-tumba /taklaggare-tumba 301
+/takbyte-tumba /taklaggare-tumba 301
+# -> /taklaggare-tungelsta (2)
+/bandtackning-tungelsta /taklaggare-tungelsta 301
+/takomlaggning-tungelsta /taklaggare-tungelsta 301
+# -> /taklaggare-vato (2)
+/bandtackning-vato /taklaggare-vato 301
+/takbyte-vato /taklaggare-vato 301
+# -> /taklaggare-vaxholm (2)
+/bandtackning-vaxholm /taklaggare-vaxholm 301
+/takrenovering-vaxholm /taklaggare-vaxholm 301
+# -> /omraden/stockholms-stad (1)
+/takrenovering-grasko /omraden/stockholms-stad 301
+# -> /taklaggare-akersberga (1)
+/bandtackning-akersberga /taklaggare-akersberga 301
+# -> /taklaggare-almsta (1)
+/takbyte-almsta /taklaggare-almsta 301
+# -> /taklaggare-arsta (1)
+/bandtackning-arsta /taklaggare-arsta 301
+# -> /taklaggare-bergshamra (1)
+/takbyte-bergshamra /taklaggare-bergshamra 301
+# -> /taklaggare-blackeberg (1)
+/bandtackning-blackeberg /taklaggare-blackeberg 301
+# -> /taklaggare-botkyrka (1)
+/bandtackning-botkyrka /taklaggare-botkyrka 301
+# -> /taklaggare-danderyd (1)
+/bandtackning-danderyd /taklaggare-danderyd 301
+# -> /taklaggare-edsviken (1)
+/takbyte-edsviken /taklaggare-edsviken 301
+# -> /taklaggare-ekero (1)
+/bandtackning-ekero /taklaggare-ekero 301
+# -> /taklaggare-enskede (1)
+/bandtackning-enskede /taklaggare-enskede 301
+# -> /taklaggare-hallstavik (1)
+/bandtackning-hallstavik /taklaggare-hallstavik 301
+# -> /taklaggare-hammarby-sjostad (1)
+/bandtackning-hammarby-sjostad /taklaggare-hammarby-sjostad 301
+# -> /taklaggare-hasselby (1)
+/takbyte-hasselby /taklaggare-hasselby 301
+# -> /taklaggare-helenelund (1)
+/bandtackning-helenelund /taklaggare-helenelund 301
+# -> /taklaggare-hemmesta (1)
+/bandtackning-hemmesta /taklaggare-hemmesta 301
+# -> /taklaggare-herrang (1)
+/takrenovering-herrang /taklaggare-herrang 301
+# -> /taklaggare-hogdalen (1)
+/takomlaggning-hogdalen /taklaggare-hogdalen 301
+# -> /taklaggare-hogmarso (1)
+/takrenovering-hogmarso /taklaggare-hogmarso 301
+# -> /taklaggare-husaro (1)
+/takrenovering-husaro /taklaggare-husaro 301
+# -> /taklaggare-ingaro (1)
+/takbyte-ingaro /taklaggare-ingaro 301
+# -> /taklaggare-ingmarso (1)
+/takomlaggning-ingmarso /taklaggare-ingmarso 301
+# -> /taklaggare-jakobsberg (1)
+/takomlaggning-jakobsberg /taklaggare-jakobsberg 301
+# -> /taklaggare-jarfalla (1)
+/bandtackning-jarfalla /taklaggare-jarfalla 301
+# -> /taklaggare-jarna (1)
+/takbyte-jarna /taklaggare-jarna 301
+# -> /taklaggare-kapellskar (1)
+/takrenovering-kapellskar /taklaggare-kapellskar 301
+# -> /taklaggare-kista (1)
+/bandtackning-kista /taklaggare-kista 301
+# -> /taklaggare-kungsangen (1)
+/takomlaggning-kungsangen /taklaggare-kungsangen 301
+# -> /taklaggare-lidingo (1)
+/bandtackning-lidingo /taklaggare-lidingo 301
+# -> /taklaggare-liljeholmen (1)
+/takbyte-liljeholmen /taklaggare-liljeholmen 301
+# -> /taklaggare-nacka (1)
+/bandtackning-nacka /taklaggare-nacka 301
+# -> /taklaggare-norrora (1)
+/bandtackning-norrora /taklaggare-norrora 301
+# -> /taklaggare-norsborg (1)
+/takomlaggning-norsborg /taklaggare-norsborg 301
+# -> /taklaggare-ostermalm (1)
+/bandtackning-ostermalm /taklaggare-ostermalm 301
+# -> /taklaggare-osterskar (1)
+/takbyte-osterskar /taklaggare-osterskar 301
+# -> /taklaggare-riala (1)
+/takrenovering-riala /taklaggare-riala 301
+# -> /taklaggare-ronninge (1)
+/bandtackning-ronninge /taklaggare-ronninge 301
+# -> /taklaggare-salem (1)
+/bandtackning-salem /taklaggare-salem 301
+# -> /taklaggare-saltsjobaden (1)
+/bandtackning-saltsjobaden /taklaggare-saltsjobaden 301
+# -> /taklaggare-segeltorp (1)
+/takomlaggning-segeltorp /taklaggare-segeltorp 301
+# -> /taklaggare-sigtuna (1)
+/takbyte-sigtuna /taklaggare-sigtuna 301
+# -> /taklaggare-singo (1)
+/takrenovering-singo /taklaggare-singo 301
+# -> /taklaggare-skarholmen (1)
+/takbyte-skarholmen /taklaggare-skarholmen 301
+# -> /taklaggare-sodermalm (1)
+/bandtackning-sodermalm /taklaggare-sodermalm 301
+# -> /taklaggare-stuvsta (1)
+/takomlaggning-stuvsta /taklaggare-stuvsta 301
+# -> /taklaggare-sundbyberg (1)
+/bandtackning-sundbyberg /taklaggare-sundbyberg 301
+# -> /taklaggare-svartloga (1)
+/takrenovering-svartloga /taklaggare-svartloga 301
+# -> /taklaggare-taby (1)
+/bandtackning-taby /taklaggare-taby 301
+# -> /taklaggare-tensta (1)
+/takomlaggning-tensta /taklaggare-tensta 301
+# -> /taklaggare-trollbacken (1)
+/takomlaggning-trollbacken /taklaggare-trollbacken 301
+# -> /taklaggare-tyreso (1)
+/bandtackning-tyreso /taklaggare-tyreso 301
+# -> /taklaggare-upplands-bro (1)
+/bandtackning-upplands-bro /taklaggare-upplands-bro 301
+# -> /taklaggare-upplands-vasby (1)
+/bandtackning-upplands-vasby /taklaggare-upplands-vasby 301
+# -> /taklaggare-vallentuna (1)
+/bandtackning-vallentuna /taklaggare-vallentuna 301
+# -> /taklaggare-vasastan (1)
+/takbyte-vasastan /taklaggare-vasastan 301
+# -> /taklaggare-vendelso (1)
+/bandtackning-vendelso /taklaggare-vendelso 301
+# -> /taklaggare-viksjo (1)
+/takbyte-viksjo /taklaggare-viksjo 301
+# -> /takrenovering-sodertalje (1)
+/bandtackning-sodertalje /takrenovering-sodertalje 301
+# -> /takrenovering-sollentuna (1)
+/bandtackning-sollentuna /takrenovering-sollentuna 301
