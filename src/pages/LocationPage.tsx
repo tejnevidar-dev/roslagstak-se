@@ -287,7 +287,7 @@ const LocationPage = () => {
                   Takbyte och takrenovering {prep} {location.name}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  {location.longDescription}
+                  {renderInline(location.longDescription)}
                 </p>
 
                 {!usesMall(locations.find((l) => l.slug === location.slug) ?? location) && referens && (

@@ -1253,11 +1253,11 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
           : `Takläggare ${prep} ${loc.name} — takbyte & takrenovering`),
       intro: radUnderRubrik(loc, prep, mall),
-      inlineLinks: referensMd ? inlineMdLinks(referensMd) : undefined,
+      inlineLinks: referensMd || inlineMdLinks(loc.longDescription).length ? [...(referensMd ? inlineMdLinks(referensMd) : []), ...inlineMdLinks(loc.longDescription)] : undefined,
       ...buildBody([
         // Paket 130b: rubriken som LocationPage.tsx ritar före sidans text. På sidor med egen text och avstängda mallavsnitt (location-slim.ts) fanns den bara i React, eftersom ordet annars stod i de avsnitt som är borta.
         ...(Object.keys(slim).length ? [{ h: `Takbyte och takrenovering ${prep} ${loc.name}`, level: 2 as const }] : []),
-        loc.longDescription,
+        stripInlineMd(loc.longDescription), // Bromma (gren 152) har länkar i sin text; LocationPage.tsx ritar longDescription med renderInline
         ...(referensMd ? [stripInlineMd(referensMd)] : []),
         ...(loc.extraContent ? [loc.extraContent] : []),
         ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, ...sektionsStycken(sec.text).map(stripInlineMd)]),
@@ -1313,8 +1313,10 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           .map(comboListLink),
         ...hubLinksFor(loc.slug),
         ...(referensMd ? inlineMdLinks(referensMd) : []),
+        ...inlineMdLinks(loc.longDescription).filter((l) => !villaAreaLinks(loc.slug).some((v) => v.href === l.href)),
         // Länkar i områdessidans egna avsnitt (LocationPage.tsx renderar section.text med renderInline), t.ex. "Hallstavik" på Norrtälje-sidan (gren 120b, H1)
-        ...(loc.extraSections ?? []).flatMap((sec) => inlineMdLinks(sec.text)),
+        // En länk per mål (paket 120 U1): en länk i texten som områdesraderna (villa-areas) redan har ritas inte en andra gång i länklistan
+        ...(loc.extraSections ?? []).flatMap((sec) => inlineMdLinks(sec.text)).filter((l) => !villaAreaLinks(loc.slug).some((v) => v.href === l.href)),
         ...loc.nearbyLocations
           .map((name) => locations.find((l) => l.name === name))
           .filter((l): l is (typeof locations)[number] => Boolean(l) && !ortAvindexerad(l.slug))
