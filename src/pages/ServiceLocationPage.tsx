@@ -3,6 +3,7 @@ import { SERVICE_LOCATION_TEXT } from "@/data/service-location-text";
 import { isHeading, renderInline, stripInlineMd } from "@/lib/inline-md";
 import { briefFaqs, medTidOchMaterial } from "@/data/brief-faq";
 import { isThinCombo } from "@/data/thin-combos";
+import { arOmpekad } from "@/data/ompekade";
 import { ortAvindexerad } from "@/data/avindexerade-orter";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -66,7 +67,7 @@ const ServiceLocationPage = () => {
   const nearbyInService = loc?.nearbyLocations
     .map((name) => {
       const nearby = locations.find((l) => l.name === name);
-      return nearby && !ortAvindexerad(nearby.slug) ? { ...nearby, comboUrl: `/${combo.serviceSlug}-${nearby.slug}` } : null;
+      return nearby && !ortAvindexerad(nearby.slug) && !arOmpekad(`/${combo.serviceSlug}-${nearby.slug}`) ? { ...nearby, comboUrl: `/${combo.serviceSlug}-${nearby.slug}` } : null;
     })
     .filter(Boolean) || [];
 
@@ -80,7 +81,7 @@ const ServiceLocationPage = () => {
     { slug: "tegeltak", name: "Tegeltak" },
     { slug: "takmalning", name: "Takmålning" },
     { slug: "taktvatt", name: "Taktvätt" },
-  ].filter((s) => s.slug !== combo.serviceSlug);
+  ].filter((s) => s.slug !== combo.serviceSlug && (MATERIAL_OWN_PAGE[s.slug] || !arOmpekad(`/${s.slug}-${combo.locationSlug}`)));
 
   // Har briefen en egen frågedel visas inte sidans genererade FAQ-sektion, och FAQPage-schemat bygger på briefens frågor (AG2)
   // Frågorna om tid och material läggs efter briefens frågedel (Innehålls lydelser, ett ställe: location-faqs.ts)
@@ -259,7 +260,7 @@ const ServiceLocationPage = () => {
                   >
                     <ArrowRight className="w-3 h-3" /> Takläggare {combo.prep} {combo.locationName}
                   </Link>
-                  {(override?.links ?? []).map((l) => (
+                  {(override?.links ?? []).filter((l) => !arOmpekad(l.to)).map((l) => (
                     <Link key={l.to} to={l.to} className="flex items-center gap-2 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {l.label}
                     </Link>

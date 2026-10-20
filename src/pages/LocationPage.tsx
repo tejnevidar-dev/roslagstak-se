@@ -7,6 +7,7 @@ import { hasServiceCombos } from "@/data/service-slugs";
 import { lankbarHref, ortAvindexerad, synligaOrter } from "@/data/avindexerade-orter";
 import { generateCombos, COMBO_LINK_LABEL, COMBO_LINK_TILL_TJANST, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
 import { isThinCombo } from "@/data/thin-combos";
+import { arOmpekad } from "@/data/ompekade";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
 import { Fragment, useEffect } from "react";
@@ -484,15 +485,21 @@ const LocationPage = () => {
                   <div className="grid sm:grid-cols-2 gap-2">
                     {hasServiceCombos(location.region) && (
                     <>
-                    <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> {COMBO_LINK_LABEL[`/takbyte-${location.slug}`] ?? `Takbyte ${prep} ${location.name}`}
-                    </Link>
-                    <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}
-                    </Link>
-                    <Link to={`/takomlaggning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Takomläggning {prep} {location.name}
-                    </Link>
+                    {!arOmpekad(`/takbyte-${location.slug}`) && (
+                      <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> {COMBO_LINK_LABEL[`/takbyte-${location.slug}`] ?? `Takbyte ${prep} ${location.name}`}
+                      </Link>
+                    )}
+                    {!arOmpekad(`/takrenovering-${location.slug}`) && (
+                      <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}
+                      </Link>
+                    )}
+                    {!arOmpekad(`/takomlaggning-${location.slug}`) && (
+                      <Link to={`/takomlaggning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> Takomläggning {prep} {location.name}
+                      </Link>
+                    )}
                     <Link to={MATERIAL_OWN_PAGE.platttak.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.platttak.label}
                     </Link>
@@ -505,12 +512,16 @@ const LocationPage = () => {
                     <Link to={MATERIAL_OWN_PAGE.tegeltak.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.tegeltak.label}
                     </Link>
-                    <Link to={`/takmalning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> Takmålning {prep} {location.name}
-                    </Link>
-                    <Link to={COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.href ?? `/taktvatt-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                      <ArrowRight className="w-3 h-3" /> {COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.label ?? `Taktvätt ${prep} ${location.name}`}
-                    </Link>
+                    {!arOmpekad(`/takmalning-${location.slug}`) && (
+                      <Link to={`/takmalning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> Takmålning {prep} {location.name}
+                      </Link>
+                    )}
+                    {!arOmpekad(COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.href ?? `/taktvatt-${location.slug}`) && (
+                      <Link to={COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.href ?? `/taktvatt-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> {COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.label ?? `Taktvätt ${prep} ${location.name}`}
+                      </Link>
+                    )}
                     </>
                     )}
                     {hubLinksFor(location.slug).map((h) => (

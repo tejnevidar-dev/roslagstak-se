@@ -130,6 +130,7 @@ import { referensMening } from "../src/data/location-referens";
 import { radUnderRubrik } from "../src/data/location-rad";
 import { slimFor, slimFragor } from "../src/data/location-slim";
 import { sektionsStycken } from "../src/lib/sektionstext";
+import { arOmpekad } from "../src/data/ompekade";
 import { isNearBase, distanceFromBaseKm, distanceKm } from "../src/data/service-reach";
 import { locationWhySections } from "../src/data/location-sections";
 import { hasServiceCombos } from "../src/data/service-slugs";
@@ -1308,7 +1309,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...villaAreaLinks(loc.slug),
         ...projectSummaries.filter((p) => p.locationSlug === loc.slug).map((p) => ({ href: `/projekt/${p.slug}`, label: `Referensjobb: ${p.title}` })),
         ...combos
-          .filter((c) => c.locationSlug === loc.slug)
+          .filter((c) => c.locationSlug === loc.slug && !arOmpekad(c.url))
           .map(comboListLink),
         ...hubLinksFor(loc.slug),
         ...(referensMd ? inlineMdLinks(referensMd) : []),
@@ -1384,13 +1385,13 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           href: `/taklaggare-${combo.locationSlug}`,
           label: `Takläggare ${combo.prep} ${combo.locationName}`,
         },
-        ...(override?.links ?? []).map((l) => ({ href: l.to, label: l.label })),
+        ...(override?.links ?? []).filter((l) => !arOmpekad(l.to)).map((l) => ({ href: l.to, label: l.label })),
         ...(COMBO_SERVICE_PAGE[combo.serviceSlug]
           ? [{ href: COMBO_SERVICE_PAGE[combo.serviceSlug].to, label: COMBO_SERVICE_PAGE[combo.serviceSlug].label }]
           : []),
         ...combos
           .filter(
-            (c) => c.locationSlug === combo.locationSlug && c.serviceSlug !== combo.serviceSlug,
+            (c) => c.locationSlug === combo.locationSlug && c.serviceSlug !== combo.serviceSlug && !arOmpekad(c.url),
           )
           .map(comboListLink),
       ],
