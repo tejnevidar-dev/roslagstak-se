@@ -18,6 +18,7 @@ import { materials } from "../src/data/materials";
 import { problems } from "../src/data/problems";
 import { generateCombos } from "../src/data/service-location-combos";
 import { ortPrep } from "../src/data/ort-prep";
+import { regionBySlug, regionLinkLabel } from "../src/data/regions";
 
 const comboByUrl = new Map(generateCombos().map((c) => [c.url, c]));
 const SERVICE_LABEL: Record<string, string> = {
@@ -60,6 +61,9 @@ const linkLabel = (href: string): string => {
   if (mat) return mat.title;
   const c = comboByUrl.get(href);
   if (c) return `${c.serviceName} ${c.prep} ${c.locationName}`;
+  const rm = href.match(/^\/omraden\/([a-z0-9-]+)$/);
+  const region = rm ? regionBySlug(rm[1]) : undefined;
+  if (region) return regionLinkLabel(region);
   throw new Error(`Ingen länktext för ${href}`);
 };
 

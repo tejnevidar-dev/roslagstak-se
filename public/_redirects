@@ -160,9 +160,6 @@
 # -> /taklaggare-norrtalje (2)
 /bandtackning-norrtalje /taklaggare-norrtalje 301
 /takrenovering-vato /taklaggare-norrtalje 301
-# -> /taklaggare-nynashamn (2)
-/takbyte-nynashamn /taklaggare-nynashamn 301
-/takomlaggning-nynashamn /taklaggare-nynashamn 301
 # -> /taklaggare-radmanso (2)
 /bandtackning-radmanso /taklaggare-radmanso 301
 /takbyte-radmanso /taklaggare-radmanso 301
@@ -262,6 +259,8 @@
 /bandtackning-norrora /taklaggare-norrora 301
 # -> /taklaggare-norsborg (1)
 /takomlaggning-norsborg /taklaggare-norsborg 301
+# -> /taklaggare-nynashamn (1)
+/takomlaggning-nynashamn /taklaggare-nynashamn 301
 # -> /taklaggare-ostermalm (1)
 /bandtackning-ostermalm /taklaggare-ostermalm 301
 # -> /taklaggare-osterskar (1)
@@ -276,8 +275,6 @@
 /bandtackning-saltsjobaden /taklaggare-saltsjobaden 301
 # -> /taklaggare-segeltorp (1)
 /takomlaggning-segeltorp /taklaggare-segeltorp 301
-# -> /taklaggare-sigtuna (1)
-/takbyte-sigtuna /taklaggare-sigtuna 301
 # -> /taklaggare-singo (1)
 /takrenovering-singo /taklaggare-singo 301
 # -> /taklaggare-skarholmen (1)

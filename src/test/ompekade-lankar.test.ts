@@ -10,13 +10,13 @@ import { allServiceSlugs, hasServiceCombos } from "../data/service-slugs";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 describe("gren 136: länkar till ompekade adresser", () => {
-  it("ompekade.ts har exakt raderna efter gren 129-kommentaren i _redirects (210 st)", () => {
+  it("ompekade.ts har exakt raderna efter gren 129-kommentaren i _redirects (208 st)", () => {
     const rader = readFileSync("public/_redirects", "utf8").split(/\r?\n/);
     const start = rader.findIndex((r) => r.startsWith("# Ompekning (gren 129"));
     expect(start).toBeGreaterThan(-1);
     const fran = rader.slice(start).map((r) => r.trim()).filter((r) => /^\/[a-z0-9-]+ \/\S* 301$/.test(r)).map((r) => r.split(" ")[0]).sort();
     expect([...OMPEKADE].sort()).toEqual(fran);
-    expect(OMPEKADE.size).toBe(210);
+    expect(OMPEKADE.size).toBe(208); // 210 minus takbyte i Nynäshamn och Sigtuna, som fick egen text (gren 137)
     expect(arOmpekad("/takbyte-vaddo")).toBe(true);
     expect(arOmpekad("/takbyte-taby")).toBe(false);
   });
