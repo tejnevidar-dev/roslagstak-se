@@ -103,7 +103,7 @@ export const services: Service[] = [
     title: "Taksäkerhet",
     short: "Takstege & snörasskydd",
     description:
-      "Taksäkerhet är den utrustning som gör att någon kan ta sig upp på taket och röra sig där säkrare, och som minskar risken för att snö och is rasar ner. Vi monterar takstege, gångbrygga och snörasskydd, antingen i samband med ett takbyte eller som ett eget arbete.",
+      "Taksäkerhet är den utrustning som gör att någon kan ta sig upp på taket och röra sig där säkrare, och som minskar risken för att snö och is rasar ner. Vi monterar takstege, gångbrygga och snörasskydd, antingen i samband med ett takbyte eller som ett eget arbete. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen och Storstockholm.",
     hideOnHome: true,
   },
 ];

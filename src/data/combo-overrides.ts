@@ -397,6 +397,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "## Frågor om takbyte i Norrtälje",
       "**Behöver jag lov för att byta tak i en äldre stadsmiljö?** För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker.",
       "**Är priset fast?** Ja. Priset i offerten är fast, och tillägg görs bara efter ditt godkännande.",
+      "**Kan takstege monteras samtidigt som taket byts?** Ja. Byter du tak är det enklast att montera taksäkerheten samtidigt. Då sätts fästena medan taket ändå är öppet, och utrustningen står med i samma offert. Mer om det står på sidan om [takstege, gångbrygga och snörasskydd](/tjanster/taksakerhet).",
       "**Vad händer om ni hittar något när taket är rivet?** Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Inget extraarbete görs utan ditt godkännande.",
       "**Vad kostar det att byta tak?** Det beror på taket och materialet. Riktpriser finns på roslagstak.se/priser, och ditt fasta pris står i offerten.",
       "**Kan vi bo kvar medan taket byts?** Hur arbetet läggs upp går vi igenom innan start, och du har en kontaktperson genom hela processen.",

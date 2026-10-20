@@ -68,6 +68,12 @@ export const taksakerhetBlocks = {
     intro: "Vilka krav som gäller för ditt hus beror på huset, på när det byggdes och på vad som ska göras.",
     groups: [
       {
+        title: "Takstege på tegeltak, pannor och plåt",
+        items: [
+          "En takstege fästs i taket, och hur det görs beror på takmaterialet och på hur taket är byggt. Ett tegeltak, ett tak med betongpannor och ett plåttak är byggda på olika sätt, och därför ser vi på plats vid takkontrollen hur takstegen kan sättas på just ditt tak. När huset i Grisslehamn fick ett nytt tak med svarta betongpannor monterades taksteg i samma arbete.",
+        ],
+      },
+      {
         title: "Vilka krav gäller för mitt hus?",
         items: [
           "Det finns regler om taksäkerhet i Boverkets byggregler. De gäller i första hand när ett hus byggs eller ändras. Vad som gäller för ditt hus avgör kommunens byggnadsnämnd.",
@@ -80,6 +86,7 @@ export const taksakerhetBlocks = {
           "Kan ni montera snörasskydd utan att byta tak? Ja. Taksäkerhet kan monteras på ett befintligt tak. Hur det görs på ditt tak ser vi vid takkontrollen.",
           "Ingår taksäkerhet i ett takbyte? Det står i offerten. Takstege, gångbrygga och snörasskydd är egna poster med egna priser.",
           "Min sotare kräver takstege. Kan ni hjälpa till? Ja. Berätta vad sotaren har sagt, så utgår vi från det när vi tittar på taket.",
+          "Kan ni sätta takstege på ett plåttak eller ett tegeltak? Hur takstegen kan fästas beror på takmaterialet och på hur taket är byggt. Det ser vi på plats vid takkontrollen, och det som passar ditt tak står i offerten.",
         ],
       },
     ],
