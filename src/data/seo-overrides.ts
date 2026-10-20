@@ -949,4 +949,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Svartsjö, Skå, Hilleshögby och Färjstaden på Färingsö, med hus från sekelskiftet till 2000-talet. Kostnadsfri takkontroll.",
   },
+  kasta: {
+    title: "Takbyte i Kästa, Huddinge – fast pris",
+    description:
+      "Takbyte och takomläggning i Kästa i Flemingsberg, ett villaområde som har byggts sedan 1940-talet på en gammal bys mark. Kostnadsfri takkontroll.",
+  },
 };

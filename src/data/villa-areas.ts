@@ -150,6 +150,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Snättringe", types: "Mest villor, en del radhus", period: "Villor 1920–1930-tal, radhus tidigt 1960-tal", href: "/taklaggare-snattringe" },
       { name: "Sjödalen södra (Solgård, Sörskogen)", types: "Villor, kedjehus och radhus", period: "Sörskogen: villor och kedjehus 1960-tal, radhus 1970-tal", href: "/taklaggare-solgard-sorskogen" },
       { name: "Östra Skogås och Mörtvik", types: "Villor, radhus och kedjehus", period: "Från slutet av 1970-talet", href: "/taklaggare-skogas" },
+      { name: "Kästa", types: "Villor, småhus och radhus", period: "Från 1940-talet (Wikipedia)", href: "/taklaggare-kasta" },
     ],
   },
   lidingo: {
