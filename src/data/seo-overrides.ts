@@ -954,4 +954,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Kästa i Flemingsberg, ett villaområde som har byggts sedan 1940-talet på en gammal bys mark. Kostnadsfri takkontroll.",
   },
+  "ekero-sommarstad": {
+    title: "Takbyte i Ekerö sommarstad och Sundby – fast pris",
+    description:
+      "Takbyte och takomläggning i Ekerö sommarstad, Sundby och Nibbla på Ekerön, med villor och kedjehus från 1940-talet och framåt. Kostnadsfri takkontroll.",
+  },
 };
