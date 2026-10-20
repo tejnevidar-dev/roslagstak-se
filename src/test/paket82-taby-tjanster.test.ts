@@ -4,21 +4,25 @@
  */
 import { describe, expect, it } from "vitest";
 import { comboOverrides } from "@/data/combo-overrides";
+import { stripInlineMd } from "@/lib/inline-md";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 const BAS = "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Täby.";
 const innehall = (n: string) => comboOverrides[n].content;
 const efter = (n: string, rubrik: string) => innehall(n)[innehall(n).indexOf("## " + rubrik) + 1];
 
+/** Gren 148 (ägarkartan A och C) lägger en mening med länk till ortssidan (och takrenoveringssidan) i första stycket. De här proven gäller resten av stycket, så meningarna tas bort före jämförelsen; paket148 prövar meningarna. */
+const utanLankMening = (t: string) => t.replace(/ Mer om orten finns på sidan om \[[^\]]+\]\([^)]+\)\./, "").replace(/ Ska bara delar av taket göras om finns mer på sidan om \[[^\]]+\]\([^)]+\)\./, "");
+
 describe("paket 82: Täby-sidorna", () => {
   it("/takbyte-taby: basen efter första frågan, bokning och svarstid sist i första stycket, basmeningen flyttad ur 'Så når vi Täby'", () => {
-    const f = innehall("takbyte-taby")[0];
+    const f = utanLankMening(innehall("takbyte-taby")[0]);
     expect(f.startsWith("Ska du byta tak i Täby? " + BAS + " Ett takbyte börjar med en kostnadsfri takkontroll")).toBe(true);
     expect(f.endsWith("Boka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.")).toBe(true);
     expect(efter("takbyte-taby", "Så når vi Täby")).toBe("Täby ligger ungefär fem mil sydväst om Norrtälje, mellan Sollentuna, Danderyd, Österåker och Vallentuna. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.");
   });
   it("/takomlaggning-taby: basen först, bokningen sist, 'Ordet takomläggning är vanligt …' och 'för dig som bor i Täby' borta, basmeningen flyttad", () => {
-    const f = innehall("takomlaggning-taby")[0];
+    const f = utanLankMening(innehall("takomlaggning-taby")[0]);
     expect(f.startsWith(BAS + " Till skillnad från en mindre reparation")).toBe(true);
     expect(f.endsWith("Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.")).toBe(true);
     expect(f).not.toContain("Ordet takomläggning är vanligt");
@@ -40,7 +44,7 @@ describe("paket 82: Täby-sidorna", () => {
     for (const n of ["takbyte-taby", "takomlaggning-taby"]) {
       const sida = prerenderContent("/" + n)!;
       const p = sida.paragraphs.map((x) => (typeof x === "string" ? x : ""));
-      expect(p[0], n).toBe(innehall(n)[0]);
+      expect(p[0], n).toBe(stripInlineMd(innehall(n)[0]));
       expect(p.join("\n").split(BAS).length - 1, n).toBe(1);
     }
   });

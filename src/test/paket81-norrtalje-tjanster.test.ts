@@ -5,22 +5,26 @@
 import { describe, expect, it } from "vitest";
 import { comboOverrides } from "@/data/combo-overrides";
 import { withSuffix } from "@/lib/seo-fit";
+import { stripInlineMd } from "@/lib/inline-md";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 const BOKA = "Boka på roslagstak.se/takkontroll eller ring 070-154 36 39.";
 const innehall = (nyckel: string) => comboOverrides[nyckel].content;
 const rubriker = (nyckel: string) => innehall(nyckel).filter((p) => p.startsWith("## ")).map((p) => p.slice(3));
 
+/** Gren 148 (ägarkartan A och C) lägger en mening med länk till ortssidan (och takrenoveringssidan) i första stycket. De här proven gäller resten av stycket, så meningarna tas bort före jämförelsen; paket148 prövar meningarna. */
+const utanLankMening = (t: string) => t.replace(/ Mer om orten finns på sidan om \[[^\]]+\]\([^)]+\)\./, "").replace(/ Ska bara delar av taket göras om finns mer på sidan om \[[^\]]+\]\([^)]+\)\./, "");
+
 describe("paket 81: första stycket på de tre Norrtälje-tjänstesidorna", () => {
   it("/takbyte-norrtalje: tre tak, bokningen och svarstiden i första stycket", () => {
-    const f = innehall("takbyte-norrtalje")[0];
+    const f = utanLankMening(innehall("takbyte-norrtalje")[0]);
     expect(f).toContain("tre tak vi har bytt i kommunen. " + BOKA + " Vi svarar inom 24 timmar.");
     expect(f.startsWith("Ska du byta tak i Norrtälje? Vi har vår bas här.")).toBe(true);
     expect(rubriker("takbyte-norrtalje")[0]).toBe("Tre tak vi har bytt i Norrtälje kommun");
     expect(innehall("takbyte-norrtalje")[2]).toContain("I Grisslehamn fick ett tak på 120 kvadratmeter svarta betongpannor från Benders i september 2026.");
   });
   it("/takomlaggning-norrtalje: vilka vi är först, bokningen sist i första stycket, rubriken 'Boka takkontroll'", () => {
-    const f = innehall("takomlaggning-norrtalje")[0];
+    const f = utanLankMening(innehall("takomlaggning-norrtalje")[0]);
     expect(f.startsWith("Vi är en takfirma med bas i Norrtälje och lägger om tak i staden och kommunen. Ett tak som läcker vid skorstenen")).toBe(true);
     expect(f.endsWith("Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.")).toBe(true);
     expect(f).not.toContain("Här beskriver vi vad en omläggning");
@@ -31,7 +35,7 @@ describe("paket 81: första stycket på de tre Norrtälje-tjänstesidorna", () =
     expect(innehall("takomlaggning-norrtalje")[i + 1]).toBe("Norrtälje ligger längst in i Norrtäljeviken, cirka sju mil nordost om Stockholm. Takkontrollen bokar du vardagar 07–20 eller helger 09–19.");
   });
   it("/takrenovering-norrtalje: vilka vi är och bokningen i första stycket, utan uppräkningen (den står direkt under i 'Takrenovering i korthet'); 'Takrenovering i korthet' kommer före 'Hus på halvöarna och öarna'", () => {
-    const f = innehall("takrenovering-norrtalje")[0];
+    const f = utanLankMening(innehall("takrenovering-norrtalje")[0]);
     expect(f).toBe(
       "Vi är en takfirma med bas i Norrtälje. Ibland är det bara en del av taket som behöver åtgärdas. Här förklarar vi vad en takrenovering innebär, var gränsen mot ett takbyte går och hur du får ett fast pris efter en kostnadsfri takkontroll. " + BOKA,
     );
@@ -50,7 +54,7 @@ describe("paket 81: första stycket på de tre Norrtälje-tjänstesidorna", () =
     for (const [url, nyckel] of [["/takbyte-norrtalje", "takbyte-norrtalje"], ["/takomlaggning-norrtalje", "takomlaggning-norrtalje"], ["/takrenovering-norrtalje", "takrenovering-norrtalje"]] as const) {
       const sida = prerenderContent(url)!;
       const p = sida.paragraphs.map((x) => (typeof x === "string" ? x : ""));
-      const forsta = innehall(nyckel)[0];
+      const forsta = stripInlineMd(innehall(nyckel)[0]);
       expect(p[0], url).toBe(forsta);
       expect(p[0], url).toMatch(/takkontroll/);
       expect(p[0], url).toContain("070-154 36 39");

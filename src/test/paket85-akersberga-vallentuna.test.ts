@@ -5,41 +5,45 @@
 import { describe, expect, it } from "vitest";
 import { comboOverrides } from "@/data/combo-overrides";
 import { landingServices } from "@/data/landing-services";
+import { stripInlineMd } from "@/lib/inline-md";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 const BAS = (ort: string) => `Vi är en takfirma med bas i Norrtälje och tar uppdrag i ${ort}.`;
 const BOKA = "Boka på roslagstak.se/takkontroll eller ring 070-154 36 39.";
 const c = (n: string) => comboOverrides[n].content;
 
+/** Gren 148 (ägarkartan A och C) lägger en mening med länk till ortssidan (och takrenoveringssidan) i första stycket. De här proven gäller resten av stycket, så meningarna tas bort före jämförelsen; paket148 prövar meningarna. */
+const utanLankMening = (t: string) => t.replace(/ Mer om orten finns på sidan om \[[^\]]+\]\([^)]+\)\./, "").replace(/ Ska bara delar av taket göras om finns mer på sidan om \[[^\]]+\]\([^)]+\)\./, "");
+
 describe("paket 85: första stycket på fem sidor", () => {
   it("/takbyte-akersberga: basen först, bokning och svarstid sist; basmeningen borta ur 'Närområdet'", () => {
-    const f = c("takbyte-akersberga")[0];
+    const f = utanLankMening(c("takbyte-akersberga")[0]);
     expect(f.startsWith(BAS("Åkersberga") + " Mellan Stockholm och skärgården")).toBe(true);
     expect(f.endsWith(BOKA + " Vi svarar inom 24 timmar.")).toBe(true);
     expect(c("takbyte-akersberga").filter((p) => p.includes(BAS("Åkersberga"))).length).toBe(1);
   });
   it("/takomlaggning-akersberga: basen först, bokningen sist, frågan 'Plåt, betong eller tegel?' borta", () => {
-    const f = c("takomlaggning-akersberga")[0];
+    const f = utanLankMening(c("takomlaggning-akersberga")[0]);
     expect(f.startsWith(BAS("Åkersberga") + " Vid en takomläggning byggs taket upp på nytt")).toBe(true);
     expect(f.endsWith("Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.")).toBe(true);
     expect(f).not.toContain("Plåt, betong eller tegel?");
     expect(c("takomlaggning-akersberga").filter((p) => p.includes(BAS("Åkersberga"))).length).toBe(1);
   });
   it("/takbyte-vallentuna: basen som andra mening, bokning och svarstid sist", () => {
-    const f = c("takbyte-vallentuna")[0];
+    const f = utanLankMening(c("takbyte-vallentuna")[0]);
     expect(f.startsWith("Funderar du på att byta tak i Vallentuna? " + BAS("Vallentuna") + " Här går vi igenom")).toBe(true);
     expect(f.endsWith(BOKA + " Vi svarar inom 24 timmar.")).toBe(true);
     expect(c("takbyte-vallentuna").filter((p) => p.includes(BAS("Vallentuna"))).length).toBe(1);
   });
   it("/takomlaggning-vallentuna: basen först, 'och hur du kommer igång' borta, bokningen sist", () => {
-    const f = c("takomlaggning-vallentuna")[0];
+    const f = utanLankMening(c("takomlaggning-vallentuna")[0]);
     expect(f.startsWith(BAS("Vallentuna") + " Har taket på ditt hus i Vallentuna")).toBe(true);
     expect(f).not.toContain("hur du kommer igång");
     expect(f.endsWith("Det börjar med en kostnadsfri takkontroll: boka på roslagstak.se/takkontroll eller ring 070-154 36 39.")).toBe(true);
     expect(c("takomlaggning-vallentuna").filter((p) => p.includes(BAS("Vallentuna"))).length).toBe(1);
   });
   it("/takrenovering-taby: basen först, 'För dig som bor i Täby' borta, 'efter en kostnadsfri takkontroll' och bokningen sist", () => {
-    const f = c("takrenovering-taby")[0];
+    const f = utanLankMening(c("takrenovering-taby")[0]);
     expect(f.startsWith(BAS("Täby") + " Ett tak som har börjat läcka")).toBe(true);
     expect(f).not.toContain("För dig som bor i Täby");
     expect(f.endsWith("hur du får ett fast pris efter en kostnadsfri takkontroll. " + BOKA)).toBe(true);
@@ -48,7 +52,7 @@ describe("paket 85: första stycket på fem sidor", () => {
   it("serverns HTML har samma första stycke, och basmeningen står en gång per sida", () => {
     for (const n of ["takbyte-akersberga", "takomlaggning-akersberga", "takbyte-vallentuna", "takomlaggning-vallentuna", "takrenovering-taby"]) {
       const p = prerenderContent("/" + n)!.paragraphs.map((x) => (typeof x === "string" ? x : ""));
-      expect(p[0], n).toBe(c(n)[0]);
+      expect(p[0], n).toBe(stripInlineMd(c(n)[0]));
       expect(p.join("\n").split("Vi är en takfirma med bas i Norrtälje och tar uppdrag i").length - 1, n).toBe(1);
     }
   });
