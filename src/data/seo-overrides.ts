@@ -964,4 +964,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Kil och kring Boo gård i Boo, där marken började styckas till villatomter 1906. Kostnadsfri takkontroll.",
   },
+  "taby-kyrkby": {
+    title: "Takbyte i Täby kyrkby – fast pris efter takkontroll",
+    description:
+      "Takbyte och takomläggning i Täby kyrkby, från villorna i den tidiga villastaden till husen från 1970-talet och framåt. Kostnadsfri takkontroll.",
+  },
 };

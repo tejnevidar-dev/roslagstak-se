@@ -55,9 +55,9 @@ describe("paket 37a: frågorna om tid och material", () => {
 });
 
 describe("paket 37b: rubriken Om <ort>", () => {
-  it("51 sidor i fem regioner får bara ortsnamnet, övriga behåller sin rubrik", () => {
+  it("52 sidor i fem regioner får bara ortsnamnet, övriga behåller sin rubrik", () => {
     const med = locations.filter((l) => REGIONER_MED_ENKEL_RUBRIK.has(l.region));
-    expect(med).toHaveLength(51);
+    expect(med).toHaveLength(52); // 51 + Täby kyrkby (gren 131c, region Roslagens inland)
     for (const l of med) expect(omOrtRubrik(l)).toBe(`Om ${l.name}`);
     const sodermalm = locations.find((l) => l.name === "Södermalm")!;
     expect(omOrtRubrik(sodermalm)).toBe(`Om Södermalm och takläggning i ${sodermalm.region}`);
