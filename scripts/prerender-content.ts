@@ -1251,7 +1251,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         (loc.parentLocation
           ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
           : `Takläggare ${prep} ${loc.name} — takbyte & takrenovering`),
-      intro: loc.description,
+      intro: radUnderRubrik(loc, prep, mall),
       inlineLinks: referensMd ? inlineMdLinks(referensMd) : undefined,
       ...buildBody([
         loc.longDescription,

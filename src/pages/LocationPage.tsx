@@ -238,7 +238,7 @@ const LocationPage = () => {
                   : `Takläggare ${prep} ${location.name} — takbyte & takrenovering`)}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              {location.description}
+              {radUnderRubrik(location, prep, usesMall(locations.find((l) => l.slug === location.slug) ?? location))}
             </p>
             <div className="mt-5">
               <a

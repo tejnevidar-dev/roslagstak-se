@@ -13,7 +13,7 @@ const bas = { title: "Bas", description: "Bas" };
 describe("paket 120b: H1, länken till Hallstavik", () => {
   const norrtalje = JSON.stringify(locations.find((l) => l.slug === "norrtalje"));
   it("första ordet 'Hallstavik' i löptexten är en länk till /taklaggare-hallstavik, texten är orörd", () => {
-    expect(norrtalje).toContain("- **[Hallstavik](/taklaggare-hallstavik)** var en by fram till början av 1900-talet.");
+    expect(norrtalje).toContain("- [Hallstavik](/taklaggare-hallstavik) var en by fram till början av 1900-talet."); // paket 72 ritar tätorterna som länkade punkter (utan fetstil)
     expect(norrtalje.split("(/taklaggare-hallstavik)").length - 1).toBe(1);
     expect(norrtalje).not.toContain("**Hallstavik** var en by");
   });
