@@ -1254,6 +1254,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       intro: radUnderRubrik(loc, prep, mall),
       inlineLinks: referensMd ? inlineMdLinks(referensMd) : undefined,
       ...buildBody([
+        // Paket 130b: rubriken som LocationPage.tsx ritar före sidans text. På sidor med egen text och avstängda mallavsnitt (location-slim.ts) fanns den bara i React, eftersom ordet annars stod i de avsnitt som är borta.
+        ...(Object.keys(slim).length ? [{ h: `Takbyte och takrenovering ${prep} ${loc.name}`, level: 2 as const }] : []),
         loc.longDescription,
         ...(referensMd ? [stripInlineMd(referensMd)] : []),
         ...(loc.extraContent ? [loc.extraContent] : []),

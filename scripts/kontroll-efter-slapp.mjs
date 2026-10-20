@@ -15,7 +15,7 @@ const ut = arg("ut", `../ledning/marknad/kontroll-efter-slapp-${new Date().toISO
 const FET_SIDOR = ["norrtalje", "vaxholm", "akersberga", "vallentuna", "taby", "ella-gard", "stockholm", "solna", "sundbyberg", "danderyd", "sollentuna", "lidingo", "nacka", "varmdo", "tyreso", "haninge", "ekero", "jarfalla", "huddinge", "sigtuna", "upplands-vasby", "nynashamn", "botkyrka", "salem", "sodertalje", "upplands-bro"].map((s) => `/taklaggare-${s}`);
 // En sida per sidtyp med FAQ i statisk HTML
 const FAQ_SIDOR = ["/", "/taklaggare-taby", "/taklaggare-grisslehamn", "/takrenovering-taby", "/betongpannor-taby", "/tjanster/tegeltak", "/tjanster/platarbeten", "/tjanster/eternit-asbest", "/taktyper", "/offert", "/hur-det-gar-till", "/brf", "/brf/norrtalje", "/rot-avdrag", "/priser", "/takkontroll", "/material/betongpannor"];
-const TJANSTELISTA_SIDOR = ["/taklaggare-taby", "/taklaggare-grisslehamn", "/taklaggare-norrtalje", "/taklaggare-solna"];
+const TJANSTELISTA_SIDOR = ["/taklaggare-taby", "/taklaggare-grisslehamn", "/taklaggare-solna"];
 
 const resultat = []; // { punkt, ok, detalj }
 const punkt = (namn, ok, detalj = "") => { resultat.push({ namn, ok, detalj }); console.log(`${ok ? "JA " : "NEJ"}  ${namn}${detalj ? " — " + detalj : ""}`); };
@@ -86,6 +86,19 @@ for (const path of TJANSTELISTA_SIDOR) {
   if (/Byta eternittak, med sanering/i.test(text)) dalig.push("raden om eternit");
   const ny = /Betongpannor, lertegel, TP20, pannplåt och dubbelfalsat plåttak/.test(text) && /Kostnadsfri takkontroll/.test(text);
   punkt(`Tjänstelistan på ${path}: ny lista, utan Velux/takinspektion/underhåll/eternit`, dalig.length === 0 && ny, dalig.length ? "kvar: " + dalig.join(", ") : ny ? "" : "nya listan hittades inte");
+  await p.close();
+}
+// Paket 72: den starkare Norrtälje-sidan har ingen mallistan "Våra taktjänster" (sidans egen text säger det): kvar får inte Velux, takinspektion, underhåll eller eternit finnas, och inte heller den gamla listan.
+{
+  const p = await renderad(ctx, "/taklaggare-norrtalje");
+  const text = await p.evaluate(() => document.body.innerText);
+  const dalig = [];
+  if (/Velux/i.test(text)) dalig.push("Velux");
+  if (/Kostnadsfri takinspektion/i.test(text)) dalig.push("Kostnadsfri takinspektion");
+  if (/Takrenovering och underhåll/i.test(text)) dalig.push("Takrenovering och underhåll");
+  if (/Byta eternittak, med sanering/i.test(text)) dalig.push("raden om eternit");
+  if (/Betongpannor, lertegel, TP20, pannplåt och dubbelfalsat plåttak/.test(text)) dalig.push("den gamla tjänstelistan");
+  punkt("Tjänstelistan på /taklaggare-norrtalje: ingen mallista (paket 72), inget Velux/takinspektion/underhåll/eternit", dalig.length === 0 && /Det här gör vi i Norrtälje/.test(text), dalig.length ? "kvar: " + dalig.join(", ") : "sidans egen text saknas");
   await p.close();
 }
 
@@ -225,7 +238,8 @@ for (const [path, rubrik] of [["/taklaggare-taby", "Takläggare i Täby: så arb
   // Paket 37 (7a): sidorna i Roslagens regioner har rubriken "Om <ort>" (tidigare "Om <ort> och takläggning i <region>")
   const ort = rubrik.replace("Takläggare i ", "").replace(": så arbetar vi", "");
   const r = await p.evaluate((o) => [...document.querySelectorAll("h3")].map((h) => h.textContent.trim()).filter((t) => t.endsWith(": så arbetar vi") || t === `Om ${o}`), ort);
-  punkt(`Renderad sida har samma två rubriker som den statiska: ${path}`, r.length === 2 && r.every((t) => stat.includes(t.toLowerCase())), r.join(" | ").slice(0, 100));
+  const forvantat = path === "/taklaggare-norrtalje" ? 1 : 2; // paket 72: Om <ort> är avstängt på Norrtälje-sidan
+  punkt(`Renderad sida har samma ${forvantat === 1 ? "rubrik" : "två rubriker"} som den statiska: ${path}`, r.length === forvantat && r.every((t) => stat.includes(t.toLowerCase())), r.join(" | ").slice(0, 100));
   await p.close();
 }
 
