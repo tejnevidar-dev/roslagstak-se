@@ -969,4 +969,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Täby kyrkby, från villorna i den tidiga villastaden till husen från 1970-talet och framåt. Kostnadsfri takkontroll.",
   },
+  frotuna: {
+    title: "Takbyte i Frötuna, Norrtälje – fast pris",
+    description:
+      "Takbyte och takomläggning i Frötuna sydost om Norrtälje, med hus från sekelskiftet 1900 till 2000-talet. Kostnadsfri takkontroll och fast pris.",
+  },
 };

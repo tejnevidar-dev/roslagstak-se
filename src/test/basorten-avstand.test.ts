@@ -20,6 +20,6 @@ describe("avståndsmeningen mot basen", () => {
       if (rad.includes(" tillhör ") && km >= 5) fel.push(`${l.slug}: "tillhör" står kvar`);
     }
     expect(fel.slice(0, 10)).toEqual([]);
-    expect(locations.filter((l) => distanceFromBaseKm(l) < 5).map((l) => l.slug)).toEqual(["norrtalje"]);
+    expect(locations.filter((l) => distanceFromBaseKm(l) < 5).map((l) => l.slug)).toEqual(["norrtalje", "frotuna"]); // Frötuna (gren 138) ligger under 5 km från basen och får ingen avståndsmening, som Norrtälje
   });
 });
