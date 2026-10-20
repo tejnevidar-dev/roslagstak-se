@@ -38,10 +38,13 @@ describe("paket 152: Botkyrka, Bromma, Upplands Väsby och Nacka", () => {
   it("de tretton stadsdelarna i Bromma är sidor som finns", () => {
     for (const d of BROMMA_DELAR) expect(locations.some((l) => l.slug === d), d).toBe(true);
   });
-  it("paritet: LocationPage ritar longDescription med renderInline, och bara Bromma har markdown i den, så alla andra sidor ritas exakt som förut (samma text i React och i serverns HTML)", () => {
+  it("paritet: LocationPage ritar longDescription med renderInline, och de sidor som har markdown i den har länkar som finns, så alla andra sidor ritas exakt som förut (samma text i React och i serverns HTML)", () => {
     const medMd = locations.filter((l) => inlineMdLinks(l.longDescription).length > 0 || new RegExp(INLINE_MD.source).test(l.longDescription)).map((l) => l.slug);
-    expect(medMd).toEqual(["bromma"]);
-    for (const l of locations) if (l.slug !== "bromma") expect(stripInlineMd(l.longDescription), l.slug).toBe(l.longDescription);
+    expect(medMd).toContain("bromma");
+    // sidorna som har länkar i longDescription (Bromma i 152, Älmsta och Grisslehamn i 156 m.fl.) har bara länkar till sidor som finns i sajtkartan
+    for (const s of medMd) for (const h of inlineMdLinks(locations.find((l) => l.slug === s)!.longDescription).map((x) => x.href)) expect(sitemap, `${s} -> ${h}`).toContain(`<loc>https://roslagstak.se${h}</loc>`);
+    // alla övriga sidor har ingen markdown i longDescription och ritas därför exakt som förut
+    for (const l of locations) if (!medMd.includes(l.slug)) expect(stripInlineMd(l.longDescription), l.slug).toBe(l.longDescription);
     // serverns HTML har Brommas text utan markdown-tecken, och texten är densamma som renderInline ger (länktexten utan adressen)
     const bromma = locations.find((l) => l.slug === "bromma")!;
     expect(stripInlineMd(bromma.longDescription)).not.toMatch(/\]\(\//);
