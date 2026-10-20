@@ -338,7 +338,9 @@ for (const file of readdirSync(resolve(comboDir)).filter((f) => f.endsWith(".md"
 
 /* ---------- 5) Regiontexter (/omraden/<region>) ---------- */
 
-const regionDir = "../ledning/marknad/innehall/regiontexter";
+// Valfri --region-dir <mapp>: regiontexterna ur en arbetskopia där pushdagens briefbyten redan är gjorda (kedjan före pushen). Utan flaggan gäller de riktiga briefarna.
+const regionDirArgIdx = process.argv.indexOf("--region-dir");
+const regionDir = regionDirArgIdx > -1 ? process.argv[regionDirArgIdx + 1] : "../ledning/marknad/innehall/regiontexter";
 for (const file of readdirSync(resolve(regionDir)).filter((f) => f.endsWith(".md") && !f.startsWith("_"))) {
   const raw = readFileSync(join(resolve(regionDir), file), "utf8").replace(/\r/g, "");
   const path = raw.match(/\*\*Slug:\*\*\s*(\/omraden\/[a-z0-9-]+)/)?.[1];
