@@ -76,6 +76,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Saltsjöbaden", types: "Villor (villastad)", period: "Villastad 1891–1912, utbyggnad efter andra världskriget", href: "/taklaggare-saltsjobaden" },
       { name: "Storängen och Saltsjö-Duvnäs", types: "Villor, radhus", period: "Storängen från 1904, funkisvillor 1930–40-tal, Duvnäs 1910–20-tal, radhus 1964–67", href: "/taklaggare-storangen" },
       { name: "Lännersta", types: "Villor", period: "Tomter styckade till 1937 (925 st), villor främst från 1930-talet och framåt", href: "/taklaggare-lannersta" },
+      { name: "Kil och Boo gård", types: "Villor", period: "Styckning för villor från 1906 (Wikipedia)", href: "/taklaggare-kil" },
       { name: "Skuru (Ektorp-Skuru)", types: "", period: "", note: "Skuru på Sicklaön ramas enligt Wikipedia in av naturreservatet Nyckelviken i väster, Skurusundet i öster, Värmdöleden i söder och Duvnäs utskog i norr. Bebyggelsen består nästan uteslutande av enfamiljshus och parhus, och centralt i området ligger Solsunda, tidigare Skuru gård, med rötter från 1600-talet." },
     ],
   },

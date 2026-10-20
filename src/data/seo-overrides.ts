@@ -959,4 +959,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Ekerö sommarstad, Sundby och Nibbla på Ekerön, med villor och kedjehus från 1940-talet och framåt. Kostnadsfri takkontroll.",
   },
+  kil: {
+    title: "Takbyte i Kil och Boo gård, Nacka – fast pris",
+    description:
+      "Takbyte och takomläggning i Kil och kring Boo gård i Boo, där marken började styckas till villatomter 1906. Kostnadsfri takkontroll.",
+  },
 };
