@@ -1381,6 +1381,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         GOOGLE_REVIEWS_TEXT.ingress,
       ]),
       jsonLd: [faqLd(comboFaqs, clean)],
+      // Länkar i brödtexten (gren 160): [text](/länk) i briefens stycken skrivs som <a> i serverns HTML (första stycket med länktexten, som på ortssidorna). Texten är oförändrad.
+      inlineLinks: (() => { const l = innehall.flatMap(inlineMdLinks).filter((x, i, alla) => alla.findIndex((y) => y.href === x.href && y.label === x.label) === i); return l.length ? l : undefined; })(),
       links: [
         ...primaryLinks,
         {
