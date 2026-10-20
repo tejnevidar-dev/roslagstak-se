@@ -994,4 +994,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Älvsala, Bullandö och Fagerdala på sydöstra Värmdölandet, där fritidshus blir åretruntbostäder. Kostnadsfri takkontroll.",
   },
+  stromma: {
+    title: "Takbyte i Strömma och Fågelbro, Värmdö – fast pris",
+    description:
+      "Takbyte och takomläggning i Strömma, Skeppsdalsström och Fågelbro, där de flesta villor började som sommarstugor. Kostnadsfri takkontroll.",
+  },
 };
