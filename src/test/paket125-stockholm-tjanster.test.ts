@@ -49,9 +49,9 @@ describe("paket 125: sex tjänstesidor med egen text", () => {
       expect(t, k).not.toMatch(/\b24\s?h\b/);
     }
   });
-  it("tjänstesidorna för övriga fyra Stockholmsorter är orörda: Enskede-takomläggning är fortfarande mallsida", () => {
-    const loc = locations.find((l) => l.slug === "enskede")!;
-    expect(comboOverrides["takomlaggning-enskede"]).toBeUndefined();
+  it("övriga tjänstesidor är orörda: Älvsjö-takomläggning är fortfarande mallsida (Enskede-takomläggning fick egen text i våg 1b, gren 131)", () => {
+    const loc = locations.find((l) => l.slug === "alvsjo")!;
+    expect(comboOverrides["takomlaggning-alvsjo"]).toBeUndefined();
     expect(isThinCombo("takomlaggning", loc)).toBe(true);
   });
 });
