@@ -42,9 +42,9 @@ export const taksakerhetDetails = {
 };
 
 export const taksakerhetBlocks = {
-  seoTitle: "Takstege, gångbrygga och snörasskydd i Roslagen",
+  seoTitle: "Takstege på taket i Roslagen – tegel, pannor och plåt",
   seoDescription:
-    "Vi monterar takstege, gångbrygga och snörasskydd i Roslagen och Storstockholm, för sig eller vid takbyte. Riktpriser efter ROT-avdrag och fast pris i offerten.",
+    "Takstege, gångbrygga och snörasskydd i Roslagen och Storstockholm, för sig eller vid takbyte. Hur fästet görs beror på taket. Kostnadsfri takkontroll.",
   blockPlacement: "after-scope" as const,
   factCards: [
     {

@@ -43,8 +43,8 @@ const Prices = () => {
   return (
     <>
       <SEOHead
-        title="Vad kostar takbyte? Priser 2026, efter ROT — Roslagen"
-        description="Vad kostar ett takbyte? Riktpriser per material efter ROT-avdrag, inkl. moms, och vad som påverkar priset. Fast pris i offerten efter kostnadsfri takkontroll."
+        title="Takbyte pris 2026: tegel, betongpannor och plåt efter ROT"
+        description="Vad kostar takbyte med tegel, betongpannor eller plåt? Riktpriser per material efter ROT-avdrag, inkl. moms. Fast pris i offerten efter kostnadsfri takkontroll."
         canonical="https://roslagstak.se/priser"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

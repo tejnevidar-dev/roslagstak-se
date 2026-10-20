@@ -68,9 +68,9 @@ describe("paket 120: Uppsala (U1, U3)", () => {
     }
   });
   it("U3: Uppsalas titel har 'takbyte'", () => {
-    expect(ortSeoOverrides.uppsala.title).toBe("Takläggare i Uppsala – takbyte, fast pris | RoslagsTak");
+    expect(ortSeoOverrides.uppsala.title).toBe("Takläggare i Uppsala – takbyte och takläggning, fast pris");
     expect(ortSeoOverrides.uppsala.title.length).toBeLessThanOrEqual(60);
-    expect(prerenderContent("/taklaggare-uppsala")!.title).toBe("Takläggare i Uppsala – takbyte, fast pris | RoslagsTak");
+    expect(prerenderContent("/taklaggare-uppsala")!.title).toBe("Takläggare i Uppsala – takbyte och takläggning, fast pris");
   });
 });
 

@@ -569,9 +569,9 @@ const staticPages: Record<string, PrerenderPage> = {
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }],
   },
   "/priser": {
-    title: "Vad kostar takbyte? Priser 2026, efter ROT — Roslagen",
+    title: "Takbyte pris 2026: tegel, betongpannor och plåt efter ROT",
     description:
-      "Vad kostar ett takbyte? Riktpriser per material efter ROT-avdrag, inkl. moms, och vad som påverkar priset. Fast pris i offerten efter kostnadsfri takkontroll.",
+      "Vad kostar takbyte med tegel, betongpannor eller plåt? Riktpriser per material efter ROT-avdrag, inkl. moms. Fast pris i offerten efter kostnadsfri takkontroll.",
     h1: "Vad kostar takbyte och takrenovering i Roslagen?",
     intro: PRICE_HERO_TEXT,
     // Samma block och ordning som Prices.tsx: kategori, post (namn, beskrivning, prisintervall), ROT, påverkar priset, frågor, uppmaning, omdömen, relaterat (AG1, paket 25)

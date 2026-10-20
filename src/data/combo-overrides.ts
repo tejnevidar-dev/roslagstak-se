@@ -307,9 +307,9 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   "takbyte-lidingo": {
-    title: "Takbyte på Lidingö – fast pris efter takkontroll",
+    title: "Takbyte på Lidingö – tegel, pannor eller plåt, fast pris",
     description:
-      "Takbyte på Lidingö: Hersby, Brevik, Sticklinge och resten av ön. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten. Svar inom 24 timmar.",
+      "Takbyte på Lidingö: lertegel, betongpannor eller plåt i Hersby, Brevik, Sticklinge och resten av ön. Kostnadsfri takkontroll och fast pris i offerten.",
     content: [
       "Hur byter man tak på en villa med kupor, vinklar och hundra år på nacken? På Lidingö är det en vanlig fråga, eftersom en stor del av villastaden kom till i början av 1900-talet. Men ön har också villor från 1960-talet och hela områden från 1980- och 90-talen. Här går vi igenom vad som skiljer husen åt, vad ett takbyte omfattar och hur du får ett fast pris innan något arbete börjar.",
       "## En villastad från 1906 och det som kom sedan",

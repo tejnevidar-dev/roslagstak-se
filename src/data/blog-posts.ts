@@ -1236,8 +1236,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ta-bort-mossa-fran-tak",
-    title: "Ta bort mossa från taket: när det behövs och varför",
-    excerpt: "Behöver mossan på taket tas bort? Det här säger Villaägarna om riskerna, vilka tak som får mest påväxt och vad du kan se själv från marken.",
+    title: "Mossa på taket: ta bort, tvätta eller låta vara?",
+    excerpt: "Behöver mossan på taket tas bort, och kan man högtryckstvätta tegelpannor? Det här säger Villaägarna om riskerna och vad du kan se själv från marken.",
     date: "2026-05-20",
     updated: "2026-10-05",
     readTime: "4 min",

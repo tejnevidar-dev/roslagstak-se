@@ -240,7 +240,7 @@ export const regionTexts: Record<string, RegionText> = {
   "Södra Stockholm": {
     h1: "Takläggare i Södra Stockholm",
     title: "Takläggare i Södra Stockholm – Huddinge och Söderort",
-    description: "Takläggare i Huddinge, Stuvsta, Segeltorp, Älvsjö, Enskede och övriga Söderort. Kostnadsfri takkontroll och fast pris.",
+    description: "Takläggare i Huddinge, Stuvsta, Segeltorp, Älvsjö, Enskede och övriga Söderort. Takbyte och takrenovering med kostnadsfri takkontroll och fast pris i offerten.",
     intro: "Södra Stockholm är på den här sidan Söderort, alltså den del av Stockholms kommun som ligger söder om innerstaden, och Huddinge kommun. Vi har vår bas i Norrtälje och tar uppdrag i Roslagen, Storstockholm och Mälardalen.",
     body: [
       "Villaområdena på båda sidor om kommungränsen kom till ungefär samtidigt. I Älvsjö köpte ett bolag stora delar av gårdens mark 1908 och 1911 och styckade den till villatomter. I Stuvsta bildades ett fastighetsbolag 1910 för att stycka tomter för egnahem, och tomterna låg enligt Wikipedia inom gångavstånd från stationen, vilket passade pendlare. Huddinge fick sedan en rad municipalsamhällen: Hörningsnäs villastad 1915, Segeltorp, Stuvsta och Fullersta 1924 och Snättringe 1928.",

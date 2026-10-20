@@ -670,9 +670,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Edsbro: takbyte och takomläggning i den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
   },
   spillersboda: {
-    title: "Takläggare i Spillersboda – fast pris efter takkontroll",
+    title: "Takläggare i Spillersboda, Norrtälje – fast pris",
     description:
-      "Takläggare i Spillersboda: takbyte och takomläggning i skärgårdssamhället i Norrtälje kommun med många fritidshus. Kostnadsfri takkontroll och fast pris.",
+      "Takläggare i Spillersboda i Norrtälje kommun: takbyte och takomläggning i skärgårdssamhället med många fritidshus. Kostnadsfri takkontroll och fast pris.",
   },
   furusund: {
     title: "Takläggare i Furusund – fast pris efter takkontroll",
@@ -895,9 +895,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Knivsta: egnahem från sågverkets tid, egnahemsområden från 1947 och småhus från 1970-talet och framåt. Kostnadsfri takkontroll och fast pris.",
   },
   uppsala: {
-    title: "Takläggare i Uppsala – takbyte, fast pris | RoslagsTak",
+    title: "Takläggare i Uppsala – takbyte och takläggning, fast pris",
     description:
-      "Takläggare i Uppsala: villastaden i Kåbo, egnahemmen i Ekeby, Sunnersta och de yngre villaområdena. Kostnadsfri takkontroll och fast pris i offerten.",
+      "Takläggare i Uppsala: takbyte och takläggning i Kåbo, Ekeby, Sunnersta och de yngre villaområdena. Kostnadsfri takkontroll och fast pris i offerten.",
   },
   vasteras: {
     title: "Takläggare i Västerås – fast pris efter takkontroll",
