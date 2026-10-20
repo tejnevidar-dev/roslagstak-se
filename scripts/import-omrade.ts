@@ -35,7 +35,7 @@ if (!files.length) {
 
 const stripMd = (s: string) => s.replace(/\[([^\]]+)\]\([^)\s]+\)/g, "$1");
 /** Egennamn i början av ett värde behåller sin stora bokstav efter kolon (paket 49b-4, A3): "Roslagsbrovägen mest 1940-tal", inte "roslagsbrovägen". */
-const EGENNAMN_I_BORJAN = ["Roslagsbrovägen", "Palmeska", "Vaxmora", "Trasthagen"];
+const EGENNAMN_I_BORJAN = ["Roslagsbrovägen", "Palmeska", "Vaxmora", "Trasthagen", "Kagghamra"];
 const lowerFirst = (s: string) => (EGENNAMN_I_BORJAN.some((n) => s.startsWith(n)) ? s : s.charAt(0).toLowerCase() + s.slice(1));
 const upperFirst = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 

@@ -979,4 +979,14 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i villastaden Mosstorp och vid Trasthagen i Stockby, med sommarstugor från 1880-talet. Kostnadsfri takkontroll.",
   },
+  djuro: {
+    title: "Takbyte på Djurö och Vindö, Värmdö – fast pris",
+    description:
+      "Takbyte och takomläggning på Djurö och Vindö, med bilväg över Djuröbron sedan 1962. Sommarhus och åretruntboende. Kostnadsfri takkontroll.",
+  },
+  grodinge: {
+    title: "Takbyte i Grödinge, Botkyrka – fast pris",
+    description:
+      "Takbyte och takomläggning i Grödinge i södra Botkyrka, från fritidshusen i Kagghamra till gårdarna vid fjärdarna. Kostnadsfri takkontroll.",
+  },
 };
