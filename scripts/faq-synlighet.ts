@@ -24,7 +24,7 @@ const avkoda = (s: string) =>
   s
     .replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;|&#x27;|&apos;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&nbsp;/g, " ")
     .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
-const norm = (s: string) => avkoda(s).replace(/<[^>]+>/g, " ").replace(/[\s ]+/g, " ").trim().toLowerCase();
+const norm = (s: string) => avkoda(s).replace(/<\/?(?:a|em|strong|b|i|span)\b[^>]*>/g, "").replace(/<[^>]+>/g, " ").replace(/[\s ]+/g, " ").trim().toLowerCase();
 
 const grupp = (path: string): string => {
   const seg = path.split("/").filter(Boolean);
