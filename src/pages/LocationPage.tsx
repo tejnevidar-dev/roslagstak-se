@@ -5,9 +5,9 @@ import { ortSeoOverrides } from "@/data/seo-overrides";
 import { Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
 import { lankbarHref, ortAvindexerad, synligaOrter } from "@/data/avindexerade-orter";
-import { generateCombos, COMBO_LINK_LABEL, COMBO_LINK_TILL_TJANST, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
+import { generateCombos, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
+import { comboLink, dedupeLinks } from "@/data/combo-links";
 import { isThinCombo } from "@/data/thin-combos";
-import { arOmpekad } from "@/data/ompekade";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
 import { Fragment, useEffect } from "react";
@@ -78,6 +78,23 @@ const LocationPage = () => {
   // Paket 72: mallavsnitt som en sidas egen text redan ersätter (location-slim.ts), samma lista som serverns HTML läser.
   const slim = slimFor(location.slug);
   const referens = slim.utanReferensmening ? null : referensMening(location, prep);
+  /* H2: tjänst × ort-länkarna. Indexerbara sidor länkas som förut; noindex- och ompekade sidor pekar på tjänstens egen indexerbara sida, eller utelämnas (takmålning).
+     Tjänstesidorna för takrenovering och taktvätt står redan i andra länkrader och tas inte med två gånger (samma regel som serverns HTML, combo-links.ts). */
+  const comboLinksAll = hasServiceCombos(location.region)
+    ? dedupeLinks(
+        (
+          [
+            ["takbyte", "Takbyte"],
+            ["takrenovering", "Takrenovering"],
+            ["takomlaggning", "Takomläggning"],
+            ["takmalning", "Takmålning"],
+            ["taktvatt", "Taktvätt"],
+          ] as const
+        ).map(([serviceSlug, serviceName]) => comboLink({ serviceSlug, serviceName, locationSlug: location.slug, prep, locationName: location.name })),
+      ).filter((l) => l.href !== "/tjanster/takrenovering" && l.href !== "/tjanster/taktvatt")
+    : [];
+  const comboLinksA = comboLinksAll.filter((l) => !/^\/(takmalning|taktvatt)-/.test(l.href));
+  const comboLinksB = comboLinksAll.filter((l) => /^\/(takmalning|taktvatt)-/.test(l.href));
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
   const faqs = slimFragor(location.slug, generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ));
@@ -485,21 +502,11 @@ const LocationPage = () => {
                   <div className="grid sm:grid-cols-2 gap-2">
                     {hasServiceCombos(location.region) && (
                     <>
-                    {!arOmpekad(`/takbyte-${location.slug}`) && (
-                      <Link to={`/takbyte-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                        <ArrowRight className="w-3 h-3" /> {COMBO_LINK_LABEL[`/takbyte-${location.slug}`] ?? `Takbyte ${prep} ${location.name}`}
+                    {comboLinksA.map((l) => (
+                      <Link key={l.href} to={l.href} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> {l.label}
                       </Link>
-                    )}
-                    {!arOmpekad(`/takrenovering-${location.slug}`) && (
-                      <Link to={`/takrenovering-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                        <ArrowRight className="w-3 h-3" /> Takrenovering {prep} {location.name}
-                      </Link>
-                    )}
-                    {!arOmpekad(`/takomlaggning-${location.slug}`) && (
-                      <Link to={`/takomlaggning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                        <ArrowRight className="w-3 h-3" /> Takomläggning {prep} {location.name}
-                      </Link>
-                    )}
+                    ))}
                     <Link to={MATERIAL_OWN_PAGE.platttak.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.platttak.label}
                     </Link>
@@ -512,16 +519,11 @@ const LocationPage = () => {
                     <Link to={MATERIAL_OWN_PAGE.tegeltak.to} className="flex items-center gap-1 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.tegeltak.label}
                     </Link>
-                    {!arOmpekad(`/takmalning-${location.slug}`) && (
-                      <Link to={`/takmalning-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                        <ArrowRight className="w-3 h-3" /> Takmålning {prep} {location.name}
+                    {comboLinksB.map((l) => (
+                      <Link key={l.href} to={l.href} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                        <ArrowRight className="w-3 h-3" /> {l.label}
                       </Link>
-                    )}
-                    {!arOmpekad(COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.href ?? `/taktvatt-${location.slug}`) && (
-                      <Link to={COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.href ?? `/taktvatt-${location.slug}`} className="flex items-center gap-1 text-sm text-primary hover:underline">
-                        <ArrowRight className="w-3 h-3" /> {COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.label ?? `Taktvätt ${prep} ${location.name}`}
-                      </Link>
-                    )}
+                    ))}
                     </>
                     )}
                     {hubLinksFor(location.slug).map((h) => (

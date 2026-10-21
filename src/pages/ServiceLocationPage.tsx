@@ -4,6 +4,7 @@ import { isHeading, renderInline, stripInlineMd } from "@/lib/inline-md";
 import { briefFaqs, medTidOchMaterial } from "@/data/brief-faq";
 import { isThinCombo } from "@/data/thin-combos";
 import { arOmpekad } from "@/data/ompekade";
+import { comboLink, dedupeLinks, nearbyComboLink, arTunnLankAdress } from "@/data/combo-links";
 import { ortAvindexerad } from "@/data/avindexerade-orter";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -82,6 +83,12 @@ const ServiceLocationPage = () => {
     { slug: "takmalning", name: "Takmålning" },
     { slug: "taktvatt", name: "Taktvätt" },
   ].filter((s) => s.slug !== combo.serviceSlug && (MATERIAL_OWN_PAGE[s.slug] || !arOmpekad(`/${s.slug}-${combo.locationSlug}`)));
+
+  /* H2: syskonlänkarna. Indexerbara sidor länkas som förut; noindex- och ompekade sidor pekar på tjänstens egen indexerbara sida, eller utelämnas (combo-links.ts).
+     Sidans egen tjänstesida visas redan ovan och tas inte med två gånger. */
+  const otherLinks = dedupeLinks(
+    otherServices.map((os) => comboLink({ serviceSlug: os.slug, serviceName: os.name, locationSlug: combo.locationSlug, prep: combo.prep, locationName: combo.locationName })),
+  ).filter((l) => l.href !== COMBO_SERVICE_PAGE[combo.serviceSlug]?.to);
 
   // Har briefen en egen frågedel visas inte sidans genererade FAQ-sektion, och FAQPage-schemat bygger på briefens frågor (AG2)
   // Frågorna om tid och material läggs efter briefens frågedel (Innehålls lydelser, ett ställe: location-faqs.ts)
@@ -260,7 +267,7 @@ const ServiceLocationPage = () => {
                   >
                     <ArrowRight className="w-3 h-3" /> Takläggare {combo.prep} {combo.locationName}
                   </Link>
-                  {(override?.links ?? []).filter((l) => !arOmpekad(l.to)).map((l) => (
+                  {(override?.links ?? []).filter((l) => !arTunnLankAdress(l.to)).map((l) => (
                     <Link key={l.to} to={l.to} className="flex items-center gap-2 text-sm text-primary hover:underline">
                       <ArrowRight className="w-3 h-3" /> {l.label}
                     </Link>
@@ -273,13 +280,9 @@ const ServiceLocationPage = () => {
                       <ArrowRight className="w-3 h-3" /> {COMBO_SERVICE_PAGE[combo.serviceSlug].label}
                     </Link>
                   )}
-                  {otherServices.map((os) => (
-                    <Link
-                      key={os.slug}
-                      to={MATERIAL_OWN_PAGE[os.slug]?.to ?? `/${os.slug}-${combo.locationSlug}`}
-                      className="flex items-center gap-2 text-sm text-primary hover:underline"
-                    >
-                      <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE[os.slug]?.label ?? COMBO_LINK_LABEL[`/${os.slug}-${combo.locationSlug}`] ?? `${os.name} ${combo.prep} ${combo.locationName}`}
+                  {otherLinks.map((l) => (
+                    <Link key={l.href} to={l.href} className="flex items-center gap-2 text-sm text-primary hover:underline">
+                      <ArrowRight className="w-3 h-3" /> {l.label}
                     </Link>
                   ))}
                   <Link to="/tjanster/takavvattning" className="flex items-center gap-2 text-sm text-primary hover:underline">
@@ -369,11 +372,11 @@ const ServiceLocationPage = () => {
                     {nearbyInService.map((n: any) => (
                       <Link
                         key={n.slug}
-                        to={n.comboUrl}
+                        to={nearbyComboLink(combo.serviceSlug, combo.serviceName, n).href}
                         className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1"
                       >
                         <MapPin className="w-3.5 h-3.5" />
-                        {combo.serviceName} {ortPrep(n)} {n.name}
+                        {nearbyComboLink(combo.serviceSlug, combo.serviceName, n).label}
                       </Link>
                     ))}
                   </div>

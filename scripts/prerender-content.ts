@@ -25,7 +25,8 @@ import { projectTexts } from "../src/data/project-texts";
 import { projektOrtLank } from "../src/data/project-lank";
 import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
-import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1, comboListLink } from "../src/data/service-location-combos";
+import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1 } from "../src/data/service-location-combos";
+import { comboLink, dedupeLinks, arTunnLankAdress } from "../src/data/combo-links";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody, type BodyItem } from "../src/lib/body-items";
@@ -1315,9 +1316,8 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...problemsForLocation(loc.slug).map((p) => ({ href: p.to, label: p.label })),
         ...villaAreaLinks(loc.slug),
         ...projectSummaries.filter((p) => p.locationSlug === loc.slug).map((p) => ({ href: `/projekt/${p.slug}`, label: `Referensjobb: ${p.title}` })),
-        ...combos
-          .filter((c) => c.locationSlug === loc.slug && !arOmpekad(c.url))
-          .map(comboListLink),
+        // H2: noindex- och ompekade tjänst × ort-sidor länkas inte, tjänstens egen indexerbara sida i stället (combo-links.ts). Takrenovering och taktvätt står redan i andra länkrader.
+        ...dedupeLinks(combos.filter((c) => c.locationSlug === loc.slug).map(comboLink)).filter((l) => l.href !== "/tjanster/takrenovering" && l.href !== "/tjanster/taktvatt"),
         ...hubLinksFor(loc.slug),
         ...(referensMd ? inlineMdLinks(referensMd) : []),
         ...inlineMdLinks(loc.longDescription).filter((l) => !villaAreaLinks(loc.slug).some((v) => v.href === l.href)),
@@ -1396,15 +1396,13 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           href: `/taklaggare-${combo.locationSlug}`,
           label: `Takläggare ${combo.prep} ${combo.locationName}`,
         },
-        ...(override?.links ?? []).filter((l) => !arOmpekad(l.to)).map((l) => ({ href: l.to, label: l.label })),
+        ...(override?.links ?? []).filter((l) => !arTunnLankAdress(l.to)).map((l) => ({ href: l.to, label: l.label })),
         ...(COMBO_SERVICE_PAGE[combo.serviceSlug]
           ? [{ href: COMBO_SERVICE_PAGE[combo.serviceSlug].to, label: COMBO_SERVICE_PAGE[combo.serviceSlug].label }]
           : []),
-        ...combos
-          .filter(
-            (c) => c.locationSlug === combo.locationSlug && c.serviceSlug !== combo.serviceSlug && !arOmpekad(c.url),
-          )
-          .map(comboListLink),
+        ...dedupeLinks(combos.filter((c) => c.locationSlug === combo.locationSlug && c.serviceSlug !== combo.serviceSlug).map(comboLink)).filter(
+          (l) => l.href !== COMBO_SERVICE_PAGE[combo.serviceSlug]?.to,
+        ),
       ],
       breadcrumbs: [
         { name: "Startsidan", path: "/", visibleName: "Hem" },

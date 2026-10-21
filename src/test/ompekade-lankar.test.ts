@@ -41,9 +41,12 @@ describe("gren 136: länkar till ompekade adresser", () => {
     expect(fel.slice(0, 10)).toEqual([]);
   });
   it("React-sidorna filtrerar med samma lista", () => {
-    expect(readFileSync("src/pages/LocationPage.tsx", "utf8")).toContain("!arOmpekad(");
+    // H2 (gren 166): länkreglerna bor i src/data/combo-links.ts (comboLink, nearbyComboLink), som React-sidorna och serverns HTML delar och som filtrerar bort ompekade adresser
+    expect(readFileSync("src/data/combo-links.ts", "utf8")).toContain("arOmpekad(url)");
+    expect(readFileSync("src/pages/LocationPage.tsx", "utf8")).toContain("comboLink(");
     const sl = readFileSync("src/pages/ServiceLocationPage.tsx", "utf8");
+    expect(sl).toContain("comboLink(");
+    expect(sl).toContain("nearbyComboLink(");
     expect(sl).toContain("arOmpekad(`/${combo.serviceSlug}-${nearby.slug}`)");
-    expect(sl).toContain("arOmpekad(`/${s.slug}-${combo.locationSlug}`)");
   });
 });

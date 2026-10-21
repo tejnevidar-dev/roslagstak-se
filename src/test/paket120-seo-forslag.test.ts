@@ -88,7 +88,8 @@ describe("paket 120: taktvätt (L1)", () => {
   });
   it("L1: React (LocationPage.tsx) använder samma regel som serverns HTML", () => {
     const s = readFileSync("src/pages/LocationPage.tsx", "utf8");
-    expect(s).toContain("COMBO_LINK_TILL_TJANST");
-    expect(s).toContain("COMBO_LINK_TILL_TJANST[`/taktvatt-${location.slug}`]?.href ?? `/taktvatt-${location.slug}`");
+    // H2 (gren 166): taktvätt-länken kommer ur comboLink (combo-links.ts), samma regel som serverns HTML
+    expect(s).toContain("comboLink(");
+    expect(s).toContain('["taktvatt", "Taktvätt"]');
   });
 });
