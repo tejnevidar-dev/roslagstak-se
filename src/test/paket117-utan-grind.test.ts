@@ -64,7 +64,7 @@ const omgang1: Rad[] = [
   {
     "slug": "djursholm",
     "kod": "O8",
-    "ny": "tdetaljer och hängrännor det som kan behöva",
+    "ny": "hur underlaget ser ut i dag går inte att se från gatan", // gren 163: O8-meningen ersatt av den godkända K2-lydelsen
     "gammal": "ofta det som behöver"
   },
   {
