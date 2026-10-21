@@ -35,13 +35,16 @@ describe("paket 114: den ortsegna texten", () => {
   });
   it("O8: 'det som kan behöva ses över' på Ormsta, Långbro, Sköndal och Herrängen", () => {
     for (const slug of ["ormsta", "langbro", "skondal", "herrangen"]) {
-      expect(ort(slug), slug).toContain("hängrännor det som kan behöva ses över.");
+      // gren 182: meningen är bytt mot underlagsformen och K2 (ofta-rattning-2026-10-22.md)
+      expect(ort(slug), slug).not.toContain("hängrännor det som kan behöva ses över.");
+      expect(ort(slug), slug).toContain("Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats.");
       expect(ort(slug), slug).not.toContain("hängrännor ofta det som behöver ses över.");
     }
   });
   it("serverns HTML har samma text", () => {
     expect(sida("viby")).toContain("Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats.");
-    expect(sida("ormsta")).toContain("det som kan behöva ses över.");
+    expect(sida("ormsta")).not.toContain("det som kan behöva ses över.");
+    expect(sida("ormsta")).toContain("Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats.");
   });
 });
 

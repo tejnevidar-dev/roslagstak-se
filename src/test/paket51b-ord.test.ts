@@ -16,7 +16,9 @@ const combo = kalla("src/data/combo-overrides.ts");
 describe("paket 51b: de egna tjänst × ort-texterna", () => {
   it("Co4: 'i regel' om huset är borta ur Huddinge och Nacka", () => {
     expect(combo).not.toContain("har i regel byggts om och till");
-    expect(combo.split("har ofta byggts om och till, och då finns det takdelar av olika ålder på samma hus").length - 1).toBe(2);
+    // gren 182: "har ofta" är bytt mot "kan ha" (ofta-rattning-2026-10-22.md)
+    expect(combo).not.toContain("har ofta byggts om och till");
+    expect(combo.split("kan ha byggts om och till, och då finns det takdelar av olika ålder på samma hus").length - 1).toBe(2);
   });
 
   it("Co5: frågan om att bo kvar står kvar, svaret lovar inte 'i de allra flesta fall'", () => {

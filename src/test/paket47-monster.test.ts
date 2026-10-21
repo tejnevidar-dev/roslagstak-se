@@ -28,7 +28,8 @@ describe("paket 47: mönstren är borta överallt", () => {
     const t = alla();
     expect(t.split("vid samma tillfälle").length - 1).toBe(1);
     expect(text("bergshamra")).toContain("vid samma tillfälle");
-    expect(t).toContain("som också behöver ses över ibland");
+    // gren 182: "som också behöver ses över ibland" är struken (ofta-rattning-2026-10-22.md)
+    expect(t).not.toContain("som också behöver ses över ibland");
   });
   it("D1: 'enligt beskrivningar' och 'enligt uppgifterna' är bytta mot källans namn", () => {
     const t = alla();

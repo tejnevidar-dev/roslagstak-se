@@ -17,11 +17,13 @@ describe("paket 115: ortssidorna 61–80", () => {
     expect(ort("vallabrink")).toContain("ändå ha ett slitet underlag. Därför börjar vi med en takkontroll");
   });
   it("O8: 'det som kan behöva ses över' på Ensta", () => {
-    expect(ort("ensta")).toContain("hängrännor det som kan behöva ses över.");
+    // gren 182: meningen är bytt mot underlagsformen och K2 (ofta-rattning-2026-10-22.md)
+    expect(ort("ensta")).not.toContain("hängrännor det som kan behöva ses över.");
+    expect(ort("ensta")).toContain("Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats.");
     expect(ort("ensta")).not.toContain("hängrännor ofta det som behöver ses över");
   });
   it("serverns HTML har samma text", () => {
     expect(sida("bollstanas")).toContain("Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats.");
-    expect(sida("ensta")).toContain("det som kan behöva ses över.");
+    expect(sida("ensta")).not.toContain("det som kan behöva ses över.");
   });
 });

@@ -11,6 +11,8 @@ const sida = (slug: string) => JSON.stringify(prerenderContent(`/taklaggare-${sl
 const js = (t: string) => JSON.stringify(t).slice(1, -1);
 
 type Rad = { slug: string; kod: string; ny: string; gammal: string };
+/** Rader vars nya lydelse innehöll "behöva ses över" och sedan ersattes i gren 182. */
+const ersatt182 = (r: Rad) => /behöva|hängränno/.test(r.ny);
 
 const omgang1: Rad[] = [
   {
@@ -126,6 +128,12 @@ const omgang1: Rad[] = [
 describe("paket 117: omgång 1 (18 rader)", () => {
   for (const r of omgang1) {
     it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
+      if (ersatt182(r)) {
+        // gren 182: meningen med "behöva ses över" är bytt mot underlagsformen och K2 (ofta-rattning-2026-10-22.md); det nya ersätter den här raden
+        expect(ort(r.slug)).not.toContain(js(r.ny));
+        expect(ort(r.slug)).not.toMatch(/(det som kan|kan|att) behöva ses över|behöver ses över/);
+        return;
+      }
       expect(ort(r.slug)).toContain(js(r.ny));
       expect(sida(r.slug)).toContain(js(r.ny));
       if (r.gammal.length > 12) expect(ort(r.slug)).not.toContain(js(r.gammal));
@@ -229,6 +237,12 @@ const omgang2: Rad[] = [
 describe("paket 117: omgång 2 (15 rader)", () => {
   for (const r of omgang2) {
     it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
+      if (ersatt182(r)) {
+        // gren 182: meningen med "behöva ses över" är bytt mot underlagsformen och K2 (ofta-rattning-2026-10-22.md); det nya ersätter den här raden
+        expect(ort(r.slug)).not.toContain(js(r.ny));
+        expect(ort(r.slug)).not.toMatch(/(det som kan|kan|att) behöva ses över|behöver ses över/);
+        return;
+      }
       expect(ort(r.slug)).toContain(js(r.ny));
       expect(sida(r.slug)).toContain(js(r.ny));
       if (r.gammal.length > 12) expect(ort(r.slug)).not.toContain(js(r.gammal));
@@ -302,6 +316,12 @@ const omgang3: Rad[] = [
 describe("paket 117: omgång 3 (10 rader)", () => {
   for (const r of omgang3) {
     it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
+      if (ersatt182(r)) {
+        // gren 182: meningen med "behöva ses över" är bytt mot underlagsformen och K2 (ofta-rattning-2026-10-22.md); det nya ersätter den här raden
+        expect(ort(r.slug)).not.toContain(js(r.ny));
+        expect(ort(r.slug)).not.toMatch(/(det som kan|kan|att) behöva ses över|behöver ses över/);
+        return;
+      }
       expect(ort(r.slug)).toContain(js(r.ny));
       expect(sida(r.slug)).toContain(js(r.ny));
       if (r.gammal.length > 12) expect(ort(r.slug)).not.toContain(js(r.gammal));
@@ -399,6 +419,12 @@ const omgang4: Rad[] = [
 describe("paket 117: omgång 4 (14 rader)", () => {
   for (const r of omgang4) {
     it(`${r.slug} ${r.kod}: det nya står i datan och på serverns sida, det gamla är borta`, () => {
+      if (ersatt182(r)) {
+        // gren 182: meningen med "behöva ses över" är bytt mot underlagsformen och K2 (ofta-rattning-2026-10-22.md); det nya ersätter den här raden
+        expect(ort(r.slug)).not.toContain(js(r.ny));
+        expect(ort(r.slug)).not.toMatch(/(det som kan|kan|att) behöva ses över|behöver ses över/);
+        return;
+      }
       expect(ort(r.slug)).toContain(js(r.ny));
       expect(sida(r.slug)).toContain(js(r.ny));
       if (r.gammal.length > 12) expect(ort(r.slug)).not.toContain(js(r.gammal));
