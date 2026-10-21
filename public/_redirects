@@ -1,7 +1,7 @@
 # Ompekning (gren 129, rad 21): noindex-sidor (tjänst × ort) med visningar i Google pekas om, en rad per adress, till ägarsidan enligt
 # ledning/marknad/seo-data/noindex-sidor-2026-09-18-till-2026-10-15.md. Undantag: sidor med egen text och adresser som redan täcks av splat-reglerna ovan.
 # Varje källa är en tunn tjänst × ort-sida utanför sajtkartan och varje mål en indexerbar sida (kontrolleras av src/test/ompekning.test.ts).
-# -> /tjanster/takomlaggning (34)
+# -> /tjanster/takomlaggning (33)
 /takbyte-arsta /tjanster/takomlaggning 301
 /takbyte-fisksatra /tjanster/takomlaggning 301
 /takbyte-fittja /tjanster/takomlaggning 301
@@ -22,7 +22,6 @@
 /takomlaggning-grisslehamn /tjanster/takomlaggning 301
 /takomlaggning-herrang /tjanster/takomlaggning 301
 /takomlaggning-humlo /tjanster/takomlaggning 301
-/takomlaggning-jarfalla /tjanster/takomlaggning 301
 /takomlaggning-kapellskar /tjanster/takomlaggning 301
 /takomlaggning-marsta /tjanster/takomlaggning 301
 /takomlaggning-norrora /tjanster/takomlaggning 301
@@ -179,9 +178,8 @@
 # -> /taklaggare-vato (2)
 /bandtackning-vato /taklaggare-vato 301
 /takbyte-vato /taklaggare-vato 301
-# -> /taklaggare-vaxholm (2)
+# -> /taklaggare-vaxholm (1)
 /bandtackning-vaxholm /taklaggare-vaxholm 301
-/takrenovering-vaxholm /taklaggare-vaxholm 301
 # -> /omraden/stockholms-stad (1)
 /takrenovering-grasko /omraden/stockholms-stad 301
 # -> /taklaggare-akersberga (1)

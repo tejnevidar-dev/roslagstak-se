@@ -150,7 +150,6 @@ export const OMPEKADE: ReadonlySet<string> = new Set([
   "/takomlaggning-husaro",
   "/takomlaggning-ingmarso",
   "/takomlaggning-jakobsberg",
-  "/takomlaggning-jarfalla",
   "/takomlaggning-jordbro",
   "/takomlaggning-kapellskar",
   "/takomlaggning-kungsangen",
@@ -210,7 +209,6 @@ export const OMPEKADE: ReadonlySet<string> = new Set([
   "/takrenovering-svartno",
   "/takrenovering-vaddo",
   "/takrenovering-vato",
-  "/takrenovering-vaxholm",
   "/takrenovering-yxlan",
 ]);
 
