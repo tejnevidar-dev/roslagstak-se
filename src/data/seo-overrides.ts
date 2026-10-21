@@ -1024,4 +1024,9 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Söderby i Handen, Haninge, ett radhusområde från slutet av 1970-talet. Kostnadsfri takkontroll och fast pris i offerten.",
   },
+  skarholmen: {
+    title: "Takläggare i Skärholmen – radhus och villor, fast pris",
+    description:
+      "Takläggare i Skärholmen, Sätra, Bredäng och Vårberg: takbyte och takomläggning på radhus, kedjehus och villor. Kostnadsfri takkontroll och fast pris.",
+  },
 };
