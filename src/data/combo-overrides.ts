@@ -612,7 +612,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
     ],
   },
   "takbyte-stockholm": {
-    title: "Takbyte i Stockholm – fast pris efter takkontroll",
+    title: "Byta tak i Stockholm – takbyte, fast pris",
     description:
       "Takbyte i Stockholm: villor och småstugor i Bromma, Enskede, Älvsjö och resten av ytterstaden. Kostnadsfri takkontroll och fast pris i offerten.",
     content: [

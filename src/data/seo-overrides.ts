@@ -810,7 +810,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Vaxholm: takbyte och takomläggning i skärgårdskommunen, med hus i staden och på öarna. Kostnadsfri takkontroll och fast pris.",
   },
   stockholm: {
-    title: "Takläggare i Stockholm — Takbyte & Takrenovering",
+    title: "Takläggare i Stockholm – takbyte, fast pris",
     description:
       "Takläggare i Stockholm: takbyte och takomläggning i ytterstadens villor, från Bromma och Hässelby till Enskede. Kostnadsfri takkontroll och fast pris.",
   },
@@ -825,7 +825,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Sundbyberg: takbyte och takomläggning, särskilt i villasamhällena Duvbo och Lilla Ursvik. Kostnadsfri takkontroll och fast pris.",
   },
   sollentuna: {
-    title: "Takläggare i Sollentuna — Takbyte & Takrenovering",
+    title: "Takläggare i Sollentuna – byta tak, fast pris",
     description:
       "Takläggare i Sollentuna: takbyte och takomläggning i kommundelarna längs järnvägen och vid Edsviken. Kostnadsfri takkontroll och fast pris.",
   },
