@@ -11,6 +11,7 @@ import { locationIndex } from "./location-index";
 import { locations } from "./locations";
 import { comboLink } from "./combo-links";
 import { ortPrep } from "./ort-prep";
+import { hasServiceCombos } from "./service-slugs";
 
 export interface HubLink {
   href: string;
@@ -103,9 +104,32 @@ export const kommunLankar = (slug: string): HubLink[] => {
   return KOMMUN_TJANSTER.flatMap(([serviceSlug, serviceName]) => comboLink({ serviceSlug, serviceName, locationSlug: kommun.slug, prep: ortPrep(kommun), locationName: kommun.name }) ?? []);
 };
 
+/**
+ * Gren 188b (Marknadschefens ja 2026-10-22 01:17): Norrtälje-hubbarna (takbyte, takomläggning, takrenovering i Norrtälje) ges till orter i regionerna runt Norrtälje, men också till
+ * orter i andra kommuner (Täby, Vallentuna, Vaxholm). De raderna pekar nu om till den egna kommunens motsvarighet ("Takbyte i Täby"), och inget tas bort: en rad blir en rad. Är orten
+ * själv kommunen har den redan raden bland sina vanliga tjänst × ort-länkar, så Norrtälje-raden utgår. Okänd kommun eller kommun utan tjänst × ort-sidor lämnar raden som den är.
+ */
+const NORRTALJE_TJANST = /^\/(takbyte|takomlaggning|takrenovering)-norrtalje$/;
+const tillEgenKommun = (h: HubLink, slug: string, region: string): HubLink | null | undefined => {
+  const t = h.href.match(NORRTALJE_TJANST);
+  if (!t) return undefined;
+  const k = kommunSlug(slug, region);
+  if (!k || k === "norrtalje") return undefined;
+  if (k === slug) return null;
+  const kommun = locations.find((x) => x.slug === k);
+  if (!kommun || !hasServiceCombos(kommun.region)) return undefined;
+  const namn = { takbyte: "Takbyte", takomlaggning: "Takomläggning", takrenovering: "Takrenovering" }[t[1] as "takbyte"];
+  return comboLink({ serviceSlug: t[1], serviceName: namn, locationSlug: kommun.slug, prep: ortPrep(kommun), locationName: kommun.name }) ?? undefined; // ompekad adress hos kommunen: raden står kvar som den är (inget tas bort)
+};
+
 /** Hubblänkarna för en ort (tom lista för hubbens egen sida och för orter utanför hubbens regioner), plus länkar som bara gäller den orten. */
 export const hubLinksFor = (slug: string): HubLink[] => {
   const loc = locationIndex.find((l) => l.slug === slug) ?? locations.find((l) => l.slug === slug);
   if (!loc) return [];
-  return [...HUBS.filter((h) => h.slug !== slug && (h.regioner.includes(loc.region) || (h.orter ?? []).includes(slug))).map(({ href, label }) => ({ href, label })), ...kommunLankar(slug), ...(ENSKILDA_LANKAR[slug] ?? [])];
+  const hubbar = HUBS.filter((h) => h.slug !== slug && (h.regioner.includes(loc.region) || (h.orter ?? []).includes(slug))).flatMap(({ href, label }) => {
+    const byt = tillEgenKommun({ href, label }, slug, loc.region);
+    return byt === undefined ? [{ href, label }] : byt ? [byt] : [];
+  });
+  const alla = [...hubbar, ...kommunLankar(slug), ...(ENSKILDA_LANKAR[slug] ?? [])];
+  return alla.filter((l, i) => alla.findIndex((x) => x.href === l.href && x.label === l.label) === i);
 };

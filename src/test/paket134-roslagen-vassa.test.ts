@@ -66,7 +66,7 @@ describe("paket 134: regionsidan Norra Roslagen", () => {
 
 describe("paket 134: Norrtälje-länkarna", () => {
   it("takrenovering-norrtalje länkas från Norrtälje-områdets ortssidor, och takbyte och takomläggning från de fyra som saknade dem", () => {
-    for (const s of ["blido", "yxlan", "graddo", "kapellskar", "rimbo", "herrang", "vaxholm"]) {
+    for (const s of ["blido", "yxlan", "graddo", "kapellskar", "rimbo", "herrang"]) {
       expect(hubLinksFor(s).map((h) => h.href), s).toContain("/takrenovering-norrtalje");
     }
     for (const s of ["blido", "yxlan", "graddo", "kapellskar"]) {
@@ -76,6 +76,13 @@ describe("paket 134: Norrtälje-länkarna", () => {
     }
     expect(hubLinksFor("norrtalje").map((h) => h.href)).not.toContain("/takrenovering-norrtalje");
     expect(hubLinksFor("taby").map((h) => h.href)).not.toContain("/takrenovering-norrtalje");
+    // gren 188b: orter i andra kommuner får sin egen kommuns motsvarighet i stället för Norrtälje-raden, och Vaxholm (kommunen själv) har sina egna länkar bland de vanliga
+    expect(hubLinksFor("vaxholm").map((h) => h.href)).not.toContain("/takrenovering-norrtalje");
+    // Resarö: takbyte byts mot Vaxholms; Vaxholms takomläggning är ompekad (301), så den raden står kvar som den är (inget tas bort)
+    expect(hubLinksFor("resaro").map((h) => h.href)).not.toContain("/takbyte-norrtalje");
+    expect(hubLinksFor("resaro").map((h) => h.href)).not.toContain("/takrenovering-norrtalje");
+    expect(hubLinksFor("taby").length + hubLinksFor("ensta").length).toBeGreaterThan(0);
+    expect(hubLinksFor("resaro").map((h) => h.label).some((x) => x.endsWith(" i Vaxholm"))).toBe(true);
   });
   it("länkarna står i serverns HTML", () => {
     expect(prerenderContent("/taklaggare-blido")!.links.map((l) => l.href)).toContain("/takrenovering-norrtalje");
