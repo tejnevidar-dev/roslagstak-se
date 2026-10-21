@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import { hasServiceCombos } from "@/data/service-slugs";
 import { lankbarHref, ortAvindexerad, synligaOrter } from "@/data/avindexerade-orter";
 import { generateCombos, MATERIAL_OWN_PAGE } from "@/data/service-location-combos";
-import { comboLink, dedupeLinks } from "@/data/combo-links";
+import { comboLink } from "@/data/combo-links";
 import { isThinCombo } from "@/data/thin-combos";
 import { isBrfLocation } from "@/data/brf-locations";
 import { isNearBase } from "@/data/service-reach";
@@ -78,23 +78,14 @@ const LocationPage = () => {
   // Paket 72: mallavsnitt som en sidas egen text redan ersätter (location-slim.ts), samma lista som serverns HTML läser.
   const slim = slimFor(location.slug);
   const referens = slim.utanReferensmening ? null : referensMening(location, prep);
-  /* H2: tjänst × ort-länkarna. Indexerbara sidor länkas som förut; noindex- och ompekade sidor pekar på tjänstens egen indexerbara sida, eller utelämnas (takmålning).
-     Tjänstesidorna för takrenovering och taktvätt står redan i andra länkrader och tas inte med två gånger (samma regel som serverns HTML, combo-links.ts). */
-  const comboLinksAll = hasServiceCombos(location.region)
-    ? dedupeLinks(
-        (
-          [
-            ["takbyte", "Takbyte"],
-            ["takrenovering", "Takrenovering"],
-            ["takomlaggning", "Takomläggning"],
-            ["takmalning", "Takmålning"],
-            ["taktvatt", "Taktvätt"],
-          ] as const
-        ).map(([serviceSlug, serviceName]) => comboLink({ serviceSlug, serviceName, locationSlug: location.slug, prep, locationName: location.name })),
-      ).filter((l) => l.href !== "/tjanster/takrenovering" && l.href !== "/tjanster/taktvatt")
-    : [];
-  const comboLinksA = comboLinksAll.filter((l) => !/^\/(takmalning|taktvatt)-/.test(l.href));
-  const comboLinksB = comboLinksAll.filter((l) => /^\/(takmalning|taktvatt)-/.test(l.href));
+  /* H2: tjänst × ort-länkarna. Varje rad behåller sin etikett. En tjänst × ort-sida som är noindex länkas via tjänstens egen indexerbara sida, ompekade visas inte och takmålning
+     behåller sitt mål (combo-links.ts, samma regel som serverns HTML). */
+  const comboRad = (tjanster: readonly (readonly [string, string])[]) =>
+    hasServiceCombos(location.region)
+      ? tjanster.flatMap(([serviceSlug, serviceName]) => comboLink({ serviceSlug, serviceName, locationSlug: location.slug, prep, locationName: location.name }) ?? [])
+      : [];
+  const comboLinksA = comboRad([["takbyte", "Takbyte"], ["takrenovering", "Takrenovering"], ["takomlaggning", "Takomläggning"]]);
+  const comboLinksB = comboRad([["takmalning", "Takmålning"], ["taktvatt", "Taktvätt"]]);
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
   const faqs = slimFragor(location.slug, generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ));
@@ -456,7 +447,7 @@ const LocationPage = () => {
                     {hasServiceCombos(location.region) && (
                     <>
                     {comboLinksA.map((l) => (
-                      <Link key={l.href} to={l.href} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <Link key={`${l.href}|${l.label}`} to={l.href} className="flex items-center gap-1 text-sm text-primary hover:underline">
                         <ArrowRight className="w-3 h-3" /> {l.label}
                       </Link>
                     ))}
@@ -473,7 +464,7 @@ const LocationPage = () => {
                       <ArrowRight className="w-3 h-3" /> {MATERIAL_OWN_PAGE.tegeltak.label}
                     </Link>
                     {comboLinksB.map((l) => (
-                      <Link key={l.href} to={l.href} className="flex items-center gap-1 text-sm text-primary hover:underline">
+                      <Link key={`${l.href}|${l.label}`} to={l.href} className="flex items-center gap-1 text-sm text-primary hover:underline">
                         <ArrowRight className="w-3 h-3" /> {l.label}
                       </Link>
                     ))}
