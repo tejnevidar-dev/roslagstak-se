@@ -75,13 +75,10 @@ describe("paket 120: Uppsala (U1, U3)", () => {
 });
 
 describe("paket 120: taktvätt (L1)", () => {
-  it("L1: Täby, Vallentuna och Vaxholm länkar 'Taktvätt' till /tjanster/taktvatt och inte till den avindexerade ortssidan", () => {
+  it("L1 (ersatt av gren 165): Täby, Vallentuna och Vaxholm har egna indexerbara taktvätt-sidor och länkar dit i stället för till /tjanster/taktvatt", () => {
     for (const s of ["taby", "vallentuna", "vaxholm"]) {
-      expect(COMBO_LINK_TILL_TJANST[`/taktvatt-${s}`], s).toEqual({ href: "/tjanster/taktvatt", label: "Taktvätt" });
-      const l = lankar(`/taklaggare-${s}`);
-      expect(l, s).toContain("/tjanster/taktvatt");
-      expect(l, s).not.toContain(`/taktvatt-${s}`);
-      expect(lankText(`/taklaggare-${s}`, "/tjanster/taktvatt"), s).toContain("Taktvätt");
+      expect(COMBO_LINK_TILL_TJANST[`/taktvatt-${s}`], s).toBeUndefined();
+      expect(lankar(`/taklaggare-${s}`), s).toContain(`/taktvatt-${s}`);
     }
   });
   it("L1: övriga orter är orörda (Norrtälje har en indexerad taktvättssida)", () => {

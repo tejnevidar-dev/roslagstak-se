@@ -9,12 +9,12 @@ import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 import { renderInline } from "@/lib/inline-md";
 import {
-  TAKTVATT_FAQS,
-  TAKTVATT_H1,
-  TAKTVATT_INTRO,
-  TAKTVATT_META,
-  TAKTVATT_SECTIONS,
-  TAKTVATT_TITLE,
+  TAKTVATT_SIDA_FAQS as TAKTVATT_FAQS,
+  TAKTVATT_SIDA_H1 as TAKTVATT_H1,
+  TAKTVATT_SIDA_INTRO as TAKTVATT_INTRO,
+  TAKTVATT_SIDA_META as TAKTVATT_META,
+  TAKTVATT_SIDA_SECTIONS as TAKTVATT_SECTIONS,
+  TAKTVATT_SIDA_TITLE as TAKTVATT_TITLE,
 } from "@/data/taktvatt-text";
 
 const PATH = "/tjanster/taktvatt";

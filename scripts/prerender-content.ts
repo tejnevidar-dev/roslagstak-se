@@ -31,7 +31,14 @@ import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody, type BodyItem } from "../src/lib/body-items";
 import { problemsForLocation, regionLinksForProblems, takkontrollLink } from "../src/data/problem-links";
 import { hubLinksFor, REGION_EXTRA_LINKS } from "../src/data/hub-links";
-import { TAKTVATT_FAQS, TAKTVATT_H1, TAKTVATT_INTRO, TAKTVATT_META, TAKTVATT_SECTIONS, TAKTVATT_TITLE } from "../src/data/taktvatt-text";
+import {
+  TAKTVATT_SIDA_FAQS as TAKTVATT_FAQS,
+  TAKTVATT_SIDA_H1 as TAKTVATT_H1,
+  TAKTVATT_SIDA_INTRO as TAKTVATT_INTRO,
+  TAKTVATT_SIDA_META as TAKTVATT_META,
+  TAKTVATT_SIDA_SECTIONS as TAKTVATT_SECTIONS,
+  TAKTVATT_SIDA_TITLE as TAKTVATT_TITLE,
+} from "../src/data/taktvatt-text";
 import { relatedForPost } from "../src/data/blog-related";
 import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";

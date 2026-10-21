@@ -29,6 +29,7 @@ const SERVICE_LABEL: Record<string, string> = {
   takavvattning: "Takavvattning",
   takinspektion: "Kostnadsfri takkontroll",
   taksakerhet: "Taksäkerhet",
+  taktvatt: "Taktvätt",
   "eternit-asbest": "Byta eternittak",
 };
 /** Länktext för en intern adress ur briefens länkrad. */

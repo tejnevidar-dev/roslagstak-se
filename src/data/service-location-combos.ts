@@ -284,9 +284,7 @@ export const COMBO_LINK_LABEL: Record<string, string> = {
  * /tjanster/taktvatt med det befintliga ordet "Taktvätt" (SEO-genomgången 2026-10-18, L1). EN regel för React och statisk HTML.
  */
 export const COMBO_LINK_TILL_TJANST: Record<string, { href: string; label: string }> = {
-  "/taktvatt-taby": { href: "/tjanster/taktvatt", label: "Taktvätt" },
-  "/taktvatt-vallentuna": { href: "/tjanster/taktvatt", label: "Taktvätt" },
-  "/taktvatt-vaxholm": { href: "/tjanster/taktvatt", label: "Taktvätt" },
+  // Taktvätt-sidorna i Täby, Vallentuna och Vaxholm har egna texter sedan gren 165 och länkas som sig själva.
 };
 
 /** Länkmålet för en tjänst × ort-sida i listor på andra sidor: materialets egen sida för material, annars sidan själv. */

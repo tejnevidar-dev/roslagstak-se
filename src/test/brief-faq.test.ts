@@ -28,7 +28,7 @@ describe("briefens frågedel", () => {
       if (!page) continue;
       const bf = briefFaqs(medTidOchMaterial(o?.content ?? c.content, c)); // briefens frågor + de två frågorna om tid och material (paket 37)
       const genereradRubrik = `Vanliga frågor om ${c.serviceName.toLowerCase()} ${c.prep} ${c.locationName}`;
-      const rubriker = page.paragraphs.filter((p) => /^(Vanliga )?frågor om /i.test(p));
+      const rubriker = page.paragraphs.filter((p) => /^(Vanliga )?frågor( om .*)?$/i.test(p));
       if (bf) {
         med++;
         if (rubriker.length !== 1) fel.push(`${c.url}: ${rubriker.length} frågerubriker`);
