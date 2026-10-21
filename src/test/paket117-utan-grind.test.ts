@@ -169,7 +169,7 @@ const omgang2: Rad[] = [
   {
     "slug": "jakobsberg",
     "kod": "O3",
-    "ny": "ag. Därför börjar vi med en takkontroll, där en av våra säljare tittar",
+    "ny": "gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar",
     "gammal": "att titta"
   },
   {

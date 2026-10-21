@@ -14,7 +14,8 @@ describe("paket 115: ortssidorna 61–80", () => {
       expect(ort(slug), slug).toContain("Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats.");
       expect(ort(slug), slug).not.toContain("börjar vi med att titta på taket på plats");
     }
-    expect(ort("vallabrink")).toContain("ändå ha ett slitet underlag. Därför börjar vi med en takkontroll");
+    // gren 182 (underlagsmeningen): "ändå ha ett slitet underlag" är bytt mot underlagsformen
+    expect(ort("vallabrink")).toContain("Hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll");
   });
   it("O8: 'det som kan behöva ses över' på Ensta", () => {
     // gren 182: meningen är bytt mot underlagsformen och K2 (ofta-rattning-2026-10-22.md)
