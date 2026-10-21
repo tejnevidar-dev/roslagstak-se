@@ -5,19 +5,20 @@
  * already present, and rebuilds the location + service-location combo entries
  * from src/data/locations.ts so the sitemap always matches the routes.
  *
- * lastmod: dagens datum sätts BARA på en sida vars text faktiskt har ändrats. Varje sida får en
- * fingeravtryck av sin förrenderade text (rubrik, ingress, stycken, titel, beskrivning, brödsmulor,
- * JSON-LD) i src/data/sitemap-lastmod.json. Samma fingeravtryck som sist = samma datum som sist,
+ * lastmod: dagens datum sätts BARA på en sida vars egen text faktiskt har ändrats. Varje sida får ett
+ * fingeravtryck av sin egen datakälla (scripts/sitemap-fingerprint.ts: ortens post, titel/meta och egna
+ * FAQ-svar för ortssidor, sin post i combo-overrides.ts för tjänst × ort-sidor, annars den förrenderade
+ * texten utan JSON-LD och brödsmulor) i src/data/sitemap-lastmod.json. Samma fingeravtryck som sist = samma datum som sist,
  * oavsett hur många gånger generatorn körs. Första körningen (ingen state-fil) tar datum ur den
  * befintliga sitemapen och lämnar sidor utan känt datum utan lastmod. Sidor utan förrenderad text
  * behåller sitt befintliga datum.
  *
  * Run:  bun scripts/generate-sitemap.ts
  */
-import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { prerenderContent } from "./prerender-content";
+import { fingeravtryck } from "./sitemap-fingerprint";
 import { locations } from "../src/data/locations";
 import { allServiceSlugs } from "../src/data/service-location-combos";
 import { hasServiceCombos } from "../src/data/service-slugs";
@@ -128,10 +129,8 @@ let andrade = 0;
 for (const e of entries) {
   const page = prerenderContent(e.path);
   if (!page) continue; // ingen förrenderad text att jämföra: behåll befintligt lastmod
-  const h = createHash("sha1")
-    .update(JSON.stringify([page.h1, page.intro, page.paragraphs, page.title, page.description, page.breadcrumbs, page.jsonLd]))
-    .digest("hex")
-    .slice(0, 16);
+  // Gren 169c: fingeravtrycket är sidans egen datakälla (scripts/sitemap-fingerprint.ts), inte hela den förrenderade sidan med JSON-LD och brödsmulor.
+  const h = fingeravtryck(e.path, page);
   const prev = prevState[e.path];
   let d: string | undefined;
   // Oförändrad text men inget sparat datum (t.ex. /omraden, som aldrig fått något): datumet sätts en gång och sparas, och ligger sedan fast
