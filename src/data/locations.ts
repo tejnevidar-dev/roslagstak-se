@@ -667,7 +667,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Edsbro: takbyte och takomläggning i den gamla bruksorten i Norrtälje kommun. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
-      "Edsbro är en tätort i Norrtälje kommun och kyrkby i Edsbro socken. Enligt Wikipedia är det en gammal bruksort: här tillverkades råjärn från 1686 till 1919, och ruinerna efter masugnen och klensmedjan är välbevarade. Kyrkan är från 1200-talet.",
+      "Edsbro är en tätort i Norrtälje kommun och kyrkby i Edsbro socken. Enligt Wikipedia är det en gammal bruksort: här tillverkades råjärn från 1686 till 1919, och ruinerna efter masugnen och klensmedjan är välbevarade. Kyrkan är från 1200-talet. Namnet skrevs 1287 Hæsabro och tolkas enligt Wikipedia som \"åsbornas bro\": kyrkan står vid en bro där åsen genombryts av en å. Socknen är en sjörik skogsbygd med odlingsbygd i ådalarna, kring Skeboåns övre lopp. Bruket hörde från början till Skebo bruk. Efter branden där 1686 flyttades masugnsrättigheterna till Edsbro, och tackjärnet fraktades i pråmar över sjön Närdingen till Skebo för att förädlas. Masugnen byggdes om och på flera gånger, senast 1905, och slaggen användes enligt Wikipedia som byggnadsmaterial i husen runt omkring. Norrtälje kommun räknar Edsbro till kommunens industriminnen. Bygden är äldre än bruket. I socknen finns enligt Wikipedia omkring 700 gravar från järnåldern och sex fornborgar. Den mest kända är Lundboborg vid Edsbro-Kyrksjön, en kallmurad borg som troligen byggdes under folkvandringstiden. Muren är 210 meter lång och som mest 2,5 meter hög, och man kan fortfarande se spåren efter borgens två ingångar.",
     extraContent:
       "",
     primaryKeyword: "takläggare Edsbro",
@@ -732,7 +732,7 @@ export const locations: LocationData[] = [
     description:
       "Takläggare i Kapellskär och på yttersta Rådmansö. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
-      "Kapellskär är en udde längst ut på Rådmansö i Norrtälje kommun, omkring 90 kilometer nordost om Stockholm. Enligt Wikipedia har sjöfart på Åland och Finland bedrivits härifrån sedan medeltiden, och den moderna hamnen kom till 1960, när färjetrafiken flyttades hit från Gräddö. Vi har vår bas i Norrtälje.",
+      "Kapellskär är en udde längst ut på Rådmansö i Norrtälje kommun, omkring 90 kilometer nordost om Stockholm. Enligt Wikipedia har sjöfart på Åland och Finland bedrivits härifrån sedan medeltiden, eftersom avståndet till Åland är kort och hamnen ligger nära öppet hav. Platsen nämns första gången 1555, och namnet syftade då på Kapellskäret, där Kapellskärs fyr står i dag. Udden var då en egen ö, Långön. Under 1700-talet fanns \"gamla krogen\" här, och ute på udden låg ett gästgiveri som fanns kvar vid mitten av 1800-talet. En ristning i hällberget på udden är från 1752, när kungen lät samla sin flotta här inför överfarten till Finland. Omkring 1910 fanns långt gångna planer på en järnväg från Stockholm hit, men första världskriget stoppade dem. Den moderna hamnen kom till 1960, när färjetrafiken flyttades hit från Gräddö, och en ny väg ut till hamnen invigdes 1979. I dag går E18 hit från Stockholm via Norrtälje, och busslinje 631 går från Norrtälje. Vi har vår bas i Norrtälje.",
     extraContent:
       "",
     primaryKeyword: "takläggare Kapellskär",
@@ -2409,20 +2409,21 @@ export const locations: LocationData[] = [
     region: "Stockholms stad",
     isIsland: false,
     description:
-      "Takläggare i Gröndal — takbyte och takrenovering i Gröndal. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Gröndal: villor och arbetarbostäder från sekelskiftet 1900 på Ormberget och vid Gröndalsvägen. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Gröndal är en kuperad stadsdel vid Mälaren, med branta tak på stjärnhus och funkisfastigheter från 1940-talet. Vid en kostnadsfri takkontroll kontrollerar vi underlagspapp, läkt, råspont, plåtbeslag och ventilation under taket — det är där ett takbyte avgörs. Du får en skriftlig bedömning och ett fast pris innan något arbete påbörjas.",
+      "Gröndal är en stadsdel i Söderort i Stockholm, väster om [Liljeholmen](/taklaggare-liljeholmen), vid Mälaren. Till stadsdelen hör öarna Lindholmen och Rotholmen. Namnet kommer från egendomen Stora Gröndal, vars huvudbyggnad uppfördes 1781. Gården friköptes 1779 från Hägerstens gård och användes främst som sommarnöje, och på 1830-talet gick sex reguljära roddbåtsförbindelser och fyra vevslupsförbindelser hit och till Liljeholmen från centrala Stockholm. När Västra stambanan och Liljeholmens station kom på 1860-talet blev Gröndal en tidig arbetar- och fabriksförstad, med bland annat ett varv från 1873. År 1898 såldes egendomen, 41 hektar, till ett tomtbolag, och från 1904 såldes tomter i större skala. Tanken var ett mönstersamhälle med ordnad stadsplan, men enligt Wikipedia blev det en mer spontan utbyggnad längs dagens Gröndalsvägen och uppe på Ormberget. Gröndal blev en del av Stockholms stad 1913 och en egen stadsdel 1934. Det mesta av bostäderna i dag är flerbostadshus, bland dem stjärnhusen och terrasshusen från 1940- och 1950-talen. År 1913 fanns ungefär ett hundratal villor i Gröndals villastad, och i dag står bara ett fåtal kvar. En av dem är Villa Ekefrid vid Gröndalsvägen, i nationalromantisk stil från 1900, som Stadsmuseet har grönmärkt. På Ormbergets östra del, längs Utkiksbacken och Sjöbjörnsvägen, står enligt Wikipedia den enda samlade bebyggelse som finns kvar av Stockholms typiska arbetarbostäder från sekelskiftet 1900. Husen var rivningshotade på 1970-talet men räddades. I dag är de grönmärkta av Stadsmuseet och riksintresse för kulturmiljövården, och ett av dem har en lökkupol på taket som har blivit ett känt landmärke.",
     extraContent:
-      "Vi går igenom förutsättningarna i Gröndal — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Gröndal.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Gröndal?",
-      answer:
-        "Priset för ett takbyte i Gröndal beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en offert med fast pris. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Gröndal?","answer":"Byggperiod enligt källorna: villor och arbetarbostäder 1900–1907, flerbostadshus från 1910 och framåt. Hustyper: mest flerbostadshus, ett fåtal villor och arbetarbostäder från sekelskiftet 1900. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Gröndal",
     lat: 59.3131,
     lng: 18.0006,
-    nearbyLocations: ["Liljeholmen", "Hägersten", "Bromma"],
+    nearbyLocations: ["Liljeholmen","Hägersten","Bromma"],
+    factBox: [{"label":"Kommun","value":"Stockholm (Hägersten-Liljeholmen)"},{"label":"Hustyper","value":"Mest flerbostadshus, ett fåtal villor och arbetarbostäder från sekelskiftet 1900"},{"label":"Byggperiod","value":"Villor och arbetarbostäder 1900–1907, flerbostadshus från 1910 och framåt"},{"label":"Skydd","value":"Ormberget riksintresse för kulturmiljövården, grönmärkta hus"}],
+    sourceLink: {"label":"Wikipedia, Gröndal","url":"https://sv.wikipedia.org/wiki/Gröndal"},
+    h1Override: "Takläggare i Gröndal, Stockholm",
+    extraSections: [{"heading":"Vad det betyder för taket","text":"De bevarade villorna och arbetarbostäderna i Gröndal är från åren 1900–1907 och i dag omkring 120 år gamla. Husens ålder säger inte hur gammalt taket är. På så gamla hus kan taket ha lagts om en eller flera gånger, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats. Husen på Ormberget och Villa Ekefrid är grönmärkta, och Ormberget är riksintresse för kulturmiljövården. Där är det extra viktigt att fråga byggnadsnämnden innan du väljer material eller kulör. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."},{"heading":"Det här gör vi i Gröndal","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag i Gröndal och resten av Stockholm. Mer om takbytet finns på sidan om takbyte i Stockholm, om grannstadsdelen på sidan om Hägersten och om kommunen på sidan om takläggare i Stockholm."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Gröndal och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "aspudden",
@@ -2872,20 +2873,20 @@ export const locations: LocationData[] = [
     region: "Västerort",
     isIsland: false,
     description:
-      "Takläggare i Kista — takbyte och takrenovering i Kista. Kostnadsfri takkontroll och fast pris innan arbetet startar.",
+      "Takläggare i Kista: stadsdelen på Järvafältet där 771 småhus började byggas 1975. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
-      "Kista är kontors- och bostadsstadsdel i nordvästra Stockholm. Bebyggelsen består till stor del av flacka tak på kontorsfastigheter och flerbostadshus. Vi utför takbyte, takrenovering och takomläggning i Kista med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en offert med fast pris.",
+      "Den som söker takläggare i Kista kan ha ett av de radhus eller småhus som byggdes när stadsdelen kom till på 1970-talet. Kista är en stadsdel i Västerort i Stockholms kommun. Den gränsar till Akalla, Husby och Rinkeby och till Sollentuna och Sundbybergs kommuner, och i söder ingår området Ärvinge. Namnet kommer från en gård. Den hette tidigare Norgården och hörde till byn Ärvinge, och enligt Wikipedia började den kallas Kista i början av 1700-talet. Av gårdens bebyggelse finns bland annat en huvudbyggnad från 1852, en flygel från 1893 och en källare från 1760 kvar. År 2012 anlades en park kring gården. Det moderna Kista är betydligt yngre. Stadsdelen bildades 1971 och ingick, tillsammans med Akalla och Husby, i generalplanen för norra Järvafältet från 1969. Enligt Wikipedia var Kista den sista stadsdelen som byggdes på Järvafältet. År 1975 började bostäderna uppföras, och Stockholms stads småstugebyrå lät då bygga 771 småhus. Kista centrum invigdes 1977, och bostadsområdet i västra Kista stod färdigt 1980. Arbetsplatsområdena i öster började byggas i mitten av 1970-talet och växte mest under 1980-talet. Alla gator i Kista har namn efter platser i Danmark, på Färöarna, Island och Grönland.",
     extraContent:
-      "Vi går igenom förutsättningarna i Kista — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Kista.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Kista?",
-      answer:
-        "Priset för ett takbyte i Kista beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Efter takkontrollen får du en offert med fast pris. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Kista?","answer":"Byggperiod enligt källorna: småhusen från 1975, västra Kista färdigt 1980. Hustyper: småhus, flerbostadshus. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Kista",
     lat: 59.4033,
     lng: 17.9444,
-    nearbyLocations: ["Akalla", "Spånga", "Helenelund"],
+    nearbyLocations: ["Akalla","Spånga","Helenelund"],
+    factBox: [{"label":"Kommun","value":"Stockholm (Järva)"},{"label":"Delar","value":"Kista, Ärvinge"},{"label":"Hustyper","value":"Småhus, flerbostadshus"},{"label":"Byggperiod","value":"Småhusen från 1975, västra Kista färdigt 1980"}],
+    sourceLink: {"label":"Wikipedia, Kista","url":"https://sv.wikipedia.org/wiki/Kista"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Småhusen i Kista är alltså omkring femtio år gamla. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats. Två saker är värda att tänka på. I ett område där många hus byggdes under samma år ser taken lika ut från gatan, men de har skötts var för sig. Ett hus kan ha fått nytt tak, ett annat nya plåtdetaljer eller hängrännor, och ett tredje kan ha allt kvar sedan huset var nytt. Därför säger grannens tak inte mycket om ditt eget. Vi tar takjobb på radhus, kedjehus och villor. Och i ett område som är planerat i ett sammanhang kan det finnas gemensamma bestämmelser om hur husen får se ut. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Kista. Mer om kommunen finns på sidan om [Stockholm](/taklaggare-stockholm), och om en annan del av Västerort på sidan om [Spånga](/taklaggare-spanga). För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Kista och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "akalla",
@@ -3067,20 +3068,20 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Hemmesta — takbyte och takrenovering i Hemmesta. Fast pris och 10 års utförandegaranti.",
+      "Takläggare i Hemmesta på Värmdö: en ort som har vuxit i omgångar sedan 1960-talet. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
-      "Hemmesta är tätort i centrala Värmdö. Bebyggelsen består till stor del av villaområden och radhus. Vi utför takbyte, takrenovering och takomläggning i Hemmesta med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en offert med fast pris.",
+      "Den som söker takläggare i Hemmesta har ett hus i en ort som har vuxit i flera omgångar sedan 1960-talet. Hemmesta ligger i Värmdö kommun, på västra sidan av Värmdölandet. Enligt Wikipedia hör orten sedan 2015 till tätorten Gustavsberg, kommunens centralort, och ligger i dess östra del. Platsen är gammal. Ortnamnet antas enligt Wikipedia ha uppstått under det första årtusendet efter Kristus. Vid Hemmesta vägskäl gick under vikingatiden en vattenled mellan Torsbyfjärden och Breviken, och runt vägskälet finns flera forntida gravfält. Väster och öster om vägskälet ligger Hemmestaträsket och Hemmesta sjöäng, våtmarker som regleras för att vara rekreationsområde och passa fåglar och fisk. Som tätort är Hemmesta däremot ung. Orten räknades som tätort första gången 1965 och hade då 548 invånare. År 1990 bodde 2 976 personer här, 2005 var de 4 577 och 2010 var de 5 240. Under tiden växte Hemmesta ihop med grannarna: med Fruvik 1990, med Hagaberg 2005 och med Gustavsberg 2015. I den södra delen ligger Vik, som i folkräkningen 1950 räknades som en egen tätort med 543 invånare. Hemmesta ligger vid länsväg 274, fyra kilometer från motorvägen mot Stockholm. Norrut leder vägen via färja till Rindö och Vaxholm. I ortens centrum finns butiker, restauranger och bibliotek.",
     extraContent:
-      "Vi går igenom förutsättningarna i Hemmesta — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Efter takkontrollen får du en specificerad offert där material, arbete, ställning och avfall står var för sig. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Hemmesta.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Hemmesta?",
-      answer:
-        "Priset för ett takbyte i Hemmesta beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"Vad kostar det att byta tak i Hemmesta?","answer":"Priset för ett takbyte i Hemmesta beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak)."},
     primaryKeyword: "takläggare Hemmesta",
     lat: 59.3175,
     lng: 18.5194,
-    nearbyLocations: ["Värmdö", "Gustavsberg", "Ingarö"],
+    nearbyLocations: ["Värmdö","Gustavsberg","Ingarö"],
+    factBox: [{"label":"Kommun","value":"Värmdö"},{"label":"Läge","value":"Västra sidan av Värmdölandet, östra delen av Gustavsbergs tätort"},{"label":"Tätort","value":"Från 1965, del av Gustavsberg sedan 2015"},{"label":"Invånare","value":"548 (1965), 2 976 (1990), 5 240 (2010)"}],
+    sourceLink: {"label":"Wikipedia, Hemmesta","url":"https://sv.wikipedia.org/wiki/Hemmesta"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Hemmesta har alltså byggts ut under mer än ett halvt sekel, och invånarantalet nästan fördubblades mellan 1990 och 2010. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats. Två saker är värda att tänka på. I en ort som har vuxit i omgångar står hus från olika årtionden nära varandra, så grannens tak säger inte mycket om ditt eget. Och ett hus som har byggts om och till kan ha takdelar av olika ålder, där skarven mellan dem är värd en extra titt. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Hemmesta. Mer om kommunen finns på sidan om [Värmdö](/taklaggare-varmdo), och om grannorten på sidan om [Gustavsberg](/taklaggare-gustavsberg). För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Hemmesta och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "trollbacken",
@@ -3151,20 +3152,20 @@ export const locations: LocationData[] = [
     region: "Sydöstra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Jordbro — takbyte och takrenovering i Jordbro. Erfarna takläggare, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Jordbro: kommundelen i Haninge med småhus byggda huvudsakligen på 1960- och 1970-talen. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Vi lägger tak i Jordbro, södra Haninge, där radhus och flerbostadshus från 1970-talet dominerar. Äldre tak i området har ofta samma problem under pannorna: sliten papp, uttorkade tätningar och beslag som börjat rosta. Vi byter det som behöver bytas, säkerställer rätt ventilation och lämnar 10 års utförandegaranti på arbetet.",
+      "Den som söker takläggare i Jordbro kan ha ett av de radhus, kedjehus eller småhus som byggdes när kommundelen växte fram på 1960- och 1970-talen. Jordbro ligger i Haninge kommun på Södertörn, mellan Handen och Västerhaninge. Wikipedia beskriver det som ett samhälle av småstadskaraktär, uppbyggt kring Jordbro centrum och med gångavstånd till pendeltåget, där flerbostadshus kombineras med småhus. Jordbro är ett gammalt torpnamn. Det står som Jolbro på en karta från 1720, och på 1700-talet fanns också en krog med samma namn vid landsvägen mellan Västerhaninge och Stockholm. Den fanns kvar till 1856. När Nynäsbanan drogs fram kring sekelskiftet 1900 delade den torpets mark i en östlig och en västlig del, och 1901 öppnade en hållplats här. Det moderna Jordbro kom till på östra sidan av järnvägen. Stadsplanen gjordes 1961 och fastställdes i september 1962, och byggarbetena började 1963. Tanken var enligt Wikipedia en lugn småstad, där trevåningshus skulle varvas med småhus och med parkstråk emellan. Merparten av bostäderna byggdes under 1960- och 1970-talen. Jordbro kyrka är från 1971, pendeltågstrafiken startade 1973, och motorvägen öster om samhället invigdes 1975. Väster om järnvägen ligger Jordbro industriområde, som planlades från början av 1970-talet.",
     extraContent:
-      "Vi går igenom förutsättningarna i Jordbro — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Du får ett fast pris som är räknat på ditt tak — inte ett uppskattat spann. Bor du granne med någon som också ska byta tak går det ofta att samordna arbetena och sänka etableringskostnaden. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Jordbro.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Jordbro?",
-      answer:
-        "Priset för ett takbyte i Jordbro beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Jordbro?","answer":"Byggperiod enligt källorna: huvudsakligen 1960- och 1970-talen (byggstart 1963). Hustyper: flerbostadshus och småhus. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Jordbro",
     lat: 59.1381,
     lng: 18.1272,
-    nearbyLocations: ["Handen", "Västerhaninge", "Haninge"],
+    nearbyLocations: ["Handen","Västerhaninge","Haninge"],
+    factBox: [{"label":"Kommun","value":"Haninge"},{"label":"Delar","value":"Bostadsområdet öster om järnvägen, industriområdet väster om den"},{"label":"Hustyper","value":"Flerbostadshus och småhus"},{"label":"Byggperiod","value":"Huvudsakligen 1960- och 1970-talen (byggstart 1963)"}],
+    sourceLink: {"label":"Wikipedia, Jordbro","url":"https://sv.wikipedia.org/wiki/Jordbro"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Småhusen i Jordbro är alltså till stor del mellan 45 och 65 år gamla. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats. Jordbro byggdes på kort tid, och husen på en gata kan vara jämngamla. Det betyder inte att taken är det. Under femtio år har vissa ägare bytt tak, andra har bytt delar av det, och på några hus ligger det första taket kvar. Hur det ser ut hos grannen visar därför inte vad ditt eget hus behöver, och den som vill byta tak samtidigt som en granne behöver ändå en egen bedömning. Vi tar takjobb på radhus, kedjehus och villor. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Jordbro. Mer om kommunen finns på sidan om [Haninge](/taklaggare-haninge), och om grannorten på sidan om [Västerhaninge](/taklaggare-vasterhaninge). För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Jordbro och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "vasterhaninge",
@@ -3459,20 +3460,21 @@ export const locations: LocationData[] = [
     region: "Sydvästra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Alby — takbyte och takrenovering i Alby. Kostnadsfri takkontroll, fast pris och 10 års utförandegaranti.",
+      "Takläggare i Alby i Botkyrka: takbyte och takomläggning på radhus och småhus. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
     longDescription:
-      "Alby är del av norra Botkyrka. Bebyggelsen består till stor del av flerbostadshus från 1970-talet med stora takytor. Vi utför takbyte, takrenovering och takomläggning i Alby med material anpassat efter husets ålder, taklutning och stil — allt från dubbelfalsad plåt och TP20 till tegel och betongpannor. Vi börjar alltid med en kostnadsfri takkontroll på plats och en offert med fast pris.",
+      "Alby är en kommundel i Botkyrka och en del av Stockholms tätort. Enligt Wikipedia bor de flesta i någon av de omkring 3 000 lägenheterna, men i Alby och kring Alby gård finns också radhus. Tunnelbanestationen invigdes den 12 januari 1975 och ligger mellan [Fittja](/taklaggare-fittja) och Hallunda. Platsen är mycket gammal. Under stenåldern var trakten ett skärgårdslandskap, och Albykistan, en hällkista från omkring 1800 f.Kr., är en av bara sju kända hällkistor i Stockholms län. Alby är enligt Wikipedia också den hittills enda kända boplatsen från bronsålderns andra period i Mälardalen. Under medeltiden gick Göta landsväg genom området, och vid avfarten till Eriksbergs industriområde står en stenvalvsbro från landsvägen kvar, bevarad som kulturminne. Nedanför Albyberget låg Svartlötens tingsplats, där man höll ting redan när Stockholm grundades i mitten av 1200-talet. Alby gård har anor från medeltiden. Säteriet är byggt i empirestil och fick sin slutliga utformning efter 1895, och sedan 1947 ägs gården av Botkyrka kommun. Alby blev tätort 1970, med 378 invånare, och växte ihop med Stockholm inför tätortsavgränsningen 1975.",
     extraContent:
-      "Vi går igenom förutsättningarna i Alby — hur tomterna ser ut, hur ställning och kranbil kan placeras och vilket material som passar huset. Det gör att offerten bygger på vad vi faktiskt sett på ditt tak, inte på schablonpriser. Vi kan samordna flera takbyten i samma område och dela kostnaden för ställning och etablering. Ring 070-154 36 39 eller boka online, så gör vi en kostnadsfri takkontroll i Alby.",
-    uniqueFAQ: {
-      question: "Vad kostar det att byta tak i Alby?",
-      answer:
-        "Priset för ett takbyte i Alby beror på material, taklutning, antal genomföringar och skicket på underliggande konstruktion. Som riktpris, efter ROT-avdrag och inkl. moms, ligger ett takbyte mellan 1 200 kr/m² (betongpannor, TP20-plåt) och ca 2 000 kr/m² (dubbelfalsat plåttak).",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Alby?","answer":"Byggperiod enligt källorna: 1970- och 2000-tal, kring Alby gård 1920- och 1970-tal. Hustyper: radhus och flerbostadshus (de flesta bor i lägenhet). Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Alby",
     lat: 59.24,
     lng: 17.8531,
-    nearbyLocations: ["Fittja", "Norsborg", "Botkyrka"],
+    nearbyLocations: ["Fittja","Norsborg","Botkyrka"],
+    factBox: [{"label":"Kommun","value":"Botkyrka"},{"label":"Hustyper","value":"Radhus och flerbostadshus (de flesta bor i lägenhet)"},{"label":"Byggperiod","value":"1970- och 2000-tal, kring Alby gård 1920- och 1970-tal"}],
+    sourceLink: {"label":"Wikipedia, Alby, Botkyrka kommun","url":"https://sv.wikipedia.org/wiki/Alby,_Botkyrka_kommun"},
+    h1Override: "Takläggare i Alby, Botkyrka",
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Enligt hitta.se är husen i Alby främst byggda på 1970- och 2000-talen och kring Alby gård på 1920- och 1970-talen. Radhusen från 1970-talet är i dag runt 50 år gamla. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats. I ett kvarter där husen byggdes samtidigt ser taken lika ut från gatan, men de kan ha skötts var för sig. Vi tar takjobb på radhus, kedjehus och villor. Varje hus får en egen takkontroll och ett eget pris. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},{"heading":"Det här gör vi i Alby","text":"Vi är en takfirma med bas i Norrtälje och tar uppdrag i Alby och resten av Botkyrka. Ska du byta tak i Alby börjar vi med en kostnadsfri takkontroll utan förpliktelser. Mer om takbytet finns på sidan om takbyte i Botkyrka, och mer om kommunen på sidan om takläggare i Botkyrka."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Alby och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "fittja",
@@ -3611,20 +3613,20 @@ export const locations: LocationData[] = [
     region: "Mälardalen",
     isIsland: false,
     description:
-      "Takläggare i Bålsta — takbyte och takrenovering i Håbo. Fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.",
+      "Takläggare i Bålsta: stationssamhället som blev villasamhälle och växte kraftigt från 1960-talet. Kostnadsfri takkontroll och fast pris i offerten.",
     longDescription:
-      "Bålsta är centralort i Håbo kommun vid Mälaren, med villaområden, radhus och flerbostadshus från olika decennier. Närheten till vatten och skog innebär fukt, mossa på nordsidor och löv som samlas i rännor och bakom skorstenar. Vi tar uppdrag i Bålsta med takbyte, takrenovering, takavvattning och taktvätt, för både villaägare och bostadsrättsföreningar.",
+      "Den som söker takläggare i Bålsta har ett hus i en ort som började som stationssamhälle, blev villasamhälle och sedan växte kraftigt under några få årtionden. Bålsta är centralort i Håbo kommun i Uppsala län. Enligt Wikipedia ligger orten vid motorvägen E18 och Mälarbanan, nära Mälaren, ungefär 50 kilometer söder om Uppsala och 50 kilometer nordväst om Stockholm. Bålsta var från början en by, och namnet nämns första gången 1316. Under 1800-talet blev platsen något av en centralort, med gästgivargård och tingsställe. År 1876 öppnade järnvägen genom Bålsta, och byn blev ett stationssamhälle. Utvecklingen gick enligt Wikipedia ganska långsamt de följande årtiondena. På 1920-talet växte butiker och andra verksamheter upp kring stationen, men 1931 hade Bålsta ännu bara 346 invånare. Det var då orten började utvecklas till ett villasamhälle. På 1950-talet kom de första större flerfamiljshusen, och 1960 hade invånarantalet stigit till 1 406. Den stora förändringen kom därefter: från mitten av 1960-talet fram till 1980-talet växte tätorten kraftigt. Industrin byggdes ut, men Wikipedia pekar framför allt på möjligheten att pendla till Stockholmsområdet som grunden för tillväxten. Den gamla stationen låg i den äldre delen av Bålsta, omkring 1 500 meter väster om dagens. Persontrafiken där lades ner 1972, och 1996 invigdes en ny station nära Bålsta centrum. Sedan 2001 är Bålsta ändstation för pendeltågen.",
     extraContent:
-      "Vid takkontrollen börjar vi i takfot, rännor och genomföringar, eftersom det är där fukt och läckage oftast visar sig först. Är taket i gott skick räcker det ibland med renovering eller taktvätt, och det säger vi som det är. Behövs ett takbyte lämnar vi ett fast pris med specificerade moment.",
-    uniqueFAQ: {
-      question: "Vilka takproblem är vanligast i Bålsta?",
-      answer:
-        "I Bålsta med omnejd är mossa och alger på skuggiga takytor, löv i rännor och slitna beslag runt skorstenar vanligast. Vi bedömer vid en kostnadsfri takkontroll om det räcker med renovering eller taktvätt eller om taket behöver bytas.",
-    },
+      "",
+    uniqueFAQ: {"question":"När byggdes husen i Bålsta?","answer":"Byggperiod enligt källorna: villasamhälle från 1930-talet, kraftig tillväxt från mitten av 1960-talet till 1980-talet. Hustyper: villasamhälle från 1930-talet, flerfamiljshus från 1950-talet. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Bålsta",
     lat: 59.5689,
     lng: 17.5275,
-    nearbyLocations: ["Upplands-Bro", "Kungsängen", "Enköping"],
+    nearbyLocations: ["Upplands-Bro","Kungsängen","Enköping"],
+    factBox: [{"label":"Kommun","value":"Håbo (Uppsala län)"},{"label":"Läge","value":"Vid E18 och Mälarbanan, ca 50 km från både Uppsala och Stockholm"},{"label":"Hustyper","value":"Villasamhälle från 1930-talet, flerfamiljshus från 1950-talet"},{"label":"Byggperiod","value":"Villasamhälle från 1930-talet, kraftig tillväxt från mitten av 1960-talet till 1980-talet"},{"label":"Invånare","value":"346 (1931), 1 406 (1960)"}],
+    sourceLink: {"label":"Wikipedia, Bålsta","url":"https://sv.wikipedia.org/wiki/Bålsta"},
+    extraSections: [{"heading":"Vad det betyder för taket","text":"Bålsta har alltså vuxit från ett litet villasamhälle på 1930-talet till en tätort som byggdes ut kraftigt från mitten av 1960-talet. Husens ålder säger inte hur gammalt taket är. Ett tak kan ha lagts om, och hur underlaget ser ut i dag går inte att se från gatan. Därför börjar vi med en takkontroll, där en av våra säljare tittar på taket på plats. Två saker är värda att tänka på. I en ort som har vuxit fort under några årtionden byggdes många hus ungefär samtidigt. Där ser taken lika ut från gatan, men de har skötts och lagts om var för sig, så grannens tak säger inte mycket om ditt eget. Och ett hus som har byggts om och till kan ha takdelar av olika ålder, där skarven mellan dem är värd en extra titt. Vi är en takfirma med bas i Norrtälje och tar uppdrag i Bålsta. Mer om länets residensstad finns på sidan om [Uppsala](/taklaggare-uppsala), och fler orter på sidan [Mälardalen](/omraden/malardalen). För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker. Varje hus får en egen takkontroll och ett eget pris."}],
+    process: {"steps":["**Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.","**Fast pris** i offerten.","**Utförande enligt AMA.**"],"paragraphs":["Vi lämnar 10 års utförandegaranti på det arbete vi utför. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.","Bor du i Bålsta och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."]},
   },
   {
     slug: "enkoping",

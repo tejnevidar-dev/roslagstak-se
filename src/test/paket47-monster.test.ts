@@ -74,14 +74,15 @@ describe("paket 47: Edsbro och Kapellskär (kortade texter)", () => {
   it("Edsbro: en kort ortsbeskrivning och standardblocket, utan bruket, pråmarna, fornborgarna och uthusmeningen", () => {
     const t = text("edsbro");
     expect(t).toContain("här tillverkades råjärn från 1686 till 1919, och ruinerna efter masugnen och klensmedjan är välbevarade. Kyrkan är från 1200-talet.");
-    for (const borta of ["Närdingen", "Lundboborg", "fornborgar", "uthus och bodar", "grannens tak", "byggts till har ofta takdelar"]) expect(t, borta).not.toContain(borta);
+    // gren 183 (briefrundan 2026-10-22): namnet, bruket och fornborgen kommer tillbaka i kortare form (Närdingen, Lundboborg, fornborgar tas därför inte längre med här)
+    for (const borta of ["uthus och bodar", "grannens tak", "byggts till har ofta takdelar"]) expect(t, borta).not.toContain(borta);
     expect(t).toContain("Vilka garantier som gäller för ditt tak står i offerten.");
     expect(ort("edsbro").factBox).toEqual([{ label: "Kommun", value: "Norrtälje" }]);
   });
   it("Kapellskär: en kort ortsbeskrivning, faktarutan utan Förbindelse, och slutfrågan 'Har du hus i Kapellskär'", () => {
     const t = text("kapellskar");
     expect(t).toContain("Kapellskär är en udde längst ut på Rådmansö i Norrtälje kommun, omkring 90 kilometer nordost om Stockholm.");
-    for (const borta of ["De flesta känner platsen som färjehamn", "andra änden av halvön", "gästgiveri", "Riddersholm", "Långön", "Ett fritidshus som står tomt", "väg hela vägen", "Källorna beskriver hamnen"]) expect(t, borta).not.toContain(borta);
+    for (const borta of ["De flesta känner platsen som färjehamn", "andra änden av halvön", "Riddersholm", "Ett fritidshus som står tomt", "väg hela vägen", "Källorna beskriver hamnen"]) expect(t, borta).not.toContain(borta);
     expect(ort("kapellskar").factBox!.map((f) => f.label)).toEqual(["Kommun", "Läge"]);
     expect(t).toContain("Har du hus i Kapellskär eller på yttersta Rådmansö och funderar på taket?");
   });

@@ -1,5 +1,5 @@
 /**
- * Gren 180 (#13): egna FAQ-svar på 206 ortssidor (steg 1–22 i innehall/faq-egna-2026-10-22.md, godkända av Marknadschefen). De tre egna frågorna ersätter mallens tre
+ * Gren 180 (#13): egna FAQ-svar på 212 ortssidor (steg 1–22 i innehall/faq-egna-2026-10-22.md, godkända av Marknadschefen). De tre egna frågorna ersätter mallens tre
  * om tidsåtgång, takmaterial och "byta eller renovera"; pris, garanti, ROT, bokning och eternit står kvar. Svaren står i serverns HTML och i FAQPage.
  */
 import { describe, expect, it } from "vitest";
@@ -16,8 +16,8 @@ const sida = (slug: string) => prerenderContent(`/taklaggare-${slug}`)!;
 const ld = (slug: string) => (sida(slug).jsonLd as { "@type"?: string; mainEntity?: { name: string; acceptedAnswer?: { text: string } }[] }[]).find((n) => n["@type"] === "FAQPage");
 
 describe("gren 180: egna FAQ-svar per ortssida", () => {
-  it("206 sidor, tre frågor var, alla på sidor som finns och är indexerbara, inga dubbletter och inga tomma svar", () => {
-    expect(slugs.length).toBe(206);
+  it("212 sidor, tre frågor var, alla på sidor som finns och är indexerbara, inga dubbletter och inga tomma svar", () => {
+    expect(slugs.length).toBe(212); // 206 (steg 1–22 utom Trosa och Nyköping) + 6 (steg 23, gren 183)
     // gren 180b: Trosa och Nyköping ligger utanför Vidars område och behåller mallens frågor (Marknadschefen 2026-10-22 00:54)
     expect(slugs).not.toContain("trosa");
     expect(slugs).not.toContain("nykoping");

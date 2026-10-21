@@ -1039,6 +1039,36 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "När blev Vårberg en del av Stockholm?", answer: "Stadsdelen fick sitt namn 1961 och fördes till Stockholm 1963. Ännu i början av 1960-talet var Vårberg landsbygd i utkanten av staden." },
     { question: "Hur planerades Vårberg?", answer: "Mellan 1965 och 1968 gjordes fjorton stadsplaner för lika många delområden. Eftersom terrängen är starkt kuperad lades höga hus på höjderna och lägre hus längre ner." },
   ],
+  "alby": [
+    { question: "Vad är Albykistan?", answer: "Albykistan är en rekonstruerad hällkista från omkring 1800 f.Kr., nära Eriksbergs industriområde. Enligt Wikipedia finns bara sju kända hällkistor i Stockholms län." },
+    { question: "Vad var Svartlötens tingsplats?", answer: "Nedanför Albyberget låg Svartlötens tingsplats, där man höll ting redan när Stockholm grundades i mitten av 1200-talet. Platsen gav namn åt Svartlösa härad." },
+    { question: "När blev Alby tätort?", answer: "Alby blev tätort 1970, med 378 invånare, och växte ihop med Stockholm inför tätortsavgränsningen 1975. Tunnelbanestationen invigdes den 12 januari 1975." },
+  ],
+  "grondal": [
+    { question: "Var kommer namnet Gröndal ifrån?", answer: "Stadsdelen har fått sitt namn efter egendomen Stora Gröndal, vars huvudbyggnad uppfördes 1781. Gården friköptes 1779 och användes främst som sommarnöje." },
+    { question: "Finns villastaden i Gröndal kvar?", answer: "Bara delvis. År 1913 fanns ungefär ett hundratal villor i Gröndals villastad, och i dag står ett fåtal kvar, bland dem Villa Ekefrid från 1900, som Stadsmuseet har grönmärkt." },
+    { question: "Vad är husen på Ormberget?", answer: "På Ormbergets östra del, längs Utkiksbacken och Sjöbjörnsvägen, står enligt Wikipedia den enda samlade bebyggelse som finns kvar av Stockholms typiska arbetarbostäder från sekelskiftet 1900. Husen är grönmärkta och riksintresse för kulturmiljövården." },
+  ],
+  "kista": [
+    { question: "Var kommer namnet Kista ifrån?", answer: "Namnet kommer från en gård som tidigare hette Norgården och hörde till byn Ärvinge. Enligt Wikipedia började den kallas Kista i början av 1700-talet, och huvudbyggnaden från 1852 står kvar." },
+    { question: "Hur många småhus byggdes i Kista?", answer: "År 1975 började bostäderna uppföras, och Stockholms stads småstugebyrå lät då bygga 771 småhus. Bostadsområdet i västra Kista stod färdigt 1980." },
+    { question: "Vilka gatunamn finns i Kista?", answer: "Alla gator i Kista har namn efter platser i Danmark, på Färöarna, Island och Grönland." },
+  ],
+  "jordbro": [
+    { question: "Var kommer namnet Jordbro ifrån?", answer: "Jordbro är ett gammalt torpnamn. Det står som Jolbro på en karta från 1720, och på 1700-talet fanns en krog med samma namn vid landsvägen mellan Västerhaninge och Stockholm." },
+    { question: "Hur planerades Jordbro?", answer: "Stadsplanen gjordes 1961 och fastställdes i september 1962. Tanken var enligt Wikipedia en lugn småstad, där trevåningshus skulle varvas med småhus och med parkstråk emellan." },
+    { question: "När kom pendeltåget till Jordbro?", answer: "En hållplats öppnade redan 1901, när Nynäsbanan drogs fram. Pendeltågstrafiken startade 1973." },
+  ],
+  "hemmesta": [
+    { question: "Hur gammalt är namnet Hemmesta?", answer: "Ortnamnet antas enligt Wikipedia ha uppstått under det första årtusendet efter Kristus. Runt Hemmesta vägskäl finns flera forntida gravfält." },
+    { question: "Hur snabbt har Hemmesta växt?", answer: "Hemmesta räknades som tätort första gången 1965 och hade då 548 invånare. År 1990 bodde 2 976 personer här och 2010 var de 5 240." },
+    { question: "Vad är Hemmestaträsket?", answer: "Väster och öster om vägskälet ligger Hemmestaträsket och Hemmesta sjöäng, våtmarker som regleras för att vara rekreationsområde och passa fåglar och fisk." },
+  ],
+  "balsta": [
+    { question: "Hur gammalt är Bålsta?", answer: "Bålsta var från början en by, och namnet nämns första gången 1316. Under 1800-talet hade platsen gästgivargård och tingsställe." },
+    { question: "När blev Bålsta ett villasamhälle?", answer: "År 1931 hade Bålsta bara 346 invånare, och det var då orten började utvecklas till ett villasamhälle. Från mitten av 1960-talet fram till 1980-talet växte tätorten kraftigt." },
+    { question: "Var låg Bålstas gamla station?", answer: "Den gamla stationen låg i den äldre delen av Bålsta, omkring 1 500 meter väster om dagens. Persontrafiken där lades ner 1972, och 1996 invigdes en ny station nära centrum." },
+  ],
 };
 
 export const egnaFaqFor = (slug: string): readonly EgenFAQ[] | undefined => EGNA_FAQ[slug];

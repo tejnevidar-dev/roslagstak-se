@@ -1029,4 +1029,34 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare i Skärholmen, Sätra, Bredäng och Vårberg: takbyte och takomläggning på radhus, kedjehus och villor. Kostnadsfri takkontroll och fast pris.",
   },
+  kista: {
+    title: "Takläggare i Kista – fast pris efter takkontroll",
+    description:
+      "Takläggare i Kista: stadsdelen på Järvafältet där 771 småhus började byggas 1975. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  jordbro: {
+    title: "Takläggare i Jordbro – fast pris efter takkontroll",
+    description:
+      "Takläggare i Jordbro: kommundelen i Haninge med småhus byggda huvudsakligen på 1960- och 1970-talen. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  hemmesta: {
+    title: "Takläggare i Hemmesta – fast pris efter takkontroll",
+    description:
+      "Takläggare i Hemmesta på Värmdö: en ort som har vuxit i omgångar sedan 1960-talet. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  balsta: {
+    title: "Takläggare i Bålsta – fast pris efter takkontroll",
+    description:
+      "Takläggare i Bålsta: stationssamhället som blev villasamhälle och växte kraftigt från 1960-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  alby: {
+    title: "Takläggare i Alby, Botkyrka – fast pris efter takkontroll",
+    description:
+      "Takläggare i Alby i Botkyrka: takbyte och takomläggning på radhus och småhus. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  grondal: {
+    title: "Takläggare i Gröndal – fast pris efter takkontroll",
+    description:
+      "Takläggare i Gröndal: villor och arbetarbostäder från sekelskiftet 1900 på Ormberget och vid Gröndalsvägen. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
 };

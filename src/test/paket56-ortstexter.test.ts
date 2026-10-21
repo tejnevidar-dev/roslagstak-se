@@ -79,7 +79,8 @@ describe("paket 56: ortstexterna Västerås, Nyköping och Trosa", () => {
   });
   it("de övriga orterna i Mälardalen är oförändrade (Enköping, Bålsta, Uppsala, Knivsta)", () => {
     expect(ort("enkoping").uniqueFAQ?.question).toBe("Hur går en takkontroll till i Enköping?");
-    expect(ort("balsta").uniqueFAQ?.question).toBe("Vilka takproblem är vanligast i Bålsta?");
+    // gren 183: Bålsta har fått sin ortstext (briefrundan 2026-10-22), och därmed sidans egen fråga om husen
+    expect(ort("balsta").uniqueFAQ?.question).toBe("När byggdes husen i Bålsta?");
     expect(ort("uppsala").uniqueFAQ?.question).toBe("När byggdes husen i Uppsala?");
     expect(ort("knivsta").uniqueFAQ?.question).toBe("När byggdes husen i Knivsta?");
   });
