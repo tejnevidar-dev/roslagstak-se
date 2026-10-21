@@ -50,3 +50,13 @@ describe("paket 161: avsnitten på Viksjö och Bo Rudboda", () => {
     expect(b).toContain("Östra Rudboda, Yttringe och Elfvik");
   });
 });
+
+describe("gren 161b: länk från de fem radhussidorna till radhusguiden", () => {
+  it("varje sida har meningen med länken i 'Vad det betyder för taket', och länken finns i serverns länklista", () => {
+    for (const slug of Object.keys(NYA)) {
+      const l = locations.find((x) => x.slug === slug)!;
+      expect(l.extraSections.find((s) => s.heading === "Vad det betyder för taket")?.text, slug).toContain("Mer om takbyte på radhus finns i guiden [byta tak på radhus](/blogg/byta-tak-radhus-guide).");
+      expect(prerenderContent(`/taklaggare-${slug}`)!.links.map((x) => x.href), slug).toContain("/blogg/byta-tak-radhus-guide");
+    }
+  });
+});

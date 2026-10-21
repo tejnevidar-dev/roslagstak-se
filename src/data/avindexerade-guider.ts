@@ -7,7 +7,6 @@
 export const AVINDEXERADE_GUIDER: readonly string[] = [
   "takmalning-betongpannor",
   "tak-pa-carport-hallbart",
-  "byta-tak-radhus-guide",
   "platta-tak-lackage-avrinning",
   "epdm-gummiduk-tak-tatskikt",
   "snorasskydd-tak-krav-placering-pris",
