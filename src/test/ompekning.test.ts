@@ -20,7 +20,10 @@ const regler = readFileSync(resolve(rot, "public/_redirects"), "utf8")
     return { kalla, mal, status };
   });
 const splat = regler.filter((r) => r.kalla.endsWith("*"));
-const exakta = regler.filter((r) => !r.kalla.endsWith("*"));
+/** Tjänstesidor utan innehåll som ompekas med en exakt rad (gren 167, M1): källan svarar 404 i dag och står inte i sajtkartan. */
+const TJANSTESIDOR_UTAN_INNEHALL = ["/tjanster/takbyte"];
+const exaktaAlla = regler.filter((r) => !r.kalla.endsWith("*"));
+const exakta = exaktaAlla.filter((r) => !TJANSTESIDOR_UTAN_INNEHALL.includes(r.kalla));
 const sitemap = readFileSync(resolve(rot, "public/sitemap.xml"), "utf8");
 const sitemapVagar = [...sitemap.matchAll(/<loc>https:\/\/roslagstak\.se([^<]*)<\/loc>/g)].map((m) => m[1] || "/");
 
@@ -45,6 +48,7 @@ describe("ompekningsreglerna", () => {
     }
     for (const r of splat) expect(r.kalla, r.kalla).toMatch(/^\/[a-z0-9-]+-\*$/);
     for (const r of exakta) expect(r.kalla, r.kalla).toMatch(/^\/[a-z0-9-]+$/);
+    for (const r of exaktaAlla.filter((x) => TJANSTESIDOR_UTAN_INNEHALL.includes(x.kalla))) expect(r.kalla, r.kalla).toMatch(/^\/tjanster\/[a-z0-9-]+$/);
   });
 
   it("varje splat-källa är en tunn tjänst × ort-sida (noindex) utanför sajtkartan, och minst 200 adresser träffas per regel", () => {
@@ -70,9 +74,18 @@ describe("ompekningsreglerna", () => {
     }
   });
 
+  it("tjänstesidor utan innehåll (gren 167): /tjanster/takbyte ompekas till /tjanster/takomlaggning med en exakt rad före splat-raderna", () => {
+    const r = exaktaAlla.find((x) => x.kalla === "/tjanster/takbyte");
+    expect(r).toEqual({ kalla: "/tjanster/takbyte", mal: "/tjanster/takomlaggning", status: "301" });
+    expect(sitemapVagar).not.toContain("/tjanster/takbyte");
+    expect(sitemapVagar).toContain("/tjanster/takomlaggning");
+    const iFilen = regler.map((x) => x.kalla);
+    expect(iFilen.indexOf("/tjanster/takbyte")).toBeLessThan(iFilen.findIndex((k) => k.endsWith("*")));
+  });
+
   it("ingen sida i sajtkartan matchar en regel", () => {
     for (const r of splat) expect(sitemapVagar.filter((v) => v.startsWith(prefixet(r.kalla))), r.kalla).toEqual([]);
-    for (const r of exakta) expect(sitemapVagar, r.kalla).not.toContain(r.kalla);
+    for (const r of exaktaAlla) expect(sitemapVagar, r.kalla).not.toContain(r.kalla);
   });
 
   it("varje mål är en indexerbar sida i sajtkartan, är sin egen canonical och ompekas inte själv", () => {
@@ -80,7 +93,7 @@ describe("ompekningsreglerna", () => {
       expect(sitemapVagar, r.mal).toContain(r.mal);
       expect(canonicalPath(r.mal), r.mal).toBe(r.mal);
       expect(splat.some((x) => r.mal.startsWith(prefixet(x.kalla))), `${r.kalla} -> ${r.mal} är en kedja`).toBe(false);
-      expect(exakta.some((x) => x.kalla === r.mal), `${r.kalla} -> ${r.mal} är en kedja`).toBe(false);
+      expect(exaktaAlla.some((x) => x.kalla === r.mal), `${r.kalla} -> ${r.mal} är en kedja`).toBe(false);
     }
   });
 });

@@ -1,3 +1,7 @@
+# Tjänstesida utan innehåll (gren 167, M1, seo-analys-2026-10-21/2-live-kontroll.md): /tjanster/takbyte svarar 404 i dag och ingår inte i sajtkartan. Navet för takbyte är /tjanster/takomlaggning
+# ("Takbyte och takomläggning", COMBO_SERVICE_PAGE). Exakt rad, före splat-raderna längre ned.
+/tjanster/takbyte /tjanster/takomlaggning 301
+
 # Ompekning (gren 129, rad 21): noindex-sidor (tjänst × ort) med visningar i Google pekas om, en rad per adress, till ägarsidan enligt
 # ledning/marknad/seo-data/noindex-sidor-2026-09-18-till-2026-10-15.md. Undantag: sidor med egen text och adresser som redan täcks av splat-reglerna ovan.
 # Varje källa är en tunn tjänst × ort-sida utanför sajtkartan och varje mål en indexerbar sida (kontrolleras av src/test/ompekning.test.ts).
