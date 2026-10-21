@@ -1059,4 +1059,69 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takläggare i Gröndal: villor och arbetarbostäder från sekelskiftet 1900 på Ormberget och vid Gröndalsvägen. Kostnadsfri takkontroll och fast pris i offerten.",
   },
+  akalla: {
+    title: "Takläggare i Akalla – radhus och parhus, fast pris",
+    description:
+      "Takläggare i Akalla: takbyte och takomläggning på radhusen och parhusen från 1970-talet vid Järvafältet. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  blackeberg: {
+    title: "Takläggare i Blackeberg – fast pris efter takkontroll",
+    description:
+      "Takläggare i Blackeberg i Bromma: takbyte och takomläggning på radhus och småhus i stadsdelen från 1950-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  brandbergen: {
+    title: "Takläggare i Brandbergen – radhus, fast pris",
+    description:
+      "Takläggare i Brandbergen i Haninge: takbyte och takomläggning på radhus och kedjehus från 1970-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  fisksatra: {
+    title: "Takläggare i Fisksätra – radhus och atriumhus",
+    description:
+      "Takläggare i Fisksätra i Nacka: takbyte och takomläggning på radhusen och atriumhusen på Båthöjden och Fiskarhöjden. Kostnadsfri takkontroll och fast pris.",
+  },
+  fittja: {
+    title: "Takläggare i Fittja, Botkyrka – fast pris efter takkontroll",
+    description:
+      "Takläggare i Fittja i Botkyrka: takbyte och takomläggning på radhus vid Albysjön och Mälaren. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  handen: {
+    title: "Takläggare i Handen, Haninge – fast pris efter takkontroll",
+    description:
+      "Takläggare i Handen: takbyte och takomläggning i Haninges centralort, från Söderbymalm till Kolartorp. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  hogdalen: {
+    title: "Takläggare i Högdalen – radhus, fast pris",
+    description:
+      "Takläggare i Högdalen: takbyte och takomläggning på radhusen från 1956–1960 väster om Skebokvarnsvägen. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  hokarangen: {
+    title: "Takläggare i Hökarängen – fast pris efter takkontroll",
+    description:
+      "Takläggare i Hökarängen: takbyte och takomläggning på radhus och småhus i förorten från 1940- och 1950-talen. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  liljeholmen: {
+    title: "Takläggare i Liljeholmen – fast pris efter takkontroll",
+    description:
+      "Takläggare i Liljeholmen: takbyte och takomläggning på radhusen och stadsvillorna på Nybodaberget och i Söderort. Kostnadsfri takkontroll och fast pris.",
+  },
+  norsborg: {
+    title: "Takläggare i Norsborg – radhus och parhus, fast pris",
+    description:
+      "Takläggare i Norsborg i Botkyrka: takbyte och takomläggning på radhusen och parhusen vid Vårbyfjärden. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  nykvarn: {
+    title: "Takläggare i Nykvarn – fast pris efter takkontroll",
+    description:
+      "Takläggare i Nykvarn: takbyte och takomläggning i den gamla bruksorten vid Turingeån. Kostnadsfri takkontroll utan förpliktelser och fast pris i offerten.",
+  },
+  tensta: {
+    title: "Takläggare i Tensta – radhus, fast pris",
+    description:
+      "Takläggare i Tensta: takbyte och takomläggning på radhusen i kvarteret Sörgården och övriga småhus. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  vallingby: {
+    title: "Takläggare i Vällingby – fast pris efter takkontroll",
+    description:
+      "Takläggare i Vällingby: takbyte och takomläggning på radhus och småhus i ABC-staden i Västerort. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
 };

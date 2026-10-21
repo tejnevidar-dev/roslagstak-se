@@ -2,13 +2,13 @@
  * Gren 180 (#13, Marknadschefens grind steg 1–22): egna FAQ-svar på ortssidorna.
  * Läser ledning/marknad/innehall/faq-egna-2026-10-22.md och skriver src/data/location-egna-faq.ts: för varje ortssida tre egna frågor med svar,
  * som i generateLocationFAQs ersätter mallens tre frågor om tidsåtgång, takmaterial och "byta eller renovera".
- * Bara steg 1–23 tas med (steg 23 hör till gren 183, steg 24 till gren 185 och importeras när den byggs). Rader som inte följer formen gör att körningen stoppar.
+ * Bara steg 1–24 tas med (steg 23 hör till gren 183, steg 24 till gren 185). Rader som inte följer formen gör att körningen stoppar.
  * Körs: bun scripts/import-egna-faq.ts [sökväg till briefen]
  */
 import { readFileSync, writeFileSync } from "node:fs";
 
 const KALLA = process.argv[2] ?? "../../ledning/marknad/innehall/faq-egna-2026-10-22.md";
-const MAX_STEG = 23;
+const MAX_STEG = 24;
 /** Utanför Vidars område (Marknadschefens grind 2026-10-22 00:54, gren 180b): behåller mallens frågor. */
 const UTESLUTNA = new Set(["trosa", "nykoping"]);
 const rader = readFileSync(KALLA, "utf8").split(/\r?\n/);

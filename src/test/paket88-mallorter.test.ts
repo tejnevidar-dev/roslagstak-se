@@ -24,10 +24,12 @@ describe("paket 88: de fyra mallorternas rådata är ren mot regel 5", () => {
   });
   it("Strängnäs och Gnesta har ingen egen FAQ kvar (Skärholmen fick egen text med frågan om husens byggår i gren 164); Vällingbys svar säger 'kan du få'", () => {
     for (const s of ["strangnas", "gnesta"]) expect(rad(s).uniqueFAQ, s).toBeUndefined();
-    expect(rad("vallingby").uniqueFAQ?.answer).toContain("Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden");
+    // gren 185: Vällingby har fått en egen ortstext och en egen fråga om husens byggår (briefrunda 2, 2026-10-22)
+    expect(rad("vallingby").uniqueFAQ?.question).toBe("När byggdes husen i Vällingby?");
   });
   it("första stycket använder de belagda tjänstenamnen", () => {
-    expect(rad("vallingby").longDescription).toContain("Vi tar uppdrag i Vällingby med takbyte och takomläggning.");
+    // gren 185: Vällingbys första stycke är den nya ortstexten (briefrunda 2)
+    expect(rad("vallingby").longDescription).toContain("Vällingby är en stadsdel i Västerort");
     expect(rad("strangnas").longDescription).toContain("Vi tar uppdrag i Strängnäs med takbyte, takomläggning och takrenovering.");
     expect(rad("gnesta").longDescription).toContain("Vi tar uppdrag i Gnesta med takbyte, takomläggning, takrenovering och hängrännor.");
     expect(rad("gnesta").extraContent).toContain("går igenom om renovering eller byte är rätt för taket");

@@ -1069,6 +1069,71 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "När blev Bålsta ett villasamhälle?", answer: "År 1931 hade Bålsta bara 346 invånare, och det var då orten började utvecklas till ett villasamhälle. Från mitten av 1960-talet fram till 1980-talet växte tätorten kraftigt." },
     { question: "Var låg Bålstas gamla station?", answer: "Den gamla stationen låg i den äldre delen av Bålsta, omkring 1 500 meter väster om dagens. Persontrafiken där lades ner 1972, och 1996 invigdes en ny station nära centrum." },
   ],
+  "nykvarn": [
+    { question: "Varför heter det Nykvarn?", answer: "Orten grundades på 1500-talet, när ett nytt bruk anlades på platsen. Enligt Wikipedia användes ordet \"kvarn\" då närmast i samma betydelse som bruk eller hytta." },
+    { question: "Hur gammal är Nykvarns herrgård?", answer: "Huvudbyggnaden är ett tvåvåningshus under säteritak med två fristående flyglar, och den har klassats som omistlig. Den brann ner 1982 men återuppfördes året därpå med samma exteriör." },
+    { question: "När kom egnahemmen till Nykvarn?", answer: "Från 1880-talet avstyckades enligt Wikipedia delar av Nykvarns södra ägor för egnahem. Pappersbruket, som hade fått mark mitt på 1800-talet, drevs fram till 1971." },
+  ],
+  "brandbergen": [
+    { question: "Var kommer namnet Brandbergen ifrån?", answer: "Namnet kommer enligt Wikipedia från en skogsbrand den 18 juli 1947, när området i stort sett var obebyggt." },
+    { question: "Hur snabbt växte Brandbergen?", answer: "Kommunen köpte marken 1968, de första hyresgästerna flyttade in 1970, och fem–sex år senare fanns bostäder för över 9 000 människor i det gamla skogsområdet." },
+    { question: "Finns det radhus i Brandbergen?", answer: "Ja. De flesta bor i flervåningshus, men i den södra delen finns också radhus och kedjehus från 1970-talet." },
+  ],
+  "handen": [
+    { question: "Varför heter det Handen?", answer: "I ett vägskäl där landsvägen söderut delades mot Dalarö och Nynäshamn stod en vägskylt i form av en hand, och man tror att den gav namnet. En annan teori är att det är en sammandragning av Hanveden." },
+    { question: "När blev Handen ett stationssamhälle?", answer: "Nynäsbanan invigdes 1901, och nära torpet Handen byggdes en station. Samhället växte fram på rullstensåsen Söderbymalm." },
+    { question: "Vad är Rudans gård?", answer: "Rudans gård var långt in på 1960-talet en fungerande bondgård, och i dag är den ett friluftsområde vid sjöarna Övre och Nedre Rudan." },
+  ],
+  "fisksatra": [
+    { question: "Vad är Båthöjden?", answer: "Båthöjden byggdes 1970–1972, med 202 atriumhus i fem olika modeller, fasader av vitt fasadtegel och svartmålad panel och platta tak." },
+    { question: "Hur gammal är Fisksätra som plats?", answer: "Där höghusen står i dag låg åtminstone från 1562 en arrendegård under Erstavik, och undersökta gravar tyder enligt Wikipedia på att platsen användes redan under vikingatiden." },
+    { question: "Vad är Fisksätra holme?", answer: "En ö i Lännerstasundet med bad- och grillplatser, som nås via en gång- och cykelbro." },
+  ],
+  "fittja": [
+    { question: "Var kommer namnet Fittja ifrån?", answer: "Namnet finns i skrift redan 1299, som \"In Fitiu\", och innehåller enligt Wikipedia ett dialektord som betyder strandäng." },
+    { question: "Vad är jättegrytorna vid Albysjön?", answer: "De bildades troligen när inlandsisens smältvatten forsade fram för över 10 000 år sedan och svarvade ut håligheter i berget." },
+    { question: "Hade Fittja ett tegelbruk?", answer: "Ja. Det anlades på 1860-talet och lades ner 1964, och Tegelbruksvägen och Tegelbruksbacken påminner om det." },
+  ],
+  "hogdalen": [
+    { question: "Var kommer namnet Högdalen ifrån?", answer: "Namnet kommer från ett torp under godset Örby och syftar troligen på de höga höjderna kring dalgången längs dagens Magelungsvägen." },
+    { question: "Varför byggdes det inga villor i Högdalen?", answer: "Redan vid sekelskiftet 1900 fanns planer, och på en karta från 1920-talet syns många villatomter, men enligt Wikipedia blev de aldrig bebyggda. Staden köpte marken 1951." },
+    { question: "Var ligger radhusen i Högdalen?", answer: "Väster om Skebokvarnsvägen ligger tre grupper med sammanlagt drygt 250 radhus, byggda mellan 1956 och 1960." },
+  ],
+  "vallingby": [
+    { question: "Vad betyder namnet Vällingby?", answer: "Enligt Wikipedia betyder namnet vällingarnas by, ungefär folket som bor på vallen. Det förekommer första gången 1315, som Bällingaby." },
+    { question: "Vad är en ABC-stad?", answer: "Vällingby byggdes som Sveriges första ABC-stad, där bokstäverna står för arbete, bostad och centrum. Tanken var ett lokalsamhälle med nära till allt." },
+    { question: "När invigdes Vällingby centrum?", answer: "Centrumet invigdes den 14 november 1954, och närmare 100 000 besökare kom på invigningsdagen." },
+  ],
+  "akalla": [
+    { question: "Var kommer namnet Akalla ifrån?", answer: "Akalla nämns första gången 1323, som Akarli, och syftar enligt Wikipedia på de som bor vid ån, alltså Igelbäcken." },
+    { question: "Vad är Akalla by?", answer: "Söder om stadsdelen, intill Järvafältet, ligger Akalla by, med bevarad bebyggelse som delvis är från 1600-talet. På båda sidor om byn finns radhusområden." },
+    { question: "Vilka gatunamn finns i Akalla?", answer: "Gatorna och kvarteren i Akalla har finska geografiska namn." },
+  ],
+  "tensta": [
+    { question: "Var kommer namnet Tensta ifrån?", answer: "Namnet antas komma av tena, ett slags fiskeredskap, och sta, inhägnat område. Byn Tensta nämns första gången 1538." },
+    { question: "Vad är kvarteret Sörgården?", answer: "Sörgården, öster om Spånga kyrka, byggdes 1969–1970 som stadsdelens enda ursprungliga småhusområde, med 76 vinkelbyggda radhus i självbyggeri." },
+    { question: "Hur många bostäder byggdes i Tensta?", answer: "Mellan 1966 och 1972 byggdes 6 200 bostäder inom miljonprogrammet." },
+  ],
+  "hokarangen": [
+    { question: "Vad var Hökarängen förr?", answer: "Hökarängen nämns 1715 som ett torp under Farsta gård, och gårdens byggnader uppfördes kring sekelskiftet 1800." },
+    { question: "Vad var speciellt med Hökarängens centrum?", answer: "Det var enligt Wikipedia det första centrumet i Sverige där butikerna vände sig mot ett bilfritt gångstråk, och det blev stilbildande för nya förorter." },
+    { question: "Var finns radhusen i Hökarängen?", answer: "I Skönstaholm uppfördes radhus. Bebyggelsen består annars mest av lamellhus i tre till fyra våningar." },
+  ],
+  "norsborg": [
+    { question: "Vad var Norsborg förr?", answer: "Norsborg var en lantegendom vid en vik av Vårbyfjärden. Den hette från början Borg och fick namnet Norsborg i slutet av 1700-talet." },
+    { question: "Vad är Norsborgs vattenverk?", answer: "Stockholms stad köpte Norsborg 1900 för vattenledningen från Bornsjön och anlade där ledningens huvudstation. År 1912 beslöt stadsfullmäktige att lägga hela vattenledningsverket hit." },
+    { question: "Finns det radhus i Norsborg?", answer: "Ja, ett stort område med radhus och parhus, som enligt Wikipedia är byggt med välbevarade naturområden omkring sig." },
+  ],
+  "blackeberg": [
+    { question: "Var kommer namnet Blackeberg ifrån?", answer: "Namnet kommer från ett torp på Råcksta gårds ägor, som nämns första gången 1599." },
+    { question: "Skulle Blackeberg ha blivit en villastad?", answer: "Kort före andra världskriget fanns planer på en villabebyggelse här liknande Södra Ängby, men kriget kom emellan. Staden köpte marken 1948." },
+    { question: "Vad är Lilla Ängby gård?", answer: "En liten rödmålad mangårdsbyggnad i hörnet av Holbergsgatan och Blackebergsvägen. Den är det som finns kvar av en bondgård som avstyckades 1720." },
+  ],
+  "liljeholmen": [
+    { question: "Var kommer namnet Liljeholmen ifrån?", answer: "Namnet kommer från ett torp under Årsta, där det fanns krog och värdshus från 1600-talet. Värdshuset upphörde 1889." },
+    { question: "Varför kallas Liljeholmen industriförort?", answer: "Redan på 1700-talet fanns här kattuntryckerier, en tobaksfabrik och ett bryggeri, och när Västra stambanan drogs förbi 1860 kom allt fler industrier." },
+    { question: "Finns det radhus i Liljeholmen?", answer: "Ja. På Nybodaberget byggdes 1998 ett bostadsområde med så kallade stadsvillor och radhus." },
+  ],
 };
 
 export const egnaFaqFor = (slug: string): readonly EgenFAQ[] | undefined => EGNA_FAQ[slug];
