@@ -22,8 +22,8 @@ describe("paket 88: de fyra mallorternas rådata är ren mot regel 5", () => {
       /plåtarbeten|membrantak|kommersiell|bostadsrättsf|Bostadsrättsför|kostnadseffektiv|frostsprängning|fuktig luft|taktvätt|ärlig rekommendation|miljonprogram.*(plåttak|papptak)|monteras effektivt|korrosionsklass|oavsett om du väljer|Med ROT-avdrag/;
     for (const s of SLUGS) expect(allText(s), s).not.toMatch(FORBIDDEN);
   });
-  it("Skärholmen, Strängnäs och Gnesta har ingen egen FAQ kvar; Vällingbys svar säger 'kan du få'", () => {
-    for (const s of ["skarholmen", "strangnas", "gnesta"]) expect(rad(s).uniqueFAQ, s).toBeUndefined();
+  it("Strängnäs och Gnesta har ingen egen FAQ kvar (Skärholmen fick egen text med frågan om husens byggår i gren 164); Vällingbys svar säger 'kan du få'", () => {
+    for (const s of ["strangnas", "gnesta"]) expect(rad(s).uniqueFAQ, s).toBeUndefined();
     expect(rad("vallingby").uniqueFAQ?.answer).toContain("Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden");
   });
   it("första stycket använder de belagda tjänstenamnen", () => {
