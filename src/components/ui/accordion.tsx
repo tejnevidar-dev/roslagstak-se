@@ -38,9 +38,12 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
+  /* Gren 174 (F1, seo-analys-2026-10-21): innehållet i stängda frågor ligger kvar i DOM:en (forceMount), så att Google, som läser den renderade sidan, ser svaren som FAQPage-schemat beskriver.
+     Radix ritar annars inte barnen i en stängd fråga. Stängda frågor döljs med CSS (display: none), så utseendet är detsamma; det som ändras är att stängningsanimationen blir omedelbar. */
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount
+    className="overflow-hidden text-sm transition-all data-[state=closed]:hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
