@@ -42,12 +42,13 @@ describe("paket 120: Täby (T1, T2)", () => {
     expect(m.title).not.toContain("byta tak");
     expect(resolveMeta("/takbyte-taby", bas).description).toContain("Byta tak i Täby?");
   });
-  it("T2: grannorterna i Norra Stockholm och på Rådmansöhalvön länkar till /takomlaggning-taby, Täby själv inte", () => {
-    expect(hubLinksFor("sollentuna").map((h) => h.href)).toContain("/takomlaggning-taby");
-    expect(hubLinksFor("sollentuna")).toContainEqual({ href: "/takomlaggning-taby", label: "Takomläggning i Täby" });
+  it("T2 (gren 188: länkar till den egna kommunens sidor): Täbys orter länkar till /takomlaggning-taby, Täby själv inte, och Sollentunas orter länkar inte längre till Täby", () => {
+    expect(hubLinksFor("ensta").map((h) => h.href)).toContain("/takomlaggning-taby");
+    expect(hubLinksFor("ensta")).toContainEqual({ href: "/takomlaggning-taby", label: "Takomläggning i Täby" });
     expect(hubLinksFor("taby").map((h) => h.href)).not.toContain("/takomlaggning-taby");
-    expect(lankar("/taklaggare-sollentuna")).toContain("/takomlaggning-taby");
-    expect(lankar("/taklaggare-sollentuna")).toContain("/takbyte-taby");
+    expect(hubLinksFor("viby").map((h) => h.href)).not.toContain("/takomlaggning-taby");
+    expect(lankar("/taklaggare-ensta")).toContain("/takomlaggning-taby");
+    expect(lankar("/taklaggare-ensta")).toContain("/takbyte-taby");
     expect(lankar("/taklaggare-taby")).toContain("/takomlaggning-taby");
   });
 });

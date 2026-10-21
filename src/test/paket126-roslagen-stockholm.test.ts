@@ -49,7 +49,9 @@ describe("paket 126: Roslagen", () => {
     expect(lankar("/taklaggare-brevik")).toContain("/takbyte-akersberga");
   });
   it("RL1 och RL2 rör inte Täbys egna regionlänkar", () => {
-    expect(hubLinksFor("sollentuna").map((x) => x.href)).toContain("/takrenovering-taby");
+    // gren 188: Täbys sidor länkas av Täbys egna orter (Roslagens inland), inte längre av Sollentunas orter, som länkar till sin egen kommun
+    expect(hubLinksFor("ensta").map((x) => x.href)).toContain("/takrenovering-taby");
+    expect(hubLinksFor("viby").map((x) => x.href)).not.toContain("/takrenovering-taby");
   });
 });
 

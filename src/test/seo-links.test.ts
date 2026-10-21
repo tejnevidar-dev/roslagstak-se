@@ -59,7 +59,8 @@ describe("internlänkar", () => {
   it("hubbsidorna för de mest sökta orterna har många inlänkar", () => {
     const inlinks = (target: string) => pages.filter(({ p, page }) => p !== target && page!.links.some((l) => normHref(l.href) === target)).length;
     expect(inlinks("/takbyte-norrtalje")).toBeGreaterThanOrEqual(30);
-    expect(inlinks("/takrenovering-taby")).toBeGreaterThanOrEqual(20);
+    // gren 188: bara Täbys egna orter länkar dit (förut även Sollentunas, Danderyds och Väsbys, som nu länkar till sin egen kommun)
+    expect(inlinks("/takrenovering-taby")).toBeGreaterThanOrEqual(15);
     expect(inlinks("/takbyte-stockholm")).toBeGreaterThanOrEqual(20);
   });
 });

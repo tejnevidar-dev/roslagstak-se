@@ -8,6 +8,9 @@
  * EN regel för React och statisk HTML. Bara relativa importer.
  */
 import { locationIndex } from "./location-index";
+import { locations } from "./locations";
+import { comboLink } from "./combo-links";
+import { ortPrep } from "./ort-prep";
 
 export interface HubLink {
   href: string;
@@ -30,19 +33,13 @@ const HUBS: Hub[] = [
   { slug: "norrtalje", href: "/takrenovering-norrtalje", label: "Takrenovering i Norrtälje", regioner: [], orter: ["blido", "yxlan", "spillersboda", "radmanso", "bergshamra", "vaddo", "vato", "vaxholm", "rimbo", "herrang", "edsbro", "riala", "graddo", "kapellskar", "vallentuna", "loharad"] },
   { slug: "norrtalje", href: "/takbyte-norrtalje", label: "Takbyte i Norrtälje", regioner: [], orter: ["blido", "yxlan", "graddo", "kapellskar"] },
   { slug: "norrtalje", href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje", regioner: [], orter: ["blido", "yxlan", "graddo", "kapellskar"] },
-  { slug: "taby", href: "/takrenovering-taby", label: "Takrenovering i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
   // Takbyte-sidor med visningar men bara en inlänk (GSC 2026-10-03): /takbyte-stockholm (66), /takbyte-jarfalla (18), /takbyte-huddinge (15), /takbyte-taby (26)
-  { slug: "taby", href: "/takbyte-taby", label: "Takbyte i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
   // SEO-genomgången 2026-10-18 (T2): /takomlaggning-taby hade 9 inlänkar mot 33 för /takbyte-taby och /takrenovering-taby
-  { slug: "taby", href: "/takomlaggning-taby", label: "Takomläggning i Täby", regioner: ["Norra Stockholm", "Rådmansöhalvön"] },
   // SEO-genomgången Roslagen 2026-10-18 (RL1, RL2): tjänstesidorna för Vallentuna och Åkersberga hade 9 inlänkar vardera. Ortssidor som har orten som granne (nearbyLocations) länkar dit.
   { slug: "vallentuna", href: "/takbyte-vallentuna", label: "Takbyte i Vallentuna", regioner: [], orter: ["taby", "ella-gard", "skarpang", "ormsta", "lindholmen"] },
   { slug: "vallentuna", href: "/takrenovering-vallentuna", label: "Takrenovering i Vallentuna", regioner: [], orter: ["taby", "ella-gard", "skarpang", "ormsta", "lindholmen"] },
   { slug: "akersberga", href: "/takbyte-akersberga", label: "Takbyte i Åkersberga", regioner: [], orter: ["riala", "osterskar", "vallentuna", "taby", "ella-gard", "brevik", "ormsta"] },
   { slug: "akersberga", href: "/takrenovering-akersberga", label: "Takrenovering i Åkersberga", regioner: [], orter: ["riala", "osterskar", "vallentuna", "taby", "ella-gard", "brevik", "ormsta"] },
-  { slug: "stockholm", href: "/takbyte-stockholm", label: "Takbyte i Stockholm", regioner: ["Stockholms stad"] },
-  { slug: "jarfalla", href: "/takbyte-jarfalla", label: "Takbyte i Järfälla", regioner: ["Nordvästra Stockholm"] },
-  { slug: "huddinge", href: "/takbyte-huddinge", label: "Takbyte i Huddinge", regioner: ["Södra Stockholm"] },
   // Svagast länkade ägarsidor (agarsidor-lankar-2026-10-07.md): /taklaggare-bro hade 5 indexerbara inlänkar, Stockholmsguiden 9.
   // Grannorter i Nordvästra Stockholm länkar till Bro, orter i Stockholmsregionerna till guiden. Länktexterna används redan på sajten.
   { slug: "bro", href: "/taklaggare-bro", label: "Takläggare i Bro", regioner: ["Nordvästra Stockholm"] },
@@ -72,9 +69,43 @@ const ENSKILDA_LANKAR: Record<string, HubLink[]> = {
   uppsala: [{ href: "/taklaggare-enkoping", label: "Takläggare i Enköping" }],
 };
 
+/**
+ * Gren 188 (svaga-toppsidor-2026-10-22.md): ortssidorna i Norra Stockholm, Stockholms stad, Nordvästra Stockholm, Södra Stockholm och Västerort (de sista hade inga tjänst × ort-länkar alls) länkade till en grannkommuns tjänst × ort-sidor
+ * (16 sidor i Sollentuna, Danderyd, Väsby och Sundbyberg till Täby, Södra Stockholm till Huddinge, Märsta och Rosersberg till Järfälla) och Stockholmssidorna bara till takbyte-stockholm.
+ * Nu länkar sidan till den egna kommunens tre tjänstesidor (takbyte, takrenovering, takomläggning), med etiketten "<tjänst> i <kommun>". Är kommunens sida noindex går länken till tjänstens
+ * egna indexerbara sida, och ompekade adresser visas inte (combo-links.ts, samma regel som övriga länkar). Kommunen är ortens parentLocation, annars raden "Kommun" i faktarutan.
+ */
+const KOMMUN_REGIONER = ["Norra Stockholm", "Stockholms stad", "Nordvästra Stockholm", "Södra Stockholm", "Västerort"];
+/** Orter som varken har parentLocation eller kommunrad i faktarutan. */
+/** Kommuner vars orter länkar till kommunens tjänstesidor oavsett region: Täbys orter ligger i Roslagens inland och hade förut inga länkar till Täbys tre sidor, som har många visningar (hub-länkarna i regionen gick till Norrtälje). */
+const KOMMUN_ALLA_REGIONER = ["taby"];
+const KOMMUN_FALLBACK: Record<string, string> = { bandhagen: "stockholm", hogdalen: "stockholm", hokarangen: "stockholm" };
+const KOMMUN_TJANSTER: readonly (readonly [string, string])[] = [["takbyte", "Takbyte"], ["takrenovering", "Takrenovering"], ["takomlaggning", "Takomläggning"]];
+
+const kommunSlug = (slug: string, region: string): string | undefined => {
+  const l = locations.find((x) => x.slug === slug);
+  if (!l) return undefined;
+  if (l.parentLocation) return l.parentLocation.slug;
+  const namn = l.factBox?.find((f) => f.label === "Kommun")?.value.replace(/\s*\(.*\)/, "").trim();
+  const k = namn ? locations.find((x) => x.name === namn) : undefined;
+  if (k) return k.slug;
+  return KOMMUN_FALLBACK[slug] ?? (region === "Stockholms stad" || region === "Västerort" ? "stockholm" : undefined);
+};
+
+/** Den egna kommunens tre tjänstesidor för en ort i de fyra regionerna (och för Täbys orter) (tom för kommunens egen sida, vars länkar redan är de vanliga tjänst × ort-länkarna). */
+export const kommunLankar = (slug: string): HubLink[] => {
+  const loc = locations.find((l) => l.slug === slug);
+  if (!loc) return [];
+  const k = kommunSlug(slug, loc.region);
+  if (!k || !(KOMMUN_REGIONER.includes(loc.region) || KOMMUN_ALLA_REGIONER.includes(k))) return [];
+  const kommun = locations.find((x) => x.slug === k);
+  if (!kommun || kommun.slug === slug) return [];
+  return KOMMUN_TJANSTER.flatMap(([serviceSlug, serviceName]) => comboLink({ serviceSlug, serviceName, locationSlug: kommun.slug, prep: ortPrep(kommun), locationName: kommun.name }) ?? []);
+};
+
 /** Hubblänkarna för en ort (tom lista för hubbens egen sida och för orter utanför hubbens regioner), plus länkar som bara gäller den orten. */
 export const hubLinksFor = (slug: string): HubLink[] => {
-  const loc = locationIndex.find((l) => l.slug === slug);
+  const loc = locationIndex.find((l) => l.slug === slug) ?? locations.find((l) => l.slug === slug);
   if (!loc) return [];
-  return [...HUBS.filter((h) => h.slug !== slug && (h.regioner.includes(loc.region) || (h.orter ?? []).includes(slug))).map(({ href, label }) => ({ href, label })), ...(ENSKILDA_LANKAR[slug] ?? [])];
+  return [...HUBS.filter((h) => h.slug !== slug && (h.regioner.includes(loc.region) || (h.orter ?? []).includes(slug))).map(({ href, label }) => ({ href, label })), ...kommunLankar(slug), ...(ENSKILDA_LANKAR[slug] ?? [])];
 };
