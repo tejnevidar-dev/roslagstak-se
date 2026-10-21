@@ -24,6 +24,7 @@ import { radUnderRubrik } from "@/data/location-rad";
 import { slimFor, slimFragor } from "@/data/location-slim";
 import { sektionsBitar } from "@/lib/sektionstext";
 import { generateLocationFAQs } from "@/data/location-faqs";
+import { egnaFaqFor } from "@/data/location-egna-faq";
 import { buildLocalSections } from "@/data/local-sections";
 import { LOCATION_PAGE_TEXT } from "@/data/location-page-text";
 import { regionLinkLabel, regionSlugs } from "@/data/regions";
@@ -88,7 +89,7 @@ const LocationPage = () => {
   const comboLinksB = comboRad([["takmalning", "Takmålning"], ["taktvatt", "Taktvätt"]]);
   const localSections = buildLocalSections(location);
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
-  const faqs = slimFragor(location.slug, generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ));
+  const faqs = slimFragor(location.slug, generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ, egnaFaqFor(location.slug)));
 
   // Gren 168 (H3): en Service-nod per ortssida med provider på den enda verksamheten (/#localbusiness), i stället för en egen verksamhetsnod per ort (samma byggare som den statiska headen).
   const jsonLd = ortServiceNode(location, prep, Boolean(slim.utanTaktjanster));

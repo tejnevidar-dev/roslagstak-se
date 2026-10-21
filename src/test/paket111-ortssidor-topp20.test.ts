@@ -5,6 +5,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { locations } from "../data/locations";
+import { egnaFaqFor } from "../data/location-egna-faq";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 const ort = (slug: string) => {
@@ -44,7 +45,16 @@ describe("paket 111: mallens fråga 'Behöver jag byta hela taket …?' (M3)", (
     const k = readFileSync("src/data/location-faqs.ts", "utf8");
     expect(k).toContain("Det beror på takets skick. Vid den kostnadsfria takkontrollen ${prep} ${name} går vi igenom om en reparation räcker eller om taket behöver läggas om.");
     expect(k).not.toContain("framför allt underlaget");
+    // Gren 180: sidor med egna FAQ-svar (location-egna-faq.ts) har bytt ut mallfrågan; sidor utan egna svar visar den som förut.
+    const utanEgna = locations.filter((l) => !egnaFaqFor(l.slug)).map((l) => l.slug);
+    expect(utanEgna.length).toBeGreaterThan(0);
     for (const slug of ["taby", "svartloga", "uppsala", "danderyd"]) {
+      const t = sida(slug);
+      expect(egnaFaqFor(slug), slug).toBeTruthy();
+      expect(t, slug).not.toContain("Behöver jag byta hela taket eller räcker en renovering");
+      expect(t, slug).not.toContain("framför allt underlaget");
+    }
+    for (const slug of utanEgna.filter((s) => prerenderContent(`/taklaggare-${s}`)).slice(0, 5)) {
       const t = sida(slug);
       expect(t, slug).toContain("går vi igenom om en reparation räcker eller om taket behöver läggas om");
       expect(t, slug).not.toContain("framför allt underlaget");

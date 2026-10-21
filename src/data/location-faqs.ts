@@ -51,7 +51,8 @@ export const generateLocationFAQs = (
   name: string,
   prep: string,
   isIsland: boolean,
-  uniqueFAQ?: { question: string; answer: string }
+  uniqueFAQ?: { question: string; answer: string },
+  egna?: readonly LocationFAQ[],
 ): LocationFAQ[] => {
   const faqs: LocationFAQ[] = [];
 
@@ -63,14 +64,19 @@ export const generateLocationFAQs = (
       question: `Vad kostar ett takbyte ${prep} ${name}?`,
       answer: withRotForbehall(PRICE(prep, name)),
     },
-    {
-      question: `Hur lång tid tar ett takbyte ${prep} ${name}?`,
-      answer: TIME("ett takbyte"),
-    },
-    {
-      question: `Vilka takmaterial lägger ni ${prep} ${name}?`,
-      answer: MATERIALS(isIsland),
-    },
+    // Gren 180 (#13): sidans tre egna frågor (location-egna-faq.ts) ersätter mallens tre om tidsåtgång, takmaterial och "byta eller renovera"; saknas de gäller mallen.
+    ...(egna?.length
+      ? egna
+      : [
+          {
+            question: `Hur lång tid tar ett takbyte ${prep} ${name}?`,
+            answer: TIME("ett takbyte"),
+          },
+          {
+            question: `Vilka takmaterial lägger ni ${prep} ${name}?`,
+            answer: MATERIALS(isIsland),
+          },
+        ]),
     {
       question: `Erbjuder ni garanti på takarbeten ${prep} ${name}?`,
       answer: GUARANTEE,
@@ -84,10 +90,12 @@ export const generateLocationFAQs = (
       question: `Hur bokar jag en kostnadsfri takkontroll ${prep} ${name}?`,
       answer: `Ring oss på 070-154 36 39 eller fyll i formuläret. En av våra säljare tittar på taket på plats ${prep} ${name}, det tar ungefär 1–2 timmar, och du får en rapport om takets skick. Takkontrollen är kostnadsfri och utan förpliktelser.${isIsland ? (OAR_UTAN_BILVAG.includes(locations.find((l) => l.name === name)?.slug ?? "") ? ` ${ARBETSOMRADE_O}` : "") : ""}`,
     },
-    {
+    ...(egna?.length
+      ? []
+      : [{
       question: `Behöver jag byta hela taket eller räcker en renovering ${prep} ${name}?`,
       answer: `Det beror på takets skick. Vid den kostnadsfria takkontrollen ${prep} ${name} går vi igenom om en reparation räcker eller om taket behöver läggas om. Du bestämmer själv om och när du vill gå vidare.`,
-    },
+    }]),
     {
       question: `Kan ni byta ett eternittak ${prep} ${name}?`,
       answer: `Vi river inte asbest och har inget tillstånd för det. Vi samordnar med en behörig saneringsfirma, som river det gamla taket, och därefter lägger vi det nya taket. Misstänker du att taket innehåller asbest kan du boka en kostnadsfri takkontroll.`,

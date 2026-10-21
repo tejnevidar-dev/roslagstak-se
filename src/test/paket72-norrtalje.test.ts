@@ -48,7 +48,7 @@ describe("paket 72: Norrtälje-sidan", () => {
     expect(t).toContain("Takläggare i Norrtälje: så arbetar vi");
     expect(t).toContain("Vi arbetar enligt AMA");
     expect(t).toMatch(/Kommun\nNorrtälje/);
-    for (const q of ["När byggdes husen i Norrtälje?", "Hur lång tid tar ett takbyte i Norrtälje?", "Vilka takmaterial lägger ni i Norrtälje?", "Behöver jag byta hela taket eller räcker en renovering i Norrtälje?", "Kan ni byta ett eternittak i Norrtälje?"]) expect(t, q).toContain(q);
+    for (const q of ["När byggdes husen i Norrtälje?", "Vilka orter i Norrtälje kommun tar ni uppdrag i?", "Vad skiljer orterna i Norrtälje kommun åt?", "Vad är värt att tänka på med ett fritidshus i Norrtälje kommun?", "Kan ni byta ett eternittak i Norrtälje?"]) expect(t, q).toContain(q);
   });
   it("inga belopp och ingen tätskiktsgaranti på nytt ställe", () => {
     const t = text("norrtalje");

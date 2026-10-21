@@ -46,6 +46,7 @@ import { relatedPosts, guidesForTitle } from "../src/data/related-posts";
 import { buildBlogPostingSchema } from "../src/lib/blog-schema";
 import { guideContent } from "../src/data/blog-cta";
 import { generateLocationFAQs } from "../src/data/location-faqs";
+import { egnaFaqFor } from "../src/data/location-egna-faq";
 import { buildFaqSchema, SITE_URL as SCHEMA_SITE_URL } from "../src/lib/schema";
 import { roofTypeFaqs } from "../src/data/roof-type-faqs";
 import { eternitFaqs } from "../src/data/eternit-content";
@@ -1245,7 +1246,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
     const prep = ortPrep(loc);
     // Paket 72: mallavsnitt som sidans egen text redan ersätter (location-slim.ts), samma lista som LocationPage.tsx läser.
     const slim = slimFor(loc.slug);
-    const locationFaqs = slimFragor(loc.slug, generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ));
+    const locationFaqs = slimFragor(loc.slug, generateLocationFAQs(loc.name, prep, loc.isIsland, loc.uniqueFAQ, egnaFaqFor(loc.slug)));
     const referensMd = mall || slim.utanReferensmening ? null : referensMening(loc, prep);
     const regionHref = regionSlugs[loc.region] ? `/omraden/${regionSlugs[loc.region]}` : "/omraden";
     return {
