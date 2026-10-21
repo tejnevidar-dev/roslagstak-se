@@ -38,3 +38,21 @@ describe("paket 164: Skärholmen och Norrviken", () => {
     expect(text("norrviken")).not.toMatch(/\bofta (har|blir|ser|finns)/);
   });
 });
+
+describe("paket 164: Österskär och Furusund (innehall/osterskar-furusund-vassa-briefrader-2026-10-21.md)", () => {
+  const sitemap = readFileSync(resolve(__dirname, "../../public/sitemap.xml"), "utf8");
+  it("båda har stycket 'Det här gör vi', länkarna ritas och varje länkmål finns i sajtkartan", () => {
+    const KRAV: Record<string, { rubrik: string; lankar: string[] }> = {
+      osterskar: { rubrik: "Det här gör vi i Österskär", lankar: ["/taklaggare-akersberga", "/takbyte-akersberga"] },
+      furusund: { rubrik: "Det här gör vi på Furusund", lankar: ["/taklaggare-yxlan", "/taklaggare-svartno", "/takbyte-norrtalje"] },
+    };
+    for (const [slug, k] of Object.entries(KRAV)) {
+      expect(locations.find((x) => x.slug === slug)!.extraSections.some((s) => s.heading === k.rubrik), k.rubrik).toBe(true);
+      const hrefs = prerenderContent(`/taklaggare-${slug}`)!.links.map((x) => x.href);
+      for (const h of k.lankar) { expect(hrefs, `${slug} ${h}`).toContain(h); expect(sitemap, h).toContain(`<loc>https://roslagstak.se${h}</loc>`); }
+    }
+  });
+  it("Furusund: vägbanken har källan med", () => {
+    expect(text("furusund")).toContain("Sedan 1953 går det enligt Wikipedia att köra bil hit.");
+  });
+});
