@@ -60,6 +60,7 @@ const {
   buildWebPageNode,
   buildBreadcrumbNode,
   buildLocalBusinessSchema,
+  serviceSchemaFor,
   buildLocalBusinessLeanSchema,
   resolveMeta,
   fitTitle,
@@ -457,6 +458,11 @@ for (const { path, robots } of routes) {
         hasBreadcrumb: (page.breadcrumbs ?? []).length > 0,
       }),
     );
+  }
+  // Gren 168 (H3): Service-nod per ort- och tjänst × ort-sida (indexerbara), samma byggare som React-sidorna.
+  if (page && robots !== NOINDEX_ROBOTS) {
+    const svc = serviceSchemaFor(path);
+    if (svc) graphNodes.push(svc);
   }
   html = html.replace("</head>", `  ${graphNodes.map(ldScript).join("\n    ")}\n  </head>`);
 

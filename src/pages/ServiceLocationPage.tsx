@@ -5,6 +5,7 @@ import { briefFaqs, medTidOchMaterial } from "@/data/brief-faq";
 import { isThinCombo } from "@/data/thin-combos";
 import { arOmpekad } from "@/data/ompekade";
 import { comboLink, dedupeLinks, nearbyComboLink, arTunnLankAdress } from "@/data/combo-links";
+import { comboServiceNode } from "@/lib/schema-service";
 import { ortAvindexerad } from "@/data/avindexerade-orter";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -26,25 +27,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ortPrep } from "@/data/ort-prep";
-
-/** Inga belopp i strukturerade data på tjänst × ort-sidor (regel 5, Marknadschefen 2026-10-04): riktpriser står på /priser. check-prisfrasing.ts fäller bygget om ett belopp hamnar här. */
-const PRIS_UTAN_BELOPP = "Fast pris i offerten efter kostnadsfri takkontroll. Riktpriser per material finns på roslagstak.se/priser.";
-
-const servicePriceDescriptionsRaw: Record<string, string> = {
-  takbyte: PRIS_UTAN_BELOPP,
-  takomlaggning: PRIS_UTAN_BELOPP,
-  takrenovering: "Fast pris efter kostnadsfri takkontroll, beroende på åtgärdens omfattning. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden.",
-  taktvatt: "Fast pris i offerten efter kostnadsfri takkontroll.",
-  takmalning: "Fast pris i offerten efter kostnadsfri takkontroll.",
-  bandtackning: PRIS_UTAN_BELOPP,
-  platttak: PRIS_UTAN_BELOPP,
-  betongpannor: PRIS_UTAN_BELOPP,
-  tegeltak: PRIS_UTAN_BELOPP,
-};
-const servicePriceDescriptions: Record<string, string> = Object.fromEntries(
-  Object.entries(servicePriceDescriptionsRaw).map(([k, v]) => [k, withRotForbehall(v)]),
-);
-
 
 const ServiceLocationPage = () => {
   const pathname = useLocation().pathname;
@@ -103,37 +85,8 @@ const ServiceLocationPage = () => {
         loc?.isIsland || false,
       );
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: `${combo.serviceName} ${combo.prep} ${combo.locationName}`,
-    description: override?.description ?? combo.description,
-    url: `https://roslagstak.se${combo.url}`,
-    provider: {
-      "@type": "RoofingContractor",
-      name: "RoslagsTak",
-      url: "https://roslagstak.se",
-      telephone: "+46701543639",
-      image: "https://roslagstak.se/og-image.jpg",
-    },
-    areaServed: {
-      "@type": "Place",
-      name: combo.locationName,
-      geo: loc ? {
-        "@type": "GeoCoordinates",
-        latitude: loc.lat,
-        longitude: loc.lng,
-      } : undefined,
-    },
-    ...(loc && isThinCombo(combo.serviceSlug, loc)
-      ? {}
-      : {
-          offers: {
-            "@type": "Offer",
-            description: servicePriceDescriptions[combo.serviceSlug] ?? "Fast pris i offerten efter kostnadsfri takkontroll.",
-          },
-        }),
-  };
+  // Gren 168 (H3): Service-noden bär @id och provider på den enda verksamheten (/#localbusiness) i stället för en namnlös verksamhetsnod; samma byggare som den statiska headen.
+  const jsonLd = comboServiceNode(combo, loc, override?.description, Boolean(loc && isThinCombo(combo.serviceSlug, loc)));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

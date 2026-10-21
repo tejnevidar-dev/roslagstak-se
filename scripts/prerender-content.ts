@@ -27,6 +27,7 @@ import { regionTexts } from "../src/data/region-texts";
 import { withRotForbehall, priceData, priceFaqs, PRICE_HERO_TEXT, PRICE_NOTE, PRICE_ROT_TITLE, PRICE_ROT_TEXT, PRICE_FACTORS_TITLE, PRICE_FACTORS_TEXT } from "../src/data/prices";
 import { allServiceSlugs, generateCombos, COMBO_SERVICE_PAGE, comboDefaultTitle, comboDefaultH1 } from "../src/data/service-location-combos";
 import { comboLink, dedupeLinks, arTunnLankAdress } from "../src/data/combo-links";
+import { ortServiceNode, comboServiceNode } from "../src/lib/schema-service";
 import { blogPosts } from "../src/data/blog-posts";
 import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody, type BodyItem } from "../src/lib/body-items";
@@ -1472,6 +1473,25 @@ export const noindexPageBody = (path: string): { h1: string; intro: string; hero
     { h: AD_TEXT.finalHeading },
   ]);
   return { h1: `${c.h1Lead} ${c.h1Accent}`, intro: c.intro, hero: "ad", paragraphs: body.paragraphs, headingAt: body.headingAt };
+};
+
+/**
+ * Service-noden för en ort- eller tjänst × ort-sida (gren 168, H3), byggd av samma funktion och samma indata som React-sidorna (LocationPage.tsx, ServiceLocationPage.tsx),
+ * så att den statiska headen och den renderade sidan bär samma graf. null för sidor som inte är ort- eller tjänst × ort-sidor.
+ */
+export const serviceSchemaFor = (path: string) => {
+  const clean = path.replace(/\/$/, "") || "/";
+  const ort = clean.match(/^\/taklaggare-([a-z0-9-]+)$/);
+  if (ort) {
+    const loc = locations.find((l) => l.slug === ort[1]);
+    return loc ? ortServiceNode(loc, ortPrep(loc), Boolean(slimFor(loc.slug).utanTaktjanster)) : null;
+  }
+  const combo = comboByUrl.get(clean);
+  if (combo) {
+    const loc = locations.find((l) => l.slug === combo.locationSlug);
+    return comboServiceNode(combo, loc, comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`]?.description, Boolean(loc && isThinCombo(combo.serviceSlug, loc)));
+  }
+  return null;
 };
 
 export const prerenderContent = (path: string): PrerenderPage | null => {

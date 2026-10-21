@@ -31,7 +31,7 @@ import { projects } from "@/data/projects";
 import { getNearbyProject } from "@/data/project-nearby";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
-import { NAP, ORG_ID, LOGO_URL, OPENING_HOURS } from "@/lib/schema";
+import { ortServiceNode } from "@/lib/schema-service";
 import { linkPhone, renderInline } from "@/lib/inline-md";
 import {
   Accordion,
@@ -99,55 +99,8 @@ const LocationPage = () => {
   const regionHref = regionSlugs[location.region] ? `/omraden/${regionSlugs[location.region]}` : "/omraden";
   const faqs = slimFragor(location.slug, generateLocationFAQs(location.name, prep, location.isIsland, location.uniqueFAQ));
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "RoofingContractor",
-    "@id": `https://roslagstak.se/taklaggare-${location.slug}#business`,
-    name: "RoslagsTak",
-    url: `https://roslagstak.se/taklaggare-${location.slug}`,
-    telephone: NAP.telephone,
-    email: NAP.email,
-    parentOrganization: { "@id": ORG_ID },
-    image: "https://roslagstak.se/og-image.jpg",
-    logo: LOGO_URL,
-    areaServed: {
-      "@type": "Place",
-      name: location.name,
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: location.lat,
-        longitude: location.lng,
-      },
-      ...(location.parentLocation
-        ? { containedInPlace: { "@type": "Place", name: location.parentLocation.name, url: `https://roslagstak.se/taklaggare-${location.parentLocation.slug}` } }
-        : {}),
-    },
-    description: `${location.primaryKeyword} — ${location.description}`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: NAP.addressLocality,
-      addressRegion: NAP.addressRegion,
-      addressCountry: NAP.addressCountry,
-    },
-    currenciesAccepted: "SEK",
-    openingHoursSpecification: OPENING_HOURS,
-    knowsAbout: [
-      "Takbyte", "Takomläggning", "Takrenovering", "Plåttak", "TP20",
-      "Dubbelfalsat plåttak", "Pannplåt", "Takavvattning",
-      "Hängrännor", "Takkontroll", "Taksäkerhet",
-    ],
-    ...(slim.utanTaktjanster ? {} : { hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `Taktjänster ${prep} ${location.name}`,
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takbyte ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takrenovering ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takkontroll ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Plåtarbeten ${prep} ${location.name}` } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: `Takavvattning ${prep} ${location.name}` } },
-      ],
-    } }),
-  };
+  // Gren 168 (H3): en Service-nod per ortssida med provider på den enda verksamheten (/#localbusiness), i stället för en egen verksamhetsnod per ort (samma byggare som den statiska headen).
+  const jsonLd = ortServiceNode(location, prep, Boolean(slim.utanTaktjanster));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

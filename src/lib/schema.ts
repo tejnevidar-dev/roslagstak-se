@@ -70,6 +70,55 @@ const locations = synligaOrter(locationIndex);
 export const serviceRegions = Array.from(new Set(locations.map((l) => l.region)));
 
 /**
+ * Kommunerna vi tar uppdrag i (gren 168, H3): areaServed på verksamheten anges per kommun i stället för per region, så att ortskopplingen är en riktig plats.
+ * Namnen finns som orter eller som föräldraort i src/data/locations.ts (provas i schema-service.test.ts).
+ */
+export const SERVICE_KOMMUNER: readonly string[] = [
+  "Norrtälje", "Österåker", "Vallentuna", "Täby", "Danderyd", "Sollentuna", "Upplands Väsby", "Vaxholm", "Värmdö", "Lidingö", "Stockholm", "Solna", "Sundbyberg", "Järfälla",
+  "Upplands-Bro", "Sigtuna", "Nacka", "Tyresö", "Haninge", "Huddinge", "Botkyrka", "Salem", "Södertälje", "Ekerö", "Nynäshamn", "Nykvarn", "Uppsala", "Västerås", "Strängnäs",
+  "Eskilstuna", "Enköping", "Gnesta",
+];
+
+/**
+ * En Service-nod per ort- och tjänst × ort-sida (gren 168, H3, seo-analys-2026-10-21/1-teknik-i-koden.md F4): provider pekar på EN verksamhet (LOCAL_BUSINESS_ID) i stället för en egen
+ * RoofingContractor per sida, och areaServed är orten som City. Delas av React-sidorna och den statiska headen (scripts/generate-static-heads.mjs), så att båda bär samma graf.
+ */
+/** areaServed på verksamheten: kommunerna plus uppdragsområdet Mälardalen (beslut 2026-09-26, malardalen-omrade.test.ts). Inga regionnamn från ortsdatan. */
+export const SERVICE_AREAS: readonly string[] = [...SERVICE_KOMMUNER, "Mälardalen"];
+
+export const buildOrtServiceNode = (o: {
+  path: string;
+  name: string;
+  serviceType: string;
+  areaName: string;
+  lat?: number;
+  lng?: number;
+  parent?: { name: string; slug: string };
+  description?: string;
+  offerNames?: string[];
+  offers?: { description: string };
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}${o.path}#service`,
+  name: o.name,
+  serviceType: o.serviceType,
+  url: `${SITE_URL}${o.path}`,
+  ...(o.description ? { description: o.description } : {}),
+  provider: { "@id": LOCAL_BUSINESS_ID },
+  areaServed: {
+    "@type": "City",
+    name: o.areaName,
+    ...(o.lat !== undefined && o.lng !== undefined ? { geo: { "@type": "GeoCoordinates", latitude: o.lat, longitude: o.lng } } : {}),
+    ...(o.parent ? { containedInPlace: { "@type": "AdministrativeArea", name: o.parent.name, url: `${SITE_URL}/taklaggare-${o.parent.slug}` } } : {}),
+  },
+  ...(o.offerNames?.length
+    ? { hasOfferCatalog: { "@type": "OfferCatalog", name: `Taktjänster ${o.areaName}`, itemListElement: o.offerNames.map((n) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: n } })) } }
+    : {}),
+  ...(o.offers ? { offers: { "@type": "Offer", description: o.offers.description } } : {}),
+});
+
+/**
  * LocalBusiness (RoofingContractor) för hela sajten — tjänstekatalog,
  * orter/områden, öppettider och kontaktuppgifter.
  */
@@ -96,7 +145,8 @@ export const buildLocalBusinessSchema = () => ({
   geo: { "@type": "GeoCoordinates", latitude: NAP.lat, longitude: NAP.lng },
   openingHoursSpecification: OPENING_HOURS,
   areaServed: [
-    ...serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
+    // Kommuner och uppdragsområdet som saknar en egen ort står som AdministrativeArea; kommuner som har en ortssida står som Place bland orterna (ett namn, en post).
+    ...SERVICE_AREAS.filter((area) => !locations.some((loc) => loc.name === area)).map((area) => ({ "@type": "AdministrativeArea", name: area })),
     ...locations.map((loc) => ({ "@type": "Place", name: loc.name })),
   ],
   knowsAbout: [
@@ -162,6 +212,6 @@ export const buildLocalBusinessLeanSchema = () => {
   const { areaServed, knowsAbout, hasOfferCatalog, ...rest } = buildLocalBusinessSchema();
   return {
     ...rest,
-    areaServed: serviceRegions.map((region) => ({ "@type": "AdministrativeArea", name: region })),
+    areaServed: SERVICE_AREAS.map((area) => ({ "@type": "AdministrativeArea", name: area })),
   };
 };

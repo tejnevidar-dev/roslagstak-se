@@ -25,7 +25,9 @@ describe("paket 92: logotypen (O1)", () => {
     expect((buildLocalBusinessLeanSchema() as any).logo).toBe(LOGO_URL);
     expect((buildOrganizationNode() as any).logo).toBe(LOGO_URL);
     expect(kalla("src/lib/blog-schema.ts")).toContain('logo: { "@type": "ImageObject", url: LOGO_URL }');
-    expect(kalla("src/pages/LocationPage.tsx")).toContain("    logo: LOGO_URL,");
+    // gren 168: ortssidans nod är en Service med provider på verksamheten (/#localbusiness) och har ingen egen logo
+    expect(kalla("src/pages/LocationPage.tsx")).toContain("ortServiceNode(");
+    expect(kalla("src/pages/LocationPage.tsx")).not.toContain("logo:");
   });
   it("sidans bild (image) är fortfarande delningsbilden, och ingen logo pekar på den", () => {
     expect((buildLocalBusinessSchema() as any).image).toBe("https://roslagstak.se/og-image.jpg");
@@ -59,7 +61,7 @@ describe("paket 92: öppettiderna (L2) stämmer med det sajten säger", () => {
       expect(n.priceRange).toBeUndefined();
       expect(n.sameAs).toBeUndefined();
     }
-    expect(kalla("src/pages/LocationPage.tsx")).toContain("openingHoursSpecification: OPENING_HOURS,");
+    expect(kalla("src/pages/LocationPage.tsx")).not.toContain("openingHoursSpecification"); // gren 168: ortssidans Service-nod har inga öppettider, de bor på verksamheten
   });
   it("tidsformatet är ISO (HH:MM), dagarna är schema.org-namn och alla sju dagar förekommer en gång", () => {
     const dagar = OPENING_HOURS.flatMap((o) => o.dayOfWeek);
