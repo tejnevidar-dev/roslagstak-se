@@ -68,6 +68,8 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Hanviken och Skälsätra (Trollbäcken)", types: "Småhus", period: "Avstyckat från Kumla gård", note: "Hanviken och Skälsätra styckades av från Kumla gård, stamfastigheten för stora delar av västra Tyresö, vars huvudbyggnad från 1700-talet och allé fortfarande finns kvar. Trollbäcken hette Kumla fram till 1947, och bebyggelsen består mest av småhus." },
       { name: "Fornudden, Persudde och Sofieberg (Trollbäcken, vid Drevviken)", types: "", period: "", note: "Fornudden, Persudde och Sofieberg i Trollbäcken styckades enligt Wikipedia av från Kumla gård, vars huvudbyggnad från 1700-talet och allé finns kvar. Fornudden ligger vid sjön Drevviken, och där finns ett gravfält från yngre järnåldern med ett tjugofemtal gravar. Enligt Tyresö kommun har villaområdet vuxit fram främst under 1900-talet." },
       { name: "Tyresö Strand (Gamla Tyresö, Alby, Gimmersta, Slumnäs, Strandtorget)", types: "", period: "", note: "Tyresö Strand ligger i kommundelen Gamla Tyresö, där också Tyresö slott och Tyresö kyrka från 1600-talet finns. Området kring Tyresö Strand har enligt Wikipedia bebyggts med villor, parhus och radhus sedan mitten av 1990-talet, och kring Strandtorget finns ett mindre antal lägenheter och kommersiella verksamheter." },
+      { name: "Krusboda", types: "Radhus, atriumhus och villor", period: "1969–1974 (Tyresö kommun)", href: "/taklaggare-krusboda" },
+      { name: "Fårdala", types: "Rad- och kedjehus samt villor", period: "1963–1967 (Tyresö kommun)", href: "/taklaggare-fardala" },
     ],
   },
   nacka: {
@@ -87,6 +89,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
       { name: "Norra Ängby", types: "Småstugor/villor i trä (1–2 plan), radhus", period: "1930–1941 (huvuddelen 1931–38), enplansvillor 1948–49", href: "/taklaggare-angby" },
       { name: "Hässelby villastad", types: "Villor, radhus, kedjehus", period: "Villor från 1900, radhus/kedjehus 1970-tal (Backlura)", href: "/taklaggare-hasselby" },
       { name: "Långbro", types: "Villor och småstugor", period: "Villor ca 1899–1903, småstugor 1943–49", href: "/taklaggare-langbro" },
+      { name: "Bagarmossen", types: "Radhus och småhus", period: "Början av 1950-talet (Wikipedia)", href: "/taklaggare-bagarmossen" },
       { name: "Örby", types: "Villor", period: "Sent 1800-tal–1970-tal", href: "/taklaggare-orby" },
       { name: "Solhem och Lunda", types: "Villor, kedjehus, radhus, parhus", period: "1904–07, 1920–30-tal, 1960-tal, 2000-tal", href: "/taklaggare-solhem-lunda" },
       { name: "Nälsta", types: "Villor, radhus och flerfamiljshus", period: "Stadsdel från 1953", note: "Nälsta by är känd sedan 1300-talet, och namnet, skrivet Nærdharstaff 1354, kommer enligt Wikipedia från gudomsnamnet Njärd. Området köptes av Stockholms stad 1931, och stadsdelen bildades 1953, med blandad bebyggelse av villor, radhus och flerfamiljshus." },
@@ -196,6 +199,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
     municipality: "Haninge",
     areas: [
       { name: "Tungelsta", types: "Villor", period: "Station på Nynäsbanan 1901 (Wikipedia)", note: "Tungelsta, en del av Västerhaninge tätort, har enligt Wikipedia traditioner inom trädgårdsnäring med flera handelsträdgårdar, och i utkanterna är bebyggelsen gles med äldre villor på stora tomter. Stationen på Nynäsbanan invigdes 1901." },
+      { name: "Söderby", types: "Radhus", period: "Från slutet av 1970-talet (Wikipedia)", href: "/taklaggare-soderby" },
       { name: "Vega norra", types: "", period: "", note: "Vega i norra Haninge består enligt Wikipedia huvudsakligen av villor. Namnet kommer från en villa, som ägaren döpte efter fartyget Vega sedan han i april 1880 hade sett det komma till Dalarö, och vägarna fick senare namn med anknytning till Vegaexpeditionen. Enligt Haninge kommun dominerar villor och radhus i utkanten av stadsdelen, medan de höga flerfamiljshusen står närmast pendeltågsstationen." },
       { name: "Årsta havsbad och Gålö", types: "", period: "", note: "Årsta havsbad vid Horsfjärden kom till 1929 som en sommarstad och har enligt Wikipedia omkring 850 stugor. De flesta är sommarstugor, men ett betydande antal har byggts om till eller ersatts av villor, och en del är permanentbostäder. Gålö, nordost om Horsfjärden, är en halvö där nästan hela ytan sedan 2006 är naturreservat." },
     ],
@@ -250,6 +254,7 @@ export const villaAreasByPage: Record<string, MunicipalityVillaAreas> = {
     municipality: "Botkyrka",
     areas: [
       { name: "Tullinge", types: "Villor och radhus", period: "Villastad kring sekelskiftet 1900, radhus mest 1965–1975 (Wikipedia)", note: "Tullinge planerades enligt Wikipedia som villastad kring sekelskiftet 1900 och fick en egen hållplats 1903 när stambanan byggdes ut till dubbelspår. De flesta av dagens radhusområden byggdes mellan 1965 och 1975." },
+      { name: "Slagsta", types: "Kedjehus och radhus", period: "Inflyttningsklart omkring 1974 (Wikipedia)", href: "/taklaggare-slagsta" },
       { name: "Grödinge och Kagghamra", types: "", period: "", note: "Grödinge ligger på Södertörn, med Hallsfjärden och Järnafjärden i väster och Kaggfjärden i söder, och beskrivs i Wikipedia som dalgångsbygd omgiven av sjörik och kuperad skogsbygd. Kagghamra tomtområde vid Kaggfjärden består enligt Wikipedia av ungefär 200 fritidshus på tomter om 2 000–3 000 kvadratmeter, där några på senare år har blivit bostäder av mer permanent karaktär. Enligt hitta.se är husen i Kagghamra främst från 1960- och 2000-talen.", href: "/taklaggare-grodinge" },
       { name: "Vårsta", types: "", period: "", note: "Vårsta ligger vid Malmsjön i Grödinge, i den sydligaste delen av tätorten Tumba. Bostadsområdet bildades enligt Wikipedia under 1950- och 1960-talen, då främst med småhus, och under senare delen av 1960-talet växte området Bremora fram i nordväst med radhus, kedjehus och lägenheter. Husen är alltså i dag omkring 55–75 år gamla, och taken kan redan ha lagts om." },
     ],

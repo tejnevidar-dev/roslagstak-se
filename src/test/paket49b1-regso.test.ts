@@ -16,7 +16,7 @@ describe("paket 49b-1: ingen RegSO och inga områdeskoder i texten", () => {
   });
 
   it("etiketten är 'Ägda småhus i området (avrundat)' på 87 sidor och 'Bostäder med äganderätt i området (avrundat)' på 3", () => {
-    expect(locations.filter((l) => l.factBox?.some((r) => r.label === "Ägda småhus i området (avrundat)")).length).toBe(87 - 2 - 1 + 3 + 2 + 1 + 1 + 1 + 1); // Ormsta och Solgård-Sörskogen tappar raden, Yxlan (egen text, paket 113) har ingen rad om ägda småhus; gren 127 lägger till Älvnäs, Brevikshalvön och Bo och Rudboda, gren 128 Träkvista och Vaxmora, gren 128d Kungsberga, gren 128f Svartsjö, gren 128g Kästa, gren 128h Ekerö sommarstad
+    expect(locations.filter((l) => l.factBox?.some((r) => r.label === "Ägda småhus i området (avrundat)")).length).toBe(87 - 2 - 1 + 3 + 2 + 1 + 1 + 1 + 1 + 3); // Ormsta och Solgård-Sörskogen tappar raden, Yxlan (egen text, paket 113) har ingen rad om ägda småhus; gren 127 lägger till Älvnäs, Brevikshalvön och Bo och Rudboda, gren 128 Träkvista och Vaxmora, gren 128d Kungsberga, gren 128f Svartsjö, gren 128g Kästa, gren 128h Ekerö sommarstad
     expect(locations.filter((l) => l.factBox?.some((r) => r.label === "Bostäder med äganderätt i området (avrundat)")).length).toBe(3);
   });
 

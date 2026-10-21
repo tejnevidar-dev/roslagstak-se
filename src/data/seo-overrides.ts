@@ -999,4 +999,29 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
     description:
       "Takbyte och takomläggning i Strömma, Skeppsdalsström och Fågelbro, där de flesta villor började som sommarstugor. Kostnadsfri takkontroll.",
   },
+  krusboda: {
+    title: "Takbyte i Krusboda, Tyresö – radhus och atriumhus",
+    description:
+      "Takbyte och takomläggning i Krusboda i Tyresö, ett grupphusområde med radhus, atriumhus och villor från 1969–1974. Kostnadsfri takkontroll och fast pris.",
+  },
+  fardala: {
+    title: "Takbyte i Fårdala, Tyresö – fast pris",
+    description:
+      "Takbyte och takomläggning i Fårdala i Tyresö, med radhus, kedjehus och villor byggda 1963–67. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
+  slagsta: {
+    title: "Takbyte i Slagsta, Botkyrka – fast pris",
+    description:
+      "Takbyte och takomläggning i Slagsta vid Mälaren i norra Botkyrka, ett småhusområde som blev inflyttningsklart omkring 1974. Kostnadsfri takkontroll.",
+  },
+  bagarmossen: {
+    title: "Takbyte i Bagarmossen, Stockholm – fast pris",
+    description:
+      "Takbyte och takomläggning på radhus och småhus i Bagarmossen i Söderort, byggda i början av 1950-talet. Kostnadsfri takkontroll utan förpliktelser.",
+  },
+  soderby: {
+    title: "Takbyte i Söderby, Haninge – radhus, fast pris",
+    description:
+      "Takbyte och takomläggning i Söderby i Handen, Haninge, ett radhusområde från slutet av 1970-talet. Kostnadsfri takkontroll och fast pris i offerten.",
+  },
 };
