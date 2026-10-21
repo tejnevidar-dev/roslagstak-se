@@ -60,3 +60,14 @@ describe("gren 161b: länk från de fem radhussidorna till radhusguiden", () => 
     }
   });
 });
+
+describe("gren 161d: Söderbys länkar till Haninge-sidorna (strippades av importen)", () => {
+  it("avsnittet 'Det här gör vi i Söderby' länkar till /takbyte-haninge och /taklaggare-haninge, och länkarna finns i serverns länklista", () => {
+    const s = locations.find((l) => l.slug === "soderby")!.extraSections.find((x) => x.heading === "Det här gör vi i Söderby");
+    expect(s?.text).toContain("[takbyte i Haninge](/takbyte-haninge)");
+    expect(s?.text).toContain("[takläggare i Haninge](/taklaggare-haninge)");
+    const hrefs = prerenderContent("/taklaggare-soderby")!.links.map((x) => x.href);
+    expect(hrefs).toContain("/takbyte-haninge");
+    expect(hrefs).toContain("/taklaggare-haninge");
+  });
+});
