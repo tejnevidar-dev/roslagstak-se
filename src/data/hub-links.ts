@@ -5,6 +5,7 @@
  *    länkar dit.
  *  - "takrenovering täby" (210 visningar, position 30) hade 3 inlänkar till /takrenovering-taby. Orter i Norra Stockholm
  *    och på Rådmansöhalvön länkar dit.
+ * Gren 176 (#5, F3): "Takrenovering i Stockholm" pekar på /takrenovering-stockholm (förut guiden /blogg/takrenovering-stockholm-guide); Stockholms egen sida har den bland sina vanliga länkar.
  * EN regel för React och statisk HTML. Bara relativa importer.
  */
 import { locationIndex } from "./location-index";
@@ -44,21 +45,21 @@ const HUBS: Hub[] = [
   // Svagast länkade ägarsidor (agarsidor-lankar-2026-10-07.md): /taklaggare-bro hade 5 indexerbara inlänkar, Stockholmsguiden 9.
   // Grannorter i Nordvästra Stockholm länkar till Bro, orter i Stockholmsregionerna till guiden. Länktexterna används redan på sajten.
   { slug: "bro", href: "/taklaggare-bro", label: "Takläggare i Bro", regioner: ["Nordvästra Stockholm"] },
-  { slug: "", href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm", regioner: ["Stockholms stad", "Södra Stockholm", "Västerort", "Östra Stockholm", "Norra Stockholm", "Nordvästra Stockholm", "Sydvästra Stockholm", "Sydöstra Stockholm"] },
+  { slug: "stockholm", href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm", regioner: ["Stockholms stad", "Södra Stockholm", "Västerort", "Östra Stockholm", "Norra Stockholm", "Nordvästra Stockholm", "Sydvästra Stockholm", "Sydöstra Stockholm"] },
 ];
 
 /** Extra länkar på regionsidor (backlog 1cn): Kusten länkar till takomläggningssidan för Norrtälje. */
 export const REGION_EXTRA_LINKS: Record<string, HubLink[]> = {
   Kusten: [{ href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }],
   // Svagast länkade ägarsidor: regionsidorna i Stockholm länkar till Stockholmsguiden, Nordvästra Stockholm även till Bro
-  "Nordvästra Stockholm": [{ href: "/taklaggare-bro", label: "Takläggare i Bro" }, { href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
-  "Stockholms stad": [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
-  "Södra Stockholm": [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
-  Västerort: [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
-  "Östra Stockholm": [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
-  "Norra Stockholm": [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
-  "Sydvästra Stockholm": [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
-  "Sydöstra Stockholm": [{ href: "/blogg/takrenovering-stockholm-guide", label: "Takrenovering i Stockholm" }],
+  "Nordvästra Stockholm": [{ href: "/taklaggare-bro", label: "Takläggare i Bro" }, { href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+  "Stockholms stad": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+  "Södra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+  Västerort: [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+  "Östra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+  "Norra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+  "Sydvästra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+  "Sydöstra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
 };
 
 /** Länkar som bara gäller en enda ortssida (paket 73): Norrtälje-sidan länkar till guiden "Välja takfirma i Norrtälje" i länkrutan, med guidens egen titel. */

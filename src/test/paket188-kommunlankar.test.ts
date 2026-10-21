@@ -61,3 +61,16 @@ describe("gren 188: ortssidornas länkar till den egna kommunens tjänstesidor",
     }
   });
 });
+
+describe("gren 176: 'Takrenovering i Stockholm' pekar på /takrenovering-stockholm", () => {
+  it("orter i Stockholmsregionerna, även utanför Stockholms kommun, länkar dit och inte till guiden, utan dubblett", () => {
+    for (const s of ["farsta", "stuvsta", "bromma", "sodermalm"].filter((x) => locations.some((l) => l.slug === x))) {
+      const h = hubLinksFor(s);
+      expect(h.map((x) => x.href), s).toContain("/takrenovering-stockholm");
+      expect(h.map((x) => x.href), s).not.toContain("/blogg/takrenovering-stockholm-guide");
+      expect(h.filter((x) => x.href === "/takrenovering-stockholm").length, s).toBe(1);
+    }
+    // Stockholms egen sida har länken bland de vanliga tjänst × ort-länkarna, inte som hubbrad
+    expect(hubLinksFor("stockholm").map((x) => x.href)).not.toContain("/takrenovering-stockholm");
+  });
+});
