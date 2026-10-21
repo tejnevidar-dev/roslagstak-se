@@ -13,7 +13,7 @@ import { prerenderContent } from "../../scripts/prerender-content";
 const FEM = ["takrenovering-bromma", "takrenovering-varmdo", "takrenovering-tullinge"];
 const ort = (k: string) => k.split("-").slice(1).join("-");
 const tjanst = (k: string) => k.split("-")[0];
-const RUBRIK: Record<string, string> = { "takrenovering-bromma": "Takrenovering i Bromma", "takrenovering-varmdo": "Takrenovering i Värmdö", "takrenovering-tullinge": "Takrenovering i Tullinge" };
+const RUBRIK: Record<string, string> = { "takrenovering-bromma": "Takrenovering i Bromma", "takrenovering-varmdo": "Takrenovering på Värmdö", "takrenovering-tullinge": "Takrenovering i Tullinge" };
 
 describe("paket 145: tre tjänstesidor med egen text (våg 3)", () => {
   it("alla tre finns i comboOverrides med titel (44–48 tecken), beskrivning, text och länkar", () => {

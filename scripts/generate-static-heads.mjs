@@ -207,7 +207,7 @@ const esc = (s) =>
    glida isär eftersom den kommer från samma modul — scripts/check-cookie-banner-sync.mjs
    verifierar ändå att de centrala strängarna faktiskt hamnade i den byggda HTML:en. */
 const staticCookieBannerHtml = `<div id="static-cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" class="fixed inset-x-3 bottom-3 z-[60] rounded-2xl border border-border bg-card p-5 shadow-[0_24px_60px_-20px_rgba(12,35,64,0.45)] md:inset-x-auto md:bottom-5 md:left-5 md:max-w-md">
-      <h2 id="cookie-title" class="font-display text-lg text-foreground">${esc(cookieBannerContent.title)}</h2>
+      <p id="cookie-title" class="font-display text-lg text-foreground">${esc(cookieBannerContent.title)}</p>
       <p id="cookie-text" class="mt-2 text-[14px] leading-relaxed text-muted-foreground">${esc(cookieBannerContent.text)} <a href="${esc(cookieBannerContent.linkHref)}" class="font-medium text-primary underline underline-offset-4">${esc(cookieBannerContent.linkLabel)}</a></p>
       <div class="mt-4 flex flex-col gap-3">
         <button type="button" disabled class="w-full rounded-full bg-primary px-4 py-3 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-primary/90">${esc(cookieBannerContent.acceptAll)}</button>

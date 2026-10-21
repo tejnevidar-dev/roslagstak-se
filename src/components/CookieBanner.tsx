@@ -29,9 +29,9 @@ const CookieBanner = () => {
       aria-describedby="cookie-text"
       className="fixed inset-x-3 bottom-3 z-[60] rounded-2xl border border-border bg-card p-5 shadow-[0_24px_60px_-20px_rgba(12,35,64,0.45)] md:inset-x-auto md:bottom-5 md:left-5 md:max-w-md"
     >
-      <h2 id="cookie-title" className="font-display text-lg text-foreground">
+      <p id="cookie-title" className="font-display text-lg text-foreground">
         {c.title}
-      </h2>
+      </p>
       <p id="cookie-text" className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
         {c.text}{" "}
         <Link to={c.linkHref} className="font-medium text-primary underline underline-offset-4">

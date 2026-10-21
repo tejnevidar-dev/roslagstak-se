@@ -20,6 +20,8 @@ import { LOCAL_BUSINESS_ID, SITE_URL, buildBreadcrumbNode } from "../lib/schema-
 export type ServiceMeta = {
   /** Tecken direkt efter tjänstens namn i H1, t.ex. ":" (H1 = namn + h1Sep + blanksteg + accentLine). */
   h1Sep?: string;
+  /** H1:ans namndel när den avviker från tjänstens titel (gren 170, M4). */
+  h1Namn?: string;
   accentLine: string;
   specs: { k: string; v: string }[];
   specHeading: string;
@@ -42,7 +44,8 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "Ny läkt.",
   },
   takrenovering: {
-    accentLine: "utan helt takbyte.",
+    h1Sep: " –",
+    accentLine: "åtgärda taket utan helt takbyte",
     specs: [
       { k: "Åtgärd", v: "Punktinsats" },
       { k: "Pris", v: "Fast efter takkontroll" },
@@ -65,7 +68,9 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "",
   },
   takkupor: {
-    accentLine: "med kostnadsfri takkontroll.",
+    h1Namn: "Takkupor och takfönster",
+    h1Sep: " –",
+    accentLine: "kostnadsfri takkontroll",
     specs: [{ k: "Takkontroll", v: "Kostnadsfri" }],
     specHeading: "Takkupor och takfönster",
     lead: "Takkupor och takfönster hör till de tjänster vi erbjuder.",
@@ -73,7 +78,9 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "",
   },
   takinspektion: {
-    accentLine: "utan förpliktelser.",
+    h1Namn: "Takinspektion",
+    h1Sep: ":",
+    accentLine: "så går vår kostnadsfria takkontroll till",
     specs: [
       { k: "Pris", v: "Kostnadsfri" },
       { k: "Tid på plats", v: "Ungefär 1–2 timmar" },
@@ -120,7 +127,8 @@ export const serviceMeta: Record<string, ServiceMeta> = {
     photoNote: "",
   },
   tegeltak: {
-    accentLine: "nytt tak med fast pris.",
+    h1Sep: " –",
+    accentLine: "nytt tak till fast pris",
     specs: [
       { k: "Material", v: "Lertegel" },
       { k: "Livslängd", v: "Enligt tillverkaren" },
@@ -563,7 +571,7 @@ export const serviceStaticPage = (slug: string, services: ServiceListItem[]) => 
   return {
     title: blocks.seoTitle,
     description: blocks.seoDescription,
-    h1: `${service.title}${meta.h1Sep ?? ""} ${meta.accentLine}`.trim(),
+    h1: `${meta.h1Namn ?? service.title}${meta.h1Sep ?? ""} ${meta.accentLine}`.trim(),
     intro: service.description,
     paragraphs,
     headingAt,

@@ -835,7 +835,7 @@ export const ortSeoOverrides: Record<string, { title: string; description: strin
       "Takläggare i Nacka: takbyte och takomläggning i villor, egnahem och hus som började som sommarstugor. Kostnadsfri takkontroll och fast pris.",
   },
   varmdo: {
-    title: "Takläggare i Värmdö — Takbyte & Takrenovering",
+    title: "Takläggare på Värmdö — Takbyte & Takrenovering",
     description:
       "Takläggare på Värmdö: takbyte och takomläggning i Gustavsberg, på Ingarö och mot Stavsnäs. Kostnadsfri takkontroll och fast pris.",
   },

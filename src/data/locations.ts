@@ -1875,7 +1875,7 @@ export const locations: LocationData[] = [
       "Värmdö kommun består enligt Wikipedia helt och hållet av öar och omfattar stora delar av Stockholms södra skärgård. Centralorten Gustavsberg ligger två mil öster om Stockholm, och länsväg 222 går genom kommunen från väst till öst. Den som söker takläggare på Värmdö kan ha ett hus i Gustavsberg, i Hemmesta, på Ingarö, ute mot Stavsnäs eller på Djurö, och många av husen har börjat som fritidshus. Här går vi igenom flera delar av kommunen.",
     extraContent:
       "",
-    uniqueFAQ: {"question":"När byggdes husen i Värmdö?","answer":"Byggperiod enligt källorna: sommarvillor från 1865 (Stavsnäs), egnahem från 1950-talet (Gustavsberg), villor från 1960-talet (Stavsnäs gärde, Hemmesta). Hustyper: villor, egnahem, sommarvillor, fritidshus ombyggda till villor. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
+    uniqueFAQ: {"question":"När byggdes husen på Värmdö?","answer":"Byggperiod enligt källorna: sommarvillor från 1865 (Stavsnäs), egnahem från 1950-talet (Gustavsberg), villor från 1960-talet (Stavsnäs gärde, Hemmesta). Hustyper: villor, egnahem, sommarvillor, fritidshus ombyggda till villor. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Värmdö",
     lat: 59.3419,
     lng: 18.3839,

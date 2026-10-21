@@ -72,7 +72,7 @@ export const TAKTVATT_COMBO_CONTENT: string[] = [
  */
 export const TAKTVATT_SIDA_TITLE = "Taktvätt av betongpannetak och plåttak – fast pris";
 export const TAKTVATT_SIDA_META = "Taktvätt av betongpannetak och plåttak i Roslagen och Storstockholm, med hetvatten och vid behov medel. Kostnadsfri takkontroll och fast pris i offerten.";
-export const TAKTVATT_SIDA_H1 = "Taktvätt";
+export const TAKTVATT_SIDA_H1 = "Taktvätt av betongpannetak och plåttak";
 export const TAKTVATT_SIDA_INTRO = "Taktvätt är en av de tjänster vi erbjuder. Vad som behöver göras på just ditt tak går inte att säga på avstånd. Därför börjar vi med en kostnadsfri takkontroll utan förpliktelser.";
 export const TAKTVATT_SIDA_SECTIONS: TaktvattSection[] = [
   {
