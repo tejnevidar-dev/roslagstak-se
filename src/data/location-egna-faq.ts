@@ -874,11 +874,6 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Hur gammal är Rotsunda gård?", answer: "Rotsunda gård nämns första gången 1409. Huvudbyggnaden från slutet av 1800-talet står kvar, liksom en flygel och ett stall från 1700-talet och ett litet rödmålat vapenhus från 1600-talet." },
     { question: "Vilka delar består Rotebro av?", answer: "Rotebro delas enligt Wikipedia in i Rotebro centrum, Rotsunda, Rotsunda gård, Gillbo, Gillberga och ett industriområde. Villorna ligger i Gillbo, Gillberga och Rotsunda." },
   ],
-  "trosa": [
-    { question: "Hur gammal är bebyggelsen i Trosa stad?", answer: "Den äldre delen ligger enligt Wikipedia vid tomterna kring de båda Långgatorna, parallellt med Trosaån. Staden brändes ner i grunden 1719, och kyrkan var det som skonades." },
-    { question: "När blev Trosa badort?", answer: "Under andra hälften av 1800-talet gav ångbåtstrafiken staden ett uppsving, och i slutet av århundradet började Trosa bli en sommarstad och badort." },
-    { question: "Vilka villaområden finns i Trosa?", answer: "Villaområdet Östermalm tillkom enligt Wikipedia redan vid sekelskiftet 1900, och Ekensberg kort därefter. Under 1960- och 1970-talen byggdes Trosalund, Eriksberg, Karlsborg, Nyängen och Tomtaklint." },
-  ],
   "graddo": [
     { question: "Hur gammal är Gräddö by?", answer: "Byn nämns första gången 1547. Härifrån gick svenska trupper ombord 1739, och 1809 avseglade en expeditionskår från Gräddö mot Västerbotten." },
     { question: "Vad är missionshuset i Gräddö?", answer: "Missionshuset uppfördes 1868 vid Nabbo och flyttades till sin nuvarande plats 1933. Ortens varmbadhus flyttades 1920 till Gräddö-Asken." },
@@ -918,11 +913,6 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Hur gammal är Bro kyrka?", answer: "Bro kyrka ligger i lantlig miljö någon kilometer sydväst om samhället. Den är enligt Wikipedia murad av kluven gråsten, de äldsta delarna är troligen från 1100-talets slut, och taket är ett spånklätt mansardtak." },
     { question: "Var låg Bros gamla centrum?", answer: "Bygdens centrum låg från början vid Bro kyrka. År 1876 byggdes en järnvägsstation i byn Härnevi, och centrum flyttade sedan långsamt över till stationssamhället." },
     { question: "Vad hände med Bro centrum 1992?", answer: "Centrum förstördes helt av en brand 1992, och knappt två år senare invigdes ett nytt, med bostäder, butiker, bibliotek och kommunal service." },
-  ],
-  "nykoping": [
-    { question: "Vad är Östra villastaden i Nyköping?", answer: "Östra villastaden var enligt Wikipedia stadens första egnahemsområde, anlagt vid 1900-talets början i stadsdelen Öster. Det är en villastad med likartade hus byggda runt 1920, där variationen främst består i färg och mindre skillnader i utformning." },
-    { question: "Vilka villaområden i Nyköping är från 1930-talet?", answer: "Harg, nära Nyköpingsån, och Stenbro med Oxbacken, båda ungefär tre kilometer nordväst om centrum, är bebyggda från 1930-talet. Fågelbo har en blandning av villor, radhus och lägenheter från 1930-talet till nyproduktion." },
-    { question: "Vilket är ett av Nyköpings nyaste villaområden?", answer: "Malmbryggshagen, ungefär tre kilometer öster om centrum, är ett av stadens senaste villaområden." },
   ],
   "singo": [
     { question: "Hur tar man sig till Singö?", answer: "Bron invigdes 1955, och sedan dess går vägen över Väddö och Fogdö. Innan dess kom man med båt, och den sista turen till Singö brygga gick 1951." },

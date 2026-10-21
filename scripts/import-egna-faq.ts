@@ -9,6 +9,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 
 const KALLA = process.argv[2] ?? "../../ledning/marknad/innehall/faq-egna-2026-10-22.md";
 const MAX_STEG = 22;
+/** Utanför Vidars område (Marknadschefens grind 2026-10-22 00:54, gren 180b): behåller mallens frågor. */
+const UTESLUTNA = new Set(["trosa", "nykoping"]);
 const rader = readFileSync(KALLA, "utf8").split(/\r?\n/);
 
 let steg = 1;
@@ -30,7 +32,7 @@ for (const [i, rad] of rader.entries()) {
   if (h) {
     slug = h[1];
     iEfter = false;
-    if (steg <= MAX_STEG) {
+    if (steg <= MAX_STEG && !UTESLUTNA.has(slug)) {
       if (perSlug.has(slug)) dubbletter.push(slug);
       perSlug.set(slug, []);
     }
@@ -41,7 +43,7 @@ for (const [i, rad] of rader.entries()) {
     iEfter = false;
     continue;
   }
-  if (!slug || steg > MAX_STEG) continue;
+  if (!slug || steg > MAX_STEG || !perSlug.has(slug)) continue;
   if (rad.startsWith("**Efter (egna):**")) {
     iEfter = true;
     continue;
