@@ -173,7 +173,7 @@ const RegionPage = () => {
                 label: regionLinkLabel(n),
                 description: "Närliggande område.",
               })),
-              ...(REGION_EXTRA_LINKS[region] ?? []).map((l) => ({ to: l.href, label: l.label, description: "Mer om takomläggning." })),
+              ...(REGION_EXTRA_LINKS[region] ?? []).map((l) => ({ to: l.href, label: l.label, description: l.description ?? "Mer om takomläggning." })),
             ]}
             title={REGION_PAGE_TEXT.nextTitle}
             intro={REGION_PAGE_TEXT.nextIntro}

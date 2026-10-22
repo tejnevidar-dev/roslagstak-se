@@ -17,6 +17,8 @@ import { hasServiceCombos } from "./service-slugs";
 export interface HubLink {
   href: string;
   label: string;
+  /** Kort beskrivning på regionsidans länkruta (gren 172). */
+  description?: string;
 }
 interface Hub extends HubLink {
   /** Ortens slug: själva hubben får ingen länk till sig själv. */
@@ -49,7 +51,7 @@ const HUBS: Hub[] = [
 ];
 
 /** Extra länkar på regionsidor (backlog 1cn): Kusten länkar till takomläggningssidan för Norrtälje. */
-export const REGION_EXTRA_LINKS: Record<string, HubLink[]> = {
+const REGION_EXTRA_STATISKA: Record<string, HubLink[]> = {
   Kusten: [{ href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }],
   // Svagast länkade ägarsidor: regionsidorna i Stockholm länkar till Stockholmsguiden, Nordvästra Stockholm även till Bro
   "Nordvästra Stockholm": [{ href: "/taklaggare-bro", label: "Takläggare i Bro" }, { href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
@@ -60,6 +62,31 @@ export const REGION_EXTRA_LINKS: Record<string, HubLink[]> = {
   "Norra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
   "Sydvästra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
   "Sydöstra Stockholm": [{ href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" }],
+};
+
+/**
+ * Gren 172 (#15, seo-analys-2026-10-21/3-ort-for-ort.md, vinst 4): kommunerna med lägst konkurrens (Sundbyberg, Botkyrka, Tumba, Nynäshamn, Ekerö, Upplands-Bro) länkas från sin regionsida
+ * med sina indexerbara tjänst × ort-sidor, och Södra Stockholm, Nordvästra Stockholm och Västerort länkar till Stockholms ortssida med de befintliga orden "Takläggare i Stockholm".
+ * Bara egna, indexerbara sidor (ingen länk via tjänstesida eller till en ompekad adress). Etiketterna är de vanliga ("Takbyte i Sundbyberg").
+ */
+const LAG_KONKURRENS = ["sundbyberg", "botkyrka", "tumba", "nynashamn", "ekero", "upplands-bro", "bro", "kungsangen"];
+const STOCKHOLM_ORTSSIDA = ["Södra Stockholm", "Nordvästra Stockholm", "Västerort"];
+const regionExtra = (): Record<string, HubLink[]> => {
+  const ut: Record<string, HubLink[]> = Object.fromEntries(Object.entries(REGION_EXTRA_STATISKA).map(([r, l]) => [r, [...l]]));
+  const lagg = (region: string, l: HubLink) => {
+    const lista = (ut[region] ??= []);
+    if (!lista.some((x) => x.href === l.href && x.label === l.label)) lista.push(l);
+  };
+  for (const r of STOCKHOLM_ORTSSIDA) lagg(r, { href: "/taklaggare-stockholm", label: "Takläggare i Stockholm", description: "Takläggare i Stockholms stad." });
+  for (const slug of LAG_KONKURRENS) {
+    const ort = locations.find((l) => l.slug === slug);
+    if (!ort) continue;
+    for (const [serviceSlug, serviceName] of KOMMUN_TJANSTER) {
+      const l = comboLink({ serviceSlug, serviceName, locationSlug: ort.slug, prep: ortPrep(ort), locationName: ort.name });
+      if (l && l.href === `/${serviceSlug}-${ort.slug}`) lagg(ort.region, { ...l, description: `${serviceName} ${ortPrep(ort)} ${ort.name}.` });
+    }
+  }
+  return ut;
 };
 
 /** Länkar som bara gäller en enda ortssida (paket 73): Norrtälje-sidan länkar till guiden "Välja takfirma i Norrtälje" i länkrutan, med guidens egen titel. */
@@ -134,3 +161,6 @@ export const hubLinksFor = (slug: string): HubLink[] => {
   const alla = [...hubbar, ...kommunLankar(slug), ...(ENSKILDA_LANKAR[slug] ?? [])];
   return alla.filter((l, i) => alla.findIndex((x) => x.href === l.href && x.label === l.label) === i);
 };
+
+/** Extra länkar på regionsidor (backlog 1cn, gren 172). */
+export const REGION_EXTRA_LINKS: Record<string, HubLink[]> = regionExtra();
