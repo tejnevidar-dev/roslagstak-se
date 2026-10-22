@@ -1,4 +1,4 @@
-import { comboOverrides } from "./combo-overrides";
+import { harComboOverride } from "./combo-keys";
 
 /**
  * Tjänst+ort-sidor (t.ex. /takbyte-taby) genereras av EN mallfunktion per tjänst
@@ -29,7 +29,7 @@ const CLICK_CONFIRMED_EXEMPTIONS: ReadonlySet<string> = new Set([
 ]);
 
 export const isThinCombo = (serviceSlug: string, loc: { slug: string; lat: number; lng: number }): boolean => {
-  if (`${serviceSlug}-${loc.slug}` in comboOverrides) return false;
+  if (harComboOverride(`${serviceSlug}-${loc.slug}`)) return false;
   if (PRIORITY_SERVICES.includes(serviceSlug) && PRIORITY_AD_SLUGS.includes(loc.slug)) return false;
   if (CLICK_CONFIRMED_EXEMPTIONS.has(`${serviceSlug}:${loc.slug}`)) return false;
   return true;

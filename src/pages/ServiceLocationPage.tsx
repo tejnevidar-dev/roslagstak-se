@@ -16,7 +16,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
 import { getCombo, allServiceSlugs, COMBO_SERVICE_PAGE, COMBO_LINK_LABEL, MATERIAL_OWN_PAGE, comboDefaultTitle, comboDefaultH1 } from "@/data/service-location-combos";
-import { comboOverrides } from "@/data/combo-overrides";
+import { useCombo } from "@/data/combo-load";
 import { locationsLight as locations } from "@/data/locations-light";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
 import NotFound from "./NotFound";
@@ -44,7 +44,7 @@ const ServiceLocationPage = () => {
 
   /* Egen, längre och unik text för vissa tjänst×ort-kombinationer i stället för den korta
      mallgenererade combo-texten (sprint-offensiv-2026-09-28 punkt 3, #14/#1r 2026-09-29). */
-  const override = comboOverrides[`${combo.serviceSlug}-${combo.locationSlug}`];
+  const override = useCombo(`${combo.serviceSlug}-${combo.locationSlug}`); // gren 192: egen text laddas per sida (kastar tills den finns)
 
   const loc = locations.find((l) => l.slug === combo.locationSlug);
   const nearbyInService = loc?.nearbyLocations

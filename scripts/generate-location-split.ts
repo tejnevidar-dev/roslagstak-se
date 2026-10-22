@@ -68,3 +68,26 @@ for (const l of locations) {
   );
 }
 console.log(`[location-split] ${locations.length} orter: src/data/locations-light.ts och src/data/orter/<slug>.ts`);
+
+/* ---- combo-texterna (src/data/combo-overrides.ts, ca 413 kB): thin-combos.ts behöver bara vilka nycklar som har egen text, ServiceLocationPage laddar sin egen text per sida ---- */
+import { comboOverrides } from "../src/data/combo-overrides";
+const nycklar = Object.keys(comboOverrides);
+writeFileSync(
+  resolve("src/data/combo-keys.ts"),
+  `${rubrik}
+/** Tjänst × ort-sidor som har egen text i combo-overrides.ts (nyckel "<tjänst>-<ort>"). thin-combos.ts läser bara den här listan, så att inte alla combotexter hamnar i ortssidornas JS. */
+export const COMBO_OVERRIDE_KEYS: readonly string[] = ${JSON.stringify(nycklar)};
+const KEYS = new Set(COMBO_OVERRIDE_KEYS);
+export const harComboOverride = (key: string): boolean => KEYS.has(key);
+`,
+);
+const cdir = resolve("src/data/combos");
+mkdirSync(cdir, { recursive: true });
+for (const f of readdirSync(cdir)) if (f.endsWith(".ts")) rmSync(resolve(cdir, f));
+for (const k of nycklar) {
+  writeFileSync(
+    resolve(cdir, `${k}.ts`),
+    `${rubrik}import type { ComboOverride } from "../combo-overrides";\n\nconst combo: ComboOverride = ${JSON.stringify(comboOverrides[k], null, 2)};\n\nexport default combo;\n`,
+  );
+}
+console.log(`[location-split] ${nycklar.length} combotexter: src/data/combo-keys.ts och src/data/combos/<nyckel>.ts`);

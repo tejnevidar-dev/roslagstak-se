@@ -33,3 +33,18 @@ describe("gren 192: delad ortsdata", () => {
     }
   });
 });
+
+describe("gren 192: delade combotexter", () => {
+  it("combo-keys.ts och combos/<nyckel>.ts är exakt comboOverrides", async () => {
+    const { comboOverrides } = await import("../data/combo-overrides");
+    const { COMBO_OVERRIDE_KEYS, harComboOverride } = await import("../data/combo-keys");
+    const filer = import.meta.glob<{ default: unknown }>("../data/combos/*.ts", { eager: true });
+    expect([...COMBO_OVERRIDE_KEYS]).toEqual(Object.keys(comboOverrides));
+    expect(Object.keys(filer).length).toBe(Object.keys(comboOverrides).length);
+    for (const k of Object.keys(comboOverrides)) {
+      expect(harComboOverride(k), k).toBe(true);
+      expect(filer[`../data/combos/${k}.ts`].default, k).toEqual((comboOverrides as Record<string, unknown>)[k]);
+    }
+    expect(harComboOverride("takbyte-finnhamn-finns-inte")).toBe(false);
+  });
+});
