@@ -3080,7 +3080,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "## Så går det till",
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Rapport och fast pris.** Efter takkontrollen får du en rapport om takets skick och en offert med fast pris. Tillägg görs bara efter ditt godkännande.",
-      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Åkersberga och hela Österåker. Mer om kommunen finns på sidan om [takläggare i Åkersberga](/taklaggare-akersberga). Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
+      "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Åkersberga och Österåker. Mer om kommunen finns på sidan om [takläggare i Åkersberga](/taklaggare-akersberga). Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
   },
   "taktvatt-sodertalje": {
