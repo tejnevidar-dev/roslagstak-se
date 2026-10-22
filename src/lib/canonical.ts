@@ -6,6 +6,8 @@
  * on several paths) are mapped to their single canonical target here.
  */
 
+import { brfNoindexVagar } from "../data/avindexerade-brf";
+
 export const SITE_URL = "https://roslagstak.se";
 
 /** Alias path -> canonical path. Keys and values are lowercase, no trailing slash. */
@@ -59,5 +61,7 @@ export const canonicalUrl = (pathnameOrUrl: string): string => {
 
 export const isNoindexPath = (pathname: string): boolean => {
   const path = normalizePath(pathname);
+  // Gren 179: BRF-ortssidorna (/brf/<ort>) är noindex när flaggan i avindexerade-brf.ts står på true (förberedd, hållen)
+  if (brfNoindexVagar().includes(path)) return true;
   return NOINDEX_PREFIXES.some((p) => path === p || path.startsWith(`${p}/`));
 };

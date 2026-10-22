@@ -55,6 +55,7 @@ const {
   HERO_STYLES,
   thinComboPaths,
   avindexeradePaths,
+  brfNoindexPaths,
   buildOrganizationNode,
   buildWebSiteNode,
   buildWebPageNode,
@@ -112,6 +113,8 @@ const routes = [
   ...noindexRoutes.map((path) => ({ path, robots: NOINDEX_ROBOTS })),
   ...thinComboPaths.map((path) => ({ path, robots: "noindex, follow" })),
   ...avindexeradePaths.map((path) => ({ path, robots: "noindex, follow" })),
+  // Gren 179: BRF-ortssidorna när flaggan i src/data/avindexerade-brf.ts står på true (annars tom lista)
+  ...brfNoindexPaths.map((path) => ({ path, robots: "noindex, follow" })),
 ];
 
 /* Sidkomponenterna laddas lazy. Utan hint hämtas deras chunk först när huvudscriptet körts

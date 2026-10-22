@@ -33,6 +33,7 @@ import { stripInlineMd, inlineMdLinks, isHeading } from "../src/lib/inline-md";
 import { buildBody, type BodyItem } from "../src/lib/body-items";
 import { problemsForLocation, regionLinksForProblems, takkontrollLink } from "../src/data/problem-links";
 import { hubLinksFor, REGION_EXTRA_LINKS } from "../src/data/hub-links";
+import { brfNoindexVagar } from "../src/data/avindexerade-brf";
 import {
   TAKTVATT_SIDA_FAQS as TAKTVATT_FAQS,
   TAKTVATT_SIDA_H1 as TAKTVATT_H1,
@@ -1510,6 +1511,8 @@ export const prerenderContent = (path: string): PrerenderPage | null => {
 /** Tjänst+ort-URL:er som ska noindexeras (se src/data/thin-combos.ts). */
 /** Avindexerade ortssidor (AJ5): noindex, follow och utanför sajtkartan. */
 export const avindexeradePaths: string[] = [...avindexeradeOrtsvagar(), ...avindexeradeGuidevagar()];
+/** Gren 179: BRF-ortssidorna som är noindex (tom lista så länge flaggan i src/data/avindexerade-brf.ts står på false). */
+export const brfNoindexPaths: string[] = brfNoindexVagar();
 
 export const thinComboPaths: string[] = locations
   .filter((l) => hasServiceCombos(l.region))
