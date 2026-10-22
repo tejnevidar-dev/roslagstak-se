@@ -360,20 +360,20 @@
   "d": "2026-10-21"
  },
  "/tjanster/takrenovering": {
-  "h": "86b38d9b813d19c9",
-  "d": "2026-10-21"
+  "h": "123467c5c2e46a3e",
+  "d": "2026-10-22"
  },
  "/tjanster/takavvattning": {
   "h": "fecf60c1a6be589e",
   "d": "2026-10-21"
  },
  "/tjanster/takkupor": {
-  "h": "eb498d956e6653c0",
-  "d": "2026-10-21"
+  "h": "7446d593549536d4",
+  "d": "2026-10-22"
  },
  "/tjanster/takinspektion": {
-  "h": "9dc0dbf7276b075f",
-  "d": "2026-10-21"
+  "h": "40967c56a2ebf2df",
+  "d": "2026-10-22"
  },
  "/tjanster/platarbeten": {
   "h": "7be55e5cacd9f73f",
@@ -388,12 +388,12 @@
   "d": "2026-10-21"
  },
  "/tjanster/tegeltak": {
-  "h": "1ee47415fafa80f7",
-  "d": "2026-10-21"
+  "h": "a9ccfdd98a357090",
+  "d": "2026-10-22"
  },
  "/tjanster/taktvatt": {
-  "h": "7e4ed1d971537fd9",
-  "d": "2026-10-21"
+  "h": "0a64cdc59a58a38a",
+  "d": "2026-10-22"
  },
  "/kontakt": {
   "h": "f696659d4c27f107",
@@ -604,7 +604,7 @@
   "d": "2026-10-22"
  },
  "/taklaggare-vaddo": {
-  "h": "b3d03c8f748b244e",
+  "h": "d1e771affd2a341d",
   "d": "2026-10-22"
  },
  "/taklaggare-vato": {
@@ -612,11 +612,11 @@
   "d": "2026-10-22"
  },
  "/taklaggare-norrtalje": {
-  "h": "ec8bed419a8c01c2",
+  "h": "c15a5ec48e847f8e",
   "d": "2026-10-22"
  },
  "/taklaggare-vaxholm": {
-  "h": "a9ac92898e533401",
+  "h": "bf00003307b961fa",
   "d": "2026-10-22"
  },
  "/taklaggare-singo": {
@@ -664,7 +664,7 @@
   "d": "2026-10-22"
  },
  "/taklaggare-akersberga": {
-  "h": "03e959f8cb32c734",
+  "h": "2dcff42638f44a73",
   "d": "2026-10-22"
  },
  "/taklaggare-osterskar": {
@@ -672,11 +672,11 @@
   "d": "2026-10-22"
  },
  "/taklaggare-vallentuna": {
-  "h": "de24de239123e6b7",
+  "h": "267d3718a1593769",
   "d": "2026-10-22"
  },
  "/taklaggare-taby": {
-  "h": "d3bbeb6f72007330",
+  "h": "b7970a149d440656",
   "d": "2026-10-22"
  },
  "/taklaggare-ella-gard": {
@@ -864,7 +864,7 @@
   "d": "2026-10-22"
  },
  "/taklaggare-varmdo": {
-  "h": "8fa50ed491f0931a",
+  "h": "35055ef48f4352ed",
   "d": "2026-10-22"
  },
  "/taklaggare-tyreso": {
@@ -880,11 +880,11 @@
   "d": "2026-10-22"
  },
  "/taklaggare-jarfalla": {
-  "h": "eff9310ee4af7547",
+  "h": "b99bd05a744d0bae",
   "d": "2026-10-22"
  },
  "/taklaggare-huddinge": {
-  "h": "8b393ee618f31a07",
+  "h": "652b7563635368a1",
   "d": "2026-10-22"
  },
  "/taklaggare-sigtuna": {
@@ -892,7 +892,7 @@
   "d": "2026-10-22"
  },
  "/taklaggare-upplands-vasby": {
-  "h": "754b99cdea586fc0",
+  "h": "d1fb84a91518cb47",
   "d": "2026-10-22"
  },
  "/taklaggare-nynashamn": {
@@ -940,11 +940,11 @@
   "d": "2026-10-22"
  },
  "/taklaggare-sodertalje": {
-  "h": "42b8ea367bfedac6",
+  "h": "378e5d291e7daef6",
   "d": "2026-10-22"
  },
  "/taklaggare-upplands-bro": {
-  "h": "5daa2ba364dbddd5",
+  "h": "2c8b42fff14d7015",
   "d": "2026-10-22"
  },
  "/taklaggare-hammarby-sjostad": {
@@ -1148,7 +1148,7 @@
   "d": "2026-10-22"
  },
  "/taklaggare-tullinge": {
-  "h": "2edbc47309eb244c",
+  "h": "b4d36fec4312642e",
   "d": "2026-10-22"
  },
  "/taklaggare-norsborg": {
@@ -1176,7 +1176,7 @@
   "d": "2026-10-22"
  },
  "/taklaggare-uppsala": {
-  "h": "f039d4d16a9c6b61",
+  "h": "5f2a806736188735",
   "d": "2026-10-22"
  },
  "/taklaggare-knivsta": {
@@ -1544,8 +1544,8 @@
   "d": "2026-10-21"
  },
  "/brf/varmdo": {
-  "h": "49739b3301300eb0",
-  "d": "2026-10-21"
+  "h": "c273bb19eef030e8",
+  "d": "2026-10-22"
  },
  "/brf/huddinge": {
   "h": "18e1ad5b00b430f2",
@@ -1688,8 +1688,8 @@
   "d": "2026-10-21"
  },
  "/taktvatt-vaxholm": {
-  "h": "3df8b2dd2424fd13",
-  "d": "2026-10-21"
+  "h": "4f19d24f41bcc567",
+  "d": "2026-10-22"
  },
  "/takbyte-rimbo": {
   "h": "3f3820f5dcbf7eef",
@@ -1744,8 +1744,8 @@
   "d": "2026-10-22"
  },
  "/taktvatt-vallentuna": {
-  "h": "f5ea2d33ae74ebd5",
-  "d": "2026-10-21"
+  "h": "de8ad19d34987bb2",
+  "d": "2026-10-22"
  },
  "/takbyte-taby": {
   "h": "4cb62885ad8dafac",
@@ -1804,7 +1804,7 @@
   "d": "2026-10-22"
  },
  "/taktvatt-sundbyberg": {
-  "h": "270374798820261d",
+  "h": "9ab4107f0a77575f",
   "d": "2026-10-22"
  },
  "/takbyte-danderyd": {
@@ -1836,8 +1836,8 @@
   "d": "2026-10-20"
  },
  "/taktvatt-sollentuna": {
-  "h": "de28a9ef3ce7e812",
-  "d": "2026-10-21"
+  "h": "d8278828879dd467",
+  "d": "2026-10-22"
  },
  "/takbyte-lidingo": {
   "h": "3002526aa2570436",
@@ -1852,8 +1852,8 @@
   "d": "2026-10-21"
  },
  "/taktvatt-lidingo": {
-  "h": "c7e538d1cb8267c0",
-  "d": "2026-10-21"
+  "h": "98b16a3129ef8c5c",
+  "d": "2026-10-22"
  },
  "/takbyte-nacka": {
   "h": "89ff037c04337fde",
@@ -1864,8 +1864,8 @@
   "d": "2026-10-21"
  },
  "/taktvatt-nacka": {
-  "h": "83bcb429589c6047",
-  "d": "2026-10-21"
+  "h": "3784fce2a2d9b992",
+  "d": "2026-10-22"
  },
  "/takbyte-varmdo": {
   "h": "81d6a5569d898410",
@@ -1892,8 +1892,8 @@
   "d": "2026-10-22"
  },
  "/taktvatt-tyreso": {
-  "h": "a3f6896f5e6b7c00",
-  "d": "2026-10-21"
+  "h": "0b756622d89eb1b4",
+  "d": "2026-10-22"
  },
  "/takbyte-haninge": {
   "h": "ad2ec4134ac3a040",
@@ -1908,8 +1908,8 @@
   "d": "2026-10-20"
  },
  "/taktvatt-haninge": {
-  "h": "68255f5373daa46d",
-  "d": "2026-10-21"
+  "h": "394567b8bc33afe0",
+  "d": "2026-10-22"
  },
  "/takbyte-ekero": {
   "h": "cb25f4aa8b09db01",
@@ -1948,8 +1948,8 @@
   "d": "2026-10-20"
  },
  "/taktvatt-huddinge": {
-  "h": "989aa0d5addca944",
-  "d": "2026-10-21"
+  "h": "bbbebc4a7ebf6933",
+  "d": "2026-10-22"
  },
  "/takbyte-sigtuna": {
   "h": "8121ba461ff9eece",
@@ -1960,8 +1960,8 @@
   "d": "2026-10-22"
  },
  "/taktvatt-upplands-vasby": {
-  "h": "d9a40756fa8aa684",
-  "d": "2026-10-21"
+  "h": "8020dab5b23bc68a",
+  "d": "2026-10-22"
  },
  "/takbyte-nynashamn": {
   "h": "bf81f621d2992585",
@@ -2020,7 +2020,7 @@
   "d": "2026-10-22"
  },
  "/taktvatt-sodertalje": {
-  "h": "dc2723ba224ff255",
+  "h": "a6ea081cc7c4a14c",
   "d": "2026-10-22"
  },
  "/takbyte-bro": {
