@@ -73,7 +73,9 @@ describe("paket 47: fynd per sida och personnamn", () => {
 describe("paket 47: Edsbro och Kapellskär (kortade texter)", () => {
   it("Edsbro: en kort ortsbeskrivning och standardblocket, utan bruket, pråmarna, fornborgarna och uthusmeningen", () => {
     const t = text("edsbro");
-    expect(t).toContain("här tillverkades råjärn från 1686 till 1919, och ruinerna efter masugnen och klensmedjan är välbevarade. Kyrkan är från 1200-talet.");
+    // gren 191 (mallandel 11–30): ett nytt stycke står mellan bruksmeningen och kyrkmeningen
+    expect(t).toContain("här tillverkades råjärn från 1686 till 1919, och ruinerna efter masugnen och klensmedjan är välbevarade.");
+    expect(t).toContain("Kyrkan är från 1200-talet.");
     // gren 183 (briefrundan 2026-10-22): namnet, bruket och fornborgen kommer tillbaka i kortare form (Närdingen, Lundboborg, fornborgar tas därför inte längre med här)
     for (const borta of ["uthus och bodar", "grannens tak", "byggts till har ofta takdelar"]) expect(t, borta).not.toContain(borta);
     expect(t).toContain("Vilka garantier som gäller för ditt tak står i offerten.");
