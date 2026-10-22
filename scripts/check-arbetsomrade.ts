@@ -11,6 +11,9 @@ const FRASER: [string, RegExp][] = [
   ["hela Storstockholm", /\bhela\s+Storstockholm\b/i],
   ["hela Österåker", /\bhela\s+Österåker\b/i],
 ];
+/** Gren 189: en mening som talar om var vi tar uppdrag, och "hela" följt av ett ortnamn eller ett platsord (kommunen, regionen, staden, området, länet). */
+const UPPDRAGSMENING = /\buppdrag\b|^\s*Ja,\s+i\s+hela\b|\bverksamma\b|\barbetar\s+i\b/i;
+const HELA_PLATS = /\bhela\s+(?:[A-ZÅÄÖ][\wåäöÅÄÖ-]+|kommunen|regionen|staden|området|länet)\b/;
 /** Sidor som får ha frasen tills deras paket är släppt. Startsidan (index.html) byts i paket 52. */
 const UNDANTAG = new Set<string>(["index.html"]);
 
@@ -32,9 +35,15 @@ for (const f of walk("dist")) {
   sidor++;
   const text = readFileSync(f, "utf8").replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ");
   for (const [namn, re] of FRASER) if (re.test(text)) fel.push(`${rel}: "${namn}"`);
+  // Gren 189: ingen uppdragsmening får lova "hela" en ort, kommun eller region ("Vi tar uppdrag i hela Täby", "Ja, i hela kommunen"). Rader utan uppdragsord (till exempel "hela taket") berörs inte.
+  for (const mening of text.split(/(?<=[.?!])\s+/)) {
+    if (!UPPDRAGSMENING.test(mening)) continue;
+    const m = mening.match(HELA_PLATS);
+    if (m) fel.push(`${rel}: "${m[0]}" i uppdragsmening: ${mening.trim().slice(0, 90)}`);
+  }
 }
 if (fel.length) {
   console.error(`[check-arbetsomrade] ${fel.length} träffar:\n  ` + fel.slice(0, 30).join("\n  "));
   process.exit(1);
 }
-console.log(`[check-arbetsomrade] OK: ingen "hela Roslagen", "hela Storstockholm" eller "hela Österåker" på ${sidor} byggda sidor (startsidan undantagen till paket 52)`);
+console.log(`[check-arbetsomrade] OK: ingen "hela Roslagen", "hela Storstockholm", "hela Österåker" och ingen annan "hela <plats>" i en uppdragsmening på ${sidor} byggda sidor (startsidan undantagen till paket 52)`);

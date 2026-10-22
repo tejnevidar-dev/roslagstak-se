@@ -10,7 +10,7 @@ export interface EgenFAQ {
 
 export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
   "uppsala": [
-    { question: "Vilka delar av Uppsala tar ni uppdrag i?", answer: "Vi tar uppdrag i hela Uppsala, bland annat i villastaden i Kåbo, egnahemsområdet i Ekeby, Sunnersta, Årsta, Valsätra, Nåntuna, Bergsbrunna och Stenhagen. Det börjar med en kostnadsfri takkontroll på plats." },
+    { question: "Vilka delar av Uppsala tar ni uppdrag i?", answer: "Vi tar uppdrag i Uppsala, bland annat i villastaden i Kåbo, egnahemsområdet i Ekeby, Sunnersta, Årsta, Valsätra, Nåntuna, Bergsbrunna och Stenhagen. Det börjar med en kostnadsfri takkontroll på plats." },
     { question: "När kom villorna till Kåbo och Ekeby?", answer: "Planerna för villaförstäderna på Kåbo gärde började byggas på 1910-talet, och Kåbo gärde byggdes som en villastad mellan universitetsområdena. Egnahemsområdet i Ekeby uppfördes med början 1922." },
     { question: "Vad är värt att tänka på med taket i en stadsdel som Sunnersta?", answer: "I Sunnersta står hus från hela 1900-talet sida vid sida, eftersom avstyckningen började 1906–1907 och fortsatte länge. Grannens tak säger därför inte mycket om ditt eget, och varje hus får en egen takkontroll och ett eget pris." },
   ],
@@ -20,17 +20,17 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Vad är värt att tänka på med taket på en äldre villa i Danderyd?", answer: "Villor från 1890-talet och 1900-talets början kan ha torn, kupor, burspråk och flera takfall. Varje anslutning ska vara tät. På en äldre villa är takets form, material och kulör en del av husets karaktär, och delar av kommunen har bebyggelse som kommunen enligt Wikipedia har pekat ut som kulturhistoriskt värdefull." },
   ],
   "taby": [
-    { question: "Vilka delar av Täby tar ni uppdrag i?", answer: "Vi tar uppdrag i hela Täby, bland annat i Roslags-Näsby, Täby kyrkby, Viggbyholm, Näsbypark, Ensta, Lahäll, Gribbylund, Skarpäng och Vallabrink. Det börjar med en kostnadsfri takkontroll på plats." },
+    { question: "Vilka delar av Täby tar ni uppdrag i?", answer: "Vi tar uppdrag i Täby, bland annat i Roslags-Näsby, Täby kyrkby, Viggbyholm, Näsbypark, Ensta, Lahäll, Gribbylund, Skarpäng och Vallabrink. Det börjar med en kostnadsfri takkontroll på plats." },
     { question: "Varför ligger så många villaområden längs Roslagsbanan i Täby?", answer: "Täby blev villaort med järnvägen. Roslagsbanan drogs fram på 1880-talet, och enligt Täby kommun växte villaområdena fram kring stationerna, till exempel Roslags-Näsby, Viggbyholm och Ensta." },
     { question: "Vad är värt att tänka på med taket i ett typhusområde i Täby?", answer: "I Skarpäng och Gribbylund präglas bebyggelsen av typhus från 1970- och 1980-talen. Där husen byggdes samtidigt ser taken lika ut från gatan, men de kan ha skötts och lagts om var för sig, så varje hus får en egen takkontroll och ett eget pris." },
   ],
   "norrtalje": [
-    { question: "Vilka orter i Norrtälje kommun tar ni uppdrag i?", answer: "Vi har vår bas i Norrtälje och tar uppdrag i hela kommunen, bland annat i staden, Rimbo, Hallstavik, Älmsta, Grisslehamn, Herräng, Rådmansö och på Vätö. Till Yxlan och Blidö går vägfärja." },
+    { question: "Vilka orter i Norrtälje kommun tar ni uppdrag i?", answer: "Vi har vår bas i Norrtälje och tar uppdrag i Norrtälje kommun, bland annat i staden, Rimbo, Hallstavik, Älmsta, Grisslehamn, Herräng, Rådmansö och på Vätö. Till Yxlan och Blidö går vägfärja." },
     { question: "Vad skiljer orterna i Norrtälje kommun åt?", answer: "Rimbo växte fram kring järnvägen, som kom 1884, och Hallstavik blev brukssamhälle när pappersbruket grundades 1915. Herräng är ett gruvsamhälle, och Grisslehamn fick ett uppsving som sommarort i slutet av 1800-talet." },
     { question: "Vad är värt att tänka på med ett fritidshus i Norrtälje kommun?", answer: "Ett fritidshus som har blivit åretruntbostad kan ha byggts om och till, och då kan det finnas takdelar av olika ålder på samma hus. Det kan också vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs." },
   ],
   "akersberga": [
-    { question: "Vilka delar av Åkersberga tar ni uppdrag i?", answer: "Vi tar uppdrag i hela Åkersberga och resten av Österåker, bland annat i Österskär, Stora Stava, Svinninge, Täljö, Margretelund, Rydbo, Brevik, Lervik, Flaxenvik och Skärgårdsstad, och på Ljusterö." },
+    { question: "Vilka delar av Åkersberga tar ni uppdrag i?", answer: "Vi tar uppdrag i Åkersberga och resten av Österåker, bland annat i Österskär, Stora Stava, Svinninge, Täljö, Margretelund, Rydbo, Brevik, Lervik, Flaxenvik och Skärgårdsstad, och på Ljusterö." },
     { question: "Hur kom Åkersberga och Österskär till?", answer: "Åkersberga började som en järnvägsstation på ett gärde 1901. Roslagsbanan förlängdes till Österskär 1906, där stora trävillor hade byggts vid sekelskiftet. På 1930-talet räknades Åkersberga och Österskär som två tätorter, och sedan 1950 anses de sammanvuxna." },
     { question: "Tar ni uppdrag på Ljusterö?", answer: "Ja. Till Ljusterö går vägfärjan från Östanå, så material och ställning kan köras fram som på fastlandet. Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas." },
   ],
@@ -40,12 +40,12 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Vad är värt att tänka på med ett fritidshus i Spillersboda?", answer: "Ett fritidshus som har byggts till eller används året om kan ha takdelar av olika ålder, och skarven mellan dem är värd en extra titt. Det kan också vara byggt med klenare takstolar, och då kan bärigheten behöva bedömas av en konstruktör innan ett tyngre material väljs." },
   ],
   "vallentuna": [
-    { question: "Vilka delar av Vallentuna tar ni uppdrag i?", answer: "Vi tar uppdrag i hela Vallentuna, bland annat i Ormsta, Bällsta, Molnby, Snapptuna, Rickeby, Kragstalund, Uthamra, Lindholmen, Kårsta och Brottby, och på landsbygden." },
+    { question: "Vilka delar av Vallentuna tar ni uppdrag i?", answer: "Vi tar uppdrag i Vallentuna, bland annat i Ormsta, Bällsta, Molnby, Snapptuna, Rickeby, Kragstalund, Uthamra, Lindholmen, Kårsta och Brottby, och på landsbygden." },
     { question: "Hur växte Vallentuna fram?", answer: "Vallentuna fick en station när järnvägen Stockholm–Rimbo invigdes 1885, och tätorten har vuxit fram längs Roslagsbanan. Mellan 1944 och 1952 ökade befolkningen från omkring 2 300 till nästan 5 900, och utbyggnaden har skett i etapper." },
     { question: "Hur gammal är Vallentuna kyrka?", answer: "Vallentuna kyrka ligger vid Vallentunasjöns norra strand och har varit sockenkyrka sedan medeltiden. Den första kyrkan av gråsten byggdes enligt Wikipedia på 1190-talet. I dag täcks alla byggnadsdelar av sadeltak, utom gravkoret, som har en spetsig takspira." },
   ],
   "upplands-vasby": [
-    { question: "Vilka delar av Upplands Väsby tar ni uppdrag i?", answer: "Vi tar uppdrag i hela kommunen, bland annat i Bollstanäs, Odenslunda, Vilunda, Brunnby Vik och på landsbygden kring Hammarby och Vaxmyra." },
+    { question: "Vilka delar av Upplands Väsby tar ni uppdrag i?", answer: "Vi tar uppdrag i Upplands Väsby kommun, bland annat i Bollstanäs, Odenslunda, Vilunda, Brunnby Vik och på landsbygden kring Hammarby och Vaxmyra." },
     { question: "Hur växte Upplands Väsby fram?", answer: "Järnvägen mellan Stockholm och Uppsala byggdes 1863–1866, och stationen fick namnet Väsby efter slottet Stora Väsby. Orten växte mycket snabbt kring 1970, och Väsby centrum öppnade 1972 på det som tidigare var åkermark." },
     { question: "Vad är värt att tänka på med taket i ett kvarter som byggdes samtidigt?", answer: "Där husen byggdes samtidigt ser taken lika ut från gatan, men de kan ha skötts och lagts om var för sig. Grannens tak säger därför inte mycket om ditt eget, och varje hus får en egen takkontroll och ett eget pris." },
   ],
@@ -55,7 +55,7 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Vad är värt att tänka på med taket i Älvsjö?", answer: "Där tomter har delats i omgångar kan grannhusen vara byggda med många årtiondens mellanrum, så det går inte att dra slutsatser från grannens tak till det egna. I lummiga trädgårdar samlas löv i hängrännor och ränndalar." },
   ],
   "tullinge": [
-    { question: "Vilka delar av Tullinge tar ni uppdrag i?", answer: "Vi tar uppdrag i hela Tullinge, bland annat i Tullinge villastad, Brantbrink, Tullinge skog och Tullinge parkhem. Det börjar med en kostnadsfri takkontroll på plats." },
+    { question: "Vilka delar av Tullinge tar ni uppdrag i?", answer: "Vi tar uppdrag i Tullinge, bland annat i Tullinge villastad, Brantbrink, Tullinge skog och Tullinge parkhem. Det börjar med en kostnadsfri takkontroll på plats." },
     { question: "Hur växte Tullinge villastad fram?", answer: "Stambanan gick genom Tullinge redan 1859, men en hållplats kom först 1903, och den blev station 1917. Planerna för villastaden fullföljdes inte helt, och villastaden har vuxit fram i flera omgångar, med en stor del av husen från 1950-talet och en nyare årgång från 2000-talet." },
     { question: "Vad är värt att tänka på med en äldre villa i Tullinge?", answer: "Äldre villor kan ha fler vinklar, kupor och skorstenar, och varje anslutning ska vara tät. I en villastad som har förtätats i omgångar säger grannens tak inte mycket om ditt eget." },
   ],
@@ -95,7 +95,7 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Vilka hus finns på Vätö?", answer: "Wikipedia beskriver en stor andel äldre bebyggelse, mest torp och gårdar från 1800-talets andra hälft, och stenhuggartorp. Stenhuggarna lät också bygga små villor med hög stenfot. Den norra delen av ön har fritidshus från 1960- och 1970-talen." },
   ],
   "vaxholm": [
-    { question: "Vilka öar i Vaxholm tar ni uppdrag på?", answer: "Vi tar uppdrag i hela Vaxholm, bland annat på Vaxön, Resarö, Rindö, Skarpö och Tynningö. Till ett hus med bilväg, också över bro eller med vägfärja, kommer vi som på fastlandet." },
+    { question: "Vilka öar i Vaxholm tar ni uppdrag på?", answer: "Vi tar uppdrag i Vaxholm, bland annat på Vaxön, Resarö, Rindö, Skarpö och Tynningö. Till ett hus med bilväg, också över bro eller med vägfärja, kommer vi som på fastlandet." },
     { question: "När började villorna byggas på Resarö?", answer: "Villabebyggelsen på Resarö började med Ytterbystrand, ett villaområde som grundades 1903. I slutet av 1900-talet förvandlades ön enligt Wikipedia från sommarö till villaförort." },
     { question: "Hur gammal är staden Vaxholm?", answer: "Centralorten ligger på Vaxön och fick stadsprivilegier 1652, med fästningen på holmen utanför som nav i försvaret av inloppet till Stockholm." },
   ],
@@ -240,7 +240,7 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Hur gammal är Rådmansö församling?", answer: "Församlingen bildades i slutet av 1500-talet som ett kapellag utbrutet ur Frötuna. Socknen blev egen landskommun 1862 och ingår sedan 1971 i Norrtälje kommun." },
   ],
   "upplands-bro": [
-    { question: "Vilka orter ligger i Upplands-Bro?", answer: "Kommunen har Kungsängen som centralort, och den andra stora orten är Bro. Båda är stationssamhällen vid samma järnväg, och till Bro hör i dag också villaområdena Österhagen och Bergliden. Vi tar uppdrag i hela kommunen." },
+    { question: "Vilka orter ligger i Upplands-Bro?", answer: "Kommunen har Kungsängen som centralort, och den andra stora orten är Bro. Båda är stationssamhällen vid samma järnväg, och till Bro hör i dag också villaområdena Österhagen och Bergliden. Vi tar uppdrag i Upplands-Bro kommun." },
     { question: "När bildades Upplands-Bro kommun?", answer: "Kommunen bildades 1971 och fördes samtidigt över från Uppsala län till Stockholms län." },
     { question: "När kom pendeltågen till Upplands-Bro?", answer: "Pendeltågen började gå till Kungsängen 1968. Bros gamla station lades ner 1972, och persontrafiken dit kom tillbaka när pendeltågsstationen öppnade 2001." },
   ],
@@ -270,7 +270,7 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
     { question: "Vad var småstugebyrån?", answer: "År 1927 bildades stadens småstugebyrå, och de första självbyggarna reste sina hus. På Enskedefältet restes över 400 småstugor mellan 1930 och 1932, och i Tallkrogen omkring 950 stugor fram till 1945." },
   ],
   "huddinge": [
-    { question: "Var ligger villaområdena i Huddinge?", answer: "Centrum består enligt Wikipedia mest av flerbostadshus, och runt det ligger villaområden i de flesta väderstrecken: villastäder vid stambanan, områden längs Nynäsbanan och gamla sommarstugeområden. Vi tar uppdrag i hela kommunen." },
+    { question: "Var ligger villaområdena i Huddinge?", answer: "Centrum består enligt Wikipedia mest av flerbostadshus, och runt det ligger villaområden i de flesta väderstrecken: villastäder vid stambanan, områden längs Nynäsbanan och gamla sommarstugeområden. Vi tar uppdrag i Huddinge kommun." },
     { question: "Vilka villastäder i Huddinge blev municipalsamhällen?", answer: "Stuvsta, Fullersta och Segeltorp blev municipalsamhällen 1924 och Snättringe 1928. I Fullersta började tomter säljas redan 1902, under namnet Huddinge villastad." },
     { question: "Hur gammal är Huddinge kyrka?", answer: "Kyrkan byggdes enligt Wikipedia omkring år 1200, som en liten gråstenskyrka med tjocka murar vid Kyrksjön. Tornet rasade 1645, och det nuvarande tornet uppfördes 1877–1878." },
   ],
@@ -297,10 +297,10 @@ export const EGNA_FAQ: Record<string, readonly EgenFAQ[]> = {
   "sodertalje": [
     { question: "När öppnade Södertälje kanal?", answer: "Kanalen, som förbinder Mälaren i norr med Östersjön i sydöst, öppnade 1819, och därefter kom järnvägen. Kommunen bildades 1971 av staden och flera landskommuner." },
     { question: "Vad är Mariekälla?", answer: "Mariekälla är en stadsdel i centrala Södertälje med namn efter en källa vid Mariekällgatan. Området planerades enligt Wikipedia 1880 med framför allt villor och flera badvillor, och i slutet av 1800-talet blev Södertälje känt som badort." },
-    { question: "Vilka villaområden finns i Södertälje?", answer: "Bland andra Östertälje, Pershagen, Järna, Hölö, Sandviken i Enhörna och Viksberg. De har vuxit fram som villastäder vid järnvägen, stationssamhällen på landet och fritidshusområden vid vattnet. Vi tar uppdrag i hela kommunen." },
+    { question: "Vilka villaområden finns i Södertälje?", answer: "Bland andra Östertälje, Pershagen, Järna, Hölö, Sandviken i Enhörna och Viksberg. De har vuxit fram som villastäder vid järnvägen, stationssamhällen på landet och fritidshusområden vid vattnet. Vi tar uppdrag i Södertälje kommun." },
   ],
   "jarfalla": [
-    { question: "Vilka villaområden finns i Järfälla?", answer: "Bland andra Barkarby och Skälby i söder, Jakobsberg, Kallhälls villastad, Stäket längst i norr och Viksjö. Vi tar uppdrag i hela kommunen." },
+    { question: "Vilka villaområden finns i Järfälla?", answer: "Bland andra Barkarby och Skälby i söder, Jakobsberg, Kallhälls villastad, Stäket längst i norr och Viksjö. Vi tar uppdrag i Järfälla kommun." },
     { question: "Hur snabbt byggdes Viksjö?", answer: "Exploateringen inleddes 1963, och när byggandet pågick som mest intensivt stod enligt Wikipedia ett hus klart om dagen. Det färdiga Viksjö omfattade omkring 5 500 bostäder, varav 70 procent i småhus." },
     { question: "Hur gammal är Järfälla kyrka?", answer: "Kyrkan byggdes enligt Wikipedia i romansk stil under 1100-talet, och delar av långhuset och koret finns kvar. Sitt nuvarande utseende fick den i huvudsak under 1400-talet, och fönsterindelningen är från en ombyggnad 1825." },
   ],
