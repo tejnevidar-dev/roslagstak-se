@@ -9,7 +9,7 @@
  * EN regel för React och statisk HTML. Bara relativa importer.
  */
 import { locationIndex } from "./location-index";
-import { locations } from "./locations";
+import { locationsLight as locations } from "./locations-light";
 import { comboLink } from "./combo-links";
 import { ortPrep } from "./ort-prep";
 import { hasServiceCombos } from "./service-slugs";
@@ -115,8 +115,7 @@ const kommunSlug = (slug: string, region: string): string | undefined => {
   const l = locations.find((x) => x.slug === slug);
   if (!l) return undefined;
   if (l.parentLocation) return l.parentLocation.slug;
-  const namn = l.factBox?.find((f) => f.label === "Kommun")?.value.replace(/\s*\(.*\)/, "").trim();
-  const k = namn ? locations.find((x) => x.name === namn) : undefined;
+  const k = l.kommun ? locations.find((x) => x.name === l.kommun) : undefined; // förberäknat ur faktarutans rad "Kommun" (generate-location-split.ts)
   if (k) return k.slug;
   return KOMMUN_FALLBACK[slug] ?? (region === "Stockholms stad" || region === "Västerort" ? "stockholm" : undefined);
 };

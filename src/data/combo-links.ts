@@ -1,4 +1,4 @@
-import { locations } from "./locations";
+import { locationsLight as locations } from "./locations-light";
 import { COMBO_LINK_LABEL, COMBO_SERVICE_PAGE, MATERIAL_OWN_PAGE } from "./service-location-combos";
 import { isThinCombo } from "./thin-combos";
 import { arOmpekad } from "./ompekade";

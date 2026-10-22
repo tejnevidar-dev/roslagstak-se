@@ -1,6 +1,6 @@
 import { GARANTI_RENOVERING } from "./guarantee";
 import { withRotForbehall } from "./prices";
-import { locations } from "./locations";
+import { locationsLight as locations } from "./locations-light";
 import { OAR_UTAN_BILVAG } from "./location-mall";
 
 const ARBETSOMRADE_O = "Har ditt hus ingen bilväg: berätta var det ligger när du hör av dig, så går vi igenom hur en takkontroll kan ordnas.";

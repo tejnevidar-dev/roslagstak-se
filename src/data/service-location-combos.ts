@@ -1,5 +1,5 @@
 import { withRotForbehall } from "./prices";
-import { locations, type LocationData } from "./locations";
+import { locationsLight as locations, type LocationLight } from "./locations-light";
 import { allServiceSlugs, hasServiceCombos } from "./service-slugs";
 import { byDistance } from "./service-reach";
 import { OAR_UTAN_BILVAG } from "./location-mall";
@@ -35,7 +35,7 @@ const serviceTypes = [
     slug: "takbyte",
     name: "Takbyte",
     verb: "byta tak",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Planerar du ett takbyte ${prep} ${loc.name}? RoslagsTak är en takfirma med bas i Norrtälje och tar uppdrag ${prep} ${loc.name}. Vi utför kompletta takbyten med TP20 plåttak, dubbelfalsat plåttak, pannplåt, betongpannor och lertegeltak.`,
       `Ett takbyte ${prep} ${loc.name} innebär att det gamla takmaterialet rivs och att nytt takmaterial monteras. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Taksäkerhet och hängrännor, om de ingår, står i offerten.`,
       loc.isIsland
@@ -53,7 +53,7 @@ const serviceTypes = [
     slug: "takrenovering",
     name: "Takrenovering",
     verb: "renovera tak",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Behöver ditt tak ${prep} ${loc.name} renoveras? Vi tar uppdrag med takrenovering ${prep} ${loc.name}, från byte av enstaka pannor och lagning av läckor till byte av underlag och underlagspapp.`,
       `En takrenovering ${prep} ${loc.name} innebär att vi åtgärdar avgränsade skador utan att byta hela taket. Det kan handla om trasiga pannor, plåtbeslag runt skorstenar, skadad råspont eller sliten underlagspapp.`,
       loc.isIsland
@@ -71,7 +71,7 @@ const serviceTypes = [
     slug: "takomlaggning",
     name: "Takomläggning",
     verb: "lägga om tak",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Behöver du takomläggning ${prep} ${loc.name}? RoslagsTak lägger om tak med TP20, dubbelfalsat plåttak, pannplåt och betongpannor. Du får fast pris efter kostnadsfri takkontroll och 10 års utförandegaranti.`,
       `Takomläggning ${prep} ${loc.name} innebär att befintligt takmaterial byts ut mot nytt. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Taksäkerhet och hängrännor, om de ingår, står i offerten.`,
       loc.isIsland
@@ -91,7 +91,7 @@ const taktvattService = {
   slug: "taktvatt",
   name: "Taktvätt",
   verb: "tvätta tak",
-  generateContent: (loc: LocationData, prep: string) => [
+  generateContent: (loc: LocationLight, prep: string) => [
     `Taktvätt är en av de tjänster vi erbjuder. Vad som behöver göras på just ditt tak ${prep} ${loc.name} går inte att säga på avstånd. Därför börjar vi med en kostnadsfri takkontroll utan förpliktelser.`,
     `En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.`,
     loc.isIsland
@@ -109,7 +109,7 @@ const specialistServices = [
     slug: "bandtackning",
     name: "Bandtäckning",
     verb: "bandtäcka tak",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Söker du bandtäckning ${prep} ${loc.name}? RoslagsTak lägger dubbelfalsat plåttak, bandtäckning. Taket täcks med plåtbanor som fogas ihop med ett dubbelt fals i stället för synliga skruvhål.`,
       `Bandtäckning ${prep} ${loc.name} är ett av de material vi lägger vid takbyte. Plåtdetaljerna runt skorsten och genomföringar anpassas efter taket.`,
       loc.isIsland
@@ -127,7 +127,7 @@ const specialistServices = [
     slug: "platttak",
     name: "Plåttak",
     verb: "lägga plåttak",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Plåttak ${prep} ${loc.name}: RoslagsTak lägger TP20 trapetsprofil, pannplåt och dubbelfalsat plåttak på villor och fritidshus.`,
       `Vid ett takbyte med plåttak ${prep} ${loc.name} görs nockbeslag, vindskiveplåt och fotplåt om. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare.`,
       loc.isIsland
@@ -145,7 +145,7 @@ const specialistServices = [
     slug: "betongpannor",
     name: "Betongpannor",
     verb: "lägga betongpannor",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Ska du byta till eller lägga om betongpannor ${prep} ${loc.name}? RoslagsTak lägger betongpannetak ${prep} ${loc.name}, vid komplett takbyte. Om de gamla pannorna kan läggas tillbaka beror på hur de mår och bedöms vid takkontrollen.`,
       `Betongpannor ${prep} ${loc.name} är tunga. Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak.`,
       loc.isIsland
@@ -163,7 +163,7 @@ const specialistServices = [
     slug: "tegeltak",
     name: "Tegeltak",
     verb: "lägga tegeltak",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Tegeltak ${prep} ${loc.name}: RoslagsTak lägger både lertegel och pannplåt ${prep} ${loc.name}. Vilket som passar ditt tak går vi igenom vid takkontrollen.`,
       `Vid ett tegeltak ${prep} ${loc.name} rivs det gamla taket, underlag och läkt görs om och nytt tegel läggs. Lertegel är tungt. Vad takstolarna klarar kan behöva bedömas av en konstruktör om huset har haft ett lättare tak.`,
       loc.isIsland
@@ -177,7 +177,7 @@ const specialistServices = [
     slug: "takmalning",
     name: "Takmålning",
     verb: "måla tak",
-    generateContent: (loc: LocationData, prep: string) => [
+    generateContent: (loc: LocationLight, prep: string) => [
       `Takmålning är en av de tjänster vi erbjuder. Vad som behöver göras på just ditt tak ${prep} ${loc.name} går inte att säga på avstånd. Därför börjar vi med en kostnadsfri takkontroll utan förpliktelser.`,
       `En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.`,
       loc.isIsland

@@ -9,7 +9,8 @@
  * Kommunen finns inte i datan, så mallens reservform används ("{ort} hör till {region} i vår områdesindelning").
  * Delas av LocationPage.tsx, scripts/prerender-content.ts och scripts/schema-fixtures.ts.
  */
-import { locations, type LocationData } from "./locations";
+import { locationsLight as locations, type LocationLight } from "./locations-light";
+import type { LocationData } from "./locations";
 import { projectTexts as projects } from "./project-texts";
 import { distanceFromBaseKm, distanceKm } from "./service-reach";
 import { ortPrep } from "./ort-prep";
@@ -32,7 +33,7 @@ export const OAR_UTAN_BILVAG: readonly string[] = [
 ];
 
 /** Orten har ingen riktig områdestext (import-omrade sätter alltid factBox) och är inte undantagen. */
-export const usesMall = (loc: LocationData): boolean => !loc.factBox && !MALL_UNDANTAG.includes(loc.slug);
+export const usesMall = (loc: { slug: string; factBox?: unknown; harFaktaruta?: boolean }): boolean => !(loc.harFaktaruta ?? !!loc.factBox) && !MALL_UNDANTAG.includes(loc.slug);
 
 /** "på A, B och C" när alla är öar, "i A, B och C" när ingen är det, annars bara namnen (P2). */
 const orterMedPrep = (namn: string[]): string => {
@@ -170,7 +171,5 @@ export const applyMall = (loc: LocationData): LocationData => {
   };
 };
 
-export const getLocationWithMall = (slug: string): LocationData | undefined => {
-  const loc = locations.find((l) => l.slug === slug);
-  return loc ? applyMall(loc) : undefined;
-};
+/** Gren 192: den fulla posten (med de tunga fälten, laddad av location-load.ts) med mallen tillämpad. */
+export const getLocationWithMall = (full: LocationData | undefined): LocationData | undefined => (full ? applyMall(full) : undefined);

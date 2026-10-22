@@ -5,7 +5,7 @@
  * Jobbets namn är en länk till projektsidan (markdown, [namn](/projekt/<slug>); React ritar den med renderInline, serverns HTML har texten utan syntax och länken i länklistan).
  * Öar utan eget jobb får ingen referensmening (de har J1 i "så arbetar vi"); öar med eget jobb (Blidö) får den och har då ingen J1. Mallsidor har sin egen mening (location-mall.ts), som är avstängd på öar. Bara relativa importer.
  */
-import { locations } from "./locations";
+import { locationsLight as locations } from "./locations-light";
 import { projectTexts } from "./project-texts";
 import { distanceKm } from "./service-reach";
 

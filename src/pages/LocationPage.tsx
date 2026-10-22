@@ -17,7 +17,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
-import { locations } from "@/data/locations";
+import { locationsLight as locations } from "@/data/locations-light";
+import { useOrt } from "@/data/location-load";
 import { getLocationWithMall, OAR_UTAN_BILVAG, usesMall } from "@/data/location-mall";
 import { referensMening } from "@/data/location-referens";
 import { radUnderRubrik } from "@/data/location-rad";
@@ -47,7 +48,7 @@ const LocationPage = () => {
 
   /* Adressen avgör orten (rutten `/:slug` bär hela "taklaggare-<ort>", så parametern används inte). */
   const resolvedSlug = pathname.startsWith("/taklaggare-") ? pathname.replace("/taklaggare-", "") : undefined;
-  const location = resolvedSlug ? getLocationWithMall(resolvedSlug) : undefined;
+  const location = getLocationWithMall(useOrt(resolvedSlug)); // gren 192: ortens tunga fält laddas per ort (kastar tills de finns)
   const locationProject = resolvedSlug ? projects.find((p) => p.locationSlug === resolvedSlug) : undefined;
 
   useEffect(() => {

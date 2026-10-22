@@ -17,7 +17,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleReviews from "@/components/GoogleReviews";
 import { getCombo, allServiceSlugs, COMBO_SERVICE_PAGE, COMBO_LINK_LABEL, MATERIAL_OWN_PAGE, comboDefaultTitle, comboDefaultH1 } from "@/data/service-location-combos";
 import { comboOverrides } from "@/data/combo-overrides";
-import { locations } from "@/data/locations";
+import { locationsLight as locations } from "@/data/locations-light";
 import { generateServiceLocationFAQs } from "@/data/location-faqs";
 import NotFound from "./NotFound";
 import {

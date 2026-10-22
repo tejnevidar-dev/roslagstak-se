@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import BrfPage, { type BrfPlace } from "@/pages/BrfPage";
 import NotFound from "@/pages/NotFound";
-import { locations } from "@/data/locations";
+import { locationsLight as locations } from "@/data/locations-light";
 import { brfLocationSlugs } from "@/data/brf-locations";
 import { brfPlaceParagraphs } from "@/data/brf-sections";
 import { ortPrep } from "@/data/ort-prep";

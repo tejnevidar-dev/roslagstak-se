@@ -2,7 +2,8 @@
  * Referensjobb nära en ort. Ligger separat från projects.ts, eftersom den kräver hela orts-datan (locations.ts, ca 925 kB):
  * projektsidorna och startsidan ska inte behöva hämta den bara för att visa ett jobb (LCP på /projekt/<jobb>, 2026-10-06).
  */
-import { locations, type LocationData } from "@/data/locations";
+import { locationsLight as locations } from "@/data/locations-light";
+import type { LocationData } from "@/data/locations";
 import { distanceKm } from "@/data/service-reach";
 import { projects } from "@/data/projects";
 
