@@ -229,8 +229,10 @@ export const styckenMedLankar = (
   const html = stycken.map((p) => esc(p));
   for (const l of lankar ?? []) {
     const t = esc(l.label);
-    const i = html.findIndex((h) => h.includes(t));
-    if (i >= 0) html[i] = html[i].replace(t, () => `<a href="${esc(l.href)}">${t}</a>`);
+    // Gren 190: länktexten ska stå på hel ordgräns, inte inuti ett ord ("vid <a>Alby</a>sjön", "<a>Söderby</a>malm"): varken bokstav eller siffra före eller efter.
+    const mal = new RegExp(`(?<![\\p{L}\\p{N}])${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\p{L}\\p{N}])`, "u");
+    const i = html.findIndex((h) => mal.test(h));
+    if (i >= 0) html[i] = html[i].replace(mal, () => `<a href="${esc(l.href)}">${t}</a>`);
   }
   return html;
 };
