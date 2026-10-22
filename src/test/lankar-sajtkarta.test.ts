@@ -19,7 +19,7 @@ const redirects = readFileSync(resolve(__dirname, "../../public/_redirects"), "u
 const ompekade = new Set([...redirects.matchAll(/^(\/[a-z0-9-]+) \/\S* 301$/gm)].map((m) => m[1]));
 
 describe("H2: länkar från sajtkartans sidor", () => {
-  it("ingen länk till en ompekad (301) adress och ingen tjänst × ort-länk utanför sajtkartan, utom takmålning (rapporteras som egen siffra)", () => {
+  it("ingen länk till en ompekad (301) adress, ingen länk till /takmalning-* (gren 195b) och ingen tjänst × ort-länk utanför sajtkartan", () => {
     const tjanstOrt = /^\/(takbyte|takomlaggning|takrenovering|takmalning|taktvatt|betongpannor|tegeltak|platttak|bandtackning)-[a-z0-9-]+$/;
     const fel: string[] = [];
     let takmalning = 0;
@@ -29,18 +29,15 @@ describe("H2: länkar från sajtkartans sidor", () => {
       if (!c) continue;
       for (const l of c.links) {
         const h = l.href.replace(/\/$/, "") || "/";
-        if (ompekade.has(h)) fel.push(`${p} -> ${h} (301)`);
-        else if (tjanstOrt.test(h) && !set.has(h)) {
-          if (h.startsWith("/takmalning-")) takmalning++;
-          else fel.push(`${p} -> ${h} (utanför sajtkartan)`);
-        }
+        if (ompekade.has(h) || h.startsWith("/takmalning-")) fel.push(`${p} -> ${h} (301)`);
+        else if (tjanstOrt.test(h) && !set.has(h)) fel.push(`${p} -> ${h} (utanför sajtkartan)`);
         rader++;
       }
     }
-    console.info(`H2: ${rader} länkar i sajtkartans sidor, varav ${takmalning} till takmålningssidor utanför sajtkartan (undantagna, väntar på Vidar)`);
+    console.info(`H2: ${rader} länkar i sajtkartans sidor, ${takmalning} till takmålningssidor (gren 195b: Vidars ja 2026-10-22 07:47, länken är borttagen)`);
     expect(fel.slice(0, 15)).toEqual([]);
     expect(fel.length).toBe(0);
-    expect(takmalning).toBeGreaterThan(0); // takmålning behåller sitt mål: de är inte borttagna
+    expect(takmalning).toBe(0);
   });
 
   it("raderna behåller sina etiketter, och noindex-kombinationer pekar på tjänstesidan (ompekade rader visas inte, som förut)", () => {
@@ -48,7 +45,7 @@ describe("H2: länkar från sajtkartans sidor", () => {
     const m = (e: string) => c.links.find((l) => l.label === e)?.href;
     expect(m("Takrenovering i Älmsta")).toBe("/tjanster/takrenovering");
     expect(m("Taktvätt i Älmsta")).toBe("/tjanster/taktvatt");
-    expect(m("Takmålning i Älmsta")).toBe("/takmalning-almsta");
+    expect(m("Takmålning i Älmsta")).toBeUndefined(); // gren 195b: takmålningsraden är borttagen (Vidars ja 2026-10-22 07:47)
     // Älmstas takbyte och takomläggning är ompekade (301) och visas inte
     expect(m("Takbyte i Älmsta")).toBeUndefined();
     // en ort vars takbyte är noindex men inte ompekat behåller raden och pekar på tjänstesidan

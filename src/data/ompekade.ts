@@ -219,4 +219,10 @@ export const OMPEKADE: ReadonlySet<string> = new Set([
   "/tegeltak-upplands-bro",
 ]);
 
-export const arOmpekad = (href: string): boolean => OMPEKADE.has(href);
+/**
+ * Gren 195b (Vidars ja 2026-10-22 07:47): takmålningssidorna (/takmalning-<ort>) pekas om med en platshållarregel i _redirects (/takmalning-* → /taklaggare-:splat), så ingen intern länk får gå dit.
+ * Prefixet gäller alla adresser på formen, även dem som inte står som exakta rader.
+ */
+export const OMPEKADE_PREFIX: readonly string[] = ["/takmalning-"];
+
+export const arOmpekad = (href: string): boolean => OMPEKADE.has(href) || OMPEKADE_PREFIX.some((p) => href.startsWith(p));

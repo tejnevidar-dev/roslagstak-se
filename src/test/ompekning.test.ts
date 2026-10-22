@@ -44,7 +44,8 @@ describe("ompekningsreglerna", () => {
     expect(regler.length).toBeLessThanOrEqual(2000);
     for (const r of regler) {
       expect(r.status, r.kalla).toBe("301");
-      expect(r.mal, r.kalla).toMatch(/^\/[a-z0-9/-]*$/);
+      // gren 195: platshållarregler pekar på /taklaggare-:splat (ortens slug); provet paket195 kontrollerar varje adress de träffar
+      expect(r.mal, r.kalla).toMatch(/^\/[a-z0-9/:-]*$/);
     }
     for (const r of splat) expect(r.kalla, r.kalla).toMatch(/^\/[a-z0-9-]+-\*$/);
     for (const r of exakta) expect(r.kalla, r.kalla).toMatch(/^\/[a-z0-9-]+$/);
@@ -91,7 +92,7 @@ describe("ompekningsreglerna", () => {
   });
 
   it("varje mål är en indexerbar sida i sajtkartan, är sin egen canonical och ompekas inte själv", () => {
-    for (const r of regler) {
+    for (const r of regler.filter((x) => !x.mal.includes(":splat"))) {
       expect(sitemapVagar, r.mal).toContain(r.mal);
       expect(canonicalPath(r.mal), r.mal).toBe(r.mal);
       expect(splat.some((x) => r.mal.startsWith(prefixet(x.kalla))), `${r.kalla} -> ${r.mal} är en kedja`).toBe(false);
