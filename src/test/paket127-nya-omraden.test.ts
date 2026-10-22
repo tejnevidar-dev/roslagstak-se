@@ -48,7 +48,7 @@ describe("paket 127: prepositionen", () => {
     expect(ortPrep({ slug: "alvnas", isIsland: false })).toBe("i");
     expect(ortPrep({ slug: "ekero", isIsland: true })).toBe("på");
     expect(ortPrep({ slug: "taby" })).toBe("i");
-    for (const l of locations) expect(ortPrep(l), l.slug).toBe(l.isIsland || ["brevikshalvon", "sodermalm", "varmdo"].includes(l.slug) ? "på" : "i"); // gren 170 (L4): Södermalm och Värmdö heter "på"
+    for (const l of locations) expect(ortPrep(l), l.slug).toBe(l.isIsland || ["brevikshalvon", "sodermalm", "varmdo", "vaddo", "svartno"].includes(l.slug) ? "på" : "i"); // gren 170 (L4): Södermalm och Värmdö heter "på"
   });
   it("Brevikshalvön får 'på' i frågor och länktexter men inget ö-innehåll", () => {
     const c = prerenderContent("/taklaggare-brevikshalvon")!;

@@ -433,7 +433,7 @@ export const locations: LocationData[] = [
     sourceLink: {"label":"Wikipedia, Roslags-Bro socken","url":"https://sv.wikipedia.org/wiki/Roslags-Bro_socken"},
     parentLocation: {"name":"Norrtälje","slug":"norrtalje"},
     h1Override: "Takläggare i Roslagsbro och på Väddö",
-    uniqueFAQ: {"question":"När byggdes husen i Väddö?","answer":"Byggperiod enligt källorna: Roslagsbrovägen mest 1940- och 1960-tal, kring kyrkan 1920-tal. Hustyper: villor och småbruk, inslag av fritidshus. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
+    uniqueFAQ: {"question":"När byggdes husen på Väddö?","answer":"Byggperiod enligt källorna: Roslagsbrovägen mest 1940- och 1960-tal, kring kyrkan 1920-tal. Hustyper: villor och småbruk, inslag av fritidshus. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."},
     primaryKeyword: "takläggare Väddö",
     lat: 59.95,
     lng: 18.95,
