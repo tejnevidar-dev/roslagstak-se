@@ -6,4 +6,14 @@
 /** Gren 170 (L4, Marknadschefens ja 2026-10-21 22:31): Södermalm och Värmdö heter "på", som sajten och titeln redan sa på Värmdö; Väddö och Svartnö (170b) likaså. */
 export const PA_HALVOAR: readonly string[] = ["brevikshalvon", "sodermalm", "varmdo", "vaddo", "svartno"];
 
+import { locationIndex } from "./location-index";
+
 export const ortPrep = (l: { slug: string; isIsland?: boolean }): "på" | "i" => (l.isIsland || PA_HALVOAR.includes(l.slug) ? "på" : "i");
+
+/** Prepositionen för en ort som bara är känd på namn (till exempel en kommun i en brödsmula eller ett villaområdesavsnitt): "på" för Värmdö, Södermalm, öarna m.fl., annars "i". Gren 190b. */
+export const ortPrepNamn = (namn: string): "på" | "i" => {
+  // sammansatta etiketter ("Djurö och Vindö", "Brevikshalvön (Raksta, Bergholm)"): första platsen avgör
+  const forsta = namn.split(/ och |, | \(/)[0].trim();
+  const l = locationIndex.find((x) => x.name === namn) ?? locationIndex.find((x) => x.name === forsta);
+  return l ? ortPrep(l) : "i";
+};

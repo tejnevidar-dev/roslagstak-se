@@ -155,7 +155,7 @@ import { serviceStaticPage, serviceSchemaNodes } from "../src/data/service-page"
 const villaAreaLinks = (key: string) =>
   (villaAreasByPage[key]?.areas ?? [])
     .filter((a) => lankbarHref(a.href))
-    .map((a) => ({ href: a.href!, label: `Takläggare i ${a.name}` }));
+    .map((a) => ({ href: a.href!, label: `Takläggare ${ortPrepNamn(a.name)} ${a.name}` }));
 import { landingServices } from "../src/data/landing-services";
 import { fitDescription, fitTitle } from "../src/lib/seo-fit";
 import { CANONICAL_ALIASES } from "../src/lib/canonical";
@@ -240,7 +240,7 @@ export const styckenMedLankar = (
 export { resolveMeta } from "../src/data/overrides";
 import { buildOverrideBlocks } from "../src/data/overrides";
 import { applyOverrideBlocks } from "../src/lib/innehall-apply";
-import { ortPrep } from "../src/data/ort-prep";
+import { ortPrep, ortPrepNamn } from "../src/data/ort-prep";
 export { fitTitle, fitDescription, withSuffix } from "../src/lib/seo-fit";
 
 /* Services live in a React component; read the data with a regex so the
@@ -1263,7 +1263,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           : `${loc.primaryKeyword} — takbyte & takrenovering ${prep} ${loc.name}. Fast pris efter kostnadsfri takkontroll, 10 års utförandegaranti.`),
       h1: loc.h1Override ??
         (loc.parentLocation
-          ? `Takläggare i ${loc.name}, ${loc.parentLocation.name}`
+          ? `Takläggare ${prep} ${loc.name}, ${loc.parentLocation.name}`
           : `Takläggare ${prep} ${loc.name} — takbyte & takrenovering`),
       intro: radUnderRubrik(loc, prep, mall),
       inlineLinks: referensMd || inlineMdLinks(loc.longDescription).length ? [...(referensMd ? inlineMdLinks(referensMd) : []), ...inlineMdLinks(loc.longDescription)] : undefined,
@@ -1317,7 +1317,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { href: "/tjanster/takrenovering", label: "Takrenovering" },
         ...faqLinks(locationFaqs),
         { href: regionHref, label: regionLinkLabel(loc.region) },
-        ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare i ${loc.parentLocation.name}` }] : []),
+        ...(loc.parentLocation ? [{ href: `/taklaggare-${loc.parentLocation.slug}`, label: `Takläggare ${ortPrepNamn(loc.parentLocation.name)} ${loc.parentLocation.name}` }] : []),
         ...problemsForLocation(loc.slug).map((p) => ({ href: p.to, label: p.label })),
         ...villaAreaLinks(loc.slug),
         ...projectSummaries.filter((p) => p.locationSlug === loc.slug).map((p) => ({ href: `/projekt/${p.slug}`, label: `Referensjobb: ${p.title}` })),
@@ -1342,7 +1342,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         { name: "Områden", path: "/omraden" },
         { name: loc.region, path: regionHref },
         ...(loc.parentLocation
-          ? [{ name: `Takläggare i ${loc.parentLocation.name}`, path: `/taklaggare-${loc.parentLocation.slug}` }]
+          ? [{ name: `Takläggare ${ortPrepNamn(loc.parentLocation.name)} ${loc.parentLocation.name}`, path: `/taklaggare-${loc.parentLocation.slug}` }]
           : []),
         { name: `Takläggare ${prep} ${loc.name}`, path: `/taklaggare-${loc.slug}`, visibleName: loc.name },
       ],

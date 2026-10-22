@@ -6,6 +6,8 @@
  * taktyp eller påståenden om egna jobb. Områden med egen sida länkas, övriga står utan länk.
  * Renderas på kommunsidan (LocationPage / RegionPage) och speglas i scripts/prerender-content.ts.
  */
+import { ortPrepNamn } from "./ort-prep";
+
 export interface VillaArea {
   name: string;
   types: string;
@@ -281,7 +283,7 @@ export const villaAreasBlocks = (key: string): (string | { h: string; level: 3 }
   const data = villaAreasByPage[key];
   if (!data) return [];
   return [
-    { h: `Villaområden i ${data.municipality}`, level: 3 as const },
+    { h: `Villaområden ${ortPrepNamn(data.municipality)} ${data.municipality}`, level: 3 as const },
     ...data.areas.flatMap((a) => [a.name, a.note ?? `${a.types}. ${a.period}.`]),
     VILLA_AREAS_SOURCE,
   ];
@@ -294,5 +296,5 @@ export const villaAreasParagraph = (key: string): string | null => {
   const rows = data.areas.map((a) =>
     a.note ? `${a.name}: ${a.note}` : `${a.name}: ${a.types.toLowerCase()}, ${a.period.charAt(0).toLowerCase()}${a.period.slice(1)}.`,
   );
-  return `Villaområden i ${data.municipality}. ${rows.join(" ")} ${VILLA_AREAS_SOURCE}`;
+  return `Villaområden ${ortPrepNamn(data.municipality)} ${data.municipality}. ${rows.join(" ")} ${VILLA_AREAS_SOURCE}`;
 };

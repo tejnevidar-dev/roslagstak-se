@@ -40,7 +40,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ortPrep } from "@/data/ort-prep";
+import { ortPrep, ortPrepNamn } from "@/data/ort-prep";
 
 const LocationPage = () => {
   const pathname = useLocation().pathname;
@@ -115,7 +115,7 @@ const LocationPage = () => {
       { "@type": "ListItem", position: 2, name: "Områden", item: "https://roslagstak.se/omraden" },
       { "@type": "ListItem", position: 3, name: location.region, item: `https://roslagstak.se${regionHref}` },
       ...(location.parentLocation
-        ? [{ "@type": "ListItem", position: 4, name: `Takläggare i ${location.parentLocation.name}`, item: `https://roslagstak.se/taklaggare-${location.parentLocation.slug}` }]
+        ? [{ "@type": "ListItem", position: 4, name: `Takläggare ${ortPrepNamn(location.parentLocation.name)} ${location.parentLocation.name}`, item: `https://roslagstak.se/taklaggare-${location.parentLocation.slug}` }]
         : []),
       {
         "@type": "ListItem",
@@ -192,12 +192,12 @@ const LocationPage = () => {
               className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-full mb-4 transition-colors hover:bg-primary/20"
             >
               <MapPin className="w-3 h-3" />
-              {location.parentLocation ? `Takläggare i ${location.parentLocation.name}` : regionLinkLabel(location.region)}
+              {location.parentLocation ? `Takläggare ${ortPrepNamn(location.parentLocation.name)} ${location.parentLocation.name}` : regionLinkLabel(location.region)}
             </Link>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
               {location.h1Override ??
                 (location.parentLocation
-                  ? `Takläggare i ${location.name}, ${location.parentLocation.name}`
+                  ? `Takläggare ${prep} ${location.name}, ${location.parentLocation.name}`
                   : `Takläggare ${prep} ${location.name} — takbyte & takrenovering`)}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
@@ -358,7 +358,7 @@ const LocationPage = () => {
                 {villaAreasByPage[location.slug] && (
                   <section aria-labelledby="villaomraden">
                     <h3 id="villaomraden" className="font-display text-xl text-foreground mb-3">
-                      Villaområden i {villaAreasByPage[location.slug].municipality}
+                      Villaområden {ortPrepNamn(villaAreasByPage[location.slug].municipality)} {villaAreasByPage[location.slug].municipality}
                     </h3>
                     <dl className="mb-3 grid gap-x-6 gap-y-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2">
                       {villaAreasByPage[location.slug].areas.map((area) => (

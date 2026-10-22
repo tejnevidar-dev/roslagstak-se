@@ -17,7 +17,7 @@ import { regionTexts } from "@/data/region-texts";
 import { isHeading, renderInline } from "@/lib/inline-md";
 import NotFound from "./NotFound";
 import { villaAreasByPage, VILLA_AREAS_SOURCE } from "@/data/villa-areas";
-import { ortPrep } from "@/data/ort-prep";
+import { ortPrep, ortPrepNamn } from "@/data/ort-prep";
 
 /** Hubbsida per område: /omraden/<region-slug> — samlar ortsidorna i regionen. */
 const RegionPage = () => {
@@ -108,7 +108,7 @@ const RegionPage = () => {
                 {villaAreasByPage[regionSlugs[region]] && (
                   <section aria-labelledby="villaomraden">
                     <h3 id="villaomraden" className="mt-10 font-display text-xl text-foreground mb-3">
-                      Villaområden i {villaAreasByPage[regionSlugs[region]].municipality}
+                      Villaområden {ortPrepNamn(villaAreasByPage[regionSlugs[region]].municipality)} {villaAreasByPage[regionSlugs[region]].municipality}
                     </h3>
                     <dl className="mb-3 grid gap-x-6 gap-y-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2">
                       {villaAreasByPage[regionSlugs[region]].areas.map((area) => (

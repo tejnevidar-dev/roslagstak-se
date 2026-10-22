@@ -1870,7 +1870,7 @@ export const locations: LocationData[] = [
     region: "Östra Stockholm",
     isIsland: false,
     description:
-      "Takläggare i Värmdö — takbyte och takrenovering i Stockholms södra skärgård. Fast pris och 10 års utförandegaranti.",
+      "Takläggare på Värmdö — takbyte och takrenovering i Stockholms södra skärgård. Fast pris och 10 års utförandegaranti.",
     longDescription:
       "Värmdö kommun består enligt Wikipedia helt och hållet av öar och omfattar stora delar av Stockholms södra skärgård. Centralorten Gustavsberg ligger två mil öster om Stockholm, och länsväg 222 går genom kommunen från väst till öst. Den som söker takläggare på Värmdö kan ha ett hus i Gustavsberg, i Hemmesta, på Ingarö, ute mot Stavsnäs eller på Djurö, och många av husen har börjat som fritidshus. Här går vi igenom flera delar av kommunen.",
     extraContent:

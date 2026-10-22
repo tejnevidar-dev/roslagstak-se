@@ -2563,7 +2563,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Värmdö. Mer om orten finns på sidan om [takläggare på Värmdö](/taklaggare-varmdo). Boka en kostnadsfri takkontroll på Värmdö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
-      { to: "/taklaggare-varmdo", label: "Takläggare i Värmdö" },
+      { to: "/taklaggare-varmdo", label: "Takläggare på Värmdö" },
       { to: "/taklaggare-gustavsberg", label: "Takläggare i Gustavsberg" },
       { to: "/taklaggare-ingaro", label: "Takläggare på Ingarö" },
       { to: "/taklaggare-stromma", label: "Takläggare i Strömma" },
@@ -2845,12 +2845,12 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Värmdö. Mer om kommunen finns på sidan om [takläggare på Värmdö](/taklaggare-varmdo), och mer om renovering på sidan om [takrenovering på Värmdö](/takrenovering-varmdo). Boka en kostnadsfri takkontroll på Värmdö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
-      { to: "/taklaggare-varmdo", label: "Takläggare i Värmdö" },
+      { to: "/taklaggare-varmdo", label: "Takläggare på Värmdö" },
       { to: "/taklaggare-hemmesta", label: "Takläggare i Hemmesta" },
       { to: "/taklaggare-stavsnas", label: "Takläggare i Stavsnäs" },
       { to: "/taklaggare-djuro", label: "Takläggare på Djurö" },
       { to: "/taklaggare-alvsala", label: "Takläggare i Älvsala" },
-      { to: "/takrenovering-varmdo", label: "Takrenovering i Värmdö" },
+      { to: "/takrenovering-varmdo", label: "Takrenovering på Värmdö" },
       { to: "/priser", label: "Riktpriser för takarbeten" },
     ],
   },

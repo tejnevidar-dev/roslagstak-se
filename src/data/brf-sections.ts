@@ -2,6 +2,7 @@
  * BRF-sidornas texter (/brf och /brf/<ort>, BrfPage.tsx): delas av sidan (React) och av scripts/prerender-content.ts
  * (statisk HTML), så att besökaren och sökmotorn får samma ord (AC5). Ändra texten här, inte i komponenten.
  */
+import { ortPrepNamn } from "./ort-prep";
 
 export const BRF_FACTS = [
   { label: "Utförande", value: "10 års utförandegaranti" },
@@ -56,7 +57,7 @@ export const BRF_HERO_CAPTION = "3D-visualisering av ett tak med snörasskydd.";
 /** Ögonbrynstexten över H1: orten, eller "BRF & fastigheter" på /brf. */
 export const brfEyebrow = (place?: { prep: string; name: string }) => (place ? `BRF ${place.prep} ${place.name}` : "BRF & fastigheter");
 export const brfHeroIntro = (place?: { name: string }) =>
-  `Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar i ${place ? `${place.name} och närområdet` : "Storstockholm och Roslagen"}.`;
+  `Från kostnadsfri takkontroll och fast offert till slutgenomgång. Vi arbetar ${place ? `${ortPrepNamn(place.name)} ${place.name} och närområdet` : "i Storstockholm och Roslagen"}.`;
 
 export const BRF_INTRO = {
   heading: "Ett takbyte är ett föreningsbeslut, inte bara ett hantverk.",
