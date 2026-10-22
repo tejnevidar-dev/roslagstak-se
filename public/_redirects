@@ -94,10 +94,12 @@
 /bandtackning-akalla /taklaggare-akalla 301
 /takbyte-akalla /taklaggare-akalla 301
 /takomlaggning-akalla /taklaggare-akalla 301
-# -> /taklaggare-bro (3)
+# -> /taklaggare-bro (5)
 /bandtackning-bro /taklaggare-bro 301
 /takbyte-upplands-bro /taklaggare-bro 301
 /takomlaggning-upplands-bro /taklaggare-bro 301
+/tegeltak-upplands-bro /taklaggare-bro 301
+/platttak-bro /taklaggare-bro 301
 # -> /taklaggare-graddo (3)
 /bandtackning-graddo /taklaggare-graddo 301
 /takbyte-graddo /taklaggare-graddo 301
@@ -274,8 +276,9 @@
 /bandtackning-sodermalm /taklaggare-sodermalm 301
 # -> /taklaggare-stuvsta (1)
 /takomlaggning-stuvsta /taklaggare-stuvsta 301
-# -> /taklaggare-sundbyberg (1)
+# -> /taklaggare-sundbyberg (2)
 /bandtackning-sundbyberg /taklaggare-sundbyberg 301
+/tegeltak-sundbyberg /taklaggare-sundbyberg 301
 # -> /taklaggare-svartloga (1)
 /takrenovering-svartloga /taklaggare-svartloga 301
 # -> /taklaggare-taby (1)
@@ -300,14 +303,20 @@
 /takbyte-viksjo /taklaggare-viksjo 301
 # -> /takrenovering-sodertalje (1)
 /bandtackning-sodertalje /takrenovering-sodertalje 301
-# -> /takrenovering-sollentuna (1)
+# -> /takrenovering-sollentuna (3)
 /bandtackning-sollentuna /takrenovering-sollentuna 301
+/platttak-sollentuna /takrenovering-sollentuna 301
+/tegeltak-sollentuna /takrenovering-sollentuna 301
 # -> /taklaggare-handen (1)
 /takbyte-handen /taklaggare-handen 301
 # -> /taklaggare-rotebro (1)
 /takbyte-rotebro /taklaggare-rotebro 301
 # -> /taklaggare-arholma (1)
 /takrenovering-arholma /taklaggare-arholma 301
+# -> /takrenovering-danderyd (1)
+/platttak-danderyd /takrenovering-danderyd 301
+# -> /taklaggare-solna (1)
+/platttak-solna /taklaggare-solna 301
 
 # Reglerna med * kommer SIST (gren 149b): Cloudflare Pages räknar en regel som står efter en dynamisk regel som dynamisk, och högst 100 dynamiska regler gäller.
 # Stod splat-raderna först föll alla exakta rader efter nr 97 bort (livekontroll 2026-10-21: 97 av 208). Ett prov (src/test/ompekning.test.ts) kräver att ingen exakt rad står efter en dynamisk.

@@ -10,13 +10,14 @@ import { allServiceSlugs, hasServiceCombos } from "../data/service-slugs";
 import { prerenderContent } from "../../scripts/prerender-content";
 
 describe("gren 136: länkar till ompekade adresser", () => {
-  it("ompekade.ts har exakt raderna efter gren 129-kommentaren i _redirects (206 st, gren 173: Järfälla-omläggning och Vaxholm-renovering har egen text)", () => {
+  it("ompekade.ts har exakt raderna efter gren 129-kommentaren i _redirects (213 st, gren 173: Järfälla-omläggning och Vaxholm-renovering har egen text)", () => {
     const rader = readFileSync("public/_redirects", "utf8").split(/\r?\n/);
     const start = rader.findIndex((r) => r.startsWith("# Ompekning (gren 129"));
     expect(start).toBeGreaterThan(-1);
     const fran = rader.slice(start).map((r) => r.trim()).filter((r) => /^\/[a-z0-9-]+ \/\S* 301$/.test(r)).map((r) => r.split(" ")[0]).sort();
     expect([...OMPEKADE].sort()).toEqual(fran);
-    expect(OMPEKADE.size).toBe(206); // 210 minus takbyte i Nynäshamn och Sigtuna, som fick egen text (gren 137)
+    expect(OMPEKADE.size).toBe(213); // gren 171: +7 exakta rader för platttak och tegeltak i Solna, Sollentuna, Sundbyberg, Danderyd och Bro (före 7: 206)
+    // // 210 minus takbyte i Nynäshamn och Sigtuna, som fick egen text (gren 137)
     expect(arOmpekad("/takbyte-vaddo")).toBe(true);
     expect(arOmpekad("/takbyte-taby")).toBe(false);
   });

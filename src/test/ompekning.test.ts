@@ -70,7 +70,9 @@ describe("ompekningsreglerna", () => {
       expect(isThinCombo(d!.tjanst, d!.loc), `${r.kalla}: har egen text och får inte pekas om`).toBe(true);
       expect(sedda.has(r.kalla), `${r.kalla}: dubblett`).toBe(false);
       sedda.add(r.kalla);
-      expect(splat.some((x) => r.kalla.startsWith(prefixet(x.kalla))), `${r.kalla}: täcks redan av en splat-regel`).toBe(false);
+      // gren 171: en exakt rad får ligga under en splat-regel om den pekar på ett annat mål (ägarsidan per rad, seo-data/noindex-sidor-…), och då ska den stå före splat-raderna (provet "ingen exakt rad efter en dynamisk")
+      const tacks = splat.find((x) => r.kalla.startsWith(prefixet(x.kalla)));
+      if (tacks) expect(r.mal, `${r.kalla}: täcks av en splat-regel med samma mål`).not.toBe(tacks.mal);
     }
   });
 

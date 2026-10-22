@@ -75,6 +75,10 @@ export const OMPEKADE: ReadonlySet<string> = new Set([
   "/bandtackning-vendelso",
   "/bandtackning-viksjo",
   "/bandtackning-yxlan",
+  "/platttak-bro",
+  "/platttak-danderyd",
+  "/platttak-sollentuna",
+  "/platttak-solna",
   "/takbyte-abrahamsberg",
   "/takbyte-akalla",
   "/takbyte-almsta",
@@ -210,6 +214,9 @@ export const OMPEKADE: ReadonlySet<string> = new Set([
   "/takrenovering-vaddo",
   "/takrenovering-vato",
   "/takrenovering-yxlan",
+  "/tegeltak-sollentuna",
+  "/tegeltak-sundbyberg",
+  "/tegeltak-upplands-bro",
 ]);
 
 export const arOmpekad = (href: string): boolean => OMPEKADE.has(href);
