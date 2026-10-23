@@ -14,6 +14,7 @@ import { ortPrep } from "@/data/ort-prep";
 const kalla = (f: string) => readFileSync(f, "utf8");
 // Paket 72: sidor vars egen text ersätter referensmeningen (location-slim.ts) räknas inte här
 import { slimFor } from "@/data/location-slim";
+import { kommunInlankarMd } from "@/data/kommun-inlankar";
 const ownText = locations.filter((l) => !usesMall(l) && !slimFor(l.slug).utanReferensmening);
 
 describe("paket 79: referensmeningen efter områdestextens första stycke", () => {
@@ -41,7 +42,7 @@ describe("paket 79: referensmeningen efter områdestextens första stycke", () =
       // jobbets namn är en länk till projektsidan i serverns HTML (länklistan), och texten har ingen markdown-syntax
       expect(ren, l.slug).not.toMatch(/\]\(|\[/);
       // länken skrivs i stycket av generate-static-heads.mjs (page.inlineLinks), inte bara i länklistan
-      expect(sida.inlineLinks, l.slug).toEqual([...inlineMdLinks(m), ...inlineMdLinks(l.longDescription)]); // gren 152: länkar i longDescription sätts också i löpande text
+      expect(sida.inlineLinks, l.slug).toEqual([...inlineMdLinks(m), ...inlineMdLinks(kommunInlankarMd(l.slug)), ...inlineMdLinks(l.longDescription)]); // gren 200: länkmeningen till kommunens ägarsida; gren 152: länkar i longDescription sätts också i löpande text
       for (const lank of inlineMdLinks(m)) expect(sida.links.some((x) => x.href === lank.href && x.label === lank.label), l.slug + " " + lank.href).toBe(true);
     }
     expect(antal).toBeGreaterThan(12); // paket 112 (M7) och 114 (M9) stängde av meningen på Norrtälje, Singö och Grisslehamn: 18 → 15 sidor

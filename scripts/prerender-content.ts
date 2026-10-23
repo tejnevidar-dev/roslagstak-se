@@ -1313,7 +1313,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         GOOGLE_REVIEWS_TEXT.ingress,
       ]),
       jsonLd: [faqLd(locationFaqs, `/taklaggare-${loc.slug}`)],
-      links: [
+      links: medKommunLankar(loc.slug, [
         ...primaryLinks,
         ...MONEY_LINKS,
         // Samma länk som länkraden "Tjänster, priser och guider" i LocationPage.tsx: ägarsidan för "takrenovering pris"
@@ -1328,19 +1328,18 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...combos.filter((c) => c.locationSlug === loc.slug).flatMap((c) => comboLink(c) ?? []),
         ...hubLinksFor(loc.slug),
         ...(referensMd ? inlineMdLinks(referensMd) : []),
-        ...inlineMdLinks(kommunInlankarMd(loc.slug)),
         ...inlineMdLinks(loc.longDescription).filter((l) => !villaAreaLinks(loc.slug).some((v) => v.href === l.href)),
         // Länkar i områdessidans egna avsnitt (LocationPage.tsx renderar section.text med renderInline), t.ex. "Hallstavik" på Norrtälje-sidan (gren 120b, H1)
         // En länk per mål (paket 120 U1): en länk i texten som områdesraderna (villa-areas) redan har ritas inte en andra gång i länklistan
         ...(loc.extraSections ?? []).flatMap((sec) => inlineMdLinks(sec.text)).filter((l) => !villaAreaLinks(loc.slug).some((v) => v.href === l.href)),
         ...loc.nearbyLocations
           .map((name) => locations.find((l) => l.name === name))
-          .filter((l): l is (typeof locations)[number] => Boolean(l) && !ortAvindexerad(l.slug))
+          .filter((l): l is (typeof locations)[number] => Boolean(l) && !ortAvindexerad(l.slug) )
           .map((l) => ({
             href: `/taklaggare-${l.slug}`,
             label: `Takläggare ${ortPrep(l)} ${l.name}`,
           })),
-      ],
+      ]),
       breadcrumbs: [
         { name: "Startsidan", path: "/" },
         { name: "Områden", path: "/omraden" },
@@ -1523,3 +1522,9 @@ export const brfNoindexPaths: string[] = brfNoindexVagar();
 export const thinComboPaths: string[] = locations
   .filter((l) => hasServiceCombos(l.region))
   .flatMap((l) => allServiceSlugs.filter((s) => isThinCombo(s, l)).map((s) => `/${s}-${l.slug}`));
+
+/** Gren 200: länkarna i länkmeningen till kommunens ägarsida läggs sist i länklistan, och bara om målet inte redan står där (en länk per mål, paket 120 U1). */
+function medKommunLankar<T extends { href: string; label: string }>(slug: string, lankar: T[]): (T | { href: string; label: string })[] {
+  const nya = inlineMdLinks(kommunInlankarMd(slug)).filter((k) => !lankar.some((l) => l.href === k.href));
+  return [...lankar, ...nya];
+}

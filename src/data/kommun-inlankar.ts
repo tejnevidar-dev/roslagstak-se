@@ -113,7 +113,7 @@ export const KOMMUN_INLANKAR: Record<string, readonly string[]> = {
   ],
   "bro": [
     "Mer om grannorten finns på sidan om [takläggare i Järfälla](/taklaggare-jarfalla).",
-    "Mer om grannorten finns på sidan om [takläggare i Ekerö](/taklaggare-ekero)."
+    "Mer om grannorten finns på sidan om [takläggare på Ekerö](/taklaggare-ekero)."
   ],
   "barkarby": [
     "Mer om kommunen finns på sidan om [takläggare i Järfälla](/taklaggare-jarfalla)."
@@ -133,7 +133,7 @@ export const KOMMUN_INLANKAR: Record<string, readonly string[]> = {
   ],
   "botkyrka": [
     "Mer om grannorten finns på sidan om [takläggare i Huddinge](/taklaggare-huddinge).",
-    "Mer om grannorten finns på sidan om [takläggare i Ekerö](/taklaggare-ekero)."
+    "Mer om grannorten finns på sidan om [takläggare på Ekerö](/taklaggare-ekero)."
   ],
   "haninge": [
     "Mer om grannorten finns på sidan om [takläggare i Huddinge](/taklaggare-huddinge).",
@@ -172,10 +172,10 @@ export const KOMMUN_INLANKAR: Record<string, readonly string[]> = {
     "Mer om kommunen finns på sidan om [takläggare i Botkyrka](/taklaggare-botkyrka)."
   ],
   "alvnas": [
-    "Mer om kommunen finns på sidan om [takläggare i Ekerö](/taklaggare-ekero)."
+    "Mer om kommunen finns på sidan om [takläggare på Ekerö](/taklaggare-ekero)."
   ],
   "trakvista": [
-    "Mer om kommunen finns på sidan om [takläggare i Ekerö](/taklaggare-ekero)."
+    "Mer om kommunen finns på sidan om [takläggare på Ekerö](/taklaggare-ekero)."
   ],
   "sodertalje": [
     "Mer om grannorten finns på sidan om [takläggare i Nynäshamn](/taklaggare-nynashamn)."
