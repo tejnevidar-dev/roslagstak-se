@@ -114,7 +114,8 @@ const KOMMUN_TJANSTER: readonly (readonly [string, string])[] = [["takbyte", "Ta
 const kommunSlug = (slug: string, region: string): string | undefined => {
   const l = locations.find((x) => x.slug === slug);
   if (!l) return undefined;
-  if (l.parentLocation) return l.parentLocation.slug;
+  // gren 197: Upplands-Bro-sidans tjänstesidor pekas om till /taklaggare-bro, så ortens kommunlänkar går till Bro, där takbytessidan har egen text
+  if (l.parentLocation) return l.parentLocation.slug === "upplands-bro" ? "bro" : l.parentLocation.slug;
   const k = l.kommun ? locations.find((x) => x.name === l.kommun) : undefined; // förberäknat ur faktarutans rad "Kommun" (generate-location-split.ts)
   if (k) return k.slug;
   return KOMMUN_FALLBACK[slug] ?? (region === "Stockholms stad" || region === "Västerort" ? "stockholm" : undefined);

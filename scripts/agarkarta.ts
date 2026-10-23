@@ -92,6 +92,8 @@ const agarMal = (ort: string, k: (typeof KOMMUNER)[number]) => {
   return `/taklaggare-${ort}`;
 };
 /** En lucka: noindex utan 301, eller en 301 till en riksomfattande tjänste- eller materialsida i stället för orten. */
+/** Gren 171 (Marknadschefen): de två generiska sidorna lämnas åt platshållarreglerna (tjänste- och materialsidan äger sökorden), se paket171-ompekning-sju.test.ts. */
+const BEHALL_SPLAT = new Set(["/tegeltak-bro", "/platttak-sundbyberg"]);
 /** Befintliga exakta rader till en tjänste- eller materialsida har belägg per rad (gren 129, 171) och är inga luckor (Marknadschefens grind 197c-b). */
 const arLucka = (r: Rad) => r.roll === "noindex" || (r.roll === "301" && r.slag === "platshållare" && /^\/(tjanster|material)\//.test(r.mal ?? ""));
 
@@ -101,6 +103,7 @@ if (args.includes("--rader") || args.includes("--skriv")) {
   for (const k of KOMMUNER.filter((x) => bygg.some((b) => x.agare.includes(b)))) {
     const { rader } = kartlagg(k);
     for (const r of rader.filter(arLucka)) {
+      if (BEHALL_SPLAT.has(r.sida)) continue;
       if (ortAvindexerad(agarMal(r.ort, k).replace("/taklaggare-", ""))) continue;
       ut.push({ kalla: r.sida, mal: agarMal(r.ort, k), fore: r.roll === "noindex" ? "noindex utan 301" : `301 ${r.slag} → ${r.mal}` });
     }

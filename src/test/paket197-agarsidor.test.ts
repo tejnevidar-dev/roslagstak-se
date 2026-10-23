@@ -40,7 +40,7 @@ const GRUPPER: Record<string, string[]> = {
 const agare = (ort: string) => (ort === "upplands-bro" ? "/taklaggare-bro" : `/taklaggare-${ort}`);
 
 /** Gren 197c-b (Marknadschefens grind 2026-10-24 00:57): äldre exakta rader med belägg per rad (allmänna sökord, gren 129 och 171) behåller sin tjänstesida. */
-const BEHALLNA = new Set(["/takomlaggning-bro", "/takomlaggning-tumba", "/takomlaggning-marsta", "/takomlaggning-vaxholm", "/bandtackning-ljustero", "/takrenovering-osterskar", "/takbyte-enebyberg"]);
+const BEHALLNA = new Set(["/tegeltak-bro", "/platttak-sundbyberg", "/takomlaggning-bro", "/takomlaggning-tumba", "/takomlaggning-marsta", "/takomlaggning-vaxholm", "/bandtackning-ljustero", "/takrenovering-osterskar", "/takbyte-enebyberg"]);
 
 describe("gren 197: ägarsidor i fem kommuner", () => {
   for (const [kommun, slugs] of Object.entries(GRUPPER)) {

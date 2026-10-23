@@ -79,10 +79,12 @@ describe("paket 134: Norrtälje-länkarna", () => {
     // gren 188b: orter i andra kommuner får sin egen kommuns motsvarighet i stället för Norrtälje-raden, och Vaxholm (kommunen själv) har sina egna länkar bland de vanliga
     expect(hubLinksFor("vaxholm").map((h) => h.href)).not.toContain("/takrenovering-norrtalje");
     // Resarö: takbyte byts mot Vaxholms; Vaxholms takomläggning är ompekad (301), så den raden står kvar som den är (inget tas bort)
-    expect(hubLinksFor("resaro").map((h) => h.href)).not.toContain("/takbyte-norrtalje");
+    // gren 197c: Vaxholms takbytessida är nu också ompekad (301 till ortssidan), så Norrtälje-raden för takbyte står kvar som den är, som takomläggningen
+    expect(hubLinksFor("resaro").map((h) => h.href)).toContain("/takbyte-norrtalje");
     expect(hubLinksFor("resaro").map((h) => h.href)).not.toContain("/takrenovering-norrtalje");
     expect(hubLinksFor("taby").length + hubLinksFor("ensta").length).toBeGreaterThan(0);
-    expect(hubLinksFor("resaro").map((h) => h.label).some((x) => x.endsWith(" i Vaxholm"))).toBe(true);
+    // gren 197c: Vaxholms takbytes- och takomläggningssidor är ompekade, så Resarö har ingen "<tjänst> i Vaxholm"-rad kvar; Norrtälje-raderna står kvar som de är (inget tas bort)
+    expect(hubLinksFor("resaro").map((h) => h.label).some((x) => x.endsWith(" i Vaxholm"))).toBe(false);
   });
   it("länkarna står i serverns HTML", () => {
     expect(prerenderContent("/taklaggare-blido")!.links.map((l) => l.href)).toContain("/takrenovering-norrtalje");

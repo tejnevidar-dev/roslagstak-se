@@ -223,6 +223,10 @@
 # ledning/marknad/seo-data/noindex-sidor-2026-09-18-till-2026-10-15.md. Undantag: sidor med egen text och adresser som redan täcks av splat-reglerna ovan.
 # Varje källa är en tunn tjänst × ort-sida utanför sajtkartan och varje mål en indexerbar sida (kontrolleras av src/test/ompekning.test.ts).
 # -> /tjanster/takomlaggning (33)
+/takomlaggning-vaxholm /tjanster/takomlaggning 301
+/takomlaggning-marsta /tjanster/takomlaggning 301
+/takomlaggning-tumba /tjanster/takomlaggning 301
+/takomlaggning-bro /tjanster/takomlaggning 301
 /takbyte-arsta /tjanster/takomlaggning 301
 /takbyte-fisksatra /tjanster/takomlaggning 301
 /takbyte-fittja /tjanster/takomlaggning 301
@@ -253,6 +257,7 @@
 /takomlaggning-vato /tjanster/takomlaggning 301
 /takomlaggning-yxlan /tjanster/takomlaggning 301
 # -> /tjanster/platarbeten (17)
+/bandtackning-ljustero /tjanster/platarbeten 301
 /bandtackning-abrahamsberg /tjanster/platarbeten 301
 /bandtackning-alta /tjanster/platarbeten 301
 /bandtackning-arholma /tjanster/platarbeten 301
@@ -270,6 +275,7 @@
 /bandtackning-viksjo /tjanster/platarbeten 301
 /bandtackning-yxlan /tjanster/platarbeten 301
 # -> /tjanster/takrenovering (9)
+/takrenovering-osterskar /tjanster/takrenovering 301
 /takrenovering-finnhamn /tjanster/takrenovering 301
 /takrenovering-grisslehamn /tjanster/takrenovering 301
 /takrenovering-humlo /tjanster/takrenovering 301
@@ -286,6 +292,7 @@
 /takomlaggning-husaro /priser 301
 /takomlaggning-norrviken /priser 301
 # -> /tjanster/tegeltak (6)
+/takbyte-enebyberg /tjanster/tegeltak 301
 /takbyte-abrahamsberg /tjanster/tegeltak 301
 /takbyte-blackeberg /tjanster/tegeltak 301
 /takbyte-humlo /tjanster/tegeltak 301
@@ -530,8 +537,7 @@
 
 # Gren 197 (Vidars stående ja 2026-10-21 för adressändringar, beställning 2026-10-23 23:52): en ägarsida per ort. Tunna tjänst × ort-sidor i bro, botkyrka, sundbyberg, nynashamn, ekero-kommunerna som saknade 301 eller pekade på en riksomfattande
 # tjänste- eller materialsida pekas om till ortens egen ortssida. Sidor med egen text berörs inte. Belägg per rad: ledning/marknad/seo-analys-2026-10-21/belagg/197-agarsidor.md.
-# -> /taklaggare-sundbyberg (2)
-/platttak-sundbyberg /taklaggare-sundbyberg 301
+# -> /taklaggare-sundbyberg (1)
 /betongpannor-sundbyberg /taklaggare-sundbyberg 301
 # -> /taklaggare-duvbo (6)
 /takbyte-duvbo /taklaggare-duvbo 301
@@ -547,13 +553,12 @@
 /platttak-ursvik /taklaggare-ursvik 301
 /betongpannor-ursvik /taklaggare-ursvik 301
 /tegeltak-ursvik /taklaggare-ursvik 301
-# -> /taklaggare-bro (7)
+# -> /taklaggare-bro (5)
 /takrenovering-upplands-bro /taklaggare-bro 301
 /platttak-upplands-bro /taklaggare-bro 301
 /betongpannor-upplands-bro /taklaggare-bro 301
 /takrenovering-bro /taklaggare-bro 301
 /betongpannor-bro /taklaggare-bro 301
-/tegeltak-bro /taklaggare-bro 301
 # -> /taklaggare-kungsangen (4)
 /takrenovering-kungsangen /taklaggare-kungsangen 301
 /platttak-kungsangen /taklaggare-kungsangen 301
@@ -564,7 +569,7 @@
 /platttak-botkyrka /taklaggare-botkyrka 301
 /betongpannor-botkyrka /taklaggare-botkyrka 301
 /tegeltak-botkyrka /taklaggare-botkyrka 301
-# -> /taklaggare-tumba (4)
+# -> /taklaggare-tumba (3)
 /platttak-tumba /taklaggare-tumba 301
 /betongpannor-tumba /taklaggare-tumba 301
 /tegeltak-tumba /taklaggare-tumba 301
@@ -642,7 +647,7 @@
 
 # Gren 197 (Vidars stående ja 2026-10-21 för adressändringar, beställning 2026-10-23 23:52): en ägarsida per ort. Tunna tjänst × ort-sidor i akersberga, vaxholm, danderyd, upplands-vasby, sigtuna-kommunerna som saknade 301 eller pekade på en riksomfattande
 # tjänste- eller materialsida pekas om till ortens egen ortssida. Sidor med egen text berörs inte. Belägg per rad: ledning/marknad/seo-analys-2026-10-21/belagg/197-agarsidor.md.
-# -> /taklaggare-ljustero (4)
+# -> /taklaggare-ljustero (3)
 /platttak-ljustero /taklaggare-ljustero 301
 /betongpannor-ljustero /taklaggare-ljustero 301
 /tegeltak-ljustero /taklaggare-ljustero 301
@@ -650,7 +655,7 @@
 /platttak-akersberga /taklaggare-akersberga 301
 /betongpannor-akersberga /taklaggare-akersberga 301
 /tegeltak-akersberga /taklaggare-akersberga 301
-# -> /taklaggare-osterskar (5)
+# -> /taklaggare-osterskar (4)
 /takomlaggning-osterskar /taklaggare-osterskar 301
 /platttak-osterskar /taklaggare-osterskar 301
 /betongpannor-osterskar /taklaggare-osterskar 301
@@ -684,7 +689,7 @@
 /platttak-djursholm /taklaggare-djursholm 301
 /betongpannor-djursholm /taklaggare-djursholm 301
 /tegeltak-djursholm /taklaggare-djursholm 301
-# -> /taklaggare-enebyberg (6)
+# -> /taklaggare-enebyberg (5)
 /takrenovering-enebyberg /taklaggare-enebyberg 301
 /takomlaggning-enebyberg /taklaggare-enebyberg 301
 /platttak-enebyberg /taklaggare-enebyberg 301
@@ -697,7 +702,7 @@
 /platttak-svalnas-osby /taklaggare-svalnas-osby 301
 /betongpannor-svalnas-osby /taklaggare-svalnas-osby 301
 /tegeltak-svalnas-osby /taklaggare-svalnas-osby 301
-# -> /taklaggare-vaxholm (5)
+# -> /taklaggare-vaxholm (4)
 /takbyte-vaxholm /taklaggare-vaxholm 301
 /platttak-vaxholm /taklaggare-vaxholm 301
 /betongpannor-vaxholm /taklaggare-vaxholm 301
@@ -742,7 +747,7 @@
 /platttak-sigtuna /taklaggare-sigtuna 301
 /betongpannor-sigtuna /taklaggare-sigtuna 301
 /tegeltak-sigtuna /taklaggare-sigtuna 301
-# -> /taklaggare-marsta (5)
+# -> /taklaggare-marsta (4)
 /takrenovering-marsta /taklaggare-marsta 301
 /platttak-marsta /taklaggare-marsta 301
 /betongpannor-marsta /taklaggare-marsta 301
@@ -755,15 +760,6 @@
 /betongpannor-rosersberg /taklaggare-rosersberg 301
 /tegeltak-rosersberg /taklaggare-rosersberg 301
 
-# Gren 197c-b (Marknadschefens grind 2026-10-24 00:57): sju äldre exakta rader behåller sina tjänstesidor. Sökorden som gav sidorna visningar är allmänna eller gäller andra orter
-# (seo-data/noindex-sidor-2026-09-18-till-2026-10-15.md), så tjänstesidan äger dem. Raderna står alltså som i gren 129 och 171, med belägg där.
-/takomlaggning-bro /tjanster/takomlaggning 301
-/takomlaggning-tumba /tjanster/takomlaggning 301
-/takomlaggning-marsta /tjanster/takomlaggning 301
-/takomlaggning-vaxholm /tjanster/takomlaggning 301
-/bandtackning-ljustero /tjanster/platarbeten 301
-/takrenovering-osterskar /tjanster/takrenovering 301
-/takbyte-enebyberg /tjanster/tegeltak 301
 
 # Reglerna med * kommer SIST (gren 149b): Cloudflare Pages räknar en regel som står efter en dynamisk regel som dynamisk, och högst 100 dynamiska regler gäller.
 # Stod splat-raderna först föll alla exakta rader efter nr 97 bort (livekontroll 2026-10-21: 97 av 208). Ett prov (src/test/ompekning.test.ts) kräver att ingen exakt rad står efter en dynamisk.

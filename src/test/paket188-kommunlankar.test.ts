@@ -34,8 +34,9 @@ describe("gren 188: ortssidornas länkar till den egna kommunens tjänstesidor",
     expect(h.some((l) => tjanstOrt.test(l.href) && l.href.endsWith("-jarfalla"))).toBe(false);
     const vasby = lankar("bollstanas");
     expect(vasby.find((l) => l.label === "Takbyte i Upplands Väsby")?.href).toBe("/takbyte-upplands-vasby");
-    expect(vasby.find((l) => l.label === "Takomläggning i Upplands Väsby")?.href).toBe("/tjanster/takomlaggning");
-    expect(vasby.find((l) => l.label === "Takrenovering i Upplands Väsby")?.href).toBe("/tjanster/takrenovering");
+    // gren 197c: takomläggning- och takrenoveringssidorna i Upplands Väsby pekas om till ortssidan, så ingen länk går dit (ompekade adresser visas inte)
+    expect(vasby.find((l) => l.label === "Takomläggning i Upplands Väsby")).toBeUndefined();
+    expect(vasby.find((l) => l.label === "Takrenovering i Upplands Väsby")).toBeUndefined();
   });
 
   it("Täbys orter länkar till Täby, och kommunens egen sida får ingen extra rad", () => {
