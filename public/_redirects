@@ -1000,6 +1000,392 @@
 /betongpannor-fardala /taklaggare-fardala 301
 /tegeltak-fardala /taklaggare-fardala 301
 
+# Gren 197 (Vidars stående ja 2026-10-21 för adressändringar, beställning 2026-10-23 23:52): en ägarsida per ort. Tunna tjänst × ort-sidor i solna, varmdo, nacka, sollentuna, stockholm-kommunerna som saknade 301 eller pekade på en riksomfattande
+# tjänste- eller materialsida pekas om till ortens egen ortssida. Sidor med egen text berörs inte. Belägg per rad: ledning/marknad/seo-analys-2026-10-21/belagg/197-agarsidor.md.
+# -> /taklaggare-langbro (6)
+/takbyte-langbro /taklaggare-langbro 301
+/takrenovering-langbro /taklaggare-langbro 301
+/takomlaggning-langbro /taklaggare-langbro 301
+/platttak-langbro /taklaggare-langbro 301
+/betongpannor-langbro /taklaggare-langbro 301
+/tegeltak-langbro /taklaggare-langbro 301
+# -> /taklaggare-orby (6)
+/takbyte-orby /taklaggare-orby 301
+/takrenovering-orby /taklaggare-orby 301
+/takomlaggning-orby /taklaggare-orby 301
+/platttak-orby /taklaggare-orby 301
+/betongpannor-orby /taklaggare-orby 301
+/tegeltak-orby /taklaggare-orby 301
+# -> /taklaggare-skondal (6)
+/takbyte-skondal /taklaggare-skondal 301
+/takrenovering-skondal /taklaggare-skondal 301
+/takomlaggning-skondal /taklaggare-skondal 301
+/platttak-skondal /taklaggare-skondal 301
+/betongpannor-skondal /taklaggare-skondal 301
+/tegeltak-skondal /taklaggare-skondal 301
+# -> /taklaggare-herrangen (6)
+/takbyte-herrangen /taklaggare-herrangen 301
+/takrenovering-herrangen /taklaggare-herrangen 301
+/takomlaggning-herrangen /taklaggare-herrangen 301
+/platttak-herrangen /taklaggare-herrangen 301
+/betongpannor-herrangen /taklaggare-herrangen 301
+/tegeltak-herrangen /taklaggare-herrangen 301
+# -> /taklaggare-solhem-lunda (6)
+/takbyte-solhem-lunda /taklaggare-solhem-lunda 301
+/takrenovering-solhem-lunda /taklaggare-solhem-lunda 301
+/takomlaggning-solhem-lunda /taklaggare-solhem-lunda 301
+/platttak-solhem-lunda /taklaggare-solhem-lunda 301
+/betongpannor-solhem-lunda /taklaggare-solhem-lunda 301
+/tegeltak-solhem-lunda /taklaggare-solhem-lunda 301
+# -> /taklaggare-kalvesta (6)
+/takbyte-kalvesta /taklaggare-kalvesta 301
+/takrenovering-kalvesta /taklaggare-kalvesta 301
+/takomlaggning-kalvesta /taklaggare-kalvesta 301
+/platttak-kalvesta /taklaggare-kalvesta 301
+/betongpannor-kalvesta /taklaggare-kalvesta 301
+/tegeltak-kalvesta /taklaggare-kalvesta 301
+# -> /taklaggare-stockholm (3)
+/platttak-stockholm /taklaggare-stockholm 301
+/betongpannor-stockholm /taklaggare-stockholm 301
+/tegeltak-stockholm /taklaggare-stockholm 301
+# -> /taklaggare-hasselby (5)
+/takrenovering-hasselby /taklaggare-hasselby 301
+/takomlaggning-hasselby /taklaggare-hasselby 301
+/platttak-hasselby /taklaggare-hasselby 301
+/betongpannor-hasselby /taklaggare-hasselby 301
+/tegeltak-hasselby /taklaggare-hasselby 301
+# -> /taklaggare-alvsjo (5)
+/takrenovering-alvsjo /taklaggare-alvsjo 301
+/takomlaggning-alvsjo /taklaggare-alvsjo 301
+/platttak-alvsjo /taklaggare-alvsjo 301
+/betongpannor-alvsjo /taklaggare-alvsjo 301
+/tegeltak-alvsjo /taklaggare-alvsjo 301
+# -> /taklaggare-enskede (4)
+/takrenovering-enskede /taklaggare-enskede 301
+/platttak-enskede /taklaggare-enskede 301
+/betongpannor-enskede /taklaggare-enskede 301
+/tegeltak-enskede /taklaggare-enskede 301
+# -> /taklaggare-skarpnack (6)
+/takbyte-skarpnack /taklaggare-skarpnack 301
+/takrenovering-skarpnack /taklaggare-skarpnack 301
+/takomlaggning-skarpnack /taklaggare-skarpnack 301
+/platttak-skarpnack /taklaggare-skarpnack 301
+/betongpannor-skarpnack /taklaggare-skarpnack 301
+/tegeltak-skarpnack /taklaggare-skarpnack 301
+# -> /taklaggare-hagersten (6)
+/takbyte-hagersten /taklaggare-hagersten 301
+/takrenovering-hagersten /taklaggare-hagersten 301
+/takomlaggning-hagersten /taklaggare-hagersten 301
+/platttak-hagersten /taklaggare-hagersten 301
+/betongpannor-hagersten /taklaggare-hagersten 301
+/tegeltak-hagersten /taklaggare-hagersten 301
+# -> /taklaggare-nockeby (6)
+/takbyte-nockeby /taklaggare-nockeby 301
+/takrenovering-nockeby /taklaggare-nockeby 301
+/takomlaggning-nockeby /taklaggare-nockeby 301
+/platttak-nockeby /taklaggare-nockeby 301
+/betongpannor-nockeby /taklaggare-nockeby 301
+/tegeltak-nockeby /taklaggare-nockeby 301
+# -> /taklaggare-angby (6)
+/takbyte-angby /taklaggare-angby 301
+/takrenovering-angby /taklaggare-angby 301
+/takomlaggning-angby /taklaggare-angby 301
+/platttak-angby /taklaggare-angby 301
+/betongpannor-angby /taklaggare-angby 301
+/tegeltak-angby /taklaggare-angby 301
+# -> /taklaggare-langsjo (6)
+/takbyte-langsjo /taklaggare-langsjo 301
+/takrenovering-langsjo /taklaggare-langsjo 301
+/takomlaggning-langsjo /taklaggare-langsjo 301
+/platttak-langsjo /taklaggare-langsjo 301
+/betongpannor-langsjo /taklaggare-langsjo 301
+/tegeltak-langsjo /taklaggare-langsjo 301
+# -> /taklaggare-alsten (6)
+/takbyte-alsten /taklaggare-alsten 301
+/takrenovering-alsten /taklaggare-alsten 301
+/takomlaggning-alsten /taklaggare-alsten 301
+/platttak-alsten /taklaggare-alsten 301
+/betongpannor-alsten /taklaggare-alsten 301
+/tegeltak-alsten /taklaggare-alsten 301
+# -> /taklaggare-nockebyhov (6)
+/takbyte-nockebyhov /taklaggare-nockebyhov 301
+/takrenovering-nockebyhov /taklaggare-nockebyhov 301
+/takomlaggning-nockebyhov /taklaggare-nockebyhov 301
+/platttak-nockebyhov /taklaggare-nockebyhov 301
+/betongpannor-nockebyhov /taklaggare-nockebyhov 301
+/tegeltak-nockebyhov /taklaggare-nockebyhov 301
+# -> /taklaggare-bromma-kyrka (6)
+/takbyte-bromma-kyrka /taklaggare-bromma-kyrka 301
+/takrenovering-bromma-kyrka /taklaggare-bromma-kyrka 301
+/takomlaggning-bromma-kyrka /taklaggare-bromma-kyrka 301
+/platttak-bromma-kyrka /taklaggare-bromma-kyrka 301
+/betongpannor-bromma-kyrka /taklaggare-bromma-kyrka 301
+/tegeltak-bromma-kyrka /taklaggare-bromma-kyrka 301
+# -> /taklaggare-flysta (6)
+/takbyte-flysta /taklaggare-flysta 301
+/takrenovering-flysta /taklaggare-flysta 301
+/takomlaggning-flysta /taklaggare-flysta 301
+/platttak-flysta /taklaggare-flysta 301
+/betongpannor-flysta /taklaggare-flysta 301
+/tegeltak-flysta /taklaggare-flysta 301
+# -> /taklaggare-malarhojden (6)
+/takbyte-malarhojden /taklaggare-malarhojden 301
+/takrenovering-malarhojden /taklaggare-malarhojden 301
+/takomlaggning-malarhojden /taklaggare-malarhojden 301
+/platttak-malarhojden /taklaggare-malarhojden 301
+/betongpannor-malarhojden /taklaggare-malarhojden 301
+/tegeltak-malarhojden /taklaggare-malarhojden 301
+# -> /taklaggare-stureby (6)
+/takbyte-stureby /taklaggare-stureby 301
+/takrenovering-stureby /taklaggare-stureby 301
+/takomlaggning-stureby /taklaggare-stureby 301
+/platttak-stureby /taklaggare-stureby 301
+/betongpannor-stureby /taklaggare-stureby 301
+/tegeltak-stureby /taklaggare-stureby 301
+# -> /taklaggare-varberg (6)
+/takbyte-varberg /taklaggare-varberg 301
+/takrenovering-varberg /taklaggare-varberg 301
+/takomlaggning-varberg /taklaggare-varberg 301
+/platttak-varberg /taklaggare-varberg 301
+/betongpannor-varberg /taklaggare-varberg 301
+/tegeltak-varberg /taklaggare-varberg 301
+# -> /taklaggare-smedslatten (6)
+/takbyte-smedslatten /taklaggare-smedslatten 301
+/takrenovering-smedslatten /taklaggare-smedslatten 301
+/takomlaggning-smedslatten /taklaggare-smedslatten 301
+/platttak-smedslatten /taklaggare-smedslatten 301
+/betongpannor-smedslatten /taklaggare-smedslatten 301
+/tegeltak-smedslatten /taklaggare-smedslatten 301
+# -> /taklaggare-hoglandet (6)
+/takbyte-hoglandet /taklaggare-hoglandet 301
+/takrenovering-hoglandet /taklaggare-hoglandet 301
+/takomlaggning-hoglandet /taklaggare-hoglandet 301
+/platttak-hoglandet /taklaggare-hoglandet 301
+/betongpannor-hoglandet /taklaggare-hoglandet 301
+/tegeltak-hoglandet /taklaggare-hoglandet 301
+# -> /taklaggare-stora-mossen (6)
+/takbyte-stora-mossen /taklaggare-stora-mossen 301
+/takrenovering-stora-mossen /taklaggare-stora-mossen 301
+/takomlaggning-stora-mossen /taklaggare-stora-mossen 301
+/platttak-stora-mossen /taklaggare-stora-mossen 301
+/betongpannor-stora-mossen /taklaggare-stora-mossen 301
+/tegeltak-stora-mossen /taklaggare-stora-mossen 301
+# -> /taklaggare-sodra-angby (6)
+/takbyte-sodra-angby /taklaggare-sodra-angby 301
+/takrenovering-sodra-angby /taklaggare-sodra-angby 301
+/takomlaggning-sodra-angby /taklaggare-sodra-angby 301
+/platttak-sodra-angby /taklaggare-sodra-angby 301
+/betongpannor-sodra-angby /taklaggare-sodra-angby 301
+/tegeltak-sodra-angby /taklaggare-sodra-angby 301
+# -> /taklaggare-enskededalen (6)
+/takbyte-enskededalen /taklaggare-enskededalen 301
+/takrenovering-enskededalen /taklaggare-enskededalen 301
+/takomlaggning-enskededalen /taklaggare-enskededalen 301
+/platttak-enskededalen /taklaggare-enskededalen 301
+/betongpannor-enskededalen /taklaggare-enskededalen 301
+/tegeltak-enskededalen /taklaggare-enskededalen 301
+# -> /taklaggare-tallkrogen (6)
+/takbyte-tallkrogen /taklaggare-tallkrogen 301
+/takrenovering-tallkrogen /taklaggare-tallkrogen 301
+/takomlaggning-tallkrogen /taklaggare-tallkrogen 301
+/platttak-tallkrogen /taklaggare-tallkrogen 301
+/betongpannor-tallkrogen /taklaggare-tallkrogen 301
+/tegeltak-tallkrogen /taklaggare-tallkrogen 301
+# -> /taklaggare-appelviken (6)
+/takbyte-appelviken /taklaggare-appelviken 301
+/takrenovering-appelviken /taklaggare-appelviken 301
+/takomlaggning-appelviken /taklaggare-appelviken 301
+/platttak-appelviken /taklaggare-appelviken 301
+/betongpannor-appelviken /taklaggare-appelviken 301
+/tegeltak-appelviken /taklaggare-appelviken 301
+# -> /taklaggare-bromsten (6)
+/takbyte-bromsten /taklaggare-bromsten 301
+/takrenovering-bromsten /taklaggare-bromsten 301
+/takomlaggning-bromsten /taklaggare-bromsten 301
+/platttak-bromsten /taklaggare-bromsten 301
+/betongpannor-bromsten /taklaggare-bromsten 301
+/tegeltak-bromsten /taklaggare-bromsten 301
+# -> /taklaggare-svedmyra (6)
+/takbyte-svedmyra /taklaggare-svedmyra 301
+/takrenovering-svedmyra /taklaggare-svedmyra 301
+/takomlaggning-svedmyra /taklaggare-svedmyra 301
+/platttak-svedmyra /taklaggare-svedmyra 301
+/betongpannor-svedmyra /taklaggare-svedmyra 301
+/tegeltak-svedmyra /taklaggare-svedmyra 301
+# -> /taklaggare-eneby (6)
+/takbyte-eneby /taklaggare-eneby 301
+/takrenovering-eneby /taklaggare-eneby 301
+/takomlaggning-eneby /taklaggare-eneby 301
+/platttak-eneby /taklaggare-eneby 301
+/betongpannor-eneby /taklaggare-eneby 301
+/tegeltak-eneby /taklaggare-eneby 301
+# -> /taklaggare-ballsta-bromma (6)
+/takbyte-ballsta-bromma /taklaggare-ballsta-bromma 301
+/takrenovering-ballsta-bromma /taklaggare-ballsta-bromma 301
+/takomlaggning-ballsta-bromma /taklaggare-ballsta-bromma 301
+/platttak-ballsta-bromma /taklaggare-ballsta-bromma 301
+/betongpannor-ballsta-bromma /taklaggare-ballsta-bromma 301
+/tegeltak-ballsta-bromma /taklaggare-ballsta-bromma 301
+# -> /taklaggare-ulvsunda (6)
+/takbyte-ulvsunda /taklaggare-ulvsunda 301
+/takrenovering-ulvsunda /taklaggare-ulvsunda 301
+/takomlaggning-ulvsunda /taklaggare-ulvsunda 301
+/platttak-ulvsunda /taklaggare-ulvsunda 301
+/betongpannor-ulvsunda /taklaggare-ulvsunda 301
+/tegeltak-ulvsunda /taklaggare-ulvsunda 301
+# -> /taklaggare-enskede-gard (6)
+/takbyte-enskede-gard /taklaggare-enskede-gard 301
+/takrenovering-enskede-gard /taklaggare-enskede-gard 301
+/takomlaggning-enskede-gard /taklaggare-enskede-gard 301
+/platttak-enskede-gard /taklaggare-enskede-gard 301
+/betongpannor-enskede-gard /taklaggare-enskede-gard 301
+/tegeltak-enskede-gard /taklaggare-enskede-gard 301
+# -> /taklaggare-enskedefaltet (6)
+/takbyte-enskedefaltet /taklaggare-enskedefaltet 301
+/takrenovering-enskedefaltet /taklaggare-enskedefaltet 301
+/takomlaggning-enskedefaltet /taklaggare-enskedefaltet 301
+/platttak-enskedefaltet /taklaggare-enskedefaltet 301
+/betongpannor-enskedefaltet /taklaggare-enskedefaltet 301
+/tegeltak-enskedefaltet /taklaggare-enskedefaltet 301
+# -> /taklaggare-bagarmossen (6)
+/takbyte-bagarmossen /taklaggare-bagarmossen 301
+/takrenovering-bagarmossen /taklaggare-bagarmossen 301
+/takomlaggning-bagarmossen /taklaggare-bagarmossen 301
+/platttak-bagarmossen /taklaggare-bagarmossen 301
+/betongpannor-bagarmossen /taklaggare-bagarmossen 301
+/tegeltak-bagarmossen /taklaggare-bagarmossen 301
+# -> /taklaggare-solna (4)
+/takrenovering-solna /taklaggare-solna 301
+/takomlaggning-solna /taklaggare-solna 301
+/betongpannor-solna /taklaggare-solna 301
+/tegeltak-solna /taklaggare-solna 301
+# -> /taklaggare-viby (6)
+/takbyte-viby /taklaggare-viby 301
+/takrenovering-viby /taklaggare-viby 301
+/takomlaggning-viby /taklaggare-viby 301
+/platttak-viby /taklaggare-viby 301
+/betongpannor-viby /taklaggare-viby 301
+/tegeltak-viby /taklaggare-viby 301
+# -> /taklaggare-tegelhagen-silverdal (6)
+/takbyte-tegelhagen-silverdal /taklaggare-tegelhagen-silverdal 301
+/takrenovering-tegelhagen-silverdal /taklaggare-tegelhagen-silverdal 301
+/takomlaggning-tegelhagen-silverdal /taklaggare-tegelhagen-silverdal 301
+/platttak-tegelhagen-silverdal /taklaggare-tegelhagen-silverdal 301
+/betongpannor-tegelhagen-silverdal /taklaggare-tegelhagen-silverdal 301
+/tegeltak-tegelhagen-silverdal /taklaggare-tegelhagen-silverdal 301
+# -> /taklaggare-sollentuna (1)
+/betongpannor-sollentuna /taklaggare-sollentuna 301
+# -> /taklaggare-haggvik (4)
+/takrenovering-haggvik /taklaggare-haggvik 301
+/platttak-haggvik /taklaggare-haggvik 301
+/betongpannor-haggvik /taklaggare-haggvik 301
+/tegeltak-haggvik /taklaggare-haggvik 301
+# -> /taklaggare-sjoberg (6)
+/takbyte-sjoberg /taklaggare-sjoberg 301
+/takrenovering-sjoberg /taklaggare-sjoberg 301
+/takomlaggning-sjoberg /taklaggare-sjoberg 301
+/platttak-sjoberg /taklaggare-sjoberg 301
+/betongpannor-sjoberg /taklaggare-sjoberg 301
+/tegeltak-sjoberg /taklaggare-sjoberg 301
+# -> /taklaggare-vaxmora (6)
+/takbyte-vaxmora /taklaggare-vaxmora 301
+/takrenovering-vaxmora /taklaggare-vaxmora 301
+/takomlaggning-vaxmora /taklaggare-vaxmora 301
+/platttak-vaxmora /taklaggare-vaxmora 301
+/betongpannor-vaxmora /taklaggare-vaxmora 301
+/tegeltak-vaxmora /taklaggare-vaxmora 301
+# -> /taklaggare-storangen (6)
+/takbyte-storangen /taklaggare-storangen 301
+/takrenovering-storangen /taklaggare-storangen 301
+/takomlaggning-storangen /taklaggare-storangen 301
+/platttak-storangen /taklaggare-storangen 301
+/betongpannor-storangen /taklaggare-storangen 301
+/tegeltak-storangen /taklaggare-storangen 301
+# -> /taklaggare-lannersta (6)
+/takbyte-lannersta /taklaggare-lannersta 301
+/takrenovering-lannersta /taklaggare-lannersta 301
+/takomlaggning-lannersta /taklaggare-lannersta 301
+/platttak-lannersta /taklaggare-lannersta 301
+/betongpannor-lannersta /taklaggare-lannersta 301
+/tegeltak-lannersta /taklaggare-lannersta 301
+# -> /taklaggare-nacka (4)
+/takrenovering-nacka /taklaggare-nacka 301
+/platttak-nacka /taklaggare-nacka 301
+/betongpannor-nacka /taklaggare-nacka 301
+/tegeltak-nacka /taklaggare-nacka 301
+# -> /taklaggare-saltsjobaden (5)
+/takrenovering-saltsjobaden /taklaggare-saltsjobaden 301
+/takomlaggning-saltsjobaden /taklaggare-saltsjobaden 301
+/platttak-saltsjobaden /taklaggare-saltsjobaden 301
+/betongpannor-saltsjobaden /taklaggare-saltsjobaden 301
+/tegeltak-saltsjobaden /taklaggare-saltsjobaden 301
+# -> /taklaggare-alta (5)
+/takbyte-alta /taklaggare-alta 301
+/takrenovering-alta /taklaggare-alta 301
+/platttak-alta /taklaggare-alta 301
+/betongpannor-alta /taklaggare-alta 301
+/tegeltak-alta /taklaggare-alta 301
+# -> /taklaggare-bjorknas (6)
+/takbyte-bjorknas /taklaggare-bjorknas 301
+/takrenovering-bjorknas /taklaggare-bjorknas 301
+/takomlaggning-bjorknas /taklaggare-bjorknas 301
+/platttak-bjorknas /taklaggare-bjorknas 301
+/betongpannor-bjorknas /taklaggare-bjorknas 301
+/tegeltak-bjorknas /taklaggare-bjorknas 301
+# -> /taklaggare-kummelnas (6)
+/takbyte-kummelnas /taklaggare-kummelnas 301
+/takrenovering-kummelnas /taklaggare-kummelnas 301
+/takomlaggning-kummelnas /taklaggare-kummelnas 301
+/platttak-kummelnas /taklaggare-kummelnas 301
+/betongpannor-kummelnas /taklaggare-kummelnas 301
+/tegeltak-kummelnas /taklaggare-kummelnas 301
+# -> /taklaggare-kil (6)
+/takbyte-kil /taklaggare-kil 301
+/takrenovering-kil /taklaggare-kil 301
+/takomlaggning-kil /taklaggare-kil 301
+/platttak-kil /taklaggare-kil 301
+/betongpannor-kil /taklaggare-kil 301
+/tegeltak-kil /taklaggare-kil 301
+# -> /taklaggare-varmdo (4)
+/takomlaggning-varmdo /taklaggare-varmdo 301
+/platttak-varmdo /taklaggare-varmdo 301
+/betongpannor-varmdo /taklaggare-varmdo 301
+/tegeltak-varmdo /taklaggare-varmdo 301
+# -> /taklaggare-ingaro (5)
+/takrenovering-ingaro /taklaggare-ingaro 301
+/takomlaggning-ingaro /taklaggare-ingaro 301
+/platttak-ingaro /taklaggare-ingaro 301
+/betongpannor-ingaro /taklaggare-ingaro 301
+/tegeltak-ingaro /taklaggare-ingaro 301
+# -> /taklaggare-stavsnas (6)
+/takbyte-stavsnas /taklaggare-stavsnas 301
+/takrenovering-stavsnas /taklaggare-stavsnas 301
+/takomlaggning-stavsnas /taklaggare-stavsnas 301
+/platttak-stavsnas /taklaggare-stavsnas 301
+/betongpannor-stavsnas /taklaggare-stavsnas 301
+/tegeltak-stavsnas /taklaggare-stavsnas 301
+# -> /taklaggare-djuro (6)
+/takbyte-djuro /taklaggare-djuro 301
+/takrenovering-djuro /taklaggare-djuro 301
+/takomlaggning-djuro /taklaggare-djuro 301
+/platttak-djuro /taklaggare-djuro 301
+/betongpannor-djuro /taklaggare-djuro 301
+/tegeltak-djuro /taklaggare-djuro 301
+# -> /taklaggare-alvsala (6)
+/takbyte-alvsala /taklaggare-alvsala 301
+/takrenovering-alvsala /taklaggare-alvsala 301
+/takomlaggning-alvsala /taklaggare-alvsala 301
+/platttak-alvsala /taklaggare-alvsala 301
+/betongpannor-alvsala /taklaggare-alvsala 301
+/tegeltak-alvsala /taklaggare-alvsala 301
+# -> /taklaggare-stromma (6)
+/takbyte-stromma /taklaggare-stromma 301
+/takrenovering-stromma /taklaggare-stromma 301
+/takomlaggning-stromma /taklaggare-stromma 301
+/platttak-stromma /taklaggare-stromma 301
+/betongpannor-stromma /taklaggare-stromma 301
+/tegeltak-stromma /taklaggare-stromma 301
+
 # Reglerna med * kommer SIST (gren 149b): Cloudflare Pages räknar en regel som står efter en dynamisk regel som dynamisk, och högst 100 dynamiska regler gäller.
 # Stod splat-raderna först föll alla exakta rader efter nr 97 bort (livekontroll 2026-10-21: 97 av 208). Ett prov (src/test/ompekning.test.ts) kräver att ingen exakt rad står efter en dynamisk.
 # Ompekning (10å, steg 1): noindex-kombinationerna material × ort pekas om till materialets egen sida.
