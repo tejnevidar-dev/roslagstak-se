@@ -140,6 +140,7 @@ import { applyMall, OAR_UTAN_BILVAG, usesMall } from "../src/data/location-mall"
 import { referensMening } from "../src/data/location-referens";
 import { radUnderRubrik } from "../src/data/location-rad";
 import { slimFor, slimFragor } from "../src/data/location-slim";
+import { kommunInlankarMd } from "../src/data/kommun-inlankar";
 import { sektionsStycken } from "../src/lib/sektionstext";
 import { arOmpekad } from "../src/data/ompekade";
 import { isNearBase, distanceFromBaseKm, distanceKm } from "../src/data/service-reach";
@@ -1266,12 +1267,14 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
           ? `Takläggare ${prep} ${loc.name}, ${loc.parentLocation.name}`
           : `Takläggare ${prep} ${loc.name} — takbyte & takrenovering`),
       intro: radUnderRubrik(loc, prep, mall),
-      inlineLinks: referensMd || inlineMdLinks(loc.longDescription).length ? [...(referensMd ? inlineMdLinks(referensMd) : []), ...inlineMdLinks(loc.longDescription)] : undefined,
+      inlineLinks: referensMd || kommunInlankarMd(loc.slug) || inlineMdLinks(loc.longDescription).length ? [...(referensMd ? inlineMdLinks(referensMd) : []), ...inlineMdLinks(kommunInlankarMd(loc.slug)), ...inlineMdLinks(loc.longDescription)] : undefined,
       ...buildBody([
         // Paket 130b: rubriken som LocationPage.tsx ritar före sidans text. På sidor med egen text och avstängda mallavsnitt (location-slim.ts) fanns den bara i React, eftersom ordet annars stod i de avsnitt som är borta.
         ...(Object.keys(slim).length ? [{ h: `Takbyte och takrenovering ${prep} ${loc.name}`, level: 2 as const }] : []),
         stripInlineMd(loc.longDescription), // Bromma (gren 152) har länkar i sin text; LocationPage.tsx ritar longDescription med renderInline
         ...(referensMd ? [stripInlineMd(referensMd)] : []),
+        // gren 200: länkmening till kommunens ägarsida (kommun-inlankar.ts), samma stycke som LocationPage.tsx ritar efter referensstycket
+        ...(kommunInlankarMd(loc.slug) ? [stripInlineMd(kommunInlankarMd(loc.slug))] : []),
         ...(loc.extraContent ? [loc.extraContent] : []),
         ...(loc.extraSections ?? []).flatMap((sec) => [{ h: sec.heading, level: 3 as const, suffix: "." }, ...sektionsStycken(sec.text).map(stripInlineMd)]),
         ...(loc.process
@@ -1325,6 +1328,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...combos.filter((c) => c.locationSlug === loc.slug).flatMap((c) => comboLink(c) ?? []),
         ...hubLinksFor(loc.slug),
         ...(referensMd ? inlineMdLinks(referensMd) : []),
+        ...inlineMdLinks(kommunInlankarMd(loc.slug)),
         ...inlineMdLinks(loc.longDescription).filter((l) => !villaAreaLinks(loc.slug).some((v) => v.href === l.href)),
         // Länkar i områdessidans egna avsnitt (LocationPage.tsx renderar section.text med renderInline), t.ex. "Hallstavik" på Norrtälje-sidan (gren 120b, H1)
         // En länk per mål (paket 120 U1): en länk i texten som områdesraderna (villa-areas) redan har ritas inte en andra gång i länklistan

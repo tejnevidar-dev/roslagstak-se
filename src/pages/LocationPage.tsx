@@ -23,6 +23,7 @@ import { getLocationWithMall, OAR_UTAN_BILVAG, usesMall } from "@/data/location-
 import { referensMening } from "@/data/location-referens";
 import { radUnderRubrik } from "@/data/location-rad";
 import { slimFor, slimFragor } from "@/data/location-slim";
+import { kommunInlankarMd } from "@/data/kommun-inlankar";
 import { sektionsBitar } from "@/lib/sektionstext";
 import { generateLocationFAQs } from "@/data/location-faqs";
 import { egnaFaqFor } from "@/data/location-egna-faq";
@@ -255,6 +256,11 @@ const LocationPage = () => {
 
                 {!usesMall(locations.find((l) => l.slug === location.slug) ?? location) && referens && (
                   <p className="text-muted-foreground leading-relaxed mb-6">{renderInline(referens)}</p>
+                )}
+
+                {/* Gren 200: länkmening till kommunens ägarsida (kommun-inlankar.ts), samma text som serverns HTML */}
+                {kommunInlankarMd(location.slug) && (
+                  <p className="text-muted-foreground leading-relaxed mb-6">{renderInline(kommunInlankarMd(location.slug))}</p>
                 )}
 
                 {location.extraContent && (
