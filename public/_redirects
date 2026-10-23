@@ -237,7 +237,6 @@
 /takomlaggning-aspudden /tjanster/takomlaggning 301
 /takomlaggning-bergshamra /tjanster/takomlaggning 301
 /takomlaggning-blido /tjanster/takomlaggning 301
-/takomlaggning-bro /tjanster/takomlaggning 301
 /takomlaggning-fisksatra /tjanster/takomlaggning 301
 /takomlaggning-graddo /tjanster/takomlaggning 301
 /takomlaggning-grisslehamn /tjanster/takomlaggning 301
@@ -252,7 +251,6 @@
 /takomlaggning-sodorora /tjanster/takomlaggning 301
 /takomlaggning-spillersboda /tjanster/takomlaggning 301
 /takomlaggning-svartloga /tjanster/takomlaggning 301
-/takomlaggning-tumba /tjanster/takomlaggning 301
 /takomlaggning-vato /tjanster/takomlaggning 301
 /takomlaggning-vaxholm /tjanster/takomlaggning 301
 /takomlaggning-yxlan /tjanster/takomlaggning 301
@@ -534,6 +532,120 @@
 /platttak-danderyd /takrenovering-danderyd 301
 # -> /taklaggare-solna (1)
 /platttak-solna /taklaggare-solna 301
+
+# Gren 197 (Vidars stående ja 2026-10-21 för adressändringar, beställning 2026-10-23 23:52): en ägarsida per ort. Tunna tjänst × ort-sidor i bro, botkyrka, sundbyberg, nynashamn, ekero-kommunerna som saknade 301 eller pekade på en riksomfattande
+# tjänste- eller materialsida pekas om till ortens egen ortssida. Sidor med egen text berörs inte. Belägg per rad: ledning/marknad/seo-analys-2026-10-21/belagg/197-agarsidor.md.
+# -> /taklaggare-sundbyberg (2)
+/platttak-sundbyberg /taklaggare-sundbyberg 301
+/betongpannor-sundbyberg /taklaggare-sundbyberg 301
+# -> /taklaggare-duvbo (6)
+/takbyte-duvbo /taklaggare-duvbo 301
+/takrenovering-duvbo /taklaggare-duvbo 301
+/takomlaggning-duvbo /taklaggare-duvbo 301
+/platttak-duvbo /taklaggare-duvbo 301
+/betongpannor-duvbo /taklaggare-duvbo 301
+/tegeltak-duvbo /taklaggare-duvbo 301
+# -> /taklaggare-ursvik (6)
+/takbyte-ursvik /taklaggare-ursvik 301
+/takrenovering-ursvik /taklaggare-ursvik 301
+/takomlaggning-ursvik /taklaggare-ursvik 301
+/platttak-ursvik /taklaggare-ursvik 301
+/betongpannor-ursvik /taklaggare-ursvik 301
+/tegeltak-ursvik /taklaggare-ursvik 301
+# -> /taklaggare-bro (7)
+/takrenovering-upplands-bro /taklaggare-bro 301
+/platttak-upplands-bro /taklaggare-bro 301
+/betongpannor-upplands-bro /taklaggare-bro 301
+/takrenovering-bro /taklaggare-bro 301
+/takomlaggning-bro /taklaggare-bro 301
+/betongpannor-bro /taklaggare-bro 301
+/tegeltak-bro /taklaggare-bro 301
+# -> /taklaggare-kungsangen (4)
+/takrenovering-kungsangen /taklaggare-kungsangen 301
+/platttak-kungsangen /taklaggare-kungsangen 301
+/betongpannor-kungsangen /taklaggare-kungsangen 301
+/tegeltak-kungsangen /taklaggare-kungsangen 301
+# -> /taklaggare-botkyrka (4)
+/takomlaggning-botkyrka /taklaggare-botkyrka 301
+/platttak-botkyrka /taklaggare-botkyrka 301
+/betongpannor-botkyrka /taklaggare-botkyrka 301
+/tegeltak-botkyrka /taklaggare-botkyrka 301
+# -> /taklaggare-tumba (4)
+/takomlaggning-tumba /taklaggare-tumba 301
+/platttak-tumba /taklaggare-tumba 301
+/betongpannor-tumba /taklaggare-tumba 301
+/tegeltak-tumba /taklaggare-tumba 301
+# -> /taklaggare-uttran (6)
+/takbyte-uttran /taklaggare-uttran 301
+/takrenovering-uttran /taklaggare-uttran 301
+/takomlaggning-uttran /taklaggare-uttran 301
+/platttak-uttran /taklaggare-uttran 301
+/betongpannor-uttran /taklaggare-uttran 301
+/tegeltak-uttran /taklaggare-uttran 301
+# -> /taklaggare-grodinge (6)
+/takbyte-grodinge /taklaggare-grodinge 301
+/takrenovering-grodinge /taklaggare-grodinge 301
+/takomlaggning-grodinge /taklaggare-grodinge 301
+/platttak-grodinge /taklaggare-grodinge 301
+/betongpannor-grodinge /taklaggare-grodinge 301
+/tegeltak-grodinge /taklaggare-grodinge 301
+# -> /taklaggare-slagsta (6)
+/takbyte-slagsta /taklaggare-slagsta 301
+/takrenovering-slagsta /taklaggare-slagsta 301
+/takomlaggning-slagsta /taklaggare-slagsta 301
+/platttak-slagsta /taklaggare-slagsta 301
+/betongpannor-slagsta /taklaggare-slagsta 301
+/tegeltak-slagsta /taklaggare-slagsta 301
+# -> /taklaggare-ekero (3)
+/platttak-ekero /taklaggare-ekero 301
+/betongpannor-ekero /taklaggare-ekero 301
+/tegeltak-ekero /taklaggare-ekero 301
+# -> /taklaggare-stenhamra (6)
+/takbyte-stenhamra /taklaggare-stenhamra 301
+/takrenovering-stenhamra /taklaggare-stenhamra 301
+/takomlaggning-stenhamra /taklaggare-stenhamra 301
+/platttak-stenhamra /taklaggare-stenhamra 301
+/betongpannor-stenhamra /taklaggare-stenhamra 301
+/tegeltak-stenhamra /taklaggare-stenhamra 301
+# -> /taklaggare-alvnas (6)
+/takbyte-alvnas /taklaggare-alvnas 301
+/takrenovering-alvnas /taklaggare-alvnas 301
+/takomlaggning-alvnas /taklaggare-alvnas 301
+/platttak-alvnas /taklaggare-alvnas 301
+/betongpannor-alvnas /taklaggare-alvnas 301
+/tegeltak-alvnas /taklaggare-alvnas 301
+# -> /taklaggare-trakvista (6)
+/takbyte-trakvista /taklaggare-trakvista 301
+/takrenovering-trakvista /taklaggare-trakvista 301
+/takomlaggning-trakvista /taklaggare-trakvista 301
+/platttak-trakvista /taklaggare-trakvista 301
+/betongpannor-trakvista /taklaggare-trakvista 301
+/tegeltak-trakvista /taklaggare-trakvista 301
+# -> /taklaggare-kungsberga (6)
+/takbyte-kungsberga /taklaggare-kungsberga 301
+/takrenovering-kungsberga /taklaggare-kungsberga 301
+/takomlaggning-kungsberga /taklaggare-kungsberga 301
+/platttak-kungsberga /taklaggare-kungsberga 301
+/betongpannor-kungsberga /taklaggare-kungsberga 301
+/tegeltak-kungsberga /taklaggare-kungsberga 301
+# -> /taklaggare-svartsjo (6)
+/takbyte-svartsjo /taklaggare-svartsjo 301
+/takrenovering-svartsjo /taklaggare-svartsjo 301
+/takomlaggning-svartsjo /taklaggare-svartsjo 301
+/platttak-svartsjo /taklaggare-svartsjo 301
+/betongpannor-svartsjo /taklaggare-svartsjo 301
+/tegeltak-svartsjo /taklaggare-svartsjo 301
+# -> /taklaggare-ekero-sommarstad (6)
+/takbyte-ekero-sommarstad /taklaggare-ekero-sommarstad 301
+/takrenovering-ekero-sommarstad /taklaggare-ekero-sommarstad 301
+/takomlaggning-ekero-sommarstad /taklaggare-ekero-sommarstad 301
+/platttak-ekero-sommarstad /taklaggare-ekero-sommarstad 301
+/betongpannor-ekero-sommarstad /taklaggare-ekero-sommarstad 301
+/tegeltak-ekero-sommarstad /taklaggare-ekero-sommarstad 301
+# -> /taklaggare-nynashamn (3)
+/platttak-nynashamn /taklaggare-nynashamn 301
+/betongpannor-nynashamn /taklaggare-nynashamn 301
+/tegeltak-nynashamn /taklaggare-nynashamn 301
 
 # Reglerna med * kommer SIST (gren 149b): Cloudflare Pages räknar en regel som står efter en dynamisk regel som dynamisk, och högst 100 dynamiska regler gäller.
 # Stod splat-raderna först föll alla exakta rader efter nr 97 bort (livekontroll 2026-10-21: 97 av 208). Ett prov (src/test/ompekning.test.ts) kräver att ingen exakt rad står efter en dynamisk.
