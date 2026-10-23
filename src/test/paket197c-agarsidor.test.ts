@@ -36,6 +36,9 @@ const GRUPPER: Record<string, string[]> = {
   Sigtuna: ["sigtuna", "marsta", "rosersberg"],
 };
 
+/** Gren 197c-b (Marknadschefens grind 2026-10-24 00:57): äldre exakta rader med belägg per rad (allmänna sökord, gren 129 och 171) behåller sin tjänstesida. */
+const BEHALLNA = new Set(["/takomlaggning-bro", "/takomlaggning-tumba", "/takomlaggning-marsta", "/takomlaggning-vaxholm", "/bandtackning-ljustero", "/takrenovering-osterskar", "/takbyte-enebyberg"]);
+
 describe("gren 197c: ägarsidor i fem kommuner till", () => {
   for (const [kommun, slugs] of Object.entries(GRUPPER)) {
     it(`${kommun}: varje tunn tjänst × ort-sida pekas om till ortens ägarsida, sidor med egen text berörs inte`, () => {
@@ -48,6 +51,10 @@ describe("gren 197c: ägarsidor i fem kommuner till", () => {
           const mal = losUpp(p);
           if (!isThinCombo(s, l)) {
             expect(mal, `${p}: har egen text och får inte pekas om`).toBeNull();
+            continue;
+          }
+          if (BEHALLNA.has(p)) {
+            expect(mal, p).toMatch(/^\/(tjanster|material)\//);
             continue;
           }
           tunna++;

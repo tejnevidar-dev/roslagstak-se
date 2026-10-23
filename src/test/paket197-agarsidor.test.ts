@@ -39,6 +39,9 @@ const GRUPPER: Record<string, string[]> = {
 /** Upplands-Bro: ortssidan för kommunen är avindexerad som ägare, /taklaggare-bro äger kommunsökorden (befintliga rader går dit). */
 const agare = (ort: string) => (ort === "upplands-bro" ? "/taklaggare-bro" : `/taklaggare-${ort}`);
 
+/** Gren 197c-b (Marknadschefens grind 2026-10-24 00:57): äldre exakta rader med belägg per rad (allmänna sökord, gren 129 och 171) behåller sin tjänstesida. */
+const BEHALLNA = new Set(["/takomlaggning-bro", "/takomlaggning-tumba", "/takomlaggning-marsta", "/takomlaggning-vaxholm", "/bandtackning-ljustero", "/takrenovering-osterskar", "/takbyte-enebyberg"]);
+
 describe("gren 197: ägarsidor i fem kommuner", () => {
   for (const [kommun, slugs] of Object.entries(GRUPPER)) {
     it(`${kommun}: varje tunn tjänst × ort-sida pekas om till ortens ägarsida, sidor med egen text berörs inte`, () => {
@@ -51,6 +54,10 @@ describe("gren 197: ägarsidor i fem kommuner", () => {
           const mal = losUpp(p);
           if (!isThinCombo(s, l)) {
             expect(mal, `${p}: har egen text och får inte pekas om`).toBeNull();
+            continue;
+          }
+          if (BEHALLNA.has(p)) {
+            expect(mal, p).toMatch(/^\/(tjanster|material)\//);
             continue;
           }
           tunna++;
@@ -83,7 +90,7 @@ describe("gren 197: ägarsidor i fem kommuner", () => {
       for (const slug of slugs) {
         const l = locations.find((x) => x.slug === slug)!;
         for (const s of allServiceSlugs) {
-          if (!isThinCombo(s, l)) continue;
+          if (!isThinCombo(s, l) || BEHALLNA.has(`/${s}-${slug}`)) continue;
           expect(losUpp(`/${s}-${slug}`), `/${s}-${slug}`).not.toMatch(/^\/(tjanster|material)\//);
         }
       }

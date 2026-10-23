@@ -92,7 +92,8 @@ const agarMal = (ort: string, k: (typeof KOMMUNER)[number]) => {
   return `/taklaggare-${ort}`;
 };
 /** En lucka: noindex utan 301, eller en 301 till en riksomfattande tjänste- eller materialsida i stället för orten. */
-const arLucka = (r: Rad) => r.roll === "noindex" || (r.roll === "301" && /^\/(tjanster|material)\//.test(r.mal ?? ""));
+/** Befintliga exakta rader till en tjänste- eller materialsida har belägg per rad (gren 129, 171) och är inga luckor (Marknadschefens grind 197c-b). */
+const arLucka = (r: Rad) => r.roll === "noindex" || (r.roll === "301" && r.slag === "platshållare" && /^\/(tjanster|material)\//.test(r.mal ?? ""));
 
 const bygg = arg("bygg", "").split(",").filter(Boolean);
 if (args.includes("--rader") || args.includes("--skriv")) {
