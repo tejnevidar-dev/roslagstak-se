@@ -16,7 +16,7 @@ describe("gren 136: länkar till ompekade adresser", () => {
     expect(start).toBeGreaterThan(-1);
     const fran = rader.slice(start).map((r) => r.trim()).filter((r) => /^\/[a-z0-9-]+ \/\S* 301$/.test(r)).map((r) => r.split(" ")[0]).sort();
     expect([...OMPEKADE].sort()).toEqual(fran);
-    expect(OMPEKADE.size).toBe(919); // gren 197e: +325 (före 594); gren 197d: +199 (före 395); // gren 197c-b: 395 (7 rader tillbaka i sina block, tegeltak-bro och platttak-sundbyberg får ingen rad, gren 171); gren 197c: +98 exakta rader (fem kommuner till), 5 befintliga ersatta (före 197c: 304); gren 197: +93 exakta rader för luckorna i Upplands-Bro, Botkyrka, Sundbyberg, Nynäshamn och Ekerö, 2 befintliga ersatta (före 197: 213); gren 171: +7 exakta rader för platttak och tegeltak i Solna, Sollentuna, Sundbyberg, Danderyd och Bro (före 7: 206)
+    expect(OMPEKADE.size).toBe(914); // gren 196: -5 (combo våg 6 gör fem sidor indexerbara, de fem 301-raderna utgår); gren 197e: +325 (före 594); gren 197d: +199 (före 395); // gren 197c-b: 395 (7 rader tillbaka i sina block, tegeltak-bro och platttak-sundbyberg får ingen rad, gren 171); gren 197c: +98 exakta rader (fem kommuner till), 5 befintliga ersatta (före 197c: 304); gren 197: +93 exakta rader för luckorna i Upplands-Bro, Botkyrka, Sundbyberg, Nynäshamn och Ekerö, 2 befintliga ersatta (före 197: 213); gren 171: +7 exakta rader för platttak och tegeltak i Solna, Sollentuna, Sundbyberg, Danderyd och Bro (före 7: 206)
     // // 210 minus takbyte i Nynäshamn och Sigtuna, som fick egen text (gren 137)
     expect(arOmpekad("/takbyte-vaddo")).toBe(true);
     expect(arOmpekad("/takbyte-taby")).toBe(false);

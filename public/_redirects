@@ -940,8 +940,7 @@
 /platttak-vendelso /taklaggare-vendelso 301
 /betongpannor-vendelso /taklaggare-vendelso 301
 /tegeltak-vendelso /taklaggare-vendelso 301
-# -> /taklaggare-vasterhaninge (6)
-/takbyte-vasterhaninge /taklaggare-vasterhaninge 301
+# -> /taklaggare-vasterhaninge (5)
 /takrenovering-vasterhaninge /taklaggare-vasterhaninge 301
 /takomlaggning-vasterhaninge /taklaggare-vasterhaninge 301
 /platttak-vasterhaninge /taklaggare-vasterhaninge 301
@@ -953,8 +952,7 @@
 /platttak-tungelsta /taklaggare-tungelsta 301
 /betongpannor-tungelsta /taklaggare-tungelsta 301
 /tegeltak-tungelsta /taklaggare-tungelsta 301
-# -> /taklaggare-dalaro (6)
-/takbyte-dalaro /taklaggare-dalaro 301
+# -> /taklaggare-dalaro (5)
 /takrenovering-dalaro /taklaggare-dalaro 301
 /takomlaggning-dalaro /taklaggare-dalaro 301
 /platttak-dalaro /taklaggare-dalaro 301
@@ -1254,9 +1252,8 @@
 /platttak-bagarmossen /taklaggare-bagarmossen 301
 /betongpannor-bagarmossen /taklaggare-bagarmossen 301
 /tegeltak-bagarmossen /taklaggare-bagarmossen 301
-# -> /taklaggare-solna (4)
+# -> /taklaggare-solna (3)
 /takrenovering-solna /taklaggare-solna 301
-/takomlaggning-solna /taklaggare-solna 301
 /betongpannor-solna /taklaggare-solna 301
 /tegeltak-solna /taklaggare-solna 301
 # -> /taklaggare-viby (6)
@@ -1308,8 +1305,7 @@
 /platttak-lannersta /taklaggare-lannersta 301
 /betongpannor-lannersta /taklaggare-lannersta 301
 /tegeltak-lannersta /taklaggare-lannersta 301
-# -> /taklaggare-nacka (4)
-/takrenovering-nacka /taklaggare-nacka 301
+# -> /taklaggare-nacka (3)
 /platttak-nacka /taklaggare-nacka 301
 /betongpannor-nacka /taklaggare-nacka 301
 /tegeltak-nacka /taklaggare-nacka 301
@@ -1346,8 +1342,7 @@
 /platttak-kil /taklaggare-kil 301
 /betongpannor-kil /taklaggare-kil 301
 /tegeltak-kil /taklaggare-kil 301
-# -> /taklaggare-varmdo (4)
-/takomlaggning-varmdo /taklaggare-varmdo 301
+# -> /taklaggare-varmdo (3)
 /platttak-varmdo /taklaggare-varmdo 301
 /betongpannor-varmdo /taklaggare-varmdo 301
 /tegeltak-varmdo /taklaggare-varmdo 301

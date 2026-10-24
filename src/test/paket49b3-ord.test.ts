@@ -16,7 +16,8 @@ describe("paket 49b-3", () => {
     expect(ortSeoOverrides.segeltorp.description).toBe("Takläggare i Segeltorp, Jakobslund, Smista och Juringe i Huddinge, med villor från 1900-talets början och radhus. Kostnadsfri takkontroll.");
     expect(ortSeoOverrides.hasselby.description).toBe("Takläggare i Hässelby villastad och Backlura, med villor från 1900-talets början och radhus från 1970-talet. Kostnadsfri takkontroll.");
     expect(ort("hasselby").description).toBe(ortSeoOverrides.hasselby.description);
-    expect(alla).not.toContain("Johannelund");
+    // gren 202: Flysta (Wikipedia) nämner torpet Johannelund; provet gäller Hässelby, där namnet ströks som obelagt
+    expect(JSON.stringify(ort("hasselby"))).not.toContain("Johannelund");
   });
 
   it("B1: Solhem-Lunda och Hässelby har fått tillbaka en mening med Wikipedia som källa", () => {
