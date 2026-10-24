@@ -28,6 +28,7 @@ import { canonicalPath, isNoindexPath, normalizePath } from "../src/lib/canonica
 import { synligaOrter } from "../src/data/avindexerade-orter";
 import { avindexeradeGuidevagar } from "../src/data/avindexerade-guider";
 import { regionSlugs } from "../src/data/regions";
+import { ordnaEfterPrioritet } from "../src/data/sitemap-prioritet";
 
 const SITE_URL = "https://roslagstak.se";
 
@@ -165,6 +166,7 @@ function generateSitemap(list: Entry[]): string {
   ].join("\n");
 }
 
-writeFileSync(resolve("public/sitemap.xml"), generateSitemap(entries));
+// P0-2: de prioriterade sidorna (src/data/sitemap-prioritet.ts) står först i sajtkartan
+writeFileSync(resolve("public/sitemap.xml"), generateSitemap(ordnaEfterPrioritet(entries)));
 console.log(`sitemap.xml: uteslöt ${skipped.length} icke-indexerbara URL:er${skipped.length ? ` (${skipped.slice(0, 8).join(", ")}${skipped.length > 8 ? ", …" : ""})` : ""}`);
 console.log(`sitemap.xml written — ${entries.length} entries (${locationEntries.length} locations, ${comboEntries.length} combos, ${existingEntries.length} static/blog).`);
