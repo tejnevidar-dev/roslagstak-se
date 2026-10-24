@@ -188,8 +188,17 @@ if (existsSync(resolve(dist, "index.html"))) {
      egen statisk fil. Därför måste VARJE känd route (även noindex-sidor utanför sitemap) ha en
      statisk fil — annars får en riktig sida statuskod 404. */
   if (existsSync(resolve(dist, "404.html"))) {
+    // P0-3: aliasen (/taktvatt, /boka m.fl.) är riktiga 301 i _redirects och behöver ingen egen fil: Cloudflare svarar med 301 före 404.html
+    const omdirigerade = new Set(
+      (existsSync(resolve(dist, "_redirects")) ? readFileSync(resolve(dist, "_redirects"), "utf8") : "")
+        .split(/\r?\n/)
+        .map((r) => r.trim().split(/\s+/))
+        .filter((p) => p.length >= 3 && p[0].startsWith("/") && !p[0].includes("*") && p[2] === "301")
+        .map((p) => p[0]),
+    );
     for (const route of knownRoutes) {
       if (route === "/" || route.includes(":") || route.includes("*")) continue;
+      if (omdirigerade.has(route)) continue;
       if (!existsSync(resolve(dist, `.${route}.html`)) && !existsSync(resolve(dist, `.${route}`, "index.html")))
         fail(`${SITE_URL}${route}`, "känd route saknar statisk fil i dist → skulle svara 404 (404.html finns)");
     }
