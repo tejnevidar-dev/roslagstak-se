@@ -27,6 +27,15 @@ for (const f of readdirSync(dist)) {
   const html = readFileSync(resolve(dist, f), "utf8");
   if (!html.includes(`<link rel="modulepreload" crossorigin href="/assets/${fil}" />`)) saknas.push(`${f} (${fil})`);
 }
+// BRF-sidornas komponentfil (BrfPage- och BrfLocationPage-) förladdas på /brf och /brf/<ort> (gren 230, P1-8)
+const brfFil = (prefix: string) => assets.find((f) => f.startsWith(prefix) && f.endsWith(".js"));
+let brfKontrollerade = 0;
+for (const [fil, prefix] of [["brf.html", "BrfPage-"], ...(existsSync(resolve(dist, "brf")) ? readdirSync(resolve(dist, "brf")).filter((f) => f.endsWith(".html")).map((f) => [`brf/${f}`, "BrfLocationPage-"]) : [])] as [string, string][]) {
+  const chunk = brfFil(prefix);
+  if (!chunk || !existsSync(resolve(dist, fil))) continue;
+  brfKontrollerade++;
+  if (!readFileSync(resolve(dist, fil), "utf8").includes(`href="/assets/${chunk}"`)) saknas.push(`${fil} (${chunk})`);
+}
 if (saknas.length) {
   console.error(`[check-ortsfil-forladdning] FEL: ${saknas.length} sidor saknar modulepreload för sin datafil, till exempel ${saknas.slice(0, 5).join(", ")}`);
   process.exit(1);
@@ -35,4 +44,4 @@ if (kontrollerade < 100) {
   console.error(`[check-ortsfil-forladdning] FEL: bara ${kontrollerade} sidor med datafil hittades (förväntat över 300), något stämmer inte i namngivningen`);
   process.exit(1);
 }
-console.log(`[check-ortsfil-forladdning] OK: ${kontrollerade} sidor förladdar sin datafil, ${utanDatafil} mallsidor utan egen datafil`);
+console.log(`[check-ortsfil-forladdning] OK: ${kontrollerade} sidor förladdar sin datafil, ${utanDatafil} mallsidor utan egen datafil, ${brfKontrollerade} BRF-sidor förladdar sin komponent`);

@@ -136,6 +136,8 @@ const chunkPrefixFor = (path) => {
   if (/^\/takproblem\/[a-z0-9-]+$/.test(path)) return "ProblemPage-";
   if (/^\/omraden\/[a-z0-9-]+$/.test(path)) return "RegionPage-";
   if (path === "/priser") return "Prices-";
+  if (path === "/brf") return "BrfPage-"; // gren 230 (P1-8): BRF-sidornas komponent förladdas som övriga sidtyper
+  if (/^\/brf\/[a-z0-9-]+$/.test(path)) return "BrfLocationPage-";
   return null;
 };
 // Hero-bildens 480w AVIF (den som faktiskt visas på mobil, där LCP mäts) som statisk preload på
