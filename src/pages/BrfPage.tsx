@@ -11,13 +11,14 @@ import { brfFaqsFor } from "@/data/brf-faqs";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
-import { supabase } from "@/integrations/supabase/client";
 import { attributionFields } from "@/lib/attribution";
 import { utmFields } from "@/lib/utm";
 import { locationIndex } from "@/data/location-index";
 import { brfLocationSlugs } from "@/data/brf-locations";
 import { toast } from "@/hooks/use-toast";
 import { trackLead } from "@/lib/analytics";
+import { skickaForfragan } from "@/lib/skicka-forfragan";
+import Falla from "@/components/Falla";
 import heroImg from "@/assets/roof-brf-hero.jpg";
 import {
   BRF_BOENDE,
@@ -73,6 +74,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formular = e.currentTarget as HTMLFormElement;
     if (submitting) return;
     setSubmitting(true);
 
@@ -88,7 +90,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
       .filter(Boolean)
       .join("\n");
 
-    const { error } = await supabase.from("quote_requests").insert({
+    const { error, ignorerad } = await skickaForfragan({
       mode: "consultation",
       name: form.name.trim(),
       phone: form.phone.trim(),
@@ -97,7 +99,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
       message,
       ...attributionFields(),
       ...utmFields(),
-    });
+    }, formular);
 
     setSubmitting(false);
 
@@ -111,7 +113,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
       return;
     }
 
-    trackLead("brf", { name: form.name, email: form.email, phone: form.phone }, { ort: place?.slug });
+    if (!ignorerad) trackLead("brf", { name: form.name, email: form.email, phone: form.phone }, { ort: place?.slug });
     setSubmitted(true);
     setForm(initialForm);
   };
@@ -218,6 +220,7 @@ const BrfForm = ({ place }: { place?: BrfPlace }) => {
         {BRF_FORM.finePrint2}{" "}
         <a href="/cookies" className="underline hover:text-foreground">{BRF_FORM.finePrint2Link}</a>.
       </p>
+      <Falla />
     </form>
   );
 };

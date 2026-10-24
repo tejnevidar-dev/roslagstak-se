@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle, Loader2, Shield, MessageCircle, Home } from "lucide-react";
 import { withUtm, utmFields } from "@/lib/utm";
 import { attributionFields } from "@/lib/attribution";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { trackLead } from "@/lib/analytics";
+import { skickaForfragan } from "@/lib/skicka-forfragan";
+import Falla from "@/components/Falla";
 import { linkPhone } from "@/lib/inline-md";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -20,10 +21,11 @@ const ContactLanding = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formular = e.currentTarget as HTMLFormElement;
     if (submitting) return;
     setSubmitting(true);
 
-    const { error } = await supabase.from("quote_requests").insert({
+    const { error, ignorerad } = await skickaForfragan({
       mode: "consultation",
       name: name.trim(),
       phone: phone.trim(),
@@ -31,7 +33,7 @@ const ContactLanding = () => {
       message: withUtm(message.trim() || "Önskar kostnadsfri takkontroll (via kontaktsida)"),
       ...attributionFields(),
       ...utmFields(),
-    });
+    }, formular);
 
     if (error) {
       console.error("Contact landing error:", error);
@@ -44,7 +46,7 @@ const ContactLanding = () => {
       return;
     }
 
-    trackLead("kontakt_sida", { name, email, phone, message });
+    if (!ignorerad) trackLead("kontakt_sida", { name, email, phone, message });
     setSubmitted(true);
     setSubmitting(false);
     setName("");
@@ -224,6 +226,7 @@ const ContactLanding = () => {
                   Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
                   <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
                 </p>
+                <Falla />
               </form>
             </div>
           </div>

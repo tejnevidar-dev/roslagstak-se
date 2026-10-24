@@ -4,10 +4,10 @@ import { attributionFields } from "@/lib/attribution";
 import { ArrowRight, CheckCircle, Loader2, Phone } from "lucide-react";
 import { utmLine } from "@/lib/utm";
 import { confirmationText, isWithinOpeningHours, nextOpeningLabel } from "@/lib/booking";
-/* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
-const loadSupabase = () => import("@/integrations/supabase/client").then((m) => m.supabase);
 import { toast } from "@/hooks/use-toast";
 import { trackLead } from "@/lib/analytics";
+import { skickaForfragan } from "@/lib/skicka-forfragan";
+import Falla from "@/components/Falla";
 
 const PHONE_DISPLAY = "070-154 36 39";
 type Slot = "formiddag" | "eftermiddag" | "ring_mig";
@@ -49,6 +49,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formular = e.currentTarget as HTMLFormElement;
     if (submitting) return;
     setSubmitting(true);
 
@@ -65,8 +66,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       .filter(Boolean)
       .join("\n");
 
-    const supabase = await loadSupabase();
-    const { error } = await supabase.from("quote_requests").insert({
+    const { error, ignorerad } = await skickaForfragan({
       mode: "consultation",
       name: form.name.trim(),
       phone: form.phone.trim(),
@@ -75,7 +75,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       message,
       ...attributionFields(),
       ...utmFields(),
-    });
+    }, formular);
 
     setSubmitting(false);
 
@@ -89,7 +89,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       return;
     }
 
-    trackLead(form.slot === "ring_mig" ? "callback" : "booking", { name: form.name, phone: form.phone }, { slot: form.slot });
+    if (!ignorerad) trackLead(form.slot === "ring_mig" ? "callback" : "booking", { name: form.name, phone: form.phone }, { slot: form.slot });
     setSubmitted(confirmationText(form.slot === "ring_mig" ? "ring_mig" : "boka"));
   };
 
@@ -108,7 +108,6 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
   return (
     <form
       onSubmit={handleSubmit}
-      onFocusCapture={() => void loadSupabase()}
       aria-label={title}
       className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-[0_30px_70px_-45px_rgba(12,35,64,0.55)] md:p-8"
     >
@@ -201,6 +200,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
         Vi sparar dina uppgifter för att kunna kontakta dig om din förfrågan. Läs mer i vår{" "}
         <a href="/cookies" className="underline hover:text-foreground">integritetsinformation</a>.
       </p>
+      <Falla />
     </form>
   );
 };

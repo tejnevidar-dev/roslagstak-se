@@ -3,9 +3,10 @@ import { QUOTE_CONFIG } from "@/data/offert-text";
 import { ArrowRight, CheckCircle, Home, Clock, Mail, Phone, MessageCircle, Loader2 } from "lucide-react";
 import { withUtm, utmFields } from "@/lib/utm";
 import { attributionFields } from "@/lib/attribution";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { trackEvent, trackLead } from "@/lib/analytics";
+import { skickaForfragan } from "@/lib/skicka-forfragan";
+import Falla from "@/components/Falla";
 
 const roofTypeOptions = [
   "TP20 Plåttak",
@@ -58,6 +59,7 @@ const QuoteConfigurator = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const formular = e.currentTarget as HTMLFormElement;
     if (submitting) return;
     setSubmitting(true);
 
@@ -79,7 +81,7 @@ const QuoteConfigurator = () => {
       ...utmFields(),
     };
 
-    const { error } = await supabase.from("quote_requests").insert(payload);
+    const { error, ignorerad } = await skickaForfragan(payload, formular);
 
     if (error) {
       console.error("Quote request error:", error);
@@ -92,7 +94,7 @@ const QuoteConfigurator = () => {
       return;
     }
 
-    trackLead(mode === "configure" ? "offert_konfigurator" : "offert_radgivning", { name, email, phone, message });
+    if (!ignorerad) trackLead(mode === "configure" ? "offert_konfigurator" : "offert_radgivning", { name, email, phone, message });
     setSubmitted(true);
     setSubmitting(false);
     toast({
@@ -457,6 +459,7 @@ const QuoteConfigurator = () => {
             {QUOTE_CONFIG.privacy}{" "}
             <a href="/cookies" className="underline hover:text-foreground">{QUOTE_CONFIG.privacyLink}</a>.
           </p>
+          <Falla />
         </form>
       </div>
     </section>

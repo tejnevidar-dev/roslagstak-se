@@ -3,10 +3,10 @@ import { LEAD_FORM_SUBTITLE } from "@/data/landing-text";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { utmLine, utmFields } from "@/lib/utm";
 import { attributionFields } from "@/lib/attribution";
-/* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
-const loadSupabase = () => import("@/integrations/supabase/client").then((m) => m.supabase);
 import { toast } from "@/hooks/use-toast";
 import { trackLead } from "@/lib/analytics";
+import { skickaForfragan } from "@/lib/skicka-forfragan";
+import Falla from "@/components/Falla";
 
 const PHONE_DISPLAY = "070-154 36 39";
 
@@ -54,6 +54,7 @@ const LeadForm = ({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formular = e.currentTarget as HTMLFormElement;
     if (submitting) return;
     setSubmitting(true);
 
@@ -61,8 +62,7 @@ const LeadForm = ({
       .filter(Boolean)
       .join("\n");
 
-    const supabase = await loadSupabase();
-    const { error } = await supabase.from("quote_requests").insert({
+    const { error, ignorerad } = await skickaForfragan({
       mode: "consultation",
       name: form.name.trim(),
       phone: form.phone.trim(),
@@ -71,7 +71,7 @@ const LeadForm = ({
       message,
       ...attributionFields(),
       ...utmFields(),
-    });
+    }, formular);
 
     setSubmitting(false);
 
@@ -85,7 +85,7 @@ const LeadForm = ({
       return;
     }
 
-    trackLead(formName, { name: form.name, email: form.email, phone: form.phone, message: form.message }, { ort });
+    if (!ignorerad) trackLead(formName, { name: form.name, email: form.email, phone: form.phone, message: form.message }, { ort });
     setSubmitted(true);
   };
 
@@ -104,7 +104,6 @@ const LeadForm = ({
   return (
     <form
       onSubmit={handleSubmit}
-      onFocusCapture={() => void loadSupabase()}
       aria-label={title}
       className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-[0_30px_70px_-45px_rgba(12,35,64,0.55)] md:p-8"
     >
@@ -112,6 +111,7 @@ const LeadForm = ({
         <h2 className="font-display text-2xl text-foreground">{title}</h2>
         <p className="mt-1 text-sm text-muted-foreground">{LEAD_FORM_SUBTITLE}</p>
       </div>
+      <Falla />
       <div>
         <label htmlFor="lead-name" className={labelClass}>Namn</label>
         <input id="lead-name" required autoComplete="name" value={form.name} onChange={set("name")} className={inputClass} />
