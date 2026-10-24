@@ -59,7 +59,7 @@ export const ExtraFaq = ({ extras, path }: { extras: PageExtras; path: string })
                 <AccordionTrigger className="py-5 text-left font-display text-lg text-foreground hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 leading-relaxed text-muted-foreground">{faq.answer}</AccordionContent>
+                <AccordionContent className="pb-5 leading-relaxed text-muted-foreground">{renderInline(faq.answer)}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

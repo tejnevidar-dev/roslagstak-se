@@ -5,7 +5,7 @@
  * Belopp hämtas ur prices.ts (aldrig för hand). Tilläggens belopp visas inte på de här sidorna: de står på /priser.
  * Delas av React-sidorna och scripts/prerender-content.ts (statisk HTML) via de rena datastrukturerna.
  */
-import { beloppLopande, prisPost, ROT_FORBEHALL, STALLNING_MENING } from "./prices";
+import { beloppLopande, prisPost, ROT_FORBEHALL, STALLNING_MENING, withRotForbehall } from "./prices";
 
 export type ExtraItem = string | { list: string[] };
 export interface ExtraBlock {
@@ -41,6 +41,28 @@ const TILLAGG_MENING = "Priserna gäller när arbetet görs i samband med ett ta
 const TILLAGG_MENING_SG = "Priset gäller när arbetet görs i samband med ett takbyte. Som eget arbete sätts priset efter takkontrollen.";
 
 export const SERVICE_EXTRAS: Record<string, PageExtras> = {
+  /** Gren 209 (Innehålls tjanstesidor-2026-10-24.md, grindsvar 361): FAQ på /tjanster/takomlaggning. Fråga 1 ordagrant ur guidetexter/c-takbyte-omlaggning-eller-reparation.md, fråga 2 med sidans egen prislistemening (belopp ur prices.ts, ROT-förbehållet intill), fråga 3 är R1 utan belopp. */
+  takomlaggning: {
+    blocks: [],
+    faqHeading: "Vanliga frågor om takomläggning",
+    faqs: [
+      {
+        question: "Vad är skillnaden mellan takomläggning och takbyte?",
+        answer:
+          "Vid en takomläggning rivs det gamla ytmaterialet, underlag och läkt byts, och taket läggs på nytt. Ordet används gärna när samma sorts material läggs igen, till exempel betongpannor på ett tak som hade betongpannor. Ett takbyte är samma omfattning, men här kan du också välja ett nytt material eller ett nytt uttryck. Läs mer i [Lägga om, byta eller laga taket?](/blogg/lagga-om-tak-vad-kostar-det)",
+      },
+      {
+        question: "Vad kostar en takomläggning?",
+        answer: withRotForbehall(
+          `Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor ${beloppLopande("TP20 plåttak")}, lertegel och pannplåt ${beloppLopande("Lertegeltak")}, dubbelfalsat ${beloppLopande("Dubbelfalsat plåttak")}. Fast pris efter kostnadsfri takkontroll.`,
+        ),
+      },
+      {
+        question: "Kan jag få ROT-avdrag för takomläggning?",
+        answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden. ROT-avdraget dras på fakturan. Läs mer om [ROT-avdrag](/rot-avdrag).",
+      },
+    ],
+  },
   takkupor: {
     blocks: [
       {
@@ -344,6 +366,7 @@ export const MATERIAL_EXTRAS: Record<string, PageExtras> = {
         answer: "Betongpannor är tunga. " + BARIGHET,
       },
       { question: "Behövs bygglov för att byta takmaterial?", answer: BYGGLOV },
+      { question: "Gör mossa skada på betongpannor?", answer: "Villaägarna skriver att mossa eller lav på taket är vanligt, men att det kan finnas anledning att göra något åt det. Risken är enligt förbundet att mossan suger åt sig fukt, så att pannorna under också blir fuktiga, och att pannorna kan skadas om de utsätts för frost. Förbundet skriver att det krävs förkunskaper för att använda högtryckstvätt på ett tak, bland annat för att undvika att vatten trycks in i den underliggande konstruktionen. Läs mer i [Ta bort mossa från taket](/blogg/ta-bort-mossa-fran-tak)" },
     ],
     links: [
       { to: "/blogg/betongpannor-eller-lertegel", label: "Betongpannor eller lertegel?" },
@@ -418,6 +441,7 @@ export const MATERIAL_EXTRAS: Record<string, PageExtras> = {
       { question: "Ingår byggställning?", answer: STALLNING_MENING },
       { question: "Gäller ROT-avdraget?", answer: ROT },
       { question: "Behövs bygglov för att byta till plåt?", answer: BYGGLOV },
+      { question: "Hur länge håller ett plåttak?", answer: "Plåt skyddas av sin ytbehandling. Så länge den är hel är stålet skyddat, och när den skadas kan plåten börja rosta. Det som brukar avgöra är därför ytan, skruvarna och anslutningarna: repor, flagnande färg, skruvar som har släppt och beslag som har rört sig. Läs mer i [Hur länge håller ett tak?](/blogg/hur-lange-haller-tak)" },
     ],
     links: [
       { to: "/blogg/plattak-vs-betongpannor", label: "Plåttak eller betongpannor?" },

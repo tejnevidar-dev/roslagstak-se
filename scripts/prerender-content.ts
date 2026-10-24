@@ -850,6 +850,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: sp.description,
       h1: sp.h1,
       intro: sp.intro,
+      inlineLinks: SERVICE_EXTRAS[slug] ? SERVICE_EXTRAS[slug].faqs.flatMap((f) => inlineMdLinks(f.answer)) : undefined,
       // Omdömesbandet sist (GoogleReviews i ServiceDetail.tsx), utanför serviceStaticPage eftersom paritetstestet renderar sidan utan omdömesbandet (AG1, paket 21)
       ...(() => {
         const rev = buildBody([GOOGLE_REVIEWS_TEXT.bandEyebrow, { h: GOOGLE_REVIEWS_TEXT.title }, GOOGLE_REVIEWS_TEXT.ingress]);
@@ -864,6 +865,7 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
         ...serviceLinks,
         ...locationLinks.slice(0, 24),
         ...sp.relatedLinks.map((l) => ({ href: l.to, label: l.label })),
+        ...(SERVICE_EXTRAS[slug] ? SERVICE_EXTRAS[slug].faqs.flatMap((f) => inlineMdLinks(f.answer)).filter((l) => !sp.relatedLinks.some((r) => r.to === l.href)) : []),
       ],
       breadcrumbs: [
         { name: "Startsidan", path: "/", visibleName: "Hem" },
@@ -947,7 +949,10 @@ export const prerenderContentRaw = (path: string): PrerenderPage | null => {
       description: d.metaDescription,
       h1: material.title,
       intro: d.intro,
-      inlineLinks: MATERIAL_PRISAVSNITT[material.slug]?.nastaSteg ? inlineMdLinks(MATERIAL_PRISAVSNITT[material.slug].nastaSteg!) : undefined,
+      inlineLinks: [
+        ...(MATERIAL_PRISAVSNITT[material.slug]?.nastaSteg ? inlineMdLinks(MATERIAL_PRISAVSNITT[material.slug].nastaSteg!) : []),
+        ...(MATERIAL_EXTRAS[material.slug] ? MATERIAL_EXTRAS[material.slug].faqs.flatMap((f) => inlineMdLinks(f.answer)) : []),
+      ],
       ...buildBody([
         ...materialSections.flatMap((s) => [{ h: s.heading, suffix: ":" }, stripInlineMd(d[s.key] as string)]),
         ...(MATERIAL_EXTRAS[material.slug] ? [] : [{ h: "Kostnadsdrivare", suffix: ":" }, d.kostnadsdrivare]),

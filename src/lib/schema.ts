@@ -195,7 +195,8 @@ export const buildFaqSchema = (faqs: FaqItem[], pageUrl?: string) => ({
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    // markdown-länkar i svar (gren 209) ger bara länktexten i schemat
+    acceptedAnswer: { "@type": "Answer", text: faq.answer.replace(/\[([^\]]+)\]\([^)\s]+\)/g, "$1") },
   })),
 });
 
