@@ -74,7 +74,9 @@ describe("gren 195: tunna mallsidor till ortssidan", () => {
     expect(dyn.length).toBeLessThan(100);
     const forstaDyn = regler.findIndex(([k]) => k.endsWith("*"));
     expect(regler.slice(forstaDyn).every(([k]) => k.endsWith("*"))).toBe(true);
-    for (const p of ["/takmalning-*", "/bandtackning-*"]) expect(regler.some(([k, m]) => k === p && m === "/taklaggare-:splat")).toBe(true);
+    // P0-3: jokerreglerna för takmålning och bandtäckning är borta (de gav 301 → 404 för namn som inte är orter) och ersatta av exakta rader per ort
+    for (const p of ["/takmalning-*", "/bandtackning-*"]) expect(regler.some(([k]) => k === p), p).toBe(false);
+    for (const l of orter.filter((x) => x.slug !== "finnhamn")) for (const sv of ["takmalning", "bandtackning"]) expect(regler.some(([k]) => k === `/${sv}-${l.slug}`), `/${sv}-${l.slug}`).toBe(true);
   });
   it("195b: takmålningssidorna räknas som ompekade, så ingen intern länk går dit", () => {
     for (const l of orter) expect(arOmpekad(`/takmalning-${l.slug}`), l.slug).toBe(true);

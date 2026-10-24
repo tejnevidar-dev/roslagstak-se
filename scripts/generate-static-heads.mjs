@@ -481,17 +481,7 @@ for (const { path, robots } of routes) {
   written++;
 }
 
-/* Alias-/dubblett-URL:er: hostingen kan inte skicka riktig 301 för SPA-filer,
-   så varje alias får en egen sida med rel=canonical mot primärversionen,
-   noindex + meta-refresh och en JS-redirect. Sökmotorer slår ihop signalerna
-   och besökare hamnar direkt på den kanoniska sidan. */
-const aliasEntries = [
-  ["/tjanster/takvard", "/tjanster/taktvatt"],
-  ["/taktvatt", "/tjanster/taktvatt"],
-  ["/radgivning", "/kontakt"],
-  ["/konsultation", "/kontakt"],
-  ["/boka", "/kontakt"],
-];
+/* Alias-/dubblett-URL:er (/taktvatt, /tjanster/takvard, /boka, /radgivning, /konsultation) är sedan P0-3 riktiga 301 i public/_redirects, inte HTML-filer med meta refresh. */
 /* 404.html (2026-10-01, mjuk 404): utan den här filen behandlar Cloudflare Pages sajten som en
    SPA och svarar 200 med startsidans HTML (titel + index,follow) på VARJE okänd adress. Med
    404.html i roten svarar Pages i stället med statuskod 404 och den här filen. Varje riktig
@@ -534,29 +524,9 @@ const aliasEntries = [
   writeFileSync(resolve(dist, "404.html"), kritiskCss(html));
 }
 
-let aliases = 0;
-for (const [alias, target] of aliasEntries) {
-  const targetUrl = `${SITE_URL}${target}`;
-  const html = `<!DOCTYPE html>
-<html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Flyttad — RoslagsTak</title>
-    <link rel="canonical" href="${targetUrl}" />
-    <meta name="robots" content="noindex, follow" />
-    <meta http-equiv="refresh" content="0; url=${target}" />
-    <script>window.location.replace("${target}" + window.location.search + window.location.hash);</script>
-  </head>
-  <body>
-    <p>Sidan har flyttat till <a href="${target}">${targetUrl}</a>.</p>
-  </body>
-</html>
-`;
-  const out = resolve(dist, `.${alias}.html`);
-  mkdirSync(dirname(out), { recursive: true });
-  writeFileSync(out, html);
-  aliases++;
-}
+/* P0-3 (seo-audit/06): aliasen skrivs inte längre som HTML-filer med meta refresh och noindex. De är riktiga 301 i public/_redirects
+   (register med datum och skäl: REDIRECT_REGISTRY i src/lib/canonical.ts, prov: src/test/ompekning.test.ts). */
+const aliases = 0;
 
 /* Ändringsloggen för SEO Command Center publiceras som /seo-overrides-logg.json (samma innehåll som
    src/data/overrides/_logg.json) så att CRM kan läsa manuella titel- och metaändringar själv. Filen är noindex

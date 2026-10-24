@@ -57,7 +57,7 @@ describe("gren 197: ägarsidor i fem kommuner", () => {
             continue;
           }
           if (BEHALLNA.has(p)) {
-            expect(mal, p).toMatch(/^\/(tjanster|material)\//);
+            expect(mal, p).toMatch(/^\/(tjanster|material|taklaggare-)/); // P0-3: raderna som en gång behölls med belägg pekar nu på ortssidan
             continue;
           }
           tunna++;

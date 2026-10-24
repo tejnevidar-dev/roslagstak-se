@@ -8,7 +8,7 @@ import { resolve } from "node:path";
 import { locations } from "@/data/locations";
 import { allServiceSlugs, hasServiceCombos } from "@/data/service-slugs";
 import { isThinCombo } from "@/data/thin-combos";
-import { canonicalPath } from "@/lib/canonical";
+import { canonicalPath, CANONICAL_ALIASES } from "@/lib/canonical";
 
 const rot = resolve(__dirname, "../..");
 const regler = readFileSync(resolve(rot, "public/_redirects"), "utf8")
@@ -23,7 +23,9 @@ const splat = regler.filter((r) => r.kalla.endsWith("*"));
 /** Tjänstesidor utan innehåll som ompekas med en exakt rad (gren 167, M1): källan svarar 404 i dag och står inte i sajtkartan. */
 const TJANSTESIDOR_UTAN_INNEHALL = ["/tjanster/takbyte"];
 const exaktaAlla = regler.filter((r) => !r.kalla.endsWith("*"));
-const exakta = exaktaAlla.filter((r) => !TJANSTESIDOR_UTAN_INNEHALL.includes(r.kalla));
+/** P0-3 (seo-audit/06): de fem aliasen (/taktvatt, /boka m.fl.) är riktiga 301 i _redirects i stället för HTML-filer med meta refresh. */
+const ALIAS = Object.keys(CANONICAL_ALIASES);
+const exakta = exaktaAlla.filter((r) => !TJANSTESIDOR_UTAN_INNEHALL.includes(r.kalla) && !ALIAS.includes(r.kalla));
 const sitemap = readFileSync(resolve(rot, "public/sitemap.xml"), "utf8");
 const sitemapVagar = [...sitemap.matchAll(/<loc>https:\/\/roslagstak\.se([^<]*)<\/loc>/g)].map((m) => m[1] || "/");
 
@@ -39,6 +41,15 @@ const delaExakt = (kalla: string) => {
 };
 
 describe("ompekningsreglerna", () => {
+  it("P0-3: varje alias är en exakt 301 till sin kanoniska adress och står bara en gång", () => {
+    for (const [alias, mal] of Object.entries(CANONICAL_ALIASES)) {
+      const rader = exaktaAlla.filter((r) => r.kalla === alias);
+      expect(rader, alias).toHaveLength(1);
+      expect(rader[0].mal, alias).toBe(mal);
+      expect(rader[0].status, alias).toBe("301");
+    }
+  });
+
   it("är välformade: 301, absolut målsökväg, splat-regler med en splat sist, högst 2 000 regler", () => {
     expect(regler.length).toBeGreaterThan(0);
     expect(regler.length).toBeLessThanOrEqual(2000);
