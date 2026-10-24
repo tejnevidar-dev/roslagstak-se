@@ -72,6 +72,10 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       phone: form.phone.trim(),
       email: "",
       address: form.municipality.trim() || null,
+      // Bokningen går till CRM:ets booking-request (functions/api/forfragan.ts): slot, date och municipality krävs där
+      slot: form.slot,
+      date: form.slot === "ring_mig" ? null : form.date,
+      municipality: form.municipality.trim() || null,
       message,
       ...attributionFields(),
       ...utmFields(),

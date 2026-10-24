@@ -47,6 +47,12 @@ describe("skickaForfragan", () => {
     expect(kalla("src/components/QuoteConfigurator.tsx")).toContain('"offert_konfigurator" : "offert_radgivning"');
     expect(kalla("src/components/BookingWidget.tsx")).toContain('"callback" : "booking"');
   });
+  it("bokningen (BookingWidget) skickar slot, date (null vid ring_mig) och municipality, som CRM:ets booking-request kräver", () => {
+    const k = kalla("src/components/BookingWidget.tsx");
+    expect(k).toContain("slot: form.slot,");
+    expect(k).toContain('date: form.slot === "ring_mig" ? null : form.date,');
+    expect(k).toContain("municipality: form.municipality.trim() || null,");
+  });
   it("en bot som fyllt i fällan skickar värdet vidare, och ett 'ignorerad'-svar ger ingen felgren men markeras", async () => {
     const hamta = vi.fn(async () => svar(200, { ok: true, ignorerad: true }));
     vi.stubGlobal("fetch", hamta);

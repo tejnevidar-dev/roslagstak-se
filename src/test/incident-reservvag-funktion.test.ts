@@ -194,6 +194,61 @@ describe("reservvägen /api/forfragan", () => {
     for (const k of ["Anna", "070-111", "gmail", "Storgatan", "Taket läcker", HEMLIGHET]) expect(allt, k).not.toContain(k);
     expect(loggar.length).toBeGreaterThan(0);
   });
+  describe("bokning (CRM 2:s kontraktsprov 2026-10-25)", () => {
+    const bokning = { mode: "consultation", name: "Bo Bokare", phone: "0701234567", email: "", address: "Täby", municipality: "Täby", slot: "eftermiddag", date: "2026-11-03", message: "Bokning kostnadsfri takkontroll\nBokning: 2026-11-03 (eftermiddag)", utm_source: "google", utm_medium: "cpc", utm_campaign: "k1", utm_content: null, landing_path: "/boka-takkontroll?gclid=abc", referrer_category: "ads", webbplats: "" };
+    const kropp = (h: ReturnType<typeof crm>) => JSON.parse(((h.mock.calls[0] as unknown as [string, RequestInit])[1].body) as string);
+    it("går till booking-request på samma värd som webhooken, med slot, date, municipality och utm som objekt", async () => {
+      const hamta = crm(201);
+      const r = await hanteraForfragan(post(bokning), env, hamta as unknown as typeof fetch);
+      expect(r.status).toBe(200);
+      expect((hamta.mock.calls[0] as unknown as [string])[0]).toBe("https://admin-vt6.tejnevidar.workers.dev/api/public/booking-request");
+      const k = kropp(hamta);
+      expect(k).toMatchObject({ name: "Bo Bokare", phone: "0701234567", email: null, municipality: "Täby", slot: "eftermiddag", date: "2026-11-03", landing_path: "/boka-takkontroll", referrer_category: "ads" });
+      expect(k.utm).toEqual({ source: "google", medium: "cpc", campaign: "k1", term: null, content: null });
+      expect(k.id).toMatch(/^[0-9a-f-]{36}$/);
+      for (const f of ["mode", "utm_source", "utm_medium", "address", "booking_slot", "webbplats", "created_at"]) expect(Object.keys(k), f).not.toContain(f);
+      expect(((hamta.mock.calls[0] as unknown as [string, RequestInit])[1].headers as Record<string, string>)["X-Webhook-Secret"]).toBe(HEMLIGHET);
+    });
+    it("ring_mig kräver inget datum och skickar date null; övriga slots kräver ÅÅÅÅ-MM-DD", async () => {
+      const h1 = crm(201);
+      await hanteraForfragan(post({ ...bokning, slot: "ring_mig", date: "2026-11-03" }), env, h1 as unknown as typeof fetch);
+      expect(kropp(h1)).toMatchObject({ slot: "ring_mig", date: null });
+      for (const d of [null, "", "3 november", "2026-11-3"]) {
+        const h = crm(201);
+        const r = await hanteraForfragan(post({ ...bokning, slot: "formiddag", date: d }), env, h as unknown as typeof fetch);
+        expect(r.status, String(d)).toBe(400);
+        expect((await r.json()).fel).toBe("ogiltigt_datum");
+        expect(h).not.toHaveBeenCalled();
+      }
+    });
+    it("okänd slot, saknat namn eller ogiltig telefon avvisas med 400 och inget skickas", async () => {
+      for (const [andra, fel] of [[{ slot: "kvall" }, "ogiltig_slot"], [{ name: " " }, "namn_saknas"], [{ phone: "12" }, "telefon_ogiltig"]] as const) {
+        const h = crm(201);
+        const r = await hanteraForfragan(post({ ...bokning, ...andra }), env, h as unknown as typeof fetch);
+        expect(r.status).toBe(400);
+        expect((await r.json()).fel).toBe(fel);
+        expect(h).not.toHaveBeenCalled();
+      }
+    });
+    it("egen bokningsadress i miljön används, meddelandet kortas till 2 000 tecken, och vanliga formulär går fortfarande till roslagstak-webhook", async () => {
+      const h = crm(201);
+      await hanteraForfragan(post({ ...bokning, message: "x".repeat(4000) }), { ...env, ROSLAGSTAK_BOOKING_URL: "https://annan.example/boka" }, h as unknown as typeof fetch);
+      expect((h.mock.calls[0] as unknown as [string])[0]).toBe("https://annan.example/boka");
+      expect(kropp(h).message.length).toBe(2000);
+      const h2 = crm(201);
+      await hanteraForfragan(post(giltig), env, h2 as unknown as typeof fetch);
+      expect((h2.mock.calls[0] as unknown as [string])[0]).toBe(STANDARD_WEBHOOK_URL);
+    });
+    it("fältfällan och loggarna fungerar likadant för bokningar: bot ger ignorerad, inga persondata i loggen", async () => {
+      const h = crm(201);
+      const r = await hanteraForfragan(post({ ...bokning, formular: "booking", webbplats: "http://spam.example" }), env, h as unknown as typeof fetch);
+      expect(await r.json()).toEqual({ ok: true, ignorerad: true });
+      expect(h).not.toHaveBeenCalled();
+      await hanteraForfragan(post(bokning), env, crm(503) as unknown as typeof fetch);
+      const allt = JSON.stringify(loggar);
+      for (const k of ["Bo Bokare", "0701234567", "Täby", "spam.example", HEMLIGHET]) expect(allt, k).not.toContain(k);
+    });
+  });
   it("andra metoder än POST ger 405", async () => {
     const r = onRequest();
     expect(r.status).toBe(405);

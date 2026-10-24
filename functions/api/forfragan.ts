@@ -8,9 +8,12 @@ export interface Env {
   ROSLAGSTAK_WEBHOOK_SECRET?: string;
   /** Valfritt: annan webhook-adress än standarden nedan. */
   ROSLAGSTAK_WEBHOOK_URL?: string;
+  /** Valfritt: annan adress för bokningar än den som härleds ur webhook-adressen (…/api/public/booking-request). */
+  ROSLAGSTAK_BOOKING_URL?: string;
 }
 
 export const STANDARD_WEBHOOK_URL = "https://admin-vt6.tejnevidar.workers.dev/api/public/roslagstak-webhook";
+export const BOOKING_PATH = "/api/public/booking-request";
 export const MAX_KROPP_BYTES = 16 * 1024;
 /** Namnet på den dolda fältfällan. Formulären skriver ut ett tomt fält med exakt detta namn (src/components/Falla.tsx). */
 export const FALLA_FALT = "webbplats";
@@ -53,12 +56,48 @@ const formularNamn = (indata: unknown): string => {
   return typeof v === "string" && /^[a-z0-9_-]{1,40}$/.test(v) ? v : "okant";
 };
 
-type Rensad = { ok: true; payload: Record<string, unknown> } | { ok: false; fel: string };
+type Rensad = { ok: true; payload: Record<string, unknown>; typ: "lead" | "bokning" } | { ok: false; fel: string };
+
+const SLOTS = new Set(["formiddag", "eftermiddag", "ring_mig"]);
+const kort = (v: unknown, max: number): string | null => (typeof v === "string" && v.trim() !== "" ? v.trim().slice(0, max) : null);
+
+/**
+ * Bokning av kostnadsfri takkontroll (BookingWidget). CRM:ets booking-request kräver slot (formiddag, eftermiddag eller ring_mig), date (ÅÅÅÅ-MM-DD, tomt vid ring_mig),
+ * municipality och utm som objekt { source, medium, campaign, term, content }. Utan det skapar CRM bara en vanlig lead och ingen bokning med tid (CRM 2, kontraktsprovet 2026-10-25).
+ */
+const rensaBokning = (i: Record<string, unknown>): Rensad => {
+  if (typeof i.slot !== "string" || !SLOTS.has(i.slot)) return { ok: false, fel: "ogiltig_slot" };
+  const name = kort(i.name, 255);
+  const phone = kort(i.phone, 64);
+  if (!name) return { ok: false, fel: "namn_saknas" };
+  if (!phone || phone.replace(/\D/g, "").length < 6) return { ok: false, fel: "telefon_ogiltig" };
+  const date = i.slot === "ring_mig" ? null : kort(i.date, 10);
+  if (i.slot !== "ring_mig" && (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date))) return { ok: false, fel: "ogiltigt_datum" };
+  const landing = kort(i.landing_path, 2000);
+  return {
+    ok: true,
+    typ: "bokning",
+    payload: {
+      id: crypto.randomUUID(),
+      name,
+      phone,
+      email: kort(i.email, 255),
+      municipality: kort(i.municipality, 255),
+      slot: i.slot,
+      date,
+      message: kort(i.message, 2000),
+      utm: { source: kort(i.utm_source, 200), medium: kort(i.utm_medium, 200), campaign: kort(i.utm_campaign, 200), term: null, content: kort(i.utm_content, 200) },
+      landing_path: landing ? landing.split(/[?#]/)[0].slice(0, 2000) || null : null,
+      referrer_category: typeof i.referrer_category === "string" && KALLOR.has(i.referrer_category) ? i.referrer_category : null,
+    },
+  };
+};
 
 /** Bygger webhook-kroppen ur den inkomna. Okända fält släpps, långa värden kortas (en förfrågan avvisas aldrig för en lång sträng), id och tid sätts här. */
 export const rensa = (indata: unknown): Rensad => {
   if (!indata || typeof indata !== "object" || Array.isArray(indata)) return { ok: false, fel: "ogiltig_kropp" };
   const i = indata as Record<string, unknown>;
+  if (i.slot !== undefined && i.slot !== null) return rensaBokning(i);
   if (i.mode !== "configure" && i.mode !== "consultation") return { ok: false, fel: "ogiltigt_mode" };
   const ut: Record<string, unknown> = { mode: i.mode };
   for (const [fält, max] of Object.entries(TEXTFALT)) {
@@ -83,7 +122,7 @@ export const rensa = (indata: unknown): Rensad => {
   if (!ut.phone || String(ut.phone).replace(/\D/g, "").length < 6) return { ok: false, fel: "telefon_ogiltig" };
   ut.id = crypto.randomUUID();
   ut.created_at = new Date().toISOString();
-  return { ok: true, payload: ut };
+  return { ok: true, payload: ut, typ: "lead" };
 };
 
 const originOk = (request: Request): boolean => {
@@ -152,7 +191,10 @@ export const hanteraForfragan = async (request: Request, env: Env, hamta: typeof
     return svar(500, { ok: false, fel: "ej_konfigurerad" });
   }
 
-  const status = await skickaTillCrm(env.ROSLAGSTAK_WEBHOOK_URL || STANDARD_WEBHOOK_URL, hemlighet, r.payload, hamta);
+  const webhook = env.ROSLAGSTAK_WEBHOOK_URL || STANDARD_WEBHOOK_URL;
+  // Bokningar går till CRM:ets booking-request (egen adress eller samma värd som webhooken), alla andra formulär till roslagstak-webhook.
+  const mal = r.typ === "bokning" ? env.ROSLAGSTAK_BOOKING_URL || webhook.replace(/\/api\/public\/[^/]+$/, BOOKING_PATH) : webhook;
+  const status = await skickaTillCrm(mal, hemlighet, r.payload, hamta);
   if (status === 200 || status === 201) return svar(200, { ok: true });
   logga("crm_avvisade", status ?? undefined);
   return svar(502, { ok: false, fel: status === null ? "mottagaren_svarar_inte" : "mottagaren_avvisade" });
