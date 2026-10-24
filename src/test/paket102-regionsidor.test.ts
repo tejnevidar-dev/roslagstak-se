@@ -42,10 +42,11 @@ describe("paket 102: regiontexterna (R1, R2, R3, R6)", () => {
     for (const slug of SLUGS) expect(alla(slug), slug).not.toContain("och det tittar vi på vid takkontrollen");
     for (const slug of ["osteraker", "vasterort", "ostra-stockholm"]) expect(alla(slug), slug).toContain("och hur det löses går vi igenom vid takkontrollen.");
   });
-  it("R6: 'Roslagen, Storstockholm och Mälardalen' i de åtta Stockholmsregionerna", () => {
+  it("R6 efter gren 204 (B2): 'Mälardalen' står bara på regionsidan Mälardalen, de åtta Stockholmsregionerna säger 'Roslagen och Storstockholm'", () => {
     const med = SLUGS.filter((s) => alla(s).includes("tar uppdrag i Roslagen, Storstockholm och Mälardalen."));
-    expect(med.length).toBe(9); // åtta Stockholmsregioner och Mälardalen, som redan hade orden
-    for (const slug of SLUGS) expect(alla(slug), slug).not.toContain("tar uppdrag i Roslagen och Storstockholm.");
+    expect(med).toEqual(["malardalen"]);
+    const utan = SLUGS.filter((s) => alla(s).includes("tar uppdrag i Roslagen och Storstockholm."));
+    expect(utan.length).toBe(8); // gren 204 (Innehålls B2-rättning): åtta Stockholmsregioner
   });
   it("R4 är orörd: Roslagens inland länkar fortfarande till plåtarbeten (väntar på Vidars fråga 3)", () => {
     expect(alla("roslagens-inland")).toContain("Plåten runt skorstenen och i ränndalarna beskriver vi på sidan om [plåtarbeten](/tjanster/platarbeten).");

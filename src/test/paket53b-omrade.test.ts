@@ -15,8 +15,8 @@ const txt = (p: ReturnType<typeof prerenderContent>) => [p!.h1, p!.intro, ...p!.
 describe("paket 53b: arbetsområdet", () => {
   it("Rg1 och de egna tjänst × ort-texterna: 'tar uppdrag i Roslagen och Storstockholm', aldrig 'hela'", () => {
     expect(kalla("src/data/region-texts.ts")).not.toMatch(/tar uppdrag i hela/);
-    expect(kalla("src/data/region-texts.ts").split("tar uppdrag i Roslagen, Storstockholm och Mälardalen.").length - 1).toBe(9); // åtta Stockholmsregioner (paket 102, R6) och Mälardalen
-    expect(kalla("src/data/region-texts.ts")).not.toContain("tar uppdrag i Roslagen och Storstockholm.");
+    expect(kalla("src/data/region-texts.ts").split("tar uppdrag i Roslagen, Storstockholm och Mälardalen.").length - 1).toBe(1); // bara Mälardalen (gren 204, B2: åtta Stockholmsregioner säger nu "Roslagen och Storstockholm")
+    expect(kalla("src/data/region-texts.ts").split("tar uppdrag i Roslagen och Storstockholm.").length - 1).toBe(8);
     expect(kalla("src/data/region-texts.ts")).toContain("tar uppdrag i kommunen.");
     expect(kalla("src/data/region-texts.ts")).toContain("tar uppdrag i Österåker.");
     expect(kalla("src/data/combo-overrides.ts")).not.toContain("tar uppdrag i hela Storstockholm");
