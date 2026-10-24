@@ -44,8 +44,8 @@
   "d": "2026-09-25"
  },
  "/brf": {
-  "h": "2c200f1a070cd12a",
-  "d": "2026-10-21"
+  "h": "79c92fb31609f50d",
+  "d": "2026-10-24"
  },
  "/hur-det-gar-till": {
   "h": "fb9f612f310e6377",
@@ -68,8 +68,8 @@
   "d": "2026-10-21"
  },
  "/takproblem": {
-  "h": "78db0aef6ed06966",
-  "d": "2026-10-21"
+  "h": "3583df7c5521698e",
+  "d": "2026-10-24"
  },
  "/takproblem/lackage-vid-skorsten": {
   "h": "2a98f6671f536b30",
@@ -96,12 +96,12 @@
   "d": "2026-10-21"
  },
  "/takproblem/rutten-raspont": {
-  "h": "bf79814e80713337",
-  "d": "2026-10-21"
+  "h": "0df82924feeee263",
+  "d": "2026-10-24"
  },
  "/takproblem/kondens-pa-vinden": {
-  "h": "9866ff20873b27cf",
-  "d": "2026-10-21"
+  "h": "c4265153be220dd2",
+  "d": "2026-10-24"
  },
  "/takproblem/dalig-underlagspapp": {
   "h": "19c9615722d0583e",
@@ -120,56 +120,56 @@
   "d": "2026-10-21"
  },
  "/takproblem/svackor-i-taket": {
-  "h": "b11f372099761c5c",
-  "d": "2026-10-21"
+  "h": "33d0cd23404a3869",
+  "d": "2026-10-24"
  },
  "/takproblem/lackande-plattak": {
-  "h": "6ebef3e6057e7dfd",
-  "d": "2026-10-21"
+  "h": "cfed6ca52ae2f370",
+  "d": "2026-10-24"
  },
  "/takproblem/skadad-takpapp-pa-papptak": {
-  "h": "2126143bde7fc792",
-  "d": "2026-10-21"
+  "h": "e1dc0e08a2c434d4",
+  "d": "2026-10-24"
  },
  "/takproblem/losa-nockpannor": {
   "h": "0471d4daf1d42481",
   "d": "2026-10-21"
  },
  "/takproblem/porosa-betongpannor": {
-  "h": "b154e3f776d914b8",
-  "d": "2026-10-21"
+  "h": "7f98ff71a29034da",
+  "d": "2026-10-24"
  },
  "/takproblem/lackage-vid-takkupa": {
   "h": "b5e83780e54f3945",
   "d": "2026-10-21"
  },
  "/takproblem/lackande-hangrannor": {
-  "h": "76df40cc62958620",
-  "d": "2026-10-21"
+  "h": "19d656b20a141f36",
+  "d": "2026-10-24"
  },
  "/takproblem/lackage-mellan-tak-och-vagg": {
-  "h": "874202bafd9695fe",
-  "d": "2026-10-21"
+  "h": "83dfe1eeffbd496a",
+  "d": "2026-10-24"
  },
  "/takproblem/rutten-lakt": {
   "h": "ad5c1d5bebd799b1",
   "d": "2026-10-21"
  },
  "/takproblem/alger-och-svarta-rander": {
-  "h": "a6edc5151493acca",
-  "d": "2026-10-21"
+  "h": "0fa1b974e1dc874b",
+  "d": "2026-10-24"
  },
  "/takproblem/fuktflack-i-innertaket": {
-  "h": "94bbeed68e9e5361",
-  "d": "2026-10-21"
+  "h": "fc5e231b3ec9c393",
+  "d": "2026-10-24"
  },
  "/takproblem/yrsno-pa-vinden": {
-  "h": "cb617c59579218d8",
-  "d": "2026-10-21"
+  "h": "c8891cfbd842c223",
+  "d": "2026-10-24"
  },
  "/takproblem/is-i-ranndalen": {
-  "h": "ae4eb4d6100ae4dd",
-  "d": "2026-10-21"
+  "h": "0f259f25c6005af8",
+  "d": "2026-10-24"
  },
  "/material": {
   "h": "96d846f9d7315451",
@@ -184,12 +184,12 @@
   "d": "2026-10-21"
  },
  "/material/papptak": {
-  "h": "638ae3bfe115c502",
-  "d": "2026-10-08"
+  "h": "ffda67232111a8b9",
+  "d": "2026-10-24"
  },
  "/material/underlagstak": {
-  "h": "ca8327378ba876c2",
-  "d": "2026-10-21"
+  "h": "7fe4ced98888041d",
+  "d": "2026-10-24"
  },
  "/material/pannplat": {
   "h": "9e2d768b71b7dd54",
@@ -220,16 +220,16 @@
   "d": "2026-10-21"
  },
  "/blogg/takbyte-skargarden-logistik": {
-  "h": "7878c34634decfe7",
-  "d": "2026-10-21"
+  "h": "f08cf5af12964e50",
+  "d": "2026-10-24"
  },
  "/blogg/rot-avdrag-takbyte": {
   "h": "224682297a505c91",
   "d": "2026-10-21"
  },
  "/blogg/tecken-byta-tak": {
-  "h": "0566a6916e2fedbc",
-  "d": "2026-10-21"
+  "h": "228a55497451352b",
+  "d": "2026-10-24"
  },
  "/blogg/basta-takmaterial-skargarden": {
   "h": "7b22c2acbb88a60f",
@@ -240,8 +240,8 @@
   "d": "2026-10-21"
  },
  "/blogg/hur-lange-haller-tak": {
-  "h": "c5d2f5e11af774a5",
-  "d": "2026-10-21"
+  "h": "8961098ac8e38b67",
+  "d": "2026-10-24"
  },
  "/blogg/takinspektion-guide": {
   "h": "7940ce2068560f28",
@@ -260,8 +260,8 @@
   "d": "2026-10-21"
  },
  "/blogg/eternittak-asbest-sanering": {
-  "h": "d2df7d7ee50e073f",
-  "d": "2026-10-21"
+  "h": "d208f475730e61c1",
+  "d": "2026-10-24"
  },
  "/blogg/takbyte-ljustero-guide-pris": {
   "h": "2d768a25470f4481",
@@ -276,16 +276,16 @@
   "d": "2026-10-21"
  },
  "/blogg/takbyte-vaxholm-skargarden": {
-  "h": "4439053bcc616a12",
-  "d": "2026-10-21"
+  "h": "4ddf7f5aff7d5d81",
+  "d": "2026-10-24"
  },
  "/blogg/takbyte-husaro-finnhamn-oar": {
   "h": "905f308b9adb0fe1",
   "d": "2026-10-21"
  },
  "/blogg/takrenovering-sommarstuga-roslagen": {
-  "h": "7347a39d9f03d174",
-  "d": "2026-10-21"
+  "h": "06d276602b85f52c",
+  "d": "2026-10-24"
  },
  "/blogg/taklaggare-radmanso-vato": {
   "h": "51cec701bc8b8c49",
@@ -296,8 +296,8 @@
   "d": "2026-10-21"
  },
  "/blogg/takventilation-luftspalt-nockventil": {
-  "h": "d76cd852b04aeb34",
-  "d": "2026-10-21"
+  "h": "2a6f7d93bf1ee4f5",
+  "d": "2026-10-24"
  },
  "/blogg/byta-tak-radhus-guide": {
   "h": "0c3d4095967cd3b3",
@@ -316,40 +316,40 @@
   "d": "2026-10-21"
  },
  "/blogg/ventilation-takfot-viktigt": {
-  "h": "80925189113ca319",
-  "d": "2026-10-21"
+  "h": "182e5763dc36a503",
+  "d": "2026-10-24"
  },
  "/blogg/platslagare-norrtalje-guide": {
   "h": "43b7e2d915325555",
   "d": "2026-10-21"
  },
  "/blogg/byta-till-plattak-forandra-look": {
-  "h": "f5eb29fdeddb71e0",
-  "d": "2026-10-21"
+  "h": "af09519dd21022c2",
+  "d": "2026-10-24"
  },
  "/blogg/mala-plattak-guide-pris": {
   "h": "1634fb244445225a",
   "d": "2026-10-21"
  },
  "/blogg/lagga-om-tak-vad-kostar-det": {
-  "h": "b2018f502538075a",
-  "d": "2026-10-21"
+  "h": "caa2f6acec71b213",
+  "d": "2026-10-24"
  },
  "/blogg/bandtackning-tak-guide": {
   "h": "0cfc06cc85e155af",
   "d": "2026-10-21"
  },
  "/blogg/takrenovering-stockholm-guide": {
-  "h": "aca74ef56fe4f9c2",
-  "d": "2026-10-21"
+  "h": "4370e60cdfd46d49",
+  "d": "2026-10-24"
  },
  "/blogg/skiffertak-hallbarhet-pris": {
-  "h": "df8092a3251766f1",
-  "d": "2026-10-21"
+  "h": "15d2d9ba92b7b822",
+  "d": "2026-10-24"
  },
  "/blogg/takpapp-byte-livslangd": {
-  "h": "e9ca624a9c037836",
-  "d": "2026-10-21"
+  "h": "ad2cba8852fd6a4b",
+  "d": "2026-10-24"
  },
  "/blogg/takstege-takbrygga-sakerhet": {
   "h": "1559ff1221221b7f",
@@ -376,8 +376,8 @@
   "d": "2026-10-22"
  },
  "/tjanster/platarbeten": {
-  "h": "7be55e5cacd9f73f",
-  "d": "2026-10-21"
+  "h": "bae42bad73c15c04",
+  "d": "2026-10-24"
  },
  "/tjanster/eternit-asbest": {
   "h": "72eb5e21d280ec54",
@@ -388,8 +388,8 @@
   "d": "2026-10-21"
  },
  "/tjanster/tegeltak": {
-  "h": "a9ccfdd98a357090",
-  "d": "2026-10-22"
+  "h": "c4243e7c963b33b0",
+  "d": "2026-10-24"
  },
  "/tjanster/taktvatt": {
   "h": "0a64cdc59a58a38a",
@@ -404,12 +404,12 @@
   "d": "2026-10-21"
  },
  "/blogg/platttak-ljud-regn-skargardshus": {
-  "h": "71773bd9d7f6d23d",
-  "d": "2026-10-21"
+  "h": "ff4e6dda5f7c7e84",
+  "d": "2026-10-24"
  },
  "/blogg/hangrannor-stupror-skargard": {
-  "h": "4222eedfff1e07fc",
-  "d": "2026-10-21"
+  "h": "5261bf25734822f7",
+  "d": "2026-10-24"
  },
  "/blogg/solceller-platttak-roslagen": {
   "h": "29a7d630d885dd76",
@@ -424,8 +424,8 @@
   "d": "2026-10-21"
  },
  "/blogg/korrugerad-plat-falsad-plat": {
-  "h": "9c374c14847e4c09",
-  "d": "2026-10-21"
+  "h": "56101672b113add9",
+  "d": "2026-10-24"
  },
  "/blogg/forsakring-takbyte-hemforsakring": {
   "h": "f430f37edf8b586f",
@@ -452,28 +452,28 @@
   "d": "2026-10-21"
  },
  "/blogg/tp20-eller-dubbelfalsat-platttak": {
-  "h": "d06ba6624340c53b",
-  "d": "2026-10-21"
+  "h": "42dbfd8da3e7fa8e",
+  "d": "2026-10-24"
  },
  "/takproblem/lackande-ranndal": {
-  "h": "82b0bc18f1609357",
-  "d": "2026-10-21"
+  "h": "30e0b8cbf5299b37",
+  "d": "2026-10-24"
  },
  "/takproblem/ruttna-vindskivor-och-takfot": {
-  "h": "22e3c731dd58af4b",
-  "d": "2026-10-21"
+  "h": "7ab2ab98a4e52967",
+  "d": "2026-10-24"
  },
  "/blogg/bygglov-byta-tak": {
   "h": "1c5b793eb239dc74",
   "d": "2026-10-21"
  },
  "/blogg/taket-lacker-vad-gor-jag-nu": {
-  "h": "c9f7779aa0a5952d",
-  "d": "2026-10-21"
+  "h": "1886f51750bcfa79",
+  "d": "2026-10-24"
  },
  "/blogg/skota-taket-betongpannor-tegel-plat": {
-  "h": "ba1d9f5a33f7f2f8",
-  "d": "2026-10-21"
+  "h": "6e3b3a904b5cc3e2",
+  "d": "2026-10-24"
  },
  "/omraden/norra-skargarden": {
   "h": "010dec2798cf7389",
@@ -524,7 +524,7 @@
   "d": "2026-10-24"
  },
  "/omraden/sydostra-stockholm": {
-  "h": "6192c5283e2d3ec9",
+  "h": "4e922373c206f919",
   "d": "2026-10-24"
  },
  "/omraden/sodra-stockholm": {
@@ -1256,7 +1256,7 @@
   "d": "2026-10-22"
  },
  "/taklaggare-alsten": {
-  "h": "8687a104a6d5adb6",
+  "h": "931785021a0d1515",
   "d": "2026-10-24"
  },
  "/taklaggare-staket": {
@@ -1344,7 +1344,7 @@
   "d": "2026-10-24"
  },
  "/taklaggare-hoglandet": {
-  "h": "4524472bdb0896c6",
+  "h": "d1f0394194326c37",
   "d": "2026-10-24"
  },
  "/taklaggare-skarsatra": {
@@ -1512,152 +1512,152 @@
   "d": "2026-10-24"
  },
  "/brf/stockholm": {
-  "h": "a21d2de2aabdc2db",
-  "d": "2026-10-21"
+  "h": "0c21067f15cf8e6d",
+  "d": "2026-10-24"
  },
  "/brf/solna": {
-  "h": "645dffd0aa2ad90e",
-  "d": "2026-10-21"
+  "h": "108708e4217c40ac",
+  "d": "2026-10-24"
  },
  "/brf/sundbyberg": {
-  "h": "8cffb777619f5aaa",
-  "d": "2026-10-21"
+  "h": "4f67157ddfdc2567",
+  "d": "2026-10-24"
  },
  "/brf/danderyd": {
-  "h": "bbbbb63971de1187",
-  "d": "2026-10-21"
+  "h": "7e85ec53210c657c",
+  "d": "2026-10-24"
  },
  "/brf/sollentuna": {
-  "h": "45add8ed9810585c",
-  "d": "2026-10-21"
+  "h": "a08372ab514ea8c0",
+  "d": "2026-10-24"
  },
  "/brf/taby": {
-  "h": "7ceb33834bd0b4b0",
-  "d": "2026-10-21"
+  "h": "db310e54104c7841",
+  "d": "2026-10-24"
  },
  "/brf/lidingo": {
-  "h": "7f5d7825d95ede4f",
-  "d": "2026-10-22"
+  "h": "b0b2d5038ae31ccf",
+  "d": "2026-10-24"
  },
  "/brf/nacka": {
-  "h": "d74c75f511d4bd1d",
-  "d": "2026-10-21"
+  "h": "099055a84698ae59",
+  "d": "2026-10-24"
  },
  "/brf/varmdo": {
-  "h": "4d60c874694915eb",
-  "d": "2026-10-22"
+  "h": "823b3945e426c16d",
+  "d": "2026-10-24"
  },
  "/brf/huddinge": {
-  "h": "18e1ad5b00b430f2",
-  "d": "2026-10-21"
+  "h": "8e53e3528486e0d2",
+  "d": "2026-10-24"
  },
  "/brf/haninge": {
-  "h": "770781daddb0875c",
-  "d": "2026-10-21"
+  "h": "c4eae5c4105f1c76",
+  "d": "2026-10-24"
  },
  "/brf/botkyrka": {
-  "h": "e19cdbec52b8c754",
-  "d": "2026-10-21"
+  "h": "75d69874680e3eae",
+  "d": "2026-10-24"
  },
  "/brf/sodertalje": {
-  "h": "db911bb6c2c0bd1b",
-  "d": "2026-10-21"
+  "h": "905cc882740b57e9",
+  "d": "2026-10-24"
  },
  "/brf/jarfalla": {
-  "h": "77b71498cde2cf67",
-  "d": "2026-10-21"
+  "h": "29b0f3d1cee60b5a",
+  "d": "2026-10-24"
  },
  "/brf/upplands-vasby": {
-  "h": "e602eeca04e03fb5",
-  "d": "2026-10-21"
+  "h": "73a47c48de3c0eea",
+  "d": "2026-10-24"
  },
  "/brf/upplands-bro": {
-  "h": "567f0a99f74c8ba0",
-  "d": "2026-10-21"
+  "h": "4c3e710767c1ff59",
+  "d": "2026-10-24"
  },
  "/brf/sigtuna": {
-  "h": "7f1c47c93c1c2649",
-  "d": "2026-10-21"
+  "h": "153c1e0ea6602382",
+  "d": "2026-10-24"
  },
  "/brf/vallentuna": {
-  "h": "b69da7bdf0113121",
-  "d": "2026-10-21"
+  "h": "ba514876c9589bc0",
+  "d": "2026-10-24"
  },
  "/brf/akersberga": {
-  "h": "0c4f1f98be908ce4",
-  "d": "2026-10-21"
+  "h": "8ca1ced0397f0d0e",
+  "d": "2026-10-24"
  },
  "/brf/tyreso": {
-  "h": "de382316fd945cf0",
-  "d": "2026-10-21"
+  "h": "bca85f10a67fd8ba",
+  "d": "2026-10-24"
  },
  "/brf/ekero": {
-  "h": "e9da078e5e5cc7c9",
-  "d": "2026-10-22"
+  "h": "894722e133d10e72",
+  "d": "2026-10-24"
  },
  "/brf/salem": {
-  "h": "9ab0957589ab96fb",
-  "d": "2026-10-21"
+  "h": "eaeeca11e885ae0b",
+  "d": "2026-10-24"
  },
  "/brf/nynashamn": {
-  "h": "9ef0ba39135643f3",
-  "d": "2026-10-21"
+  "h": "1a91f104b448b088",
+  "d": "2026-10-24"
  },
  "/brf/vaxholm": {
-  "h": "2750963106bdede4",
-  "d": "2026-10-21"
+  "h": "07e34e6923116d81",
+  "d": "2026-10-24"
  },
  "/brf/norrtalje": {
-  "h": "248ccec9f9e23481",
-  "d": "2026-10-21"
+  "h": "4fdd3a6949668096",
+  "d": "2026-10-24"
  },
  "/brf/uppsala": {
-  "h": "fb97e4860be36dd6",
-  "d": "2026-10-21"
+  "h": "1a197553980a91b8",
+  "d": "2026-10-24"
  },
  "/brf/knivsta": {
-  "h": "a9e5d2841a240ccb",
-  "d": "2026-10-21"
+  "h": "a8f54e3d0446af32",
+  "d": "2026-10-24"
  },
  "/brf/balsta": {
-  "h": "c81bf864df63ac41",
-  "d": "2026-10-21"
+  "h": "4a0becd403e32d9f",
+  "d": "2026-10-24"
  },
  "/brf/enkoping": {
-  "h": "24bda4bdb1eac706",
-  "d": "2026-10-21"
+  "h": "507ed55e4fbf98c7",
+  "d": "2026-10-24"
  },
  "/brf/vasteras": {
-  "h": "725ef7b8f59e9eb0",
-  "d": "2026-10-21"
+  "h": "9358fa55424b667d",
+  "d": "2026-10-24"
  },
  "/brf/eskilstuna": {
-  "h": "6a180cad6564dd2c",
-  "d": "2026-10-21"
+  "h": "3cce3c21f85cbcbe",
+  "d": "2026-10-24"
  },
  "/brf/strangnas": {
-  "h": "f366b1be824ee600",
-  "d": "2026-10-21"
+  "h": "18190b239f24aef0",
+  "d": "2026-10-24"
  },
  "/brf/mariefred": {
-  "h": "162ab35010c69eab",
-  "d": "2026-10-21"
+  "h": "eb5d1fcb7b049585",
+  "d": "2026-10-24"
  },
  "/brf/nykvarn": {
-  "h": "bf0befce5d861436",
-  "d": "2026-10-21"
+  "h": "1b06117dbd5d4f91",
+  "d": "2026-10-24"
  },
  "/brf/gnesta": {
-  "h": "f8f1ecef0132dbb4",
-  "d": "2026-10-21"
+  "h": "ff40f3aba00117dd",
+  "d": "2026-10-24"
  },
  "/brf/nykoping": {
-  "h": "30ec20686d5a9bb0",
-  "d": "2026-10-21"
+  "h": "9ed315c676de44e2",
+  "d": "2026-10-24"
  },
  "/brf/trosa": {
-  "h": "81605927e744642b",
-  "d": "2026-10-21"
+  "h": "63d4ef45d08c3248",
+  "d": "2026-10-24"
  },
  "/taktvatt-ljustero": {
   "h": "b9fd412a72754329",
