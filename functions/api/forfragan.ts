@@ -45,7 +45,13 @@ const svar = (status: number, kropp: Record<string, unknown>) =>
   });
 
 /** Loggrad utan persondata: bara händelse och eventuell statuskod. */
-const logga = (handelse: string, status?: number) => console.error(JSON.stringify({ funktion: "forfragan", handelse, status }));
+const logga = (handelse: string, status?: number, extra?: Record<string, string>) => console.error(JSON.stringify({ funktion: "forfragan", handelse, status, tid: new Date().toISOString(), ...extra }));
+
+/** Formulärets namn (till exempel "brf" eller "kontakt_sida") för loggraden; allt som inte är ett kort ord blir "okant". Skickas aldrig vidare till CRM. */
+const formularNamn = (indata: unknown): string => {
+  const v = indata && typeof indata === "object" ? (indata as Record<string, unknown>).formular : undefined;
+  return typeof v === "string" && /^[a-z0-9_-]{1,40}$/.test(v) ? v : "okant";
+};
 
 type Rensad = { ok: true; payload: Record<string, unknown> } | { ok: false; fel: string };
 
@@ -131,7 +137,11 @@ export const hanteraForfragan = async (request: Request, env: Env, hamta: typeof
 
   // Fältfällan: ett ifyllt dolt fält betyder en bot. Svara som om det gått bra, skicka ingenting, och låt formuläret inte räkna ett lead.
   const falla = indata && typeof indata === "object" ? (indata as Record<string, unknown>)[FALLA_FALT] : undefined;
-  if (typeof falla === "string" && falla.trim() !== "") return svar(200, { ok: true, ignorerad: true });
+  if (typeof falla === "string" && falla.trim() !== "") {
+    // Loggraden har bara tid, formulär och "falla": aldrig fältvärden, IP-adress eller user agent.
+    logga("falla", undefined, { formular: formularNamn(indata) });
+    return svar(200, { ok: true, ignorerad: true });
+  }
 
   const r = rensa(indata);
   if ("fel" in r) return svar(400, { ok: false, fel: r.fel });

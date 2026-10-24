@@ -72,6 +72,31 @@ describe("reservvägen /api/forfragan", () => {
     expect(await r.json()).toEqual({ ok: true, ignorerad: true });
     expect(hamta).not.toHaveBeenCalled();
   });
+  it("varje träff i fällan loggar EN rad med tid, formulär och 'falla', och aldrig fältvärden, IP eller user agent", async () => {
+    const hamta = crm(201);
+    const bot = { ...giltig, formular: "brf", webbplats: "http://spam.example/bot-lank" };
+    await hanteraForfragan(post(bot, { "CF-Connecting-IP": "203.0.113.7", "X-Forwarded-For": "203.0.113.7", "User-Agent": "BotAgent/9.9" }), env, hamta as unknown as typeof fetch);
+    expect(loggar.length).toBe(1);
+    const rad = JSON.parse(String(loggar[0][0]));
+    expect(rad).toMatchObject({ funktion: "forfragan", handelse: "falla", formular: "brf" });
+    expect(new Date(rad.tid).getTime()).toBeGreaterThan(0);
+    expect(Object.keys(rad).sort()).toEqual(["formular", "funktion", "handelse", "tid"]);
+    const text = JSON.stringify(loggar);
+    for (const k of ["Anna", "070-111", "gmail", "Storgatan", "spam.example", "203.0.113.7", "BotAgent", HEMLIGHET]) expect(text, k).not.toContain(k);
+    expect(hamta).not.toHaveBeenCalled();
+  });
+  it("formulärnamnet i loggen är ett kort ord, annars 'okant', och det skickas aldrig vidare till CRM", async () => {
+    for (const [namn, forvantat] of [["kontakt_sida", "kontakt_sida"], ["<script>alert(1)</script>", "okant"], [5, "okant"], [undefined, "okant"], ["a".repeat(41), "okant"]] as const) {
+      loggar.length = 0;
+      await hanteraForfragan(post({ ...giltig, formular: namn, webbplats: "x" }), env, crm(201) as unknown as typeof fetch);
+      expect(JSON.parse(String(loggar[0][0])).formular).toBe(forvantat);
+    }
+    const hamta = crm(201);
+    loggar.length = 0;
+    await hanteraForfragan(post({ ...giltig, formular: "brf" }), env, hamta as unknown as typeof fetch);
+    expect(Object.keys(JSON.parse(((hamta.mock.calls[0] as unknown as [string, RequestInit])[1].body) as string))).not.toContain("formular");
+    expect(loggar.length).toBe(0);
+  });
   it("ett tomt dolt fält är ett vanligt inskick", async () => {
     const hamta = crm(201);
     const r = await hanteraForfragan(post({ ...giltig, webbplats: "" }), env, hamta as unknown as typeof fetch);

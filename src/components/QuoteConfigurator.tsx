@@ -81,7 +81,7 @@ const QuoteConfigurator = () => {
       ...utmFields(),
     };
 
-    const { error, ignorerad } = await skickaForfragan(payload, formular);
+    const { error, ignorerad } = await skickaForfragan(payload, formular, mode === "configure" ? "offert_konfigurator" : "offert_radgivning");
 
     if (error) {
       console.error("Quote request error:", error);

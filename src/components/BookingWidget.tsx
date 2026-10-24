@@ -75,7 +75,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       message,
       ...attributionFields(),
       ...utmFields(),
-    }, formular);
+    }, formular, form.slot === "ring_mig" ? "callback" : "booking");
 
     setSubmitting(false);
 

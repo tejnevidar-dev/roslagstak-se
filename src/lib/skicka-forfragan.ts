@@ -14,7 +14,8 @@ const fallVarde = (formular?: HTMLFormElement | null): string => {
   return f instanceof HTMLInputElement ? f.value : "";
 };
 
-export const skickaForfragan = async (kropp: ForfraganKropp, formular?: HTMLFormElement | null): Promise<ForfraganSvar> => {
+/** `formularNamn` (till exempel "brf") följer med bara för att funktionen ska kunna logga vilket formulär en bot träffade; det skickas inte vidare till CRM. */
+export const skickaForfragan = async (kropp: ForfraganKropp, formular?: HTMLFormElement | null, formularNamn?: string): Promise<ForfraganSvar> => {
   if (FORFRAGAN_VIA === "supabase") {
     const { supabase } = await import("@/integrations/supabase/client");
     const { error } = await supabase.from("quote_requests").insert(kropp as never);
@@ -24,7 +25,7 @@ export const skickaForfragan = async (kropp: ForfraganKropp, formular?: HTMLForm
     const r = await fetch("/api/forfragan", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...kropp, [FALLA_FALT]: fallVarde(formular) }),
+      body: JSON.stringify({ ...kropp, [FALLA_FALT]: fallVarde(formular), formular: formularNamn }),
     });
     if (!r.ok) return { error: new Error(`forfragan ${r.status}`) };
     const svar = (await r.json().catch(() => null)) as { ok?: boolean; ignorerad?: boolean } | null;

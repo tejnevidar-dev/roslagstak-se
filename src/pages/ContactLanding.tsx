@@ -33,7 +33,7 @@ const ContactLanding = () => {
       message: withUtm(message.trim() || "Önskar kostnadsfri takkontroll (via kontaktsida)"),
       ...attributionFields(),
       ...utmFields(),
-    }, formular);
+    }, formular, "kontakt_sida");
 
     if (error) {
       console.error("Contact landing error:", error);

@@ -10,6 +10,7 @@ import { FORFRAGAN_VIA, skickaForfragan } from "@/lib/skicka-forfragan";
 
 const rot = resolve(__dirname, "../..");
 const kalla = (rel: string) => readFileSync(resolve(rot, rel), "utf8");
+const FORMULAR_FILER = ["src/components/LeadForm.tsx", "src/components/BookingWidget.tsx", "src/components/QuoteConfigurator.tsx", "src/pages/BrfPage.tsx", "src/pages/ContactLanding.tsx"];
 const svar = (status: number, kropp: unknown) => new Response(JSON.stringify(kropp), { status, headers: { "Content-Type": "application/json" } });
 afterEach(() => vi.unstubAllGlobals());
 
@@ -33,6 +34,18 @@ describe("skickaForfragan", () => {
     expect(url).toBe("/api/forfragan");
     expect(init.method).toBe("POST");
     expect(JSON.parse(init.body as string)).toEqual({ mode: "consultation", name: "Anna", phone: "0701112233", webbplats: "" });
+  });
+  it("formulärets namn följer med i posten (för fällans loggrad), och alla fem formulär anger sitt namn", async () => {
+    const hamta = vi.fn(async () => svar(200, { ok: true }));
+    vi.stubGlobal("fetch", hamta);
+    await skickaForfragan({ mode: "consultation", name: "Anna", phone: "0701112233" }, formMedFalla(""), "brf");
+    expect(JSON.parse((hamta.mock.calls[0] as unknown as [string, RequestInit])[1].body as string).formular).toBe("brf");
+    for (const fil of FORMULAR_FILER) expect(kalla(fil), fil).toMatch(/skickaForfragan\([\s\S]*?formular, /);
+    expect(kalla("src/components/LeadForm.tsx")).toContain("}, formular, formName);");
+    expect(kalla("src/pages/BrfPage.tsx")).toContain('}, formular, "brf");');
+    expect(kalla("src/pages/ContactLanding.tsx")).toContain('}, formular, "kontakt_sida");');
+    expect(kalla("src/components/QuoteConfigurator.tsx")).toContain('"offert_konfigurator" : "offert_radgivning"');
+    expect(kalla("src/components/BookingWidget.tsx")).toContain('"callback" : "booking"');
   });
   it("en bot som fyllt i fällan skickar värdet vidare, och ett 'ignorerad'-svar ger ingen felgren men markeras", async () => {
     const hamta = vi.fn(async () => svar(200, { ok: true, ignorerad: true }));
