@@ -45,6 +45,40 @@ export const trackEvent = (name: string, params: EventParams = {}) => {
   }
 };
 
+/**
+ * P0-4 (seo-audit/06): generate_lead räknas exakt en gång per riktigt inskick.
+ *  - Testinskick (e-post på example/test-domän eller sajtens egen domän, namn som börjar på "test", "testinskick" i texten) filtreras bort och skickar varken GA4- eller Meta-händelse.
+ *  - Samma formulär får inte räknas två gånger inom 60 sekunder (dubbelklick, dubbel inlämning, inlämning som återförsöks): en andra händelse för samma formulär och samma telefon/e-post släpps.
+ * Alla fem formulär (LeadForm, BookingWidget, QuoteConfigurator, BrfPage, ContactLanding) går via trackLead; ingen annan kod skickar generate_lead (provas i src/test/p0-4-generate-lead.test.ts).
+ */
+const TEST_EPOST = /@(example\.(com|org|net|se)|test\.[a-z]+|testmail\.[a-z]+|mailinator\.com|roslagstak\.se)$/i;
+export const arTestinskick = (f: { name?: string; email?: string; phone?: string; message?: string }): boolean => {
+  const namn = (f.name ?? "").trim();
+  const epost = (f.email ?? "").trim();
+  const text = `${namn} ${f.message ?? ""}`;
+  return TEST_EPOST.test(epost) || /^(test|testsson|testperson|provsson|asdf)\b/i.test(namn) || /testinskick|\[test\]/i.test(text);
+};
+
+const senasteLeads = new Map<string, number>();
+/** Nollställer dubbletthållningen (provens skull). */
+export const nollstallLeadMinne = () => senasteLeads.clear();
+
+/** Skickar generate_lead för ett riktigt inskick, annars ingenting. Returnerar true om händelsen skickades. */
+export const trackLead = (
+  form: string,
+  fields: { name?: string; email?: string; phone?: string; message?: string },
+  params: EventParams = {},
+  nu: number = Date.now(),
+): boolean => {
+  if (arTestinskick(fields)) return false;
+  const nyckel = `${form}|${(fields.phone ?? "").replace(/\D/g, "")}|${(fields.email ?? "").trim().toLowerCase()}`;
+  const forra = senasteLeads.get(nyckel);
+  if (forra !== undefined && nu - forra < 60_000) return false;
+  senasteLeads.set(nyckel, nu);
+  trackEvent("generate_lead", { form, ...params });
+  return true;
+};
+
 /** Räknar klick på telefonnummer och e-postlänkar var de än ligger på sajten. */
 export const initClickTracking = () => {
   document.addEventListener(

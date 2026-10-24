@@ -6,7 +6,7 @@ import { attributionFields } from "@/lib/attribution";
 /* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
 const loadSupabase = () => import("@/integrations/supabase/client").then((m) => m.supabase);
 import { toast } from "@/hooks/use-toast";
-import { trackEvent } from "@/lib/analytics";
+import { trackLead } from "@/lib/analytics";
 
 const PHONE_DISPLAY = "070-154 36 39";
 
@@ -85,7 +85,7 @@ const LeadForm = ({
       return;
     }
 
-    trackEvent("generate_lead", { form: formName, ort });
+    trackLead(formName, { name: form.name, email: form.email, phone: form.phone, message: form.message }, { ort });
     setSubmitted(true);
   };
 

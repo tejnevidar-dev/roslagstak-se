@@ -5,7 +5,7 @@ import { withUtm, utmFields } from "@/lib/utm";
 import { attributionFields } from "@/lib/attribution";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackLead } from "@/lib/analytics";
 
 const roofTypeOptions = [
   "TP20 Plåttak",
@@ -92,7 +92,7 @@ const QuoteConfigurator = () => {
       return;
     }
 
-    trackEvent("generate_lead", { form: mode === "configure" ? "offert_konfigurator" : "offert_radgivning" });
+    trackLead(mode === "configure" ? "offert_konfigurator" : "offert_radgivning", { name, email, phone, message });
     setSubmitted(true);
     setSubmitting(false);
     toast({

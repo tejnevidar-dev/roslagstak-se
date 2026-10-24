@@ -5,7 +5,7 @@ import { withUtm, utmFields } from "@/lib/utm";
 import { attributionFields } from "@/lib/attribution";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { trackEvent } from "@/lib/analytics";
+import { trackLead } from "@/lib/analytics";
 import { linkPhone } from "@/lib/inline-md";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -44,7 +44,7 @@ const ContactLanding = () => {
       return;
     }
 
-    trackEvent("generate_lead", { form: "kontakt_sida" });
+    trackLead("kontakt_sida", { name, email, phone, message });
     setSubmitted(true);
     setSubmitting(false);
     setName("");

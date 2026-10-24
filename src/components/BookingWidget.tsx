@@ -7,7 +7,7 @@ import { confirmationText, isWithinOpeningHours, nextOpeningLabel } from "@/lib/
 /* Databasklienten (≈200 kB) hämtas först när någon börjar fylla i formuläret, inte vid sidladdning. */
 const loadSupabase = () => import("@/integrations/supabase/client").then((m) => m.supabase);
 import { toast } from "@/hooks/use-toast";
-import { trackEvent } from "@/lib/analytics";
+import { trackLead } from "@/lib/analytics";
 
 const PHONE_DISPLAY = "070-154 36 39";
 type Slot = "formiddag" | "eftermiddag" | "ring_mig";
@@ -89,7 +89,7 @@ const BookingWidget = ({ title = "Boka kostnadsfri takkontroll" }: { title?: str
       return;
     }
 
-    trackEvent("generate_lead", { form: form.slot === "ring_mig" ? "callback" : "booking", slot: form.slot });
+    trackLead(form.slot === "ring_mig" ? "callback" : "booking", { name: form.name, phone: form.phone }, { slot: form.slot });
     setSubmitted(confirmationText(form.slot === "ring_mig" ? "ring_mig" : "boka"));
   };
 
