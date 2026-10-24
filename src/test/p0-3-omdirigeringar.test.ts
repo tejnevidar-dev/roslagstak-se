@@ -3,7 +3,7 @@
  *  1. Ingen exakt rad /<tjänst>-<ort> för en ort med indexerbar ortssida pekar på en tjänste-, material-, pris- eller regionsida.
  *  2. Jokerreglerna /takmalning-* och /bandtackning-* (301 → 404 för namn som inte är orter) är borta och ersatta av exakta rader per ort.
  *  3. De fem aliasen är riktiga 301 och skrivs inte längre som HTML-filer med meta refresh (scripts/generate-static-heads.mjs).
- * De 335 adresser som träffas av /tegeltak-*, /betongpannor-* och /platttak-* ingår INTE (alternativ a i seo-audit/11c, väntar på Vidars val), och de tre jokerreglerna står kvar.
+ * Gren 230 (Vidars ja 2026-10-24 16:57): alternativ a i seo-audit/11c är valt för materialadresserna: de adresser som /tegeltak-*, /betongpannor-* och /platttak-* träffade för orter med ortssida har fått exakta rader till ortssidan, och de tre jokerreglerna står kvar som reserv.
  * Belägg per rad: ledning/marknad/seo-analys-2026-10-21/belagg/p0-3-rader.md.
  */
 import { describe, expect, it } from "vitest";
@@ -48,6 +48,17 @@ describe("P0-3: omdirigeringar", () => {
       expect(regler.some((r) => r.kalla === u) || sitemap.has(u), u).toBe(true);
     }
   });
+  it("varje ort med indexerbar ortssida har en exakt rad till den för plåttak, betongpannor och tegeltak (eller en egen indexerbar sida)", () => {
+    for (const [slug] of orter) {
+      if (!indexerbar(slug)) continue;
+      for (const sv of ["platttak", "betongpannor", "tegeltak"]) {
+        const u = `/${sv}-${slug}`;
+        const rad = regler.find((r) => r.kalla === u);
+        expect(rad !== undefined || sitemap.has(u), u).toBe(true);
+        if (rad) expect(rad.mal, u).toMatch(/^\/(taklaggare-|takrenovering-)/);
+      }
+    }
+  });
   it("inga mål av takmålnings- och bandtäckningsraderna är en annan sida än ortens egen sida, utom där ortens sida är avindexerad (Finnhamn)", () => {
     for (const r of regler) {
       const m = r.kalla.match(/^\/(takmalning|bandtackning)-([a-z0-9-]+)$/);
@@ -56,7 +67,7 @@ describe("P0-3: omdirigeringar", () => {
       expect(r.mal, r.kalla).toMatch(/^\/(taklaggare-|takrenovering-)/);
     }
   });
-  it("de tre materialjokerreglerna står kvar tills Vidar väljer alternativ a (11c)", () => {
+  it("de tre materialjokerreglerna står kvar som reserv för adresser som inte är orter (gren 230, alternativ a i 11c)", () => {
     for (const p of ["/tegeltak-*", "/betongpannor-*", "/platttak-*"]) expect(regler.some((r) => r.kalla === p), p).toBe(true);
   });
   it("de fem aliasen är riktiga 301 och skrivs inte längre som meta refresh-filer", () => {

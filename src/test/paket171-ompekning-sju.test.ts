@@ -31,9 +31,9 @@ describe("gren 171: sju exakta 301-rader före splat-raderna", () => {
       expect(sitemap).not.toContain(`<loc>https://roslagstak.se${kalla}</loc>`);
     });
   }
-  it("de två generiska raderna ligger kvar under splat-reglerna", () => {
-    expect(rader.some((r) => r.startsWith("/tegeltak-bro "))).toBe(false);
-    expect(rader.some((r) => r.startsWith("/platttak-sundbyberg "))).toBe(false);
+  it("splat-reglerna står kvar som reserv, och de två adresserna har sedan gren 230 (P0-3) egna exakta rader till ortssidan", () => {
+    expect(rader).toContain("/tegeltak-bro /taklaggare-bro 301");
+    expect(rader).toContain("/platttak-sundbyberg /taklaggare-sundbyberg 301");
     expect(rader).toContain("/tegeltak-* /tjanster/tegeltak 301");
     expect(rader).toContain("/platttak-* /material/tp20-plattak 301");
   });
