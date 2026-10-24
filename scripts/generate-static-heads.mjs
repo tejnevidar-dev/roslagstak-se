@@ -163,6 +163,11 @@ const preloadFor = (path) => {
   const hints = file
     ? [file, ...depsOf(file)].map((f) => `<link rel="modulepreload" crossorigin href="/assets/${f}" />`)
     : [];
+  /* Gren 218 (revision C2): ortens och tjänst × ort-sidans egen datafil (orter/<slug>, combos/<nyckel>) hämtas annars först när sidkomponenten har körts
+     (useOrt/useCombo väntar på den), en extra nätverksrunda med tom skärm. Filens namn är <stam>-<hash på 8 tecken>.js. Finns ingen fil för sidan (mallsidor) läggs ingen hint. */
+  const dataStam = path.startsWith("/taklaggare-") ? path.slice("/taklaggare-".length) : COMBO_RE.test(path) ? path.slice(1) : null;
+  const dataFil = dataStam && assetFiles.find((f) => f.startsWith(`${dataStam}-`) && f.endsWith(".js") && f.length === dataStam.length + 1 + 8 + 3);
+  if (dataFil) hints.push(`<link rel="modulepreload" crossorigin href="/assets/${dataFil}" />`);
   /* Projektsidornas hero-bild (LCP): Reacts <picture> hinner inte börja hämta bilden förrän sidchunken har laddats och renderats
      (3+ s på mobil). Förladdningen i den statiska <head> startar hämtningen samtidigt som huvudscriptet. Samma srcset och sizes
      som ProjectPage.tsx, så att webbläsaren väljer samma fil. */
