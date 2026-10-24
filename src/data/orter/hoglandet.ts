@@ -25,7 +25,7 @@ const ort: LocationHeavy = {
   },
   "uniqueFAQ": {
     "question": "När byggdes husen i Höglandet?",
-    "answer": "Byggperiod enligt källorna: stadens mark 1925–1933, funkisvillor vid Grönviksvägen 1930-tal, äldre hus i Grönvik. Hustyper: villor (ofta två fulla våningar), stugor från 1800-talet i Grönvik. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."
+    "answer": "Byggperiod enligt källorna: stadens mark 1925–1933, funkisvillor vid Grönviksvägen 1930-tal, äldre hus i Grönvik. Hustyper: villor (bland dem hus i två fulla våningar), stugor från 1800-talet i Grönvik. Taken kan redan ha lagts om, så skicket bedöms vid en kostnadsfri takkontroll. För småhus krävs normalt inget bygglov för att byta takmaterial eller kulör. Kommunen kan ha bestämt annat i detaljplanen eller för värdefulla miljöer, så fråga byggnadsnämnden om du är osäker."
   },
   "factBox": [
     {
@@ -38,7 +38,7 @@ const ort: LocationHeavy = {
     },
     {
       "label": "Hustyper",
-      "value": "Villor (ofta två fulla våningar), stugor från 1800-talet i Grönvik"
+      "value": "Villor (bland dem hus i två fulla våningar), stugor från 1800-talet i Grönvik"
     },
     {
       "label": "Byggperiod",

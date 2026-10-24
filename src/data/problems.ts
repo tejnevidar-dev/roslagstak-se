@@ -188,7 +188,7 @@ export const problems: Problem[] = [
     title: "Rutten eller skadad råspont",
     metaTitle: "Rutten råspont – tecken, orsaker och åtgärder",
     metaDescription:
-      "Mjuk, mörk eller rutten råspont syns ofta först på vinden. Så känner du igen den, varför den uppstår och vad som görs åt det.",
+      "Mjuk, mörk eller rutten råspont kan synas först på vinden. Så känner du igen den, varför den uppstår och vad som görs åt det.",
     intro:
       "Rutten råspont syns som mörka, mjuka eller svampangripna brädor på vinden. Den kommer av fukt över lång tid.",
     symptom:
@@ -200,7 +200,7 @@ export const problems: Problem[] = [
     undersokning:
       "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Byte av skadade delar av råsponten (ofta i samband med takbyte, när underlaget ändå är öppet) och åtgärd av fuktkällan. Råsponten bedöms när taket är öppet: är den torr och frisk kan den ligga kvar, är den fuktskadad byts de delar som har tagit skada. På Blidö i Norrtälje behölls den befintliga råsponten, och på Singö byttes delar av den.",
+      "Byte av skadade delar av råsponten (till exempel i samband med takbyte, när underlaget ändå är öppet) och åtgärd av fuktkällan. Råsponten bedöms när taket är öppet: är den torr och frisk kan den ligga kvar, är den fuktskadad byts de delar som har tagit skada. På Blidö i Norrtälje behölls den befintliga råsponten, och på Singö byttes delar av den.",
     gorInteSjalv:
       "Ingrepp i takkonstruktionen eller att gå på en sviktande takyta. Du kan fota och markera fläckarna på vinden.",
     related: [
@@ -216,7 +216,7 @@ export const problems: Problem[] = [
     title: "Kondens på vinden",
     metaTitle: "Kondens på vinden – därför bildas den och vad som hjälper",
     metaDescription:
-      "Droppar eller frost på undersidan av taket en kall morgon är ofta kondens, inte läckage. Så skiljer du dem åt och vad som hjälper.",
+      "Droppar eller frost på undersidan av taket en kall morgon kan vara kondens och inte läckage. Så skiljer du dem åt och vad som hjälper.",
     intro:
       "Kondens på vinden syns som droppar, rimfrost eller fukt på undersidan av yttertaket, spridd över stora ytor och utan en tydlig läckpunkt.",
     symptom:
@@ -351,7 +351,7 @@ export const problems: Problem[] = [
     intro:
       "Ett tak ska ha raka linjer: en rak nock, jämna takfall och raka takfötter. När takytan i stället sjunker in i en svacka, buktar eller när nocken inte längre är rak, är det ett tecken på att något under ytmaterialet har förändrats. Det behöver inte vara akut, men det ska alltid kontrolleras, eftersom orsaken kan finnas i underlaget eller i själva bärande konstruktionen.",
     symptom:
-      "En synlig svacka eller våg i takytan, ofta tydligast i motljus eller när snö ligger kvar ojämnt. En nock som sjunker på mitten eller en takfot som inte längre är rak. Pannor som har glidit isär eller ligger ojämnt i ett parti. På vinden kan det synas böjda, spruckna eller fuktskadade takstolar och brädor, mjuk eller mörk råspont, eller att takstolar eller läkt har rört sig. Inomhus kan sprickor i innertaket eller dörrar som börjar kärva på övervåningen ibland höra ihop med samma sak.",
+      "En synlig svacka eller våg i takytan, som kan synas tydligast i motljus eller när snö ligger kvar ojämnt. En nock som sjunker på mitten eller en takfot som inte längre är rak. Pannor som har glidit isär eller ligger ojämnt i ett parti. På vinden kan det synas böjda, spruckna eller fuktskadade takstolar och brädor, mjuk eller mörk råspont, eller att takstolar eller läkt har rört sig. Inomhus kan sprickor i innertaket eller dörrar som börjar kärva på övervåningen ibland höra ihop med samma sak.",
     orsaker:
       "Råspont eller läkt som har blivit mjuk av fukt under lång tid, till exempel efter ett läckage som inte har upptäckts. Takstolar som har skadats av fukt eller som har belastats hårdare än de är gjorda för, till exempel av ett tyngre takmaterial eller av mycket snö. Äldre ombyggnader där bärande delar har tagits bort eller ändrats. Ibland handlar det bara om att underlaget har satt sig ojämnt, men det går inte att veta säkert utan att titta.",
     akut:
@@ -359,7 +359,7 @@ export const problems: Problem[] = [
     undersokning:
       "Vid takkontrollen tittar en av våra säljare på taket på plats. Pekar något mot takstolarna kan en konstruktörs bedömning behövas innan taket åtgärdas. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Beror helt på orsaken. Är det underlaget som har tagit skada kan skadade delar av råsponten och läkten bytas, ofta i samband med ett takbyte när taket ändå är öppet. Fuktkällan ska alltid åtgärdas samtidigt. Är det takstolarna kan de behöva förstärkas eller bytas efter en konstruktörs bedömning. Vid byte till ett tyngre material, till exempel från plåt till pannor, måste konstruktionen klara den nya vikten.",
+      "Beror helt på orsaken. Är det underlaget som har tagit skada kan skadade delar av råsponten och läkten bytas, till exempel i samband med ett takbyte när taket ändå är öppet. Fuktkällan ska alltid åtgärdas samtidigt. Är det takstolarna kan de behöva förstärkas eller bytas efter en konstruktörs bedömning. Vid byte till ett tyngre material, till exempel från plåt till pannor, måste konstruktionen klara den nya vikten.",
     gorInteSjalv:
       "Gå inte upp på ett tak som buktar eller sviktar, och gör inga ingrepp i takstolarna. Du kan fota svackan från marken, gärna från samma ställe vid olika tillfällen så att du ser om den växer, och fota eventuella fuktspår på vinden.",
     related: [
@@ -380,7 +380,7 @@ export const problems: Problem[] = [
     intro:
       "En ränndal är den inåtvända vinkeln där två takfall möts, till exempel där en tillbyggnad eller en kupa ansluter mot huvudtaket. Allt vatten från båda takfallen samlas där och rinner ner längs ränndalen, och därför får den ta emot mycket vatten. Här går vi igenom hur ett läckage i ränndalen visar sig, vad det kan bero på och vad du kan göra innan taket kontrolleras.",
     symptom:
-      "Fuktfläckar i innertaket eller på väggen under den del av taket där två takfall möts. På vinden syns mörka ränder, droppmärken eller fukt på råsponten längs ränndalens linje. Utifrån kan du se löv, barr och mossa som har samlats i ränndalen, pannor som ligger snett eller har glidit ner i den, eller plåt som ser rostig, bucklig eller lös ut. Läckaget märks ofta mest vid kraftigt regn eller när snö och is smälter, eftersom vattenmängden i ränndalen då är som störst.",
+      "Fuktfläckar i innertaket eller på väggen under den del av taket där två takfall möts. På vinden syns mörka ränder, droppmärken eller fukt på råsponten längs ränndalens linje. Utifrån kan du se löv, barr och mossa som har samlats i ränndalen, pannor som ligger snett eller har glidit ner i den, eller plåt som ser rostig, bucklig eller lös ut. Läckaget kan märkas mest vid kraftigt regn eller när snö och is smälter, eftersom vattenmängden i ränndalen då är som störst.",
     orsaker:
       "Ränndalsplåten har rostat, spruckit eller fått hål, eller skarvarna i den har släppt. Löv, barr och skräp har bildat en damm som tvingar vattnet åt sidan och in under pannorna. Pannorna närmast ränndalen är fel kapade eller ligger för långt ut eller för långt in, så att vattnet inte leds ner i plåten. Is som bildas i ränndalen kan lyfta vatten över plåtens kant. Under plåten kan underlaget ha åldrats, så att vatten som tar sig förbi inte längre stoppas.",
     akut:
@@ -388,9 +388,9 @@ export const problems: Problem[] = [
     undersokning:
       "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Rensning av ränndalen när det bara är skräp som dämmer. Justering eller omläggning av pannorna närmast ränndalen. Ny ränndalsplåt när den gamla har rostat eller spruckit, och då ofta även nytt underlag i ränndalen, eftersom pannorna ändå måste lyftas. Är taket i övrigt uttjänt, med slitet underlag och flera svaga punkter, kan ett takbyte vara bättre än att göra om ränndalen för sig. Vid ett takbyte görs alla ränndalar om.",
+      "Rensning av ränndalen när det bara är skräp som dämmer. Justering eller omläggning av pannorna närmast ränndalen. Ny ränndalsplåt när den gamla har rostat eller spruckit, och då ibland även nytt underlag i ränndalen, eftersom pannorna ändå måste lyftas. Är taket i övrigt uttjänt, med slitet underlag och flera svaga punkter, kan ett takbyte vara bättre än att göra om ränndalen för sig. Vid ett takbyte görs alla ränndalar om.",
     gorInteSjalv:
-      "Gå inte upp på taket för att rensa eller laga ränndalen. Den ligger ofta högt och i en vinkel där det är lätt att halka, och pannorna runt den kan sitta löst. Du kan titta från marken, med kikare eller mobilkamerans zoom, fota fuktspåren på vinden och notera när det läcker: vid regn, snösmältning eller blåst.",
+      "Gå inte upp på taket för att rensa eller laga ränndalen. Den kan ligga högt och i en vinkel där det är lätt att halka, och pannorna runt den kan sitta löst. Du kan titta från marken, med kikare eller mobilkamerans zoom, fota fuktspåren på vinden och notera när det läcker: vid regn, snösmältning eller blåst.",
     related: [
       { to: "/takproblem/igensatta-hangrannor", label: "Igensatta hängrännor" },
       { to: "/takproblem/lackage-vid-takfonster-och-genomforingar", label: "Läckage vid takfönster och genomföringar" },
@@ -406,7 +406,7 @@ export const problems: Problem[] = [
     metaDescription:
       "Flagnande färg, mjukt trä eller mörka fläckar på vindskivor och takfot? Så hittar du orsaken, vad du gör själv och när det hänger ihop med taket.",
     intro:
-      "Vindskivorna sitter längs takets gavlar och takfotsbrädorna längs takets nedre kant. De skyddar takets kanter mot väder och vind och ger huset dess avslutning. Eftersom de sitter ytterst får de ta emot mycket regn, sol och fukt. När träet börjar ruttna är det ofta ett tecken på att vatten har kommit dit det inte ska, och ibland ligger orsaken uppe på taket.",
+      "Vindskivorna sitter längs takets gavlar och takfotsbrädorna längs takets nedre kant. De skyddar takets kanter mot väder och vind och ger huset dess avslutning. Eftersom de sitter ytterst får de ta emot mycket regn, sol och fukt. När träet börjar ruttna kan det vara ett tecken på att vatten har kommit dit det inte ska, och ibland ligger orsaken uppe på taket.",
     symptom:
       "Färg som flagnar eller släpper i flagor, trä som har mörknat, spruckit eller känns mjukt där du säkert når det från marken eller från ett fönster. Brädor som har släppt, bågnar eller har glipor i skarvarna. Mossa, alger eller svarta fläckar på träet. Under takfoten kan du ibland se droppmärken eller fuktränder på fasaden. På vinden kan det finnas fukt eller mörk råspont närmast takfoten eller gaveln.",
     orsaker:
@@ -436,7 +436,7 @@ export const problems: Problem[] = [
     intro:
       "Ett plåttak är tätt så länge plåten, skarvarna och infästningarna är hela. När det börjar läcka kan orsaken sitta där plåtarna möts, där de är fästa eller där något går igenom taket. Här går vi igenom hur läckaget brukar visa sig på skruvad profilplåt och på falsat plåttak, och vad du kan göra innan taket kontrolleras.",
     symptom:
-      "Fuktfläckar i innertaket som ofta följer en rak linje, längs en skarv eller en rad av skruvar. Droppar eller fuktränder på undersidan av taket på vinden, i ett garage eller ett uthus där plåten syns inifrån. Utifrån kan du se skruvar som står upp, saknas eller har rostiga brickor, plåtar som har glidit isär i en skarv, en fals som har öppnat sig, rost i kanter och skarvar eller plåt som har bucklats av en gren eller av snö och is.",
+      "Fuktfläckar i innertaket som kan följa en rak linje, längs en skarv eller en rad av skruvar. Droppar eller fuktränder på undersidan av taket på vinden, i ett garage eller ett uthus där plåten syns inifrån. Utifrån kan du se skruvar som står upp, saknas eller har rostiga brickor, plåtar som har glidit isär i en skarv, en fals som har öppnat sig, rost i kanter och skarvar eller plåt som har bucklats av en gren eller av snö och is.",
     orsaker:
       "På skruvad plåt har tätningsbrickan under skruven åldrats, eller skruven har släppt eller dragits snett så att vatten följer med in. Skarvarna mellan plåtarna överlappar för lite eller har öppnats. På falsat plåttak har en fals öppnat sig eller ett fäste släppt. Nockplåt, fotplåt eller anslutningar mot skorsten, vägg och genomföringar har släppt eller rostat. Plåten har fått hål av rost eller av en mekanisk skada. Under plåten kan det också vara kondens som droppar, vilket ser ut som ett läckage men har en annan orsak.",
     akut:
@@ -462,9 +462,9 @@ export const problems: Problem[] = [
     metaDescription:
       "Blåsor, sprickor, släppta skarvar eller stående vatten på papptaket? Så känner du igen skadorna och vet när taket behöver kontrolleras.",
     intro:
-      "På ett papptak är pappen själva tätskiktet. Det finns inga pannor ovanför som tar det mesta av vädret, så en skada i pappen kan släppa in vatten direkt. Papptak ligger ofta på flacka tak, som garage, uthus, tillbyggnader och låglutande villatak, där vattnet rinner av långsamt. Här går vi igenom de tecken du kan se och vad de kan betyda.",
+      "På ett papptak är pappen själva tätskiktet. Det finns inga pannor ovanför som tar det mesta av vädret, så en skada i pappen kan släppa in vatten direkt. Papptak ligger på flacka tak, som garage, uthus, tillbyggnader och låglutande villatak, där vattnet rinner av långsamt. Här går vi igenom de tecken du kan se och vad de kan betyda.",
     symptom:
-      "Blåsor eller bubblor i pappen, sprickor i ytan, skarvar som har släppt eller rest sig, och kanter som har lossnat vid takfot, vindskivor eller uppvik mot en vägg. Ytan kan ha tappat sitt skyddande strö så att den svarta pappen syns, eller ha fått veck och ojämnheter. Vatten som står kvar i pölar långt efter att det har slutat regna. Inomhus visar det sig som fuktfläckar i innertaket, ofta en bit från det ställe där vattnet faktiskt kommer in.",
+      "Blåsor eller bubblor i pappen, sprickor i ytan, skarvar som har släppt eller rest sig, och kanter som har lossnat vid takfot, vindskivor eller uppvik mot en vägg. Ytan kan ha tappat sitt skyddande strö så att den svarta pappen syns, eller ha fått veck och ojämnheter. Vatten som står kvar i pölar långt efter att det har slutat regna. Inomhus kan det visa sig som fuktfläckar i innertaket, en bit från det ställe där vattnet faktiskt kommer in.",
     orsaker:
       "Pappen har åldrats av sol, kyla och värme och blivit spröd. Skarvar har inte svetsats eller klistrats tätt, eller har släppt med tiden. Blåsor kan uppstå när fukt har stängts in under pappen. Taket har för lite fall eller har satt sig, så att vatten blir stående, och då prövas varje skarv hårdare. Takbrunnar och utlopp är igensatta av löv. Plåtdetaljer vid kanter och uppvik har släppt, eller pappen har skadats av grenar, snöskottning eller av att någon har gått på taket.",
     akut:
@@ -522,7 +522,7 @@ export const problems: Problem[] = [
     symptom:
       "Pannor som har bleknat, blivit grå och flammiga eller har tappat sin ursprungliga kulör. En sträv, sandig yta, och sand eller grus från pannorna som samlas i hängrännorna och vid stuprörens utlopp. Mycket mossa och lav, särskilt i skuggiga lägen. Kanter som har vittrat eller flagnat, och enstaka pannor som har spruckit. Pannorna torkar långsamt efter regn och ser mörka ut länge.",
     orsaker:
-      "Ytskiktet har slitits bort av väder och vind. Frost spränger ytan när pannan har sugit åt sig vatten. Mossa och lav håller kvar fukt och påskyndar slitaget. Hård rengöring, till exempel med högtryck på nära håll, kan ta bort ytskiktet i förtid. Slitaget går ofta fortare på den sida av taket som ligger i skugga eller under träd.",
+      "Ytskiktet har slitits bort av väder och vind. Frost spränger ytan när pannan har sugit åt sig vatten. Mossa och lav håller kvar fukt och påskyndar slitaget. Hård rengöring, till exempel med högtryck på nära håll, kan ta bort ytskiktet i förtid. Slitaget kan gå fortare på den sida av taket som ligger i skugga eller under träd.",
     akut:
       "Sällan. Porösa pannor är ett långsamt förlopp, och det som skyddar huset om en panna släpper igenom lite fukt är underlaget under pannorna. Det blir bråttom först när pannor spricker och faller sönder, eller när underlaget samtidigt är slitet så att vatten kommer in. Då ska taket kontrolleras snarast.",
     undersokning:
@@ -585,7 +585,7 @@ export const problems: Problem[] = [
     undersokning:
       "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Justering av lutningen och nya eller kompletterade krokar. Tätning eller byte av skarvar och gavlar. Byte av de delar som har rostat eller bucklats. Ny fotplåt där den saknas eller sitter fel, och byte av takfotsbräda där träet har tagit skada. Är rännorna slitna längs hela huset byts de i sin helhet, och det görs ofta i samband med ett takbyte.",
+      "Justering av lutningen och nya eller kompletterade krokar. Tätning eller byte av skarvar och gavlar. Byte av de delar som har rostat eller bucklats. Ny fotplåt där den saknas eller sitter fel, och byte av takfotsbräda där träet har tagit skada. Är rännorna slitna längs hela huset byts de i sin helhet, och det kan göras i samband med ett takbyte.",
     gorInteSjalv:
       "Arbete från hög stege vid takfoten. Luta inte stegen mot rännan, eftersom den inte är gjord för att bära en människa. Du kan titta på rännorna från marken när det regnar, vilket är det bästa tillfället att se var vattnet tar vägen, och fota det du ser.",
     related: [
@@ -605,7 +605,7 @@ export const problems: Problem[] = [
     intro:
       "På många hus möter ett tak en vägg: en tillbyggnad mot huvudhuset, ett garage mot gaveln, ett farstutak eller ett altantak mot fasaden. I den vinkeln ska en plåt leda vattnet från väggen ut på taket. Anslutningen är utsatt, eftersom två byggnadsdelar som rör sig olika ska hållas täta mot varandra.",
     symptom:
-      "Fuktfläckar i innertaket eller högst upp på väggen i tillbyggnaden, längs den sida som ligger mot det högre huset. Färg som bubblar, tapet som släpper eller en mörk rand längs vinkeln. Utifrån kan du se plåt som har släppt från väggen, en fog som har spruckit, panel som har mörknat närmast taket eller löv och snö som blir liggande i vinkeln. Läckaget märks ofta vid slagregn mot väggen eller när snö smälter.",
+      "Fuktfläckar i innertaket eller högst upp på väggen i tillbyggnaden, längs den sida som ligger mot det högre huset. Färg som bubblar, tapet som släpper eller en mörk rand längs vinkeln. Utifrån kan du se plåt som har släppt från väggen, en fog som har spruckit, panel som har mörknat närmast taket eller löv och snö som blir liggande i vinkeln. Läckaget kan märkas vid slagregn mot väggen eller när snö smälter.",
     orsaker:
       "Plåten i vinkeln har släppt, rostat eller går för kort upp på väggen. Fogen mellan plåt och vägg har åldrats och spruckit. Fasadens panel eller puts går ner bakom plåten på fel sätt, så att vatten som rinner längs väggen hamnar innanför. Snö som ligger kvar i vinkeln smälter och når över plåtens kant. Tillbyggnaden har satt sig något, så att anslutningen har öppnats. Pannorna eller pappen närmast väggen ligger fel.",
     akut:
@@ -662,7 +662,7 @@ export const problems: Problem[] = [
     intro:
       "Mörka strimmor som rinner ner längs takfallet, en grön hinna på norrsidan eller svarta fläckar på pannorna är oftast alger och annan påväxt. Det ser tråkigt ut, men det är sällan ett läckage i sig. Däremot visar det var taket håller sig fuktigt längst, och det kan dölja skador som behöver ses över.",
     symptom:
-      "Svarta eller mörkgrå strimmor som följer vattnets väg ner längs taket. En grön eller gröngrå hinna, främst på den sida som ligger i skugga eller under träd. Fläckar som är mörka när taket är blött och ljusnar när det torkar. Missfärgningen är ofta tydligast nedanför skorstenar, takfönster och andra ställen där vatten rinner långsamt.",
+      "Svarta eller mörkgrå strimmor som följer vattnets väg ner längs taket. En grön eller gröngrå hinna, främst på den sida som ligger i skugga eller under träd. Fläckar som är mörka när taket är blött och ljusnar när det torkar. Missfärgningen kan vara tydligast nedanför skorstenar, takfönster och andra ställen där vatten rinner långsamt.",
     orsaker:
       "Alger och annan påväxt trivs där ytan är fuktig länge: i skugga, i norrläge, under träd och nära vatten. En sträv och porös yta, till exempel på äldre betongpannor, ger bättre fäste än en slät. Löv och barr som blir liggande håller kvar fukt. Mörka ränder kan också vara smuts och sot som har följt med regnvattnet, eller rost som rinner från en plåtdetalj eller ett fäste högre upp.",
     akut:
@@ -670,7 +670,7 @@ export const problems: Problem[] = [
     undersokning:
       "Vid takkontrollen tittar en av våra säljare på taket på plats. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Ofta behövs ingenting annat än att taket hålls rent från löv och att rännorna fungerar. Är det rost åtgärdas eller byts den plåtdetalj som rostar. Är pannorna porösa och underlaget slitet kan en takomläggning vara det som löser grundproblemet. Vi erbjuder också taktvätt, och vid takkontrollen går vi igenom om det är rätt åtgärd för ditt tak.",
+      "Det kan räcka med att taket hålls rent från löv och att rännorna fungerar. Är det rost åtgärdas eller byts den plåtdetalj som rostar. Är pannorna porösa och underlaget slitet kan en takomläggning vara det som löser grundproblemet. Vi erbjuder också taktvätt, och vid takkontrollen går vi igenom om det är rätt åtgärd för ditt tak.",
     gorInteSjalv:
       "Gå inte upp på ett tak med alger. En grön hinna är mycket hal, särskilt när den är fuktig. Tvätta inte taket med högtryck på nära håll, eftersom det kan skada ytan och pressa in vatten under pannorna. Du kan fota taket, hålla undan grenar som hänger över det och rensa hängrännorna där du säkert når dem från marken.",
     related: [
@@ -688,9 +688,9 @@ export const problems: Problem[] = [
     metaDescription:
       "En gul eller mörk fläck i innertaket? Så ringar du in var vattnet kommer ifrån, vad du gör direkt och när taket behöver kontrolleras. Kostnadsfri takkontroll.",
     intro:
-      "En fuktfläck i innertaket är ofta det första tecknet på att vatten har tagit sig in någonstans ovanför. Fläcken säger att något är fel, men sällan var. Vatten som kommer in genom taket kan rinna flera meter längs underlag, takstolar och isolering innan det syns i ett rum. Här går vi igenom hur du läser av fläcken, vilka orsaker som finns och hur du ringar in var vattnet kommer ifrån innan taket kontrolleras.",
+      "En fuktfläck i innertaket kan vara det första tecknet på att vatten har tagit sig in någonstans ovanför. Fläcken säger att något är fel, men sällan var. Vatten som kommer in genom taket kan rinna flera meter längs underlag, takstolar och isolering innan det syns i ett rum. Här går vi igenom hur du läser av fläcken, vilka orsaker som finns och hur du ringar in var vattnet kommer ifrån innan taket kontrolleras.",
     symptom:
-      "En gulaktig eller brun fläck i innertaket, ofta med en mörkare kant. Färg som bubblar eller flagnar, tapet som släpper uppe vid taket, eller en taklist som har missfärgats. Fläcken kan växa efter regn eller när snö smälter och blekna däremellan. Ibland känns ytan fuktig eller mjuk, och i värsta fall droppar det. En unken lukt i rummet eller på vinden ovanför hör ofta ihop med fläcken. Lägg märke till var den sitter: nära en yttervägg, under en skorsten, under ett takfönster eller mitt i rummet.",
+      "En gulaktig eller brun fläck i innertaket, ibland med en mörkare kant. Färg som bubblar eller flagnar, tapet som släpper uppe vid taket, eller en taklist som har missfärgats. Fläcken kan växa efter regn eller när snö smälter och blekna däremellan. Ibland känns ytan fuktig eller mjuk, och i värsta fall droppar det. En unken lukt i rummet eller på vinden ovanför kan höra ihop med fläcken. Lägg märke till var den sitter: nära en yttervägg, under en skorsten, under ett takfönster eller mitt i rummet.",
     orsaker:
       "Källan kan vara en otät anslutning i taket snarare än själva takytan. Under en skorsten pekar fläcken mot beslaget runt den. Under eller intill ett takfönster, en ventilationshuv eller ett avloppsrör pekar den mot genomföringen. Längs en linje där två takfall möts pekar den mot ränndalen, och intill en kupa eller en tillbyggnad mot anslutningen mellan tak och vägg. En fläck vid ytterväggen kan komma från takfoten eller från hängrännor som svämmar över. En fläck mitt i takfallet tyder oftare på trasiga pannor, skadad plåt eller ett underlag som har åldrats. Alla fläckar är inte läckage utifrån: kondens på vinden, eller en vattenledning eller ett våtrum på våningen ovanför, kan ge samma bild.",
     akut:
@@ -698,7 +698,7 @@ export const problems: Problem[] = [
     undersokning:
       "Vid takkontrollen tittar en av våra säljare på taket på plats. Berätta var fläcken sitter, när du såg den första gången och i vilket väder den växer, eftersom det hjälper till att ringa in var på taket vattnet kommer in. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Åtgärden beror på var vattnet kommer in. Ett otätt beslag eller en genomföring kan tätas eller göras om. Enstaka trasiga pannor byts, och en ränndal som har rostat får ny plåt. Visar det sig att underlaget har åldrats på stora delar av taket, eller att det finns flera läckage, är ett takbyte ofta bättre än att laga ett ställe i taget. Innertaket ska torka ut helt innan det spacklas och målas om, annars kommer fläcken tillbaka genom färgen. Är orsaken kondens eller en ledning inne i huset är det inte ett takarbete, och då säger vi det.",
+      "Åtgärden beror på var vattnet kommer in. Ett otätt beslag eller en genomföring kan tätas eller göras om. Enstaka trasiga pannor byts, och en ränndal som har rostat får ny plåt. Visar det sig att underlaget har åldrats på stora delar av taket, eller att det finns flera läckage, kan ett takbyte vara bättre än att laga ett ställe i taget. Innertaket ska torka ut helt innan det spacklas och målas om, annars kommer fläcken tillbaka genom färgen. Är orsaken kondens eller en ledning inne i huset är det inte ett takarbete, och då säger vi det.",
     gorInteSjalv:
       "Gå inte upp på taket för att leta efter läckan, och försök inte täta från utsidan med fogmassa eller presenning på egen hand. Måla inte över fläcken förrän orsaken är åtgärdad: då döljs spåret som visar om läckaget fortsätter. Det du kan göra är att fotografera fläcken med datum, rita en tunn blyertslinje runt den för att se om den växer, och titta på vinden med ficklampa efter mörka ränder eller blöt isolering ovanför fläcken.",
     related: [
@@ -721,7 +721,7 @@ export const problems: Problem[] = [
     intro:
       "Efter ett snöfall med hård vind kan det ligga snö på vinden, som små drivor på isoleringen eller som ett tunt lager längs takfoten. Det är finkornig snö som vinden har tryckt in genom öppningar i taket. Lite yrsnö vid ett enstaka oväder är inget ovanligt på en kall, ventilerad vind. Kommer det mycket, eller på samma ställe varje gång, finns det en öppning som är värd att se över.",
     symptom:
-      "Snö på isoleringen eller på vindsgolvet, ofta i en sträng längs takfoten, vid gavlarna eller under nocken. Snön kan också ligga runt en genomföring eller under ett ställe där en panna har flyttat sig. Efter några dagar syns i stället blöta fläckar i isoleringen, och ibland en fuktfläck i innertaket under. Ser du frost eller droppar på hela undersidan av taket och inte bara snö på vissa ställen är det oftare kondens.",
+      "Snö på isoleringen eller på vindsgolvet, till exempel i en sträng längs takfoten, vid gavlarna eller under nocken. Snön kan också ligga runt en genomföring eller under ett ställe där en panna har flyttat sig. Efter några dagar syns i stället blöta fläckar i isoleringen, och ibland en fuktfläck i innertaket under. Ser du frost eller droppar på hela undersidan av taket och inte bara snö på vissa ställen är det oftare kondens.",
     orsaker:
       "En kall vind ska ventileras, och luften kommer in vid takfoten och går ut vid nock eller gavlar. Vid finkornig snö och hård vind kan snön följa med samma väg. Mer snö än så kommer in där det finns en större öppning: pannor som har glidit isär eller spruckit, en nockpanna som sitter löst, en gavelventil utan galler eller skydd, en otät anslutning runt en genomföring eller ett underlag som har gått sönder. På ett tak med pannor är det underlaget som ska hålla tätt mot snö som blåser in under pannorna.",
     akut:
@@ -729,7 +729,7 @@ export const problems: Problem[] = [
     undersokning:
       "Vid takkontrollen tittar en av våra säljare på taket på plats. Berätta var på vinden snön låg och hur mycket det var, och fotografera gärna innan du tar bort den, eftersom det visar var den kom in. Efter takkontrollen får du en rapport om takets skick. Behöver taket åtgärdas får du också en offert med fast pris.",
     atgarder:
-      "Lite yrsnö vid takfoten efter ett ovanligt hårt oväder kräver ofta ingen annan åtgärd än att snön tas bort. Kommer snön in genom en öppning rättas den till: pannor läggs tillbaka eller byts, nockpannor fästs, och en otät genomföring eller anslutning görs om. Är underlaget skadat på en begränsad yta kan det lagas där. Är underlaget dåligt på stora delar av taket är ett takbyte ofta bättre än att laga ett ställe i taget. Ventilationen vid takfot och nock ska inte täppas igen för att stänga ute snön, eftersom vinden då får problem med fukt i stället.",
+      "Lite yrsnö vid takfoten efter ett ovanligt hårt oväder behöver inte kräva någon annan åtgärd än att snön tas bort. Kommer snön in genom en öppning rättas den till: pannor läggs tillbaka eller byts, nockpannor fästs, och en otät genomföring eller anslutning görs om. Är underlaget skadat på en begränsad yta kan det lagas där. Är underlaget dåligt på stora delar av taket kan ett takbyte vara bättre än att laga ett ställe i taget. Ventilationen vid takfot och nock ska inte täppas igen för att stänga ute snön, eftersom vinden då får problem med fukt i stället.",
     gorInteSjalv:
       "Gå inte upp på ett snöigt eller isigt tak. Täta inte ventilationsöppningar med skum, tyg eller plast. Det du kan göra är att ta bort snön från vinden medan den är torr: skyffla den försiktigt i en hink eller en säck och bär ut den. Gå bara på bjälkarna eller på landgången, inte på isoleringen. Har snön redan smält, lyft undan blöt lösull eller blöta skivor så att de får torka, och håll koll på innertaket under de närmaste dagarna.",
     related: [
@@ -752,9 +752,9 @@ export const problems: Problem[] = [
     intro:
       "Ränndalen är rännan där två takfall möts, och dit leds vatten från båda sidor. På vintern samlas också snö där. När snön smälter på dagen och fryser igen på natten kan det byggas upp is i ränndalen. Isen blir en damm, och smältvattnet bakom den blir stående i stället för att rinna av. En ränndal är gjord för vatten som rinner, inte för vatten som står.",
     symptom:
-      "En tjock iskaka eller en isvall i ränndalen, ofta längst ner mot takfoten. Istappar där ränndalen slutar. Efter några dagars töväder kan det synas fukt på vinden under ränndalen eller en fuktfläck i innertaket längs linjen där takfallen möts. Läcker det bara vid tö efter en kall period och inte vid vanligt regn pekar det mot is snarare än mot ett hål i plåten.",
+      "En tjock iskaka eller en isvall i ränndalen, ibland längst ner mot takfoten. Istappar där ränndalen slutar. Efter några dagars töväder kan det synas fukt på vinden under ränndalen eller en fuktfläck i innertaket längs linjen där takfallen möts. Läcker det bara vid tö efter en kall period och inte vid vanligt regn pekar det mot is snarare än mot ett hål i plåten.",
     orsaker:
-      "Is bildas när snö smälter på en varmare del av taket och vattnet fryser igen på en kallare. Värme som läcker upp från huset till vinden värmer takytan, medan takfoten utanför ytterväggen är kall. Ränndalen tar emot smältvatten från två takfall och har ofta mer snö än resten av taket, så där går det fortast. Löv och barr som ligger kvar sedan hösten håller kvar vatten och gör det värre. När vattnet blir stående kan det ta sig över plåtens uppvikta kanter eller in i skarvar som är täta mot rinnande vatten.",
+      "Is bildas när snö smälter på en varmare del av taket och vattnet fryser igen på en kallare. Värme som läcker upp från huset till vinden värmer takytan, medan takfoten utanför ytterväggen är kall. Ränndalen tar emot smältvatten från två takfall och kan ha mer snö än resten av taket, så där går det fortast. Löv och barr som ligger kvar sedan hösten håller kvar vatten och gör det värre. När vattnet blir stående kan det ta sig över plåtens uppvikta kanter eller in i skarvar som är täta mot rinnande vatten.",
     akut:
       "När det droppar inne, när en fuktfläck växer under ränndalen eller när is och snö hänger ut över en entré, en gångväg eller en altan. Spärra av under taket där något kan falla ner. Läcker det inne, ställ ett kärl under, flytta undan det som kan ta skada och fotografera. Hör sedan av dig till en takläggare.",
     undersokning:

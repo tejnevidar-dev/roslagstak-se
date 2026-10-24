@@ -105,7 +105,7 @@ describe("paket 51b: guiderna", () => {
   it("G7: 'i regel' om taket och huset blir 'oftast' och 'ofta'", () => {
     expect(guide("takpapp-byte-hur-ofta")).toContain("byts oftast inte för sig");
     expect(guide("takpapp-byte-hur-ofta")).not.toContain("byts i regel");
-    expect(guide("platttak-ljud-regn-skargardshus")).toContain("Under den finns ofta flera lager:");
+    expect(guide("platttak-ljud-regn-skargardshus")).toContain("Under den kan det finnas flera lager:");
   });
 
   it("G8: 'vad vi gör i Stockholm' blir 'tak i Stockholm'", () => {

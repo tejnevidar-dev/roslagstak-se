@@ -145,7 +145,7 @@ export const materials: Material[] = [
       intro:
         "Papptak är ett tätt, lätt tak av takpapp och ett av få material som fungerar på riktigt flacka tak. Du hittar det på garage, carportar, uthus och tillbyggnader, men också på hela villor med låg taklutning. Till skillnad från pannor och profilplåt bygger papptaket på att hela ytan är ett sammanhängande tätskikt.",
       funktion:
-        "Takpapp är en duk av glasfiber eller polyester som har impregnerats och belagts med bitumen. Den läggs direkt på ett fast underlag, oftast råspont, i våder som överlappar varandra. Skarvarna fogas så att ytan blir tät. Beroende på system läggs taket i ett eller flera lager, med en underpapp under en ytpapp. Ytpappen har ofta ett skikt av skiffer eller granulat på ovansidan, som skyddar mot solens UV-ljus och ger taket dess färg.",
+        "Takpapp är en duk av glasfiber eller polyester som har impregnerats och belagts med bitumen. Den läggs direkt på ett fast underlag, oftast råspont, i våder som överlappar varandra. Skarvarna fogas så att ytan blir tät. Beroende på system läggs taket i ett eller flera lager, med en underpapp under en ytpapp. Ytpappen kan ha ett skikt av skiffer eller granulat på ovansidan, som skyddar mot solens UV-ljus och ger taket dess färg.",
       anvandning:
         "Flacka och låglutande tak, där pannor inte kan läggas för att vattnet inte rinner av tillräckligt snabbt. Papptak används på garage, carportar, förråd, uthus och tillbyggnader, och på bostadshus med låg lutning. Vilka lutningar ett visst papptakssystem är gjort för anger tillverkaren.",
       livslangd:
@@ -191,15 +191,15 @@ export const materials: Material[] = [
       fordelar:
         "Ett helt underlag ger taket två skydd i stället för ett. En sprucken panna eller en plåt som har släppt behöver då inte betyda att vatten kommer in i huset. Råsponten ger ett fast underlag att arbeta på och fästa i, och den ger taket stadga.",
       nackdelar:
-        "Underlaget går inte att se eller bedöma från marken, och skador upptäcks ofta sent, först när fukt syns på vinden eller i innertaket. Det går inte att byta underlagspappen utan att lyfta bort ytmaterialet och läkten. Därför görs det normalt i samband med en omläggning eller ett takbyte, inte som en egen åtgärd.",
+        "Underlaget går inte att se eller bedöma från marken, och skador kan upptäckas sent, först när fukt syns på vinden eller i innertaket. Det går inte att byta underlagspappen utan att lyfta bort ytmaterialet och läkten. Därför görs det normalt i samband med en omläggning eller ett takbyte, inte som en egen åtgärd.",
       passarNar:
         "Frågan är sällan om taket ska ha ett underlag, utan om det befintliga håller. Underlagspapp och läkt byts när taket läggs om. Råsponten bedöms när taket är öppet: är den torr och frisk kan den ligga kvar, är den fuktskadad byts de delar som har tagit skada. På Blidö i Norrtälje behölls den befintliga råsponten när huset fick nytt underlag, ny läkt och nya betongpannor. På Singö byttes delar av råsponten.",
       underhall:
         "Underlaget sköts genom att resten av taket sköts. Byt trasiga pannor innan vatten hinner rinna in under lång tid, håll hängrännor och ränndalar rena och se till att vinden är ventilerad så att fukt kan vädras ut. Titta på vinden någon gång om året, gärna efter regn: mörka fläckar, droppmärken eller mjukt trä på råspontens undersida är tecken som ska tas på allvar.",
       vanligaFel:
-        "Underlagspapp som har blivit spröd och spruckit, vilket ofta märks som läckage på flera ställen samtidigt. Läs mer om dålig underlagspapp. Råspont som har blivit mörk, mjuk eller rutten efter ett läckage som har pågått länge, se rutten råspont. Läkt som har ruttnat så att pannorna inte längre ligger stadigt. Kondens på råspontens undersida när vinden är dåligt ventilerad.",
+        "Underlagspapp som har blivit spröd och spruckit, vilket kan märkas som läckage på flera ställen samtidigt. Läs mer om dålig underlagspapp. Råspont som har blivit mörk, mjuk eller rutten efter ett läckage som har pågått länge, se rutten råspont. Läkt som har ruttnat så att pannorna inte längre ligger stadigt. Kondens på råspontens undersida när vinden är dåligt ventilerad.",
       kostnadsdrivare:
-        "Takets storlek och form, hur mycket av råsponten som behöver bytas, antalet genomföringar och anslutningar och åtkomsten. Hur mycket råspont som måste bytas syns ofta först när taket är öppet.",
+        "Takets storlek och form, hur mycket av råsponten som behöver bytas, antalet genomföringar och anslutningar och åtkomsten. Hur mycket råspont som måste bytas kan visa sig först när taket är öppet.",
       delAvTaksystemet:
         "Takstolar, råspont, underlagspapp eller underlagsduk, ströläkt, bärläkt och sedan ytmaterialet, med plåtdetaljer och avvattning. Vid en takomläggning eller ett takbyte byts underlagspapp och läkt, och råsponten ses över när det gamla taket är borta.",
       hosOss:
