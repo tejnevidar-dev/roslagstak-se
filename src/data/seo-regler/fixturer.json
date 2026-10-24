@@ -29,6 +29,12 @@
     }
   ],
   "daliga": [
+    { "falt": "description", "text": "Takbyte med 30 års tätskiktsgaranti i Täby.", "regel": "forbjuden-tatskiktsgaranti" },
+    { "falt": "title", "text": "TÄTSKIKTSGARANTIER för ditt tak", "regel": "forbjuden-tatskiktsgaranti" },
+    { "falt": "description", "text": "Vi lämnar 30 års garanti på taket vid takbyte.", "regel": "forbjuden-30-ar-pa-taket-arbetet" },
+    { "falt": "description", "text": "30 års garanti på arbetet i hela Roslagen.", "regel": "forbjuden-30-ar-pa-taket-arbetet" },
+    { "falt": "description", "text": "Underlagstak med garanti på upp till 30 år.", "regel": "forbjuden-upp-till-30-ar" },
+    { "falt": "title", "text": "Takbyte med 30 års garanti", "regel": "forbjuden-30-ars-garanti" },
     { "falt": "title", "text": "Takbyte som håller i 50 år", "regel": "livslangd-i-ar" },
     { "falt": "description", "text": "Taket får 40 års livslängd med vårt takbyte i Täby.", "regel": "livslangd-i-ar" },
     { "falt": "title", "text": "Ett tak för generationer", "regel": "livslangd-i-ar" },

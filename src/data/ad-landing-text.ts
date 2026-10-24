@@ -5,7 +5,7 @@
 
 export const AD_TRUST = [
   "10 års utförandegaranti",
-  "30 års tätskiktsgaranti via MATAKI",
+  "30 års produktgaranti från MATAKI på underlagstaket, som standard",
   "Arbete enligt AMA",
 ];
 
@@ -41,7 +41,7 @@ export const AD_FAQS = [
   },
   {
     q: "Vilken garanti får jag?",
-    a: "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
+    a: "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
   },
   {
     q: "Behöver jag bygglov?",

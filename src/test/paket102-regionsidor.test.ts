@@ -23,7 +23,7 @@ describe("paket 102: regiontexterna (R1, R2, R3, R6)", () => {
   it("R5 är struken: regionsidorna behåller den vanliga garantimeningen (beslutet 2026-10-05), alla 16 orörda", () => {
     for (const slug of SLUGS) {
       const t = alla(slug);
-      expect(t, slug).toContain("Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.");
+      expect(t, slug).toContain("Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.");
       expect(t, slug).not.toContain("gäller dessutom 30 års tätskiktsgaranti via MATAKI");
     }
   });
@@ -53,7 +53,7 @@ describe("paket 102: regiontexterna (R1, R2, R3, R6)", () => {
   });
   it("serverns HTML har samma texter som datan", () => {
     const t = sida("/omraden/kusten");
-    expect(t).toContain("Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.");
+    expect(t).toContain("Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.");
   });
 });
 

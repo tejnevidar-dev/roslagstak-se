@@ -148,7 +148,7 @@ export const SERVICE_EXTRAS: Record<string, PageExtras> = {
       { question: "Vad är skillnaden mellan dubbelfalsat och TP20?", answer: "Dubbelfalsat har dolda klammer och uppstående falsar. TP20 är en trapetsprofilerad plåt som skruvas genom plåten." },
       { question: "Är priset fast?", answer: PRIS_FAST },
       { question: "Gäller ROT-avdraget?", answer: "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, högst 50 000 kr per person och år, om du äger bostaden och har utrymme kvar." },
-      { question: "Vilken garanti gäller?", answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI." },
+      { question: "Vilken garanti gäller?", answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten." },
     ],
     links: [
       { to: "/blogg/platslagare-norrtalje-guide", label: "Plåten på taket: detaljerna en i taget" },

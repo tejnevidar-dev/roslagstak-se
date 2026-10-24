@@ -28,7 +28,7 @@ describe("paket 104: materialsidorna", () => {
     expect(t).not.toContain("Ofta är det underlaget, inte pannorna, som avgör när ett tak behöver göras om.");
   });
   it("garantimeningen på underlagstak står kvar (beslutet 2026-10-13)", () => {
-    expect(sida("/material/underlagstak")).toContain("Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.");
+    expect(sida("/material/underlagstak")).toContain("Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.");
   });
 });
 

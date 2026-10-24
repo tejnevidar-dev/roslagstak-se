@@ -13,7 +13,7 @@ const ort: LocationHeavy = {
     },
     {
       "heading": "Så går det till hos oss",
-      "text": "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte. 2. **Fast pris.** Du får en offert med fast pris, där kommunens riktlinjer för Ella gård tas med i underlaget. 3. **Utförande enligt AMA.** Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Bor du i Ella gård och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."
+      "text": "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, det tar ungefär 1–2 timmar. Du betalar inget och binder dig inte. 2. **Fast pris.** Du får en offert med fast pris, där kommunens riktlinjer för Ella gård tas med i underlaget. 3. **Utförande enligt AMA.** Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Bor du i Ella gård och funderar på taket? Boka en kostnadsfri takkontroll på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."
     }
   ],
   "uniqueFAQ": {

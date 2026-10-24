@@ -58,7 +58,7 @@ export const HOME_CORE_VALUES = [
   {
     title: "Tydliga villkor",
     description:
-      "Fast pris i offerten, där det framgår vad som ingår. 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
+      "Fast pris i offerten, där det framgår vad som ingår. 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. ROT-avdraget på 30 % av arbetskostnaden dras direkt på fakturan.",
   },
   {
     title: "Hantverk enligt AMA",

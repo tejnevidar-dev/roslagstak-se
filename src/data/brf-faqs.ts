@@ -18,7 +18,7 @@ export const brfFaqs = [
   {
     question: "Vilken garanti får föreningen?",
     answer:
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ert tak står i offerten.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Vilka garantier som gäller för ert tak står i offerten.",
   },
   {
     question: "Hur minimerar ni störningen för de boende?",

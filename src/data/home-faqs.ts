@@ -18,7 +18,7 @@ export const homeFaqs = [
   },
   {
     question: "Hur lång garanti ger ni på takarbeten?",
-    answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI. Vi arbetar enligt AMA.",
+    answer: "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Vi arbetar enligt AMA.",
   },
   {
     question: "Kan jag använda ROT-avdrag för takbyte?",

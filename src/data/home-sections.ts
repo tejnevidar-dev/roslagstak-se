@@ -12,7 +12,7 @@ export const HOME_HERO = {
 };
 
 export const HOME_TRUST_ITEMS: { value: string; label: string; accent?: boolean }[] = [
-  { value: "10 år", label: "Utförandegaranti. 30 års tätskiktsgaranti via MATAKI när nytt tätskikt läggs" },
+  { value: "10 år", label: "Utförandegaranti. 30 års produktgaranti från MATAKI på underlagstaket, som standard" },
   { value: "Fast pris", label: "Tillägg bara efter ditt godkännande" },
   { value: "0 kr", label: "Takkontroll utan förpliktelser", accent: true },
 ];

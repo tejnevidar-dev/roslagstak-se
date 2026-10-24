@@ -15,7 +15,7 @@ export interface ComboOverride {
 }
 
 const PROCESS =
-  "Processen är densamma oavsett kommun: en kostnadsfri takkontroll, en offert med fast pris och utförande enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Du har en kontaktperson genom hela processen.";
+  "Processen är densamma oavsett kommun: en kostnadsfri takkontroll, en offert med fast pris och utförande enligt AMA. Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Du har en kontaktperson genom hela processen.";
 
 const ROT =
   "Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.";
@@ -67,7 +67,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Åkersberga på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -103,7 +103,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Danderyd på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -143,7 +143,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll på Ekerö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -179,7 +179,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Hallstavik på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -218,7 +218,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Haninge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -258,7 +258,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Huddinge. Mer om orten finns på sidan om [takläggare i Huddinge](/taklaggare-huddinge). Boka en kostnadsfri takkontroll i Huddinge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -295,7 +295,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Järfälla. Mer om orten finns på sidan om [takläggare i Järfälla](/taklaggare-jarfalla). Boka en kostnadsfri takkontroll i Järfälla på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -331,7 +331,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Lidingö. Mer om orten finns på sidan om [takläggare på Lidingö](/taklaggare-lidingo). Boka en kostnadsfri takkontroll på Lidingö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -367,7 +367,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nacka. Mer om orten finns på sidan om [takläggare i Nacka](/taklaggare-nacka). Boka en kostnadsfri takkontroll i Nacka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -405,7 +405,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Norrtälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -444,7 +444,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Rimbo på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -482,7 +482,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Salem eller Rönninge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -521,7 +521,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Södertälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -560,7 +560,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sollentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -600,7 +600,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Solna. Mer om orten finns på sidan om [takläggare i Solna](/taklaggare-solna). Boka en kostnadsfri takkontroll i Solna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -640,7 +640,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Stockholm. Mer om orten finns på sidan om [takläggare i Stockholm](/taklaggare-stockholm). Boka en kostnadsfri takkontroll i Stockholm på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -679,7 +679,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sundbyberg på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -718,7 +718,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Täby på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -759,7 +759,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Tyresö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -795,7 +795,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Upplands Väsby. Mer om orten finns på sidan om [takläggare i Upplands Väsby](/taklaggare-upplands-vasby). Boka en kostnadsfri takkontroll i Upplands Väsby på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -831,7 +831,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Vallentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -869,7 +869,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Åkersberga på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -906,7 +906,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Danderyd på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -944,7 +944,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll på Ekerö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -981,7 +981,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Hallstavik på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1019,7 +1019,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Haninge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1059,7 +1059,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Norrtälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1099,7 +1099,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Rimbo på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1137,7 +1137,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Salem på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1175,7 +1175,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Södertälje på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1211,7 +1211,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sollentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1249,7 +1249,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Sundbyberg på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1292,7 +1292,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Täby på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1333,7 +1333,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Boka en kostnadsfri takkontroll i Tyresö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1370,7 +1370,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan.",
       "Boka en kostnadsfri takkontroll i Vallentuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1941,7 +1941,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Enskede. Mer om orten finns på sidan om [takläggare i Enskede](/taklaggare-enskede). Boka en kostnadsfri takkontroll i Enskede på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -1981,7 +1981,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Älvsjö. Mer om orten finns på sidan om [takläggare i Älvsjö](/taklaggare-alvsjo). Boka en kostnadsfri takkontroll i Älvsjö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2021,7 +2021,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Bro. Mer om orten finns på sidan om [takläggare i Bro](/taklaggare-bro). Boka en kostnadsfri takkontroll i Bro på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2061,7 +2061,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Kungsängen. Mer om orten finns på sidan om [takläggare i Kungsängen](/taklaggare-kungsangen). Boka en kostnadsfri takkontroll i Kungsängen på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2099,7 +2099,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Huddinge. Mer om orten finns på sidan om [takläggare i Huddinge](/taklaggare-huddinge). Boka en kostnadsfri takkontroll i Huddinge på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2177,7 +2177,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Stockholm. Mer om orten finns på sidan om [takläggare i Stockholm](/taklaggare-stockholm). Boka en kostnadsfri takkontroll i Stockholm på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2221,7 +2221,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Botkyrka. Mer om orten finns på sidan om [takläggare i Botkyrka](/taklaggare-botkyrka). Boka en kostnadsfri takkontroll i Botkyrka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2265,7 +2265,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Bromma. Mer om orten finns på sidan om [takläggare i Bromma](/taklaggare-bromma). Boka en kostnadsfri takkontroll i Bromma på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2307,7 +2307,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Enskede. Mer om orten finns på sidan om [takläggare i Enskede](/taklaggare-enskede). Boka en kostnadsfri takkontroll i Enskede på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2348,7 +2348,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nacka. Mer om orten finns på sidan om [takläggare i Nacka](/taklaggare-nacka). Boka en kostnadsfri takkontroll i Nacka på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2391,7 +2391,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Nynäshamn. Mer om orten finns på sidan om [takläggare i Nynäshamn](/taklaggare-nynashamn). Boka en kostnadsfri takkontroll i Nynäshamn på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2431,7 +2431,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Sigtuna. Mer om orten finns på sidan om [takläggare i Sigtuna](/taklaggare-sigtuna). Boka en kostnadsfri takkontroll i Sigtuna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -2637,7 +2637,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Lidingö. Mer om orten finns på sidan om [takläggare på Lidingö](/taklaggare-lidingo). Boka en kostnadsfri takkontroll på Lidingö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
     links: [
@@ -3500,7 +3500,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag i Solna. Mer om kommunen finns på sidan om [takläggare i Solna](/taklaggare-solna), och om villaområdena i Råsunda på sidan om [takbyte i Solna](/takbyte-solna). Boka en kostnadsfri takkontroll i Solna på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
   },
@@ -3531,7 +3531,7 @@ export const comboOverrides: Record<string, ComboOverride> = {
       "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
       "2. **Fast pris** i offerten.",
       "3. **Utförande enligt AMA.**",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
       "Vi är en takfirma med bas i Norrtälje och tar uppdrag på Värmdö. Mer om kommunen finns på sidan om [takläggare på Värmdö](/taklaggare-varmdo), och mer om att byta taket på sidan om [takbyte på Värmdö](/takbyte-varmdo). Boka en kostnadsfri takkontroll på Värmdö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar.",
     ],
   },

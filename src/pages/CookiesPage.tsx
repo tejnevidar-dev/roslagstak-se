@@ -126,7 +126,7 @@ const CookiesPage = () => (
                   <strong className="text-foreground">Avtal och utförda jobb</strong> sparas i sin helhet i 11 år
                   efter avslutat arbete, eftersom du kan reklamera fel i upp till tio år. Därefter sparar vi bara de
                   uppgifter om fastigheten, arbetet och materialet som behövs för garantier som följer huset (till
-                  exempel tillverkarens tätskiktsgaranti på upp till 30 år), dock längst 31 år. Namn, telefon, e-post
+                  exempel tillverkarens produktgaranti på 30 år), dock längst 31 år. Namn, telefon, e-post
                   och priser tas då bort.
                 </li>
                 <li>

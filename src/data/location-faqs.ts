@@ -19,7 +19,7 @@ const tidy = (faqs: LocationFAQ[]): LocationFAQ[] =>
 /*
  * Regel 5 (Marknadschefen 2026-09-30): svaren lovar bara det som är belagt — kostnadsfri
  * takkontroll utan förpliktelser (ca 1–2 timmar, en av våra säljare), fast pris, AMA,
- * 10 års utförandegaranti, 30 års tätskiktsgaranti via MATAKI, ROT direkt på fakturan och
+ * 10 års utförandegaranti, 30 års produktgaranti från MATAKI på underlagstaket, som standard, ROT direkt på fakturan och
  * svar inom 24 timmar. Inga tidsåtgångar, starttider, livslängder i år, transportlöften
  * eller påståenden om lokal närvaro.
  */

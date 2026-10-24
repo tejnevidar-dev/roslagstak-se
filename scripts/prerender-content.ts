@@ -303,7 +303,7 @@ const home: PrerenderPage = {
       "Vi tar också uppdrag i skärgården och har gjort kompletta takbyten på Blidö och Singö. Båda finns med bilder under Projekt.",
       "Vi tar uppdrag i Roslagen och Storstockholm, från Täby, Danderyd och Sollentuna i norr till Nacka, Huddinge och Södertälje i söder. Du får ett fast pris i offerten och en kontaktperson genom hela processen.",
       "Vad som ingår står i offerten. Ett komplett takbyte omfattar normalt nytt underlag, ny läkt, nytt ytmaterial och nya plåtdetaljer, och byggställning ingår. Du får en kontaktperson hela vägen, från takkontroll till färdigt tak.",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
       `Boka en kostnadsfri takkontroll. Vi svarar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
   links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks, ...homeAreaLinks().filter((l) => l.href !== "/takomlaggning-norrtalje"), ...HEM_PRIORITERADE],
@@ -556,7 +556,7 @@ const staticPages: Record<string, PrerenderPage> = {
     ...brfBody({
       extra: [
         // Text som bara finns i den statiska HTML:en: garantiformuleringen och uppmaningen (ingen motsvarighet som eget block i React)
-        "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
+        "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
         `Boka en kostnadsfri takkontroll på /brf eller ring ${PHONE}. Vi svarar inom 24 timmar.`,
       ],
       faqs: brfFaqs,
@@ -587,7 +587,7 @@ const staticPages: Record<string, PrerenderPage> = {
       "Steg 4 — rivning: gamla taket rivs. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare, och inget extraarbete görs utan ditt godkännande.",
       "Steg 5 — underlag: ny underlagspapp, ströläkt och bärläkt läggs.",
       "Steg 6 — tätskikt och beslag: det nya taket monteras tillsammans med plåtbeslag kring skorsten, ventiler och genomföringar, och taksäkerhet och hängrännor, om de ingår i offerten.",
-      "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
+      "Steg 7 — slutgenomgång: vi går igenom hela arbetet tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
     ],
     links: [...primaryLinks, ...serviceLinks],
     breadcrumbs: [{ name: "Hem", path: "/" }, { name: "Så går det till", path: "/hur-det-gar-till" }],

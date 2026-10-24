@@ -13,7 +13,7 @@ export const SERVICE_LOCATION_TEXT = {
   usps: (serviceSlug: string): string[] => [
     ["takmalning", "taktvatt"].includes(serviceSlug)
       ? "10 års utförandegaranti"
-      : GARANTI_RENOVERING_CHIP.replace("30 års tätskiktsgaranti", "10 års utförandegaranti, 30 års tätskiktsgaranti"),
+      : `10 års utförandegaranti, ${GARANTI_RENOVERING_CHIP.charAt(0).toLowerCase()}${GARANTI_RENOVERING_CHIP.slice(1)}`,
     "Fast pris i offerten",
     "En kontaktperson genom hela processen",
     "Kostnadsfri takkontroll",

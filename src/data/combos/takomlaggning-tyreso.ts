@@ -26,7 +26,7 @@ const combo: ComboOverride = {
     "1. **Kostnadsfri takkontroll utan förpliktelser.** En av våra säljare tittar på taket på plats, ungefär 1–2 timmar. Du betalar inget och binder dig inte.",
     "2. **Fast pris** i offerten.",
     "3. **Utförande enligt AMA.**",
-    "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
+    "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten. Som privatperson kan du få ROT-avdrag på 30 % av arbetskostnaden, och vi drar av det direkt på fakturan. Riktpriser finns på roslagstak.se/priser.",
     "Boka en kostnadsfri takkontroll i Tyresö på roslagstak.se/takkontroll eller ring 070-154 36 39. Vi svarar inom 24 timmar."
   ],
   "links": [

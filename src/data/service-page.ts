@@ -35,7 +35,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
   takomlaggning: {
     accentLine: "",
     specs: [
-      { k: "Tätskikt", v: "30 års garanti via MATAKI, på tillverkarens villkor" },
+      { k: "Underlagstak", v: "30 års produktgaranti från MATAKI på underlagstaket, som standard" },
       { k: "Utförande", v: "enligt AMA" },
     ],
     specHeading: "Teknisk specifikation och utförande",
@@ -145,7 +145,7 @@ export const serviceMeta: Record<string, ServiceMeta> = {
 
 export const serviceDetails: Record<string, { longDesc: string; benefits: string[]; process: string[]; priceRange?: string }> = {
   takomlaggning: {
-    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen. Allt arbete utförs enligt AMA. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
+    longDesc: "En takomläggning innebär att hela det befintliga takmaterialet rivs och ersätts med nytt. Skadad råspont syns först när det gamla taket är rivet. Då får du besked och pris innan vi går vidare. Vilka alternativ som finns för ditt tak går vi igenom vid takkontrollen. Allt arbete utförs enligt AMA. Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
     priceRange: `Riktpris, efter ROT-avdrag och inkl. moms: TP20-plåt och betongpannor ${beloppLopande("TP20 plåttak")}, lertegel och pannplåt ${beloppLopande("Lertegeltak")}, dubbelfalsat ${beloppLopande("Dubbelfalsat plåttak")}. Exakt pris beror på takets storlek, material och underlag.`,
     benefits: [
       "Rivning av befintligt yttertak",
@@ -284,7 +284,7 @@ export const serviceDetails: Record<string, { longDesc: string; benefits: string
       "Lertegel",
       "Plåtdetaljer kring skorsten och genomföringar",
       "Fast pris efter kostnadsfri takkontroll",
-      "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
+      "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
     ],
     process: [
       "Kostnadsfri takkontroll",
@@ -310,7 +310,7 @@ export const SERVICE_COPY = {
   heroEyebrow: "Tjänstebeskrivning / Roslagen",
   takkontrollLink: "Boka kostnadsfri takkontroll",
   chipUtforande: "10 års utförandegaranti",
-  chipTatskikt: "30 års tätskiktsgaranti via MATAKI",
+  chipTatskikt: "30 års produktgaranti från MATAKI på underlagstaket, som standard",
   chipFastPris: "Fast pris",
   chipSvar: "Svar inom 24 timmar",
   offertButton: "Boka kostnadsfri takkontroll",
@@ -343,7 +343,7 @@ export const SERVICE_COPY = {
   priceFallback: "Fast pris efter kostnadsfri takkontroll.",
   addonsNote: " Tillägg bara efter ditt godkännande.",
   guaranteeTitle: "Garanti",
-  guaranteeStandard: "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
+  guaranteeStandard: "Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
   ctaHeading: (slug: string, title: string) =>
     slug === "eternit-asbest" ? "Har du eternittak med asbest?" : `Intresserad av ${title.toLowerCase()}?`,
   ctaText: (slug: string) =>

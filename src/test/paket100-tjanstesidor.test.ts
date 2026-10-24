@@ -19,8 +19,8 @@ describe("paket 100: /tjanster/takkupor", () => {
     expect(t).toContain("Vi lämnar 10 års garanti på utförandet.");
   });
   it("märket står kvar på de sidor där Marknadschefen lät det stå", () => {
-    expect(tatskiktChip("platarbeten")).toContain("30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)");
-    expect(tatskiktChip("takomlaggning")).toContain("30 års tätskiktsgaranti via MATAKI");
+    expect(tatskiktChip("platarbeten")).toContain("30 års produktgaranti från MATAKI på underlagstaket, som standard");
+    expect(tatskiktChip("takomlaggning")).toContain("30 års produktgaranti från MATAKI på underlagstaket, som standard");
   });
 });
 
@@ -37,7 +37,7 @@ describe("paket 100: /tjanster/takrenovering", () => {
     expect(serviceDetails.takrenovering.process[2]).toBe("Byte av skadad råspont, om det behövs");
   });
   it("garantin med villkor och punkten om råspont bland fördelarna är orörda; plåtbeslag står kvar (väntar på Vidars fråga 3)", () => {
-    expect(t).toContain("När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI.");
+    expect(t).toContain("Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.");
     expect(serviceDetails.takrenovering.benefits).toContain("Byte av skadad råspont");
     expect(t).toContain("reparera plåtbeslag");
   });

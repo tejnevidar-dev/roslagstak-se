@@ -28,6 +28,6 @@ export const processFaqs = [
   {
     question: "Vad ingår i slutgenomgången?",
     answer:
-      "Vi går igenom taket tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor. Vilka garantier som gäller för ditt tak står i offerten.",
+      "Vi går igenom taket tillsammans med dig. Vi lämnar 10 års garanti på utförandet. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
   },
 ];

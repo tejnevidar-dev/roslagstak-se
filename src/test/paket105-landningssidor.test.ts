@@ -25,7 +25,7 @@ describe("paket 105: /boka-takkontroll lovar inte en dagväljare som inte finns"
     expect(t).toContain("Boka en kostnadsfri takkontroll. Vi svarar inom 24 timmar. Fast pris, utan förpliktelser.");
   });
   it("märket om tätskiktsgarantin har villkoret (kort G3-form), samma i React", () => {
-    expect(GARANTI_RENOVERING_CHIP).toBe("30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)");
+    expect(GARANTI_RENOVERING_CHIP).toBe("30 års produktgaranti från MATAKI på underlagstaket, som standard");
     const k = kalla("src/pages/BookingPage.tsx");
     expect(k).toContain("GARANTI_RENOVERING_CHIP");
     expect(k).not.toContain('"30 års tätskiktsgaranti via MATAKI"');

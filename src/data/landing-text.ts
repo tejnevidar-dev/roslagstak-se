@@ -11,7 +11,7 @@ export const landingTrust = (slug: string): string[] => [
   "10 års utförandegaranti",
   ...(NO_TATSKIKT_CHIP_LANDING.includes(slug)
     ? []
-    : [RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års tätskiktsgaranti via MATAKI"]),
+    : [RENOVERING_LANDING_SLUGS.includes(slug) ? GARANTI_RENOVERING_CHIP : "30 års produktgaranti från MATAKI på underlagstaket, som standard"]),
   "Fast pris efter takkontroll",
   "Arbete enligt AMA",
   "Svar inom 24 timmar",

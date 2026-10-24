@@ -8,7 +8,7 @@ import { brfLocationSlugs } from "../data/brf-locations";
 import { BRF_FACTS } from "../data/brf-sections";
 import { prerenderContent } from "../../scripts/prerender-content";
 
-const G2 = "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.";
+const G2 = "Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.";
 const text = (u: string) => JSON.stringify(prerenderContent(u) ?? {});
 
 describe("gren 206: BRF-sidornas regel 5", () => {

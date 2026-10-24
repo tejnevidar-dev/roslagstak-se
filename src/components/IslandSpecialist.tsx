@@ -3,7 +3,7 @@ import { ISLAND_TEXT } from "@/data/taktyper-text";
 
 /**
  * Skärgårdsblocket på /taktyper (Marknadschefen, backlog 1cl, underlag-taktyper-2026-10-05.md avsnitt 5): tre kort och ett
- * stycke. Ingen ö-lista (öarna utan bilväg, 10o), ingen "samma villkor som på fastlandet", ingen tätskiktsgaranti och
+ * stycke. Ingen ö-lista (öarna utan bilväg, 10o), ingen "samma villkor som på fastlandet", ingen 30-årsgaranti och
  * Blidö och Singö nämns högst en gång. Ö-lydelsen är den ur location-mall.ts.
  */
 const highlights = [Ship, Wrench, Anchor].map((icon, i) => ({ icon, ...ISLAND_TEXT.highlights[i] }));

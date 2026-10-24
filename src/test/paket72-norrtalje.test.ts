@@ -54,7 +54,7 @@ describe("paket 72: Norrtälje-sidan", () => {
     const t = text("norrtalje");
     expect(t).not.toMatch(/\d[\d  ]*\s?kr\b/);
     expect(t).not.toMatch(/riktpris(er)?\s+(från|på)\s+\d/i);
-    expect(t.split("MATAKI").length - 1).toBeLessThanOrEqual(1);
+    expect(t.split("MATAKI").length - 1).toBeLessThanOrEqual(2); // Juristens långform (Rättelse 2) nämner MATAKI två gånger
     const nyaDelar = [norr().longDescription, ...(norr().extraSections ?? []).map((s) => s.text)].join("\n");
     expect(nyaDelar).not.toMatch(/MATAKI|tätskikt|30 års/i);
   });

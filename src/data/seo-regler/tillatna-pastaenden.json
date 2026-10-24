@@ -14,20 +14,21 @@
     },
     {
       "id": "G2",
-      "pastaende": "Tätskiktsgaranti",
+      "pastaende": "Produktgaranti från MATAKI på underlagstaket",
       "formuleringar": [
-        "30 års tätskiktsgaranti via MATAKI",
-        "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor."
+        "30 års produktgaranti från MATAKI på underlagstaket, som standard",
+        "Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
+        "Underlagstaket har som standard 30 års produktgaranti från tillverkaren MATAKI, på MATAKI:s villkor."
       ],
-      "villkor": "Bara på sidor om takbyte och takomläggning, där nytt tätskikt läggs. Alltid med \"via MATAKI\" och ordet \"tätskikt\". L3: G2 och G3 får inte läggas in på nya ställen förrän MATAKI har svarat, bara stå kvar där de redan står",
+      "villkor": "Juristens lydelse 2026-10-25 (ledning/jurist/mataki-utan-behorighet-2026-10-25.md) ersätter G2 = tätskiktsgaranti. Bara produktgarantin, aldrig \"tätskiktsgaranti\". Standard är Haloten PRO eller Haloten STEEL (Rättelse 2). Annat underlagstak bara på kundens begäran, och då står garantin i offerten. Inte på papptak. Får inte läggas in på nya ställen. På eternitsidan gäller saneringsformen",
       "kalla": "Regel 5, Marknadschefens beslut 2026-10-05"
     },
     {
       "id": "G3",
       "pastaende": "Garanti på renovering, reparation, hängrännor, takproblem",
       "formuleringar": [
-        "Vi lämnar 10 års utförandegaranti på det arbete vi utför. När ett nytt tätskikt läggs, som vid takbyte och takomläggning, gäller dessutom 30 års tätskiktsgaranti via MATAKI.",
-        "30 års tätskiktsgaranti när nytt tätskikt läggs (MATAKI)"
+        "Vi lämnar 10 års utförandegaranti på det arbete vi utför. Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten.",
+        "30 års produktgaranti från MATAKI på underlagstaket, som standard"
       ],
       "villkor": "Ordet \"garanti\" får bara förekomma i G1–G3",
       "kalla": "Beslut 2026-10-05"

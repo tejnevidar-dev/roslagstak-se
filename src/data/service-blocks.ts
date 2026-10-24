@@ -98,7 +98,7 @@ export const serviceBlocks: Record<string, ServiceBlocks> = {
     factCards: [
       { tone: "primary", label: "Prisbild", value: belopp("TP20 plåttak"), text: `TP20-plåt ${beloppLopande("TP20 plåttak")}, dubbelfalsat ${beloppLopande("Dubbelfalsat plåttak")} — efter ROT-avdrag, inkl. moms.` },
       { tone: "outline", label: "Tidsåtgång", value: "Efter takets storlek", text: "Beror på takets storlek, underlagets skick och väder." },
-      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor." },
+      { tone: "accent", label: "Garanti", value: "10 år på utförandet", text: "Vid takbyte och takomläggning lägger vi som standard underlagstak från MATAKI (Haloten PRO eller Haloten STEEL), med 30 års produktgaranti från tillverkaren på MATAKI:s villkor. Önskar du ett annat underlagstak står garantin för det i offerten." },
       { tone: "plain", label: "Ingrepp", value: "Ner till råspont", text: "Papp, läkt och plåtdetaljer byts normalt." },
     ],
     block: {

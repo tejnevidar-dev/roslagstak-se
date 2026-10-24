@@ -14,7 +14,7 @@
       "monster": "\\b(?!10\\b|30\\b)\\d{1,2}\\s*(–|-)?\\s*\\d*\\s*års\\s*(\\w+\\s)?\\w*garanti",
       "flaggor": "i",
       "falt": ["title", "description"],
-      "orsak": "Bara 10 års utförandegaranti och 30 års tätskiktsgaranti via MATAKI är belagda."
+      "orsak": "Bara 10 års utförandegaranti och, som standard, 30 års produktgaranti från MATAKI på underlagstaket (Haloten PRO eller STEEL; Juristen 2026-10-25, Rättelse 2) är belagda."
     },
     {
       "id": "garanti-tatskikt-utan-forbehall",
@@ -228,7 +228,7 @@
     },
     {
       "id": "t1-sammansatta-garantiord",
-      "monster": "(?<![\\p{L}])(?!utförandegaranti|tätskiktsgaranti)[\\p{L}]+garanti[\\p{L}]*|(?<![\\p{L}])garantier(?![\\p{L}])|(?<![\\p{L}])garantera[\\p{L}]*",
+      "monster": "(?<![\\p{L}])(?!utförandegaranti|tätskiktsgaranti|produktgaranti)[\\p{L}]+garanti[\\p{L}]*|(?<![\\p{L}])garantier(?![\\p{L}])|(?<![\\p{L}])garantera[\\p{L}]*",
       "flaggor": "iu",
       "falt": ["title", "description"],
       "orsak": "T1 (juristen): alla sammansatta garantiord utom utförandegaranti och tätskiktsgaranti, samt 'garantier' och 'garantera…', är förbjudna."
@@ -303,6 +303,34 @@
       "flaggor": "iu",
       "falt": ["title", "description"],
       "orsak": "Livslängd får inte påstås (\"lång livslängd\", \"mycket lång livslängd\", \"förlänger livslängden\"): obelagt, Ads-fynd 2026-10-04."
+    },
+    {
+      "id": "forbjuden-tatskiktsgaranti",
+      "monster": "t[äa]tskiktsgaranti(?:er)?",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "Juristen 2026-10-25 (mataki-utan-behorighet): vi är inte auktoriserade i MATAKI:s TÄTSKIKTSGARANTIER och får aldrig skriva tätskiktsgaranti. Rätt ord är produktgaranti från MATAKI på underlagstaket."
+    },
+    {
+      "id": "forbjuden-30-ar-pa-taket-arbetet",
+      "monster": "30\\s*års\\s+garanti\\s+på\\s+(?:taket|arbetet)",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "Juristen 2026-10-25: \"30 års garanti på taket\" och \"30 års garanti på arbetet\" är fel. Garantin gäller produkten (underlagstaket från MATAKI), och utförandet har 10 år."
+    },
+    {
+      "id": "forbjuden-upp-till-30-ar",
+      "monster": "upp\\s+till\\s+30\\s*år",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "Juristen 2026-10-25 (rättelsen): upp till 30 år är vilseledande. Standard är 30 år (Haloten PRO eller STEEL), och vad som gäller för ett annat underlagstak står i offerten."
+    },
+    {
+      "id": "forbjuden-30-ars-garanti",
+      "monster": "30\\s*års\\s+garanti",
+      "flaggor": "iu",
+      "falt": ["title", "description"],
+      "orsak": "Juristen 2026-10-25 (rättelsen): \"30 års garanti\" får inte stå utan \"produktgaranti\" och MATAKI. Rätt form är 30 års produktgaranti från MATAKI på underlagstaket, som standard."
     },
     {
       "id": "platshallare-och-fel",
