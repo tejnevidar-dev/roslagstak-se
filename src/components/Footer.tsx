@@ -27,6 +27,7 @@ const genvagar = [
   { to: "/brf", label: "BRF & fastigheter" },
   { to: "/takbyte-var-2027", label: "Planera takbyte våren 2027" },
   { to: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" },
+  { to: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" },
   { to: "/hur-det-gar-till", label: "Så går det till" },
   { to: "/priser", label: "Prislista" },
   { to: "/recensioner", label: "Omdömen" },

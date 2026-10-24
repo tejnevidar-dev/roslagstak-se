@@ -1,6 +1,6 @@
 /**
- * P0-2 (seo-audit/06-atgardslista.md): sajtkartan börjar med de cirka 30 sidor som betyder mest för förfrågningar och lokal synlighet, i den här ordningen, och resten följer i den ordning generatorn ger.
- * Listan är: pengasidorna och tjänsterna (01 §2 rad 1), de fjorton ortsidor som revisionen pekar ut som ägarsidor i kärnområdet (01 §2 och 06 P1-4), och några tjänst × ort-sidor och nav.
+ * P0-2 (seo-audit/06-atgardslista.md): sajtkartan börjar med de 32 sidor som betyder mest (Vidars ja 2026-10-24 16:57, gren 230) för förfrågningar och lokal synlighet, i den här ordningen, och resten följer i den ordning generatorn ger.
+ * Listan står i beslut.md och Projektledarens meddelande: pengasidorna och tjänsterna, nav (/brf, /projekt), sexton ortssidor i kärnområdet och tre tjänst × ort-sidor.
  * Ordningen i en sajtkarta är ingen rankingsignal; syftet är att Google ser de starka sidorna först och att "Begär indexering" (Vidar, tio per dag) följer samma lista. Bara relativa importer.
  */
 export const SITEMAP_PRIORITET: readonly string[] = [
@@ -11,9 +11,12 @@ export const SITEMAP_PRIORITET: readonly string[] = [
   "/takreparation",
   "/hangrannor",
   "/priser",
+  "/brf",
+  "/projekt",
   "/tjanster/takomlaggning",
   "/tjanster/takrenovering",
   "/tjanster/platarbeten",
+  "/tjanster/taktvatt",
   "/taklaggare-norrtalje",
   "/taklaggare-taby",
   "/taklaggare-akersberga",
@@ -22,18 +25,17 @@ export const SITEMAP_PRIORITET: readonly string[] = [
   "/taklaggare-vaxholm",
   "/taklaggare-lidingo",
   "/taklaggare-stockholm",
-  "/taklaggare-nacka",
-  "/taklaggare-sundbyberg",
-  "/taklaggare-huddinge",
   "/taklaggare-sollentuna",
+  "/taklaggare-nacka",
+  "/taklaggare-huddinge",
+  "/taklaggare-rimbo",
+  "/taklaggare-hallstavik",
   "/taklaggare-botkyrka",
+  "/taklaggare-sundbyberg",
   "/taklaggare-jarfalla",
-  "/takrenovering-stockholm",
   "/takbyte-norrtalje",
-  "/takbyte-taby",
-  "/material/tp20-plattak",
-  "/brf",
-  "/recensioner",
+  "/takbyte-stockholm",
+  "/takrenovering-stockholm",
 ];
 
 /** Lägger de prioriterade sidorna först (i listans ordning) och behåller övriga i sin ordning. Sidor i listan som inte finns bland posterna hoppas över. */

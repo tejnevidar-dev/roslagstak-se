@@ -278,6 +278,16 @@ const locationLinks = synligaOrter(locations).map((l) => ({
   label: `Takläggare ${ortPrep(l)} ${l.name}`,
 }));
 
+/** Gren 230 (P0-2): sidor bland de 32 prioriterade som startsidan länkar till i React (sidfoten och snabbkorten) men som saknades i den statiska länklistan, med samma länktexter som i React. */
+const HEM_PRIORITERADE = [
+  { href: "/offert", label: "Boka kostnadsfri takkontroll" },
+  { href: "/rot-avdrag", label: "ROT-avdrag på tak" },
+  { href: "/takreparation", label: "Takreparation" },
+  { href: "/hangrannor", label: "Hängrännor och stuprör" },
+  { href: "/brf", label: "BRF & fastigheter" },
+  { href: "/takrenovering-stockholm", label: "Takrenovering i Stockholm" },
+];
+
 const combos = generateCombos();
 const comboByUrl = new Map(combos.map((c) => [c.url, c]));
 
@@ -296,7 +306,7 @@ const home: PrerenderPage = {
       "Vi lämnar 10 års garanti på utförandet. Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor.",
       `Boka en kostnadsfri takkontroll. Vi svarar inom 24 timmar. Ring ${PHONE} eller boka på /kontakt.`,
     ],
-  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks, ...homeAreaLinks().filter((l) => l.href !== "/takomlaggning-norrtalje")],
+  links: [...primaryLinks, { href: "/projekt", label: "Projekt" }, { href: "/takbyte-norrtalje", label: "Byta tak i Norrtälje" }, ...referensCases.map((c) => ({ href: `/projekt/${c.slug}`, label: c.title })), { href: "/recensioner", label: "Recensioner" }, { href: "/takomlaggning-norrtalje", label: "Takomläggning i Norrtälje" }, ...serviceLinks, ...locationLinks, ...homeAreaLinks().filter((l) => l.href !== "/takomlaggning-norrtalje"), ...HEM_PRIORITERADE],
 };
 
 /** Interna länkar som står som [text](/länk) i FAQ-svar: i den statiska HTML:en blir de riktiga länkar i länklistan, texten och schemat är rena. */
