@@ -280,7 +280,7 @@ const locationLinks = synligaOrter(locations).map((l) => ({
 
 /** Gren 230 (P0-2): sidor bland de 32 prioriterade som startsidan länkar till i React (sidfoten och snabbkorten) men som saknades i den statiska länklistan, med samma länktexter som i React. */
 const HEM_PRIORITERADE = [
-  { href: "/offert", label: "Boka kostnadsfri takkontroll" },
+  { href: "/offert", label: "Begär offert" }, // samma text som menyknappen (Header.tsx); M3 kräver att länkar med texten "Boka kostnadsfri takkontroll" går till /takkontroll
   { href: "/rot-avdrag", label: "ROT-avdrag på tak" },
   { href: "/takreparation", label: "Takreparation" },
   { href: "/hangrannor", label: "Hängrännor och stuprör" },
