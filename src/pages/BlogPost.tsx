@@ -35,9 +35,9 @@ const locationForSlug = (slug: string): { to: string; label: string } | null => 
   const rules: [RegExp, { to: string; label: string }][] = [
     [/norrtalje/, { to: "/takbyte-norrtalje", label: "Takbyte i Norrtälje" }],
     [/-taby-|-taby$/, { to: "/takbyte-taby", label: "Takbyte i Täby" }],
-    [/ljustero/, { to: "/takbyte-ljustero", label: "Takbyte på Ljusterö" }],
-    [/blido/, { to: "/takbyte-blido", label: "Takbyte på Blidö" }],
-    [/vaxholm/, { to: "/takbyte-vaxholm", label: "Takbyte i Vaxholm" }],
+    [/ljustero/, { to: "/taklaggare-ljustero", label: "Takläggare på Ljusterö" }],
+    [/blido/, { to: "/taklaggare-blido", label: "Takläggare på Blidö" }],
+    [/vaxholm/, { to: "/taklaggare-vaxholm", label: "Takläggare i Vaxholm" }],
     [/husaro|finnhamn/, { to: "/taklaggare-husaro", label: "Takläggare på Husarö" }],
     [/radmanso|vato/, { to: "/taklaggare-radmanso", label: "Takläggare på Rådmansö" }],
     [/-stockholm/, { to: "/taklaggare-stockholm", label: "Takläggare i Stockholm" }],

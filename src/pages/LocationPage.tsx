@@ -631,7 +631,7 @@ const LocationPage = () => {
                     { name: "Plåtarbeten", slug: "platarbeten" },
                     { name: "Takkontroll", slug: "takinspektion" },
                     { name: "Takkupor & takfönster", slug: "takkupor" },
-                    { name: "Taktvätt & takmålning", slug: "takvard" },
+                    { name: "Taktvätt & takmålning", slug: "taktvatt" },
                     { name: "Byta eternittak", slug: "eternit-asbest" },
                   ].map((s) => (
                     <Link

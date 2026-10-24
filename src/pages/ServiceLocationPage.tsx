@@ -7,6 +7,7 @@ import { arOmpekad } from "@/data/ompekade";
 import { comboLink, nearbyComboLink, mapOverrideLinks } from "@/data/combo-links";
 import { comboServiceNode } from "@/lib/schema-service";
 import { ortAvindexerad } from "@/data/avindexerade-orter";
+import { comboOrtHref } from "@/data/combo-ort-href";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MapPin, ArrowRight, CheckCircle, Phone, Shield, Clock, Award } from "lucide-react";
@@ -343,10 +344,11 @@ const ServiceLocationPage = () => {
               {SERVICE_LOCATION_TEXT.allLocationsHeading(combo.serviceName)}
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
+              {/* Gren 205b: raderna står kvar med samma etikett, men en ort vars sida för tjänsten är tunn, ompekad eller saknas länkar till sin indexerbara motsvarighet (ortssidan), så att ingen intern länk går via en 301 eller till en noindex-sida. */}
               {locations.map((l) => (
                 <Link
                   key={l.slug}
-                  to={`/${combo.serviceSlug}-${l.slug}`}
+                  to={comboOrtHref(combo.serviceSlug, combo.locationSlug, l)}
                   className={`inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full transition-colors ${
                     l.slug === combo.locationSlug
                       ? "bg-primary text-primary-foreground"
