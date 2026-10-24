@@ -6,7 +6,7 @@ import { ortPrepNamn } from "./ort-prep";
 
 export const BRF_FACTS = [
   { label: "Utförande", value: "10 års utförandegaranti" },
-  { label: "Tätskikt", value: "30 års garanti via tillverkaren MATAKI" },
+  { label: "Tätskikt", value: "Tätskiktet har 30 års garanti via tillverkaren MATAKI, på tillverkarens villkor." },
   { label: "Offert", value: "Fast pris efter kostnadsfri takkontroll" },
   { label: "Standard", value: "Arbete enligt AMA" },
 ];
@@ -106,7 +106,7 @@ export const BRF_ECONOMY = {
   heading: "Planera taket i underhållsplanen, inte först när det läcker",
   paragraphs: [
     "Ett tak som byts i tid går att planera in i budget och underhållsplan. Ett akut takbyte blir en oplanerad kostnad som styrelsen måste lösa snabbt. Med en takkontroll i god tid vet ni vad taket kräver och när.",
-    "Takbyten finansieras ofta via föreningens underhållsfond, lån eller en justering av avgiften. Vi lämnar ett fast prisunderlag som styrelsen kan ta med i ekonomin och till förvaltare eller bank.",
+    "Ett takbyte kan finansieras via föreningens underhållsfond, lån eller en justering av avgiften. Vi lämnar ett fast prisunderlag som styrelsen kan ta med i ekonomin och till förvaltare eller bank.",
     "Osäker på när det är dags? Boka en kostnadsfri takkontroll så får ni ett besked om takets skick, utan förpliktelser.",
   ],
 };
