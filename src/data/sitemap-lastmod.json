@@ -1,71 +1,71 @@
 {
  "/": {
-  "h": "39096b81dc497ab2",
-  "d": "2026-10-21"
+  "h": "4528f116d75bffbd",
+  "d": "2026-10-25"
  },
  "/offert": {
-  "h": "90cfc05e82195d68",
-  "d": "2026-10-21"
+  "h": "f5491942fa2912f1",
+  "d": "2026-10-25"
  },
  "/taktyper": {
   "h": "39a1b4733794baee",
   "d": "2026-10-21"
  },
  "/takkontroll": {
-  "h": "a70de05dbbdc4ec2",
-  "d": "2026-10-21"
+  "h": "cdf20d5e587af3c4",
+  "d": "2026-10-25"
  },
  "/rot-avdrag": {
-  "h": "2b4e6b47d9ba0bab",
-  "d": "2026-10-21"
+  "h": "dd6aa5a3b9869a18",
+  "d": "2026-10-25"
  },
  "/platslagare": {
-  "h": "1e659518d307499c",
-  "d": "2026-10-21"
+  "h": "6a800f0735821c33",
+  "d": "2026-10-25"
  },
  "/takbyte-var-2027": {
-  "h": "5e08aa84f99d861a",
-  "d": "2026-10-21"
+  "h": "4a1fbbf50f46a87d",
+  "d": "2026-10-25"
  },
  "/hangrannor": {
   "h": "39e41f309dc69837",
   "d": "2026-10-21"
  },
  "/akut-lackage": {
-  "h": "07eb6fdb1e5d49b8",
-  "d": "2026-10-21"
+  "h": "0f4152faec14e641",
+  "d": "2026-10-25"
  },
  "/takreparation": {
-  "h": "1fe4ab18015ca48c",
-  "d": "2026-10-21"
+  "h": "7cc908149241c3a9",
+  "d": "2026-10-25"
  },
  "/cookies": {
   "h": "6322bdd2995d767f",
   "d": "2026-09-25"
  },
  "/brf": {
-  "h": "79c92fb31609f50d",
-  "d": "2026-10-24"
+  "h": "d843a3fbf995474f",
+  "d": "2026-10-25"
  },
  "/hur-det-gar-till": {
-  "h": "fb9f612f310e6377",
-  "d": "2026-10-21"
+  "h": "ae499a62b0dbc1ee",
+  "d": "2026-10-25"
  },
  "/projekt": {
   "h": "14704c01fbd0b548",
   "d": "2026-10-21"
  },
  "/projekt/takrenovering-blido": {
-  "h": "6a87c224b2b3ae65",
-  "d": "2026-10-21"
+  "h": "7a6d3352ccbbc67f",
+  "d": "2026-10-25"
  },
  "/projekt/takbyte-grisslehamn": {
-  "h": "31b79bb15ad12ef0",
-  "d": "2026-10-21"
+  "h": "ff7fae2bd2a765ed",
+  "d": "2026-10-25"
  },
  "/projekt/takbyte-singo": {
-  "h": "c834e2c12955cc8a",
-  "d": "2026-10-21"
+  "h": "7d1301937749685d",
+  "d": "2026-10-25"
  },
  "/takproblem": {
   "h": "3583df7c5521698e",
@@ -188,8 +188,8 @@
   "d": "2026-10-24"
  },
  "/material/underlagstak": {
-  "h": "7fe4ced98888041d",
-  "d": "2026-10-24"
+  "h": "aa2b90875299fc4f",
+  "d": "2026-10-25"
  },
  "/material/pannplat": {
   "h": "9e2d768b71b7dd54",
@@ -200,8 +200,8 @@
   "d": "2026-10-21"
  },
  "/priser": {
-  "h": "1bb2519c866be4f9",
-  "d": "2026-10-21"
+  "h": "838253ed01934903",
+  "d": "2026-10-25"
  },
  "/recensioner": {
   "h": "0e0fe68d16ccfc16",
@@ -212,24 +212,24 @@
   "d": "2026-04-11"
  },
  "/blogg/byta-tak-brf-guide-styrelse": {
-  "h": "96d5d1a53b143a65",
-  "d": "2026-10-24"
+  "h": "2e4593c7c5f28499",
+  "d": "2026-10-25"
  },
  "/blogg/valja-ratt-tak-roslagen": {
   "h": "d53b8bd6ce3d17d5",
   "d": "2026-10-21"
  },
  "/blogg/takbyte-skargarden-logistik": {
-  "h": "f08cf5af12964e50",
-  "d": "2026-10-24"
+  "h": "c0f085b40f9ba1c4",
+  "d": "2026-10-25"
  },
  "/blogg/rot-avdrag-takbyte": {
   "h": "224682297a505c91",
   "d": "2026-10-21"
  },
  "/blogg/tecken-byta-tak": {
-  "h": "228a55497451352b",
-  "d": "2026-10-24"
+  "h": "ca3882363e21db9d",
+  "d": "2026-10-25"
  },
  "/blogg/basta-takmaterial-skargarden": {
   "h": "7b22c2acbb88a60f",
@@ -248,8 +248,8 @@
   "d": "2026-10-21"
  },
  "/blogg/kostnad-takbyte-2026": {
-  "h": "29ebf24dcb9abf96",
-  "d": "2026-10-21"
+  "h": "4b621f21a980270b",
+  "d": "2026-10-25"
  },
  "/blogg/plattak-vs-betongpannor": {
   "h": "0b29af02f6492e33",
@@ -332,8 +332,8 @@
   "d": "2026-10-21"
  },
  "/blogg/lagga-om-tak-vad-kostar-det": {
-  "h": "caa2f6acec71b213",
-  "d": "2026-10-24"
+  "h": "6db3497dfcfc87f8",
+  "d": "2026-10-25"
  },
  "/blogg/bandtackning-tak-guide": {
   "h": "0cfc06cc85e155af",
@@ -356,40 +356,40 @@
   "d": "2026-10-21"
  },
  "/tjanster/takomlaggning": {
-  "h": "9b3449f813030dc2",
-  "d": "2026-10-24"
+  "h": "6b60e2de57ae2995",
+  "d": "2026-10-25"
  },
  "/tjanster/takrenovering": {
-  "h": "123467c5c2e46a3e",
-  "d": "2026-10-22"
+  "h": "1da799b124812371",
+  "d": "2026-10-25"
  },
  "/tjanster/takavvattning": {
-  "h": "fecf60c1a6be589e",
-  "d": "2026-10-21"
+  "h": "9caf6edde1bccc59",
+  "d": "2026-10-25"
  },
  "/tjanster/takkupor": {
-  "h": "7446d593549536d4",
-  "d": "2026-10-22"
+  "h": "7e7c389692523152",
+  "d": "2026-10-25"
  },
  "/tjanster/takinspektion": {
-  "h": "40967c56a2ebf2df",
-  "d": "2026-10-22"
+  "h": "4c66b9de7af8c9b3",
+  "d": "2026-10-25"
  },
  "/tjanster/platarbeten": {
-  "h": "bae42bad73c15c04",
-  "d": "2026-10-24"
+  "h": "443757f8f55a7853",
+  "d": "2026-10-25"
  },
  "/tjanster/eternit-asbest": {
-  "h": "72eb5e21d280ec54",
-  "d": "2026-10-21"
+  "h": "bae434e11d5c8e9b",
+  "d": "2026-10-25"
  },
  "/tjanster/taksakerhet": {
-  "h": "058ee1cb1cc5fc31",
-  "d": "2026-10-21"
+  "h": "1af7adfcb8f817b6",
+  "d": "2026-10-25"
  },
  "/tjanster/tegeltak": {
-  "h": "c4243e7c963b33b0",
-  "d": "2026-10-24"
+  "h": "d2a08ab73853c733",
+  "d": "2026-10-25"
  },
  "/tjanster/taktvatt": {
   "h": "0a64cdc59a58a38a",
@@ -440,20 +440,20 @@
   "d": "2026-10-21"
  },
  "/blogg/betongpannor-eller-lertegel": {
-  "h": "06e4f9d4d86730a5",
-  "d": "2026-10-21"
+  "h": "c21a78d2a3d5f57f",
+  "d": "2026-10-25"
  },
  "/blogg/takkontroll-fore-vintern": {
-  "h": "1a442b3a12349ed7",
-  "d": "2026-10-21"
+  "h": "83e6ed411af2f364",
+  "d": "2026-10-25"
  },
  "/blogg/jamfora-offerter-takbyte": {
-  "h": "35b48e1e4f0a9a00",
-  "d": "2026-10-21"
+  "h": "da6a81556005bce7",
+  "d": "2026-10-25"
  },
  "/blogg/tp20-eller-dubbelfalsat-platttak": {
-  "h": "42dbfd8da3e7fa8e",
-  "d": "2026-10-24"
+  "h": "6183e34b757aca7f",
+  "d": "2026-10-25"
  },
  "/takproblem/lackande-ranndal": {
   "h": "30e0b8cbf5299b37",
@@ -476,76 +476,76 @@
   "d": "2026-10-24"
  },
  "/omraden/norra-skargarden": {
-  "h": "010dec2798cf7389",
-  "d": "2026-10-24"
+  "h": "cac29ac7dfba12bf",
+  "d": "2026-10-25"
  },
  "/omraden/mellersta-skargarden": {
-  "h": "fd06a0705bdad620",
-  "d": "2026-10-24"
+  "h": "3b21097017b9ec5e",
+  "d": "2026-10-25"
  },
  "/omraden/kusten": {
-  "h": "cf7a22d5afdfc8c3",
-  "d": "2026-10-24"
+  "h": "b96b51f7fea3496a",
+  "d": "2026-10-25"
  },
  "/omraden/radmansohalvon": {
-  "h": "26926b19d407ca94",
-  "d": "2026-10-24"
+  "h": "99d21ce1692831d1",
+  "d": "2026-10-25"
  },
  "/omraden/norra-roslagen": {
-  "h": "a229777fb09c8bdd",
-  "d": "2026-10-24"
+  "h": "31e6d9afdb362eaa",
+  "d": "2026-10-25"
  },
  "/omraden/roslagens-inland": {
-  "h": "a366b7ac7ef057a4",
-  "d": "2026-10-24"
+  "h": "c5de737426dc2609",
+  "d": "2026-10-25"
  },
  "/omraden/osteraker": {
-  "h": "aa5589377ff6edd7",
-  "d": "2026-10-24"
+  "h": "03c98257e7d90f90",
+  "d": "2026-10-25"
  },
  "/omraden/stockholms-stad": {
-  "h": "0f33d03e16c9c498",
-  "d": "2026-10-24"
+  "h": "c70b9efe73ad213d",
+  "d": "2026-10-25"
  },
  "/omraden/norra-stockholm": {
-  "h": "aca741f784b21664",
-  "d": "2026-10-24"
+  "h": "dbf89c96308228d8",
+  "d": "2026-10-25"
  },
  "/omraden/nordvastra-stockholm": {
-  "h": "5425f647930c3860",
-  "d": "2026-10-24"
+  "h": "817aafd54e538a53",
+  "d": "2026-10-25"
  },
  "/omraden/vasterort": {
-  "h": "4007d93b70f3cc46",
-  "d": "2026-10-24"
+  "h": "9d670b8b7e45f555",
+  "d": "2026-10-25"
  },
  "/omraden/ostra-stockholm": {
-  "h": "0ecd2818400be234",
-  "d": "2026-10-24"
+  "h": "f248740e42fe553b",
+  "d": "2026-10-25"
  },
  "/omraden/sydostra-stockholm": {
-  "h": "4e922373c206f919",
-  "d": "2026-10-24"
+  "h": "adeb8c54c1d9a748",
+  "d": "2026-10-25"
  },
  "/omraden/sodra-stockholm": {
-  "h": "5d13435cfe22232f",
-  "d": "2026-10-24"
+  "h": "7c2f95769cdfbad5",
+  "d": "2026-10-25"
  },
  "/omraden/sydvastra-stockholm": {
-  "h": "bc2c74f880cd21c2",
-  "d": "2026-10-24"
+  "h": "c09ab4785078c34c",
+  "d": "2026-10-25"
  },
  "/omraden/malardalen": {
-  "h": "4d7365b8b37fe221",
-  "d": "2026-10-24"
+  "h": "9e7c0cd15919d527",
+  "d": "2026-10-25"
  },
  "/taklaggare-blido": {
-  "h": "c5b0e2381934d842",
-  "d": "2026-10-22"
+  "h": "4026935a5f77f956",
+  "d": "2026-10-25"
  },
  "/taklaggare-ljustero": {
-  "h": "1bbd7767272043f5",
-  "d": "2026-10-24"
+  "h": "cf18037e771b6eed",
+  "d": "2026-10-25"
  },
  "/taklaggare-yxlan": {
   "h": "4509a2ed9a698776",
@@ -568,48 +568,48 @@
   "d": "2026-10-22"
  },
  "/taklaggare-svartloga": {
-  "h": "85280a143e69b555",
-  "d": "2026-10-22"
+  "h": "5f9ab0062f229232",
+  "d": "2026-10-25"
  },
  "/taklaggare-sodorora": {
-  "h": "4ab894ab1a702b36",
-  "d": "2026-10-22"
+  "h": "b504210c524ca752",
+  "d": "2026-10-25"
  },
  "/taklaggare-humlo": {
   "h": "07bb0b34b4bcf401",
   "d": "2026-09-30"
  },
  "/taklaggare-norrora": {
-  "h": "7e90bcb7c9bf1d12",
-  "d": "2026-10-22"
+  "h": "a4e6539a10057813",
+  "d": "2026-10-25"
  },
  "/taklaggare-grasko": {
-  "h": "7ea47fb3eb750773",
-  "d": "2026-10-22"
+  "h": "04a73e06b325919d",
+  "d": "2026-10-25"
  },
  "/taklaggare-spillersboda": {
   "h": "f451fd0858216f6c",
   "d": "2026-10-24"
  },
  "/taklaggare-radmanso": {
-  "h": "1042cbe96ab5744f",
-  "d": "2026-10-24"
+  "h": "80d378a952047929",
+  "d": "2026-10-25"
  },
  "/taklaggare-bergshamra": {
-  "h": "d589954b8ca9238a",
-  "d": "2026-10-22"
+  "h": "969fd0da8ebe859b",
+  "d": "2026-10-25"
  },
  "/taklaggare-svartno": {
   "h": "1a207b65692f7749",
   "d": "2026-10-24"
  },
  "/taklaggare-vaddo": {
-  "h": "531de58726ef90d7",
-  "d": "2026-10-24"
+  "h": "6a33299f17683b45",
+  "d": "2026-10-25"
  },
  "/taklaggare-vato": {
-  "h": "dc169c25edfd4639",
-  "d": "2026-10-24"
+  "h": "6050ef70e8058330",
+  "d": "2026-10-25"
  },
  "/taklaggare-norrtalje": {
   "h": "c706df0dcc0ba4a8",
@@ -620,20 +620,20 @@
   "d": "2026-10-24"
  },
  "/taklaggare-singo": {
-  "h": "fbdf7e98fd259554",
-  "d": "2026-10-22"
+  "h": "05a6dc0fdcd1b56a",
+  "d": "2026-10-25"
  },
  "/taklaggare-grisslehamn": {
-  "h": "91cf846c051d092b",
-  "d": "2026-10-24"
+  "h": "83d4197f752dbb64",
+  "d": "2026-10-25"
  },
  "/taklaggare-arholma": {
-  "h": "fe5c7f366e51f388",
-  "d": "2026-10-24"
+  "h": "86201a35b38ae531",
+  "d": "2026-10-25"
  },
  "/taklaggare-rimbo": {
-  "h": "bfa005ed13133b8d",
-  "d": "2026-10-24"
+  "h": "747c1cf8fa13661d",
+  "d": "2026-10-25"
  },
  "/taklaggare-hallstavik": {
   "h": "1f2e700d6c525ca0",
@@ -644,32 +644,32 @@
   "d": "2026-10-24"
  },
  "/taklaggare-herrang": {
-  "h": "5952ec583d45f6ac",
-  "d": "2026-10-24"
+  "h": "3576d8f01813246a",
+  "d": "2026-10-25"
  },
  "/taklaggare-edsbro": {
-  "h": "302230e70052fc9c",
-  "d": "2026-10-24"
+  "h": "dbcc4d2b387c29c8",
+  "d": "2026-10-25"
  },
  "/taklaggare-riala": {
-  "h": "6ab1e55e36a3f792",
-  "d": "2026-10-24"
+  "h": "0614f494a66b6392",
+  "d": "2026-10-25"
  },
  "/taklaggare-graddo": {
-  "h": "d4224f1511bb4803",
-  "d": "2026-10-24"
+  "h": "b75648a1b1473849",
+  "d": "2026-10-25"
  },
  "/taklaggare-kapellskar": {
-  "h": "4b1f59de1c617e0d",
-  "d": "2026-10-24"
+  "h": "6928399978a94db7",
+  "d": "2026-10-25"
  },
  "/taklaggare-akersberga": {
   "h": "82c8150186585b9e",
   "d": "2026-10-24"
  },
  "/taklaggare-osterskar": {
-  "h": "3c0b25eb2a9a080d",
-  "d": "2026-10-24"
+  "h": "5ee91616193c81b8",
+  "d": "2026-10-25"
  },
  "/taklaggare-vallentuna": {
   "h": "1f2567f240952777",
@@ -680,132 +680,132 @@
   "d": "2026-10-24"
  },
  "/taklaggare-ella-gard": {
-  "h": "968f6504f85e5fe3",
-  "d": "2026-10-24"
+  "h": "870717460ddf0a30",
+  "d": "2026-10-25"
  },
  "/taklaggare-skarpang": {
-  "h": "85038a75da84d06a",
-  "d": "2026-10-24"
+  "h": "9af61f94855d0052",
+  "d": "2026-10-25"
  },
  "/taklaggare-viby": {
-  "h": "3b6b49c9919d4503",
-  "d": "2026-10-22"
+  "h": "a4252e94af2dd282",
+  "d": "2026-10-25"
  },
  "/taklaggare-brevik": {
-  "h": "b46b719e2f81a6de",
-  "d": "2026-10-22"
+  "h": "32dded4c4fc44fdb",
+  "d": "2026-10-25"
  },
  "/taklaggare-ormsta": {
-  "h": "aa4af2f39d9a2e79",
-  "d": "2026-10-22"
+  "h": "346a28308f8d2b34",
+  "d": "2026-10-25"
  },
  "/taklaggare-langbro": {
-  "h": "c4a80661aba5e2c7",
-  "d": "2026-10-24"
+  "h": "dece47762a92f807",
+  "d": "2026-10-25"
  },
  "/taklaggare-orby": {
-  "h": "60235e6eb0e46636",
-  "d": "2026-10-22"
+  "h": "26ded369bb5154fe",
+  "d": "2026-10-25"
  },
  "/taklaggare-skondal": {
-  "h": "616b0e3d7e6696df",
-  "d": "2026-10-22"
+  "h": "75a8a8d205740d80",
+  "d": "2026-10-25"
  },
  "/taklaggare-herrangen": {
-  "h": "b7eb2ff3309832e1",
-  "d": "2026-10-22"
+  "h": "6d3e7cbdbc7e3859",
+  "d": "2026-10-25"
  },
  "/taklaggare-solhem-lunda": {
-  "h": "e8f20693dd67baeb",
-  "d": "2026-10-24"
+  "h": "8a780ca9f65e3c5e",
+  "d": "2026-10-25"
  },
  "/taklaggare-storangen": {
-  "h": "17a4580da69fd48f",
-  "d": "2026-10-24"
+  "h": "b3648f66aebf7570",
+  "d": "2026-10-25"
  },
  "/taklaggare-lannersta": {
-  "h": "c170e36894d98a67",
-  "d": "2026-10-24"
+  "h": "a6491dd2db8389a6",
+  "d": "2026-10-25"
  },
  "/taklaggare-snattringe": {
-  "h": "9c9b507455808db0",
-  "d": "2026-10-24"
+  "h": "064b349fcd57ad2c",
+  "d": "2026-10-25"
  },
  "/taklaggare-solgard-sorskogen": {
-  "h": "87f40fcd26580881",
-  "d": "2026-10-24"
+  "h": "868da3db23d08b23",
+  "d": "2026-10-25"
  },
  "/taklaggare-molna": {
-  "h": "19215c490ec73e4b",
-  "d": "2026-10-24"
+  "h": "ca9df8c9e029d6cc",
+  "d": "2026-10-25"
  },
  "/taklaggare-sticklinge": {
-  "h": "299f5eecc1744c81",
-  "d": "2026-10-24"
+  "h": "54a8d3d01ab57596",
+  "d": "2026-10-25"
  },
  "/taklaggare-viggbyholm": {
-  "h": "2a3926e539cce613",
-  "d": "2026-10-24"
+  "h": "778862b6a6fde40c",
+  "d": "2026-10-25"
  },
  "/taklaggare-vallatorp-visinge": {
-  "h": "d2ea39807ce870ae",
-  "d": "2026-10-22"
+  "h": "b9be4ef08393d193",
+  "d": "2026-10-25"
  },
  "/taklaggare-tegelhagen-silverdal": {
-  "h": "0154028ef4b0df46",
-  "d": "2026-10-24"
+  "h": "82f48eaf3b4ced7e",
+  "d": "2026-10-25"
  },
  "/taklaggare-ensta": {
-  "h": "93fd4d8fa3df8f28",
-  "d": "2026-10-22"
+  "h": "abcba16e41473b09",
+  "d": "2026-10-25"
  },
  "/taklaggare-erikslund": {
-  "h": "ca9f093fb421446f",
-  "d": "2026-10-24"
+  "h": "9326c25493a614f0",
+  "d": "2026-10-25"
  },
  "/taklaggare-gribbylund": {
-  "h": "4bcf873b8dd031c1",
-  "d": "2026-10-24"
+  "h": "1cafd29519fcd18e",
+  "d": "2026-10-25"
  },
  "/taklaggare-karlslund": {
-  "h": "e01a0526c304b589",
-  "d": "2026-10-24"
+  "h": "d48658dbb20c2b55",
+  "d": "2026-10-25"
  },
  "/taklaggare-midgard-byle": {
-  "h": "5c303738769980e4",
-  "d": "2026-10-22"
+  "h": "8cd74a16d6343426",
+  "d": "2026-10-25"
  },
  "/taklaggare-roslags-nasby": {
-  "h": "d78292f9bb4862ae",
-  "d": "2026-10-24"
+  "h": "97e380a550e9f9aa",
+  "d": "2026-10-25"
  },
  "/taklaggare-nasbypark": {
-  "h": "a7d56614b256eeeb",
-  "d": "2026-10-22"
+  "h": "87fe51edd55a5920",
+  "d": "2026-10-25"
  },
  "/taklaggare-vallabrink": {
-  "h": "8619f58d4e176599",
-  "d": "2026-10-22"
+  "h": "7def7227f0c27ea7",
+  "d": "2026-10-25"
  },
  "/taklaggare-kalvesta": {
-  "h": "a5008ce86b5f1fa6",
-  "d": "2026-10-22"
+  "h": "83703caf9a64b230",
+  "d": "2026-10-25"
  },
  "/taklaggare-fullersta": {
-  "h": "a27f4a1a4ee0ff13",
-  "d": "2026-10-24"
+  "h": "26d053fb1eb96d22",
+  "d": "2026-10-25"
  },
  "/taklaggare-brevik-kappala-gashaga": {
-  "h": "fe5b326f5da9bfeb",
-  "d": "2026-10-24"
+  "h": "f39330cded155a77",
+  "d": "2026-10-25"
  },
  "/taklaggare-bollstanas": {
-  "h": "75716ad215b97a8f",
-  "d": "2026-10-22"
+  "h": "737ea436c2ddc1fa",
+  "d": "2026-10-25"
  },
  "/taklaggare-nora-kevinge": {
-  "h": "7acc44232f3c0de6",
-  "d": "2026-10-24"
+  "h": "b632e6feedfa9868",
+  "d": "2026-10-25"
  },
  "/taklaggare-stockholm": {
   "h": "d28b63a4de4df2ce",
@@ -900,8 +900,8 @@
   "d": "2026-10-24"
  },
  "/taklaggare-hasselby": {
-  "h": "a2d1d8703d6f458b",
-  "d": "2026-10-24"
+  "h": "48bfdf244c8ebfb6",
+  "d": "2026-10-25"
  },
  "/taklaggare-vallingby": {
   "h": "47b65de241001eb1",
@@ -912,24 +912,24 @@
   "d": "2026-10-24"
  },
  "/taklaggare-vendelso": {
-  "h": "e8b60117112303f7",
-  "d": "2026-10-22"
+  "h": "e04bc9e75ed0c2b7",
+  "d": "2026-10-25"
  },
  "/taklaggare-vega": {
   "h": "843f0a2d4046e9b9",
   "d": "2026-10-22"
  },
  "/taklaggare-alvsjo": {
-  "h": "471463b33a5f0828",
-  "d": "2026-10-24"
+  "h": "109fa0620bf7130e",
+  "d": "2026-10-25"
  },
  "/taklaggare-enskede": {
-  "h": "6f3d20814a0af229",
-  "d": "2026-10-24"
+  "h": "7a8dc4babdb09cfc",
+  "d": "2026-10-25"
  },
  "/taklaggare-skarpnack": {
-  "h": "b86604722c31a2aa",
-  "d": "2026-10-22"
+  "h": "5bdb60034f39127f",
+  "d": "2026-10-25"
  },
  "/taklaggare-botkyrka": {
   "h": "46a31e9df4a4456a",
@@ -960,8 +960,8 @@
   "d": "2026-10-04"
  },
  "/taklaggare-hagersten": {
-  "h": "0c6c60ae36458368",
-  "d": "2026-10-24"
+  "h": "0a13e824b4f32ff4",
+  "d": "2026-10-25"
  },
  "/taklaggare-grondal": {
   "h": "a1065c3ca1d219fc",
@@ -972,8 +972,8 @@
   "d": "2026-10-05"
  },
  "/taklaggare-haggvik": {
-  "h": "f3893bcef4c96d04",
-  "d": "2026-10-22"
+  "h": "c123b7b9f2dc0157",
+  "d": "2026-10-25"
  },
  "/taklaggare-helenelund": {
   "h": "979f568a1376e982",
@@ -992,40 +992,40 @@
   "d": "2026-10-24"
  },
  "/taklaggare-stocksund": {
-  "h": "50cc4ad4142a6b0f",
-  "d": "2026-10-24"
+  "h": "d5d38b37da041e54",
+  "d": "2026-10-25"
  },
  "/taklaggare-djursholm": {
-  "h": "89fde5472486291d",
-  "d": "2026-10-24"
+  "h": "e883f8d695dbaada",
+  "d": "2026-10-25"
  },
  "/taklaggare-enebyberg": {
-  "h": "97216e8011e3af3d",
-  "d": "2026-10-24"
+  "h": "0811ad5196107e92",
+  "d": "2026-10-25"
  },
  "/taklaggare-jakobsberg": {
-  "h": "207d454002f591a9",
-  "d": "2026-10-22"
+  "h": "85b226f140bae2f7",
+  "d": "2026-10-25"
  },
  "/taklaggare-barkarby": {
-  "h": "6792542064e9f253",
-  "d": "2026-10-22"
+  "h": "41d386c47de9a8e1",
+  "d": "2026-10-25"
  },
  "/taklaggare-kallhall": {
-  "h": "931056fc6faecb20",
-  "d": "2026-10-22"
+  "h": "4b3975ad333733d8",
+  "d": "2026-10-25"
  },
  "/taklaggare-viksjo": {
-  "h": "f51d92446d528022",
-  "d": "2026-10-22"
+  "h": "c5949e6ad985a50b",
+  "d": "2026-10-25"
  },
  "/taklaggare-bro": {
   "h": "dc59a8d68d4cbcbb",
   "d": "2026-10-24"
  },
  "/taklaggare-kungsangen": {
-  "h": "463807949f62a9d0",
-  "d": "2026-10-24"
+  "h": "a0c8aef3e62aa3b2",
+  "d": "2026-10-25"
  },
  "/taklaggare-marsta": {
   "h": "7d7134c143ffc9fb",
@@ -1036,16 +1036,16 @@
   "d": "2026-10-24"
  },
  "/taklaggare-nockeby": {
-  "h": "a2c91a2d8d7d6c65",
-  "d": "2026-10-24"
+  "h": "5253b649e4a90013",
+  "d": "2026-10-25"
  },
  "/taklaggare-abrahamsberg": {
   "h": "a9d11df1a157b27e",
   "d": "2026-10-04"
  },
  "/taklaggare-angby": {
-  "h": "aa10887fae974935",
-  "d": "2026-10-22"
+  "h": "4a4ec56be4855b55",
+  "d": "2026-10-25"
  },
  "/taklaggare-kista": {
   "h": "a80705cd201d6457",
@@ -1060,8 +1060,8 @@
   "d": "2026-10-24"
  },
  "/taklaggare-saltsjobaden": {
-  "h": "3420b78f713edd03",
-  "d": "2026-10-24"
+  "h": "b401a06a4a0f7217",
+  "d": "2026-10-25"
  },
  "/taklaggare-fisksatra": {
   "h": "e453bfdf1a468ed2",
@@ -1072,16 +1072,16 @@
   "d": "2026-10-22"
  },
  "/taklaggare-alta": {
-  "h": "607b80627d8b313d",
-  "d": "2026-10-22"
+  "h": "4b3fcb6a6946d0d1",
+  "d": "2026-10-25"
  },
  "/taklaggare-gustavsberg": {
   "h": "fc82fc583f803ca3",
   "d": "2026-10-22"
  },
  "/taklaggare-ingaro": {
-  "h": "80f71c7f2005f3fd",
-  "d": "2026-10-22"
+  "h": "bbd36833fb1b2bbe",
+  "d": "2026-10-25"
  },
  "/taklaggare-hemmesta": {
   "h": "95495f51ebf0a638",
@@ -1104,32 +1104,32 @@
   "d": "2026-10-22"
  },
  "/taklaggare-vasterhaninge": {
-  "h": "786f879ed73db3b1",
-  "d": "2026-10-22"
+  "h": "cbc272262f8a9cb6",
+  "d": "2026-10-25"
  },
  "/taklaggare-tungelsta": {
-  "h": "502885e926ac170d",
-  "d": "2026-10-22"
+  "h": "03e803a716d6d20a",
+  "d": "2026-10-25"
  },
  "/taklaggare-dalaro": {
-  "h": "532d2d6edb525f11",
-  "d": "2026-10-22"
+  "h": "2d2cd37c27538d2d",
+  "d": "2026-10-25"
  },
  "/taklaggare-stuvsta": {
-  "h": "55af8842c07de340",
-  "d": "2026-10-24"
+  "h": "c850e78748b19a7c",
+  "d": "2026-10-25"
  },
  "/taklaggare-trangsund": {
-  "h": "f7091e07e65cc31d",
-  "d": "2026-10-24"
+  "h": "adbcaa75502bd313",
+  "d": "2026-10-25"
  },
  "/taklaggare-skogas": {
-  "h": "7be3c6331b481354",
-  "d": "2026-10-24"
+  "h": "9bd3ad169bc75145",
+  "d": "2026-10-25"
  },
  "/taklaggare-segeltorp": {
-  "h": "c48caf7d9406d772",
-  "d": "2026-10-24"
+  "h": "4e238da1375fd622",
+  "d": "2026-10-25"
  },
  "/taklaggare-bandhagen": {
   "h": "00c94c7ffca00686",
@@ -1164,12 +1164,12 @@
   "d": "2026-10-22"
  },
  "/taklaggare-ronninge": {
-  "h": "7e045b8b5c73989a",
-  "d": "2026-10-24"
+  "h": "fca2b48a190a83a6",
+  "d": "2026-10-25"
  },
  "/taklaggare-jarna": {
-  "h": "45292013c8e3d091",
-  "d": "2026-10-24"
+  "h": "7c406470ed327465",
+  "d": "2026-10-25"
  },
  "/taklaggare-edsviken": {
   "h": "f44ef26ee9906769",
@@ -1224,84 +1224,84 @@
   "d": "2026-10-22"
  },
  "/taklaggare-svalnas-osby": {
-  "h": "1cd4ad79f4c1fe6b",
-  "d": "2026-10-22"
+  "h": "e0fc564a971a1857",
+  "d": "2026-10-25"
  },
  "/taklaggare-lindholmen": {
-  "h": "0e9a5760e69de665",
-  "d": "2026-10-22"
+  "h": "81b5f3db965e897e",
+  "d": "2026-10-25"
  },
  "/taklaggare-sjoberg": {
-  "h": "c8f4426613d9856f",
-  "d": "2026-10-24"
+  "h": "71bd29634261f3c6",
+  "d": "2026-10-25"
  },
  "/taklaggare-lahall": {
-  "h": "25dca658aec10d4b",
-  "d": "2026-10-24"
+  "h": "acfcfd965a0e39fe",
+  "d": "2026-10-25"
  },
  "/taklaggare-stenhamra": {
-  "h": "5e7e47bf6569c846",
-  "d": "2026-10-24"
+  "h": "2cd1190e51f6b795",
+  "d": "2026-10-25"
  },
  "/taklaggare-uttran": {
-  "h": "16ff6a3cac9df2ad",
-  "d": "2026-10-24"
+  "h": "e07c4f29c759e70e",
+  "d": "2026-10-25"
  },
  "/taklaggare-bjorknas": {
-  "h": "944166b915ec1547",
-  "d": "2026-10-22"
+  "h": "ef8ab6f4cca6cba6",
+  "d": "2026-10-25"
  },
  "/taklaggare-langsjo": {
-  "h": "df4d34862e2d521f",
-  "d": "2026-10-22"
+  "h": "fceedbd5b0ba183f",
+  "d": "2026-10-25"
  },
  "/taklaggare-alsten": {
-  "h": "931785021a0d1515",
-  "d": "2026-10-24"
+  "h": "b6afe3173b469aed",
+  "d": "2026-10-25"
  },
  "/taklaggare-staket": {
-  "h": "3d07271dfa5bc940",
-  "d": "2026-10-24"
+  "h": "775951da950533b9",
+  "d": "2026-10-25"
  },
  "/taklaggare-nockebyhov": {
-  "h": "d6215a962983ce10",
-  "d": "2026-10-24"
+  "h": "d8d66f5826e4ac7b",
+  "d": "2026-10-25"
  },
  "/taklaggare-bromma-kyrka": {
-  "h": "18f865cbb3a6aeca",
-  "d": "2026-10-24"
+  "h": "e6b05bf833539ba3",
+  "d": "2026-10-25"
  },
  "/taklaggare-flysta": {
-  "h": "ad8a4cc88c71a484",
-  "d": "2026-10-24"
+  "h": "4bee37eabfc82ae4",
+  "d": "2026-10-25"
  },
  "/taklaggare-vidja": {
-  "h": "2b7280cb4adb4995",
-  "d": "2026-10-22"
+  "h": "a467d445af96fc08",
+  "d": "2026-10-25"
  },
  "/taklaggare-glomsta": {
-  "h": "ccb3845ede8726dd",
-  "d": "2026-10-22"
+  "h": "25263ca067ff0152",
+  "d": "2026-10-25"
  },
  "/taklaggare-kummelnas": {
-  "h": "e6c200b36486e76d",
-  "d": "2026-10-24"
+  "h": "db22d47bc5db8232",
+  "d": "2026-10-25"
  },
  "/taklaggare-hersby": {
-  "h": "49b4a07e87546eb2",
-  "d": "2026-10-22"
+  "h": "474532be45d7b301",
+  "d": "2026-10-25"
  },
  "/taklaggare-malarhojden": {
-  "h": "55ae344ecdb0f27e",
-  "d": "2026-10-24"
+  "h": "5c16ba6ff0f97458",
+  "d": "2026-10-25"
  },
  "/taklaggare-stureby": {
-  "h": "785260d418fcf0b8",
-  "d": "2026-10-24"
+  "h": "d4cc1a0f7c069c26",
+  "d": "2026-10-25"
  },
  "/taklaggare-resaro": {
-  "h": "3d0c106fd747ca24",
-  "d": "2026-10-22"
+  "h": "3e97b476c8ab7454",
+  "d": "2026-10-25"
  },
  "/taklaggare-rindo": {
   "h": "53447154d2f018f4",
@@ -1324,340 +1324,340 @@
   "d": "2026-10-24"
  },
  "/taklaggare-duvbo": {
-  "h": "e1ba637889315b2d",
-  "d": "2026-10-24"
+  "h": "21633964255bce7a",
+  "d": "2026-10-25"
  },
  "/taklaggare-smedslatten": {
-  "h": "86bf4233f64d357d",
-  "d": "2026-10-24"
+  "h": "0a8d61ee682d8316",
+  "d": "2026-10-25"
  },
  "/taklaggare-pershagen": {
-  "h": "3764db3f377caa95",
-  "d": "2026-10-22"
+  "h": "9ac623d98deb51a1",
+  "d": "2026-10-25"
  },
  "/taklaggare-glado-kvarn": {
-  "h": "8006ac0c105f6459",
-  "d": "2026-10-22"
+  "h": "e07bc2c7cf9ff167",
+  "d": "2026-10-25"
  },
  "/taklaggare-loharad": {
-  "h": "876bf059bbf276dd",
-  "d": "2026-10-24"
+  "h": "78c10f5b49ed79d9",
+  "d": "2026-10-25"
  },
  "/taklaggare-hoglandet": {
-  "h": "d1f0394194326c37",
-  "d": "2026-10-24"
+  "h": "984dd04475b70af8",
+  "d": "2026-10-25"
  },
  "/taklaggare-skarsatra": {
-  "h": "6cf37d5e61ff03ad",
-  "d": "2026-10-22"
+  "h": "297449c1e6f07a32",
+  "d": "2026-10-25"
  },
  "/taklaggare-stora-mossen": {
-  "h": "4e5d491fae827700",
-  "d": "2026-10-24"
+  "h": "34d57ff0ebc5cfe8",
+  "d": "2026-10-25"
  },
  "/taklaggare-sodra-angby": {
-  "h": "f42d3056f973174f",
-  "d": "2026-10-24"
+  "h": "0c7b4005ba2c46d1",
+  "d": "2026-10-25"
  },
  "/taklaggare-enskededalen": {
-  "h": "6ea41c8cf832512b",
-  "d": "2026-10-24"
+  "h": "c59d49e060153425",
+  "d": "2026-10-25"
  },
  "/taklaggare-tallkrogen": {
-  "h": "9d767879d2ab0f38",
-  "d": "2026-10-24"
+  "h": "40f7ff4f62ede0e4",
+  "d": "2026-10-25"
  },
  "/taklaggare-viksberg": {
-  "h": "13fba533790af750",
-  "d": "2026-10-22"
+  "h": "8e6c84fb1bd45b79",
+  "d": "2026-10-25"
  },
  "/taklaggare-appelviken": {
-  "h": "afc25df6fdf5aad7",
-  "d": "2026-10-24"
+  "h": "16764956064d8b20",
+  "d": "2026-10-25"
  },
  "/taklaggare-ostertalje": {
-  "h": "5ac121e405bae2eb",
-  "d": "2026-10-22"
+  "h": "6897869f1cc0e3a0",
+  "d": "2026-10-25"
  },
  "/taklaggare-bromsten": {
-  "h": "90af5a6307bdcb34",
-  "d": "2026-10-24"
+  "h": "b3e3db689c9e0429",
+  "d": "2026-10-25"
  },
  "/taklaggare-svedmyra": {
-  "h": "97e0d396913aba73",
-  "d": "2026-10-24"
+  "h": "515b6cc6e8bfae5c",
+  "d": "2026-10-25"
  },
  "/taklaggare-eneby": {
-  "h": "989f74b1bb7f4c02",
-  "d": "2026-10-22"
+  "h": "d86658ccebd014ac",
+  "d": "2026-10-25"
  },
  "/taklaggare-ballsta-bromma": {
-  "h": "3d1f4f1e60482a10",
-  "d": "2026-10-22"
+  "h": "836b0736ad8d19c1",
+  "d": "2026-10-25"
  },
  "/taklaggare-ulvsunda": {
-  "h": "912cf0ea8c2228d7",
-  "d": "2026-10-24"
+  "h": "cecd8d9cab969d10",
+  "d": "2026-10-25"
  },
  "/taklaggare-holo": {
-  "h": "3091e90b57b8fcc2",
-  "d": "2026-10-24"
+  "h": "46c271c73e07490a",
+  "d": "2026-10-25"
  },
  "/taklaggare-stavsnas": {
-  "h": "26b54104edfc3c1d",
-  "d": "2026-10-24"
+  "h": "c24e38539c0ff5f3",
+  "d": "2026-10-25"
  },
  "/taklaggare-enhorna-sandviken": {
-  "h": "99f3db9532963d73",
-  "d": "2026-10-24"
+  "h": "426a14b7d7e6c034",
+  "d": "2026-10-25"
  },
  "/taklaggare-ursvik": {
-  "h": "ddfc701a56a33c76",
-  "d": "2026-10-24"
+  "h": "b5dd279bfb6ed917",
+  "d": "2026-10-25"
  },
  "/taklaggare-enskede-gard": {
-  "h": "9c1fd47f5e440ea6",
-  "d": "2026-10-24"
+  "h": "a8825d60abecee93",
+  "d": "2026-10-25"
  },
  "/taklaggare-enskedefaltet": {
-  "h": "805fe17fcf65506a",
-  "d": "2026-10-24"
+  "h": "eec44008f304657c",
+  "d": "2026-10-25"
  },
  "/taklaggare-alvnas": {
-  "h": "e29303fcf6d3fedd",
-  "d": "2026-10-24"
+  "h": "b909486d376e4200",
+  "d": "2026-10-25"
  },
  "/taklaggare-brevikshalvon": {
-  "h": "c11bee33b67463ad",
-  "d": "2026-10-22"
+  "h": "3a4b4097e00ddd7b",
+  "d": "2026-10-25"
  },
  "/taklaggare-bo-rudboda": {
-  "h": "7abb5243e9269565",
-  "d": "2026-10-22"
+  "h": "4b94ee2569c47964",
+  "d": "2026-10-25"
  },
  "/taklaggare-trakvista": {
-  "h": "ff965553fd7d4c61",
-  "d": "2026-10-22"
+  "h": "603c1b926c5b1e24",
+  "d": "2026-10-25"
  },
  "/taklaggare-vaxmora": {
-  "h": "0f7e203146e0dbab",
-  "d": "2026-10-22"
+  "h": "3406098ff44f9b49",
+  "d": "2026-10-25"
  },
  "/taklaggare-kungsberga": {
-  "h": "6ac12da422a8b9b1",
-  "d": "2026-10-24"
+  "h": "3d81dceed6df4e27",
+  "d": "2026-10-25"
  },
  "/taklaggare-svartsjo": {
-  "h": "8f0bba0c8f21f847",
-  "d": "2026-10-24"
+  "h": "caec5221790a30e2",
+  "d": "2026-10-25"
  },
  "/taklaggare-kasta": {
-  "h": "1b9a1ffa28e4b4f0",
-  "d": "2026-10-22"
+  "h": "0ee06de43c2fda48",
+  "d": "2026-10-25"
  },
  "/taklaggare-ekero-sommarstad": {
-  "h": "27be1b3a40af26aa",
-  "d": "2026-10-22"
+  "h": "4cba10b756639537",
+  "d": "2026-10-25"
  },
  "/taklaggare-kil": {
-  "h": "c2dd6f3a2bd5af0d",
-  "d": "2026-10-24"
+  "h": "387facde35b49b66",
+  "d": "2026-10-25"
  },
  "/taklaggare-taby-kyrkby": {
-  "h": "abcd0b1fd4b374c2",
-  "d": "2026-10-24"
+  "h": "e073e873a99ade6b",
+  "d": "2026-10-25"
  },
  "/taklaggare-frotuna": {
-  "h": "bf83c59f247d175a",
-  "d": "2026-10-22"
+  "h": "1472a7660504fb17",
+  "d": "2026-10-25"
  },
  "/taklaggare-mosstorp": {
-  "h": "917e767bf59a9461",
-  "d": "2026-10-22"
+  "h": "09423ff7865331d7",
+  "d": "2026-10-25"
  },
  "/taklaggare-djuro": {
-  "h": "57c6e383814b6874",
-  "d": "2026-10-24"
+  "h": "28959f2363b97ef9",
+  "d": "2026-10-25"
  },
  "/taklaggare-grodinge": {
-  "h": "f920acad95d4db92",
-  "d": "2026-10-22"
+  "h": "c22e173eb6061cf1",
+  "d": "2026-10-25"
  },
  "/taklaggare-alvsala": {
-  "h": "3a62d2e0df9d177a",
-  "d": "2026-10-22"
+  "h": "70e5d7967191428f",
+  "d": "2026-10-25"
  },
  "/taklaggare-stromma": {
-  "h": "faea6c5852d9941a",
-  "d": "2026-10-24"
+  "h": "c2de7bb0730a3287",
+  "d": "2026-10-25"
  },
  "/taklaggare-krusboda": {
-  "h": "7594813c68841867",
-  "d": "2026-10-24"
+  "h": "d02d895f918fb6ad",
+  "d": "2026-10-25"
  },
  "/taklaggare-fardala": {
-  "h": "507df87ca90e59d6",
-  "d": "2026-10-22"
+  "h": "50ea806df207966c",
+  "d": "2026-10-25"
  },
  "/taklaggare-slagsta": {
-  "h": "8c8567f27a5ae38d",
-  "d": "2026-10-22"
+  "h": "f764c9684ead68a4",
+  "d": "2026-10-25"
  },
  "/taklaggare-bagarmossen": {
-  "h": "a85aea5d85ab4d6a",
-  "d": "2026-10-24"
+  "h": "dc86c79714b482b2",
+  "d": "2026-10-25"
  },
  "/taklaggare-soderby": {
   "h": "e3266e936ef19b7b",
   "d": "2026-10-24"
  },
  "/brf/stockholm": {
-  "h": "0c21067f15cf8e6d",
-  "d": "2026-10-24"
+  "h": "bf7d1d5c6630c310",
+  "d": "2026-10-25"
  },
  "/brf/solna": {
-  "h": "108708e4217c40ac",
-  "d": "2026-10-24"
+  "h": "89c46cfce18f3f68",
+  "d": "2026-10-25"
  },
  "/brf/sundbyberg": {
-  "h": "4f67157ddfdc2567",
-  "d": "2026-10-24"
+  "h": "4faf09a16346cc8d",
+  "d": "2026-10-25"
  },
  "/brf/danderyd": {
-  "h": "7e85ec53210c657c",
-  "d": "2026-10-24"
+  "h": "c1e65c58a61fc0ec",
+  "d": "2026-10-25"
  },
  "/brf/sollentuna": {
-  "h": "a08372ab514ea8c0",
-  "d": "2026-10-24"
+  "h": "850dc933637c732b",
+  "d": "2026-10-25"
  },
  "/brf/taby": {
-  "h": "db310e54104c7841",
-  "d": "2026-10-24"
+  "h": "d6537d85ce1d1a72",
+  "d": "2026-10-25"
  },
  "/brf/lidingo": {
-  "h": "b0b2d5038ae31ccf",
-  "d": "2026-10-24"
+  "h": "47f3eacb9869ef30",
+  "d": "2026-10-25"
  },
  "/brf/nacka": {
-  "h": "099055a84698ae59",
-  "d": "2026-10-24"
+  "h": "6f8c499222e60bdc",
+  "d": "2026-10-25"
  },
  "/brf/varmdo": {
-  "h": "823b3945e426c16d",
-  "d": "2026-10-24"
+  "h": "68f890805360715e",
+  "d": "2026-10-25"
  },
  "/brf/huddinge": {
-  "h": "8e53e3528486e0d2",
-  "d": "2026-10-24"
+  "h": "00570e11c5d6ee6f",
+  "d": "2026-10-25"
  },
  "/brf/haninge": {
-  "h": "c4eae5c4105f1c76",
-  "d": "2026-10-24"
+  "h": "5af4e713d2b07212",
+  "d": "2026-10-25"
  },
  "/brf/botkyrka": {
-  "h": "75d69874680e3eae",
-  "d": "2026-10-24"
+  "h": "8a83cfc7095b0f86",
+  "d": "2026-10-25"
  },
  "/brf/sodertalje": {
-  "h": "905cc882740b57e9",
-  "d": "2026-10-24"
+  "h": "f322bd449bd7e702",
+  "d": "2026-10-25"
  },
  "/brf/jarfalla": {
-  "h": "29b0f3d1cee60b5a",
-  "d": "2026-10-24"
+  "h": "3bfd694c6bb7908d",
+  "d": "2026-10-25"
  },
  "/brf/upplands-vasby": {
-  "h": "73a47c48de3c0eea",
-  "d": "2026-10-24"
+  "h": "b638797a52300105",
+  "d": "2026-10-25"
  },
  "/brf/upplands-bro": {
-  "h": "4c3e710767c1ff59",
-  "d": "2026-10-24"
+  "h": "2f0312ca75fae6e4",
+  "d": "2026-10-25"
  },
  "/brf/sigtuna": {
-  "h": "153c1e0ea6602382",
-  "d": "2026-10-24"
+  "h": "8b923d57b98c30ba",
+  "d": "2026-10-25"
  },
  "/brf/vallentuna": {
-  "h": "ba514876c9589bc0",
-  "d": "2026-10-24"
+  "h": "93cacaf9b8222e9e",
+  "d": "2026-10-25"
  },
  "/brf/akersberga": {
-  "h": "8ca1ced0397f0d0e",
-  "d": "2026-10-24"
+  "h": "6da4bdda1cc7b260",
+  "d": "2026-10-25"
  },
  "/brf/tyreso": {
-  "h": "bca85f10a67fd8ba",
-  "d": "2026-10-24"
+  "h": "9e122317ff8f9e98",
+  "d": "2026-10-25"
  },
  "/brf/ekero": {
-  "h": "894722e133d10e72",
-  "d": "2026-10-24"
+  "h": "e69189ada891463a",
+  "d": "2026-10-25"
  },
  "/brf/salem": {
-  "h": "eaeeca11e885ae0b",
-  "d": "2026-10-24"
+  "h": "1f5cfd58c427e2a4",
+  "d": "2026-10-25"
  },
  "/brf/nynashamn": {
-  "h": "1a91f104b448b088",
-  "d": "2026-10-24"
+  "h": "35d225819d914708",
+  "d": "2026-10-25"
  },
  "/brf/vaxholm": {
-  "h": "07e34e6923116d81",
-  "d": "2026-10-24"
+  "h": "7b02ee120140d9b7",
+  "d": "2026-10-25"
  },
  "/brf/norrtalje": {
-  "h": "4fdd3a6949668096",
-  "d": "2026-10-24"
+  "h": "d64c0cd823daac74",
+  "d": "2026-10-25"
  },
  "/brf/uppsala": {
-  "h": "1a197553980a91b8",
-  "d": "2026-10-24"
+  "h": "6ff243c03189341d",
+  "d": "2026-10-25"
  },
  "/brf/knivsta": {
-  "h": "a8f54e3d0446af32",
-  "d": "2026-10-24"
+  "h": "a8c24bcbf486e5bb",
+  "d": "2026-10-25"
  },
  "/brf/balsta": {
-  "h": "4a0becd403e32d9f",
-  "d": "2026-10-24"
+  "h": "7f6cf1b6c2929d84",
+  "d": "2026-10-25"
  },
  "/brf/enkoping": {
-  "h": "507ed55e4fbf98c7",
-  "d": "2026-10-24"
+  "h": "6f805d3cd97c9ea0",
+  "d": "2026-10-25"
  },
  "/brf/vasteras": {
-  "h": "9358fa55424b667d",
-  "d": "2026-10-24"
+  "h": "4eb1af8a44171878",
+  "d": "2026-10-25"
  },
  "/brf/eskilstuna": {
-  "h": "3cce3c21f85cbcbe",
-  "d": "2026-10-24"
+  "h": "7940dba46db4d48d",
+  "d": "2026-10-25"
  },
  "/brf/strangnas": {
-  "h": "18190b239f24aef0",
-  "d": "2026-10-24"
+  "h": "c40ad93a91cd190e",
+  "d": "2026-10-25"
  },
  "/brf/mariefred": {
-  "h": "eb5d1fcb7b049585",
-  "d": "2026-10-24"
+  "h": "9fa34f31f1937e3c",
+  "d": "2026-10-25"
  },
  "/brf/nykvarn": {
-  "h": "1b06117dbd5d4f91",
-  "d": "2026-10-24"
+  "h": "632587eaca60a7c4",
+  "d": "2026-10-25"
  },
  "/brf/gnesta": {
-  "h": "ff40f3aba00117dd",
-  "d": "2026-10-24"
+  "h": "0076d6a4befb2e04",
+  "d": "2026-10-25"
  },
  "/brf/nykoping": {
-  "h": "9ed315c676de44e2",
-  "d": "2026-10-24"
+  "h": "afe8a12ee4d4288e",
+  "d": "2026-10-25"
  },
  "/brf/trosa": {
-  "h": "63d4ef45d08c3248",
-  "d": "2026-10-24"
+  "h": "a01a07fc5bb518d2",
+  "d": "2026-10-25"
  },
  "/taktvatt-ljustero": {
   "h": "b9fd412a72754329",
@@ -1668,16 +1668,16 @@
   "d": "2026-10-21"
  },
  "/takbyte-norrtalje": {
-  "h": "3c7bafcd3a803bef",
-  "d": "2026-10-21"
+  "h": "690640e53f99d4de",
+  "d": "2026-10-25"
  },
  "/takrenovering-norrtalje": {
   "h": "8b7a8fe43d1b762e",
   "d": "2026-10-22"
  },
  "/takomlaggning-norrtalje": {
-  "h": "69e45ad2b5d45248",
-  "d": "2026-10-22"
+  "h": "2d0e33a6b67410cd",
+  "d": "2026-10-25"
  },
  "/taktvatt-norrtalje": {
   "h": "040fea6ede5fd6fd",
@@ -1692,184 +1692,184 @@
   "d": "2026-10-22"
  },
  "/takbyte-rimbo": {
-  "h": "3f3820f5dcbf7eef",
-  "d": "2026-10-20"
+  "h": "921197ce0586f9c9",
+  "d": "2026-10-25"
  },
  "/takrenovering-rimbo": {
   "h": "1c1879df9d8907bf",
   "d": "2026-10-22"
  },
  "/takomlaggning-rimbo": {
-  "h": "a08b4f435ac60297",
-  "d": "2026-10-22"
+  "h": "1b30c1d3d1c9e397",
+  "d": "2026-10-25"
  },
  "/takbyte-hallstavik": {
-  "h": "5bbca52ff433d8ef",
-  "d": "2026-10-20"
+  "h": "2ba8cd044e04b3fd",
+  "d": "2026-10-25"
  },
  "/takrenovering-hallstavik": {
   "h": "46341e4c09aae31a",
   "d": "2026-10-22"
  },
  "/takomlaggning-hallstavik": {
-  "h": "66e9d9e77695321a",
-  "d": "2026-10-22"
+  "h": "6e39293e29d5f3a4",
+  "d": "2026-10-25"
  },
  "/takbyte-akersberga": {
-  "h": "d288e5ac8e63e405",
-  "d": "2026-10-20"
+  "h": "9cde99b402bd1775",
+  "d": "2026-10-25"
  },
  "/takrenovering-akersberga": {
   "h": "87d4c3a225c2d345",
   "d": "2026-10-22"
  },
  "/takomlaggning-akersberga": {
-  "h": "f0ba2b0a86f97db0",
-  "d": "2026-10-22"
+  "h": "d84b074484708759",
+  "d": "2026-10-25"
  },
  "/taktvatt-akersberga": {
   "h": "99a13cdda1961b0a",
   "d": "2026-10-22"
  },
  "/takbyte-vallentuna": {
-  "h": "ad0fc0ffe8f3bd68",
-  "d": "2026-10-20"
+  "h": "e5e0640294309481",
+  "d": "2026-10-25"
  },
  "/takrenovering-vallentuna": {
   "h": "7c2876c0a7e1d8bd",
   "d": "2026-10-22"
  },
  "/takomlaggning-vallentuna": {
-  "h": "384e74d4375df95b",
-  "d": "2026-10-22"
+  "h": "b45d77b670248fd6",
+  "d": "2026-10-25"
  },
  "/taktvatt-vallentuna": {
   "h": "de8ad19d34987bb2",
   "d": "2026-10-22"
  },
  "/takbyte-taby": {
-  "h": "4cb62885ad8dafac",
-  "d": "2026-10-20"
+  "h": "e2e383c5aafee156",
+  "d": "2026-10-25"
  },
  "/takrenovering-taby": {
   "h": "634ecbe339ae37a0",
   "d": "2026-10-22"
  },
  "/takomlaggning-taby": {
-  "h": "dec817fc50518279",
-  "d": "2026-10-22"
+  "h": "716c0e756f6296ba",
+  "d": "2026-10-25"
  },
  "/taktvatt-taby": {
   "h": "e8538dec024ab7c0",
   "d": "2026-10-21"
  },
  "/takbyte-stockholm": {
-  "h": "fdcacbda21ccb5a7",
-  "d": "2026-10-22"
+  "h": "5cba2478a8aca200",
+  "d": "2026-10-25"
  },
  "/takrenovering-stockholm": {
   "h": "2cf8421de441f9b6",
   "d": "2026-10-21"
  },
  "/takomlaggning-stockholm": {
-  "h": "37611d9a8ce31565",
-  "d": "2026-10-21"
+  "h": "77dccca330d85a51",
+  "d": "2026-10-25"
  },
  "/taktvatt-stockholm": {
   "h": "2562af3f44a8e10f",
   "d": "2026-10-22"
  },
  "/takbyte-bromma": {
-  "h": "908eaf3ba9170179",
-  "d": "2026-10-21"
+  "h": "c9d0a8507b7d5108",
+  "d": "2026-10-25"
  },
  "/takrenovering-bromma": {
   "h": "3d6cb509e7b398a7",
   "d": "2026-10-21"
  },
  "/takbyte-solna": {
-  "h": "108a1e77270278c0",
-  "d": "2026-10-22"
+  "h": "09155d315eca5f8f",
+  "d": "2026-10-25"
  },
  "/takomlaggning-solna": {
-  "h": "6f3b7a86cc61ad96",
-  "d": "2026-10-24"
+  "h": "a4f3befc7ba6edad",
+  "d": "2026-10-25"
  },
  "/takbyte-sundbyberg": {
-  "h": "767531b90a660399",
-  "d": "2026-10-22"
+  "h": "21b927ab26cf1165",
+  "d": "2026-10-25"
  },
  "/takrenovering-sundbyberg": {
   "h": "584d40a56d50ef24",
   "d": "2026-10-22"
  },
  "/takomlaggning-sundbyberg": {
-  "h": "20912a8cd8703c1d",
-  "d": "2026-10-22"
+  "h": "c9b0b9a1af1d1a82",
+  "d": "2026-10-25"
  },
  "/taktvatt-sundbyberg": {
   "h": "9ab4107f0a77575f",
   "d": "2026-10-22"
  },
  "/takbyte-danderyd": {
-  "h": "b7268f0a57434212",
-  "d": "2026-10-22"
+  "h": "871600a684360c8b",
+  "d": "2026-10-25"
  },
  "/takrenovering-danderyd": {
   "h": "af95968f674e3498",
   "d": "2026-10-22"
  },
  "/takomlaggning-danderyd": {
-  "h": "2f2629fd01471f55",
-  "d": "2026-10-22"
+  "h": "86c09bb26fc5145e",
+  "d": "2026-10-25"
  },
  "/taktvatt-danderyd": {
   "h": "a912eed98d36eaf5",
   "d": "2026-10-21"
  },
  "/takbyte-sollentuna": {
-  "h": "65402d9dfb6cd866",
-  "d": "2026-10-22"
+  "h": "31ee7b4cd39b9186",
+  "d": "2026-10-25"
  },
  "/takrenovering-sollentuna": {
   "h": "d36ad6141f452cba",
   "d": "2026-10-22"
  },
  "/takomlaggning-sollentuna": {
-  "h": "ad524c5f389d131f",
-  "d": "2026-10-20"
+  "h": "e862a47c25c57e0b",
+  "d": "2026-10-25"
  },
  "/taktvatt-sollentuna": {
   "h": "d8278828879dd467",
   "d": "2026-10-22"
  },
  "/takbyte-lidingo": {
-  "h": "3002526aa2570436",
-  "d": "2026-10-22"
+  "h": "e35910a28dac2edf",
+  "d": "2026-10-25"
  },
  "/takrenovering-lidingo": {
   "h": "a8ce47fb73186521",
   "d": "2026-10-22"
  },
  "/takomlaggning-lidingo": {
-  "h": "4faa96dd579cd047",
-  "d": "2026-10-21"
+  "h": "baf7f90894a14913",
+  "d": "2026-10-25"
  },
  "/taktvatt-lidingo": {
   "h": "98b16a3129ef8c5c",
   "d": "2026-10-22"
  },
  "/takbyte-nacka": {
-  "h": "89ff037c04337fde",
-  "d": "2026-10-22"
+  "h": "145d9a4c2e859e06",
+  "d": "2026-10-25"
  },
  "/takrenovering-nacka": {
   "h": "b4eb88858e50f8c0",
   "d": "2026-10-24"
  },
  "/takomlaggning-nacka": {
-  "h": "9ac3e164306252f2",
-  "d": "2026-10-21"
+  "h": "8cce619773a3260b",
+  "d": "2026-10-25"
  },
  "/taktvatt-nacka": {
   "h": "3784fce2a2d9b992",
@@ -1884,60 +1884,60 @@
   "d": "2026-10-22"
  },
  "/takomlaggning-varmdo": {
-  "h": "2f209c2f6b6bb38a",
-  "d": "2026-10-24"
+  "h": "981f07e560a10d00",
+  "d": "2026-10-25"
  },
  "/taktvatt-varmdo": {
   "h": "66d4efb67807a101",
   "d": "2026-10-22"
  },
  "/takbyte-tyreso": {
-  "h": "09f015a1586733cb",
-  "d": "2026-10-22"
+  "h": "bdb963bfb314a208",
+  "d": "2026-10-25"
  },
  "/takrenovering-tyreso": {
   "h": "3afb1833c9322e5b",
   "d": "2026-10-22"
  },
  "/takomlaggning-tyreso": {
-  "h": "73d4e93cf7ee7cb9",
-  "d": "2026-10-22"
+  "h": "87f4f2a62cfa26c9",
+  "d": "2026-10-25"
  },
  "/taktvatt-tyreso": {
   "h": "0b756622d89eb1b4",
   "d": "2026-10-22"
  },
  "/takbyte-haninge": {
-  "h": "ad2ec4134ac3a040",
-  "d": "2026-10-22"
+  "h": "d34c3746a4c72352",
+  "d": "2026-10-25"
  },
  "/takrenovering-haninge": {
   "h": "3ec2a1093d28e284",
   "d": "2026-10-22"
  },
  "/takomlaggning-haninge": {
-  "h": "3130de3f16e2e31e",
-  "d": "2026-10-20"
+  "h": "d5f947535e8f726c",
+  "d": "2026-10-25"
  },
  "/taktvatt-haninge": {
   "h": "394567b8bc33afe0",
   "d": "2026-10-22"
  },
  "/takbyte-ekero": {
-  "h": "cb25f4aa8b09db01",
-  "d": "2026-10-20"
+  "h": "3f141e4a8c4b61c8",
+  "d": "2026-10-25"
  },
  "/takrenovering-ekero": {
   "h": "c80b4ec903986f14",
   "d": "2026-10-20"
  },
  "/takomlaggning-ekero": {
-  "h": "fd225c05c8e16bcf",
-  "d": "2026-10-20"
+  "h": "a674f97dba1288c0",
+  "d": "2026-10-25"
  },
  "/takbyte-jarfalla": {
-  "h": "6a7aae8512ac300e",
-  "d": "2026-10-22"
+  "h": "e4f8e5d0fd5c55a2",
+  "d": "2026-10-25"
  },
  "/takrenovering-jarfalla": {
   "h": "271a56c59c84a14e",
@@ -1948,36 +1948,36 @@
   "d": "2026-10-21"
  },
  "/takbyte-huddinge": {
-  "h": "a4d1edd9390c4986",
-  "d": "2026-10-22"
+  "h": "c33833edc8fc42fa",
+  "d": "2026-10-25"
  },
  "/takrenovering-huddinge": {
   "h": "01610ef4c5dd79b5",
   "d": "2026-10-20"
  },
  "/takomlaggning-huddinge": {
-  "h": "7b4649e637033dd0",
-  "d": "2026-10-20"
+  "h": "fd6b194ce580047d",
+  "d": "2026-10-25"
  },
  "/taktvatt-huddinge": {
   "h": "bbbebc4a7ebf6933",
   "d": "2026-10-22"
  },
  "/takbyte-sigtuna": {
-  "h": "8121ba461ff9eece",
-  "d": "2026-10-21"
+  "h": "933c0101192ea587",
+  "d": "2026-10-25"
  },
  "/takbyte-upplands-vasby": {
-  "h": "9eb3747b04335aea",
-  "d": "2026-10-22"
+  "h": "50ce7c1aa31c1c62",
+  "d": "2026-10-25"
  },
  "/taktvatt-upplands-vasby": {
   "h": "8020dab5b23bc68a",
   "d": "2026-10-22"
  },
  "/takbyte-nynashamn": {
-  "h": "bf81f621d2992585",
-  "d": "2026-10-21"
+  "h": "4ff2d5eafbe3d505",
+  "d": "2026-10-25"
  },
  "/takrenovering-nynashamn": {
   "h": "b6dd148dd6684be9",
@@ -1988,60 +1988,60 @@
   "d": "2026-10-22"
  },
  "/takbyte-alvsjo": {
-  "h": "9e952f0e289ad24c",
-  "d": "2026-10-20"
+  "h": "89306c7decd266e6",
+  "d": "2026-10-25"
  },
  "/takbyte-enskede": {
-  "h": "69fb6554c5d2f3df",
-  "d": "2026-10-20"
+  "h": "4909e7e1cf9b0c8e",
+  "d": "2026-10-25"
  },
  "/takomlaggning-enskede": {
-  "h": "07ff17154503e607",
-  "d": "2026-10-21"
+  "h": "7ae350afe302b7bc",
+  "d": "2026-10-25"
  },
  "/takbyte-botkyrka": {
-  "h": "33e8fcb78d22e23b",
-  "d": "2026-10-21"
+  "h": "6d183f700a366242",
+  "d": "2026-10-25"
  },
  "/takrenovering-botkyrka": {
   "h": "cab1fa12984d9085",
   "d": "2026-10-22"
  },
  "/takbyte-salem": {
-  "h": "712fc970221e99f8",
-  "d": "2026-10-22"
+  "h": "6ecce6c6f539c34a",
+  "d": "2026-10-25"
  },
  "/takrenovering-salem": {
   "h": "5b2e93c31b6b3cf5",
   "d": "2026-10-22"
  },
  "/takomlaggning-salem": {
-  "h": "0517ecc0c3c5ad39",
-  "d": "2026-10-22"
+  "h": "1998b37b552a5d00",
+  "d": "2026-10-25"
  },
  "/takbyte-sodertalje": {
-  "h": "b65d7291da712201",
-  "d": "2026-10-20"
+  "h": "33baa6eb69522c47",
+  "d": "2026-10-25"
  },
  "/takrenovering-sodertalje": {
   "h": "ae2f5e6726327e0e",
   "d": "2026-10-22"
  },
  "/takomlaggning-sodertalje": {
-  "h": "71411b153048445e",
-  "d": "2026-10-22"
+  "h": "6c527522a2a90e25",
+  "d": "2026-10-25"
  },
  "/taktvatt-sodertalje": {
   "h": "a6ea081cc7c4a14c",
   "d": "2026-10-22"
  },
  "/takbyte-bro": {
-  "h": "f9e45f776cf8e2b7",
-  "d": "2026-10-20"
+  "h": "e49a742d24c29e0f",
+  "d": "2026-10-25"
  },
  "/takbyte-kungsangen": {
-  "h": "cdc9f3432103c74f",
-  "d": "2026-10-20"
+  "h": "6b9c8b8f10c5bc42",
+  "d": "2026-10-25"
  },
  "/takbyte-vasterhaninge": {
   "h": "dc135afb06e1ae30",
