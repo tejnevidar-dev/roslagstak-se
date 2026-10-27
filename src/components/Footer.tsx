@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useMemo } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logoWhite from "@/assets/roslagstak-logo-white.png";
 import ContentOverrides from "@/components/ContentOverrides";
@@ -38,7 +37,6 @@ const genvagar = [
 ];
 
 const Footer = () => {
-  const orgNr = useMemo(() => ["559", "539", "-", "3595"].join(""), []);
   return (
     <>
     <ContentOverrides />
@@ -97,7 +95,6 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" aria-hidden="true" /> Norrtälje, Roslagen
               </li>
-              <li data-nosnippet="" className="text-primary-foreground/50">Org.nr: {orgNr}</li>
             </ul>
           </div>
         </div>
